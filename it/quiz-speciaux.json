@@ -41,14 +41,14 @@
     "p3": "Li teniamo tutti qui, stagione dopo stagione. Quelli della stagione in corso sono in cima alla pagina; gli altri restano giocabili tutto l'anno, un po' più in basso."
   },
   "section2": {
+    "title": "E il resto dell'anno",
+    "p1": "Quando la stagione è passata, <a href=\"/it/giochi-di-coppia/\">i giochi da fare in due tutto l'anno</a> prendono il testimone: <a href=\"/it/preferiresti-quiz-coppia/\">i dilemmi «preferiresti»</a>, obbligo o verità, il gioco da tavolo, e una decina di altri. E per chi vuole <a href=\"/it/test-compatibilita-coppia/\">una vera risposta sulla propria coppia</a>, c'è di che confrontare le vostre risposte su quello che conta."
+  },
+  "section3": {
     "title": "Come si gioca",
     "p1": "Tutti questi quiz si giocano allo stesso modo. Da solo/a, rispondi e scopri il tuo risultato. In due, il primo risponde a tutta la serie, passa il telefono, e il secondo risponde a sua volta senza vedere le risposte del primo: i due risultati compaiono alla fine, uno accanto all'altro, con quello che vi separa.",
     "p2": "Se non siete nello stesso posto, ogni quiz ha una modalità a distanza: una persona crea la partita, l'altra si unisce con il codice o il QR code, e ognuno risponde sul proprio telefono. Vedete le vostre due risposte dopo ogni domanda, e il risultato è lo stesso da entrambe le parti.",
     "p3": "Nessun account da creare, niente da installare, e niente viene salvato: le risposte restano sui vostri telefoni."
-  },
-  "section3": {
-    "title": "E il resto dell'anno",
-    "p1": "Quando la stagione è passata, <a href=\"/it/giochi-di-coppia/\">i giochi da fare in due tutto l'anno</a> prendono il testimone: <a href=\"/it/preferiresti-quiz-coppia/\">i dilemmi «preferiresti»</a>, obbligo o verità, il gioco da tavolo, e una decina di altri. E per chi vuole <a href=\"/it/test-compatibilita-coppia/\">una vera risposta sulla propria coppia</a>, c'è di che confrontare le vostre risposte su quello che conta."
   },
   "faq": {
     "title": "Domande frequenti",

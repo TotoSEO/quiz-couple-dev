@@ -53,6 +53,10 @@
       {
         "titre": "Le affinità tra due nomi",
         "texte": "<p>Una volta ridotto ogni nome al suo numero, il test guarda come vanno d'accordo i due numeri. Le affinità migliori sono l'1 con il 3, il 2 con il 6, il 3 con il 6 e il 6 con il 9: 9 su 10. Due nomi che finiscono sullo stesso numero hanno 7 su 10 (6 per due 4, 8 per due numeri maestri): vi capite in fretta, ma forse vi somigliate un po' troppo. Le distanze più nette sono tra il 3 e il 4, e tra il 4 e il 5: 3 su 10, perché il 4 ama le regole e sia il 3 sia il 5 le sopportano male.</p><p>I numeri maestri hanno i loro alleati: l'11 va molto d'accordo con il 2 e il 7, il 22 con il 4 e l'8.</p>"
+      },
+      {
+        "titre": "E la compatibilità sessuale dei nomi?",
+        "texte": "<p>Il test non calcola un punteggio a parte per il sesso: la percentuale parla della vostra intesa in generale. L'astrologia, però, ha la sua idea: i segni di Fuoco sarebbero più passionali, quelli di Terra più sensuali, e la numerologia attribuisce al 5 un grande bisogno di novità. Resta un gioco, e va preso come tale.</p><p>Per sapere se vi intendete a letto, la cosa più semplice è <a href=\"/it/test-compatibilita-sessuale/\">confrontare i vostri desideri, domanda per domanda</a>: ognuno risponde per conto suo su desiderio, tenerezza o ritmo, e le risposte dell'altro le vedete solo alla fine.</p>"
       }
     ]
   },
@@ -67,19 +71,13 @@
     "title": "Perché incrociare entrambe le letture?",
     "p1": "Perché guardano cose del tutto diverse. Il vostro segno dipende dal giorno in cui siete nati, il vostro nome l'hanno scelto i vostri genitori, e una cosa non c'entra niente con l'altra. Due Leoni possono avere nomi con numeri opposti, e una coppia che per i segni è complicata può avere due nomi che vanno benissimo insieme.",
     "p2": "Per questo il risultato mostra tre punteggi. Prendete Sofia, Bilancia, e Matteo, Leone: i loro segni vanno d'accordo (80%), i loro nomi molto meno (40%), e il punteggio complessivo scende al 64%. Senza il dettaglio, non sapreste che sono i nomi ad abbassare il voto...",
-    "tip": "Un buon punteggio non garantisce una relazione facile, e un punteggio basso non vuol dire che non funzionerà. Guardate piuttosto quale dei due punteggi abbassa il risultato, e parlatene insieme."
+    "tip": "Un buon punteggio non garantisce una relazione facile, e un punteggio basso non vuol dire che non funzionerà. Guardate piuttosto quale dei due punteggi abbassa il risultato, e parlatene insieme.",
+    "p3": "Se volete un risultato che parta dalla vostra vita di coppia, servono delle domande. C'è un test che fa a ciascuno di voi venti domande su <a href=\"/it/test-compatibilita-amorosa/\">matrimonio, figli, soldi o vacanze</a>, e poi confronta le vostre risposte."
   },
   "section5": {
     "title": "Cosa questi numeri non possono dire",
     "p1": "Né l'astrologia né la numerologia possono dire se la vostra storia durerà. Prendete il risultato come un gioco, e come un'occasione per parlare dei vostri caratteri: «tu sei proprio un Leone», «io, un 9? Mi stupisce», ecc.",
-    "p2": "Se volete un risultato che parta dalla vostra vita di coppia, servono delle domande. C'è un test che fa a ciascuno di voi venti domande su <a href=\"/it/test-compatibilita-amorosa/\">matrimonio, figli, soldi o vacanze</a>, e poi confronta le vostre risposte.",
-    "tip": "Fatelo insieme sullo stesso telefono, poi riprovate con i vostri soprannomi: il punteggio dei nomi cambia spesso!",
-    "plus": [
-      {
-        "titre": "E la compatibilità sessuale dei nomi?",
-        "texte": "<p>Ce lo chiedono spesso. Il test non calcola un punteggio a parte per il sesso: la percentuale parla della vostra intesa in generale. L'astrologia, però, ha la sua idea: i segni di Fuoco sarebbero più passionali, quelli di Terra più sensuali, e la numerologia attribuisce al 5 un grande bisogno di novità. Resta un gioco, e va preso come tale.</p><p>Per sapere se vi intendete a letto, la cosa più semplice è <a href=\"/it/test-compatibilita-sessuale/\">confrontare i vostri desideri, domanda per domanda</a>: ognuno risponde per conto suo su desiderio, tenerezza o ritmo, e le risposte dell'altro le vedete solo alla fine.</p>"
-      }
-    ]
+    "tip": "Fatelo insieme sullo stesso telefono, poi riprovate con i vostri soprannomi: il punteggio dei nomi cambia spesso!"
   },
   "faq": {
     "title": "Domande frequenti",

@@ -29,7 +29,7 @@
     "s2Tip": "Astuce : faites chacun la liste de vos 3 principales inquiétudes liées à la parentalité, puis comparez-les. Les écarts révèlent souvent les conversations les plus importantes à avoir.",
     "s3Title": "Comment savoir si on est prêt à être parent : les vrais signaux",
     "s3p1": "Spoiler : le \"bon moment\" parfait n’existe pas. Si vous attendez d’avoir tout aligné (finances, carrière, logement, maturité émotionnelle, lune croissante et mercure en rétrograde), vous n’y arriverez jamais. Mais il y a quand même des signaux qui ne trompent pas.",
-    "s3p2": "Vous êtes probablement prêts si votre couple est dans une bonne dynamique, si vous arrivez à gérer les conflits sans vous détruire mutuellement, si l’envie vient de vous deux (et pas de la pression sociale), et si vous avez au minimum discuté des sujets mentionnés plus haut. À l’inverse, si votre couple bat de l’aile, si vous espérez qu’un bébé va tout arranger, ou si l’un de vous n’est pas vraiment partant… attendez.",
+    "s3p2": "Vous êtes probablement prêts si votre couple est dans une bonne dynamique, si vous arrivez à <a href=\"/test-couple-toxique/\">gérer les conflits sans vous détruire mutuellement</a>, si l’envie vient de vous deux (et pas de la pression sociale), et si vous avez au minimum discuté des sujets mentionnés plus haut. À l’inverse, si votre couple bat de l’aile, si vous espérez qu’un bébé va tout arranger, ou si l’un de vous n’est pas vraiment partant… attendez.",
     "s3p3": "Un test de parentalité comme celui que vous venez de faire ne remplace pas un vrai travail d’introspection (et encore moins un accompagnement pro si besoin). Mais c’est un bon point de départ pour ouvrir le dialogue.",
     "s3Quote": "Être prêt, ce n’est pas ne plus avoir peur. C’est avoir assez confiance en son couple pour avancer malgré la peur.",
     "s4Title": "L’erreur la plus courante : ne pas parler du \"après\"",
@@ -45,7 +45,6 @@
     "s6Title": "Refaire le test dans 6 mois : pourquoi c’est une bonne idée",
     "s6p1": "Votre score aujourd’hui, c’est une photo à un instant T. Vos réponses vont évoluer. Vos finances vont peut-être changer, votre situation professionnelle aussi. Votre couple va traverser de nouvelles épreuves (ou au contraire se renforcer). C’est pour ça qu’on vous recommande de refaire ce test de parentalité dans quelques mois.",
     "s6p2": "L’idée, c’est pas d’attendre le score parfait. C’est de voir si vos réponses bougent dans le bon sens. Si les sujets qui bloquaient se débloquent. Et surtout, si l’envie grandit ou s’estompe, parce que les deux sont valides.",
-    "s6p3": "Entre-temps, la parentalité c’est aussi une question de compatibilité au quotidien. Savoir si vous avez <a href=\"/test-points-communs-couples/\">suffisamment de points communs</a> pour construire un projet aussi gros, ça compte. Et si le mariage fait aussi partie de la réflexion, ça vaut le coup de vérifier que vous êtes <a href=\"/test-couple-mariage/\">alignés sur cette question-là aussi</a>.",
     "faqTitle": "Questions fréquentes sur la parentalité et le couple",
     "faq": [
       {
@@ -58,7 +57,7 @@
       },
       {
         "q": "Un bébé peut-il sauver un couple en crise ?",
-        "a": "Non. C’est un mythe dangereux. Un bébé amplifie les dynamiques existantes. Si votre couple va bien, un enfant va probablement renforcer votre lien. Si votre couple est en difficulté, un bébé va ajouter du stress. Avant de penser bébé, vérifiez que <a href=\"/test-couple-toxique/\">votre relation n’a pas des traits toxiques</a>."
+        "a": "Non. C’est un mythe dangereux. Un bébé amplifie les dynamiques existantes. Si votre couple va bien, un enfant va probablement renforcer votre lien. Si votre couple est en difficulté, un bébé va ajouter du stress. Avant de penser bébé, vérifiez que votre relation n’a pas des traits toxiques."
       },
       {
         "q": "À partir de quel âge est-on trop vieux pour avoir un enfant ?",
@@ -72,6 +71,7 @@
         "q": "Combien coûte un enfant la première année en France ?",
         "a": "En moyenne, comptez entre 6 000 et 10 000 € la première année, hors frais de garde (qui peuvent facilement doubler la facture). Les postes les plus lourds : couches (environ 600-800 €/an), alimentation, vêtements, équipement et frais médicaux non remboursés."
       }
-    ]
+    ],
+    "s3p4": "La parentalité, c’est aussi une question de compatibilité au quotidien. Savoir si vous avez <a href=\"/test-points-communs-couples/\">suffisamment de points communs</a> pour construire un projet aussi gros, ça compte. Et si le mariage fait aussi partie de la réflexion, ça vaut le coup de vérifier que vous êtes <a href=\"/test-couple-mariage/\">alignés sur cette question-là aussi</a>."
   }
 }

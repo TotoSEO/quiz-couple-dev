@@ -41,14 +41,14 @@
     "p3": "Wir behalten sie alle hier, Saison für Saison. Die der laufenden Saison stehen oben auf der Seite; die anderen bleiben das ganze Jahr spielbar, etwas weiter unten."
   },
   "section2": {
+    "title": "Und der Rest des Jahres",
+    "p1": "Wenn die Saison vorbei ist, übernehmen <a href=\"/de/paarspiele/\">die Spiele für zwei</a>, die das ganze Jahr gehen: <a href=\"/de/was-wuerdest-du-lieber-paar-quiz/\">die „Würdest du eher“-Fragen</a>, Wahrheit oder Pflicht, das Brettspiel und ein Dutzend weitere. Und für alle, die <a href=\"/de/paar-kompatibilitaetstest/\">eine echte Antwort über ihre Beziehung</a> wollen: Es gibt die Möglichkeit, eure Antworten zu dem zu vergleichen, was zählt."
+  },
+  "section3": {
     "title": "So wird gespielt",
     "p1": "Alle diese Quiz spielen sich gleich. Allein antwortest du und entdeckst dein Ergebnis. Zu zweit beantwortet der Erste die ganze Reihe, gibt das Handy weiter, und der Zweite antwortet danach, ohne die Antworten des Ersten zu sehen: Am Ende erscheinen beide Ergebnisse nebeneinander, mit dem, was euch unterscheidet.",
     "p2": "Wenn ihr nicht am selben Ort seid, hat jedes Quiz einen Fernmodus: Eine Person erstellt die Partie, die andere tritt mit dem Code oder dem QR-Code bei, und jeder antwortet auf dem eigenen Handy. Ihr seht nach jeder Frage eure beiden Antworten, und das Ergebnis ist auf beiden Seiten dasselbe.",
     "p3": "Kein Konto anlegen, nichts installieren, und nichts wird gespeichert: Die Antworten bleiben auf euren Handys."
-  },
-  "section3": {
-    "title": "Und der Rest des Jahres",
-    "p1": "Wenn die Saison vorbei ist, übernehmen <a href=\"/de/paarspiele/\">die Spiele für zwei</a>, die das ganze Jahr gehen: <a href=\"/de/was-wuerdest-du-lieber-paar-quiz/\">die „Würdest du eher“-Fragen</a>, Wahrheit oder Pflicht, das Brettspiel und ein Dutzend weitere. Und für alle, die <a href=\"/de/paar-kompatibilitaetstest/\">eine echte Antwort über ihre Beziehung</a> wollen: Es gibt die Möglichkeit, eure Antworten zu dem zu vergleichen, was zählt."
   },
   "faq": {
     "title": "Häufige Fragen",

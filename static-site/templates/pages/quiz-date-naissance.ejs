@@ -220,7 +220,7 @@
         </table>
       </div>
       <div class="mt-6 p-4 bg-primary/5 border border-primary/20 rounded-lg">
-        <p class="text-sm text-muted-foreground"><%= t(ns + ':section2.tip') %></p>
+        <p class="text-sm text-muted-foreground"><%- t(ns + ':section2.tip') %></p>
       </div>
     </section>
 
@@ -262,7 +262,7 @@
         <p class="text-muted-foreground leading-relaxed"><%- t(ns + ':section4.sub2Text') %></p>
       </div>
       <div class="mt-6 p-4 bg-primary/5 border border-primary/20 rounded-lg">
-        <p class="text-sm text-muted-foreground"><%= t(ns + ':section4.tip') %></p>
+        <p class="text-sm text-muted-foreground"><%- t(ns + ':section4.tip') %></p>
       </div>
     </section>
 
@@ -273,7 +273,7 @@
         <p><%- t(ns + ':section5.p2') %></p>
       </div>
       <div class="mt-6 p-4 bg-primary/5 border border-primary/20 rounded-lg">
-        <p class="text-sm text-muted-foreground"><%= t(ns + ':section5.tip') %></p>
+        <p class="text-sm text-muted-foreground"><%- t(ns + ':section5.tip') %></p>
       </div>
     </section>
 
@@ -281,10 +281,10 @@
       <h2 class="text-2xl md:text-3xl font-bold mb-6"><%= t(ns + ':section6.title') %></h2>
       <div class="space-y-4 text-muted-foreground leading-relaxed">
         <p><%- t(ns + ':section6.p1') %></p>
-        <p><%- t(ns + ':section6.p2') %></p>
+        <% const s6p2 = t(ns + ':section6.p2', ''); if (s6p2) { %><p><%- s6p2 %></p><% } %>
       </div>
       <div class="mt-6 p-4 bg-primary/5 border border-primary/20 rounded-lg">
-        <p class="text-sm text-muted-foreground"><%= t(ns + ':section6.tip') %></p>
+        <p class="text-sm text-muted-foreground"><%- t(ns + ':section6.tip') %></p>
       </div>
     </section>
 

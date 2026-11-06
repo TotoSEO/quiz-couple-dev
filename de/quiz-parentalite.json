@@ -29,7 +29,7 @@
     "s2Tip": "Tipp: Schreibt jeder eure 3 größten Bedenken zur Elternschaft auf und vergleicht sie. Die Unterschiede zeigen oft die wichtigsten Gespräche, die ihr führen solltet.",
     "s3Title": "Wie weiß man, ob man bereit ist, Eltern zu werden: die echten Signale",
     "s3p1": "Spoiler: Den \"perfekten Moment\" gibt es nicht. Wenn ihr wartet, bis alles stimmt (Finanzen, Karriere, Wohnung, emotionale Reife, zunehmender Mond und Merkur in Retrograde), schafft ihr es nie. Aber es gibt dennoch Signale, die nicht trügen.",
-    "s3p2": "Ihr seid wahrscheinlich bereit, wenn eure Beziehung in einer guten Dynamik ist, wenn ihr Konflikte bewältigen könnt, ohne euch gegenseitig zu zerstören, wenn der Wunsch von euch beiden kommt (und nicht vom sozialen Druck), und wenn ihr zumindest über die oben genannten Themen gesprochen habt. Umgekehrt: Wenn eure Beziehung kriselt, wenn ihr hofft, dass ein Baby alles retten wird, oder wenn einer von euch nicht wirklich dabei ist... wartet.",
+    "s3p2": "Ihr seid wahrscheinlich bereit, wenn eure Beziehung in einer guten Dynamik ist, wenn ihr <a href=\"/de/toxische-beziehung-test/\">Konflikte bewältigen könnt, ohne euch gegenseitig zu zerstören</a>, wenn der Wunsch von euch beiden kommt (und nicht vom sozialen Druck), und wenn ihr zumindest über die oben genannten Themen gesprochen habt. Umgekehrt: Wenn eure Beziehung kriselt, wenn ihr hofft, dass ein Baby alles retten wird, oder wenn einer von euch nicht wirklich dabei ist... wartet.",
     "s3p3": "Ein Elternschaftstest wie dieser ersetzt keine echte Selbstreflexion (und schon gar keine professionelle Begleitung, falls nötig). Aber er ist ein guter Ausgangspunkt, um den Dialog zu eröffnen.",
     "s3Quote": "Bereit zu sein bedeutet nicht, keine Angst mehr zu haben. Es bedeutet, genug Vertrauen in eure Beziehung zu haben, um trotz der Angst voranzugehen.",
     "s4Title": "Der häufigste Fehler: Nicht über das \"Danach\" sprechen",
@@ -45,7 +45,6 @@
     "s6Title": "Den Test in 6 Monaten wiederholen: Warum das eine gute Idee ist",
     "s6p1": "Euer Ergebnis heute ist eine Momentaufnahme. Eure Antworten werden sich weiterentwickeln. Eure Finanzen werden sich vielleicht ändern, eure berufliche Situation auch. Eure Beziehung wird neue Prüfungen durchlaufen (oder sich im Gegenteil stärken). Deshalb empfehlen wir euch, diesen Elternschaftstest in ein paar Monaten zu wiederholen.",
     "s6p2": "Es geht nicht darum, auf das perfekte Ergebnis zu warten. Es geht darum zu sehen, ob sich eure Antworten in die richtige Richtung bewegen. Ob sich blockierte Themen lösen. Und vor allem, ob der Wunsch wächst oder nachlässt, denn beides ist berechtigt.",
-    "s6p3": "In der Zwischenzeit: Elternschaft ist auch eine Frage der alltäglichen Kompatibilität. Zu wissen, ob ihr <a href=\"/de/gemeinsamkeiten-test-paare/\">genügend Gemeinsamkeiten</a> habt, um ein so großes Projekt aufzubauen, ist wichtig. Und wenn die Ehe auch Teil eurer Überlegungen ist, lohnt es sich zu überprüfen, ob ihr <a href=\"/de/ehe-kompatibilitaetstest/\">auch in dieser Frage auf einer Linie seid</a>.",
     "faqTitle": "Häufig gestellte Fragen zur Elternschaft und Partnerschaft",
     "faq": [
       {
@@ -58,7 +57,7 @@
       },
       {
         "q": "Kann ein Baby eine Beziehung in der Krise retten?",
-        "a": "Nein. Das ist ein gefährlicher Mythos. Ein Baby verstärkt die bestehenden Dynamiken. Wenn eure Beziehung gut läuft, wird ein Kind eure Bindung wahrscheinlich stärken. Wenn eure Beziehung Schwierigkeiten hat, wird ein Baby Stress hinzufügen. Bevor ihr an Baby denkt, prüft ob <a href=\"/de/toxische-beziehung-test/\">eure Beziehung keine toxischen Züge hat</a>."
+        "a": "Nein. Das ist ein gefährlicher Mythos. Ein Baby verstärkt die bestehenden Dynamiken. Wenn eure Beziehung gut läuft, wird ein Kind eure Bindung wahrscheinlich stärken. Wenn eure Beziehung Schwierigkeiten hat, wird ein Baby Stress hinzufügen. Bevor ihr an Baby denkt, prüft ob eure Beziehung keine toxischen Züge hat."
       },
       {
         "q": "Ab welchem Alter ist man zu alt für ein Kind?",
@@ -72,6 +71,7 @@
         "q": "Was kostet ein Kind im ersten Jahr in Deutschland?",
         "a": "Im Durchschnitt rechnet mit 6.000 bis 10.000 Euro im ersten Jahr, ohne Betreuungskosten (Kita-Plätze können die Rechnung leicht verdoppeln). Die größten Posten: Windeln (ca. 600-800 Euro/Jahr), Nahrung, Kleidung, Ausstattung und nicht erstattete Arztkosten. Das Kindergeld (250 Euro/Monat pro Kind) und das Elterngeld helfen, decken aber nicht alle Mehrkosten."
       }
-    ]
+    ],
+    "s3p4": "Elternschaft ist auch eine Frage der alltäglichen Kompatibilität. Zu wissen, ob ihr <a href=\"/de/gemeinsamkeiten-test-paare/\">genügend Gemeinsamkeiten</a> habt, um ein so großes Projekt aufzubauen, ist wichtig. Und wenn die Ehe auch Teil eurer Überlegungen ist, lohnt es sich zu überprüfen, ob ihr <a href=\"/de/ehe-kompatibilitaetstest/\">auch in dieser Frage auf einer Linie seid</a>."
   }
 }

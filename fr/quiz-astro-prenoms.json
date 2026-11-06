@@ -53,6 +53,10 @@
       {
         "titre": "Les affinités entre deux prénoms",
         "texte": "<p>Une fois chaque prénom ramené à son nombre, le test regarde comment les deux nombres s'entendent. Les plus belles affinités sont le 1 avec le 3, le 2 avec le 6, le 3 avec le 6 et le 6 avec le 9 : 9 sur 10. Deux prénoms qui tombent sur le même nombre ont 7 sur 10 (6 pour deux 4, 8 pour deux nombres maîtres) : on se comprend vite, mais on se ressemble peut-être un peu trop. Les écarts les plus nets sont entre le 3 et le 4, et entre le 4 et le 5 : 3 sur 10, parce que le 4 aime les règles et que le 3 comme le 5 les supportent mal.</p><p>Les nombres maîtres ont leurs propres alliés : le 11 s'entend très bien avec le 2 et le 7, le 22 avec le 4 et le 8.</p>"
+      },
+      {
+        "titre": "Et la compatibilité sexuelle des prénoms ?",
+        "texte": "<p>Le test ne calcule pas de score à part pour la sexualité : le pourcentage parle de votre entente en général. L'astrologie, elle, a son avis sur la question : on dit les signes de Feu plus passionnés, ceux de Terre plus sensuels, et la numérologie prête au 5 un grand besoin de nouveauté. Ça reste un jeu, à prendre comme tel.</p><p>Pour savoir si vous vous accordez au lit, le plus simple est de <a href=\"/test-compatibilite-sexuelle/\">comparer vos envies, question par question</a> : chacun répond de son côté sur le désir, la tendresse ou le rythme, et vous ne voyez les réponses de l'autre qu'à la fin.</p>"
       }
     ]
   },
@@ -67,19 +71,13 @@
     "title": "Pourquoi croiser les deux lectures ?",
     "p1": "Parce qu'elles ne regardent pas du tout la même chose. Votre signe dépend du jour de votre naissance, votre prénom a été choisi par vos parents, et l'un n'a rien à voir avec l'autre. Deux Lions peuvent très bien avoir des prénoms aux nombres opposés, et un couple que les signes disent compliqué peut avoir deux prénoms qui s'accordent très bien.",
     "p2": "C'est pour ça que le résultat affiche trois scores. Prenez Emma, Balance, et Hugo, Lion : leurs signes s'entendent bien (80 %), leurs prénoms beaucoup moins (40 %), et le score global tombe à 64 %. Sans le détail, on ne saurait pas que ce sont les prénoms qui font baisser la note...",
-    "tip": "Un bon score ne garantit pas une relation facile, et un score bas ne veut pas dire que ça ne marchera pas. Regardez plutôt lequel des deux scores tire le résultat vers le bas, et parlez-en ensemble."
+    "tip": "Un bon score ne garantit pas une relation facile, et un score bas ne veut pas dire que ça ne marchera pas. Regardez plutôt lequel des deux scores tire le résultat vers le bas, et parlez-en ensemble.",
+    "p3": "Si vous voulez un résultat qui parte de votre vie à deux, il faut passer par des questions. Il existe un test qui vous pose vingt questions à chacun sur <a href=\"/test-compatibilite-amoureuse/\">le mariage, les enfants, l'argent ou les vacances</a>, puis qui compare vos réponses."
   },
   "section5": {
     "title": "Ce que ces chiffres ne peuvent pas dire",
     "p1": "Ni l'astrologie ni la numérologie ne peuvent dire si votre couple va durer. Prenez le résultat comme un jeu, et comme une occasion de parler de vos caractères : « toi, tu es bien un Lion », « moi, un 9 ? Ça m'étonne », etc.",
-    "p2": "Si vous voulez un résultat qui parte de votre vie à deux, il faut passer par des questions. Il existe un test qui vous pose vingt questions à chacun sur <a href=\"/test-compatibilite-amoureuse/\">le mariage, les enfants, l'argent ou les vacances</a>, puis qui compare vos réponses.",
-    "tip": "Faites-le à deux sur le même téléphone, puis recommencez avec vos surnoms : le score des prénoms change souvent !",
-    "plus": [
-      {
-        "titre": "Et la compatibilité sexuelle des prénoms ?",
-        "texte": "<p>On nous la pose souvent. Le test ne calcule pas de score à part pour la sexualité : le pourcentage parle de votre entente en général. L'astrologie, elle, a son avis sur la question : on dit les signes de Feu plus passionnés, ceux de Terre plus sensuels, et la numérologie prête au 5 un grand besoin de nouveauté. Ça reste un jeu, à prendre comme tel.</p><p>Pour savoir si vous vous accordez au lit, le plus simple est de <a href=\"/test-compatibilite-sexuelle/\">comparer vos envies, question par question</a> : chacun répond de son côté sur le désir, la tendresse ou le rythme, et vous ne voyez les réponses de l'autre qu'à la fin.</p>"
-      }
-    ]
+    "tip": "Faites-le à deux sur le même téléphone, puis recommencez avec vos surnoms : le score des prénoms change souvent !"
   },
   "faq": {
     "title": "Questions fréquentes",

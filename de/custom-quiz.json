@@ -8,7 +8,7 @@
     "seo": {
       "s1Title": "Erstelle ein Online-Quiz in wenigen Minuten",
       "s1p1": "Mit unserem kostenlosen Quiz-Ersteller baust du deinen eigenen Fragebogen in wenigen Klicks, ganz ohne Anmeldung. Wähle eine Vorlage (Punkte-Quiz, Wahr oder Falsch oder einfach zum Spaß), füge bis zu 30 Fragen mit maximal 4 Antworten hinzu, fertig.",
-      "s1p2": "Perfekt, um deine Freunde zu testen, deinen Partner herauszufordern oder einen Spieleabend zu gestalten: Jeder kann direkt vom Handy oder Computer aus mitspielen.",
+      "s1p2": "Perfekt, um deine Freunde zu testen, <a href=\"/de/wer-kennt-partner-besser-quiz/\">deinen Partner herauszufordern</a> oder einen Spieleabend zu gestalten: Jeder kann direkt vom Handy oder Computer aus mitspielen.",
       "s2Title": "Ein privates Quiz, geteilt über einen einfachen Link",
       "s2p1": "Dein Quiz ist privat. Es öffnet sich nur über den Link, den du beim Erstellen bekommst, und niemand findet es auf einem anderen Weg. Bewahre den Link irgendwo auf, in einer Notiz oder einem Chat zum Beispiel: Er ist der einzige Weg zurück zu deinem Quiz.",
       "s2p2": "Schick ihn deinem Partner, einer Freundin oder in eine Gruppe, und alle können sofort mitspielen, ganz ohne Konto. Nach einer Woche wird das Quiz gelöscht. Wenn du weitermachen willst, dauert ein neues etwa zwei Minuten.",
@@ -17,7 +17,7 @@
       "s3plus": [
         {
           "titre": "Ein „Wer kennt mich am besten“-Quiz über dich",
-          "texte": "<p>Das ist die häufigste Art, den Quiz-Ersteller zu nutzen: ein Quiz über dich, mit deinen eigenen Fragen, um zu sehen, wer dich am besten kennt. Dein Lieblingsessen, die Stadt, in der du gern leben würdest, was dich am meisten zum Lachen bringt ... Du wählst die Vorlage „Punkte-Quiz“, kreuzt bei jeder Frage die richtige Antwort an, und am Ende sieht jeder sein Ergebnis. Für euch als Paar gibt es auch ein fertiges Quiz, bei dem <a href=\"/de/wer-kennt-partner-besser-quiz/\">jeder die Antworten des anderen errät</a>, falls ihr keine Lust habt, selbst Fragen zu schreiben.</p>"
+          "texte": "<p>Das ist die häufigste Art, den Quiz-Ersteller zu nutzen: ein Quiz über dich, mit deinen eigenen Fragen, um zu sehen, wer dich am besten kennt. Dein Lieblingsessen, die Stadt, in der du gern leben würdest, was dich am meisten zum Lachen bringt ... Du wählst die Vorlage „Punkte-Quiz“, kreuzt bei jeder Frage die richtige Antwort an, und am Ende sieht jeder sein Ergebnis. Für euch als Paar gibt es auch ein fertiges Quiz, bei dem jeder die Antworten des anderen errät, falls ihr keine Lust habt, selbst Fragen zu schreiben.</p>"
         },
         {
           "titre": "Ein Quiz für deine Freunde erstellen",

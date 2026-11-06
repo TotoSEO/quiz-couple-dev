@@ -12,7 +12,8 @@
     "intro": "On croit souvent qu'un couple heureux ressemble à quelque chose de précis : beaucoup de temps ensemble, beaucoup de rires, des projets. En vrai, les couples qui durent ne se ressemblent pas du tout.",
     "p1": "Ce quiz range les couples en quatre grandes familles. Les fusionnels font presque tout à deux, et ils aiment ça. Chez les complices, tout passe par le rire. Les indépendants ont chacun leur vie et se retrouvent le soir. Et les bâtisseurs avancent vers quelque chose : un appartement, un enfant, un projet.",
     "p2": "Aucune de ces quatre façons de vivre à deux ne vaut mieux qu'une autre. Chacune a sa force, et chacune a un point faible qu'on ne voit pas parce qu'on est dedans. On les détaille juste en dessous.",
-    "p3": "Ce que le quiz vous donne, c'est un nom pour ce que vous êtes, et une chose à surveiller. Ça paraît simple, mais mettre un mot sur sa façon de vivre à deux change pas mal de choses. On comprend pourquoi tel ami trouve qu'on ne se voit plus assez, ou pourquoi l'autre a eu besoin d'air le mois dernier."
+    "p3": "Ce que le quiz vous donne, c'est un nom pour ce que vous êtes, et une chose à surveiller. Ça paraît simple, mais mettre un mot sur sa façon de vivre à deux change pas mal de choses. On comprend pourquoi tel ami trouve qu'on ne se voit plus assez, ou pourquoi l'autre a eu besoin d'air le mois dernier.",
+    "p4": "Ce quiz décrit votre façon de vivre à deux. Il ne mesure pas <a href=\"/tester-son-couple/\">la solidité de votre relation</a>, ni <a href=\"/test-personnalite-couple/\">la façon dont chacun de vous aime</a> pris séparément. Et si vous voulez savoir par quels gestes l'autre se sent aimé, c'est encore autre chose : <a href=\"/test-langage-amour-couple/\">le langage de l'amour de l'autre</a> se mesure avec un test à part."
   },
   "section2": {
     "title": "Les quatre types de couple",
@@ -33,8 +34,7 @@
   "section3": {
     "title": "Comment répondre, et ce que dit le résultat",
     "p1": "Vous répondez ensemble, sur le même téléphone. À chaque situation, quatre réponses, une par type de couple. Vous choisissez celle qui vous ressemble le plus, même si aucune ne colle tout à fait. Quand vous n'êtes pas d'accord, c'est justement là que ça devient intéressant ! Discutez deux minutes, puis prenez la réponse qui décrit ce que vous faites en vrai, pas ce que vous aimeriez faire.",
-    "p2": "L'ordre des réponses change à chaque question, pour qu'on ne puisse pas répondre « toujours la première » sans lire. À la fin, vous voyez les quatre barres et le profil qui ressort. Si aucune famille ne domine nettement, le quiz le dit plutôt que de trancher à une voix près : c'est le couple caméléon, qui change selon la période.",
-    "p3": "Ce quiz décrit votre façon de vivre à deux. Il ne mesure pas <a href=\"/tester-son-couple/\">la solidité de votre relation</a>, ni <a href=\"/test-personnalite-couple/\">la façon dont chacun de vous aime</a> pris séparément. Et si vous voulez savoir par quels gestes l'autre se sent aimé, c'est encore autre chose : <a href=\"/test-langage-amour-couple/\">le langage de l'amour de l'autre</a> se mesure avec un test à part."
+    "p2": "L'ordre des réponses change à chaque question, pour qu'on ne puisse pas répondre « toujours la première » sans lire. À la fin, vous voyez les quatre barres et le profil qui ressort. Si aucune famille ne domine nettement, le quiz le dit plutôt que de trancher à une voix près : c'est le couple caméléon, qui change selon la période."
   },
   "seo": {
     "faqTitle": "Les questions qu'on se pose",

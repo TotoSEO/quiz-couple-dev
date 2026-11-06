@@ -8,7 +8,7 @@
     "seo": {
       "s1Title": "Crea un quiz online en unos minutos",
       "s1p1": "Nuestro creador de quiz gratuito te permite construir tu propio cuestionario en unos clics, sin registro. Elige una plantilla (quiz de puntos, verdadero o falso, o solo por diversión), añade hasta 30 preguntas con un máximo de 4 respuestas cada una, y listo.",
-      "s1p2": "Ideal para poner a prueba a tus amigos, retar a tu pareja o animar una fiesta: cualquiera puede jugar directamente desde su móvil u ordenador.",
+      "s1p2": "Ideal para poner a prueba a tus amigos, <a href=\"/es/quiz-quien-conoce-mejor-pareja/\">retar a tu pareja</a> o animar una fiesta: cualquiera puede jugar directamente desde su móvil u ordenador.",
       "s2Title": "Un quiz privado, compartido con un simple enlace",
       "s2p1": "Tu quiz es privado. Solo se abre con el enlace que recibes al crearlo, y nadie puede encontrarlo de otra manera. Guarda ese enlace en algún sitio, en una nota o en un chat por ejemplo: es la única forma de volver a tu quiz.",
       "s2p2": "Envíaselo a tu pareja, a un amigo o a un grupo, y todos pueden jugar al momento, sin cuenta. Al cabo de una semana, el quiz se elimina. Si quieres seguir, crear uno nuevo lleva unos dos minutos.",
@@ -17,7 +17,7 @@
       "s3plus": [
         {
           "titre": "Un quiz de \"quién me conoce mejor\" sobre ti",
-          "texte": "<p>Es el uso más habitual del creador: un quiz sobre ti, con tus propias preguntas, para ver quién te conoce mejor. Tu plato favorito, la ciudad en la que sueñas vivir, lo que más te hace reír... Eliges el modelo \"quiz de puntos\", marcas la respuesta correcta en cada pregunta y cada uno ve su puntuación al final. Para vuestra pareja también hay un quiz ya hecho en el que <a href=\"/es/quiz-quien-conoce-mejor-pareja/\">cada uno adivina las respuestas del otro</a>, si no os apetece escribir las preguntas.</p>"
+          "texte": "<p>Es el uso más habitual del creador: un quiz sobre ti, con tus propias preguntas, para ver quién te conoce mejor. Tu plato favorito, la ciudad en la que sueñas vivir, lo que más te hace reír... Eliges el modelo \"quiz de puntos\", marcas la respuesta correcta en cada pregunta y cada uno ve su puntuación al final. Para vuestra pareja también hay un quiz ya hecho en el que cada uno adivina las respuestas del otro, si no os apetece escribir las preguntas.</p>"
         },
         {
           "titre": "Crear un quiz para tus amigos",

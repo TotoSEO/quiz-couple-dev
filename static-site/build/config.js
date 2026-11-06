@@ -2157,7 +2157,7 @@ export const QUIZ_RELATED_ARTICLES = {
   testLangageAmour: ['manque-communication-couple', 'sauver-son-couple'],
   testPersonnalite: ['5-langages-de-l-amour', 'styles-attachement-couple', 'comment-savoir-si-cest-le-bon'],
   testAttachement:  ['dependance-affective', 'comment-savoir-si-cest-le-bon', 'sauver-son-couple'],
-  testDependance:   ['dependance-affective', 'love-bombing', 'sauver-son-couple'],
+  testDependance:   ['dependance-affective', 'dependance-affective-chez-l-homme', 'love-bombing', 'sauver-son-couple'],
   testConfiance:    ['sauver-son-couple', 'red-flags-homme', 'disputes-couple'],
   testInfidelite:   ['red-flags-homme', 'red-flags-femme', 'choses-pas-accepter-couple'],
   testAstroPrenoms: ['compatibilite-amoureuse-belier', 'compatibilite-amoureuse-lion', 'compatibilite-amoureuse-scorpion'],

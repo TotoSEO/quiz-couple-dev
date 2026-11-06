@@ -29,7 +29,7 @@
     "s2Tip": "Ejercicio: cada uno escribe sus 3 mayores preocupaciones sobre la paternidad/maternidad, y luego las comparáis. Las diferencias suelen revelar las conversaciones más importantes que debéis tener.",
     "s3Title": "Cómo saber si estáis preparados para ser padres: las verdaderas señales",
     "s3p1": "Spoiler: el \"momento perfecto\" no existe. Si esperáis a tener todo alineado (finanzas, carrera, vivienda, madurez emocional, luna creciente y Mercurio en retrógrado), no lo lograréis nunca. Pero sí hay señales que no engañan.",
-    "s3p2": "Probablemente estéis preparados si vuestra pareja está en una buena dinámica, si conseguís gestionar los conflictos sin destruiros mutuamente, si el deseo viene de los dos (y no de la presión social), y si al menos habéis hablado de los temas mencionados antes. Por el contrario, si vuestra relación está mal, si esperáis que un bebé lo arregle todo, o si uno de los dos no está realmente convencido… esperad.",
+    "s3p2": "Probablemente estéis preparados si vuestra pareja está en una buena dinámica, si conseguís <a href=\"/es/test-relacion-toxica/\">gestionar los conflictos sin destruiros mutuamente</a>, si el deseo viene de los dos (y no de la presión social), y si al menos habéis hablado de los temas mencionados antes. Por el contrario, si vuestra relación está mal, si esperáis que un bebé lo arregle todo, o si uno de los dos no está realmente convencido… esperad.",
     "s3p3": "Un test de parentalidad como el que acabáis de hacer no sustituye un verdadero trabajo de introspección (y mucho menos un acompañamiento profesional si hace falta). Pero es un buen punto de partida para abrir el diálogo.",
     "s3Quote": "Estar preparado no es no tener miedo. Es confiar lo suficiente en vuestra pareja para avanzar a pesar del miedo.",
     "s4Title": "El error más común: no hablar del \"después\"",
@@ -45,7 +45,6 @@
     "s6Title": "Repetir el test en 6 meses: por qué es buena idea",
     "s6p1": "Vuestra puntuación de hoy es una foto en un momento dado. Vuestras respuestas van a evolucionar. Vuestras finanzas quizá cambien, vuestra situación laboral también. Vuestra pareja va a atravesar nuevas pruebas (o por el contrario se va a reforzar). Por eso os recomendamos repetir este test de parentalidad en unos meses.",
     "s6p2": "La idea no es esperar a la puntuación perfecta. Es ver si vuestras respuestas evolucionan en la buena dirección. Si los temas que bloqueaban se desbloquean. Y sobre todo, si el deseo crece o se desvanece, porque las dos opciones son válidas.",
-    "s6p3": "Mientras tanto, la parentalidad también es una cuestión de compatibilidad en el día a día. Saber si tenéis <a href=\"/es/test-puntos-comunes-pareja/\">suficientes puntos en común</a> para construir un proyecto tan grande importa. Y si el matrimonio también forma parte de la reflexión, merece la pena comprobar que estáis <a href=\"/es/test-compatibilidad-matrimonio/\">alineados en esa cuestión también</a>.",
     "faqTitle": "Preguntas frecuentes sobre parentalidad y pareja",
     "faq": [
       {
@@ -58,7 +57,7 @@
       },
       {
         "q": "¿Puede un bebé salvar a una pareja en crisis?",
-        "a": "No. Es un mito peligroso. Un bebé amplifica las dinámicas existentes. Si vuestra pareja va bien, un hijo probablemente reforzará vuestro vínculo. Si vuestra relación tiene problemas, un bebé añadirá estrés. Antes de pensar en un bebé, comprobad que <a href=\"/es/test-relacion-toxica/\">vuestra relación no tiene rasgos tóxicos</a>."
+        "a": "No. Es un mito peligroso. Un bebé amplifica las dinámicas existentes. Si vuestra pareja va bien, un hijo probablemente reforzará vuestro vínculo. Si vuestra relación tiene problemas, un bebé añadirá estrés. Antes de pensar en un bebé, comprobad que vuestra relación no tiene rasgos tóxicos."
       },
       {
         "q": "¿A partir de qué edad se es demasiado mayor para tener hijos?",
@@ -72,6 +71,7 @@
         "q": "¿Cuánto cuesta un hijo el primer año en España?",
         "a": "De media, contad entre 6.000 y 10.000 € el primer año, sin contar los gastos de guardería (que pueden duplicar fácilmente la factura). Las partidas más pesadas: pañales (unos 600-800 €/año), alimentación, ropa, equipamiento y gastos médicos no cubiertos por la Seguridad Social."
       }
-    ]
+    ],
+    "s3p4": "La parentalidad también es una cuestión de compatibilidad en el día a día. Saber si tenéis <a href=\"/es/test-puntos-comunes-pareja/\">suficientes puntos en común</a> para construir un proyecto tan grande importa. Y si el matrimonio también forma parte de la reflexión, merece la pena comprobar que estáis <a href=\"/es/test-compatibilidad-matrimonio/\">alineados en esa cuestión también</a>."
   }
 }

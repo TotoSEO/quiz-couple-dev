@@ -8,12 +8,12 @@
   "section1": {
     "title": "Heiße Fragen für Wahrheit oder Pflicht, von andeutend bis sehr direkt",
     "p1": "Ein <strong class=\"text-foreground\">versautes Wahrheit oder Pflicht</strong>, das zu hart anfängt, funktioniert nie. Die erste Pflicht ist unangenehm, einer von beiden macht dicht, und der Abend ist vorbei, bevor er begonnen hat. Deshalb steigert sich dieser Stapel langsam, statt gleich mit voller Wucht loszulegen.",
-    "p2": "Die sanftesten Karten bleiben andeutend: Fragen, bei denen man rot wird, Pflichten, die euch näherbringen, nichts, das zum Entblößen zwingt. Die direktesten nehmen kein Blatt mehr vor den Mund und setzen voraus, dass ihr beide wisst, wohin das führt. Die Ziehung mischt sie, und das Recht auszusetzen lässt euch die Kontrolle.",
+    "p2": "Die sanftesten Karten bleiben andeutend: <a href=\"/de/pikantes-paar-quiz/\">Fragen, bei denen man rot wird</a>, Pflichten, die euch näherbringen, nichts, das zum Entblößen zwingt. Die direktesten nehmen kein Blatt mehr vor den Mund und setzen voraus, dass ihr beide wisst, wohin das führt. Die Ziehung mischt sie, und das Recht auszusetzen lässt euch die Kontrolle.",
     "p3": "Fangt sanft an, auch wenn ihr glaubt, diesen Schritt überspringen zu können. Das Lachen der ersten Karten bringt für den restlichen Abend mehr als jede kalt hingeworfene Pflicht…"
   },
   "section2": {
     "title": "So wird gespielt",
-    "intro": "Dieselben wie in der klassischen Variante, plus ein Punkt, der hier deutlich mehr zählt.",
+    "intro": "Dieselben wie in <a href=\"/de/wahrheit-oder-pflicht-paar/\">der klassischen Variante</a>, plus ein Punkt, der hier deutlich mehr zählt.",
     "regle1Titre": "Tragt eure beiden Vornamen ein",
     "regle1Texte": "Das Spiel sagt bei jeder Karte an, wer dran ist, damit sich niemand fragen muss, wer spielt.",
     "regle2Titre": "Wahrheit oder Pflicht, ihr entscheidet",
@@ -31,7 +31,7 @@
   "faq": {
     "title": "Häufige Fragen",
     "q1": "Was ist der Unterschied zur klassischen Version?",
-    "a1": "Die Karten, ganz einfach. Die <a href=\"/de/wahrheit-oder-pflicht-paar/\">klassische Variante</a> richtet sich an alle Paare und lässt sich vor jedem spielen. Diese hier hat ihren eigenen, deutlich direkteren Stapel, geschrieben für einen Moment, in dem ihr allein seid.",
+    "a1": "Die Karten, ganz einfach. Die klassische Variante richtet sich an alle Paare und lässt sich vor jedem spielen. Diese hier hat ihren eigenen, deutlich direkteren Stapel, geschrieben für einen Moment, in dem ihr allein seid.",
     "q2": "Ist es sehr explizit?",
     "a2": "Von andeutend bis sehr direkt. Die sanftesten verlangen ein Kompliment oder einen Kuss, die kühnsten setzen eine bereits gewachsene Vertrautheit voraus. Es gibt keine Stufe zu wählen: das Recht auszusetzen zieht die Grenze, Karte für Karte.",
     "q3": "Wie viele Karten gibt es?",
@@ -43,7 +43,7 @@
   },
   "section4": {
     "title": "Was ein Spiel wie dieses leisten kann",
-    "p1": "Es wird euer Intimleben nicht umkrempeln, und das sollte auch niemand von ihm verlangen. Was es gut kann, ist einem Gespräch einen Rahmen geben, das viele Paare nie wirklich geführt haben, demselben, das man auch <a href=\"/de/pikantes-paar-quiz/\">über pikante Fragen statt über Aufgaben</a> angehen kann. Weil die Karte die Frage stellt und nicht ihr.",
+    "p1": "Es wird euer Intimleben nicht umkrempeln, und das sollte auch niemand von ihm verlangen. Was es gut kann, ist einem Gespräch einen Rahmen geben, das viele Paare nie wirklich geführt haben, demselben, das man auch über pikante Fragen statt über Aufgaben angehen kann. Weil die Karte die Frage stellt und nicht ihr.",
     "p2": "Den Rest entscheidet ihr. Und so soll es auch sein!"
   },
   "jsonLd": {

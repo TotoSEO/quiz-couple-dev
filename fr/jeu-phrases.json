@@ -22,7 +22,7 @@
     "modeLectureTexte": "La phrase s'affiche, vous la complétez à voix haute tous les deux, et vous restez dessus le temps que vous voulez. Quand vous avez fini d'en parler, vous cliquez sur « Suivant ». C'est la version tranquille, sans chrono et sans points.",
     "modeChronoEmoji": "⏱️",
     "modeChronoTitre": "On répond en même temps",
-    "modeChronoTexte": "Vous cliquez sur « Lancer le chrono » et le décompte part : 3, 2, 1, GO. Au « GO », vous dites votre réponse tous les deux au même moment, sans réfléchir. Le jeu vous demande ensuite si c'était pareil ou pas, et il compte vos réponses communes jusqu'au bout.",
+    "modeChronoTexte": "Vous cliquez sur « Lancer le chrono » et le décompte part : 3, 2, 1, GO. Au « GO », vous dites votre réponse tous les deux au même moment, sans réfléchir. Le jeu vous demande ensuite si c'était pareil ou pas, et il compte vos réponses communes jusqu'au bout. Et si le chrono vous plaît, il y a la même idée en plus poussé avec des questions où <a href=\"/quiz-qui-connait-mieux-partenaire/\">l'un répond à la place de l'autre</a>.",
     "apres": "La phrase reste affichée pendant tout le tour, décompte compris : personne n'a besoin de la relire de mémoire. Et le bouton « Suivant » est là en permanence, même à côté du chrono. Si une phrase ne vous inspire pas, vous passez à la suivante."
   },
   "section3": {
@@ -32,9 +32,9 @@
   },
   "section4": {
     "title": "Quand sortir ce jeu",
-    "p1": "Le meilleur moment, c'est quand il ne se passe rien de spécial : un dimanche soir, un trajet en voiture, une salle d'attente, ou ces dîners où on a fait le tour de la journée et où <a href=\"/blog/questions-pour-mieux-se-connaitre-en-couple/\">on ne sait plus trop quoi se dire</a>.",
+    "p1": "Le meilleur moment, c'est quand il ne se passe rien de spécial : un dimanche soir, un trajet en voiture, une salle d'attente, ou ces dîners où on a fait le tour de la journée et où on ne sait plus trop quoi se dire.",
     "p2": "Ça marche aussi à distance. L'un des deux ouvre la page et lit la phrase à voix haute en appel vidéo. Pour le mode chrono, mettez le haut-parleur, le décompte doit être entendu des deux côtés.",
-    "p3": "Un dernier conseil : dites la première réponse qui vous vient. Celle qu'on cherche pendant dix secondes est presque toujours moins drôle que celle qui sort toute seule. Et si le chrono vous plaît, il y a la même idée en plus poussé avec des questions où <a href=\"/quiz-qui-connait-mieux-partenaire/\">l'un répond à la place de l'autre</a>."
+    "p3": "Un dernier conseil : dites la première réponse qui vous vient. Celle qu'on cherche pendant dix secondes est presque toujours moins drôle que celle qui sort toute seule."
   },
   "faq": {
     "title": "Questions fréquentes",

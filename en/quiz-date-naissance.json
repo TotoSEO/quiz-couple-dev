@@ -173,11 +173,11 @@
     "title": "What a birth date can tell you about a couple",
     "p1": "This compatibility test starts from one thing only: your two dates of birth. Most of the time, a birth date is just for wishing someone a happy birthday, but three traditions also read a personality in it: numerology, Western astrology and Chinese astrology. The test runs both your dates through all three.",
     "p2": "Numerology turns the date into a number, the <strong>life path</strong>, which says how a person moves through life. Western astrology looks at the day and the month to find your sign, and Chinese astrology looks at the year to find your animal. These three readings don't say the same thing, which is exactly why we look at all three.",
-    "p3": "At the end, you get an overall score, a score for each of the three readings and explanations about the two of you. If you'd rather have <a href=\"/en/love-compatibility-test/\">a questionnaire to fill in together</a>, there's also a twenty-question test about how you each see life as a couple.",
+    "p3": "At the end, you get an overall score, a score for each of the three readings and explanations about the two of you. If you'd rather have <a href=\"/en/love-compatibility-test/\">a questionnaire to fill in together</a>, there's also a twenty-question test about how you each see life as a couple, another that starts <a href=\"/en/zodiac-signs-names-compatibility/\">from your first names and star signs</a>, and <a href=\"/en/love-calculator/\">a calculator that only looks at your first names</a>.",
     "plus": [
       {
         "titre": "Can your date of birth tell you your love future?",
-        "texte": "<p>It's a question a lot of people ask, and the honest answer is no. A date of birth won't tell you who you'll meet, or when, or whether you'll ever get married. The test doesn't predict anything: it compares two personalities, as these three traditions describe them. Take it as a game, and as a good excuse to talk about your temperaments.</p>"
+        "texte": "<p>It's a question a lot of people ask, and the honest answer is no. A date of birth won't tell you who you'll meet, or when, or whether you'll ever get married. The test doesn't predict anything: it compares two personalities, as these three traditions describe them. Take it as a game, and as a good excuse to talk about your temperaments.</p><p>Plenty of people land on a page like this with another question in mind, and it isn't an astrology question. If that's you, you'd be better off with a test about <a href=\"/en/healthy-relationship-test/\">how you treat each other day to day</a>, or one that helps you get clear on <a href=\"/en/love-or-habit-test/\">what you still feel</a>. Those talk about what's going on between you today, not about what the stars were saying on the day you were born.</p>"
       }
     ]
   },
@@ -309,7 +309,6 @@
   "section6": {
     "title": "And if the score is low?",
     "p1": "Nothing serious happens! None of these three systems has ever predicted a break-up, and none has ever stopped a couple from lasting thirty years. A low score just means your two temperaments don't click on their own, and that you'll sometimes have to put into words what other couples understand without talking.",
-    "p2": "Plenty of people land on a page like this with another question in mind, and it isn't an astrology question. If that's you, you'd be better off with a test about <a href=\"/en/healthy-relationship-test/\">how you treat each other day to day</a>, or one that helps you get clear on <a href=\"/en/love-or-habit-test/\">what you still feel</a>. Those talk about what's going on between you today, not about what the stars were saying on the day you were born.",
     "tip": "Take the test together, on the same screen. Reading the three bars side by side is often what gets the conversation going."
   },
   "faq": {
@@ -323,7 +322,7 @@
     "q4": "Does a score of 40% mean we're going to split up?",
     "a4": "No. That figure measures agreement between two symbolic temperaments, not the strength of a relationship. It knows nothing of your history, your efforts, or what you've been through together. Take it as a reading grid that shows where understanding comes naturally and where it has to be worked at.",
     "q5": "How is this different from your first name and star sign test?",
-    "a5": "This one starts from your dates only and crosses three calculations. The test <a href=\"/en/zodiac-signs-names-compatibility/\">based on first names and zodiac signs</a> starts from your names, read with letter numerology, and from the signs you pick from a list. The two work well together, and doing both takes five minutes in total. And to <a href=\"/en/love-calculator/\">compare two first names without any astrology</a>, there's also the love calculator.",
+    "a5": "This one starts from your dates only and crosses three calculations. The test based on first names and zodiac signs starts from your names, read with letter numerology, and from the signs you pick from a list. The two work well together, and doing both takes five minutes in total. And to compare two first names without any astrology, there's also the love calculator.",
     "q6": "Are the results stored anywhere?",
     "a6": "No. The whole calculation runs in your browser, the dates go nowhere and nothing is kept once you close the page. You can redo the test as often as you like, with as many dates as you like."
   }

@@ -29,7 +29,7 @@
     "s2Tip": "Probeer dit: schrijf allebei je drie grootste zorgen over het ouderschap op, en vergelijk ze daarna. De verschillen laten vaak zien welke gesprekken het belangrijkst zijn.",
     "s3Title": "Hoe weet je of je klaar bent om ouder te worden: de tekenen die niet liegen",
     "s3p1": "Het ‘perfecte moment’ bestaat niet. Als je wacht tot alles klopt (geld, carrière, huis, emotionele rijpheid, wassende maan en Mercurius retrograde), kom je er nooit. Maar er zijn tekenen die niet liegen.",
-    "s3p2": "Jullie zijn waarschijnlijk klaar als jullie relatie goed zit, als jullie conflicten kunnen oplossen zonder elkaar kapot te maken, als de wens van jullie allebei komt (en niet van sociale druk), en als jullie het in elk geval over de onderwerpen hierboven hebben gehad. Omgekeerd: is jullie relatie wankel, hopen jullie dat een baby alles oplost, of staat een van jullie er niet echt achter… wacht dan.",
+    "s3p2": "Jullie zijn waarschijnlijk klaar als jullie relatie goed zit, als jullie <a href=\"/nl/toxische-relatie-test/\">conflicten kunnen oplossen zonder elkaar kapot te maken</a>, als de wens van jullie allebei komt (en niet van sociale druk), en als jullie het in elk geval over de onderwerpen hierboven hebben gehad. Omgekeerd: is jullie relatie wankel, hopen jullie dat een baby alles oplost, of staat een van jullie er niet echt achter… wacht dan.",
     "s3p3": "Een test zoals deze vervangt geen echte zelfreflectie (en zeker geen professionele begeleiding als dat nodig is). Maar het is een goed beginpunt om het gesprek te openen.",
     "s3Quote": "Klaar zijn betekent niet dat je geen angst hebt. Het betekent dat je genoeg vertrouwen hebt in jullie relatie om ondanks die angst verder te gaan.",
     "s4Title": "De meest gemaakte fout: niet praten over het ‘daarna’",
@@ -45,7 +45,6 @@
     "s6Title": "De test over 6 maanden opnieuw doen: waarom dat een goed idee is",
     "s6p1": "Jullie score van vandaag is een momentopname. Jullie antwoorden veranderen. Jullie financiën kunnen veranderen, jullie werk ook. Jullie relatie krijgt nieuwe uitdagingen (of wordt juist sterker). Daarom raden we aan om deze test over een paar maanden opnieuw te doen.",
     "s6p2": "Het gaat er niet om te wachten op een perfecte score. Het gaat erom te zien of jullie antwoorden de goede kant op gaan. Of de onderwerpen die jullie tegenhielden, loskomen. En vooral of de wens groeit of afneemt, want allebei is goed.",
-    "s6p3": "Ondertussen is ouderschap ook een kwestie van dagelijks bij elkaar passen. Weten of jullie <a href=\"/nl/hoeveel-hebben-we-gemeen/\">genoeg gemeen hebben</a> om zo'n groot project samen aan te gaan, telt mee. En is trouwen ook een onderwerp van gesprek, kijk dan of jullie <a href=\"/nl/klaar-om-te-trouwen-test/\">ook daarover op één lijn zitten</a>.",
     "faqTitle": "Veelgestelde vragen over ouderschap en relaties",
     "faq": [
       {
@@ -58,7 +57,7 @@
       },
       {
         "q": "Kan een baby een relatie in crisis redden?",
-        "a": "Nee. Dat is een gevaarlijke mythe. Een baby vergroot uit wat er al is. Gaat het goed in jullie relatie, dan maakt een kind jullie band waarschijnlijk sterker. Gaat het moeilijk, dan voegt een baby stress toe. Kijk voordat je aan een baby denkt eerst of <a href=\"/nl/toxische-relatie-test/\">jullie relatie toxische trekjes heeft</a>."
+        "a": "Nee. Dat is een gevaarlijke mythe. Een baby vergroot uit wat er al is. Gaat het goed in jullie relatie, dan maakt een kind jullie band waarschijnlijk sterker. Gaat het moeilijk, dan voegt een baby stress toe. Kijk voordat je aan een baby denkt eerst of jullie relatie toxische trekjes heeft."
       },
       {
         "q": "Op welke leeftijd ben je te oud voor een kind?",
@@ -72,6 +71,7 @@
         "q": "Hoeveel kost een kind in het eerste jaar?",
         "a": "Reken in het eerste jaar al snel op enkele duizenden euro's, zonder de kinderopvang, die de rekening makkelijk kan verdubbelen. De grootste kostenposten: luiers, voeding, kleding, spullen en zorgkosten die niet vergoed worden."
       }
-    ]
+    ],
+    "s3p4": "Ouderschap is ook een kwestie van dagelijks bij elkaar passen. Weten of jullie <a href=\"/nl/hoeveel-hebben-we-gemeen/\">genoeg gemeen hebben</a> om zo'n groot project samen aan te gaan, telt mee. En is trouwen ook een onderwerp van gesprek, kijk dan of jullie <a href=\"/nl/klaar-om-te-trouwen-test/\">ook daarover op één lijn zitten</a>."
   }
 }

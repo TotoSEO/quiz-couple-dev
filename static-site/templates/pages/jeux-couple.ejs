@@ -163,6 +163,7 @@
         <p><%- t(ns + ':section1.p1', '') %></p>
         <p><%- t(ns + ':section1.p2', '') %></p>
         <p><%- t(ns + ':section1.p3', '') %></p>
+        <% const s1p4 = t(ns + ':section1.p4', ''); if (s1p4) { %><p><%- s1p4 %></p><% } %>
       </div>
     </section>
 

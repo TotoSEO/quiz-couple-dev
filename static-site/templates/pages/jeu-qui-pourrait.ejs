@@ -118,6 +118,7 @@
         <p><%- t(ns + ':section2.p1', '') %></p>
         <p><%- t(ns + ':section2.p2', '') %></p>
         <p><%- t(ns + ':section2.p3', '') %></p>
+        <% const s2p4 = t(ns + ':section2.p4', ''); if (s2p4) { %><p><%- s2p4 %></p><% } %>
       </div>
     </section>
 
@@ -147,7 +148,7 @@
           <% } %>
         </ul>
       </div>
-      <p class="text-muted-foreground leading-relaxed mt-8"><%- t(ns + ':section4.apres', '') %></p>
+      <% const s4apres = t(ns + ':section4.apres', ''); if (s4apres) { %><p class="text-muted-foreground leading-relaxed mt-8"><%- s4apres %></p><% } %>
     </section>
 
     <section class="mb-4">

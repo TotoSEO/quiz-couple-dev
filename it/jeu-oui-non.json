@@ -50,7 +50,7 @@
   },
   "section4": {
     "title": "Esempi di situazioni del gioco",
-    "intro": "Ecco venti delle centoventi situazioni, così come il gioco le pone. C'è del molto concreto, del più impegnativo, e qualche argomento che quasi nessuno osa tirare fuori a bruciapelo:",
+    "intro": "Ecco venti delle centoventi situazioni, così come il gioco le pone. C'è del molto concreto, del più impegnativo, e qualche <a href=\"/it/quiz-coppia-piccante/\">argomento che quasi nessuno osa tirare fuori</a> a bruciapelo:",
     "apres": "Le altre 100 sono nel gioco, servite in un ordine diverso a ogni visita. Alcune pungono un po', e onestamente è anche lo scopo: un disaccordo su «Avere un migliore amico del sesso opposto» dice più di una serata intera di banalità. Se un argomento si inceppa, non spazzatelo via: potrebbe essere l'inizio di <a href=\"/it/domande-coppia/\">una vera conversazione in due</a>, e vale più della partita."
   },
   "faq": {
@@ -64,7 +64,7 @@
     "q4": "Si può giocare tra amici, o da soli?",
     "a4": "Il gioco è scritto per una coppia: le situazioni parlano di conto in comune, di suoceri o di intimità. Da soli funziona lo stesso, votate la vostra opinione e la confrontate con quella degli altri. Tra amici, alcune situazioni cadranno nel vuoto, ma niente lo vieta.",
     "q5": "Cosa succede alla fine delle 120 situazioni?",
-    "a5": "Non granché, ed è voluto: non c'è punteggio né classifica, il gioco vi dice semplicemente che avete visto tutto. Se il formato vi piace, <a href=\"/it/dilemmi-di-coppia/\">i dilemmi di coppia</a> funzionano sullo stesso principio dei voti, con patti impossibili al posto delle situazioni."
+    "a5": "Non granché, ed è voluto: non c'è punteggio né classifica, il gioco vi dice semplicemente che avete visto tutto. Se il formato vi piace, i dilemmi di coppia funzionano sullo stesso principio dei voti, con patti impossibili al posto delle situazioni."
   },
   "plus": [
     {
@@ -73,7 +73,7 @@
       "sous": [
         {
           "titre": "E in versione hot?",
-          "texte": "<p>Il nostro gioco resta sulle situazioni della vita di coppia, senza domande piccanti. Per una versione hot, da tenere per la fine della serata, ecco da dove cominciare:</p><ul><li>«Hai mai avuto voglia di me nel bel mezzo di un pranzo di famiglia?»</li><li>«Hai mai tenuto un messaggio piccante per rileggerlo dopo?»</li><li>«Ti piacerebbe provare un gioco piccante stasera?»</li><li>«Hai mai pensato a me in modo poco innocente al lavoro?»</li><li>«Diresti di sì a una notte in hotel, solo per noi due?»</li><li>«Preferisci che ci diciamo cosa vogliamo invece di indovinarlo?»</li></ul><p>Per andare oltre, ci sono <a href=\"/it/quiz-coppia-piccante/\">domande piccanti, dalla più dolce alla più audace</a>, da farsi faccia a faccia.</p>"
+          "texte": "<p>Il nostro gioco resta sulle situazioni della vita di coppia, senza domande piccanti. Per una versione hot, da tenere per la fine della serata, ecco da dove cominciare:</p><ul><li>«Hai mai avuto voglia di me nel bel mezzo di un pranzo di famiglia?»</li><li>«Hai mai tenuto un messaggio piccante per rileggerlo dopo?»</li><li>«Ti piacerebbe provare un gioco piccante stasera?»</li><li>«Hai mai pensato a me in modo poco innocente al lavoro?»</li><li>«Diresti di sì a una notte in hotel, solo per noi due?»</li><li>«Preferisci che ci diciamo cosa vogliamo invece di indovinarlo?»</li></ul>"
         }
       ]
     }
