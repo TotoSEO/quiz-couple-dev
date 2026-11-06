@@ -66,7 +66,13 @@
     "row7Analysis": "Bij meerdere vragen loopt het op hetzelfde punt vast: begin rustig met wat het zwaarst weegt",
     "row8Score": "0-19%",
     "row8Level": "Eerst praten",
-    "row8Analysis": "Veel om over te praten: een echt gesprek, op een dag dat het goed gaat, en hulp als het nodig is"
+    "row8Analysis": "Veel om over te praten: een echt gesprek, op een dag dat het goed gaat, en hulp als het nodig is",
+    "plus": [
+      {
+        "titre": "Houdt onze relatie stand?",
+        "texte": "<p>Geen enkele test kan dat zeggen, deze ook niet. Een score is een momentopname van jullie antwoorden van vandaag, geen voorspelling voor over tien jaar.</p><p>Wat onderzoek wel goed kent, is wat een relatie op den duur slijt. In het werk van psycholoog John Gottman is minachting het signaal dat het vaakst aan een breuk voorafgaat: met je ogen rollen als de ander praat, de kleine steken onder water, de toon waardoor de ander zich minder voelt. Hij zag ook dat koppels die bij elkaar blijven het na een botsing snel weer goedmaken, met een lief woord, een grapje of een hand op de arm.</p><p>Dus als jullie antwoorden vastlopen op communicatie of respect, kijk dan daar het eerst.</p>"
+      }
+    ]
   },
   "section4": {
     "title": "Fouten die je beter niet maakt bij een relatietest",

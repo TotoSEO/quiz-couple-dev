@@ -66,7 +66,13 @@
     "row7Analysis": "Es hakt bei mehreren Antworten an derselben Stelle: Sprecht das schwerste Thema in Ruhe an",
     "row8Score": "0-19 %",
     "row8Level": "Zum Reden",
-    "row8Analysis": "Viel, worüber ihr reden solltet: ein echtes Gespräch an einem guten Tag, und Hilfe, wenn nötig"
+    "row8Analysis": "Viel, worüber ihr reden solltet: ein echtes Gespräch an einem guten Tag, und Hilfe, wenn nötig",
+    "plus": [
+      {
+        "titre": "Hält unsere Beziehung?",
+        "texte": "<p>Das kann kein Test sagen, dieser auch nicht. Ein Ergebnis ist eine Momentaufnahme eurer Antworten von heute, keine Vorhersage für die nächsten zehn Jahre.</p><p>Was die Forschung dagegen gut kennt, ist das, was eine Beziehung mit der Zeit zermürbt. In den Arbeiten des Psychologen John Gottman ist Verachtung das Zeichen, das einer Trennung am häufigsten vorausgeht: die Augen verdrehen, wenn der andere spricht, die kleinen Spitzen, ein Ton, der ihn spüren lässt, dass er unter einem steht. Er hat außerdem beobachtet, dass Paare, die zusammenbleiben, nach einem Streit schnell wieder aufeinander zugehen, mit einem freundlichen Wort, einem Witz oder einer Hand auf dem Arm.</p><p>Wenn eure Antworten also bei der Kommunikation oder beim Respekt hängen, schaut genau dort zuerst hin.</p>"
+      }
+    ]
   },
   "section4": {
     "title": "Fehler, die ihr beim Paartest vermeiden solltet",

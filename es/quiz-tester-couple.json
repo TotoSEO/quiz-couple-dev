@@ -66,7 +66,13 @@
     "row7Analysis": "Se atasca en el mismo sitio en varias respuestas: abrid el tema que más pesa, con calma",
     "row8Score": "0-19 %",
     "row8Level": "Para hablarlo",
-    "row8Analysis": "Muchas cosas que deciros: una conversación de verdad un buen día, y ayuda si hace falta"
+    "row8Analysis": "Muchas cosas que deciros: una conversación de verdad un buen día, y ayuda si hace falta",
+    "plus": [
+      {
+        "titre": "¿Durará nuestra relación?",
+        "texte": "<p>Ningún test puede decirlo, tampoco este. Una puntuación es una foto de vuestras respuestas de hoy, no una predicción para dentro de diez años.</p><p>Lo que la investigación sí conoce bien es lo que desgasta una pareja con el tiempo. En los trabajos del psicólogo John Gottman, la señal que más a menudo anuncia una separación es el desprecio: poner los ojos en blanco cuando el otro habla, las pequeñas pullas, el tono que le hace sentirse inferior. También observó que las parejas que duran saben arreglar las cosas rápido después de un roce, con una palabra amable, una broma o una mano en el brazo.</p><p>Así que, si vuestras respuestas se atascan en la comunicación o el respeto, es ahí donde hay que mirar primero.</p>"
+      }
+    ]
   },
   "section4": {
     "title": "Errores a evitar al hacer un test de pareja",

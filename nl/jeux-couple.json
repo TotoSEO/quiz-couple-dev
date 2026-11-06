@@ -97,10 +97,16 @@
     "p1": "Een <strong class=\"text-foreground\">spelletje voor koppels</strong> lijkt niks bijzonders. En toch lost het een heel concreet probleem op: met z'n tweeën praat je uiteindelijk altijd over dezelfde dingen. De dag, het werk, wat we vanavond eten… Een spel geeft een kader, en dat kader geeft je de vrijheid om vragen te stellen die je anders nooit zomaar zou stellen.",
     "p2": "Daarom werkt een spel ook beter dan een film als je echt weer even samen wilt zijn. Voor een scherm zijn jullie twee mensen naast elkaar die ergens anders naar kijken. Bij een spel zijn jullie twee mensen die naar elkaar kijken. Na tien minuten voel je het verschil.",
     "p3": "De veertien spellen op deze pagina speel je online en gratis op één telefoon, behalve het partyspel, waarbij elk koppel op de eigen telefoon speelt. Niets aan te maken, niets te installeren, niets voor te bereiden.",
-    "p4": "En afhankelijk van het seizoen zorgen <a href=\"/nl/themaquiz-voor-koppels/\">de quizzen die met de kalender meegaan</a> voor een paar avonden apart: met Halloween <a href=\"/nl/wie-gaat-als-eerste-dood/\">wie van jullie eerst sterft in een horrorfilm</a> of <a href=\"/nl/welk-superschurkenduo-zijn-jullie/\">welk superschurkenduo jullie vormen</a>."
+    "p4": "En afhankelijk van het seizoen zorgen <a href=\"/nl/themaquiz-voor-koppels/\">de quizzen die met de kalender meegaan</a> voor een paar avonden apart: met Halloween <a href=\"/nl/wie-gaat-als-eerste-dood/\">wie van jullie eerst sterft in een horrorfilm</a> of <a href=\"/nl/welk-superschurkenduo-zijn-jullie/\">welk superschurkenduo jullie vormen</a>.",
+    "plus": [
+      {
+        "titre": "Spelletjes voor twee zonder materiaal, alleen een telefoon",
+        "texte": "<p>Geen kaarten te kopen, geen bord uit te pakken: op het partyspel na past alles op één telefoon, en de meeste spellen speel je hardop. Daardoor werken ze overal waar je niets bij de hand hebt: in de auto, in de trein, in een rij of in een restaurant. De een leest voor, de ander antwoordt, en jullie geven de telefoon aan elkaar door.</p><p>Kies in de auto de spellen die je kunt spelen zonder naar het scherm te kijken, zoals kiezen tussen twee opties of zeggen wie van jullie wat doet: de passagier leest, de bestuurder antwoordt, en niemand haalt de ogen van de weg!</p>"
+      }
+    ]
   },
   "section2": {
-    "title": "Welk spel past bij welk moment",
+    "title": "Welk spel past bij welk moment: in de auto, thuis of op afstand",
     "intro": "Dat is de echte vraag. En het antwoord hangt veel minder af van jullie smaak dan van het moment waarin jullie zitten.",
     "headerMoment": "Het moment",
     "headerJeu": "Het spel",

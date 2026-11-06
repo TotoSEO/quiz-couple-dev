@@ -97,10 +97,16 @@
     "p1": "A <strong class=\"text-foreground\">couple game</strong> looks like nothing at all. And yet it solves a very concrete problem: as a pair, you always end up circling the same subjects. The day, work, what's for dinner… A game imposes a frame, and that frame gives you permission to ask questions you'd never ask out of nowhere.",
     "p2": "It's also why a game works better than a film when you genuinely want to reconnect. In front of a screen you're two people side by side looking elsewhere. Around a game you're two people looking at each other. You feel the difference within ten minutes.",
     "p3": "The fourteen games on this page run online, free, on one phone, except the party game, where each couple plays on their own. Nothing to create, nothing to install, nothing to prepare.",
-    "p4": "And depending on the season, <a href=\"/en/special-couple-quizzes/\">the quizzes that change with the calendar</a> add a few evenings of their own: for Halloween, which of you <a href=\"/en/who-dies-first-in-a-horror-movie-quiz/\">dies first in a horror movie</a> or <a href=\"/en/which-supervillain-duo-are-you-quiz/\">which supervillain duo you form</a>."
+    "p4": "And depending on the season, <a href=\"/en/special-couple-quizzes/\">the quizzes that change with the calendar</a> add a few evenings of their own: for Halloween, which of you <a href=\"/en/who-dies-first-in-a-horror-movie-quiz/\">dies first in a horror movie</a> or <a href=\"/en/which-supervillain-duo-are-you-quiz/\">which supervillain duo you form</a>.",
+    "plus": [
+      {
+        "titre": "Games for two without anything, just a phone",
+        "texte": "<p>No cards to buy, no board to set up: apart from the party game, everything fits on one phone, and most of the games are played out loud. So they work wherever you have nothing to hand, in the car, on the train, in a queue or at a restaurant. One reads, the other answers, and you pass the phone back and forth.</p><p>In the car, pick the ones you can play without looking at the screen, like choosing between two options or saying which of you two does what: the passenger reads, the driver answers, and nobody takes their eyes off the road!</p>"
+      }
+    ]
   },
   "section2": {
-    "title": "Which game to pick, depending on the moment",
+    "title": "Which game to pick: in the car, at home or long distance",
     "intro": "That's the real question. And the answer depends far less on your tastes than on the moment you happen to be in.",
     "headerMoment": "The moment",
     "headerJeu": "The game",

@@ -66,7 +66,13 @@
     "row7Analysis": "Si inceppa nello stesso punto in diverse risposte: aprite l'argomento che pesa di più, con calma",
     "row8Score": "0-19 %",
     "row8Level": "Da parlarne",
-    "row8Analysis": "Molte cose da dirvi: una vera conversazione in un giorno buono, e un aiuto se serve"
+    "row8Analysis": "Molte cose da dirvi: una vera conversazione in un giorno buono, e un aiuto se serve",
+    "plus": [
+      {
+        "titre": "La nostra relazione durerà?",
+        "texte": "<p>Nessun test può dirlo, nemmeno questo. Un punteggio è una foto delle vostre risposte di oggi, non una previsione per i prossimi dieci anni.</p><p>Quello che la ricerca conosce bene, invece, è ciò che logora una coppia nel tempo. Nei lavori dello psicologo John Gottman, il segnale che più spesso annuncia una separazione è il disprezzo: alzare gli occhi al cielo quando l'altro parla, le piccole frecciatine, il tono che lo fa sentire inferiore. Ha anche notato che le coppie che durano sanno ricucire in fretta dopo uno scontro, con una parola gentile, una battuta o una mano sul braccio.</p><p>Quindi, se le vostre risposte si inceppano sulla comunicazione o sul rispetto, è lì che conviene guardare per primo.</p>"
+      }
+    ]
   },
   "section4": {
     "title": "Errori da evitare durante un test di coppia",
