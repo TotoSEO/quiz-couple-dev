@@ -495,6 +495,12 @@
     "description": "Poned la fecha de vuestra boda y la herramienta os dice qué bodas celebráis, cuándo caen las siguientes y la lista completa de 1 a 80 años.",
     "metaDescription": "Aniversarios de boda año por año: la lista completa de 1 a 80 años (papel, algodón, plata, oro...) y un cálculo gratis para saber qué bodas celebráis."
   },
+  "differenceAge": {
+    "title": "Diferencia de edad en pareja: el cálculo exacto, al día",
+    "shortTitle": "Diferencia de edad en pareja",
+    "description": "Poned vuestras dos fechas de nacimiento y la herramienta os da la diferencia exacta, la regla de la mitad más siete y vuestros 100 años entre los dos.",
+    "metaDescription": "Calcula la diferencia de edad en pareja: los años, meses y días que os lleváis, la regla de la mitad más siete y cuándo sumaréis 100 años entre los dos."
+  },
   "testDureeCelibat": {
     "title": "¿Cuánto tiempo voy a estar soltero? Test online",
     "shortTitle": "¿Cuánto tiempo seguiré soltero?",

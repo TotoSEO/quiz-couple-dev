@@ -1,0 +1,195 @@
+{
+  "hero": {
+    "badge": "Gratis tool",
+    "title": "Leeftijdsverschil in een relatie: hoeveel zit er tussen jullie?",
+    "highlight": "Leeftijdsverschil in een relatie",
+    "description": "Vul jullie twee geboortedata in en de tool geeft <strong>jullie exacte leeftijdsverschil</strong>, in jaren, maanden en dagen, de regel van de helft plus zeven, de periode van het jaar waarin jullie verschil verandert, en de dag waarop jullie samen 100 worden.",
+    "subtitle": "Zonder account. De data blijven op je telefoon, er wordt niets verstuurd."
+  },
+  "form": {
+    "titre": "Jullie twee geboortedata",
+    "moi": "Jij",
+    "autre": "Je partner",
+    "jour": "Dag",
+    "moisLabel": "Maand",
+    "annee": "Jaar",
+    "mois": [
+      "januari",
+      "februari",
+      "maart",
+      "april",
+      "mei",
+      "juni",
+      "juli",
+      "augustus",
+      "september",
+      "oktober",
+      "november",
+      "december"
+    ],
+    "moisDate": [
+      "januari",
+      "februari",
+      "maart",
+      "april",
+      "mei",
+      "juni",
+      "juli",
+      "augustus",
+      "september",
+      "oktober",
+      "november",
+      "december"
+    ],
+    "joursSemaine": [
+      "zondag",
+      "maandag",
+      "dinsdag",
+      "woensdag",
+      "donderdag",
+      "vrijdag",
+      "zaterdag"
+    ],
+    "dateAffichee": "{{j}} {{mois}} {{a}}",
+    "dateAvecJour": "{{js}} {{date}}",
+    "prenom": "Voornaam (niet verplicht)",
+    "prenom1Ex": "Bijv. Sanne",
+    "prenom2Ex": "Bijv. Daan",
+    "jourMois": "{{j}} {{mois}}",
+    "premier": "1",
+    "lancer": "Bereken ons leeftijdsverschil",
+    "aide": "De data worden in deze browser bewaard: kom je terug op de pagina, dan staat je resultaat er meteen.",
+    "erreurVide": "Kies de dag, de maand en het jaar van beide geboortedata.",
+    "erreur": "Een van de data bestaat niet. Kijk de dag en de maand nog even na.",
+    "erreurFutur": "Een van de data ligt in de toekomst. Kijk het jaar nog even na."
+  },
+  "unites": {
+    "jour": [
+      "dag",
+      "dagen"
+    ],
+    "mois": [
+      "maand",
+      "maanden"
+    ],
+    "an": [
+      "jaar",
+      "jaar"
+    ]
+  },
+  "et": " en ",
+  "virgule": ", ",
+  "quand": {
+    "aujourdhui": "vandaag",
+    "demain": "morgen",
+    "dans": "over {{n}} dagen"
+  },
+  "resultat": {
+    "plusVous": "Jij bent {{ecart}} ouder dan {{autre}}.",
+    "plusNom": "{{aine}} is {{ecart}} ouder dan {{cadet}}.",
+    "objVous": "jij",
+    "objPartenaire": "je partner",
+    "objNom": "{{nom}}",
+    "sujPartenaire": "Je partner",
+    "memeTitre": "Geen dag verschil!",
+    "memeJour": "Jullie zijn op dezelfde dag geboren: dat is zeldzaam, en heel handig om elkaars verjaardag nooit te vergeten.",
+    "bandes": [
+      {
+        "titre": "Even oud, of bijna",
+        "texte": "Jullie zijn opgegroeid met dezelfde liedjes, dezelfde tekenfilms en dezelfde ietwat gekke leraren: niemand hoeft de verwijzingen uit te leggen."
+      },
+      {
+        "titre": "Een heel klein verschil",
+        "texte": "Jullie zijn van dezelfde generatie, een paar jaar meer of minder. De schoolherinneringen lijken op elkaar, en dat levert meestal eindeloos veel grappen op."
+      },
+      {
+        "titre": "Een gewoon verschil",
+        "texte": "Genoeg om je iets te herinneren wat de ander nooit heeft meegemaakt, niet genoeg om in het dagelijks leven veel te veranderen."
+      },
+      {
+        "titre": "Een flink verschil",
+        "texte": "Jullie hadden vast niet dezelfde eerste telefoon, en dat geeft mooie discussies. In het dagelijks leven telt vooral wat jullie willen en wat jullie plannen."
+      },
+      {
+        "titre": "Een groot verschil",
+        "texte": "Boven de tien jaar zie je het verschil meer. Over plannen (kinderen, werk, levensritme) kun je beter vroeg en eerlijk praten, want daar draait het vaak om."
+      },
+      {
+        "titre": "Een heel groot verschil",
+        "texte": "Het kan heel goed werken, als jullie er openlijk over praten: kinderen, gezondheid, het einde van een loopbaan... en hoe anderen ernaar kijken, wat soms zwaarder weegt dan het verschil zelf."
+      }
+    ],
+    "regleTitre": "De regel van de helft plus zeven",
+    "regleCalcul": "{{age}} ÷ 2 + 7 = {{min}} jaar",
+    "regleExplique": "De oudste is {{age}}: volgens de regel moet de ander minstens {{min}} zijn.",
+    "regleOk": "De jongste is {{jeune}}: jullie zitten binnen de regel.",
+    "regleNon": "De jongste is {{jeune}}: vanaf {{date}} zitten jullie binnen de regel.",
+    "mineur": "De jongste is minderjarig. Tussen een volwassene en een minderjarige is het leeftijdsverschil geen rekensom: de wet beschermt iedereen onder de 18, en niemand mag je onder druk zetten. Voelt iets niet goed, praat er dan over met een volwassene die je vertrouwt, of bel de Kindertelefoon op 0800-0432 (gratis), in België Awel op 102.",
+    "faitsTitre": "Wat jullie twee data vertellen",
+    "naissance": "Toen de jongste werd geboren, had de ander al {{jours}} geleefd.",
+    "annee": "Van {{du}} tot en met {{au}} zit er {{haut}} tussen jullie, de rest van het jaar {{bas}}.",
+    "anneeMemeAge": "Van {{du}} tot en met {{au}} zit er 1 jaar tussen jullie, de rest van het jaar zijn jullie even oud.",
+    "anneeConstante": "Jullie verjaardagen vallen op dezelfde dag: het verschil blijft het hele jaar {{n}}.",
+    "cumul": "Opgeteld worden jullie samen {{n}} jaar op {{date}}, {{dans}}.",
+    "cumulAujourdhui": "Opgeteld zijn jullie vandaag samen {{n}} jaar: dat moet gevierd worden!",
+    "lienBouton": "Link naar ons resultaat kopiëren",
+    "lienCopie": "Link gekopieerd! Jullie twee data zitten erin.",
+    "modifier": "Data wijzigen",
+    "avis": "Laat een review achter"
+  },
+  "suite": {
+    "titre": "En passen jullie bij elkaar?",
+    "texte": "Leeftijd zegt niet of jullie voor elkaar gemaakt zijn. De compatibiliteitstest kijkt naar jullie waarden, wensen en plannen, in twintig vragen.",
+    "bouton": "Doe de compatibiliteitstest"
+  },
+  "section1": {
+    "title": "Hoe bereken je het leeftijdsverschil in een relatie?",
+    "p1": "Om het leeftijdsverschil tussen twee mensen te berekenen, tel je gewoon de tijd tussen hun twee geboortedata. Is de een bijvoorbeeld geboren op 12 maart 1994 en de ander op 3 juli 1997, dan is het verschil 3 jaar, 3 maanden en 21 dagen.",
+    "p2": "Klinkt simpel, maar er is een detail dat veel mensen verrast: het verschil ‘in jaren’ verandert in de loop van het jaar. In het voorbeeld hierboven is de oudste tussen 12 maart en 2 juli al jarig geweest en de ander nog niet, dus zit er dan 4 jaar tussen jullie leeftijden. De rest van het jaar 3. De tool hierboven laat zien op welke data dat bij jullie omslaat.",
+    "p3": "Daarnaast krijg je de regel van de helft plus zeven en de dag waarop jullie leeftijden samen 100 jaar zijn. En voor een berekening met een knipoog is er ook de liefdestest waarvoor <a href=\"/nl/liefdestest/\">twee voornamen genoeg zijn</a>!"
+  },
+  "section2": {
+    "title": "Wat is de regel van de helft plus zeven?",
+    "p1": "Het is een regel die je vooral in Engelstalige landen hoort, ‘half your age plus seven’. Je neemt de leeftijd van de oudste, deelt die door twee en telt er zeven bij op: volgens de regel is dat de minimumleeftijd van de ander. Op je 30e ligt de grens dus op 22, op je 40e op 27 en op je 50e op 32.",
+    "p2": "Nieuw is hij niet: hij staat al begin twintigste eeuw in een boek van Max O'Rell, een Franse schrijver die veel over de Engelsen schreef. Wetenschappelijk is er natuurlijk niets aan. Het is eerder een manier om te zeggen: ‘daarboven gaan de mensen praten’.",
+    "p3": "Grappig is dat hij met de tijd soepeler wordt. Bij 10 jaar verschil klopt de regel pas als de jongste 24 is en de oudste 34. In het echte leven accepteren mensen vaak grotere verschillen: in een onderzoek van twee Duitse onderzoekers, Sascha Schwarz en Manfred Hassebrauck, onder 21.245 mensen, accepteerden mannen gemiddeld een partner tot 10 jaar jonger en 4,5 jaar ouder, en vrouwen een partner tot 8 jaar ouder en 5 jaar jonger."
+  },
+  "section3": {
+    "title": "Is een groot leeftijdsverschil een probleem in een relatie?",
+    "p1": "Meestal is het verschil zelf niet het probleem, maar wat het in het dagelijks leven verandert. Met 3 jaar verschil heb je dezelfde schoolherinneringen en dezelfde liedjes. Met 15 jaar denkt de een misschien al aan zijn pensioen terwijl de ander net begint met werken.",
+    "p2": "Volgens cijfers van het CBS, waar Kassa in 2019 over schreef, ging van de stellen die in 2003 gingen samenwonen ongeveer een kwart uit elkaar als het leeftijdsverschil hooguit vijf jaar was, tegen 30 procent na twaalf jaar bij een groter verschil. Bij grote verschillen bleek de relatie wel iets stabieler als de man ouder was. Een Amerikaans onderzoek van de Emory University vond iets vergelijkbaars, maar de onderzoekers geven zelf toe dat het misschien niet aan het verschil ligt, eerder aan het soort stellen met een groot verschil.",
+    "p3": "Wat telt, zijn vooral de onderwerpen die door het verschil dringender worden:",
+    "points": [
+      "<strong>Kinderen:</strong> of, wanneer, hoeveel. Bij een groot verschil komt die vraag voor een van de twee eerder, en <a href=\"/nl/klaar-voor-een-baby-test/\">of jullie klaar zijn voor een kind</a> kun je het best samen nagaan.",
+      "<strong>Het levensritme:</strong> uitgaan, vrienden, de energie in het weekend. Dat is geen kwestie van leeftijd maar van wensen, en wensen kun je naast elkaar leggen.",
+      "<strong>Hoe anderen kijken:</strong> familie, vrienden, grapjes. Dat weegt soms zwaarder dan het verschil zelf, en je kunt er beter samen over praten dan er ieder apart onder te lijden.",
+      "<strong>De toekomst:</strong> pensioen, gezondheid, wie voor wie zorgt. Niet heel romantisch, maar er vroeg over praten voorkomt nare verrassingen."
+    ],
+    "apres": "Uiteindelijk telt of <a href=\"/nl/passen-we-bij-elkaar/\">jullie waarden en plannen bij elkaar passen</a> veel meer dan de jaren op jullie identiteitskaart."
+  },
+  "section4": {
+    "title": "Wat is het gemiddelde leeftijdsverschil in een relatie?",
+    "p1": "In Frankrijk is de man gemiddeld tweeënhalf jaar ouder dan zijn partner, volgens het Franse statistiekbureau Insee. In 56 procent van de stellen is de man de oudste, in 14 procent de vrouw, en in 30 procent zijn ze op een jaar na even oud. Maar 8 procent van de stellen heeft tien jaar of meer verschil.",
+    "p2": "In Duitsland waren vrouwen in 2022 bij hun eerste huwelijk gemiddeld 32,6 jaar en mannen 35,1, volgens het Duitse statistiekbureau. Het verschil is daar sinds 2002 licht gekrompen, van 3,0 naar 2,5 jaar.",
+    "p3": "Bij stellen van hetzelfde geslacht zijn de verschillen groter: in Frankrijk zat er in 2017 bij 27 procent van de huwelijken tussen twee mannen en bij 14 procent van de huwelijken tussen twee vrouwen minstens tien jaar tussen de twee, tegen 11 procent bij huwelijken tussen een man en een vrouw."
+  },
+  "faq": {
+    "title": "Jullie vragen over leeftijdsverschil in een relatie",
+    "q1": "Wat is het ideale leeftijdsverschil in een relatie?",
+    "a1": "Dat bestaat niet. Wat telt, zijn dezelfde wensen en plannen die dezelfde kant op gaan. Ter info: in Frankrijk is de man gemiddeld tweeënhalf jaar ouder dan zijn partner (Insee).",
+    "q2": "Hoe bereken je een leeftijdsverschil?",
+    "a2": "Tel de tijd tussen de twee geboortedata: eerst de hele jaren, dan de maanden, dan de dagen. De tool bovenaan de pagina doet dat tot op de dag, en vertelt je ook in welk deel van het jaar jullie verschil ‘in jaren’ met één omhooggaat.",
+    "q3": "Hoe werkt de regel van de helft plus zeven?",
+    "a3": "Je deelt de leeftijd van de oudste door twee en telt er zeven bij op: volgens de regel is dat de minimumleeftijd van de ander. Op je 36e geeft dat 25. Het is een vuistregel uit de volksmond, geen wetenschappelijke regel.",
+    "q4": "Is 10 jaar leeftijdsverschil veel?",
+    "a4": "Het komt minder vaak voor dan je denkt: in Frankrijk heeft maar 8 procent van de stellen tien jaar of meer verschil (Insee). Volgens het CBS gaan stellen met meer dan vijf jaar verschil wel iets vaker uit elkaar, maar het zijn vooral de wensen en de plannen die tellen.",
+    "q5": "Is het zeldzaam dat de vrouw ouder is?",
+    "a5": "Steeds minder. In Frankrijk is dat zo bij 14 procent van de stellen, en bij 16 procent van de stellen die in de jaren 2000 zijn begonnen, tegen 10 procent in de jaren 1960 (Insee).",
+    "q6": "Worden onze geboortedata bewaard?",
+    "a6": "Nee. Ze blijven in je browser, op je telefoon of computer, zodat het resultaat verschijnt als je terugkomt. Er wordt niets naar een server gestuurd."
+  },
+  "jsonLd": {
+    "name": "Leeftijdsverschil berekenen voor stellen",
+    "about": "Exact leeftijdsverschil tussen twee geboortedata en de regel van de helft plus zeven"
+  }
+}

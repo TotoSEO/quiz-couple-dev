@@ -495,6 +495,12 @@
     "description": "Enter your wedding date and see which anniversary you are celebrating, when the next ones fall, and the full list from year 1 to 80.",
     "metaDescription": "Wedding anniversaries by year: the traditional name of every anniversary from 1 to 80 years (paper, tin, silver, gold...) and a free calculator for yours."
   },
+  "differenceAge": {
+    "title": "Age Gap Calculator: Your Exact Age Difference as a Couple",
+    "shortTitle": "Age gap calculator",
+    "description": "Enter both dates of birth and see your exact age difference, the half-your-age-plus-seven rule, and when your ages will add up to 100.",
+    "metaDescription": "Age gap calculator for couples: your exact age difference in years, months and days, the half-your-age-plus-seven rule, and when your ages add up to 100."
+  },
   "testDureeCelibat": {
     "title": "How long will I be single? Online test",
     "shortTitle": "How long will I stay single?",

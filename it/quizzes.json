@@ -495,6 +495,12 @@
     "description": "Inserite la data del vostro matrimonio e scoprite che nozze festeggiate, quando arrivano le prossime e la lista completa, anno per anno.",
     "metaDescription": "Anniversari di matrimonio: i nomi delle nozze anno per anno (carta, legno, argento, oro...) e un calcolo gratis per sapere che nozze festeggiate."
   },
+  "differenceAge": {
+    "title": "Differenza di età nella coppia: il calcolo esatto, al giorno",
+    "shortTitle": "Differenza di età nella coppia",
+    "description": "Inserite le vostre due date di nascita: lo strumento vi dà la differenza esatta, la regola della metà più sette e quando farete 100 anni in due.",
+    "metaDescription": "Calcolate la differenza di età nella coppia al giorno: anni, mesi e giorni che vi separano, la regola della metà più sette e quando farete 100 anni in due."
+  },
   "testDureeCelibat": {
     "title": "Quanto tempo resterò single? Test online",
     "shortTitle": "Quanto tempo resterò single?",
