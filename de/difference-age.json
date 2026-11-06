@@ -1,0 +1,195 @@
+{
+  "hero": {
+    "badge": "Kostenloses Tool",
+    "title": "Altersunterschied in der Beziehung: Wie viele Jahre liegen zwischen euch?",
+    "highlight": "Altersunterschied in der Beziehung",
+    "description": "Gebt eure beiden Geburtsdaten ein, und das Tool zeigt euch <strong>euren genauen Altersunterschied</strong> in Jahren, Monaten und Tagen, die Regel „Hälfte plus sieben“, den Zeitraum im Jahr, in dem sich euer Abstand ändert, und den Tag, an dem ihr zusammen 100 Jahre alt seid.",
+    "subtitle": "Ohne Anmeldung. Die Daten bleiben auf eurem Handy, nichts wird verschickt."
+  },
+  "form": {
+    "titre": "Eure beiden Geburtsdaten",
+    "moi": "Du",
+    "autre": "Dein Schatz",
+    "jour": "Tag",
+    "moisLabel": "Monat",
+    "annee": "Jahr",
+    "mois": [
+      "Januar",
+      "Februar",
+      "März",
+      "April",
+      "Mai",
+      "Juni",
+      "Juli",
+      "August",
+      "September",
+      "Oktober",
+      "November",
+      "Dezember"
+    ],
+    "moisDate": [
+      "Januar",
+      "Februar",
+      "März",
+      "April",
+      "Mai",
+      "Juni",
+      "Juli",
+      "August",
+      "September",
+      "Oktober",
+      "November",
+      "Dezember"
+    ],
+    "joursSemaine": [
+      "Sonntag",
+      "Montag",
+      "Dienstag",
+      "Mittwoch",
+      "Donnerstag",
+      "Freitag",
+      "Samstag"
+    ],
+    "dateAffichee": "{{j}}. {{mois}} {{a}}",
+    "dateAvecJour": "{{js}}, {{date}}",
+    "prenom": "Vorname (freiwillig)",
+    "prenom1Ex": "z. B. Lena",
+    "prenom2Ex": "z. B. Jonas",
+    "jourMois": "{{j}}. {{mois}}",
+    "premier": "1",
+    "lancer": "Unseren Altersunterschied berechnen",
+    "aide": "Die Daten werden in diesem Browser gespeichert: Wenn ihr wiederkommt, erscheint euer Ergebnis von allein.",
+    "erreurVide": "Wählt Tag, Monat und Jahr beider Geburtsdaten.",
+    "erreur": "Eines der Daten gibt es nicht. Prüft Tag und Monat.",
+    "erreurFutur": "Eines der Daten liegt in der Zukunft. Prüft das Jahr."
+  },
+  "unites": {
+    "jour": [
+      "Tag",
+      "Tage"
+    ],
+    "mois": [
+      "Monat",
+      "Monate"
+    ],
+    "an": [
+      "Jahr",
+      "Jahre"
+    ]
+  },
+  "et": " und ",
+  "virgule": ", ",
+  "quand": {
+    "aujourdhui": "heute",
+    "demain": "morgen",
+    "dans": "in {{n}} Tagen"
+  },
+  "resultat": {
+    "plusVous": "Du bist {{ecart}} älter als {{autre}}.",
+    "plusNom": "{{aine}} ist {{ecart}} älter als {{cadet}}.",
+    "objVous": "du",
+    "objPartenaire": "dein Schatz",
+    "objNom": "{{nom}}",
+    "sujPartenaire": "Dein Schatz",
+    "memeTitre": "Nicht ein Tag Unterschied!",
+    "memeJour": "Ihr seid am selben Tag geboren: Das ist selten und sehr praktisch, um den Geburtstag des anderen nie zu vergessen.",
+    "bandes": [
+      {
+        "titre": "Gleich alt, oder fast",
+        "texte": "Ihr seid mit denselben Liedern, denselben Zeichentrickserien und denselben etwas verrückten Lehrern groß geworden: Die Anspielungen muss euch niemand erklären."
+      },
+      {
+        "titre": "Ein ganz kleiner Unterschied",
+        "texte": "Ihr seid aus derselben Generation, ein paar Jahre hin oder her. Die Schulerinnerungen ähneln sich, und das sorgt meistens für endlose Witze."
+      },
+      {
+        "titre": "Ein klassischer Unterschied",
+        "texte": "Genug, damit sich einer an etwas erinnert, das der andere nicht mehr kennt, aber nicht genug, um im Alltag viel zu ändern."
+      },
+      {
+        "titre": "Ein spürbarer Unterschied",
+        "texte": "Euer erstes Handy war bestimmt nicht dasselbe, und das gibt schöne Diskussionen. Im Alltag zählt vor allem, was ihr wollt und was ihr plant."
+      },
+      {
+        "titre": "Ein großer Unterschied",
+        "texte": "Ab zehn Jahren merkt man den Abstand mehr. Über Pläne (Kinder, Arbeit, Lebensrhythmus) lohnt es sich, früh und offen zu reden, denn oft entscheidet sich dort alles."
+      },
+      {
+        "titre": "Ein sehr großer Unterschied",
+        "texte": "Das kann sehr gut funktionieren, solange ihr offen darüber redet: Kinder, Gesundheit, das Ende des Berufslebens... und die Blicke der anderen, die manchmal schwerer wiegen als der Abstand selbst."
+      }
+    ],
+    "regleTitre": "Die Regel „Hälfte plus sieben“",
+    "regleCalcul": "{{age}} ÷ 2 + 7 = {{min}} Jahre",
+    "regleExplique": "Die ältere Person ist {{age}}: Laut Regel sollte die andere mindestens {{min}} sein.",
+    "regleOk": "Die jüngere ist {{jeune}}: Ihr liegt innerhalb der Regel.",
+    "regleNon": "Die jüngere ist {{jeune}}: Ab dem {{date}} liegt ihr innerhalb der Regel.",
+    "mineur": "Die jüngere Person ist minderjährig. Zwischen einem Erwachsenen und einem Minderjährigen ist der Altersunterschied keine Rechenaufgabe: Das Gesetz schützt Menschen unter 18, und niemand darf dich unter Druck setzen. Wenn dir etwas komisch vorkommt, sprich mit einem Erwachsenen, dem du vertraust, oder ruf die Nummer gegen Kummer an: 116 111, kostenlos und anonym.",
+    "faitsTitre": "Was eure beiden Daten verraten",
+    "naissance": "Als die jüngere Person geboren wurde, hatte die andere schon {{jours}} gelebt.",
+    "annee": "Vom {{du}} bis zum {{au}} beträgt euer Abstand {{haut}}, den Rest des Jahres {{bas}}.",
+    "anneeMemeAge": "Vom {{du}} bis zum {{au}} beträgt euer Abstand 1 Jahr, den Rest des Jahres seid ihr gleich alt.",
+    "anneeConstante": "Eure Geburtstage fallen auf denselben Tag: Euer Abstand beträgt das ganze Jahr über {{n}}.",
+    "cumul": "Zusammengerechnet seid ihr {{n}} Jahre alt am {{date}}, also {{dans}}.",
+    "cumulAujourdhui": "Zusammengerechnet seid ihr heute {{n}} Jahre alt: Das muss gefeiert werden!",
+    "lienBouton": "Link zu unserem Ergebnis kopieren",
+    "lienCopie": "Link kopiert! Er enthält eure beiden Daten.",
+    "modifier": "Daten ändern",
+    "avis": "Bewertung abgeben"
+  },
+  "suite": {
+    "titre": "Und wie steht es um eure Kompatibilität?",
+    "texte": "Das Alter sagt nicht, ob ihr füreinander gemacht seid. Der Kompatibilitätstest schaut auf eure Werte, eure Wünsche und eure Pläne, in zwanzig Fragen.",
+    "bouton": "Den Kompatibilitätstest machen"
+  },
+  "section1": {
+    "title": "Wie berechnet man den Altersunterschied in einer Beziehung?",
+    "p1": "Um den Altersunterschied zwischen zwei Menschen zu berechnen, zählt man einfach die Zeit zwischen ihren beiden Geburtsdaten. Ist der eine zum Beispiel am 12. März 1994 geboren und die andere am 3. Juli 1997, beträgt der Unterschied 3 Jahre, 3 Monate und 21 Tage.",
+    "p2": "Klingt einfach, aber ein kleines Detail überrascht viele: Der Abstand „in Jahren“ ändert sich im Lauf des Jahres. Im Beispiel oben hat der Ältere zwischen dem 12. März und dem 2. Juli schon Geburtstag gehabt, die andere noch nicht, und dann liegen zwischen den beiden Altersangaben 4 Jahre. Den Rest des Jahres sind es 3. Das Tool oben zeigt euch, an welchen Tagen das bei euch umspringt.",
+    "p3": "Dazu gibt es die Regel „Hälfte plus sieben“ und den Tag, an dem eure beiden Alter zusammen 100 Jahre ergeben. Und wer es lieber verspielt mag, findet auch den Liebesrechner, bei dem <a href=\"/de/liebesrechner/\">zwei Vornamen reichen</a>."
+  },
+  "section2": {
+    "title": "Was ist die Regel „Hälfte plus sieben“?",
+    "p1": "Die Regel hört man vor allem in englischsprachigen Ländern, als „half your age plus seven“. Man nimmt das Alter der älteren Person, teilt es durch zwei und zählt sieben dazu: Das ergibt laut Regel das Mindestalter der anderen. Mit 30 liegt die Grenze also bei 22, mit 40 bei 27 und mit 50 bei 32.",
+    "p2": "Neu ist sie nicht: Sie taucht schon Anfang des 20. Jahrhunderts in einem Buch von Max O'Rell auf, einem französischen Autor, der viel über die Engländer geschrieben hat. Wissenschaftlich ist daran natürlich nichts. Eher eine Art zu sagen: „Darüber hinaus fangen die Leute an zu reden.“",
+    "p3": "Witzig ist, dass sie mit der Zeit lockerer wird. Bei 10 Jahren Abstand ist die Regel erst erfüllt, wenn der Jüngere 24 ist und der Ältere 34. Im echten Leben akzeptieren viele größere Abstände: In einer Studie der Psychologen Sascha Schwarz und Manfred Hassebrauck mit 21.245 Teilnehmenden akzeptierten Männer im Schnitt eine Partnerin bis zu 10 Jahre jünger und 4,5 Jahre älter, Frauen einen Partner bis zu 8 Jahre älter und 5 Jahre jünger."
+  },
+  "section3": {
+    "title": "Ist ein großer Altersunterschied ein Problem in der Beziehung?",
+    "p1": "Meistens ist nicht der Abstand selbst das Problem, sondern das, was er im Alltag verändert. Mit 3 Jahren Unterschied hat man dieselben Schulerinnerungen und dieselben Lieder. Mit 15 denkt einer vielleicht schon an die Rente, während der andere gerade ins Berufsleben startet.",
+    "p2": "Die Forschung ist sich nicht einig. Eine Studie der Emory University in den USA mit rund 3.000 Verheirateten fand ein höheres Scheidungsrisiko, je größer der Abstand: etwa 18 % mehr bei 5 Jahren und 39 % mehr bei 10 Jahren. Die Autoren geben aber selbst zu, dass es vielleicht nicht am Abstand liegt, sondern an der Art von Paaren, die große Abstände haben. Und in Großbritannien kam die nationale Statistikbehörde 2008 zu dem Schluss, dass der Altersunterschied kein echtes Risiko für eine Ehe ist.",
+    "p3": "Was zählt, sind vor allem die Themen, die der Abstand dringlicher macht:",
+    "points": [
+      "<strong>Kinder:</strong> ob, wann, wie viele. Bei einem großen Abstand stellt sich die Frage für einen von beiden früher, und <a href=\"/de/elternschafts-bereitschaftstest/\">ob ihr bereit seid, Eltern zu werden</a>, prüft ihr am besten zu zweit.",
+      "<strong>Der Lebensrhythmus:</strong> Ausgehen, Freunde, die Energie am Wochenende. Das ist keine Frage des Alters, sondern der Wünsche, und Wünsche lassen sich vergleichen.",
+      "<strong>Die Blicke der anderen:</strong> Familie, Freunde, Sprüche. Sie wiegen manchmal schwerer als der Abstand selbst, und es ist besser, zu zweit darüber zu reden, als jeder für sich darunter zu leiden.",
+      "<strong>Die Zukunft:</strong> Rente, Gesundheit, wer sich um wen kümmert. Nicht sehr romantisch, aber früh darüber zu reden erspart böse Überraschungen."
+    ],
+    "apres": "Am Ende zählt, ob <a href=\"/de/liebeskompatibilitaet-test/\">eure Werte und eure Pläne zusammenpassen</a>, viel mehr als die Jahre in euren Ausweisen."
+  },
+  "section4": {
+    "title": "Wie groß ist der durchschnittliche Altersunterschied in einer Beziehung?",
+    "p1": "In Deutschland waren Frauen 2022 bei ihrer ersten Heirat im Schnitt 32,6 Jahre alt und Männer 35,1 Jahre, so das Statistische Bundesamt. Der Altersunterschied ist damit seit 2002 leicht geschrumpft, von 3,0 auf 2,5 Jahre.",
+    "p2": "Zum Vergleich: In Frankreich ist der Mann in 56 % der Paare älter, in 14 % die Frau, und in 30 % sind beide auf ein Jahr genau gleich alt. Nur bei 8 % der Paare liegen dort zehn Jahre oder mehr dazwischen, so das französische Statistikamt Insee.",
+    "p3": "Bei gleichgeschlechtlichen Paaren sind die Abstände größer: In Frankreich lagen 2017 bei 27 % der Ehen zwischen zwei Männern und bei 14 % der Ehen zwischen zwei Frauen mindestens zehn Jahre zwischen den beiden, gegenüber 11 % bei Ehen zwischen Mann und Frau."
+  },
+  "faq": {
+    "title": "Eure Fragen zum Altersunterschied in der Beziehung",
+    "q1": "Welcher Altersunterschied ist in einer Beziehung ideal?",
+    "a1": "Den gibt es nicht. Was zählt, sind dieselben Wünsche und Pläne, die in dieselbe Richtung gehen. Nur so zur Info: Bei der ersten Heirat sind Männer in Deutschland im Schnitt 2,5 Jahre älter als Frauen (2022).",
+    "q2": "Wie berechnet man einen Altersunterschied?",
+    "a2": "Zählt die Zeit zwischen den beiden Geburtsdaten: erst die vollen Jahre, dann die Monate, dann die Tage. Das Tool oben auf der Seite macht das auf den Tag genau und sagt euch außerdem, in welchem Teil des Jahres euer Abstand „in Jahren“ um eins steigt.",
+    "q3": "Wie funktioniert die Regel „Hälfte plus sieben“?",
+    "a3": "Man teilt das Alter der älteren Person durch zwei und zählt sieben dazu: Das ist laut Regel das Mindestalter der anderen. Mit 36 ergibt das 25. Eine Faustregel aus dem Volksmund, keine wissenschaftliche Regel.",
+    "q4": "Sind 10 Jahre Altersunterschied viel?",
+    "a4": "Es ist seltener, als man denkt: In Frankreich liegen nur bei 8 % der Paare zehn Jahre oder mehr zwischen den beiden (Insee). Das hindert ein Paar nicht daran, gut zu funktionieren, am meisten zählen die Wünsche und die Pläne.",
+    "q5": "Ist es selten, dass die Frau älter ist?",
+    "a5": "Immer weniger. In Frankreich ist die Frau in 14 % der Paare älter, und bei den Paaren aus den 2000er-Jahren sind es 16 %, gegenüber 10 % bei denen aus den 1960er-Jahren (Insee).",
+    "q6": "Werden unsere Geburtsdaten gespeichert?",
+    "a6": "Nein. Sie bleiben in eurem Browser, auf dem Handy oder dem Computer, damit das Ergebnis erscheint, wenn ihr wiederkommt. Nichts wird an einen Server geschickt."
+  },
+  "jsonLd": {
+    "name": "Altersunterschied-Rechner für Paare",
+    "about": "Genauer Altersunterschied zwischen zwei Geburtsdaten und die Regel Hälfte plus sieben"
+  }
+}

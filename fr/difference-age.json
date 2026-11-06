@@ -1,0 +1,195 @@
+{
+  "hero": {
+    "badge": "Outil gratuit",
+    "title": "Différence d'âge en couple : votre écart au jour près",
+    "highlight": "Différence d'âge en couple",
+    "description": "Entrez vos deux dates de naissance : l'outil vous donne <strong>votre écart exact</strong>, en années, mois et jours, la règle de la moitié plus sept, le moment de l'année où votre écart change, et la date de vos 100 ans à deux.",
+    "subtitle": "Aucune inscription. Les dates restent dans votre téléphone, rien n'est envoyé."
+  },
+  "form": {
+    "titre": "Vos deux dates de naissance",
+    "moi": "Vous",
+    "autre": "Votre partenaire",
+    "jour": "Jour",
+    "moisLabel": "Mois",
+    "annee": "Année",
+    "mois": [
+      "Janvier",
+      "Février",
+      "Mars",
+      "Avril",
+      "Mai",
+      "Juin",
+      "Juillet",
+      "Août",
+      "Septembre",
+      "Octobre",
+      "Novembre",
+      "Décembre"
+    ],
+    "moisDate": [
+      "janvier",
+      "février",
+      "mars",
+      "avril",
+      "mai",
+      "juin",
+      "juillet",
+      "août",
+      "septembre",
+      "octobre",
+      "novembre",
+      "décembre"
+    ],
+    "joursSemaine": [
+      "dimanche",
+      "lundi",
+      "mardi",
+      "mercredi",
+      "jeudi",
+      "vendredi",
+      "samedi"
+    ],
+    "dateAffichee": "{{j}} {{mois}} {{a}}",
+    "dateAvecJour": "{{js}} {{date}}",
+    "prenom": "Prénom (facultatif)",
+    "prenom1Ex": "Ex : Léa",
+    "prenom2Ex": "Ex : Tom",
+    "jourMois": "{{j}} {{mois}}",
+    "premier": "1er",
+    "lancer": "Calculer notre écart",
+    "aide": "Les dates sont gardées dans ce navigateur : en revenant sur la page, votre résultat s'affiche tout seul.",
+    "erreurVide": "Choisissez le jour, le mois et l'année des deux dates de naissance.",
+    "erreur": "Une des dates n'existe pas. Vérifiez le jour et le mois.",
+    "erreurFutur": "Une des dates est dans le futur. Vérifiez l'année."
+  },
+  "unites": {
+    "jour": [
+      "jour",
+      "jours"
+    ],
+    "mois": [
+      "mois",
+      "mois"
+    ],
+    "an": [
+      "an",
+      "ans"
+    ]
+  },
+  "et": " et ",
+  "virgule": ", ",
+  "quand": {
+    "aujourdhui": "aujourd'hui",
+    "demain": "demain",
+    "dans": "dans {{n}} jours"
+  },
+  "resultat": {
+    "plusVous": "Vous avez {{ecart}} de plus que {{autre}}.",
+    "plusNom": "{{aine}} a {{ecart}} de plus que {{cadet}}.",
+    "objVous": "vous",
+    "objPartenaire": "votre partenaire",
+    "objNom": "{{nom}}",
+    "sujPartenaire": "Votre partenaire",
+    "memeTitre": "Pas un jour d'écart !",
+    "memeJour": "Vous êtes nés le même jour : c'est rare, et c'est très pratique pour ne jamais oublier l'anniversaire de l'autre.",
+    "bandes": [
+      {
+        "titre": "Le même âge, ou presque",
+        "texte": "Vous avez grandi avec les mêmes chansons, les mêmes dessins animés et les mêmes profs un peu fous : pas besoin de vous expliquer les références."
+      },
+      {
+        "titre": "Un tout petit écart",
+        "texte": "Vous êtes de la même génération, à quelques années près. Les souvenirs d'école se ressemblent, et c'est souvent une source de blagues sans fin."
+      },
+      {
+        "titre": "Un écart classique",
+        "texte": "Assez pour que l'un se souvienne d'un truc que l'autre n'a pas connu, pas assez pour que ça change grand-chose au quotidien."
+      },
+      {
+        "titre": "Un vrai écart",
+        "texte": "Vous n'avez sûrement pas eu le même premier téléphone, et ça donne de bons débats. Au quotidien, ce sont surtout vos envies et vos projets qui comptent."
+      },
+      {
+        "titre": "Un grand écart",
+        "texte": "Au-delà de dix ans, l'écart se voit plus. Les projets (enfants, travail, rythme de vie) méritent qu'on en parle tôt et franchement, et c'est souvent là que tout se joue."
+      },
+      {
+        "titre": "Un très grand écart",
+        "texte": "Ça peut très bien marcher, à condition d'en parler sans tabou : enfants, santé, fin de carrière... et le regard des autres, qui pèse parfois plus que l'écart lui-même."
+      }
+    ],
+    "regleTitre": "La règle de la moitié plus sept",
+    "regleCalcul": "{{age}} ÷ 2 + 7 = {{min}} ans",
+    "regleExplique": "La personne la plus âgée a {{age}} ans : selon la règle, l'autre doit avoir au moins {{min}} ans.",
+    "regleOk": "La plus jeune en a {{jeune}} : vous êtes dans la règle.",
+    "regleNon": "La plus jeune en a {{jeune}} : vous serez dans la règle à partir du {{date}}.",
+    "mineur": "La personne la plus jeune est mineure. Entre un adulte et un mineur, l'écart d'âge n'est pas une affaire de calcul : la loi protège les moins de 18 ans, et personne n'a le droit de vous mettre la pression. Si quelque chose vous met mal à l'aise, parlez-en à un adulte de confiance ou appelez le 119, gratuit, jour et nuit.",
+    "faitsTitre": "Ce que disent vos deux dates",
+    "naissance": "Quand la personne la plus jeune est née, l'autre avait déjà vécu {{jours}}.",
+    "annee": "Du {{du}} au {{au}}, vous avez {{haut}} d'écart ; le reste de l'année, {{bas}}.",
+    "anneeMemeAge": "Du {{du}} au {{au}}, vous avez 1 an d'écart ; le reste de l'année, vous avez le même âge.",
+    "anneeConstante": "Vos anniversaires tombent le même jour : votre écart reste de {{n}} toute l'année.",
+    "cumul": "À vous deux, vous aurez {{n}} ans le {{date}}, {{dans}}.",
+    "cumulAujourdhui": "À vous deux, vous avez {{n}} ans aujourd'hui : ça se fête !",
+    "lienBouton": "Copier le lien de notre résultat",
+    "lienCopie": "Lien copié ! Il garde vos deux dates.",
+    "modifier": "Changer les dates",
+    "avis": "Laisser un avis"
+  },
+  "suite": {
+    "titre": "Et côté compatibilité ?",
+    "texte": "L'âge ne dit pas si vous êtes faits l'un pour l'autre. Le test de compatibilité amoureuse regarde vos valeurs, vos envies et vos projets, en vingt questions.",
+    "bouton": "Faire le test de compatibilité"
+  },
+  "section1": {
+    "title": "Comment calculer la différence d'âge dans un couple ?",
+    "p1": "Pour calculer la différence d'âge entre deux personnes, il suffit de compter le temps qui sépare leurs deux dates de naissance. Par exemple, si l'un est né le 12 mars 1994 et l'autre le 3 juillet 1997, l'écart est de 3 ans, 3 mois et 21 jours.",
+    "p2": "Ça paraît simple, mais il y a un petit détail qui étonne souvent : l'écart « en années » change pendant l'année. Avec l'exemple d'au-dessus, entre le 12 mars et le 2 juillet, l'aîné a déjà eu son anniversaire et pas l'autre, du coup les deux âges ont 4 ans d'écart. Le reste de l'année, 3 ans. L'outil ci-dessus vous dit à quelles dates ça bascule pour vous.",
+    "p3": "Il ajoute la règle de la moitié plus sept et la date où vos deux âges additionnés feront 100 ans. Et pour un calcul plus fantaisiste, il y a aussi la calculatrice où <a href=\"/calculatrice-de-l-amour/\">deux prénoms suffisent</a> !"
+  },
+  "section2": {
+    "title": "La règle de la moitié plus sept, c'est quoi ?",
+    "p1": "C'est une règle qu'on entend surtout dans les pays anglophones, « half your age plus seven ». On prend l'âge de la personne la plus âgée, on le divise par deux et on ajoute sept : ça donne l'âge minimum de l'autre, d'après la règle. Par exemple, à 30 ans, la limite est à 22 ans, à 40 ans à 27 ans, et à 50 ans à 32 ans.",
+    "p2": "Elle ne date pas d'hier : on la trouve déjà au début du XXe siècle dans un livre de Max O'Rell, un auteur français qui écrivait beaucoup sur les Anglais. Bien sûr, elle n'a rien de scientifique. C'est plutôt une façon de dire « au-delà, les gens vont jaser ».",
+    "p3": "Ce qui est amusant, c'est qu'elle devient plus souple avec le temps. Avec 10 ans d'écart, elle n'est respectée qu'à partir du moment où le plus jeune a 24 ans, et l'aîné 34. Dans la réalité, les gens acceptent souvent des écarts plus grands : dans une étude de deux chercheurs allemands, Sascha Schwarz et Manfred Hassebrauck, auprès de 21 245 personnes, les hommes acceptaient en moyenne une partenaire jusqu'à 10 ans plus jeune et 4 ans et demi plus âgée, et les femmes un partenaire jusqu'à 8 ans plus âgé et 5 ans plus jeune."
+  },
+  "section3": {
+    "title": "Une grande différence d'âge, est-ce un problème dans un couple ?",
+    "p1": "La plupart du temps, ce n'est pas l'écart lui-même qui pose problème, c'est ce qu'il change dans la vie de tous les jours. Avec 3 ans d'écart, on a les mêmes souvenirs d'école et les mêmes chansons. Avec 15 ans, l'un pense parfois déjà à la retraite quand l'autre commence sa carrière.",
+    "p2": "Du côté des études, ce n'est pas tranché. Une étude de l'université Emory, aux États-Unis, menée auprès d'environ 3 000 personnes mariées, trouvait un risque de divorce plus élevé quand l'écart grandit : environ 18 % de plus à 5 ans d'écart et 39 % à 10 ans. Mais ses auteurs reconnaissent que ce n'est peut-être pas l'écart qui joue, plutôt le genre de couples qui ont de grands écarts. Et au Royaume-Uni, l'office national de statistique concluait en 2008 que l'écart d'âge n'était pas un vrai risque pour un mariage.",
+    "p3": "Ce qui compte, ce sont surtout les sujets que l'écart rend plus pressants :",
+    "points": [
+      "<strong>Les enfants :</strong> en vouloir ou pas, quand, combien. Avec un grand écart, la question se pose plus tôt pour l'un des deux, et <a href=\"/test-parentalite-couple/\">être prêts à devenir parents</a> se vérifie à deux.",
+      "<strong>Le rythme de vie :</strong> les sorties, les amis, l'énergie du week-end. Ce n'est pas une question d'âge mais d'envies, et les envies, ça se compare.",
+      "<strong>Le regard des autres :</strong> la famille, les amis, les blagues. Il pèse parfois plus que l'écart lui-même, et mieux vaut en parler entre vous qu'en souffrir chacun de son côté.",
+      "<strong>L'avenir :</strong> la retraite, la santé, qui s'occupera de qui. Ce n'est pas très romantique, mais en parler tôt évite les mauvaises surprises."
+    ],
+    "apres": "Au fond, savoir si <a href=\"/test-compatibilite-amoureuse/\">vos valeurs et vos projets s'accordent</a> compte bien plus que les années inscrites sur vos cartes d'identité."
+  },
+  "section4": {
+    "title": "Quelle est la différence d'âge moyenne dans un couple ?",
+    "p1": "En France, l'homme a en moyenne 2 ans et demi de plus que sa conjointe, d'après l'Insee, qui a regardé les couples d'un homme et d'une femme vivant ensemble en 2012. Dans 56 % de ces couples, l'homme est le plus âgé, dans 30 % les deux ont le même âge à un an près, et dans 14 % c'est la femme qui est la plus âgée.",
+    "p2": "Les grands écarts sont plus rares qu'on ne le croit : seuls 8 % des couples ont au moins 10 ans d'écart. Et la femme plus âgée devient doucement moins rare : c'était le cas de 10 % des couples formés dans les années 1960, et de 16 % de ceux formés dans les années 2000.",
+    "p3": "Chez les couples de même sexe, les écarts sont plus grands. Parmi les mariages célébrés en 2017, 27 % des mariages entre deux hommes et 14 % des mariages entre deux femmes réunissaient deux personnes d'au moins 10 ans d'écart, contre 11 % des mariages entre un homme et une femme."
+  },
+  "faq": {
+    "title": "Vos questions sur la différence d'âge en couple",
+    "q1": "Quelle est la différence d'âge idéale dans un couple ?",
+    "a1": "Il n'y en a pas. Ce qui compte, c'est d'avoir les mêmes envies et des projets qui vont dans le même sens. Pour l'anecdote, en France, l'homme a en moyenne 2 ans et demi de plus que sa conjointe (Insee, couples de 2012).",
+    "q2": "Comment calculer une différence d'âge ?",
+    "a2": "Comptez le temps entre les deux dates de naissance : les années pleines, puis les mois, puis les jours. L'outil en haut de la page le fait au jour près, et vous dit en plus à quelle période de l'année votre écart « en années » augmente d'un an.",
+    "q3": "Comment marche la règle de la moitié plus sept ?",
+    "a3": "On divise l'âge de la personne la plus âgée par deux et on ajoute sept : c'est l'âge minimum de l'autre selon la règle. À 36 ans, ça donne 25 ans. C'est une règle populaire, pas une règle scientifique.",
+    "q4": "10 ans d'écart dans un couple, c'est beaucoup ?",
+    "a4": "C'est moins courant qu'on l'imagine : en France, 8 % des couples ont au moins 10 ans d'écart (Insee, 2012). Ça n'empêche pas un couple de marcher, ce sont surtout les envies et les projets qui comptent.",
+    "q5": "Est-ce rare que la femme soit plus âgée ?",
+    "a5": "De moins en moins. En France, c'est le cas de 14 % des couples, et de 16 % des couples formés dans les années 2000, contre 10 % de ceux des années 1960 (Insee).",
+    "q6": "Nos dates de naissance sont-elles enregistrées ?",
+    "a6": "Non. Elles restent dans votre navigateur, sur votre téléphone ou votre ordinateur, pour que le résultat s'affiche quand vous revenez. Rien n'est envoyé sur un serveur."
+  },
+  "jsonLd": {
+    "name": "Calculateur de différence d'âge en couple",
+    "about": "Écart d'âge exact entre deux dates de naissance et règle de la moitié plus sept"
+  }
+}

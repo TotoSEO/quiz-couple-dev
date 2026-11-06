@@ -1,0 +1,195 @@
+{
+  "hero": {
+    "badge": "Free tool",
+    "title": "Age gap calculator: how many years, months and days apart are you?",
+    "highlight": "Age gap calculator",
+    "description": "Enter your two dates of birth and the tool gives you <strong>your exact age difference</strong>, in years, months and days, the half-your-age-plus-seven rule, the time of year when your gap changes, and the date your ages add up to 100.",
+    "subtitle": "No sign-up. The dates stay on your phone, nothing is sent anywhere."
+  },
+  "form": {
+    "titre": "Your two dates of birth",
+    "moi": "You",
+    "autre": "Your partner",
+    "jour": "Day",
+    "moisLabel": "Month",
+    "annee": "Year",
+    "mois": [
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "July",
+      "August",
+      "September",
+      "October",
+      "November",
+      "December"
+    ],
+    "moisDate": [
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "July",
+      "August",
+      "September",
+      "October",
+      "November",
+      "December"
+    ],
+    "joursSemaine": [
+      "Sunday",
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday"
+    ],
+    "dateAffichee": "{{mois}} {{j}}, {{a}}",
+    "dateAvecJour": "{{js}}, {{date}}",
+    "prenom": "First name (optional)",
+    "prenom1Ex": "e.g. Emma",
+    "prenom2Ex": "e.g. Jake",
+    "jourMois": "{{mois}} {{j}}",
+    "premier": "1",
+    "lancer": "Calculate our age gap",
+    "aide": "The dates are saved in this browser: come back to the page and your result shows up on its own.",
+    "erreurVide": "Choose the day, month and year of both dates of birth.",
+    "erreur": "One of the dates doesn't exist. Check the day and the month.",
+    "erreurFutur": "One of the dates is in the future. Check the year."
+  },
+  "unites": {
+    "jour": [
+      "day",
+      "days"
+    ],
+    "mois": [
+      "month",
+      "months"
+    ],
+    "an": [
+      "year",
+      "years"
+    ]
+  },
+  "et": " and ",
+  "virgule": ", ",
+  "quand": {
+    "aujourdhui": "today",
+    "demain": "tomorrow",
+    "dans": "in {{n}} days"
+  },
+  "resultat": {
+    "plusVous": "You are {{ecart}} older than {{autre}}.",
+    "plusNom": "{{aine}} is {{ecart}} older than {{cadet}}.",
+    "objVous": "you",
+    "objPartenaire": "your partner",
+    "objNom": "{{nom}}",
+    "sujPartenaire": "Your partner",
+    "memeTitre": "Not a single day apart!",
+    "memeJour": "You were born on the same day: that's rare, and very handy for never forgetting each other's birthday.",
+    "bandes": [
+      {
+        "titre": "The same age, or almost",
+        "texte": "You grew up with the same songs, the same cartoons and the same slightly crazy teachers: no need to explain the references."
+      },
+      {
+        "titre": "A tiny gap",
+        "texte": "You're from the same generation, give or take a few years. Your school memories look alike, and that's usually an endless source of jokes."
+      },
+      {
+        "titre": "A classic gap",
+        "texte": "Enough for one of you to remember something the other never knew, not enough to change much day to day."
+      },
+      {
+        "titre": "A real gap",
+        "texte": "You probably didn't have the same first phone, which makes for good debates. Day to day, what matters most is what you both want and plan."
+      },
+      {
+        "titre": "A big gap",
+        "texte": "Past ten years, the gap shows more. Plans (kids, work, pace of life) are worth talking about early and honestly, and that's often where it all plays out."
+      },
+      {
+        "titre": "A very big gap",
+        "texte": "It can work very well, as long as you talk about it openly: kids, health, the end of a career... and what other people think, which sometimes weighs more than the gap itself."
+      }
+    ],
+    "regleTitre": "The half-your-age-plus-seven rule",
+    "regleCalcul": "{{age}} ÷ 2 + 7 = {{min}}",
+    "regleExplique": "The older person is {{age}}: according to the rule, the other should be at least {{min}}.",
+    "regleOk": "The younger one is {{jeune}}: you're within the rule.",
+    "regleNon": "The younger one is {{jeune}}: you'll be within the rule from {{date}}.",
+    "mineur": "The younger person is under 18. Between an adult and a minor, the age gap isn't a matter of maths: the law protects under-18s, and nobody has the right to pressure you. If something makes you uncomfortable, talk to an adult you trust, or call Childline on 0800 1111 in the UK or the Childhelp hotline on 1-800-422-4453 in the US.",
+    "faitsTitre": "What your two dates say",
+    "naissance": "When the younger one was born, the other had already lived {{jours}}.",
+    "annee": "From {{du}} to {{au}}, your ages are {{haut}} apart; the rest of the year, {{bas}}.",
+    "anneeMemeAge": "From {{du}} to {{au}}, your ages are 1 year apart; the rest of the year, you're the same age.",
+    "anneeConstante": "Your birthdays fall on the same day: the gap stays at {{n}} all year round.",
+    "cumul": "Your ages will add up to {{n}} on {{date}}, {{dans}}.",
+    "cumulAujourdhui": "Your ages add up to {{n}} today: time to celebrate!",
+    "lienBouton": "Copy the link to our result",
+    "lienCopie": "Link copied! It keeps both dates.",
+    "modifier": "Change the dates",
+    "avis": "Leave a review"
+  },
+  "suite": {
+    "titre": "What about compatibility?",
+    "texte": "Age doesn't tell you whether you're made for each other. The love compatibility test looks at your values, your wishes and your plans, in twenty questions.",
+    "bouton": "Take the compatibility test"
+  },
+  "section1": {
+    "title": "How do you calculate the age gap in a couple?",
+    "p1": "To calculate the age difference between two people, you just count the time between their two dates of birth. For example, if one was born on March 12, 1994 and the other on July 3, 1997, the gap is 3 years, 3 months and 21 days.",
+    "p2": "Sounds simple, but there's a little detail that often surprises people: the gap \"in years\" changes during the year. With the example above, between March 12 and July 2, the older one has already had their birthday and the other hasn't, so your two ages are 4 years apart. The rest of the year, 3 years. The tool above tells you on which dates it switches for you.",
+    "p3": "It also adds the half-your-age-plus-seven rule and the date when your two ages will add up to 100. And for a more playful calculation, there's also the love calculator, where <a href=\"/en/love-calculator/\">two first names are enough</a>!"
+  },
+  "section2": {
+    "title": "What is the half-your-age-plus-seven rule?",
+    "p1": "It's a rule you hear a lot in English-speaking countries. You take the age of the older person, divide it by two and add seven: that gives the youngest acceptable age for the other, according to the rule. For example, at 30 the limit is 22, at 40 it's 27, and at 50 it's 32.",
+    "p2": "It's not new: it already shows up at the turn of the 20th century in a book by Max O'Rell, a French writer who wrote a lot about the English. Of course, there's nothing scientific about it. It's more a way of saying \"beyond that, people will talk\".",
+    "p3": "The funny thing is that it gets looser over time. With a 10-year gap, the rule is only met once the younger one is 24 and the older one 34. In real life, people often accept wider gaps: in a study of 21,245 people by two German researchers, Sascha Schwarz and Manfred Hassebrauck, men accepted on average a partner up to 10 years younger and 4.5 years older, and women a partner up to 8 years older and 5 years younger. In a famous study across 37 cultures, psychologist David Buss found the same pattern everywhere: men preferred younger partners, women older ones."
+  },
+  "section3": {
+    "title": "Is a big age gap a problem in a relationship?",
+    "p1": "Most of the time, it isn't the gap itself that causes trouble, it's what it changes in everyday life. With 3 years between you, you have the same school memories and the same songs. With 15, one of you may already be thinking about retirement while the other is starting a career.",
+    "p2": "Research doesn't settle it. A study from Emory University in the US, of about 3,000 married people, found a higher risk of divorce as the gap grows: about 18% more with a 5-year gap and 39% more with a 10-year gap. But its authors admit it may not be the gap itself, rather the kind of couples who have big gaps. In the UK, a 2003 study by the Office for National Statistics also found more divorces as the gap grew, whichever partner was older, while a 2008 study concluded the age gap was no real risk to a marriage.",
+    "p3": "What matters most are the topics the gap makes more pressing:",
+    "points": [
+      "<strong>Kids:</strong> whether you want them, when, how many. With a big gap, the question comes sooner for one of you, and <a href=\"/en/parenthood-readiness-test/\">being ready to become parents</a> is something to check together.",
+      "<strong>Pace of life:</strong> going out, friends, weekend energy. It's not about age but about what you want, and that can be compared.",
+      "<strong>What others think:</strong> family, friends, jokes. It sometimes weighs more than the gap itself, and it's better to talk about it together than to suffer through it on your own.",
+      "<strong>The future:</strong> retirement, health, who will look after whom. Not very romantic, but talking about it early avoids bad surprises."
+    ],
+    "apres": "In the end, whether <a href=\"/en/love-compatibility-test/\">your values and your plans match</a> counts far more than the years on your ID cards."
+  },
+  "section4": {
+    "title": "What is the average age gap in a couple?",
+    "p1": "In the US, about a third of married couples (33.9%) are within two years of each other, according to the Census Bureau's 2017 figures. The husband is two to three years older in 19.6% of couples and the wife in 6.9%; with six to nine years, it's 11.2% for husbands against 2.8% for wives.",
+    "p2": "On average, the gap is about two and a half years in the US and about three years in the UK. And couples where the woman is older are less rare than they used to be: in England and Wales, the share of women marrying a younger man rose from 15% in 1963 to 26% in 1998.",
+    "p3": "Same-sex couples tend to have wider gaps. In 2023, the Census Bureau found that 24% of same-sex couples were within two years of each other, against 35% of opposite-sex couples."
+  },
+  "faq": {
+    "title": "Your questions about age gaps in couples",
+    "q1": "What is the ideal age gap in a relationship?",
+    "a1": "There isn't one. What matters is wanting the same things and having plans that go in the same direction. For the record, the average gap is about two and a half years in the US.",
+    "q2": "How do you calculate an age gap?",
+    "a2": "Count the time between the two dates of birth: full years first, then months, then days. The tool at the top of the page does it to the day, and also tells you during which part of the year your gap \"in years\" goes up by one.",
+    "q3": "How does the half-your-age-plus-seven rule work?",
+    "a3": "Divide the older person's age by two and add seven: that's the youngest acceptable age for the other, according to the rule. At 36, that gives 25. It's a popular rule of thumb, not a scientific one.",
+    "q4": "Is a 10-year age gap a lot?",
+    "a4": "It's less common than people think: in the US, even a gap of six to nine years with an older husband only concerns 11.2% of married couples (2017). That doesn't stop a couple from working, what you want and plan together matters most.",
+    "q5": "Is it rare for the woman to be older?",
+    "a5": "Less and less. In the US, the wife is two to three years older in 6.9% of married couples and six to nine years older in 2.8% (2017). In England and Wales, the share of women marrying a younger man went from 15% to 26% between 1963 and 1998.",
+    "q6": "Are our dates of birth saved anywhere?",
+    "a6": "No. They stay in your browser, on your phone or computer, so the result shows up when you come back. Nothing is sent to a server."
+  },
+  "jsonLd": {
+    "name": "Age gap calculator for couples",
+    "about": "Exact age difference between two dates of birth and the half-your-age-plus-seven rule"
+  }
+}

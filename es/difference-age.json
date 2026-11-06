@@ -1,0 +1,195 @@
+{
+  "hero": {
+    "badge": "Herramienta gratis",
+    "title": "Diferencia de edad en pareja: ¿cuántos años, meses y días os lleváis?",
+    "highlight": "Diferencia de edad en pareja",
+    "description": "Poned vuestras dos fechas de nacimiento y la herramienta os da <strong>la diferencia exacta</strong>, en años, meses y días, la regla de la mitad más siete, el momento del año en que cambia vuestra diferencia y la fecha en que sumaréis 100 años entre los dos.",
+    "subtitle": "Sin registro. Las fechas se quedan en vuestro móvil, no se envía nada."
+  },
+  "form": {
+    "titre": "Vuestras dos fechas de nacimiento",
+    "moi": "Tú",
+    "autre": "Tu pareja",
+    "jour": "Día",
+    "moisLabel": "Mes",
+    "annee": "Año",
+    "mois": [
+      "Enero",
+      "Febrero",
+      "Marzo",
+      "Abril",
+      "Mayo",
+      "Junio",
+      "Julio",
+      "Agosto",
+      "Septiembre",
+      "Octubre",
+      "Noviembre",
+      "Diciembre"
+    ],
+    "moisDate": [
+      "enero",
+      "febrero",
+      "marzo",
+      "abril",
+      "mayo",
+      "junio",
+      "julio",
+      "agosto",
+      "septiembre",
+      "octubre",
+      "noviembre",
+      "diciembre"
+    ],
+    "joursSemaine": [
+      "domingo",
+      "lunes",
+      "martes",
+      "miércoles",
+      "jueves",
+      "viernes",
+      "sábado"
+    ],
+    "dateAffichee": "{{j}} de {{mois}} de {{a}}",
+    "dateAvecJour": "{{js}} {{date}}",
+    "prenom": "Nombre (opcional)",
+    "prenom1Ex": "Ej.: Lucía",
+    "prenom2Ex": "Ej.: Pablo",
+    "jourMois": "{{j}} de {{mois}}",
+    "premier": "1",
+    "lancer": "Calcular nuestra diferencia",
+    "aide": "Las fechas se guardan en este navegador: al volver a la página, vuestro resultado aparece solo.",
+    "erreurVide": "Elegid el día, el mes y el año de las dos fechas de nacimiento.",
+    "erreur": "Una de las fechas no existe. Revisad el día y el mes.",
+    "erreurFutur": "Una de las fechas está en el futuro. Revisad el año."
+  },
+  "unites": {
+    "jour": [
+      "día",
+      "días"
+    ],
+    "mois": [
+      "mes",
+      "meses"
+    ],
+    "an": [
+      "año",
+      "años"
+    ]
+  },
+  "et": " y ",
+  "virgule": ", ",
+  "quand": {
+    "aujourdhui": "hoy",
+    "demain": "mañana",
+    "dans": "en {{n}} días"
+  },
+  "resultat": {
+    "plusVous": "Tienes {{ecart}} más que {{autre}}.",
+    "plusNom": "{{aine}} tiene {{ecart}} más que {{cadet}}.",
+    "objVous": "tú",
+    "objPartenaire": "tu pareja",
+    "objNom": "{{nom}}",
+    "sujPartenaire": "Tu pareja",
+    "memeTitre": "¡Ni un día de diferencia!",
+    "memeJour": "Nacisteis el mismo día: es raro, y muy práctico para no olvidar nunca el cumpleaños del otro.",
+    "bandes": [
+      {
+        "titre": "La misma edad, o casi",
+        "texte": "Habéis crecido con las mismas canciones, los mismos dibujos animados y los mismos profes un poco locos: no hace falta explicar las referencias."
+      },
+      {
+        "titre": "Una diferencia muy pequeña",
+        "texte": "Sois de la misma generación, con unos años arriba o abajo. Los recuerdos del cole se parecen, y eso suele dar para bromas sin fin."
+      },
+      {
+        "titre": "Una diferencia clásica",
+        "texte": "Suficiente para que uno se acuerde de algo que el otro no vivió, pero no tanto como para cambiar gran cosa en el día a día."
+      },
+      {
+        "titre": "Una diferencia que se nota",
+        "texte": "Seguro que no tuvisteis el mismo primer móvil, y eso da para buenos debates. En el día a día, lo que más cuenta es lo que queréis y lo que planeáis."
+      },
+      {
+        "titre": "Una gran diferencia",
+        "texte": "Pasados los diez años, la diferencia se nota más. Los proyectos (hijos, trabajo, ritmo de vida) merecen hablarse pronto y con franqueza, y muchas veces ahí se juega todo."
+      },
+      {
+        "titre": "Una diferencia muy grande",
+        "texte": "Puede funcionar muy bien, siempre que lo habléis sin tabúes: hijos, salud, el final de la vida laboral... y la mirada de los demás, que a veces pesa más que la propia diferencia."
+      }
+    ],
+    "regleTitre": "La regla de la mitad más siete",
+    "regleCalcul": "{{age}} ÷ 2 + 7 = {{min}} años",
+    "regleExplique": "La persona mayor tiene {{age}} años: según la regla, la otra debería tener al menos {{min}}.",
+    "regleOk": "La más joven tiene {{jeune}}: estáis dentro de la regla.",
+    "regleNon": "La más joven tiene {{jeune}}: estaréis dentro de la regla a partir del {{date}}.",
+    "mineur": "La persona más joven es menor de edad. Entre un adulto y un menor, la diferencia de edad no es cuestión de cálculos: la ley protege a los menores de 18 años, y nadie tiene derecho a presionarte. Si algo te hace sentir incómodo o incómoda, habla con un adulto de confianza o llama al Teléfono ANAR, el 900 20 20 10, gratuito y confidencial.",
+    "faitsTitre": "Lo que dicen vuestras dos fechas",
+    "naissance": "Cuando nació la persona más joven, la otra ya había vivido {{jours}}.",
+    "annee": "Del {{du}} al {{au}}, os lleváis {{haut}}; el resto del año, {{bas}}.",
+    "anneeMemeAge": "Del {{du}} al {{au}}, os lleváis 1 año; el resto del año, tenéis la misma edad.",
+    "anneeConstante": "Vuestros cumpleaños caen el mismo día: os lleváis {{n}} todo el año.",
+    "cumul": "Entre los dos sumaréis {{n}} años el {{date}}, {{dans}}.",
+    "cumulAujourdhui": "Hoy sumáis {{n}} años entre los dos: ¡hay que celebrarlo!",
+    "lienBouton": "Copiar el enlace de nuestro resultado",
+    "lienCopie": "¡Enlace copiado! Guarda vuestras dos fechas.",
+    "modifier": "Cambiar las fechas",
+    "avis": "Dejar una opinión"
+  },
+  "suite": {
+    "titre": "¿Y la compatibilidad?",
+    "texte": "La edad no dice si estáis hechos el uno para el otro. El test de compatibilidad amorosa mira vuestros valores, vuestras ganas y vuestros proyectos, en veinte preguntas.",
+    "bouton": "Hacer el test de compatibilidad"
+  },
+  "section1": {
+    "title": "¿Cómo se calcula la diferencia de edad en una pareja?",
+    "p1": "Para calcular la diferencia de edad entre dos personas, basta con contar el tiempo que hay entre sus dos fechas de nacimiento. Por ejemplo, si uno nació el 12 de marzo de 1994 y el otro el 3 de julio de 1997, la diferencia es de 3 años, 3 meses y 21 días.",
+    "p2": "Parece sencillo, pero hay un detalle que suele sorprender: la diferencia «en años» cambia a lo largo del año. Con el ejemplo de arriba, entre el 12 de marzo y el 2 de julio, el mayor ya ha cumplido años y el otro todavía no, así que vuestras dos edades se llevan 4 años. El resto del año, 3. La herramienta de arriba os dice en qué fechas cambia en vuestro caso.",
+    "p3": "Además, os da la regla de la mitad más siete y la fecha en que vuestras dos edades sumadas harán 100 años. Y para un cálculo más de broma, también está la calculadora en la que <a href=\"/es/calculadora-del-amor/\">bastan dos nombres</a>."
+  },
+  "section2": {
+    "title": "¿Qué es la regla de la mitad más siete?",
+    "p1": "Es una regla que se oye sobre todo en los países de habla inglesa, «half your age plus seven». Se toma la edad de la persona mayor, se divide entre dos y se le suma siete: eso da la edad mínima de la otra, según la regla. Por ejemplo, a los 30 años el límite está en 22, a los 40 en 27 y a los 50 en 32.",
+    "p2": "No es nueva: ya aparece a principios del siglo XX en un libro de Max O'Rell, un autor francés que escribió mucho sobre los ingleses. Por supuesto, no tiene nada de científica. Es más bien una forma de decir «a partir de ahí, la gente va a hablar».",
+    "p3": "Lo curioso es que se vuelve más flexible con el tiempo. Con 10 años de diferencia, la regla solo se cumple cuando el más joven tiene 24 años y el mayor 34. En la vida real, la gente suele aceptar diferencias mayores: en un estudio de dos investigadores alemanes, Sascha Schwarz y Manfred Hassebrauck, con 21.245 personas, los hombres aceptaban de media una pareja hasta 10 años más joven y 4 años y medio mayor, y las mujeres una pareja hasta 8 años mayor y 5 años más joven."
+  },
+  "section3": {
+    "title": "¿Una gran diferencia de edad es un problema en la pareja?",
+    "p1": "La mayoría de las veces, el problema no es la diferencia en sí, sino lo que cambia en el día a día. Con 3 años de diferencia, se tienen los mismos recuerdos del cole y las mismas canciones. Con 15, uno puede estar pensando ya en la jubilación cuando el otro empieza su carrera.",
+    "p2": "Los estudios no lo tienen claro. Un estudio de la Universidad Emory, en Estados Unidos, con unas 3.000 personas casadas, encontraba más riesgo de divorcio a medida que crece la diferencia: alrededor de un 18 % más con 5 años y un 39 % más con 10. Pero sus autores reconocen que quizá no sea la diferencia lo que influye, sino el tipo de parejas que tienen grandes diferencias. Y en el Reino Unido, la oficina nacional de estadística concluía en 2008 que la diferencia de edad no era un riesgo real para un matrimonio.",
+    "p3": "Lo que cuenta son, sobre todo, los temas que la diferencia vuelve más urgentes:",
+    "points": [
+      "<strong>Los hijos:</strong> si queréis, cuándo, cuántos. Con una gran diferencia, la pregunta llega antes para uno de los dos, y <a href=\"/es/test-parentalidad-pareja/\">estar preparados para ser padres</a> es algo que se comprueba entre los dos.",
+      "<strong>El ritmo de vida:</strong> las salidas, los amigos, la energía del fin de semana. No es cuestión de edad sino de ganas, y las ganas se pueden comparar.",
+      "<strong>La mirada de los demás:</strong> la familia, los amigos, las bromas. A veces pesa más que la propia diferencia, y es mejor hablarlo entre vosotros que sufrirlo cada uno por su lado.",
+      "<strong>El futuro:</strong> la jubilación, la salud, quién cuidará de quién. No es muy romántico, pero hablarlo pronto evita sorpresas."
+    ],
+    "apres": "Al final, saber si <a href=\"/es/test-compatibilidad-amorosa/\">vuestros valores y vuestros proyectos encajan</a> cuenta mucho más que los años que pone en vuestro DNI."
+  },
+  "section4": {
+    "title": "¿Cuál es la diferencia de edad media en una pareja?",
+    "p1": "En España, según un análisis de eldiario.es con los microdatos de matrimonios del INE (de 2005 a 2016, más de 2,1 millones de bodas), el hombre es mayor en el 65 % de las parejas de hombre y mujer que se casan, con unos cinco años de diferencia de media. La mujer es mayor en el 23 %, con 3,5 años de media, y en el 11 % los dos tienen la misma edad.",
+    "p2": "En las bodas entre dos hombres, la diferencia media sube a ocho años, y entre dos mujeres es de cinco.",
+    "p3": "Para comparar, en Francia el hombre tiene de media dos años y medio más que su pareja, y solo el 8 % de las parejas se llevan diez años o más, según el instituto de estadística francés."
+  },
+  "faq": {
+    "title": "Vuestras preguntas sobre la diferencia de edad en pareja",
+    "q1": "¿Cuál es la diferencia de edad ideal en una pareja?",
+    "a1": "No la hay. Lo que cuenta es tener las mismas ganas y proyectos que vayan en la misma dirección. Como dato, en las bodas de hombre y mujer en España, cuando el hombre es mayor, se lleva de media unos cinco años con ella.",
+    "q2": "¿Cómo se calcula una diferencia de edad?",
+    "a2": "Contad el tiempo entre las dos fechas de nacimiento: primero los años completos, luego los meses y luego los días. La herramienta de arriba lo hace al día, y además os dice en qué parte del año vuestra diferencia «en años» sube uno.",
+    "q3": "¿Cómo funciona la regla de la mitad más siete?",
+    "a3": "Se divide la edad de la persona mayor entre dos y se suma siete: es la edad mínima de la otra según la regla. A los 36 años, da 25. Es una regla popular, no una regla científica.",
+    "q4": "¿10 años de diferencia es mucho?",
+    "a4": "Es menos habitual de lo que parece: en Francia, solo el 8 % de las parejas se llevan diez años o más. Eso no impide que una pareja funcione, lo que más cuenta son las ganas y los proyectos.",
+    "q5": "¿Es raro que la mujer sea mayor?",
+    "a5": "No tanto: en España, la mujer es mayor en el 23 % de las bodas de hombre y mujer, con 3,5 años de diferencia de media (INE, 2005-2016, según eldiario.es).",
+    "q6": "¿Se guardan nuestras fechas de nacimiento?",
+    "a6": "No. Se quedan en vuestro navegador, en el móvil o el ordenador, para que el resultado aparezca cuando volváis. No se envía nada a ningún servidor."
+  },
+  "jsonLd": {
+    "name": "Calculadora de diferencia de edad en pareja",
+    "about": "Diferencia de edad exacta entre dos fechas de nacimiento y regla de la mitad más siete"
+  }
+}

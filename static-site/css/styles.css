@@ -12180,6 +12180,40 @@ body { padding-bottom: var(--pub-footer, 0px); }
 .nm-table tr.nm-ligne--vous td:first-child { box-shadow: inset 4px 0 0 hsl(var(--primary)); }
 .nm-marque { color: hsl(var(--primary-texte, var(--primary))); font-weight: 700; }
 
+/* ═══════════════════════════════════════════════════════════════════
+   Différence d'âge en couple (difference-age.ejs, js/difference-age.js).
+   Deux dates de naissance, l'écart en grand, la règle de la moitié plus
+   sept et ce que disent les deux dates. Le reste vient des classes
+   astro-*, dn-* et cc-* des outils par date.
+   ═══════════════════════════════════════════════════════════════════ */
+.da-carte { padding-bottom: 1.25rem; }
+.da-etiquette {
+  display: inline-block; margin: 0 0 0.6rem; padding: 0.3rem 0.85rem; border-radius: 9999px;
+  font-size: 0.8rem; font-weight: 700; letter-spacing: 0.02em;
+  color: hsl(var(--primary-texte, var(--primary))); background: hsl(var(--primary) / 0.1);
+}
+.da-ecart {
+  margin: 0 0 0.6rem; font-family: 'Poppins', 'Inter', sans-serif; line-height: 1.15;
+  font-size: clamp(1.7rem, 7vw, 2.5rem); font-weight: 800; letter-spacing: -0.01em;
+  color: hsl(var(--primary)); overflow-wrap: anywhere; text-wrap: balance;
+}
+.da-phrase { margin: 0 0 0.75rem; font-weight: 600; color: hsl(var(--foreground)); }
+.da-commentaire { max-width: 34rem; margin: 0 auto; color: hsl(var(--muted-foreground)); line-height: 1.65; }
+.dn-bloc .da-formule {
+  display: inline-block; padding: 0.35rem 0.85rem; border-radius: 0.6rem;
+  font-family: 'Poppins', 'Inter', sans-serif; font-weight: 700; font-variant-numeric: tabular-nums;
+  color: hsl(var(--secondary-texte, var(--secondary))); background: hsl(var(--secondary) / 0.1);
+}
+.dn-bloc .da-verdict-regle {
+  margin-top: 0.85rem; padding-left: 0.85rem; border-left: 4px solid hsl(var(--primary));
+  font-weight: 600; color: hsl(var(--foreground));
+}
+.dn-bloc .da-verdict-regle--ok { border-left-color: hsl(150 55% 42%); }
+.da-mineur { border-color: hsl(var(--primary) / 0.35); background: hsl(var(--primary) / 0.06); }
+.dn-bloc .da-mineur p, .da-mineur p { color: hsl(var(--foreground)); }
+.da-faits { margin: 0; padding-left: 1.2rem; list-style: disc; display: grid; gap: 0.55rem; color: hsl(var(--muted-foreground)); line-height: 1.6; }
+.da-faits li::marker { color: hsl(var(--primary)); }
+
 /* ─────────────────────────────────────────────
    Les mascottes dans les moteurs (octobre 2026)
    Le dessin vient de /js/mascottes.js (le fichier de la charte) ; ici

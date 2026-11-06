@@ -507,6 +507,12 @@
     "description": "La date de votre mariage, et l'outil vous dit quelles noces vous fêtez, quand tombent les suivantes, avec la liste complète de 1 à 80 ans.",
     "metaDescription": "Noces de mariage année par année : la liste de 1 à 80 ans (coton, cuir, étain, argent, or...) et un calcul gratuit pour savoir quelles noces vous fêtez."
   },
+  "differenceAge": {
+    "title": "Différence d'âge en couple : calculez votre écart d'âge",
+    "shortTitle": "Différence d'âge en couple",
+    "description": "Vos deux dates de naissance, et l'outil vous donne votre écart exact, la règle de la moitié plus sept et la date de vos 100 ans à deux.",
+    "metaDescription": "Calculez la différence d'âge de votre couple au jour près : l'écart exact, la règle de la moitié plus sept, l'écart moyen en France et vos 100 ans à deux."
+  },
   "testDureeCelibat": {
     "title": "Combien de temps vais-je rester célibataire ? Test en ligne",
     "shortTitle": "Combien de temps encore célibataire ?",

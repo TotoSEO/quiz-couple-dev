@@ -495,6 +495,12 @@
     "description": "Gebt euer Hochzeitsdatum ein und seht, welchen Hochzeitstag ihr gerade feiert, wann die nächsten kommen, und die ganze Liste von 1 bis 80 Jahren.",
     "metaDescription": "Hochzeitstage im Überblick: alle Namen von 1 bis 80 Jahren (Papierhochzeit, Silberne, Goldene...) und ein kostenloser Rechner für euren Hochzeitstag."
   },
+  "differenceAge": {
+    "title": "Altersunterschied berechnen: euer Abstand auf den Tag genau",
+    "shortTitle": "Altersunterschied in der Beziehung",
+    "description": "Gebt eure beiden Geburtsdaten ein: Das Tool zeigt euren genauen Altersunterschied, die Regel Hälfte plus sieben und wann ihr zusammen 100 werdet.",
+    "metaDescription": "Den Altersunterschied in der Beziehung auf den Tag genau berechnen, dazu die Regel Hälfte plus sieben und wann ihr zusammen 100 Jahre alt seid."
+  },
   "testDureeCelibat": {
     "title": "Wie lange bleibe ich noch Single? Online-Test",
     "shortTitle": "Wie lange bleibe ich noch Single?",
