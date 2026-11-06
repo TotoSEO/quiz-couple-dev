@@ -1,12 +1,12 @@
 {
-  "genere_le": "2026-11-05T10:49:08.803Z",
+  "genere_le": "2026-11-06T03:15:53.827Z",
   "langue": "en",
   "compte": {
     "nom": "quiz_couple_official",
     "actif": true
   },
   "fuseau": "Europe/Paris",
-  "aujourdhui": "2026-11-05",
+  "aujourdhui": "2026-11-06",
   "melange": {
     "midi": {
       "1": null,
@@ -28,7 +28,7 @@
     },
     "matin": null
   },
-  "reserve_jours": 147,
+  "reserve_jours": 146,
   "a_remplir": [],
   "a_corriger": [],
   "hors_grille": [],
@@ -831,7 +831,7 @@
       "creneau": "soir",
       "gabarit": "tu-preferes",
       "categorie": "tu-preferes",
-      "statut": "rendu",
+      "statut": "publie",
       "texte": "Would you rather: couple edition",
       "erreur": null
     },
@@ -876,7 +876,7 @@
       "creneau": "midi",
       "gabarit": "tu-preferes",
       "categorie": "tu-preferes",
-      "statut": "a_rendre",
+      "statut": "rendu",
       "texte": "Would you rather: gifts?",
       "erreur": null
     },
@@ -885,7 +885,7 @@
       "creneau": "soir",
       "gabarit": "baton",
       "categorie": "baton",
-      "statut": "a_rendre",
+      "statut": "rendu",
       "texte": null,
       "erreur": null
     },
@@ -3624,8 +3624,8 @@
       "creneau": "soir"
     },
     "tu-preferes": {
-      "jour": "2026-11-05",
-      "creneau": "soir"
+      "jour": "2026-11-07",
+      "creneau": "midi"
     },
     "phrase": null,
     "carrousel": null,
@@ -4716,18 +4716,36 @@
       "jour": "2026-10-28",
       "creneau": "soir",
       "theme": null
+    },
+    {
+      "variante_id": "b7b64e0e-ae60-4b01-8c86-7632486e31d5",
+      "releve": "j7",
+      "vues": 2211,
+      "portee": 1845,
+      "likes": 29,
+      "commentaires": 0,
+      "partages": 39,
+      "enregistrements": 15,
+      "releve_le": "2026-11-06T03:15:53.180253+00:00",
+      "publie_le": "2026-10-29T15:40:11.942+00:00",
+      "categorie": "tu-preferes",
+      "format": "reel",
+      "gabarit": "tu-preferes",
+      "jour": "2026-10-29",
+      "creneau": "soir",
+      "theme": null
     }
   ],
   "statistiques_par_categorie": [
     {
       "categorie": "tu-preferes",
-      "posts": 13,
-      "vues_mediane": 2502,
-      "vues_moyenne": 12387,
+      "posts": 14,
+      "vues_mediane": 2357,
+      "vues_moyenne": 11660,
       "vues_max": 74587,
-      "partages": 5378,
-      "enregistrements": 2107,
-      "likes": 2204,
+      "partages": 5417,
+      "enregistrements": 2122,
+      "likes": 2233,
       "commentaires": 4
     },
     {
