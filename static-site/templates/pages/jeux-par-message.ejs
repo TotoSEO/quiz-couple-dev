@@ -1,0 +1,222 @@
+<%
+  // Jeux de couple par message (6 novembre 2026) : un générateur qui tire une
+  // question au hasard dans sept jeux du site et l'envoie sur WhatsApp, par
+  // SMS, par le partage du téléphone ou en copie, avec le lien de la page
+  // pour que l'autre en renvoie une. Les questions sont lues dans les
+  // réservoirs des jeux (gd.json), déjà écrits et traduits dans les six
+  // langues : seules celles qui se lisent bien dans un message que l'un
+  // envoie à l'autre sont gardées (pas de « votre premier rendez-vous », pas
+  // de « ton/ta partenaire » ni de « l'autre » quand c'est soi-même qu'on
+  // désigne). Le script est js/jeux-message.js, racine #pm-outil.
+  const ns = 'jeux-par-message';
+  const pageTitle = t('quizzes:jeuxParMessage.title', 'Jeux de couple par message');
+
+  // Les numéros gardés dans chaque réservoir, les mêmes dans les six langues.
+  const PM_BANQUES = [
+    { id: 'tuPreferes', ancre: 'tu-preferes', emoji: '🤔', cle: 'wyr', ids: ['q1', 'q7', 'q12', 'q18', 'q25', 'q32', 'q33', 'q37', 'q41', 'q45', 'q52', 'q53', 'q55', 'q65', 'q73', 'q77', 'q79', 'q87', 'q89', 'q93', 'q95', 'q98'] },
+    { id: 'jamais', ancre: 'jamais', emoji: '🙊', cle: 'jamais', de: 1, a: 100 },
+    { id: 'verite', ancre: 'verite', emoji: '🎲', cle: 'actionVerite', ids: Array.from({ length: 15 }, (_, i) => 'classique_q' + (i + 1)).concat(Array.from({ length: 15 }, (_, i) => 'marrant_q' + (i + 1))) },
+    { id: 'quiDeNous', ancre: 'qui-de-nous', emoji: '👀', cle: 'quiDeNous', ids: ['quotidien', 'amour', 'caractere', 'drole'].flatMap((th) => Array.from({ length: 20 }, (_, i) => th + (i + 1))) },
+    { id: 'quiPourrait', ancre: 'qui-pourrait', emoji: '🏆', cle: 'quiPourrait', de: 1, a: 108, sauf: ['q49', 'q52', 'q60', 'q91'] },
+    { id: 'phrase', ancre: 'phrase', emoji: '💬', cle: 'phrases', de: 1, a: 20 },
+    { id: 'rapide', ancre: 'rapide', emoji: '⚡', cle: 'questionsRapides', ids: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 18, 19, 20, 21, 22, 24, 25, 52, 53, 55, 62, 67, 72, 73, 74].map((n) => 'q' + n) },
+  ];
+  const pmJeux = {};
+  const pmOrdre = [];
+  PM_BANQUES.forEach(function (b) {
+    let ids = b.ids;
+    if (!ids) { ids = []; for (let i = b.de; i <= b.a; i++) ids.push('q' + i); }
+    if (b.sauf) ids = ids.filter((k) => !b.sauf.includes(k));
+    const items = ids.map((k) => tgd(b.cle + '.' + k, '')).filter((v, i) => v && v !== b.cle + '.' + ids[i]);
+    if (!items.length) return;
+    pmJeux[b.id] = {
+      nom: t(ns + ':jeux.' + b.id + '.nom', b.id),
+      modele: t(ns + ':jeux.' + b.id + '.modele', '{{q}}'),
+      aide: t(ns + ':jeux.' + b.id + '.aide', ''),
+      emoji: b.emoji, ancre: b.ancre, items: items,
+    };
+    pmOrdre.push(b.id);
+  });
+  const premier = pmOrdre.length ? pmJeux[pmOrdre[0]] : null;
+  const premiereQuestion = premier ? premier.modele.replace('{{q}}', premier.items[0]) : '';
+  const pmData = {
+    ordre: pmOrdre, jeux: pmJeux, url: canonical,
+    outil: { appel: t(ns + ':outil.appel', ''), copie: t(ns + ':outil.copie', '') },
+  };
+
+  const faqNums = [1, 2, 3, 4, 5, 6];
+  const jsonLd = [
+    {
+      "@context": "https://schema.org", "@type": "Game",
+      "name": t(ns + ':jsonLd.name', pageTitle),
+      "description": t('quizzes:jeuxParMessage.metaDescription', ''),
+      "about": t(ns + ':jsonLd.about', ''),
+      "inLanguage": lang,
+      "isAccessibleForFree": true,
+      "gamePlatform": "Web browser",
+      "numberOfPlayers": { "@type": "QuantitativeValue", "minValue": 2, "maxValue": 2 }
+    },
+    {
+      "@context": "https://schema.org", "@type": "FAQPage",
+      "mainEntity": faqNums.map(function(i) {
+        return {
+          "@type": "Question", "name": t(ns + ':faq.q' + i, ''),
+          "acceptedAnswer": { "@type": "Answer", "text": t(ns + ':faq.a' + i, '').replace(/<[^>]+>/g, '') }
+        };
+      })
+    }
+  ];
+  const sectionJeux = function (cle) { return t(ns + ':' + cle + '.jeux', []); };
+%>
+<script type="application/ld+json"><%- JSON.stringify(jsonLd) %></script>
+
+<!-- Hero -->
+<section class="quiz-page-hero relative overflow-hidden hero-gradient">
+  <div class="container mx-auto px-4 relative z-10">
+    <div class="mx-auto max-w-3xl text-center">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="<%= lang === 'fr' ? '/' : '/' + lang + '/' %>">Quiz Couple</a></li>
+          <li class="breadcrumb-separator" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg></li>
+          <% if (getLocalizedUrl('jeuxCouple', lang)) { %>
+          <li><a href="<%= getLocalizedUrl('jeuxCouple', lang) %>"><%= t('quizzes:jeuxCouple.shortTitle', 'Jeux de couple') %></a></li>
+          <li class="breadcrumb-separator" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg></li>
+          <% } %>
+          <li class="breadcrumb-current" aria-current="page"><%= t('quizzes:jeuxParMessage.shortTitle', pageTitle) %></li>
+        </ol>
+      </nav>
+      <span class="hero-badge mb-4">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><path d="M8 9h8M8 13h5"/></svg>
+        <%= t(ns + ':hero.badge', '') %>
+      </span>
+      <%
+        const heroTitle = t(ns + ':hero.title', pageTitle);
+        const heroHighlight = t(ns + ':hero.highlight', '');
+      %>
+      <h1 class="mb-6 text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-foreground">
+        <% if (heroHighlight && heroTitle.includes(heroHighlight)) { %>
+          <%- escapeHtml(heroTitle).replace(escapeHtml(heroHighlight), '<span class="text-gradient">' + escapeHtml(heroHighlight) + '</span>') %>
+        <% } else { %>
+          <%= heroTitle %>
+        <% } %>
+      </h1>
+      <p class="text-lg text-muted-foreground md:text-xl"><%= t(ns + ':hero.description', '') %></p>
+    </div>
+  </div>
+  <%# L'image de tête vient en dernier dans le code, comme sur les autres pages de jeu. %>
+  <%- include('../partials/quiz-featured', { featuredImage: typeof featuredImage !== 'undefined' ? featuredImage : null, featuredImageAlt: typeof featuredImageAlt !== 'undefined' ? featuredImageAlt : '', featuredImageSrcset: typeof featuredImageSrcset !== 'undefined' ? featuredImageSrcset : null }) %>
+</section>
+
+<!-- Le générateur -->
+<section class="py-12 md:py-16">
+  <div class="container mx-auto px-4">
+    <div class="mx-auto max-w-2xl">
+      <div id="pm-outil" class="astro-form-card pm-outil rounded-2xl p-6 md:p-10" data-lang="<%= lang %>">
+        <h2 class="pm-titre"><%= t(ns + ':outil.titre', '') %></h2>
+        <div class="pm-jeux" role="group" aria-label="<%= t(ns + ':outil.titre', '') %>">
+          <% pmOrdre.forEach(function (id, i) { const j = pmJeux[id]; %>
+          <button type="button" class="pm-jeu<%= i === 0 ? ' pm-jeu--actif' : '' %>" data-jeu="<%= id %>" aria-pressed="<%= i === 0 ? 'true' : 'false' %>"><span aria-hidden="true"><%= j.emoji %></span> <%= j.nom %></button>
+          <% }) %>
+        </div>
+
+        <p class="pm-apercu-titre"><%= t(ns + ':outil.apercu', '') %></p>
+        <div class="pm-bulle" aria-live="polite">
+          <p class="pm-question"><%= premiereQuestion %></p>
+          <p class="pm-appel"><%= t(ns + ':outil.appel', '') %> <span class="pm-lien">quiz-couple.com</span></p>
+        </div>
+        <p class="pm-aide"><%= premier ? premier.aide : '' %></p>
+
+        <div class="pm-autre-boite">
+          <button type="button" id="pm-autre" class="btn btn-outline pm-autre">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4" aria-hidden="true"><path d="M21 12a9 9 0 1 1-3-6.7L21 8"/><path d="M21 3v5h-5"/></svg>
+            <%= t(ns + ':outil.autre', '') %>
+          </button>
+        </div>
+
+        <div class="pm-envois">
+          <a id="pm-wa" class="btn pm-envoi pm-envoi--wa" href="https://wa.me/?text=<%= encodeURIComponent(premiereQuestion) %>" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" class="h-5 w-5" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 11.9 11.9 0 0 0 4.6 4c1.7.7 2.4.8 3.2.7.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3z"/></svg>
+            <%= t(ns + ':outil.whatsapp', '') %>
+          </a>
+          <a id="pm-sms" class="btn btn-outline pm-envoi pm-envoi--sms" href="sms:?&amp;body=<%= encodeURIComponent(premiereQuestion) %>">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            <%= t(ns + ':outil.sms', '') %>
+          </a>
+          <button id="pm-partager" type="button" class="btn btn-outline pm-envoi pm-envoi--partage" hidden>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg>
+            <%= t(ns + ':outil.partager', '') %>
+          </button>
+          <button id="pm-copier" type="button" class="btn btn-outline pm-envoi pm-envoi--copie">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>
+            <%= t(ns + ':outil.copier', '') %>
+          </button>
+        </div>
+        <p id="pm-copie" class="cc-copie hidden" role="status"></p>
+        <p class="pm-note"><%= t(ns + ':outil.note', '') %></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<%# Sous le générateur, jamais au-dessus. %>
+<% if (typeof pagePublicitaire !== 'undefined' && pagePublicitaire) { %><%- include('../partials/pub', { format: 31 }) %><% } %>
+
+<%- include('../partials/wave-divider', { variant: 'muted', direction: 'down' }) %>
+
+<!-- Contenu -->
+<article class="py-16 md:py-24 seo-content">
+  <div class="avec-colonne">
+    <div class="avec-colonne__contenu container mx-auto px-4 max-w-3xl">
+
+    <section class="mb-16">
+      <h2 class="text-2xl md:text-3xl font-bold mb-6"><%= t(ns + ':section1.title', '') %></h2>
+      <div class="space-y-4 text-muted-foreground leading-relaxed">
+        <p><%- t(ns + ':section1.p1', '') %></p>
+        <p><%- t(ns + ':section1.p2', '') %></p>
+        <p><%- t(ns + ':section1.p3', '') %></p>
+      </div>
+    </section>
+    <% if (typeof pagePublicitaire !== 'undefined' && pagePublicitaire) { %><%- include('../partials/pub', { format: 2 }) %><% } %>
+
+    <section class="mb-16">
+      <h2 class="text-2xl md:text-3xl font-bold mb-6"><%= t(ns + ':section2.title', '') %></h2>
+      <ul class="space-y-3 text-muted-foreground leading-relaxed list-disc pl-6">
+        <% t(ns + ':section2.points', []).forEach(function (pt) { %><li><%- pt %></li><% }) %>
+      </ul>
+    </section>
+
+    <% for (const cle of ['section3', 'section4']) { const liste = sectionJeux(cle); if (!liste.length) continue; %>
+    <section class="mb-16">
+      <h2 class="text-2xl md:text-3xl font-bold mb-6"><%= t(ns + ':' + cle + '.title', '') %></h2>
+      <p class="text-muted-foreground leading-relaxed mb-8"><%- t(ns + ':' + cle + '.intro', '') %></p>
+      <div class="space-y-8">
+        <% liste.forEach(function (j) { %>
+        <div>
+          <h3 class="text-xl font-semibold mb-3"><%= j.titre %></h3>
+          <p class="text-muted-foreground leading-relaxed"><%- j.texte %></p>
+        </div>
+        <% }) %>
+      </div>
+    </section>
+    <% } %>
+
+    <section class="mb-4">
+      <h2 class="text-2xl md:text-3xl font-bold mb-6"><%= t(ns + ':faq.title', '') %></h2>
+      <div class="space-y-4">
+        <% for (const i of faqNums) { const q = t(ns + ':faq.q' + i, ''); if (!q) continue; %>
+        <details class="bg-card border border-border rounded-lg p-5">
+          <summary class="font-semibold cursor-pointer"><%= q %></summary>
+          <p class="text-muted-foreground leading-relaxed mt-3"><%- t(ns + ':faq.a' + i, '') %></p>
+        </details>
+        <% } %>
+      </div>
+    </section>
+
+    </div>
+  </div>
+</article>
+
+<%- include('../partials/related-tests', { routeKey, lang, t, getLocalizedUrl }) %>
+
+<script>window.PM_DATA = <%- JSON.stringify(pmData).replace(/</g, '\\u003c') %>;</script>
+<script src="/js/jeux-message.js" defer></script>

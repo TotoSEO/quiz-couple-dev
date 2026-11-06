@@ -1,0 +1,151 @@
+{
+  "hero": {
+    "badge": "Jeu gratuit",
+    "title": "12 jeux de couple à faire par message, sur WhatsApp ou par SMS",
+    "highlight": "jeux de couple à faire par message",
+    "description": "Choisissez un jeu : une question tombe au hasard, et elle part sur WhatsApp ou par SMS en un geste. L'autre répond... et vous en renvoie une ! Plus bas, cinq autres jeux à faire par message, sans rien préparer."
+  },
+  "outil": {
+    "titre": "Choisissez un jeu",
+    "apercu": "Votre message",
+    "autre": "Une autre question",
+    "whatsapp": "Envoyer sur WhatsApp",
+    "sms": "Envoyer par SMS",
+    "partager": "Partager",
+    "copier": "Copier",
+    "copie": "Message copié ! Il n'y a plus qu'à le coller dans votre conversation.",
+    "appel": "À toi ! Et envoie-m'en une à ton tour :",
+    "note": "Le lien de cette page part avec la question : l'autre n'a qu'à appuyer dessus pour vous en renvoyer une."
+  },
+  "jeux": {
+    "tuPreferes": {
+      "nom": "Tu préfères",
+      "modele": "{{q}}",
+      "aide": "L'autre choisit, et dit pourquoi."
+    },
+    "jamais": {
+      "nom": "Je n'ai jamais",
+      "modele": "{{q}} Et toi ?",
+      "aide": "L'autre répond « moi oui » ou « moi non », et raconte si c'est oui."
+    },
+    "verite": {
+      "nom": "Vérité",
+      "modele": "Vérité : {{q}}",
+      "aide": "Une seule règle : répondre pour de vrai."
+    },
+    "quiDeNous": {
+      "nom": "Qui de nous deux ?",
+      "modele": "Qui de nous deux {{q}}",
+      "aide": "L'autre répond par un prénom, le sien ou le tien."
+    },
+    "quiPourrait": {
+      "nom": "Qui pourrait ?",
+      "modele": "Qui de nous deux pourrait {{q}} ?",
+      "aide": "L'autre répond par un prénom, avec une bonne raison."
+    },
+    "phrase": {
+      "nom": "Phrase à compléter",
+      "modele": "Complète la phrase : {{q}}",
+      "aide": "L'autre complète, puis c'est à toi avec la même phrase."
+    },
+    "rapide": {
+      "nom": "Question rapide",
+      "modele": "Question rapide, réponds sans réfléchir : {{q}}",
+      "aide": "Le premier mot qui vient, pas le temps de chercher !"
+    }
+  },
+  "section1": {
+    "title": "Comment jouer par message avec cette page ?",
+    "p1": "Jouer par message, c'est tout simple : l'un envoie une question, l'autre répond, et on recommence. Le plus dur, c'est de trouver la question ! C'est justement ce que fait le générateur en haut de la page.",
+    "p2": "Vous choisissez un jeu, une question tombe au hasard, et un bouton l'envoie sur WhatsApp ou par SMS. Par exemple, avec « Tu préfères », vous pouvez tomber sur : « Tu préfères ne plus jamais pouvoir mentir ou ne plus jamais pouvoir garder un secret ? » Si elle ne vous plaît pas, « Une autre question » en tire une nouvelle.",
+    "p3": "Le message part avec le lien de la page. Du coup, l'autre peut répondre puis vous en renvoyer une à son tour, sans rien installer. Ça marche aussi bien entre deux pièces de l'appartement qu'à <a href=\"/quiz-couple-distance/\">des centaines de kilomètres l'un de l'autre</a> !"
+  },
+  "section2": {
+    "title": "Quand jouer par message ?",
+    "points": [
+      "<strong>En pleine journée :</strong> une question envoyée entre deux réunions, et l'autre répond quand il peut. Ça change des « ça va ? » et des photos du déjeuner.",
+      "<strong>À distance :</strong> le soir où l'appel tourne en rond, une question suffit à repartir. Et il y a aussi <a href=\"/blog/questions-couple-telephone-message/\">des questions à se poser au téléphone</a>, pour les appels qui durent.",
+      "<strong>Avant un rendez-vous :</strong> trois ou quatre questions dans l'après-midi, et vous arrivez avec de quoi parler toute la soirée.",
+      "<strong>Pour pimenter un peu :</strong> les vérités de <a href=\"/action-ou-verite-coquin/\">la version coquine</a> passent très bien par écrit, à garder pour le soir..."
+    ]
+  },
+  "section3": {
+    "title": "Les 7 jeux du générateur, et comment y jouer par message",
+    "intro": "Ce sont des jeux qui existent aussi en version complète sur le site. Par message, on garde le principe, et on joue une question à la fois, quand on a deux minutes.",
+    "jeux": [
+      {
+        "titre": "Tu préfères",
+        "texte": "Deux choix, et l'autre doit en prendre un : pas le droit de répondre « les deux » ! Le plus intéressant, c'est le « pourquoi » qui vient après. Par exemple : « Tu préfères recevoir un long message d'amour par jour ou un seul câlin de 10 minutes chaque soir ? » Le soir, pour une partie entière sur le même téléphone, il y a <a href=\"/tu-preferes-couple-quiz/\">cent dilemmes à départager à deux</a>, avec votre taux d'accord à la fin."
+      },
+      {
+        "titre": "Je n'ai jamais",
+        "texte": "On envoie une phrase qui commence par « Je n'ai jamais », et l'autre répond honnêtement : « moi oui » ou « moi non ». Si c'est oui, il faut raconter ! Par exemple : « Je n'ai jamais relu dix fois un message avant de te l'envoyer. Et toi ? » En face, le jeu se joue avec <a href=\"/je-nai-jamais-jeu-couple/\">cent aveux à se faire</a>, et les histoires qui vont avec."
+      },
+      {
+        "titre": "Vérité",
+        "texte": "On pose une question, et la seule règle, c'est d'y répondre pour de vrai. Par exemple : « Vérité : Quelle est la première chose qui t'a plu chez moi ? » ou, pour rire un peu : « Vérité : Si notre couple était une série, ça donnerait quoi comme titre ? » Par message, on garde les vérités et on laisse les actions de côté : elles se font mieux <a href=\"/jeu-action-ou-verite-couple/\">en face, avec des défis à relever</a>."
+      },
+      {
+        "titre": "Qui de nous deux ?",
+        "texte": "La question désigne l'un des deux, et l'autre répond par un prénom. Par exemple : « Qui de nous deux dit “je t'aime” le plus souvent ? » ou « Qui de nous deux chante le plus faux ? » C'est souvent quand vous n'êtes pas d'accord que ça devient drôle. Sur le même canapé, <a href=\"/qui-de-nous-deux/\">chacun vote en secret</a>, puis on révèle les deux réponses en même temps."
+      },
+      {
+        "titre": "Qui pourrait ?",
+        "texte": "Même principe, avec des situations un peu folles : « Qui de nous deux pourrait acheter une montre de luxe sur un coup de tête ? », « Qui de nous deux pourrait dépenser tout le budget vacances en une soirée ? »... On répond par un prénom, avec une bonne raison. Le jeu complet en compte plus de cent, de quoi <a href=\"/qui-pourrait-couple/\">vous désigner l'un l'autre</a> toute une soirée."
+      },
+      {
+        "titre": "Phrase à compléter",
+        "texte": "Le début d'une phrase, et l'autre la termine : « Complète la phrase : Notre meilleur souvenir à deux, c'est… » Ensuite, c'est à vous de compléter la même. Les réponses se ressemblent rarement, et c'est tout l'intérêt ! <a href=\"/phrases-a-completer-couple/\">Les vingt phrases du jeu</a> se jouent aussi à deux sur un seul écran."
+      },
+      {
+        "titre": "Question rapide",
+        "texte": "Une question sur vous deux, et l'autre répond avec le premier mot qui vient, sans réfléchir ni chercher dans ses photos. Par exemple : « Question rapide, réponds sans réfléchir : Quelle est “notre” chanson ? » En vrai, le jeu se joue <a href=\"/questions-rapides-couple/\">avec un compte à rebours</a>, et c'est le plus rapide qui marque le point."
+      }
+    ]
+  },
+  "section4": {
+    "title": "5 autres jeux à faire par message, sans rien préparer",
+    "intro": "Pour ces jeux-là, vous n'avez besoin de rien d'autre que de vos messages et d'un peu d'imagination.",
+    "jeux": [
+      {
+        "titre": "Le jeu des 20 questions",
+        "texte": "L'un pense à quelque chose : un souvenir, un objet de la maison, un endroit où vous êtes allés ensemble. L'autre a vingt questions pour trouver, et on ne répond que par oui ou par non. « Est-ce qu'on y est allés en été ? », « Est-ce que c'était avant qu'on emménage ? »... Parfait pour une pause déjeuner, et ça peut durer tout l'après-midi."
+      },
+      {
+        "titre": "L'histoire en émojis",
+        "texte": "Racontez un souvenir, votre journée ou un film uniquement avec des émojis, et l'autre doit deviner. 🍝🌧️🚗💨 ? Notre premier rendez-vous, sous la pluie, le soir où la voiture n'a pas voulu démarrer... Plus le souvenir est à vous, plus c'est drôle."
+      },
+      {
+        "titre": "La photo mystère",
+        "texte": "Prenez en photo un détail de très près (le motif d'un pull, le coin d'une étagère, une poignée de porte) et envoyez-la. L'autre a trois essais pour deviner ce que c'est. Ça marche très bien quand l'un est à la maison et l'autre au travail."
+      },
+      {
+        "titre": "L'histoire à deux",
+        "texte": "Chacun écrit une phrase à son tour, et vous construisez une histoire ensemble. Une seule règle : ne jamais refuser ce que l'autre a écrit, il faut faire avec. « Ce matin-là, on s'est réveillés sur une île déserte... » « ... et tu avais encore oublié tes lunettes de soleil. » En dix messages, ça part généralement n'importe où !"
+      },
+      {
+        "titre": "Le top 3",
+        "texte": "Une catégorie, et chacun donne son top 3 sans regarder celui de l'autre : vos trois restos préférés, vos trois plus beaux souvenirs, les trois chansons qui vous font penser à l'autre. Ensuite, vous comparez. C'est souvent là qu'on découvre qu'on ne se souvient pas du tout des mêmes choses."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Vos questions sur les jeux par message",
+    "q1": "Quel jeu faire par message avec son copain ou sa copine ?",
+    "a1": "Les plus simples sont ceux où une seule question suffit : tu préfères, je n'ai jamais, qui de nous deux, une vérité... Le générateur en haut de la page en tire une au hasard, vous n'avez plus qu'à l'envoyer.",
+    "q2": "Comment envoyer une question sur WhatsApp ?",
+    "a2": "Choisissez un jeu, puis appuyez sur « Envoyer sur WhatsApp » : l'application s'ouvre avec le message déjà écrit, vous choisissez la conversation et c'est parti. Sur ordinateur, c'est WhatsApp Web ou l'application de bureau qui s'ouvre.",
+    "q3": "Est-ce que l'autre doit installer quelque chose ?",
+    "a3": "Non. C'est un message normal, avec le lien de la page à la fin. L'autre peut répondre directement dans la conversation, ou ouvrir le lien pour vous renvoyer une question.",
+    "q4": "Peut-on jouer par message quand on est à distance ?",
+    "a4": "Oui, et c'est même là que ces jeux servent le plus : une question par jour suffit à relancer une conversation qui s'essouffle. Pour jouer en direct, plusieurs jeux du site ont aussi un mode à distance, chacun sur son téléphone.",
+    "q5": "Ça marche par SMS, sans internet ?",
+    "a5": "Oui. La question est du texte, le lien n'est qu'un bonus. Et les cinq jeux de la dernière partie (vingt questions, émojis, photo mystère, histoire à deux, top 3) n'ont besoin de rien d'autre que vos messages.",
+    "q6": "Les questions envoyées sont-elles enregistrées ?",
+    "a6": "Non. La page tire les questions dans votre navigateur, et le message ne part que là où vous choisissez de l'envoyer."
+  },
+  "jsonLd": {
+    "name": "Jeux de couple par message",
+    "about": "Jeux à faire en couple par SMS ou sur WhatsApp"
+  }
+}

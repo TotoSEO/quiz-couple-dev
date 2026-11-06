@@ -1,0 +1,151 @@
+{
+  "hero": {
+    "badge": "Juego gratis",
+    "title": "12 juegos para parejas por WhatsApp o por mensaje",
+    "highlight": "juegos para parejas por WhatsApp",
+    "description": "Elige un juego: sale una pregunta al azar, y se envía por WhatsApp o por SMS en un toque. Tu pareja contesta... ¡y te manda otra! Más abajo, cinco juegos más para jugar por mensaje sin preparar nada."
+  },
+  "outil": {
+    "titre": "Elige un juego",
+    "apercu": "Tu mensaje",
+    "autre": "Otra pregunta",
+    "whatsapp": "Enviar por WhatsApp",
+    "sms": "Enviar por SMS",
+    "partager": "Compartir",
+    "copier": "Copiar",
+    "copie": "¡Mensaje copiado! Solo tienes que pegarlo en tu conversación.",
+    "appel": "¡Te toca! Y luego mándame tú una:",
+    "note": "El enlace de esta página va con la pregunta: tu pareja solo tiene que tocarlo para mandarte otra."
+  },
+  "jeux": {
+    "tuPreferes": {
+      "nom": "¿Qué prefieres?",
+      "modele": "{{q}}",
+      "aide": "Tu pareja elige una, y dice por qué."
+    },
+    "jamais": {
+      "nom": "Yo nunca",
+      "modele": "{{q}} ¿Y tú?",
+      "aide": "Tu pareja contesta «yo sí» o «yo no», y lo cuenta si es que sí."
+    },
+    "verite": {
+      "nom": "Verdad",
+      "modele": "Verdad: {{q}}",
+      "aide": "Una sola regla: contestar de verdad."
+    },
+    "quiDeNous": {
+      "nom": "¿Quién de los dos?",
+      "modele": "¿Quién de los dos {{q}}",
+      "aide": "Tu pareja contesta con un nombre, el suyo o el tuyo."
+    },
+    "quiPourrait": {
+      "nom": "¿Quién podría?",
+      "modele": "¿Quién de los dos podría {{q}}?",
+      "aide": "Tu pareja contesta con un nombre, y con una buena razón."
+    },
+    "phrase": {
+      "nom": "Completa la frase",
+      "modele": "Completa la frase: {{q}}",
+      "aide": "Tu pareja la completa, y luego te toca a ti con la misma."
+    },
+    "rapide": {
+      "nom": "Pregunta rápida",
+      "modele": "Pregunta rápida, contesta sin pensar: {{q}}",
+      "aide": "Lo primero que te venga, ¡sin tiempo para buscarlo!"
+    }
+  },
+  "section1": {
+    "title": "¿Cómo se juega por mensaje con esta página?",
+    "p1": "Jugar por mensaje es muy sencillo: uno manda una pregunta, el otro contesta, y vuelta a empezar. ¡Lo más difícil es encontrar la pregunta! Eso es justo lo que hace el generador de arriba.",
+    "p2": "Eliges un juego, sale una pregunta al azar, y un botón la envía por WhatsApp o por SMS. Por ejemplo, con «¿Qué prefieres?», te puede salir: «¿Preferirías no poder mentir nunca más o no poder guardar un secreto nunca más?» Si no te convence, «Otra pregunta» saca una nueva.",
+    "p3": "El mensaje va con el enlace de la página. Así, tu pareja puede contestar y luego mandarte otra a ti, sin instalar nada. Funciona igual de bien entre dos habitaciones del piso que <a href=\"/es/quiz-pareja-distancia/\">a cientos de kilómetros de distancia</a>."
+  },
+  "section2": {
+    "title": "¿Cuándo jugar por mensaje?",
+    "points": [
+      "<strong>En mitad del día:</strong> una pregunta enviada entre dos reuniones, y tu pareja contesta cuando puede. Cambia un poco de los «¿qué tal?» y de las fotos de la comida.",
+      "<strong>A distancia:</strong> la noche en que la llamada da vueltas sin ir a ningún sitio, una pregunta basta para arrancar otra vez. Y también hay <a href=\"/es/blog/preguntas-de-pareja-por-mensaje/\">preguntas para haceros por teléfono</a>, para las llamadas largas.",
+      "<strong>Antes de una cita:</strong> tres o cuatro preguntas por la tarde, y llegáis con tema de conversación para toda la noche.",
+      "<strong>Para darle un poco de picante:</strong> las verdades de <a href=\"/es/verdad-o-reto-picante-pareja/\">la versión atrevida</a> funcionan muy bien por escrito, mejor guardarlas para la noche..."
+    ]
+  },
+  "section3": {
+    "title": "Los 7 juegos del generador, y cómo jugarlos por mensaje",
+    "intro": "Son juegos que también están en versión completa en la web. Por mensaje, se mantiene la idea y se juega una pregunta cada vez, cuando tenéis dos minutos.",
+    "jeux": [
+      {
+        "titre": "¿Qué prefieres?",
+        "texte": "Dos opciones, y tu pareja tiene que elegir una: ¡nada de contestar «las dos»! Lo más interesante es el «por qué» que viene después. Por ejemplo: «¿Preferirías recibir una larga carta de amor cada día o un solo abrazo de 10 minutos cada noche?» Por la noche, para una partida entera en el mismo móvil, hay <a href=\"/es/quiz-preferirias-pareja/\">cien dilemas para resolver entre los dos</a>, con vuestro porcentaje de acuerdo al final."
+      },
+      {
+        "titre": "Yo nunca",
+        "texte": "Se manda una frase que empieza por «Yo nunca», y tu pareja contesta con sinceridad: «yo sí» o «yo no». Si es que sí, ¡hay que contarlo! Por ejemplo: «Yo nunca he releído diez veces un mensaje antes de enviártelo. ¿Y tú?» Cara a cara, el juego trae <a href=\"/es/yo-nunca-juego-pareja/\">cien confesiones para haceros</a>, y las historias que vienen con ellas."
+      },
+      {
+        "titre": "Verdad",
+        "texte": "Se hace una pregunta, y la única regla es contestar de verdad. Por ejemplo: «Verdad: ¿Qué fue lo primero que te gustó de mí?» o, para reírse un poco: «Verdad: Si nuestra pareja fuera una serie, ¿qué título tendría?» Por mensaje se juegan las verdades y se dejan los retos a un lado: funcionan mejor <a href=\"/es/juego-verdad-o-reto-pareja/\">en persona, con retos que cumplir</a>."
+      },
+      {
+        "titre": "¿Quién de los dos?",
+        "texte": "La pregunta señala a uno de los dos, y tu pareja contesta con un nombre. Por ejemplo: «¿Quién de los dos dice “te quiero” más a menudo?» o «¿Quién de los dos canta peor?» Lo divertido suele empezar cuando no estáis de acuerdo. En el mismo sofá, <a href=\"/es/quien-de-los-dos-pareja/\">cada uno vota en secreto</a> y se revelan las dos respuestas a la vez."
+      },
+      {
+        "titre": "¿Quién podría?",
+        "texte": "La misma idea, con situaciones un poco locas: «¿Quién de los dos podría comprarse un reloj de lujo por impulso?», «¿Quién de los dos podría gastarse todo el presupuesto de vacaciones en una noche?»... Se contesta con un nombre, y con una buena razón. El juego completo tiene más de cien, como para <a href=\"/es/quien-podria-juego-pareja/\">señalaros el uno al otro</a> toda la noche."
+      },
+      {
+        "titre": "Completa la frase",
+        "texte": "El principio de una frase, y tu pareja la termina: «Completa la frase: Nuestro mejor recuerdo juntos es…» Después te toca a ti completar la misma. Las respuestas casi nunca coinciden, ¡y de eso se trata! <a href=\"/es/frases-para-completar-pareja/\">Las veinte frases del juego</a> también se juegan entre los dos en una sola pantalla."
+      },
+      {
+        "titre": "Pregunta rápida",
+        "texte": "Una pregunta sobre vosotros, y tu pareja contesta lo primero que le venga, sin pensar ni buscar en sus fotos. Por ejemplo: «Pregunta rápida, contesta sin pensar: ¿Cuál es “nuestra” canción?» En persona, el juego se juega <a href=\"/es/preguntas-rapidas-para-parejas/\">con una cuenta atrás</a>, y el más rápido se lleva el punto."
+      }
+    ]
+  },
+  "section4": {
+    "title": "5 juegos más para jugar por mensaje, sin preparar nada",
+    "intro": "Para estos no necesitáis nada más que vuestros mensajes y un poco de imaginación.",
+    "jeux": [
+      {
+        "titre": "Las 20 preguntas",
+        "texte": "Uno piensa en algo: un recuerdo, un objeto de casa, un sitio donde habéis estado juntos. El otro tiene veinte preguntas para adivinarlo, y solo se contesta sí o no. «¿Fuimos en verano?», «¿Fue antes de irnos a vivir juntos?»... Perfecto para la pausa de la comida, y puede durar toda la tarde."
+      },
+      {
+        "titre": "La historia en emojis",
+        "texte": "Cuenta un recuerdo, tu día o una película solo con emojis, y tu pareja tiene que adivinarlo. ¿🍝🌧️🚗💨? Nuestra primera cita, bajo la lluvia, la noche que el coche no quiso arrancar... Cuanto más vuestro es el recuerdo, más gracia tiene."
+      },
+      {
+        "titre": "La foto misteriosa",
+        "texte": "Haz una foto muy de cerca de un detalle (el dibujo de un jersey, la esquina de una estantería, el pomo de una puerta) y mándala. Tu pareja tiene tres intentos para adivinar qué es. Funciona muy bien cuando uno está en casa y el otro en el trabajo."
+      },
+      {
+        "titre": "La historia a dos",
+        "texte": "Cada uno escribe una frase por turnos, y vais construyendo una historia juntos. Una sola regla: no rechazar nunca lo que ha escrito el otro, hay que seguir con ello. «Esa mañana nos despertamos en una isla desierta...» «... y tú te habías vuelto a olvidar las gafas de sol.» ¡En diez mensajes suele acabar en cualquier parte!"
+      },
+      {
+        "titre": "El top 3",
+        "texte": "Una categoría, y cada uno da su top 3 sin mirar el del otro: vuestros tres restaurantes favoritos, vuestros tres mejores recuerdos, las tres canciones que os hacen pensar en el otro. Luego comparáis. Ahí suele descubrirse que no os acordáis para nada de lo mismo."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Vuestras preguntas sobre los juegos por mensaje",
+    "q1": "¿A qué jugar por WhatsApp con tu novio o tu novia?",
+    "a1": "Los más fáciles son aquellos en los que basta con una pregunta: qué prefieres, yo nunca, quién de los dos, una verdad... El generador de arriba saca una al azar, y solo tienes que enviarla.",
+    "q2": "¿Cómo se envía una pregunta por WhatsApp?",
+    "a2": "Elige un juego y toca «Enviar por WhatsApp»: se abre la aplicación con el mensaje ya escrito, eliges la conversación y listo. En el ordenador se abre WhatsApp Web o la aplicación de escritorio.",
+    "q3": "¿Tu pareja tiene que instalar algo?",
+    "a3": "No. Es un mensaje normal, con el enlace de la página al final. Tu pareja puede contestar directamente en la conversación, o abrir el enlace para mandarte otra pregunta.",
+    "q4": "¿Se puede jugar por mensaje en una relación a distancia?",
+    "a4": "Sí, y de hecho es donde más sirven estos juegos: una pregunta al día basta para reanimar una conversación que se apaga. Para jugar en directo, varios juegos de la web tienen también un modo a distancia, cada uno en su móvil.",
+    "q5": "¿Funciona por SMS, sin internet?",
+    "a5": "Sí. La pregunta es texto, el enlace es solo un extra. Y los cinco juegos de la última parte (20 preguntas, emojis, foto misteriosa, historia a dos, top 3) no necesitan nada más que vuestros mensajes.",
+    "q6": "¿Se guardan las preguntas que enviamos?",
+    "a6": "No. La página saca las preguntas en tu navegador, y el mensaje solo va adonde tú decidas enviarlo."
+  },
+  "jsonLd": {
+    "name": "Juegos por WhatsApp para parejas",
+    "about": "Juegos para jugar en pareja por mensaje o por WhatsApp"
+  }
+}

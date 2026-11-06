@@ -397,6 +397,12 @@
     "metaDescription": "Una pregunta, una cuenta atrás y la respuesta correcta más rápida se lleva el punto. 75 preguntas rápidas para parejas, en 10, 20 o 30. Gratis, sin registro.",
     "description": "Una pregunta, 3, 2, 1, ¡ya! La respuesta correcta más rápida se lleva el punto."
   },
+  "jeuxParMessage": {
+    "title": "Juegos por WhatsApp para parejas: 12 juegos por mensaje",
+    "shortTitle": "Juegos por WhatsApp",
+    "description": "Una pregunta al azar que mandas por WhatsApp o por SMS en un toque: qué prefieres, yo nunca, verdad, quién de los dos...",
+    "metaDescription": "Juegos por WhatsApp para parejas: elige un juego, sale una pregunta al azar (qué prefieres, yo nunca, verdad...) y mándala por WhatsApp o SMS."
+  },
   "jeuOuiNon": {
     "title": "Juego Sí o No para parejas online - 120 preguntas",
     "shortTitle": "Sí o no",

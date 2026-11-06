@@ -6,7 +6,7 @@
     "description": "Quindici giochi: quattordici che partono su un solo telefono fra voi due, e uno per più coppie, ognuno sul proprio. Senza account e senza installare nulla."
   },
   "stats": {
-    "jeux": "15",
+    "jeux": "16",
     "jeuxLabel": "giochi di coppia",
     "cartes": "520",
     "cartesLabel": "carte, penitenze e dilemmi",
@@ -30,6 +30,11 @@
     "rapidesContenu": "75 domande da giocare in 10, 20 o 30",
     "rapidesDuree": "5-15 min",
     "rapidesJoueurs": "2 giocatori",
+    "messageNom": "Giochi su WhatsApp",
+    "messageTagline": "Una domanda a caso, mandata su WhatsApp o per SMS con un tocco",
+    "messageContenu": "7 giochi e più di 350 domande",
+    "messageDuree": "1 minuto, o tutta la giornata",
+    "messageJoueurs": "2 giocatori, ognuno sul suo telefono",
     "actionVeriteNom": "Obbligo o verità",
     "actionVeriteTagline": "Cade una carta, verità o obbligo, e non sapete mai quale delle due arriva.",
     "actionVeriteJoueurs": "2 giocatori",
@@ -145,7 +150,9 @@
     "row14Moment": "Una serata con più coppie",
     "row14Pourquoi": "L'unico gioco della pagina che si fa in più coppie, ognuno sul proprio telefono: un maestro di gioco forma le coppie, ognuno indovina le risposte dell'altro, e nelle manche speciali si vota la coppia più festaiola o quella sempre in ritardo.",
     "row15Moment": "Un aperitivo in due, quando avete voglia di punzecchiarvi",
-    "row15Pourquoi": "Un conto alla rovescia e vince chi risponde per primo: dov'è stato il vostro primo appuntamento, il piatto preferito della tua dolce metà, tre delle sue fissazioni... Tornano i ricordi e si ride!"
+    "row15Pourquoi": "Un conto alla rovescia e vince chi risponde per primo: dov'è stato il vostro primo appuntamento, il piatto preferito della tua dolce metà, tre delle sue fissazioni... Tornano i ricordi e si ride!",
+    "row16Moment": "In pieno giorno, ognuno per conto suo",
+    "row16Pourquoi": "Una domanda mandata tra due riunioni, e la conversazione riparte. L'altro risponde quando può... e te ne manda un'altra!"
   },
   "section3": {
     "title": "Come far funzionare una serata di giochi in due",

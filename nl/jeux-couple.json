@@ -6,7 +6,7 @@
     "description": "Vijftien spellen: veertien die je start op één telefoon tussen jullie in, en één voor meerdere koppels, ieder op de eigen telefoon. Zonder account en zonder iets te installeren."
   },
   "stats": {
-    "jeux": "15",
+    "jeux": "16",
     "jeuxLabel": "spellen voor koppels",
     "cartes": "520",
     "cartesLabel": "kaarten, opdrachten en dilemma's",
@@ -30,6 +30,11 @@
     "rapidesContenu": "75 vragen, te spelen in 10, 20 of 30",
     "rapidesDuree": "5 tot 15 min",
     "rapidesJoueurs": "2 spelers",
+    "messageNom": "WhatsApp spelletjes",
+    "messageTagline": "Een willekeurige vraag, met één tik via WhatsApp of sms verstuurd",
+    "messageContenu": "7 spelletjes en meer dan 350 vragen",
+    "messageDuree": "1 minuut, of de hele dag",
+    "messageJoueurs": "2 spelers, ieder op zijn eigen telefoon",
     "actionVeriteNom": "Waarheid of durven",
     "actionVeriteTagline": "Er valt een kaart, waarheid of durven, en je weet nooit welke er komt.",
     "actionVeriteJoueurs": "2 spelers",
@@ -145,7 +150,9 @@
     "row14Moment": "Een avond met meerdere koppels",
     "row14Pourquoi": "Het enige spel van de pagina voor meerdere koppels, ieder op de eigen telefoon: een spelleider maakt de koppels, ieder raadt de antwoorden van de ander, en in de speciale rondes stemt iedereen op het koppel dat het grootste feestbeest is of altijd te laat komt.",
     "row15Moment": "Een borrel met z'n tweeën, als jullie elkaar willen plagen",
-    "row15Pourquoi": "Een aftelling, en wie het eerst antwoordt, wint: waar jullie eerste date was, het lievelingseten van je partner, drie van zijn of haar eigenaardigheden... De herinneringen komen boven en er wordt gelachen!"
+    "row15Pourquoi": "Een aftelling, en wie het eerst antwoordt, wint: waar jullie eerste date was, het lievelingseten van je partner, drie van zijn of haar eigenaardigheden... De herinneringen komen boven en er wordt gelachen!",
+    "row16Moment": "Midden op de dag, ieder voor zich",
+    "row16Pourquoi": "Een vraag tussen twee vergaderingen door, en het gesprek komt weer op gang. Je partner antwoordt als het uitkomt... en stuurt er een terug!"
   },
   "section3": {
     "title": "Zo slaagt een avondje spelletjes met z'n tweeën",

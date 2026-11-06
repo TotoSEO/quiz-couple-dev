@@ -6,7 +6,7 @@
     "description": "Fünfzehn Spiele: vierzehn, die auf einem einzigen Handy zwischen euch beiden starten, und eines für mehrere Paare, jeder auf dem eigenen. Ohne Konto und ohne Installation."
   },
   "stats": {
-    "jeux": "15",
+    "jeux": "16",
     "jeuxLabel": "Paarspiele",
     "cartes": "520",
     "cartesLabel": "Karten, Strafen und Dilemmas",
@@ -30,6 +30,11 @@
     "rapidesContenu": "75 Fragen, gespielt in Runden mit 10, 20 oder 30",
     "rapidesDuree": "5 bis 15 Min",
     "rapidesJoueurs": "2 Spieler",
+    "messageNom": "WhatsApp-Spiele",
+    "messageTagline": "Eine zufällige Frage, mit einem Tippen per WhatsApp oder SMS verschickt",
+    "messageContenu": "7 Spiele und über 350 Fragen",
+    "messageDuree": "1 Minute, oder den ganzen Tag",
+    "messageJoueurs": "2 Spieler, jeder an seinem Handy",
     "actionVeriteNom": "Wahrheit oder Pflicht",
     "actionVeriteTagline": "Eine Karte fällt, Wahrheit oder Pflicht, und ihr wisst nie, welche davon kommt.",
     "actionVeriteJoueurs": "2 Spieler",
@@ -145,7 +150,9 @@
     "row14Moment": "Ein Abend mit mehreren Paaren",
     "row14Pourquoi": "Das einzige Spiel dieser Seite für mehrere Paare, jeder auf dem eigenen Handy: Ein Spielleiter bildet die Paare, jeder errät die Antworten des anderen, und in den Sonderrunden stimmen alle für das Paar ab, das am meisten feiert oder immer zu spät kommt.",
     "row15Moment": "Ein Drink zu zweit, wenn ihr euch gegenseitig aufziehen wollt",
-    "row15Pourquoi": "Ein Countdown, und wer zuerst antwortet, gewinnt: wo euer erstes Date war, das Lieblingsessen deines Schatzes, drei seiner Marotten... Die Erinnerungen kommen hoch, und es wird gelacht!"
+    "row15Pourquoi": "Ein Countdown, und wer zuerst antwortet, gewinnt: wo euer erstes Date war, das Lieblingsessen deines Schatzes, drei seiner Marotten... Die Erinnerungen kommen hoch, und es wird gelacht!",
+    "row16Moment": "Mitten am Tag, jeder für sich",
+    "row16Pourquoi": "Eine Frage zwischen zwei Meetings, und das Gespräch kommt wieder in Gang. Dein Schatz antwortet, wenn er kann... und schickt dir eine zurück!"
   },
   "section3": {
     "title": "Ein Spieleabend zu zweit, der funktioniert",

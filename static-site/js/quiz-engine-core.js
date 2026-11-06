@@ -2428,6 +2428,7 @@ var QuizEngine = (function() {
     { type: 'jeu', key: 'jamais', icon: '🙊', route: 'jeuJamais' },
     { type: 'jeu', key: 'qui-pourrait', icon: '🏆', route: 'jeuQuiPourrait' },
     { type: 'jeu', key: 'questions-rapides', icon: '⚡', route: 'jeuQuestionsRapides' },
+    { type: 'jeu', key: 'jeux-message', icon: '📱', route: 'jeuxParMessage' },
     { type: 'jeu', key: 'oui-non', icon: '✅', route: 'jeuOuiNon' },
     { type: 'jeu', key: 'phrases', icon: '💬', route: 'jeuPhrases' },
     { type: 'jeu', key: 'dix-mais', icon: '🔟', route: 'jeuDixMais' },

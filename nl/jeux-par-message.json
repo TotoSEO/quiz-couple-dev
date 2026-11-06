@@ -1,0 +1,151 @@
+{
+  "hero": {
+    "badge": "Gratis spel",
+    "title": "12 WhatsApp spelletjes om met je partner te spelen, ook via sms",
+    "highlight": "WhatsApp spelletjes om met je partner te spelen",
+    "description": "Kies een spel: er verschijnt een willekeurige vraag, en met één tik gaat hij via WhatsApp of sms de deur uit. Je partner antwoordt... en stuurt er een terug! Verderop nog vijf spelletjes per bericht, zonder iets voor te bereiden."
+  },
+  "outil": {
+    "titre": "Kies een spel",
+    "apercu": "Je bericht",
+    "autre": "Andere vraag",
+    "whatsapp": "Via WhatsApp sturen",
+    "sms": "Via sms sturen",
+    "partager": "Delen",
+    "copier": "Kopiëren",
+    "copie": "Bericht gekopieerd! Je hoeft het alleen nog in jullie chat te plakken.",
+    "appel": "Jouw beurt! En stuur mij er daarna eentje terug:",
+    "note": "De link naar deze pagina gaat met de vraag mee: je partner tikt erop om je er een terug te sturen."
+  },
+  "jeux": {
+    "tuPreferes": {
+      "nom": "Zou je liever",
+      "modele": "{{q}}",
+      "aide": "Je partner kiest er een, en zegt waarom."
+    },
+    "jamais": {
+      "nom": "Ik heb nog nooit",
+      "modele": "{{q}} En jij?",
+      "aide": "Je partner antwoordt ‘ik wel’ of ‘ik niet’, en vertelt het verhaal als het ja is."
+    },
+    "verite": {
+      "nom": "Waarheid",
+      "modele": "Waarheid: {{q}}",
+      "aide": "Eén regel: eerlijk antwoorden."
+    },
+    "quiDeNous": {
+      "nom": "Wie van ons?",
+      "modele": "Wie van ons {{q}}",
+      "aide": "Je partner antwoordt met een naam: die van zichzelf of die van jou."
+    },
+    "quiPourrait": {
+      "nom": "Wie zou eerder?",
+      "modele": "Wie van ons zou eerder {{q}}?",
+      "aide": "Je partner antwoordt met een naam, en met een goede reden."
+    },
+    "phrase": {
+      "nom": "Maak de zin af",
+      "modele": "Maak de zin af: {{q}}",
+      "aide": "Je partner maakt hem af, daarna ben jij aan de beurt met dezelfde zin."
+    },
+    "rapide": {
+      "nom": "Snelle vraag",
+      "modele": "Snelle vraag, antwoord zonder na te denken: {{q}}",
+      "aide": "Het eerste woord dat opkomt, geen tijd om het op te zoeken!"
+    }
+  },
+  "section1": {
+    "title": "Hoe speel je per bericht met deze pagina?",
+    "p1": "Per bericht spelen is heel simpel: de een stuurt een vraag, de ander antwoordt, en dan begin je opnieuw. Het moeilijkste is de vraag bedenken! En dat is precies wat de generator bovenaan de pagina doet.",
+    "p2": "Je kiest een spel, er verschijnt een willekeurige vraag, en met een knop stuur je hem via WhatsApp of sms. Met ‘Zou je liever’ kan bijvoorbeeld deze komen: ‘Zou je liever nooit meer kunnen liegen of nooit meer een geheim kunnen bewaren?’ Vind je hem niks, dan trekt ‘Andere vraag’ een nieuwe.",
+    "p3": "Het bericht gaat mee met de link naar de pagina. Zo kan je partner antwoorden en je daarna zelf een vraag sturen, zonder iets te installeren. Dat werkt net zo goed tussen twee kamers in huis als <a href=\"/nl/lange-afstandsrelatie-test/\">op honderden kilometers afstand</a>!"
+  },
+  "section2": {
+    "title": "Wanneer speel je per bericht?",
+    "points": [
+      "<strong>Midden op de dag:</strong> een vraag tussen twee vergaderingen door, en je partner antwoordt als het uitkomt. Eens wat anders dan ‘hoe is het?’ en foto's van de lunch.",
+      "<strong>Op afstand:</strong> op de avond dat het telefoongesprek in rondjes draait, is één vraag genoeg om weer op gang te komen. En er zijn ook <a href=\"/nl/blog/vragen-voor-koppels-via-berichtjes/\">vragen om aan de telefoon te stellen</a>, voor de lange gesprekken.",
+      "<strong>Voor een date:</strong> drie of vier vragen in de middag, en jullie komen aan met genoeg gespreksstof voor de hele avond.",
+      "<strong>Om het wat spannender te maken:</strong> de waarheden uit <a href=\"/nl/waarheid-of-durven-18/\">de pikante versie</a> werken ook op schrift heel goed, die bewaar je voor de avond..."
+    ]
+  },
+  "section3": {
+    "title": "De 7 spelletjes van de generator, en hoe je ze per bericht speelt",
+    "intro": "Deze spelletjes staan ook in een volledige versie op de site. Per bericht blijft het idee hetzelfde, en speel je één vraag tegelijk, als je even twee minuten hebt.",
+    "jeux": [
+      {
+        "titre": "Zou je liever",
+        "texte": "Twee keuzes, en je partner moet er een kiezen: ‘allebei’ telt niet! Het leukste is het ‘waarom’ dat erachteraan komt. Bijvoorbeeld: ‘Zou je liever elke dag een lang liefdesbericht krijgen of elke avond één knuffel van tien minuten?’ ’s Avonds, voor een heel potje op dezelfde telefoon, zijn er <a href=\"/nl/zou-je-liever-vragen/\">honderd dilemma's om samen uit te zoeken</a>, met aan het eind hoe vaak jullie het eens waren."
+      },
+      {
+        "titre": "Ik heb nog nooit",
+        "texte": "Je stuurt een zin die begint met ‘Ik heb nog nooit’, en je partner antwoordt eerlijk: ‘ik wel’ of ‘ik niet’. Is het ja, dan moet het verhaal erbij! Bijvoorbeeld: ‘Ik heb nog nooit een bericht tien keer herlezen voordat ik het naar je stuurde. En jij?’ Samen op de bank speel je het spel met <a href=\"/nl/ik-heb-nog-nooit-vragen/\">honderd bekentenissen</a>, en de verhalen die erbij horen."
+      },
+      {
+        "titre": "Waarheid",
+        "texte": "Je stelt één vraag, en de enige regel is dat je eerlijk antwoordt. Bijvoorbeeld: ‘Waarheid: Wat vond je als eerste leuk aan mij?’ of, om even te lachen: ‘Waarheid: Als onze relatie een serie was, hoe zou die dan heten?’ Per bericht speel je de waarheden en laat je de opdrachten liggen: die doe je liever <a href=\"/nl/waarheid-of-durven-koppels/\">samen, met opdrachten om te doen</a>."
+      },
+      {
+        "titre": "Wie van ons?",
+        "texte": "De vraag wijst een van jullie aan, en je partner antwoordt met een naam. Bijvoorbeeld: ‘Wie van ons zegt het vaakst “ik hou van je”?’ of ‘Wie van ons zingt het valst?’ Meestal wordt het pas echt grappig als jullie het niet eens zijn. Op dezelfde bank <a href=\"/nl/wie-van-ons-twee/\">stemt ieder in het geheim</a>, en dan komen de twee antwoorden tegelijk tevoorschijn."
+      },
+      {
+        "titre": "Wie zou eerder?",
+        "texte": "Hetzelfde idee, met wat gekkere situaties: ‘Wie van ons zou eerder in een opwelling een luxe horloge kopen?’, ‘Wie van ons zou eerder in één avond het hele vakantiebudget uitgeven?’... Je antwoordt met een naam en een goede reden. Het hele spel heeft er meer dan honderd, genoeg om <a href=\"/nl/wie-zou-eerder-vragen/\">elkaar aan te wijzen</a>, de hele avond lang."
+      },
+      {
+        "titre": "Maak de zin af",
+        "texte": "Het begin van een zin, en je partner maakt hem af: ‘Maak de zin af: Onze mooiste herinnering samen is…’ Daarna maak jij dezelfde zin af. De antwoorden lijken zelden op elkaar, en daar draait het om! <a href=\"/nl/maak-de-zin-af/\">De twintig zinnen van het spel</a> speel je ook samen op één scherm."
+      },
+      {
+        "titre": "Snelle vraag",
+        "texte": "Een vraag over jullie twee, en je partner antwoordt met het eerste woord dat opkomt, zonder na te denken of in de foto's te zoeken. Bijvoorbeeld: ‘Snelle vraag, antwoord zonder na te denken: Wat is “ons” liedje?’ In het echt speel je het spel <a href=\"/nl/snelle-vragen-voor-koppels/\">met een aftelklok</a>, en wie het snelst is, krijgt het punt."
+      }
+    ]
+  },
+  "section4": {
+    "title": "Nog 5 spelletjes per bericht, zonder voorbereiding",
+    "intro": "Voor deze spelletjes hebben jullie alleen jullie berichtjes nodig, en een beetje fantasie.",
+    "jeux": [
+      {
+        "titre": "20 vragen",
+        "texte": "De een denkt aan iets: een herinnering, een voorwerp in huis, een plek waar jullie samen zijn geweest. De ander heeft twintig vragen om het te raden, en je antwoordt alleen met ja of nee. ‘Waren we er in de zomer?’, ‘Was het voordat we gingen samenwonen?’... Perfect voor de lunchpauze, en het kan de hele middag duren."
+      },
+      {
+        "titre": "Het emojiverhaal",
+        "texte": "Vertel een herinnering, je dag of een film alleen met emoji's, en je partner moet raden. 🍝🌧️🚗💨? Onze eerste date, in de regen, de avond dat de auto niet wilde starten... Hoe meer het jullie eigen herinnering is, hoe leuker."
+      },
+      {
+        "titre": "De mysteriefoto",
+        "texte": "Maak een foto van een detail van heel dichtbij (het patroon van een trui, de hoek van een plank, een deurklink) en stuur hem op. Je partner heeft drie pogingen om te raden wat het is. Dat werkt heel goed als de een thuis is en de ander op het werk."
+      },
+      {
+        "titre": "Het verhaal met z'n tweeën",
+        "texte": "Om de beurt schrijft ieder een zin, en zo maken jullie samen een verhaal. Eén regel: wat de ander schrijft, mag je nooit weigeren, je moet ermee verder. ‘Die ochtend werden we wakker op een onbewoond eiland...’ ‘... en jij was je zonnebril alweer vergeten.’ Na tien berichtjes belandt het verhaal meestal ergens waar niemand het had verwacht!"
+      },
+      {
+        "titre": "De top 3",
+        "texte": "Eén categorie, en ieder geeft zijn top 3 zonder naar die van de ander te kijken: jullie drie favoriete restaurants, jullie drie mooiste herinneringen, de drie liedjes waarbij je aan de ander denkt. Daarna vergelijken jullie. Vaak ontdek je juist dan dat je je heel andere dingen herinnert."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Jullie vragen over spelletjes per bericht",
+    "q1": "Welk spelletje speel je via WhatsApp met je vriend of vriendin?",
+    "a1": "Het makkelijkst zijn de spelletjes waarbij één vraag genoeg is: zou je liever, ik heb nog nooit, wie van ons, een waarheid... De generator bovenaan de pagina trekt er willekeurig een, je hoeft hem alleen nog te versturen.",
+    "q2": "Hoe stuur je een vraag via WhatsApp?",
+    "a2": "Kies een spel en tik op ‘Via WhatsApp sturen’: de app gaat open met het bericht al klaar, je kiest de chat en klaar. Op de computer gaat WhatsApp Web of de desktop-app open.",
+    "q3": "Moet mijn partner iets installeren?",
+    "a3": "Nee. Het is een gewoon bericht, met de link naar de pagina aan het eind. Je partner kan meteen in de chat antwoorden, of de link openen om je een vraag terug te sturen.",
+    "q4": "Kun je per bericht spelen in een lange-afstandsrelatie?",
+    "a4": "Ja, en juist daar helpen deze spelletjes het meest: één vraag per dag is genoeg om een gesprek dat inzakt weer op gang te brengen. Om live te spelen, hebben meerdere spellen op de site ook een afstandsmodus, ieder op zijn eigen telefoon.",
+    "q5": "Werkt het ook via sms, zonder internet?",
+    "a5": "Ja. De vraag is gewoon tekst, de link is alleen een extraatje. En de vijf spelletjes uit het laatste deel (20 vragen, emoji's, mysteriefoto, verhaal met z'n tweeën, top 3) hebben niets anders nodig dan jullie berichtjes.",
+    "q6": "Worden de vragen die we sturen ergens bewaard?",
+    "a6": "Nee. De pagina trekt de vragen in je browser, en het bericht gaat alleen naar waar jij het naartoe stuurt."
+  },
+  "jsonLd": {
+    "name": "WhatsApp spelletjes voor koppels",
+    "about": "Spelletjes voor koppels per bericht of via WhatsApp"
+  }
+}
