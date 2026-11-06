@@ -23,7 +23,7 @@
 
     // Alerte, personne seule : on reste sur la question suivante
     testToxic:        ['testPervers', 'testEmprise', 'testDivorce', 'testCoupleSain'],
-    testPervers:      ['testToxic', 'testEmprise', 'testJalousie', 'testDivorce'],
+    testPervers:      ['testToxic', 'testEmprise', 'testLoveBombing', 'testJalousie'],
     testDivorce:      ['testFinCouple', 'testAmourHabitude', 'testToxic', 'testCoupleSain'],
     testFinCouple:    ['testAimeEncore', 'testCouche', 'testToxic', 'testDivorce'],
     testAmourHabitude:['testFinCouple', 'testSuisJeAmoureux', 'testDivorce', 'testCoupleSain'],
@@ -44,7 +44,9 @@
     testSecret:       ['testSuisJeAmoureux', 'testAmourAmitie', 'testLangageAmour', 'testAttachement'],
     testDistanceAime: ['testDistance', 'testAimeEncore', 'testFinCouple', 'testAttachement'],
     testAimeEncore:   ['testFinCouple', 'testAmourHabitude', 'testCouple', 'testSuisJeAmoureux'],
-    testEmprise:      ['testToxic', 'testPervers', 'testDependance', 'testJalousie'],
+    testEmprise:      ['testToxic', 'testPervers', 'testLoveBombing', 'testDependance'],
+    // Un début trop parfait : les signaux en général, puis ce qui vient quand le contrôle s'installe
+    testLoveBombing:  ['testRedFlag', 'testEmprise', 'testToxic', 'testPervers'],
     testEx:           ['testExRevenir', 'testEncoreAmoureuxEx', 'testOublierEx', 'testDependance'],
     // Après une rupture : ce qu'on ressent encore, puis le temps qu'il faudra
     testEncoreAmoureuxEx: ['testOublierEx', 'testRemettreEx', 'testEx', 'testPretRelation'],

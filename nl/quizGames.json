@@ -327,6 +327,7 @@
     "testDistance": "Lange afstandsrelatie test",
     "testToxic": "Toxische relatie test",
     "testRedFlag": "Red flag test",
+    "testLoveBombing": "Love bombing test",
     "testCoupleSain": "Gezonde relatie test",
     "testMariage": "Klaar om te trouwen?",
     "testDivorce": "Moet ik scheiden?",
@@ -807,5 +808,10 @@
     "introQuestion": "Voordat je begint:",
     "introQuote": "Antwoord op basis van wat deze persoon doet, niet wat hij of zij zegt te gaan doen.",
     "disclaimer": "Deze test plakt op niemand een etiket. Hij telt gedrag, en hij laat zwaarder wegen wat echt telt: angst, controle, het nee dat niet wordt gehoord. Je antwoorden worden niet bewaard."
+  },
+  "love-bombing": {
+    "introQuestion": "Voordat je begint:",
+    "introQuote": "Antwoord op basis van wat deze persoon doet, niet van wat er wordt beloofd.",
+    "disclaimer": "De test heeft het over ‘deze persoon’, man of vrouw: love bombing komt in beide richtingen voor. Hij plakt op niemand een etiket, hij kijkt naar gedrag en laat zwaarder wegen wat het meest telt: een nee dat niet wordt gehoord, afstand tot je vrienden en familie, angst. Je antwoorden worden niet bewaard."
   }
 }

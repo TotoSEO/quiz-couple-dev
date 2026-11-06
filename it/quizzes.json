@@ -471,6 +471,12 @@
     "description": "Un uomo o una donna: venti domande su quello che questa persona fa, ogni segnale pesato in base alla gravità, e un risultato su nove livelli.",
     "metaDescription": "Uomo o donna, 20 domande su quello che questa persona fa: gli ex, il no, la gelosia, la rabbia. Ogni segnale pesa in base alla gravità. Gratis e anonimo."
   },
+  "testLoveBombing": {
+    "title": "Test love bombing: colpo di fulmine o manipolazione?",
+    "shortTitle": "Test love bombing",
+    "description": "Venti situazioni, dai primi messaggi a oggi: il ritmo, i tuoi limiti, le persone a cui tieni e quello che è cambiato dall'inizio.",
+    "metaDescription": "Un «ti amo» dopo dieci giorni, messaggi tutto il giorno, un no che non va giù? Fai il test love bombing: 20 domande, gratis e anonimo."
+  },
   "testSignesChinois": {
     "title": "Compatibilità dei segni cinesi in amore: calcolo gratuito",
     "shortTitle": "Compatibilità segni cinesi",

@@ -483,6 +483,12 @@
     "description": "Un homme ou une femme : vingt questions sur ce que cette personne fait, chaque signe pesé selon sa gravité, et un résultat sur neuf paliers.",
     "metaDescription": "Homme ou femme, 20 questions sur ce que cette personne fait : ses ex, le non, la jalousie, les colères. Chaque signe pèse selon sa gravité. Gratuit et anonyme."
   },
+  "testLoveBombing": {
+    "title": "Test love bombing : coup de foudre ou manipulation ?",
+    "shortTitle": "Test love bombing",
+    "description": "Vingt situations, du premier message à aujourd'hui : le rythme, vos limites, vos proches, et ce qui a changé depuis le début.",
+    "metaDescription": "Un « je t'aime » au bout de dix jours, des messages sans arrêt, un non qui passe mal ? Faites le test love bombing : 20 questions, gratuit et anonyme."
+  },
   "testSignesChinois": {
     "title": "Compatibilité des signes chinois en amour : calcul gratuit",
     "shortTitle": "Compatibilité signes chinois",

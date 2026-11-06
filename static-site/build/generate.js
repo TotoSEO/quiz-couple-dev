@@ -281,7 +281,7 @@ function promoBilanPour(lang) {
 // (l'évaluation est réservée aux majeurs) et les pages où l'on ne vend pas
 // l'évaluation : emprise, manipulation, infidélité, et pour les articles la
 // même règle que la bannière du bas (entreeArticle).
-const PAGES_SANS_BANDEAU = new Set(['bilanCouple', 'admin', 'quizAdo', 'testEmprise', 'testPervers', 'testInfidelite']);
+const PAGES_SANS_BANDEAU = new Set(['bilanCouple', 'admin', 'quizAdo', 'testEmprise', 'testPervers', 'testInfidelite', 'testLoveBombing']);
 function bandeauPromoPour(routeKey, articleMeta, lang) {
   if (!bilanOuvertPour(lang) || !BILAN_PROMO) return false;
   if (articleMeta) return !!entreeArticle(articleMeta, lang);
@@ -767,6 +767,7 @@ const GD_QUESTION_PREFIXES = {
   crush: ['crushH', 'crushF'],
   // Le test red flag : la série « homme » d'abord, comme pour le crush.
   'red-flag': ['redFlagH', 'redFlagF'],
+  'love-bombing': ['loveBombing'],
   ex: ['exH', 'exF'],
   'charge-mentale': ['chargeMentale'],
   // Les jeux rangent leurs cartes par ambiance ou par thème : on prend la

@@ -4,16 +4,17 @@ import { AUTHORS } from '@/data/blog/authors';
 const article: BlogArticleData = {
   slug: 'love-bombing-signs',
   title: "Love bombing: how to tell real love from manipulation",
-  metaTitle: "Love Bombing: The Signs and the Test That Settles It",
-  metaDescription: "He's perfect, too fast, too much. Genuine love or love bombing? The 3 phases of the cycle, the concrete signs, and the boundary test that settles it.",
+  metaTitle: "Love Bombing: The Signs and the 3 Phases to Spot It",
+  metaDescription: "He's perfect, too fast, too much. Genuine love or love bombing? The 3 phases of the cycle, the concrete signs, and the boundary that tells them apart.",
   featuredImage: '/blog/love-bombing.webp',
   featuredImageAlt: "An oversized bouquet of pale roses left alone on a sunlit doorstep",
   publishedAt: '2026-08-02',
+  modifiedAt: '2026-11-06',
   author: AUTHORS['thomas'],
   excerpt: "Love bombing doesn't look like manipulation. It looks like the most beautiful beginning of your life. That is exactly what makes it work.",
   introduction: `<p>You've just met someone and everything is moving fast. Messages from morning to night. Compliments that make your head spin. An "I think you're the one" after three weeks. Your friends tell you it's wonderful. And somewhere inside, you feel a small mismatch you can't quite name.</p>
 <p><strong>Love bombing doesn't look like manipulation. It looks like the most beautiful beginning of your life.</strong> That is precisely what makes it so effective, and it's why the question "does he really love me, or is he manipulating me?" is so hard to settle from the inside.</p>
-<p>This article won't just hand you a list of signs. You'll find those everywhere, and the problem is that a genuinely passionate beginning ticks roughly the same boxes. What we're going to give you is the one test that actually separates the two.</p>`,
+<p>The problem is that a genuinely passionate beginning ticks roughly the same boxes as love bombing. The difference mostly shows at one precise moment: when you set a boundary.</p>`,
   quickSummary: [
     "Love bombing is a phase of massive, accelerated seduction designed to create attachment before you've had time to assess the person.",
     "It follows a three-part cycle: idealisation, devaluation, then rejection or a forceful return.",
@@ -88,7 +89,7 @@ const article: BlogArticleData = {
     {
       id: 'the-boundary-test',
       title: "Love bombing or genuine whirlwind? The boundary test",
-      content: `<p>Here's the point most articles dodge. A sincerely passionate beginning and a love bombing produce, in the moment, almost identical observations. Lots of messages, lots of compliments, lots of eagerness. <strong>Intensity proves nothing.</strong> Not one way, not the other.</p>
+      content: `<p>In the moment, <a href="/en/love-bombing-test/">sincere passion and love bombing</a> look almost exactly alike: lots of messages, lots of compliments, lots of eagerness. <strong>Intensity proves nothing.</strong> Not one way, not the other.</p>
 <p>What separates the two is what happens when you're unavailable.</p>`,
       subsections: [
         {

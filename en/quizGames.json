@@ -327,6 +327,7 @@
     "testDistance": "Distance Test",
     "testToxic": "Toxic Test",
     "testRedFlag": "Red flag test",
+    "testLoveBombing": "Love bombing test",
     "testCoupleSain": "Healthy Couple Test",
     "testMariage": "Marriage Test",
     "testDivorce": "Divorce Test",
@@ -807,5 +808,10 @@
     "introQuestion": "Before you start:",
     "introQuote": "Answer about what this person does, not about what they say they'll do.",
     "disclaimer": "This test doesn't pin a label on anyone. It counts behaviours, and it gives more weight to the ones that matter: fear, control, a no that isn't heard. Your answers are not saved."
+  },
+  "love-bombing": {
+    "introQuestion": "Before you start:",
+    "introQuote": "Answer about what this person does, not about what they promise.",
+    "disclaimer": "The test talks about \"this person\", man or woman: love bombing goes both ways. It doesn't pin a label on anyone, it looks at behaviours, and it gives more weight to the ones that matter most: a no that isn't heard, distance from the people close to you, fear. Your answers are not saved."
   }
 }

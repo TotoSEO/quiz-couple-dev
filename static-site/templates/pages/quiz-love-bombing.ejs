@@ -1,0 +1,8 @@
+<%
+  // Le test love bombing (6 novembre 2026) : une seule série de vingt
+  // questions sur « cette personne », homme ou femme, dans l'ordre d'une
+  // histoire, barème pondéré, cinq paliers et des planchers, sur le gabarit
+  // générique. Les textes sont dans quiz-love-bombing.json.
+  var quizType = 'love-bombing'; var ns = 'quiz-love-bombing'; var totalQ = 20; var sectionCount = 3;
+%>
+<%- include('quiz-generic', { quizType, ns, totalQ, sectionCount, t, lang, routeKey, getLocalizedUrl, canonical, JSON }) %>
