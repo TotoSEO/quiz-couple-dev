@@ -11,7 +11,7 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/"/>
     <xhtml:link rel="alternate" hreflang="nl" href="https://quiz-couple.com/nl/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/"/>
-    <lastmod>2026-11-06</lastmod>
+    <lastmod>2026-11-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -297,7 +297,7 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/domande-coppia/"/>
     <xhtml:link rel="alternate" hreflang="nl" href="https://quiz-couple.com/nl/vragen-voor-koppels/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/questions-couple/"/>
-    <lastmod>2026-11-06</lastmod>
+    <lastmod>2026-11-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -544,7 +544,7 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/giochi-di-coppia/"/>
     <xhtml:link rel="alternate" hreflang="nl" href="https://quiz-couple.com/nl/spelletjes-voor-koppels/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/jeux-de-couple/"/>
-    <lastmod>2026-11-06</lastmod>
+    <lastmod>2026-11-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -1107,6 +1107,19 @@
     <xhtml:link rel="alternate" hreflang="nl" href="https://quiz-couple.com/nl/snelle-vragen-voor-koppels/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/questions-rapides-couple/"/>
     <lastmod>2026-11-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://quiz-couple.com/jeux-de-couple-par-message/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/jeux-de-couple-par-message/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://quiz-couple.com/en/texting-games-for-couples/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://quiz-couple.com/es/juegos-por-whatsapp-para-parejas/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://quiz-couple.com/de/whatsapp-spiele-fuer-paare/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/giochi-su-whatsapp-per-coppie/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://quiz-couple.com/nl/whatsapp-spelletjes-voor-koppels/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/jeux-de-couple-par-message/"/>
+    <lastmod>2026-11-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
