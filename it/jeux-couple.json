@@ -154,7 +154,7 @@
     "q3": "Qual è il gioco migliore da fare in coppia a casa?",
     "a3": "Dipende dalla serata! Obbligo o verità è il più versatile: parte in fretta e si ferma quando volete. Chi di noi due sta in cinque minuti e apre una conversazione ogni volta. Preferiresti funziona meglio quando avete voglia di parlare più che di fare. Il tabellone chiede una mezz'ora vera, ma è l'unico che si vince. La ruota serve soprattutto a chiudere una scommessa. E la versione piccante è da tenere per i momenti in cui siete soli in due.",
     "q4": "Si può giocare a distanza, ognuno a casa propria?",
-    "a4": "Sì. Uno apre il gioco, legge ad alta voce in videochiamata e conferma per entrambi. Verità, dilemmi e voti funzionano perfettamente a distanza, gli obblighi chiedono un po' di fantasia.",
+    "a4": "Sì. Chi di noi due, Non ho mai, Chi potrebbe? ed È un 10, ma... hanno una modalità a distanza: uno crea la partita, l'altro entra con il codice e ognuno gioca sul suo telefono. Per gli altri, uno apre il gioco, legge ad alta voce in videochiamata e conferma per entrambi. Verità, dilemmi e voti funzionano benissimo a distanza, gli obblighi chiedono un po' di fantasia.",
     "q5": "Questi giochi vanno bene per una coppia che si è appena conosciuta?",
     "a5": "Preferiresti, chi di noi due, la ruota delle penitenze e la versione classica di obbligo o verità: sì, nessuno presuppone una storia in comune. Anche il tabellone, anche se le sue caselle ricordo resteranno un po' scarne all'inizio. La versione piccante, invece, dà per scontato che vi conosciate già bene: giocata troppo presto mette più a disagio di quanto diverta."
   },
@@ -167,5 +167,11 @@
   },
   "jsonLd": {
     "name": "Giochi di coppia"
-  }
+  },
+  "plus": [
+    {
+      "titre": "Giochi di coppia a distanza, ognuno sul suo telefono",
+      "texte": "<p>Quattro dei nostri giochi hanno una vera modalità a distanza. Uno di voi crea la partita, l'altro entra con un codice o un QR code, e ognuno risponde sul proprio schermo. Le due risposte compaiono una accanto all'altra quando avete risposto tutti e due, e così avete di che parlare durante la chiamata:</p><ul><li><a href=\"/it/chi-di-noi-due-coppia/\">indicare chi di voi due</a> è sempre in ritardo, il più geloso o quello che spende di più;</li><li><a href=\"/it/non-ho-mai-gioco-coppia/\">confessare quello che avete già fatto</a>, oppure no;</li><li><a href=\"/it/chi-potrebbe-gioco-coppia/\">dire chi di voi due sarebbe capace</a> di lanciarsi col paracadute o di perdere un aereo;</li><li><a href=\"/it/gioco-e-un-10-ma/\">dare un voto a una persona perfetta</a>, con un difetto, da 0 a 10.</li></ul><p>Questa modalità funziona anche quando siete seduti uno accanto all'altro: diventa un gioco a due telefoni, in cui nessuno vede cosa sceglie l'altro prima della rivelazione. Gli altri giochi della pagina funzionano benissimo in videochiamata: uno apre il gioco, legge ad alta voce e conferma per entrambi.</p><p>E se siete più coppie, anche <a href=\"/it/gioco-da-serata-per-coppie/\">il gioco pensato per quattro-dieci giocatori</a> si fa sul telefono di ciascuno.</p>"
+    }
+  ]
 }

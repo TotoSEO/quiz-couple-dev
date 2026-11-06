@@ -1,0 +1,42 @@
+<%
+  // Titres ajoutés d'après les requêtes de la Search Console (novembre 2026) :
+  // un tableau de blocs { titre, texte } lu dans le JSON de la page. Par
+  // défaut, chaque bloc est un H3 posé dans la section qui l'inclut ; avec
+  // niveau 2, chaque bloc est une section H2 entière, avec des sous-blocs
+  // { titre, texte } facultatifs en H3 (clé sous). texte est du HTML :
+  // paragraphes <p> et listes <ul>, stylés par .seo-rich-content.
+  // cles : une clé, ou une liste de clés essayées dans l'ordre (le gabarit
+  // commun a plusieurs façons de nommer ses sections). nu : balises sans
+  // classes, pour un article en .prose qui met déjà en forme ses h2, h3, p, ul.
+  var _cles = Array.isArray(cles) ? cles : [cles];
+  var _blocs = [];
+  for (var _i = 0; _i < _cles.length && !_blocs.length; _i++) {
+    var _v = t(ns + ':' + _cles[_i], []);
+    if (Array.isArray(_v)) _blocs = _v;
+  }
+  var _niveau = (typeof niveau !== 'undefined' && niveau === 2) ? 2 : 3;
+  var _nu = typeof nu !== 'undefined' && !!nu;
+%><% for (var _b of _blocs) { if (!_b || !_b.titre) continue; %><% if (_nu) { %>
+<h<%= _niveau %>><%= _b.titre %></h<%= _niveau %>>
+<% if (_b.texte) { %><%- _b.texte %><% } %>
+<% (Array.isArray(_b.sous) ? _b.sous : []).forEach(function (_s) { if (!_s || !_s.titre) return; %>
+<h3><%= _s.titre %></h3>
+<% if (_s.texte) { %><%- _s.texte %><% } %>
+<% }) %>
+<% } else if (_niveau === 2) { %>
+<section class="mb-16">
+  <h2 class="text-2xl md:text-3xl font-bold mb-6"><%= _b.titre %></h2>
+  <% if (_b.texte) { %><div class="seo-rich-content"><%- _b.texte %></div><% } %>
+  <% (Array.isArray(_b.sous) ? _b.sous : []).forEach(function (_s) { if (!_s || !_s.titre) return; %>
+  <div class="mt-6">
+    <h3 class="text-xl font-semibold mb-3"><%= _s.titre %></h3>
+    <% if (_s.texte) { %><div class="seo-rich-content"><%- _s.texte %></div><% } %>
+  </div>
+  <% }) %>
+</section>
+<% } else { %>
+<div class="mt-6">
+  <h3 class="text-xl font-semibold mb-3"><%= _b.titre %></h3>
+  <% if (_b.texte) { %><div class="seo-rich-content"><%- _b.texte %></div><% } %>
+</div>
+<% } %><% } %>

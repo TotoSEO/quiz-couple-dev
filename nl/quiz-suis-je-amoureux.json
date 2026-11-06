@@ -46,7 +46,13 @@
     "row3Analysis": "Er is geen twijfel meer: je ziet de gebreken en je gevoelens blijven toch.",
     "row4Score": "156 tot 205 punten",
     "row4Level": "Een liefde die er stevig staat",
-    "row4Analysis": "Een diepe gehechtheid, de ander echt kennen en willen dat hij of zij gelukkig is, ook zonder jou."
+    "row4Analysis": "Een diepe gehechtheid, de ander echt kennen en willen dat hij of zij gelukkig is, ook zonder jou.",
+    "plus": [
+      {
+        "titre": "Hoe diep je gevoelens voor hem of haar gaan",
+        "texte": "<p>Veel mensen zoeken een test die meet ‘hoe sterk hun gevoelens’ voor iemand zijn. Dat doet deze score ongeveer, met één verschil: hij meet niet hoe heftig je gevoel is, maar wat voor gevoel het is. De vier niveaus gaan van genegenheid tot een liefde die vastligt, en het niveau zegt meer over waar je staat dan het aantal punten.</p><p>Is jullie verhaal pas een paar weken oud, dan heb je waarschijnlijk meer aan <a href=\"/nl/crush-test/\">het verschil tussen een crush en liefde</a>: helemaal in het begin komt bijna iedereen op het tweede niveau uit, en dat is normaal.</p>"
+      }
+    ]
   },
   "section4": {
     "title": "Liefde of alleen aantrekking: hoe zie je het verschil?",

@@ -66,5 +66,17 @@
   },
   "jsonLd": {
     "name": "The couple forfeit wheel"
-  }
+  },
+  "plus": [
+    {
+      "titre": "Forfeit ideas for couples",
+      "texte": "<p>The wheel picks at random from 140 forfeits. If you want an idea right now, here are a few exactly as it gives them, nearly one per family:</p><ul><li>A kiss on the neck, with no warning.</li><li>Two minutes of shoulder massage, in silence.</li><li>Sing the chorus of a love song, standing up.</li><li>Tell them the moment you knew this was serious.</li><li>Speak in an accent of your choice until the next spin.</li><li>Recreate a photo of the two of you that is at least a year old.</li><li>Three honest compliments, without repeating a single word.</li><li>Write a sweet note on paper and hand it over without reading it out.</li></ul><p>They're written to be given to a boyfriend or a girlfriend alike: none of them assumes who does what in the couple.</p>",
+      "sous": [
+        {
+          "titre": "Forfeits for long distance",
+          "texte": "<p>On the phone or on video, the wheel works too: one of you spins it and reads the forfeit, the other does it on camera. The ones that work best at a distance:</p><ul><li>Sing the chorus of a love song, standing up, camera on.</li><li>Speak in an accent of your choice until the end of the call.</li><li>Three honest compliments, without repeating a single word.</li><li>Tell them the moment you knew this was serious.</li><li>Show the last photo on your phone and tell the story behind it.</li><li>Send the ugliest possible selfie, no filter.</li></ul>"
+        }
+      ]
+    }
+  ]
 }

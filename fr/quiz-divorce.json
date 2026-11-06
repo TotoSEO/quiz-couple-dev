@@ -4,7 +4,17 @@
       "title": "Dois-je divorcer ? Ce que votre hésitation vous dit déjà",
       "p1": "Vous n'avez pas ouvert cette page par hasard. Quand quelqu'un tape « dois-je divorcer » dans Google, ce n'est pas par curiosité abstraite. C'est parce que quelque chose, quelque part, ne va plus, et que la question commence à occuper une place que vous n'arrivez plus à ignorer.",
       "p2": "L'hésitation, en elle-même, est déjà une information. Elle dit que vous ne voulez pas décider dans la précipitation. Que vous prenez votre couple, et votre vie, au sérieux. Ça compte.",
-      "p3": "Mais elle peut aussi vous garder dans une situation inconfortable indéfiniment, si elle n'est jamais adressée franchement."
+      "p3": "Mais elle peut aussi vous garder dans une situation inconfortable indéfiniment, si elle n'est jamais adressée franchement.",
+      "plus": [
+        {
+          "titre": "Dois-je le quitter, même sans être marié(e) ?",
+          "texte": "<p>Derrière « dois-je divorcer », il y a souvent une question plus large : rester ou partir. Le test est écrit pour un couple marié, mais la plupart des questions valent pour n'importe quelle relation de longue date : la communication, les tentatives de réparation, ce que la situation vous coûte. Si vous n'êtes pas marié(e), répondez de la même façon et laissez de côté ce qui touche à la procédure.</p>"
+        },
+        {
+          "titre": "Je n'aime plus mon mari, ou ma femme : faut-il divorcer ?",
+          "texte": "<p>Ne plus ressentir la même chose qu'au début ne veut pas forcément dire que c'est fini. Avant de parler de divorce, ça vaut la peine de regarder <a href=\"/test-je-l-aime-encore/\">ce qu'il reste de vos sentiments</a> sous la fatigue et les habitudes. Si le doute tient toujours après ça, ce test vous aidera à peser le reste : la communication, votre santé, ce que vous voulez pour la suite.</p>"
+        }
+      ]
     },
     "s2": {
       "title": "Quand faut-il envisager le divorce ?",

@@ -18,7 +18,13 @@
     "title": "Qu'est-ce qu'un quiz pour couple marrant exactement ?",
     "p1": "Un <strong class=\"text-foreground\">quiz pour couple marrant</strong> est un jeu de questions à deux dont le but n'est pas de tester des connaissances, mais de lancer la conversation. Une question s'affiche, vous la lisez à voix haute, et vous répondez chacun votre tour. C'est tout.",
     "p2": "Il n'y a ni bonne réponse ni score. Ce qui fait rire, c'est la réponse elle-même : ce que l'autre pensait de vous au premier rendez-vous, le <a href=\"/quiz-couple-genant/\">moment le plus gênant</a> que vous avez vécu ensemble, ou ce qu'il ferait s'il gagnait au loto demain matin.",
-    "p3": "Ce format est particulièrement apprécié car il permet de parler de la relation sans lourdeur, d'aborder des sujets du quotidien avec humour et de renforcer la communication dans le couple."
+    "p3": "Ce format est particulièrement apprécié car il permet de parler de la relation sans lourdeur, d'aborder des sujets du quotidien avec humour et de renforcer la communication dans le couple.",
+    "plus": [
+      {
+        "titre": "Des questions drôles à poser en couple",
+        "texte": "<p>Pour vous donner une idée de ce qui tombe, voici une question de chacune des six familles du jeu, telle qu'il la pose :</p><ul><li>C'est quoi le détail complètement débile qui t'a fait craquer ?</li><li>Tu as déjà fait semblant d'aimer un de mes plats ? Lequel ?</li><li>Combien de temps je mets vraiment quand je dis « deux minutes » ?</li><li>Quelle est notre blague privée que personne d'autre ne comprend ?</li><li>Tu as déjà fait semblant de dormir pour éviter une discussion ?</li><li>Si on restait bloqués trois heures dans un ascenseur, ça se passerait comment ?</li></ul><p>Il y en a 150 en tout. Pour des listes à lire tranquillement, des plus légères aux plus profondes, il y a aussi <a href=\"/questions-couple/\">des questions classées par situation et par thème</a>.</p>"
+      }
+    ]
   },
   "section3": {
     "title": "Pourquoi le quiz pour couple marrant fonctionne aussi bien ?",

@@ -35,7 +35,13 @@
     "title": "Las preguntas que hacen reflexionar (y las que solo hacen reír)",
     "p1": "Hay dos categorías de preguntas en un buen preferirías para parejas. Las dos sirven, pero no de la misma manera.",
     "p2": "Las <strong class=\"text-foreground\">preguntas ligeras</strong> sirven para relajar, reír e instalar un ritmo. No enseñan nada profundo, pero crean el contexto para que las siguientes caigan bien.",
-    "p3": "Las <strong class=\"text-foreground\">preguntas que rascan</strong> abren algo. Tocan expectativas reales, necesidades que no siempre se han formulado con claridad. La proporción buena es más o menos 60/40: bastante ligereza para que siga siendo un juego, bastante profundidad para que haya merecido la pena."
+    "p3": "Las <strong class=\"text-foreground\">preguntas que rascan</strong> abren algo. Tocan expectativas reales, necesidades que no siempre se han formulado con claridad. La proporción buena es más o menos 60/40: bastante ligereza para que siga siendo un juego, bastante profundidad para que haya merecido la pena.",
+    "plus": [
+      {
+        "titre": "Preguntas de «¿qué prefieres?» para hacer en pareja",
+        "texte": "<p>Para empezar con calma:</p><ul><li>¿Prefieres resolver vuestras discusiones a piedra, papel o tijera o a cara o cruz?</li><li>¿Prefieres una cama enorme con un lado para cada uno o una cama individual pegados toda la noche?</li><li>¿Prefieres fregar los platos cada noche durante diez años o no volver a elegir la película nunca más?</li></ul><p>Y para ir un poco más al fondo:</p><ul><li>¿Prefieres que te elija cada mañana o que te haya elegido de una vez por todas?</li><li>¿Prefieres saber que acabaréis juntos pero sin pasión o vivir diez años de pasión sin ninguna garantía?</li><li>¿Prefieres perdonar sin olvidar u olvidar sin perdonar?</li></ul>"
+      }
+    ]
   },
   "section5": {
     "title": "Por qué este quiz funciona tan bien en pareja",

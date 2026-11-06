@@ -154,7 +154,7 @@
     "q3": "What is the best game to play as a couple at home?",
     "a3": "It depends on the evening! Truth or dare is the most versatile: it starts fast and stops whenever you want. Which one of us fits in five minutes and starts a conversation every single time. Would you rather works better when you feel like talking more than doing. The board game needs a proper half hour, but it's the only one you can win. The wheel is mostly for settling a bet. And the naughty version is for the moments when it's just the two of you.",
     "q4": "Can we play remotely, each at home?",
-    "a4": "Yes. One of you opens the game, reads out loud on video and confirms for both. Truths, dilemmas and votes work perfectly at a distance, dares take a bit of imagination.",
+    "a4": "Yes. Which one of us, Never Have I Ever, Who could? and He's a 10 but... have a remote mode: one of you creates the game, the other joins with the code, and each plays on their own phone. For the others, one of you opens the game, reads out loud on video and confirms for both. Truths, dilemmas and votes work very well at a distance, dares take a bit of imagination.",
     "q5": "Are these games suitable for a couple who have just met?",
     "a5": "Would you rather, which one of us, the forfeit wheel and the classic truth or dare, yes: none of them assume a shared history. The board game too, though its memory squares will feel a little thin early on. The naughty version, though, assumes you already know each other well: played too early it makes people more uncomfortable than amused."
   },
@@ -167,5 +167,11 @@
   },
   "jsonLd": {
     "name": "Couple games"
-  }
+  },
+  "plus": [
+    {
+      "titre": "Long-distance couple games, each on your own phone",
+      "texte": "<p>Four of our games have a proper remote mode. One of you creates the game, the other joins with a code or a QR code, and each of you answers on your own screen. Both answers appear side by side once you've both replied, which gives you something to talk about on the call:</p><ul><li><a href=\"/en/which-one-of-us-couple-game/\">pointing at which one of you</a> is always late, the most jealous or the biggest spender;</li><li><a href=\"/en/never-have-i-ever-couples-game/\">owning up to what you've already done</a>, or not;</li><li><a href=\"/en/who-could-couples-game/\">saying which of you would be capable</a> of skydiving or missing a flight;</li><li><a href=\"/en/hes-a-10-but-game/\">rating a perfect person from 0 to 10</a>, with one flaw.</li></ul><p>This mode also works when you're sitting side by side: it becomes a two-phone game where neither of you sees what the other picks before the reveal. The other games on this page play very well over video: one of you opens the game, reads out loud and confirms for both.</p><p>And if there are several couples of you, <a href=\"/en/couples-party-game/\">the game made for four to ten players</a> is also played on everyone's own phone.</p>"
+    }
+  ]
 }

@@ -10,12 +10,24 @@
     "title": "Che cos'è la compatibilità amorosa?",
     "p1": "La <strong>compatibilità amorosa</strong> è il grado di allineamento tra due partner su ciò che struttura una vita di coppia: valori, progetti, denaro, stile di vita, comunicazione e intimità. Non è la stessa cosa dell'attrazione: si può provare una forte chimica pur avendo visioni di vita molto diverse.",
     "p2": "Due persone compatibili non sono cloni: non devono condividere tutto, ma i loro <strong>fondamentali vanno nella stessa direzione</strong>. È questo allineamento, più della passione iniziale, a predire meglio la solidità di una relazione nel tempo.",
-    "p3": "Il nostro <strong>test di compatibilità amorosa</strong> misura proprio questo allineamento: rispondete ciascuno separatamente, poi confrontiamo le vostre risposte per calcolare la vostra percentuale."
+    "p3": "Il nostro <strong>test di compatibilità amorosa</strong> misura proprio questo allineamento: rispondete ciascuno separatamente, poi confrontiamo le vostre risposte per calcolare la vostra percentuale.",
+    "plus": [
+      {
+        "titre": "Come capire se siete compatibili, al di là di un test?",
+        "texte": "<p>La cosa più semplice è parlare dei temi delicati prima che diventino delicati: dove volete vivere, se volete figli, come gestite i soldi, o lo spazio che ognuno tiene per i suoi amici. Se queste conversazioni vanno bene, anche quando non siete d'accordo, è un buon segno. Se ognuna finisce in una lite, o se le evitate da mesi, anche questo dice qualcosa. Il test serve proprio a mettere questi temi sul tavolo senza che nessuno dei due debba tirarli fuori.</p>"
+      }
+    ]
   },
   "section2": {
     "title": "Come funziona il nostro test di compatibilità amorosa?",
     "p1": "Il test si gioca <strong>in coppia</strong>. Ognuno risponde, a turno, alle stesse 20 domande sulle grandi dimensioni della coppia. Non ci sono risposte giuste o sbagliate, basta rispondere con sincerità.",
-    "p2": "Alla fine confrontiamo le vostre risposte. Ogni risposta identica rivela un punto di allineamento. La vostra <strong>percentuale di compatibilità</strong> è la quota di risposte in cui siete sulla stessa lunghezza d'onda, con un verdetto e spunti di dialogo."
+    "p2": "Alla fine confrontiamo le vostre risposte. Ogni risposta identica rivela un punto di allineamento. La vostra <strong>percentuale di compatibilità</strong> è la quota di risposte in cui siete sulla stessa lunghezza d'onda, con un verdetto e spunti di dialogo.",
+    "plus": [
+      {
+        "titre": "Un test di compatibilità amorosa scientifico?",
+        "texte": "<p>Non in senso stretto. Perché un punteggio sia scientifico, bisognerebbe averlo verificato su migliaia di coppie seguite per anni, e non è il caso di questo test. Le sue domande riguardano cose concrete (i valori, i progetti, i soldi, la vita di tutti i giorni), e la percentuale serve soprattutto a cominciare a parlarne. Non prevede il futuro della vostra coppia, e non sostituisce un terapeuta di coppia.</p>"
+      }
+    ]
   },
   "section3": {
     "title": "Le grandi dimensioni della compatibilità",

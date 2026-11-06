@@ -4,7 +4,17 @@
       "title": "¿Debería divorciarme? Lo que tu vacilación ya te dice",
       "p1": "No abriste esta página por casualidad. Cuando alguien busca \"¿debería divorciarme?\" en Google, no es por curiosidad abstracta. Es porque algo, en algún lugar, ya no funciona, y la pregunta empieza a ocupar un espacio que ya no puedes ignorar.",
       "p2": "La vacilación, en sí misma, ya es información. Dice que no quieres decidir de forma precipitada. Que te tomas tu relación, y tu vida, en serio. Eso cuenta.",
-      "p3": "Pero también puede mantenerte en una situación incómoda indefinidamente, si nunca se aborda con honestidad."
+      "p3": "Pero también puede mantenerte en una situación incómoda indefinidamente, si nunca se aborda con honestidad.",
+      "plus": [
+        {
+          "titre": "¿Debería dejarlo, aunque no estemos casados?",
+          "texte": "<p>Detrás de «¿debería divorciarme?» suele haber una pregunta más amplia: quedarse o irse. El test está escrito para una pareja casada, pero la mayoría de las preguntas sirven para cualquier relación larga: la comunicación, los intentos de arreglarlo, lo que te está costando la situación. Si no estás casado o casada, responde igual y deja de lado lo que tiene que ver con el procedimiento.</p>"
+        },
+        {
+          "titre": "Ya no quiero a mi marido o a mi mujer: ¿debo divorciarme?",
+          "texte": "<p>No sentir lo mismo que al principio no significa necesariamente que se haya acabado. Antes de hablar de divorcio, merece la pena mirar <a href=\"/es/test-todavia-le-quiero/\">lo que queda de tus sentimientos</a> debajo del cansancio y las costumbres. Si la duda sigue ahí después, este test te ayudará a sopesar el resto: la comunicación, tu salud, lo que quieres para lo que viene.</p>"
+        }
+      ]
     },
     "s2": {
       "title": "¿Cuándo hay que plantearse el divorcio?",

@@ -36,5 +36,10 @@
     "faq3A": "Ja, 100% gratis en zonder account. Jullie antwoorden worden niet opgeslagen, en je kunt de quiz zo vaak doen als je wilt.",
     "faq4Q": "Wat zegt onze score?",
     "faq4A": "De score telt de vragen waarop jullie hetzelfde antwoord kozen zonder te overleggen. Een lage score zegt weinig over jullie relatie. Vooral dat jullie elkaar nog dingen te vertellen hebben."
+  },
+  "section1": {
+    "title": "Een vraag-en-antwoordspel over jullie liefdesverhaal",
+    "p1": "Deze liefdesquiz is een vraag-en-antwoordspel voor twee: twintig vragen over jullie verhaal, elke keer gekozen uit dertig, met vier antwoorden om uit te kiezen. Bijvoorbeeld “Als we dieren waren, dan waren we…”, “Hoe troost jij de ander als het even niet gaat?” of “Op welk moment besefte je dat je van me hield?”",
+    "p2": "Start je een nieuw spel, dan verandert een deel van de vragen, en kunnen jullie een andere avond opnieuw spelen zonder precies dezelfde te krijgen!"
   }
 }

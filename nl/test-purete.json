@@ -109,7 +109,9 @@
         "🚨 <strong>Over de grens:</strong> casino, verboden plekken, samen liegen",
         "🤐 <strong>Geheimen:</strong> wat de ander nog steeds niet weet"
       ],
-      "sub2P1": "De categorie geheimen scoort wat de een voor de ander verborgen heeft gehouden. Daardoor kunnen twee stellen die ongeveer hetzelfde hebben meegemaakt, op heel verschillende scores uitkomen."
+      "sub2P1": "De categorie geheimen scoort wat de een voor de ander verborgen heeft gehouden. Daardoor kunnen twee stellen die ongeveer hetzelfde hebben meegemaakt, op heel verschillende scores uitkomen.",
+      "sub3Titre": "Een puriteitstest voor tieners, of de harde versie?",
+      "sub3P1": "Ze bestaan allebei, en de leeftijd die je aan het begin opgeeft, beslist. Onder de 16 krijg je de versie voor iedereen, en voor een tienerstel is er ook <a class=\"pu-lien-int\" href=\"{{quizAdo}}\">een quiz over hun relatie, gemaakt voor hun leeftijd</a>. Vanaf 16 is het de volledige versie, de harde versie zo je wilt: de vragen over seks en drugs gaan ver, en sommige stel je niet waar iedereen bij is!"
     },
     "s5": {
       "titre": "Is een hoge score erg?",
@@ -135,7 +137,7 @@
     "q5": "Kun je hem met meer dan twee mensen doen?",
     "a5": "De koppelmodus is voor twee mensen gemaakt. Maar niets houdt een hele groep tegen om ieder voor zich de modus alleen te doen en daarna de scores te vergelijken: als je met meer bent, is dat zelfs de beste manier om de test te gebruiken.",
     "q6": "Vanaf welke leeftijd?",
-    "a6": "De test vraagt je leeftijd voordat je begint. Ben je jonger dan 16, dan krijg je een versie voor iedereen, zonder vragen over expliciete seks en drugs, maar met alles over leugens, familie, feestjes en geheimen. Voor een tienerstel past de <a href=\"/nl/liefdesquiz-voor-tieners/\">liefdesquiz voor tieners</a> waarschijnlijk beter."
+    "a6": "De test vraagt je leeftijd voordat je begint. Ben je jonger dan 16, dan krijg je een versie voor iedereen, zonder vragen over expliciete seks en drugs, maar met alles over leugens, familie, feestjes en geheimen."
   },
   "suite": {
     "titre": "Om meteen daarna te doen",

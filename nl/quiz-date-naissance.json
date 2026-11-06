@@ -173,7 +173,13 @@
     "title": "Wat een geboortedatum over een relatie kan zeggen",
     "p1": "Deze test gaat uit van één gegeven: jullie twee geboortedata. Een geboortedatum gebruik je vooral om iemand te feliciteren, maar drie tradities lezen er ook een karakter in: de numerologie, de westerse astrologie en de Chinese astrologie. De test haalt jullie twee data door alle drie.",
     "p2": "De numerologie haalt er een getal uit, het <strong>levenspad</strong>, dat zegt hoe iemand door het leven gaat. De westerse astrologie kijkt naar de dag en de maand om je sterrenbeeld te vinden, en de Chinese astrologie kijkt naar het jaar om je dier te vinden. Die drie lezingen zeggen niet hetzelfde, en juist daarom kijken we naar alle drie.",
-    "p3": "Aan het eind krijg je een totaalscore, een score voor elk van de drie lezingen en uitleg die over jullie twee gaat. Zoek je liever <a href=\"/nl/passen-we-bij-elkaar/\">een vragenlijst om samen in te vullen</a>? Dan is er ook een test met twintig vragen over hoe jullie het leven samen zien."
+    "p3": "Aan het eind krijg je een totaalscore, een score voor elk van de drie lezingen en uitleg die over jullie twee gaat. Zoek je liever <a href=\"/nl/passen-we-bij-elkaar/\">een vragenlijst om samen in te vullen</a>? Dan is er ook een test met twintig vragen over hoe jullie het leven samen zien.",
+    "plus": [
+      {
+        "titre": "Kun je je liefdestoekomst aflezen aan je geboortedatum?",
+        "texte": "<p>Veel mensen stellen zich die vraag, en het eerlijke antwoord is nee. Een geboortedatum zegt niet wie je gaat ontmoeten of wanneer, en ook niet of je ooit gaat trouwen. De test voorspelt niets: hij vergelijkt twee karakters, zoals die drie tradities ze beschrijven. Zie het als een spel, en als een mooie aanleiding om over jullie temperament te praten.</p>"
+      }
+    ]
   },
   "section2": {
     "title": "Het levenspad, het getal dat in je geboortedatum verstopt zit",

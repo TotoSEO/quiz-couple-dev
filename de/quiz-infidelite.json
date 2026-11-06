@@ -68,7 +68,17 @@
     "do2Title": "Sag, was du empfindest, ohne anzuklagen",
     "do2Text": "\"Seit einigen Wochen spüre ich eine Distanz zwischen uns und das beunruhigt mich. Ich möchte darüber reden.\" Dieser Zugang öffnet das Gespräch, statt es zu schließen. Du klagst nicht an, du teilst ein Empfinden.",
     "do3Title": "Hol dir professionelle Hilfe",
-    "do3Text": "Eine Therapeutin, einzeln oder als Paar, kann dir durch diese Zeit helfen. Sie gibt dir einen neutralen Raum, um Worte für das Erlebte zu finden, und begleitet dich zu der Entscheidung, die für dich die beste ist."
+    "do3Text": "Eine Therapeutin, einzeln oder als Paar, kann dir durch diese Zeit helfen. Sie gibt dir einen neutralen Raum, um Worte für das Erlebte zu finden, und begleitet dich zu der Entscheidung, die für dich die beste ist.",
+    "plus": [
+      {
+        "titre": "Fangfragen, um herauszufinden, ob er oder sie dich betrügt",
+        "texte": "<p>Das ist eine der häufigsten Suchen: eine Fangfrage, ganz beiläufig gestellt, die die Maske fallen lässt. Das Problem ist, dass jemand, der fremdgeht, mit Fragen rechnet, und jemand, der treu ist, sich angegriffen fühlt, sobald er die Falle spürt. In beiden Fällen erfährst du wenig, und das Vertrauen leidet.</p><p>Besser funktionieren offene Fragen, ruhig gestellt, auf die man mit einer Geschichte antwortet statt mit einem auswendig gelernten Satz. Zum Beispiel:</p><ul><li>„Erzählst du mir von Donnerstagabend? Am Telefon habe ich nicht alles mitbekommen.“</li><li>„Gibt es gerade jemanden auf der Arbeit, mit dem du dich besonders gut verstehst?“</li><li>„Du wirkst seit ein paar Wochen abwesend. Ist irgendwas los?“</li><li>„Wenn sich einer von uns mal zu jemand anderem hingezogen fühlen würde, würdest du es wissen wollen?“</li><li>„Was fehlt dir gerade in unserer Beziehung?“</li></ul>"
+      },
+      {
+        "titre": "Worauf du bei der Antwort achten solltest",
+        "texte": "<p>Eine wahre Geschichte hat Details, die von allein kommen, und sie hält einer zweiten Frage stand. Eine erfundene ist oft sehr genau bei Dingen, die keine Rolle spielen, vage beim Rest, und sie ändert sich von Mal zu Mal. Achte auch auf die Reaktion: sofortige Wut oder die zurückgegebene Frage („Warum fragst du mich das?“) beweist nichts, ist aber ein weiteres Zeichen neben den anderen.</p><p>Und egal, ob du an deiner Frau, deinem Mann, deiner Freundin oder deinem Freund zweifelst, entscheidend ist dasselbe: <a href=\"/de/blog/anzeichen-fuer-untreue/\">Veränderungen im Verhalten</a> im Vergleich zu sonst, nicht das Geschlecht der Person.</p>"
+      }
+    ]
   },
   "section6": {
     "title": "Kann man nach einer Untreue wieder aufbauen?",

@@ -11,7 +11,13 @@
     "title": "How do you know whether you still love someone?",
     "p1": "The answer isn't in grand declarations, it's in reflexes. Do you want to see them when you get home in the evening? Do their successes make you happy? Do you defend them when someone criticises them? These are things you don't decide, and that's exactly why they tell the truth.",
     "p2": "The trouble, when you ask yourself the question, is that you look to be reassured or condemned in one go, on a single sign. A drop in desire means nothing on its own: it happens to every couple. Neither does a thought about someone else. What counts is the accumulation, and above all the weight of the heavy signs: having thought about leaving, calmly, several times, isn't in the same league as an evening when you'd rather have your phone.",
-    "p3": "That's why the test doesn't count the answers, it weighs them. And why it doesn't hand back a \"yes\" or a \"no\", but one level out of eight: between \"you love them, and it's clear\" and \"you don't love them any more\", there are six in-between states that many couples go through, and they don't all lead to the same place."
+    "p3": "That's why the test doesn't count the answers, it weighs them. And why it doesn't hand back a \"yes\" or a \"no\", but one level out of eight: between \"you love them, and it's clear\" and \"you don't love them any more\", there are six in-between states that many couples go through, and they don't all lead to the same place.",
+    "plus": [
+      {
+        "titre": "Do I love him, or do I still love him?",
+        "texte": "<p>Plenty of people simply search \"do I love him\". This test answers the version with \"still\": you've been together for a while, and you're no longer quite sure what's left. If the story is only just beginning, the question is more whether you're <a href=\"/en/am-i-in-love-test/\">in love, or just attracted</a>, and that's another test, which looks at early attraction rather than the wear of everyday life.</p>"
+      }
+    ]
   },
   "section2": {
     "title": "The signs that weigh the most",
@@ -32,7 +38,9 @@
     "p3": "Your total then lands on one of eight levels. The boundaries aren't equal slices: the two bottom levels are tighter, because the difference between \"what's left is no longer love\" and \"you don't love them any more\" comes down to few points, but not to few things. A score of 45 out of 89 doesn't mean \"half in love\", it means something has gone into standby and the direction hasn't been taken yet.",
     "p4": "One thing to be clear about: this test says nothing about the other person's feelings. If your doubt is about what they feel for you, <a href=\"/en/does-he-she-still-love-me-test/\">the signs that they still love you</a> are read elsewhere. And if your result is low on both counts, the next question is no longer about the feeling, it's about <a href=\"/en/is-my-relationship-over-test/\">what still holds in the relationship</a>."
   },
-  "seo": { "faqTitle": "The questions people ask" },
+  "seo": {
+    "faqTitle": "The questions people ask"
+  },
   "jsonLd": {
     "about": "feelings of love in a relationship",
     "faq1Q": "How do you know you no longer love your partner?",

@@ -16,7 +16,13 @@
     "not2Title": "Der perfekte Mensch",
     "not2Text": "Eine Seelenverwandtschaft hat Fehler, und manche stören dich wirklich. Die Frage ist nicht, ob es sie gibt, sondern ob ihr darüber reden könnt.",
     "not3Title": "Die Person, die dich vervollständigt",
-    "not3Text": "Die fehlende Hälfte macht sich gut im Film. Im echten Leben halten zwei ganze Menschen besser als zwei Hälften, die sich aneinander klammern."
+    "not3Text": "Die fehlende Hälfte macht sich gut im Film. Im echten Leben halten zwei ganze Menschen besser als zwei Hälften, die sich aneinander klammern.",
+    "plus": [
+      {
+        "titre": "Ein Seelenverwandten-Test nach Geburtsdatum oder Namen?",
+        "texte": "<p>Viele suchen einen Seelenverwandten-Test mit Geburtsdatum oder Namen. Dieser hier nutzt sie nicht: Er schaut auf das, was du in deiner Beziehung erlebst. Wenn du trotzdem die astrologische Seite willst, kannst du <a href=\"/de/liebeskompatibilitaet-geburtsdatum/\">von euren beiden Geburtsdaten ausgehen</a> und bekommst eine Deutung über Lebenszahl, Sternzeichen und chinesisches Tierzeichen, und <a href=\"/de/liebesrechner/\">zwei Vornamen reichen</a> für einen Prozentwert. Das sind Spiele, und so sollte man sie auch nehmen.</p>"
+      }
+    ]
   },
   "section2": {
     "title": "Die verschiedenen Arten von Seelenverwandtschaft",

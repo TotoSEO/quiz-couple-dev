@@ -13,7 +13,13 @@
     "title": "¿Qué es un test de pareja y para qué sirve?",
     "p1": "Un <strong>test de pareja</strong> es una herramienta de evaluación diseñada para medir la compatibilidad y armonía entre dos personas. A diferencia de una conversación casual, estructura los intercambios en torno a temas clave: comunicación, confianza, valores, proyectos de vida e intimidad.",
     "p2": "El objetivo no es dar un veredicto definitivo, sino ofrecer un <strong>espejo objetivo de vuestra relación</strong>. La puntuación obtenida destaca vuestros puntos fuertes e identifica las áreas donde un esfuerzo conjunto podría reforzar vuestro vínculo.",
-    "p3": "Las preguntas se apoyan en <strong>situaciones concretas del día a día</strong>, no en conceptos abstractos. Eso hace el ejercicio pertinente y accesible, tanto si la relación es reciente como si lleváis años."
+    "p3": "Las preguntas se apoyan en <strong>situaciones concretas del día a día</strong>, no en conceptos abstractos. Eso hace el ejercicio pertinente y accesible, tanto si la relación es reciente como si lleváis años.",
+    "plus": [
+      {
+        "titre": "Un test de pareja para hacer los dos, incluso a distancia",
+        "texte": "<p>El test se hace entre dos, pero no necesariamente en el mismo sitio. En un solo móvil podéis responder juntos con una sola voz, o por turnos para que cada uno tenga su puntuación. Y si estáis lejos, el modo a distancia os deja responder a cada uno en su móvil: uno crea la partida, el otro se une con un código, y vuestras dos respuestas aparecen una al lado de la otra en cada pregunta.</p>"
+      }
+    ]
   },
   "section2": {
     "title": "Los 5 pilares de una pareja sólida",

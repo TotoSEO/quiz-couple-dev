@@ -529,7 +529,13 @@
     "faq3Q": "Kunnen we opnieuw spelen met andere vragen?",
     "faq3A": "Ja! Elk spel kiest 20 willekeurige vragen uit 80. Speel zo vaak als je wilt om nieuwe vragen te ontdekken.",
     "faq4Q": "Worden onze antwoorden bewaard?",
-    "faq4A": "Nee. Spelen jullie elk op je eigen telefoon, dan gaan de antwoorden via een tijdelijk kanaal dat verdwijnt zodra jullie stoppen. Er worden geen persoonsgegevens blijvend opgeslagen."
+    "faq4A": "Nee. Spelen jullie elk op je eigen telefoon, dan gaan de antwoorden via een tijdelijk kanaal dat verdwijnt zodra jullie stoppen. Er worden geen persoonsgegevens blijvend opgeslagen.",
+    "plus": [
+      {
+        "titre": "Vragen en gespreksonderwerpen voor een tienerstel",
+        "texte": "<p>De quiz stelt zijn eigen vragen, maar als jullie nog maar net met elkaar gaan, weet je soms niet goed waar je het over moet hebben. Hier een paar vragen die goed werken, via een berichtje of in het echt:</p><ul><li>“Welk nummer heb je nu steeds op repeat?”</li><li>“Als je morgen overal naartoe kon, waar zou je dan heen gaan?”</li><li>“Waar moest je voor het laatst zo hard om lachen dat je huilde?”</li><li>“Waar word je op school het meest gestrest van?”</li><li>“Wat is je mooiste herinnering met je vrienden?”</li><li>“Spreken we liever met z'n tweeën af of met de groep?”</li></ul><p>En als jullie niet meer weten wat je moet zeggen, zijn de simpelste onderwerpen nog altijd de beste: een serie die jullie allebei kijken, een herinnering uit je jeugd, wat je met duizend euro zou doen, de grootste blunder van de week... En een stilte is helemaal niet erg: je leert elkaar beetje bij beetje kennen, en dat kost tijd.</p>"
+      }
+    ]
   },
   "jsonLd": {
     "about": "liefdesquiz voor tieners"

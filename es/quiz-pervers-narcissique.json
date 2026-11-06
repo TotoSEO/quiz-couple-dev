@@ -94,5 +94,21 @@
     "faq3Q": "¿Es fiable este test de pareja narcisista?",
     "faq3A": "Es una herramienta de reflexión y autoevaluación, no un diagnóstico médico. Una puntuación alta no prueba nada por sí sola, pero invita a hablar con un profesional y a protegerte.",
     "about": "abuso narcisista"
-  }
+  },
+  "plus": [
+    {
+      "titre": "¿Manipulador o narcisista? Lo que detecta este test",
+      "texte": "<p>Mucha gente llega aquí buscando un test de manipulador más que un test de narcisista. La diferencia es sobre todo de grado: un narcisista siempre manipula, pero quien manipula no es necesariamente narcisista. Se puede mentir, hacer sentir culpable al otro o recurrir al chantaje emocional para conseguir lo que se quiere, sin intentar destruirlo.</p><p>El test mira las dos cosas. El tercer nivel de la puntuación habla de manipulación marcada: la negación, la culpa devuelta, los reproches disfrazados de consejos. El último va más lejos, hacia el control: el aislamiento, la doble cara, la falta de empatía ante tu dolor. Ahí es donde el cuadro se parece al de un narcisista.</p>",
+      "sous": [
+        {
+          "titre": "Un hombre o una mujer narcisista: ¿las mismas señales?",
+          "texte": "<p>En lo esencial, sí. El test funciona en los dos casos, porque mira lo que hace la persona, no su género: el desprecio, el frío y el calor o el aislamiento se dan en hombres y en mujeres. Lo que cambia sobre todo es la mirada de los demás. A un hombre que dice que su pareja lo manipula se le cree menos rápido, y muchos tardan años en ponerle nombre.</p><p>Para ejemplos del día a día, mira <a href=\"/es/blog/mujer-narcisista-senales/\">cómo actúa una mujer narcisista</a> y <a href=\"/es/blog/hombre-narcisista-senales/\">cómo un hombre narcisista instala su control</a>.</p>"
+        },
+        {
+          "titre": "¿Y si fuera yo quien manipula?",
+          "texte": "<p>El simple hecho de hacerte la pregunta cuenta: quien manipula de forma habitual rara vez se ve en falta. Para usar el test en ese sentido, relee las preguntas poniéndote en el lugar del otro. ¿Niegas cosas que tu pareja recuerda perfectamente? ¿Es siempre ella o él quien pide perdón, incluso cuando empezaste tú? ¿Le haces sentir que sus amigos no valen gran cosa?</p><p>Si varias respuestas te incomodan, háblalo con un psicólogo. Estos reflejos se aprenden a menudo muy pronto, y también se desaprenden.</p>"
+        }
+      ]
+    }
+  ]
 }

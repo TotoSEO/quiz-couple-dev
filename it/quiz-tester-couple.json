@@ -13,7 +13,13 @@
     "title": "Cos'è un test di coppia e a cosa serve?",
     "p1": "Un <strong>test di coppia</strong> è uno strumento di valutazione progettato per misurare la compatibilità e l'armonia tra due partner. A differenza di una conversazione casuale, struttura gli scambi attorno a temi chiave: comunicazione, fiducia, valori, progetti di vita e intimità.",
     "p2": "L'obiettivo non è dare un verdetto definitivo, ma offrire uno <strong>specchio oggettivo della vostra relazione</strong>. Il punteggio ottenuto evidenzia i vostri punti di forza e identifica le aree in cui uno sforzo congiunto potrebbe rafforzare il vostro legame.",
-    "p3": "Le domande poggiano su <strong>situazioni concrete del quotidiano</strong>, non su concetti astratti. È ciò che rende l'esercizio pertinente e accessibile, che la relazione sia recente o che duri da anni."
+    "p3": "Le domande poggiano su <strong>situazioni concrete del quotidiano</strong>, non su concetti astratti. È ciò che rende l'esercizio pertinente e accessibile, che la relazione sia recente o che duri da anni.",
+    "plus": [
+      {
+        "titre": "Un test di coppia da fare in due, anche a distanza",
+        "texte": "<p>Il test si fa in due, ma non per forza nello stesso posto. Su un solo telefono potete rispondere insieme con una sola voce, oppure a turno per avere ognuno il suo punteggio. E se siete lontani, la modalità a distanza vi lascia rispondere ognuno sul proprio telefono: uno crea la partita, l'altro entra con un codice, e le vostre due risposte compaiono una accanto all'altra a ogni domanda.</p>"
+      }
+    ]
   },
   "section2": {
     "title": "I 5 pilastri di una coppia solida",

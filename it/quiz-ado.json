@@ -529,7 +529,13 @@
     "faq3Q": "Possiamo rigiocare con altre domande?",
     "faq3A": "Sì! Ogni sessione seleziona 20 domande casuali tra 80. Potete rigiocare quante volte volete per scoprire nuove domande.",
     "faq4Q": "Le nostre risposte vengono conservate?",
-    "faq4A": "Le sessioni scadono automaticamente dopo 30 minuti. Nessun dato personale viene conservato in modo permanente."
+    "faq4A": "Le sessioni scadono automaticamente dopo 30 minuti. Nessun dato personale viene conservato in modo permanente.",
+    "plus": [
+      {
+        "titre": "Domande e argomenti di conversazione per una coppia di adolescenti",
+        "texte": "<p>Il quiz fa le sue domande, ma quando ci si frequenta da poco, a volte non si sa bene di cosa parlare. Ecco qualche domanda che funziona bene, per messaggio o dal vivo:</p><ul><li>«Cosa ascolti a ripetizione in questo periodo?»</li><li>«Se domani potessi andare ovunque, dove andresti?»</li><li>«Qual è l'ultima cosa che ti ha fatto piangere dal ridere?»</li><li>«Cos'è che ti stressa di più a scuola?»</li><li>«Qual è il tuo ricordo più bello con i tuoi amici?»</li><li>«Preferisci che ci vediamo da soli o con il gruppo?»</li></ul><p>E quando non sapete più cosa dirvi, gli argomenti più semplici restano i migliori: una serie che guardate tutti e due, un ricordo d'infanzia, cosa fareste con mille euro, la figuraccia della settimana... E un silenzio non è grave: ci si conosce un po' alla volta, e ci vuole tempo.</p>"
+      }
+    ]
   },
   "jsonLd": {
     "about": "quiz di coppia per adolescenti"

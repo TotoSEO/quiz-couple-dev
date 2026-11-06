@@ -154,7 +154,7 @@
     "q3": "Quel est le meilleur jeu à faire en couple à la maison ?",
     "a3": "Ça dépend de la soirée ! Action ou vérité est le plus polyvalent : il démarre vite et s'arrête quand vous voulez. Qui de nous deux tient en cinq minutes et lance une conversation à tous les coups. Tu préfères marche mieux quand vous avez envie de parler plus que de faire. Le plateau, lui, demande une vraie demi-heure, mais c'est le seul qui se gagne. La roue sert surtout à trancher après un pari. Et la version coquine est à réserver aux moments où vous êtes seuls tous les deux.",
     "q4": "Peut-on y jouer à distance, chacun chez soi ?",
-    "a4": "Oui. L'un ouvre le jeu, lit à voix haute en visio et valide pour les deux. Les vérités, les dilemmes et les votes fonctionnent parfaitement à distance, les actions demandent un peu d'imagination.",
+    "a4": "Oui. Qui de nous deux, Je n'ai jamais, Qui pourrait et C'est un 10 mais ont un mode à distance : l'un crée la partie, l'autre la rejoint avec le code, et chacun joue sur son téléphone. Pour les autres, l'un ouvre le jeu, lit à voix haute en visio et valide pour les deux. Les vérités, les dilemmes et les votes passent très bien à distance, les actions demandent un peu d'imagination.",
     "q5": "Ces jeux conviennent-ils à un couple qui vient de se rencontrer ?",
     "a5": "Tu préfères, qui de nous deux, la roue des gages et la version classique d'action ou vérité, oui : ils ne supposent aucune histoire commune. Le plateau aussi, même si ses cases souvenir seront un peu vides au début. La version coquine, elle, part du principe que vous vous connaissez déjà bien : lancée trop tôt, elle met plus mal à l'aise qu'elle n'amuse."
   },
@@ -167,5 +167,11 @@
   },
   "jsonLd": {
     "name": "Jeux de couple"
-  }
+  },
+  "plus": [
+    {
+      "titre": "Des jeux de couple à distance, chacun sur son téléphone",
+      "texte": "<p>Quatre de nos jeux ont un vrai mode à distance. L'un de vous crée la partie, l'autre la rejoint avec un code ou un QR code, et chacun répond sur son propre écran. Les deux réponses s'affichent côte à côte quand vous avez répondu tous les deux, de quoi en parler pendant l'appel :</p><ul><li><a href=\"/qui-de-nous-deux/\">désigner lequel de vous deux</a> est le plus en retard, le plus jaloux ou le plus dépensier ;</li><li><a href=\"/je-nai-jamais-jeu-couple/\">avouer ce que vous avez déjà fait</a>, ou pas ;</li><li><a href=\"/qui-pourrait-couple/\">dire qui de vous deux serait capable</a> de sauter en parachute ou de rater un avion ;</li><li><a href=\"/jeu-c-est-un-10-mais/\">noter de 0 à 10 une personne parfaite</a>, avec un défaut.</li></ul><p>Ce mode marche aussi quand vous êtes assis côte à côte : ça fait un jeu à deux téléphones, où personne ne voit ce que l'autre choisit avant la révélation. Les autres jeux de la page se jouent très bien en visio : l'un ouvre le jeu, lit à voix haute et valide pour les deux.</p><p>Et si vous êtes plusieurs couples, <a href=\"/jeu-de-soiree-couples/\">le jeu prévu pour quatre à dix joueurs</a> se joue lui aussi sur le téléphone de chacun.</p>"
+    }
+  ]
 }

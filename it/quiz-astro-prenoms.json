@@ -48,7 +48,13 @@
     "title": "La numerologia dei nomi, lettera per lettera",
     "p1": "In numerologia ogni lettera vale un numero da 1 a 9. La A vale 1, la B vale 2, e così via fino alla I, che vale 9. Poi si ricomincia da 1 con la J, e di nuovo con la S. È la tabella detta «pitagorica», la più usata. Si sommano le lettere del nome, poi le cifre del totale, finché ne resta una sola. Per esempio: Sara è S = 1, A = 1, R = 9 e A = 1, quindi 12, e 1 + 2 = 3. Leo è L = 3, E = 5 e O = 6, quindi 14, e 1 + 4 = 5. Sara porta il 3 e Leo il 5.",
     "p2": "C'è un'eccezione: quando il totale dà 11 o 22, ci si ferma lì. Sono i «numeri maestri». Ogni numero ha la sua fama: l'1 decide, il 2 cerca l'armonia, il 5 ha bisogno di libertà, il 9 pensa agli altri, e così via. Poi il test confronta i vostri due numeri con una tabella di compatibilità. Un 3 e un 6, per esempio, vanno molto d'accordo, mentre un 4 e un 5 molto meno.",
-    "tip": "Il calcolo prende le lettere come le scrivete, senza accenti. «Niccolò» e «Niccolo» danno quindi lo stesso numero, ma «Cristian» e «Christian» no (3 e 11). E se non conoscete ancora il segno dell'altra persona, <a href=\"/it/calcolatrice-dell-amore/\">bastano due nomi</a> per la calcolatrice dell'amore, che dà una percentuale senza nessuna astrologia."
+    "tip": "Il calcolo prende le lettere come le scrivete, senza accenti. «Niccolò» e «Niccolo» danno quindi lo stesso numero, ma «Cristian» e «Christian» no (3 e 11). E se non conoscete ancora il segno dell'altra persona, <a href=\"/it/calcolatrice-dell-amore/\">bastano due nomi</a> per la calcolatrice dell'amore, che dà una percentuale senza nessuna astrologia.",
+    "plus": [
+      {
+        "titre": "Le affinità tra due nomi",
+        "texte": "<p>Una volta ridotto ogni nome al suo numero, il test guarda come vanno d'accordo i due numeri. Le affinità migliori sono l'1 con il 3, il 2 con il 6, il 3 con il 6 e il 6 con il 9: 9 su 10. Due nomi che finiscono sullo stesso numero hanno 7 su 10 (6 per due 4, 8 per due numeri maestri): vi capite in fretta, ma forse vi somigliate un po' troppo. Le distanze più nette sono tra il 3 e il 4, e tra il 4 e il 5: 3 su 10, perché il 4 ama le regole e sia il 3 sia il 5 le sopportano male.</p><p>I numeri maestri hanno i loro alleati: l'11 va molto d'accordo con il 2 e il 7, il 22 con il 4 e l'8.</p>"
+      }
+    ]
   },
   "section3": {
     "title": "I segni zodiacali e i loro quattro elementi",
@@ -67,7 +73,13 @@
     "title": "Cosa questi numeri non possono dire",
     "p1": "Né l'astrologia né la numerologia possono dire se la vostra storia durerà. Prendete il risultato come un gioco, e come un'occasione per parlare dei vostri caratteri: «tu sei proprio un Leone», «io, un 9? Mi stupisce», ecc.",
     "p2": "Se volete un risultato che parta dalla vostra vita di coppia, servono delle domande. C'è un test che fa a ciascuno di voi venti domande su <a href=\"/it/test-compatibilita-amorosa/\">matrimonio, figli, soldi o vacanze</a>, e poi confronta le vostre risposte.",
-    "tip": "Fatelo insieme sullo stesso telefono, poi riprovate con i vostri soprannomi: il punteggio dei nomi cambia spesso!"
+    "tip": "Fatelo insieme sullo stesso telefono, poi riprovate con i vostri soprannomi: il punteggio dei nomi cambia spesso!",
+    "plus": [
+      {
+        "titre": "E la compatibilità sessuale dei nomi?",
+        "texte": "<p>Ce lo chiedono spesso. Il test non calcola un punteggio a parte per il sesso: la percentuale parla della vostra intesa in generale. L'astrologia, però, ha la sua idea: i segni di Fuoco sarebbero più passionali, quelli di Terra più sensuali, e la numerologia attribuisce al 5 un grande bisogno di novità. Resta un gioco, e va preso come tale.</p><p>Per sapere se vi intendete a letto, la cosa più semplice è <a href=\"/it/test-compatibilita-sessuale/\">confrontare i vostri desideri, domanda per domanda</a>: ognuno risponde per conto suo su desiderio, tenerezza o ritmo, e le risposte dell'altro le vedete solo alla fine.</p>"
+      }
+    ]
   },
   "faq": {
     "title": "Domande frequenti",

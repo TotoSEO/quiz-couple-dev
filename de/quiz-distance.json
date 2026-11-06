@@ -74,7 +74,7 @@
       },
       {
         "title": "Rituale und Beziehungskreativität",
-        "text": "Einschränkung schafft Kreativität. Einen Film „zusammen“ schauen, sich Überraschungspakete schicken, dasselbe Rezept per Video kochen… Diese Rituale werden zum Kitt eurer Beziehung."
+        "text": "Einschränkung schafft Kreativität. Einen Film „zusammen“ schauen, sich Überraschungspakete schicken, dasselbe Rezept per Video kochen, <a href=\"/de/paarspiele/\">Spiele zu zweit spielen, jeder auf seinem Handy</a>… Diese Rituale werden zum Kitt eurer Beziehung."
       }
     ]
   },
@@ -199,7 +199,7 @@
     "readyDesc": "Ihr habt die nötigen Qualitäten, um die Distanz zu bewältigen."
   },
   "section10": {
-    "title": "18 Fragen für den nächsten Videoanruf",
+    "title": "24 Fragen für den nächsten Videoanruf",
     "intro": "Der Test oben gibt euch ein Urteil. Diese Liste ist für etwas anderes gedacht: für den Abend, an dem das Gespräch einschläft, ihr euren Tag längst erzählt habt und noch zwanzig Minuten übrig sind. Greift einfach eine heraus.",
     "sub1Title": "Der Alltag, den man nicht mitbekommt",
     "sub1Text": "<ul><li>Erzähl mir von gestern, aber nur die fünf banalsten Minuten.</li><li>Wovon in deiner Wohnung habe ich überhaupt keine Ahnung?</li><li>Wen hast du diese Woche getroffen, den ich nicht kenne?</li><li>Was machst du abends, wenn wir nicht telefonieren?</li><li>Welche Gewohnheit hast du dir angeeignet, seit wir weit weg sind?</li><li>Was erinnert dich an einem ganz normalen Tag an mich?</li></ul>",
@@ -207,7 +207,11 @@
     "sub2Text": "<ul><li>Was fehlt dir am meisten, außer mich zu sehen?</li><li>Welcher Moment der Woche ist am schwersten?</li><li>Gibt es ein Thema, das du am Telefon vermeidest?</li><li>Was hat die Entfernung zwischen uns leichter gemacht?</li><li>Wann hast du gezweifelt, und sei es fünf Minuten lang?</li><li>Was tue ich, das dich beruhigt, ohne dass ich es merke?</li></ul>",
     "sub3Title": "Das Danach",
     "sub3Text": "<ul><li>Das Erste, was wir machen, wenn wir uns wiedersehen: du entscheidest.</li><li>Ehrlich: wie lange noch, bis wir in derselben Stadt sind?</li><li>Was würde dich sagen lassen, dass es sich nicht mehr lohnt?</li><li>Wovor hast du Respekt, wenn wir zusammenziehen?</li><li>Welche Single-Gewohnheit willst du auf keinen Fall aufgeben?</li><li>Wenn einer für den anderen umziehen müsste, wer wäre es?</li></ul>",
-    "outro": "Eine Regel, damit es funktioniert: erst antworten, dann fragen. Sonst sitzt einer von euch am Ende in einem Bewerbungsgespräch."
+    "outro": "Eine Regel, damit es funktioniert: erst antworten, dann fragen. Sonst sitzt einer von euch am Ende in einem Bewerbungsgespräch.",
+    "sub4Title": "Liebesfragen an deine Freundin oder deinen Freund in der Fernbeziehung",
+    "sub4Text": "<ul><li>Was hast du beim allerersten Mal von mir gedacht?</li><li>An welchen Moment mit mir denkst du am häufigsten zurück?</li><li>Was machst du, damit du mich weniger vermisst, wenn ich nicht da bin?</li><li>Was sage ich, das du gern öfter hören würdest?</li><li>Wenn ich heute Abend da sein könnte, was würden wir machen?</li><li>Woran hast du gemerkt, dass ich dir wichtig bin?</li></ul>",
+    "sub5Title": "Gesprächsthemen für Paare in einer Fernbeziehung",
+    "sub5Text": "<p>Es gibt auch Abende, an denen keiner von euch Lust hat, eine Frage zu beantworten. Dann hilft ein Thema, über das man lange reden kann, ohne sich anzustrengen. Ein paar, die gut funktionieren:</p><ul><li>die Serie oder der Film, den ihr gerade jeder für sich schaut, und was der andere dazu sagen würde;</li><li>das Letzte, worüber ihr heute lachen musstet, auch wenn es albern ist;</li><li>eine gemeinsame Erinnerung, die jeder auf seine Art erzählt (ihr werdet sehen, die Versionen stimmen nie überein ...);</li><li>der nächste Besuch: wo, wann und was ihr am ersten Abend macht;</li><li>jemand aus eurem Umfeld, den der andere noch nicht kennt, und seine Geschichte;</li><li>was es heute Abend zu essen gibt, mit Foto.</li></ul><p>Und wenn gar nichts kommt, tut es für die Dauer eines Anrufs auch ein Spiel.</p>"
   },
   "jsonLd": {
     "about": "Fernbeziehung"

@@ -51,7 +51,24 @@
       "Wie heeft de meeste geheimen?",
       "Wie is het gevoeligst voor complimenten?",
       "Wie houdt het meest vast aan zijn of haar gewoontes?"
-    ]
+    ],
+    "amisTitle": "‘Wie is het meest’-vragen voor vrienden",
+    "amisQuestions": [
+      "Wie komt altijd het laatst op een afspraak?",
+      "Wie zou als eerste een avond afzeggen die al een maand gepland staat?",
+      "Wie raakt op vakantie het makkelijkst de weg kwijt?",
+      "Wie stuurt de meeste spraakberichten van drie minuten?",
+      "Wie vertelt op feestjes altijd hetzelfde verhaal?"
+    ],
+    "coupleTitle": "‘Wie is het meest’-vragen voor stellen",
+    "coupleQuestions": [
+      "Wie is 's ochtends het knuffeligst?",
+      "Wie geeft als eerste toe als jullie boos op elkaar zijn?",
+      "Wie pikt het vaakst het dekbed in?",
+      "Wie vergeet het vaakst belangrijke data?",
+      "Wie kiest 's avonds de film?"
+    ],
+    "coupleNote": "Zijn jullie maar met z'n tweeën, zonder vrienden erbij? Dan is er een spel waarin <a href=\"/nl/wie-van-ons-twee/\">ieder stiekem een van jullie tweeën aanwijst</a>, precies daarvoor gemaakt."
   },
   "tips": {
     "title": "Onze tips voor een geslaagd spel ‘Wie is het meest’",

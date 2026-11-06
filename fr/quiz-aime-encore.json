@@ -77,7 +77,13 @@
   "section6": {
     "title": "Et si c'était vous qui n'aimiez plus ?",
     "p1": "La question se retourne parfois. On se demande s'il nous aime encore et, au fond, on n'est plus très sûr de l'aimer, lui. Ce n'est pas un aveu honteux, c'est une question honnête, et elle mérite sa propre réponse.",
-    "p2": "Deux tests s'en occupent mieux que celui-ci : <a href=\"/test-suis-je-amoureux/\">ce que vous ressentez encore</a> pour les sentiments, et amour ou habitude pour ce qui vous fait rester. Faites-les avant de poser la question à l'autre. On parle mieux quand on sait ce qu'on ressent soi-même !"
+    "p2": "Deux tests s'en occupent mieux que celui-ci : <a href=\"/test-suis-je-amoureux/\">ce que vous ressentez encore</a> pour les sentiments, et amour ou habitude pour ce qui vous fait rester. Faites-les avant de poser la question à l'autre. On parle mieux quand on sait ce qu'on ressent soi-même !",
+    "plus": [
+      {
+        "titre": "Est-ce qu'il m'aime, ou est-ce qu'il m'aime encore ?",
+        "texte": "<p>La question se tape souvent sans le « encore ». Ce test est fait pour les couples installés, quand le doute porte sur des sentiments qui étaient là et qui semblent s'éloigner. Si vous n'êtes pas encore ensemble et que vous vous demandez ce que l'autre ressent, les signaux de <a href=\"/test-m-aime-t-il-elle-en-secret/\">quelqu'un qui vous aime sans le dire</a> ne sont pas les mêmes, et un autre test est écrit pour ce cas-là.</p>"
+      }
+    ]
   },
   "section7": {
     "title": "Comment fonctionne ce test",

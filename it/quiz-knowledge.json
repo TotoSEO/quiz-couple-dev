@@ -77,7 +77,7 @@
     ]
   },
   "examples": {
-    "title": "Esempi di domande dal quiz \"Chi conosce meglio\"",
+    "title": "Domande per capire se vi conoscete bene",
     "subtitle": "Ecco un'anteprima dei tipi di domande che troverete in questo quiz. Gli argomenti sono vari per esplorare tutti gli aspetti della vostra relazione.",
     "categories": [
       {
@@ -119,6 +119,12 @@
           "Cosa farebbe se vincesse alla lotteria?",
           "Qual è il suo più grande sogno?"
         ]
+      }
+    ],
+    "plus": [
+      {
+        "titre": "E un quiz \"chi mi conosce meglio\" solo su di te?",
+        "texte": "<p>Le domande di questo quiz sono le stesse per tutti. Se vuoi un quiz su di te, con le tue domande, da mandare al partner o agli amici per vedere chi ti conosce meglio, puoi <a href=\"/it/crea-il-tuo-quiz/\">scrivere il tuo quiz</a> e condividerlo con un link. Resta privato e sparisce dopo una settimana.</p>"
       }
     ]
   },

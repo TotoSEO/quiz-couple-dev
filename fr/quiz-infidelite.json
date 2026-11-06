@@ -68,7 +68,17 @@
     "do2Title": "Exprimez vos ressentis sans accuser",
     "do2Text": "\"Depuis quelques semaines, je sens une distance entre nous et ça m'inquiète. J'ai besoin qu'on en parle.\" Cette approche ouvre le dialogue au lieu de le fermer. Vous n'accusez pas, vous partagez un ressenti.",
     "do3Title": "Consultez un professionnel",
-    "do3Text": "Un thérapeute, en individuel ou en couple, peut vous aider à traverser cette période. Il/elle vous donnera un espace neutre pour mettre des mots sur ce que vous vivez et vous guidera vers la meilleure décision pour vous."
+    "do3Text": "Un thérapeute, en individuel ou en couple, peut vous aider à traverser cette période. Il/elle vous donnera un espace neutre pour mettre des mots sur ce que vous vivez et vous guidera vers la meilleure décision pour vous.",
+    "plus": [
+      {
+        "titre": "Les questions pièges pour savoir s'il ou elle vous trompe",
+        "texte": "<p>C'est l'une des recherches qui reviennent le plus : une question piège, posée l'air de rien, qui ferait tomber le masque. Le souci, c'est qu'une personne qui trompe s'attend aux questions, et qu'une personne fidèle se sent accusée dès qu'elle sent le piège. Dans les deux cas, vous n'apprenez pas grand-chose, et la confiance en prend un coup.</p><p>Ce qui marche mieux, ce sont des questions ouvertes, posées au calme, dont la réponse se raconte au lieu de se réciter. Par exemple :</p><ul><li>« Tu me racontes ta soirée de jeudi ? Je n'ai pas tout suivi au téléphone. »</li><li>« Il y a quelqu'un au travail avec qui tu t'entends particulièrement bien en ce moment ? »</li><li>« Tu as l'air ailleurs depuis quelques semaines. Il se passe quelque chose ? »</li><li>« Si un jour l'un de nous deux était attiré par quelqu'un d'autre, tu voudrais le savoir ? »</li><li>« Qu'est-ce qui te manque dans notre couple en ce moment ? »</li></ul>"
+      },
+      {
+        "titre": "Ce qu'il faut regarder dans la réponse",
+        "texte": "<p>Une histoire vraie a des détails qui viennent tout seuls, et elle tient quand on pose une deuxième question. Une histoire inventée est souvent très précise sur ce qui ne compte pas, floue sur le reste, et elle change d'une fois à l'autre. Regardez aussi la réaction : une colère immédiate, ou la question retournée (« pourquoi tu me demandes ça ? »), ne prouve rien, mais c'est un signe de plus à mettre à côté des autres.</p><p>Et que vous ayez un doute sur votre femme, votre mari, votre copine ou votre copain, ce qui compte reste le même : <a href=\"/blog/signes-infidelite/\">les changements de comportement</a> par rapport à d'habitude, pas le genre de la personne.</p>"
+      }
+    ]
   },
   "section6": {
     "title": "Peut-on reconstruire après une infidélité ?",

@@ -529,7 +529,13 @@
     "faq3Q": "Können wir mit anderen Fragen nochmal spielen?",
     "faq3A": "Ja! Jede Sitzung wählt 20 zufällige Fragen aus 80. Ihr könnt so oft spielen, wie ihr wollt, und dabei immer neue Fragen entdecken.",
     "faq4Q": "Werden unsere Antworten gespeichert?",
-    "faq4A": "Sitzungen laufen nach 30 Minuten automatisch ab. Keine persönlichen Daten werden dauerhaft gespeichert."
+    "faq4A": "Sitzungen laufen nach 30 Minuten automatisch ab. Keine persönlichen Daten werden dauerhaft gespeichert.",
+    "plus": [
+      {
+        "titre": "Fragen und Gesprächsthemen für ein junges Paar",
+        "texte": "<p>Das Quiz stellt seine eigenen Fragen, aber wenn man erst seit Kurzem zusammen ist, weiß man manchmal nicht so recht, worüber man reden soll. Hier ein paar Fragen, die gut funktionieren, per Nachricht oder in echt:</p><ul><li>„Was hörst du gerade in Dauerschleife?“</li><li>„Wenn du morgen überallhin könntest, wohin würdest du fahren?“</li><li>„Was hat dich zuletzt Tränen lachen lassen?“</li><li>„Was stresst dich in der Schule am meisten?“</li><li>„Was ist deine schönste Erinnerung mit deinen Freunden?“</li><li>„Treffen wir uns lieber zu zweit oder mit der Clique?“</li></ul><p>Und wenn euch nichts mehr einfällt, sind die einfachsten Themen immer noch die besten: eine Serie, die ihr beide schaut, eine Kindheitserinnerung, was ihr mit tausend Euro machen würdet, der peinlichste Moment der Woche … Und Stille ist nicht schlimm: Man lernt sich nach und nach kennen, und das braucht Zeit.</p>"
+      }
+    ]
   },
   "jsonLd": {
     "about": "Paar-Quiz für Jugendliche"

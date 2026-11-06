@@ -94,5 +94,21 @@
     "faq3Q": "Ist dieser Narzissten-Test zuverlässig?",
     "faq3A": "Er ist ein Werkzeug zum Nachdenken und zur Selbsteinschätzung, keine medizinische Diagnose. Ein hoher Wert beweist für sich genommen nichts, aber er lädt dazu ein, mit einer Fachperson zu sprechen und dich zu schützen.",
     "about": "narzisstischer Missbrauch"
-  }
+  },
+  "plus": [
+    {
+      "titre": "Manipulator oder Narzisst: Was dieser Test erkennt",
+      "texte": "<p>Viele kommen hierher, weil sie eher einen Manipulator-Test suchen als einen Narzissmus-Test. Der Unterschied ist vor allem eine Frage des Grades: Ein Narzisst manipuliert immer, aber wer manipuliert, ist nicht unbedingt ein Narzisst. Man kann lügen, dem anderen Schuldgefühle machen oder emotionale Erpressung einsetzen, um zu bekommen, was man will, ohne ihn zerstören zu wollen.</p><p>Der Test schaut auf beides. Die dritte Stufe des Ergebnisses steht für deutliche Manipulation: Leugnen, umgedrehte Schuld, Vorwürfe, die als Ratschläge verpackt sind. Die letzte geht weiter, in Richtung Abhängigkeit: Isolation, zwei Gesichter, kein Mitgefühl für deinen Schmerz. Dort ähnelt das Bild dem eines Narzissten.</p>",
+      "sous": [
+        {
+          "titre": "Narzisstischer Mann oder narzisstische Frau: dieselben Anzeichen?",
+          "texte": "<p>Im Wesentlichen ja. Der Test funktioniert in beiden Fällen, weil er darauf schaut, was die Person tut, nicht auf ihr Geschlecht: Herabsetzen, das Wechselbad aus Nähe und Kälte oder Isolation kommen bei Männern wie bei Frauen vor. Was sich vor allem ändert, ist der Blick der anderen. Einem Mann, der sagt, dass seine Partnerin ihn manipuliert, wird weniger schnell geglaubt, und viele brauchen Jahre, um es zu benennen.</p><p>Beispiele aus dem Alltag findest du unter <a href=\"/de/blog/narzisstische-frau-anzeichen/\">wie eine narzisstische Frau vorgeht</a> und <a href=\"/de/blog/narzisstischer-mann-anzeichen/\">wie ein narzisstischer Mann seine Macht aufbaut</a>.</p>"
+        },
+        {
+          "titre": "Und wenn ich selbst manipuliere?",
+          "texte": "<p>Schon dass du dir die Frage stellst, zählt: Wer gewohnheitsmäßig manipuliert, sieht sich selten im Unrecht. Um den Test so zu nutzen, lies die Fragen noch einmal aus der Sicht des anderen. Streitest du Dinge ab, an die er oder sie sich genau erinnert? Entschuldigt sich immer er oder sie, auch wenn du angefangen hast? Gibst du ihm oder ihr das Gefühl, dass seine oder ihre Freunde nicht viel wert sind?</p><p>Wenn dir mehrere Antworten unangenehm sind, sprich mit einem Psychologen oder einer Psychologin darüber. Solche Muster lernt man oft früh, und man kann sie auch wieder verlernen.</p>"
+        }
+      ]
+    }
+  ]
 }

@@ -10,12 +10,24 @@
     "title": "Was ist Liebeskompatibilität?",
     "p1": "<strong>Liebeskompatibilität</strong> beschreibt, wie sehr zwei Partner in den Dingen übereinstimmen, die ein gemeinsames Leben prägen: Werte, Zukunftspläne, Geld, Lebensstil, Kommunikation und Intimität. Sie ist nicht dasselbe wie Anziehung: man kann starke Chemie spüren und dennoch sehr unterschiedliche Lebensvorstellungen haben.",
     "p2": "Zwei kompatible Menschen sind keine Klone: Sie müssen nicht alles teilen, aber ihre <strong>Grundlagen zeigen in dieselbe Richtung</strong>. Diese Übereinstimmung sagt, besser als die Leidenschaft der ersten Zeit, voraus, wie stabil eine Beziehung langfristig sein wird.",
-    "p3": "Unser <strong>Liebeskompatibilitäts-Test</strong> misst genau diese Übereinstimmung: Ihr antwortet jeder für sich, dann vergleichen wir eure Antworten und leiten daraus euren Kompatibilitäts-Wert ab."
+    "p3": "Unser <strong>Liebeskompatibilitäts-Test</strong> misst genau diese Übereinstimmung: Ihr antwortet jeder für sich, dann vergleichen wir eure Antworten und leiten daraus euren Kompatibilitäts-Wert ab.",
+    "plus": [
+      {
+        "titre": "Wie merkt ihr, ob ihr zusammenpasst, auch ohne Test?",
+        "texte": "<p>Am einfachsten ist es, über die heiklen Themen zu reden, bevor sie heikel werden: wo ihr leben wollt, ob ihr Kinder wollt, wie ihr mit Geld umgeht oder wie viel Platz jeder für seine Freunde behält. Laufen diese Gespräche gut, auch wenn ihr nicht einer Meinung seid, ist das ein gutes Zeichen. Endet jedes im Streit oder weicht ihr ihnen seit Monaten aus, sagt das auch etwas. Genau dafür ist der Test da: Er bringt diese Themen auf den Tisch, ohne dass einer von euch sie anschneiden muss.</p>"
+      }
+    ]
   },
   "section2": {
     "title": "Wie funktioniert unser Liebeskompatibilitäts-Test?",
     "p1": "Der Test wird <strong>zu zweit</strong> gespielt. Jeder beantwortet abwechselnd dieselben 20 Fragen zu den großen Dimensionen einer Beziehung. Es gibt keine richtigen oder falschen Antworten, man muss nur ehrlich antworten.",
-    "p2": "Am Ende vergleichen wir eure Antworten. Jede übereinstimmende Antwort zeigt einen Punkt der Übereinstimmung. Euer <strong>Kompatibilitäts-Wert</strong> ist der Prozentsatz der Antworten, bei denen ihr auf einer Wellenlänge seid, zusammen mit einem Fazit und Gesprächsanstößen."
+    "p2": "Am Ende vergleichen wir eure Antworten. Jede übereinstimmende Antwort zeigt einen Punkt der Übereinstimmung. Euer <strong>Kompatibilitäts-Wert</strong> ist der Prozentsatz der Antworten, bei denen ihr auf einer Wellenlänge seid, zusammen mit einem Fazit und Gesprächsanstößen.",
+    "plus": [
+      {
+        "titre": "Ein wissenschaftlicher Kompatibilitätstest?",
+        "texte": "<p>Nicht im strengen Sinn. Damit ein Ergebnis wissenschaftlich wäre, müsste man es an Tausenden von Paaren überprüft haben, die man über Jahre begleitet, und das ist bei diesem Test nicht der Fall. Seine Fragen drehen sich um konkrete Dinge (Werte, Pläne, Geld, den Alltag), und der Prozentwert ist vor allem dazu da, ein Gespräch anzustoßen. Er sagt nicht die Zukunft eurer Beziehung voraus und ersetzt keine Paarberatung.</p>"
+      }
+    ]
   },
   "section3": {
     "title": "Die großen Dimensionen der Kompatibilität",

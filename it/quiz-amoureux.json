@@ -36,5 +36,10 @@
     "faq3A": "Sì, 100% gratuito e senza registrazione. Le vostre risposte non vengono salvate, potete rifare il quiz tutte le volte che volete.",
     "faq4Q": "Cosa significa il nostro punteggio?",
     "faq4A": "Il punteggio conta le domande in cui avete scelto la stessa risposta senza consultarvi. Un punteggio basso dice poco della vostra coppia; dice soprattutto che avete cose da raccontarvi."
+  },
+  "section1": {
+    "title": "Un gioco di domande e risposte sulla vostra storia d'amore",
+    "p1": "Questo quiz d'amore è un gioco di domande e risposte da fare in due: venti domande sulla vostra storia, pescate fra trenta a ogni partita, con quattro risposte possibili. Per esempio «Se fossimo animali, saremmo…», «Come consoli l'altro quando sta male?» o ancora «Quale momento ti ha fatto capire che mi amavi?».",
+    "p2": "Rilanciate il gioco e una parte delle domande cambia, così potete rigiocare un'altra sera senza ritrovare esattamente le stesse!"
   }
 }

@@ -529,7 +529,13 @@
     "faq3Q": "Can we play again with different questions?",
     "faq3A": "Yes! Each session randomly picks 20 questions from 80. You can replay as many times as you want to discover new questions.",
     "faq4Q": "Are our answers stored?",
-    "faq4A": "Sessions expire automatically after 30 minutes. No personal data is permanently stored."
+    "faq4A": "Sessions expire automatically after 30 minutes. No personal data is permanently stored.",
+    "plus": [
+      {
+        "titre": "Questions and conversation topics for a teen couple",
+        "texte": "<p>The quiz asks its own questions, but when you've only just started going out, it can be hard to know what to talk about. Here are a few questions that work well, by text or face to face:</p><ul><li>“What have you got on repeat at the moment?”</li><li>“If you could go anywhere tomorrow, where would you go?”</li><li>“What's the last thing that made you cry with laughter?”</li><li>“What stresses you out most at school?”</li><li>“What's your best memory with your friends?”</li><li>“Would you rather we hang out just the two of us or with the group?”</li></ul><p>And when you run out of things to say, the simplest topics are still the best: a series you're both watching, a childhood memory, what you'd buy if money were no object, the most embarrassing moment of your week... And a silence is no big deal: you get to know each other little by little, and that takes time.</p>"
+      }
+    ]
   },
   "jsonLd": {
     "about": "teen couple quiz"

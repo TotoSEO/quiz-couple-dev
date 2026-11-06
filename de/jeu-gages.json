@@ -66,5 +66,17 @@
   },
   "jsonLd": {
     "name": "Das Strafen-Glücksrad für Paare"
-  }
+  },
+  "plus": [
+    {
+      "titre": "Ideen für Strafen und Aufgaben zu zweit",
+      "texte": "<p>Das Rad lost unter 140 Aufgaben aus. Wenn ihr sofort eine Idee wollt, hier ein paar genau so, wie es sie ausgibt, fast eine pro Familie:</p><ul><li>Ein Kuss auf den Hals, ohne Vorwarnung.</li><li>Zwei Minuten Schultermassage, schweigend.</li><li>Sing den Refrain eines Liebeslieds, im Stehen.</li><li>Erzähl den Moment, in dem du wusstest, dass es ernst ist.</li><li>Sprich bis zur nächsten Drehung mit einem Akzent deiner Wahl.</li><li>Stellt ein Foto von euch nach, das mindestens ein Jahr alt ist.</li><li>Drei ehrliche Komplimente, ohne ein Wort zu wiederholen.</li><li>Schreib ein liebes Wort auf Papier und gib es ihm, ohne es vorzulesen.</li></ul><p>Sie sind so geschrieben, dass man sie dem Freund wie der Freundin geben kann: Keine setzt voraus, wer in der Beziehung was macht.</p>",
+      "sous": [
+        {
+          "titre": "Aufgaben für die Fernbeziehung",
+          "texte": "<p>Am Telefon oder per Video funktioniert das Rad auch: Einer dreht und liest die Aufgabe vor, der andere erledigt sie vor der Kamera. Am besten klappen aus der Ferne:</p><ul><li>Sing den Refrain eines Liebeslieds, im Stehen, mit Kamera.</li><li>Sprich bis zum Ende des Anrufs mit einem Akzent deiner Wahl.</li><li>Drei ehrliche Komplimente, ohne ein Wort zu wiederholen.</li><li>Erzähl den Moment, in dem du wusstest, dass es ernst ist.</li><li>Zeig das letzte Foto auf deinem Handy und erzähl die Geschichte dazu.</li><li>Schick das hässlichste Selfie, das du hinbekommst, ohne Filter.</li></ul>"
+        }
+      ]
+    }
+  ]
 }

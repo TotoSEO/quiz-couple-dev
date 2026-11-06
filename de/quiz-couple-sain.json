@@ -96,6 +96,14 @@
     "faq2Q": "Wie funktioniert die Bewertung des Tests?",
     "faq2A": "Ihr wählt den Modus am Anfang. Im Solo-Modus beantwortet ihr die 20 Fragen gemeinsam und bekommt eine einzige Punktzahl. Im Duo-Modus beantwortet ihr dieselben 20 Fragen abwechselnd: ein Wert pro Person, dazu der Durchschnitt des Paares. Das Ergebnis ist ein Prozentwert und keine Punktsumme, denn jede Frage zählt nach ihrer Bedeutung. Keine Zukunftspläne zu haben wiegt dreimal so schwer wie ein Ungleichgewicht bei der Hausarbeit, und die 20 Fragen decken immer dieselben großen Themen ab: Kommunikation, Vertrauen, Konflikte, Intimität, Eigenständigkeit, Zukunft und Wohlbefinden.",
     "faq3Q": "Was tun, wenn unsere individuellen Ergebnisse sehr unterschiedlich sind?",
-    "faq3A": "Ein großer Unterschied zeigt, dass ihr eure Beziehung nicht gleich wahrnehmt. Das ist eine wertvolle Information, die es gemeinsam zu besprechen gilt."
+    "faq3A": "Ein großer Unterschied zeigt, dass ihr eure Beziehung nicht gleich wahrnehmt. Das ist eine wertvolle Information, die es gemeinsam zu besprechen gilt.",
+    "s1": {
+      "plus": [
+        {
+          "titre": "„Ich bin nicht glücklich in meiner Beziehung“: was der Test zeigen kann",
+          "texte": "<p>Diesen Satz sagt man sich manchmal, ohne zu wissen, wo man anfangen soll. Der Test sagt euch nicht, was ihr tun sollt, aber er hilft, in Worte zu fassen, was hakt. Ein niedriges Ergebnis heißt nicht, dass alles verloren ist, es zeigt vor allem, dass man einiges genauer anschauen sollte. Und wenn dieses Unbehagen schon seit Monaten anhält, haben wir die Anzeichen gesammelt, die immer wieder auftauchen, <a href=\"/de/blog/unglueckliche-frau-in-beziehung-anzeichen/\">wenn man in der Beziehung unglücklich ist</a>, und was hilft, da herauszukommen.</p>"
+        }
+      ]
+    }
   }
 }

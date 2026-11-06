@@ -173,7 +173,13 @@
     "title": "Che cosa può dire una data di nascita su una coppia",
     "p1": "Questo test parte da un solo dato: le vostre due date di nascita. Di solito una data di nascita serve per fare gli auguri, ma tre tradizioni ci leggono anche un carattere: la numerologia, l'astrologia occidentale e l'astrologia cinese. Il test fa passare le vostre due date da tutte e tre.",
     "p2": "La numerologia ne ricava un numero, il <strong>cammino di vita</strong>, che dice come una persona va avanti nella vita. L'astrologia occidentale guarda il giorno e il mese per trovare il vostro segno, e l'astrologia cinese guarda l'anno per trovare il vostro animale. Queste tre letture non dicono la stessa cosa, ed è proprio per questo che le guardiamo tutte e tre.",
-    "p3": "Alla fine avete un punteggio globale, un punteggio per ognuna delle tre letture e delle spiegazioni che parlano di voi due. Se invece cercate <a href=\"/it/test-compatibilita-amorosa/\">un questionario da compilare in due</a>, c'è anche un test di venti domande sul vostro modo di vedere la vita di coppia."
+    "p3": "Alla fine avete un punteggio globale, un punteggio per ognuna delle tre letture e delle spiegazioni che parlano di voi due. Se invece cercate <a href=\"/it/test-compatibilita-amorosa/\">un questionario da compilare in due</a>, c'è anche un test di venti domande sul vostro modo di vedere la vita di coppia.",
+    "plus": [
+      {
+        "titre": "Si può conoscere il proprio futuro amoroso con la data di nascita?",
+        "texte": "<p>È una domanda che si fanno in tanti, e la risposta onesta è no. Una data di nascita non dice chi si incontrerà, né quando, né se ci si sposerà un giorno. Il test non prevede niente: confronta due caratteri, così come li descrivono queste tre tradizioni. Prendetelo come un gioco, e come una buona occasione per parlare dei vostri temperamenti.</p>"
+      }
+    ]
   },
   "section2": {
     "title": "Il cammino di vita, il numero nascosto nella vostra data di nascita",

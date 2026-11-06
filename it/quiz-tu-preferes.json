@@ -35,7 +35,13 @@
     "title": "Le domande che fanno riflettere (e quelle che fanno solo ridere)",
     "p1": "In un buon preferiresti per coppie ci sono due categorie di domande. Servono entrambe, ma non allo stesso modo.",
     "p2": "Le <strong class=\"text-foreground\">domande leggere</strong> servono a mettere a proprio agio, a far ridere, a dare un ritmo. Non insegnano nulla di profondo, ma creano il contesto perché le successive arrivino bene.",
-    "p3": "Le <strong class=\"text-foreground\">domande che grattano</strong> aprono qualcosa. Toccano aspettative reali, bisogni non sempre formulati con chiarezza. Il dosaggio giusto è più o meno 60/40: abbastanza leggerezza perché resti un gioco, abbastanza profondità perché sia valsa la pena."
+    "p3": "Le <strong class=\"text-foreground\">domande che grattano</strong> aprono qualcosa. Toccano aspettative reali, bisogni non sempre formulati con chiarezza. Il dosaggio giusto è più o meno 60/40: abbastanza leggerezza perché resti un gioco, abbastanza profondità perché sia valsa la pena.",
+    "plus": [
+      {
+        "titre": "Domande «preferiresti» da fare in coppia",
+        "texte": "<p>Per cominciare con calma:</p><ul><li>Preferiresti risolvere i litigi a carta, sasso e forbici o a testa o croce?</li><li>Preferiresti un letto enorme con un lato a testa o un letto singolo, attaccati tutta la notte?</li><li>Preferiresti lavare i piatti ogni sera per dieci anni o non scegliere mai più il film?</li></ul><p>E per andare un po' più a fondo:</p><ul><li>Preferiresti che ti scelga ogni mattina o che ti abbia scelto una volta per tutte?</li><li>Preferiresti sapere che finirete insieme ma senza passione o vivere dieci anni di passione senza garanzie?</li><li>Preferiresti perdonare senza dimenticare o dimenticare senza perdonare?</li></ul>"
+      }
+    ]
   },
   "section5": {
     "title": "Perché questo quiz funziona così bene in coppia",

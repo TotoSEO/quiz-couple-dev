@@ -74,7 +74,7 @@
       },
       {
         "title": "Rituels et créativité relationnelle",
-        "text": "La contrainte crée la créativité. Regarder un film \"ensemble\", s'envoyer des colis surprises, cuisiner la même recette en visio... Ces rituels deviennent le ciment de votre couple."
+        "text": "La contrainte crée la créativité. Regarder un film \"ensemble\", s'envoyer des colis surprises, cuisiner la même recette en visio, jouer à <a href=\"/jeux-de-couple/\">des jeux à deux, chacun sur son téléphone</a>... Ces rituels deviennent le ciment de votre couple."
       }
     ]
   },
@@ -199,7 +199,7 @@
     "readyDesc": "Vous avez les qualités nécessaires pour gérer la distance."
   },
   "section10": {
-    "title": "18 questions à se poser en visio quand on est loin",
+    "title": "24 questions à se poser en visio quand on est loin",
     "intro": "Le test ci-dessus vous donne un verdict. Cette liste sert à autre chose : la sortir <a href=\"/blog/questions-couple-telephone-message/\">un soir où l'appel s'essouffle</a>, où vous avez déjà raconté votre journée et où il reste vingt minutes à tenir. Piochez-en une, au hasard.",
     "sub1Title": "Le quotidien qu'on ne voit pas",
     "sub1Text": "<ul><li>Décris-moi ta journée d'hier, mais uniquement les cinq minutes les plus banales.</li><li>Qu'est-ce que j'ignore complètement de ton appartement ?</li><li>Qui as-tu vu cette semaine que je ne connais pas ?</li><li>Qu'est-ce que tu fais le soir quand on ne s'appelle pas ?</li><li>Quelle habitude as-tu prise depuis qu'on est loin ?</li><li>Qu'est-ce qui te fait penser à moi dans une journée normale ?</li></ul>",
@@ -207,7 +207,11 @@
     "sub2Text": "<ul><li>Qu'est-ce qui te manque le plus, à part le fait de me voir ?</li><li>Quel moment de la semaine est le plus dur ?</li><li>Y a-t-il un sujet que tu évites de me raconter au téléphone ?</li><li>Qu'est-ce que la distance a rendu plus facile entre nous ?</li><li>À quel moment as-tu douté, même cinq minutes ?</li><li>Qu'est-ce que je fais qui te rassure sans que je le sache ?</li></ul>",
     "sub3Title": "L'après, et les retrouvailles",
     "sub3Text": "<ul><li>La première chose qu'on fait quand on se revoit, tu la choisis.</li><li>Combien de temps encore, honnêtement, avant qu'on soit dans la même ville ?</li><li>Qu'est-ce qui te ferait dire que ça ne vaut plus le coup ?</li><li>Qu'est-ce que tu appréhendes le jour où on vivra ensemble ?</li><li>Quelle habitude de célibataire tu ne veux pas perdre ?</li><li>Si l'un de nous devait déménager pour l'autre, ce serait qui ?</li></ul>",
-    "outro": "Une règle si vous voulez que ça marche : on répond en premier, on demande ensuite. Sinon l'un des deux se retrouve à passer un entretien d'embauche."
+    "outro": "Une règle si vous voulez que ça marche : on répond en premier, on demande ensuite. Sinon l'un des deux se retrouve à passer un entretien d'embauche.",
+    "sub4Title": "Des questions d'amour à poser à sa copine ou à son copain à distance",
+    "sub4Text": "<ul><li>Qu'est-ce que tu as pensé de moi, la toute première fois ?</li><li>Quel est le moment avec moi auquel tu repenses le plus souvent ?</li><li>Qu'est-ce que tu fais pour moins sentir mon absence quand je ne suis pas là ?</li><li>Qu'est-ce que je te dis et que tu aimerais entendre plus souvent ?</li><li>Si je pouvais être là ce soir, on ferait quoi ?</li><li>Qu'est-ce qui t'a fait comprendre que tu tenais à moi ?</li></ul>",
+    "sub5Title": "Des sujets de conversation pour un couple à distance",
+    "sub5Text": "<p>Il y a aussi les soirs où personne n'a envie de répondre à une question. Dans ce cas, mieux vaut un sujet sur lequel on peut parler longtemps sans effort. Quelques idées qui marchent bien :</p><ul><li>la série ou le film que vous regardez chacun de votre côté, et ce que l'autre en penserait ;</li><li>la dernière chose qui vous a fait rire dans la journée, même si c'est bête ;</li><li>un souvenir à deux que chacun raconte à sa façon (vous verrez que les versions ne sont jamais les mêmes...) ;</li><li>le prochain séjour : où, quand, et ce que vous ferez le premier soir ;</li><li>quelqu'un de votre entourage que l'autre ne connaît pas encore, et son histoire ;</li><li>ce que vous mangez ce soir, photo à l'appui.</li></ul><p>Et quand rien ne vient, un jeu fait très bien l'affaire le temps d'un appel.</p>"
   },
   "jsonLd": {
     "about": "relation à distance"

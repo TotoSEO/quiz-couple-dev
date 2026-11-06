@@ -529,7 +529,13 @@
     "faq3Q": "On peut rejouer avec d'autres questions ?",
     "faq3A": "Oui ! Chaque session tire 20 questions aléatoires parmi 80. Vous pouvez rejouer autant de fois que vous voulez pour découvrir de nouvelles questions.",
     "faq4Q": "Nos réponses sont-elles conservées ?",
-    "faq4A": "Les sessions expirent automatiquement après 30 minutes. Aucune donnée personnelle n'est stockée de manière permanente."
+    "faq4A": "Les sessions expirent automatiquement après 30 minutes. Aucune donnée personnelle n'est stockée de manière permanente.",
+    "plus": [
+      {
+        "titre": "Des questions et des sujets de conversation pour un couple ado",
+        "texte": "<p>Le quiz pose ses propres questions, mais quand on sort ensemble depuis peu, il arrive qu'on ne sache plus trop de quoi parler. Voici quelques questions qui marchent bien, par message ou en vrai :</p><ul><li>« Tu écoutes quoi en boucle en ce moment ? »</li><li>« Si tu pouvais partir n'importe où demain, tu irais où ? »</li><li>« C'est quoi le dernier truc qui t'a fait rire aux larmes ? »</li><li>« Qu'est-ce qui te stresse le plus au lycée ? »</li><li>« Ton meilleur souvenir avec tes amis, c'est lequel ? »</li><li>« Tu préfères qu'on se voie tous les deux ou avec la bande ? »</li></ul><p>Et quand vous ne savez plus quoi vous dire, les sujets les plus simples restent les meilleurs : une série que vous regardez tous les deux, un souvenir d'enfance, ce que vous feriez avec mille euros, la honte de la semaine... Et un silence n'a rien de grave : on apprend à se connaître petit à petit, et ça prend du temps.</p>"
+      }
+    ]
   },
   "jsonLd": {
     "about": "quiz de couple pour ados"

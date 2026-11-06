@@ -94,5 +94,21 @@
     "faq3Q": "Is this narcissistic partner test reliable?",
     "faq3A": "It's a tool for reflection and self-assessment, not a medical diagnosis. A high score proves nothing on its own, but it's an invitation to talk to a professional and to protect yourself.",
     "about": "narcissistic abuse"
-  }
+  },
+  "plus": [
+    {
+      "titre": "Manipulator or narcissist: what this test picks up",
+      "texte": "<p>A lot of people arrive here looking for a manipulator test rather than a narcissist test. The difference is mostly one of degree: a narcissist always manipulates, but someone who manipulates isn't necessarily a narcissist. People can lie, guilt-trip or use emotional blackmail to get what they want without trying to destroy the other person.</p><p>The test looks at both. The third level of the score is about marked manipulation: denial, guilt turned back on you, criticism dressed up as advice. The last one goes further, towards control: isolation, the two faces, no empathy for your pain. That's where the picture starts to look like a narcissist's.</p>",
+      "sous": [
+        {
+          "titre": "A narcissistic man or woman: the same signs?",
+          "texte": "<p>Mostly, yes. The test works either way, because it looks at what the person does, not at their gender: putting you down, blowing hot and cold or cutting you off from others happen with men and women alike. What changes is mainly how other people see it. A man who says his partner manipulates him is believed less quickly, and many take years to put a word to it.</p><p>For everyday examples, see <a href=\"/en/blog/narcissistic-woman-signs/\">how a narcissistic woman goes about it</a> and <a href=\"/en/blog/narcissistic-man-signs/\">how a narcissistic man builds his hold</a>.</p>"
+        },
+        {
+          "titre": "What if I'm the one manipulating?",
+          "texte": "<p>Just asking yourself the question counts: someone who manipulates as a habit rarely sees themselves as in the wrong. To use the test that way, reread the questions from the other person's side. Do you deny things they remember perfectly well? Are they always the one apologising, even when you started it? Do you make them feel their friends aren't worth much?</p><p>If several answers make you uncomfortable, talk to a therapist. These reflexes are often learned early, and they can be unlearned too.</p>"
+        }
+      ]
+    }
+  ]
 }

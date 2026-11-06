@@ -77,7 +77,7 @@
     ]
   },
   "examples": {
-    "title": "Example questions from the \"Who Knows Best\" quiz",
+    "title": "Questions to find out how well you know each other",
     "subtitle": "Here's a preview of the types of questions you'll find in this quiz. Topics vary to explore all aspects of your relationship.",
     "categories": [
       {
@@ -119,6 +119,12 @@
           "What would he/she do if they won the lottery?",
           "What is his/her biggest dream?"
         ]
+      }
+    ],
+    "plus": [
+      {
+        "titre": "What about a \"who knows me best\" quiz just about you?",
+        "texte": "<p>The questions in this quiz are the same for everyone. If you want a quiz about you, with your own questions, to send to your partner or your friends and see who knows you best, you can <a href=\"/en/create-your-own-quiz/\">write your own quiz</a> and share it with a link. It stays private and disappears after a week.</p>"
       }
     ]
   },

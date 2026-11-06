@@ -13,7 +13,17 @@
       "s2p1": "Votre quiz est privé. Il ne s'ouvre qu'avec le lien que vous recevez à la création, et personne ne peut le trouver autrement. Gardez ce lien quelque part, dans une note ou une conversation par exemple : c'est le seul moyen de revenir dessus.",
       "s2p2": "Envoyez-le à votre moitié, à un ami ou dans un groupe, et tout le monde peut y jouer tout de suite, sans compte. Au bout d'une semaine, le quiz est supprimé. Si vous y tenez, rien ne vous empêche d'en créer un nouveau, ça prend deux minutes !",
       "s3Title": "Des quiz pour tous les moments à deux",
-      "s3p1": "Que ce soit pour savoir si votre partenaire vous connaît vraiment, pour une soirée entre amis ou juste pour rigoler, la création de quiz personnalisé s'adapte à toutes les envies. Laissez libre cours à votre imagination !"
+      "s3p1": "Que ce soit pour savoir si votre partenaire vous connaît vraiment, pour une soirée entre amis ou juste pour rigoler, la création de quiz personnalisé s'adapte à toutes les envies. Laissez libre cours à votre imagination !",
+      "s3plus": [
+        {
+          "titre": "Un quiz « qui me connaît le mieux » sur vous",
+          "texte": "<p>C'est l'usage le plus courant du créateur : un quiz sur vous, avec vos propres questions, pour voir qui vous connaît le mieux. Votre plat préféré, la ville où vous rêvez de vivre, ce qui vous fait le plus rire... Vous prenez le modèle « quiz à points », vous cochez la bonne réponse à chaque question, et chacun voit son score à la fin. Pour votre couple, il existe aussi un quiz tout prêt où <a href=\"/quiz-qui-connait-mieux-partenaire/\">chacun devine les réponses de l'autre</a>, si vous n'avez pas envie d'écrire les questions.</p>"
+        },
+        {
+          "titre": "Créer un quiz pour ses amis",
+          "texte": "<p>Le quiz se partage par un simple lien, donc il marche aussi bien dans un groupe d'amis que pour votre moitié. Envoyez-le dans la conversation du groupe : chacun y joue sur son téléphone, sans compte, pendant une semaine. Pour un anniversaire ou un enterrement de vie de jeune fille, le modèle vrai ou faux fait souvent beaucoup rire.</p>"
+        }
+      ]
     },
     "total_quiz": "quiz créés par la communauté",
     "total_merci": "Merci à la communauté Quiz Couple de faire vivre le site ❤️"

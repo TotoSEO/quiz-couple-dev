@@ -94,5 +94,21 @@
     "faq3Q": "Questo test sul partner narcisista è affidabile?",
     "faq3A": "È uno strumento di riflessione e autovalutazione, non una diagnosi medica. Un punteggio alto non prova nulla da solo, ma invita a parlarne con un professionista e a proteggerti.",
     "about": "abuso narcisistico"
-  }
+  },
+  "plus": [
+    {
+      "titre": "Manipolatore o narcisista: cosa rileva questo test",
+      "texte": "<p>Tante persone arrivano qui cercando un test sul manipolatore più che sul narcisista. La differenza è soprattutto di grado: un narcisista manipola sempre, ma chi manipola non è per forza un narcisista. Si può mentire, far sentire in colpa l'altro o fare ricatti emotivi per ottenere quello che si vuole, senza cercare di distruggerlo.</p><p>Il test guarda tutte e due le cose. Il terzo livello del punteggio parla di manipolazione marcata: la negazione, la colpa rigirata, i rimproveri travestiti da consigli. L'ultimo va oltre, verso il controllo: l'isolamento, la doppia faccia, la mancanza di empatia davanti al tuo dolore. È lì che il quadro somiglia a quello di un narcisista.</p>",
+      "sous": [
+        {
+          "titre": "Un uomo o una donna narcisista: gli stessi segnali?",
+          "texte": "<p>Nell'essenziale, sì. Il test funziona in tutti e due i casi, perché guarda cosa fa la persona, non il suo genere: la svalutazione, il caldo e freddo o l'isolamento si ritrovano negli uomini come nelle donne. Quello che cambia è soprattutto lo sguardo degli altri. Un uomo che dice che la sua compagna lo manipola viene creduto meno in fretta, e molti ci mettono anni a dargli un nome.</p><p>Per esempi di tutti i giorni, guarda <a href=\"/it/blog/donna-narcisista-segnali/\">come agisce una donna narcisista</a> e <a href=\"/it/blog/uomo-narcisista-segnali/\">come un uomo narcisista costruisce il suo controllo</a>.</p>"
+        },
+        {
+          "titre": "E se fossi io a manipolare?",
+          "texte": "<p>Il solo fatto di farti la domanda conta: chi manipola per abitudine raramente si vede dalla parte del torto. Per usare il test in questo senso, rileggi le domande mettendoti al posto dell'altro. Neghi cose che il tuo partner ricorda benissimo? È sempre lui o lei a chiedere scusa, anche quando hai cominciato tu? Gli fai sentire che i suoi amici valgono poco?</p><p>Se diverse risposte ti mettono a disagio, parlane con uno psicologo. Questi riflessi si imparano spesso presto, e si possono anche disimparare.</p>"
+        }
+      ]
+    }
+  ]
 }

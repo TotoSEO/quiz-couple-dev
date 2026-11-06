@@ -9,7 +9,13 @@
     "title": "Un action ou vérité qui se joue, pas une liste à faire défiler",
     "p1": "L'<strong class=\"text-foreground\">action ou vérité en couple</strong>, on y a tous joué au moins une fois. En colo, en soirée, sur un canapé à deux heures du matin… Le souci, c'est ce qu'on trouve en ligne aujourd'hui : cent questions à la suite, qu'on fait défiler du pouce. Ça tient cinq minutes. Après, quelqu'un lit en avance, un autre cherche « une meilleure », et la partie meurt.",
     "p2": "Ici, c'est un vrai jeu. Le joueur dont c'est le tour annonce son camp, une carte tombe, et vous n'en voyez qu'une à la fois. Pas de liste, pas d'ordre connu d'avance, aucun moyen de repérer la suivante. Et les cartes ne repassent pas tant que la pioche n'est pas vide.",
-    "p3": "Un téléphone posé entre vous deux, et c'est parti !"
+    "p3": "Un téléphone posé entre vous deux, et c'est parti !",
+    "plus": [
+      {
+        "titre": "Les questions vérité et les actions à faire en couple",
+        "texte": "<p>Il y a des vérités tendres et d'autres franchement drôles, et les actions se font sur place, à deux. Par exemple, une vérité peut être « Quelle est la première chose qui t'a plu chez moi ? » et une action « Regarde-moi dans les yeux pendant une minute entière, sans rien dire. » On ne vous en dit pas plus, sinon la pioche n'a plus de surprise ! Et pour des questions plus osées, il y a <a href=\"/action-ou-verite-coquin/\">la version coquine du jeu</a>.</p>"
+      }
+    ]
   },
   "section2": {
     "title": "Les règles, en quatre points",

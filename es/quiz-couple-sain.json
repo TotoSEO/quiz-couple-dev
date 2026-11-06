@@ -96,6 +96,14 @@
     "faq2Q": "¿Cómo funciona la puntuación del test?",
     "faq2A": "Elegís el modo al principio. En solo, respondéis juntos a las 20 preguntas y obtenéis una puntuación única. En dúo, cada uno responde las mismas 20 preguntas por turnos: una puntuación por persona, más la media de la pareja. El resultado es un porcentaje y no un total de puntos, porque cada pregunta cuenta según su importancia. No tener proyectos de futuro pesa tres veces más que un desequilibrio en las tareas del hogar, y las 20 preguntas cubren siempre los mismos grandes temas: comunicación, confianza, conflictos, intimidad, autonomía, futuro y bienestar.",
     "faq3Q": "¿Qué hacer si nuestras puntuaciones individuales son muy diferentes?",
-    "faq3A": "Una diferencia importante indica que no perciben su relación de la misma manera. Es una información valiosa para discutir juntos."
+    "faq3A": "Una diferencia importante indica que no perciben su relación de la misma manera. Es una información valiosa para discutir juntos.",
+    "s1": {
+      "plus": [
+        {
+          "titre": "«No soy feliz en mi relación»: lo que puede mostrar el test",
+          "texte": "<p>Es una frase que a veces uno se dice sin saber por dónde empezar. El test no da recetas, pero ayuda a poner palabras a lo que no funciona. Una puntuación baja no significa que todo esté perdido; sobre todo muestra que hay cosas que mirar más de cerca. Y si este malestar dura desde hace meses, hemos reunido las señales que se repiten <a href=\"/es/blog/mujer-infeliz-en-pareja-senales/\">cuando una es infeliz en pareja</a>, y lo que ayuda a salir de ahí.</p>"
+        }
+      ]
+    }
   }
 }

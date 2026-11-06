@@ -66,5 +66,17 @@
   },
   "jsonLd": {
     "name": "La ruleta de prendas en pareja"
-  }
+  },
+  "plus": [
+    {
+      "titre": "Ideas de prendas para hacer en pareja",
+      "texte": "<p>La ruleta sortea entre 140 prendas. Si queréis una idea ya mismo, aquí van algunas tal como las da, casi una por familia:</p><ul><li>Un beso en el cuello, sin avisar.</li><li>Dos minutos de masaje en los hombros, en silencio.</li><li>Canta el estribillo de una canción de amor, de pie.</li><li>Cuenta el momento en que supiste que esto iba en serio.</li><li>Habla con el acento que quieras hasta el próximo giro.</li><li>Reproducid una foto vuestra de hace por lo menos un año.</li><li>Tres cumplidos sinceros, sin repetir ni una palabra.</li><li>Escribe una nota bonita en papel y dásela sin leerla en voz alta.</li></ul><p>Están escritas para ponérselas a tu novio o a tu novia por igual: ninguna da por hecho quién hace qué en la pareja.</p>",
+      "sous": [
+        {
+          "titre": "Prendas para hacer a distancia",
+          "texte": "<p>Por teléfono o por videollamada la ruleta también funciona: uno la gira y lee la prenda, el otro la hace delante de la cámara. Las que mejor funcionan a distancia:</p><ul><li>Canta el estribillo de una canción de amor, de pie y con la cámara encendida.</li><li>Habla con el acento que quieras hasta el final de la llamada.</li><li>Tres cumplidos sinceros, sin repetir ni una palabra.</li><li>Cuenta el momento en que supiste que esto iba en serio.</li><li>Enseña la última foto de tu móvil y cuenta qué es.</li><li>Manda el selfie más feo posible, sin filtro.</li></ul>"
+        }
+      ]
+    }
+  ]
 }

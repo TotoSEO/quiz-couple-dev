@@ -68,7 +68,17 @@
     "do2Title": "Zeg wat je voelt, zonder te beschuldigen",
     "do2Text": "“Sinds een paar weken voel ik afstand tussen ons en dat maakt me ongerust. Ik wil er graag over praten.” Zo open je het gesprek in plaats van het te sluiten. Je beschuldigt niet, je deelt wat je voelt.",
     "do3Title": "Zoek een professional",
-    "do3Text": "Een therapeut, alleen of samen, kan je helpen om deze periode door te komen. Hij of zij geeft je een neutrale plek om woorden te geven aan wat je meemaakt, en helpt je naar de beste beslissing voor jou."
+    "do3Text": "Een therapeut, alleen of samen, kan je helpen om deze periode door te komen. Hij of zij geeft je een neutrale plek om woorden te geven aan wat je meemaakt, en helpt je naar de beste beslissing voor jou.",
+    "plus": [
+      {
+        "titre": "Strikvragen om te weten of hij of zij vreemdgaat",
+        "texte": "<p>Het is een van de zoekopdrachten die het vaakst terugkomen: een strikvraag, terloops gesteld, waardoor het masker valt. Het probleem is dat iemand die vreemdgaat de vragen verwacht, en dat iemand die trouw is zich beschuldigd voelt zodra hij of zij de val doorheeft. In beide gevallen kom je weinig te weten, en het vertrouwen krijgt een deuk.</p><p>Wat beter werkt, zijn open vragen, rustig gesteld, waarop je antwoordt met een verhaal in plaats van met een ingestudeerde zin. Bijvoorbeeld:</p><ul><li>“Vertel je me over donderdagavond? Aan de telefoon heb ik niet alles meegekregen.”</li><li>“Is er iemand op je werk met wie je het nu bijzonder goed kunt vinden?”</li><li>“Je lijkt al een paar weken met je hoofd ergens anders. Is er iets?”</li><li>“Als een van ons zich ooit tot iemand anders aangetrokken zou voelen, zou je het dan willen weten?”</li><li>“Wat mis je op dit moment in onze relatie?”</li></ul>"
+      },
+      {
+        "titre": "Waar je op let in het antwoord",
+        "texte": "<p>Een waar verhaal heeft details die vanzelf komen, en het houdt stand als je een tweede vraag stelt. Een verzonnen verhaal is vaak heel precies over dingen die er niet toe doen, vaag over de rest, en het verandert van keer tot keer. Let ook op de reactie: meteen boos worden, of de vraag terugkaatsen (“Waarom vraag je dat?”), bewijst niets, maar het is een teken meer naast de andere.</p><p>Twijfel je aan je vrouw, je man, je vriendin of je vriend? Waar het om gaat is altijd hetzelfde: <a href=\"/nl/blog/tekenen-van-vreemdgaan/\">veranderingen in gedrag</a> vergeleken met normaal, niet het geslacht van de persoon.</p>"
+      }
+    ]
   },
   "section6": {
     "title": "Kun je na vreemdgaan samen verder?",

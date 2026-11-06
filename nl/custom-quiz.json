@@ -13,7 +13,17 @@
       "s2p1": "Je quiz is privé. Hij gaat alleen open met de link die je krijgt als je hem maakt, en niemand kan hem op een andere manier vinden. Bewaar die link ergens, in een notitie of een chat bijvoorbeeld: het is de enige manier om er later naar terug te gaan.",
       "s2p2": "Stuur hem naar je partner, een vriend of een groep, en iedereen kan meteen spelen, zonder account. Na een week wordt de quiz verwijderd. Wil je hem houden? Dan maak je gewoon een nieuwe, dat kost je twee minuten!",
       "s3Title": "Quizzen voor alle momenten met z'n tweeën",
-      "s3p1": "Wil je weten of je partner je echt kent, zoek je iets voor een avondje met vrienden, of wil je gewoon lachen? Met een eigen quiz kan het allemaal. Laat je fantasie de vrije loop!"
+      "s3p1": "Wil je weten of je partner je echt kent, zoek je iets voor een avondje met vrienden, of wil je gewoon lachen? Met een eigen quiz kan het allemaal. Laat je fantasie de vrije loop!",
+      "s3plus": [
+        {
+          "titre": "Een quiz ‘wie kent mij het best’ over jezelf",
+          "texte": "<p>Dat is de meest gebruikte manier om de quizmaker te gebruiken: een quiz over jezelf, met je eigen vragen, om te zien wie je het best kent. Je lievelingseten, de stad waar je zou willen wonen, waar je het hardst om moet lachen... Je kiest het sjabloon ‘quiz met punten’, vinkt bij elke vraag het goede antwoord aan, en aan het eind ziet iedereen zijn score. Voor jullie als stel is er ook een kant-en-klare quiz waarin <a href=\"/nl/hoe-goed-ken-je-je-partner/\">jullie elkaars antwoorden raden</a>, als je geen zin hebt om zelf vragen te schrijven.</p>"
+        },
+        {
+          "titre": "Een quiz voor je vrienden maken",
+          "texte": "<p>De quiz deel je met een gewone link, dus hij werkt net zo goed in een vriendengroep als voor je partner. Zet hem in de groepsapp: iedereen speelt op de eigen telefoon, zonder account, een week lang. Voor een verjaardag of een vrijgezellenfeest zorgt het sjabloon ‘waar of niet waar’ vaak voor veel gelach.</p>"
+        }
+      ]
     },
     "total_quiz": "quizzen gemaakt door de community",
     "total_merci": "Bedankt aan de community van Quiz Couple: jullie houden de site levend ❤️"

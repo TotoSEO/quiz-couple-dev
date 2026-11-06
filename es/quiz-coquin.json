@@ -18,6 +18,24 @@
       "h3_2_p2": "No existe una duración ideal de relación para empezar. Hace falta sobre todo un deseo compartido de jugar con amabilidad, sin presión ni obligación de responder a todo. El quiz se convierte entonces en un espacio seguro, donde cada uno puede expresarse a su ritmo."
     },
     "section2": {
+      "title": "Preguntas picantes para parejas, de las más suaves a las más hot",
+      "intro": "El quiz hace sus propias preguntas, con respuestas para elegir. Pero muchas parejas buscan también preguntas picantes para hacerse directamente, sin pantalla, por la noche o por mensaje. Aquí van una docena, ordenadas de la más suave a la más atrevida. Empezad por arriba, y pasad a las siguientes solo si os apetece a los dos.",
+      "plus": [
+        {
+          "titre": "Para empezar con suavidad",
+          "texte": "<ul><li>«¿En qué momento te he atraído más?»</li><li>«¿Qué hago sin darme cuenta que te gusta?»</li><li>«¿Te acuerdas de nuestro primer beso? Cuéntamelo como lo viviste tú.»</li><li>«¿Mimos por la mañana o por la noche?»</li></ul>"
+        },
+        {
+          "titre": "Preguntas hot para subir la temperatura",
+          "texte": "<ul><li>«¿Qué te gustaría que hiciera más a menudo?»</li><li>«¿Algún sitio donde me hayas deseado sin decírmelo?»</li><li>«¿La ropa que más te gusta verme puesta... o verme quitar?»</li><li>«¿Qué es lo que te enciende más rápido?»</li></ul>"
+        },
+        {
+          "titre": "Las más atrevidas, si los dos os animáis",
+          "texte": "<ul><li>«¿Una fantasía que nunca me hayas contado?»</li><li>«¿Algo que te apetezca probar pero que nunca te hayas atrevido a proponer?»</li><li>«Si tuviéramos una noche entera sin despertador ni obligaciones, ¿cómo la pasaríamos?»</li><li>«¿Lo que más te gusta de mí en la cama, en una sola palabra?»</li></ul><p>Si queréis más, hay una lista mucho más larga de <a href=\"/es/blog/preguntas-intimas-pareja/\">preguntas íntimas para tu novio</a>, también de la más tierna a la más atrevida. Y si preferís los retos a las preguntas, <a href=\"/es/verdad-o-reto-picante-pareja/\">la versión atrevida del verdad o reto</a> mezcla las dos cosas.</p>"
+        }
+      ]
+    },
+    "section3": {
       "title": "Por qué hacer un quiz de pareja picante juntos",
       "intro": "Tomarse el tiempo para hacer un quiz de pareja hot es regalarse una pausa fuera del día a día. En un mundo donde todo va rápido, estos momentos dedicados a la pareja son preciosos. Permiten volver a centrarse el uno en el otro y devolver importancia a la comunicación.",
       "h3_1": "Crear complicidad en la pareja",
@@ -30,7 +48,7 @@
       "h3_3_p1": "A menudo creemos conocer perfectamente a nuestra pareja, pero <a href=\"/es/test-compatibilidad-sexual/\">las expectativas y los deseos</a> evolucionan con el tiempo. El quiz de pareja picante permite hacer balance, sin juicio, de lo que gusta, intriga o ya no corresponde.",
       "h3_3_p2": "No se trata tanto de buscar respuestas «ideales» como de <strong>comprender la visión actual del otro</strong>. Esta comprensión mutua es esencial para construir una relación equilibrada, respetuosa y satisfactoria."
     },
-    "section3": {
+    "section4": {
       "title": "Cómo funciona un quiz de pareja hot",
       "intro": "El funcionamiento de un quiz de pareja hot es intencionalmente simple. Es esta simplicidad la que lo hace accesible a todos y adaptable a cada pareja. No hay reglas universales, pero sí algunos principios comunes que garantizan una experiencia agradable.",
       "h3_1": "El principio de las preguntas de elección",
@@ -41,9 +59,38 @@
       "h3_2_p2": "La elección depende principalmente de la personalidad de los compañeros. Algunos apreciarán la energía de un quiz oral, otros preferirán la comodidad de un soporte escrito, que permite volver a ciertas preguntas más tarde.",
       "h3_3": "Cuándo y dónde hacer un quiz picante en pareja",
       "h3_3_p1": "No existe el momento perfecto, pero ciertas condiciones facilitan la experiencia. Un ambiente tranquilo, sin distracciones, es ideal para concentrarse en el intercambio. El quiz puede integrarse en una velada a dos, un fin de semana tranquilo o incluso un momento improvisado.",
-      "h3_3_p2": "Lo esencial es elegir un entorno donde cada uno se sienta cómodo, libre de hablar sin ser interrumpido."
+      "h3_3_p2": "Lo esencial es elegir un entorno donde cada uno se sienta cómodo, libre de hablar sin ser interrumpido.",
+      "h3_1_table": {
+        "headers": {
+          "type": "Tipo de pregunta",
+          "objective": "Objetivo principal",
+          "example": "Ejemplo de tema abordado"
+        },
+        "rows": {
+          "light": {
+            "type": "Pregunta ligera",
+            "objective": "Relajar el ambiente",
+            "example": "Hábitos de la pareja"
+          },
+          "introspective": {
+            "type": "Pregunta introspectiva",
+            "objective": "Favorecer la reflexión",
+            "example": "Expectativas relacionales"
+          },
+          "suggestive": {
+            "type": "Pregunta sugerente",
+            "objective": "Estimular la curiosidad",
+            "example": "Preferencias y deseos"
+          },
+          "open": {
+            "type": "Pregunta abierta",
+            "objective": "Fomentar el intercambio",
+            "example": "Visión de la pareja"
+          }
+        }
+      }
     },
-    "section4": {
+    "section5": {
       "title": "Ejemplos de temas abordados en un quiz de pareja picante",
       "intro": "La riqueza de un quiz de pareja hot reside en la diversidad de temas abordados. Estos temas permiten explorar diferentes facetas de la relación, sin forzar nunca la discusión.",
       "h3_1": "Preferencias y hábitos en la pareja",
@@ -53,7 +100,7 @@
       "h3_3": "Fantasías y curiosidades",
       "h3_3_p1": "Abordado con delicadeza, este tema permite hablar de curiosidades, imaginarios y deseos, sin entrar en descripciones explícitas. El objetivo no es imponer, sino <strong>compartir ideas</strong>, comprender mejor lo que intriga o inspira al otro, respetando siempre sus límites."
     },
-    "section5": {
+    "section6": {
       "title": "Quiz de pareja hot: reglas y límites a establecer",
       "intro": "Para que la experiencia sea positiva, es esencial definir algunas reglas simples. Estas reglas no limitan el juego, lo hacen seguro.",
       "h3_1": "La importancia del consentimiento",
@@ -62,75 +109,6 @@
       "h3_2_p1": "El quiz de pareja picante no es un test. Es perfectamente aceptable hacer una pausa, cambiar de tema o parar completamente si uno de los dos ya no se siente cómodo. Esta posibilidad de decir stop refuerza la confianza mutua.",
       "h3_3": "Adaptar el quiz a tu pareja",
       "h3_3_p1": "Cada pareja es única. Adaptar las preguntas, el ritmo y la duración del quiz permite respetar la sensibilidad de cada uno. A menudo es preferible privilegiar la calidad del intercambio sobre la cantidad de preguntas."
-    },
-    "section6": {
-      "title": "Quiz de pareja picante para animar una velada",
-      "intro": "Utilizado en el momento adecuado, el quiz de pareja hot puede transformar una velada ordinaria en un momento memorable. No se trata de hacer de ello un evento excepcional, sino de integrarlo naturalmente en la vida de la pareja.",
-      "h3_1": "Ideal para una velada a dos",
-      "h3_1_p1": "Durante una velada tranquila, el quiz crea un ambiente propicio para discusiones profundas. Permite reconectarse después de un día ajetreado y compartir un momento privilegiado, lejos de las pantallas y las distracciones externas.",
-      "h3_2": "Quiz de pareja hot a distancia",
-      "h3_2_p1": "Incluso a distancia, el quiz sigue siendo una excelente manera de mantener la complicidad. Por mensaje, llamada o videoconferencia, ofrece un espacio de intercambio íntimo a pesar de la distancia.",
-      "h3_3": "Asociar el quiz con un juego o una prenda ligera",
-      "h3_3_p1": "En algunos casos, el quiz puede complementarse con pequeñas prendas simbólicas o desafíos ligeros, siempre con espíritu de respeto y amabilidad. La idea no es obligar, sino añadir un toque lúdico adicional.",
-      "h3_3_p2": "Aquí hay un ejemplo de formatos posibles según el contexto:"
-    },
-    "table": {
-      "headers": {
-        "type": "Tipo de pregunta",
-        "objective": "Objetivo principal",
-        "example": "Ejemplo de tema abordado"
-      },
-      "rows": {
-        "light": {
-          "type": "Pregunta ligera",
-          "objective": "Relajar el ambiente",
-          "example": "Hábitos de la pareja"
-        },
-        "introspective": {
-          "type": "Pregunta introspectiva",
-          "objective": "Favorecer la reflexión",
-          "example": "Expectativas relacionales"
-        },
-        "suggestive": {
-          "type": "Pregunta sugerente",
-          "objective": "Estimular la curiosidad",
-          "example": "Preferencias y deseos"
-        },
-        "open": {
-          "type": "Pregunta abierta",
-          "objective": "Fomentar el intercambio",
-          "example": "Visión de la pareja"
-        }
-      }
-    },
-    "table2": {
-      "headers": {
-        "context": "Contexto",
-        "format": "Formato recomendado",
-        "benefit": "Beneficio principal"
-      },
-      "rows": {
-        "evening": {
-          "context": "Velada a dos",
-          "format": "Quiz oral",
-          "benefit": "Espontaneidad"
-        },
-        "distance": {
-          "context": "Pareja a distancia",
-          "format": "Quiz escrito",
-          "benefit": "Continuidad"
-        },
-        "weekend": {
-          "context": "Fin de semana relax",
-          "format": "Mixto",
-          "benefit": "Inmersión"
-        },
-        "dialogue": {
-          "context": "Retomar el diálogo",
-          "format": "Preguntas abiertas",
-          "benefit": "Comunicación"
-        }
-      }
     },
     "faq": {
       "title": "FAQ sobre quiz de pareja hot",
@@ -149,6 +127,46 @@
       "q4": {
         "question": "¿Cuál es la diferencia con un quiz clásico?",
         "answer": "Un quiz de pareja clásico se interesa principalmente por elementos factuales o divertidos: gustos, recuerdos compartidos, hábitos del día a día. El quiz de pareja hot va más allá en la intimidad emocional y relacional con deseos, límites y curiosidades."
+      }
+    },
+    "section7": {
+      "title": "Quiz de pareja picante para animar una velada",
+      "intro": "Utilizado en el momento adecuado, el quiz de pareja hot puede transformar una velada ordinaria en un momento memorable. No se trata de hacer de ello un evento excepcional, sino de integrarlo naturalmente en la vida de la pareja.",
+      "h3_1": "Ideal para una velada a dos",
+      "h3_1_p1": "Durante una velada tranquila, el quiz crea un ambiente propicio para discusiones profundas. Permite reconectarse después de un día ajetreado y compartir un momento privilegiado, lejos de las pantallas y las distracciones externas.",
+      "h3_2": "Quiz de pareja hot a distancia",
+      "h3_2_p1": "Incluso a distancia, el quiz sigue siendo una excelente manera de mantener la complicidad. Por mensaje, llamada o videoconferencia, ofrece un espacio de intercambio íntimo a pesar de la distancia.",
+      "h3_3": "Asociar el quiz con un juego o una prenda ligera",
+      "h3_3_p1": "En algunos casos, el quiz puede complementarse con pequeñas prendas simbólicas o desafíos ligeros, siempre con espíritu de respeto y amabilidad. La idea no es obligar, sino añadir un toque lúdico adicional.",
+      "h3_3_p2": "Aquí hay un ejemplo de formatos posibles según el contexto:",
+      "h3_3_table": {
+        "headers": {
+          "context": "Contexto",
+          "format": "Formato recomendado",
+          "benefit": "Beneficio principal"
+        },
+        "rows": {
+          "evening": {
+            "context": "Velada a dos",
+            "format": "Quiz oral",
+            "benefit": "Espontaneidad"
+          },
+          "distance": {
+            "context": "Pareja a distancia",
+            "format": "Quiz escrito",
+            "benefit": "Continuidad"
+          },
+          "weekend": {
+            "context": "Fin de semana relax",
+            "format": "Mixto",
+            "benefit": "Inmersión"
+          },
+          "dialogue": {
+            "context": "Retomar el diálogo",
+            "format": "Preguntas abiertas",
+            "benefit": "Comunicación"
+          }
+        }
       }
     }
   }

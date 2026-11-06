@@ -66,5 +66,17 @@
   },
   "jsonLd": {
     "name": "La roue des gages en couple"
-  }
+  },
+  "plus": [
+    {
+      "titre": "Des idées de gages à faire en couple",
+      "texte": "<p>La roue tire au sort parmi 140 gages. Si vous voulez une idée tout de suite, en voici quelques-uns tels qu'elle les donne, presque un par famille :</p><ul><li>Un bisou dans le cou, sans prévenir.</li><li>Deux minutes de massage des épaules, sans parler.</li><li>Chante le refrain d'une chanson d'amour, debout.</li><li>Raconte le moment où tu as su que c'était sérieux.</li><li>Parle avec l'accent de ton choix jusqu'au prochain tour.</li><li>Reproduisez une photo de vous qui date d'au moins un an.</li><li>Trois compliments sincères, sans répéter le même mot.</li><li>Écris un mot doux sur un papier et donne-le sans le lire à voix haute.</li></ul><p>Ils sont écrits pour être donnés à son copain comme à sa copine : aucun ne suppose qui fait quoi dans le couple.</p>",
+      "sous": [
+        {
+          "titre": "Des gages à faire à distance",
+          "texte": "<p>Au téléphone ou en visio, la roue marche aussi : l'un la lance et lit le gage, l'autre le fait devant la caméra. Ceux qui passent le mieux à distance :</p><ul><li>Chante le refrain d'une chanson d'amour, debout, caméra allumée.</li><li>Parle avec l'accent de ton choix jusqu'à la fin de l'appel.</li><li>Trois compliments sincères, sans répéter le même mot.</li><li>Raconte le moment où tu as su que c'était sérieux.</li><li>Montre la dernière photo de ton téléphone et raconte-la.</li><li>Envoie le selfie le plus moche possible, sans filtre.</li></ul>"
+        }
+      ]
+    }
+  ]
 }

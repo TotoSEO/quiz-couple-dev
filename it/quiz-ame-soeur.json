@@ -16,7 +16,13 @@
     "not2Title": "La persona perfetta",
     "not2Text": "Un'anima gemella ha dei difetti, e alcuni ti danno davvero fastidio. La domanda non è se esistono, ma se potete parlarne.",
     "not3Title": "Quella che ti completa",
-    "not3Text": "La metà mancante sta benissimo nei film. Nella vita vera, due persone intere reggono meglio di due metà aggrappate l'una all'altra."
+    "not3Text": "La metà mancante sta benissimo nei film. Nella vita vera, due persone intere reggono meglio di due metà aggrappate l'una all'altra.",
+    "plus": [
+      {
+        "titre": "Un test sull'anima gemella con la data di nascita o con il nome?",
+        "texte": "<p>Tanti cercano un test sull'anima gemella con la data di nascita o con i nomi. Questo non li usa: guarda quello che vivi nella tua relazione. Se vuoi comunque il lato astrologico, puoi <a href=\"/it/compatibilita-amorosa-data-di-nascita/\">partire dalle vostre due date di nascita</a> per una lettura con il cammino di vita, il segno zodiacale e il segno cinese, e <a href=\"/it/calcolatrice-dell-amore/\">bastano due nomi</a> per avere una percentuale. Sono giochi, da prendere come tali.</p>"
+      }
+    ]
   },
   "section2": {
     "title": "I diversi tipi di anima gemella",

@@ -66,5 +66,17 @@
   },
   "jsonLd": {
     "name": "Het rad met opdrachten voor koppels"
-  }
+  },
+  "plus": [
+    {
+      "titre": "Ideeën voor opdrachten om samen te doen",
+      "texte": "<p>Het rad kiest willekeurig uit 140 opdrachten. Wil je meteen een idee, dan zijn hier er een paar precies zoals het rad ze geeft, bijna één per familie:</p><ul><li>Een kus in de nek, zonder waarschuwing.</li><li>Twee minuten schouders masseren, zonder te praten.</li><li>Zing staand het refrein van een liefdesliedje.</li><li>Vertel over het moment waarop je wist dat het serieus was.</li><li>Praat met een accent naar keuze tot de volgende draai.</li><li>Doe samen een foto van jullie na die minstens een jaar oud is.</li><li>Drie gemeende complimenten, zonder één woord te herhalen.</li><li>Schrijf een lief briefje en geef het zonder het hardop voor te lezen.</li></ul><p>Ze zijn zo geschreven dat je ze aan je vriend en aan je vriendin kunt geven: geen enkele gaat ervan uit wie wat doet in de relatie.</p>",
+      "sous": [
+        {
+          "titre": "Opdrachten om op afstand te doen",
+          "texte": "<p>Aan de telefoon of via videobellen werkt het rad ook: een van jullie draait en leest de opdracht voor, de ander doet hem voor de camera. Deze werken het best op afstand:</p><ul><li>Zing staand het refrein van een liefdesliedje, met de camera aan.</li><li>Praat met een accent naar keuze tot het eind van het gesprek.</li><li>Drie gemeende complimenten, zonder één woord te herhalen.</li><li>Vertel over het moment waarop je wist dat het serieus was.</li><li>Laat de laatste foto op je telefoon zien en vertel erover.</li><li>Stuur de lelijkst mogelijke selfie, zonder filter.</li></ul>"
+        }
+      ]
+    }
+  ]
 }

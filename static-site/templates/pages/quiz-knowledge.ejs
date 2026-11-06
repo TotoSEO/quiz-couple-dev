@@ -172,6 +172,7 @@
         <% } %>
       </div>
       <% } %>
+      <%- include('../partials/blocs-plus', { t, ns, cles: 'examples.plus' }) %>
     </section>
 
     <% const occasions = t(ns + ':when.occasions', []); if (Array.isArray(occasions) && occasions.length > 0) { %>

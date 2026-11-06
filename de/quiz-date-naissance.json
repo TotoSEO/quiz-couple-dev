@@ -173,7 +173,13 @@
     "title": "Was ein Geburtsdatum über ein Paar sagen kann",
     "p1": "Dieser Test geht von einer einzigen Angabe aus: euren beiden Geburtsdaten. Meistens braucht man ein Geburtsdatum nur, um zum Geburtstag zu gratulieren, aber drei Traditionen lesen darin auch einen Charakter: die Numerologie, die westliche Astrologie und die chinesische Astrologie. Der Test lässt eure beiden Daten durch alle drei laufen.",
     "p2": "Die Numerologie macht daraus eine Zahl, die <strong>Lebenszahl</strong>, die sagt, wie ein Mensch durchs Leben geht. Die westliche Astrologie schaut auf Tag und Monat, um euer Sternzeichen zu finden, und die chinesische Astrologie auf das Jahr, um euer Tier zu finden. Diese drei Lesarten sagen nicht dasselbe, und genau deshalb schauen wir uns alle drei an.",
-    "p3": "Am Ende habt ihr eine Gesamtwertung, eine Wertung für jede der drei Lesarten und Erklärungen, die von euch beiden handeln. Wenn ihr lieber <a href=\"/de/liebeskompatibilitaet-test/\">einen Fragebogen zu zweit ausfüllt</a>, gibt es auch einen Test mit zwanzig Fragen dazu, wie ihr euer Leben als Paar seht."
+    "p3": "Am Ende habt ihr eine Gesamtwertung, eine Wertung für jede der drei Lesarten und Erklärungen, die von euch beiden handeln. Wenn ihr lieber <a href=\"/de/liebeskompatibilitaet-test/\">einen Fragebogen zu zweit ausfüllt</a>, gibt es auch einen Test mit zwanzig Fragen dazu, wie ihr euer Leben als Paar seht.",
+    "plus": [
+      {
+        "titre": "Kann man seine Liebeszukunft am Geburtsdatum ablesen?",
+        "texte": "<p>Diese Frage stellen sich viele, und die ehrliche Antwort ist nein. Ein Geburtsdatum verrät nicht, wen man kennenlernt, wann das passiert oder ob man eines Tages heiratet. Der Test sagt nichts voraus: Er vergleicht zwei Charaktere, so wie diese drei Traditionen sie beschreiben. Nehmt ihn als Spiel und als guten Anlass, über eure Temperamente zu reden.</p>"
+      }
+    ]
   },
   "section2": {
     "title": "Die Lebenszahl, die verborgene Zahl in eurem Geburtsdatum",
