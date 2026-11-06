@@ -397,6 +397,12 @@
     "metaDescription": "Eine Frage, ein Countdown, und die schnellste richtige Antwort holt den Punkt. 75 schnelle Fragen für Paare, mit 10, 20 oder 30. Kostenlos, ohne Anmeldung.",
     "description": "Eine Frage, 3, 2, 1, los! Die schnellste richtige Antwort holt den Punkt."
   },
+  "jeuxParMessage": {
+    "title": "WhatsApp-Spiele für Paare: 12 Spiele per Nachricht",
+    "shortTitle": "WhatsApp-Spiele",
+    "description": "Eine zufällige Frage, die du mit einem Tippen per WhatsApp oder SMS verschickst: Würdest du eher, Ich hab noch nie, Wahrheit, Wer von uns...",
+    "metaDescription": "WhatsApp-Spiele für Paare: Spiel wählen, zufällige Frage bekommen (Würdest du eher, Ich hab noch nie, Wahrheit...) und per WhatsApp oder SMS senden."
+  },
   "jeuOuiNon": {
     "title": "Ja oder Nein Spiel für Paare online - 120 Fragen",
     "shortTitle": "Ja oder Nein",

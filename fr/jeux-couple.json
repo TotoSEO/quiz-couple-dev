@@ -6,7 +6,7 @@
     "description": "Quinze jeux : quatorze qui se lancent sur un seul téléphone posé entre vous deux, et un à plusieurs couples, chacun sur le sien. Sans compte et sans rien installer."
   },
   "stats": {
-    "jeux": "15",
+    "jeux": "16",
     "jeuxLabel": "jeux de couple",
     "cartes": "520",
     "cartesLabel": "cartes, gages et dilemmes",
@@ -30,6 +30,11 @@
     "rapidesContenu": "75 questions à jouer en 10, 20 ou 30",
     "rapidesDuree": "5 à 15 min",
     "rapidesJoueurs": "2 joueurs",
+    "messageNom": "Jeux par message",
+    "messageTagline": "Une question au hasard, envoyée sur WhatsApp ou par SMS en un geste",
+    "messageContenu": "7 jeux et plus de 350 questions",
+    "messageDuree": "1 minute, ou toute la journée",
+    "messageJoueurs": "2 joueurs, chacun son téléphone",
     "actionVeriteNom": "Action ou vérité",
     "actionVeriteTagline": "Une carte tombe, vérité ou action, et vous ne savez jamais laquelle arrive.",
     "actionVeriteJoueurs": "2 joueurs",
@@ -145,7 +150,9 @@
     "row14Moment": "Une soirée à plusieurs couples",
     "row14Pourquoi": "Le seul jeu de la page qui se joue à plusieurs couples, chacun sur son téléphone : un maître du jeu forme les couples, chacun devine les réponses de l'autre, et les manches spéciales font voter pour le couple le plus fêtard ou le plus en retard.",
     "row15Moment": "Un apéro à deux, quand vous avez envie de vous chambrer",
-    "row15Pourquoi": "Un compte à rebours, et c'est à qui répondra le premier : où s'est passé votre premier rendez-vous, le plat préféré de l'autre, trois de ses manies... Les souvenirs remontent et ça se chambre gentiment !"
+    "row15Pourquoi": "Un compte à rebours, et c'est à qui répondra le premier : où s'est passé votre premier rendez-vous, le plat préféré de l'autre, trois de ses manies... Les souvenirs remontent et ça se chambre gentiment !",
+    "row16Moment": "En pleine journée, chacun de son côté",
+    "row16Pourquoi": "Une question envoyée entre deux réunions, et la conversation repart. L'autre répond quand il peut... et vous en renvoie une !"
   },
   "section3": {
     "title": "Réussir une soirée jeux à deux",

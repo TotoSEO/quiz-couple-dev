@@ -397,6 +397,12 @@
     "metaDescription": "A question, a countdown, and the fastest right answer scores the point. 75 rapid-fire questions for couples, in rounds of 10, 20 or 30. Free, no sign-up.",
     "description": "A question, 3, 2, 1, go! The fastest right answer scores the point."
   },
+  "jeuxParMessage": {
+    "title": "Texting Games for Couples: 12 Games to Play Over Text",
+    "shortTitle": "Texting games",
+    "description": "A random question you can send on WhatsApp or by text in one tap: would you rather, never have I ever, truth, which of us...",
+    "metaDescription": "Texting games for couples: pick a game, get a random question (would you rather, never have I ever, truth...) and send it on WhatsApp or by SMS."
+  },
   "jeuOuiNon": {
     "title": "Yes or No Game for Couples Online - 120 Questions",
     "shortTitle": "Yes or no",

@@ -1,0 +1,151 @@
+{
+  "hero": {
+    "badge": "Kostenloses Spiel",
+    "title": "12 Spiele für Paare per WhatsApp oder SMS",
+    "highlight": "Spiele für Paare per WhatsApp",
+    "description": "Such dir ein Spiel aus: Eine zufällige Frage erscheint, und mit einem Tippen geht sie per WhatsApp oder SMS raus. Dein Schatz antwortet... und schickt dir eine zurück! Weiter unten findest du fünf weitere Spiele per Nachricht, ganz ohne Vorbereitung."
+  },
+  "outil": {
+    "titre": "Such dir ein Spiel aus",
+    "apercu": "Deine Nachricht",
+    "autre": "Andere Frage",
+    "whatsapp": "Per WhatsApp senden",
+    "sms": "Per SMS senden",
+    "partager": "Teilen",
+    "copier": "Kopieren",
+    "copie": "Nachricht kopiert! Du musst sie nur noch in euren Chat einfügen.",
+    "appel": "Du bist dran! Und dann schick mir eine zurück:",
+    "note": "Der Link zu dieser Seite geht mit der Frage mit: Dein Schatz muss nur darauf tippen, um dir eine zurückzuschicken."
+  },
+  "jeux": {
+    "tuPreferes": {
+      "nom": "Würdest du eher",
+      "modele": "{{q}}",
+      "aide": "Dein Schatz wählt eins aus und sagt, warum."
+    },
+    "jamais": {
+      "nom": "Ich hab noch nie",
+      "modele": "{{q}} Und du?",
+      "aide": "Dein Schatz antwortet „ich schon“ oder „ich nicht“, und erzählt, wenn es ja ist."
+    },
+    "verite": {
+      "nom": "Wahrheit",
+      "modele": "Wahrheit: {{q}}",
+      "aide": "Nur eine Regel: ehrlich antworten."
+    },
+    "quiDeNous": {
+      "nom": "Wer von uns?",
+      "modele": "Wer von uns {{q}}",
+      "aide": "Dein Schatz antwortet mit einem Namen, mit seinem oder deinem."
+    },
+    "quiPourrait": {
+      "nom": "Wer würde eher?",
+      "modele": "Wer von uns würde eher {{q}}?",
+      "aide": "Dein Schatz antwortet mit einem Namen und einem guten Grund."
+    },
+    "phrase": {
+      "nom": "Satz vervollständigen",
+      "modele": "Vervollständige den Satz: {{q}}",
+      "aide": "Dein Schatz vervollständigt ihn, dann bist du mit demselben Satz dran."
+    },
+    "rapide": {
+      "nom": "Schnelle Frage",
+      "modele": "Schnelle Frage, antworte ohne nachzudenken: {{q}}",
+      "aide": "Das erste Wort, das einem einfällt, keine Zeit zum Nachschauen!"
+    }
+  },
+  "section1": {
+    "title": "Wie spielt man mit dieser Seite per Nachricht?",
+    "p1": "Per Nachricht spielen ist ganz einfach: Einer schickt eine Frage, der andere antwortet, und dann geht es von vorne los. Das Schwierigste ist, die Frage zu finden! Genau das übernimmt der Generator oben auf der Seite.",
+    "p2": "Du suchst dir ein Spiel aus, eine zufällige Frage erscheint, und ein Knopf schickt sie per WhatsApp oder SMS. Mit „Würdest du eher“ kann zum Beispiel diese kommen: „Würdest du lieber nie wieder lügen können oder nie wieder ein Geheimnis bewahren können?“ Wenn sie dir nicht gefällt, zieht „Andere Frage“ eine neue.",
+    "p3": "Die Nachricht geht mit dem Link zur Seite raus. So kann dein Schatz antworten und dir dann selbst eine schicken, ohne etwas zu installieren. Das klappt zwischen zwei Zimmern der Wohnung genauso gut wie <a href=\"/de/fernbeziehung-quiz/\">Hunderte Kilometer voneinander entfernt</a>!"
+  },
+  "section2": {
+    "title": "Wann spielt man per Nachricht?",
+    "points": [
+      "<strong>Mitten am Tag:</strong> Eine Frage zwischen zwei Meetings, und dein Schatz antwortet, wenn er Zeit hat. Das ist mal etwas anderes als „Wie geht's?“ und Fotos vom Mittagessen.",
+      "<strong>In einer Fernbeziehung:</strong> An dem Abend, an dem das Telefonat sich im Kreis dreht, reicht eine Frage, um wieder in Gang zu kommen. Und es gibt auch <a href=\"/de/blog/fragen-fuer-paare-per-nachricht/\">Fragen für ein Telefonat</a>, für die langen Gespräche.",
+      "<strong>Vor einem Date:</strong> Drei oder vier Fragen am Nachmittag, und ihr kommt mit Gesprächsstoff für den ganzen Abend an.",
+      "<strong>Für ein bisschen Würze:</strong> Die Wahrheiten aus <a href=\"/de/wahrheit-oder-pflicht-versaut/\">der frechen Version</a> funktionieren auch schriftlich sehr gut, am besten für den Abend..."
+    ]
+  },
+  "section3": {
+    "title": "Die 7 Spiele des Generators, und wie man sie per Nachricht spielt",
+    "intro": "Diese Spiele gibt es auf der Seite auch in einer vollen Version. Per Nachricht bleibt das Prinzip gleich, und man spielt eine Frage nach der anderen, immer wenn man zwei Minuten hat.",
+    "jeux": [
+      {
+        "titre": "Würdest du eher",
+        "texte": "Zwei Möglichkeiten, und dein Schatz muss sich für eine entscheiden: „beides“ gilt nicht! Am spannendsten ist das „Warum“, das danach kommt. Zum Beispiel: „Würdest du lieber jeden Tag einen langen Liebesbrief bekommen oder jeden Abend eine einzige 10-minütige Umarmung?“ Am Abend, für eine ganze Runde auf demselben Handy, gibt es <a href=\"/de/was-wuerdest-du-lieber-paar-quiz/\">hundert Dilemmas, die ihr zu zweit entscheidet</a>, mit eurer Übereinstimmung am Ende."
+      },
+      {
+        "titre": "Ich hab noch nie",
+        "texte": "Man schickt einen Satz, der mit „Ich hab noch nie“ anfängt, und dein Schatz antwortet ehrlich: „ich schon“ oder „ich nicht“. Wenn es ja ist, muss erzählt werden! Zum Beispiel: „Ich hab noch nie eine Nachricht zehnmal gelesen, bevor ich sie dir geschickt habe. Und du?“ Von Angesicht zu Angesicht kommt das Spiel mit <a href=\"/de/ich-hab-noch-nie-paar-spiel/\">hundert Geständnissen</a> und den Geschichten, die dazugehören."
+      },
+      {
+        "titre": "Wahrheit",
+        "texte": "Man stellt eine Frage, und die einzige Regel ist, ehrlich zu antworten. Zum Beispiel: „Wahrheit: Was hat dir als Erstes an mir gefallen?“ oder, zum Lachen: „Wahrheit: Wenn unsere Beziehung eine Serie wäre, wie hieße sie?“ Per Nachricht spielt man die Wahrheiten und lässt die Pflichtaufgaben weg: Die machen sich besser <a href=\"/de/wahrheit-oder-pflicht-paar/\">zu zweit, mit Aufgaben zum Erledigen</a>."
+      },
+      {
+        "titre": "Wer von uns?",
+        "texte": "Die Frage zeigt auf einen von euch, und dein Schatz antwortet mit einem Namen. Zum Beispiel: „Wer von uns sagt öfter ‚ich liebe dich‘?“ oder „Wer von uns singt schiefer?“ Lustig wird es meistens, wenn ihr euch nicht einig seid. Auf demselben Sofa <a href=\"/de/wer-von-uns-beiden-paarspiel/\">stimmt jeder geheim ab</a>, und dann werden beide Antworten gleichzeitig aufgedeckt."
+      },
+      {
+        "titre": "Wer würde eher?",
+        "texte": "Dasselbe Prinzip, mit etwas verrückten Situationen: „Wer von uns würde eher aus einer Laune heraus eine Luxusuhr kaufen?“, „Wer von uns würde eher das ganze Urlaubsbudget an einem Abend ausgeben?“... Man antwortet mit einem Namen und einem guten Grund. Das ganze Spiel hat über hundert davon, genug, um <a href=\"/de/wer-koennte-paar-spiel/\">aufeinander zu zeigen</a>, den ganzen Abend lang."
+      },
+      {
+        "titre": "Satz vervollständigen",
+        "texte": "Der Anfang eines Satzes, und dein Schatz beendet ihn: „Vervollständige den Satz: Unsere schönste gemeinsame Erinnerung ist…“ Danach vervollständigst du denselben Satz. Die Antworten sind selten gleich, und genau darum geht es! <a href=\"/de/satz-vervollstaendigen-paarspiel/\">Die zwanzig Sätze des Spiels</a> kann man auch zu zweit auf einem Bildschirm spielen."
+      },
+      {
+        "titre": "Schnelle Frage",
+        "texte": "Eine Frage über euch beide, und dein Schatz antwortet mit dem ersten Wort, das ihm einfällt, ohne nachzudenken oder in den Fotos zu suchen. Zum Beispiel: „Schnelle Frage, antworte ohne nachzudenken: Was ist ‚unser‘ Lied?“ Live spielt man das Spiel <a href=\"/de/schnelle-fragen-fuer-paare/\">mit einem Countdown</a>, und wer am schnellsten ist, bekommt den Punkt."
+      }
+    ]
+  },
+  "section4": {
+    "title": "5 weitere Spiele per Nachricht, ohne Vorbereitung",
+    "intro": "Für diese Spiele braucht ihr nur eure Nachrichten und ein bisschen Fantasie.",
+    "jeux": [
+      {
+        "titre": "20 Fragen",
+        "texte": "Einer denkt an etwas: eine Erinnerung, einen Gegenstand in der Wohnung, einen Ort, an dem ihr zusammen wart. Der andere hat zwanzig Fragen, um es zu erraten, und geantwortet wird nur mit Ja oder Nein. „Waren wir im Sommer da?“, „War das, bevor wir zusammengezogen sind?“... Perfekt für die Mittagspause, und es kann den ganzen Nachmittag dauern."
+      },
+      {
+        "titre": "Die Emoji-Geschichte",
+        "texte": "Erzähl eine Erinnerung, deinen Tag oder einen Film nur mit Emojis, und dein Schatz muss raten. 🍝🌧️🚗💨? Unser erstes Date, im Regen, an dem Abend, als das Auto nicht anspringen wollte... Je mehr es eure eigene Erinnerung ist, desto lustiger wird es."
+      },
+      {
+        "titre": "Das Rätselfoto",
+        "texte": "Fotografiere ein Detail ganz aus der Nähe (das Muster eines Pullis, die Ecke eines Regals, eine Türklinke) und schick es. Dein Schatz hat drei Versuche, um zu erraten, was es ist. Das klappt super, wenn einer zu Hause ist und der andere bei der Arbeit."
+      },
+      {
+        "titre": "Die Geschichte zu zweit",
+        "texte": "Jeder schreibt abwechselnd einen Satz, und so baut ihr zusammen eine Geschichte. Nur eine Regel: Was der andere geschrieben hat, wird nie abgelehnt, man muss damit weitermachen. „An diesem Morgen wachten wir auf einer einsamen Insel auf...“ „... und du hattest schon wieder deine Sonnenbrille vergessen.“ Nach zehn Nachrichten landet die Geschichte meistens irgendwo, wo keiner sie erwartet hätte!"
+      },
+      {
+        "titre": "Die Top 3",
+        "texte": "Eine Kategorie, und jeder nennt seine Top 3, ohne auf die des anderen zu schauen: eure drei Lieblingsrestaurants, eure drei schönsten Erinnerungen, die drei Lieder, bei denen ihr aneinander denkt. Dann vergleicht ihr. Oft merkt man genau da, dass man sich an ganz andere Dinge erinnert."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Eure Fragen zu den Spielen per Nachricht",
+    "q1": "Welches Spiel kann man per WhatsApp mit seinem Freund oder seiner Freundin spielen?",
+    "a1": "Am einfachsten sind die, bei denen eine einzige Frage reicht: Würdest du eher, Ich hab noch nie, Wer von uns, eine Wahrheit... Der Generator oben auf der Seite zieht eine zufällig, du musst sie nur noch verschicken.",
+    "q2": "Wie schickt man eine Frage per WhatsApp?",
+    "a2": "Such dir ein Spiel aus und tippe auf „Per WhatsApp senden“: Die App öffnet sich mit der fertigen Nachricht, du wählst den Chat aus und los geht's. Am Computer öffnet sich WhatsApp Web oder die Desktop-App.",
+    "q3": "Muss mein Schatz etwas installieren?",
+    "a3": "Nein. Es ist eine ganz normale Nachricht, mit dem Link zur Seite am Ende. Dein Schatz kann direkt im Chat antworten oder den Link öffnen, um dir eine Frage zurückzuschicken.",
+    "q4": "Kann man in einer Fernbeziehung per Nachricht spielen?",
+    "a4": "Ja, und genau da helfen diese Spiele am meisten: Eine Frage am Tag reicht, um ein Gespräch wiederzubeleben, das einschläft. Für ein Live-Spiel haben mehrere Spiele der Seite auch einen Fernmodus, jeder auf seinem Handy.",
+    "q5": "Klappt das auch per SMS, ohne Internet?",
+    "a5": "Ja. Die Frage ist reiner Text, der Link ist nur ein Extra. Und die fünf Spiele aus dem letzten Teil (20 Fragen, Emojis, Rätselfoto, Geschichte zu zweit, Top 3) brauchen nichts außer euren Nachrichten.",
+    "q6": "Werden die verschickten Fragen gespeichert?",
+    "a6": "Nein. Die Seite zieht die Fragen in deinem Browser, und die Nachricht geht nur dorthin, wohin du sie schickst."
+  },
+  "jsonLd": {
+    "name": "WhatsApp-Spiele für Paare",
+    "about": "Spiele für Paare per Nachricht oder WhatsApp"
+  }
+}

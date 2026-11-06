@@ -6,7 +6,7 @@
     "description": "Quince juegos: catorce que arrancan en un solo móvil entre los dos, y uno para varias parejas, cada uno en el suyo. Sin cuenta y sin instalar nada."
   },
   "stats": {
-    "jeux": "15",
+    "jeux": "16",
     "jeuxLabel": "juegos para parejas",
     "cartes": "520",
     "cartesLabel": "cartas, prendas y dilemas",
@@ -30,6 +30,11 @@
     "rapidesContenu": "75 preguntas para jugar en 10, 20 o 30",
     "rapidesDuree": "5 a 15 min",
     "rapidesJoueurs": "2 jugadores",
+    "messageNom": "Juegos por WhatsApp",
+    "messageTagline": "Una pregunta al azar, enviada por WhatsApp o por SMS en un toque",
+    "messageContenu": "7 juegos y más de 350 preguntas",
+    "messageDuree": "1 minuto, o todo el día",
+    "messageJoueurs": "2 jugadores, cada uno en su móvil",
     "actionVeriteNom": "Verdad o reto",
     "actionVeriteTagline": "Cae una carta, verdad o reto, y nunca sabéis cuál de las dos llega.",
     "actionVeriteJoueurs": "2 jugadores",
@@ -145,7 +150,9 @@
     "row14Moment": "Una noche con varias parejas",
     "row14Pourquoi": "El único juego de la página que se juega con varias parejas, cada uno en su móvil: un maestro del juego forma las parejas, cada uno adivina las respuestas del otro, y en las rondas especiales se vota a la pareja más fiestera o a la que siempre llega tarde.",
     "row15Moment": "Un aperitivo para dos, cuando os apetece picaros un poco",
-    "row15Pourquoi": "Una cuenta atrás y gana quien responde primero: dónde fue vuestra primera cita, la comida favorita de tu pareja, tres de sus manías... ¡Salen los recuerdos y las bromas!"
+    "row15Pourquoi": "Una cuenta atrás y gana quien responde primero: dónde fue vuestra primera cita, la comida favorita de tu pareja, tres de sus manías... ¡Salen los recuerdos y las bromas!",
+    "row16Moment": "En mitad del día, cada uno por su lado",
+    "row16Pourquoi": "Una pregunta enviada entre dos reuniones, y la conversación arranca otra vez. Tu pareja contesta cuando puede... ¡y te manda otra!"
   },
   "section3": {
     "title": "Cómo hacer que una noche de juegos en pareja funcione",

@@ -1,0 +1,151 @@
+{
+  "hero": {
+    "badge": "Free game",
+    "title": "12 texting games for couples, on WhatsApp or by SMS",
+    "highlight": "texting games for couples",
+    "description": "Pick a game: a random question comes up, and you can send it on WhatsApp or by text in one tap. Your partner answers... and sends one back! Further down, five more games to play over text with nothing to prepare."
+  },
+  "outil": {
+    "titre": "Pick a game",
+    "apercu": "Your message",
+    "autre": "Another question",
+    "whatsapp": "Send on WhatsApp",
+    "sms": "Send by text",
+    "partager": "Share",
+    "copier": "Copy",
+    "copie": "Message copied! Just paste it into your chat.",
+    "appel": "Your turn! And send me one back:",
+    "note": "The link to this page goes with the question: your partner just taps it to send you one back."
+  },
+  "jeux": {
+    "tuPreferes": {
+      "nom": "Would you rather",
+      "modele": "{{q}}",
+      "aide": "Your partner picks one, and says why."
+    },
+    "jamais": {
+      "nom": "Never have I ever",
+      "modele": "{{q}} What about you?",
+      "aide": "Your partner answers “I have” or “I haven't”, and tells the story if it's a yes."
+    },
+    "verite": {
+      "nom": "Truth",
+      "modele": "Truth: {{q}}",
+      "aide": "Just one rule: answer honestly."
+    },
+    "quiDeNous": {
+      "nom": "Which of us?",
+      "modele": "Which of us {{q}}",
+      "aide": "Your partner answers with a name, theirs or yours."
+    },
+    "quiPourrait": {
+      "nom": "Who could?",
+      "modele": "Which of us could {{q}}?",
+      "aide": "Your partner answers with a name, and a good reason."
+    },
+    "phrase": {
+      "nom": "Finish the sentence",
+      "modele": "Finish the sentence: {{q}}",
+      "aide": "Your partner finishes it, then it's your turn with the same one."
+    },
+    "rapide": {
+      "nom": "Rapid-fire question",
+      "modele": "Rapid-fire question, answer without thinking: {{q}}",
+      "aide": "The first word that comes to mind, no time to look it up!"
+    }
+  },
+  "section1": {
+    "title": "How do you play over text with this page?",
+    "p1": "Playing over text is simple: one of you sends a question, the other answers, and you go again. The hardest part is finding the question! That's exactly what the generator at the top of the page does.",
+    "p2": "You pick a game, a random question comes up, and a button sends it on WhatsApp or by text. For example, with “Would you rather”, you might get: “Would you rather never be able to lie again or never be able to keep a secret?” If you don't like it, “Another question” draws a new one.",
+    "p3": "The message goes out with the link to the page. So your partner can answer and then send you one back, without installing anything. It works just as well between two rooms of your flat as when you're <a href=\"/en/long-distance-relationship-quiz/\">hundreds of miles apart</a>!"
+  },
+  "section2": {
+    "title": "When to play over text?",
+    "points": [
+      "<strong>In the middle of the day:</strong> a question sent between two meetings, and your partner answers when they can. It makes a change from “how's it going?” and photos of lunch.",
+      "<strong>Long distance:</strong> on the evening the call goes round in circles, one question is enough to get it going again. And there are also <a href=\"/en/blog/questions-for-couples-over-text/\">questions to ask over the phone</a>, for the calls that last.",
+      "<strong>Before a date:</strong> three or four questions in the afternoon, and you show up with enough to talk about all evening.",
+      "<strong>To spice things up:</strong> the truths from <a href=\"/en/dirty-truth-or-dare-couples/\">the naughty version</a> work very well in writing, best kept for the evening..."
+    ]
+  },
+  "section3": {
+    "title": "The 7 games in the generator, and how to play them over text",
+    "intro": "These games also exist in a full version on the site. Over text, you keep the idea and play one question at a time, whenever you have two minutes.",
+    "jeux": [
+      {
+        "titre": "Would you rather",
+        "texte": "Two options, and your partner has to pick one: no saying “both”! The best part is the “why” that comes after. For example: “Would you rather receive a long love letter every day or a single 10-minute cuddle every evening?” In the evening, for a whole game on the same phone, there are <a href=\"/en/would-you-rather-couple-quiz/\">a hundred dilemmas to settle together</a>, with your agreement rate at the end."
+      },
+      {
+        "titre": "Never have I ever",
+        "texte": "You send a sentence that starts with “Never have I ever”, and your partner answers honestly: “I have” or “I haven't”. If it's a yes, they have to tell the story! For example: “Never have I ever reread a text ten times before sending it to you. What about you?” Face to face, the game comes with <a href=\"/en/never-have-i-ever-couples-game/\">a hundred confessions to make</a>, and the stories that go with them."
+      },
+      {
+        "titre": "Truth",
+        "texte": "You ask one question, and the only rule is to answer honestly. For example: “Truth: What was the first thing you liked about me?” or, for a laugh: “Truth: If our relationship were a TV series, what would it be called?” Over text, you keep the truths and leave the dares aside: they work better <a href=\"/en/truth-or-dare-couple-game/\">in person, with dares to take on</a>."
+      },
+      {
+        "titre": "Which of us?",
+        "texte": "The question points at one of you, and your partner answers with a name. For example: “Which of us says ‘I love you’ more often?” or “Which of us sings the most out of tune?” It usually gets funny when you don't agree. On the same sofa, <a href=\"/en/which-one-of-us-couple-game/\">you each vote in secret</a>, then reveal both answers at the same time."
+      },
+      {
+        "titre": "Who could?",
+        "texte": "Same idea, with slightly crazy situations: “Which of us could buy a luxury watch on a whim?”, “Which of us could blow the entire holiday budget in one evening?”... You answer with a name, and give a good reason. The full game has over a hundred of them, enough to <a href=\"/en/who-could-couples-game/\">point at each other</a> all evening."
+      },
+      {
+        "titre": "Finish the sentence",
+        "texte": "The start of a sentence, and your partner finishes it: “Finish the sentence: Our best memory together is…” Then it's your turn to finish the same one. The answers rarely match, and that's the whole point! <a href=\"/en/finish-the-sentence-couples-game/\">The twenty sentences of the game</a> can also be played together on a single screen."
+      },
+      {
+        "titre": "Rapid-fire question",
+        "texte": "A question about the two of you, and your partner answers with the first word that comes to mind, without thinking or scrolling through their photos. For example: “Rapid-fire question, answer without thinking: What's ‘our song’?” In person, the game is played <a href=\"/en/rapid-fire-questions-for-couples/\">with a countdown</a>, and the fastest one scores the point."
+      }
+    ]
+  },
+  "section4": {
+    "title": "5 more games to play over text, with nothing to prepare",
+    "intro": "For these ones, all you need is your messages and a bit of imagination.",
+    "jeux": [
+      {
+        "titre": "20 questions",
+        "texte": "One of you thinks of something: a memory, an object in the house, a place you've been together. The other has twenty questions to guess it, and you can only answer yes or no. “Did we go there in summer?”, “Was it before we moved in together?”... Perfect for a lunch break, and it can last all afternoon."
+      },
+      {
+        "titre": "The emoji story",
+        "texte": "Tell a memory, your day or a film using only emojis, and your partner has to guess. 🍝🌧️🚗💨? Our first date, in the rain, the night the car wouldn't start... The more the memory is yours, the funnier it gets."
+      },
+      {
+        "titre": "The mystery photo",
+        "texte": "Take a very close-up photo of a detail (the pattern on a jumper, the corner of a shelf, a door handle) and send it. Your partner has three guesses to work out what it is. It works really well when one of you is at home and the other at work."
+      },
+      {
+        "titre": "The story for two",
+        "texte": "You each write one sentence in turn, and build a story together. Just one rule: never turn down what the other wrote, you have to go with it. “That morning, we woke up on a desert island...” “... and you'd forgotten your sunglasses again.” Ten messages in, it usually ends up somewhere completely unexpected!"
+      },
+      {
+        "titre": "Top 3",
+        "texte": "Pick a category, and you each give your top 3 without looking at the other's: your three favourite restaurants, your three best memories, the three songs that make you think of each other. Then compare. That's often when you find out you don't remember the same things at all."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Your questions about texting games",
+    "q1": "What game can I play over text with my boyfriend or girlfriend?",
+    "a1": "The easiest ones are those where a single question is enough: would you rather, never have I ever, which of us, a truth... The generator at the top of the page draws one at random, and all you have to do is send it.",
+    "q2": "How do I send a question on WhatsApp?",
+    "a2": "Pick a game, then tap “Send on WhatsApp”: the app opens with the message already written, you choose the chat and off you go. On a computer, WhatsApp Web or the desktop app opens.",
+    "q3": "Does my partner need to install anything?",
+    "a3": "No. It's a normal message, with the link to the page at the end. Your partner can answer right in the chat, or open the link to send you a question back.",
+    "q4": "Can we play over text in a long-distance relationship?",
+    "a4": "Yes, and that's actually where these games help the most: one question a day is enough to restart a conversation that's running out of steam. To play live, several games on the site also have a remote mode, each on your own phone.",
+    "q5": "Does it work by SMS, without internet?",
+    "a5": "Yes. The question is plain text, the link is just a bonus. And the five games in the last part (20 questions, emojis, mystery photo, story for two, top 3) need nothing but your messages.",
+    "q6": "Are the questions we send saved anywhere?",
+    "a6": "No. The page draws the questions in your browser, and the message only goes where you choose to send it."
+  },
+  "jsonLd": {
+    "name": "Texting games for couples",
+    "about": "Games for couples to play by text message or on WhatsApp"
+  }
+}
