@@ -501,6 +501,12 @@
     "description": "La date du début, et le compteur vous dit combien de jours vous êtes ensemble, la durée exacte et les prochaines dates à fêter.",
     "metaDescription": "Compteur de durée en couple gratuit : entrez votre date de début et voyez vos jours ensemble, la durée exacte, les prochains anniversaires et caps à fêter."
   },
+  "nocesMariage": {
+    "title": "Noces de mariage : la liste de 1 à 80 ans et le calcul",
+    "shortTitle": "Noces de mariage",
+    "description": "La date de votre mariage, et l'outil vous dit quelles noces vous fêtez, quand tombent les suivantes, avec la liste complète de 1 à 80 ans.",
+    "metaDescription": "Noces de mariage année par année : la liste de 1 à 80 ans (coton, cuir, étain, argent, or...) et un calcul gratuit pour savoir quelles noces vous fêtez."
+  },
   "testDureeCelibat": {
     "title": "Combien de temps vais-je rester célibataire ? Test en ligne",
     "shortTitle": "Combien de temps encore célibataire ?",

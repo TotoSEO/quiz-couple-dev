@@ -159,7 +159,7 @@
     },
     {
       "an": 10,
-      "nom": "nozze di stagno"
+      "nom": "nozze di alluminio"
     },
     {
       "an": 11,
@@ -210,8 +210,24 @@
       "nom": "nozze d'oro"
     },
     {
+      "an": 55,
+      "nom": "nozze di smeraldo"
+    },
+    {
       "an": 60,
       "nom": "nozze di diamante"
+    },
+    {
+      "an": 65,
+      "nom": "nozze di zaffiro blu"
+    },
+    {
+      "an": 70,
+      "nom": "nozze di platino"
+    },
+    {
+      "an": 80,
+      "nom": "nozze di quercia"
     }
   ],
   "resultat": {
@@ -320,7 +336,7 @@
   },
   "section5": {
     "title": "Le nozze: il nome di ogni anno insieme",
-    "p1": "In Italia ogni anniversario porta il nome di un materiale, dalla carta del primo anno alle nozze d'oro dei cinquanta. In origine la lista era riservata al matrimonio, ma oggi le coppie la usano per tutti gli anniversari, sposate o no. Il contatore mostra il nome che corrisponde al vostro prossimo anniversario. Ecco la lista completa, con <a href=\"/it/test-linguaggio-amore-coppia/\">un'idea di regalo o di pensiero</a> per ogni anno:",
+    "p1": "<a href=\"/it/anniversari-di-matrimonio/\">Molti anniversari portano il nome di un materiale</a>, dalla carta del primo anno alle nozze d'oro dei cinquanta. In origine la lista era riservata al matrimonio, ma oggi le coppie la usano per tutti gli anniversari, sposate o no. Il contatore mostra il nome che corrisponde al vostro prossimo anniversario. Ecco i più noti, con <a href=\"/it/test-linguaggio-amore-coppia/\">un'idea di regalo o di pensiero</a> per ognuno:",
     "tableHeaders": [
       "Anno",
       "Le nozze",
@@ -374,7 +390,7 @@
       ],
       [
         "10",
-        "Nozze di stagno",
+        "Nozze di alluminio",
         "La vostra data incisa su un oggetto di metallo."
       ],
       [

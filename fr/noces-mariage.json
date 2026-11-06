@@ -1,0 +1,485 @@
+{
+  "hero": {
+    "badge": "Outil gratuit",
+    "title": "Noces de mariage : quelles noces fêtez-vous cette année ?",
+    "highlight": "Noces de mariage",
+    "description": "Entrez la date de votre mariage : l'outil vous dit <strong>quelles noces vous fêtez en ce moment</strong>, et quand tombent les suivantes, avec le nombre de jours qui restent. Juste en dessous, la liste complète, des noces de coton (1 an) aux noces de chêne (80 ans).",
+    "subtitle": "Aucune inscription. La date reste dans votre téléphone, rien n'est envoyé."
+  },
+  "form": {
+    "titre": "Vos noces",
+    "dateTitre": "Le jour de votre mariage",
+    "dateAide": "La date de la mairie, ou celle de la cérémonie si c'est celle que vous fêtez. Pas mariés ? Prenez le jour où votre histoire a commencé : beaucoup de couples comptent leurs noces comme ça.",
+    "jour": "Jour",
+    "moisLabel": "Mois",
+    "annee": "Année",
+    "mois": [
+      "Janvier",
+      "Février",
+      "Mars",
+      "Avril",
+      "Mai",
+      "Juin",
+      "Juillet",
+      "Août",
+      "Septembre",
+      "Octobre",
+      "Novembre",
+      "Décembre"
+    ],
+    "moisDate": [
+      "janvier",
+      "février",
+      "mars",
+      "avril",
+      "mai",
+      "juin",
+      "juillet",
+      "août",
+      "septembre",
+      "octobre",
+      "novembre",
+      "décembre"
+    ],
+    "joursSemaine": [
+      "dimanche",
+      "lundi",
+      "mardi",
+      "mercredi",
+      "jeudi",
+      "vendredi",
+      "samedi"
+    ],
+    "dateAffichee": "{{j}} {{mois}} {{a}}",
+    "dateAvecJour": "{{js}} {{date}}",
+    "lancer": "Voir nos noces",
+    "aide": "La date est gardée dans ce navigateur : en revenant sur la page, vos noces s'affichent toutes seules.",
+    "erreurVide": "Choisissez le jour, le mois et l'année de votre mariage.",
+    "erreur": "Cette date n'existe pas. Vérifiez le jour et le mois."
+  },
+  "unites": {
+    "jour": [
+      "jour",
+      "jours"
+    ],
+    "mois": [
+      "mois",
+      "mois"
+    ],
+    "an": [
+      "an",
+      "ans"
+    ]
+  },
+  "et": " et ",
+  "virgule": ", ",
+  "quand": {
+    "aujourdhui": "aujourd'hui",
+    "demain": "demain",
+    "dans": "dans {{n}} jours",
+    "ilya": "il y a {{n}} jours"
+  },
+  "resultat": {
+    "depuis": "Mariés le {{date}}",
+    "duree": "{{duree}} de mariage",
+    "jourJ": "C'est le grand jour : félicitations !",
+    "avant": "Mariage prévu {{dans}}, le {{date}}",
+    "actuelleTitre": "Vos dernières noces",
+    "actuelleDetail": "Atteintes le {{date}}, à {{ans}} de mariage.",
+    "aujourdhuiTitre": "C'est aujourd'hui !",
+    "aujourdhuiDetail": "{{ans}} de mariage ce {{date}} : joyeux anniversaire !",
+    "premiereTitre": "Vos premières noces",
+    "premiereDetail": "À {{ans}} de mariage, le {{date}}, {{dans}}.",
+    "ook": "Aussi appelées : {{ook}}",
+    "titreSuivantes": "Vos prochaines noces",
+    "finListe": "Vous avez passé les noces de chêne, les dernières de la liste, à 80 ans de mariage. Chapeau !",
+    "lienBouton": "Copier le lien de nos noces",
+    "lienCopie": "Lien copié ! Il garde la date de votre mariage.",
+    "modifier": "Changer la date",
+    "avis": "Laisser un avis"
+  },
+  "suite": {
+    "titre": "Et en jours, ça fait combien ?",
+    "texte": "Les noces ne tombent qu'une fois par an. Le compteur de durée en couple compte vos jours ensemble et vous donne d'autres dates à fêter : les mois ronds, les 1 000 jours, les 10 000 heures...",
+    "bouton": "Compter nos jours ensemble"
+  },
+  "table": {
+    "annees": "Années de mariage",
+    "noces": "Les noces",
+    "ook": "Aussi appelées"
+  },
+  "liste": [
+    {
+      "an": 1,
+      "nom": "noces de coton"
+    },
+    {
+      "an": 2,
+      "nom": "noces de cuir"
+    },
+    {
+      "an": 3,
+      "nom": "noces de froment"
+    },
+    {
+      "an": 4,
+      "nom": "noces de cire"
+    },
+    {
+      "an": 5,
+      "nom": "noces de bois"
+    },
+    {
+      "an": 6,
+      "nom": "noces de chypre"
+    },
+    {
+      "an": 7,
+      "nom": "noces de laine"
+    },
+    {
+      "an": 8,
+      "nom": "noces de coquelicot"
+    },
+    {
+      "an": 9,
+      "nom": "noces de faïence"
+    },
+    {
+      "an": 10,
+      "nom": "noces d'étain"
+    },
+    {
+      "an": 11,
+      "nom": "noces de corail"
+    },
+    {
+      "an": 12,
+      "nom": "noces de soie"
+    },
+    {
+      "an": 13,
+      "nom": "noces de muguet"
+    },
+    {
+      "an": 14,
+      "nom": "noces de plomb"
+    },
+    {
+      "an": 15,
+      "nom": "noces de cristal"
+    },
+    {
+      "an": 16,
+      "nom": "noces de saphir"
+    },
+    {
+      "an": 17,
+      "nom": "noces de rose"
+    },
+    {
+      "an": 18,
+      "nom": "noces de turquoise"
+    },
+    {
+      "an": 19,
+      "nom": "noces de cretonne"
+    },
+    {
+      "an": 20,
+      "nom": "noces de porcelaine"
+    },
+    {
+      "an": 21,
+      "nom": "noces d'opale"
+    },
+    {
+      "an": 22,
+      "nom": "noces de bronze"
+    },
+    {
+      "an": 23,
+      "nom": "noces de béryl"
+    },
+    {
+      "an": 24,
+      "nom": "noces de satin"
+    },
+    {
+      "an": 25,
+      "nom": "noces d'argent",
+      "phare": true
+    },
+    {
+      "an": 26,
+      "nom": "noces de jade"
+    },
+    {
+      "an": 27,
+      "nom": "noces d'acajou"
+    },
+    {
+      "an": 28,
+      "nom": "noces de nickel"
+    },
+    {
+      "an": 29,
+      "nom": "noces de velours"
+    },
+    {
+      "an": 30,
+      "nom": "noces de perle"
+    },
+    {
+      "an": 31,
+      "nom": "noces de basane"
+    },
+    {
+      "an": 32,
+      "nom": "noces de cuivre"
+    },
+    {
+      "an": 33,
+      "nom": "noces de porphyre"
+    },
+    {
+      "an": 34,
+      "nom": "noces d'ambre"
+    },
+    {
+      "an": 35,
+      "nom": "noces de rubis"
+    },
+    {
+      "an": 36,
+      "nom": "noces de mousseline"
+    },
+    {
+      "an": 37,
+      "nom": "noces de papier"
+    },
+    {
+      "an": 38,
+      "nom": "noces de mercure"
+    },
+    {
+      "an": 39,
+      "nom": "noces de crêpe"
+    },
+    {
+      "an": 40,
+      "nom": "noces d'émeraude"
+    },
+    {
+      "an": 41,
+      "nom": "noces de fer"
+    },
+    {
+      "an": 42,
+      "nom": "noces de nacre"
+    },
+    {
+      "an": 43,
+      "nom": "noces de flanelle"
+    },
+    {
+      "an": 44,
+      "nom": "noces de topaze"
+    },
+    {
+      "an": 45,
+      "nom": "noces de vermeil"
+    },
+    {
+      "an": 46,
+      "nom": "noces de lavande"
+    },
+    {
+      "an": 47,
+      "nom": "noces de cachemire"
+    },
+    {
+      "an": 48,
+      "nom": "noces d'améthyste"
+    },
+    {
+      "an": 49,
+      "nom": "noces de cèdre"
+    },
+    {
+      "an": 50,
+      "nom": "noces d'or",
+      "phare": true
+    },
+    {
+      "an": 51,
+      "nom": "noces de camélia"
+    },
+    {
+      "an": 52,
+      "nom": "noces de tourmaline"
+    },
+    {
+      "an": 53,
+      "nom": "noces de merisier"
+    },
+    {
+      "an": 54,
+      "nom": "noces de zibeline"
+    },
+    {
+      "an": 55,
+      "nom": "noces d'orchidée"
+    },
+    {
+      "an": 56,
+      "nom": "noces de buis",
+      "ook": "noces de lapis-lazuli"
+    },
+    {
+      "an": 57,
+      "nom": "noces d'azalée"
+    },
+    {
+      "an": 58,
+      "nom": "noces d'érable"
+    },
+    {
+      "an": 59,
+      "nom": "noces d'olivier",
+      "ook": "noces de vison"
+    },
+    {
+      "an": 60,
+      "nom": "noces de diamant",
+      "phare": true
+    },
+    {
+      "an": 61,
+      "nom": "noces de platane"
+    },
+    {
+      "an": 62,
+      "nom": "noces d'ivoire"
+    },
+    {
+      "an": 63,
+      "nom": "noces de lilas"
+    },
+    {
+      "an": 64,
+      "nom": "noces d'astrakan"
+    },
+    {
+      "an": 65,
+      "nom": "noces de palissandre"
+    },
+    {
+      "an": 66,
+      "nom": "noces de jasmin"
+    },
+    {
+      "an": 67,
+      "nom": "noces de chinchilla"
+    },
+    {
+      "an": 68,
+      "nom": "noces de granit"
+    },
+    {
+      "an": 69,
+      "nom": "noces de mélèze"
+    },
+    {
+      "an": 70,
+      "nom": "noces de platine"
+    },
+    {
+      "an": 71,
+      "nom": "noces d'ocre"
+    },
+    {
+      "an": 72,
+      "nom": "noces de titane"
+    },
+    {
+      "an": 73,
+      "nom": "noces de fonte"
+    },
+    {
+      "an": 74,
+      "nom": "noces de sienne"
+    },
+    {
+      "an": 75,
+      "nom": "noces d'albâtre"
+    },
+    {
+      "an": 76,
+      "nom": "noces de zinc"
+    },
+    {
+      "an": 77,
+      "nom": "noces de silice"
+    },
+    {
+      "an": 78,
+      "nom": "noces d'ébène"
+    },
+    {
+      "an": 79,
+      "nom": "noces de bambou"
+    },
+    {
+      "an": 80,
+      "nom": "noces de chêne"
+    }
+  ],
+  "section1": {
+    "title": "Les noces de mariage, c'est quoi ?",
+    "p1": "Les noces, c'est le nom qu'on donne à chaque anniversaire de mariage. Chaque année a sa matière : le coton pour la première, le cuir pour la deuxième, le bois pour la cinquième, et ainsi de suite jusqu'aux noces d'or des 50 ans et aux noces de diamant des 60 ans. Quand on dit d'un couple qu'il fête ses noces d'étain, ça veut dire qu'il est marié depuis 10 ans.",
+    "p2": "En regardant la liste, on voit vite une logique : les premières années ont des matières qui s'usent, comme le coton ou le cuir, et plus le mariage dure, plus elles deviennent solides ou précieuses, jusqu'à l'or et au diamant. Bon, la liste n'est pas parfaite : les noces de plomb tombent à 14 ans et celles de papier à 37 ans.",
+    "p3": "Pas mariés ? Beaucoup de couples se servent quand même des noces, en partant du jour où leur histoire a commencé. Et pour ceux qui préfèrent les jours aux années, on peut aussi <a href=\"/compteur-de-couple/\">compter ses jours ensemble</a> : le 1 000e jour tombe quelques mois avant les noces de froment !"
+  },
+  "section2": {
+    "title": "La liste des noces de mariage, de 1 à 80 ans",
+    "p1": "Voici la liste des noces telle qu'on la trouve en France, avec un nom pour chaque année jusqu'à 80 ans. Pour deux années, la 56e et la 59e, les listes ne sont pas d'accord et donnent deux noms : on a mis les deux.",
+    "p2": "Les plus fêtées restent les noces d'argent (25 ans), d'or (50 ans) et de diamant (60 ans), en gras dans le tableau. Les autres servent surtout à trouver une idée de cadeau, même si <a href=\"/test-langage-amour-couple/\">la façon dont l'autre se sent aimé</a> compte plus que la matière de l'année. Et si vous tombez sur une autre liste ailleurs, ne vous étonnez pas d'y voir des différences : aux États-Unis, par exemple, la première année est celle du papier, pas du coton."
+  },
+  "section3": {
+    "title": "Comment fêter ses noces de mariage ?",
+    "p1": "La plupart des couples partent de la matière de l'année : un plaid pour les noces de laine, un cadre en bois pour les noces de bois, un bijou pour les noces d'argent. C'est un bon point de départ quand on manque d'idées, mais rien n'oblige à s'y tenir. Voici ce qui marche bien la plupart du temps :",
+    "points": [
+      "<strong>Jouer avec la matière :</strong> pour les noces de froment, un petit-déjeuner au lit avec du pain frais, pour les noces de coquelicot, un pique-nique dans un champ. Le clin d'œil compte plus que le prix.",
+      "<strong>Refaire un moment de vos débuts :</strong> le restaurant du premier rendez-vous, l'endroit de la demande, la chanson de votre première danse.",
+      "<strong>Revenir sur vos années à deux :</strong> où étiez-vous il y a dix ans, quel a été votre plus beau voyage, qu'est-ce que l'autre a changé chez vous... Pour en faire un jeu pendant le dîner, cherchez à savoir <a href=\"/quiz-qui-connait-mieux-partenaire/\">lequel de vous deux connaît l'autre par cœur</a>.",
+      "<strong>Pour les grandes noces, réunir vos proches :</strong> les noces d'argent et les noces d'or se fêtent souvent avec la famille et les amis, parfois avec un renouvellement des vœux."
+    ],
+    "p2": "Et si la date tombe un soir de semaine, sans rien de prévu, un dîner tranquille à la maison avec les téléphones loin de la table, c'est déjà une très belle façon de marquer le coup."
+  },
+  "section4": {
+    "title": "D'où viennent les noces de mariage ?",
+    "p1": "On fête son anniversaire de mariage depuis longtemps : l'Encyclopédie de Diderot et d'Alembert en parle déjà au XVIIIe siècle. En 1783, un livre sur les coutumes religieuses du monde mentionne les noces d'argent, à 25 ans, et les noces d'or, à 50 ans, chez les calvinistes.",
+    "p2": "Pendant longtemps, on n'en fêtait d'ailleurs que trois : les noces d'argent, les noces d'or et les noces de diamant, qui tombaient alors à 75 ans. C'est ce que racontait l'ethnologue Arnold Van Gennep, pour qui la mode venait de la petite bourgeoisie des villes et n'est arrivée dans les campagnes qu'au XIXe siècle. Aujourd'hui, les noces de diamant se fêtent à 60 ans, c'est l'usage qu'ont retenu les bijoutiers.",
+    "p3": "Les noms des autres années sont venus plus tard. Aux États-Unis, c'est une association de bijoutiers qui a publié en 1937 une liste complète de cadeaux, un par anniversaire. Rien de tout ça n'est officiel, d'où les petites différences d'une liste à l'autre, et les grosses d'un pays à l'autre."
+  },
+  "faq": {
+    "title": "Vos questions sur les noces de mariage",
+    "q1": "Quelles sont les noces des 10 ans de mariage ?",
+    "a1": "Ce sont les noces d'étain. Après viennent les noces de corail (11 ans), de soie (12 ans) et de muguet (13 ans).",
+    "q2": "Quelles noces pour 25, 30 et 40 ans de mariage ?",
+    "a2": "25 ans, ce sont les noces d'argent, 30 ans les noces de perle et 40 ans les noces d'émeraude. Entre les deux, 35 ans de mariage donnent les noces de rubis.",
+    "q3": "Quelles sont les noces des 50 ans de mariage ?",
+    "a3": "Les noces d'or. Ce sont, avec les noces d'argent, les plus anciennes de la liste : on en parlait déjà au XVIIIe siècle. Viennent ensuite les noces de diamant, à 60 ans, puis les noces de platine, à 70 ans.",
+    "q4": "Peut-on fêter ses noces sans être mariés ?",
+    "a4": "Bien sûr. Beaucoup de couples pacsés ou en union libre comptent leurs noces à partir du jour où ils se sont mis ensemble, ou de la date du pacs. L'outil marche pareil : entrez la date qui compte pour vous deux.",
+    "q5": "La liste des noces est-elle la même dans tous les pays ?",
+    "a5": "Non. Les noces d'argent, d'or et de diamant sont à peu près les mêmes partout, mais les autres années changent. Aux États-Unis, la première année est celle du papier et la deuxième celle du coton, et en Allemagne comme aux Pays-Bas, on fête aussi des noces à 12 ans et demi.",
+    "q6": "Pourquoi la liste s'arrête-t-elle à 80 ans ?",
+    "a6": "Parce que très peu de couples y arrivent ! On trouve des listes qui vont jusqu'à 100 ans, avec les noces d'onyx à 89 ans ou les noces d'eau à 100 ans, mais à ce stade, chaque année passée ensemble est déjà une fête à elle seule."
+  },
+  "jsonLd": {
+    "name": "Calculateur de noces de mariage",
+    "about": "Nom des anniversaires de mariage, de 1 à 80 ans, et dates des prochaines noces"
+  }
+}

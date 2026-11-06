@@ -17,7 +17,7 @@
     testDistance:     ['testDistanceAime', 'quizKnowledge', 'testCouple', 'testConfiance'],
 
     // Étapes de vie
-    testMariage:      ['testEmmenager', 'testParentalite', 'testCompatibilite', 'testCouple'],
+    testMariage:      ['testEmmenager', 'testParentalite', 'testCompatibilite', 'nocesMariage'],
     testEmmenager:    ['testParentalite', 'testMariage', 'testCompatibilite', 'testChargeMentale'],
     testParentalite:  ['testEmmenager', 'testMariage', 'testCoupleSain', 'testCouple'],
 
@@ -27,7 +27,8 @@
     testDivorce:      ['testFinCouple', 'testAmourHabitude', 'testToxic', 'testCoupleSain'],
     testFinCouple:    ['testAimeEncore', 'testCouche', 'testToxic', 'testDivorce'],
     testAmourHabitude:['testFinCouple', 'testSuisJeAmoureux', 'testDivorce', 'testCoupleSain'],
-    compteurCouple:   ['calculatriceAmour', 'testAmourHabitude', 'testCoupleSain', 'testMariage'],
+    compteurCouple:   ['nocesMariage', 'calculatriceAmour', 'testAmourHabitude', 'testCoupleSain'],
+    nocesMariage:     ['compteurCouple', 'testMariage', 'testLangageAmour', 'quizKnowledge'],
 
     // Doute et soupçon
     testInfidelite:   ['testCouche', 'testConfiance', 'testJalousie', 'quizTentation'],
@@ -121,7 +122,7 @@
     testCouple: '💕', testCommonPoints: '🎯', testDistance: '🌍', testToxic: '⚠️',
     testCoupleSain: '💚', testMariage: '💒', testDivorce: '⚖️', testParentalite: '👶',
     testEmmenager: '🏠', testAstroPrenoms: '♈', testDateNaissance: '📅', testSignesChinois: '🐉', testJalousie: '🫣', testLangageAmour: '💬',
-    testAttachement: '🔗', testConfiance: '🤝', bilanCouple: '📋', testCompatibilite: '💘', testPervers: '🎭', testAmourHabitude: '☕', testEstCeLeBon: '🔑', compteurCouple: '📆', testCompatSexuelle: '🔥',
+    testAttachement: '🔗', testConfiance: '🤝', bilanCouple: '📋', testCompatibilite: '💘', testPervers: '🎭', testAmourHabitude: '☕', testEstCeLeBon: '🔑', compteurCouple: '📆', nocesMariage: '💍', testCompatSexuelle: '🔥',
     testAmeSoeur: '💫', testFinCouple: '🪢', testAmourAmitie: '🧭', testCrush: '💘', testAmourAmi: '🧡', testKarmique: '🔮', testInfidelite: '💔', testCouche: '🛏️', testSecret: '💌', testEncoreAmoureuxEx: '🥀', testOublierEx: '🌊', testExRevenir: '🚪', testRemettreEx: '🧩', testOublieSonEx: '💭', testPourquoiQuitte: '🔑', testAimeEncore: '💞', testEmprise: '🔒', testDistanceAime: '📞', testEx: '🕰️', testChargeMentale: '🧠', quizRencontre: '💬', testSuisJeAmoureux: '💗',
     quizAmoureux: '❤️', quizCoquin: '🔥', quizMarrant: '😂', quizKnowledge: '🧠',
     quizMost: '🏆', quizAdo: '🌟', quizGenant: '😳', quizTuPreferes: '🤔', quizVraiFaux: '✅',
@@ -144,7 +145,7 @@
   // Les deux outils (calculatrice, compteur) sont rangés dans les tests mais
   // s'essaient plutôt qu'ils ne se font.
   const _familleDe = function (k) {
-    if (k === 'calculatriceAmour' || k === 'compteurCouple') return 'outil';
+    if (k === 'calculatriceAmour' || k === 'compteurCouple' || k === 'nocesMariage') return 'outil';
     for (const f of ['tests', 'celib', 'quiz', 'jeux', 'speciaux']) {
       if (famillesNav && famillesNav[f] && famillesNav[f].indexOf(k) !== -1) return f;
     }

@@ -1,0 +1,385 @@
+{
+  "hero": {
+    "badge": "Herramienta gratis",
+    "title": "Aniversarios de boda: ¿qué bodas celebráis este año?",
+    "highlight": "Aniversarios de boda",
+    "description": "Poned la fecha de vuestra boda y la herramienta os dice <strong>qué bodas celebráis ahora mismo</strong> y cuándo caen las siguientes, con los días que faltan. Justo debajo, la lista completa, desde las bodas de papel (1 año) hasta las de roble (80 años).",
+    "subtitle": "Sin registro. La fecha se queda en vuestro móvil, no se envía nada."
+  },
+  "form": {
+    "titre": "Vuestras bodas",
+    "dateTitre": "El día de vuestra boda",
+    "dateAide": "La fecha del juzgado o la de la ceremonia, si es la que celebráis. ¿No estáis casados? Poned el día en que empezó vuestra historia: muchas parejas cuentan así sus aniversarios.",
+    "jour": "Día",
+    "moisLabel": "Mes",
+    "annee": "Año",
+    "mois": [
+      "Enero",
+      "Febrero",
+      "Marzo",
+      "Abril",
+      "Mayo",
+      "Junio",
+      "Julio",
+      "Agosto",
+      "Septiembre",
+      "Octubre",
+      "Noviembre",
+      "Diciembre"
+    ],
+    "moisDate": [
+      "enero",
+      "febrero",
+      "marzo",
+      "abril",
+      "mayo",
+      "junio",
+      "julio",
+      "agosto",
+      "septiembre",
+      "octubre",
+      "noviembre",
+      "diciembre"
+    ],
+    "joursSemaine": [
+      "domingo",
+      "lunes",
+      "martes",
+      "miércoles",
+      "jueves",
+      "viernes",
+      "sábado"
+    ],
+    "dateAffichee": "{{j}} de {{mois}} de {{a}}",
+    "dateAvecJour": "{{js}} {{date}}",
+    "lancer": "Ver nuestras bodas",
+    "aide": "La fecha se guarda en este navegador: al volver a la página, vuestras bodas aparecen solas.",
+    "erreurVide": "Elegid el día, el mes y el año de vuestra boda.",
+    "erreur": "Esta fecha no existe. Revisad el día y el mes."
+  },
+  "unites": {
+    "jour": [
+      "día",
+      "días"
+    ],
+    "mois": [
+      "mes",
+      "meses"
+    ],
+    "an": [
+      "año",
+      "años"
+    ]
+  },
+  "et": " y ",
+  "virgule": ", ",
+  "quand": {
+    "aujourdhui": "hoy",
+    "demain": "mañana",
+    "dans": "en {{n}} días",
+    "ilya": "hace {{n}} días"
+  },
+  "resultat": {
+    "depuis": "Casados el {{date}}",
+    "duree": "{{duree}} de casados",
+    "jourJ": "¡Es el gran día! ¡Enhorabuena!",
+    "avant": "Boda {{dans}}, el {{date}}",
+    "actuelleTitre": "Vuestras últimas bodas",
+    "actuelleDetail": "Cumplidas el {{date}}, con {{ans}} de casados.",
+    "aujourdhuiTitre": "¡Es hoy!",
+    "aujourdhuiDetail": "{{ans}} de casados hoy, {{date}}. ¡Feliz aniversario!",
+    "premiereTitre": "Vuestras primeras bodas",
+    "premiereDetail": "Al cumplir {{ans}} de casados, el {{date}}, {{dans}}.",
+    "titreSuivantes": "Vuestras próximas bodas",
+    "finListe": "Habéis pasado las bodas de roble, las últimas de la lista, a los 80 años de casados. ¡Enhorabuena!",
+    "lienBouton": "Copiar el enlace de nuestras bodas",
+    "lienCopie": "¡Enlace copiado! Guarda la fecha de vuestra boda.",
+    "modifier": "Cambiar la fecha",
+    "avis": "Dejar una opinión"
+  },
+  "suite": {
+    "titre": "¿Y en días, cuánto es?",
+    "texte": "Las bodas solo llegan una vez al año. El contador de tiempo en pareja cuenta vuestros días juntos y os da otras fechas para celebrar: los meses redondos, los 1.000 días, las 10.000 horas...",
+    "bouton": "Contar nuestros días juntos"
+  },
+  "table": {
+    "annees": "Años de casados",
+    "noces": "Las bodas"
+  },
+  "liste": [
+    {
+      "an": 1,
+      "nom": "bodas de papel"
+    },
+    {
+      "an": 2,
+      "nom": "bodas de algodón"
+    },
+    {
+      "an": 3,
+      "nom": "bodas de cuero"
+    },
+    {
+      "an": 4,
+      "nom": "bodas de lino"
+    },
+    {
+      "an": 5,
+      "nom": "bodas de madera"
+    },
+    {
+      "an": 6,
+      "nom": "bodas de hierro"
+    },
+    {
+      "an": 7,
+      "nom": "bodas de lana"
+    },
+    {
+      "an": 8,
+      "nom": "bodas de bronce"
+    },
+    {
+      "an": 9,
+      "nom": "bodas de arcilla"
+    },
+    {
+      "an": 10,
+      "nom": "bodas de aluminio"
+    },
+    {
+      "an": 11,
+      "nom": "bodas de acero"
+    },
+    {
+      "an": 12,
+      "nom": "bodas de seda"
+    },
+    {
+      "an": 13,
+      "nom": "bodas de encaje"
+    },
+    {
+      "an": 14,
+      "nom": "bodas de marfil"
+    },
+    {
+      "an": 15,
+      "nom": "bodas de cristal"
+    },
+    {
+      "an": 16,
+      "nom": "bodas de hiedra"
+    },
+    {
+      "an": 17,
+      "nom": "bodas de alhelí"
+    },
+    {
+      "an": 18,
+      "nom": "bodas de cuarzo"
+    },
+    {
+      "an": 19,
+      "nom": "bodas de madreselva"
+    },
+    {
+      "an": 20,
+      "nom": "bodas de porcelana"
+    },
+    {
+      "an": 21,
+      "nom": "bodas de roble"
+    },
+    {
+      "an": 22,
+      "nom": "bodas de cobre"
+    },
+    {
+      "an": 23,
+      "nom": "bodas de agua"
+    },
+    {
+      "an": 24,
+      "nom": "bodas de granito"
+    },
+    {
+      "an": 25,
+      "nom": "bodas de plata",
+      "phare": true
+    },
+    {
+      "an": 26,
+      "nom": "bodas de rosas"
+    },
+    {
+      "an": 27,
+      "nom": "bodas de azabache"
+    },
+    {
+      "an": 28,
+      "nom": "bodas de ámbar"
+    },
+    {
+      "an": 29,
+      "nom": "bodas de granate"
+    },
+    {
+      "an": 30,
+      "nom": "bodas de perla"
+    },
+    {
+      "an": 31,
+      "nom": "bodas de ébano"
+    },
+    {
+      "an": 32,
+      "nom": "bodas de cobre"
+    },
+    {
+      "an": 33,
+      "nom": "bodas de estaño"
+    },
+    {
+      "an": 34,
+      "nom": "bodas de amapola"
+    },
+    {
+      "an": 35,
+      "nom": "bodas de coral"
+    },
+    {
+      "an": 36,
+      "nom": "bodas de sílex"
+    },
+    {
+      "an": 37,
+      "nom": "bodas de piedra"
+    },
+    {
+      "an": 38,
+      "nom": "bodas de jade"
+    },
+    {
+      "an": 39,
+      "nom": "bodas de ágata"
+    },
+    {
+      "an": 40,
+      "nom": "bodas de rubí"
+    },
+    {
+      "an": 41,
+      "nom": "bodas de topacio"
+    },
+    {
+      "an": 42,
+      "nom": "bodas de jaspe"
+    },
+    {
+      "an": 43,
+      "nom": "bodas de ópalo"
+    },
+    {
+      "an": 44,
+      "nom": "bodas de turquesa"
+    },
+    {
+      "an": 45,
+      "nom": "bodas de zafiro"
+    },
+    {
+      "an": 46,
+      "nom": "bodas de nácar"
+    },
+    {
+      "an": 47,
+      "nom": "bodas de amatista"
+    },
+    {
+      "an": 48,
+      "nom": "bodas de feldespato"
+    },
+    {
+      "an": 49,
+      "nom": "bodas de circón"
+    },
+    {
+      "an": 50,
+      "nom": "bodas de oro",
+      "phare": true
+    },
+    {
+      "an": 55,
+      "nom": "bodas de esmeralda"
+    },
+    {
+      "an": 60,
+      "nom": "bodas de diamante",
+      "phare": true
+    },
+    {
+      "an": 65,
+      "nom": "bodas de platino"
+    },
+    {
+      "an": 70,
+      "nom": "bodas de titanio"
+    },
+    {
+      "an": 75,
+      "nom": "bodas de brillantes"
+    },
+    {
+      "an": 80,
+      "nom": "bodas de roble"
+    }
+  ],
+  "section1": {
+    "title": "¿Qué son las bodas de papel, de plata o de oro?",
+    "p1": "Cada aniversario de boda tiene un nombre, casi siempre el de un material. El primer año son las bodas de papel, el segundo las de algodón, el quinto las de madera, y así hasta las bodas de oro de los 50 años y las de diamante de los 60. Cuando se dice que una pareja celebra sus bodas de aluminio, quiere decir que lleva 10 años casada.",
+    "p2": "Si miráis la lista, se ve enseguida una lógica: los primeros años tienen materiales que se gastan, como el papel o el algodón, y cuanto más dura el matrimonio, más sólidos o valiosos se vuelven, hasta el oro y el diamante. Eso sí, la lista no es perfecta: las bodas de agua llegan a los 23 años y las de rosas a los 26.",
+    "p3": "¿No estáis casados? Muchas parejas usan los nombres igualmente, contando desde el día en que empezaron. Y si preferís pensar en días en vez de en años, también podéis <a href=\"/es/contador-de-pareja/\">contar vuestros días juntos</a>: el día 1.000 llega unos meses antes de las bodas de cuero."
+  },
+  "section2": {
+    "title": "Los aniversarios de boda, de 1 a 80 años",
+    "p1": "Esta es la lista tradicional de las bodas, año por año: un nombre para cada aniversario hasta los 50 años y, a partir de ahí, uno cada cinco años. Algún material se repite, como el cobre (22 y 32 años) o el roble (21 y 80 años), y la lista es así, no es un error.",
+    "p2": "Las que más se celebran son las bodas de plata (25 años), de oro (50 años) y de diamante (60 años), en negrita en la tabla. Las demás sirven sobre todo para encontrar una idea de regalo, aunque <a href=\"/es/test-lenguaje-amor-pareja/\">la manera de sentirse querido de cada uno</a> cuenta más que el material del año. Y si encontráis otra lista en otro sitio, no os extrañen las diferencias: en Francia, por ejemplo, el primer año es el del algodón, no el del papel."
+  },
+  "section3": {
+    "title": "Cómo celebrar vuestro aniversario de boda",
+    "p1": "La mayoría de las parejas parten del material del año: un marco de madera para las bodas de madera, dos copas de cristal para las de cristal, una joya para las de plata. Es un buen punto de partida cuando faltan ideas, pero nada obliga a seguirlo. Esto es lo que suele funcionar:",
+    "points": [
+      "<strong>Jugar con el material:</strong> una carta o un libro para las bodas de papel, un pícnic sobre una manta grande para las de algodón. El guiño cuenta más que el precio.",
+      "<strong>Repetir un momento de vuestros comienzos:</strong> el restaurante de la primera cita, el sitio de la pedida, la canción del primer baile.",
+      "<strong>Repasar vuestros años juntos:</strong> dónde estabais hace diez años, cuál fue vuestro mejor viaje, qué ha cambiado el otro en vosotros... Para convertirlo en juego durante la cena, descubrid cuál de los dos <a href=\"/es/quiz-quien-conoce-mejor-pareja/\">se sabe al otro de memoria</a>.",
+      "<strong>Para las grandes, reunir a los vuestros:</strong> las bodas de plata y de oro se suelen celebrar con la familia y los amigos, a veces renovando los votos."
+    ],
+    "p2": "Y si la fecha cae entre semana y sin nada previsto, una cena tranquila en casa con los móviles lejos de la mesa ya es una muy buena manera de celebrarlo."
+  },
+  "section4": {
+    "title": "¿De dónde vienen los nombres de las bodas?",
+    "p1": "Celebrar las bodas de plata y de oro es una costumbre antigua. En los países de lengua alemana, asociar los 25 años de casados a la plata y los 50 al oro está documentado desde el siglo XVI, y la tradición cuenta que a los esposos se les regalaba entonces una corona de plata o de oro.",
+    "p2": "El nombre de cada año llegó mucho después. En Estados Unidos, por ejemplo, fue una asociación de joyeros la que publicó en 1937 una lista completa de regalos, uno para cada aniversario.",
+    "p3": "Nada de esto es oficial, y por eso las listas cambian un poco de un libro a otro, y bastante de un país a otro. En Francia, el primer año es el del algodón y el segundo el del cuero, y en Alemania y los Países Bajos se celebran incluso unas bodas a los doce años y medio."
+  },
+  "faq": {
+    "title": "Vuestras preguntas sobre los aniversarios de boda",
+    "q1": "¿Qué bodas se celebran a los 10 años de casados?",
+    "a1": "Las bodas de aluminio. Después vienen las de acero (11 años), las de seda (12 años) y las de encaje (13 años).",
+    "q2": "¿Qué bodas son los 25, 30 y 40 años?",
+    "a2": "Los 25 años son las bodas de plata, los 30 las de perla y los 40 las de rubí. Entre medias, los 35 años son las bodas de coral.",
+    "q3": "¿Qué bodas son los 50 años de casados?",
+    "a3": "Las bodas de oro. Junto con las de plata, son las más antiguas de la lista. Después vienen las bodas de esmeralda a los 55 años y las de diamante a los 60.",
+    "q4": "¿Se pueden celebrar las bodas sin estar casados?",
+    "a4": "Claro. Muchas parejas las cuentan desde el día en que empezaron a salir. La herramienta funciona igual: poned la fecha que cuenta para los dos.",
+    "q5": "¿La lista es la misma en todos los países?",
+    "a5": "No. La plata, el oro y el diamante son casi iguales en todas partes, pero los demás años cambian. En el Reino Unido, por ejemplo, el sexto aniversario es el del azúcar, y no el del hierro.",
+    "q6": "¿Por qué la lista se para en los 80 años?",
+    "a6": "¡Porque muy pocas parejas llegan! La lista termina con las bodas de roble, a los 80 años, y a esas alturas cada año juntos ya es una fiesta en sí."
+  },
+  "jsonLd": {
+    "name": "Calculadora de aniversarios de boda",
+    "about": "Nombres de los aniversarios de boda de 1 a 80 años y fechas de las próximas bodas"
+  }
+}

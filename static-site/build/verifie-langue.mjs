@@ -485,6 +485,20 @@ function controleCode() {
 // Les clés qui portent une donnée et pas un texte : barèmes, axes,
 // conditions, identifiants. Elles se recopient telles quelles.
 const CLE_DONNEE = /(_pts|_axes|_axe|_si|_miroir|_cle|answer|\.(id|cat|p|min|max|note|score|route|article|cle|img|dom|ado))$/;
+// Les données propres à chaque pays, qui n'ont ni la même longueur ni les
+// mêmes valeurs d'une langue à l'autre : la liste des noces de mariage
+// (chaque pays a ses noms, la koperen bruiloft néerlandaise et la
+// Petersilienhochzeit allemande tombent à douze ans et demi, l'italien n'en
+// connaît que onze), et le tableau du compteur qui en reprend les plus connues.
+const PROPRES_A_LA_LANGUE = {
+  'noces-mariage.json': ['liste'],
+  'compteur-couple.json': ['noces', 'section5.tableRows'],
+};
+const horsPropres = (f, m) => {
+  const pref = PROPRES_A_LA_LANGUE[f];
+  if (!pref) return m;
+  return new Map([...m].filter(([k]) => !pref.some((p) => k === p || k.startsWith(p + '[') || k.startsWith(p + '.'))));
+};
 const estDonnee = (v) => {
   const s = String(v ?? '');
   if (s === '' || /^(true|false|null)$/.test(s)) return true;
@@ -554,8 +568,8 @@ function controleTextes() {
       const ou = `${LANGUE}/${f} ${u}`;
       if (!nouv || !(u in nouv)) { marque(C, ou, nouv ? 'partie pas encore écrite' : 'fichier pas encore écrit'); continue; }
       faites++;
-      const F = Object.fromEntries(Object.entries(src).map(([l, d]) => [l, feuilles(l === 'fr' && !(u in d) ? d[alias[u]] : d[u], u)]));
-      const N = feuilles(nouv[u], u);
+      const F = Object.fromEntries(Object.entries(src).map(([l, d]) => [l, horsPropres(f, feuilles(l === 'fr' && !(u in d) ? d[alias[u]] : d[u], u))]));
+      const N = horsPropres(f, feuilles(nouv[u], u));
       // La structure suit celle du français ou celle de l'anglais (certains
       // préfixes de gd.json n'ont pas les mêmes clés d'une langue à l'autre).
       const memes = (a, b) => a.size === b.size && [...a.keys()].every((k) => b.has(k));

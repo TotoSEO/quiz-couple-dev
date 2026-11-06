@@ -181,6 +181,7 @@ const TOUJOURS = /^(@import|@charset|@namespace|@font-face|@property|:root\b|htm
 // gardees ici, a leur place dans la feuille.
 const GARDER_PAR_CLE = {
   compteurCouple: /\.(cc-[a-z]|dn-verdict|dn-bloc)/,
+  nocesMariage: /\.(nm-[a-z]|cc-actions|cc-copie|dn-verdict|dn-bloc)/,
 };
 // Le bandeau du haut des pages jouables (parties, note, avis) est écrit à la
 // construction, dans le premier écran : une page relevée le jour où elle n'a

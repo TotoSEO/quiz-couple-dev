@@ -155,11 +155,11 @@
     },
     {
       "an": 9,
-      "nom": "bodas de cerámica"
+      "nom": "bodas de arcilla"
     },
     {
       "an": 10,
-      "nom": "bodas de estaño"
+      "nom": "bodas de aluminio"
     },
     {
       "an": 11,
@@ -182,36 +182,168 @@
       "nom": "bodas de cristal"
     },
     {
+      "an": 16,
+      "nom": "bodas de hiedra"
+    },
+    {
+      "an": 17,
+      "nom": "bodas de alhelí"
+    },
+    {
+      "an": 18,
+      "nom": "bodas de cuarzo"
+    },
+    {
+      "an": 19,
+      "nom": "bodas de madreselva"
+    },
+    {
       "an": 20,
       "nom": "bodas de porcelana"
+    },
+    {
+      "an": 21,
+      "nom": "bodas de roble"
+    },
+    {
+      "an": 22,
+      "nom": "bodas de cobre"
+    },
+    {
+      "an": 23,
+      "nom": "bodas de agua"
+    },
+    {
+      "an": 24,
+      "nom": "bodas de granito"
     },
     {
       "an": 25,
       "nom": "bodas de plata"
     },
     {
+      "an": 26,
+      "nom": "bodas de rosas"
+    },
+    {
+      "an": 27,
+      "nom": "bodas de azabache"
+    },
+    {
+      "an": 28,
+      "nom": "bodas de ámbar"
+    },
+    {
+      "an": 29,
+      "nom": "bodas de granate"
+    },
+    {
       "an": 30,
       "nom": "bodas de perla"
+    },
+    {
+      "an": 31,
+      "nom": "bodas de ébano"
+    },
+    {
+      "an": 32,
+      "nom": "bodas de cobre"
+    },
+    {
+      "an": 33,
+      "nom": "bodas de estaño"
+    },
+    {
+      "an": 34,
+      "nom": "bodas de amapola"
     },
     {
       "an": 35,
       "nom": "bodas de coral"
     },
     {
+      "an": 36,
+      "nom": "bodas de sílex"
+    },
+    {
+      "an": 37,
+      "nom": "bodas de piedra"
+    },
+    {
+      "an": 38,
+      "nom": "bodas de jade"
+    },
+    {
+      "an": 39,
+      "nom": "bodas de ágata"
+    },
+    {
       "an": 40,
       "nom": "bodas de rubí"
+    },
+    {
+      "an": 41,
+      "nom": "bodas de topacio"
+    },
+    {
+      "an": 42,
+      "nom": "bodas de jaspe"
+    },
+    {
+      "an": 43,
+      "nom": "bodas de ópalo"
+    },
+    {
+      "an": 44,
+      "nom": "bodas de turquesa"
     },
     {
       "an": 45,
       "nom": "bodas de zafiro"
     },
     {
+      "an": 46,
+      "nom": "bodas de nácar"
+    },
+    {
+      "an": 47,
+      "nom": "bodas de amatista"
+    },
+    {
+      "an": 48,
+      "nom": "bodas de feldespato"
+    },
+    {
+      "an": 49,
+      "nom": "bodas de circón"
+    },
+    {
       "an": 50,
       "nom": "bodas de oro"
     },
     {
+      "an": 55,
+      "nom": "bodas de esmeralda"
+    },
+    {
       "an": 60,
       "nom": "bodas de diamante"
+    },
+    {
+      "an": 65,
+      "nom": "bodas de platino"
+    },
+    {
+      "an": 70,
+      "nom": "bodas de titanio"
+    },
+    {
+      "an": 75,
+      "nom": "bodas de brillantes"
+    },
+    {
+      "an": 80,
+      "nom": "bodas de roble"
     }
   ],
   "resultat": {
@@ -320,7 +452,7 @@
   },
   "section5": {
     "title": "Las bodas: el nombre de cada año juntos",
-    "p1": "En España, cada aniversario lleva el nombre de un material, desde el papel del primer año hasta las bodas de oro de los cincuenta. En origen la lista era solo para el matrimonio, pero hoy las parejas la usan para todos los aniversarios, casadas o no. El contador muestra el nombre que corresponde a vuestro próximo aniversario. Aquí va la lista completa, con <a href=\"/es/test-lenguaje-amor-pareja/\">una idea de regalo o de detalle</a> para cada año:",
+    "p1": "En España, <a href=\"/es/aniversarios-de-boda/\">cada aniversario lleva el nombre de un material</a>, desde el papel del primer año hasta las bodas de oro de los cincuenta. En origen la lista era solo para el matrimonio, pero hoy las parejas la usan para todos los aniversarios, casadas o no. El contador muestra el nombre que corresponde a vuestro próximo aniversario. Aquí van las más conocidas, con <a href=\"/es/test-lenguaje-amor-pareja/\">una idea de regalo o de detalle</a> para cada una:",
     "tableHeaders": [
       "Año",
       "Las bodas",
@@ -369,12 +501,12 @@
       ],
       [
         "9",
-        "Bodas de cerámica",
-        "Dos cuencos hechos a mano, en un taller de cerámica."
+        "Bodas de arcilla",
+        "Dos cuencos de barro hechos a mano, en un taller de cerámica."
       ],
       [
         "10",
-        "Bodas de estaño",
+        "Bodas de aluminio",
         "Vuestra fecha grabada en un objeto de metal."
       ],
       [
