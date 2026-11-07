@@ -531,6 +531,12 @@
     "metaDescription": "Test de compatibilidad sexual en pareja: 20 preguntas sobre deseo, ternura, novedades y ritmo, con una puntuación por dimensión. Gratis.",
     "description": "Veinte preguntas para dos sobre el deseo, la ternura y la forma de hablarlo, para ver dónde coincidís."
   },
+  "testQuiAime": {
+    "title": "Test: ¿quién ama más en la pareja? 20 preguntas",
+    "shortTitle": "¿Quién ama más?",
+    "description": "Veinte preguntas sobre los pequeños gestos de cada día, solo o en pareja, para ver hacia qué lado se inclina la balanza.",
+    "metaDescription": "¿Quién ama más en tu pareja? Un test de 20 preguntas sobre los pequeños gestos, para hacer solo o en pareja, cada uno por su lado."
+  },
   "speciauxCouple": {
     "title": "Quiz especiales para hacer en pareja: Navidad, Halloween…",
     "shortTitle": "Quiz especiales",

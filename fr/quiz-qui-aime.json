@@ -1,0 +1,59 @@
+{
+  "hero": {
+    "badge": "Test seul(e) ou à deux",
+    "title": "Qui aime le plus l'autre dans votre couple ? Le test en 20 questions",
+    "titleHighlight": "Qui aime le plus l'autre",
+    "description": "Le premier message du matin, les excuses après une dispute, les surprises, les compromis... Répondez seul(e), ou chacun de votre côté, et voyez de quel côté penche la balance.",
+    "subtitle": "Vingt questions, quatre à huit minutes, gratuit et sans inscription",
+    "jumpBtn": "Faire le test"
+  },
+  "section1": {
+    "title": "Comment marche le test « qui aime le plus l'autre » ?",
+    "intro": "Ce test pose vingt questions toutes simples sur votre vie à deux. Pour chacune, vous répondez « Moi », le prénom de votre partenaire, ou « Autant l'un que l'autre ».",
+    "p1": "Par exemple : « Qui fait le premier pas pour se réconcilier après une dispute ? » Si c'est presque toujours vous, vous répondez « Moi ». Si c'est votre partenaire, vous choisissez son prénom. Et si ça dépend des fois, c'est « Autant l'un que l'autre ».",
+    "p2": "Toutes les questions ne pèsent pas pareil. Envoyer le premier message du matin compte moins que faire des compromis sur les vacances, ou changer de ville pour l'autre. À la fin, le test additionne tout et montre la part de chacun, comme une balance. Seul(e), c'est votre vision du couple. À deux, chacun répond sans voir l'écran de l'autre, et le test compare aussi vos réponses.",
+    "p3": "Un point important : le test regarde qui <strong>montre</strong> le plus son amour, pas qui en ressent le plus. Il y a des gens très amoureux qui oublient tous les anniversaires ! C'est souvent là que tout se joue, d'ailleurs, parce que <a href=\"/test-langage-amour-couple/\">chacun montre son amour à sa façon</a>, et pas forcément de la façon que l'autre attend."
+  },
+  "section2": {
+    "title": "Est-ce grave si l'un aime plus que l'autre ?",
+    "p1": "Non, et c'est même très courant. Dans la plupart des couples, il y a un des deux qui envoie plus de messages, qui organise plus, qui fait plus souvent le premier pas. Et ça bouge avec les périodes : un gros projet au travail, un bébé, un deuil, et la balance penche de l'autre côté pendant quelques mois.",
+    "p2": "Ce qui pèse, c'est quand le déséquilibre s'installe pour de bon et que l'autre <a href=\"/blog/copain-ne-fait-pas-effort/\">ne fait presque plus d'efforts</a>. Le sociologue Willard Waller en parlait déjà en 1938 : c'est le <strong>principe du moindre intérêt</strong>. Celui qui s'investit le moins a plus de pouvoir dans le couple, parce qu'il a moins à perdre. En 2006, une étude américaine qui a suivi des couples pendant plusieurs années (Sprecher, Schmeeckle et Felmlee) l'a vérifié : le déséquilibre est fréquent, il bouge peu avec le temps, et les couples où <a href=\"/test-couple-sain/\">les deux s'investissent autant</a> sont plus heureux et plus stables. Une étude plus ancienne, sur 231 couples d'étudiants de Boston suivis pendant deux ans, était arrivée au même constat.",
+    "p3": "Et puis il y a un piège : on voit beaucoup mieux ce qu'on fait soi-même. Dans une étude de 1979, Michael Ross et Fiore Sicoly ont demandé à 37 couples mariés qui s'occupait le plus de différentes choses de la vie à deux. Chacun s'en attribuait une plus grande part que l'autre ne lui en donnait, tout simplement parce qu'on se souvient mieux de ses propres efforts. C'est vrai pour le ménage et le fait de <a href=\"/test-charge-mentale-couple/\">penser à tout à la maison</a>, et c'est vrai pour les gestes d'amour. C'est pour ça que la version à deux est la plus intéressante !"
+  },
+  "section3": {
+    "title": "Comment lire votre résultat ?",
+    "p1": "Le résultat donne la part de chacun dans vos réponses, en pourcentage. À deux, le test additionne les réponses des deux : si chacun répond « Moi » à toutes les questions, la balance reste au milieu... mais vous n'êtes d'accord sur rien !",
+    "p2": "Le résultat à deux dit donc aussi sur combien de questions vous êtes d'accord, et montre les questions où chacun pense en faire plus, puis celles où chacun pense que l'autre en fait plus. Ces dernières sont souvent les plus touchantes à lire.",
+    "p3": "Si la balance penche nettement d'un côté, ce n'est pas une note sur votre couple. C'est plutôt une bonne occasion d'en parler, sans faire de comptes : qu'est-ce qui fait que chacun se sent aimé ? Et qu'est-ce qui manque un peu en ce moment ?",
+    "headerScore": "Part de celui qui en fait le plus",
+    "headerLevel": "Résultat",
+    "headerAnalysis": "Ce que ça veut dire",
+    "row1Score": "50 à 56 %",
+    "row1Level": "Autant l'un que l'autre",
+    "row1Analysis": "Chacun donne à sa façon, et la balance tient.",
+    "row2Score": "57 à 66 %",
+    "row2Level": "Un peu plus d'un côté",
+    "row2Analysis": "L'un des deux pense un peu plus souvent aux petits gestes. C'est le cas de beaucoup de couples.",
+    "row3Score": "67 % et plus",
+    "row3Level": "Nettement plus d'un côté",
+    "row3Analysis": "L'un des deux porte la plupart des gestes. Ça vaut le coup d'en parler."
+  },
+  "seo": {
+    "faqTitle": "Vos questions sur le test « qui aime le plus l'autre »",
+    "faq1Q": "Comment savoir qui aime le plus dans un couple ?",
+    "faq1A": "On ne peut pas mesurer l'amour lui-même, mais on peut regarder les gestes : qui fait le premier pas, qui pense aux surprises, qui fait des compromis. C'est ce que fait ce test, avec vingt questions qui pèsent plus ou moins selon ce qu'elles disent. À deux, il montre aussi si vous voyez la balance de la même façon.",
+    "faq2Q": "Qui aime le plus dans un couple, l'homme ou la femme ?",
+    "faq2A": "Aucune étude ne dit qu'un genre aime plus que l'autre. Une étude de 2011 (Ackerman, Griskevicius et Li) a par contre montré quelque chose de surprenant : ce sont plus souvent les hommes qui disent « je t'aime » en premier. Ils pensent à le dire en moyenne six semaines avant les femmes, alors que la plupart des gens croient l'inverse ! Le test se fait aussi bien dans un couple d'un homme et d'une femme que de deux hommes ou de deux femmes.",
+    "faq3Q": "Est-ce normal que l'un aime plus que l'autre ?",
+    "faq3A": "Oui, et ça arrive dans la plupart des couples à un moment ou à un autre. Ce qui compte, c'est que le déséquilibre ne s'installe pas pour de bon, et que celui qui donne le plus ne se sente pas seul à porter le couple.",
+    "faq4Q": "Peut-on faire le test seul(e) ?",
+    "faq4A": "Oui. Seul(e), vous répondez pour vous deux, d'après ce que vous vivez, et vous voyez de quel côté penche la balance selon vous. À deux, c'est encore plus parlant : chacun répond de son côté, et le test montre si vous êtes d'accord.",
+    "faq5Q": "Comment se passe le test à deux ?",
+    "faq5A": "Vous entrez vos deux prénoms, puis le premier répond aux vingt questions. Il passe le téléphone, et le second répond à son tour, sans voir les réponses de l'autre. Au résultat, les deux séries s'affichent côte à côte.",
+    "faq6Q": "Que faire si c'est toujours moi qui fais tout ?",
+    "faq6A": "D'abord, en parler sans reproche : l'autre ne voit peut-être pas tout ce que vous faites, ou montre son amour autrement. Dites ce qui vous ferait plaisir, avec des exemples concrets. Si rien ne bouge pendant des mois et que vous vous sentez seul(e) à porter le couple, c'est un signal à prendre au sérieux."
+  },
+  "jsonLd": {
+    "about": "Qui aime le plus l'autre dans un couple"
+  }
+}

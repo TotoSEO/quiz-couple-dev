@@ -12248,6 +12248,41 @@ body { padding-bottom: var(--pub-footer, 0px); }
 .pm-envoi--wa { grid-column: 1 / -1; color: #fff; background: hsl(145 63% 30%); border: 1px solid hsl(145 63% 30%); font-weight: 700; }
 .pm-envoi--wa:hover { background: hsl(145 63% 25%); color: #fff; }
 .pm-envoi[hidden] { display: none; }
+
+/* ═══════════════════════════════════════════════════════════════════
+   Qui aime le plus l'autre ? (QuiAimeQuiz, 6 novembre 2026). La balance du
+   resultat : les deux personnages face a face, la part de chacun et la
+   barre partagee dessous, une couleur par personnage (la teinte foncee pour
+   la seconde personne quand les deux ont le meme). Les listes de questions
+   reprennent les classes .ech-* de la compatibilite sexuelle.
+   ═══════════════════════════════════════════════════════════════════ */
+.qa-avert { max-width: 30rem; margin: 0 auto 1.25rem; font-size: 0.85rem; line-height: 1.45; text-align: center; color: hsl(var(--muted-foreground)); }
+.qa-balance-bloc { max-width: 26rem; margin: 1rem auto 1.25rem; }
+.qa-balance { display: grid; grid-template-columns: 1fr auto 1fr; align-items: end; gap: 0.5rem; }
+.qa-cote { display: flex; flex-direction: column; align-items: center; gap: 0.2rem; min-width: 0; }
+.qa-masc { display: block; line-height: 0; }
+.qa-masc .qc-masc { width: auto; height: clamp(56px, 18vw, 82px); }
+.qa-nb { font-size: clamp(1.75rem, 7vw, 2.25rem); font-weight: 800; line-height: 1; font-variant-numeric: tabular-nums; }
+.qa-nom { max-width: 100%; font-size: 0.9rem; font-weight: 700; overflow-wrap: anywhere; color: hsl(var(--foreground)); }
+.qa-coeur { align-self: center; font-size: 1.5rem; }
+.qa-cote--rose .qa-nb, .qa-cote--rose-fonce .qa-nb { color: hsl(var(--primary-texte)); }
+.qa-cote--violet .qa-nb, .qa-cote--violet-fonce .qa-nb { color: hsl(var(--secondary-texte)); }
+.qa-barre { display: flex; gap: 2px; height: 0.75rem; margin-top: 0.875rem; border-radius: 999px; overflow: hidden; background: hsl(var(--muted)); }
+.qa-part { display: block; height: 100%; transition: width 0.9s cubic-bezier(0.22, 1, 0.36, 1); }
+.qa-part--rose { background: hsl(var(--primary)); }
+.qa-part--rose-fonce { background: hsl(var(--primary-texte)); }
+.qa-part--violet { background: hsl(var(--secondary)); }
+.qa-part--violet-fonce { background: hsl(var(--secondary-texte)); }
+.qa-legende { margin: 0.5rem 0 0; font-size: 0.8rem; font-weight: 600; color: hsl(var(--muted-foreground)); }
+.qa-texte { max-width: 32rem; margin-left: auto; margin-right: auto; text-align: left; line-height: 1.6; }
+.qa-accord { max-width: 30rem; margin: 0 auto 0.5rem; padding: 0.875rem 1rem; border-radius: var(--radius); background: hsl(var(--primary) / 0.07); border: 1px solid hsl(var(--primary) / 0.25); }
+.qa-accord-titre { margin: 0; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; color: hsl(var(--muted-foreground)); }
+.qa-accord-nb { margin: 0.25rem 0; font-size: 1.05rem; font-weight: 800; }
+.qa-accord-sens { margin: 0; font-size: 0.92rem; line-height: 1.5; }
+.qa-note { margin: -0.25rem 0 0.75rem; font-size: 0.88rem; text-align: center; color: hsl(var(--muted-foreground)); }
+.qa-invitation { max-width: 30rem; margin: 1.5rem auto 0; padding: 1rem; border-radius: var(--radius); border: 1px dashed hsl(var(--secondary) / 0.5); background: hsl(var(--secondary) / 0.06); }
+.qa-invitation-texte { margin: 0 0 0.75rem; font-size: 0.95rem; line-height: 1.5; }
+@media (prefers-reduced-motion: reduce) { .qa-part { transition: none; } }
 @media (hover: hover) and (pointer: fine) { .pm-envoi--sms { display: none; } }
 .pm-note { margin: 1rem 0 0; font-size: 0.85rem; color: hsl(var(--muted-foreground)); text-align: center; }
 

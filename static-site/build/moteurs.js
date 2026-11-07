@@ -33,6 +33,7 @@ export const TABLE_MOTEURS = {
   'dix-mais':      'DixMaisGame',
   'duree':         'DureeQuiz',
   'echelle':       'EchelleQuiz',
+  'qui-aime':      'QuiAimeQuiz',
   'dilemme':       'DilemmeGame',
   'duo-match':     'DuoMatchQuiz',
   'duo-vote':      'DuoVoteGame',

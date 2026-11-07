@@ -1,0 +1,59 @@
+{
+  "hero": {
+    "badge": "Test allein oder zu zweit",
+    "title": "Wer von euch beiden liebt mehr? Der Test in 20 Fragen",
+    "titleHighlight": "liebt mehr",
+    "description": "Die erste Nachricht am Morgen, die Entschuldigung nach einem Streit, die Überraschungen, die Kompromisse... Antworte allein oder jeder für sich, und seht, in welche Richtung die Waage ausschlägt.",
+    "subtitle": "Zwanzig Fragen, vier bis acht Minuten, kostenlos und ohne Anmeldung",
+    "jumpBtn": "Zum Test"
+  },
+  "section1": {
+    "title": "Wie funktioniert der Test „Wer liebt mehr“?",
+    "intro": "Der Test stellt zwanzig ganz einfache Fragen zu eurem Leben zu zweit. Bei jeder antwortest du „Ich“, mit dem Namen deines Schatzes oder „Beide gleich viel“.",
+    "p1": "Zum Beispiel: „Wer macht nach einem Streit den ersten Schritt zur Versöhnung?“ Wenn du es fast immer bist, antwortest du „Ich“. Wenn es dein Schatz ist, wählst du seinen oder ihren Namen. Und wenn es mal so, mal so ist, heißt es „Beide gleich viel“.",
+    "p2": "Nicht alle Fragen zählen gleich viel. Die erste Nachricht am Morgen zählt weniger als Kompromisse beim Urlaub oder ein Umzug in eine andere Stadt für den anderen. Am Ende zählt der Test alles zusammen und zeigt den Anteil von jedem, wie eine Waage. Allein ist es dein Blick auf die Beziehung. Zu zweit antwortet jeder, ohne den Bildschirm des anderen zu sehen, und der Test vergleicht auch eure Antworten.",
+    "p3": "Wichtig: Der Test schaut, wer seine Liebe mehr <strong>zeigt</strong>, nicht, wer mehr fühlt. Es gibt Menschen, die total verliebt sind und jeden Geburtstag vergessen! Genau da liegt oft der Knackpunkt, denn <a href=\"/de/liebessprache-test-paar/\">jeder zeigt seine Liebe auf seine Art</a>, und nicht unbedingt so, wie der andere es erwartet."
+  },
+  "section2": {
+    "title": "Ist es schlimm, wenn einer mehr liebt als der andere?",
+    "p1": "Nein, und es ist sogar ganz normal. In den meisten Paaren schickt einer mehr Nachrichten, plant mehr und macht öfter den ersten Schritt. Und das ändert sich mit der Zeit: ein großes Projekt bei der Arbeit, ein Baby, ein Trauerfall, und die Waage neigt sich ein paar Monate zur anderen Seite.",
+    "p2": "Schwierig wird es, wenn sich das Ungleichgewicht dauerhaft festsetzt und der andere <a href=\"/de/blog/freund-gibt-sich-keine-muehe/\">sich kaum noch Mühe gibt</a>. Der Soziologe Willard Waller sprach schon 1938 davon: das <strong>Prinzip des geringsten Interesses</strong>. Wer sich weniger einbringt, hat mehr Macht in der Beziehung, weil er weniger zu verlieren hat. 2006 hat eine amerikanische Studie, die Paare über mehrere Jahre begleitet hat (Sprecher, Schmeeckle und Felmlee), das bestätigt: Ungleichgewicht ist häufig, es ändert sich mit der Zeit kaum, und Paare, in denen <a href=\"/de/gesunde-beziehung-test/\">sich beide gleich stark einbringen</a>, sind glücklicher und stabiler. Eine ältere Studie mit 231 Studentenpaaren aus Boston, die zwei Jahre lang begleitet wurden, war schon zum selben Ergebnis gekommen.",
+    "p3": "Und dann gibt es eine Falle: Was man selbst tut, sieht man viel besser. In einer Studie von 1979 haben Michael Ross und Fiore Sicoly 37 Ehepaare gefragt, wer sich um verschiedene Dinge im gemeinsamen Leben mehr kümmert. Jeder schrieb sich einen größeren Anteil zu, als der andere ihm zugestand, einfach weil man sich an die eigene Mühe besser erinnert. Das gilt für den Haushalt und dafür, <a href=\"/de/mental-load-test-paare/\">zu Hause an alles zu denken</a>, und es gilt für die Gesten der Liebe. Deshalb ist die Version zu zweit die spannendste!"
+  },
+  "section3": {
+    "title": "Wie liest man das Ergebnis?",
+    "p1": "Das Ergebnis zeigt den Anteil von jedem in euren Antworten, in Prozent. Zu zweit zählt der Test die Antworten von beiden zusammen: Wenn jeder bei allen Fragen „Ich“ antwortet, bleibt die Waage in der Mitte... aber ihr seid euch bei nichts einig!",
+    "p2": "Darum sagt das Ergebnis zu zweit auch, bei wie vielen Fragen ihr euch einig seid, und zeigt die Fragen, bei denen jeder glaubt, mehr zu tun, und danach die, bei denen jeder glaubt, dass der andere mehr tut. Die letzten sind oft am schönsten zu lesen.",
+    "p3": "Wenn die Waage deutlich zu einer Seite ausschlägt, ist das keine Note für eure Beziehung. Es ist eher eine gute Gelegenheit, darüber zu reden, ohne aufzurechnen: Wodurch fühlt sich jeder von euch geliebt? Und was fehlt gerade ein bisschen?",
+    "headerScore": "Anteil dessen, der mehr tut",
+    "headerLevel": "Ergebnis",
+    "headerAnalysis": "Was es bedeutet",
+    "row1Score": "50 bis 56 %",
+    "row1Level": "Beide gleich viel",
+    "row1Analysis": "Jeder gibt auf seine Art, und die Waage hält.",
+    "row2Score": "57 bis 66 %",
+    "row2Level": "Ein bisschen mehr auf einer Seite",
+    "row2Analysis": "Einer von euch denkt etwas öfter an die kleinen Gesten. Das ist bei vielen Paaren so.",
+    "row3Score": "ab 67 %",
+    "row3Level": "Deutlich mehr auf einer Seite",
+    "row3Analysis": "Einer von euch übernimmt die meisten Gesten. Es lohnt sich, darüber zu reden."
+  },
+  "seo": {
+    "faqTitle": "Eure Fragen zum Test „Wer liebt mehr“",
+    "faq1Q": "Wie findet man heraus, wer in einer Beziehung mehr liebt?",
+    "faq1A": "Die Liebe selbst kann man nicht messen, aber die Gesten schon: Wer macht den ersten Schritt, wer denkt an Überraschungen, wer macht Kompromisse? Genau das macht dieser Test, mit zwanzig Fragen, die je nach Inhalt mehr oder weniger zählen. Zu zweit zeigt er außerdem, ob ihr die Waage gleich seht.",
+    "faq2Q": "Wer liebt in einer Beziehung mehr, der Mann oder die Frau?",
+    "faq2A": "Keine Studie sagt, dass ein Geschlecht mehr liebt als das andere. Eine Studie von 2011 (Ackerman, Griskevicius und Li) hat aber etwas Überraschendes gezeigt: Meist sagen die Männer zuerst „Ich liebe dich“. Im Schnitt denken sie sechs Wochen früher als Frauen daran, es zu sagen, obwohl die meisten Menschen das Gegenteil glauben! Der Test funktioniert für einen Mann und eine Frau genauso wie für zwei Männer oder zwei Frauen.",
+    "faq3Q": "Ist es normal, dass einer mehr liebt als der andere?",
+    "faq3A": "Ja, und das kommt in den meisten Beziehungen irgendwann vor. Wichtig ist, dass sich das Ungleichgewicht nicht dauerhaft festsetzt und dass der, der mehr gibt, die Beziehung nicht allein trägt.",
+    "faq4Q": "Kann man den Test allein machen?",
+    "faq4A": "Ja. Allein antwortest du für euch beide, nach dem, was du erlebst, und siehst, in welche Richtung die Waage aus deiner Sicht ausschlägt. Zu zweit ist es noch aufschlussreicher: Jeder antwortet für sich, und der Test zeigt, ob ihr euch einig seid.",
+    "faq5Q": "Wie läuft der Test zu zweit ab?",
+    "faq5A": "Ihr gebt beide Namen ein, dann beantwortet der Erste die zwanzig Fragen. Er gibt das Handy weiter, und der Zweite antwortet, ohne die Antworten des anderen zu sehen. Beim Ergebnis stehen beide Antwortreihen nebeneinander.",
+    "faq6Q": "Was tun, wenn ich immer alles mache?",
+    "faq6A": "Zuerst ohne Vorwurf darüber reden: Vielleicht sieht dein Schatz nicht alles, was du tust, oder zeigt seine Liebe anders. Sag, was dir guttun würde, mit konkreten Beispielen. Wenn sich über Monate nichts ändert und du dich allein fühlst, ist das ein Signal, das man ernst nehmen sollte."
+  },
+  "jsonLd": {
+    "about": "Wer in einer Beziehung mehr liebt"
+  }
+}

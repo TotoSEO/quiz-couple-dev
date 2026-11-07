@@ -1,0 +1,9 @@
+<%
+  // Qui aime le plus l'autre ? (6 novembre 2026) : vingt questions « qui fait
+  // le plus... », trois réponses (moi, le prénom de l'autre, autant l'un que
+  // l'autre), un poids de 1 à 3 par question, seul(e) ou à deux sur le même
+  // téléphone (moteur QuiAimeQuiz), sur le gabarit générique. Les textes sont
+  // dans quiz-qui-aime.json.
+  var quizType = 'qui-aime'; var ns = 'quiz-qui-aime'; var totalQ = 20; var sectionCount = 3;
+%>
+<%- include('quiz-generic', { quizType, ns, totalQ, sectionCount, t, lang, routeKey, getLocalizedUrl, canonical, JSON }) %>

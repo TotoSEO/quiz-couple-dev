@@ -531,6 +531,12 @@
     "metaDescription": "A sexual compatibility test for two: 20 questions on desire, tenderness, trying new things and rhythm, with a score for each dimension. Free.",
     "description": "Twenty questions for two on desire, tenderness and how you talk about it, to see where you meet."
   },
+  "testQuiAime": {
+    "title": "Who Loves More Quiz: Which of You Loves the Other More?",
+    "shortTitle": "Who Loves More?",
+    "description": "Twenty questions about the little things you do every day, alone or together, to see which way the scale tips.",
+    "metaDescription": "Who loves more in your relationship? A 20-question quiz about the little gestures, to take alone or together, each of you on your own."
+  },
   "speciauxCouple": {
     "title": "Special couple quizzes: Christmas, Halloween…",
     "shortTitle": "Special quizzes",
