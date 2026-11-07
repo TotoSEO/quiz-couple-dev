@@ -1,0 +1,47 @@
+name: Étude du livre · audience (temporaire)
+
+# Lecture seule, chiffres agrégés seulement (aucune adresse, aucun prénom,
+# aucune réponse) : l'audience du site pour l'étude du livre Quiz Couple
+# (7 novembre 2026). Lancé au push de la branche de l'étude, retiré avant
+# la fusion.
+
+on:
+  push:
+    branches: [claude/quiz-couple-interactive-book-qjuvc7]
+    paths: ['.github/workflows/etude-livre-audience.yml']
+
+jobs:
+  audience:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    env:
+      SUPABASE_ACCESS_TOKEN: ${{ secrets.SUPABASE_ACCESS_TOKEN }}
+      SUPABASE_PROJECT_REF: ${{ secrets.SUPABASE_PROJECT_REF }}
+    steps:
+      - name: Audience
+        run: |
+          sql() {
+            jq -n --arg q "$2" '{query: $q}' > requete.json
+            code=$(curl -sS -o reponse.json -w '%{http_code}' -X POST \
+              "https://api.supabase.com/v1/projects/$SUPABASE_PROJECT_REF/database/query" \
+              -H "Authorization: Bearer $SUPABASE_ACCESS_TOKEN" -H 'Content-Type: application/json' \
+              --data @requete.json)
+            echo; echo "## $1 (HTTP $code)"
+            if [ "$code" -ge 300 ]; then head -c 800 reponse.json; echo; return 0; fi
+            jq -r 'if length == 0 then "(aucune ligne)" else (.[0] | keys_unsorted | join(" | ")), (.[] | [.[] | tostring] | join(" | ")) end' reponse.json 2>/dev/null || head -c 3000 reponse.json
+          }
+          sql "Visites et pages vues par mois" "select to_char(jour, 'YYYY-MM') as mois, count(*) as jours, sum(visites) as visites, sum(pages_vues) as pages_vues, round(avg(visites)) as visites_par_jour from public.trafic_jour where jour >= date '2026-05-01' group by 1 order by 1"
+          sql "Entonnoir par page jouable, 30 jours" "select route_key, sum(visites) as visites, sum(lances) as lances, sum(finis) as finis from public.trafic_jour_entonnoir where jour > current_date - 30 group by 1 order by 2 desc limit 45"
+          sql "Lancements par langue, 30 jours" "select coalesce(lang, '?') as lang, count(*) as lances from public.quiz_starts where created_at > now() - interval '30 days' group by 1 order by 2 desc"
+          sql "Test de pureté : version adulte ou moins de 16 ans, solo ou couple (90 jours)" "select mode, count(*) as parties from public.purete_scores where created_at > now() - interval '90 days' group by 1 order by 2 desc"
+          sql "Test de pureté : idem depuis le début" "select mode, count(*) as parties, min(created_at)::date as depuis from public.purete_scores group by 1 order by 2 desc"
+          sql "Pages vues par tranche horaire (heure de Paris) et par langue, 7 jours" "select coalesce(lang, '?') as lang, case when extract(hour from created_at at time zone 'Europe/Paris') < 6 then '0-6 h' when extract(hour from created_at at time zone 'Europe/Paris') < 12 then '6-12 h' when extract(hour from created_at at time zone 'Europe/Paris') < 18 then '12-18 h' else '18-24 h' end as tranche, count(*) as vues from public.page_views where created_at > now() - interval '7 days' group by 1, 2 order by 1, 2"
+          sql "Pages vues par jour de la semaine, 28 jours" "select to_char(created_at at time zone 'Europe/Paris', 'ID Dy') as jour, count(*) as vues from public.page_views where created_at > now() - interval '28 days' group by 1 order by 1"
+          sql "Évaluations : genre de la personne qui crée, par façon de faire" "select mode, coalesce(a_genre, '?') as genre_createur, count(*) as evaluations from public.bilans group by 1, 2 order by 1, 3 desc"
+          sql "Évaluations à deux : genre des deux personnes" "select coalesce(a_genre, '?') || '+' || coalesce(b_genre, '?') as couple, count(*) as evaluations from public.bilans where mode is distinct from 'solo' and b_genre is not null group by 1 order by 2 desc"
+          sql "Évaluations : genre du créateur par langue" "select lang, coalesce(a_genre, '?') as genre_createur, count(*) as evaluations from public.bilans group by 1, 2 order by 1, 3 desc"
+          sql "Abonnés : par langue" "select lang, count(*) as abonnes, count(*) filter (where statut = 'actif') as actifs from public.abonnes group by 1 order by 2 desc"
+          sql "Abonnés : vingt premières sources" "select source, count(*) as abonnes from public.abonnes group by 1 order by 2 desc limit 20"
+          sql "Abonnés : nouvelles adresses par semaine" "select to_char(date_trunc('week', created_at), 'YYYY-MM-DD') as semaine, count(*) as adresses from public.abonnes group by 1 order by 1 desc limit 6"
+          sql "Profils obtenus aux tests de profil, 60 jours (types de couple, langages)" "select quiz_slug, profil, count(*) as n from public.profil_resultats where created_at > now() - interval '60 days' and quiz_slug in ('testLangageAmour', 'quizTypeCouple', 'typeCouple', 'loveLanguage') group by 1, 2 order by 1, 3 desc"
+          sql "Profils : clés de test présentes" "select quiz_slug, count(*) as n from public.profil_resultats where created_at > now() - interval '60 days' group by 1 order by 2 desc limit 25"
