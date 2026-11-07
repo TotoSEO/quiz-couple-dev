@@ -336,7 +336,20 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/test-genitorialita-coppia/"/>
     <xhtml:link rel="alternate" hreflang="nl" href="https://quiz-couple.com/nl/klaar-voor-een-baby-test/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/test-parentalite-couple/"/>
-    <lastmod>2026-11-06</lastmod>
+    <lastmod>2026-11-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://quiz-couple.com/test-est-ce-que-je-veux-un-enfant/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/test-est-ce-que-je-veux-un-enfant/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://quiz-couple.com/en/do-i-want-kids-quiz/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://quiz-couple.com/es/test-quiero-tener-hijos/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://quiz-couple.com/de/will-ich-kinder-test/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/test-voglio-un-figlio/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://quiz-couple.com/nl/wil-ik-kinderen-test/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/test-est-ce-que-je-veux-un-enfant/"/>
+    <lastmod>2026-11-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
