@@ -2018,6 +2018,19 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://quiz-couple.com/en/blog/codependent-and-manipulator/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/blog/dependant-affectif-et-manipulateur/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://quiz-couple.com/en/blog/codependent-and-manipulator/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://quiz-couple.com/es/blog/dependiente-emocional-y-manipulador/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://quiz-couple.com/de/blog/emotional-abhaengig-und-manipulator/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/blog/dipendente-affettivo-e-manipolatore/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://quiz-couple.com/nl/blog/emotioneel-afhankelijk-en-manipulator/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/blog/dependant-affectif-et-manipulateur/"/>
+    <lastmod>2026-11-07T12:21:00+01:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://quiz-couple.com/en/blog/can-you-be-friends-with-your-ex/</loc>
     <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/blog/rester-ami-avec-son-ex/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://quiz-couple.com/en/blog/can-you-be-friends-with-your-ex/"/>

@@ -6,12 +6,21 @@
     <atom:link href="https://quiz-couple.com/es/blog/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Los artículos de Quiz Couple sobre la vida en pareja, la psicología y las historias de amor.</description>
     <language>es</language>
-    <lastBuildDate>Tue, 03 Nov 2026 09:33:00 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 07 Nov 2026 11:21:00 GMT</lastBuildDate>
     <image>
       <url>https://quiz-couple.com/apple-touch-icon.png</url>
       <title>Quiz Couple · Blog</title>
       <link>https://quiz-couple.com/es/blog/</link>
     </image>
+    <item>
+      <title>Soy dependiente emocional de un manipulador: ¿qué hago?</title>
+      <link>https://quiz-couple.com/es/blog/dependiente-emocional-y-manipulador/</link>
+      <guid isPermaLink="true">https://quiz-couple.com/es/blog/dependiente-emocional-y-manipulador/</guid>
+      <pubDate>Sat, 07 Nov 2026 11:21:00 GMT</pubDate>
+      <category>Psicología</category>
+      <description>El manipulador detecta al dependiente emocional como un radar. Por qué estos dos perfiles se atraen, qué hace vivir esta pareja y cómo romper el dúo.</description>
+      <media:content url="https://quiz-couple.com/blog/dependant-affectif-et-manipulateur.webp" medium="image" type="image/webp" width="1536" height="1024"/>
+    </item>
     <item>
       <title>36 preguntas para enamorarse</title>
       <link>https://quiz-couple.com/es/blog/36-preguntas-para-enamorarse/</link>
@@ -272,15 +281,6 @@
       <category>Psicología</category>
       <description>Las 12 señales que demuestran que un hombre está nervioso delante de ti, qué pasa en su cuerpo en ese momento, y qué hacer para relajarlo.</description>
       <media:content url="https://quiz-couple.com/blog/homme-nerveux-devant-une-femme.webp" medium="image" type="image/webp" width="1200" height="630"/>
-    </item>
-    <item>
-      <title>¿Qué siente un hombre cuando lo ignoras? Las 5 fases, una a una</title>
-      <link>https://quiz-couple.com/es/blog/que-siente-un-hombre-cuando-lo-ignoras/</link>
-      <guid isPermaLink="true">https://quiz-couple.com/es/blog/que-siente-un-hombre-cuando-lo-ignoras/</guid>
-      <pubDate>Wed, 26 Aug 2026 07:30:00 GMT</pubDate>
-      <category>Psicología</category>
-      <description>Lo que siente un hombre cuando lo ignoras, fase por fase: no se entera, duda, se irrita, te escribe y al final desconecta. Y si eso hace que vuelva.</description>
-      <media:content url="https://quiz-couple.com/blog/homme-qu-on-ignore.webp" medium="image" type="image/webp" width="1200" height="630"/>
     </item>
   </channel>
 </rss>

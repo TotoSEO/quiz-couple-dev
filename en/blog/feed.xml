@@ -6,12 +6,21 @@
     <atom:link href="https://quiz-couple.com/en/blog/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Quiz Couple articles on relationships, psychology and love stories.</description>
     <language>en</language>
-    <lastBuildDate>Tue, 03 Nov 2026 09:33:00 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 07 Nov 2026 11:21:00 GMT</lastBuildDate>
     <image>
       <url>https://quiz-couple.com/apple-touch-icon.png</url>
       <title>Quiz Couple · Blog</title>
       <link>https://quiz-couple.com/en/blog/</link>
     </image>
+    <item>
+      <title>I am emotionally dependent on a manipulator: what can I do?</title>
+      <link>https://quiz-couple.com/en/blog/codependent-and-manipulator/</link>
+      <guid isPermaLink="true">https://quiz-couple.com/en/blog/codependent-and-manipulator/</guid>
+      <pubDate>Sat, 07 Nov 2026 11:21:00 GMT</pubDate>
+      <category>Psychology</category>
+      <description>The manipulator detects emotional dependency like a radar. Why these two profiles attract each other, what this couple puts you through, and how to break the duo.</description>
+      <media:content url="https://quiz-couple.com/blog/dependant-affectif-et-manipulateur.webp" medium="image" type="image/webp" width="1536" height="1024"/>
+    </item>
     <item>
       <title>36 questions to fall in love</title>
       <link>https://quiz-couple.com/en/blog/36-questions-to-fall-in-love/</link>
@@ -272,15 +281,6 @@
       <category>Psychology</category>
       <description>The 12 signs that show a man is nervous around you, what is going on in his body at that moment, and what to do to put him at ease.</description>
       <media:content url="https://quiz-couple.com/blog/homme-nerveux-devant-une-femme.webp" medium="image" type="image/webp" width="1200" height="630"/>
-    </item>
-    <item>
-      <title>How does a man feel when you ignore him? The 5 stages, one by one</title>
-      <link>https://quiz-couple.com/en/blog/how-men-feel-when-ignored/</link>
-      <guid isPermaLink="true">https://quiz-couple.com/en/blog/how-men-feel-when-ignored/</guid>
-      <pubDate>Wed, 26 Aug 2026 07:30:00 GMT</pubDate>
-      <category>Psychology</category>
-      <description>What a man feels when you ignore him, stage by stage: he doesn&#39;t notice, he doubts, he gets annoyed, he texts, then he switches off. And whether it brings him back.</description>
-      <media:content url="https://quiz-couple.com/blog/homme-qu-on-ignore.webp" medium="image" type="image/webp" width="1200" height="630"/>
     </item>
   </channel>
 </rss>

@@ -6,12 +6,21 @@
     <atom:link href="https://quiz-couple.com/blog/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Les articles de Quiz Couple sur la vie de couple, la psychologie et les histoires d&#39;amour.</description>
     <language>fr</language>
-    <lastBuildDate>Tue, 03 Nov 2026 09:33:00 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 07 Nov 2026 11:21:00 GMT</lastBuildDate>
     <image>
       <url>https://quiz-couple.com/apple-touch-icon.png</url>
       <title>Quiz Couple · Le blog</title>
       <link>https://quiz-couple.com/blog/</link>
     </image>
+    <item>
+      <title>Je suis dépendante affective d&#39;un manipulateur : Que faire ?</title>
+      <link>https://quiz-couple.com/blog/dependant-affectif-et-manipulateur/</link>
+      <guid isPermaLink="true">https://quiz-couple.com/blog/dependant-affectif-et-manipulateur/</guid>
+      <pubDate>Sat, 07 Nov 2026 11:21:00 GMT</pubDate>
+      <category>Psychologie</category>
+      <description>Le manipulateur détecte le dépendant affectif comme un radar. Pourquoi ces deux profils s&#39;attirent, ce que ce couple fait vivre, et comment casser le duo.</description>
+      <media:content url="https://quiz-couple.com/blog/dependant-affectif-et-manipulateur.webp" medium="image" type="image/webp" width="1536" height="1024"/>
+    </item>
     <item>
       <title>36 questions pour tomber amoureux</title>
       <link>https://quiz-couple.com/blog/36-questions-pour-tomber-amoureux/</link>
@@ -272,15 +281,6 @@
       <category>Psychologie</category>
       <description>Les 12 signes qui montrent qu&#39;un homme est nerveux devant vous, ce qui se passe dans son corps à ce moment-là, et quoi faire pour le détendre.</description>
       <media:content url="https://quiz-couple.com/blog/homme-nerveux-devant-une-femme.webp" medium="image" type="image/webp" width="1200" height="630"/>
-    </item>
-    <item>
-      <title>Que ressent un homme quand on l&#39;ignore ? Les 5 étapes, une par une</title>
-      <link>https://quiz-couple.com/blog/homme-qu-on-ignore/</link>
-      <guid isPermaLink="true">https://quiz-couple.com/blog/homme-qu-on-ignore/</guid>
-      <pubDate>Wed, 26 Aug 2026 07:30:00 GMT</pubDate>
-      <category>Psychologie</category>
-      <description>Ce que ressent un homme quand on l&#39;ignore, étape par étape : il ne remarque rien, il doute, il s&#39;agace, il écrit, puis il décroche. Et si ça le fait revenir.</description>
-      <media:content url="https://quiz-couple.com/blog/homme-qu-on-ignore.webp" medium="image" type="image/webp" width="1200" height="630"/>
     </item>
   </channel>
 </rss>

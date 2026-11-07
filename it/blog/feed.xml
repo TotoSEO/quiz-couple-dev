@@ -6,12 +6,21 @@
     <atom:link href="https://quiz-couple.com/it/blog/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Gli articoli di Quiz Couple sulla vita di coppia, la psicologia e le storie d&#39;amore.</description>
     <language>it</language>
-    <lastBuildDate>Tue, 03 Nov 2026 09:33:00 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 07 Nov 2026 11:21:00 GMT</lastBuildDate>
     <image>
       <url>https://quiz-couple.com/apple-touch-icon.png</url>
       <title>Quiz Couple · Blog</title>
       <link>https://quiz-couple.com/it/blog/</link>
     </image>
+    <item>
+      <title>Sono dipendente affettiva di un manipolatore: che fare?</title>
+      <link>https://quiz-couple.com/it/blog/dipendente-affettivo-e-manipolatore/</link>
+      <guid isPermaLink="true">https://quiz-couple.com/it/blog/dipendente-affettivo-e-manipolatore/</guid>
+      <pubDate>Sat, 07 Nov 2026 11:21:00 GMT</pubDate>
+      <category>Psicologia</category>
+      <description>Il manipolatore rileva il dipendente affettivo come un radar. Perché questi due profili si attraggono, cosa fa vivere questa coppia, e come spezzare il duo.</description>
+      <media:content url="https://quiz-couple.com/blog/dependant-affectif-et-manipulateur.webp" medium="image" type="image/webp" width="1536" height="1024"/>
+    </item>
     <item>
       <title>36 domande per innamorarsi</title>
       <link>https://quiz-couple.com/it/blog/36-domande-per-innamorarsi/</link>
@@ -272,15 +281,6 @@
       <category>Psicologia</category>
       <description>I 12 segni che dimostrano che un uomo è nervoso davanti a te, cosa succede nel suo corpo in quel momento, e cosa fare per farlo rilassare.</description>
       <media:content url="https://quiz-couple.com/blog/homme-nerveux-devant-une-femme.webp" medium="image" type="image/webp" width="1200" height="630"/>
-    </item>
-    <item>
-      <title>Cosa prova un uomo quando lo ignori? Le 5 fasi, una per una</title>
-      <link>https://quiz-couple.com/it/blog/cosa-prova-un-uomo-quando-lo-ignori/</link>
-      <guid isPermaLink="true">https://quiz-couple.com/it/blog/cosa-prova-un-uomo-quando-lo-ignori/</guid>
-      <pubDate>Wed, 26 Aug 2026 07:30:00 GMT</pubDate>
-      <category>Psicologia</category>
-      <description>Cosa prova un uomo quando lo ignori, fase per fase: non se ne accorge, dubita, si irrita, ti scrive, poi si stacca. E se questo lo fa tornare.</description>
-      <media:content url="https://quiz-couple.com/blog/homme-qu-on-ignore.webp" medium="image" type="image/webp" width="1200" height="630"/>
     </item>
   </channel>
 </rss>
