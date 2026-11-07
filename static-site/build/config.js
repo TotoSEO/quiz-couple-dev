@@ -154,6 +154,7 @@ export const ROUTE_SLUGS = {
   jeuQuestionsRapides: { fr: 'questions-rapides-couple', en: 'rapid-fire-questions-for-couples', es: 'preguntas-rapidas-para-parejas', de: 'schnelle-fragen-fuer-paare', it: 'domande-veloci-di-coppia', nl: 'snelle-vragen-voor-koppels' },
   jeuxParMessage: { fr: 'jeux-de-couple-par-message', en: 'texting-games-for-couples', es: 'juegos-por-whatsapp-para-parejas', de: 'whatsapp-spiele-fuer-paare', it: 'giochi-su-whatsapp-per-coppie', nl: 'whatsapp-spelletjes-voor-koppels' },
   jeuMarguerite: { fr: 'effeuiller-la-marguerite', en: 'he-loves-me-he-loves-me-not', es: 'me-quiere-no-me-quiere', de: 'er-liebt-mich-er-liebt-mich-nicht', it: 'm-ama-non-m-ama', nl: 'hij-houdt-van-me-hij-houdt-niet-van-me' },
+  jeuNouvelAn: { fr: 'jeu-nouvel-an-couple', en: 'new-years-questions-for-couples', es: 'juego-de-nochevieja-en-pareja', de: 'silvester-spiel-fuer-paare', it: 'giochi-capodanno-coppia', nl: 'oud-en-nieuw-spel-voor-koppels' },
   jeuOuiNon: { fr: 'jeu-oui-non-couple', en: 'yes-or-no-couples-game', es: 'juego-si-o-no-pareja', de: 'ja-oder-nein-paar-spiel', it: 'gioco-si-o-no-coppia', nl: 'ja-of-nee-vragen' },
   jeuPhrases: { fr: 'phrases-a-completer-couple', en: 'finish-the-sentence-couples-game', es: 'frases-para-completar-pareja', de: 'satz-vervollstaendigen-paarspiel', it: 'frasi-da-completare-coppia', nl: 'maak-de-zin-af' },
   jeuDixMais: { fr: 'jeu-c-est-un-10-mais', en: 'hes-a-10-but-game', es: 'juego-es-un-10-pero', de: 'er-ist-eine-10-aber-spiel', it: 'gioco-e-un-10-ma', nl: 'hij-is-een-10-maar' },
@@ -290,6 +291,7 @@ export const QUIZ_FEATURED = {
   jeuQuestionsRapides: { file: 'rapid-buzzer',               old: null,                  alt: { fr: "Deux mains se précipitent vers un gros buzzer rouge posé sur une table en bois, dans un salon éclairé par une lampe", en: "Two hands racing toward a big red buzzer on a wooden table, in a living room lit by a lamp", es: "Dos manos se lanzan hacia un gran pulsador rojo sobre una mesa de madera, en un salón iluminado por una lámpara", de: "Zwei Hände greifen nach einem großen roten Buzzer auf einem Holztisch, in einem von einer Lampe beleuchteten Wohnzimmer", it: "Due mani si lanciano verso un grande pulsante rosso su un tavolo di legno, in un salotto illuminato da una lampada", nl: "Twee handen grijpen naar een grote rode buzzer op een houten tafel, in een woonkamer met een brandende lamp" } },
   jeuxParMessage: { file: 'texting-phones', old: null, alt: {"fr": "Deux smartphones posés côte à côte sur une couverture en laine, l'un dans une coque rose, l'autre dans une coque violette, leurs écrans remplis de bulles de conversation colorées, avec un petit cœur en papier entre les deux", "en": "Two smartphones lying side by side on a wool blanket, one in a pink case and the other in a purple case, their screens full of colorful chat bubbles, with a small paper heart between them", "es": "Dos móviles uno al lado del otro sobre una manta de lana, uno con funda rosa y otro con funda morada, con las pantallas llenas de burbujas de chat de colores y un pequeño corazón de papel entre los dos", "de": "Zwei Smartphones nebeneinander auf einer Wolldecke, eines in einer rosa Hülle, das andere in einer lila Hülle, die Bildschirme voller bunter Chatblasen, dazwischen ein kleines Papierherz", "it": "Due smartphone uno accanto all'altro su una coperta di lana, uno con la cover rosa e l'altro con la cover viola, gli schermi pieni di fumetti di chat colorati, con un piccolo cuore di carta in mezzo", "nl": "Twee smartphones naast elkaar op een wollen deken, de ene in een roze hoesje, de andere in een paars hoesje, de schermen vol kleurige chatballonnen, met een klein papieren hartje ertussen"} },
   jeuMarguerite: { file: 'marguerite-effeuillee', old: null, alt: { fr: "Une marguerite blanche posée sur une table de jardin en bois, à moitié effeuillée, ses pétales éparpillés autour d'elle dans la lumière dorée de la fin d'après-midi", en: "A white daisy lying on a wooden garden table, half of its petals plucked and scattered around it in golden late-afternoon light", es: "Una margarita blanca sobre una mesa de jardín de madera, medio deshojada, con los pétalos esparcidos alrededor en la luz dorada del final de la tarde", de: "Eine weiße Margerite auf einem hölzernen Gartentisch, halb entblättert, die Blütenblätter rundherum verstreut im goldenen Licht des späten Nachmittags", it: "Una margherita bianca su un tavolo da giardino di legno, sfogliata a metà, con i petali sparsi intorno nella luce dorata del tardo pomeriggio", nl: "Een witte margriet op een houten tuintafel, half geplukt, met de blaadjes eromheen verspreid in het gouden licht van de late middag" } },
+  jeuNouvelAn: { file: 'nouvel-an-coupes', old: null, alt: { fr: "Deux coupes de champagne sur le rebord d'une fenêtre le soir du Nouvel An, à côté de quelques photos de l'année et de confettis dorés, avec un feu d'artifice flou dans le ciel de la ville", en: "Two coupes of champagne on a windowsill on New Year's Eve, next to a few photos from the year and gold confetti, with blurred fireworks in the city sky", es: "Dos copas de champán en el alféizar de una ventana en Nochevieja, junto a unas fotos del año y confeti dorado, con fuegos artificiales desenfocados en el cielo de la ciudad", de: "Zwei Sektschalen auf einer Fensterbank an Silvester, daneben ein paar Fotos des Jahres und goldenes Konfetti, dahinter ein unscharfes Feuerwerk über der Stadt", it: "Due coppe di champagne sul davanzale di una finestra la notte di Capodanno, accanto ad alcune foto dell'anno e a coriandoli dorati, con i fuochi d'artificio sfocati nel cielo della città", nl: "Twee champagneglazen op een vensterbank op oudejaarsavond, naast een paar foto's van het afgelopen jaar en gouden confetti, met wazig vuurwerk boven de stad" } },
   jeuQuiPourrait:     { file: 'two-cards-face-off',          old: null,                  alt: { fr: "Deux cartes vierges posées face à face sur une petite table ronde en bois, une verte et une jaune, comme prêtes à être retournées", en: "Two blank cards lying face to face on a small round wooden table, one green and one yellow, as if about to be flipped", es: "Dos cartas en blanco frente a frente sobre una pequeña mesa redonda de madera, una verde y otra amarilla, como a punto de darse la vuelta", de: "Zwei leere Karten liegen sich auf einem kleinen runden Holztisch gegenüber, eine grün und eine gelb, als würden sie gleich umgedreht", it: "Due carte bianche una di fronte all'altra su un tavolino rotondo di legno, una verde e una gialla, come pronte a essere girate", nl: 'Twee lege kaarten tegenover elkaar op een klein rond houten tafeltje, een groene en een gele, alsof ze zo omgedraaid worden' } },
   jeuOuiNon:         { file: 'oui-non-vote',           old: null,                  alt: { fr: 'Deux cartes de vote face à face, une verte pour le oui et une rouge pour le non', en: 'Two voting cards facing each other, a green one for yes and a red one for no', es: 'Dos tarjetas de voto frente a frente, una verde para el sí y una roja para el no', de: 'Zwei Abstimmungskarten einander gegenüber, eine grüne für Ja und eine rote für Nein', it: 'Due carte per votare una di fronte all\'altra, una verde per il sì e una rossa per il no', nl: 'Twee stemkaarten tegenover elkaar, een groene voor ja en een rode voor nee' } },
   jeuPhrases:        { file: 'deux-bulles-phrase',    old: null,                  alt: { fr: 'Deux bulles de conversation, une rose et une violette, qui finissent chacune par trois points de suspension', en: 'Two speech bubbles, one pink and one purple, each ending in three dots', es: 'Dos bocadillos de conversación, uno rosa y otro morado, que terminan con tres puntos suspensivos', de: 'Zwei Sprechblasen, eine rosa und eine violette, die beide mit drei Punkten enden', it: 'Due fumetti, uno rosa e uno viola, che finiscono entrambi con tre puntini', nl: 'Twee tekstballonnen, een roze en een paarse, die allebei eindigen op drie puntjes' } },
@@ -403,6 +405,7 @@ export const ROUTE_CONFIG = {
   jeuQuestionsRapides: { template: 'jeu-questions-rapides', namespaces: ['jeu-questions-rapides', 'quizzes', 'quizGames', 'gd', 'common'] },
   jeuxParMessage: { template: 'jeux-par-message', namespaces: ['jeux-par-message', 'quizzes', 'quizGames', 'gd', 'common'] },
   jeuMarguerite: { template: 'jeu-marguerite', namespaces: ['jeu-marguerite', 'quizzes', 'quizGames', 'common'] },
+  jeuNouvelAn: { template: 'jeu-nouvel-an', namespaces: ['jeu-nouvel-an', 'quizzes', 'quizGames', 'gd', 'common'] },
   jeuOuiNon: { template: 'jeu-oui-non', namespaces: ['jeu-oui-non', 'quizzes', 'quizGames', 'gd', 'common'] },
   jeuPhrases: { template: 'jeu-phrases', namespaces: ['jeu-phrases', 'quizzes', 'quizGames', 'gd', 'common'] },
   jeuDixMais: { template: 'jeu-dix-mais', namespaces: ['jeu-dix-mais', 'quizzes', 'quizGames', 'gd', 'common'] },
@@ -531,6 +534,7 @@ export const BILAN_ENTREES = {
   jeuQuiPourrait: { groupe: 'jeu', id: 'qui-pourrait' },
   jeuQuestionsRapides: { groupe: 'jeu', id: 'questions-rapides' },
   jeuxParMessage: { groupe: 'jeu', id: 'jeux-message' },
+  jeuNouvelAn: { groupe: 'jeu', id: 'nouvel-an' },
   jeuDixMais: { groupe: 'jeu', id: 'dix-mais' },
   jeuSoireeCouples: { groupe: 'jeu', id: 'soiree' },
   jeuOuiNon: { groupe: 'jeu', id: 'oui-non' },
@@ -627,7 +631,7 @@ export const ROUTES_JEUX = [
   'jeuActionVerite', 'jeuActionVeriteHot', 'jeuGages',
   'jeuPlateau', 'jeuQuiDeNous', 'jeuDilemmes', 'pourContre', 'jeuJamais', 'jeuQuiPourrait',
   'jeuOuiNon', 'jeuPhrases', 'jeuDixMais', 'jeuSoireeCouples', 'jeuQuestionsRapides', 'jeuxParMessage',
-  'jeuMarguerite',
+  'jeuMarguerite', 'jeuNouvelAn',
 ];
 
 // Les quatre familles de navigation, dans l'ordre d'affichage. C'est la seule
@@ -667,7 +671,7 @@ export const FAMILLES_NAV = {
   jeux: [
     'jeuSoireeCouples',
     'quizTuPreferes', 'jeuActionVerite', 'jeuActionVeriteHot', 'jeuGages',
-    'jeuPlateau', 'jeuQuiDeNous', 'jeuQuestionsRapides', 'jeuxParMessage', 'jeuMarguerite', 'jeuDilemmes', 'pourContre', 'jeuJamais',
+    'jeuPlateau', 'jeuQuiDeNous', 'jeuQuestionsRapides', 'jeuxParMessage', 'jeuMarguerite', 'jeuNouvelAn', 'jeuDilemmes', 'pourContre', 'jeuJamais',
     'jeuQuiPourrait', 'jeuOuiNon', 'jeuPhrases', 'jeuDixMais',
   ],
   // Les quiz spéciaux de saison (16 octobre 2026, demande de Thomas) : le hub
@@ -2264,6 +2268,7 @@ export const QUIZ_RELATED_ARTICLES = {
   jeuQuestionsRapides: ['questions-pour-mieux-se-connaitre-en-couple', 'questions-a-poser-a-son-copain'],
   jeuxParMessage: ['questions-couple-telephone-message', 'activites-couple-a-distance', 'relation-a-distance', 'questions-pour-mieux-se-connaitre-en-couple'],
   jeuMarguerite:  ['homme-nerveux-devant-une-femme', 'questions-a-poser-a-son-crush', '36-questions-pour-tomber-amoureux', 'homme-qu-on-ignore'],
+  jeuNouvelAn:    ['rituels-de-couple', 'soiree-en-amoureux-a-la-maison', 'questions-avenir-couple', 'questions-pour-mieux-se-connaitre-en-couple', 'questions-a-poser-a-son-copain'],
   jeuOuiNon:        ['choses-pas-accepter-couple', 'questions-pour-mieux-se-connaitre-en-couple'],
   jeuGages:         ['activites-couple-ete', 'comment-savoir-si-cest-le-bon'],
   jeuPhrases:       ['questions-pour-mieux-se-connaitre-en-couple', 'questions-intimes-couple'],

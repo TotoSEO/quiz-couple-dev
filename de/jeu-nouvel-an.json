@@ -1,0 +1,73 @@
+{
+  "hero": {
+    "badge": "Silvesterspiel • Kostenlos • Zu zweit",
+    "title": "Euer Jahresrückblick zu zweit: das Silvesterspiel für Paare",
+    "titleHighlight": "Jahresrückblick zu zweit",
+    "description": "Vier Runden, um an Silvester auf euer Jahr zurückzublicken. Am Ende erscheint euer Rückblick mit den Preisen von jedem und eurem gemeinsamen Vorsatz."
+  },
+  "section1": {
+    "title": "Wie spielt man den Jahresrückblick zu zweit?",
+    "intro": "Der Jahresrückblick zu zweit ist ein Spiel für Paare, für Silvester oder die ersten Tage im Januar. Es ist ein ganz einfaches Fragespiel: Ihr schaut gemeinsam auf das Jahr zurück, das zu Ende geht, und redet dann über das nächste. Zum Beispiel: „Der größte Lachanfall des Jahres: Wisst ihr noch, wann das war?“",
+    "intro2": "Gespielt wird auf einem einzigen Handy, das zwischen euch liegt. Ihr gebt eure Namen ein, wählt ein kurzes oder ein langes Spiel, und dann folgen vier Runden:",
+    "etape1Titre": "Unsere Erinnerungen an das Jahr",
+    "etape1Texte": "Die schönsten Momente, die Lacher und die Pannen. Auf jeder Karte steht, wer zuerst antwortet, und ihr redet abwechselnd.",
+    "etape2Titre": "Die Preise des Jahres",
+    "etape2Texte": "Der Preis für die Schlafmütze, fürs Zuspätkommen, für die beste Küche... Ihr entscheidet zusammen, wer ihn verdient hat, und tippt auf den Namen. Bei Gleichstand gibt es auch „Beide“.",
+    "etape3Titre": "Was wir aus dem Jahr mitnehmen",
+    "etape3Texte": "Etwas ernstere Fragen: was ihr übereinander gelernt habt, der Moment, in dem ihr euch am nächsten wart, oder ein Danke, das ihr euch noch nicht gesagt habt.",
+    "etape4Titre": "Das nächste Jahr",
+    "etape4Texte": "Wünsche, Reisen, Pläne und zum Schluss euer gemeinsamer Vorsatz, den ihr zusammen aufschreiben könnt, wenn ihr wollt.",
+    "apres": "Am Ende zeigt das Spiel euren Jahresrückblick mit den Preisen von jedem und eurem Vorsatz. Ihr könnt ihn verschicken oder kopieren, und er bleibt auf dem Handy: Wenn ihr nächstes Jahr wieder auf die Seite kommt, findet ihr euren Vorsatz wieder. Feiert ihr Silvester mit anderen Paaren, nehmt lieber <a href=\"/de/partyspiel-fuer-paare/\">das Spiel, in dem Paare gegeneinander antreten</a>, mit bis zu zehn Spielern, jeder auf seinem Handy."
+  },
+  "section2": {
+    "title": "Jahresrückblick-Fragen für Paare, Runde für Runde",
+    "intro": "Hier ist ein Teil der Fragen aus dem Spiel, genau so, wie sie beim Spielen erscheinen. Sie funktionieren auch sehr gut ohne Handy, laut vorgelesen beim Nachtisch.",
+    "souvenirsTitre": "Fragen zu den Erinnerungen an das Jahr",
+    "souvenirsTexte": "Das sind die leichtesten zum Anfangen. Man geht die Monate einen nach dem anderen durch, und meistens bringt eine Erinnerung die nächste mit.",
+    "tropheesTitre": "Die Liste der Preise des Jahres",
+    "tropheesTexte": "Es gibt sechzehn, und in jedem Spiel kommen ein paar davon dran. Sie sind zum Lachen und Necken da, nicht zum Abrechnen!",
+    "retenirTitre": "Fragen für euren Beziehungsrückblick",
+    "retenirTexte": "Das ist die ruhigste Runde. Es geht darum, was dieses Jahr zwischen euch passiert ist: was ihr gelernt habt, was gezählt hat, was sich verändert hat.",
+    "avenirTitre": "Fragen zum nächsten Jahr",
+    "avenirTexte": "Zum Schluss geht es um das, worauf ihr Lust habt: eine Reise, etwas, das ihr zusammen ausprobieren wollt, eine Gewohnheit, die bleibt...",
+    "apres": "Und wer nach Mitternacht weitermachen will: Hier gibt es <a href=\"/de/fragen-fuer-paare/\">über hundert weitere Fragen</a>, nach Themen sortiert."
+  },
+  "section3": {
+    "title": "Noch mehr Silvesterspiele zu zweit",
+    "intro": "Der Jahresrückblick passt am besten an den Anfang des Abends oder kurz vor Mitternacht. Für den Rest der Nacht gibt es hier weitere Ideen für Silvesterspiele für Paare, alle kostenlos auf der Seite:",
+    "items": [
+      "<strong>Zum Start in den Abend:</strong> <a href=\"/de/was-wuerdest-du-lieber-paar-quiz/\">unmögliche Entscheidungen zwischen zwei Optionen</a>, die oft in einer Diskussion enden.",
+      "<strong>Zum gegenseitigen Necken:</strong> ein Countdown, und <a href=\"/de/schnelle-fragen-fuer-paare/\">wer zuerst antwortet, bekommt den Punkt</a>.",
+      "<strong>Nach Mitternacht:</strong> <a href=\"/de/wahrheit-oder-pflicht-versaut/\">frechere Wahrheiten und Aufgaben</a>, wenn die Stimmung passt.",
+      "<strong>Wenn ihr an dem Abend weit voneinander weg seid:</strong> <a href=\"/de/whatsapp-spiele-fuer-paare/\">Fragen, die ihr euch per Nachricht schickt</a>, bis zum Jahreswechsel."
+    ]
+  },
+  "section4": {
+    "title": "So gelingt euer Jahresrückblick als Paar",
+    "intro": "Es gibt kein Richtig oder Falsch, aber ein paar kleine Dinge helfen ziemlich:",
+    "resumeTitre": "Was hilft",
+    "resume1": "<strong>Den richtigen Moment wählen:</strong> vor dem Essen oder zwischen zwei Gängen, solange ihr noch fit seid, lieber nicht um ein Uhr nachts.",
+    "resume2": "<strong>Die Fotos rausholen:</strong> Wenn ihr zusammen durch die Galerie des Jahres scrollt, kommen Dinge zurück, die ihr komplett vergessen hattet.",
+    "resume3": "<strong>Zuhören, ohne zu korrigieren:</strong> Der andere erinnert sich nicht immer so wie du, und genau das ist das Spannende.",
+    "resume4": "<strong>Nur ein Vorsatz:</strong> ein kleiner, den man halten kann. „Alle drei Monate ein Wochenende zu zweit“ hält viel besser als „alles ändern“.",
+    "apres": "Und wenn eine Frage schlecht ankommt, überspringt sie einfach. Es geht darum, das Jahr mit einem schönen Moment zu beenden!"
+  },
+  "faq": {
+    "title": "Häufige Fragen",
+    "q1": "Wann macht man als Paar einen Jahresrückblick?",
+    "a1": "An Silvester, am frühen Abend oder kurz vor Mitternacht, ist der natürlichste Moment. Es funktioniert aber auch in den ersten Januartagen oder an eurem Jahrestag. Das Spiel passt sich an: Von Juli bis Dezember blickt es auf das laufende Jahr zurück, von Januar bis Juni auf das Jahr davor.",
+    "q2": "Wie lange dauert das Spiel?",
+    "a2": "Das kurze Spiel hat 12 Karten, drei pro Runde, und dauert etwa zwanzig Minuten. Das lange hat 24 und dauert ungefähr eine Stunde, je nachdem, wie lange ihr bei jeder Erinnerung bleibt.",
+    "q3": "Kann man es auch zu mehreren spielen?",
+    "a3": "Das Spiel ist für ein Paar gemacht: Jeder Preis geht an einen von euch beiden. Mit mehreren Paaren passt das Partyspiel der Seite besser, bei dem jedes Paar gegen die anderen spielt, mit bis zu zehn Spielern.",
+    "q4": "Werden unsere Antworten gespeichert?",
+    "a4": "Nein. Eure Antworten sagt ihr laut, das Spiel speichert sie nicht. Nur eure Namen, eure Preise und euer Vorsatz bleiben in diesem Browser auf diesem Handy, damit ihr sie nächstes Jahr wiederfindet. Nichts wird woandershin geschickt.",
+    "q5": "Muss man eine App herunterladen?",
+    "a5": "Nein, alles passiert auf dieser Seite, kostenlos und ohne Anmeldung. Ihr braucht nur ein Handy oder einen Computer.",
+    "q6": "Welche Fragen eignen sich für einen Jahresrückblick als Paar?",
+    "a6": "Am besten sind Fragen zu konkreten Dingen: der schönste Moment des Jahres, was ihr übereinander gelernt habt, etwas, das der andere getan hat und das gezählt hat, oder was ihr fürs nächste Jahr behalten wollt. Das Spiel stellt rund fünfzig davon, in vier Runden."
+  },
+  "jsonLd": {
+    "name": "Der Jahresrückblick zu zweit, ein Silvesterspiel für Paare"
+  }
+}

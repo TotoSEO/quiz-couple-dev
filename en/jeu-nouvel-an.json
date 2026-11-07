@@ -1,0 +1,73 @@
+{
+  "hero": {
+    "badge": "New Year's game • Free • For two",
+    "title": "Year in review for two: the New Year's Eve game for couples",
+    "titleHighlight": "Year in review for two",
+    "description": "Four rounds to look back on your year on New Year's Eve, then your year in review shows up with each person's awards and your couple's resolution."
+  },
+  "section1": {
+    "title": "How do you play the year in review for two?",
+    "intro": "The year in review for two is a game for couples, to play on New Year's Eve or in the first days of January. It's a simple question game: you look back together on the year that's ending, then you talk about the one that's coming. For example: “Our biggest laugh of the year, do you remember it?”",
+    "intro2": "It's played on a single phone, sitting between the two of you. You enter your names, choose a short or full game, and the game takes you through four rounds:",
+    "etape1Titre": "Our memories of the year",
+    "etape1Texte": "The best moments, the laughs and the rough patches. On each card, the game says who answers first, and you take turns talking.",
+    "etape2Titre": "The awards of the year",
+    "etape2Texte": "The heavy sleeper award, the running late award, the chef award... You decide together who deserves it and tap their name. There's also “Both of us” when it's a tie.",
+    "etape3Titre": "What we'll keep from this year",
+    "etape3Texte": "Slightly more serious questions: what you learned about each other, the moment you felt closest, or a thank-you you haven't said yet.",
+    "etape4Titre": "Next year",
+    "etape4Texte": "Things you want to do, trips, plans, and to finish, your couple's resolution, which you can write together if you want.",
+    "apres": "At the end, the game shows your year in review with each person's awards and your resolution. You can send it or copy it, and it stays on the phone: next year, when you come back to the page, you'll find the resolution you made. If you're spending New Year's Eve with other couples, go for <a href=\"/en/couples-party-game/\">the game where couples play against each other</a> instead, up to ten players, each on their own phone."
+  },
+  "section2": {
+    "title": "New Year's questions for couples, round by round",
+    "intro": "Here are some of the game's questions, just as they appear during the game. They also work really well read out loud without the phone, over dessert.",
+    "souvenirsTitre": "Questions about the year's memories",
+    "souvenirsTexte": "These are the easiest ones to start with. You go back month by month, and most of the time one memory brings back another.",
+    "tropheesTitre": "The list of the year's awards",
+    "tropheesTexte": "There are sixteen in all, and each game picks a few of them. They're there to laugh and tease each other a bit, not to keep score!",
+    "retenirTitre": "Year-in-review questions for your relationship",
+    "retenirTexte": "This is the calmest round. It's about what happened between you this year: what you learned, what mattered, what changed.",
+    "avenirTitre": "Questions about next year",
+    "avenirTexte": "To finish on what you're looking forward to: a trip, something to try together, a habit to keep...",
+    "apres": "And to keep going after midnight, there are <a href=\"/en/couple-questions/\">more than a hundred other questions</a>, sorted by theme."
+  },
+  "section3": {
+    "title": "More New Year's Eve games for two",
+    "intro": "The year in review works best early in the evening or just before midnight. For the rest of the night, here are other New Year's Eve game ideas for two, all free on the site:",
+    "items": [
+      "<strong>To get the night started:</strong> <a href=\"/en/would-you-rather-couple-quiz/\">impossible choices between two options</a>, the kind that often ends in a big debate.",
+      "<strong>To tease each other:</strong> a countdown, and <a href=\"/en/rapid-fire-questions-for-couples/\">the first one to answer scores the point</a>.",
+      "<strong>After midnight:</strong> <a href=\"/en/dirty-truth-or-dare-couples/\">spicier truths and dares</a>, if the mood is right.",
+      "<strong>If you're far apart that night:</strong> <a href=\"/en/texting-games-for-couples/\">questions to text each other</a> until the clock strikes twelve."
+    ]
+  },
+  "section4": {
+    "title": "How to make your end-of-year couple review a good one",
+    "intro": "There's no right or wrong way to do it, but a few little things help a lot:",
+    "resumeTitre": "What helps",
+    "resume1": "<strong>Pick the right moment:</strong> before dinner or between two courses, while you're still fresh, rather than at one in the morning.",
+    "resume2": "<strong>Get the photos out:</strong> scrolling through the year's gallery together brings back things you'd completely forgotten.",
+    "resume3": "<strong>Listen without correcting:</strong> your partner doesn't always remember things the way you do, and that's exactly what makes it interesting.",
+    "resume4": "<strong>Just one resolution:</strong> a small one you can keep. “A weekend for two every three months” works much better than “change everything”.",
+    "apres": "And if a question lands badly, just skip it. The point is to end the year on a good moment!"
+  },
+  "faq": {
+    "title": "Frequently asked questions",
+    "q1": "When should a couple do their year in review?",
+    "a1": "On New Year's Eve, early in the evening or just before midnight, is the most natural moment. But it also works in the first days of January, or on your anniversary. The game adapts: from July to December it looks back on the current year, from January to June on the year before.",
+    "q2": "How long does the game last?",
+    "a2": "The short game has 12 cards, three per round, and lasts about twenty minutes. The full game has 24 and lasts around an hour, depending on how long you spend on each memory.",
+    "q3": "Can more than two people play?",
+    "a3": "The game is made for one couple: each award goes to one of you or the other. With several couples, the site's party game works better: each couple plays against the others, up to ten players.",
+    "q4": "Are our answers saved?",
+    "a4": "No. You say your answers out loud, and the game doesn't record them. Only your names, your awards and your resolution stay in this browser, on this phone, so you can find them next year. Nothing is sent anywhere else.",
+    "q5": "Do we need to download an app?",
+    "a5": "No, everything happens on this page, for free and with no sign-up. All you need is a phone or a computer.",
+    "q6": "What questions should you ask to review your relationship?",
+    "a6": "The best ones are about specific things: the best moment of the year, what you learned about each other, something your partner did that mattered, or what you want to keep for next year. The game asks about fifty of them, in four rounds."
+  },
+  "jsonLd": {
+    "name": "The year in review for two, a New Year's game for couples"
+  }
+}

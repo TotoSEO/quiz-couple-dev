@@ -3,10 +3,10 @@
     "badge": "15 spellen • Gratis • Zonder account",
     "title": "Onze online spelletjes voor koppels, klaar in één klik",
     "titleHighlight": "spelletjes voor koppels",
-    "description": "Zeventien spellen: veertien die je start op één telefoon tussen jullie in, één voor meerdere koppels en één via berichtjes, ieder op de eigen telefoon, en de margriet die je in je eentje plukt. Zonder account en zonder iets te installeren."
+    "description": "Achttien spellen: vijftien die je start op één telefoon tussen jullie in, één voor meerdere koppels en één via berichtjes, ieder op de eigen telefoon, en de margriet die je in je eentje plukt. Zonder account en zonder iets te installeren."
   },
   "stats": {
-    "jeux": "17",
+    "jeux": "18",
     "jeuxLabel": "spellen voor koppels",
     "cartes": "520",
     "cartesLabel": "kaarten, opdrachten en dilemma's",
@@ -40,6 +40,11 @@
     "margueriteJoueurs": "Alleen, met iemand in je gedachten",
     "margueriteDuree": "1 minuut",
     "margueriteContenu": "14 tot 26 blaadjes per bloem",
+    "nouvelAnNom": "De jaarterugblik met z'n tweeën",
+    "nouvelAnTagline": "Herinneringen, prijzen en een goed voornemen, op oudejaarsavond",
+    "nouvelAnJoueurs": "2 spelers",
+    "nouvelAnDuree": "20-60 min",
+    "nouvelAnContenu": "55 vragen en prijzen, in vier rondes",
     "actionVeriteNom": "Waarheid of durven",
     "actionVeriteTagline": "Er valt een kaart, waarheid of durven, en je weet nooit welke er komt.",
     "actionVeriteJoueurs": "2 spelers",
@@ -111,7 +116,7 @@
     "title": "Wat een spel met z'n tweeën aan een avond verandert",
     "p1": "Een <strong class=\"text-foreground\">spelletje voor koppels</strong> lijkt niks bijzonders. En toch lost het een heel concreet probleem op: met z'n tweeën praat je uiteindelijk altijd over dezelfde dingen. De dag, het werk, wat we vanavond eten… Een spel geeft een kader, en dat kader geeft je de vrijheid om vragen te stellen die je anders nooit zomaar zou stellen.",
     "p2": "Daarom werkt een spel ook beter dan een film als je echt weer even samen wilt zijn. Voor een scherm zijn jullie twee mensen naast elkaar die ergens anders naar kijken. Bij een spel zijn jullie twee mensen die naar elkaar kijken. Na tien minuten voel je het verschil.",
-    "p3": "De zeventien spellen op deze pagina speel je online en gratis, bijna allemaal op één telefoon: het partyspel en de WhatsApp-spelletjes speelt ieder op de eigen telefoon. Niets aan te maken, niets te installeren, niets voor te bereiden.",
+    "p3": "De achttien spellen op deze pagina speel je online en gratis, bijna allemaal op één telefoon: het partyspel en de WhatsApp-spelletjes speelt ieder op de eigen telefoon. Niets aan te maken, niets te installeren, niets voor te bereiden.",
     "p4": "En afhankelijk van het seizoen zorgen <a href=\"/nl/themaquiz-voor-koppels/\">de quizzen die met de kalender meegaan</a> voor een paar avonden apart: met Halloween <a href=\"/nl/wie-gaat-als-eerste-dood/\">wie van jullie eerst sterft in een horrorfilm</a> of <a href=\"/nl/welk-superschurkenduo-zijn-jullie/\">welk superschurkenduo jullie vormen</a>.",
     "plus": [
       {
@@ -159,7 +164,9 @@
     "row16Moment": "Midden op de dag, ieder voor zich",
     "row16Pourquoi": "Een vraag tussen twee vergaderingen door, en het gesprek komt weer op gang. Je partner antwoordt als het uitkomt... en stuurt er een terug!",
     "row17Moment": "Als iemand niet uit je hoofd gaat",
-    "row17Pourquoi": "Het ene blaadje na het andere, voor de lol, en omdat de bloem soms precies zegt wat je wilde horen!"
+    "row17Pourquoi": "Het ene blaadje na het andere, voor de lol, en omdat de bloem soms precies zegt wat je wilde horen!",
+    "row18Moment": "Op oudejaarsavond",
+    "row18Pourquoi": "Jullie kijken terug op het jaar dat eindigt, geven elkaar de langslaperprijs of de chef-kokprijs, en sluiten af met een goed voornemen samen. Perfect om op middernacht te wachten!"
   },
   "section3": {
     "title": "Zo slaagt een avondje spelletjes met z'n tweeën",
@@ -176,7 +183,7 @@
   "faq": {
     "title": "Vragen die we vaak krijgen",
     "q1": "Zijn deze spelletjes voor koppels helemaal gratis?",
-    "a1": "Ja, alle zeventien, van het eerste tot het laatste. Geen account, geen betaalde versie, geen inhoud die pas na betaling vrijkomt. Je opent de pagina van het spel en speelt.",
+    "a1": "Ja, alle achttien, van het eerste tot het laatste. Geen account, geen betaalde versie, geen inhoud die pas na betaling vrijkomt. Je opent de pagina van het spel en speelt.",
     "q2": "Moet je een app downloaden?",
     "a2": "Nee. Alles speel je gewoon in je browser, op je telefoon of op je computer. Daardoor kun je ook binnen tien seconden een spel starten, precies op het moment dat je er zin in hebt.",
     "q3": "Wat is het leukste spel om thuis met z'n tweeën te spelen?",

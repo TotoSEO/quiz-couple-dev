@@ -229,6 +229,16 @@
         ]
       },
       {
+        "route": "jeuNouvelAn",
+        "titre": "Per fare il bilancio dell'anno",
+        "texte": "La sera del 31 dicembre, o nei primi giorni di gennaio, molte coppie amano <a href=\"/it/giochi-capodanno-coppia/\">ripercorrere l'anno appena passato</a>. Ne abbiamo fatto un gioco di Capodanno in quattro manche, con dei premi e un buon proposito a due. Per esempio:",
+        "exemples": [
+          "Il momento più bello dell'anno insieme, quando è stato?",
+          "Cosa hai imparato su di me quest'anno?",
+          "Un posto dove ti piacerebbe andare insieme l'anno prossimo?"
+        ]
+      },
+      {
         "article": "questions-couple-telephone-message",
         "titre": "A distanza, al telefono o per messaggio",
         "texte": "Quando ci si vede poco, le chiamate finiscono per somigliarsi tutte: la giornata, la stanchezza, buonanotte. Basta una domanda un po' diversa per <a href=\"/it/giochi-su-whatsapp-per-coppie/\">rimettere in moto la conversazione</a>, e alcune funzionano addirittura meglio <a href=\"/it/blog/domande-di-coppia-per-messaggio/\">per messaggio o al telefono</a> che di persona. E per capire a che punto siete, ci sono anche <a href=\"/it/quiz-coppia-distanza/\">domande scritte per le coppie a distanza</a>. Per esempio:",
@@ -296,6 +306,10 @@
       {
         "route": "jeuQuestionsRapides",
         "texte": "Una domanda, un conto alla rovescia, e chi dà per primo la risposta giusta si prende il punto."
+      },
+      {
+        "route": "jeuNouvelAn",
+        "texte": "Il gioco di Capodanno: i ricordi, i premi e il buon proposito dell'anno, da fare in coppia."
       },
       {
         "route": "quizTuPreferes",

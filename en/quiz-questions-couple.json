@@ -229,6 +229,16 @@
         ]
       },
       {
+        "route": "jeuNouvelAn",
+        "titre": "To look back on the year",
+        "texte": "On New Year's Eve, or in the first days of January, a lot of couples like to <a href=\"/en/new-years-questions-for-couples/\">look back on the year that's just ended</a>. We turned it into a New Year's game in four rounds, with awards and a resolution for two. For example:",
+        "exemples": [
+          "When was our best moment together this year?",
+          "What did you learn about me this year?",
+          "A place you'd like us to go next year?"
+        ]
+      },
+      {
         "article": "questions-couple-telephone-message",
         "titre": "Long distance, over the phone or by text",
         "texte": "When you don't see each other much, calls end up sounding the same: your day, how tired you are, good night. One slightly different question is enough to <a href=\"/en/texting-games-for-couples/\">get the conversation going again</a>, and some even work better <a href=\"/en/blog/questions-for-couples-over-text/\">by text or on the phone</a> than face to face. And to see where you stand, there are also <a href=\"/en/long-distance-relationship-quiz/\">questions written for long-distance couples</a>. For example:",
@@ -296,6 +306,10 @@
       {
         "route": "jeuQuestionsRapides",
         "texte": "A question, a countdown, and whoever gives the right answer first scores the point."
+      },
+      {
+        "route": "jeuNouvelAn",
+        "texte": "The New Year's game: the year's memories, awards and resolution, to play as a couple."
       },
       {
         "route": "quizTuPreferes",

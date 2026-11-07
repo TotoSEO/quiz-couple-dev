@@ -3,10 +3,10 @@
     "badge": "15 jeux • Gratuits • Sans inscription",
     "title": "Nos jeux à faire en couple, prêts en un clic",
     "titleHighlight": "à faire en couple",
-    "description": "Dix-sept jeux : quatorze qui se lancent sur un seul téléphone posé entre vous deux, un à plusieurs couples, un par message, chacun sur son téléphone, et la marguerite, à effeuiller seul(e). Sans compte et sans rien installer."
+    "description": "Dix-huit jeux : quinze qui se lancent sur un seul téléphone posé entre vous deux, un à plusieurs couples, un par message, chacun sur son téléphone, et la marguerite, à effeuiller seul(e). Sans compte et sans rien installer."
   },
   "stats": {
-    "jeux": "17",
+    "jeux": "18",
     "jeuxLabel": "jeux de couple",
     "cartes": "520",
     "cartesLabel": "cartes, gages et dilemmes",
@@ -40,6 +40,11 @@
     "margueriteJoueurs": "Seul(e), en pensant à quelqu'un",
     "margueriteDuree": "1 minute",
     "margueriteContenu": "De 14 à 26 pétales par fleur",
+    "nouvelAnNom": "Le bilan de l'année à deux",
+    "nouvelAnTagline": "Les souvenirs, les trophées et la résolution de l'année, le soir du réveillon",
+    "nouvelAnJoueurs": "2 joueurs",
+    "nouvelAnDuree": "20 à 60 min",
+    "nouvelAnContenu": "55 questions et trophées, en quatre manches",
     "actionVeriteNom": "Action ou vérité",
     "actionVeriteTagline": "Une carte tombe, vérité ou action, et vous ne savez jamais laquelle arrive.",
     "actionVeriteJoueurs": "2 joueurs",
@@ -111,7 +116,7 @@
     "title": "Ce qu'un jeu à deux change à une soirée",
     "p1": "Un <strong class=\"text-foreground\">jeu de couple</strong> n'a l'air de rien. Et pourtant il règle un problème très concret : à deux, on finit toujours par tourner autour des mêmes sujets. La journée, le boulot, ce qu'on mange ce soir… Un jeu impose un cadre, et ce cadre donne la permission de poser des questions qu'on ne poserait jamais de but en blanc.",
     "p2": "C'est aussi pour ça qu'un jeu marche mieux qu'un film quand vous voulez vraiment vous retrouver. Devant un écran, vous êtes deux personnes côte à côte qui regardent ailleurs. Autour d'un jeu, vous êtes deux personnes qui se regardent. La différence se sent au bout de dix minutes.",
-    "p3": "Les dix-sept jeux de cette page se jouent en ligne, gratuitement, et presque tous sur un seul téléphone : le jeu de soirée et les jeux par message se jouent chacun sur le sien. Rien à créer, rien à installer, rien à préparer.",
+    "p3": "Les dix-huit jeux de cette page se jouent en ligne, gratuitement, et presque tous sur un seul téléphone : le jeu de soirée et les jeux par message se jouent chacun sur le sien. Rien à créer, rien à installer, rien à préparer.",
     "p4": "Et selon la saison, <a href=\"/quiz-speciaux-pour-couple/\">les quiz qui changent avec le calendrier</a> ajoutent quelques soirées à part : pour Halloween, qui de vous deux <a href=\"/quiz-qui-meurt-en-premier-film-horreur/\">meurt en premier dans un film d'horreur</a> ou <a href=\"/quiz-quel-duo-de-super-vilains-formez-vous/\">quel duo de super-vilains vous formez</a>.",
     "plus": [
       {
@@ -159,7 +164,9 @@
     "row16Moment": "En pleine journée, chacun de son côté",
     "row16Pourquoi": "Une question envoyée entre deux réunions, et la conversation repart. L'autre répond quand il peut... et vous en renvoie une !",
     "row17Moment": "Quand on pense très fort à quelqu'un",
-    "row17Pourquoi": "Un pétale après l'autre, pour rire, et parce que la fleur dit parfois exactement ce qu'on avait envie d'entendre !"
+    "row17Pourquoi": "Un pétale après l'autre, pour rire, et parce que la fleur dit parfois exactement ce qu'on avait envie d'entendre !",
+    "row18Moment": "Le soir du 31 décembre",
+    "row18Pourquoi": "On revient sur l'année qui se termine, on se donne le trophée du gros dormeur ou du meilleur chef, et on finit sur une résolution à deux. Parfait pour attendre minuit !"
   },
   "section3": {
     "title": "Réussir une soirée jeux à deux",
@@ -176,7 +183,7 @@
   "faq": {
     "title": "Questions fréquentes",
     "q1": "Ces jeux de couple sont-ils vraiment gratuits ?",
-    "a1": "Oui, les dix-sept, du premier au dernier. Ni compte à créer, ni version payante, ni contenu débloqué après paiement. Vous ouvrez la page du jeu et vous jouez.",
+    "a1": "Oui, les dix-huit, du premier au dernier. Ni compte à créer, ni version payante, ni contenu débloqué après paiement. Vous ouvrez la page du jeu et vous jouez.",
     "q2": "Faut-il télécharger une application ?",
     "a2": "Non. Tout se joue directement dans votre navigateur, sur téléphone comme sur ordinateur. C'est aussi ce qui permet de lancer une partie en dix secondes, pile au moment où l'envie arrive.",
     "q3": "Quel est le meilleur jeu à faire en couple à la maison ?",

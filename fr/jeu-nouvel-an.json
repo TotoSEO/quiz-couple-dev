@@ -1,0 +1,73 @@
+{
+  "hero": {
+    "badge": "Jeu du Nouvel An • Gratuit • À deux",
+    "title": "Le bilan de l'année à deux : le jeu du réveillon pour les couples",
+    "titleHighlight": "bilan de l'année à deux",
+    "description": "Quatre manches pour revenir sur votre année le soir du réveillon, puis votre bilan s'affiche avec les trophées de chacun et votre résolution de couple."
+  },
+  "section1": {
+    "title": "Comment se joue le bilan de l'année à deux ?",
+    "intro": "Le bilan de l'année à deux est un jeu qu'on fait en couple, le soir du 31 décembre ou dans les premiers jours de janvier. C'est un jeu de questions tout simple : on revient ensemble sur l'année qui se termine, puis on parle de celle qui arrive. Par exemple : « Le fou rire de l'année, vous vous en souvenez ? »",
+    "intro2": "Il se joue sur un seul téléphone, posé entre vous deux. Vous donnez vos prénoms, vous choisissez une partie courte ou complète, et le jeu enchaîne quatre manches :",
+    "etape1Titre": "Nos souvenirs de l'année",
+    "etape1Texte": "Les meilleurs moments, les fous rires et les galères. À chaque carte, le jeu dit qui répond en premier, et vous parlez chacun à votre tour.",
+    "etape2Titre": "Les trophées de l'année",
+    "etape2Texte": "Le trophée du gros dormeur, du retard, du chef... Vous décidez ensemble qui le mérite et vous touchez son prénom. Il y a aussi « Les deux » quand vous êtes ex æquo.",
+    "etape3Titre": "Ce qu'on retient",
+    "etape3Texte": "Des questions un peu plus sérieuses : ce que vous avez appris l'un sur l'autre, le moment où vous vous êtes sentis le plus proches, ou encore un merci que vous ne vous êtes pas encore dit.",
+    "etape4Titre": "L'année prochaine",
+    "etape4Texte": "Les envies, les voyages, les projets, et pour finir votre résolution de couple, que vous écrivez ensemble si vous le voulez.",
+    "apres": "À la fin, le jeu affiche votre bilan avec les trophées de chacun et votre résolution. Vous pouvez l'envoyer ou le copier, et il reste sur le téléphone : l'an prochain, en revenant sur la page, vous retrouverez la résolution que vous aviez prise. Si vous passez le réveillon à plusieurs couples, prenez plutôt <a href=\"/jeu-de-soiree-couples/\">le jeu où les couples s'affrontent</a>, jusqu'à dix joueurs, chacun sur son téléphone."
+  },
+  "section2": {
+    "title": "Les questions du bilan de l'année",
+    "intro": "Voici une partie des questions du jeu, telles qu'elles s'affichent pendant la partie. Elles se lisent aussi très bien à voix haute, sans téléphone, au moment du dessert.",
+    "souvenirsTitre": "Les questions sur les souvenirs de l'année",
+    "souvenirsTexte": "Ce sont les plus faciles pour commencer. On remonte les mois un par un, et la plupart du temps un souvenir en rappelle un autre.",
+    "tropheesTitre": "La liste des trophées de l'année",
+    "tropheesTexte": "Il y en a seize en tout, et chaque partie en tire quelques-uns. Ils sont là pour rire et se chambrer un peu, pas pour faire les comptes !",
+    "retenirTitre": "Les questions pour faire le bilan de votre couple",
+    "retenirTexte": "C'est la manche la plus calme. Elle parle de ce qui s'est passé entre vous cette année : ce que vous avez appris, ce qui a compté, ce qui a changé.",
+    "avenirTitre": "Les questions sur l'année prochaine",
+    "avenirTexte": "Pour finir sur ce qui vous fait envie : un voyage, une chose à essayer ensemble, une habitude à garder...",
+    "apres": "Et pour continuer après minuit, il y a <a href=\"/questions-couple/\">plus d'une centaine d'autres questions</a> à se poser, rangées par thème."
+  },
+  "section3": {
+    "title": "D'autres jeux pour le Nouvel An à deux",
+    "intro": "Le bilan de l'année se joue plutôt en début de soirée ou juste avant minuit. Pour le reste de la nuit, voici d'autres idées de jeux pour le réveillon, tous gratuits sur le site :",
+    "items": [
+      "<strong>Pour lancer la soirée :</strong> des <a href=\"/tu-preferes-couple-quiz/\">choix impossibles entre deux options</a>, qui finissent souvent en grand débat.",
+      "<strong>Pour se chambrer :</strong> un compte à rebours, et <a href=\"/questions-rapides-couple/\">le premier qui répond marque le point</a>.",
+      "<strong>Après minuit :</strong> des <a href=\"/action-ou-verite-coquin/\">vérités et des défis plus coquins</a>, si l'ambiance s'y prête.",
+      "<strong>Si vous êtes loin l'un de l'autre ce soir-là :</strong> des <a href=\"/jeux-de-couple-par-message/\">questions à s'envoyer par message</a> jusqu'aux douze coups de minuit."
+    ]
+  },
+  "section4": {
+    "title": "Comment réussir son bilan de couple de fin d'année",
+    "intro": "Il n'y a pas de bonne ou de mauvaise façon de faire, mais quelques petites choses aident pas mal :",
+    "resumeTitre": "Ce qui aide",
+    "resume1": "<strong>Choisir le bon moment :</strong> avant le repas ou entre deux plats, quand vous êtes encore en forme, plutôt qu'à une heure du matin.",
+    "resume2": "<strong>Sortir les photos :</strong> faire défiler la galerie de l'année ensemble rappelle des choses qu'on avait complètement oubliées.",
+    "resume3": "<strong>Écouter sans corriger :</strong> l'autre ne garde pas forcément les mêmes souvenirs que vous, et c'est justement ça qui est intéressant.",
+    "resume4": "<strong>Une seule résolution :</strong> une petite, qu'on peut tenir. « Un week-end à deux tous les trois mois », ça tient beaucoup mieux que « tout changer ».",
+    "apres": "Et si une question tombe mal, passez-la, tout simplement. Le but, c'est de finir l'année sur un bon moment !"
+  },
+  "faq": {
+    "title": "Questions fréquentes",
+    "q1": "Quand faire le bilan de l'année en couple ?",
+    "a1": "Le soir du 31 décembre, en début de soirée ou juste avant minuit, c'est le moment le plus naturel. Mais ça marche aussi dans les premiers jours de janvier, ou le jour de votre anniversaire de couple. Le jeu s'adapte : de juillet à décembre il fait le bilan de l'année en cours, de janvier à juin celui de l'année d'avant.",
+    "q2": "Combien de temps dure le jeu ?",
+    "a2": "La partie courte compte 12 cartes, trois par manche, et dure une vingtaine de minutes. La partie complète en compte 24 et dure autour d'une heure, selon le temps que vous passez sur chaque souvenir.",
+    "q3": "Peut-on y jouer à plus de deux ?",
+    "a3": "Le jeu est fait pour un couple : chaque trophée revient à l'un ou à l'autre. À plusieurs couples, le jeu de soirée du site est plus adapté : chaque couple joue contre les autres, jusqu'à dix joueurs.",
+    "q4": "Nos réponses sont-elles enregistrées ?",
+    "a4": "Non. Vos réponses se disent à voix haute, et le jeu ne les enregistre pas. Seuls vos prénoms, vos trophées et votre résolution restent dans ce navigateur, sur ce téléphone, pour que vous les retrouviez l'an prochain. Rien n'est envoyé ailleurs.",
+    "q5": "Faut-il télécharger une application ?",
+    "a5": "Non, tout se passe sur cette page, gratuitement et sans inscription. Il suffit d'un téléphone ou d'un ordinateur.",
+    "q6": "Quelles questions poser pour faire le bilan de son couple ?",
+    "a6": "Les meilleures parlent de choses précises : le meilleur moment de l'année, ce que vous avez appris l'un sur l'autre, une chose que l'autre a faite et qui a compté, ou encore ce que vous voulez garder pour l'an prochain. Le jeu en pose une cinquantaine, rangées en quatre manches."
+  },
+  "jsonLd": {
+    "name": "Le bilan de l'année à deux, jeu du Nouvel An pour les couples"
+  }
+}

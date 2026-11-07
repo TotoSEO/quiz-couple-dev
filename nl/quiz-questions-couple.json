@@ -229,6 +229,16 @@
         ]
       },
       {
+        "route": "jeuNouvelAn",
+        "titre": "Om terug te kijken op het jaar",
+        "texte": "Op oudejaarsavond, of in de eerste dagen van januari, kijken veel koppels graag <a href=\"/nl/oud-en-nieuw-spel-voor-koppels/\">terug op het afgelopen jaar</a>. Wij maakten er een oud-en-nieuwspel van in vier rondes, met prijzen en een goed voornemen samen. Bijvoorbeeld:",
+        "exemples": [
+          "Wanneer was ons mooiste moment samen dit jaar?",
+          "Wat heb je dit jaar over mij geleerd?",
+          "Een plek waar je volgend jaar samen naartoe zou willen?"
+        ]
+      },
+      {
         "article": "questions-couple-telephone-message",
         "titre": "Op afstand, aan de telefoon of via berichtjes",
         "texte": "Als je elkaar weinig ziet, gaan de gesprekken vaak op elkaar lijken: je dag, hoe moe je bent, welterusten. Eén net iets andere vraag is genoeg om <a href=\"/nl/whatsapp-spelletjes-voor-koppels/\">het gesprek weer op gang te brengen</a>, en sommige werken zelfs beter <a href=\"/nl/blog/vragen-voor-koppels-via-berichtjes/\">via een berichtje of aan de telefoon</a> dan in het echt. En om te zien waar jullie staan, zijn er ook <a href=\"/nl/lange-afstandsrelatie-test/\">vragen speciaal voor koppels op afstand</a>. Bijvoorbeeld:",
@@ -296,6 +306,10 @@
       {
         "route": "jeuQuestionsRapides",
         "texte": "Een vraag, een aftelling, en wie als eerste het goede antwoord geeft, pakt het punt."
+      },
+      {
+        "route": "jeuNouvelAn",
+        "texte": "Het oud-en-nieuwspel: de herinneringen, de prijzen en het goede voornemen van het jaar, om samen te spelen."
       },
       {
         "route": "quizTuPreferes",

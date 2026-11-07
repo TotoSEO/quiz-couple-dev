@@ -2430,6 +2430,7 @@ var QuizEngine = (function() {
     { type: 'jeu', key: 'jamais', icon: '🙊', route: 'jeuJamais' },
     { type: 'jeu', key: 'qui-pourrait', icon: '🏆', route: 'jeuQuiPourrait' },
     { type: 'jeu', key: 'questions-rapides', icon: '⚡', route: 'jeuQuestionsRapides' },
+    { type: 'jeu', key: 'nouvel-an', icon: '🥂', route: 'jeuNouvelAn' },
     { type: 'jeu', key: 'jeux-message', icon: '📱', route: 'jeuxParMessage' },
     { type: 'jeu', key: 'marguerite', icon: '🌼', route: 'jeuMarguerite' },
     { type: 'jeu', key: 'oui-non', icon: '✅', route: 'jeuOuiNon' },
@@ -2590,6 +2591,7 @@ var QuizEngine = (function() {
     'phrases':          ['jeuQuiDeNous', 'jeuJamais', 'quizKnowledge'],
     'dix-mais':         ['jeuOuiNon', 'jeuDilemmes', 'quizTuPreferes'],
     'questions-rapides': ['quizKnowledge', 'jeuQuiDeNous', 'quizTuPreferes'],
+    'nouvel-an':        ['jeuQuestionsRapides', 'quizTuPreferes', 'jeuActionVeriteHot'],
   };
 
   function getRelatedQuizUrl(routeKey, lang) {
@@ -3072,6 +3074,7 @@ var QuizEngine = (function() {
     'jamais': ['dilemmes'],
     'qui-pourrait': ['dilemmes'],
     'questions-rapides': ['quiSaitMieux'],
+    'nouvel-an': COFFRETS_COUPLE,
     'pour-contre': ['dilemmes'],
     'marrant': ['dilemmes'],
     'astro-prenoms': ['astro'],
@@ -12925,6 +12928,475 @@ var QuizEngine = (function() {
     smoothScroll(wrap, 'center');
   };
 
+  // ─── Le bilan de l'année à deux : le jeu du Nouvel An ─────
+  // Sur la liste d'idées validée par Thomas (7 novembre 2026). Un jeu à faire
+  // le soir du 31 décembre ou dans les premiers jours de janvier, sur un seul
+  // téléphone posé entre les deux. Quatre manches, toujours dans cet ordre :
+  // les souvenirs de l'année, les trophées de l'année (on décide ensemble qui
+  // le mérite et on touche son prénom), ce qu'on en retient, et l'année
+  // prochaine. Une carte de discussion dit qui répond le premier, chacun son
+  // tour. À la fin, une résolution de couple facultative, puis le bilan : les
+  // trophées de chacun et la résolution, que le bouton de partage envoie ou
+  // copie. Le dernier bilan reste sur ce téléphone (localStorage, NAN_CLE) :
+  // l'année suivante, l'écran de départ rappelle la résolution prise.
+  // L'année se lit sur l'horloge : de juillet à décembre on fait le bilan de
+  // l'année en cours, de janvier à juin celui de l'année d'avant.
+  var NAN_CLE = 'qc-nouvel-an';
+  function NouvelAnGame(config) {
+    this.container = config.container;
+    this.prefix = config.prefix || 'nouvelAn';
+    this.lang = config.lang || 'fr';
+    // { id, emoji, trophees, questions: [{ id, texte, question, emoji }] }
+    this.manches = config.manches || [];
+    this.parId = {};
+    var self = this;
+    this.manches.forEach(function(m) {
+      m.questions.forEach(function(q) { self.parId[q.id] = q; });
+    });
+    this.phase = 'setup';
+    this.noms = ['', ''];
+    this.genres = [null, null];
+    this.parManche = 3;                    // partie courte ; la complète en pose 6
+    this.cartes = [];                      // { manche, rang, q, debut }
+    this.idx = 0;
+    this.trophees = {};                    // id du trophée → 0, 1, ou 2 pour les deux
+    this.resolution = '';
+    this.bilan = null;
+    this.dejaVues = {};
+    this.jeton = 0;
+    var d = new Date();
+    this.annee = d.getMonth() >= 6 ? d.getFullYear() : d.getFullYear() - 1;
+    this.render();
+  }
+
+  NouvelAnGame.prototype.qtg = function(cle, repli) {
+    return tgd(this.prefix + '.' + cle, repli);
+  };
+
+  NouvelAnGame.prototype.joueur = function(i, noms) {
+    var n = (noms || this.noms)[i];
+    return n || tg('playerSetup.player' + (i + 1), 'Joueur ' + (i + 1));
+  };
+
+  // Le personnage de chacun : son genre s'il l'a donné, sinon son rang.
+  NouvelAnGame.prototype.perso = function(i, genres) {
+    return mascotteDe({ genre: (genres || this.genres)[i] }, i);
+  };
+
+  NouvelAnGame.prototype.calme = function() {
+    return !!(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches);
+  };
+
+  // {{annee}} : l'année du bilan ; {{suivante}} : celle des résolutions.
+  NouvelAnGame.prototype.avecAnnee = function(texte, annee) {
+    var a = annee || this.annee;
+    return String(texte || '').replace(/\{\{annee\}\}/g, a).replace(/\{\{suivante\}\}/g, a + 1);
+  };
+
+  // Le bilan gardé sur ce téléphone, relu champ par champ : il vient d'un
+  // stockage que n'importe quel script de la page peut écrire.
+  NouvelAnGame.prototype.lireBilan = function() {
+    var b;
+    try { b = JSON.parse(localStorage.getItem(NAN_CLE) || 'null'); } catch (e) { return null; }
+    if (!b || typeof b !== 'object' || typeof b.annee !== 'number' || b.annee < 2000 || b.annee > 2200) return null;
+    var self = this, propre = { annee: b.annee, noms: ['', ''], genres: [null, null], trophees: {}, resolution: '' };
+    [0, 1].forEach(function(i) {
+      if (b.noms && typeof b.noms[i] === 'string') propre.noms[i] = b.noms[i].slice(0, 40);
+      if (b.genres && (b.genres[i] === 'homme' || b.genres[i] === 'femme')) propre.genres[i] = b.genres[i];
+    });
+    if (b.trophees && typeof b.trophees === 'object') {
+      Object.keys(b.trophees).forEach(function(id) {
+        var k = b.trophees[id];
+        if (self.parId[id] && (k === 0 || k === 1 || k === 2)) propre.trophees[id] = k;
+      });
+    }
+    if (typeof b.resolution === 'string') propre.resolution = b.resolution.slice(0, 160);
+    return propre;
+  };
+
+  NouvelAnGame.prototype.garderBilan = function(b) {
+    try { localStorage.setItem(NAN_CLE, JSON.stringify(b)); } catch (e) {}
+  };
+
+  // Le tirage : dans chaque manche, les questions pas encore posées depuis
+  // l'arrivée sur la page d'abord, puis les autres ; les manches gardent
+  // leur ordre. Celui qui répond le premier change à chaque carte de
+  // discussion, en partant d'un des deux au hasard.
+  NouvelAnGame.prototype.tirer = function() {
+    var self = this, cartes = [];
+    var tour = Math.random() < 0.5 ? 0 : 1;
+    this.manches.forEach(function(m, rang) {
+      var neuves = [], vues = [];
+      m.questions.forEach(function(q) { (self.dejaVues[q.id] ? vues : neuves).push(q); });
+      shuffleArray(neuves).concat(shuffleArray(vues)).slice(0, self.parManche).forEach(function(q) {
+        cartes.push({ manche: m, rang: rang, q: q, debut: m.trophees ? -1 : (tour++) % 2 });
+      });
+    });
+    this.cartes = cartes;
+    this.idx = 0;
+    this.trophees = {};
+    this.resolution = '';
+  };
+
+  NouvelAnGame.prototype.render = function() {
+    this.jeton++;                         // tout minuteur en cours devient caduc
+    this.container.innerHTML = '';
+    if (this.phase === 'setup') this.renderSetup();
+    else if (this.phase === 'manche') this.renderManche();
+    else if (this.phase === 'resolution') this.renderResolution();
+    else if (this.phase === 'bilan') this.renderBilan();
+    else this.renderCarte();
+  };
+
+  // Le bilan d'une année précédente, gardé sur ce téléphone : sa résolution
+  // revient, et on peut le revoir. Celui de l'année en cours aussi.
+  NouvelAnGame.prototype.carteSouvenir = function(ancien) {
+    var self = this;
+    var meme = ancien.annee === this.annee;
+    var carte = el('div', 'nan-capsule');
+    carte.appendChild(el('p', 'nan-capsule-titre', esc(insecables(this.avecAnnee(
+      this.qtg(meme ? 'dejaTitre' : 'capsuleTitre', 'Votre bilan {{annee}}'), ancien.annee)))));
+    if (!meme && ancien.resolution) {
+      carte.appendChild(el('p', 'nan-capsule-texte', esc(insecables(this.avecAnnee(this.qtg('capsuleTexte', ''), ancien.annee)))));
+      carte.appendChild(el('blockquote', 'nan-capsule-citation', esc(ancien.resolution)));
+      carte.appendChild(el('p', 'nan-capsule-texte', esc(insecables(this.qtg('capsuleQuestion', '')))));
+    } else if (meme) {
+      carte.appendChild(el('p', 'nan-capsule-texte', esc(insecables(this.qtg('dejaTexte', '')))));
+    }
+    var revoir = el('button', 'btn btn-outline btn-sm nan-capsule-btn', esc(this.qtg('revoir', 'Revoir ce bilan')));
+    revoir.type = 'button';
+    revoir.addEventListener('click', function() {
+      self.bilan = ancien;
+      self.phase = 'bilan';
+      self.render();
+    });
+    carte.appendChild(revoir);
+    return carte;
+  };
+
+  NouvelAnGame.prototype.renderSetup = function() {
+    var self = this;
+    var grille = cartesDeuxJoueurs('nan-nom', { genre: true });
+
+    // Deux longueurs, le composant du je n'ai jamais : trois cartes par
+    // manche, ou six.
+    var choixWrap = el('div', 'jnj-longueur');
+    choixWrap.appendChild(el('p', 'jnj-longueur-titre', esc(insecables(this.qtg('longueurTitre', 'Vous avez combien de temps ?')))));
+    var boutonsWrap = el('div', 'jnj-longueur-choix nan-longueur-choix');
+    [3, 6].forEach(function(n) {
+      var b = el('button', 'jnj-longueur-btn' + (n === self.parManche ? ' active' : ''));
+      b.type = 'button';
+      b.setAttribute('aria-pressed', n === self.parManche ? 'true' : 'false');
+      b.innerHTML = '<span class="jnj-longueur-nb">' + (n * self.manches.length) + '</span>' +
+        '<span class="jnj-longueur-unite">' + esc(self.qtg('longueurMot', 'cartes')) + '</span>' +
+        '<span class="jnj-longueur-libelle">' + esc(self.qtg('longueur' + n, '')) + '</span>';
+      b.addEventListener('click', function() {
+        self.parManche = n;
+        boutonsWrap.querySelectorAll('.jnj-longueur-btn').forEach(function(x) {
+          x.classList.remove('active'); x.setAttribute('aria-pressed', 'false');
+        });
+        b.classList.add('active'); b.setAttribute('aria-pressed', 'true');
+      });
+      boutonsWrap.appendChild(b);
+    });
+    choixWrap.appendChild(boutonsWrap);
+
+    var corps = [];
+    var ancien = this.lireBilan();
+    if (ancien) corps.push(this.carteSouvenir(ancien));
+    corps.push(grille, choixWrap);
+
+    var ecran = ecranDepart({
+      icone: '🥂',
+      poses: ['joie', 'amoureux'],
+      titre: this.avecAnnee(this.qtg('setupTitre', 'Le bilan de l\'année à deux')),
+      desc: this.avecAnnee(this.qtg('setupDesc', '')),
+      meta: '🗓️ ' + esc(this.qtg('metaManches', '4 manches')) + ' &bull; ⏱ ' + esc(this.qtg('metaDuree', '20 à 60 min')),
+      corps: corps,
+      bouton: this.qtg('commencer', 'On commence !'),
+      onStart: function() {
+        self.noms = [
+          grille.querySelector('#nan-nom1').value.trim().slice(0, 40),
+          grille.querySelector('#nan-nom2').value.trim().slice(0, 40)
+        ];
+        self.genres = grille.lireGenres();
+        self.tirer();
+        self.phase = 'manche';
+        self.render();
+        smoothScroll(self.container, 'start');
+      }
+    });
+    this.container.appendChild(ecran.wrap);
+  };
+
+  // L'annonce d'une manche, avant sa première carte.
+  NouvelAnGame.prototype.renderManche = function() {
+    var self = this;
+    var c = this.cartes[this.idx];
+    var m = c.manche;
+    var wrap = el('div', 'quiz-engine funny-palier nan-palier nan-palier--' + m.id + ' animate-fade-in');
+    wrap.appendChild(el('div', 'funny-palier-emoji', m.emoji));
+    wrap.appendChild(el('div', 'funny-palier-rang', esc(this.qtg('mancheRang', 'Manche {{n}} sur {{total}}')
+      .replace('{{n}}', c.rang + 1).replace('{{total}}', this.manches.length))));
+    wrap.appendChild(el('h2', 'funny-palier-titre', esc(insecables(this.avecAnnee(this.qtg('manche_' + m.id, ''))))));
+    var desc = this.qtg('mancheDesc_' + m.id, '');
+    if (desc) wrap.appendChild(el('p', 'funny-palier-desc', esc(insecables(this.avecAnnee(desc)))));
+    var btn = el('button', 'btn btn-cta btn-gradient funny-palier-btn', esc(this.qtg('mancheBouton', 'C\'est parti')));
+    btn.type = 'button';
+    btn.addEventListener('click', function() { self.phase = 'carte'; self.render(); });
+    wrap.appendChild(btn);
+    this.container.appendChild(wrap);
+    smoothScroll(wrap, 'center');
+  };
+
+  NouvelAnGame.prototype.renderCarte = function() {
+    var self = this;
+    var c = this.cartes[this.idx];
+    var m = c.manche, q = c.q;
+    var total = this.cartes.length;
+    var wrap = el('div', 'quiz-engine nan-jeu quiz-question-enter');
+    var qui = c.debut >= 0 ? c.debut : 0;
+    renderProgressBar(wrap, this.idx, total,
+      this.qtg('progression', 'Carte {{n}}/{{total}}').replace('{{n}}', this.idx + 1).replace('{{total}}', total),
+      { marche: this.perso(qui), attend: this.perso(1 - qui) });
+
+    var carte = el('div', 'funny-carte nan-carte funny-carte--nan-' + m.id);
+    var etiquette = el('div', 'funny-carte-etiquette');
+    etiquette.innerHTML = '<span aria-hidden="true">' + m.emoji + '</span>' +
+      '<span>' + esc(this.avecAnnee(this.qtg('manche_' + m.id, ''))) + '</span>';
+    carte.appendChild(etiquette);
+
+    if (m.trophees) {
+      carte.appendChild(el('div', 'nan-trophee-emoji', '<span aria-hidden="true">' + (q.emoji || '🏆') + '</span>'));
+      carte.appendChild(el('h3', 'funny-carte-question nan-trophee-nom', esc(insecables(q.texte))));
+      if (q.question) carte.appendChild(el('p', 'nan-trophee-question', esc(insecables(this.avecAnnee(q.question)))));
+      var choix = el('div', 'nan-choix');
+      [0, 1, 2].forEach(function(k) {
+        var pris = self.trophees[q.id] === k;
+        var b = el('button', 'nan-choix-btn nan-choix-btn--' + (k === 2 ? 'deux' : self.perso(k)) + (pris ? ' is-choisi' : ''));
+        b.type = 'button';
+        b.setAttribute('aria-pressed', pris ? 'true' : 'false');
+        b.innerHTML = '<span class="nan-choix-nom">' + esc(k === 2 ? self.qtg('lesDeux', 'Les deux') : self.joueur(k)) + '</span>';
+        b.addEventListener('click', function() { self.donnerTrophee(q.id, k, b, choix); });
+        choix.appendChild(b);
+      });
+      carte.appendChild(choix);
+      carte.appendChild(el('p', 'funny-carte-consigne', esc(insecables(this.qtg('tropheeConsigne', '')))));
+    } else {
+      carte.appendChild(el('h3', 'funny-carte-question', esc(insecables(this.avecAnnee(q.texte)))));
+      var tour = el('div', 'nan-tour');
+      tour.innerHTML = badgeDeTour(this.joueur(c.debut),
+        insecables(this.qtg('commence', '{{nom}} commence').replace('{{nom}}', this.joueur(c.debut))),
+        this.perso(c.debut) === 'violet' ? 1 : 0);
+      carte.appendChild(tour);
+      carte.appendChild(el('p', 'funny-carte-consigne', esc(insecables(this.qtg('consigne', '')))));
+    }
+    wrap.appendChild(carte);
+
+    var nav = el('div', 'funny-nav');
+    if (this.idx > 0) {
+      var retour = el('button', 'btn btn-ghost funny-nav-retour');
+      retour.type = 'button';
+      retour.innerHTML = '&larr; ' + esc(this.qtg('precedente', tg('question.previousQuestion', 'Précédent')));
+      retour.addEventListener('click', function() { self.idx--; self.phase = 'carte'; self.render(); });
+      nav.appendChild(retour);
+    } else {
+      nav.appendChild(el('div'));
+    }
+    // Une carte de trophée avance quand on touche un prénom ; revenue par
+    // « Précédent », elle garde le choix fait et propose de passer.
+    if (!m.trophees || this.trophees[q.id] !== undefined) {
+      var suite = el('button', 'btn btn-cta funny-nav-suivante');
+      suite.type = 'button';
+      suite.innerHTML = esc(this.qtg(this.idx === total - 1 ? 'derniere' : 'suivante', 'Suivant')) + ' &rarr;';
+      suite.addEventListener('click', function() { self.avancer(); });
+      nav.appendChild(suite);
+    }
+    wrap.appendChild(nav);
+    this.container.appendChild(wrap);
+  };
+
+  NouvelAnGame.prototype.donnerTrophee = function(id, k, bouton, choix) {
+    var self = this, jeton = this.jeton;
+    if (this.verrou === jeton) return;
+    this.verrou = jeton;
+    this.trophees[id] = k;
+    choix.querySelectorAll('.nan-choix-btn').forEach(function(b) {
+      b.classList.remove('is-choisi'); b.setAttribute('aria-pressed', 'false');
+    });
+    bouton.classList.add('is-choisi');
+    bouton.setAttribute('aria-pressed', 'true');
+    setTimeout(function() { if (self.jeton === jeton) self.avancer(); }, this.calme() ? 0 : 420);
+  };
+
+  NouvelAnGame.prototype.avancer = function() {
+    var c = this.cartes[this.idx];
+    if (c) this.dejaVues[c.q.id] = true;
+    if (this.idx >= this.cartes.length - 1) {
+      this.phase = 'resolution';
+      this.render();
+      smoothScroll(this.container, 'start');
+      return;
+    }
+    this.idx++;
+    // Le passage à une nouvelle manche s'annonce.
+    this.phase = this.cartes[this.idx].rang !== c.rang ? 'manche' : 'carte';
+    this.render();
+  };
+
+  NouvelAnGame.prototype.renderResolution = function() {
+    var self = this;
+    var wrap = el('div', 'quiz-engine nan-resolution animate-fade-in');
+    wrap.appendChild(el('div', 'funny-palier-emoji', '<span aria-hidden="true">✨</span>'));
+    var titre = this.avecAnnee(this.qtg('resolutionTitre', 'Votre résolution de couple pour {{suivante}}'));
+    wrap.appendChild(el('h2', 'nan-resolution-titre', esc(insecables(titre))));
+    wrap.appendChild(el('p', 'nan-resolution-texte', esc(insecables(this.qtg('resolutionTexte', '')))));
+    var champ = document.createElement('textarea');
+    champ.id = 'nan-resolution';
+    champ.className = 'nan-champ';
+    champ.maxLength = 160;
+    champ.rows = 3;
+    champ.placeholder = this.qtg('resolutionExemple', '');
+    champ.setAttribute('aria-label', titre);
+    champ.value = this.resolution;
+    wrap.appendChild(champ);
+
+    var actions = el('div', 'nan-resolution-actions');
+    var voir = el('button', 'btn btn-cta btn-gradient btn-lg', esc(this.qtg('resolutionBouton', 'Voir notre bilan')));
+    voir.type = 'button';
+    voir.addEventListener('click', function() { self.finir(champ.value); });
+    var passer = el('button', 'btn btn-ghost', esc(this.qtg('resolutionPasser', 'Passer cette étape')));
+    passer.type = 'button';
+    passer.addEventListener('click', function() { self.finir(''); });
+    actions.appendChild(voir);
+    actions.appendChild(passer);
+    wrap.appendChild(actions);
+
+    var retour = el('button', 'btn btn-ghost nan-resolution-retour');
+    retour.type = 'button';
+    retour.innerHTML = '&larr; ' + esc(this.qtg('precedente', tg('question.previousQuestion', 'Précédent')));
+    retour.addEventListener('click', function() {
+      self.resolution = champ.value;
+      self.idx = self.cartes.length - 1;
+      self.phase = 'carte';
+      self.render();
+    });
+    wrap.appendChild(retour);
+    this.container.appendChild(wrap);
+  };
+
+  NouvelAnGame.prototype.finir = function(resolution) {
+    this.resolution = String(resolution || '').replace(/\s+/g, ' ').trim().slice(0, 160);
+    var trophees = {};
+    var self = this;
+    // L'ordre des trophées est celui de la partie.
+    this.cartes.forEach(function(c) {
+      if (c.manche.trophees && self.trophees[c.q.id] !== undefined) trophees[c.q.id] = self.trophees[c.q.id];
+    });
+    this.bilan = {
+      annee: this.annee, noms: this.noms.slice(), genres: this.genres.slice(),
+      trophees: trophees, resolution: this.resolution
+    };
+    this.garderBilan(this.bilan);
+    this.phase = 'bilan';
+    this.render();
+  };
+
+  // Le texte du bilan, pour le bouton de partage (qui l'envoie, ou le copie
+  // sur un ordinateur, avec l'adresse de la page au bout).
+  NouvelAnGame.prototype.texteBilan = function(b, listes) {
+    var self = this, lignes = [];
+    var noms = this.qtg('finNoms', '{{a}} et {{b}}').replace('{{a}}', this.joueur(0, b.noms)).replace('{{b}}', this.joueur(1, b.noms));
+    lignes.push('🥂 ' + this.avecAnnee(this.qtg('finTitre', 'Notre bilan {{annee}}'), b.annee) + ' · ' + noms);
+    [0, 1, 2].forEach(function(k) {
+      if (!listes[k].length) return;
+      var qui = k === 2 ? self.qtg('pourLesDeux', 'Pour vous deux') : self.joueur(k, b.noms);
+      lignes.push('🏆 ' + qui + avantPonct() + ': ' + listes[k].map(function(t) { return t.emoji + ' ' + t.texte; }).join(', '));
+    });
+    if (b.resolution) {
+      lignes.push('✨ ' + this.avecAnnee(this.qtg('resolutionFin', 'Notre résolution pour {{suivante}}'), b.annee) + avantPonct() + ': ' +
+        this.qtg('guillemets', '« {{t}} »').replace('{{t}}', b.resolution));
+    }
+    return lignes.join('\n');
+  };
+
+  NouvelAnGame.prototype.renderBilan = function() {
+    var self = this;
+    var b = this.bilan;
+    if (!b) { this.phase = 'setup'; this.render(); return; }
+    var listes = [[], [], []];
+    Object.keys(b.trophees).forEach(function(id) {
+      var t = self.parId[id], k = b.trophees[id];
+      if (t && listes[k]) listes[k].push(t);
+    });
+    var persos = [this.perso(0, b.genres), this.perso(1, b.genres)];
+    var wrap = el('div', 'quiz-engine quiz-result-card text-center nan-fin');
+
+    // Les deux personnages amoureux, l'année entre eux.
+    var duo = el('div', 'nan-fin-duo');
+    duo.setAttribute('aria-hidden', 'true');
+    duo.innerHTML = mascotteSvg(persos[0], 'amoureux', 84, null, 'nan-fin-perso') +
+      '<span class="nan-fin-annee">' + b.annee + '</span>' +
+      mascotteSvg(persos[1], 'amoureux', 92, null, 'nan-fin-perso');
+    wrap.appendChild(duo);
+    wrap.appendChild(el('h2', 'nan-fin-titre', esc(insecables(this.avecAnnee(this.qtg('finTitre', 'Notre bilan {{annee}}'), b.annee)))));
+    wrap.appendChild(el('p', 'nan-fin-noms', esc(this.qtg('finNoms', '{{a}} et {{b}}')
+      .replace('{{a}}', this.joueur(0, b.noms)).replace('{{b}}', this.joueur(1, b.noms)))));
+
+    if (listes[0].length || listes[1].length || listes[2].length) {
+      wrap.appendChild(el('h3', 'nan-fin-soustitre', esc(insecables(this.avecAnnee(this.qtg('tropheesTitre', 'Les trophées de l\'année'), b.annee)))));
+      var liste = function(ts) {
+        return '<ul class="nan-fin-liste">' + ts.map(function(t) {
+          return '<li><span class="nan-fin-liste-emoji" aria-hidden="true">' + t.emoji + '</span><span>' + esc(t.texte) + '</span></li>';
+        }).join('') + '</ul>';
+      };
+      var colonnes = el('div', 'nan-fin-colonnes');
+      [0, 1].forEach(function(j) {
+        var n = listes[j].length;
+        var col = el('div', 'nan-fin-col nan-fin-col--' + persos[j]);
+        col.innerHTML = '<p class="nan-fin-col-nom">' + esc(self.joueur(j, b.noms)) + '</p>' +
+          '<p class="nan-fin-col-nb">' + esc(self.qtg(n === 0 ? 'trophee0' : (n === 1 ? 'trophee1' : 'tropheesN'), '{{n}}').replace('{{n}}', n)) + '</p>' +
+          (n ? liste(listes[j]) : '<p class="nan-fin-vide">' + esc(insecables(self.qtg('aucunTrophee', ''))) + '</p>');
+        colonnes.appendChild(col);
+      });
+      wrap.appendChild(colonnes);
+      if (listes[2].length) {
+        var deux = el('div', 'nan-fin-deux');
+        deux.innerHTML = '<p class="nan-fin-col-nom">' + esc(this.qtg('pourLesDeux', 'Pour vous deux')) + '</p>' + liste(listes[2]);
+        wrap.appendChild(deux);
+      }
+    }
+
+    if (b.resolution) {
+      var res = el('div', 'nan-fin-resolution');
+      res.appendChild(el('p', 'nan-fin-soustitre', esc(insecables('✨ ' + this.avecAnnee(this.qtg('resolutionFin', 'Notre résolution pour {{suivante}}'), b.annee)))));
+      res.appendChild(el('blockquote', 'nan-fin-citation', esc(b.resolution)));
+      wrap.appendChild(res);
+    }
+    wrap.appendChild(el('p', 'nan-fin-voeux', esc(insecables(this.qtg('finVoeux', 'Bonne année à vous deux !')))));
+    var garde = this.qtg('finGarde', '');
+    if (garde) wrap.appendChild(el('p', 'nan-fin-garde', esc(insecables(this.avecAnnee(garde, b.annee)))));
+
+    var rejouer = el('button', 'btn btn-outline mt-5 mb-2', esc(this.qtg('rejouer', 'Une autre partie')));
+    rejouer.type = 'button';
+    rejouer.addEventListener('click', function() {
+      self.noms = b.noms.slice();
+      self.genres = b.genres.slice();
+      self.tirer();
+      self.phase = 'manche';
+      self.render();
+      smoothScroll(self.container, 'start');
+    });
+    wrap.appendChild(rejouer);
+
+    renderActionButtons(wrap, {
+      share: this.texteBilan(b, listes),
+      restart: function() { self.phase = 'setup'; self.render(); smoothScroll(self.container, 'start'); }
+    });
+    this.container.appendChild(wrap);
+    smoothScroll(wrap, 'center');
+  };
+
   // ─── Jeu « Oui ou non » spécial couple ────────────────────
   // Des situations, un OUI, un NON, et après chaque vote les chiffres de
   // tous les visiteurs, comme sur les dilemmes. Pas de score et pas de fin
@@ -15411,6 +15883,7 @@ var QuizEngine = (function() {
     JamaisGame: JamaisGame,
     QuiPourraitGame: QuiPourraitGame,
     RapiditeGame: RapiditeGame,
+    NouvelAnGame: NouvelAnGame,
     OuiNonGame: OuiNonGame,
     PhrasesGame: PhrasesGame,
     DixMaisGame: DixMaisGame,

@@ -229,6 +229,16 @@
         ]
       },
       {
+        "route": "jeuNouvelAn",
+        "titre": "Para hacer balance del año",
+        "texte": "En Nochevieja, o en los primeros días de enero, muchas parejas <a href=\"/es/juego-de-nochevieja-en-pareja/\">repasan el año que acaba de terminar</a>. Lo hemos convertido en un juego de Nochevieja en cuatro rondas, con premios y un propósito para los dos. Por ejemplo:",
+        "exemples": [
+          "¿Cuál fue nuestro mejor momento juntos este año?",
+          "¿Qué has aprendido de mí este año?",
+          "¿Un sitio al que te gustaría que fuéramos el año que viene?"
+        ]
+      },
+      {
         "article": "questions-couple-telephone-message",
         "titre": "A distancia, por teléfono o por mensaje",
         "texte": "Cuando os veis poco, las llamadas acaban pareciéndose todas: el día, el cansancio, buenas noches. Basta una pregunta un poco distinta para <a href=\"/es/juegos-por-whatsapp-para-parejas/\">reanimar la conversación</a>, y algunas incluso funcionan mejor <a href=\"/es/blog/preguntas-de-pareja-por-mensaje/\">por mensaje o por teléfono</a> que cara a cara. Y para saber en qué punto estáis, también hay <a href=\"/es/quiz-pareja-distancia/\">preguntas escritas para parejas a distancia</a>. Por ejemplo:",
@@ -296,6 +306,10 @@
       {
         "route": "jeuQuestionsRapides",
         "texte": "Una pregunta, una cuenta atrás, y quien da primero la respuesta correcta se lleva el punto."
+      },
+      {
+        "route": "jeuNouvelAn",
+        "texte": "El juego de Nochevieja: los recuerdos, los premios y el propósito del año, para hacer en pareja."
       },
       {
         "route": "quizTuPreferes",

@@ -257,10 +257,10 @@
     "metaDescription": "Anima gemella o solo una bella storia? 20 domande, un indice e un verdetto che non si limita a lusingare. Test gratuito, da solo o in due, senza registrazione."
   },
   "jeuxCouple": {
-    "title": "Giochi di coppia online: 14 giochi gratis da fare in due",
+    "title": "Giochi di coppia online: 15 giochi gratis da fare in due",
     "shortTitle": "Giochi di coppia",
-    "description": "Quattordici giochi da fare in due: le domande veloci, è un 10 ma, le frasi da completare, il sì o no, pro o contro, chi potrebbe, non ho mai, chi di noi due, preferiresti, i dilemmi, obbligo o verità, la versione piccante, la ruota delle penitenze e il tabellone.",
-    "metaDescription": "14 giochi di coppia gratis su un solo telefono: sì o no, pro o contro, chi di noi due, preferiresti, i dilemmi, obbligo o verità e la ruota delle penitenze. Senza registrazione."
+    "description": "Quindici giochi da fare in due: il bilancio dell'anno, le domande veloci, è un 10 ma, le frasi da completare, il sì o no, pro o contro, chi potrebbe, non ho mai, chi di noi due, preferiresti, i dilemmi, obbligo o verità, la versione piccante, la ruota delle penitenze e il tabellone.",
+    "metaDescription": "15 giochi di coppia gratis su un solo telefono: sì o no, pro o contro, chi di noi due, preferiresti, i dilemmi, obbligo o verità e la ruota delle penitenze. Senza registrazione."
   },
   "jeuGages": {
     "title": "Penitenze di coppia: il gioco della ruota, 140 penitenze",
@@ -414,6 +414,13 @@
     "shortTitle": "M'ama non m'ama",
     "description": "Togli i petali uno a uno: m'ama, non m'ama… Cosa dirà l'ultimo?",
     "metaDescription": "Sfoglia la margherita online, un petalo dopo l'altro: m'ama, non m'ama. Gratis, con il suo nome, anche nella versione francese: un poco, molto…"
+  },
+  "jeuNouvelAn": {
+    "title": "Giochi di Capodanno in coppia: il bilancio dell'anno a due",
+    "shortTitle": "Bilancio dell'anno a due",
+    "metaTitle": "Giochi di Capodanno in coppia: il bilancio dell'anno a due",
+    "metaDescription": "Un gioco di Capodanno in coppia: domande sui vostri ricordi, i premi dell'anno per ognuno di voi e un buon proposito a due. Gratis e senza registrazione.",
+    "description": "Quattro manche per fare il bilancio del vostro anno a due, la sera del 31 dicembre."
   },
   "jeuOuiNon": {
     "title": "Gioco Sì o No per coppie online - 120 domande",
