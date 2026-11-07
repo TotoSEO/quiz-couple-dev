@@ -830,7 +830,7 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/test-perche-il-mio-ex-mi-ha-lasciato/"/>
     <xhtml:link rel="alternate" hreflang="nl" href="https://quiz-couple.com/nl/waarom-heeft-mijn-ex-het-uitgemaakt/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/pourquoi-mon-ex-m-a-quitte/"/>
-    <lastmod>2026-11-06</lastmod>
+    <lastmod>2026-11-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -909,6 +909,19 @@
     <xhtml:link rel="alternate" hreflang="nl" href="https://quiz-couple.com/nl/seksuele-compatibiliteit-test/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/test-compatibilite-sexuelle/"/>
     <lastmod>2026-11-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://quiz-couple.com/es/test-quien-ama-mas/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/test-qui-aime-le-plus-l-autre/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://quiz-couple.com/en/who-loves-more-quiz/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://quiz-couple.com/es/test-quien-ama-mas/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://quiz-couple.com/de/wer-liebt-mehr-test/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/test-chi-ama-di-piu/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://quiz-couple.com/nl/wie-houdt-het-meest-van-wie-test/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/test-qui-aime-le-plus-l-autre/"/>
+    <lastmod>2026-11-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
