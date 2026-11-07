@@ -531,6 +531,12 @@
     "metaDescription": "Test di compatibilità sessuale in coppia: 20 domande su desiderio, tenerezza, novità e ritmo, con un punteggio per dimensione. Gratis.",
     "description": "Venti domande in due sul desiderio, la tenerezza e il modo di parlarne, per vedere dove vi incontrate."
   },
+  "testQuiAime": {
+    "title": "Test: chi ama di più nella coppia? 20 domande",
+    "shortTitle": "Chi ama di più?",
+    "description": "Venti domande sui piccoli gesti di ogni giorno, da soli o in due, per vedere da che parte pende la bilancia.",
+    "metaDescription": "Chi ama di più nella tua coppia? Un test di 20 domande sui piccoli gesti di ogni giorno, da fare da soli o in due, ognuno per conto suo."
+  },
   "speciauxCouple": {
     "title": "Quiz speciali da fare in coppia: Natale, Halloween…",
     "shortTitle": "Quiz speciali",

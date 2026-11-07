@@ -1,0 +1,59 @@
+{
+  "hero": {
+    "badge": "Quiz alone or together",
+    "title": "Who loves more in your relationship? The 20-question quiz",
+    "titleHighlight": "Who loves more",
+    "description": "The first text in the morning, the apologies after a fight, the surprises, the compromises... Answer on your own, or each on your side, and see which way the scale tips.",
+    "subtitle": "Twenty questions, four to eight minutes, free and no sign-up",
+    "jumpBtn": "Take the quiz"
+  },
+  "section1": {
+    "title": "How does the “who loves more” quiz work?",
+    "intro": "This quiz asks twenty very simple questions about your life together. For each one, you answer “Me”, your partner's name, or “Both of us equally”.",
+    "p1": "For example: “Who makes the first move to make up after a fight?” If it's almost always you, you answer “Me”. If it's your partner, you pick their name. And if it depends, it's “Both of us equally”.",
+    "p2": "Not all questions weigh the same. Sending the first text in the morning counts less than compromising on trips, or moving to a new city for the other. At the end, the quiz adds everything up and shows each person's share, like a scale. On your own, it's your view of the relationship. Together, you each answer without seeing the other's screen, and the quiz also compares your answers.",
+    "p3": "One important thing: the quiz looks at who <strong>shows</strong> love more, not who feels more of it. Some people are deeply in love and forget every birthday! That's often where it all plays out, actually, because <a href=\"/en/love-language-test-couple/\">everyone shows love in their own way</a>, and not always the way the other expects."
+  },
+  "section2": {
+    "title": "Is it a problem if one loves more than the other?",
+    "p1": "No, and it's actually very common. In most couples, one of the two sends more texts, plans more, makes the first move more often. And it shifts over time: a big project at work, a baby, a loss, and the scale tips the other way for a few months.",
+    "p2": "What weighs is when the imbalance sets in for good and the other <a href=\"/en/blog/boyfriend-doesnt-make-effort/\">barely makes an effort anymore</a>. The sociologist Willard Waller was already talking about it in 1938: it's the <strong>principle of least interest</strong>. Whoever is less invested has more power in the relationship, because they have less to lose. In 2006, an American study that followed couples for several years (Sprecher, Schmeeckle and Felmlee) confirmed it: imbalance is common, it changes little over time, and couples where <a href=\"/en/healthy-relationship-test/\">both are equally invested</a> are happier and more stable. An older study, of 231 student couples in Boston followed for two years, had come to the same conclusion.",
+    "p3": "And there's a trap: we see what we do ourselves much more clearly. In a 1979 study, Michael Ross and Fiore Sicoly asked 37 married couples who took care of various parts of life together. Each spouse claimed a bigger share than the other gave them, simply because we remember our own efforts better. It's true for chores and for <a href=\"/en/mental-load-test-couples/\">keeping track of everything at home</a>, and it's true for gestures of love. That's why the version for two is the most interesting!"
+  },
+  "section3": {
+    "title": "How do you read your result?",
+    "p1": "The result gives each person's share in your answers, as a percentage. Together, the quiz adds up both sets of answers: if you each answer “Me” to every question, the scale stays in the middle... but you don't agree on anything!",
+    "p2": "So the result for two also says how many questions you agree on, and shows the questions where you each think you do more, then the ones where you each think the other does more. Those last ones are often the sweetest to read.",
+    "p3": "If the scale clearly tips to one side, it's not a grade for your relationship. It's more of a good opportunity to talk about it, without keeping score: what makes each of you feel loved? And what's a little missing right now?",
+    "headerScore": "Share of the one who does more",
+    "headerLevel": "Result",
+    "headerAnalysis": "What it means",
+    "row1Score": "50 to 56%",
+    "row1Level": "Both of you equally",
+    "row1Analysis": "You each give in your own way, and the scale holds.",
+    "row2Score": "57 to 66%",
+    "row2Level": "A little more on one side",
+    "row2Analysis": "One of you thinks of the little gestures a bit more often. That's the case for lots of couples.",
+    "row3Score": "67% and up",
+    "row3Level": "Clearly more on one side",
+    "row3Analysis": "One of you carries most of the gestures. It's worth talking about."
+  },
+  "seo": {
+    "faqTitle": "Your questions about the “who loves more” quiz",
+    "faq1Q": "How can you tell who loves more in a relationship?",
+    "faq1A": "You can't measure love itself, but you can look at the gestures: who makes the first move, who thinks of surprises, who compromises. That's what this quiz does, with twenty questions that weigh more or less depending on what they say. Together, it also shows whether you see the scale the same way.",
+    "faq2Q": "Who loves more in a relationship, the man or the woman?",
+    "faq2A": "No study says one gender loves more than the other. A 2011 study (Ackerman, Griskevicius and Li) did find something surprising, though: men are more often the first to say “I love you”. On average, they think about saying it six weeks before women do, even though most people believe the opposite! The quiz works just as well for a man and a woman as for two men or two women.",
+    "faq3Q": "Is it normal for one person to love more than the other?",
+    "faq3A": "Yes, and it happens in most couples at one point or another. What matters is that the imbalance doesn't set in for good, and that the one who gives more doesn't feel alone in carrying the relationship.",
+    "faq4Q": "Can I take the quiz on my own?",
+    "faq4A": "Yes. On your own, you answer for both of you, based on what you experience, and you see which way the scale tips in your eyes. Together, it's even more telling: you each answer separately, and the quiz shows whether you agree.",
+    "faq5Q": "How does the quiz work for two?",
+    "faq5A": "You enter both names, then the first person answers the twenty questions. They hand over the phone, and the second answers in turn, without seeing the other's answers. At the result, both sets of answers appear side by side.",
+    "faq6Q": "What if I'm always the one doing everything?",
+    "faq6A": "First, talk about it without blaming: your partner may not see everything you do, or may show love in other ways. Say what would make you happy, with concrete examples. If nothing changes for months and you feel alone in carrying the relationship, that's a sign to take seriously."
+  },
+  "jsonLd": {
+    "about": "Who loves more in a relationship"
+  }
+}

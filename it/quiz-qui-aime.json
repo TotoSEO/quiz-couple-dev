@@ -1,0 +1,59 @@
+{
+  "hero": {
+    "badge": "Test da soli o in due",
+    "title": "Chi ama di più nella coppia? Il test in 20 domande",
+    "titleHighlight": "Chi ama di più",
+    "description": "Il primo messaggio del mattino, le scuse dopo un litigio, le sorprese, i compromessi... Rispondi da solo, o ognuno per conto suo, e guarda da che parte pende la bilancia.",
+    "subtitle": "Venti domande, da quattro a otto minuti, gratis e senza registrazione",
+    "jumpBtn": "Fai il test"
+  },
+  "section1": {
+    "title": "Come funziona il test «chi ama di più»?",
+    "intro": "Questo test fa venti domande semplicissime sulla vostra vita di coppia. Per ognuna rispondi «Io», il nome del tuo partner o «Tutti e due allo stesso modo».",
+    "p1": "Per esempio: «Chi fa il primo passo per fare pace dopo un litigio?». Se sei quasi sempre tu, rispondi «Io». Se è il tuo partner, scegli il suo nome. E se dipende, è «Tutti e due allo stesso modo».",
+    "p2": "Non tutte le domande pesano uguale. Mandare il primo messaggio del mattino conta meno che fare compromessi sulle vacanze, o cambiare città per l'altro. Alla fine il test somma tutto e mostra la parte di ciascuno, come una bilancia. Da solo, è la tua visione della coppia. In due, ognuno risponde senza vedere lo schermo dell'altro, e il test confronta anche le vostre risposte.",
+    "p3": "Una cosa importante: il test guarda chi <strong>mostra</strong> di più il suo amore, non chi ne prova di più. C'è gente innamoratissima che si dimentica tutti i compleanni! Ed è proprio lì che spesso si gioca tutto, perché <a href=\"/it/test-linguaggio-amore-coppia/\">ognuno mostra il suo amore a modo suo</a>, e non sempre come l'altro si aspetta."
+  },
+  "section2": {
+    "title": "È grave se uno ama più dell'altro?",
+    "p1": "No, anzi, è molto comune. Nella maggior parte delle coppie, uno dei due manda più messaggi, organizza di più e fa più spesso il primo passo. E cambia con i periodi: un grosso progetto al lavoro, un bambino, un lutto, e la bilancia pende dall'altra parte per qualche mese.",
+    "p2": "Quello che pesa è quando lo squilibrio si installa per sempre e l'altro <a href=\"/it/blog/ragazzo-non-si-impegna/\">non fa quasi più nessuno sforzo</a>. Il sociologo Willard Waller ne parlava già nel 1938: è il <strong>principio del minimo interesse</strong>. Chi si impegna di meno ha più potere nella coppia, perché ha meno da perdere. Nel 2006 uno studio americano che ha seguito delle coppie per diversi anni (Sprecher, Schmeeckle e Felmlee) lo ha confermato: lo squilibrio è frequente, cambia poco nel tempo, e le coppie in cui <a href=\"/it/test-relazione-sana/\">tutti e due si impegnano allo stesso modo</a> sono più felici e più stabili. Uno studio più vecchio, su 231 coppie di studenti di Boston seguite per due anni, era già arrivato alla stessa conclusione.",
+    "p3": "E poi c'è una trappola: vediamo molto meglio quello che facciamo noi. In uno studio del 1979, Michael Ross e Fiore Sicoly hanno chiesto a 37 coppie sposate chi si occupava di più di varie cose della vita insieme. Ognuno si attribuiva una parte più grande di quella che gli dava l'altro, semplicemente perché ci ricordiamo meglio dei nostri sforzi. Vale per le faccende e per <a href=\"/it/test-carico-mentale-coppia/\">pensare a tutto in casa</a>, e vale per i gesti d'amore. Per questo la versione in due è la più interessante!"
+  },
+  "section3": {
+    "title": "Come leggere il risultato?",
+    "p1": "Il risultato dà la parte di ciascuno nelle vostre risposte, in percentuale. In due, il test somma le risposte di tutti e due: se ognuno risponde «Io» a tutte le domande, la bilancia resta in mezzo... ma non siete d'accordo su niente!",
+    "p2": "Così il risultato in due dice anche su quante domande siete d'accordo, e mostra le domande in cui ognuno pensa di fare di più, poi quelle in cui ognuno pensa che l'altro faccia di più. Queste ultime sono spesso le più belle da leggere.",
+    "p3": "Se la bilancia pende chiaramente da una parte, non è un voto alla vostra coppia. È piuttosto una buona occasione per parlarne, senza fare i conti: che cosa fa sentire amato ciascuno di voi? E che cosa manca un po' in questo periodo?",
+    "headerScore": "Parte di chi fa di più",
+    "headerLevel": "Risultato",
+    "headerAnalysis": "Che cosa vuol dire",
+    "row1Score": "da 50 a 56 %",
+    "row1Level": "Tutti e due allo stesso modo",
+    "row1Analysis": "Ognuno dà a modo suo, e la bilancia regge.",
+    "row2Score": "da 57 a 66 %",
+    "row2Level": "Un po' di più da una parte",
+    "row2Analysis": "Uno dei due pensa un po' più spesso ai piccoli gesti. Succede a tante coppie.",
+    "row3Score": "67 % e oltre",
+    "row3Level": "Chiaramente di più da una parte",
+    "row3Analysis": "Uno dei due si occupa di quasi tutti i gesti. Vale la pena parlarne."
+  },
+  "seo": {
+    "faqTitle": "Le tue domande sul test «chi ama di più»",
+    "faq1Q": "Come capire chi ama di più in una coppia?",
+    "faq1A": "L'amore in sé non si può misurare, ma i gesti sì: chi fa il primo passo, chi pensa alle sorprese, chi fa compromessi. È quello che fa questo test, con venti domande che pesano più o meno a seconda di quello che dicono. In due, mostra anche se vedete la bilancia allo stesso modo.",
+    "faq2Q": "Chi ama di più in una coppia, l'uomo o la donna?",
+    "faq2A": "Nessuno studio dice che un genere ami più dell'altro. Uno studio del 2011 (Ackerman, Griskevicius e Li) ha però mostrato una cosa sorprendente: sono più spesso gli uomini a dire «ti amo» per primi. In media pensano di dirlo sei settimane prima delle donne, anche se la maggior parte delle persone crede il contrario! Il test funziona allo stesso modo per un uomo e una donna, per due uomini o per due donne.",
+    "faq3Q": "È normale che uno ami più dell'altro?",
+    "faq3A": "Sì, e capita nella maggior parte delle coppie prima o poi. Quello che conta è che lo squilibrio non si installi per sempre, e che chi dà di più non si senta solo a portare avanti la coppia.",
+    "faq4Q": "Si può fare il test da soli?",
+    "faq4A": "Sì. Da solo, rispondi per tutti e due, in base a quello che vivi, e vedi da che parte pende la bilancia secondo te. In due è ancora più interessante: ognuno risponde per conto suo, e il test mostra se siete d'accordo.",
+    "faq5Q": "Come funziona il test in due?",
+    "faq5A": "Scrivete i vostri due nomi, poi il primo risponde alle venti domande. Passa il telefono, e il secondo risponde a sua volta, senza vedere le risposte dell'altro. Nel risultato, le due serie di risposte compaiono una accanto all'altra.",
+    "faq6Q": "Che cosa fare se sono sempre io a fare tutto?",
+    "faq6A": "Prima di tutto, parlarne senza rimproveri: forse il tuo partner non vede tutto quello che fai, o mostra il suo amore in un altro modo. Di' che cosa ti farebbe piacere, con esempi concreti. Se per mesi non cambia niente e ti senti solo a portare avanti la coppia, è un segnale da prendere sul serio."
+  },
+  "jsonLd": {
+    "about": "Chi ama di più in una coppia"
+  }
+}

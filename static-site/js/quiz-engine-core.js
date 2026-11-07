@@ -2393,6 +2393,7 @@ var QuizEngine = (function() {
     { type: 'test', key: 'duree-celibat', icon: '⏳', route: 'testDureeCelibat' },
     { type: 'test', key: 'est-ce-le-bon', icon: '🔑', route: 'testEstCeLeBon' },
     { type: 'test', key: 'compatibilite-sexuelle', icon: '🔥', route: 'testCompatSexuelle' },
+    { type: 'test', key: 'qui-aime', icon: '💞', route: 'testQuiAime' },
     // Les quiz speciaux d'Halloween (16 octobre 2026), ranges avec les quiz
     { type: 'quiz', key: 'serial-killer', icon: '🔪', route: 'quizSerialKiller' },
     { type: 'quiz', key: 'film-horreur', icon: '🎬', route: 'quizMortFilmHorreur' },
@@ -2541,7 +2542,7 @@ var QuizEngine = (function() {
     // L'emprise appelle le regard sur la relation, puis sur l'autre.
     'emprise':         ['testToxic', 'testPervers', 'testLoveBombing'],
     'personnalite':    ['testLangageAmour', 'testAttachement', 'testCouple'],
-    'langage-amour':   ['testPersonnalite', 'testAttachement', 'testCouple'],
+    'langage-amour':   ['testQuiAime', 'testPersonnalite', 'testAttachement'],
     'attachement':     ['testPersonnalite', 'testLangageAmour', 'testConfiance'],
 
     // ── Tests à lecture symbolique ──────────────────────────────────────
@@ -2564,6 +2565,7 @@ var QuizEngine = (function() {
     // moment où elles sont le plus disposées à enchaîner : on garde le ton.
     'coquin':                  ['jeuActionVeriteHot', 'testCompatSexuelle', 'jeuGages'],
     'compatibilite-sexuelle':  ['quizCoquin', 'jeuActionVeriteHot', 'testCompatibilite'],
+    'qui-aime':                ['testLangageAmour', 'testCommonPoints', 'testCoupleSain'],
     // Halloween : d'un quiz special a l'autre, puis un jeu
     'serial-killer':    ['quizSuperVilain', 'quizMortFilmHorreur', 'quizPossession'],
     'film-horreur':     ['quizPossession', 'quizSerialKiller', 'quizDuoVilains'],
@@ -14308,6 +14310,342 @@ var QuizEngine = (function() {
   };
 
   // ═══════════════════════════════════════════════════════════
+  // QUI AIME QUIZ - « Qui aime le plus l'autre ? » (6 novembre 2026)
+  // Vingt questions de tous les jours sur les gestes d'amour (le premier
+  // message, les excuses, les surprises, les compromis), avec trois
+  // reponses, toujours les memes : « Moi », le prenom de l'autre, « Autant
+  // l'un que l'autre ». Chaque question a un poids de 1 a 3 (q{N}_poids dans
+  // gd.json) : faire le premier pas apres une dispute pese plus qu'envoyer
+  // le premier message du matin. Une reponse donne le poids de la question
+  // a la personne qu'elle designe, la moitie a chacun pour « autant ». La
+  // part de chacun dit de quel cote penche la balance : a six points de
+  // 50 % pres, c'est l'egalite ; jusqu'a seize, « un peu plus » ; au-dela,
+  // « le plus » (seuils du chargeur). Seul(e) : une serie, la vue d'une
+  // personne sur son couple. A deux : chacun repond a toute la serie de son
+  // cote, le telephone change de main une fois, le resultat additionne les
+  // deux series, puis dit sur combien de questions les deux sont d'accord,
+  // ou chacun pense en faire plus, et ou chacun pense que l'autre en fait
+  // plus. Pas de mode a distance : on se passe le telephone.
+  // ═══════════════════════════════════════════════════════════
+  function QuiAimeQuiz(config) {
+    this.container = config.container;
+    this.prefix = config.prefix;
+    this.lang = config.lang || 'fr';
+    this.questions = config.questions || [];
+    this.quizType = config.quizType || 'qui-aime';
+    this.icone = config.icone || '💞';
+    this.seuils = config.seuils || { egal: 6, unPeu: 16 };
+    this.modes = { solo: true, duo: true };
+    this.mode = null;
+    this.phase = 'modes';
+    this.players = [{ name: '', gender: null }, { name: '', gender: null }];
+    this.joueurCourant = 0;
+    this.currentQ = 0;
+    this.answers = { p1: [], p2: [] };
+    this.render();
+  }
+
+  QuiAimeQuiz.prototype.etg = saisonEtg;
+  QuiAimeQuiz.prototype.texteQuestion = saisonTexteQuestion;
+  QuiAimeQuiz.prototype.couleur = saisonCouleur;
+  QuiAimeQuiz.prototype.render = saisonRender;
+  QuiAimeQuiz.prototype.renderModes = saisonRenderModes;
+  QuiAimeQuiz.prototype.boutonRetourModes = saisonBoutonRetourModes;
+  QuiAimeQuiz.prototype.renderRelais = saisonRenderRelais;
+
+  // Un texte du moteur, prenoms remplaces : {{nom}} est celui vers qui la
+  // balance penche, {{autre}} l'autre.
+  QuiAimeQuiz.prototype.texte = function(cle, nom, autre) {
+    return this.etg(cle, '').replace(/\{\{nom\}\}/g, nom || '').replace(/\{\{autre\}\}/g, autre || '');
+  };
+
+  QuiAimeQuiz.prototype.renderSetup = function() {
+    var self = this;
+    var duo = this.mode === 'duo';
+    // Seul(e) aussi, les deux prenoms : une reponse dit « Moi » ou le prenom
+    // de l'autre, et le resultat met les deux face a face. Le genre, facultatif,
+    // choisit le personnage de chacun.
+    var genres = [null, null];
+    var grille = el('div', 'quiz-setup-grid');
+    var libelles = duo ? [null, null] : [this.etg('libelleMoi', 'Votre prénom'), this.etg('libelleAutre', 'Le prénom de votre partenaire')];
+    [0, 1].forEach(function(i) {
+      grille.appendChild(cartePrenom({
+        rang: i, id: 'qa-nom' + (i + 1), genre: true, libelle: libelles[i] || '',
+        surGenre: function(g) { genres[i] = g; }
+      }).el);
+    });
+    var corps = [];
+    var avert = this.etg('avertissement', '');
+    if (avert) corps.push(el('p', 'qa-avert', esc(avert)));
+    corps.push(grille);
+    var ecran = ecranDepart({
+      icone: this.icone,
+      poses: ['amoureux', 'amoureux'],
+      titre: duo ? this.etg('setupTitreDuo', '') : this.etg('setupTitreSolo', ''),
+      desc: duo ? this.etg('setupDescDuo', '') : this.etg('setupDescSolo', ''),
+      corps: corps,
+      meta: pastilleMeta(this.questions.length, null, duo ? this.etg('dureeDuo', '8 min') : this.etg('dureeSolo', '4 min')),
+      bouton: this.etg('commencer', 'Commencer le test'),
+      onStart: function() {
+        var total = self.questions.length;
+        self.answers = { p1: new Array(total).fill(null), p2: new Array(total).fill(null) };
+        self.joueurCourant = 0;
+        self.currentQ = 0;
+        self.players = [0, 1].map(function(i) {
+          var v = grille.querySelector('#qa-nom' + (i + 1)).value.trim();
+          var repli = duo ? tg('playerSetup.player' + (i + 1), 'Joueur ' + (i + 1))
+            : self.etg(i === 0 ? 'moiDefaut' : 'autreDefaut', i === 0 ? 'Vous' : "L'autre");
+          return { name: v || repli, gender: genres[i] || null, saisi: !!v };
+        });
+        self.phase = duo ? 'relais' : 'playing';
+        self.render();
+        smoothScroll(self.container, 'start');
+      }
+    });
+    var retour = this.boutonRetourModes();
+    if (retour) ecran.wrap.appendChild(retour);
+    this.container.appendChild(ecran.wrap);
+  };
+
+  // Les trois reponses, dans le meme ordre a chaque question : « Moi », le
+  // prenom de l'autre, puis « Autant l'un que l'autre ».
+  QuiAimeQuiz.prototype.reponses = function(j) {
+    return [
+      { id: 'moi', texte: this.etg('optMoi', 'Moi') },
+      { id: 'autre', texte: this.players[1 - j].name },
+      { id: 'autant', texte: this.etg('optAutant', "Autant l'un que l'autre") }
+    ];
+  };
+
+  QuiAimeQuiz.prototype.renderQuestion = function() {
+    var self = this;
+    var q = this.questions[this.currentQ];
+    var total = this.questions.length;
+    var duo = this.mode === 'duo';
+    var j = this.joueurCourant;
+    var cle = j === 0 ? 'p1' : 'p2';
+    var wrap = el('div', 'quiz-engine quiz-question-enter');
+    renderProgressBar(wrap, this.currentQ, total,
+      tg('question.question', 'Question') + ' ' + (this.currentQ + 1) + '/' + total,
+      persosBarre(this.players, j));
+    if (duo) {
+      var c = this.couleur(j);
+      var badge = el('div', 'text-center mb-4');
+      badge.innerHTML = '<span class="badge" style="background:' + c.bg + ';color:' + c.text + '">' + esc(this.players[j].name) + '</span>';
+      wrap.appendChild(badge);
+    }
+    wrap.appendChild(el('h3', 'text-xl font-semibold mb-6 text-center', esc(this.texteQuestion(q))));
+
+    var liste = el('div', 'space-y-2');
+    var lettres = ['A', 'B', 'C'];
+    this.reponses(j).forEach(function(opt, k) {
+      var b = el('button', 'quiz-option');
+      b.type = 'button';
+      b.innerHTML = '<span class="quiz-option-letter">' + lettres[k] + '</span><span>' + esc(opt.texte) + '</span>';
+      b.style.animationDelay = (k * 60) + 'ms';
+      b.addEventListener('click', function() {
+        if (!answerLock(self)) return;
+        b.classList.add('selected');
+        liste.querySelectorAll('.quiz-option').forEach(function(x) {
+          if (x !== b) x.style.opacity = '0.5';
+          x.style.pointerEvents = 'none';
+        });
+        setTimeout(function() {
+          self.answers[cle][self.currentQ] = opt.id;
+          if (self.currentQ < total - 1) { self.currentQ++; self.phase = 'playing'; }
+          else if (duo && j === 0) { self.joueurCourant = 1; self.currentQ = 0; self.phase = 'relais'; }
+          else { self.phase = 'results'; }
+          self.render();
+        }, DELAI_REPONSE);
+      });
+      liste.appendChild(b);
+    });
+    wrap.appendChild(liste);
+    this.container.appendChild(wrap);
+  };
+
+  // Qui une reponse designe, pour celui qui repond (j) : 0 ou 1, -1 pour
+  // « autant », null sans reponse.
+  QuiAimeQuiz.prototype.cible = function(rep, j) {
+    if (rep === 'moi') return j;
+    if (rep === 'autre') return 1 - j;
+    if (rep === 'autant') return -1;
+    return null;
+  };
+
+  QuiAimeQuiz.prototype.calcul = function() {
+    var self = this;
+    var duo = this.mode === 'duo';
+    var pts = [0, 0];
+    var accords = 0, n = 0;
+    var details = [];
+    this.questions.forEach(function(q, i) {
+      var w = q.poids || 1;
+      var reps = duo ? [self.answers.p1[i], self.answers.p2[i]] : [self.answers.p1[i]];
+      var cibles = reps.map(function(r, k) { return self.cible(r, k); });
+      cibles.forEach(function(c) {
+        if (c === null) return;
+        if (c === -1) { pts[0] += w / 2; pts[1] += w / 2; }
+        else pts[c] += w;
+      });
+      var d = { q: q, reps: reps, cibles: cibles };
+      if (duo && cibles[0] !== null && cibles[1] !== null) {
+        n++;
+        d.accord = cibles[0] === cibles[1];
+        if (d.accord) accords++;
+        d.chacunMoi = cibles[0] === 0 && cibles[1] === 1;
+        d.chacunAutre = cibles[0] === 1 && cibles[1] === 0;
+      }
+      details.push(d);
+    });
+    var somme = pts[0] + pts[1];
+    var part = somme ? Math.round(pts[0] / somme * 100) : 50;
+    var ecart = Math.abs(part - 50);
+    var cle = ecart <= this.seuils.egal ? 'egal' : (ecart <= this.seuils.unPeu ? 'unPeu' : 'plus');
+    return { part: [part, 100 - part], cle: cle, tete: cle === 'egal' ? null : (part > 50 ? 0 : 1), accords: accords, n: n, details: details };
+  };
+
+  // Le titre et le texte du verdict. A deux, ou seul(e) quand la balance
+  // penche du cote de l'autre, {{nom}} est cette personne ; seul(e), quand
+  // elle penche de son propre cote, la personne lit la version « vous ».
+  QuiAimeQuiz.prototype.verdict = function(res) {
+    var duo = this.mode === 'duo';
+    var p = this.players;
+    if (res.cle === 'egal') {
+      return { titre: this.etg('r_egal_t', ''), texte: this.texte(duo ? 'r_egal_d' : 'r_egal_d_solo', p[0].name, p[1].name) };
+    }
+    var nom = p[res.tete].name, autre = p[1 - res.tete].name;
+    if (!duo && res.tete === 0) {
+      return { titre: this.texte('r_' + res.cle + '_t_vous', '', autre), texte: this.texte('r_' + res.cle + '_d_vous', '', autre), vous: true };
+    }
+    return { titre: this.texte('r_' + res.cle + '_t', nom, autre), texte: this.texte('r_' + res.cle + (duo ? '_d' : '_d_solo'), nom, autre) };
+  };
+
+  // La balance : les deux personnages face a face, la part de chacun, et la
+  // barre partagee dessous. Deux personnes du meme genre ont le meme
+  // personnage : la seconde part prend alors la teinte foncee.
+  QuiAimeQuiz.prototype.balance = function(res) {
+    var persos = persosDe(this.players);
+    var teintes = [persos[0], persos[1] === persos[0] ? persos[1] + '-fonce' : persos[1]];
+    var poses = res.tete === null ? ['amoureux', 'amoureux'] : (res.tete === 0 ? ['amoureux', 'joie'] : ['joie', 'amoureux']);
+    var lang = langueDuMoteur();
+    var self = this;
+    var noms = [this.mode === 'duo' || this.players[0].saisi ? this.players[0].name : this.etg('moiDefaut', 'Vous'), this.players[1].name];
+    var cote = function(k) {
+      return '<div class="qa-cote qa-cote--' + teintes[k] + '">' +
+        '<span class="qa-masc" aria-hidden="true">' + mascotteSvg(persos[k], poses[k], k === 0 ? 76 : 82) + '</span>' +
+        '<span class="qa-nb">' + pctTexte(lang, res.part[k]) + '</span>' +
+        '<span class="qa-nom">' + esc(noms[k]) + '</span></div>';
+    };
+    var bloc = el('div', 'qa-balance-bloc');
+    bloc.innerHTML = '<div class="qa-balance">' + cote(0) + '<span class="qa-coeur" aria-hidden="true">💞</span>' + cote(1) + '</div>' +
+      '<div class="qa-barre" role="img" aria-label="' + esc(noms[0] + ' ' + pctTexte(lang, res.part[0]) + ', ' + noms[1] + ' ' + pctTexte(lang, res.part[1])) + '">' +
+      '<span class="qa-part qa-part--' + teintes[0] + '" style="width:0%"></span><span class="qa-part qa-part--' + teintes[1] + '" style="width:0%"></span></div>' +
+      '<p class="qa-legende">' + esc(this.etg('balanceLegende', '')) + '</p>';
+    setTimeout(function() {
+      var parts = bloc.querySelectorAll('.qa-part');
+      if (parts[0]) parts[0].style.width = res.part[0] + '%';
+      if (parts[1]) parts[1].style.width = res.part[1] + '%';
+    }, 120);
+    return bloc;
+  };
+
+  // Une liste de questions, avec la reponse de chacun telle qu'il l'a vue.
+  QuiAimeQuiz.prototype.listeReponses = function(details) {
+    var self = this;
+    var duo = this.mode === 'duo';
+    var persos = persosDe(this.players);
+    var ul = el('ul', 'ech-liste');
+    details.forEach(function(d) {
+      var classe = duo ? (d.accord ? 'pareil' : (d.chacunAutre ? 'proche' : 'loin')) : '';
+      var li = el('li', 'ech-liste-item' + (classe ? ' ech-liste-item--' + classe : ''));
+      var html = '<p class="ech-liste-q">' + esc(self.texteQuestion(d.q)) + '</p>';
+      d.reps.forEach(function(rep, k) {
+        var opt = null;
+        self.reponses(k).forEach(function(o) { if (o.id === rep) opt = o; });
+        if (!opt) return;
+        var qui = duo ? self.players[k].name : self.etg('reponseSolo', 'Votre réponse');
+        html += '<p class="ech-liste-r"><b class="ech-nom--' + persos[k] + '">' + esc(qui) + '</b> ' + esc(opt.texte) + '</p>';
+      });
+      li.innerHTML = html;
+      ul.appendChild(li);
+    });
+    return ul;
+  };
+
+  QuiAimeQuiz.prototype.blocListe = function(titre, note, details) {
+    if (!details.length) return null;
+    var b = el('div', 'ech-ecarts');
+    b.appendChild(el('h3', 'ech-bloc-titre', esc(titre)));
+    if (note) b.appendChild(el('p', 'qa-note', esc(note)));
+    b.appendChild(this.listeReponses(details));
+    return b;
+  };
+
+  QuiAimeQuiz.prototype.renderResults = function() {
+    var self = this;
+    var duo = this.mode === 'duo';
+    var res = this.calcul();
+    var v = this.verdict(res);
+    var p = this.players;
+    var wrap = el('div', 'quiz-engine quiz-result-card qa-resultat text-center');
+    wrap.appendChild(el('p', 'ech-res-noms', esc(duo || p[0].saisi ? p[0].name + ' & ' + p[1].name : p[1].name)));
+    wrap.appendChild(el('h2', 'text-2xl font-bold mb-2', esc(v.titre)));
+    wrap.appendChild(this.balance(res));
+    if (v.texte) wrap.appendChild(el('p', 'text-muted-foreground mb-6 qa-texte', escRiche(v.texte)));
+
+    if (duo) {
+      // Sur combien de questions les deux voient la meme personne.
+      var taux = res.n ? res.accords / res.n : 0;
+      var accord = el('div', 'qa-accord');
+      accord.innerHTML = '<p class="qa-accord-titre">' + esc(this.etg('accordTitre', '')) + '</p>' +
+        '<p class="qa-accord-nb">' + esc(this.etg('accordTexte', '').replace('{{n}}', res.accords).replace('{{total}}', res.n)) + '</p>' +
+        '<p class="qa-accord-sens">' + esc(this.etg(taux >= 0.7 ? 'accordHaut' : (taux >= 0.4 ? 'accordMoyen' : 'accordBas'), '')) + '</p>';
+      wrap.appendChild(accord);
+      var moi = this.blocListe(this.etg('chacunMoiTitre', ''), this.etg('chacunMoiNote', ''),
+        res.details.filter(function(d) { return d.chacunMoi; }));
+      if (moi) wrap.appendChild(moi);
+      var autre = this.blocListe(this.etg('chacunAutreTitre', ''), this.etg('chacunAutreNote', ''),
+        res.details.filter(function(d) { return d.chacunAutre; }));
+      if (autre) wrap.appendChild(autre);
+    } else {
+      var lui = this.blocListe(this.texte('soloAutreTitre', p[1].name, p[1].name), '',
+        res.details.filter(function(d) { return d.cibles[0] === 1; }));
+      if (lui) wrap.appendChild(lui);
+      var vous = this.blocListe(this.etg('soloVousTitre', ''), '',
+        res.details.filter(function(d) { return d.cibles[0] === 0; }));
+      if (vous) wrap.appendChild(vous);
+      // Seul(e), une seule vue : l'invitation a refaire le test a deux.
+      var inv = el('div', 'qa-invitation');
+      inv.appendChild(el('p', 'qa-invitation-texte', esc(this.texte('invitationDuo', p[1].name, p[1].name))));
+      var bouton = el('button', 'btn btn-outline qa-invitation-btn', esc(this.etg('boutonDuo', 'Refaire le test à deux')));
+      bouton.type = 'button';
+      bouton.addEventListener('click', function() {
+        self.mode = 'duo'; self.phase = 'setup'; self.render(); smoothScroll(self.container, 'start');
+      });
+      inv.appendChild(bouton);
+      wrap.appendChild(inv);
+    }
+
+    var tout = el('details', 'ech-tout');
+    tout.appendChild(el('summary', 'ech-tout-titre', esc(this.etg(duo ? 'toutTitre' : 'toutTitreSolo', ''))));
+    tout.appendChild(this.listeReponses(res.details));
+    wrap.appendChild(tout);
+
+    // Le partage dit le verdict avec les prenoms, jamais « vous ».
+    var aPartager = '';
+    if (duo || (p[0].saisi && p[1].saisi)) {
+      aPartager = res.cle === 'egal' ? v.titre : this.texte('r_' + res.cle + '_t', p[res.tete].name, p[1 - res.tete].name);
+    }
+    renderActionButtons(wrap, {
+      share: { noms: nomsPartage(this), type: 'fun', verdict: aPartager },
+      restart: function() { self.phase = 'setup'; self.render(); smoothScroll(self.container, 'start'); }
+    });
+    this.container.appendChild(wrap);
+    smoothScroll(wrap, 'center');
+  };
+
+  // ═══════════════════════════════════════════════════════════
   // PORTRAIT QUIZ - les quiz speciaux d'Halloween a profil (16 octobre 2026)
   // « Avec quel serial killer es-tu compatible ? », « A quel super-vilain
   // ressembles-tu ? », « Quel duo de super-vilains formez-vous ? ».
@@ -15074,6 +15412,7 @@ var QuizEngine = (function() {
     PhrasesGame: PhrasesGame,
     DixMaisGame: DixMaisGame,
     EchelleQuiz: EchelleQuiz,
+    QuiAimeQuiz: QuiAimeQuiz,
     PortraitQuiz: PortraitQuiz,
     SurvieQuiz: SurvieQuiz,
     el: el,

@@ -410,6 +410,16 @@
     'compatibilite-sexuelle': { prefix: 'compatSex', engine: 'echelle', totalQ: 20, pool: 20, quizType: 'compatibilite-sexuelle',
                                 needsGender: true, distance: true,
                                 axes: ['envie', 'tendresse', 'parole', 'audace', 'rythme'], paliers: [55, 70, 80, 90] },
+    // Qui aime le plus l'autre ? (6 novembre 2026) : vingt questions « qui
+    // fait le plus... », trois réponses toujours les mêmes (moi, le prénom de
+    // l'autre, autant l'un que l'autre), un poids de 1 à 3 par question
+    // (`prefix.q{N}_poids`), seul(e) ou à deux. La part de chacun dit de quel
+    // côté penche la balance : à `egal` points de 50 % près, égalité ; jusqu'à
+    // `unPeu`, « un peu plus » ; au-delà, « le plus » (voir QuiAimeQuiz).
+    // `textOnly` : aucune reponse n'est ecrite par question, le chargeur ne
+    // doit pas en chercher (voir la charge mentale).
+    'qui-aime': { prefix: 'quiAime', engine: 'qui-aime', totalQ: 20, pool: 20, quizType: 'qui-aime',
+                  textOnly: true, seuils: { egal: 6, unPeu: 16 } },
 
     // Les quiz speciaux d'Halloween (16 octobre 2026, demande de Thomas), tous
     // a distance possible. Les quiz a portrait (moteur « portrait ») : chaque
@@ -1298,6 +1308,9 @@
         break;
       case 'echelle':
         initEchelleQuiz(config);
+        break;
+      case 'qui-aime':
+        initQuiAimeQuiz(config);
         break;
       case 'portrait':
         initPortraitQuiz(config);
@@ -2921,6 +2934,30 @@
       axes: cfg.axes || [],
       paliers: cfg.paliers || [55, 70, 80, 90]
     }, optionsDistance(cfg, questions.slice())));
+  }
+
+  // Qui aime le plus l'autre ? : la reserve lue dans l'ordre du fichier, sans
+  // reponses propres (ce sont les memes pour toutes les questions), avec le
+  // poids de chaque question, 1 par defaut.
+  function initQuiAimeQuiz(cfg) {
+    var questions = parseGdQuestions(cfg.prefix, (cfg.pool || 20) + 5, false, true);
+    questions.sort(function(a, b) { return a.id - b.id; });
+    questions.forEach(function(q) {
+      var cle = cfg.prefix + '.q' + q.id + '_poids';
+      var brut = QuizEngine.tgd(cle, null);
+      var n = parseInt(brut, 10);
+      q.poids = (brut !== null && brut !== cle && n > 0) ? n : 1;
+    });
+    if (!questions.length) { showUnavailable(cfg); return; }
+    new QuizEngine.QuiAimeQuiz({
+      container: container,
+      questions: questions,
+      prefix: cfg.prefix,
+      lang: lang,
+      quizType: cfg.quizType || 'qui-aime',
+      seuils: cfg.seuils,
+      icone: cfg.icone
+    });
   }
 
   // Les quiz speciaux d'Halloween (16 octobre 2026). Comme la compatibilite

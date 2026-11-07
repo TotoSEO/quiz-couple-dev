@@ -1,0 +1,59 @@
+{
+  "hero": {
+    "badge": "Test solo o en pareja",
+    "title": "¿Quién ama más en la pareja? El test en 20 preguntas",
+    "titleHighlight": "¿Quién ama más",
+    "description": "El primer mensaje de la mañana, las disculpas después de una discusión, las sorpresas, lo que cede cada uno... Responde solo, o cada uno por su lado, y mira hacia qué lado se inclina la balanza.",
+    "subtitle": "Veinte preguntas, de cuatro a ocho minutos, gratis y sin registro",
+    "jumpBtn": "Hacer el test"
+  },
+  "section1": {
+    "title": "¿Cómo funciona el test de quién ama más?",
+    "intro": "Este test hace veinte preguntas muy sencillas sobre vuestra vida en pareja. En cada una respondes «Yo», el nombre de tu pareja o «Los dos por igual».",
+    "p1": "Por ejemplo: «¿Quién da el primer paso para reconciliarse después de una discusión?». Si casi siempre eres tú, respondes «Yo». Si es tu pareja, eliges su nombre. Y si depende, es «Los dos por igual».",
+    "p2": "No todas las preguntas pesan lo mismo. Mandar el primer mensaje de la mañana cuenta menos que ceder con las vacaciones o cambiar de ciudad por el otro. Al final, el test lo suma todo y muestra la parte de cada uno, como una balanza. Solo, es tu visión de la pareja. En pareja, cada uno responde sin ver la pantalla del otro, y el test compara también vuestras respuestas.",
+    "p3": "Algo importante: el test mira quién <strong>demuestra</strong> más su amor, no quién lo siente más. ¡Hay gente muy enamorada que se olvida de todos los cumpleaños! De hecho, ahí es donde suele estar la clave, porque <a href=\"/es/test-lenguaje-amor-pareja/\">cada uno demuestra su amor a su manera</a>, y no siempre como el otro espera."
+  },
+  "section2": {
+    "title": "¿Es grave que uno ame más que el otro?",
+    "p1": "No, y de hecho es muy habitual. En la mayoría de las parejas, uno de los dos manda más mensajes, organiza más y da el primer paso más a menudo. Y cambia según la época: un gran proyecto en el trabajo, un bebé, un duelo, y la balanza se inclina hacia el otro lado durante unos meses.",
+    "p2": "Lo que pesa es cuando el desequilibrio se instala para siempre y el otro <a href=\"/es/blog/novio-no-hace-esfuerzo/\">ya casi no hace ningún esfuerzo</a>. El sociólogo Willard Waller ya hablaba de ello en 1938: es el <strong>principio del menor interés</strong>. Quien menos se implica tiene más poder en la pareja, porque tiene menos que perder. En 2006, un estudio estadounidense que siguió a parejas durante varios años (Sprecher, Schmeeckle y Felmlee) lo confirmó: el desequilibrio es frecuente, cambia poco con el tiempo, y las parejas en las que <a href=\"/es/test-relacion-sana/\">los dos se implican por igual</a> son más felices y más estables. Un estudio más antiguo, con 231 parejas de estudiantes de Boston seguidas durante dos años, ya había llegado a la misma conclusión.",
+    "p3": "Y hay una trampa: vemos mucho mejor lo que hacemos nosotros. En un estudio de 1979, Michael Ross y Fiore Sicoly preguntaron a 37 parejas casadas quién se ocupaba más de distintas cosas de la vida en común. Cada uno se atribuía una parte mayor de la que le daba el otro, simplemente porque recordamos mejor nuestros propios esfuerzos. Pasa con las tareas del hogar y con <a href=\"/es/test-carga-mental-pareja/\">acordarse de todo en casa</a>, y pasa con los gestos de amor. ¡Por eso la versión en pareja es la más interesante!"
+  },
+  "section3": {
+    "title": "¿Cómo leer tu resultado?",
+    "p1": "El resultado da la parte de cada uno en vuestras respuestas, en porcentaje. En pareja, el test suma las respuestas de los dos: si cada uno responde «Yo» a todas las preguntas, la balanza se queda en el centro... ¡pero no estáis de acuerdo en nada!",
+    "p2": "Así que el resultado en pareja dice también en cuántas preguntas estáis de acuerdo, y muestra las preguntas en las que cada uno cree que hace más, y luego aquellas en las que cada uno cree que el otro hace más. Estas últimas suelen ser las más bonitas de leer.",
+    "p3": "Si la balanza se inclina claramente hacia un lado, no es una nota sobre vuestra pareja. Es más bien una buena ocasión para hablarlo, sin llevar la cuenta: ¿qué hace que cada uno se sienta querido? ¿Y qué falta un poco en este momento?",
+    "headerScore": "Parte de quien más hace",
+    "headerLevel": "Resultado",
+    "headerAnalysis": "Qué significa",
+    "row1Score": "50 a 56 %",
+    "row1Level": "Los dos por igual",
+    "row1Analysis": "Cada uno da a su manera, y la balanza se mantiene.",
+    "row2Score": "57 a 66 %",
+    "row2Level": "Un poco más de un lado",
+    "row2Analysis": "Uno de los dos piensa un poco más a menudo en los pequeños gestos. Les pasa a muchas parejas.",
+    "row3Score": "67 % o más",
+    "row3Level": "Claramente más de un lado",
+    "row3Analysis": "Uno de los dos se encarga de casi todos los gestos. Vale la pena hablarlo."
+  },
+  "seo": {
+    "faqTitle": "Tus preguntas sobre el test de quién ama más",
+    "faq1Q": "¿Cómo saber quién ama más en una pareja?",
+    "faq1A": "No se puede medir el amor en sí, pero sí los gestos: quién da el primer paso, quién piensa en las sorpresas, quién cede. Eso es lo que hace este test, con veinte preguntas que pesan más o menos según lo que dicen. En pareja, muestra además si veis la balanza de la misma manera.",
+    "faq2Q": "¿Quién ama más en una pareja, el hombre o la mujer?",
+    "faq2A": "Ningún estudio dice que un género ame más que el otro. Eso sí, un estudio de 2011 (Ackerman, Griskevicius y Li) mostró algo sorprendente: suelen ser los hombres quienes dicen «te quiero» primero. De media, piensan en decirlo seis semanas antes que las mujeres, ¡aunque la mayoría de la gente cree lo contrario! El test sirve igual para un hombre y una mujer que para dos hombres o dos mujeres.",
+    "faq3Q": "¿Es normal que uno ame más que el otro?",
+    "faq3A": "Sí, y pasa en la mayoría de las parejas en algún momento. Lo importante es que el desequilibrio no se instale para siempre, y que quien más da no sienta que sostiene la relación solo.",
+    "faq4Q": "¿Se puede hacer el test solo?",
+    "faq4A": "Sí. Solo, respondes por los dos, según lo que vives, y ves hacia qué lado se inclina la balanza según tú. En pareja es todavía más revelador: cada uno responde por su lado, y el test muestra si estáis de acuerdo.",
+    "faq5Q": "¿Cómo funciona el test en pareja?",
+    "faq5A": "Escribís vuestros dos nombres y el primero responde a las veinte preguntas. Pasa el móvil, y el segundo responde a su vez, sin ver las respuestas del otro. En el resultado, las dos series aparecen una al lado de la otra.",
+    "faq6Q": "¿Qué hago si siempre soy yo quien lo hace todo?",
+    "faq6A": "Primero, hablarlo sin reproches: puede que tu pareja no vea todo lo que haces, o que demuestre su amor de otra manera. Dile qué te haría ilusión, con ejemplos concretos. Si nada cambia en meses y sientes que sostienes la relación solo, es una señal que hay que tomarse en serio."
+  },
+  "jsonLd": {
+    "about": "Quién ama más en una pareja"
+  }
+}
