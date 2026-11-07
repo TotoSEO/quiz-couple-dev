@@ -1,0 +1,116 @@
+{
+  "hero": {
+    "badge": "Jeu en ligne gratuit",
+    "title": "Effeuiller la marguerite en ligne : il m'aime un peu, beaucoup, passionnément…",
+    "highlight": "Effeuiller la marguerite en ligne",
+    "description": "Pensez à quelqu'un, touchez les pétales un par un et regardez sur quoi tombe le dernier : un peu, beaucoup, passionnément, à la folie… ou pas du tout. C'est le hasard qui décide, comme avec une vraie fleur !"
+  },
+  "outil": {
+    "titre": "Votre marguerite",
+    "prenom": "Le prénom de la personne (facultatif)",
+    "prenomExemple": "Par exemple : Léa",
+    "pronom": "Il ou elle ?",
+    "version": "La formule",
+    "consigne": "Touchez un pétale pour commencer.",
+    "encore": "Touchez le pétale suivant…",
+    "tout": "Tout effeuiller d'un coup",
+    "nouvelle": "Une autre marguerite",
+    "fleur": "La marguerite : touchez un pétale pour l'enlever",
+    "petale": "Enlever ce pétale",
+    "finTitre": "La marguerite a parlé !",
+    "finPositif": "C'est plutôt bon signe ! Bon, c'est une fleur, elle répond au hasard… mais on prend quand même.",
+    "finMoyen": "Un peu, c'est déjà un début ! Et une marguerite peut très bien se tromper.",
+    "finNegatif": "Aïe. Mais la marguerite répond au hasard, et la suivante dira peut-être tout autre chose !",
+    "partager": "Partager",
+    "copier": "Copier le résultat",
+    "copie": "C'est copié, il n'y a plus qu'à le coller !",
+    "partage": "La marguerite a parlé : « {{phrase}} » 🌼 Et la tienne, elle dit quoi ?",
+    "suite": "Pour une réponse moins au hasard",
+    "suiteBouton": "Faire le test « M'aime-t-il en secret ? »"
+  },
+  "pronoms": [
+    {
+      "id": "m",
+      "label": "Il",
+      "sujet": "Il"
+    },
+    {
+      "id": "f",
+      "label": "Elle",
+      "sujet": "Elle"
+    }
+  ],
+  "versionDefaut": "longue",
+  "ordreVersions": [
+    "longue",
+    "courte"
+  ],
+  "versions": {
+    "longue": {
+      "nom": "Un peu, beaucoup, passionnément…",
+      "tete": "{{s}} m'aime…",
+      "mots": [
+        "un peu",
+        "beaucoup",
+        "passionnément",
+        "à la folie",
+        "pas du tout"
+      ],
+      "sens": [
+        "moyen",
+        "positif",
+        "positif",
+        "positif",
+        "negatif"
+      ]
+    },
+    "courte": {
+      "nom": "M'aime, m'aime pas",
+      "phrases": [
+        "{{s}} m'aime",
+        "{{s}} ne m'aime pas"
+      ],
+      "sens": [
+        "positif",
+        "negatif"
+      ]
+    }
+  },
+  "section1": {
+    "title": "Comment effeuiller la marguerite en ligne ?",
+    "p1": "Effeuiller la marguerite, c'est un jeu qu'on connaît tous depuis l'enfance. On pense à quelqu'un, on arrache les pétales d'une fleur un par un, et à chaque pétale on dit un mot de la formule « il m'aime un peu, beaucoup, passionnément, à la folie, pas du tout ». Le mot qui tombe sur le dernier pétale, c'est la réponse.",
+    "p2": "Ici, c'est pareil, sans abîmer de fleur. Vous pouvez écrire le prénom de la personne (ou pas), choisir « il » ou « elle », puis toucher les pétales dans l'ordre que vous voulez. Chaque marguerite a un nombre de pétales différent, entre 14 et 26, donc impossible de savoir où ça va tomber… à moins de compter avant de commencer ! Par exemple, sur une marguerite de 17 pétales, le dernier tombe sur « beaucoup ».",
+    "p3": "Bien sûr, la fleur ne sait rien de vos histoires de cœur : elle répond au hasard. Pour savoir si une personne vous aime sans oser le dire, mieux vaut regarder <a href=\"/test-m-aime-t-il-elle-en-secret/\">les signes d'un amour secret</a> : sa façon de vous écrire, de vous regarder, de se souvenir de ce que vous lui avez raconté…"
+  },
+  "section2": {
+    "title": "Il m'aime un peu, beaucoup, passionnément : la formule et ses variantes",
+    "p1": "La formule la plus connue en France, c'est « il m'aime un peu, beaucoup, passionnément, à la folie, pas du tout ». On la dit aussi au féminin, bien sûr : « elle m'aime un peu… ». Certains ajoutent « plus que tout » juste avant « pas du tout », ce qui fait six mots par tour au lieu de cinq.",
+    "p2": "Il existe aussi une version courte, un pétale sur deux : « il m'aime, il ne m'aime pas ». C'est d'ailleurs la version qu'on joue dans la plupart des autres pays. En anglais, on dit « he loves me, he loves me not », en italien « m'ama, non m'ama », en allemand « er liebt mich, er liebt mich nicht », en espagnol « me quiere, no me quiere » et en néerlandais « hij houdt van me, hij houdt niet van me ». Les anglophones connaissent la formule à cinq mots comme la version française du jeu.",
+    "p3": "Pour la fleur, on prend d'habitude une marguerite commune (Leucanthemum vulgare, pour les botanistes), mais une pâquerette fait très bien l'affaire. Et si vous préférez faire parler <a href=\"/calculatrice-de-l-amour/\">vos deux prénoms</a> plutôt qu'une fleur, il y a aussi le pourcentage qu'on calcule à partir des lettres."
+  },
+  "section3": {
+    "title": "D'où vient le jeu de la marguerite ?",
+    "p1": "Personne ne sait vraiment qui a inventé le jeu. On lit souvent qu'il vient de France, mais aucune date précise ne le prouve. Ce qui est sûr, c'est qu'il est déjà connu au début du XIXe siècle : dans le Faust de Goethe, publié en 1808, Marguerite (Gretchen en allemand) arrache les pétales d'une fleur un par un dans la scène du jardin. Elle murmure « Er liebt mich – liebt mich nicht » (il m'aime, il ne m'aime pas), et quand le dernier pétale tombe du bon côté, elle s'écrie « Er liebt mich ! ».",
+    "p2": "On retrouve le jeu dans le ballet Giselle, créé à Paris en 1841, où Giselle effeuille une fleur au premier acte. Et en 1872, le peintre italien Giacomo Di Chirico en a fait un tableau qui porte le nom du jeu.",
+    "p3": "En 1956, Marc Allégret a même tourné « En effeuillant la marguerite », avec Brigitte Bardot. Le titre joue sur les mots : dans le film, son personnage s'inscrit à un concours de strip-tease pour rembourser une édition unique qu'elle a vendue."
+  },
+  "faq": {
+    "title": "Vos questions sur le jeu de la marguerite",
+    "q1": "Comment jouer à « il m'aime un peu, beaucoup » ?",
+    "a1": "On pense à quelqu'un, on prend une marguerite et on arrache les pétales un par un en disant à chaque fois un mot de la formule : un peu, beaucoup, passionnément, à la folie, pas du tout. Arrivé au bout de la formule, on recommence depuis le début. Le mot qui tombe sur le dernier pétale donne la réponse.",
+    "q2": "Que veut dire « effeuiller la marguerite » ?",
+    "a2": "C'est enlever un à un les pétales d'une marguerite en récitant « il m'aime un peu, beaucoup… » pour savoir si quelqu'un vous aime. L'expression est si connue qu'on la croise chez les écrivains : dans La Madone des sleepings (1925), Maurice Dekobra écrit « On ne fait pas le bonheur d'un peuple en effeuillant des marguerites ».",
+    "q3": "Peut-on tricher en effeuillant la marguerite ?",
+    "a3": "Oui, il suffit de compter les pétales avant de commencer ! Avec la formule à cinq mots, on divise le nombre de pétales par cinq et on regarde le reste : 1 pour « un peu », 2 pour « beaucoup », 3 pour « passionnément », 4 pour « à la folie », et un compte juste pour « pas du tout ». Avec la version courte, un nombre impair finit toujours sur « il m'aime ». Ici, chaque marguerite a entre 14 et 26 pétales, tirés au hasard.",
+    "q4": "Quelle fleur utiliser pour effeuiller la marguerite ?",
+    "a4": "La marguerite, bien sûr, mais n'importe quelle fleur à pétales fins fait l'affaire : une pâquerette, une petite fleur des champs, etc. Dans le Faust de Goethe, Marguerite prend d'ailleurs une « Sternblume », une fleur en étoile, et pas une marguerite.",
+    "q5": "La marguerite dit-elle la vérité ?",
+    "a5": "Non, et c'est tout le charme du jeu ! Le résultat dépend seulement du nombre de pétales de la fleur. Ça n'empêche pas de sourire quand elle tombe sur « à la folie »…",
+    "q6": "Comment dit-on « il m'aime un peu, beaucoup » en anglais ?",
+    "a6": "Les anglophones disent « he loves me, he loves me not » (ou « she loves me, she loves me not »), un pétale sur deux. La formule à cinq mots se traduit par « a little, a lot, passionately, madly, not at all »."
+  },
+  "jsonLd": {
+    "name": "Effeuiller la marguerite en ligne",
+    "about": "Le jeu de la marguerite : il m'aime un peu, beaucoup, passionnément, à la folie, pas du tout"
+  }
+}

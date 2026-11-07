@@ -83,7 +83,7 @@
   "section2": {
     "title": "Cómo funciona nuestra calculadora del amor",
     "p1": "El resultado final es una media de cinco medidas, cada una con su peso. Así funciona nuestro motor de cálculo de arriba:",
-    "apres": "Las cinco notas se suman según su peso y dan el porcentaje que aparece. No hay nada al azar: los mismos nombres dan siempre exactamente el mismo resultado, y «Thomas + Elisa» da lo mismo que «Elisa + Thomas».",
+    "apres": "Las cinco notas se suman según su peso y dan el porcentaje que aparece. No hay nada al azar, al contrario que al <a href=\"/es/me-quiere-no-me-quiere/\">deshojar la margarita</a>: los mismos nombres dan siempre exactamente el mismo resultado, y «Thomas + Elisa» da lo mismo que «Elisa + Thomas».",
     "poidsTitre": "Cuánto pesa cada medida",
     "poidsTexte": "El método original y la numerología son los que más pesan, porque son los que hacen la tradición de esta herramienta. Las letras compartidas van justo detrás. El ritmo de las vocales y el equilibrio de longitudes cuentan algo menos, sirven sobre todo para desempatar dos parejas que van igualadas."
   },

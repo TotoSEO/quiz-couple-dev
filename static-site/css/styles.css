@@ -13742,6 +13742,80 @@ img[src^="/bilan/apercu-"] { pointer-events: none; user-select: none; -webkit-us
 }
 
 /* ═══════════════════════════════════════════════════════════════════
+   Effeuiller la marguerite (jeu-marguerite.ejs, js/marguerite.js)
+   ═══════════════════════════════════════════════════════════════════
+   La fleur est un carré dont la taille vient de la colonne. Les pétales
+   sont des boutons posés en haut du centre, tournés autour de leur pied
+   (--a), un peu plus ou moins longs au hasard (--t), plus étroits quand
+   il y en a beaucoup (--n, en unités de conteneur). La chute n'anime que
+   transform et opacity, depuis le script (Web Animations) ; la carte ne
+   déborde pas, ce qui tombe hors d'elle est coupé. */
+.mg-outil { overflow: hidden; }
+.mg-titre { margin: 0 0 1.25rem; text-align: center; font-size: 1.3rem; font-weight: 700; }
+.mg-reglages { display: grid; gap: 1rem; margin-bottom: 1.25rem; }
+.mg-champ, .mg-groupe { display: grid; gap: 0.4rem; }
+.mg-libelle { font-size: 0.85rem; font-weight: 600; color: hsl(var(--muted-foreground)); }
+.mg-saisie { width: 100%; min-height: 2.75rem; padding: 0.55rem 0.85rem; font-size: 16px; border-radius: var(--radius); border: 1px solid hsl(var(--border)); background: hsl(var(--background)); color: hsl(var(--foreground)); }
+.mg-saisie:focus-visible { outline: 2px solid hsl(var(--primary)); outline-offset: 1px; }
+.mg-saisie:disabled { opacity: 0.6; }
+.mg-choix { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.mg-option { flex: 1 1 auto; min-height: 2.6rem; padding: 0.5rem 0.9rem; border-radius: 999px; border: 1px solid hsl(var(--border)); background: hsl(var(--background)); color: hsl(var(--foreground)); font-size: 0.9rem; font-weight: 600; line-height: 1.25; cursor: pointer; transition: background-color 150ms ease, border-color 150ms ease, color 150ms ease; }
+.mg-option:hover:not(:disabled) { border-color: hsl(var(--primary) / 0.6); }
+.mg-option:focus-visible { outline: 2px solid hsl(var(--primary)); outline-offset: 2px; }
+.mg-option--actif { background: hsl(var(--primary) / 0.12); border-color: hsl(var(--primary)); color: hsl(var(--primary-texte)); }
+.mg-option:disabled { cursor: default; opacity: 0.5; }
+.mg-option--actif:disabled { opacity: 0.85; }
+
+.mg-scene { display: flex; justify-content: center; padding: 0.25rem 0; }
+.mg-fleur { position: relative; width: min(100%, 21rem); aspect-ratio: 1; container-type: inline-size; touch-action: manipulation; -webkit-tap-highlight-color: transparent; }
+/* Un disque vert pâle sous la fleur : sur la carte blanche du thème clair, les pétales blancs s'y détachent. */
+.mg-fleur::before { content: ''; position: absolute; inset: 1%; border-radius: 50%; pointer-events: none; background: radial-gradient(circle, hsl(98 34% 84%) 0%, hsl(98 30% 89% / 0.75) 52%, hsl(98 30% 92% / 0) 71%); }
+.dark .mg-fleur::before { background: radial-gradient(circle, hsl(98 22% 24% / 0.55) 0%, hsl(98 20% 20% / 0.3) 52%, transparent 71%); }
+.mg-petale {
+  position: absolute; left: 50%; top: 6%;
+  width: calc(190cqw / var(--n, 20)); height: 44%;
+  margin-left: calc(-95cqw / var(--n, 20));
+  transform-origin: 50% 100%;
+  transform: rotate(var(--a, 0deg)) scaleY(var(--t, 1));
+  padding: 0; border: 1px solid hsl(38 24% 78%);
+  border-radius: 50% 50% 45% 45% / 64% 64% 36% 36%;
+  background: radial-gradient(ellipse at 50% 20%, #fff 0%, #fffdf8 55%, hsl(40 38% 92%) 100%);
+  box-shadow: 0 1px 3px hsl(30 25% 30% / 0.2);
+  cursor: pointer;
+}
+.mg-petale::after { content: ''; position: absolute; left: 50%; top: 14%; bottom: 10%; width: 1px; transform: translateX(-50%); background: hsl(40 22% 86%); }
+.mg-petale:hover:not(:disabled) { border-color: hsl(var(--primary) / 0.55); }
+.mg-petale:focus-visible { outline: 2px solid hsl(var(--primary)); outline-offset: 1px; }
+.mg-petale--ote { pointer-events: none; }
+.dark .mg-petale { border-color: hsl(38 12% 66%); box-shadow: 0 1px 3px hsl(0 0% 0% / 0.35); }
+.mg-coeur {
+  position: absolute; left: 50%; top: 50%; z-index: 2; width: 30%; height: 30%;
+  transform: translate(-50%, -50%); border-radius: 50%; pointer-events: none;
+  background:
+    radial-gradient(circle, hsl(34 85% 36% / 0.45) 0.07rem, transparent 0.09rem) 0 0 / 0.5rem 0.5rem,
+    radial-gradient(circle at 38% 32%, hsl(50 100% 72%), hsl(44 98% 52%) 55%, hsl(36 92% 44%) 100%);
+  box-shadow: inset 0 -3px 6px hsl(32 80% 32% / 0.35), 0 2px 6px hsl(30 40% 25% / 0.25);
+}
+.mg-parole { min-height: 5.25rem; margin-top: 0.75rem; text-align: center; }
+.mg-tete { margin: 0; font-size: 1rem; font-weight: 600; color: hsl(var(--muted-foreground)); }
+.mg-phrase { margin: 0.15rem 0 0; font-size: 1rem; color: hsl(var(--muted-foreground)); }
+.mg-phrase--mot { font-family: var(--font-display); font-size: clamp(1.5rem, 6vw, 2rem); font-weight: 800; line-height: 1.2; color: hsl(var(--foreground)); }
+.mg-phrase--mot[data-sens="positif"] { color: hsl(var(--primary-texte)); }
+.mg-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.6rem; margin-top: 0.5rem; }
+.mg-bouton { min-height: 2.75rem; }
+.mg-resultat { margin-top: 1.5rem; }
+.mg-resultat[hidden] { display: none; }
+.mg-carte { padding: 1.75rem 1.25rem; }
+.mg-carte-titre { margin: 0 0 0.5rem; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: hsl(var(--muted-foreground)); }
+.mg-carte-tete { margin: 0; font-size: 1.1rem; font-weight: 600; }
+.mg-carte-mot { margin: 0.1rem 0 0.75rem; font-family: var(--font-display); font-size: clamp(1.9rem, 8vw, 2.6rem); font-weight: 800; line-height: 1.15; color: hsl(var(--primary-texte)); }
+.mg-carte--negatif .mg-carte-mot { color: hsl(var(--foreground)); }
+.mg-carte-texte { margin: 0 auto 1.25rem; max-width: 28rem; line-height: 1.55; color: hsl(var(--muted-foreground)); }
+.mg-carte-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.6rem; }
+.mg-carte-suite { margin: 1.25rem 0 0.25rem; font-size: 0.85rem; color: hsl(var(--muted-foreground)); }
+.mg-carte-lien { font-weight: 700; color: hsl(var(--primary-texte)); text-decoration: underline; text-underline-offset: 3px; }
+
+/* ═══════════════════════════════════════════════════════════════════
    Téléphone : les animations infinies qui repeignent à chaque image
    ═══════════════════════════════════════════════════════════════════
    Elles n'animent ni transform ni opacity : dégradé qui glisse dans le

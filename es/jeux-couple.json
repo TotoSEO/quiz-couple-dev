@@ -3,10 +3,10 @@
     "badge": "15 juegos • Gratis • Sin registro",
     "title": "Nuestros juegos para jugar en pareja, listos en un toque",
     "titleHighlight": "para jugar en pareja",
-    "description": "Quince juegos: catorce que arrancan en un solo móvil entre los dos, y uno para varias parejas, cada uno en el suyo. Sin cuenta y sin instalar nada."
+    "description": "Diecisiete juegos: catorce que arrancan en un solo móvil entre los dos, uno para varias parejas y otro por mensajes, cada uno en el suyo, y la margarita, para deshojar a solas. Sin cuenta y sin instalar nada."
   },
   "stats": {
-    "jeux": "16",
+    "jeux": "17",
     "jeuxLabel": "juegos para parejas",
     "cartes": "520",
     "cartesLabel": "cartas, prendas y dilemas",
@@ -35,6 +35,11 @@
     "messageContenu": "7 juegos y más de 350 preguntas",
     "messageDuree": "1 minuto, o todo el día",
     "messageJoueurs": "2 jugadores, cada uno en su móvil",
+    "margueriteNom": "Me quiere, no me quiere",
+    "margueriteTagline": "Deshoja la margarita pétalo a pétalo: ¿qué dirá el último?",
+    "margueriteJoueurs": "Solo o sola, pensando en alguien",
+    "margueriteDuree": "1 minuto",
+    "margueriteContenu": "De 14 a 26 pétalos por flor",
     "actionVeriteNom": "Verdad o reto",
     "actionVeriteTagline": "Cae una carta, verdad o reto, y nunca sabéis cuál de las dos llega.",
     "actionVeriteJoueurs": "2 jugadores",
@@ -106,7 +111,7 @@
     "title": "Lo que un juego en pareja cambia en una noche",
     "p1": "Un <strong class=\"text-foreground\">juego de pareja</strong> no parece gran cosa. Y sin embargo resuelve un problema muy concreto: entre dos siempre se acaba dando vueltas a los mismos temas. El día, el trabajo, qué se cena… Un juego impone un marco, y ese marco da permiso para hacer preguntas que nunca se harían de golpe.",
     "p2": "Por eso también un juego funciona mejor que una película cuando de verdad queréis reencontraros. Delante de una pantalla sois dos personas una al lado de la otra mirando a otro sitio. Alrededor de un juego sois dos personas que se miran. La diferencia se nota a los diez minutos.",
-    "p3": "Los quince juegos de esta página se juegan online, gratis, en un solo móvil, salvo el juego de fiesta, donde cada pareja juega en el suyo. Nada que crear, nada que instalar, nada que preparar.",
+    "p3": "Los diecisiete juegos de esta página se juegan online, gratis, y casi todos en un solo móvil: el juego de fiesta y los juegos por WhatsApp se juegan cada uno en el suyo. Nada que crear, nada que instalar, nada que preparar.",
     "p4": "Y según la temporada, <a href=\"/es/quiz-especiales-para-parejas/\">los quiz que cambian con el calendario</a> añaden algunas noches aparte: para Halloween, quién de los dos <a href=\"/es/quiz-quien-muere-primero-pelicula-de-terror/\">muere primero en una película de terror</a> o <a href=\"/es/quiz-que-duo-de-supervillanos-formais/\">qué dúo de supervillanos formáis</a>.",
     "plus": [
       {
@@ -152,7 +157,9 @@
     "row15Moment": "Un aperitivo para dos, cuando os apetece picaros un poco",
     "row15Pourquoi": "Una cuenta atrás y gana quien responde primero: dónde fue vuestra primera cita, la comida favorita de tu pareja, tres de sus manías... ¡Salen los recuerdos y las bromas!",
     "row16Moment": "En mitad del día, cada uno por su lado",
-    "row16Pourquoi": "Una pregunta enviada entre dos reuniones, y la conversación arranca otra vez. Tu pareja contesta cuando puede... ¡y te manda otra!"
+    "row16Pourquoi": "Una pregunta enviada entre dos reuniones, y la conversación arranca otra vez. Tu pareja contesta cuando puede... ¡y te manda otra!",
+    "row17Moment": "Cuando piensas mucho en alguien",
+    "row17Pourquoi": "Un pétalo tras otro, para reírse, ¡y porque a veces la flor dice justo lo que querías oír!"
   },
   "section3": {
     "title": "Cómo hacer que una noche de juegos en pareja funcione",
@@ -169,7 +176,7 @@
   "faq": {
     "title": "Preguntas frecuentes",
     "q1": "¿Estos juegos de pareja son realmente gratis?",
-    "a1": "Sí, los quince, del primero al último. Ni cuenta que crear, ni versión de pago, ni contenido desbloqueado tras pagar. Abrís la página del juego y jugáis.",
+    "a1": "Sí, los diecisiete, del primero al último. Ni cuenta que crear, ni versión de pago, ni contenido desbloqueado tras pagar. Abrís la página del juego y jugáis.",
     "q2": "¿Hay que descargar una aplicación?",
     "a2": "No. Todo se juega directamente en el navegador, en móvil o en ordenador. Es también lo que permite empezar una partida en diez segundos, justo cuando entran las ganas.",
     "q3": "¿Cuál es el mejor juego para hacer en pareja en casa?",

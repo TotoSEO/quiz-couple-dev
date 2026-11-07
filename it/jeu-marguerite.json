@@ -1,0 +1,105 @@
+{
+  "hero": {
+    "badge": "Gioco online gratis",
+    "title": "M'ama non m'ama: sfoglia la margherita online",
+    "highlight": "M'ama non m'ama",
+    "description": "Pensa a qualcuno, tocca i petali uno a uno e guarda dove cade l'ultimo: m'ama o non m'ama? Decide il caso, proprio come con un fiore vero!"
+  },
+  "outil": {
+    "titre": "La tua margherita",
+    "prenom": "Il suo nome (facoltativo)",
+    "prenomExemple": "Per esempio: Giulia",
+    "pronom": "",
+    "version": "La formula",
+    "consigne": "Tocca un petalo per cominciare.",
+    "encore": "Tocca il petalo successivo…",
+    "tout": "Sfogliarla tutta in un colpo",
+    "nouvelle": "Un'altra margherita",
+    "fleur": "La margherita: tocca un petalo per toglierlo",
+    "petale": "Togli questo petalo",
+    "finTitre": "La margherita ha parlato!",
+    "finPositif": "È un buon segno! Va be', è un fiore e risponde a caso… ma ce lo prendiamo.",
+    "finMoyen": "Un poco è già un inizio! E una margherita può benissimo sbagliarsi.",
+    "finNegatif": "Ahi. Ma la margherita risponde a caso, e la prossima magari dirà tutt'altro!",
+    "partager": "Condividi",
+    "copier": "Copia il risultato",
+    "copie": "Copiato, ora basta incollarlo!",
+    "partage": "La margherita ha parlato: «{{phrase}}» 🌼 E la tua cosa dice?",
+    "suite": "Per una risposta meno a caso",
+    "suiteBouton": "Fai il test «Mi ama in segreto?»"
+  },
+  "pronoms": [],
+  "versionDefaut": "courte",
+  "ordreVersions": [
+    "courte",
+    "longue"
+  ],
+  "versions": {
+    "courte": {
+      "nom": "M'ama, non m'ama",
+      "phrases": [
+        "{{s}} m'ama",
+        "{{s}} non m'ama"
+      ],
+      "sens": [
+        "positif",
+        "negatif"
+      ]
+    },
+    "longue": {
+      "nom": "Versione francese (un poco, molto…)",
+      "tete": "{{s}} m'ama…",
+      "mots": [
+        "un poco",
+        "molto",
+        "appassionatamente",
+        "alla follia",
+        "per niente"
+      ],
+      "sens": [
+        "moyen",
+        "positif",
+        "positif",
+        "positif",
+        "negatif"
+      ]
+    }
+  },
+  "section1": {
+    "title": "Come sfogliare la margherita online?",
+    "p1": "«M'ama, non m'ama» è un gioco che quasi tutti abbiamo fatto da piccoli. Pensi a qualcuno, togli i petali di una margherita uno a uno e a ogni petalo dici la frase successiva: «m'ama», «non m'ama». Quello che dici sull'ultimo petalo è la risposta.",
+    "p2": "Qui funziona allo stesso modo, e nessun fiore ci rimette. Puoi scrivere il nome della persona (oppure no) e poi toccare i petali nell'ordine che vuoi. Ogni margherita ha un numero di petali diverso, tra 14 e 26, quindi non puoi sapere dove andrà a finire… a meno di contarli prima! Per esempio, su una margherita di 17 petali, l'ultimo cade su «m'ama».",
+    "p3": "Certo, il fiore non sa niente della tua vita sentimentale: risponde a caso. Se vuoi sapere se qualcuno ti ama senza avere il coraggio di dirlo, è meglio guardare <a href=\"/it/mi-ama-in-segreto-test/\">i segnali di un amore segreto</a>: come ti scrive, come ti guarda, come si ricorda di quello che gli hai raccontato…"
+  },
+  "section2": {
+    "title": "M'ama non m'ama: la formula e le sue varianti",
+    "p1": "In italiano la formula di sempre è «m'ama, non m'ama», un petalo per ogni frase. Non serve dire chi: va bene per un ragazzo come per una ragazza, e se scrivi un nome qui sopra, la margherita lo usa.",
+    "p2": "In Francia il gioco ha cinque passaggi invece di due: «il m'aime un peu, beaucoup, passionnément, à la folie, pas du tout», cioè m'ama un poco, molto, appassionatamente, alla follia o per niente. Puoi provare questa versione francese sulla margherita qui sopra. In inglese si dice «he loves me, he loves me not», in tedesco «er liebt mich, er liebt mich nicht», in spagnolo «me quiere, no me quiere» e in olandese «hij houdt van me, hij houdt niet van me».",
+    "p3": "Come fiore si usa di solito una margherita (Leucanthemum vulgare, per i botanici), ma va benissimo anche una pratolina. E se preferisci far parlare <a href=\"/it/calcolatrice-dell-amore/\">i vostri due nomi</a> invece di un fiore, c'è anche una percentuale calcolata con le lettere."
+  },
+  "section3": {
+    "title": "Da dove viene il gioco della margherita?",
+    "p1": "Nessuno sa chi abbia inventato il gioco. Si dice spesso che venga dalla Francia, ma nessuna data precisa lo dimostra. Di sicuro era già conosciuto all'inizio dell'Ottocento: nel Faust di Goethe, pubblicato nel 1808, Margherita (Gretchen in tedesco) toglie i petali di un fiore uno a uno nella scena del giardino. Mormora «Er liebt mich – liebt mich nicht» (m'ama, non m'ama) e, quando l'ultimo petalo cade dalla parte giusta, esclama «Er liebt mich!».",
+    "p2": "Il gioco compare anche nel balletto Giselle, rappresentato per la prima volta a Parigi nel 1841, dove Giselle sfoglia un fiore nel primo atto. E nel 1872 il pittore italiano Giacomo Di Chirico ha dipinto un quadro che porta il nome del gioco.",
+    "p3": "Più di recente, in Italia, «M'ama non m'ama» è anche il titolo italiano di un film francese del 2002 di Laetitia Colombani con Audrey Tautou, uscito in Francia come «À la folie… pas du tout»: in pratica, la formula francese del gioco!"
+  },
+  "faq": {
+    "title": "Le tue domande sul gioco della margherita",
+    "q1": "Come si gioca a m'ama non m'ama?",
+    "a1": "Pensi a qualcuno, prendi una margherita e togli i petali uno a uno dicendo «m'ama» al primo, «non m'ama» al successivo, e così via fino alla fine. Quello che dici sull'ultimo petalo è la risposta. Qui basta toccare i petali.",
+    "q2": "Cosa vuol dire sfogliare la margherita?",
+    "a2": "Vuol dire togliere uno a uno i petali di una margherita dicendo «m'ama, non m'ama» per sapere se qualcuno ti ama. Un petalo è sì, il successivo è no, e l'ultimo decide. È un gioco di fortuna, certo, ma il bello è proprio questo.",
+    "q3": "Si può barare a m'ama non m'ama?",
+    "a3": "Sì: basta contare i petali prima di cominciare! Con «m'ama, non m'ama», un numero dispari finisce sempre su «m'ama». Con la versione francese, dividi il numero di petali per cinque e guardi il resto: 1 per «un poco», 2 per «molto», 3 per «appassionatamente», 4 per «alla follia», e una divisione esatta per «per niente». Qui ogni margherita ha tra 14 e 26 petali, estratti a caso.",
+    "q4": "Che fiore si usa per m'ama non m'ama?",
+    "a4": "Di solito una margherita o una pratolina, ma va bene qualsiasi fiore con tanti petali sottili. Nel Faust di Goethe, Margherita usa infatti una «Sternblume», un fiore a stella, e non una margherita.",
+    "q5": "La margherita dice la verità?",
+    "a5": "No, ed è proprio questo il bello del gioco! Il risultato dipende solo dal numero di petali del fiore. Ma un sorriso, quando cade su «m'ama», scappa lo stesso…",
+    "q6": "Esiste una versione più lunga di m'ama non m'ama?",
+    "a6": "Sì, quella francese: «il m'aime un peu, beaucoup, passionnément, à la folie, pas du tout», cioè m'ama un poco, molto, appassionatamente, alla follia o per niente. Si fanno i cinque passaggi e poi si ricomincia da capo, fino all'ultimo petalo."
+  },
+  "jsonLd": {
+    "name": "M'ama non m'ama: sfoglia la margherita online",
+    "about": "Il gioco della margherita: m'ama, non m'ama"
+  }
+}

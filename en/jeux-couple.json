@@ -3,10 +3,10 @@
     "badge": "15 games • Free • No sign-up",
     "title": "Our games to play together, ready in one tap",
     "titleHighlight": "to play together",
-    "description": "Fifteen games: fourteen that start on a single phone sitting between the two of you, and one for several couples, everyone on their own. No account and nothing to install."
+    "description": "Seventeen games: fourteen that start on a single phone sitting between the two of you, one for several couples and one by text, everyone on their own phone, plus the daisy you pick on your own. No account and nothing to install."
   },
   "stats": {
-    "jeux": "16",
+    "jeux": "17",
     "jeuxLabel": "couple games",
     "cartes": "520",
     "cartesLabel": "cards, forfeits and dilemmas",
@@ -35,6 +35,11 @@
     "messageContenu": "7 games and over 350 questions",
     "messageDuree": "1 minute, or all day",
     "messageJoueurs": "2 players, each on their own phone",
+    "margueriteNom": "He Loves Me, He Loves Me Not",
+    "margueriteTagline": "Pick the daisy petals one by one: what will the last one say?",
+    "margueriteJoueurs": "On your own, thinking of someone",
+    "margueriteDuree": "1 minute",
+    "margueriteContenu": "14 to 26 petals per daisy",
     "actionVeriteNom": "Truth or dare",
     "actionVeriteTagline": "A card drops, truth or dare, and you never know which one is coming.",
     "actionVeriteJoueurs": "2 players",
@@ -106,7 +111,7 @@
     "title": "What a game for two changes about an evening",
     "p1": "A <strong class=\"text-foreground\">couple game</strong> looks like nothing at all. And yet it solves a very concrete problem: as a pair, you always end up circling the same subjects. The day, work, what's for dinner… A game imposes a frame, and that frame gives you permission to ask questions you'd never ask out of nowhere.",
     "p2": "It's also why a game works better than a film when you genuinely want to reconnect. In front of a screen you're two people side by side looking elsewhere. Around a game you're two people looking at each other. You feel the difference within ten minutes.",
-    "p3": "The fifteen games on this page run online, free, on one phone, except the party game, where each couple plays on their own. Nothing to create, nothing to install, nothing to prepare.",
+    "p3": "The seventeen games on this page run online, free, and almost all on one phone: the party game and the texting games are played on everyone's own phone. Nothing to create, nothing to install, nothing to prepare.",
     "p4": "And depending on the season, <a href=\"/en/special-couple-quizzes/\">the quizzes that change with the calendar</a> add a few evenings of their own: for Halloween, which of you <a href=\"/en/who-dies-first-in-a-horror-movie-quiz/\">dies first in a horror movie</a> or <a href=\"/en/which-supervillain-duo-are-you-quiz/\">which supervillain duo you form</a>.",
     "plus": [
       {
@@ -152,7 +157,9 @@
     "row15Moment": "Drinks for two, when you're in the mood to tease each other",
     "row15Pourquoi": "A countdown, then it's whoever answers first: where your first date was, your partner's favorite food, three of their little habits... The memories come back and the teasing starts!",
     "row16Moment": "In the middle of the day, each on your own",
-    "row16Pourquoi": "A question sent between two meetings, and the conversation gets going again. Your partner answers when they can... and sends one back!"
+    "row16Pourquoi": "A question sent between two meetings, and the conversation gets going again. Your partner answers when they can... and sends one back!",
+    "row17Moment": "When someone's on your mind",
+    "row17Pourquoi": "One petal after another, just for fun, and because the daisy sometimes says exactly what you wanted to hear!"
   },
   "section3": {
     "title": "Making a games night for two work",
@@ -169,7 +176,7 @@
   "faq": {
     "title": "Frequently asked questions",
     "q1": "Are these couple games really free?",
-    "a1": "Yes, all fifteen, from the first to the last. No account to create, no paid tier, no content unlocked after payment. Open the game's page and play.",
+    "a1": "Yes, all seventeen, from the first to the last. No account to create, no paid tier, no content unlocked after payment. Open the game's page and play.",
     "q2": "Do I need to download an app?",
     "a2": "No. Everything runs straight in your browser, on a phone or a computer. That's also what lets you start a game in ten seconds, right when the urge strikes.",
     "q3": "What is the best game to play as a couple at home?",

@@ -83,7 +83,7 @@
   "section2": {
     "title": "Come funziona la nostra calcolatrice dell'amore",
     "p1": "Il punteggio finale è una media di cinque misure, ognuna con il suo peso. Ecco come funziona il nostro motore di calcolo qui sopra:",
-    "apres": "I cinque voti si sommano secondo il loro peso e danno la percentuale mostrata. Niente è tirato a sorte: gli stessi nomi danno sempre esattamente lo stesso risultato, e «Thomas + Elisa» dà la stessa cosa di «Elisa + Thomas».",
+    "apres": "I cinque voti si sommano secondo il loro peso e danno la percentuale mostrata. Niente è tirato a sorte, a differenza di quando <a href=\"/it/m-ama-non-m-ama/\">si sfoglia una margherita</a>: gli stessi nomi danno sempre esattamente lo stesso risultato, e «Thomas + Elisa» dà la stessa cosa di «Elisa + Thomas».",
     "poidsTitre": "Quanto pesa ogni misura",
     "poidsTexte": "Il metodo originale e la numerologia pesano di più, perché sono quelli che fanno la tradizione di questo strumento. Le lettere condivise seguono da vicino. Il ritmo delle vocali e l'equilibrio delle lunghezze contano un po' meno, servono soprattutto a separare due coppie che si equivalgono."
   },

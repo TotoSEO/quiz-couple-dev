@@ -1,0 +1,116 @@
+{
+  "hero": {
+    "badge": "Gratis online spel",
+    "title": "Hij houdt van me, hij houdt niet van me: pluk de margriet online",
+    "highlight": "Hij houdt van me, hij houdt niet van me",
+    "description": "Denk aan iemand, tik de blaadjes één voor één aan en kijk waar het laatste op valt: houdt hij van je of niet? Het toeval beslist, net als bij een echte bloem!"
+  },
+  "outil": {
+    "titre": "Jouw margriet",
+    "prenom": "Zijn of haar naam (niet verplicht)",
+    "prenomExemple": "Bijvoorbeeld: Sanne",
+    "pronom": "Hij of zij?",
+    "version": "Het rijmpje",
+    "consigne": "Tik een blaadje aan om te beginnen.",
+    "encore": "Tik het volgende blaadje aan…",
+    "tout": "Alles in één keer plukken",
+    "nouvelle": "Een nieuwe margriet",
+    "fleur": "De margriet: tik een blaadje aan om het te plukken",
+    "petale": "Dit blaadje plukken",
+    "finTitre": "De margriet heeft gesproken!",
+    "finPositif": "Dat is een goed teken! Oké, het is een bloem en ze antwoordt op goed geluk… maar we nemen het.",
+    "finMoyen": "Een beetje is al een begin! En een margriet kan zich best vergissen.",
+    "finNegatif": "Au. Maar de margriet antwoordt op goed geluk, en de volgende zegt misschien iets heel anders!",
+    "partager": "Delen",
+    "copier": "Resultaat kopiëren",
+    "copie": "Gekopieerd, nu alleen nog plakken!",
+    "partage": "De margriet heeft gesproken: ‘{{phrase}}’ 🌼 En wat zegt die van jou?",
+    "suite": "Voor een antwoord dat minder op toeval berust",
+    "suiteBouton": "Doe de test ‘Stiekem verliefd op mij?’"
+  },
+  "pronoms": [
+    {
+      "id": "m",
+      "label": "Hij",
+      "sujet": "Hij"
+    },
+    {
+      "id": "f",
+      "label": "Zij",
+      "sujet": "Zij"
+    }
+  ],
+  "versionDefaut": "courte",
+  "ordreVersions": [
+    "courte",
+    "longue"
+  ],
+  "versions": {
+    "courte": {
+      "nom": "Houdt van me, houdt niet van me",
+      "phrases": [
+        "{{s}} houdt van me",
+        "{{s}} houdt niet van me"
+      ],
+      "sens": [
+        "positif",
+        "negatif"
+      ]
+    },
+    "longue": {
+      "nom": "Franse versie (een beetje, veel…)",
+      "tete": "{{s}} houdt van me…",
+      "mots": [
+        "een beetje",
+        "veel",
+        "hartstochtelijk",
+        "waanzinnig",
+        "helemaal niet"
+      ],
+      "sens": [
+        "moyen",
+        "positif",
+        "positif",
+        "positif",
+        "negatif"
+      ]
+    }
+  },
+  "section1": {
+    "title": "Hoe speel je ‘hij houdt van me, hij houdt niet van me’ online?",
+    "p1": "‘Hij houdt van me, hij houdt niet van me’ is een spelletje dat bijna iedereen als kind heeft gespeeld. Je denkt aan iemand, je plukt de blaadjes van een margriet één voor één en bij elk blaadje zeg je de volgende zin: ‘hij houdt van me’, ‘hij houdt niet van me’. Wat je bij het laatste blaadje zegt, is het antwoord.",
+    "p2": "Hier werkt het net zo, en er hoeft geen bloem aan te geloven. Je kunt de naam van de persoon intikken (of niet), ‘hij’ of ‘zij’ kiezen en dan de blaadjes aantikken in de volgorde die je wilt. Elke margriet heeft een ander aantal blaadjes, tussen 14 en 26, dus je weet niet waar het eindigt… tenzij je ze eerst telt! Bij een margriet met 17 blaadjes valt het laatste bijvoorbeeld op ‘hij houdt van me’.",
+    "p3": "Natuurlijk weet de bloem niets van je liefdesleven: ze antwoordt op goed geluk. Wil je weten of iemand van je houdt maar het niet durft te zeggen, dan kun je beter letten op <a href=\"/nl/stiekem-verliefd-op-mij/\">de signalen van een geheime liefde</a>: hoe die persoon je berichtjes stuurt, naar je kijkt, onthoudt wat je hebt verteld…"
+  },
+  "section2": {
+    "title": "Hij houdt van me, hij houdt niet van me: het rijmpje en de varianten",
+    "p1": "In het Nederlands is het rijmpje ‘hij houdt van me, hij houdt niet van me’, één blaadje per zin. En natuurlijk werkt het net zo goed met ‘zij houdt van me, zij houdt niet van me’.",
+    "p2": "In Frankrijk heeft het spel vijf stappen in plaats van twee: ‘il m'aime un peu, beaucoup, passionnément, à la folie, pas du tout’, oftewel: hij houdt een beetje van me, veel, hartstochtelijk, waanzinnig of helemaal niet. Die Franse versie kun je hierboven op de margriet proberen. In het Engels zeg je ‘he loves me, he loves me not’, in het Italiaans ‘m'ama, non m'ama’, in het Duits ‘er liebt mich, er liebt mich nicht’ en in het Spaans ‘me quiere, no me quiere’.",
+    "p3": "Als bloem neem je meestal een margriet (Leucanthemum vulgare, voor de botanici), maar een madeliefje werkt net zo goed. En laat je liever <a href=\"/nl/liefdestest/\">jullie twee namen</a> spreken dan een bloem, dan is er ook een percentage dat uit de letters wordt berekend."
+  },
+  "section3": {
+    "title": "Waar komt het margrietspelletje vandaan?",
+    "p1": "Niemand weet wie het spel heeft bedacht. Vaak wordt gezegd dat het uit Frankrijk komt, maar geen precieze datum bewijst dat. Wel is zeker dat het begin negentiende eeuw al bekend was: in de Faust van Goethe, verschenen in 1808, plukt Margarete (Gretchen in het Duits) in de tuinscène de blaadjes van een bloem één voor één. Ze fluistert ‘Er liebt mich – liebt mich nicht’ (hij houdt van me, hij houdt niet van me), en als het laatste blaadje goed valt, roept ze ‘Er liebt mich!’.",
+    "p2": "Het spel duikt ook op in het ballet Giselle, in 1841 voor het eerst opgevoerd in Parijs, waarin Giselle in het eerste bedrijf een bloem plukt. En in 1872 schilderde de Italiaanse schilder Giacomo Di Chirico een schilderij dat de naam van het spel draagt.",
+    "p3": "In 1956 maakte de Franse regisseur Marc Allégret zelfs ‘En effeuillant la marguerite’, met Brigitte Bardot. De titel is een woordgrap: in de film schrijft haar personage zich in voor een stripteasewedstrijd om een unieke uitgave terug te betalen die ze heeft verkocht."
+  },
+  "faq": {
+    "title": "Je vragen over het margrietspelletje",
+    "q1": "Hoe speel je ‘hij houdt van me, hij houdt niet van me’?",
+    "a1": "Je denkt aan iemand, neemt een margriet en plukt de blaadjes één voor één: bij het eerste zeg je ‘hij houdt van me’, bij het volgende ‘hij houdt niet van me’, en zo verder tot het eind. Wat je bij het laatste blaadje zegt, is het antwoord. Hier tik je de blaadjes gewoon aan.",
+    "q2": "Wat betekent ‘hij houdt van me, hij houdt niet van me’?",
+    "a2": "Het is het rijmpje dat je zegt terwijl je de blaadjes van een bloem plukt, om te weten of iemand van je houdt. Het ene blaadje betekent ja, het volgende nee, en het laatste beslist. Een kansspel natuurlijk, maar daar zit juist de lol in.",
+    "q3": "Kun je valsspelen bij ‘hij houdt van me, hij houdt niet van me’?",
+    "a3": "Ja: tel de blaadjes gewoon voordat je begint! Met ‘hij houdt van me, hij houdt niet van me’ eindigt een oneven aantal altijd op ‘hij houdt van me’. Met de Franse versie deel je het aantal blaadjes door vijf en kijk je naar de rest: 1 voor ‘een beetje’, 2 voor ‘veel’, 3 voor ‘hartstochtelijk’, 4 voor ‘waanzinnig’, en gaat het precies op, dan is het ‘helemaal niet’. Hier heeft elke margriet tussen 14 en 26 blaadjes, willekeurig gekozen.",
+    "q4": "Welke bloem gebruik je voor dit spelletje?",
+    "a4": "Meestal een margriet, maar elke bloem met veel smalle blaadjes werkt, zoals een madeliefje of een kleine veldbloem. In de Faust van Goethe gebruikt Margarete trouwens een ‘Sternblume’, een stervormige bloem, en geen margriet.",
+    "q5": "Zegt de margriet de waarheid?",
+    "a5": "Nee, en dat is juist de charme van het spel! De uitkomst hangt alleen af van het aantal blaadjes van de bloem. Glimlachen mag natuurlijk wel als ze op ‘hij houdt van me’ valt…",
+    "q6": "Bestaat er een langere versie van dit spelletje?",
+    "a6": "Ja, de Franse: ‘il m'aime un peu, beaucoup, passionnément, à la folie, pas du tout’, oftewel hij houdt een beetje van me, veel, hartstochtelijk, waanzinnig of helemaal niet. Je gaat de vijf stappen langs en begint dan opnieuw, tot het laatste blaadje."
+  },
+  "jsonLd": {
+    "name": "Hij houdt van me, hij houdt niet van me: online spel",
+    "about": "Het margrietspelletje: hij houdt van me, hij houdt niet van me"
+  }
+}

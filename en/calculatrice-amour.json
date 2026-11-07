@@ -83,7 +83,7 @@
   "section2": {
     "title": "How our love calculator works",
     "p1": "The final score is an average of five measures, each with its own weight. Here is how our calculation engine above works:",
-    "apres": "The five marks are added up according to their weight and give the percentage on screen. Nothing is random: the same names always give exactly the same result, and \"Thomas + Elisa\" gives the same thing as \"Elisa + Thomas\".",
+    "apres": "The five marks are added up according to their weight and give the percentage on screen. Nothing is random, unlike <a href=\"/en/he-loves-me-he-loves-me-not/\">pulling petals off a daisy</a>: the same names always give exactly the same result, and \"Thomas + Elisa\" gives the same thing as \"Elisa + Thomas\".",
     "poidsTitre": "How much each measure weighs",
     "poidsTexte": "The original method and numerology weigh the most, because they are what makes this tool a tradition. Shared letters follow closely. The vowel rhythm and the length balance count a little less, they mostly serve to separate two pairs that are otherwise equal."
   },

@@ -421,6 +421,12 @@
     "description": "Une question tirée au hasard, envoyée sur WhatsApp ou par SMS en un geste : tu préfères, je n'ai jamais, vérité, qui de nous deux...",
     "metaDescription": "Des jeux de couple à faire par message : tirez une question (tu préfères, je n'ai jamais, vérité...) et envoyez-la sur WhatsApp ou par SMS."
   },
+  "jeuMarguerite": {
+    "title": "Effeuiller la marguerite en ligne : un peu, beaucoup…",
+    "shortTitle": "Effeuiller la marguerite",
+    "description": "Touchez les pétales un par un : il m'aime un peu, beaucoup, passionnément, à la folie… ou pas du tout ?",
+    "metaDescription": "Effeuillez la marguerite en ligne : un pétale après l'autre, il m'aime un peu, beaucoup, passionnément, à la folie ou pas du tout. Gratuit, avec un prénom."
+  },
   "jeuOuiNon": {
     "title": "Jeu Oui ou Non pour couples en ligne - 120 questions",
     "shortTitle": "Oui ou non",
