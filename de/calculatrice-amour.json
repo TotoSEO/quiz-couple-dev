@@ -83,7 +83,7 @@
   "section2": {
     "title": "Wie unser Liebesrechner funktioniert",
     "p1": "Das Endergebnis ist ein Durchschnitt aus fünf Messungen, jede mit ihrem Gewicht. So funktioniert unser Rechenwerk oben:",
-    "apres": "Die fünf Noten werden nach ihrem Gewicht addiert und ergeben den angezeigten Prozentwert. Nichts wird ausgelost: dieselben Namen geben immer genau dasselbe Ergebnis, und «Thomas + Elisa» ergibt dasselbe wie «Elisa + Thomas».",
+    "apres": "Die fünf Noten werden nach ihrem Gewicht addiert und ergeben den angezeigten Prozentwert. Nichts wird ausgelost, anders als <a href=\"/de/er-liebt-mich-er-liebt-mich-nicht/\">beim Blumenorakel</a>: dieselben Namen geben immer genau dasselbe Ergebnis, und «Thomas + Elisa» ergibt dasselbe wie «Elisa + Thomas».",
     "poidsTitre": "Wie viel jede Messung wiegt",
     "poidsTexte": "Die ursprüngliche Methode und die Numerologie wiegen am schwersten, denn sie machen die Tradition dieses Werkzeugs aus. Die gemeinsamen Buchstaben folgen dicht dahinter. Der Vokalrhythmus und das Gleichgewicht der Längen zählen etwas weniger, sie dienen vor allem dazu, zwei gleichwertige Paare voneinander zu trennen."
   },

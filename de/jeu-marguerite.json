@@ -1,0 +1,116 @@
+{
+  "hero": {
+    "badge": "Kostenloses Onlinespiel",
+    "title": "Er liebt mich, er liebt mich nicht: das Blumenorakel online",
+    "highlight": "Er liebt mich, er liebt mich nicht",
+    "description": "Denk an jemanden, tipp die Blütenblätter einzeln an und schau, worauf das letzte fällt: Er liebt mich oder er liebt mich nicht? Der Zufall entscheidet, genau wie bei einer echten Blume!"
+  },
+  "outil": {
+    "titre": "Deine Blume",
+    "prenom": "Der Name der Person (freiwillig)",
+    "prenomExemple": "Zum Beispiel: Lena",
+    "pronom": "Er oder sie?",
+    "version": "Der Spruch",
+    "consigne": "Tipp ein Blütenblatt an, um anzufangen.",
+    "encore": "Tipp das nächste Blatt an…",
+    "tout": "Alle auf einmal abzupfen",
+    "nouvelle": "Eine neue Blume",
+    "fleur": "Die Blume: Tipp ein Blatt an, um es abzuzupfen",
+    "petale": "Dieses Blatt abzupfen",
+    "finTitre": "Die Blume hat gesprochen!",
+    "finPositif": "Das ist ein gutes Zeichen! Gut, es ist eine Blume und sie antwortet zufällig… aber wir nehmen es trotzdem.",
+    "finMoyen": "Ein bisschen ist schon mal ein Anfang! Und eine Blume kann sich auch irren.",
+    "finNegatif": "Autsch. Aber die Blume antwortet zufällig, und die nächste sagt vielleicht etwas ganz anderes!",
+    "partager": "Teilen",
+    "copier": "Ergebnis kopieren",
+    "copie": "Kopiert, jetzt nur noch einfügen!",
+    "partage": "Die Blume hat gesprochen: „{{phrase}}“ 🌼 Und was sagt deine?",
+    "suite": "Für eine Antwort, die weniger vom Zufall abhängt",
+    "suiteBouton": "Zum Test „Liebt er/sie mich heimlich?“"
+  },
+  "pronoms": [
+    {
+      "id": "m",
+      "label": "Er",
+      "sujet": "Er"
+    },
+    {
+      "id": "f",
+      "label": "Sie",
+      "sujet": "Sie"
+    }
+  ],
+  "versionDefaut": "courte",
+  "ordreVersions": [
+    "courte",
+    "longue"
+  ],
+  "versions": {
+    "courte": {
+      "nom": "Liebt mich, liebt mich nicht",
+      "phrases": [
+        "{{s}} liebt mich",
+        "{{s}} liebt mich nicht"
+      ],
+      "sens": [
+        "positif",
+        "negatif"
+      ]
+    },
+    "longue": {
+      "nom": "Französische Version (ein bisschen, sehr…)",
+      "tete": "{{s}} liebt mich…",
+      "mots": [
+        "ein bisschen",
+        "sehr",
+        "leidenschaftlich",
+        "wahnsinnig",
+        "gar nicht"
+      ],
+      "sens": [
+        "moyen",
+        "positif",
+        "positif",
+        "positif",
+        "negatif"
+      ]
+    }
+  },
+  "section1": {
+    "title": "Wie spielt man das Blumenorakel online?",
+    "p1": "„Er liebt mich, er liebt mich nicht“ ist ein Spiel, das fast jeder als Kind gespielt hat. Du denkst an jemanden, zupfst die Blütenblätter einer Margerite einzeln ab und sagst bei jedem Blatt den nächsten Satz: „Er liebt mich“, „er liebt mich nicht“. Was du beim letzten Blatt sagst, ist die Antwort.",
+    "p2": "Hier geht das genauso, und keine Blume muss dran glauben. Du kannst den Namen der Person eintippen (oder auch nicht), „er“ oder „sie“ wählen und dann die Blätter in beliebiger Reihenfolge antippen. Jede Blume hat eine andere Zahl an Blättern, zwischen 14 und 26, du kannst also nicht wissen, wo es endet… außer du zählst vorher nach! Bei einer Blume mit 17 Blättern zum Beispiel fällt das letzte auf „er liebt mich“.",
+    "p3": "Natürlich weiß die Blume nichts über dein Liebesleben: Sie antwortet zufällig. Wenn du wissen willst, ob dich jemand liebt, sich aber nicht traut, es zu sagen, achtest du besser auf <a href=\"/de/liebt-er-sie-mich-heimlich-test/\">die Zeichen einer heimlichen Liebe</a>: wie die Person dir schreibt, dich ansieht, sich an das erinnert, was du erzählt hast…"
+  },
+  "section2": {
+    "title": "Er liebt mich, er liebt mich nicht: der Spruch und seine Varianten",
+    "p1": "Auf Deutsch heißt der Spruch „er liebt mich, er liebt mich nicht“, ein Blatt für jeden Satz. Natürlich geht das genauso mit „sie liebt mich, sie liebt mich nicht“.",
+    "p2": "In Frankreich hat das Spiel fünf Stufen statt zwei: „il m'aime un peu, beaucoup, passionnément, à la folie, pas du tout“, also: Er liebt mich ein bisschen, sehr, leidenschaftlich, wahnsinnig oder gar nicht. Diese französische Version kannst du oben an der Blume ausprobieren. Auf Englisch sagt man „he loves me, he loves me not“, auf Italienisch „m'ama, non m'ama“, auf Spanisch „me quiere, no me quiere“ und auf Niederländisch „hij houdt van me, hij houdt niet van me“.",
+    "p3": "Als Blume nimmt man meistens eine Margerite (Leucanthemum vulgare, für die Botaniker), aber ein Gänseblümchen tut es genauso. Und wenn du lieber <a href=\"/de/liebesrechner/\">eure beiden Namen</a> sprechen lässt als eine Blume, gibt es auch einen Prozentwert, der aus den Buchstaben berechnet wird."
+  },
+  "section3": {
+    "title": "Woher kommt das Blumenorakel?",
+    "p1": "Wer das Spiel erfunden hat, weiß niemand. Oft heißt es, es komme aus Frankreich, aber kein genaues Datum belegt das. Sicher ist, dass es Anfang des 19. Jahrhunderts schon bekannt war: In Goethes Faust, 1808 erschienen, zupft Margarete in der Szene „Garten“ die Blätter einer „Sternblume“ ab, eins nach dem andern. Sie murmelt „Er liebt mich – liebt mich nicht“, und als das letzte Blatt richtig fällt, ruft sie „Er liebt mich!“. Faust antwortet: „Ja, mein Kind! Laß dieses Blumenwort / Dir Götter-Ausspruch seyn.“",
+    "p2": "Das Spiel taucht auch im Ballett Giselle auf, 1841 in Paris uraufgeführt, in dem Giselle im ersten Akt eine Blume entblättert. Und 1872 hat der italienische Maler Giacomo Di Chirico ein Bild gemalt, das den Namen des Spiels trägt.",
+    "p3": "1956 drehte der französische Regisseur Marc Allégret sogar „En effeuillant la marguerite“, auf Deutsch „Das Gänseblümchen wird entblättert“, mit Brigitte Bardot. Der Titel ist ein Wortspiel: Im Film meldet sich ihre Figur zu einem Striptease-Wettbewerb an, um eine Einzelausgabe zurückzuzahlen, die sie verkauft hat."
+  },
+  "faq": {
+    "title": "Deine Fragen zum Blumenorakel",
+    "q1": "Wie spielt man „Er liebt mich, er liebt mich nicht“?",
+    "a1": "Du denkst an jemanden, nimmst eine Margerite und zupfst die Blätter einzeln ab: Beim ersten sagst du „er liebt mich“, beim nächsten „er liebt mich nicht“, und so weiter bis zum Schluss. Was du beim letzten Blatt sagst, ist die Antwort. Hier tippst du die Blätter einfach an.",
+    "q2": "Was ist ein Blumenorakel?",
+    "a2": "So nennt man das Spiel, bei dem man die Blütenblätter einer Blume einzeln abzupft und dabei „er liebt mich, er liebt mich nicht“ sagt, um zu erfahren, ob einen jemand liebt. Ein Blatt heißt ja, das nächste nein, und das letzte entscheidet. Ein Glücksspiel, klar, aber genau das macht den Spaß aus.",
+    "q3": "Kann man beim Blumenorakel schummeln?",
+    "a3": "Ja: Einfach vorher die Blätter zählen! Bei „er liebt mich, er liebt mich nicht“ endet eine ungerade Zahl immer auf „er liebt mich“. Bei der französischen Version teilst du die Zahl der Blätter durch fünf und schaust auf den Rest: 1 für „ein bisschen“, 2 für „sehr“, 3 für „leidenschaftlich“, 4 für „wahnsinnig“, und geht es glatt auf, heißt es „gar nicht“. Hier hat jede Blume zwischen 14 und 26 Blätter, zufällig ausgewählt.",
+    "q4": "Welche Blume nimmt man für das Blumenorakel?",
+    "a4": "Meistens eine Margerite, aber jede Blume mit vielen schmalen Blättern geht, zum Beispiel ein Gänseblümchen oder eine kleine Wiesenblume. In Goethes Faust nimmt Margarete übrigens eine „Sternblume“.",
+    "q5": "Sagt die Blume die Wahrheit?",
+    "a5": "Nein, und genau das ist der Reiz des Spiels! Das Ergebnis hängt nur davon ab, wie viele Blätter die Blume hat. Lächeln darf man trotzdem, wenn sie auf „er liebt mich“ fällt…",
+    "q6": "Gibt es eine längere Version von „Er liebt mich, er liebt mich nicht“?",
+    "a6": "Ja, die französische: „il m'aime un peu, beaucoup, passionnément, à la folie, pas du tout“, also er liebt mich ein bisschen, sehr, leidenschaftlich, wahnsinnig oder gar nicht. Man geht die fünf Stufen durch und fängt dann wieder von vorne an, bis zum letzten Blatt."
+  },
+  "jsonLd": {
+    "name": "Er liebt mich, er liebt mich nicht: das Blumenorakel online",
+    "about": "Das Blumenorakel: er liebt mich, er liebt mich nicht"
+  }
+}

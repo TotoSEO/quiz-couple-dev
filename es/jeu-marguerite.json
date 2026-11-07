@@ -1,0 +1,105 @@
+{
+  "hero": {
+    "badge": "Juego online gratis",
+    "title": "Me quiere, no me quiere: deshoja la margarita online",
+    "highlight": "Me quiere, no me quiere",
+    "description": "Piensa en alguien, toca los pétalos uno a uno y mira dónde cae el último: ¿me quiere o no me quiere? Decide el azar, ¡igual que con una flor de verdad!"
+  },
+  "outil": {
+    "titre": "Tu margarita",
+    "prenom": "Su nombre (opcional)",
+    "prenomExemple": "Por ejemplo: Lucía",
+    "pronom": "",
+    "version": "La fórmula",
+    "consigne": "Toca un pétalo para empezar.",
+    "encore": "Toca el pétalo siguiente…",
+    "tout": "Deshojarla de golpe",
+    "nouvelle": "Otra margarita",
+    "fleur": "La margarita: toca un pétalo para quitarlo",
+    "petale": "Quitar este pétalo",
+    "finTitre": "¡La margarita ha hablado!",
+    "finPositif": "¡Buena señal! Bueno, es una flor y responde al azar… pero nos lo quedamos.",
+    "finMoyen": "Un poco ya es un comienzo. ¡Y una margarita se puede equivocar!",
+    "finNegatif": "Vaya. Pero la margarita responde al azar, ¡y la siguiente quizá diga otra cosa!",
+    "partager": "Compartir",
+    "copier": "Copiar el resultado",
+    "copie": "Copiado, ¡ya solo queda pegarlo!",
+    "partage": "La margarita ha hablado: «{{phrase}}» 🌼 ¿Y la tuya qué dice?",
+    "suite": "Para una respuesta menos al azar",
+    "suiteBouton": "Hacer el test «¿Me quiere en secreto?»"
+  },
+  "pronoms": [],
+  "versionDefaut": "courte",
+  "ordreVersions": [
+    "courte",
+    "longue"
+  ],
+  "versions": {
+    "courte": {
+      "nom": "Me quiere, no me quiere",
+      "phrases": [
+        "{{s}} me quiere",
+        "{{s}} no me quiere"
+      ],
+      "sens": [
+        "positif",
+        "negatif"
+      ]
+    },
+    "longue": {
+      "nom": "Versión francesa (un poco, mucho…)",
+      "tete": "{{s}} me quiere…",
+      "mots": [
+        "un poco",
+        "mucho",
+        "con pasión",
+        "con locura",
+        "nada"
+      ],
+      "sens": [
+        "moyen",
+        "positif",
+        "positif",
+        "positif",
+        "negatif"
+      ]
+    }
+  },
+  "section1": {
+    "title": "¿Cómo deshojar la margarita online?",
+    "p1": "«Me quiere, no me quiere» es un juego que casi todos hemos hecho de pequeños. Piensas en alguien, quitas los pétalos de una margarita uno a uno y con cada pétalo dices la frase siguiente: «me quiere», «no me quiere». Lo que dices con el último pétalo es la respuesta.",
+    "p2": "Aquí funciona igual, y sin estropear ninguna flor. Puedes escribir el nombre de la persona (o no) y luego tocar los pétalos en el orden que quieras. Cada margarita tiene un número de pétalos distinto, entre 14 y 26, así que no hay forma de saber dónde va a caer… ¡a menos que los cuentes antes! Por ejemplo, en una margarita de 17 pétalos, el último cae en «me quiere».",
+    "p3": "Claro que la flor no sabe nada de tu vida amorosa: responde al azar. Si quieres saber si alguien te quiere sin atreverse a decirlo, es mejor fijarse en <a href=\"/es/test-me-quiere-en-secreto/\">las señales de un amor secreto</a>: cómo te escribe, cómo te mira, cómo se acuerda de lo que le contaste…"
+  },
+  "section2": {
+    "title": "Me quiere, no me quiere: la fórmula y sus versiones",
+    "p1": "En español, la fórmula de siempre es «me quiere, no me quiere», un pétalo para cada frase. No hace falta decir quién: vale igual para un chico que para una chica, y si escribes un nombre arriba, la margarita lo usa.",
+    "p2": "En Francia, el juego tiene cinco pasos en lugar de dos: «il m'aime un peu, beaucoup, passionnément, à la folie, pas du tout», es decir, me quiere un poco, mucho, con pasión, con locura o nada. Puedes probar esta versión francesa en la margarita de arriba. En inglés se dice «he loves me, he loves me not», en italiano «m'ama, non m'ama», en alemán «er liebt mich, er liebt mich nicht» y en neerlandés «hij houdt van me, hij houdt niet van me».",
+    "p3": "Para la flor, lo normal es una margarita común (Leucanthemum vulgare, para los botánicos), aunque una margarita pequeña del césped sirve igual. Y si prefieres que hablen <a href=\"/es/calculadora-del-amor/\">vuestros dos nombres</a> en lugar de una flor, también hay un porcentaje que se calcula con las letras."
+  },
+  "section3": {
+    "title": "¿De dónde viene el juego de la margarita?",
+    "p1": "Nadie sabe quién inventó el juego. Se suele decir que viene de Francia, pero ninguna fecha precisa lo demuestra. Lo que sí es seguro es que ya se conocía a principios del siglo XIX: en el Fausto de Goethe, publicado en 1808, Margarita (Gretchen en alemán) quita los pétalos de una flor uno a uno en la escena del jardín. Murmura «Er liebt mich – liebt mich nicht» (me quiere, no me quiere) y, cuando el último pétalo cae del lado bueno, exclama «Er liebt mich!».",
+    "p2": "El juego aparece también en el ballet Giselle, estrenado en París en 1841, donde Giselle deshoja una flor en el primer acto. Y en 1872, el pintor italiano Giacomo Di Chirico pintó un cuadro que lleva el nombre del juego.",
+    "p3": "En 1956, el director francés Marc Allégret rodó incluso «En effeuillant la marguerite», estrenada en español como «Deshojando la margarita», con Brigitte Bardot. El título es un juego de palabras: en la película, su personaje se apunta a un concurso de striptease para pagar una edición única que había vendido."
+  },
+  "faq": {
+    "title": "Tus preguntas sobre el juego de la margarita",
+    "q1": "¿Cómo se juega a me quiere, no me quiere?",
+    "a1": "Piensas en alguien, coges una margarita y quitas los pétalos uno a uno diciendo «me quiere» con el primero, «no me quiere» con el siguiente, y así hasta el final. Lo que dices con el último pétalo es la respuesta. Aquí basta con tocar los pétalos.",
+    "q2": "¿Qué significa deshojar la margarita?",
+    "a2": "Es quitar uno a uno los pétalos de una margarita diciendo «me quiere, no me quiere» para saber si alguien te quiere. Un pétalo es sí, el siguiente es no, y el último decide. Es un juego de azar, claro, pero ahí está la gracia.",
+    "q3": "¿Se puede hacer trampa al deshojar la margarita?",
+    "a3": "Sí: ¡basta con contar los pétalos antes de empezar! Con «me quiere, no me quiere», un número impar siempre acaba en «me quiere». Con la versión francesa, divides el número de pétalos entre cinco y miras el resto: 1 para «un poco», 2 para «mucho», 3 para «con pasión», 4 para «con locura», y una división exacta para «nada». Aquí, cada margarita tiene entre 14 y 26 pétalos, sorteados al azar.",
+    "q4": "¿Qué flor se usa para deshojar la margarita?",
+    "a4": "Normalmente una margarita, pero vale cualquier flor con muchos pétalos finos, como una margarita del césped o una flor silvestre pequeña. En el Fausto de Goethe, Margarita usa de hecho una «Sternblume», una flor en forma de estrella, y no una margarita.",
+    "q5": "¿La margarita dice la verdad?",
+    "a5": "No, ¡y ahí está toda la gracia del juego! El resultado solo depende del número de pétalos de la flor. Eso no impide sonreír cuando cae en «me quiere»…",
+    "q6": "¿Existe una versión más larga de me quiere, no me quiere?",
+    "a6": "Sí, la francesa: «il m'aime un peu, beaucoup, passionnément, à la folie, pas du tout», que significa me quiere un poco, mucho, con pasión, con locura o nada. Se recorren los cinco pasos y se vuelve a empezar hasta el último pétalo."
+  },
+  "jsonLd": {
+    "name": "Me quiere, no me quiere: deshoja la margarita online",
+    "about": "El juego de deshojar la margarita: me quiere, no me quiere"
+  }
+}

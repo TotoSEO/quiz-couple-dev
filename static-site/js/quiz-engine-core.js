@@ -2431,6 +2431,7 @@ var QuizEngine = (function() {
     { type: 'jeu', key: 'qui-pourrait', icon: '🏆', route: 'jeuQuiPourrait' },
     { type: 'jeu', key: 'questions-rapides', icon: '⚡', route: 'jeuQuestionsRapides' },
     { type: 'jeu', key: 'jeux-message', icon: '📱', route: 'jeuxParMessage' },
+    { type: 'jeu', key: 'marguerite', icon: '🌼', route: 'jeuMarguerite' },
     { type: 'jeu', key: 'oui-non', icon: '✅', route: 'jeuOuiNon' },
     { type: 'jeu', key: 'phrases', icon: '💬', route: 'jeuPhrases' },
     { type: 'jeu', key: 'dix-mais', icon: '🔟', route: 'jeuDixMais' },
@@ -2536,7 +2537,7 @@ var QuizEngine = (function() {
     // Un type de couple appelle la facon d'aimer de chacun, puis le langage
     // de l'autre, puis la solidite de l'ensemble.
     'type-couple': ['testPersonnalite', 'testLangageAmour', 'testCouple'],
-    'secret':          ['testSuisJeAmoureux', 'testLangageAmour', 'testAttachement'],
+    'secret':          ['testSuisJeAmoureux', 'jeuMarguerite', 'testLangageAmour'],
     'distance-aime':   ['testDistance', 'testAimeEncore', 'testAttachement'],
     // Le doute sur ses sentiments appelle la question du couple, puis de soi.
     'aime-encore':     ['testFinCouple', 'testAmourHabitude', 'testCouple'],

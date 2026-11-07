@@ -1,0 +1,116 @@
+{
+  "hero": {
+    "badge": "Free online game",
+    "title": "He loves me, he loves me not: pick the daisy petals online",
+    "highlight": "He loves me, he loves me not",
+    "description": "Think of someone, tap the petals one by one and see where the last one lands: he loves me, or he loves me not? It's pure chance, just like with a real flower!"
+  },
+  "outil": {
+    "titre": "Your daisy",
+    "prenom": "Their name (optional)",
+    "prenomExemple": "For example: Sam",
+    "pronom": "He or she?",
+    "version": "The rhyme",
+    "consigne": "Tap a petal to start.",
+    "encore": "Tap the next petal…",
+    "tout": "Pick them all at once",
+    "nouvelle": "Another daisy",
+    "fleur": "The daisy: tap a petal to pull it off",
+    "petale": "Pull off this petal",
+    "finTitre": "The daisy has spoken!",
+    "finPositif": "That's a good sign! Well, it's a flower, it answers at random… but we'll take it.",
+    "finMoyen": "A little is a start! And a daisy can easily get it wrong.",
+    "finNegatif": "Ouch. But the daisy answers at random, and the next one might say something else entirely!",
+    "partager": "Share",
+    "copier": "Copy the result",
+    "copie": "Copied, now just paste it!",
+    "partage": "The daisy has spoken: \"{{phrase}}\" 🌼 What does yours say?",
+    "suite": "For an answer that's less random",
+    "suiteBouton": "Take the \"Do they secretly love me?\" quiz"
+  },
+  "pronoms": [
+    {
+      "id": "m",
+      "label": "He",
+      "sujet": "He"
+    },
+    {
+      "id": "f",
+      "label": "She",
+      "sujet": "She"
+    }
+  ],
+  "versionDefaut": "courte",
+  "ordreVersions": [
+    "courte",
+    "longue"
+  ],
+  "versions": {
+    "courte": {
+      "nom": "Loves me, loves me not",
+      "phrases": [
+        "{{s}} loves me",
+        "{{s}} loves me not"
+      ],
+      "sens": [
+        "positif",
+        "negatif"
+      ]
+    },
+    "longue": {
+      "nom": "French version (a little, a lot…)",
+      "tete": "{{s}} loves me…",
+      "mots": [
+        "a little",
+        "a lot",
+        "passionately",
+        "madly",
+        "not at all"
+      ],
+      "sens": [
+        "moyen",
+        "positif",
+        "positif",
+        "positif",
+        "negatif"
+      ]
+    }
+  },
+  "section1": {
+    "title": "How to play he loves me, he loves me not online",
+    "p1": "He loves me, he loves me not is a game most of us played as kids. You think of someone, you pull the petals off a daisy one by one, and with each petal you say the next line: \"he loves me\", \"he loves me not\". Whatever you say on the last petal is the answer.",
+    "p2": "It works the same way here, and no flower gets hurt. You can type the person's name (or not), choose \"he\" or \"she\", then tap the petals in any order you like. Every daisy has a different number of petals, from 14 to 26, so there's no way to know where it'll land… unless you count them first! For example, on a daisy with 17 petals, the last one lands on \"he loves me\".",
+    "p3": "Of course, the flower knows nothing about your love life: it answers at random. If you want to know whether someone loves you without daring to say it, you're better off looking at <a href=\"/en/does-he-she-secretly-love-me-test/\">the signs of a secret crush</a>: the way they text you, look at you, or remember what you told them…"
+  },
+  "section2": {
+    "title": "He loves me, he loves me not: the rhyme and its versions",
+    "p1": "The classic rhyme in English is \"he loves me, he loves me not\", one petal for each line. And of course it works just as well as \"she loves me, she loves me not\". Some people add a funny twist at the end: \"he loves me, he loves me lots\".",
+    "p2": "In France, the game has five steps instead of two: \"il m'aime un peu, beaucoup, passionnément, à la folie, pas du tout\". In other words: he loves me a little, a lot, passionately, madly, or not at all. You can try this French version on the daisy above. In Italian, people say \"m'ama, non m'ama\", in German \"er liebt mich, er liebt mich nicht\", in Spanish \"me quiere, no me quiere\" and in Dutch \"hij houdt van me, hij houdt niet van me\".",
+    "p3": "The flower is usually an oxeye daisy (Leucanthemum vulgare, if you want the Latin), but a small lawn daisy works just as well. And if you'd rather let <a href=\"/en/love-calculator/\">your two names</a> do the talking instead of a flower, there's also a percentage worked out from the letters."
+  },
+  "section3": {
+    "title": "Where does he loves me, he loves me not come from?",
+    "p1": "Nobody knows who invented the game. It's often said to come from France, but no precise date backs that up. What's certain is that it was already well known in the early 19th century: in Goethe's Faust, published in 1808, Gretchen pulls the petals off a flower one by one in the garden scene. She whispers \"Er liebt mich – liebt mich nicht\" (he loves me, loves me not), and when the last petal falls the right way, she cries out \"Er liebt mich!\".",
+    "p2": "The game also shows up in the ballet Giselle, first performed in Paris in 1841, where Giselle plucks a flower in the first act. And in 1872, the Italian painter Giacomo Di Chirico painted a picture named after the game.",
+    "p3": "In 1956, the French director Marc Allégret even made a film called En effeuillant la marguerite, released in English as Plucking the Daisy, starring Brigitte Bardot. The title is a play on words: in the film, her character enters a striptease contest to pay back a one-of-a-kind edition she sold."
+  },
+  "faq": {
+    "title": "Your questions about the daisy game",
+    "q1": "How do you play he loves me, he loves me not?",
+    "a1": "You think of someone, take a daisy and pull off the petals one by one, saying \"he loves me\" for the first one, \"he loves me not\" for the next, and so on. Whatever you say on the last petal is the answer. Here, you just tap the petals instead.",
+    "q2": "What does \"he loves me, he loves me not\" mean?",
+    "a2": "It's the rhyme you say while pulling the petals off a flower, to find out whether someone loves you. One petal means yes, the next means no, and the last one decides. It's a game of chance, of course, but that's the fun of it.",
+    "q3": "Can you cheat at he loves me, he loves me not?",
+    "a3": "Yes: just count the petals before you start! With the two-line version, an odd number always ends on \"he loves me\". With the French version, divide the number of petals by five and look at the remainder: 1 for \"a little\", 2 for \"a lot\", 3 for \"passionately\", 4 for \"madly\", and no remainder for \"not at all\". Here, every daisy has between 14 and 26 petals, picked at random.",
+    "q4": "What flower do you use for he loves me, he loves me not?",
+    "a4": "Usually a daisy, but any flower with lots of thin petals will do, like a lawn daisy or a small wildflower. In Goethe's Faust, Gretchen actually uses a \"Sternblume\", a star-shaped flower, not a daisy.",
+    "q5": "Does the daisy tell the truth?",
+    "a5": "No, and that's the whole charm of the game! The result only depends on how many petals the flower has. That doesn't stop you from smiling when it lands on \"he loves me\"…",
+    "q6": "Is there a longer version of he loves me, he loves me not?",
+    "a6": "Yes, the French one: \"il m'aime un peu, beaucoup, passionnément, à la folie, pas du tout\", which means he loves me a little, a lot, passionately, madly, or not at all. You go through the five steps, then start again from the beginning until the last petal."
+  },
+  "jsonLd": {
+    "name": "He loves me, he loves me not: online daisy game",
+    "about": "The daisy petal game: he loves me, he loves me not"
+  }
+}

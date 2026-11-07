@@ -294,6 +294,7 @@
     jeuQuiPourrait: 'Qui pourrait',
     jeuQuestionsRapides: 'Questions rapides',
     jeuxParMessage: 'Jeux par message',
+    jeuMarguerite: 'Effeuiller la marguerite',
     jeuOuiNon: 'Oui ou non',
     jeuPhrases: 'Phrases à compléter',
     jeuDixMais: "C'est un 10 mais",

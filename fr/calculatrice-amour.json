@@ -80,7 +80,7 @@
   "section2": {
     "title": "Comment marche notre calculatrice de l'amour",
     "p1": "Le score final est une moyenne de cinq mesures, chacune avec son poids. Voici comment fonctionne notre moteur de calcul ci-dessus :",
-    "apres": "Les cinq notes s'additionnent selon leur poids et donnent le pourcentage affiché. Rien n'est tiré au hasard : les mêmes prénoms donnent toujours exactement le même résultat, et « Thomas + Elisa » donne la même chose que « Elisa + Thomas ».",
+    "apres": "Les cinq notes s'additionnent selon leur poids et donnent le pourcentage affiché. Rien n'est tiré au hasard, contrairement à <a href=\"/effeuiller-la-marguerite/\">la marguerite qu'on effeuille</a> : les mêmes prénoms donnent toujours exactement le même résultat, et « Thomas + Elisa » donne la même chose que « Elisa + Thomas ».",
     "poidsTitre": "Le poids de chaque mesure",
     "poidsTexte": "La méthode historique et la numérologie pèsent le plus lourd, parce que ce sont elles qui font la tradition de cet outil. Les lettres partagées suivent de près. Le rythme des voyelles et l'équilibre des longueurs comptent un peu moins, ils servent surtout à départager deux paires qui se valent."
   },
