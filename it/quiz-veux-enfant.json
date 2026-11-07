@@ -1,0 +1,64 @@
+{
+  "hero": {
+    "badge": "Un test da fare da soli",
+    "title": "Voglio un figlio? Il test per vederci più chiaro",
+    "titleHighlight": "Voglio un figlio?",
+    "description": "Si parla della tua vita tra dieci anni, di un neonato in braccio, della paura di sbagliare, dei soldi o della stanchezza. Venti domande misurano la tua voglia da una parte e i tuoi dubbi dall'altra, perché le due cose possono essere forti allo stesso tempo.",
+    "subtitle": "Venti domande, cinque minuti, gratis e senza registrazione",
+    "jumpBtn": "Fai il test"
+  },
+  "section1": {
+    "title": "Come capire se vuoi un figlio?",
+    "p1": "Per capire se vuoi un figlio, bisogna guardare due cose: cosa provi quando ti immagini con un figlio, e cosa ti trattiene. Le due cose non vanno sempre nella stessa direzione. Si può desiderare tanto un figlio e avere molta paura di sbagliare, oppure non averne nessuna voglia senza avere paura di niente.",
+    "p2": "Per questo il test le separa. Dieci domande guardano la voglia, per esempio: «Una vita intera senza figli: che effetto ti fa?». Altre dieci guardano quello che ti trattiene: la libertà, i soldi, il lavoro, lo stato del mondo, la stanchezza. Il risultato viene dalla forma delle due misure, non da un voto su cento.",
+    "p3": "Una cosa da tenere a mente: volere un figlio e poterlo accogliere nelle condizioni giuste non sono la stessa domanda. Qui parliamo della voglia. Capire se siete pronti <a href=\"/it/test-genitorialita-coppia/\">a diventare genitori insieme</a> (i soldi, la casa, la divisione dei compiti) è un altro test, da fare in coppia."
+  },
+  "section2": {
+    "title": "Non volere figli è più comune di quanto si pensi",
+    "p1": "In Francia, l'istituto nazionale di studi demografici (Ined) ha fatto la domanda nell'indagine Fecond del 2010: <strong>il 4,3% delle donne e il 6,3% degli uomini tra i 18 e i 49 anni</strong> non avevano figli e non ne volevano. È poco, e non aumenta, ma non è niente. La metà di queste persone viveva in coppia, e più della metà dava ragioni molto semplici: stare bene senza figli, voler restare liberi.",
+    "p2": "Negli Stati Uniti, il Pew Research Center ha intervistato nel 2024 degli adulti sotto i 50 anni senza figli: il <strong>47%</strong> pensava che probabilmente non ne avrebbe mai avuti, contro il 37% del 2018. E tra loro, il 57% diceva semplicemente di non averne voglia. Le altre ragioni venivano molto dopo: voler dedicarsi ad altro (44%), lo stato del mondo (38%), non poterselo permettere (36%).",
+    "p3": "Questi numeri dicono una cosa utile: non volere figli non è un problema da risolvere. È una risposta. E se hai una relazione, è una delle <a href=\"/it/blog/domande-sul-futuro-di-coppia/\">domande sul futuro da farsi in due</a>, abbastanza presto da non scoprire il disaccordo dieci anni dopo."
+  },
+  "section3": {
+    "title": "Come leggere il tuo risultato?",
+    "p1": "Il risultato dà due percentuali: la tua voglia di un figlio e i tuoi dubbi. Ognuna è calcolata sul proprio massimo, quindi le due non fanno cento insieme. Quello che conta è la forma delle due.",
+    "p2": "Se la voglia è alta e i dubbi sono bassi, è una voglia chiara. Se sono alti tutti e due, è una voglia con delle vere paure, ed è molto comune. Se i dubbi superano nettamente la voglia, spesso è il segno che non è il momento, o che la paura nasconde il resto. Se sono bassi tutti e due, è una vita senza figli che ti va bene.",
+    "p3": "Il test non sa tutto. Non conosce né la tua età, né la tua salute, né la tua storia. Se la domanda ti pesa, parlarne con una persona di fiducia, o con un professionista, spesso aiuta a vederci più chiaro.",
+    "headerScore": "Le tue due misure",
+    "headerLevel": "Risultato",
+    "headerAnalysis": "Cosa vuol dire",
+    "row1Score": "Voglia nettamente più alta",
+    "row1Level": "Hai voglia di un figlio",
+    "row1Analysis": "La voglia c'è, e le paure non prendono il sopravvento.",
+    "row2Score": "Tutte e due sopra il 60%",
+    "row2Level": "Una vera voglia, e vere paure",
+    "row2Analysis": "Lo vuoi, e la decisione ti fa paura.",
+    "row3Score": "Dubbi nettamente più alti",
+    "row3Level": "Più dubbi che voglia",
+    "row3Analysis": "Forse non è il momento, o la paura nasconde il resto.",
+    "row4Score": "Tutte e due vicine",
+    "row4Level": "Non hai ancora deciso",
+    "row4Analysis": "Né sì né no per ora, ed è onesto.",
+    "row5Score": "Tutte e due sotto il 40%",
+    "row5Level": "Una vita senza figli ti va bene",
+    "row5Analysis": "Nessuna voglia, e nessuna paura dietro: una scelta di vita."
+  },
+  "seo": {
+    "faqTitle": "Le tue domande sulla voglia di un figlio",
+    "faq1Q": "Come essere sicuri di volere un figlio?",
+    "faq1A": "Guarda separatamente cosa provi quando immagini un figlio, e cosa ti trattiene. Una voglia chiara resiste alle paure; una voglia che sparisce appena si parla di soldi o di stanchezza forse era soprattutto quella degli altri. È proprio quello che misura questo test, in due parti.",
+    "faq2Q": "È normale non sapere se si vogliono figli?",
+    "faq2A": "Sì, ed è anzi molto frequente. Tante persone esitano per anni, e la voglia può arrivare tardi, o mai. Non saperlo non è un problema in sé: è una fase, finché nessuno ti spinge a decidere per far piacere a qualcuno.",
+    "faq3Q": "E se io non voglio figli, ma il mio partner sì?",
+    "faq3A": "È uno dei pochi argomenti su cui non c'è compromesso possibile: non si fa mezzo figlio. La cosa migliore è parlarne presto, con sincerità, senza cercare di convincere l'altro. Se la distanza resta la stessa, è meglio saperlo prima che dopo.",
+    "faq4Q": "La voglia di un figlio può arrivare col tempo?",
+    "faq4A": "Sì, può arrivare, e può anche andarsene. Cambia con l'età, la relazione, il lavoro, quello che si vede intorno. Per questo un risultato vale solo per oggi: rifare il test tra qualche mese può mostrare in che direzione stai andando.",
+    "faq5Q": "Perché il test separa la voglia e i dubbi?",
+    "faq5A": "Perché un solo punteggio mescolerebbe due situazioni opposte: chi desidera tanto un figlio ma ha molta paura, e chi non ha né voglia né paura, finirebbero con lo stesso punteggio. Misurandole separatamente, il risultato dice se è la voglia che manca, o se sono le paure a occupare lo spazio.",
+    "faq6Q": "Questo test basta per prendere una decisione?",
+    "faq6A": "No, e non è fatto per questo. Aiuta a mettere delle parole su quello che provi. Una decisione così importante si prende con il tuo partner, se ce l'hai, e con il tempo."
+  },
+  "jsonLd": {
+    "about": "La voglia di avere un figlio"
+  }
+}

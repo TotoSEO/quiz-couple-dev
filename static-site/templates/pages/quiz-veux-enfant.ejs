@@ -1,0 +1,9 @@
+<%
+  // Est-ce que je veux un enfant ? (7 novembre 2026) : vingt questions, deux
+  // axes mesurés séparément, l'envie d'un enfant et les doutes et les freins
+  // (moteur AxesQuiz, comme « amour ou attachement »), sur le gabarit
+  // générique. Un test à faire seul(e) ; celui du couple prêt à accueillir un
+  // enfant est le test de parentalité. Les textes sont dans quiz-veux-enfant.json.
+  var quizType = 'veux-enfant'; var ns = 'quiz-veux-enfant'; var totalQ = 20; var sectionCount = 3;
+%>
+<%- include('quiz-generic', { quizType, ns, totalQ, sectionCount, t, lang, routeKey, getLocalizedUrl, canonical, JSON }) %>

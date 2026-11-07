@@ -1,0 +1,64 @@
+{
+  "hero": {
+    "badge": "Test à faire seul(e)",
+    "title": "Est-ce que je veux un enfant ? Le test pour y voir plus clair",
+    "titleHighlight": "Est-ce que je veux un enfant",
+    "description": "On y parle de votre vie dans dix ans, d'un bébé dans les bras, de la peur de mal faire, de l'argent ou encore de la fatigue. Vingt questions mesurent votre envie d'un côté et vos doutes de l'autre, parce que les deux peuvent être forts en même temps.",
+    "subtitle": "Vingt questions, cinq minutes, gratuit et sans inscription",
+    "jumpBtn": "Faire le test"
+  },
+  "section1": {
+    "title": "Comment savoir si on veut un enfant ?",
+    "p1": "Pour savoir si on veut un enfant, il faut regarder deux choses : ce qu'on ressent quand on s'imagine avec un enfant, et ce qui nous retient. Les deux ne vont pas toujours dans le même sens. On peut avoir très envie d'un enfant et très peur de mal faire, ou n'avoir aucune envie sans avoir peur de rien.",
+    "p2": "Ce test sépare donc les deux. Dix questions regardent l'envie, par exemple : « Une vie entière sans enfant, ça vous fait quoi ? » Dix autres regardent ce qui vous retient : la liberté, l'argent, le travail, l'état du monde, la fatigue. Le résultat vient de la forme des deux mesures, pas d'une note sur cent.",
+    "p3": "Un point à garder en tête : avoir envie d'un enfant et pouvoir l'accueillir dans de bonnes conditions, ce n'est pas la même question. Ici, on parle de l'envie. Savoir si vous êtes prêts <a href=\"/test-parentalite-couple/\">à devenir parents à deux</a> (l'argent, le logement, le partage des tâches), c'est un autre test, à faire en couple."
+  },
+  "section2": {
+    "title": "Ne pas vouloir d'enfant, c'est plus courant qu'on le croit",
+    "p1": "En France, l'Ined a posé la question dans l'enquête Fecond de 2010 : <strong>4,3 % des femmes et 6,3 % des hommes de 18 à 49 ans</strong> n'avaient pas d'enfant et n'en voulaient pas. C'est peu, et ça n'augmente pas, mais ce n'est pas rien. La moitié de ces personnes vivaient en couple, et plus de la moitié donnaient des raisons très simples : être bien sans enfant, vouloir rester libre.",
+    "p2": "Aux États-Unis, le Pew Research Center a interrogé en 2024 des adultes de moins de 50 ans sans enfant : <strong>47 %</strong> pensaient ne jamais en avoir, contre 37 % en 2018. Et parmi eux, 57 % disaient tout simplement ne pas en avoir envie. Les autres raisons venaient loin derrière : vouloir se consacrer à autre chose (44 %), l'état du monde (38 %), ne pas avoir les moyens (36 %).",
+    "p3": "Ces chiffres disent une chose utile : ne pas vouloir d'enfant n'est pas un problème à régler. C'est une réponse. Et si vous êtes en couple, c'est une des <a href=\"/blog/questions-avenir-couple/\">questions sur l'avenir à se poser à deux</a>, assez tôt pour ne pas découvrir le désaccord dix ans plus tard."
+  },
+  "section3": {
+    "title": "Comment lire votre résultat ?",
+    "p1": "Le résultat donne deux pourcentages : votre envie d'un enfant, et vos doutes. Chacun est calculé sur son propre maximum, donc les deux ne font pas cent à eux deux. C'est la forme des deux qui compte.",
+    "p2": "Une envie haute et des doutes bas, c'est une envie claire. Les deux hauts, c'est une envie avec de vraies peurs, et c'est très courant. Des doutes qui dépassent nettement l'envie, c'est souvent le signe que ce n'est pas le moment, ou que la peur cache le reste. Les deux bas, c'est une vie sans enfant qui vous va bien.",
+    "p3": "Le test n'a pas réponse à tout. Il ne connaît ni votre âge, ni votre santé, ni votre histoire. Si la question vous pèse, en parler avec une personne de confiance, ou avec un professionnel, aide souvent à y voir plus clair.",
+    "headerScore": "Vos deux mesures",
+    "headerLevel": "Résultat",
+    "headerAnalysis": "Ce que ça veut dire",
+    "row1Score": "Envie nettement au-dessus",
+    "row1Level": "Vous avez envie d'un enfant",
+    "row1Analysis": "L'envie est là, et les peurs ne prennent pas le dessus.",
+    "row2Score": "Les deux au-dessus de 60 %",
+    "row2Level": "Une vraie envie, et de vraies peurs",
+    "row2Analysis": "Vous en avez envie, et la décision vous fait peur.",
+    "row3Score": "Doutes nettement au-dessus",
+    "row3Level": "Plus de doutes que d'envie",
+    "row3Analysis": "Ce n'est peut-être pas le moment, ou la peur cache le reste.",
+    "row4Score": "Les deux proches",
+    "row4Level": "Vous n'avez pas encore tranché",
+    "row4Analysis": "Ni oui, ni non pour l'instant, et c'est honnête.",
+    "row5Score": "Les deux sous 40 %",
+    "row5Level": "Une vie sans enfant vous va bien",
+    "row5Analysis": "Pas d'envie, et pas de peur derrière : un choix de vie."
+  },
+  "seo": {
+    "faqTitle": "Vos questions sur l'envie d'enfant",
+    "faq1Q": "Comment être sûr de vouloir un enfant ?",
+    "faq1A": "Regardez séparément ce que vous ressentez quand vous imaginez un enfant, et ce qui vous retient. Une envie claire résiste aux peurs ; une envie qui disparaît dès qu'on parle d'argent ou de fatigue était peut-être surtout celle des autres. C'est exactement ce que mesure ce test, en deux parties.",
+    "faq2Q": "Est-ce normal de ne pas savoir si on veut un enfant ?",
+    "faq2A": "Oui, et c'est même très fréquent. Beaucoup de gens hésitent pendant des années, et l'envie peut arriver tard, ou jamais. Ne pas savoir n'est pas un problème en soi : c'est une étape, tant que personne ne vous pousse à trancher pour faire plaisir.",
+    "faq3Q": "Et si je ne veux pas d'enfant, mais que mon partenaire en veut ?",
+    "faq3A": "C'est un des rares sujets où il n'y a pas de compromis possible : on ne fait pas la moitié d'un enfant. Le mieux est d'en parler tôt, honnêtement, sans essayer de convaincre l'autre. Si l'écart reste entier, il vaut mieux le savoir avant qu'après.",
+    "faq4Q": "L'envie d'enfant peut-elle venir avec le temps ?",
+    "faq4A": "Oui, elle peut venir, et elle peut aussi partir. Elle bouge avec l'âge, le couple, le travail, ce qu'on voit autour de soi. C'est pour ça qu'un résultat n'est valable qu'aujourd'hui : refaire le test dans quelques mois peut montrer dans quel sens vous allez.",
+    "faq5Q": "Pourquoi le test sépare-t-il l'envie et les doutes ?",
+    "faq5A": "Parce qu'une seule note mélangerait deux situations opposées : quelqu'un qui a très envie mais très peur, et quelqu'un qui n'a ni envie ni peur, tomberaient au même score. En les mesurant à part, le résultat dit si c'est l'envie qui manque, ou si ce sont les peurs qui prennent la place.",
+    "faq6Q": "Ce test suffit-il pour prendre une décision ?",
+    "faq6A": "Non, et il n'est pas fait pour ça. Il aide à mettre des mots sur ce que vous ressentez. Une décision aussi importante se prend avec votre partenaire si vous en avez un, et avec du temps."
+  },
+  "jsonLd": {
+    "about": "L'envie d'avoir un enfant"
+  }
+}
