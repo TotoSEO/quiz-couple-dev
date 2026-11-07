@@ -1,0 +1,65 @@
+/* Base des maquettes du livre Quiz Couple : polices et couleurs de la charte
+   (design system « Quiz Couple Social », reseaux/charte/tokens.json), page
+   à fond perdu au format KDP. Les tailles de texte sont en points, la
+   géométrie en pouces, comme dans les gabarits d'imprimeur. */
+@font-face { font-family: 'Fredoka'; src: url('../../commun/fonts/Fredoka-latin-variable.woff2') format('woff2'); font-weight: 300 700; font-style: normal; }
+@font-face { font-family: 'Inter'; src: url('../../commun/fonts/Inter-latin-variable.woff2') format('woff2'); font-weight: 400 700; font-style: normal; }
+@font-face { font-family: 'Playfair Display'; src: url('../../commun/fonts/PlayfairDisplay-latin-variable.woff2') format('woff2'); font-weight: 400 700; font-style: normal; }
+@font-face { font-family: 'Playfair Display'; src: url('../../commun/fonts/PlayfairDisplay-italic-latin-variable.woff2') format('woff2'); font-weight: 400 700; font-style: italic; }
+
+:root {
+  --c-rose: #e17398; --c-rose-fonce: #c9557c; --c-rose-clair: #f6d3df; --c-rose-pale: #fbe9ef; --c-rose-texte: #b12559;
+  --c-violet: #7f4db3; --c-violet-fonce: #6c409d; --c-violet-clair: #ddcdee; --c-violet-pale: #f1eaf8; --c-violet-texte: #6834b2;
+  --c-encre: #2b1722; --c-encre-douce: #785e6c; --c-trait: #f0e0e6; --c-papier: #fcf6f3; --c-blanc: #ffffff;
+  --c-joue: #ec9769; --c-noeud: #ffb3d1; --c-jaune: #f7cf5b; --c-jaune-pale: #fdf1c9; --c-vert: #94c78e; --c-vert-pale: #e3f1e0;
+  --c-ciel: #d4ebf8; --c-celib: #25919d; --c-nuit: #170f23; --c-nuit-2: #362749;
+  --f-titre: 'Fredoka', 'Baloo 2', ui-rounded, system-ui, sans-serif;
+  --f-texte: 'Inter', system-ui, sans-serif;
+  --f-plume: 'Playfair Display', Georgia, serif;
+  --fond-perdu: 0.125in;
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body { font-family: var(--f-texte); color: var(--c-encre); font-size: 9.5pt; line-height: 1.42; -webkit-print-color-adjust: exact; print-color-adjust: exact; background: #9a8f95; }
+@media screen { body { padding: 0.3in; display: flex; flex-direction: column; gap: 0.3in; align-items: center; } }
+
+/* Une feuille = la page coupée + le fond perdu (haut, bas et bord extérieur). */
+.feuille { position: relative; width: var(--feuille-l); height: var(--feuille-h); overflow: hidden; break-after: page; page-break-after: always; background: var(--fond-page, var(--c-blanc)); }
+.feuille:last-child { break-after: auto; page-break-after: auto; }
+.coupe { position: absolute; top: var(--fond-perdu); width: var(--coupe-l); height: var(--coupe-h); }
+.feuille--recto .coupe { left: 0; }
+.feuille--verso .coupe { left: var(--fond-perdu); }
+/* Zone de sécurité : rien d'important hors de ce cadre (marges KDP + air). */
+.zone { position: absolute; top: var(--marge-haut); bottom: var(--marge-bas); display: flex; flex-direction: column; }
+.feuille--recto .zone { left: var(--marge-int); right: var(--marge-ext); }
+.feuille--verso .zone { left: var(--marge-ext); right: var(--marge-int); }
+.folio { position: absolute; bottom: 0.32in; font-family: var(--f-titre); font-weight: 600; font-size: 8pt; color: var(--c-encre-douce); }
+.feuille--recto .folio { right: var(--marge-ext); }
+.feuille--verso .folio { left: var(--marge-ext); }
+/* Décor à fond perdu : positionné sur la feuille entière. */
+.perdu { position: absolute; inset: 0; pointer-events: none; }
+
+h1, h2, h3, h4, p { margin: 0; }
+.titre { font-family: var(--f-titre); font-weight: 600; line-height: 1.05; letter-spacing: -0.005em; }
+.plume { font-family: var(--f-plume); font-style: italic; font-weight: 500; }
+.etiquette { font-family: var(--f-texte); font-weight: 700; font-size: 7pt; letter-spacing: 0.08em; text-transform: uppercase; }
+.ligne { border-bottom: 0.6pt dotted var(--c-ligne, #9d8f96); height: 0.3in; }
+.lignes > .ligne:first-child { border-top: none; }
+.mascotte { display: block; }
+.qr { display: block; width: 0.85in; height: 0.85in; }
+.pion { display: inline-block; vertical-align: middle; flex: none; }
+.coeur, .etoile { display: inline-block; vertical-align: middle; flex: none; }
+.fleur { position: absolute; opacity: 0.3; }
+
+/* La couverture : dos, tranche et face sur une seule feuille. */
+.couv { position: relative; width: var(--feuille-l); height: var(--feuille-h); overflow: hidden; }
+.couv-dos, .couv-face { position: absolute; top: 0; height: 100%; width: calc(var(--coupe-l) + var(--fond-perdu)); }
+.couv-dos { left: 0; }
+.couv-face { right: 0; }
+.couv-tranche { position: absolute; top: 0; height: 100%; left: calc(var(--coupe-l) + var(--fond-perdu)); width: var(--tranche); }
+.couv-zone { position: absolute; top: calc(var(--fond-perdu) + 0.375in); bottom: calc(var(--fond-perdu) + 0.375in); }
+.couv-face .couv-zone { left: 0.375in; right: calc(var(--fond-perdu) + 0.375in); }
+.couv-dos .couv-zone { left: calc(var(--fond-perdu) + 0.375in); right: 0.375in; }
+/* L'emplacement du code-barres que KDP ajoute : 2 x 1,2 in, en bas à droite du dos. */
+.code-barres { position: absolute; right: 0.25in; bottom: calc(var(--fond-perdu) + 0.25in); width: 2in; height: 1.2in; background: #fff; border-radius: 3pt; display: flex; align-items: center; justify-content: center; font-family: var(--f-texte); font-size: 6.5pt; color: #8a8a8a; letter-spacing: 0.04em; }
