@@ -1,0 +1,73 @@
+{
+  "hero": {
+    "badge": "Juego de Nochevieja • Gratis • Para dos",
+    "title": "Haced balance del año en pareja con este juego de Nochevieja",
+    "titleHighlight": "balance del año en pareja",
+    "description": "Cuatro rondas para repasar vuestro año en Nochevieja, y al final aparece vuestro balance con los premios de cada uno y vuestro propósito de pareja."
+  },
+  "section1": {
+    "title": "¿Cómo se juega al balance del año en pareja?",
+    "intro": "El balance del año en pareja es un juego para hacer en pareja, en Nochevieja o en los primeros días de enero. Es un juego de preguntas muy sencillo: repasáis juntos el año que se acaba y luego habláis del que llega. Por ejemplo: «La mayor risa del año, ¿os acordáis?»",
+    "intro2": "Se juega en un solo móvil, entre los dos. Ponéis vuestros nombres, elegís una partida corta o completa, y el juego encadena cuatro rondas:",
+    "etape1Titre": "Nuestros recuerdos del año",
+    "etape1Texte": "Los mejores momentos, las risas y los líos. En cada carta, el juego dice quién responde primero, y habláis por turnos.",
+    "etape2Titre": "Los premios del año",
+    "etape2Texte": "El premio al más dormilón, al más tardón, al mejor chef... Decidís juntos quién se lo merece y tocáis su nombre. También está «Los dos» cuando hay empate.",
+    "etape3Titre": "Lo que nos llevamos del año",
+    "etape3Texte": "Preguntas un poco más serias: lo que habéis aprendido el uno del otro, el momento en que os sentisteis más cerca, o un gracias que todavía no os habéis dicho.",
+    "etape4Titre": "El año que viene",
+    "etape4Texte": "Las ganas, los viajes, los planes y, para terminar, vuestro propósito de pareja, que escribís juntos si queréis.",
+    "apres": "Al final, el juego muestra vuestro balance con los premios de cada uno y vuestro propósito. Podéis enviarlo o copiarlo, y se queda en el móvil: el año que viene, al volver a la página, encontraréis el propósito que os hicisteis. Si pasáis la Nochevieja con otras parejas, mejor sacad <a href=\"/es/juego-de-fiesta-para-parejas/\">el juego en el que las parejas compiten</a>, hasta diez jugadores, cada uno en su móvil."
+  },
+  "section2": {
+    "title": "Preguntas de fin de año para parejas, ronda por ronda",
+    "intro": "Aquí tenéis una parte de las preguntas del juego, tal como aparecen durante la partida. También funcionan muy bien leídas en voz alta, sin móvil, a la hora del postre.",
+    "souvenirsTitre": "Preguntas sobre los recuerdos del año",
+    "souvenirsTexte": "Son las más fáciles para empezar. Se repasan los meses uno a uno, y casi siempre un recuerdo trae otro.",
+    "tropheesTitre": "La lista de los premios del año",
+    "tropheesTexte": "Hay dieciséis en total, y en cada partida salen unos cuantos. Están para reírse y picarse un poco, ¡no para echar cuentas!",
+    "retenirTitre": "Preguntas para hacer balance de vuestra relación",
+    "retenirTexte": "Es la ronda más tranquila. Habla de lo que ha pasado entre vosotros este año: lo que habéis aprendido, lo que ha contado, lo que ha cambiado.",
+    "avenirTitre": "Preguntas sobre el año que viene",
+    "avenirTexte": "Para terminar con lo que os apetece: un viaje, algo que probar juntos, una costumbre que mantener...",
+    "apres": "Y para seguir después de las uvas, hay <a href=\"/es/preguntas-pareja/\">más de cien preguntas más</a>, ordenadas por temas."
+  },
+  "section3": {
+    "title": "Más juegos para Nochevieja en pareja",
+    "intro": "El balance del año se juega mejor al principio de la noche o justo antes de las campanadas. Para el resto de la noche, aquí tenéis otras ideas de juegos para fin de año en pareja, todos gratis en la web:",
+    "items": [
+      "<strong>Para empezar la noche:</strong> <a href=\"/es/quiz-preferirias-pareja/\">elecciones imposibles entre dos opciones</a>, que suelen acabar en debate.",
+      "<strong>Para picaros un poco:</strong> una cuenta atrás, y <a href=\"/es/preguntas-rapidas-para-parejas/\">el primero que responde se lleva el punto</a>.",
+      "<strong>Después de medianoche:</strong> <a href=\"/es/verdad-o-reto-picante-pareja/\">verdades y retos más picantes</a>, si hay ambiente.",
+      "<strong>Si esa noche estáis lejos:</strong> <a href=\"/es/juegos-por-whatsapp-para-parejas/\">preguntas para mandaros por mensaje</a> hasta las doce campanadas."
+    ]
+  },
+  "section4": {
+    "title": "Cómo hacer un buen balance de pareja a fin de año",
+    "intro": "No hay una forma buena o mala de hacerlo, pero hay algunas cosas que ayudan bastante:",
+    "resumeTitre": "Lo que ayuda",
+    "resume1": "<strong>Elegir el momento:</strong> antes de cenar o entre dos platos, cuando todavía estáis frescos, mejor que a la una de la mañana.",
+    "resume2": "<strong>Sacar las fotos:</strong> repasar juntos la galería del año trae cosas que se os habían olvidado por completo.",
+    "resume3": "<strong>Escuchar sin corregir:</strong> el otro no siempre recuerda las cosas como tú, y justo eso es lo interesante.",
+    "resume4": "<strong>Un solo propósito:</strong> uno pequeño, que se pueda cumplir. «Un finde para los dos cada tres meses» funciona mucho mejor que «cambiarlo todo».",
+    "apres": "Y si una pregunta cae mal, pasadla y ya está. ¡Lo importante es acabar el año con un buen rato!"
+  },
+  "faq": {
+    "title": "Preguntas frecuentes",
+    "q1": "¿Cuándo hacer el balance del año en pareja?",
+    "a1": "En Nochevieja, al principio de la noche o justo antes de las campanadas, es el momento más natural. Pero también funciona en los primeros días de enero, o el día de vuestro aniversario. El juego se adapta: de julio a diciembre hace el balance del año en curso, y de enero a junio el del año anterior.",
+    "q2": "¿Cuánto dura el juego?",
+    "a2": "La partida corta tiene 12 cartas, tres por ronda, y dura unos veinte minutos. La completa tiene 24 y dura alrededor de una hora, según el tiempo que paséis con cada recuerdo.",
+    "q3": "¿Se puede jugar con más de dos personas?",
+    "a3": "El juego está pensado para una pareja: cada premio va para uno o para el otro. Con varias parejas funciona mejor el juego de fiesta de la web, en el que cada pareja juega contra las demás, hasta diez jugadores.",
+    "q4": "¿Se guardan nuestras respuestas?",
+    "a4": "No. Las respuestas se dicen en voz alta y el juego no las guarda. Solo vuestros nombres, vuestros premios y vuestro propósito se quedan en este navegador, en este móvil, para que los encontréis el año que viene. No se envía nada a ningún sitio.",
+    "q5": "¿Hay que descargar una aplicación?",
+    "a5": "No, todo pasa en esta página, gratis y sin registrarse. Basta con un móvil o un ordenador.",
+    "q6": "¿Qué preguntas hacer para el balance de la relación?",
+    "a6": "Las mejores hablan de cosas concretas: el mejor momento del año, lo que habéis aprendido el uno del otro, algo que el otro hizo y que os importó, o lo que queréis conservar para el año que viene. El juego hace unas cincuenta, repartidas en cuatro rondas."
+  },
+  "jsonLd": {
+    "name": "El balance del año en pareja, juego de Nochevieja para parejas"
+  }
+}

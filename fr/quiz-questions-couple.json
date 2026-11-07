@@ -229,6 +229,16 @@
         ]
       },
       {
+        "route": "jeuNouvelAn",
+        "titre": "Pour faire le bilan de l'année",
+        "texte": "Le 31 décembre, ou dans les premiers jours de janvier, beaucoup de couples aiment <a href=\"/jeu-nouvel-an-couple/\">revenir sur l'année qui vient de passer</a>. On en a fait un jeu du Nouvel An en quatre manches, avec des trophées et une résolution à deux. Par exemple :",
+        "exemples": [
+          "Le meilleur moment de l'année à deux, c'était quand ?",
+          "Qu'est-ce que tu as appris sur moi cette année ?",
+          "Un endroit où tu aimerais qu'on parte l'an prochain ?"
+        ]
+      },
+      {
         "article": "questions-couple-telephone-message",
         "titre": "À distance, au téléphone ou par message",
         "texte": "Quand on se voit peu, les appels finissent souvent par se ressembler : la journée, la fatigue, bonne nuit. Une question un peu différente suffit à <a href=\"/jeux-de-couple-par-message/\">relancer la conversation</a>, et certaines passent même mieux <a href=\"/blog/questions-couple-telephone-message/\">par message ou au téléphone</a> qu'en face. Et pour savoir où vous en êtes, il y a aussi <a href=\"/quiz-couple-distance/\">des questions écrites pour les couples à distance</a>. Par exemple :",
@@ -296,6 +306,10 @@
       {
         "route": "jeuQuestionsRapides",
         "texte": "Une question, un compte à rebours, et le premier qui donne la bonne réponse marque le point."
+      },
+      {
+        "route": "jeuNouvelAn",
+        "texte": "Le jeu du Nouvel An : les souvenirs, les trophées et la résolution de l'année, à faire à deux."
       },
       {
         "route": "quizTuPreferes",

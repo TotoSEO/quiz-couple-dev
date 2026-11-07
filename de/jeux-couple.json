@@ -3,10 +3,10 @@
     "badge": "15 Spiele • Kostenlos • Ohne Anmeldung",
     "title": "Paarspiele und Beziehungsspiele, sofort spielbar",
     "titleHighlight": "Beziehungsspiele",
-    "description": "Siebzehn Spiele: vierzehn, die auf einem einzigen Handy zwischen euch beiden starten, eines für mehrere Paare und eines per Nachricht, jeder auf dem eigenen, dazu das Blumenorakel für dich allein. Ohne Konto und ohne Installation."
+    "description": "Achtzehn Spiele: fünfzehn, die auf einem einzigen Handy zwischen euch beiden starten, eines für mehrere Paare und eines per Nachricht, jeder auf dem eigenen, dazu das Blumenorakel für dich allein. Ohne Konto und ohne Installation."
   },
   "stats": {
-    "jeux": "17",
+    "jeux": "18",
     "jeuxLabel": "Paarspiele",
     "cartes": "520",
     "cartesLabel": "Karten, Strafen und Dilemmas",
@@ -40,6 +40,11 @@
     "margueriteJoueurs": "Allein, mit jemandem im Kopf",
     "margueriteDuree": "1 Minute",
     "margueriteContenu": "14 bis 26 Blütenblätter pro Blume",
+    "nouvelAnNom": "Der Jahresrückblick zu zweit",
+    "nouvelAnTagline": "Erinnerungen, Preise und ein Vorsatz, an Silvester",
+    "nouvelAnJoueurs": "2 Spieler",
+    "nouvelAnDuree": "20 bis 60 Min.",
+    "nouvelAnContenu": "55 Fragen und Preise in vier Runden",
     "actionVeriteNom": "Wahrheit oder Pflicht",
     "actionVeriteTagline": "Eine Karte fällt, Wahrheit oder Pflicht, und ihr wisst nie, welche davon kommt.",
     "actionVeriteJoueurs": "2 Spieler",
@@ -111,7 +116,7 @@
     "title": "Was ein Spiel zu zweit an einem Abend verändert",
     "p1": "Ein <strong class=\"text-foreground\">Paarspiel</strong> sieht nach nichts aus. Und doch löst es ein sehr konkretes Problem: zu zweit dreht man sich am Ende immer um dieselben Themen. Der Tag, die Arbeit, was es heute Abend gibt… Ein Spiel setzt einen Rahmen, und dieser Rahmen erlaubt Fragen, die man aus dem Nichts heraus nie stellen würde.",
     "p2": "Deshalb funktioniert ein Spiel auch besser als ein Film, wenn ihr euch wirklich wiederfinden wollt. Vor einem Bildschirm seid ihr zwei Menschen nebeneinander, die woanders hinschauen. Um ein Spiel herum seid ihr zwei Menschen, die einander anschauen. Den Unterschied spürt man nach zehn Minuten.",
-    "p3": "Die siebzehn Spiele auf dieser Seite laufen online, kostenlos und fast alle auf einem einzigen Handy: Das Partyspiel und die WhatsApp-Spiele spielt jeder auf dem eigenen. Nichts anzulegen, nichts zu installieren, nichts vorzubereiten.",
+    "p3": "Die achtzehn Spiele auf dieser Seite laufen online, kostenlos und fast alle auf einem einzigen Handy: Das Partyspiel und die WhatsApp-Spiele spielt jeder auf dem eigenen. Nichts anzulegen, nichts zu installieren, nichts vorzubereiten.",
     "p4": "Und je nach Jahreszeit sorgen <a href=\"/de/besondere-paar-quiz/\">die Quiz, die mit dem Kalender wechseln</a>, für ein paar Abende der anderen Art: zu Halloween <a href=\"/de/quiz-wer-stirbt-zuerst-im-horrorfilm/\">wer von euch zuerst im Horrorfilm stirbt</a> oder <a href=\"/de/quiz-welches-superschurken-duo-seid-ihr/\">welches Superschurken-Duo ihr bildet</a>.",
     "plus": [
       {
@@ -159,7 +164,9 @@
     "row16Moment": "Mitten am Tag, jeder für sich",
     "row16Pourquoi": "Eine Frage zwischen zwei Meetings, und das Gespräch kommt wieder in Gang. Dein Schatz antwortet, wenn er kann... und schickt dir eine zurück!",
     "row17Moment": "Wenn dir jemand nicht aus dem Kopf geht",
-    "row17Pourquoi": "Ein Blatt nach dem anderen, zum Spaß, und weil die Blume manchmal genau das sagt, was man hören wollte!"
+    "row17Pourquoi": "Ein Blatt nach dem anderen, zum Spaß, und weil die Blume manchmal genau das sagt, was man hören wollte!",
+    "row18Moment": "Der Abend des 31. Dezember",
+    "row18Pourquoi": "Ihr blickt auf das Jahr zurück, verleiht euch den Preis für die Schlafmütze oder die beste Küche und endet mit einem gemeinsamen Vorsatz. Perfekt, um auf Mitternacht zu warten!"
   },
   "section3": {
     "title": "Ein Spieleabend zu zweit, der funktioniert",
@@ -176,7 +183,7 @@
   "faq": {
     "title": "Häufige Fragen",
     "q1": "Sind diese Paarspiele wirklich kostenlos?",
-    "a1": "Ja, alle siebzehn, vom ersten bis zum letzten. Kein Konto anzulegen, keine Bezahlversion, keine Inhalte, die erst nach Zahlung freigeschaltet werden. Ihr öffnet die Seite des Spiels und spielt.",
+    "a1": "Ja, alle achtzehn, vom ersten bis zum letzten. Kein Konto anzulegen, keine Bezahlversion, keine Inhalte, die erst nach Zahlung freigeschaltet werden. Ihr öffnet die Seite des Spiels und spielt.",
     "q2": "Muss man eine App herunterladen?",
     "a2": "Nein. Alles läuft direkt im Browser, auf dem Handy wie am Rechner. Genau deshalb startet eine Partie in zehn Sekunden, genau dann, wenn die Lust kommt.",
     "q3": "Welches Spiel eignet sich zu Hause zu zweit am besten?",

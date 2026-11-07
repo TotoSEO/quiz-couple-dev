@@ -1,0 +1,73 @@
+{
+  "hero": {
+    "badge": "Gioco di Capodanno • Gratis • In due",
+    "title": "Il bilancio dell'anno in coppia: il gioco di Capodanno per due",
+    "titleHighlight": "bilancio dell'anno in coppia",
+    "description": "Quattro manche per ripercorrere il vostro anno la sera del 31 dicembre, poi compare il vostro bilancio con i premi di ognuno e il vostro buon proposito di coppia."
+  },
+  "section1": {
+    "title": "Come si gioca al bilancio dell'anno a due?",
+    "intro": "Il bilancio dell'anno a due è un gioco da fare in coppia, la sera del 31 dicembre o nei primi giorni di gennaio. È un gioco di domande molto semplice: ripercorrete insieme l'anno che finisce, poi parlate di quello che arriva. Per esempio: «La risata più grande dell'anno, ve la ricordate?»",
+    "intro2": "Si gioca su un solo telefono, appoggiato tra voi due. Scrivete i vostri nomi, scegliete una partita breve o completa, e il gioco vi porta attraverso quattro manche:",
+    "etape1Titre": "I nostri ricordi dell'anno",
+    "etape1Texte": "I momenti più belli, le risate e i momenti difficili. A ogni carta, il gioco dice chi comincia, e parlate uno alla volta.",
+    "etape2Titre": "I premi dell'anno",
+    "etape2Texte": "Il premio dormiglione, il premio ritardatario, il premio chef... Decidete insieme chi se lo merita e toccate il suo nome. C'è anche «Tutti e due» quando siete pari.",
+    "etape3Titre": "Cosa ci portiamo dietro",
+    "etape3Texte": "Domande un po' più serie: cosa avete imparato l'uno dell'altro, il momento in cui vi siete sentiti più vicini, o ancora un grazie che non avete mai detto ad alta voce.",
+    "etape4Titre": "L'anno prossimo",
+    "etape4Texte": "I desideri, i viaggi, i progetti, e per finire il vostro buon proposito di coppia, che potete scrivere insieme se vi va.",
+    "apres": "Alla fine, il gioco mostra il vostro bilancio con i premi di ognuno e il vostro buon proposito. Potete mandarlo o copiarlo, e resta sul telefono: l'anno prossimo, tornando su questa pagina, ritroverete il proposito che avevate preso. Se passate il Capodanno con altre coppie, scegliete piuttosto <a href=\"/it/gioco-da-serata-per-coppie/\">il gioco in cui le coppie si sfidano</a>, fino a dieci giocatori, ognuno sul suo telefono."
+  },
+  "section2": {
+    "title": "Le domande del bilancio dell'anno, manche per manche",
+    "intro": "Ecco una parte delle domande del gioco, così come compaiono durante la partita. Funzionano benissimo anche lette ad alta voce, senza telefono, al momento del dolce.",
+    "souvenirsTitre": "Le domande sui ricordi dell'anno",
+    "souvenirsTexte": "Sono le più facili per cominciare. Si ripercorrono i mesi uno per uno, e il più delle volte un ricordo ne tira fuori un altro.",
+    "tropheesTitre": "L'elenco dei premi dell'anno",
+    "tropheesTexte": "Sono sedici in tutto, e ogni partita ne pesca qualcuno. Servono per ridere e prendersi un po' in giro, non per fare i conti!",
+    "retenirTitre": "Le domande per fare il bilancio della vostra coppia",
+    "retenirTexte": "È la manche più tranquilla. Parla di quello che è successo tra voi quest'anno: cosa avete imparato, cosa ha contato, cosa è cambiato.",
+    "avenirTitre": "Le domande sull'anno prossimo",
+    "avenirTexte": "Per finire con quello che vi fa venire voglia: un viaggio, una cosa da provare insieme, un'abitudine da tenere...",
+    "apres": "E per continuare dopo la mezzanotte, ci sono <a href=\"/it/domande-coppia/\">più di cento altre domande</a> da farsi, divise per tema."
+  },
+  "section3": {
+    "title": "Altri giochi di Capodanno in coppia",
+    "intro": "Il bilancio dell'anno si gioca meglio a inizio serata o poco prima di mezzanotte. Per il resto della notte, ecco altre idee di giochi da fare a Capodanno in coppia, tutti gratis sul sito:",
+    "items": [
+      "<strong>Per cominciare la serata:</strong> <a href=\"/it/preferiresti-quiz-coppia/\">scelte impossibili tra due opzioni</a>, che spesso finiscono in un gran dibattito.",
+      "<strong>Per prendersi in giro:</strong> un conto alla rovescia, e <a href=\"/it/domande-veloci-di-coppia/\">chi risponde per primo prende il punto</a>.",
+      "<strong>Dopo la mezzanotte:</strong> <a href=\"/it/obbligo-o-verita-piccante-coppia/\">verità e sfide più piccanti</a>, se l'atmosfera è quella giusta.",
+      "<strong>Se quella sera siete lontani:</strong> <a href=\"/it/giochi-su-whatsapp-per-coppie/\">domande da mandarvi per messaggio</a> fino allo scoccare della mezzanotte."
+    ]
+  },
+  "section4": {
+    "title": "Come fare un bel bilancio di coppia a fine anno",
+    "intro": "Non c'è un modo giusto o sbagliato di farlo, ma alcune piccole cose aiutano parecchio:",
+    "resumeTitre": "Cosa aiuta",
+    "resume1": "<strong>Scegliere il momento giusto:</strong> prima di cena o tra una portata e l'altra, quando siete ancora in forma, piuttosto che all'una di notte.",
+    "resume2": "<strong>Tirare fuori le foto:</strong> scorrere insieme la galleria dell'anno fa tornare in mente cose che avevate completamente dimenticato.",
+    "resume3": "<strong>Ascoltare senza correggere:</strong> non ricordate per forza le stesse cose, ed è proprio questo il bello.",
+    "resume4": "<strong>Un solo buon proposito:</strong> piccolo, che si possa mantenere. «Un weekend a due ogni tre mesi» funziona molto meglio di «cambiare tutto».",
+    "apres": "E se una domanda cade male, saltatela e basta. Lo scopo è finire l'anno con un bel momento!"
+  },
+  "faq": {
+    "title": "Domande frequenti",
+    "q1": "Quando fare il bilancio dell'anno in coppia?",
+    "a1": "La sera del 31 dicembre, a inizio serata o poco prima di mezzanotte, è il momento più naturale. Ma funziona anche nei primi giorni di gennaio, o il giorno del vostro anniversario. Il gioco si adatta: da luglio a dicembre fa il bilancio dell'anno in corso, da gennaio a giugno quello dell'anno prima.",
+    "q2": "Quanto dura il gioco?",
+    "a2": "La partita breve ha 12 carte, tre per manche, e dura una ventina di minuti. La partita completa ne ha 24 e dura circa un'ora, a seconda del tempo che passate su ogni ricordo.",
+    "q3": "Si può giocare in più di due?",
+    "a3": "Il gioco è fatto per una coppia: ogni premio va all'uno o all'altro. Con più coppie, il gioco da serata del sito è più adatto: ogni coppia gioca contro le altre, fino a dieci giocatori.",
+    "q4": "Le nostre risposte vengono salvate?",
+    "a4": "No. Le risposte le dite ad alta voce, e il gioco non le registra. Solo i vostri nomi, i vostri premi e il vostro buon proposito restano in questo browser, su questo telefono, per ritrovarli l'anno prossimo. Niente viene mandato altrove.",
+    "q5": "Bisogna scaricare un'app?",
+    "a5": "No, si fa tutto su questa pagina, gratis e senza registrazione. Basta un telefono o un computer.",
+    "q6": "Quali domande fare per il bilancio di coppia?",
+    "a6": "Le migliori parlano di cose precise: il momento più bello dell'anno, cosa avete imparato l'uno dell'altro, una cosa che l'altro ha fatto e che ha contato, o ancora cosa volete tenere per l'anno prossimo. Il gioco ne fa una cinquantina, divise in quattro manche."
+  },
+  "jsonLd": {
+    "name": "Il bilancio dell'anno a due, gioco di Capodanno per le coppie"
+  }
+}

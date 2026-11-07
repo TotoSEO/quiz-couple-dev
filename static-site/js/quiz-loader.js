@@ -629,6 +629,14 @@
     // nouvelle tranche avec son libellé cat_<id>.
     'questions-rapides': { prefix: 'questionsRapides', engine: 'questions-rapides', totalQ: 0, pool: 0, textOnly: true,
       categories: [['souvenir', 1, 25], ['autre', 26, 50], ['reflexe', 51, 75]] },
+    // ── Le bilan de l'année à deux (jeu du Nouvel An) ──
+    // Quatre manches lues dans gd.json, chacune par sa lettre de clé
+    // (nouvelAn.s1, t1 et t1_q, r1, p1...) ; la manche des trophées a un
+    // emoji par trophée, dans l'ordre des numéros. Un trophée ajouté prend
+    // le numéro suivant et son emoji en bout de liste.
+    'nouvel-an':      { prefix: 'nouvelAn', engine: 'nouvel-an', totalQ: 0, pool: 0, textOnly: true,
+      manches: [['souvenirs', 's', '📸'], ['trophees', 't', '🏆'], ['retenir', 'r', '💬'], ['avenir', 'p', '✨']],
+      emojisTrophees: ['😴', '⏰', '🍳', '😤', '💡', '📺', '🛍️', '🧹', '🌹', '😂', '📱', '🧘', '🤦', '🏃', '🗺️', '🍫'] },
     'oui-non':        { prefix: 'ouiNon', engine: 'oui-non', totalQ: 0, pool: 0, textOnly: true },
 
     // Amoureux de son meilleur ami : deux series selon le genre de l'ami, pour
@@ -1091,6 +1099,35 @@
         return;
       }
       new QuizEngine.RapiditeGame({ container: container, prefix: config.prefix, lang: lang, questions: rqQuestions });
+      return;
+    }
+
+    // Le bilan de l'année : les quatre manches, et pour les trophées la
+    // question qui va avec chacun (t<N>_q) et son emoji.
+    if (config.engine === 'nouvel-an') {
+      var naManches = (config.manches || []).map(function(m) {
+        var naQuestions = [];
+        for (var nai = 1; nai <= 40; nai++) {
+          var cleNa = config.prefix + '.' + m[1] + nai;
+          var texteNa = QuizEngine.tgd(cleNa, null);
+          if (!texteNa || texteNa === cleNa) continue;
+          var qNa = { id: m[1] + nai, texte: texteNa };
+          if (m[1] === 't') {
+            var questionNa = QuizEngine.tgd(cleNa + '_q', null);
+            qNa.question = questionNa && questionNa !== cleNa + '_q' ? questionNa : '';
+            qNa.emoji = (config.emojisTrophees || [])[nai - 1] || '🏆';
+          }
+          naQuestions.push(qNa);
+        }
+        return { id: m[0], emoji: m[2], trophees: m[1] === 't', questions: naQuestions };
+      });
+      if (!naManches.length || naManches.some(function(m) { return !m.questions.length; })) {
+        if (!_repliComplet) { _repliComplet = true; QuizEngine.loadAllTranslations(lang, initFromData); return; }
+        if (_dataAttempt < 3) { _dataAttempt++; setTimeout(function() { QuizEngine.loadAllTranslations(lang, initFromData); }, 700 * _dataAttempt); return; }
+        showUnavailable(config);
+        return;
+      }
+      new QuizEngine.NouvelAnGame({ container: container, prefix: config.prefix, lang: lang, manches: naManches });
       return;
     }
 

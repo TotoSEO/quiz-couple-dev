@@ -13458,7 +13458,7 @@ img[src^="/bilan/apercu-"] { pointer-events: none; user-select: none; -webkit-us
 .qc-porte-consent input { margin: .1rem 0 0; width: 1.15rem; height: 1.15rem; accent-color: hsl(var(--primary)); cursor: pointer; }
 .qc-porte-consent a { color: hsl(var(--primary-texte)); text-decoration: underline; }
 /* La case oubliée au moment d'envoyer : entourée, en plus du message. */
-.qc-porte-consent--manque { outline: 2px solid hsl(0 68% 52% / .6); outline-offset: 4px; color: hsl(var(--foreground)); }
+.qc-porte-consent--manque { outline: 2px solid hsla(0, 68%, 52%, .6); outline-offset: 4px; color: hsl(var(--foreground)); }
 .qc-porte .qc-porte-bouton { width: 100%; display: inline-flex; align-items: center; justify-content: center; gap: .5rem; white-space: nowrap; }
 .qc-porte .qc-porte-bouton svg { width: 1.1rem; height: 1.1rem; flex: none; }
 .qc-porte .qc-porte-bouton[disabled] { opacity: .7; cursor: wait; }
@@ -13814,6 +13814,130 @@ img[src^="/bilan/apercu-"] { pointer-events: none; user-select: none; -webkit-us
 .mg-carte-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.6rem; }
 .mg-carte-suite { margin: 1.25rem 0 0.25rem; font-size: 0.85rem; color: hsl(var(--muted-foreground)); }
 .mg-carte-lien { font-weight: 700; color: hsl(var(--primary-texte)); text-decoration: underline; text-underline-offset: 3px; }
+
+/* ═══════════════════════════════════════════════════════════════════
+   Le bilan de l'année à deux (jeu-nouvel-an.ejs, NouvelAnGame)
+   ═══════════════════════════════════════════════════════════════════
+   Quatre manches, une teinte chacune (souvenirs en rose, trophées en or,
+   ce qu'on retient en violet, l'année prochaine en bleu). Les boutons des
+   trophées portent la couleur du personnage de chacun, et l'or pour « les
+   deux » ; le texte reste sombre, jamais du blanc sur le rose. Quand les
+   deux joueurs ont le même personnage, le second prend une teinte plus
+   soutenue (bouton et colonne du bilan). */
+.funny-carte--nan-souvenirs { --fc-h: 340; --fc-s: 72%; --fc-l: 62%; }
+.funny-carte--nan-trophees  { --fc-h: 42;  --fc-s: 88%; --fc-l: 50%; }
+.funny-carte--nan-retenir   { --fc-h: 268; --fc-s: 52%; --fc-l: 60%; }
+.funny-carte--nan-avenir    { --fc-h: 196; --fc-s: 66%; --fc-l: 50%; }
+.funny-carte--nan-trophees .funny-carte-etiquette { color: hsl(30 60% 14%); background: hsl(44 92% 60%); }
+.nan-palier { --nan-h: 340; --nan-s: 72%; --nan-l: 62%; }
+.nan-palier--trophees { --nan-h: 42;  --nan-s: 88%; --nan-l: 50%; }
+.nan-palier--retenir  { --nan-h: 268; --nan-s: 52%; --nan-l: 60%; }
+.nan-palier--avenir   { --nan-h: 196; --nan-s: 66%; --nan-l: 50%; }
+.quiz-engine.nan-palier {
+  border: 2px dashed hsl(var(--nan-h) var(--nan-s) var(--nan-l) / .5);
+  background: linear-gradient(160deg, hsl(var(--nan-h) var(--nan-s) var(--nan-l) / .13), hsl(var(--nan-h) var(--nan-s) var(--nan-l) / .03));
+}
+.nan-palier .funny-palier-rang { color: hsl(var(--nan-h) var(--nan-s) 32%); }
+.dark .nan-palier .funny-palier-rang { color: hsl(var(--nan-h) var(--nan-s) 74%); }
+
+/* L'écran de départ : le bilan gardé sur ce téléphone, et deux longueurs. */
+/* Dans un raccourci border ou outline, une couleur à transparence s'écrit
+   hsla(h, s, l, a) : clean-css (niveau 2) efface hsl(h s l / a) du raccourci,
+   et le trait prend la couleur du texte. */
+.nan-capsule {
+  margin: 0 0 1.25rem; padding: 1rem 1.1rem; border-radius: 1rem; text-align: center;
+  border: 1px solid hsla(42, 88%, 50%, .4); background: hsl(42 88% 50% / .12);
+}
+.nan-capsule-titre { margin: 0 0 .35rem; font-weight: 800; color: hsl(var(--foreground)); }
+.nan-capsule-texte { margin: 0 0 .5rem; font-size: .9rem; line-height: 1.5; color: hsl(var(--muted-foreground)); }
+.nan-capsule-citation { margin: 0 auto .5rem; max-width: 26rem; font-style: italic; font-weight: 700; line-height: 1.45; color: hsl(var(--foreground)); }
+.nan-capsule-btn { margin-top: .25rem; }
+.jnj-longueur-choix.nan-longueur-choix { grid-template-columns: repeat(2, 1fr); }
+
+/* Une carte de trophée : l'emoji, le nom, la question, trois boutons. */
+.nan-trophee-emoji { font-size: 3rem; line-height: 1; margin: 0 0 .5rem; }
+.funny-carte-question.nan-trophee-nom { margin-bottom: .35rem; }
+.nan-trophee-question { margin: 0 0 1.25rem; font-size: 1.05rem; line-height: 1.45; color: hsl(var(--foreground)); }
+.nan-choix { display: grid; grid-template-columns: 1fr 1fr; gap: .6rem; margin: 0 0 1.1rem; }
+.nan-choix-btn {
+  min-height: 3.25rem; min-width: 0; padding: .7rem .75rem; cursor: pointer;
+  border-radius: 1rem; border: 2px solid hsl(var(--border)); background: hsl(var(--card));
+  color: hsl(var(--foreground)); font-size: 1.05rem; font-weight: 800; line-height: 1.2;
+  overflow-wrap: anywhere;
+  transition: transform 150ms ease, background-color 150ms ease, border-color 150ms ease, box-shadow 150ms ease;
+}
+.nan-choix-btn:hover { transform: translateY(-1px); }
+.nan-choix-btn:focus-visible { outline: 3px solid hsl(var(--ring)); outline-offset: 2px; }
+.nan-choix-btn--rose   { border-color: hsl(var(--primary) / .6);   background: hsl(var(--primary) / .1); }
+.nan-choix-btn--violet { border-color: hsl(var(--secondary) / .6); background: hsl(var(--secondary) / .1); }
+.nan-choix-btn--rose + .nan-choix-btn--rose     { border-color: hsl(var(--primary) / .95);   background: hsl(var(--primary) / .2); }
+.nan-choix-btn--violet + .nan-choix-btn--violet { border-color: hsl(var(--secondary) / .95); background: hsl(var(--secondary) / .2); }
+.nan-choix-btn--deux { grid-column: 1 / -1; min-height: 2.9rem; border-color: hsl(42 88% 50% / .65); background: hsl(42 88% 50% / .12); }
+.nan-choix-btn.is-choisi { border-width: 3px; box-shadow: 0 0 0 3px hsl(var(--ring) / .22); }
+.nan-choix-btn--rose.is-choisi   { border-color: hsl(var(--primary));   background: hsl(var(--primary) / .32); }
+.nan-choix-btn--violet.is-choisi { border-color: hsl(var(--secondary)); background: hsl(var(--secondary) / .3); }
+.nan-choix-btn--deux.is-choisi   { border-color: hsl(42 88% 46%);       background: hsl(42 88% 50% / .34); }
+.nan-choix-btn.is-choisi .nan-choix-nom::before { content: '✓ '; }
+.nan-tour { margin: 0 0 1rem; }
+
+/* La résolution, avant le bilan. */
+.quiz-engine.nan-resolution { max-width: 36rem; padding-top: 2.5rem; padding-bottom: 2rem; }
+.nan-resolution-titre { margin: 0 0 .5rem; font-size: 1.5rem; font-weight: 800; line-height: 1.25; text-wrap: balance; }
+.nan-resolution-texte { margin: 0 auto 1.25rem; max-width: 28rem; line-height: 1.55; color: hsl(var(--muted-foreground)); }
+.quiz-engine textarea.nan-champ {
+  display: block; width: 100%; max-width: 30rem; min-height: 5.5rem; margin: 0 auto 1.25rem;
+  padding: .85rem 1rem; font: inherit; font-size: 16px; line-height: 1.45; resize: vertical;
+  border-radius: 1rem; border: 2px solid hsl(var(--border)); background: hsl(var(--card)); color: hsl(var(--foreground));
+}
+.quiz-engine textarea.nan-champ:focus { outline: none; border-color: hsl(var(--primary)); box-shadow: 0 0 0 3px hsl(var(--primary) / .2); }
+.nan-resolution-actions { display: flex; flex-direction: column; align-items: center; gap: .5rem; }
+.nan-resolution-retour { margin-top: .75rem; font-size: .875rem; }
+
+/* Le bilan : les deux personnages et l'année, les trophées de chacun,
+   ceux des deux, la résolution. */
+.nan-fin-duo { display: flex; align-items: flex-end; justify-content: center; gap: .6rem; margin: 0 auto .5rem; }
+.nan-fin-duo svg { max-width: 24vw; height: auto; }
+.nan-fin-annee {
+  margin-bottom: 1.1rem; padding: .35rem .7rem; border-radius: .9rem;
+  font-family: var(--font-display); font-size: clamp(1.6rem, 8vw, 2.4rem); font-weight: 800; line-height: 1;
+  color: hsl(30 60% 14%); background: hsl(44 92% 60%); transform: rotate(-4deg);
+  box-shadow: 0 8px 18px -10px hsl(42 88% 40%);
+}
+.nan-fin-titre { margin: .25rem 0; font-size: clamp(1.5rem, 5.5vw, 2rem); font-weight: 800; text-wrap: balance; }
+.nan-fin-noms { margin: 0 0 1.5rem; font-weight: 600; color: hsl(var(--muted-foreground)); overflow-wrap: anywhere; }
+.nan-fin-soustitre { margin: 0 0 .75rem; font-size: 1.05rem; font-weight: 800; color: hsl(var(--foreground)); }
+.nan-fin-colonnes { display: grid; grid-template-columns: 1fr 1fr; gap: .75rem; margin: 0 0 .75rem; text-align: left; }
+.nan-fin-col, .nan-fin-deux { min-width: 0; padding: .9rem .85rem; border-radius: 1rem; border: 2px solid hsl(var(--border)); }
+.nan-fin-col--rose   { border-color: hsl(var(--primary) / .45);   background: hsl(var(--primary) / .07); }
+.nan-fin-col--violet { border-color: hsl(var(--secondary) / .45); background: hsl(var(--secondary) / .07); }
+.nan-fin-col--rose + .nan-fin-col--rose     { border-color: hsl(var(--primary) / .85);   background: hsl(var(--primary) / .15); }
+.nan-fin-col--violet + .nan-fin-col--violet { border-color: hsl(var(--secondary) / .85); background: hsl(var(--secondary) / .15); }
+.nan-fin-deux { margin: 0 0 .75rem; text-align: left; border-color: hsl(42 88% 50% / .5); background: hsl(42 88% 50% / .1); }
+.nan-fin-col-nom { margin: 0; font-size: 1rem; font-weight: 800; color: hsl(var(--foreground)); overflow-wrap: anywhere; }
+.nan-fin-col--rose .nan-fin-col-nom   { color: hsl(var(--primary-texte)); }
+.nan-fin-col--violet .nan-fin-col-nom { color: hsl(var(--secondary-texte)); }
+.nan-fin-deux .nan-fin-col-nom { margin-bottom: .5rem; }
+.nan-fin-col-nb { margin: .1rem 0 .6rem; font-size: .78rem; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; color: hsl(var(--muted-foreground)); }
+.nan-fin-liste { display: grid; gap: .4rem; margin: 0; padding: 0; list-style: none; }
+.nan-fin-liste li { display: flex; align-items: flex-start; gap: .45rem; font-size: .9rem; line-height: 1.35; overflow-wrap: anywhere; hyphens: auto; }
+.nan-fin-liste-emoji { flex: none; }
+.nan-fin-vide { margin: 0; font-size: .85rem; line-height: 1.45; color: hsl(var(--muted-foreground)); }
+.nan-fin-resolution { margin: 1.25rem 0 .5rem; }
+.nan-fin-citation {
+  max-width: 28rem; margin: 0 auto; padding: 1rem 1.25rem; border-radius: 1rem;
+  font-size: 1.1rem; font-style: italic; font-weight: 700; line-height: 1.45; overflow-wrap: anywhere;
+  color: hsl(var(--foreground)); background: hsl(var(--muted));
+}
+.nan-fin-voeux { margin: 1.25rem 0 .25rem; font-family: var(--font-display); font-size: 1.3rem; font-weight: 800; color: hsl(var(--primary-texte)); }
+.nan-fin-garde { max-width: 28rem; margin: 0 auto; font-size: .85rem; line-height: 1.5; color: hsl(var(--muted-foreground)); }
+@media (max-width: 440px) {
+  .nan-fin-colonnes { grid-template-columns: 1fr; }
+  .nan-choix-btn { font-size: 1rem; padding: .65rem .5rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .nan-choix-btn { transition: none; }
+  .nan-choix-btn:hover { transform: none; }
+}
 
 /* ═══════════════════════════════════════════════════════════════════
    Téléphone : les animations infinies qui repeignent à chaque image

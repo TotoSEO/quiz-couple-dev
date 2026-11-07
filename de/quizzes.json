@@ -257,10 +257,10 @@
     "metaDescription": "Seelenverwandtschaft oder nur eine schöne Geschichte? 20 Fragen, ein Wert und ein Ergebnis, das nicht nur schmeichelt. Kostenloser Test, allein oder zu zweit, ohne Anmeldung."
   },
   "jeuxCouple": {
-    "title": "Paarspiele online: 14 kostenlose Spiele für zwei",
+    "title": "Paarspiele online: 15 kostenlose Spiele für zwei",
     "shortTitle": "Paarspiele",
-    "description": "Vierzehn Spiele für zwei: Schnelle Fragen, Er ist eine 10 aber, Satz vervollständigen, Ja oder Nein, Dafür oder dagegen, Wer würde eher, Ich hab noch nie, Wer von uns beiden, Würdest du eher, die Dilemma-Fragen, Wahrheit oder Pflicht, die pikante Version, das Strafenrad und das Brettspiel.",
-    "metaDescription": "14 kostenlose Paarspiele auf einem Handy: Ja oder Nein, Wer von uns beiden, Würdest du eher, Dilemma-Fragen, Wahrheit oder Pflicht. Ohne Anmeldung."
+    "description": "Fünfzehn Spiele für zwei: Jahresrückblick, Schnelle Fragen, Er ist eine 10 aber, Satz vervollständigen, Ja oder Nein, Dafür oder dagegen, Wer würde eher, Ich hab noch nie, Wer von uns beiden, Würdest du eher, die Dilemma-Fragen, Wahrheit oder Pflicht, die pikante Version, das Strafenrad und das Brettspiel.",
+    "metaDescription": "15 kostenlose Paarspiele auf einem Handy: Ja oder Nein, Wer von uns beiden, Würdest du eher, Dilemma-Fragen, Wahrheit oder Pflicht. Ohne Anmeldung."
   },
   "jeuGages": {
     "title": "Strafen für Paare: das Glücksrad-Spiel mit 140 Strafen",
@@ -414,6 +414,13 @@
     "shortTitle": "Er liebt mich, er liebt mich nicht",
     "description": "Zupf die Blütenblätter einzeln ab: Er liebt mich, er liebt mich nicht… Was sagt das letzte?",
     "metaDescription": "Das Blumenorakel online, Blatt für Blatt: er liebt mich, er liebt mich nicht. Kostenlos, mit Namen, auch als französische Version: ein bisschen, sehr…"
+  },
+  "jeuNouvelAn": {
+    "title": "Silvesterspiel für Paare: Jahresrückblick-Fragen zu zweit",
+    "shortTitle": "Jahresrückblick zu zweit",
+    "metaTitle": "Silvesterspiel für Paare: Jahresrückblick-Fragen zu zweit",
+    "metaDescription": "Ein Silvesterspiel für Paare: Fragen zu euren Erinnerungen, die Preise des Jahres für jeden von euch und ein gemeinsamer Vorsatz. Kostenlos.",
+    "description": "Vier Runden für euren Jahresrückblick zu zweit, an Silvester."
   },
   "jeuOuiNon": {
     "title": "Ja oder Nein Spiel für Paare online - 120 Fragen",

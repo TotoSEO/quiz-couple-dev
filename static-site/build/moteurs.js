@@ -53,6 +53,7 @@ export const TABLE_MOTEURS = {
   'profile':       'ProfileQuiz',
   'qui-pourrait':  'QuiPourraitGame',
   'questions-rapides': 'RapiditeGame',
+  'nouvel-an':     'NouvelAnGame',
   'roue':          'WheelGame',
   'solo':          'SoloTest',
   'survie':        'SurvieQuiz',

@@ -269,10 +269,10 @@
     "metaDescription": "Âme sœur ou belle histoire ? 20 questions, un indice et un verdict qui ne se contente pas de flatter. Test gratuit, seul ou à deux, sans inscription."
   },
   "jeuxCouple": {
-    "title": "Jeux de couple en ligne : 14 jeux gratuits à jouer à deux",
+    "title": "Jeux de couple en ligne : 15 jeux gratuits à jouer à deux",
     "shortTitle": "Jeux de couple",
-    "description": "Quatorze jeux à jouer à deux : les questions rapides, c'est un 10 mais, les phrases à compléter, le oui ou non, pour ou contre, qui pourrait, je n'ai jamais, qui de nous deux, tu préfères, les dilemmes, action ou vérité, sa version coquine, la roue des gages et le plateau.",
-    "metaDescription": "14 jeux de couple gratuits sur un seul téléphone : oui ou non, pour ou contre, qui de nous deux, tu préfères, les dilemmes, action ou vérité et la roue des gages. Sans inscription."
+    "description": "Quinze jeux à jouer à deux : le bilan de l'année, les questions rapides, c'est un 10 mais, les phrases à compléter, le oui ou non, pour ou contre, qui pourrait, je n'ai jamais, qui de nous deux, tu préfères, les dilemmes, action ou vérité, sa version coquine, la roue des gages et le plateau.",
+    "metaDescription": "15 jeux de couple gratuits sur un seul téléphone : oui ou non, pour ou contre, qui de nous deux, tu préfères, les dilemmes, action ou vérité et la roue des gages. Sans inscription."
   },
   "jeuGages": {
     "title": "Gage couple : le jeu de la roue, 140 gages tirés au hasard",
@@ -426,6 +426,13 @@
     "shortTitle": "Effeuiller la marguerite",
     "description": "Touchez les pétales un par un : il m'aime un peu, beaucoup, passionnément, à la folie… ou pas du tout ?",
     "metaDescription": "Effeuillez la marguerite en ligne : un pétale après l'autre, il m'aime un peu, beaucoup, passionnément, à la folie ou pas du tout. Gratuit, avec un prénom."
+  },
+  "jeuNouvelAn": {
+    "title": "Jeu du Nouvel An en couple : le bilan de l'année à deux",
+    "shortTitle": "Bilan de l'année à deux",
+    "metaTitle": "Jeu du Nouvel An en couple : le bilan de l'année à deux",
+    "metaDescription": "Le jeu du Nouvel An à faire en couple : vos souvenirs de l'année, les trophées de chacun et votre résolution à deux pour l'année qui vient. Gratuit.",
+    "description": "Quatre manches pour faire le bilan de votre année à deux, le soir du réveillon."
   },
   "jeuOuiNon": {
     "title": "Jeu Oui ou Non pour couples en ligne - 120 questions",
