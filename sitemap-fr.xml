@@ -1163,6 +1163,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://quiz-couple.com/jeu-nouvel-an-couple/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/jeu-nouvel-an-couple/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://quiz-couple.com/en/new-years-questions-for-couples/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://quiz-couple.com/es/juego-de-nochevieja-en-pareja/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://quiz-couple.com/de/silvester-spiel-fuer-paare/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/giochi-capodanno-coppia/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://quiz-couple.com/nl/oud-en-nieuw-spel-voor-koppels/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/jeu-nouvel-an-couple/"/>
+    <lastmod>2026-11-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://quiz-couple.com/jeu-oui-non-couple/</loc>
     <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/jeu-oui-non-couple/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://quiz-couple.com/en/yes-or-no-couples-game/"/>
