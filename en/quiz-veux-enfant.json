@@ -1,0 +1,64 @@
+{
+  "hero": {
+    "badge": "Quiz to take on your own",
+    "title": "Do I want kids? The quiz to help you see clearly",
+    "titleHighlight": "Do I want kids",
+    "description": "It covers your life in ten years, a baby in your arms, the fear of getting it wrong, money or tiredness. Twenty questions measure your wish on one side and your doubts on the other, because both can be strong at the same time.",
+    "subtitle": "Twenty questions, five minutes, free and no sign-up",
+    "jumpBtn": "Take the quiz"
+  },
+  "section1": {
+    "title": "How do you know if you want kids?",
+    "p1": "To know whether you want a child, you need to look at two things: how you feel when you picture yourself with a child, and what holds you back. The two don't always point the same way. You can really want a child and be very afraid of getting it wrong, or have no wish at all without being afraid of anything.",
+    "p2": "So this quiz separates the two. Ten questions look at the wish, for example: “A whole life without children: how does that feel?” Ten others look at what holds you back: freedom, money, work, the state of the world, tiredness. The result comes from the shape of the two measures, not from a score out of a hundred.",
+    "p3": "One thing to keep in mind: wanting a child and being ready to welcome one aren't the same question. Here, we're talking about the wish. Whether you're ready <a href=\"/en/parenthood-readiness-test/\">to become parents together</a> (money, housing, sharing the load) is another quiz, to take as a couple."
+  },
+  "section2": {
+    "title": "Not wanting kids is more common than you think",
+    "p1": "In France, the national demographic institute (Ined) asked the question in its 2010 Fecond survey: <strong>4.3% of women and 6.3% of men aged 18 to 49</strong> had no children and didn't want any. That's not many, and it isn't growing, but it's not nothing. Half of these people lived with a partner, and more than half gave very simple reasons: being happy without children, wanting to stay free.",
+    "p2": "In the United States, the Pew Research Center surveyed adults under 50 without children in 2024: <strong>47%</strong> thought they'd probably never have any, up from 37% in 2018. Among them, 57% simply said they didn't want to. The other reasons came far behind: wanting to focus on other things (44%), the state of the world (38%), not being able to afford it (36%).",
+    "p3": "These numbers say something useful: not wanting kids isn't a problem to fix. It's an answer. And if you're in a relationship, it's one of the <a href=\"/en/blog/future-questions-for-couples/\">questions about the future to ask each other</a>, early enough not to discover the disagreement ten years later."
+  },
+  "section3": {
+    "title": "How do you read your result?",
+    "p1": "The result gives two percentages: your wish for a child, and your doubts. Each one is calculated against its own maximum, so the two don't add up to a hundred. What matters is the shape of the two.",
+    "p2": "If your wish is high and your doubts are low, the wish is clear. If both are high, it's a wish with real fears, and that's very common. If your doubts are clearly above your wish, it's often a sign that it's not the right time, or that fear is hiding the rest. If both are low, a life without kids suits you.",
+    "p3": "The quiz doesn't know everything. It doesn't know your age, your health or your story. If the question weighs on you, talking to someone you trust, or to a professional, often helps you see more clearly.",
+    "headerScore": "Your two measures",
+    "headerLevel": "Result",
+    "headerAnalysis": "What it means",
+    "row1Score": "Wish clearly higher",
+    "row1Level": "You want a child",
+    "row1Analysis": "The wish is there, and the fears don't take over.",
+    "row2Score": "Both above 60%",
+    "row2Level": "A real wish, and real fears",
+    "row2Analysis": "You want it, and the decision scares you.",
+    "row3Score": "Doubts clearly higher",
+    "row3Level": "More doubts than desire",
+    "row3Analysis": "Maybe it's not the right time, or fear is hiding the rest.",
+    "row4Score": "Both close",
+    "row4Level": "You haven't decided yet",
+    "row4Analysis": "Neither yes nor no for now, and that's honest.",
+    "row5Score": "Both under 40%",
+    "row5Level": "A life without kids suits you",
+    "row5Analysis": "No wish, and no fear behind it: a life choice."
+  },
+  "seo": {
+    "faqTitle": "Your questions about wanting kids",
+    "faq1Q": "How can I be sure I want a child?",
+    "faq1A": "Look separately at how you feel when you picture a child, and at what holds you back. A clear wish holds up against fears; a wish that disappears as soon as money or tiredness come up may have been mostly other people's. That's exactly what this quiz measures, in two parts.",
+    "faq2Q": "Is it normal not to know if you want kids?",
+    "faq2A": "Yes, and it's actually very common. Lots of people hesitate for years, and the wish can come late, or never. Not knowing isn't a problem in itself: it's a stage, as long as nobody pushes you to decide just to please them.",
+    "faq3Q": "What if I don't want kids but my partner does?",
+    "faq3A": "It's one of the few subjects where there's no possible compromise: you can't have half a child. The best thing is to talk about it early and honestly, without trying to convince the other person. If the gap stays the same, it's better to know before than after.",
+    "faq4Q": "Can the wish for a child come with time?",
+    "faq4A": "Yes, it can come, and it can also go. It shifts with age, the relationship, work, what you see around you. That's why a result is only valid today: taking the quiz again in a few months can show which way you're heading.",
+    "faq5Q": "Why does the quiz separate the wish and the doubts?",
+    "faq5A": "Because a single score would mix up two opposite situations: someone who really wants a child but is very scared, and someone who has neither the wish nor the fear, would end up with the same score. Measuring them separately, the result tells you whether it's the wish that's missing, or the fears that are taking up the room.",
+    "faq6Q": "Is this quiz enough to make a decision?",
+    "faq6A": "No, and it isn't meant to be. It helps you put words on what you feel. A decision this big is made with your partner if you have one, and with time."
+  },
+  "jsonLd": {
+    "about": "Wanting to have a child"
+  }
+}

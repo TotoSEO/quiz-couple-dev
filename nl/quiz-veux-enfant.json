@@ -1,0 +1,64 @@
+{
+  "hero": {
+    "badge": "Test om alleen te doen",
+    "title": "Wil ik kinderen? De test om het helder te krijgen",
+    "titleHighlight": "Wil ik kinderen?",
+    "description": "Het gaat over je leven over tien jaar, een baby in je armen, de angst om het verkeerd te doen, geld of vermoeidheid. Twintig vragen meten je wens aan de ene kant en je twijfels aan de andere, want allebei kunnen ze tegelijk sterk zijn.",
+    "subtitle": "Twintig vragen, vijf minuten, gratis en zonder inschrijving",
+    "jumpBtn": "Doe de test"
+  },
+  "section1": {
+    "title": "Hoe weet je of je kinderen wilt?",
+    "p1": "Om te weten of je een kind wilt, moet je naar twee dingen kijken: wat je voelt als je jezelf met een kind voorstelt, en wat je tegenhoudt. Die twee wijzen niet altijd dezelfde kant op. Je kunt heel graag een kind willen en heel bang zijn om het verkeerd te doen, of helemaal geen wens hebben zonder ergens bang voor te zijn.",
+    "p2": "Daarom haalt deze test ze uit elkaar. Tien vragen kijken naar de wens, bijvoorbeeld: ‘Een heel leven zonder kinderen: hoe voelt dat?’ Tien andere kijken naar wat je tegenhoudt: vrijheid, geld, werk, de toestand van de wereld, vermoeidheid. Het resultaat komt uit de vorm van de twee metingen, niet uit een cijfer op honderd.",
+    "p3": "Iets om in je achterhoofd te houden: een kind willen en een kind goed kunnen opvangen is niet dezelfde vraag. Hier gaat het om de wens. Of jullie klaar zijn <a href=\"/nl/klaar-voor-een-baby-test/\">om samen ouders te worden</a> (geld, woning, de taken verdelen), is een andere test, om als stel te doen."
+  },
+  "section2": {
+    "title": "Geen kinderen willen komt vaker voor dan je denkt",
+    "p1": "In Frankrijk stelde het nationale instituut voor demografisch onderzoek (Ined) de vraag in zijn Fecond-enquête van 2010: <strong>4,3% van de vrouwen en 6,3% van de mannen tussen 18 en 49 jaar</strong> had geen kinderen en wilde ze ook niet. Dat is weinig, en het stijgt niet, maar het is niet niks. De helft van die mensen woonde samen met een partner, en meer dan de helft gaf heel eenvoudige redenen: gelukkig zijn zonder kinderen, vrij willen blijven.",
+    "p2": "In de Verenigde Staten ondervroeg het Pew Research Center in 2024 volwassenen onder de 50 zonder kinderen: <strong>47%</strong> dacht er waarschijnlijk nooit te krijgen, tegen 37% in 2018. En van hen zei 57% gewoon dat ze geen kinderen wilden. De andere redenen kwamen ver daarachter: zich op andere dingen willen richten (44%), de toestand van de wereld (38%), het niet kunnen betalen (36%).",
+    "p3": "Die cijfers zeggen iets nuttigs: geen kinderen willen is geen probleem dat opgelost moet worden. Het is een antwoord. En heb je een relatie, dan hoort het bij de <a href=\"/nl/blog/vragen-over-de-toekomst-als-koppel/\">vragen over jullie toekomst</a>, vroeg genoeg om de onenigheid niet pas tien jaar later te ontdekken."
+  },
+  "section3": {
+    "title": "Hoe lees je je resultaat?",
+    "p1": "Het resultaat geeft twee percentages: je kinderwens en je twijfels. Elk wordt berekend op zijn eigen maximum, dus samen komen ze niet op honderd. Het gaat om de vorm van de twee.",
+    "p2": "Is de wens hoog en zijn de twijfels laag, dan is het een duidelijke wens. Zijn ze allebei hoog, dan is het een wens met echte angsten, en dat komt heel vaak voor. Liggen de twijfels duidelijk hoger dan de wens, dan is dat vaak een teken dat het niet het moment is, of dat de angst de rest verbergt. Zijn ze allebei laag, dan past een leven zonder kinderen bij je.",
+    "p3": "De test weet niet alles. Hij kent je leeftijd niet, je gezondheid niet en je verhaal niet. Als de vraag zwaar op je weegt, helpt het vaak om erover te praten met iemand die je vertrouwt, of met een professional.",
+    "headerScore": "Je twee metingen",
+    "headerLevel": "Resultaat",
+    "headerAnalysis": "Wat het betekent",
+    "row1Score": "Wens duidelijk hoger",
+    "row1Level": "Je wilt een kind",
+    "row1Analysis": "De wens is er, en de angsten krijgen niet de overhand.",
+    "row2Score": "Allebei boven de 60%",
+    "row2Level": "Een echte wens, en echte angsten",
+    "row2Analysis": "Je wilt het, en de beslissing maakt je bang.",
+    "row3Score": "Twijfels duidelijk hoger",
+    "row3Level": "Meer twijfels dan wens",
+    "row3Analysis": "Misschien niet het juiste moment, of de angst verbergt de rest.",
+    "row4Score": "Allebei dicht bij elkaar",
+    "row4Level": "Je hebt nog niet gekozen",
+    "row4Analysis": "Voorlopig geen ja en geen nee, en dat is eerlijk.",
+    "row5Score": "Allebei onder de 40%",
+    "row5Level": "Een leven zonder kinderen past bij je",
+    "row5Analysis": "Geen wens, en geen angst erachter: een levenskeuze."
+  },
+  "seo": {
+    "faqTitle": "Je vragen over de kinderwens",
+    "faq1Q": "Hoe weet je zeker dat je een kind wilt?",
+    "faq1A": "Kijk apart naar wat je voelt als je je een kind voorstelt, en naar wat je tegenhoudt. Een duidelijke wens houdt stand tegen angsten; een wens die verdwijnt zodra het over geld of vermoeidheid gaat, was misschien vooral die van anderen. Precies dat meet deze test, in twee delen.",
+    "faq2Q": "Is het normaal om niet te weten of je kinderen wilt?",
+    "faq2A": "Ja, het komt zelfs heel vaak voor. Veel mensen twijfelen jarenlang, en de wens kan laat komen, of nooit. Het niet weten is op zich geen probleem: het is een fase, zolang niemand je dwingt te kiezen om een ander een plezier te doen.",
+    "faq3Q": "En als ik geen kinderen wil, maar mijn partner wel?",
+    "faq3A": "Het is een van de weinige onderwerpen waarbij geen compromis mogelijk is: je krijgt geen half kind. Het beste is er vroeg en eerlijk over te praten, zonder de ander te willen overtuigen. Blijft de kloof even groot, dan weet je het beter vooraf dan achteraf.",
+    "faq4Q": "Kan de kinderwens met de tijd komen?",
+    "faq4A": "Ja, hij kan komen, en hij kan ook weer gaan. Hij verandert met je leeftijd, je relatie, je werk en wat je om je heen ziet. Daarom geldt een resultaat alleen voor vandaag: de test over een paar maanden opnieuw doen kan laten zien welke kant je op gaat.",
+    "faq5Q": "Waarom meet de test de wens en de twijfels apart?",
+    "faq5A": "Omdat één cijfer twee tegenovergestelde situaties zou vermengen: iemand die heel graag een kind wil maar heel bang is, en iemand die geen wens en geen angst heeft, zouden op dezelfde score uitkomen. Door ze apart te meten, zegt het resultaat of het de wens is die ontbreekt, of de angsten die de ruimte innemen.",
+    "faq6Q": "Is deze test genoeg om een beslissing te nemen?",
+    "faq6A": "Nee, en daar is hij ook niet voor bedoeld. Hij helpt je woorden te geven aan wat je voelt. Zo'n grote beslissing neem je met je partner als je die hebt, en met tijd."
+  },
+  "jsonLd": {
+    "about": "De kinderwens"
+  }
+}

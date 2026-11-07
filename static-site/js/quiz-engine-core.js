@@ -2394,6 +2394,7 @@ var QuizEngine = (function() {
     { type: 'test', key: 'est-ce-le-bon', icon: '🔑', route: 'testEstCeLeBon' },
     { type: 'test', key: 'compatibilite-sexuelle', icon: '🔥', route: 'testCompatSexuelle' },
     { type: 'test', key: 'qui-aime', icon: '💞', route: 'testQuiAime' },
+    { type: 'test', key: 'veux-enfant', icon: '🌱', route: 'testVeuxEnfant' },
     // Les quiz speciaux d'Halloween (16 octobre 2026), ranges avec les quiz
     { type: 'quiz', key: 'serial-killer', icon: '🔪', route: 'quizSerialKiller' },
     { type: 'quiz', key: 'film-horreur', icon: '🎬', route: 'quizMortFilmHorreur' },
@@ -2468,7 +2469,7 @@ var QuizEngine = (function() {
     // Une étape validée donne envie de regarder la suivante.
     'mariage':         ['testEmmenager', 'testParentalite', 'testCompatibilite'],
     'emmenager':       ['testParentalite', 'testMariage', 'testCompatibilite'],
-    'parentalite':     ['testEmmenager', 'testMariage'],
+    'parentalite':     ['testVeuxEnfant', 'testEmmenager', 'testMariage'],
 
     // ── Tests d'alerte, faits seul ──────────────────────────────────────
     // Personne ne fait ces tests pour s'amuser. On enchaîne sur la question
@@ -2566,6 +2567,7 @@ var QuizEngine = (function() {
     'coquin':                  ['jeuActionVeriteHot', 'testCompatSexuelle', 'jeuGages'],
     'compatibilite-sexuelle':  ['quizCoquin', 'jeuActionVeriteHot', 'testCompatibilite'],
     'qui-aime':                ['testLangageAmour', 'testCommonPoints', 'testCoupleSain'],
+    'veux-enfant':             ['testParentalite', 'testEstCeLeBon', 'testMariage'],
     // Halloween : d'un quiz special a l'autre, puis un jeu
     'serial-killer':    ['quizSuperVilain', 'quizMortFilmHorreur', 'quizPossession'],
     'film-horreur':     ['quizPossession', 'quizSerialKiller', 'quizDuoVilains'],

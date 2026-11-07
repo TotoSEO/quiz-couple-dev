@@ -1,0 +1,64 @@
+{
+  "hero": {
+    "badge": "Test para hacer solo",
+    "title": "¿Quiero tener hijos? El test para verlo más claro",
+    "titleHighlight": "¿Quiero tener hijos?",
+    "description": "Se habla de tu vida dentro de diez años, de un bebé en brazos, del miedo a hacerlo mal, del dinero o del cansancio. Veinte preguntas miden tus ganas por un lado y tus dudas por el otro, porque las dos cosas pueden ser fuertes a la vez.",
+    "subtitle": "Veinte preguntas, cinco minutos, gratis y sin registro",
+    "jumpBtn": "Hacer el test"
+  },
+  "section1": {
+    "title": "¿Cómo saber si quieres tener hijos?",
+    "p1": "Para saber si quieres tener un hijo, hay que mirar dos cosas: lo que sientes cuando te imaginas con un hijo, y lo que te frena. Las dos no siempre van en el mismo sentido. Se pueden tener muchas ganas de un hijo y mucho miedo a hacerlo mal, o no tener ganas en absoluto sin tener miedo de nada.",
+    "p2": "Por eso este test separa las dos cosas. Diez preguntas miran las ganas, por ejemplo: «Una vida entera sin hijos: ¿cómo te sienta?». Otras diez miran lo que te frena: la libertad, el dinero, el trabajo, el estado del mundo, el cansancio. El resultado sale de la forma de las dos medidas, no de una nota sobre cien.",
+    "p3": "Algo que conviene tener en cuenta: querer un hijo y poder recibirlo en buenas condiciones no son la misma pregunta. Aquí hablamos de las ganas. Saber si estáis preparados <a href=\"/es/test-parentalidad-pareja/\">para ser padres los dos</a> (el dinero, la vivienda, el reparto de tareas) es otro test, para hacer en pareja."
+  },
+  "section2": {
+    "title": "No querer hijos es más habitual de lo que parece",
+    "p1": "En Francia, el instituto de estudios demográficos (Ined) hizo la pregunta en su encuesta Fecond de 2010: <strong>el 4,3 % de las mujeres y el 6,3 % de los hombres de 18 a 49 años</strong> no tenían hijos y no los querían. Es poco, y no va en aumento, pero no es nada. La mitad de estas personas vivían en pareja, y más de la mitad daban razones muy sencillas: estar bien sin hijos, querer seguir siendo libres.",
+    "p2": "En Estados Unidos, el Pew Research Center preguntó en 2024 a adultos de menos de 50 años sin hijos: el <strong>47 %</strong> creía que probablemente nunca los tendría, frente al 37 % en 2018. Y entre ellos, el 57 % decía simplemente que no le apetecía. Las demás razones quedaban muy por detrás: querer dedicarse a otras cosas (44 %), el estado del mundo (38 %), no poder permitírselo (36 %).",
+    "p3": "Estas cifras dicen algo útil: no querer hijos no es un problema que haya que arreglar. Es una respuesta. Y si tienes pareja, es una de las <a href=\"/es/blog/preguntas-sobre-el-futuro-pareja/\">preguntas sobre el futuro que conviene hacerse</a>, lo bastante pronto para no descubrir el desacuerdo diez años después."
+  },
+  "section3": {
+    "title": "¿Cómo leer tu resultado?",
+    "p1": "El resultado da dos porcentajes: tus ganas de tener un hijo, y tus dudas. Cada uno se calcula sobre su propio máximo, así que los dos no suman cien. Lo que cuenta es la forma de los dos.",
+    "p2": "Si tienes muchas ganas y pocas dudas, es un deseo claro. Si las dos medidas están altas, son unas ganas con miedos de verdad, y es muy habitual. Si las dudas están claramente por encima de las ganas, suele ser la señal de que no es el momento, o de que el miedo tapa lo demás. Si las dos están bajas, es una vida sin hijos la que te sienta bien.",
+    "p3": "El test no lo sabe todo. No conoce ni tu edad, ni tu salud, ni tu historia. Si la pregunta te pesa, hablarlo con alguien de confianza, o con un profesional, suele ayudar a verlo más claro.",
+    "headerScore": "Tus dos medidas",
+    "headerLevel": "Resultado",
+    "headerAnalysis": "Qué significa",
+    "row1Score": "Ganas claramente por encima",
+    "row1Level": "Quieres tener un hijo",
+    "row1Analysis": "Las ganas están ahí, y los miedos no se imponen.",
+    "row2Score": "Los dos por encima del 60 %",
+    "row2Level": "Muchas ganas, y muchos miedos",
+    "row2Analysis": "Lo quieres, y la decisión te da miedo.",
+    "row3Score": "Dudas claramente por encima",
+    "row3Level": "Más dudas que ganas",
+    "row3Analysis": "Quizá no es el momento, o el miedo tapa lo demás.",
+    "row4Score": "Los dos cerca",
+    "row4Level": "Todavía no lo has decidido",
+    "row4Analysis": "Ni sí ni no por ahora, y es honesto.",
+    "row5Score": "Los dos por debajo del 40 %",
+    "row5Level": "Una vida sin hijos te sienta bien",
+    "row5Analysis": "Sin ganas, y sin miedo detrás: una forma de vida."
+  },
+  "seo": {
+    "faqTitle": "Tus preguntas sobre las ganas de tener hijos",
+    "faq1Q": "¿Cómo estar seguro de querer tener un hijo?",
+    "faq1A": "Mira por separado lo que sientes cuando te imaginas con un hijo, y lo que te frena. Unas ganas claras resisten a los miedos; unas ganas que desaparecen en cuanto se habla de dinero o de cansancio quizá eran sobre todo las de los demás. Es justo lo que mide este test, en dos partes.",
+    "faq2Q": "¿Es normal no saber si quieres tener hijos?",
+    "faq2A": "Sí, y de hecho es muy frecuente. Mucha gente duda durante años, y las ganas pueden llegar tarde, o nunca. No saberlo no es un problema en sí: es una etapa, mientras nadie te empuje a decidir para quedar bien.",
+    "faq3Q": "¿Y si yo no quiero hijos y mi pareja sí?",
+    "faq3A": "Es uno de los pocos temas en los que no hay término medio posible: no se puede tener medio hijo. Lo mejor es hablarlo pronto, con sinceridad, sin intentar convencer al otro. Si la distancia sigue siendo la misma, más vale saberlo antes que después.",
+    "faq4Q": "¿Las ganas de tener un hijo pueden llegar con el tiempo?",
+    "faq4A": "Sí, pueden llegar, y también pueden irse. Cambian con la edad, la pareja, el trabajo, lo que ves a tu alrededor. Por eso un resultado solo vale para hoy: repetir el test dentro de unos meses puede mostrar hacia dónde vas.",
+    "faq5Q": "¿Por qué el test separa las ganas y las dudas?",
+    "faq5A": "Porque una sola nota mezclaría dos situaciones opuestas: alguien con muchas ganas pero mucho miedo, y alguien sin ganas ni miedo, acabarían con la misma puntuación. Al medirlas por separado, el resultado dice si lo que falta son las ganas, o si son los miedos los que ocupan el sitio.",
+    "faq6Q": "¿Basta este test para tomar una decisión?",
+    "faq6A": "No, y no está hecho para eso. Ayuda a poner palabras a lo que sientes. Una decisión así se toma con tu pareja si la tienes, y con tiempo."
+  },
+  "jsonLd": {
+    "about": "Las ganas de tener un hijo"
+  }
+}

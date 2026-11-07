@@ -1,0 +1,64 @@
+{
+  "hero": {
+    "badge": "Ein Test, den du allein machst",
+    "title": "Will ich Kinder? Der Test, um klarer zu sehen",
+    "titleHighlight": "Will ich Kinder?",
+    "description": "Es geht um dein Leben in zehn Jahren, ein Baby im Arm, die Angst, etwas falsch zu machen, um Geld oder Müdigkeit. Zwanzig Fragen messen deinen Wunsch auf der einen Seite und deine Zweifel auf der anderen, denn beides kann gleichzeitig stark sein.",
+    "subtitle": "Zwanzig Fragen, fünf Minuten, kostenlos und ohne Anmeldung",
+    "jumpBtn": "Zum Test"
+  },
+  "section1": {
+    "title": "Wie weiß man, ob man Kinder will?",
+    "p1": "Um zu wissen, ob du ein Kind willst, musst du auf zwei Dinge schauen: was du fühlst, wenn du dich mit einem Kind vorstellst, und was dich zurückhält. Die beiden zeigen nicht immer in dieselbe Richtung. Man kann sich sehr ein Kind wünschen und große Angst haben, etwas falsch zu machen, oder überhaupt keinen Wunsch haben, ohne vor irgendetwas Angst zu haben.",
+    "p2": "Deshalb trennt dieser Test die beiden. Zehn Fragen schauen auf den Wunsch, zum Beispiel: „Ein ganzes Leben ohne Kinder: Wie fühlt sich das an?“ Zehn andere schauen auf das, was dich zurückhält: die Freiheit, das Geld, der Job, der Zustand der Welt, die Müdigkeit. Das Ergebnis ergibt sich aus der Form der beiden Werte, nicht aus einer Note von hundert.",
+    "p3": "Ein Punkt, den du im Kopf behalten solltest: Sich ein Kind wünschen und ein Kind unter guten Bedingungen aufnehmen können, ist nicht dieselbe Frage. Hier geht es um den Wunsch. Ob ihr bereit seid, <a href=\"/de/elternschafts-bereitschaftstest/\">zu zweit Eltern zu werden</a> (Geld, Wohnung, Aufgabenteilung), ist ein anderer Test, den ihr als Paar macht."
+  },
+  "section2": {
+    "title": "Keine Kinder zu wollen ist häufiger, als man denkt",
+    "p1": "In Frankreich hat das nationale Institut für demografische Studien (Ined) die Frage in seiner Fecond-Erhebung von 2010 gestellt: <strong>4,3 % der Frauen und 6,3 % der Männer zwischen 18 und 49 Jahren</strong> hatten keine Kinder und wollten auch keine. Das ist wenig, und es steigt nicht, aber es ist nicht nichts. Die Hälfte dieser Menschen lebte in einer Beziehung, und mehr als die Hälfte nannte ganz einfache Gründe: ohne Kinder glücklich zu sein, frei bleiben zu wollen.",
+    "p2": "In den USA hat das Pew Research Center 2024 Erwachsene unter 50 ohne Kinder befragt: <strong>47 %</strong> dachten, dass sie wahrscheinlich nie welche haben werden, gegenüber 37 % im Jahr 2018. Und von ihnen sagten 57 % ganz einfach, dass sie keine wollen. Die anderen Gründe kamen weit dahinter: sich auf andere Dinge konzentrieren wollen (44 %), der Zustand der Welt (38 %), es sich nicht leisten können (36 %).",
+    "p3": "Diese Zahlen sagen etwas Nützliches: Keine Kinder zu wollen ist kein Problem, das man lösen muss. Es ist eine Antwort. Und wenn du in einer Beziehung bist, gehört es zu den <a href=\"/de/blog/zukunftsfragen-fuer-paare/\">Fragen zur gemeinsamen Zukunft</a>, früh genug, um die Uneinigkeit nicht erst zehn Jahre später zu entdecken."
+  },
+  "section3": {
+    "title": "Wie liest du dein Ergebnis?",
+    "p1": "Das Ergebnis gibt zwei Prozentwerte: deinen Kinderwunsch und deine Zweifel. Jeder wird an seinem eigenen Maximum gemessen, die beiden ergeben zusammen also nicht hundert. Es kommt auf die Form der beiden an.",
+    "p2": "Ist der Wunsch hoch und sind die Zweifel niedrig, ist der Wunsch klar. Sind beide hoch, ist es ein Wunsch mit echten Ängsten, und das ist sehr häufig. Liegen die Zweifel deutlich über dem Wunsch, ist das oft ein Zeichen, dass es nicht der richtige Zeitpunkt ist oder dass die Angst den Rest verdeckt. Sind beide niedrig, passt ein Leben ohne Kinder zu dir.",
+    "p3": "Der Test weiß nicht alles. Er kennt weder dein Alter noch deine Gesundheit noch deine Geschichte. Wenn dich die Frage belastet, hilft es oft, mit einem Menschen deines Vertrauens oder mit einer Fachperson darüber zu reden.",
+    "headerScore": "Deine zwei Werte",
+    "headerLevel": "Ergebnis",
+    "headerAnalysis": "Was es bedeutet",
+    "row1Score": "Wunsch deutlich höher",
+    "row1Level": "Du wünschst dir ein Kind",
+    "row1Analysis": "Der Wunsch ist da, und die Ängste gewinnen nicht die Oberhand.",
+    "row2Score": "Beide über 60 %",
+    "row2Level": "Ein echter Wunsch, und echte Ängste",
+    "row2Analysis": "Du willst es, und die Entscheidung macht dir Angst.",
+    "row3Score": "Zweifel deutlich höher",
+    "row3Level": "Mehr Zweifel als Wunsch",
+    "row3Analysis": "Vielleicht nicht der richtige Zeitpunkt, oder die Angst verdeckt den Rest.",
+    "row4Score": "Beide nah beieinander",
+    "row4Level": "Du hast dich noch nicht entschieden",
+    "row4Analysis": "Für den Moment weder ja noch nein, und das ist ehrlich.",
+    "row5Score": "Beide unter 40 %",
+    "row5Level": "Ein Leben ohne Kinder passt zu dir",
+    "row5Analysis": "Kein Wunsch, und keine Angst dahinter: eine Lebensentscheidung."
+  },
+  "seo": {
+    "faqTitle": "Deine Fragen zum Kinderwunsch",
+    "faq1Q": "Wie kann ich sicher sein, dass ich ein Kind will?",
+    "faq1A": "Schau getrennt darauf, was du fühlst, wenn du dir ein Kind vorstellst, und was dich zurückhält. Ein klarer Wunsch hält den Ängsten stand; ein Wunsch, der verschwindet, sobald es um Geld oder Müdigkeit geht, war vielleicht vor allem der der anderen. Genau das misst dieser Test, in zwei Teilen.",
+    "faq2Q": "Ist es normal, nicht zu wissen, ob man Kinder will?",
+    "faq2A": "Ja, und es ist sogar sehr häufig. Viele Menschen zögern jahrelang, und der Wunsch kann spät kommen, oder nie. Nicht zu wissen ist an sich kein Problem: Es ist eine Phase, solange dich niemand drängt, dich jemandem zuliebe zu entscheiden.",
+    "faq3Q": "Und wenn ich keine Kinder will, mein Partner aber schon?",
+    "faq3A": "Das ist eines der wenigen Themen, bei denen es keinen Kompromiss gibt: Man bekommt kein halbes Kind. Am besten sprecht ihr früh und ehrlich darüber, ohne den anderen überzeugen zu wollen. Wenn der Abstand bleibt, ist es besser, es vorher zu wissen als nachher.",
+    "faq4Q": "Kann der Kinderwunsch mit der Zeit kommen?",
+    "faq4A": "Ja, er kann kommen, und er kann auch wieder gehen. Er verändert sich mit dem Alter, der Beziehung, dem Job und dem, was man um sich herum sieht. Deshalb gilt ein Ergebnis nur für heute: Wenn du den Test in ein paar Monaten noch einmal machst, siehst du, in welche Richtung du gehst.",
+    "faq5Q": "Warum trennt der Test Wunsch und Zweifel?",
+    "faq5A": "Weil eine einzige Note zwei entgegengesetzte Situationen vermischen würde: Jemand, der sich sehr ein Kind wünscht, aber große Angst hat, und jemand, der weder Wunsch noch Angst hat, landen beim selben Wert. Wenn man beides getrennt misst, sagt das Ergebnis, ob der Wunsch fehlt oder ob die Ängste den Platz einnehmen.",
+    "faq6Q": "Reicht dieser Test, um eine Entscheidung zu treffen?",
+    "faq6A": "Nein, und dafür ist er auch nicht gemacht. Er hilft dir, Worte für das zu finden, was du fühlst. Eine so große Entscheidung triffst du mit der Person an deiner Seite, wenn es sie gibt, und mit Zeit."
+  },
+  "jsonLd": {
+    "about": "Der Kinderwunsch"
+  }
+}

@@ -130,6 +130,12 @@
     "description": "24 ehrliche Fragen über eure Beziehung, Finanzen, Lebensstil und Ängste. Findet heraus, ob ihr bereit seid, Eltern zu werden.",
     "metaDescription": "Kostenloser Elternschaftstest: 24 Fragen, um herauszufinden, ob ihr als Paar bereit seid für ein Kind. Sofortiges Ergebnis, ohne Anmeldung!"
   },
+  "testVeuxEnfant": {
+    "title": "Will ich Kinder? Der Kinderwunsch-Test in 20 Fragen",
+    "shortTitle": "Will ich Kinder?",
+    "description": "Zwanzig Fragen, die deinen Kinderwunsch und deine Zweifel getrennt messen. Für dich allein, in fünf Minuten.",
+    "metaDescription": "Will ich Kinder oder nicht? Dieser Test misst deinen Kinderwunsch und deine Zweifel getrennt, in 20 Fragen, damit du klarer siehst. Kostenlos, 5 Minuten."
+  },
   "testAstroPrenoms": {
     "title": "Liebestest mit Namen und Sternzeichen: Passt ihr zusammen?",
     "shortTitle": "Astro-Kompatibilität",

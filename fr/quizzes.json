@@ -136,6 +136,12 @@
     "description": "24 questions honnêtes pour évaluer votre préparation en couple avant d'avoir un enfant. Test gratuit, résultat immédiat.",
     "metaDescription": "Êtes-vous prêts à devenir parents ? 24 questions pour évaluer votre préparation en couple avant d'accueillir un bébé. Test gratuit."
   },
+  "testVeuxEnfant": {
+    "title": "Test : est-ce que je veux un enfant ? 20 questions",
+    "shortTitle": "Est-ce que je veux un enfant ?",
+    "description": "Vingt questions pour faire la part entre votre envie d'enfant et vos doutes, mesurés séparément. Seul(e), en cinq minutes.",
+    "metaDescription": "Est-ce que je veux un enfant ? Ce test mesure séparément votre envie et vos doutes, en 20 questions, pour y voir plus clair. Gratuit, 5 minutes."
+  },
   "testAstroPrenoms": {
     "title": "Compatibilité amoureuse prénom et signe astrologique, gratuit",
     "shortTitle": "Compatibilité Astro",

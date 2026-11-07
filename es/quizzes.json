@@ -130,6 +130,12 @@
     "description": "24 preguntas honestas para evaluar vuestra preparación como pareja antes de tener un hijo. Test gratuito, resultado inmediato.",
     "metaDescription": "¿Estáis realmente preparados para ser padres? 24 preguntas honestas para evaluar vuestra preparación como pareja antes de tener un hijo. Test gratuito, resultado inmediato."
   },
+  "testVeuxEnfant": {
+    "title": "Test para saber si quiero tener hijos: 20 preguntas",
+    "shortTitle": "¿Quiero tener hijos?",
+    "description": "Veinte preguntas que miden por separado tus ganas de tener un hijo y tus dudas. Para hacer solo, en cinco minutos.",
+    "metaDescription": "¿Quiero tener hijos? Este test mide por separado tus ganas y tus dudas, en 20 preguntas, para que lo veas más claro. Gratis, 5 minutos."
+  },
   "testAstroPrenoms": {
     "title": "Compatibilidad amorosa: Nombres y signos zodiacales | Test gratis",
     "shortTitle": "Compatibilidad Astro",

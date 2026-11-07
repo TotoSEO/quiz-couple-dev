@@ -402,6 +402,13 @@
     // cinquante points chacun. Le verdict sort de la forme du profil, pas
     // d'une tranche de score : voir AxesQuiz.
     'amour-ou-attachement': { prefix: 'attache', engine: 'axes', totalQ: 20, pool: 20, quizType: 'amour-ou-attachement' },
+    // Est-ce que je veux un enfant ? Le meme moteur a deux axes (7 novembre
+    // 2026) : l'envie d'un enfant (axe a) et les doutes et les freins (axe b),
+    // dix questions et cinquante points chacun, poses en alternance. Les
+    // seuils par defaut : les deux sous 40, une vie sans enfant qui convient ;
+    // un ecart de 15, l'envie ou les doutes ; les deux au-dessus de 60, une
+    // envie avec de vraies peurs.
+    'veux-enfant': { prefix: 'veuxEnfant', engine: 'axes', totalQ: 20, pool: 20, quizType: 'veux-enfant' },
     // Compatibilité sexuelle : deux joueurs, des réponses rangées sur une
     // échelle et comparées en proximité (voir EchelleQuiz). Cinq dimensions,
     // quatre questions chacune, posées dans l'ordre du fichier (du plus doux
