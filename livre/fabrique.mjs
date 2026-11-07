@@ -1,7 +1,9 @@
 // Fabrique des maquettes du livre Quiz Couple (7 novembre 2026).
 //
-//   node livre/fabrique.mjs            les trois formats
-//   node livre/fabrique.mjs quiz       un seul (journal, aventures, quiz)
+//   node livre/fabrique.mjs                  les trois maquettes du 7 novembre
+//   node livre/fabrique.mjs quiz             une seule (journal, aventures, quiz)
+//   node livre/fabrique.mjs aventures:en     le livre complet dans une langue
+//   node livre/fabrique.mjs aventures:toutes le livre complet dans les six langues
 //
 // Pour chaque format, dans livre/sortie/<id>/ (hors du dépôt) :
 //   interieur.pdf    les pages d'exemple, à fond perdu, au format KDP
@@ -33,7 +35,7 @@ function margeInterieure(n) {
 
 function dimensions(f) {
   const l = f.trim.l, h = f.trim.h;
-  const tranche = +(f.pagesFinales * EPAISSEUR[f.papier]).toFixed(4);
+  const tranche = +(f.pagesFinales * EPAISSEUR[f.papier]).toFixed(6);
   return {
     l, h, tranche,
     page: { l: l + FOND_PERDU, h: h + 2 * FOND_PERDU },
@@ -46,14 +48,14 @@ function document(f, d, corps, { couverture = false } = {}) {
   const base = fs.readFileSync(path.join(ICI, 'commun/base.css'), 'utf8');
   const L = couverture ? d.couv.l : d.page.l;
   const H = couverture ? d.couv.h : d.page.h;
-  return `<!doctype html><html lang="fr"><head><meta charset="utf-8"><title>${f.titre}</title>
+  return `<!doctype html><html lang="${f.lang || 'fr'}"><head><meta charset="utf-8"><title>${f.titre}</title>
 <style>${base}
 @page { size: ${L}in ${H}in; margin: 0; }
 :root { --feuille-l: ${L}in; --feuille-h: ${H}in; --coupe-l: ${d.l}in; --coupe-h: ${d.h}in; --tranche: ${d.tranche}in;
   --marge-int: ${d.margeInt}in; --marge-ext: ${f.margeExt || 0.5}in; --marge-haut: ${f.margeHaut || 0.55}in; --marge-bas: ${f.margeBas || 0.65}in; --fond-page: ${f.fond || '#fff'}; }
 ${f.css || ''}
 ${couverture ? (f.couverture.css || '') : ''}
-</style></head><body class="fmt-${f.id}">${corps}</body></html>`;
+</style></head><body class="fmt-${f.famille || f.id}">${corps}${f.script ? `<script>${f.script}</script>` : ''}</body></html>`;
 }
 
 function feuille(p) {
@@ -65,8 +67,45 @@ ${p.perdu ? `<div class="perdu">${p.perdu}</div>` : ''}
 </section>`;
 }
 
-async function fabriquer(navigateur, id) {
-  const f = (await import(pathToFileURL(path.join(ICI, 'formats', `${id}.mjs`)).href)).default;
+// Un format exporte soit l'objet du livre, soit une fonction de la langue
+// (avec LANGUES et charger(langue) pour lire les textes).
+async function formatsDe(demande) {
+  const [id, langue] = demande.split(':');
+  const mod = await import(pathToFileURL(path.join(ICI, 'formats', `${id}.mjs`)).href);
+  if (typeof mod.default !== 'function') return [mod.default];
+  const langues = langue === 'toutes' ? mod.LANGUES : [langue || 'fr'];
+  const liste = [];
+  for (const l of langues) {
+    await mod.charger(l);
+    liste.push({ famille: id, ...mod.default(l) });
+  }
+  return liste;
+}
+
+// Chromium arrondit la largeur de page au 1/300 de pouce (8,625 in devient
+// 8,6267 in) : on réécrit la boîte de chaque page à la taille exacte, sans
+// changer la longueur du fichier (la table des objets reste juste).
+function boiteExacte(fichier, largeurIn, hauteurIn) {
+  const brut = fs.readFileSync(fichier).toString('latin1');
+  const exact = (pt, modele) => {
+    let s = pt.toFixed(6).replace(/0+$/, '').replace(/\.$/, '');
+    if (s.length > modele.length) s = s.slice(0, modele.length).replace(/\.$/, '');
+    if (s.length < modele.length) s = (s.includes('.') ? s : s + '.') .padEnd(modele.length, '0');
+    return s.length === modele.length ? s : null;
+  };
+  let n = 0;
+  const corrige = brut.replace(/\/MediaBox \[0 0 ([\d.]+) ([\d.]+)\]/g, (m, l, h) => {
+    const nl = exact(largeurIn * 72, l), nh = exact(hauteurIn * 72, h);
+    if (!nl || !nh) return m;
+    n++;
+    return `/MediaBox [0 0 ${nl} ${nh}]`;
+  });
+  fs.writeFileSync(fichier, Buffer.from(corrige, 'latin1'));
+  return n;
+}
+
+async function fabriquer(navigateur, f) {
+  const id = f.id;
   const d = dimensions(f);
   const sortie = path.join(ICI, 'sortie', id);
   const apercu = path.join(sortie, 'apercu');
@@ -80,7 +119,9 @@ async function fabriquer(navigateur, id) {
   const onglet = await navigateur.newPage({ deviceScaleFactor: 2, viewport: { width: 1400, height: 1000 } });
   await onglet.goto(pathToFileURL(htmlInt).href);
   await onglet.evaluate(() => document.fonts.ready);
+  const reduites = await onglet.evaluate(() => (window.__mettreEnPage ? window.__mettreEnPage() : []));
   await onglet.pdf({ path: path.join(sortie, 'interieur.pdf'), width: `${d.page.l}in`, height: `${d.page.h}in`, printBackground: true, preferCSSPageSize: true });
+  boiteExacte(path.join(sortie, 'interieur.pdf'), d.page.l, d.page.h);
   const liste = [];
   const coupes = await onglet.$$('.feuille .coupe');
   for (let i = 0; i < coupes.length; i++) {
@@ -99,7 +140,7 @@ async function fabriquer(navigateur, id) {
       z.querySelectorAll('*').forEach((el) => {
         const b = el.getBoundingClientRect();
         if (b.width === 0 || b.height === 0) return;
-        if (el.closest('.peut-deborder')) return;
+        if (el.ownerSVGElement || el.closest('.peut-deborder') || el.closest('.apercu')) return;
         if (b.bottom > r.bottom + 1 || b.right > r.right + 1 || b.left < r.left - 1 || b.top < r.top - 1) {
           out.push(`${fe.dataset.folio}: <${el.tagName.toLowerCase()} class="${el.className && el.className.baseVal !== undefined ? el.className.baseVal : el.className}"> déborde de ${Math.round(Math.max(b.bottom - r.bottom, b.right - r.right, r.left - b.left, r.top - b.top))} px`);
         }
@@ -121,7 +162,9 @@ async function fabriquer(navigateur, id) {
   const o2 = await navigateur.newPage({ deviceScaleFactor: 2, viewport: { width: 2400, height: 1400 } });
   await o2.goto(pathToFileURL(htmlCouv).href);
   await o2.evaluate(() => document.fonts.ready);
+  await o2.evaluate(() => (window.__mettreEnPage ? window.__mettreEnPage() : []));
   await o2.pdf({ path: path.join(sortie, 'couverture.pdf'), width: `${d.couv.l}in`, height: `${d.couv.h}in`, printBackground: true, preferCSSPageSize: true });
+  boiteExacte(path.join(sortie, 'couverture.pdf'), d.couv.l, d.couv.h);
   const boite = await (await o2.$('.couv')).boundingBox();
   const px = boite.width / d.couv.l;
   await o2.screenshot({ path: path.join(apercu, 'couverture-entiere.jpg'), type: 'jpeg', quality: 86, clip: { x: boite.x + FOND_PERDU * px, y: boite.y + FOND_PERDU * px, width: (d.couv.l - 2 * FOND_PERDU) * px, height: d.h * px } });
@@ -132,13 +175,16 @@ async function fabriquer(navigateur, id) {
 
   fs.writeFileSync(path.join(sortie, 'pages.json'), JSON.stringify({ id, titre: f.titre, sousTitre: f.sousTitre, trim: f.trim, tranche: d.tranche, pagesFinales: f.pagesFinales, papier: f.papier, encre: f.encre, pages: liste }, null, 1));
   console.log(`${id} : ${liste.length} pages, tranche ${d.tranche} in, couverture ${d.couv.l.toFixed(3)} x ${d.couv.h} in`);
+  if (reduites.length) console.log(`  textes réduits pour tenir (page:échelle) : ${reduites.join(' ')}`);
   if (debords.length) console.log(`  débordements :\n  ${debords.join('\n  ')}`);
 }
 
-const demandes = process.argv.slice(2).filter((a) => FORMATS.includes(a));
+const demandes = process.argv.slice(2).filter((a) => FORMATS.includes(a.split(':')[0]));
 const navigateur = await chromium.launch();
 try {
-  for (const id of (demandes.length ? demandes : FORMATS)) await fabriquer(navigateur, id);
+  for (const demande of (demandes.length ? demandes : FORMATS)) {
+    for (const f of await formatsDe(demande)) await fabriquer(navigateur, f);
+  }
 } finally {
   await navigateur.close();
 }
