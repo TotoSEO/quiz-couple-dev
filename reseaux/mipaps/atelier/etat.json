@@ -1,12 +1,12 @@
 {
-  "genere_le": "2026-11-07T10:03:34.415Z",
+  "genere_le": "2026-11-08T03:15:47.213Z",
   "langue": "fr",
   "compte": {
     "nom": "mipaps_stories",
     "actif": true
   },
   "fuseau": "Europe/Paris",
-  "aujourdhui": "2026-11-07",
+  "aujourdhui": "2026-11-08",
   "melange": {
     "midi": {
       "1": null,
@@ -28,7 +28,7 @@
     },
     "matin": "mipaps-anime"
   },
-  "reserve_jours": 145,
+  "reserve_jours": 144,
   "a_remplir": [],
   "a_corriger": [],
   "hors_grille": [],
@@ -840,7 +840,7 @@
       "creneau": "soir",
       "gabarit": "mipaps-reel",
       "categorie": "mipaps-anime",
-      "statut": "rendu",
+      "statut": "publie",
       "texte": null,
       "erreur": null
     },
@@ -2891,8 +2891,8 @@
   "idees": [],
   "prochain_creneau": {
     "mipaps-anime": {
-      "jour": "2026-11-07",
-      "creneau": "soir"
+      "jour": "2026-11-09",
+      "creneau": "matin"
     },
     "mipaps-statique": null,
     "mipaps-histoire": null,
@@ -3834,18 +3834,36 @@
       "jour": "2026-10-31",
       "creneau": "matin",
       "theme": null
+    },
+    {
+      "variante_id": "c999dcf0-2f86-4ca4-a8ed-c858f27debac",
+      "releve": "j7",
+      "vues": 2501,
+      "portee": 1915,
+      "likes": 138,
+      "commentaires": 0,
+      "partages": 29,
+      "enregistrements": 7,
+      "releve_le": "2026-11-08T03:15:39.354963+00:00",
+      "publie_le": "2026-10-31T15:10:10.544+00:00",
+      "categorie": "mipaps-anime",
+      "format": "reel",
+      "gabarit": "mipaps-reel",
+      "jour": "2026-10-31",
+      "creneau": "soir",
+      "theme": null
     }
   ],
   "statistiques_par_categorie": [
     {
       "categorie": "mipaps-anime",
-      "posts": 22,
-      "vues_mediane": 1127,
-      "vues_moyenne": 1238,
+      "posts": 23,
+      "vues_mediane": 1342,
+      "vues_moyenne": 1293,
       "vues_max": 3437,
-      "partages": 134,
-      "enregistrements": 39,
-      "likes": 908,
+      "partages": 163,
+      "enregistrements": 46,
+      "likes": 1046,
       "commentaires": 0
     },
     {
