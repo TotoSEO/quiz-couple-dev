@@ -1,12 +1,12 @@
 {
-  "genere_le": "2026-11-07T10:03:29.889Z",
+  "genere_le": "2026-11-08T03:15:42.986Z",
   "langue": "en",
   "compte": {
     "nom": "quiz_couple_official",
     "actif": true
   },
   "fuseau": "Europe/Paris",
-  "aujourdhui": "2026-11-07",
+  "aujourdhui": "2026-11-08",
   "melange": {
     "midi": {
       "1": null,
@@ -28,39 +28,12 @@
     },
     "matin": null
   },
-  "reserve_jours": 145,
+  "reserve_jours": 144,
   "a_remplir": [],
   "a_corriger": [],
   "hors_grille": [],
   "refuses": [],
   "recents_et_prevus": [
-    {
-      "jour": "2026-10-08",
-      "creneau": "matin",
-      "gabarit": "pov",
-      "categorie": "pov",
-      "statut": "publie",
-      "texte": null,
-      "erreur": null
-    },
-    {
-      "jour": "2026-10-08",
-      "creneau": "midi",
-      "gabarit": "pov",
-      "categorie": "statique",
-      "statut": "publie",
-      "texte": null,
-      "erreur": null
-    },
-    {
-      "jour": "2026-10-08",
-      "creneau": "soir",
-      "gabarit": "carrousel",
-      "categorie": "carrousel",
-      "statut": "publie",
-      "texte": "8 questions for you two",
-      "erreur": null
-    },
     {
       "jour": "2026-10-09",
       "creneau": "matin",
@@ -858,7 +831,7 @@
       "creneau": "midi",
       "gabarit": "tu-preferes",
       "categorie": "tu-preferes",
-      "statut": "rendu",
+      "statut": "publie",
       "texte": "Would you rather: gifts?",
       "erreur": null
     },
@@ -867,7 +840,7 @@
       "creneau": "soir",
       "gabarit": "baton",
       "categorie": "baton",
-      "statut": "rendu",
+      "statut": "publie",
       "texte": null,
       "erreur": null
     },
@@ -921,7 +894,7 @@
       "creneau": "soir",
       "gabarit": "tu-preferes",
       "categorie": "tu-preferes",
-      "statut": "a_rendre",
+      "statut": "rendu",
       "texte": "Would you rather: couple edition",
       "erreur": null
     },
@@ -3614,7 +3587,7 @@
     "bd": null,
     "dix-mais": null,
     "baton": {
-      "jour": "2026-11-07",
+      "jour": "2026-11-14",
       "creneau": "soir"
     }
   },
@@ -4734,19 +4707,55 @@
       "jour": "2026-10-30",
       "creneau": "soir",
       "theme": null
+    },
+    {
+      "variante_id": "e50af8ab-f55a-4b5c-a508-d9bbc2f62529",
+      "releve": "j7",
+      "vues": 1435,
+      "portee": 1242,
+      "likes": 17,
+      "commentaires": 0,
+      "partages": 10,
+      "enregistrements": 4,
+      "releve_le": "2026-11-08T03:15:36.627421+00:00",
+      "publie_le": "2026-10-31T15:30:09.579+00:00",
+      "categorie": "baton",
+      "format": "reel",
+      "gabarit": "baton",
+      "jour": "2026-10-31",
+      "creneau": "soir",
+      "theme": null
+    },
+    {
+      "variante_id": "a59fa6c5-45b6-46ee-8f95-877931d74403",
+      "releve": "j7",
+      "vues": 2612,
+      "portee": 2014,
+      "likes": 34,
+      "commentaires": 1,
+      "partages": 71,
+      "enregistrements": 31,
+      "releve_le": "2026-11-08T03:15:42.049506+00:00",
+      "publie_le": "2026-10-31T10:30:19.649+00:00",
+      "categorie": "tu-preferes",
+      "format": "reel",
+      "gabarit": "tu-preferes",
+      "jour": "2026-10-31",
+      "creneau": "midi",
+      "theme": null
     }
   ],
   "statistiques_par_categorie": [
     {
       "categorie": "tu-preferes",
-      "posts": 14,
-      "vues_mediane": 2357,
-      "vues_moyenne": 11660,
+      "posts": 15,
+      "vues_mediane": 2502,
+      "vues_moyenne": 11057,
       "vues_max": 74587,
-      "partages": 5417,
-      "enregistrements": 2122,
-      "likes": 2233,
-      "commentaires": 4
+      "partages": 5488,
+      "enregistrements": 2153,
+      "likes": 2267,
+      "commentaires": 5
     },
     {
       "categorie": "connais-tu",
@@ -4761,13 +4770,13 @@
     },
     {
       "categorie": "baton",
-      "posts": 9,
-      "vues_mediane": 1342,
-      "vues_moyenne": 1302,
+      "posts": 10,
+      "vues_mediane": 1385,
+      "vues_moyenne": 1316,
       "vues_max": 1647,
-      "partages": 25,
-      "enregistrements": 14,
-      "likes": 180,
+      "partages": 35,
+      "enregistrements": 18,
+      "likes": 197,
       "commentaires": 0
     },
     {
