@@ -1,11 +1,18 @@
 name: Réseaux · publication
 
-# Toutes les 10 minutes : publie sur Instagram ce qui est dû (heure tirée au
-# sort dans chaque créneau). Sans compte actif ni jeton, ne fait rien.
+# Publie sur Instagram et sur Facebook ce qui est dû (heure tirée au sort
+# dans chaque créneau). Sans compte actif ni jeton, ne fait rien.
+#
+# L'horloge est pg_cron (migration 20261008140000) : il passe toutes les
+# 10 minutes, mais depuis le 9 novembre 2026 ne lance ce workflow que quand
+# un post est à préparer ou à publier, une story ou Facebook en attente
+# (social_publication_a_faire, migration 20261109120000) : trois ou quatre
+# départs par post au lieu de 144 par jour. Le « schedule » n'est qu'un
+# secours, une fois par heure.
 
 on:
   schedule:
-    - cron: '*/10 * * * *'
+    - cron: '7 * * * *'
   workflow_dispatch:
 
 concurrency:
