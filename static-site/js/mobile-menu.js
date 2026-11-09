@@ -1,5 +1,6 @@
 /**
- * En-tête à deux niveaux : état collé, menu mobile, accordéons, panneaux.
+ * En-tête à deux niveaux : état collé, menu mobile plein écran et ses
+ * panneaux de famille, panneaux du bureau.
  */
 (function() {
   var entete = document.getElementById('site-header');
@@ -47,17 +48,86 @@
   }
 
   // ── Menu mobile ─────────────────────────────────────────
+  // Plein écran sous la rangée du logo (9 novembre 2026) : la page, derrière,
+  // ne défile plus tant qu'il est ouvert (html.menu-mobile-ouvert). Il montre
+  // d'abord la liste des familles (.mnav-accueil) ; une famille touchée ouvre
+  // son panneau (.mnav-panneau), qui prend toute la place, et la flèche de sa
+  // barre ramène à la liste, là où on l'avait laissée. Refermer le menu le
+  // remet sur la liste.
   var menuBtn = document.getElementById('mobile-menu-btn');
   var menu = document.getElementById('mobile-menu');
+  var accueil = menu ? menu.querySelector('.mnav-accueil') : null;
+  var familles = menu ? Array.prototype.slice.call(menu.querySelectorAll('.mnav-famille')) : [];
+  var panneaux = menu ? Array.prototype.slice.call(menu.querySelectorAll('.mnav-panneau')) : [];
+  var defilementListe = 0;
+  var mouvementReduit = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // Un glissement de côté à l'arrivée d'une vue, en transform et opacity
+  // seulement ; rien quand le mouvement est réduit.
+  function glisse(el, depuis) {
+    if (mouvementReduit || !el || !el.animate) return;
+    try {
+      el.animate([
+        { transform: 'translateX(' + depuis + 'px)', opacity: 0 },
+        { transform: 'none', opacity: 1 }
+      ], { duration: 240, easing: 'cubic-bezier(0.22, 1, 0.36, 1)' });
+    } catch (e) {}
+  }
+
+  function panneauOuvert() {
+    for (var i = 0; i < panneaux.length; i++) if (!panneaux[i].hidden) return panneaux[i];
+    return null;
+  }
+
+  function ouvrirFamille(bouton) {
+    var panneau = document.getElementById(bouton.getAttribute('aria-controls'));
+    if (!panneau || !accueil) return;
+    defilementListe = menu.scrollTop;
+    accueil.hidden = true;
+    panneaux.forEach(function(p) { p.hidden = p !== panneau; });
+    familles.forEach(function(b) { b.setAttribute('aria-expanded', b === bouton ? 'true' : 'false'); });
+    menu.scrollTop = 0;
+    glisse(panneau, 28);
+    var retour = panneau.querySelector('.mnav-retour');
+    if (retour) { try { retour.focus({ preventScroll: true }); } catch (e) { retour.focus(); } }
+  }
+
+  // Retour à la liste des familles ; « anime » à faux quand le menu se ferme.
+  function revenirALaListe(anime) {
+    var ouvert = panneauOuvert();
+    if (!accueil || (!ouvert && !accueil.hidden)) return;
+    var bouton = ouvert ? menu.querySelector('.mnav-famille[aria-controls="' + ouvert.id + '"]') : null;
+    panneaux.forEach(function(p) { p.hidden = true; });
+    familles.forEach(function(b) { b.setAttribute('aria-expanded', 'false'); });
+    accueil.hidden = false;
+    menu.scrollTop = anime ? defilementListe : 0;
+    if (!anime) return;
+    glisse(accueil, -28);
+    if (bouton) { try { bouton.focus({ preventScroll: true }); } catch (e) { bouton.focus(); } }
+  }
+
+  // Le menu couvre toute la page : tant qu'il est ouvert, le contenu caché
+  // derrière (main, pied de page) sort de la tabulation et des lecteurs
+  // d'écran, qui sinon y poursuivaient leur lecture.
+  function rendreInerte(oui) {
+    document.querySelectorAll('main, body > footer').forEach(function(el) {
+      if (oui) el.setAttribute('inert', '');
+      else el.removeAttribute('inert');
+    });
+  }
 
   function poserTiroir(ouvert) {
     if (!menuBtn || !menu) return;
     menu.classList.toggle('hidden', !ouvert);
+    document.documentElement.classList.toggle('menu-mobile-ouvert', ouvert);
+    rendreInerte(ouvert);
     menuBtn.setAttribute('aria-expanded', ouvert ? 'true' : 'false');
     var menuIcon = menuBtn.querySelector('.menu-icon');
     var closeIcon = menuBtn.querySelector('.close-icon');
     if (menuIcon) menuIcon.classList.toggle('hidden', ouvert);
     if (closeIcon) closeIcon.classList.toggle('hidden', !ouvert);
+    if (ouvert) { menu.scrollTop = 0; glisse(menu.querySelector('.mnav'), 0); }
+    else revenirALaListe(false);
   }
 
   if (menuBtn && menu) {
@@ -68,28 +138,29 @@
     menu.querySelectorAll('a').forEach(function(link) {
       link.addEventListener('click', function() { poserTiroir(false); });
     });
-  }
-
-  // ── Accordéons du menu mobile ───────────────────────────
-  // Deux formes : le déclencheur classique (bouton pleine largeur) et le
-  // déclencheur scindé des jeux (le libellé est un lien vers le hub, seule
-  // la flèche déplie la liste).
-  function basculerAccordeon(bouton, contenu, forcerOuvert) {
-    var ouvert = bouton.getAttribute('aria-expanded') === 'true';
-    var cible = (forcerOuvert === undefined) ? !ouvert : forcerOuvert;
-    if (cible === ouvert) return;
-    bouton.setAttribute('aria-expanded', cible ? 'true' : 'false');
-    if (contenu) {
-      contenu.classList.toggle('open', cible);
-      contenu.classList.toggle('hidden', !cible);
+    familles.forEach(function(bouton) {
+      bouton.addEventListener('click', function() { ouvrirFamille(bouton); });
+    });
+    panneaux.forEach(function(p) {
+      var retour = p.querySelector('.mnav-retour');
+      if (retour) retour.addEventListener('click', function() { revenirALaListe(true); });
+    });
+    // Échap : d'abord le retour à la liste, puis la fermeture du menu.
+    document.addEventListener('keydown', function(e) {
+      if (e.key !== 'Escape' || menu.classList.contains('hidden')) return;
+      if (panneauOuvert()) { revenirALaListe(true); return; }
+      poserTiroir(false);
+      menuBtn.focus();
+    });
+    // Passé en largeur de bureau, le menu mobile disparaît (CSS) : la page
+    // doit pouvoir défiler de nouveau.
+    if (window.matchMedia) {
+      var bureau = window.matchMedia('(min-width: 1024px)');
+      var auBureau = function() { if (bureau.matches && !menu.classList.contains('hidden')) poserTiroir(false); };
+      if (bureau.addEventListener) bureau.addEventListener('change', auBureau);
+      else if (bureau.addListener) bureau.addListener(auBureau);
     }
   }
-  document.querySelectorAll('.mobile-accordion-trigger').forEach(function(trigger) {
-    var contenu = trigger.nextElementSibling;
-    var fleche = trigger.querySelector('.mobile-trigger-fleche');
-    if (fleche) { fleche.addEventListener('click', function() { basculerAccordeon(fleche, contenu); }); return; }
-    trigger.addEventListener('click', function() { basculerAccordeon(trigger, contenu); });
-  });
 
   // ── Menus déroulants (bureau) ───────────────────────────
   // Les panneaux des familles s'ouvrent au survol (et à la tabulation par le

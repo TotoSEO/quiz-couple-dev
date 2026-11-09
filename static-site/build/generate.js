@@ -16,7 +16,7 @@ import { analyseMoteur, litQuizConfig, ensemblesPossibles, moteursDeLaPage, nomD
 import {
   BASE_URL, INSTAGRAM_URL, LANGUAGES, LANGUES_PUBLIQUES, langueCachee, langueEnCours, PAGES_EN_ATTENTE, pageEnAttente, cheminDeclare, LOCALES, ROUTE_SLUGS, ROUTE_CONFIG, GA_ID,
   SUPABASE_URL, SUPABASE_ANON_KEY, BLOG_ARTICLES, BLOG_CATEGORIES, AUTHORS,
-  QUIZ_RELATED_ARTICLES, ARTICLES_QUESTIONS, QUIZ_FEATURED, IMAGE_PARTAGE, FAMILLES_NAV, SAISON_DES_QUIZ, getLocalizedPath, getLocalizedUrl, getRouteAlternates, escapeHtml,
+  QUIZ_RELATED_ARTICLES, ARTICLES_QUESTIONS, QUIZ_FEATURED, IMAGE_PARTAGE, FAMILLES_NAV, SECTIONS_NAV, SAISON_DES_QUIZ, getLocalizedPath, getLocalizedUrl, getRouteAlternates, escapeHtml,
   getArticlePath, getArticleUrl, getArticleAlternates,
   estPageJouable, genrePageJouable, pagePublicitaire, BILAN_OUVERT, bilanOuvertPour, BILAN_ENTREES, CAPTURE_PAGES, VENDEUR, MOYENS_PAIEMENT, ROUTES_JEUX,
 } from './config.js';
@@ -321,6 +321,16 @@ function carteCelibPour(routeKey, lang, t) {
 function famillesPour(lang) {
   if (bilanOuvertPour(lang)) return FAMILLES_NAV;
   return { ...FAMILLES_NAV, tests: FAMILLES_NAV.tests.filter((k) => k !== 'bilanCouple') };
+}
+// Les mêmes familles rangées en sections (SECTIONS_NAV), pour le menu et le
+// plan du site : sans l'évaluation là où elle est fermée, sans les pages qui
+// n'existent pas dans la langue (une page réservée au français, une page en
+// attente de traduction), et sans section restée vide.
+function sectionsPour(lang) {
+  const ouvert = bilanOuvertPour(lang);
+  return Object.fromEntries(Object.entries(SECTIONS_NAV).map(([famille, sections]) => [famille, sections
+    .map((s) => ({ cle: s.cle, routes: s.routes.filter((k) => (ouvert || k !== 'bilanCouple') && getLocalizedPath(k, lang) !== null) }))
+    .filter((s) => s.routes.length)]));
 }
 
 function stripFutureLinks(html) {
@@ -1646,6 +1656,7 @@ async function generatePage(routeKey, lang) {
     getLocalizedUrl,
     mascotteSvg,
     famillesNav: famillesPour(lang),
+    sectionsNav: sectionsPour(lang),
     // Le bilan de couple : ouvert ou non, son prix dans la langue de la page,
     // sa garantie, et les mentions du vendeur (mentions légales, CGV).
     bilanOuvert: bilanOuvertPour(lang),
@@ -2051,13 +2062,14 @@ function copyStaticAssets() {
   }
 
   // Copy public/blog/, public/authors/ and public/quiz/. Le dossier vacances
-  // porte les 200 photos de destinations du test « où partir en vacances ? ».
+  // (les photos de destinations du test « où partir en vacances ? ») est parti
+  // avec le test, le 9 novembre 2026.
   // « fonts » porte les polices du rapport du bilan (Fraunces et Inter, OFL),
   // « bilan » les aperçus du rapport montrés sur sa page, « email » les images
   // des e-mails du parcours (emails/gabarit.html les appelle par leur adresse
   // sur le site). Les dossiers « partenaires » et « produits » (visuels des
   // encarts d'affiliation) sont partis avec l'affiliation, le 9 novembre 2026.
-  for (const dir of ['blog', 'authors', 'quiz', 'vacances', 'fonts', 'bilan', 'email', 'og']) {
+  for (const dir of ['blog', 'authors', 'quiz', 'fonts', 'bilan', 'email', 'og']) {
     const srcDir = path.join(publicDir, dir);
     const destDir = path.join(DIST_DIR, dir);
     if (fs.existsSync(srcDir)) {
@@ -2223,13 +2235,6 @@ function copyTranslationData() {
     const bilanPoint = completeParFrancais('bilan-point.json');
     if (bilanPoint) {
       fs.writeFileSync(path.join(dataDir, `bilan-point-${lang}.json`), JSON.stringify(bilanPoint), 'utf-8');
-    }
-
-    // Les 200 destinations du test « où partir en vacances ? » ne se
-    // chargent que quand quelqu'un lance le questionnaire.
-    const vacancesSrc = path.join(langDir, 'vacances.json');
-    if (fs.existsSync(vacancesSrc)) {
-      fs.copyFileSync(vacancesSrc, path.join(dataDir, `vacances-${lang}.json`));
     }
 
     // Les 144 duos de signes pesent 70 Ko : le test par date de naissance va
@@ -2811,6 +2816,7 @@ async function generateBlogArticle(articleMeta, lang) {
     translations,
     getLocalizedUrl,
     famillesNav: famillesPour(lang),
+    sectionsNav: sectionsPour(lang),
     // Le bilan de couple : ouvert ou non, son prix dans la langue de la page,
     // sa garantie, et les mentions du vendeur (mentions légales, CGV).
     bilanOuvert: bilanOuvertPour(lang),
@@ -2932,6 +2938,7 @@ async function generate404Pages() {
       translations,
       getLocalizedUrl,
       famillesNav: famillesPour(lang),
+      sectionsNav: sectionsPour(lang),
       // Le bilan de couple : ouvert ou non, son prix dans la langue de la page,
       // sa garantie, et les mentions du vendeur (mentions légales, CGV).
       bilanOuvert: bilanOuvertPour(lang),
@@ -3099,6 +3106,10 @@ async function main() {
     // L'ancienne adresse du test « mon ex pense-t-il encore à moi » (au
     // féminin seulement), encore vue par Google en octobre 2026.
     { from: 'mon-ex-pense-t-elle-encore-a-moi', to: '/mon-ex-pense-t-il-elle-encore-a-moi/' },
+    // Le test « où partir en vacances ? » (français seulement) est retiré le
+    // 9 novembre 2026, à la demande de Thomas, avec son moteur et ses photos :
+    // son adresse renvoie vers l'accueil.
+    { from: 'test-ou-partir-en-vacances', to: '/' },
   ];
   for (const { from, to } of REDIRECTS) {
     const redirectDir = path.join(DIST_DIR, from);

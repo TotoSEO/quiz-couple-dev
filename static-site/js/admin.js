@@ -315,6 +315,7 @@
     testChargeMentale: 'Charge mentale',
     quizRencontre: 'Questions de premier rendez-vous',
     testDependance: 'Dépendance affective',
+    // Page retirée le 9 novembre 2026 : le nom reste pour les parties d'avant.
     testVacances: 'Test où partir en vacances'
   };
   // Un slug inconnu (nouveau quiz pas encore reference ici) reste affiche tel

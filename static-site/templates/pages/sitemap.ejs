@@ -97,6 +97,25 @@ const celibLinksDispo = _dispo(celibLinks);
 const jeuxLinksDispo = _dispo(jeuxLinks);
 const speciauxLinksDispo = _dispo(speciauxLinks);
 const toolLinksDispo = _dispo(toolLinks);
+// Les familles rangées en sections, comme dans le menu (9 novembre 2026) :
+// un petit titre par section, puis ses pages. Une famille d'une seule
+// section garde sa liste simple. Les hubs (jeux, quiz spéciaux) restent en
+// tête de leur famille.
+const _esc = (x) => String(x).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+const _lienPlan = (k) => '<li><a href="' + getLocalizedUrl(k, lang) + '" class="text-sm text-muted-foreground hover:text-primary transition-colors no-underline">' + _esc(t('common:nav.' + k, k)) + '</a></li>';
+function listePlan(cle, liensSimples, tete) {
+  const secs = (typeof sectionsNav !== 'undefined' && sectionsNav && sectionsNav[cle]) || null;
+  const avant = (tete || []).filter((k) => getLocalizedUrl(k, lang));
+  if (!secs || secs.length < 2) {
+    return '<ul class="space-y-2">' + liensSimples.map((l) => _lienPlan(l.routeKey)).join('') + '</ul>';
+  }
+  let h = avant.length ? '<ul class="space-y-2 mb-4">' + avant.map(_lienPlan).join('') + '</ul>' : '';
+  for (const sec of secs) {
+    h += '<p class="plan-section-titre fam--' + cle + '">' + _esc(t('common:nav.sections.' + sec.cle, sec.cle)) + '</p>'
+      + '<ul class="space-y-2">' + sec.routes.map(_lienPlan).join('') + '</ul>';
+  }
+  return h;
+}
 %>
 
 <!-- ═══════ HERO ═══════ -->
@@ -127,11 +146,7 @@ const toolLinksDispo = _dispo(toolLinks);
             </span>
             <%= s.tests %>
           </h3>
-          <ul class="space-y-2">
-            <% for (const link of testLinksDispo) { %>
-            <li><a href="<%= getLocalizedUrl(link.routeKey, lang) %>" class="text-sm text-muted-foreground hover:text-primary transition-colors no-underline"><%= t('common:' + link.labelKey, link.labelKey) %></a></li>
-            <% } %>
-          </ul>
+          <%- listePlan('tests', testLinksDispo) %>
         </div>
 
         <!-- Quiz + Tests célibataires -->
@@ -144,11 +159,7 @@ const toolLinksDispo = _dispo(toolLinks);
             </span>
             <%= s.quizzes %>
           </h3>
-          <ul class="space-y-2">
-            <% for (const link of quizLinksDispo) { %>
-            <li><a href="<%= getLocalizedUrl(link.routeKey, lang) %>" class="text-sm text-muted-foreground hover:text-primary transition-colors no-underline"><%= t('common:' + link.labelKey, link.labelKey) %></a></li>
-            <% } %>
-          </ul>
+          <%- listePlan('quiz', quizLinksDispo) %>
         </div>
 
         <div class="rounded-2xl border border-border bg-card p-6">
@@ -158,11 +169,7 @@ const toolLinksDispo = _dispo(toolLinks);
             </span>
             <%= s.singles %>
           </h3>
-          <ul class="space-y-2">
-            <% for (const link of celibLinksDispo) { %>
-            <li><a href="<%= getLocalizedUrl(link.routeKey, lang) %>" class="text-sm text-muted-foreground hover:text-primary transition-colors no-underline"><%= t('common:' + link.labelKey, link.labelKey) %></a></li>
-            <% } %>
-          </ul>
+          <%- listePlan('celib', celibLinksDispo) %>
         </div>
         </div>
 
@@ -175,11 +182,7 @@ const toolLinksDispo = _dispo(toolLinks);
               </span>
               <%= t('common:nav.categoryJeux', 'Jeux') %>
             </h3>
-            <ul class="space-y-2">
-              <% for (const link of jeuxLinksDispo) { %>
-              <li><a href="<%= getLocalizedUrl(link.routeKey, lang) %>" class="text-sm text-muted-foreground hover:text-primary transition-colors no-underline"><%= t('common:' + link.labelKey, link.labelKey) %></a></li>
-              <% } %>
-            </ul>
+            <%- listePlan('jeux', jeuxLinksDispo, ['jeuxCouple']) %>
           </div>
 
           <% if (speciauxLinksDispo.length > 1) { %>
@@ -190,11 +193,7 @@ const toolLinksDispo = _dispo(toolLinks);
               </span>
               <%= t('common:nav.categorySpeciaux', 'Quiz spéciaux') %>
             </h3>
-            <ul class="space-y-2">
-              <% for (const link of speciauxLinksDispo) { %>
-              <li><a href="<%= getLocalizedUrl(link.routeKey, lang) %>" class="text-sm text-muted-foreground hover:text-primary transition-colors no-underline"><%= t('common:' + link.labelKey, link.labelKey) %></a></li>
-              <% } %>
-            </ul>
+            <%- listePlan('speciaux', speciauxLinksDispo, ['speciauxCouple']) %>
           </div>
           <% } %>
 

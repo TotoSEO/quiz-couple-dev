@@ -839,7 +839,7 @@ function textesDeReference() {
   return { fr, en, invariants };
 }
 
-const RACINES_MOTEUR = '#quiz-engine, [data-quiz], #astro-form, #dn-outil, #sc-outil, #cc-outil, #vacances-racine, #calc-carte';
+const RACINES_MOTEUR = '#quiz-engine, [data-quiz], #astro-form, #dn-outil, #sc-outil, #cc-outil, #calc-carte';
 // Ce que la page fait dans le navigateur, sans réseau : rien ne sort de la
 // machine, les appels à Supabase et aux régies reçoivent une réponse vide.
 async function ouvre(contexte, url) {

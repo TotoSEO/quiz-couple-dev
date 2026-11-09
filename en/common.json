@@ -135,7 +135,29 @@
     "bilanCouple": "Relationship assessment",
     "evaluer": "Assess your relationship",
     "evaluerSous": "The complete assessment, together or on your own",
-    "bilanCoupleDesc": "100 questions each on your own, and a 30-page report"
+    "bilanCoupleDesc": "100 questions each on your own, and a 30-page report",
+    "sections": {
+      "compatibilite": "Compatibility tests",
+      "instantanee": "Instant compatibility",
+      "sante": "Relationship health",
+      "sentiments": "Feelings",
+      "confiance": "Trust and jealousy",
+      "alerte": "Warning signs",
+      "projets": "Big steps",
+      "profil": "Your love profile",
+      "outils": "Tools",
+      "trouverAmour": "Finding love",
+      "crush": "Crushes and feelings",
+      "ex": "Your ex",
+      "connaitre": "Get to know each other",
+      "amuser": "Just for fun",
+      "soiree": "Game night",
+      "questions": "Question games",
+      "rire": "For a laugh",
+      "pimenter": "Spice it up",
+      "halloween": "Halloween"
+    },
+    "retour": "Back"
   },
   "footer": {
     "brandDescription": "Test your compatibility and discover your love match with our free couple quizzes.",

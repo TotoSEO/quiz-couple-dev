@@ -135,7 +135,29 @@
     "bilanCouple": "Beziehungsanalyse",
     "evaluer": "Beziehung analysieren",
     "evaluerSous": "Die vollständige Analyse, zu zweit oder allein",
-    "bilanCoupleDesc": "100 Fragen, jeder für sich, und ein Bericht mit 30 Seiten"
+    "bilanCoupleDesc": "100 Fragen, jeder für sich, und ein Bericht mit 30 Seiten",
+    "sections": {
+      "compatibilite": "Kompatibilitätstests",
+      "instantanee": "Kompatibilität in Sekunden",
+      "sante": "Beziehung unter der Lupe",
+      "sentiments": "Gefühle",
+      "confiance": "Vertrauen und Eifersucht",
+      "alerte": "Warnsignale",
+      "projets": "Gemeinsame Pläne",
+      "profil": "Dein Liebesprofil",
+      "outils": "Tools",
+      "trouverAmour": "Die Liebe finden",
+      "crush": "Crush und Gefühle",
+      "ex": "Ex und Trennung",
+      "connaitre": "Sich besser kennenlernen",
+      "amuser": "Zum Spaß",
+      "soiree": "Spieleabend",
+      "questions": "Fragespiele",
+      "rire": "Zum Lachen",
+      "pimenter": "Für mehr Prickeln",
+      "halloween": "Halloween"
+    },
+    "retour": "Zurück"
   },
   "footer": {
     "brandDescription": "Teste deine Kompatibilität und entdecke deine Liebesverbindung mit unseren kostenlosen Paar-Quiz.",

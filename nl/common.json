@@ -135,7 +135,29 @@
     "bilanCouple": "Relatiecheck",
     "evaluer": "Check je relatie",
     "evaluerSous": "De volledige relatiecheck, samen of alleen",
-    "bilanCoupleDesc": "100 vragen, ieder voor zich, en een volledig rapport"
+    "bilanCoupleDesc": "100 vragen, ieder voor zich, en een volledig rapport",
+    "sections": {
+      "compatibilite": "Compatibiliteitstests",
+      "instantanee": "Compatibiliteit in seconden",
+      "sante": "Je relatie onder de loep",
+      "sentiments": "Gevoelens",
+      "confiance": "Vertrouwen en jaloezie",
+      "alerte": "Alarmsignalen",
+      "projets": "Grote stappen",
+      "profil": "Jouw liefdesprofiel",
+      "outils": "Tools",
+      "trouverAmour": "De liefde vinden",
+      "crush": "Crush en gevoelens",
+      "ex": "Je ex",
+      "connaitre": "Elkaar beter leren kennen",
+      "amuser": "Voor de lol",
+      "soiree": "Spelavond",
+      "questions": "Vragenspellen",
+      "rire": "Om te lachen",
+      "pimenter": "Iets pittiger",
+      "halloween": "Halloween"
+    },
+    "retour": "Terug"
   },
   "footer": {
     "brandDescription": "Test jullie band en ontdek hoe goed jullie bij elkaar passen met onze gratis quizzen voor koppels.",

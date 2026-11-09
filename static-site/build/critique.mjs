@@ -22,6 +22,8 @@
    inscrite en tete de chaque fichier, que le generateur compare.
 
    Emploi :  cd static-site && npm run build && npm run critique [cle ...]
+             (ou « npm run critique -- --fusion [cle ...] » depuis une session
+             de travail sans accès à la base : voir main)
    Le site construit doit etre servi sur CRITIQUE_SERVEUR (par defaut
    http://127.0.0.1:8099, par exemple « python3 -m http.server 8099
    --directory dist »). Playwright est cherche dans NODE_PATH ou en local.
@@ -197,8 +199,24 @@ function garderPour(cle) {
   return propre ? new RegExp(propre.source + '|' + GARDER_JOUABLES.source) : GARDER_JOUABLES;
 }
 
-function selectionne(css, noeuds, plages, garderAussi) {
+// La clé d'une règle pour la fusion : ses blocs conditionnels et son texte.
+function cleRegle(contexte, texte) { return contexte + '\u0000' + texte; }
+
+// Les règles d'une feuille critique existante, pour --fusion.
+function reglesDe(css) {
+  const cles = new Set();
+  (function parcours(liste, contexte) {
+    for (const nd of liste) {
+      if (nd.enfants) { parcours(nd.enfants, contexte + nd.prelude + '|'); continue; }
+      cles.add(cleRegle(contexte, css.slice(nd.debut, nd.fin)));
+    }
+  })(analyse(css), '');
+  return cles;
+}
+
+function selectionne(css, noeuds, plages, garderAussi, ancien) {
   const garde = new Set();
+  const repris = { n: 0 };
   const animations = new Set();
   const keyframes = [];
 
@@ -214,17 +232,19 @@ function selectionne(css, noeuds, plages, garderAussi) {
     }
   }
 
-  function passe1(liste) {
+  function passe1(liste, contexte) {
     for (const nd of liste) {
-      if (nd.enfants) { passe1(nd.enfants); continue; }
-      if (/^@(-webkit-)?keyframes\s+/.test(nd.prelude)) { keyframes.push(nd); continue; }
-      if (TOUJOURS.test(nd.prelude) || (garderAussi && garderAussi.test(nd.prelude)) || chevauche(plages, nd.debut, nd.fin)) marque(nd);
+      if (nd.enfants) { passe1(nd.enfants, contexte + nd.prelude + '|'); continue; }
+      const dejaLa = ancien && ancien.has(cleRegle(contexte, css.slice(nd.debut, nd.fin)));
+      if (/^@(-webkit-)?keyframes\s+/.test(nd.prelude)) { keyframes.push({ nd, dejaLa }); continue; }
+      const couvert = TOUJOURS.test(nd.prelude) || (garderAussi && garderAussi.test(nd.prelude)) || chevauche(plages, nd.debut, nd.fin);
+      if (couvert || dejaLa) { marque(nd); if (!couvert) repris.n++; }
     }
   }
-  passe1(noeuds);
-  for (const kf of keyframes) {
+  passe1(noeuds, '');
+  for (const { nd: kf, dejaLa } of keyframes) {
     const nom = kf.prelude.replace(/^@(-webkit-)?keyframes\s+/, '').trim();
-    if (animations.has(nom)) garde.add(kf);
+    if (animations.has(nom) || dejaLa) garde.add(kf);
   }
 
   function emet(liste) {
@@ -239,7 +259,8 @@ function selectionne(css, noeuds, plages, garderAussi) {
     }
     return out;
   }
-  return emet(noeuds);
+  const sortie = emet(noeuds);
+  return ancien ? { css: sortie, repris: repris.n } : sortie;
 }
 
 // ── Le releve dans Chromium ──────────────────────────────────────────
@@ -269,9 +290,15 @@ async function releve(browser, chemin) {
       if (mobile) {
         const bouton = document.getElementById('mobile-menu-btn');
         if (bouton) {
+          // Le menu plein écran, puis chaque famille ouverte tour à tour
+          // (son panneau, ses titres de section) et le retour à la liste.
           clic(bouton); await pause(250);
-          document.querySelectorAll('.mobile-accordion-trigger, .mobile-trigger-fleche').forEach(clic);
-          await pause(250);
+          for (const famille of document.querySelectorAll('.mnav-famille')) {
+            clic(famille); await pause(200);
+            const ouvert = document.getElementById(famille.getAttribute('aria-controls'));
+            const retour = ouvert && ouvert.querySelector('.mnav-retour');
+            if (retour) { clic(retour); await pause(150); }
+          }
           clic(bouton); await pause(150);
         }
       }
@@ -303,8 +330,17 @@ async function releve(browser, chemin) {
   return { plages: fusionne(plages), texte: texteVu };
 }
 
+// --fusion : garder aussi chaque règle de la feuille critique existante qui
+// figure encore, telle quelle, dans styles.css, en plus de ce que le relevé
+// voit. C'est le mode d'une session de travail sans accès à la base : la
+// construction n'y a ni avis ni compteurs, et un relevé simple perdrait les
+// règles des avis cuits (.pqx-*) et du bandeau des parties, ce qui est
+// arrivé le 14 octobre 2026. Une règle modifiée ou retirée de styles.css
+// disparaît d'elle-même ; une règle nouvelle n'entre que si le relevé la voit.
 async function main() {
-  const filtre = process.argv.slice(2);
+  const args = process.argv.slice(2);
+  const fusion = args.includes('--fusion');
+  const filtre = args.filter((a) => !a.startsWith('--'));
   if (!fs.existsSync(DIST_CSS)) {
     console.error('dist/css/styles.css introuvable : lancez d\'abord npm run build.');
     process.exit(1);
@@ -334,12 +370,18 @@ async function main() {
         const { plages, texte } = await releve(browser, p.chemin);
         if (texte === null) throw new Error('styles.css jamais chargee sur ' + p.chemin);
         if (texte.length !== cssDist.length) throw new Error('la feuille servie ne correspond pas a dist/css/styles.css (' + texte.length + ' vs ' + cssDist.length + ')');
-        const css = selectionne(cssDist, arbre, plages, garderPour(p.cle));
+        const fichier = path.join(DOSSIER, `${p.cle}.css`);
+        const ancien = fusion && fs.existsSync(fichier)
+          ? reglesDe(fs.readFileSync(fichier, 'utf-8').replace(/^\/\*![^*]*\*\/\n?/, ''))
+          : null;
+        const choix = selectionne(cssDist, arbre, plages, garderPour(p.cle), ancien);
+        const css = ancien ? choix.css : choix;
         // Pas de date dans l'en-tete : deux releves identiques doivent donner le meme fichier.
         const entete = `/*! critique ${p.cle} styles=${empreinte} */\n`;
-        fs.writeFileSync(path.join(DOSSIER, `${p.cle}.css`), entete + css, 'utf-8');
+        fs.writeFileSync(fichier, entete + css, 'utf-8');
         resultats.push({ cle: p.cle, taille: css.length });
-        console.log(`  ${p.cle.padEnd(20)} ${(css.length / 1024).toFixed(1).padStart(6)} Ko  ${p.chemin}`);
+        console.log(`  ${p.cle.padEnd(20)} ${(css.length / 1024).toFixed(1).padStart(6)} Ko  ${p.chemin}` +
+          (ancien ? `  (${choix.repris} regle(s) reprise(s) de l'ancienne feuille)` : ''));
       } catch (e) {
         resultats.push({ cle: p.cle, erreur: e.message });
         console.error(`  ${p.cle.padEnd(20)} ECHEC  ${e.message}`);
