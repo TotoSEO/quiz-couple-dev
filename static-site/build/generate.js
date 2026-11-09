@@ -555,6 +555,24 @@ function imagePartage(lang) {
   return { url: `${BASE_URL}${rel}`, alt: IMAGE_PARTAGE.alt[lang] || IMAGE_PARTAGE.alt.fr };
 }
 
+// L'illustration de la section « Qu'est-ce qu'un quiz pour couples ? » de
+// l'accueil : la même image que le partage, dans la langue de la page, en WebP
+// de 480, 800 et 1 200 px (public/og/<fichier>-<langue>-<largeur>.webp, tirées
+// des JPEG par sharp le 9 novembre 2026, de 17 à 53 Ko). Jusque-là, la section
+// montrait encore l'ancienne image « QUIZ POUR COUPLE », en français dans les
+// six langues (Thomas : « sur la home il y a encore l'ancienne »). Sans ses
+// variantes, une langue garde l'ancienne image.
+function illustrationAccueil(lang) {
+  const base = `/og/${IMAGE_PARTAGE.fichier}-${lang}`;
+  const largeurs = [480, 800, 1200].filter((w) => fs.existsSync(path.join(PUBLIC_DIR, `${base}-${w}.webp`)));
+  if (!largeurs.length) return null;
+  return {
+    src: `${base}-${largeurs.includes(800) ? 800 : largeurs[largeurs.length - 1]}.webp`,
+    srcset: largeurs.map((w) => `${base}-${w}.webp ${w}w`).join(', '),
+    alt: IMAGE_PARTAGE.alt[lang] || IMAGE_PARTAGE.alt.fr,
+  };
+}
+
 // Review stats fetched from Supabase at build time
 let reviewStats = { avg: '0', count: '0' };
 let reviewStatsByQuiz = {};
@@ -825,6 +843,22 @@ const STATIC_Q_LABELS = {
   it: { heading: 'Pronti per il test?', intro: 'Le {n} domande, in ordine. Avvia il test qui sopra per ottenere il tuo risultato.', introExtrait: '{n} delle domande poste. Il motore ne pesca di nuove ogni partita: avvia il test qui sopra.' },
   nl: { heading: 'Klaar voor de test?', intro: 'Alle {n} vragen, op volgorde. Start de test hierboven om je uitslag te krijgen.', introExtrait: '{n} van de vragen die we stellen. De test kiest er elke keer andere uit: start hem hierboven.' },
 };
+// Une question écrite avec le prénom de l'autre ({{name}} dans les données,
+// NAME, NOMBRE ou NOME dans les plus anciennes) s'affichait telle quelle dans
+// la liste des questions et dans les données structurées de quatre quiz (âme
+// sœur, quiz ado, qui connaît le mieux son partenaire, les Z'amours), dans les
+// six langues, jusqu'au 9 novembre 2026. Le moteur y met le vrai prénom ; une
+// page statique ne le connaît pas, elle écrit X, la seule forme qui reste
+// juste dans toutes les langues (« deinem Partner » ou « del tuo partner »
+// changent avec la préposition), et la liste dit une fois ce que X veut dire.
+const NOTE_PRENOM_X = {
+  fr: "Dans le quiz, X est remplacé par le prénom de l'autre.",
+  en: "In the quiz, X is replaced by the other person's first name.",
+  es: 'En el quiz, X se sustituye por el nombre de la otra persona.',
+  de: 'Im Quiz steht statt X der Vorname der anderen Person.',
+  it: "Nel quiz, al posto di X c'è il nome dell'altra persona.",
+  nl: 'In de quiz staat op de plaats van X de voornaam van de ander.',
+};
 // Quelques moteurs ouvrent sur une autre phrase que « Prêts pour le test ? ».
 // Le bloc statique reprend la leur, sinon le titre en dur ne correspondrait
 // pas à ce que la personne lit une fois le moteur chargé.
@@ -840,10 +874,57 @@ const STATIC_Q_HEADINGS = {
   'pour-contre': { fr: 'Prêts à vous prononcer ?', en: 'Ready to take a side?', es: '¿Listos para posicionaros?', de: 'Bereit, Stellung zu beziehen?', it: 'Pronti a schierarvi?', nl: 'Klaar om een kant te kiezen?' },
 };
 
-function buildStaticQuestionsSection(quizType, tgd, lang) {
+const GABARIT_PRENOM_MOTIF = '\\{\\{\\s*(?:name|nom|prenom|prénom)\\s*\\}\\}|\\b(?:NAME|NOMBRE|NOME|NAAM)\\b';
+const GABARIT_PRENOM = new RegExp(GABARIT_PRENOM_MOTIF, 'g');
+const A_UN_GABARIT_PRENOM = new RegExp(GABARIT_PRENOM_MOTIF);
+function sansGabaritPrenom(texte) {
+  return typeof texte === 'string' ? texte.replace(GABARIT_PRENOM, 'X') : texte;
+}
+// Les données structurées d'une page passent par la même règle, dans tous
+// les gabarits : seules les valeurs des blocs ld+json sont touchées (les clés
+// JSON sont en minuscules, le motif ne prend que les majuscules et {{name}}).
+function donneesStructureesSansGabarit(html) {
+  return html.replace(/(<script type="application\/ld\+json"[^>]*>)([\s\S]*?)(<\/script>)/g,
+    (m, a, corps, b) => a + corps.replace(GABARIT_PRENOM, 'X') + b);
+}
+
+// Les options d'une question, dans l'ordre où le chargeur les cherche
+// (findOptions, quiz-loader.js) : q1a à q1f, q1o0 à q1o4, q1A à q1E (les deux
+// dernières formes passent déjà par tgd), puis la liste d'identifiants q1opts
+// dont chaque libellé vit une seule fois dans <préfixe>.o_<id>. Cette
+// quatrième forme manquait à la liste des questions et au balisage : 125 des
+// 153 questions des points communs n'y avaient pas leurs réponses. Les
+// libellés sont cherchés dans la langue de la page seulement : mieux vaut une
+// question sans ses réponses que des réponses dans une autre langue.
+function optionsDeQuestion(tgd, prefix, i) {
+  const local = (k) => {
+    const v = tgd.local ? tgd.local(k, '') : tgd(k, '');
+    return typeof v === 'string' && v && v !== k ? v : '';
+  };
+  const opts = [];
+  for (const l of ['a', 'b', 'c', 'd', 'e', 'f']) {
+    const o = local(prefix + '.q' + i + l) || local(prefix + '_q' + i + l) || local(prefix + '.q' + i + 'o' + 'abcdef'.indexOf(l));
+    if (o) opts.push(o);
+  }
+  if (opts.length) return opts;
+  const ids = local(prefix + '.q' + i + 'opts');
+  if (!ids) return opts;
+  for (const id of ids.split(',').map((x) => x.trim()).filter(Boolean).slice(0, 6)) {
+    const o = local(prefix + '.o_' + id);
+    if (o) opts.push(o);
+  }
+  return opts;
+}
+
+// Les questions d'un quiz telles que la page les montre (au plus soixante),
+// avec leurs options : une seule lecture pour la liste visible
+// (buildStaticQuestionsSection) et pour le balisage Quiz des gabarits, qui
+// la reçoivent en repli quand leur propre lecture ne trouve rien. Rend null
+// quand la page n'a pas de liste.
+function questionsDuQuiz(quizType, tgd, lang) {
   const multi = GD_QUESTION_FAMILLES[quizType];
   const candidates = GD_QUESTION_PREFIXES[quizType];
-  if (!multi && !candidates) return '';
+  if (!multi && !candidates) return null;
 
   const has = (key) => { const v = tgd(key, ''); return v && v !== key ? v : ''; };
 
@@ -866,7 +947,7 @@ function buildStaticQuestionsSection(quizType, tgd, lang) {
       if (premiere(c)) { prefixes = [c]; break; }
     }
   }
-  if (!prefixes.length) return '';
+  if (!prefixes.length) return null;
 
   // Le plafond était à 24, ce qui coupait la plupart des tests au milieu.
   // Un test de 20 questions les pose toutes : la page doit toutes les
@@ -875,9 +956,6 @@ function buildStaticQuestionsSection(quizType, tgd, lang) {
   // décrire le test sans transformer la page en annuaire de 244 titres.
   const CAP = 60;
   const showOptions = !NO_OPTION_TYPES.has(quizType);
-  // La sixième lettre : le « moment à soi » de six questions des langages
-  // de l'amour.
-  const optLetters = ['a', 'b', 'c', 'd', 'e', 'f'];
   const items = [];
   // Vrai seulement si la table contenait encore des questions au moment où le
   // plafond est tombé. Le comparer au plafond ne suffit pas : un réservoir qui
@@ -892,22 +970,22 @@ function buildStaticQuestionsSection(quizType, tgd, lang) {
       if (!qText) { if (items.length > 0 && ++misses >= 8) break; continue; }
       misses = 0;
       if (items.length >= CAP) { tronque = true; break; }
-      const opts = [];
-      if (showOptions) {
-        // q1a..q1d pour les series historiques, q1o0..q1o3 pour les suivantes.
-        for (let k = 0; k < optLetters.length; k++) {
-          const o = has(prefix + '.q' + i + optLetters[k])
-                 || has(prefix + '_q' + i + optLetters[k])
-                 || has(prefix + '.q' + i + 'o' + k);
-          if (o) opts.push(o);
-        }
-      }
+      const opts = showOptions ? optionsDeQuestion(tgd, prefix, i) : [];
       const corps = abaisser ? qText.charAt(0).toLowerCase() + qText.slice(1) : qText;
-      items.push({ q: amorce + corps, opts });
+      const q = amorce + corps;
+      const x = A_UN_GABARIT_PRENOM.test(q) || opts.some((o) => A_UN_GABARIT_PRENOM.test(o));
+      items.push({ q: sansGabaritPrenom(q), opts: opts.map(sansGabaritPrenom), x });
     }
     if (tronque) break;
   }
-  if (items.length < 3) return '';
+  if (items.length < 3) return null;
+  return { items, tronque };
+}
+
+function buildStaticQuestionsSection(quizType, tgd, lang) {
+  const liste = questionsDuQuiz(quizType, tgd, lang);
+  if (!liste) return '';
+  const { items, tronque } = liste;
 
   const L = STATIC_Q_LABELS[lang] || STATIC_Q_LABELS.fr;
   const specifique = STATIC_Q_HEADINGS[quizType];
@@ -919,6 +997,7 @@ function buildStaticQuestionsSection(quizType, tgd, lang) {
     ? (L.introExtrait || L.intro).replace('{n}', items.length)
     : L.intro.replace('{n}', items.length);
   out += `<p class="quiz-static-intro">${escapeHtml(phrase)}</p>`;
+  if (items.some((it) => it.x)) out += `<p class="quiz-static-intro">${escapeHtml(NOTE_PRENOM_X[lang] || NOTE_PRENOM_X.fr)}</p>`;
   out += '<ol class="quiz-static-list">';
   for (const it of items) {
     out += '<li class="quiz-static-item">';
@@ -1460,11 +1539,20 @@ async function generatePage(routeKey, lang) {
   // Le bloc est donc toujours émis, et seule la note reste conditionnée à de
   // vrais avis : une note vide ou inventée est une faute que Google sanctionne.
   if (estPageJouable(routeKey)) {
+    const imageTete = QUIZ_FEATURED[routeKey];
     const app = {
       '@context': 'https://schema.org',
       '@type': 'WebApplication',
+      // Un seul identifiant pour l'application d'une page (9 novembre 2026) :
+      // les gabarits qui la décrivent aussi (calculatrice, compteur, noces,
+      // différence d'âge) reprennent le même, et les deux blocs se lisent
+      // comme une seule application, avec sa note, au lieu de deux, dont une
+      // sans note.
+      '@id': `${canonical}#application`,
       name: title,
+      ...(description ? { description } : {}),
       url: canonical,
+      image: imageTete ? `${BASE_URL}/quiz/featured/${imageTete.file}.webp` : imagePartage(lang).url,
       // La langue etait declaree sur l'accueil et dans le balisage Quiz de
       // chaque page, mais pas ici : les quarante-deux pages jouables
       // annoncaient une application sans langue, dans les cinq versions.
@@ -1621,6 +1709,12 @@ async function generatePage(routeKey, lang) {
     ogImage: featured ? `${BASE_URL}/quiz/featured/${featured.file}.webp` : imagePartage(lang).url,
     ogImageAlt: featured ? (featured.alt[lang] || featured.alt.fr) : imagePartage(lang).alt,
     featuredImage: featured ? `/quiz/featured/${featured.file}.webp` : null,
+    illustrationAccueil: routeKey === 'home' ? illustrationAccueil(lang) : null,
+    // La liste des questions que la page montre, et la lecture de leurs
+    // options : le balisage Quiz des gabarits s'en sert quand sa propre
+    // lecture ne trouve rien, pour décrire les mêmes questions que la page.
+    questionsDuQuiz,
+    optionsDeQuestion,
     featuredImageAlt: featured ? (featured.alt[lang] || featured.alt.fr) : '',
     // Les variantes reduites de l'image de tete (480/, 720/ et 880/), quand elles
     // existent : sur telephone, l'original de 1200 px etait affiche a 390 px
@@ -1751,6 +1845,7 @@ async function generatePage(routeKey, lang) {
 
     // SEO: render the quiz questions as static HTML so JS-less crawlers see them
     fullHtml = injectStaticQuestions(fullHtml, data.tgd, lang);
+    fullHtml = donneesStructureesSansGabarit(fullHtml);
 
     // Neutralise les liens vers les articles programmés tant qu'ils ne sont pas publiés
     fullHtml = stripFutureLinks(fullHtml);

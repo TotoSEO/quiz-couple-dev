@@ -9,6 +9,9 @@
   const jsonLd = [
     {
       "@context": "https://schema.org", "@type": "WebApplication",
+      // Même identifiant que le bloc du générateur, qui porte la note des avis.
+      "@id": canonical + '#application',
+      "url": canonical,
       "name": t(ns + ':jsonLd.name', "Calculatrice de l'amour"),
       "description": t('quizzes:calculatriceAmour.metaDescription', ''),
       "applicationCategory": "EntertainmentApplication",

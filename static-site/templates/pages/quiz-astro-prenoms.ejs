@@ -2,7 +2,14 @@
   const ns = 'quiz-astro-prenoms';
   const quizTitle = t('quizzes:testAstroPrenoms.title', 'Compatibilité amoureuse');
   const quizDesc = t('quizzes:testAstroPrenoms.metaDescription', '');
+  // La page montre trois questions fréquentes (plus bas) : jusqu'au
+  // 9 novembre 2026, elle était la seule page jouable sans leur balisage.
+  const faqAstro = [1, 2, 3].map(function (i) {
+    const q = t(ns + ':faq.q' + i, ''), a = t(ns + ':faq.a' + i, '');
+    return (q && a && q !== ns + ':faq.q' + i) ? { '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a } } : null;
+  }).filter(Boolean);
 %>
+<% if (faqAstro.length) { %><script type="application/ld+json"><%- JSON.stringify({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faqAstro }) %></script><% } %>
 
 <!-- Hero with celestial background -->
 <section class="quiz-page-hero relative overflow-hidden astro-hero-section">

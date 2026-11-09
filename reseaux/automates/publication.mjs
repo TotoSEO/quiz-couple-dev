@@ -1,4 +1,6 @@
-// Publication : passe toutes les 10 minutes (GitHub Actions).
+// Publication : lancée par pg_cron, au plus toutes les 10 minutes, quand
+// social_publication_a_faire() voit l'une des étapes qui suivent à faire
+// (migration 20261109120000 : une étape ajoutée ici s'y recopie).
 //  1. Une heure avant l'heure prévue, crée le conteneur Instagram d'un reel
 //     (Instagram met quelques minutes à traiter la vidéo), avec un son
 //     tendance de la bibliothèque Instagram attaché (Audio API).

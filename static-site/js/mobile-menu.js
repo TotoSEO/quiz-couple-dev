@@ -1,6 +1,6 @@
 /**
- * En-tête à deux niveaux : état collé, menu mobile plein écran et ses
- * panneaux de famille, panneaux du bureau.
+ * En-tête à deux niveaux : état collé, menu mobile plein écran, ses
+ * panneaux de famille et ses mouvements, panneaux du bureau.
  */
 (function() {
   var entete = document.getElementById('site-header');
@@ -54,6 +54,14 @@
   // son panneau (.mnav-panneau), qui prend toute la place, et la flèche de sa
   // barre ramène à la liste, là où on l'avait laissée. Refermer le menu le
   // remet sur la liste.
+  //
+  // Les mouvements (Thomas, le même soir : « le menu s'affiche immédiatement
+  // [...] des petites animations très légères mais qui fluidifient ») : le
+  // menu apparaît en fondu, ses cartes montent l'une après l'autre (30 ms
+  // d'écart), un panneau arrive de la droite avec ses sections en cascade,
+  // l'icône du bouton tourne en passant du burger à la croix, et le menu se
+  // referme en fondu avant de disparaître. Transform et opacity seulement,
+  // par l'API Web Animations ; rien quand le mouvement est réduit.
   var menuBtn = document.getElementById('mobile-menu-btn');
   var menu = document.getElementById('mobile-menu');
   var accueil = menu ? menu.querySelector('.mnav-accueil') : null;
@@ -61,17 +69,44 @@
   var panneaux = menu ? Array.prototype.slice.call(menu.querySelectorAll('.mnav-panneau')) : [];
   var defilementListe = 0;
   var mouvementReduit = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var DOUX = 'cubic-bezier(0.22, 1, 0.36, 1)';
+  // L'état voulu, qui change dès le geste, même pendant le fondu de fermeture.
+  var menuOuvert = false;
+  var fermeture = null;
 
-  // Un glissement de côté à l'arrivée d'une vue, en transform et opacity
-  // seulement ; rien quand le mouvement est réduit.
+  function anime(el, images, options) {
+    if (mouvementReduit || !el || !el.animate) return null;
+    try { return el.animate(images, options); } catch (e) { return null; }
+  }
+
+  // L'arrivée d'une vue de côté (un panneau, la liste au retour).
   function glisse(el, depuis) {
-    if (mouvementReduit || !el || !el.animate) return;
-    try {
-      el.animate([
-        { transform: 'translateX(' + depuis + 'px)', opacity: 0 },
+    anime(el, [
+      { transform: 'translateX(' + depuis + 'px)', opacity: 0 },
+      { transform: 'none', opacity: 1 }
+    ], { duration: 260, easing: DOUX });
+  }
+
+  // Les éléments d'une vue montent l'un après l'autre, les huit premiers
+  // seulement : les suivants sont sous le bord de l'écran.
+  function cascade(els, depart) {
+    for (var i = 0; i < els.length && i < 8; i++) {
+      anime(els[i], [
+        { transform: 'translateY(12px)', opacity: 0 },
         { transform: 'none', opacity: 1 }
-      ], { duration: 240, easing: 'cubic-bezier(0.22, 1, 0.36, 1)' });
-    } catch (e) {}
+      ], { duration: 280, delay: depart + i * 30, easing: DOUX, fill: 'backwards' });
+    }
+  }
+
+  // La liste : le bouton de l'évaluation, chaque famille, le trait, les tuiles.
+  function elementsAccueil() {
+    var els = [];
+    if (!accueil) return els;
+    Array.prototype.forEach.call(accueil.children, function(c) {
+      if (c.classList.contains('mnav-familles')) Array.prototype.push.apply(els, c.children);
+      else els.push(c);
+    });
+    return els;
   }
 
   function panneauOuvert() {
@@ -87,22 +122,23 @@
     panneaux.forEach(function(p) { p.hidden = p !== panneau; });
     familles.forEach(function(b) { b.setAttribute('aria-expanded', b === bouton ? 'true' : 'false'); });
     menu.scrollTop = 0;
-    glisse(panneau, 28);
+    glisse(panneau, 24);
+    cascade(panneau.querySelectorAll('.mnav-section, .mnav-hub'), 60);
     var retour = panneau.querySelector('.mnav-retour');
     if (retour) { try { retour.focus({ preventScroll: true }); } catch (e) { retour.focus(); } }
   }
 
   // Retour à la liste des familles ; « anime » à faux quand le menu se ferme.
-  function revenirALaListe(anime) {
+  function revenirALaListe(animer) {
     var ouvert = panneauOuvert();
     if (!accueil || (!ouvert && !accueil.hidden)) return;
     var bouton = ouvert ? menu.querySelector('.mnav-famille[aria-controls="' + ouvert.id + '"]') : null;
     panneaux.forEach(function(p) { p.hidden = true; });
     familles.forEach(function(b) { b.setAttribute('aria-expanded', 'false'); });
     accueil.hidden = false;
-    menu.scrollTop = anime ? defilementListe : 0;
-    if (!anime) return;
-    glisse(accueil, -28);
+    menu.scrollTop = animer ? defilementListe : 0;
+    if (!animer) return;
+    glisse(accueil, -24);
     if (bouton) { try { bouton.focus({ preventScroll: true }); } catch (e) { bouton.focus(); } }
   }
 
@@ -116,27 +152,61 @@
     });
   }
 
-  function poserTiroir(ouvert) {
-    if (!menuBtn || !menu) return;
-    menu.classList.toggle('hidden', !ouvert);
-    document.documentElement.classList.toggle('menu-mobile-ouvert', ouvert);
-    rendreInerte(ouvert);
-    menuBtn.setAttribute('aria-expanded', ouvert ? 'true' : 'false');
+  // Le burger devient une croix, et l'inverse, en tournant d'un quart de tour.
+  function basculeIcone(ouvre, animer) {
     var menuIcon = menuBtn.querySelector('.menu-icon');
     var closeIcon = menuBtn.querySelector('.close-icon');
-    if (menuIcon) menuIcon.classList.toggle('hidden', ouvert);
-    if (closeIcon) closeIcon.classList.toggle('hidden', !ouvert);
-    if (ouvert) { menu.scrollTop = 0; glisse(menu.querySelector('.mnav'), 0); }
-    else revenirALaListe(false);
+    if (menuIcon) menuIcon.classList.toggle('hidden', ouvre);
+    if (closeIcon) closeIcon.classList.toggle('hidden', !ouvre);
+    if (animer) anime(ouvre ? closeIcon : menuIcon, [
+      { transform: 'rotate(-90deg) scale(0.6)', opacity: 0 },
+      { transform: 'none', opacity: 1 }
+    ], { duration: 240, easing: DOUX });
+  }
+
+  // « immediat » : sans fondu, quand on suit un lien du menu ou que l'écran
+  // passe en largeur de bureau.
+  function poserTiroir(ouvrir, immediat) {
+    if (!menuBtn || !menu) return;
+    // Un geste pendant le fondu de fermeture le rattrape : le menu reste.
+    var reprise = false;
+    if (fermeture) { fermeture.cancel(); fermeture = null; reprise = ouvrir; }
+    menuOuvert = ouvrir;
+    document.documentElement.classList.toggle('menu-mobile-ouvert', ouvrir);
+    rendreInerte(ouvrir);
+    menuBtn.setAttribute('aria-expanded', ouvrir ? 'true' : 'false');
+    basculeIcone(ouvrir, !immediat);
+    if (ouvrir) {
+      if (reprise) return;
+      menu.classList.remove('hidden');
+      menu.scrollTop = 0;
+      if (immediat) return;
+      anime(menu, [{ opacity: 0, transform: 'translateY(-6px)' }, { opacity: 1, transform: 'none' }], { duration: 200, easing: DOUX });
+      cascade(elementsAccueil(), 40);
+      return;
+    }
+    var finir = function() {
+      fermeture = null;
+      if (menuOuvert) return;
+      menu.classList.add('hidden');
+      revenirALaListe(false);
+    };
+    var a = (immediat || menu.classList.contains('hidden')) ? null : anime(menu, [
+      { opacity: 1, transform: 'none' },
+      { opacity: 0, transform: 'translateY(-6px)' }
+    ], { duration: 170, easing: 'cubic-bezier(0.4, 0, 1, 1)' });
+    if (!a) { finir(); return; }
+    fermeture = a;
+    a.onfinish = finir;
   }
 
   if (menuBtn && menu) {
     menuBtn.addEventListener('click', function() {
-      poserTiroir(menu.classList.contains('hidden'));
+      poserTiroir(!menuOuvert);
     });
-    // Suivre un lien du menu le referme.
+    // Suivre un lien du menu le referme, sans attendre : la page change.
     menu.querySelectorAll('a').forEach(function(link) {
-      link.addEventListener('click', function() { poserTiroir(false); });
+      link.addEventListener('click', function() { poserTiroir(false, true); });
     });
     familles.forEach(function(bouton) {
       bouton.addEventListener('click', function() { ouvrirFamille(bouton); });
@@ -147,7 +217,7 @@
     });
     // Échap : d'abord le retour à la liste, puis la fermeture du menu.
     document.addEventListener('keydown', function(e) {
-      if (e.key !== 'Escape' || menu.classList.contains('hidden')) return;
+      if (e.key !== 'Escape' || !menuOuvert) return;
       if (panneauOuvert()) { revenirALaListe(true); return; }
       poserTiroir(false);
       menuBtn.focus();
@@ -156,7 +226,7 @@
     // doit pouvoir défiler de nouveau.
     if (window.matchMedia) {
       var bureau = window.matchMedia('(min-width: 1024px)');
-      var auBureau = function() { if (bureau.matches && !menu.classList.contains('hidden')) poserTiroir(false); };
+      var auBureau = function() { if (bureau.matches && menuOuvert) poserTiroir(false, true); };
       if (bureau.addEventListener) bureau.addEventListener('change', auBureau);
       else if (bureau.addListener) bureau.addListener(auBureau);
     }
