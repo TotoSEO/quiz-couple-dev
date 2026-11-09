@@ -21,7 +21,7 @@ export default {
   // Pour l'imprimer quand même : prix: '19,99 € TTC'.
   prix: '',
   // L'ISBN, une fois attribué par KDP ou l'AFNIL (page des mentions).
-  isbn: '',
+  isbn: '9798141209154', // ISBN gratuit de KDP, attribué le 9 novembre 2026
   livre: {
     titre: '100 aventures à deux',
     sousTitre: 'Le livre souvenir à remplir ensemble',
