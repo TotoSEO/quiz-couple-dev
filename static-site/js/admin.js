@@ -2955,7 +2955,6 @@
     reviews: ['Avis', 'Modération des avis laissés sur les pages'],
     leads: ['Leads', 'Les demandes reçues par le formulaire'],
     messages: ['Messagerie', 'Les messages du formulaire de contact'],
-    affiliation: ['Affiliation', 'Clics, conversions et commissions Affilae'],
     reseaux: ['Réseaux', 'Planning et publication des posts Instagram']
   };
   function majTitre(tab) {
@@ -2963,10 +2962,6 @@
     var h = document.getElementById('adm-titre'), sub = document.getElementById('adm-sous-titre');
     if (h && t) h.textContent = t[0];
     if (sub && t) sub.textContent = t[1];
-  }
-
-  function contexteAffiliation() {
-    return { url: SUPABASE_URL, cle: SUPABASE_KEY, jeton: adminToken };
   }
 
   function rechargeOnglet(tab) {
@@ -2977,7 +2972,6 @@
     else if (tab === 'reviews') { loadReviews(); chargeClassement(); }
     else if (tab === 'leads') { allLeads = []; loadLeads(); }
     else if (tab === 'messages') { allMessages = []; loadMessages(); }
-    else if (tab === 'affiliation' && window.AdminAffiliation && window.AdminAffiliation.ouvrir) window.AdminAffiliation.ouvrir(contexteAffiliation());
     else if (tab === 'reseaux') ouvrirReseaux();
   }
 
@@ -3001,8 +2995,6 @@
     document.getElementById('admin-messages-tab').classList.toggle('hidden', tab !== 'messages');
     var statsTab = document.getElementById('admin-stats-tab');
     if (statsTab) statsTab.classList.toggle('hidden', tab !== 'stats');
-    var afTab = document.getElementById('admin-affiliation-tab');
-    if (afTab) afTab.classList.toggle('hidden', tab !== 'affiliation');
     var trTab = document.getElementById('admin-trafic-tab');
     if (trTab) trTab.classList.toggle('hidden', tab !== 'trafic');
     var diTab = document.getElementById('admin-distance-tab');
@@ -3027,12 +3019,6 @@
     }
     if (tab === 'distance') {
       loadDistance();
-    }
-    // L'onglet affiliation vit dans son propre module : il parle a Affilae
-    // et range son jeton cote serveur (fonction admin-reglages), d'ou le
-    // contexte qu'il recoit (url, cle publique, jeton admin).
-    if (tab === 'affiliation' && window.AdminAffiliation) {
-      window.AdminAffiliation.ouvrir(contexteAffiliation());
     }
     if (tab === 'leads') {
       if (allLeads.length === 0) loadLeads();

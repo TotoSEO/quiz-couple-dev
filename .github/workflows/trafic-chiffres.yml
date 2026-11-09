@@ -1,0 +1,179 @@
+name: Trafic · pages par visite
+
+# Les pages vues par visite, lues dans la mesure maison du site (page_views,
+# audience.js), pour comprendre où les visites s'arrêtent : par type de page
+# d'entrée, par langue, par source, ce qui suit un écran de résultat (rien,
+# une revanche, un autre test, un article, l'évaluation), ce qui suit un
+# article, les pages d'entrée une par une, et la tendance jour par jour.
+# 9 novembre 2026, Thomas : « Est-ce que tu peux voir comment on peut
+# améliorer le nombre de pages vues par utilisateur ? » ; Google Analytics
+# n'est pas joignable depuis une session de travail, Supabase l'est par ce
+# workflow. Lecture seule, que des comptes : aucun numéro de visite ne sort
+# au journal. Les lignes brutes ne sont gardées que 35 jours
+# (trafic_jours_bruts()) : au-delà de 34 jours, la lecture est tronquée.
+#
+# Ce que les chiffres veulent dire : une « vue » est une ligne de page_views,
+# l'écran de résultat d'un test compris (/<page>/resultat/, resultat-url.js) ;
+# une « page » ne compte pas ces écrans. Une revanche (rejouer sur place) ne
+# fait pas de vue, sauf l'écran de résultat suivant.
+
+on:
+  workflow_dispatch:
+    inputs:
+      jours:
+        description: 'Nombre de jours lus, jusqu à hier (14 par défaut, 34 au plus)'
+        required: false
+        default: '14'
+
+concurrency:
+  group: trafic-chiffres
+  cancel-in-progress: false
+
+jobs:
+  chiffres:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      SUPABASE_ACCESS_TOKEN: ${{ secrets.SUPABASE_ACCESS_TOKEN }}
+      SUPABASE_PROJECT_REF: ${{ secrets.SUPABASE_PROJECT_REF }}
+      JOURS: ${{ inputs.jours }}
+    steps:
+      - name: Pages par visite
+        run: |
+          N=$(printf '%s' "${JOURS:-14}" | tr -cd '0-9'); N=${N:-14}
+          if [ "$N" -lt 1 ]; then N=1; fi
+          if [ "$N" -gt 34 ]; then N=34; fi
+          echo "Fenêtre : les $N derniers jours complets, heure de Paris."
+          sql() {
+            jq -n --arg q "$2" '{query: $q}' > requete.json
+            code=$(curl -sS -o reponse.json -w '%{http_code}' -X POST \
+              "https://api.supabase.com/v1/projects/$SUPABASE_PROJECT_REF/database/query" \
+              -H "Authorization: Bearer $SUPABASE_ACCESS_TOKEN" -H 'Content-Type: application/json' \
+              --data @requete.json)
+            echo; echo "## $1 (HTTP $code)"
+            if [ "$code" -ge 300 ]; then head -c 800 reponse.json; echo; return 0; fi
+            jq -r 'if length == 0 then "(aucune ligne)" else (.[0] | keys_unsorted | join(" | ")), (.[] | [.[] | tostring] | join(" | ")) end' reponse.json 2>/dev/null || head -c 3000 reponse.json
+          }
+
+          # Le type d'une page d'après son chemin (et sa clé de page jouable).
+          TYPE="case
+            when \$P ~ '/resultat/\$' then 'resultat'
+            when \$P ~ '^/((en|es|de|it|nl)/)?\$' then 'accueil'
+            when \$P ~ '^/((en|es|de|it|nl)/)?blog/\$' then 'blog-liste'
+            when \$P ~ '^/((en|es|de|it|nl)/)?blog/.+' then 'article'
+            when \$P ~ '^/((en|es|de|it|nl)/)?(evaluation-de-couple|relationship-assessment|evaluacion-de-pareja|beziehungsanalyse|valutazione-di-coppia|relatiecheck)/' then 'evaluation'
+            when \$K is not null then 'jouable'
+            else 'autre' end"
+          type_de() { local t="${TYPE//\$P/$1}"; echo "${t//\$K/$2}"; }
+
+          BASE="with borne as (
+            select (date_trunc('day', now() at time zone 'Europe/Paris') - make_interval(days => $N)) at time zone 'Europe/Paris' as b,
+                   date_trunc('day', now() at time zone 'Europe/Paris') at time zone 'Europe/Paris' as e
+          ), pv as (
+            select p.visite_id, p.path, p.route_key, p.lang, p.source, p.created_at,
+                   (p.path like '%/resultat/') as res
+            from public.page_views p, borne
+            where p.created_at >= borne.b and p.created_at < borne.e
+          ), pv2 as (
+            select pv.*, min(created_at) filter (where res) over (partition by visite_id) as t_res
+            from pv
+          ), v as (
+            select visite_id,
+              count(*) as vues,
+              count(*) filter (where not res) as pages,
+              count(*) filter (where res) as resultats,
+              count(*) filter (where not res and t_res is not null and created_at > t_res) as pages_apres,
+              (array_agg(path order by created_at))[1] as entree,
+              (array_agg(route_key order by created_at))[1] as entree_cle,
+              (array_agg(source order by created_at))[1] as entree_source,
+              (array_agg(lang order by created_at))[1] as entree_lang
+            from pv2 group by visite_id
+          )"
+
+          MESURES="count(*) as visites,
+            round(avg(vues), 2) as vues_par_visite,
+            round(avg(pages), 2) as pages_par_visite,
+            round(100.0 * avg((vues = 1)::int), 1) as pct_une_vue,
+            round(100.0 * avg((pages <= 1)::int), 1) as pct_une_page,
+            round(100.0 * avg((resultats > 0)::int), 1) as pct_resultat,
+            round(100.0 * avg(case when resultats > 0 then (pages_apres > 0)::int end), 1) as pct_suite_apres_resultat"
+
+          sql "Vue d'ensemble" "$BASE select $MESURES, sum(vues) as vues from v"
+
+          sql "Par type de page d'entrée" "$BASE select $(type_de entree entree_cle) as entree_type, $MESURES from v group by 1 order by 2 desc"
+
+          sql "Par langue d'entrée" "$BASE select coalesce(entree_lang, '?') as langue, $MESURES from v group by 1 order by 2 desc"
+
+          sql "Par source d'entrée" "$BASE select case
+              when entree_source is null or entree_source = 'direct' then 'direct'
+              when entree_source = 'interne' then 'interne'
+              when entree_source ~ 'google' then 'google'
+              when entree_source ~ 'bing|duckduckgo|yahoo|ecosia|qwant|yandex|brave' then 'autres moteurs'
+              when entree_source ~ 'chatgpt|openai|perplexity|claude|gemini|copilot' then 'assistants IA'
+              when entree_source ~ 'instagram|facebook|tiktok|pinterest|snapchat|twitter|reddit|whatsapp' or entree_source ~ '(^|\.)t\.co\$' then 'réseaux'
+              else 'autres sites' end as source, $MESURES from v group by 1 order by 2 desc"
+
+          sql "Jour par jour" "$BASE, j as (
+              select visite_id, (min(created_at) at time zone 'Europe/Paris')::date as jour from pv group by visite_id)
+            select j.jour, $MESURES from v join j using (visite_id) group by 1 order by 1"
+
+          SUITE="$BASE, s as (
+            select x.*, lead(x.path) over w as p2, lead(x.route_key) over w as k2
+            from pv x window w as (partition by x.visite_id order by x.created_at))"
+
+          sql "Après un écran de résultat : la vue suivante" "$SUITE, t as (
+              select case
+                when p2 is null then 'sortie'
+                when p2 = path then 'revanche (même résultat)'
+                when p2 = regexp_replace(path, 'resultat/\$', '') then 'retour sur la page du test'
+                when p2 ~ '/resultat/\$' then 'résultat d''un autre test'
+                else $(type_de p2 k2) end as suite
+              from s where res)
+            select suite, count(*) as vues, round(100.0 * count(*) / sum(count(*)) over (), 1) as pct from t group by 1 order by 2 desc"
+
+          sql "Après un écran de résultat, test par test (les 45 plus vus)" "$SUITE, t as (
+              select regexp_replace(path, 'resultat/\$', '') as test,
+                case
+                  when p2 is null then 'sortie'
+                  when p2 = path then 'revanche'
+                  when p2 ~ '/resultat/\$' then 'autre'
+                  else $(type_de p2 k2) end as suite
+              from s where res)
+            select test, count(*) as resultats,
+              round(100.0 * avg((suite = 'sortie')::int), 0) as pct_sortie,
+              round(100.0 * avg((suite = 'revanche')::int), 0) as pct_revanche,
+              round(100.0 * avg((suite = 'jouable')::int), 0) as pct_autre_test,
+              round(100.0 * avg((suite = 'article')::int), 0) as pct_article,
+              round(100.0 * avg((suite = 'evaluation')::int), 0) as pct_evaluation,
+              round(100.0 * avg((suite in ('accueil', 'blog-liste', 'autre'))::int), 0) as pct_ailleurs
+            from t group by 1 order by 2 desc limit 45"
+
+          sql "Après un article : la vue suivante" "$SUITE, t as (
+              select case when p2 is null then 'sortie' else $(type_de p2 k2) end as suite
+              from s where $(type_de path route_key) = 'article')
+            select suite, count(*) as vues, round(100.0 * count(*) / sum(count(*)) over (), 1) as pct from t group by 1 order by 2 desc"
+
+          sql "Après la page d'un test, avant tout résultat : la vue suivante" "$SUITE, t as (
+              select case
+                when p2 is null then 'sortie'
+                when p2 = path || 'resultat/' then 'son résultat'
+                when p2 = path then 'rechargée'
+                else $(type_de p2 k2) end as suite
+              from s where not res and route_key is not null)
+            select suite, count(*) as vues, round(100.0 * count(*) / sum(count(*)) over (), 1) as pct from t group by 1 order by 2 desc"
+
+          sql "Les 50 premières pages d'entrée" "$BASE select entree, $MESURES from v group by 1 order by 2 desc limit 50"
+
+          sql "Les visites entrées sur une page jouable : lancées, finies, et la suite" "$BASE, d as (
+              select distinct s.visite_id from public.quiz_starts s, borne where s.created_at >= borne.b and s.created_at < borne.e and s.visite_id is not null
+            ), f as (
+              select distinct c.visite_id from public.quiz_completions c, borne where c.created_at >= borne.b and c.created_at < borne.e and c.visite_id is not null
+            )
+            select count(*) as visites,
+              round(100.0 * avg((d.visite_id is not null)::int), 1) as pct_lancee,
+              round(100.0 * avg((f.visite_id is not null)::int), 1) as pct_finie,
+              round(100.0 * avg((resultats > 0)::int), 1) as pct_resultat_vu,
+              round(100.0 * avg(case when resultats > 0 then (pages_apres > 0)::int end), 1) as pct_suite_apres_resultat,
+              round(avg(pages), 2) as pages_par_visite
+            from v left join d using (visite_id) left join f using (visite_id)
+            where entree_cle is not null"

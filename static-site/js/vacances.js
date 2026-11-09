@@ -190,71 +190,6 @@
     return carte;
   }
 
-  // La carte AbracadaRoom : la première proposition, sans exception, dès que
-  // le duo week-end + France est choisi. C'est une vraie proposition au même
-  // format que les autres, pas un pavé publicitaire au milieu de la page.
-  function carteInsolite(p) {
-    var a = el('a', 'va-carte va-carte--insolite');
-    a.href = p.url;
-    a.target = '_blank';
-    a.rel = 'sponsored nofollow noopener';
-    a.innerHTML =
-      '<div class="va-carte-visuel">' +
-        '<img src="' + esc(p.image) + '" alt="Couple dans un dôme insolite au coucher du soleil" loading="lazy" decoding="async" width="640" height="360">' +
-        '<span class="va-carte-nuits">1 à 2 nuits</span>' +
-      '</div>' +
-      '<div class="va-carte-corps">' +
-        '<p class="va-carte-libelle">Notre coup de cœur pour un week-end à deux</p>' +
-        '<h4 class="va-carte-nom"><span aria-hidden="true">🛖</span> Une nuit insolite près de chez vous</h4>' +
-        '<p class="va-carte-accroche">Cabane dans les arbres, bulle sous les étoiles ou spa privatif : des milliers de séjours insolites partout en France, souvent à moins de 100 €.</p>' +
-        '<span class="va-carte-cta">Trouver notre nuit insolite ' +
-          '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></span>' +
-      '</div>';
-    return a;
-  }
-
-  function blocPartenaires(d) {
-    // L'ordre s'adapte aux réponses : la mer met SamBoat devant, l'aventure
-    // met Sport Découverte devant, sinon AbracadaRoom ouvre la sélection.
-    var cles = ['abracadaroom', 'sportdecouverte', 'samboat'];
-    if (reponses.decor === 'mer' || reponses.decor === 'ile') cles = ['samboat', 'abracadaroom', 'sportdecouverte'];
-    else if (reponses.rythme === 'aventure' || reponses.decor === 'montagne') cles = ['sportdecouverte', 'abracadaroom', 'samboat'];
-
-    var zone = el('section', 'va-selection');
-    zone.innerHTML =
-      '<span class="va-selection-pastille">✨ Testé et approuvé</span>' +
-      '<h3 class="va-selection-titre">La <span class="va-selection-accent">sélection idée de voyage</span> de Quiz Couple</h3>' +
-      '<span class="va-selection-trait" aria-hidden="true"></span>' +
-      '<p class="va-selection-sous">Trois pépites pour passer de l\'idée à la réservation, sans y laisser le budget.</p>';
-    var liste = el('div', 'va-selection-liste');
-    cles.forEach(function (cle) {
-      var p = d.partenaires[cle];
-      if (!p) return;
-      var a = el('a', 'va-partenaire');
-      a.href = p.url;
-      a.target = '_blank';
-      a.rel = 'sponsored nofollow noopener';
-      a.setAttribute('aria-label', p.titre);
-      a.innerHTML =
-        '<span class="va-partenaire-visuel">' +
-          '<img src="' + esc(p.image) + '" alt="' + esc(p.alt) + '" loading="lazy" decoding="async" width="640" height="360">' +
-          (p.badge ? '<span class="va-partenaire-badge">' + esc(p.badge) + '</span>' : '') +
-        '</span>' +
-        '<span class="va-partenaire-corps">' +
-          '<span class="va-partenaire-titre">' + esc(p.titre) + '</span>' +
-          '<span class="va-partenaire-texte">' + esc(p.texte) + '</span>' +
-          (p.puces ? '<span class="va-partenaire-puces">' + p.puces.map(function (x) {
-            return '<span class="va-partenaire-puce">' + esc(x) + '</span>';
-          }).join('') + '</span>' : '') +
-          '<span class="va-partenaire-cta">' + esc(p.bouton) +
-            '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></span>' +
-        '</span>';
-      liste.appendChild(a);
-    });
-    zone.appendChild(liste);
-    return zone;
-  }
-
   function ecranResultats(d) {
     var r = {
       age: reponses.age, duree: reponses.duree, zone: reponses.zone,
@@ -281,13 +216,8 @@
     }
 
     var liste = el('div', 'va-liste');
-    if (reponses.format === 'weekend' && reponses.zone === 'france') {
-      liste.appendChild(carteInsolite(d.partenaires.abracadaroom));
-    }
     res.resultats.forEach(function (x) { liste.appendChild(carteDestination(x)); });
     zone.appendChild(liste);
-
-    zone.appendChild(blocPartenaires(d));
 
     var refaire = el('button', 'va-refaire btn btn-outline');
     refaire.type = 'button';

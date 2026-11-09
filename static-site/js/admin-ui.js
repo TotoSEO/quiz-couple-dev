@@ -1,8 +1,8 @@
 /**
  * L'interface du tableau de bord (2 novembre 2026) : le thème clair ou
  * sombre, le tiroir du menu sur téléphone et tablette, et les bulles d'aide
- * ouvertes par les « ? ». Rien ici ne lit la base : admin.js, admin-reseaux.js
- * et admin-affiliation.js gardent tout le travail sur les données. La page ne
+ * ouvertes par les « ? ». Rien ici ne lit la base : admin.js et
+ * admin-reseaux.js gardent tout le travail sur les données. La page ne
  * charge pas theme.js : ce script tient le même rôle, avec la même clé
  * localStorage « theme » que le site, pour les boutons [data-theme-toggle].
  */

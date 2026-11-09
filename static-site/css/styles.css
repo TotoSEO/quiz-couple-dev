@@ -79,7 +79,6 @@
 :root { --secondary-texte: 265 55% 45%; }
 .dark { --secondary-texte: 265 75% 78%; }
 
-
 /* ── Reset & Base ─────────────────────────────────────────── */
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; border: 0 solid hsl(var(--border)); }
@@ -2608,62 +2607,6 @@ article a:not(.no-underline):hover, .seo-content a:hover { text-decoration-color
 /* ── Pistes proposées en fin de test ───────────────────────
    Le score dit où en est la relation, il ne dit pas pourquoi. Chaque piste
    répond à une question que le test lui-même ne pose pas. */
-/* ── Encart partenaire affilie sur l'ecran de resultat ────────────────────
-   Banniere en haut, texte en dessous, tout l'encart est cliquable. Il se
-   distingue du reste de la carte de resultat par sa bordure et son fond,
-   pour qu'on voie tout de suite que c'est une suggestion et pas le verdict. */
-.qr-partenaire {
-  display: block; margin: 1.75rem auto 0; max-width: 34rem; overflow: hidden;
-  text-align: left; text-decoration: none; color: inherit;
-  border: 1px solid hsl(var(--border)); border-radius: var(--radius);
-  background: hsl(var(--card));
-  transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
-}
-.qr-partenaire:focus-visible {
-  transform: translateY(-2px); border-color: hsl(var(--primary) / .45);
-  box-shadow: 0 14px 34px -18px hsl(var(--primary) / .45);
-}
-@media (hover: hover) and (pointer: fine) {
-.qr-partenaire:hover {
-  transform: translateY(-2px); border-color: hsl(var(--primary) / .45);
-  box-shadow: 0 14px 34px -18px hsl(var(--primary) / .45);
-}
-}
-.qr-partenaire-image {
-  display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover;
-}
-/* Variante sans visuel : les partenaires dont aucune image de marque n'est
-   copiée en local. Un liseré dégradé tient lieu d'accroche visuelle. */
-.qr-partenaire--texte { border-top: 3px solid transparent;
-  border-image: linear-gradient(90deg, hsl(var(--secondary)), hsl(var(--primary))) 1; }
-.qr-partenaire-corps { display: block; padding: 1.1rem 1.25rem 1.25rem; }
-.qr-partenaire-mention {
-  display: block; margin-bottom: .45rem;
-  font-size: .68rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase;
-  color: hsl(var(--muted-foreground));
-}
-.qr-partenaire-titre {
-  display: block; margin-bottom: .5rem; font-family: var(--font-display);
-  font-size: 1.05rem; font-weight: 800; line-height: 1.3; color: hsl(var(--foreground));
-}
-.qr-partenaire-texte {
-  display: block; margin-bottom: .9rem; font-size: .92rem; line-height: 1.6;
-  color: hsl(var(--muted-foreground));
-}
-/* En inline plutot qu'en inline-flex : sur un libelle qui passe sur deux
-   lignes, la fleche d'un conteneur flex partait se coller a droite au lieu
-   de suivre le dernier mot. */
-.qr-partenaire-cta {
-  display: inline; font-weight: 800; font-size: .92rem; color: hsl(var(--primary));
-}
-.qr-partenaire-cta svg {
-  display: inline-block; width: 1rem; height: 1rem;
-  margin-left: .35rem; vertical-align: -2px; transition: transform .2s ease;
-}
-@media (hover: hover) and (pointer: fine) {
-.qr-partenaire:hover .qr-partenaire-cta svg { transform: translateX(3px); }
-}
-
 .qr-orientation {
   display: grid; gap: .55rem; margin: 1.5rem auto 0; max-width: 34rem; text-align: left;
 }
@@ -2947,10 +2890,9 @@ article a:not(.no-underline):hover, .seo-content a:hover { text-decoration-color
 .pc-bravo-texte { margin: 0; font-size: .92rem; line-height: 1.5; color: hsl(var(--muted-foreground)); }
 .pc-bravo-suite { margin-top: .4rem; }
 
-/* ── Bloc d'appel à l'action partenaire ────────────────────
+/* ── Bloc d'appel à l'action ───────────────────────────────
    Un lien souligné se perd dans le corps du texte. Le bloc s'arrête
-   franchement sur la page, annonce ce qu'on propose, et assume qu'il
-   envoie vers un partenaire. */
+   franchement sur la page et annonce ce qu'on propose (un test, un jeu). */
 .blog-cta {
   margin: 2.5rem 0; padding: 1.75rem 1.5rem; border-radius: 1.5rem; text-align: center;
   display: grid; gap: .55rem; justify-items: center;
@@ -2973,8 +2915,7 @@ article a:not(.no-underline):hover, .seo-content a:hover { text-decoration-color
   margin: 0; max-width: 30rem; font-size: .93rem; line-height: 1.55;
   color: hsl(var(--muted-foreground));
 }
-.blog-cta a.blog-cta-btn,
-.blog-banniere a.blog-cta-btn {
+.blog-cta a.blog-cta-btn{
   display: inline-flex; align-items: center; justify-content: center; gap: .6rem;
   margin-top: .5rem; padding: 1rem 2.25rem; border-radius: 9999px;
   background: linear-gradient(120deg, hsl(var(--primary)), hsl(var(--secondary)));
@@ -2998,143 +2939,6 @@ a.blog-cta-btn:hover::after { transform: translateX(4px); }
 @media (prefers-reduced-motion: reduce) {
   a.blog-cta-btn:hover { transform: none; }
   a.blog-cta-btn:hover::after { transform: none; }
-}
-
-/* ── Fiche partenaire ──────────────────────────────────────
-   Le verdict d'un test d'application, c'est une note et quatre
-   arguments. Autant les montrer ensemble, au moment où le lecteur
-   vient de lire la note, plutôt que de le renvoyer trois écrans plus
-   bas. Réutilisable pour les autres avis (Bumble, Tinder, Hinge…). */
-.blog-offre {
-  margin: 2.25rem 0; padding: 1.1rem; border-radius: 1.5rem;
-  display: grid; gap: 1.1rem; align-items: center;
-  border: 2px solid hsl(var(--primary) / .3);
-  background:
-    radial-gradient(120% 100% at 0% 0%, hsl(var(--primary) / .13), transparent 60%),
-    hsl(var(--card));
-  box-shadow: 0 24px 50px -34px hsl(var(--primary) / .85);
-}
-@media (min-width: 700px) {
-  .blog-offre { grid-template-columns: minmax(0, 15rem) minmax(0, 1fr); gap: 1.5rem; padding: 1.35rem; }
-}
-/* En colonne, le visuel carré à pleine largeur repousse le bouton hors de
-   l'écran. On le plafonne : la création reprend sa taille réelle plus bas
-   dans l'article, ici c'est le bouton qui doit rester visible. */
-@media (max-width: 699px) {
-  .blog-offre-visuel { max-width: 14rem; margin-inline: auto; }
-}
-.blog-article a.blog-offre-visuel,
-a.blog-offre-visuel {
-  display: block; overflow: hidden; border-radius: 1.15rem;
-  border: 1px solid hsl(var(--border));
-  text-decoration: none !important;
-  transition: transform .2s ease, box-shadow .2s ease;
-}
-.blog-offre-visuel img {
-  width: 100%; height: auto; display: block; margin: 0 !important; border-radius: 0;
-}
-.blog-offre-visuel:hover { transform: scale(1.015); box-shadow: 0 18px 34px -20px hsl(var(--primary) / .9); }
-.blog-offre-corps { display: grid; gap: .45rem; justify-items: start; min-width: 0; }
-.blog-article .blog-offre-kicker {
-  margin: 0; font-size: .72rem; font-weight: 800; letter-spacing: .09em;
-  text-transform: uppercase; color: hsl(var(--primary));
-}
-.blog-article .blog-offre-nom {
-  margin: 0; font-family: var(--font-display); font-size: 1.65rem; font-weight: 800;
-  line-height: 1.1; color: hsl(var(--foreground));
-}
-.blog-article .blog-offre-note {
-  margin: 0; display: flex; align-items: baseline; gap: .5rem;
-  font-size: 1rem; color: hsl(var(--muted-foreground));
-}
-.blog-offre-note strong {
-  font-family: var(--font-display); font-size: 1.5rem; font-weight: 800;
-  line-height: 1; color: hsl(var(--foreground));
-}
-.blog-offre-note small { font-size: .85rem; font-weight: 600; color: hsl(var(--muted-foreground)); }
-.blog-offre-note span { color: #f5a524; letter-spacing: .06em; }
-.blog-article ul.blog-offre-points {
-  margin: .35rem 0 .2rem; padding: 0; list-style: none; display: grid; gap: .3rem;
-}
-.blog-article ul.blog-offre-points li {
-  position: relative; padding-left: 1.5rem; font-size: .95rem; line-height: 1.45;
-  color: hsl(var(--foreground) / .9);
-}
-.blog-article ul.blog-offre-points li::before {
-  content: '✓'; position: absolute; left: 0; top: 0;
-  font-weight: 800; color: hsl(var(--primary));
-}
-.blog-article a.blog-offre-btn,
-a.blog-offre-btn {
-  display: inline-flex; align-items: center; justify-content: center; gap: .6rem;
-  margin-top: .35rem; padding: .9rem 1.9rem; border-radius: 9999px;
-  background: linear-gradient(120deg, hsl(var(--primary)), hsl(var(--secondary)));
-  color: #fff !important; font-weight: 800; font-size: 1rem;
-  text-decoration: none !important; border: 0;
-  box-shadow: 0 16px 34px -14px hsl(var(--primary) / .9);
-  transition: transform .18s ease, box-shadow .18s ease, filter .18s ease;
-}
-a.blog-offre-btn::after { content: '→'; font-weight: 400; transition: transform .18s ease; }
-a.blog-offre-btn:hover { transform: translateY(-2px); filter: brightness(1.06); box-shadow: 0 22px 42px -14px hsl(var(--primary) / 1); }
-a.blog-offre-btn:hover::after { transform: translateX(4px); }
-.blog-article .blog-offre-note-bas {
-  margin: .1rem 0 0; font-size: .74rem; letter-spacing: .02em;
-  color: hsl(var(--muted-foreground) / .85);
-}
-@media (max-width: 460px) {
-  /* Le libellé doit tenir sur une ligne : dès qu'il passe à deux, la flèche
-     se retrouve seule sur le côté et le bouton perd son allure de bouton. */
-  .blog-article a.blog-offre-btn { width: 100%; padding-inline: .9rem; font-size: .92rem; gap: .45rem; }
-  .blog-offre-corps { justify-items: stretch; }
-  .blog-article .blog-offre-kicker,
-  .blog-article .blog-offre-nom,
-  .blog-article .blog-offre-note-bas { text-align: left; }
-}
-
-/* Visuel partenaire pleine largeur : la création du partenaire fait
-   déjà le travail d'accroche, elle a juste besoin d'être cliquable et
-   d'avoir un bouton dessous pour ceux qui ne cliquent pas les images. */
-.blog-banniere {
-  margin: 2.25rem auto; max-width: 30rem;
-  display: grid; gap: 0; border-radius: 1.5rem; overflow: hidden;
-  border: 2px solid hsl(var(--primary) / .3);
-  background: hsl(var(--card));
-  box-shadow: 0 24px 50px -34px hsl(var(--primary) / .85);
-}
-.blog-article a.blog-banniere-visuel,
-a.blog-banniere-visuel { display: block; text-decoration: none !important; }
-.blog-banniere-visuel img {
-  width: 100%; height: auto; display: block; margin: 0 !important; border-radius: 0;
-}
-.blog-banniere-pied {
-  padding: 1.25rem 1.25rem 1.4rem; display: grid; gap: .5rem; justify-items: center;
-  text-align: center;
-  background: radial-gradient(120% 100% at 50% 0%, hsl(var(--primary) / .12), transparent 70%);
-}
-.blog-article .blog-banniere-texte {
-  margin: 0; font-size: .93rem; line-height: 1.5; color: hsl(var(--muted-foreground));
-}
-.blog-banniere a.blog-cta-btn { margin-top: .25rem; }
-@media (max-width: 460px) {
-  .blog-banniere-pied { padding-inline: 1rem; }
-  .blog-banniere a.blog-cta-btn { width: 100%; padding-inline: .9rem; font-size: .92rem; gap: .45rem; }
-}
-@media (prefers-reduced-motion: reduce) {
-  .blog-offre-visuel:hover { transform: none; }
-  a.blog-offre-btn:hover { transform: none; }
-  a.blog-offre-btn:hover::after { transform: none; }
-}
-
-/* Mention de partenariat, en pied d'article. Discrète mais lisible : elle
-   n'a pas à interrompre la lecture, seulement à être là.
-   Le sélecteur est qualifié parce que .blog-article p impose 1,08rem à tous
-   les paragraphes de l'article et gagnerait sur une classe seule. */
-.blog-article p.blog-affil-mention,
-.blog-affil-mention {
-  margin: 2.5rem 0 0; padding-top: 1rem;
-  border-top: 1px solid hsl(var(--border));
-  font-size: .78rem; line-height: 1.5; text-align: center;
-  color: hsl(var(--muted-foreground) / .85);
 }
 
 /* ── Verdict en deux colonnes : pour qui, pas pour qui ───── */
@@ -6451,7 +6255,6 @@ body.quiz-has-result .related-tests-section { display: none !important; }
   html { scroll-behavior: auto; }
 }
 
-
 /* ═══════════════════════════════════════════════════════════════════
    Quiz/Test featured hero image + SEO content figure
    ═══════════════════════════════════════════════════════════════════ */
@@ -8914,102 +8717,15 @@ h1, h2, h3, h4, .quiz-result-title, .duo-result-title {
   .qc-jeu:hover { transform: none; }
 }
 
-/* ── Bannière partenaire (écrans de fin coquin et action ou vérité hot) ──
-   Une bannière, pas un bouton posé sur un aplat : visuel de la marque à
-   gauche, bord à bord, et le discours à droite. Toute la surface est un
-   lien. La mention de partenariat reste lisible sous le bouton, la section 8
-   des mentions légales étant à deux clics d'ici. */
-.partenaire-zone { container-type: inline-size; }
-/* Empilée par défaut : c'est la disposition qui tient à toutes les largeurs,
-   et le repli des navigateurs sans requête de conteneur. */
-.partenaire-banniere {
-  display: grid; grid-template-columns: minmax(0, 1fr);
-  align-items: stretch; text-align: left; text-decoration: none;
-  margin: 2rem auto 0.75rem; max-width: 40rem; overflow: hidden;
-  border-radius: calc(var(--radius) + 6px);
-  border: 1px solid hsl(var(--primary) / 0.25);
-  background: linear-gradient(135deg, hsl(var(--primary) / 0.07), hsl(var(--secondary) / 0.09));
-  box-shadow: 0 10px 30px -18px hsl(var(--primary) / 0.5);
-  transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
-}
-.partenaire-banniere:hover,
-.partenaire-banniere:focus-visible {
-  transform: translateY(-3px);
-  border-color: hsl(var(--primary) / 0.5);
-  box-shadow: 0 20px 44px -18px hsl(var(--primary) / 0.6);
-}
-.partenaire-visuel { display: block; position: relative; overflow: hidden; background: hsl(var(--muted)); }
-.partenaire-visuel img {
-  display: block; width: 100%; height: 100%; min-height: 15rem;
-  object-fit: cover; object-position: center;
-  transition: transform 500ms ease;
-}
-.partenaire-banniere:hover .partenaire-visuel img { transform: scale(1.04); }
-/* Fondu vers le fond de la carte : l'image se raccorde au texte au lieu de
-   s'arrêter net sur une arête. */
-.partenaire-visuel::after {
-  content: ''; position: absolute; inset: 0;
-  background: linear-gradient(90deg, transparent 55%, hsl(var(--card) / 0.35) 100%);
-}
-.partenaire-corps { display: block; padding: 1.5rem 1.5rem 1.25rem; }
-.partenaire-marque { display: block; margin-bottom: 0.75rem; }
-.partenaire-logo {
-  display: block; height: 1.5rem; width: auto; max-width: 11rem;
-  object-fit: contain; object-position: left center;
-}
-.partenaire-surtitre {
-  display: block; font-size: 0.6875rem; font-weight: 700;
-  letter-spacing: 0.09em; text-transform: uppercase;
-  color: hsl(var(--primary)); margin-bottom: 0.375rem;
-}
-.partenaire-titre {
-  display: block; font-family: Poppins, Inter, sans-serif;
-  font-size: 1.1875rem; font-weight: 700; line-height: 1.3;
-  color: hsl(var(--foreground)); margin-bottom: 0.5rem;
-}
-.partenaire-texte {
-  display: block; font-size: 0.9375rem; line-height: 1.55;
-  color: hsl(var(--muted-foreground)); margin-bottom: 1.125rem;
-}
-.partenaire-btn {
-  display: inline-flex; align-items: center; gap: 0.5rem;
-  padding: 0.8125rem 1.625rem; border-radius: var(--radius);
-  background-color: hsl(var(--primary)); color: hsl(var(--primary-foreground));
-  font-size: 0.9375rem; font-weight: 700;
-  box-shadow: 0 0 26px -6px hsl(var(--primary) / 0.6);
-  transition: background-color 200ms ease, gap 200ms ease;
-}
-.partenaire-btn svg { width: 1rem; height: 1rem; }
-.partenaire-banniere:hover .partenaire-btn { background-color: hsl(var(--primary) / 0.9); gap: 0.75rem; }
-.partenaire-mention {
-  display: block; margin-top: 0.875rem;
-  font-size: 0.75rem; line-height: 1.5; color: hsl(var(--muted-foreground));
-}
 /* Le logo de la marque est violet foncé : sur fond sombre il disparaîtrait.
    On l'éclaircit plutôt que de poser une pastille blanche, qui ferait tache
    au milieu de la bannière. */
-.dark .partenaire-logo { filter: brightness(0) invert(1); opacity: 0.92; }
-.dark .partenaire-visuel::after { background: linear-gradient(90deg, transparent 55%, hsl(var(--card) / 0.55) 100%); }
 
 /* Etat empilé : image en bandeau au-dessus du discours. */
-.partenaire-visuel img { min-height: 0; height: 11rem; }
-.partenaire-visuel::after { background: linear-gradient(180deg, transparent 60%, hsl(var(--card) / 0.45) 100%); }
-.dark .partenaire-visuel::after { background: linear-gradient(180deg, transparent 60%, hsl(var(--card) / 0.6) 100%); }
-.partenaire-corps { padding: 1.25rem 1.25rem 1.125rem; }
-.partenaire-btn { width: 100%; justify-content: center; }
 
 /* Deux colonnes seulement quand la bannière dispose de sa propre largeur.
    En dessous, le texte tomberait à 240 px et le bouton passerait sur deux
    lignes. */
-@container (min-width: 34rem) {
-  .partenaire-banniere { grid-template-columns: minmax(0, 13rem) minmax(0, 1fr); }
-  .partenaire-visuel img { min-height: 15rem; height: 100%; }
-  .partenaire-visuel::after { background: linear-gradient(90deg, transparent 55%, hsl(var(--card) / 0.35) 100%); }
-  .dark .partenaire-visuel::after { background: linear-gradient(90deg, transparent 55%, hsl(var(--card) / 0.55) 100%); }
-  .partenaire-corps { padding: 1.5rem 1.5rem 1.25rem; }
-  .partenaire-btn { width: auto; }
-}
-
 
 /* ── Quiz coquin : choix de la longueur, verdict de manche, palier ──────── */
 
@@ -9131,22 +8847,6 @@ h1, h2, h3, h4, .quiz-result-title, .duo-result-title {
   .coquin-duel { grid-template-columns: 1fr; gap: 0.5rem; }
   .coquin-duel-vs { justify-self: center; }
   .coquin-verdict-titre { font-size: 1.5rem; }
-}
-
-/* Arguments de réassurance de la bannière partenaire : ce qui arrive dans la
-   boîte aux lettres et la note du vendeur. Placés entre le discours et le
-   bouton, là où se joue la décision de cliquer. */
-.partenaire-atouts {
-  display: flex; flex-wrap: wrap; gap: 0.4375rem;
-  margin: 0 0 1.125rem;
-}
-.partenaire-atout {
-  display: inline-flex; align-items: center; gap: 0.375rem;
-  padding: 0.3125rem 0.6875rem; border-radius: 999px;
-  border: 1px solid hsl(var(--primary) / 0.22);
-  background: hsl(var(--card) / 0.7);
-  font-size: 0.75rem; font-weight: 600; line-height: 1.3;
-  color: hsl(var(--foreground));
 }
 
 /* ── Les emplacements publicitaires ────────────────────────────────────
@@ -9485,8 +9185,8 @@ body { padding-bottom: var(--pub-footer, 0px); }
 }
 
 /* ── Test « où partir en vacances ? » ─────────────────────────
-   Questionnaire plein cadre, cartes de destinations avec photo, sélection
-   des partenaires voyage. La page vit en français seulement. */
+   Questionnaire plein cadre et cartes de destinations avec photo. La page
+   vit en français seulement. */
 
 .va-racine { max-width: 46rem; margin: 0 auto; scroll-margin-top: 6rem; }
 
@@ -9576,87 +9276,6 @@ body { padding-bottom: var(--pub-footer, 0px); }
 .va-carte-accroche { font-size: 0.875rem; line-height: 1.45; color: hsl(var(--foreground) / 0.85); }
 .va-carte-etapes { font-size: 0.78rem; color: hsl(var(--muted-foreground)); margin-top: 0.2rem; }
 
-/* Carte insolite AbracadaRoom : même gabarit, liseré qui la distingue. */
-.va-carte--insolite { position: relative; text-decoration: none; border: 1.5px solid hsl(var(--primary) / 0.45); }
-.va-carte--insolite:hover { border-color: hsl(var(--primary) / 0.7); }
-.va-carte-libelle {
-  font-size: 0.7rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.06em;
-  color: hsl(var(--primary));
-}
-.va-carte-cta {
-  display: inline-flex; align-items: center; gap: 0.4rem; margin-top: 0.5rem;
-  font-size: 0.875rem; font-weight: 700; color: hsl(var(--primary));
-}
-.va-carte-cta svg { width: 0.9rem; height: 0.9rem; transition: transform 0.2s ease; }
-.va-carte--insolite:hover .va-carte-cta svg { transform: translateX(3px); }
-
-/* Sélection des partenaires : trois cartes qui donnent envie de cliquer. */
-.va-selection { margin-top: 2.5rem; text-align: center; }
-.va-selection-pastille {
-  display: inline-flex; align-items: center; gap: 0.3rem;
-  padding: 0.35rem 0.9rem; border-radius: 9999px;
-  font-size: 0.75rem; font-weight: 800; letter-spacing: 0.04em;
-  background: hsl(var(--primary) / 0.1); color: hsl(var(--primary));
-  margin-bottom: 0.7rem;
-}
-.va-selection-titre { font-size: 1.55rem; font-weight: 800; line-height: 1.25; }
-.va-selection-accent {
-  background: linear-gradient(120deg, hsl(var(--primary)), hsl(265 60% 58%));
-  -webkit-background-clip: text; background-clip: text; color: transparent;
-}
-.va-selection-trait {
-  display: block; width: 5.5rem; height: 0.3rem; margin: 0.7rem auto 0.6rem;
-  border-radius: 9999px;
-  background: linear-gradient(90deg, hsl(var(--primary)), hsl(265 60% 58%));
-}
-.va-selection-sous { font-size: 0.92rem; color: hsl(var(--muted-foreground)); margin-bottom: 1.4rem; }
-.va-selection-liste { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; text-align: left; }
-@media (max-width: 860px) { .va-selection-liste { grid-template-columns: 1fr; max-width: 26rem; margin: 0 auto; } }
-.va-partenaire {
-  display: flex; flex-direction: column; overflow: hidden; text-decoration: none;
-  border-radius: 1.1rem; border: 1px solid hsl(var(--border) / 0.8);
-  background: hsl(var(--card));
-  box-shadow: 0 2px 10px -6px rgb(0 0 0 / 0.12);
-  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
-}
-.va-partenaire:hover {
-  transform: translateY(-4px);
-  border-color: hsl(var(--primary) / 0.45);
-  box-shadow: 0 18px 36px -16px hsl(var(--primary) / 0.35);
-}
-.va-partenaire-visuel { position: relative; aspect-ratio: 16 / 9; overflow: hidden; }
-.va-partenaire-visuel img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.3s ease; }
-.va-partenaire:hover .va-partenaire-visuel img { transform: scale(1.05); }
-.va-partenaire-badge {
-  position: absolute; left: 0.6rem; top: 0.6rem;
-  padding: 0.28rem 0.7rem; border-radius: 9999px;
-  font-size: 0.68rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em;
-  background: linear-gradient(135deg, hsl(var(--primary)), hsl(265 60% 58%));
-  color: hsl(var(--primary-foreground));
-  box-shadow: 0 2px 8px -2px rgb(0 0 0 / 0.35);
-}
-.va-partenaire-corps { display: flex; flex-direction: column; flex: 1 1 auto; gap: 0.45rem; padding: 1rem 1.1rem 1.15rem; }
-.va-partenaire-titre { font-size: 1.02rem; font-weight: 800; line-height: 1.3; color: hsl(var(--foreground)); }
-.va-partenaire-texte { font-size: 0.85rem; line-height: 1.45; color: hsl(var(--muted-foreground)); }
-.va-partenaire-puces { display: flex; flex-wrap: wrap; gap: 0.35rem; margin-top: 0.1rem; }
-.va-partenaire-puce {
-  padding: 0.22rem 0.55rem; border-radius: 9999px;
-  font-size: 0.7rem; font-weight: 700;
-  background: hsl(var(--muted) / 0.7); color: hsl(var(--foreground) / 0.8);
-}
-.va-partenaire-cta {
-  display: inline-flex; align-items: center; justify-content: center; gap: 0.45rem;
-  margin-top: auto; padding: 0.65rem 1rem; border-radius: 9999px;
-  font-size: 0.875rem; font-weight: 800;
-  background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary) / 0.85));
-  color: hsl(var(--primary-foreground));
-  box-shadow: 0 3px 12px -3px hsl(var(--primary) / 0.5), inset 0 1px 0 hsl(0 0% 100% / 0.18);
-  transition: box-shadow 0.2s ease;
-}
-.va-partenaire:hover .va-partenaire-cta { box-shadow: 0 8px 22px -6px hsl(var(--primary) / 0.6), inset 0 1px 0 hsl(0 0% 100% / 0.25); }
-.va-partenaire-cta svg { width: 0.95rem; height: 0.95rem; transition: transform 0.2s ease; }
-.va-partenaire:hover .va-partenaire-cta svg { transform: translateX(3px); }
-
 .va-refaire { display: block; margin: 2rem auto 0; }
 
 .va-credits { margin-top: 2rem; font-size: 0.72rem; color: hsl(var(--muted-foreground)); }
@@ -9664,14 +9283,9 @@ body { padding-bottom: var(--pub-footer, 0px); }
 .va-credits ul { columns: 2; gap: 1.5rem; margin-top: 0.6rem; padding-left: 1rem; }
 @media (max-width: 640px) { .va-credits ul { columns: 1; } }
 
-.va-mention-affiliation {
-  margin: 2.5rem auto 1.5rem; text-align: center;
-  font-size: 0.72rem; line-height: 1.5; color: hsl(var(--muted-foreground) / 0.8);
-}
-
 @media (prefers-reduced-motion: reduce) {
   .va-analyse-globe { animation: none; }
-  .va-option, .va-carte, .va-partenaire { transition: none; }
+  .va-option, .va-carte{ transition: none; }
 }
 
 /* ── Test des 5 langages de l'amour : définition et statistiques ────────
@@ -9869,43 +9483,6 @@ body { padding-bottom: var(--pub-footer, 0px); }
   .quiz-saut-btn:focus-visible { outline: 2px solid hsl(var(--primary)); outline-offset: 3px; }
 }
 @media (prefers-reduced-motion: reduce) { .quiz-saut-btn { transition: none; } }
-
-/* ═══════════════════════════════════════════════════════════
-   ENCART PARTENAIRE AFFILIÉ (pages au contenu adulte)
-   Volontairement sobre et distinct du contenu éditorial : la
-   mention « lien affilié » doit rester lisible avant le bouton.
-   ═══════════════════════════════════════════════════════════ */
-.partenaire-adulte {
-  max-width: 44rem; margin: 0 auto; padding: 2rem 1.5rem;
-  text-align: center; border-radius: var(--radius);
-  border: 1px dashed hsl(var(--border));
-  background: hsl(var(--muted) / .45);
-}
-.partenaire-adulte-mention {
-  display: inline-block; margin-bottom: .75rem;
-  font-size: .7rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase;
-  color: hsl(var(--muted-foreground));
-}
-.partenaire-adulte-titre {
-  font-family: 'Poppins', 'Inter', sans-serif; font-weight: 700;
-  font-size: clamp(1.25rem, 3.5vw, 1.6rem); line-height: 1.25;
-  color: hsl(var(--foreground)); margin-bottom: .6rem;
-}
-.partenaire-adulte-texte {
-  max-width: 34rem; margin: 0 auto 1.4rem;
-  font-size: .95rem; line-height: 1.6; color: hsl(var(--muted-foreground));
-}
-@media (max-width: 430px) {
-  .partenaire-adulte { padding: 1.5rem 1.1rem; }
-}
-/* Variante posee dans l'ecran de resultat, sous la banniere de la boutique :
-   elle doit s'y inserer sans repousser les boutons d'action, d'ou la largeur
-   ramenee a celle de la carte et l'espace au-dessus. */
-.partenaire-adulte-resultat {
-  max-width: 40rem; margin: 0.5rem auto 1.5rem; padding: 1.5rem 1.25rem;
-}
-.partenaire-adulte-resultat .partenaire-adulte-titre { font-size: clamp(1.1rem, 3vw, 1.35rem); }
-.partenaire-adulte-resultat .partenaire-adulte-texte { margin-bottom: 1.2rem; }
 
 /* ── Test charge mentale ────────────────────────────────────────────────
    Deux blocs propres a ce test : la barre de repartition entre les deux
@@ -10554,8 +10131,7 @@ body { padding-bottom: var(--pub-footer, 0px); }
 }
 .quiz-engine .qr-rate { border-style: solid; }
 .quiz-engine .result-related-card,
-.quiz-engine .qr-orientation-lien,
-.quiz-engine .qr-partenaire {
+.quiz-engine .qr-orientation-lien{
   border: var(--qe-trait-p) solid hsl(var(--ink));
   border-radius: var(--qe-rayon-i);
   box-shadow: var(--qe-ombre-p) hsl(var(--ink));
@@ -10982,8 +10558,7 @@ body { padding-bottom: var(--pub-footer, 0px); }
   }
 
   .quiz-engine .result-related-card:hover,
-  .quiz-engine .qr-orientation-lien:hover,
-  .quiz-engine .qr-partenaire:hover {
+  .quiz-engine .qr-orientation-lien:hover{
     transform: translate(-2px, -2px);
     box-shadow: var(--qe-ombre-i) hsl(var(--primary));
     border-color: hsl(var(--ink));
@@ -11013,7 +10588,6 @@ body { padding-bottom: var(--pub-footer, 0px); }
     .quiz-engine .quiz-validate-btn:hover,
     .quiz-engine .result-related-card:hover,
     .quiz-engine .qr-orientation-lien:hover,
-    .quiz-engine .qr-partenaire:hover,
     #astro-tool .btn-cta:hover,
     #astro-tool .btn-outline:hover,
     #astro-tool .btn-primary:hover,
@@ -11660,120 +11234,6 @@ body { padding-bottom: var(--pub-footer, 0px); }
 .axe-jauge--b .axe-part { background: hsl(var(--secondary)); }
 @media (prefers-reduced-motion: reduce) { .axe-part { transition: none; } }
 
-/* ═══════════════════════════════════════════════════════════════════
-   ENCART PRODUITS SUR L'ECRAN DE RESULTAT
-   Une carte faite pour le clic : image carree, prix en bulle, nom, bouton.
-   Le cadre blanc est volontaire, en clair comme en sombre : les visuels
-   produit d'Amazon sont detoures sur blanc, un fond sombre les ferait
-   flotter dans un carre gris. Plusieurs produits : une piste a defilement
-   avec aimantation, des fleches a partir de 700 px.
-   ═══════════════════════════════════════════════════════════════════ */
-.qr-produits {
-  padding: 1.25rem 1.1rem 1rem;
-  border-radius: 1.5rem;
-  border: 2.5px solid hsl(var(--primary) / .35);
-  background:
-    linear-gradient(135deg, hsl(var(--primary) / .09), hsl(var(--secondary) / .07)),
-    hsl(var(--card));
-  text-align: center;
-}
-.qr-produits-titre {
-  margin: 0 0 1rem;
-  font-family: var(--font-display);
-  font-size: 1.12rem;
-  font-weight: 800;
-  line-height: 1.25;
-  color: hsl(var(--foreground));
-}
-.qr-produit {
-  display: grid;
-  gap: .85rem;
-  justify-items: center;
-  text-align: center;
-}
-/* Le lien-image : le cadre carre et la bulle du prix par-dessus. */
-.qr-produit-visuel {
-  position: relative;
-  display: block;
-  width: min(100%, 15rem);
-  border-radius: 1.1rem;
-  text-decoration: none;
-  color: inherit;
-  transition: transform .2s ease, box-shadow .2s ease;
-}
-.qr-produit-visuel:focus-visible { outline: 3px solid hsl(var(--primary)); outline-offset: 3px; }
-@media (hover: hover) and (pointer: fine) {
-  .qr-produit-visuel:hover { transform: translateY(-3px); box-shadow: 0 18px 36px -22px hsl(var(--primary) / .55); }
-}
-.qr-produit-cadre {
-  display: block;
-  overflow: hidden;
-  aspect-ratio: 1 / 1;
-  border-radius: 1.1rem;
-  background: #fff;
-  border: 1px solid hsl(var(--border));
-}
-.qr-produit-piste {
-  display: flex;
-  width: 100%;
-  height: 100%;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  scrollbar-width: none;
-}
-.qr-produit-piste::-webkit-scrollbar { display: none; }
-.qr-produit-piste img {
-  flex: 0 0 100%;
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  scroll-snap-align: start;
-  padding: .6rem;
-  box-sizing: border-box;
-}
-.qr-produit-prix {
-  position: absolute;
-  top: .65rem;
-  left: .65rem;
-  padding: .3rem .7rem;
-  border-radius: 999px;
-  background: hsl(var(--primary));
-  color: hsl(var(--primary-foreground));
-  font-family: var(--font-display);
-  font-size: .95rem;
-  font-weight: 800;
-  letter-spacing: .01em;
-  box-shadow: 0 6px 16px -8px hsl(var(--primary) / .8);
-}
-/* Points de navigation entre les visuels d'un meme produit. */
-.qr-produit-points { display: flex; gap: .4rem; justify-content: center; margin-top: -.25rem; }
-.qr-produit-point {
-  width: .55rem; height: .55rem; padding: 0; border: 0; border-radius: 999px;
-  background: hsl(var(--muted-foreground) / .35); cursor: pointer;
-  transition: background .2s ease, transform .2s ease;
-}
-.qr-produit-point.est-actif { background: hsl(var(--primary)); transform: scale(1.25); }
-.qr-produit-corps { display: grid; gap: .7rem; justify-items: center; width: 100%; }
-.qr-produit-nom {
-  display: block;
-  max-width: 22rem;
-  font-weight: 700;
-  font-size: 1rem;
-  line-height: 1.35;
-  color: hsl(var(--foreground));
-  text-wrap: balance;
-}
-/* La note relevee sur la fiche Amazon, en petit sous le nom, avec son etoile
-   doree. Le nombre d'avis n'y figure pas : fige dans le code, il serait faux
-   au bout d'une semaine. */
-.qr-produit-note {
-  display: block;
-  margin-top: .3rem;
-  font-size: .82rem;
-  font-weight: 600;
-  color: hsl(var(--foreground));
-}
-.qr-produit-etoile { color: #f5b301; margin-right: .25rem; }
 /* L'avertissement sous le champ de commentaire, quand la note est de trois
    etoiles ou moins et que le message devient obligatoire. Rouge tant que les
    quatre-vingt-dix caracteres ne sont pas atteints, vert une fois la longueur
@@ -11790,94 +11250,12 @@ body { padding-bottom: var(--pub-footer, 0px); }
 }
 :root[data-theme="dark"] .pqx-min.est-atteint { color: hsl(142 50% 62%); }
 
-.qr-produit-btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: .5rem;
-  width: min(100%, 17rem);
-  padding: .85rem 1.4rem;
-  border-radius: 999px;
-  background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--secondary)));
-  color: #fff;
-  font-weight: 800;
-  font-size: 1rem;
-  text-decoration: none;
-  box-shadow: 0 12px 28px -14px hsl(var(--primary) / .75);
-  transition: transform .18s ease, box-shadow .18s ease, filter .18s ease;
-}
-.qr-produit-btn svg { width: 1.05rem; height: 1.05rem; flex: none; }
-.qr-produit-btn:focus-visible { outline: 3px solid hsl(var(--primary)); outline-offset: 3px; }
-@media (hover: hover) and (pointer: fine) {
-  .qr-produit-btn:hover { transform: translateY(-2px); filter: brightness(1.05); box-shadow: 0 16px 32px -14px hsl(var(--primary) / .85); }
-}
-.qr-produits-mention {
-  margin: .9rem 0 0;
-  font-size: .68rem;
-  letter-spacing: .06em;
-  text-transform: uppercase;
-  color: hsl(var(--muted-foreground));
-}
-/* Carte unique sur un ecran large : l'image a gauche, le nom et le bouton
-   a droite, alignes a gauche. */
-@media (min-width: 560px) {
-  .qr-produits:not(.qr-produits--carrousel) .qr-produit {
-    grid-template-columns: 11.5rem 1fr;
-    align-items: center;
-    justify-items: start;
-    text-align: left;
-    column-gap: 1.35rem;
-  }
-  .qr-produits:not(.qr-produits--carrousel) .qr-produit-visuel { width: 11.5rem; }
-  .qr-produits:not(.qr-produits--carrousel) .qr-produit-points { grid-column: 1; justify-self: center; }
-  .qr-produits:not(.qr-produits--carrousel) .qr-produit-corps { grid-column: 2; grid-row: 1 / span 2; justify-items: start; }
-  .qr-produits:not(.qr-produits--carrousel) .qr-produit-nom { font-size: 1.08rem; }
-}
-/* Plusieurs produits : une piste qui defile, une carte par cran. */
-.qr-produits-fenetre { position: relative; }
-.qr-produits--carrousel .qr-produits-piste {
-  display: flex;
-  gap: 1rem;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  scroll-padding: .25rem;
-  padding: .25rem .25rem .5rem;
-  scrollbar-width: none;
-}
-.qr-produits--carrousel .qr-produits-piste::-webkit-scrollbar { display: none; }
-.qr-produits--carrousel .qr-produit {
-  flex: 0 0 min(15rem, 82%);
-  scroll-snap-align: start;
-  gap: .65rem;
-}
-.qr-produits--carrousel .qr-produit-visuel { width: 100%; }
-.qr-produits--carrousel .qr-produit-nom { font-size: .95rem; min-height: 2.7em; }
-.qr-produits--carrousel .qr-produit-btn { width: 100%; padding: .75rem 1rem; font-size: .95rem; }
-.qr-produits-fleche {
-  display: none;
-  position: absolute;
-  top: 5.5rem;
-  width: 2.5rem; height: 2.5rem;
-  border: 1px solid hsl(var(--border));
-  border-radius: 999px;
-  background: hsl(var(--card));
-  color: hsl(var(--foreground));
-  box-shadow: 0 8px 20px -10px hsl(var(--foreground) / .4);
-  cursor: pointer;
-  place-items: center;
-}
-.qr-produits-fleche svg { width: 1.2rem; height: 1.2rem; }
-.qr-produits-fleche--precedent { left: -.6rem; }
-.qr-produits-fleche--suivant { right: -.6rem; }
-@media (min-width: 700px) { .qr-produits-fleche { display: grid; } }
-@media (hover: hover) and (pointer: fine) {
-  .qr-produits-fleche:hover { border-color: hsl(var(--primary) / .5); color: hsl(var(--primary)); }
-}
-/* Dans un ecran de resultat, la zone prend sa place entre le resultat et le
-   bloc de renvoi ; l'ordre des autres zones est decale d'un cran. */
+/* Dans un ecran de resultat, l'encart de nos offres (l'evaluation de couple
+   ou le point, encartBilan) prend sa place entre le resultat et le bloc de
+   renvoi ; l'ordre des autres zones est decale d'un cran. */
 .qr-zone--produits { order: 3; }
 /* Le pave de la regie, remonte dans le resultat par dispositionResultat :
-   meme rang que les produits, et avant eux dans le DOM, donc juste sous la
+   meme rang que l'encart de nos offres, et avant lui dans le DOM, donc juste sous la
    carte du verdict. La marge du .pub ordinaire est celle du texte courant ;
    dans la carte, l'espacement est celui du plan. */
 .qr-zone--pub { order: 3; }
@@ -11885,36 +11263,6 @@ body { padding-bottom: var(--pub-footer, 0px); }
 .qr-zone--suite    { order: 4; }
 .qr-zone--actions  { order: 5; }
 .qr-zone--story    { order: 6; }
-/* Le jeu « tu préfères » construit son propre écran : l'encart s'y pose dans
-   un creux prévu entre le score et la proposition de prolonger. */
-.wyr-produits { margin: 1.25rem 0; }
-.wyr-produits:empty { display: none; }
-/* Le texte des cartes ne doit rien heriter des titres en degrade qui les
-   entourent : -webkit-text-fill-color s'herite, et un bouton blanc sortait
-   rose sur la page astro. Chaque element repose donc sur sa propre couleur. */
-.qr-produits, .qr-produits * { -webkit-text-fill-color: currentcolor; }
-/* Carte sans visuel : un aplat de marque et un emoji, meme silhouette. */
-.qr-produit-vide {
-  flex: 0 0 100%;
-  display: grid;
-  place-items: center;
-  width: 100%;
-  height: 100%;
-  font-size: 4rem;
-  background: linear-gradient(135deg, hsl(var(--primary) / .18), hsl(var(--secondary) / .22));
-}
-/* Les liens d'un article sont colores en rose par « article a:not(.no-underline) »,
-   plus specifique qu'une classe seule : le bouton sortait rose sur rose. Les
-   liens de la carte reprennent donc la main avec deux classes. Meme chose
-   pour le zoom et l'ombre que a[href]:hover img pose sur toute image liee. */
-.qr-produits .qr-produit-btn,
-.qr-produits .qr-produit-btn:hover,
-.qr-produits .qr-produit-btn:visited { color: #fff; text-decoration: none; }
-.qr-produits .qr-produit-visuel,
-.qr-produits .qr-produit-visuel:hover { color: inherit; text-decoration: none; }
-.qr-produits .qr-produit-visuel img,
-.qr-produits .qr-produit-visuel:hover img { filter: none; transform: none; }
-
 /* ═══════════════════════════════════════════════════════════════════
    CALCULATRICE DE L'AMOUR
    Deux prenoms, un pourcentage, le detail du calcul. L'outil vit dans le
@@ -13237,7 +12585,7 @@ img[src^="/bilan/apercu-"] { pointer-events: none; user-select: none; -webkit-us
 .bilan-puces strong { color: hsl(var(--foreground)); }
 
 /* L'encart du bilan sous le verdict des tests de couple (encartBilan,
-   quiz-engine-core.js), à la place des produits affiliés : une carte de nuit
+   quiz-engine-core.js) : une carte de nuit
    comme la page du bilan (css/pages/bilanCouple.css), avec une vraie page du
    rapport d'exemple à droite, en bandeau au-dessus du texte sur téléphone.
    Les mêmes règles servent la bannière du bas des pages (related-tests.ejs). */
@@ -13521,7 +12869,7 @@ img[src^="/bilan/apercu-"] { pointer-events: none; user-select: none; -webkit-us
 /* ═══════════════════════════════════════════════════════════════════
    La carte « le bilan célibataire arrive bientôt » (celib-bientot.js,
    4 novembre 2026), à l'écran de résultat des tests célibataires : au rang
-   des produits dans le plan du résultat (juste après eux), dans le
+   de l'encart de nos offres dans le plan du résultat (juste après lui), dans le
    turquoise de la famille. Repliée, elle n'a que la situation à choisir ;
    le choix ouvre les sujets, l'idée et l'adresse. Jamais présente au
    chargement : ses règles n'ont rien à faire dans les feuilles critiques.

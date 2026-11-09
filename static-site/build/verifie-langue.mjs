@@ -395,8 +395,9 @@ function controleCode() {
       try { objets = objetsJson(JSON.parse(brut)).map((o) => ({ ...o, ligne: 1, fin: 1 })); } catch { objets = []; }
     } else if (/\.(m?js|cjs|ts|ejs|html)$/.test(ext)) objets = objetsLitteraux(code);
     // Une marque posée sur l'ouverture d'un objet, ou juste au-dessus, vaut
-    // pour tout ce qu'il contient (la table des produits affiliés : une entrée
-    // par produit, chacune avec ses langues).
+    // pour tout ce qu'il contient (une table dont chaque entrée a ses
+    // langues, comme l'était celle des produits affiliés, retirée le
+    // 9 novembre 2026).
     const zones = objets.filter((o) => o.fin > o.ligne && lignes.slice(Math.max(0, o.ligne - 3), o.ligne).some((x) => x.includes(MARQUE_SANS)))
       .map((o) => [o.ligne, o.fin]);
     for (const o of objets) {
