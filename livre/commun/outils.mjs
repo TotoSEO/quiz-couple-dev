@@ -28,7 +28,11 @@ export function fr(t) {
     .replace(/ ([?!;])/g, ' $1')
     .replace(/ :/g, ' :')
     .replace(/« /g, '« ')
-    .replace(/ »/g, ' »');
+    .replace(/ »/g, ' »')
+    // un nombre ne se sépare pas de son unité, ni « page » de son numéro
+    .replace(/(\d) (€|h\b|km\b|min\b|kg\b|%)/g, '$1 $2')
+    .replace(/(\d) h (\d)/g, '$1 h $2')
+    .replace(/\b(page|p\.|n°) (\d)/g, '$1 $2');
 }
 
 // Échappement HTML (les textes sont écrits ici, mais un prénom ou une
