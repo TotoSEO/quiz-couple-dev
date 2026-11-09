@@ -2457,6 +2457,11 @@ var QuizEngine = (function() {
   // Les listes comptent parfois quatre entrées : on garde les trois premières
   // qui existent dans la langue affichée. Seul Les Z'Amours est limité au
   // français, d'où les doublures là où il apparaît.
+  //
+  // Depuis le 9 novembre 2026, ces listes ouvrent celles des cartes « À faire
+  // ensuite » du bas de page (related-tests.ejs), que le bloc de renvoi
+  // recopie quand la page les a : une suggestion changée ici se change
+  // aussi là-bas. Elles ne servent plus directement que de repli.
   var SUGGESTIONS_PAR_QUIZ = {
     // ── Tests à deux, ambiance posée ────────────────────────────────────
     // Ils viennent de mesurer leur couple ensemble, le téléphone passe de
@@ -2609,6 +2614,23 @@ var QuizEngine = (function() {
   }
 
   function renderRelatedQuizzes(wrap, currentQuizKey, lang) {
+    // Les cartes « À faire ensuite » du bas de la page (related-tests.ejs,
+    // masquées pendant le résultat) ont l'image, la famille, le nom et le
+    // verbe de chaque page, dans la langue : on les reprend ici plutôt que les
+    // petites tuiles à emoji (9 novembre 2026, chantier des pages vues par
+    // visite). Leur liste commence par les suggestions de SUGGESTIONS_PAR_QUIZ,
+    // qui ne servent plus que de repli, pour une page sans ces cartes.
+    var grille = document.querySelector('.related-tests-section .suite-grille');
+    var cartes = grille ? grille.querySelectorAll('a.suite-carte') : [];
+    if (cartes.length >= 2) {
+      var bloc = el('div', 'result-related-section result-related-section--cartes');
+      bloc.appendChild(el('p', 'text-lg font-bold text-center mb-6', tg('result.relatedTitle', 'Poursuivez avec d\'autres tests / quiz !')));
+      var copie = el('div', 'suite-grille suite-grille--resultat');
+      for (var ci = 0; ci < cartes.length && ci < 4; ci++) copie.appendChild(cartes[ci].cloneNode(true));
+      bloc.appendChild(copie);
+      wrap.appendChild(bloc);
+      return;
+    }
     var courant = null;
     for (var c = 0; c < ALL_QUIZZES_LIST.length; c++) {
       if (ALL_QUIZZES_LIST[c].key === currentQuizKey) { courant = ALL_QUIZZES_LIST[c].route; break; }
@@ -9132,11 +9154,6 @@ var QuizEngine = (function() {
       self.phase = 'choix'; self.render(); smoothScroll(self.container, 'start');
     });
     wrap.appendChild(rejouer);
-
-    // Ce moteur sert aussi la version tout public d'action ou vérité, qui ne
-    // doit surtout pas porter cet encart. Seul le préfixe hot le déclenche.
-    if (this.prefix === 'actionVeriteHot') {
-    }
 
     renderActionButtons(wrap, {
       share: { noms: nomsPartage(this), type: 'cartes', score: this.releves, total: total },

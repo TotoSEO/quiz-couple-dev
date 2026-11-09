@@ -1,9 +1,14 @@
 <%
-  // Bloc « à faire ensuite » affiché en bas de page. Il double l'écran de
-  // résultat du moteur, dont la table de suggestions vit dans
-  // static-site/js/quiz-engine-core.js : les trois premières entrées sont les
-  // mêmes des deux côtés, la quatrième ajoute une porte de sortie
-  // supplémentaire ici où la place le permet.
+  // Bloc « à faire ensuite » affiché en bas de page. Depuis le 9 novembre
+  // 2026, ses cartes servent aussi sous les résultats : le bloc de renvoi du
+  // moteur commun (renderRelatedQuizzes, quiz-engine-core.js), la calculatrice
+  // et les outils (quiz-extras.js, cartesApresResultat) en recopient les
+  // quatre premières. Les listes commencent donc par les suggestions choisies
+  // pour l'écran de résultat (SUGGESTIONS_PAR_QUIZ du moteur, qui ne sert plus
+  // que de repli pour une page sans ces cartes) ; une entrée de plus sert
+  // quand une page manque dans la langue (Les Z'Amours n'est qu'en français).
+  // Le même bloc ferme chaque article de blog, avec ses propres pages
+  // (suiteRoutes) et ses articles les plus proches (suiteArticle, generate.js).
   //
   // Les sept jeux étaient totalement absents de cette table : ni comme entrée,
   // ni comme suggestion. Ils étaient donc invisibles depuis les 42 pages, alors
@@ -12,9 +17,9 @@
     // Tests à faire à deux, ambiance posée
     testCouple:       ['testCompatibilite', 'quizKnowledge', 'testCoupleSain', 'testCommonPoints'],
     testCommonPoints: ['jeuQuiDeNous', 'quizKnowledge', 'testCompatibilite', 'testCouple'],
-    testCompatibilite:['testCouple', 'testCompatSexuelle', 'testMariage', 'testEmmenager'],
+    testCompatibilite:['testCouple', 'testMariage', 'testEmmenager', 'testCompatSexuelle'],
     testCoupleSain:   ['testConfiance', 'testCouple', 'testCompatibilite', 'testLangageAmour'],
-    testDistance:     ['testDistanceAime', 'jeuxParMessage', 'testCouple', 'testConfiance'],
+    testDistance:     ['testDistanceAime', 'quizKnowledge', 'testCouple', 'jeuxParMessage', 'testConfiance'],
 
     // Étapes de vie
     testMariage:      ['testEmmenager', 'testParentalite', 'testCompatibilite', 'nocesMariage'],
@@ -23,12 +28,18 @@
     testVeuxEnfant:   ['testParentalite', 'testEstCeLeBon', 'testMariage', 'testCoupleSain'],
 
     // Alerte, personne seule : on reste sur la question suivante
-    testToxic:        ['testPervers', 'testEmprise', 'testDivorce', 'testCoupleSain'],
-    testPervers:      ['testToxic', 'testEmprise', 'testLoveBombing', 'testJalousie'],
+    testToxic:        ['testRedFlag', 'testPervers', 'testCoupleSain', 'testEmprise', 'testDivorce'],
+    // Le red flag : la relation telle qu'elle est, l'autre face du doute, la question de rester
+    testRedFlag:      ['testToxic', 'testEstCeLeBon', 'testFinCouple', 'testLoveBombing'],
+    testPervers:      ['testToxic', 'testJalousie', 'testDivorce', 'testEmprise', 'testLoveBombing'],
     testDivorce:      ['testFinCouple', 'testAmourHabitude', 'testToxic', 'testCoupleSain'],
-    testFinCouple:    ['testAimeEncore', 'testCouche', 'testToxic', 'testDivorce'],
-    testAmourHabitude:['testFinCouple', 'testSuisJeAmoureux', 'testDivorce', 'testCoupleSain'],
+    testFinCouple:    ['testCouche', 'testToxic', 'testDivorce', 'testAimeEncore'],
+    testAmourHabitude:['testSuisJeAmoureux', 'testDivorce', 'testCoupleSain', 'testFinCouple'],
+    testAmourAttachement: ['testAmourHabitude', 'testDependance', 'testFinCouple', 'testJeLaimeEncore'],
+    testJeLaimeEncore: ['testAimeEncore', 'testAmourAttachement', 'testFinCouple', 'testAmourHabitude'],
     compteurCouple:   ['nocesMariage', 'calculatriceAmour', 'testAmourHabitude', 'testCoupleSain'],
+    // La calculatrice, l'une des premières pages d'entrée : le vrai test, puis les autres lectures de deux prénoms
+    calculatriceAmour: ['testCompatibilite', 'testAstroPrenoms', 'jeuMarguerite', 'testDateNaissance'],
     nocesMariage:     ['compteurCouple', 'testMariage', 'testLangageAmour', 'quizKnowledge'],
     differenceAge:    ['testCompatibilite', 'calculatriceAmour', 'testParentalite', 'testDateNaissance'],
 
@@ -36,16 +47,16 @@
     testInfidelite:   ['testCouche', 'testConfiance', 'testJalousie', 'quizTentation'],
     testCouche:       ['testInfidelite', 'testFinCouple', 'testConfiance', 'testToxic'],
     testJalousie:     ['testConfiance', 'testInfidelite', 'testToxic', 'testCouche'],
-    testConfiance:    ['testJalousie', 'testDependance', 'testInfidelite', 'testAttachement'],
+    testConfiance:    ['testJalousie', 'testCoupleSain', 'testInfidelite', 'testDependance', 'testAttachement'],
     testDependance:   ['testAttachement', 'testConfiance', 'testJalousie', 'testToxic'],
 
     // Introspection
-    testSuisJeAmoureux: ['testAmourAmitie', 'testCrush', 'testSecret', 'testLangageAmour'],
-    testAmourAmitie:  ['testSecret', 'testSuisJeAmoureux', 'testAmourAmi', 'testAmourHabitude'],
-    testCrush:        ['testSecret', 'testSuisJeAmoureux', 'testAmourAmitie', 'testAmourAmi'],
-    testAmourAmi:     ['testAmourAmitie', 'testSecret', 'testCrush', 'testSuisJeAmoureux'],
-    testSecret:       ['testSuisJeAmoureux', 'testAmourAmitie', 'testLangageAmour', 'testAttachement'],
-    testDistanceAime: ['testDistance', 'testAimeEncore', 'testFinCouple', 'testAttachement'],
+    testSuisJeAmoureux: ['testAmourAmitie', 'testSecret', 'testAttachement', 'testCrush', 'testLangageAmour'],
+    testAmourAmitie:  ['testSecret', 'testSuisJeAmoureux', 'testAmourHabitude', 'testAmourAmi'],
+    testCrush:        ['testSecret', 'testRedFlag', 'testSuisJeAmoureux', 'testAmourAmitie', 'testAmourAmi'],
+    testAmourAmi:     ['testSecret', 'testAmourAmitie', 'testCrush', 'testSuisJeAmoureux'],
+    testSecret:       ['testSuisJeAmoureux', 'jeuMarguerite', 'testLangageAmour', 'testAmourAmitie', 'testAttachement'],
+    testDistanceAime: ['testDistance', 'testAimeEncore', 'testAttachement', 'testFinCouple'],
     testAimeEncore:   ['testFinCouple', 'testAmourHabitude', 'testCouple', 'testSuisJeAmoureux'],
     testEmprise:      ['testToxic', 'testPervers', 'testLoveBombing', 'testDependance'],
     // Un début trop parfait : les signaux en général, puis ce qui vient quand le contrôle s'installe
@@ -53,9 +64,9 @@
     testEx:           ['testExRevenir', 'testEncoreAmoureuxEx', 'testOublierEx', 'testDependance'],
     // Après une rupture : ce qu'on ressent encore, puis le temps qu'il faudra
     testEncoreAmoureuxEx: ['testOublierEx', 'testRemettreEx', 'testEx', 'testPretRelation'],
-    testOublierEx:    ['testEncoreAmoureuxEx', 'testPretRelation', 'testExRevenir', 'testDependance'],
+    testOublierEx:    ['testEncoreAmoureuxEx', 'testPretRelation', 'testEx', 'testExRevenir', 'testDependance'],
     // Les chances d'un retour, et la question de s'y remettre
-    testExRevenir:    ['testRemettreEx', 'testEx', 'testEncoreAmoureuxEx', 'testOublierEx'],
+    testExRevenir:    ['testRemettreEx', 'testEx', 'testOublierEx', 'testEncoreAmoureuxEx'],
     testRemettreEx:   ['testExRevenir', 'testEncoreAmoureuxEx', 'testRedFlag', 'testOublierEx'],
     // L'ex de son partenaire, et pourquoi c'est fini
     testOublieSonEx:  ['testJalousie', 'testConfiance', 'testAimeEncore', 'testRedFlag'],
@@ -66,24 +77,27 @@
     quizTypeCouple:   ['testPersonnalite', 'testLangageAmour', 'testCouple', 'quizKnowledge'],
     testPretRelation: ['testTrouverAmour', 'testEx', 'testAttachement', 'testOublierEx'],
     testDureeCelibat: ['testCelibataire', 'testTrouverAmour', 'testPretRelation', 'testCoupleOuCelibat'],
-    testEstCeLeBon:   ['testCoupleSain', 'testJeLaimeEncore', 'testAmourHabitude', 'testFinCouple'],
-    testCompatSexuelle: ['testCompatibilite', 'quizCoquin', 'jeuActionVeriteHot', 'testPurete'],
+    testTrouverAmour: ['testCelibataire', 'testAttachement', 'testDependance', 'testDureeCelibat'],
+    testCelibataire:  ['testTrouverAmour', 'testAttachement', 'testSuisJeAmoureux', 'testDureeCelibat'],
+    testCoupleOuCelibat: ['testCelibataire', 'testAttachement', 'testDependance', 'testPretRelation'],
+    testEstCeLeBon:   ['testCoupleSain', 'testJeLaimeEncore', 'testFinCouple', 'testAmourHabitude'],
+    testCompatSexuelle: ['quizCoquin', 'jeuActionVeriteHot', 'testCompatibilite', 'testPurete'],
     testQuiAime:      ['testLangageAmour', 'testCommonPoints', 'testCoupleSain', 'testChargeMentale'],
     testLangageAmour: ['testQuiAime', 'testPersonnalite', 'testAttachement', 'testCouple'],
-    testAttachement:  ['testPersonnalite', 'testDependance', 'testLangageAmour', 'testConfiance'],
+    testAttachement:  ['testPersonnalite', 'testLangageAmour', 'testConfiance', 'testDependance'],
 
     // Lecture symbolique
     testAmeSoeur:     ['testKarmique', 'testCouple', 'testCompatibilite', 'testSuisJeAmoureux'],
-    testKarmique:     ['testAmeSoeur', 'testDateNaissance', 'testAttachement', 'testSuisJeAmoureux'],
-    testDateNaissance:['testSignesChinois', 'testKarmique', 'testAstroPrenoms', 'testCouple'],
+    testKarmique:     ['testDateNaissance', 'testAttachement', 'testSuisJeAmoureux', 'testAmeSoeur'],
+    testDateNaissance:['testKarmique', 'testCompatibilite', 'testCouple', 'testSignesChinois', 'testAstroPrenoms'],
     testSignesChinois:['testDateNaissance', 'testAstroPrenoms', 'testCompatibilite', 'differenceAge'],
     testAstroPrenoms: ['testDateNaissance', 'testKarmique', 'testCompatibilite', 'testCouple'],
 
     // Quiz légers
     quizAmoureux:     ['jeuDilemmes', 'quizTuPreferes', 'quizKnowledge', 'quizMarrant'],
-    quizMarrant:      ['quizGenant', 'quizMost', 'quizMortFilmHorreur', 'quizTuPreferes'],
+    quizMarrant:      ['quizGenant', 'quizMost', 'jeuActionVerite', 'quizMortFilmHorreur', 'quizTuPreferes'],
     quizGenant:       ['quizMarrant', 'jeuActionVerite', 'quizMost', 'quizTuPreferes'],
-    quizKnowledge:    ['jeuQuiDeNous', 'zamours', 'testCommonPoints', 'quizMost'],
+    quizKnowledge:    ['jeuQuiDeNous', 'jeuQuestionsRapides', 'zamours', 'testCommonPoints', 'quizMost'],
     quizMost:         ['jeuSoireeCouples', 'jeuActionVerite', 'quizMarrant', 'quizTuPreferes'],
     quizVraiFaux:     ['quizKnowledge', 'zamours', 'quizMarrant', 'jeuDilemmes'],
     zamours:          ['quizKnowledge', 'jeuQuiDeNous', 'quizMost', 'testCommonPoints'],
@@ -92,7 +106,7 @@
     // Le fil chaud : le quiz coquin ne proposait ni action ou vérité coquin
     // ni la roue des gages, c'était le trou le plus visible de la table.
     quizCoquin:       ['jeuActionVeriteHot', 'testCompatSexuelle', 'jeuGages', 'quizTentation'],
-    jeuActionVeriteHot:['quizCoquin', 'testCompatSexuelle', 'jeuGages', 'jeuActionVerite'],
+    jeuActionVeriteHot:['quizCoquin', 'jeuGages', 'quizTentation', 'testCompatSexuelle', 'jeuActionVerite'],
     quizTentation:    ['testInfidelite', 'quizCoquin', 'testConfiance', 'testJalousie'],
 
     // Jeux
@@ -100,7 +114,7 @@
     jeuActionVerite:  ['jeuActionVeriteHot', 'jeuGages', 'jeuPlateau', 'quizTuPreferes'],
     jeuGages:         ['jeuActionVerite', 'jeuActionVeriteHot', 'jeuPlateau', 'quizMost'],
     jeuPlateau:       ['jeuActionVerite', 'jeuQuiDeNous', 'jeuDilemmes', 'quizKnowledge'],
-    jeuQuiDeNous:     ['quizKnowledge', 'jeuQuestionsRapides', 'jeuDilemmes', 'pourContre', 'zamours'],
+    jeuQuiDeNous:     ['quizKnowledge', 'jeuQuestionsRapides', 'jeuDilemmes', 'zamours', 'quizMost', 'pourContre'],
     jeuDilemmes:      ['pourContre', 'quizTuPreferes', 'jeuQuiDeNous', 'quizMost'],
     pourContre:       ['jeuDilemmes', 'quizTuPreferes', 'jeuQuiDeNous', 'testCommonPoints'],
     jeuJamais:        ['jeuActionVerite', 'quizGenant', 'quizCoquin', 'quizTuPreferes'],
@@ -111,7 +125,7 @@
     jeuNouvelAn:      ['jeuQuestionsRapides', 'quizTuPreferes', 'jeuActionVeriteHot', 'compteurCouple'],
     jeuOuiNon:        ['jeuDilemmes', 'jeuDixMais', 'pourContre', 'jeuQuiDeNous'],
     jeuPhrases:       ['jeuQuiDeNous', 'jeuJamais', 'quizKnowledge', 'jeuQuiPourrait'],
-    jeuDixMais:       ['jeuOuiNon', 'jeuDilemmes', 'jeuJamais', 'quizTuPreferes'],
+    jeuDixMais:       ['jeuOuiNon', 'jeuDilemmes', 'quizTuPreferes', 'jeuJamais'],
     // Le jeu de soirée à plusieurs couples : des jeux qui se jouent aussi en groupe
     jeuSoireeCouples: ['jeuQuiPourrait', 'quizMost', 'jeuJamais', 'quizTuPreferes'],
 
@@ -121,7 +135,7 @@
     quizMortFilmHorreur: ['quizPossession', 'quizSerialKiller', 'quizDuoVilains', 'jeuDilemmes'],
     quizPossession:      ['quizMortFilmHorreur', 'quizSerialKiller', 'quizSuperVilain', 'jeuJamais'],
     quizSuperVilain:     ['quizDuoVilains', 'quizSerialKiller', 'quizMortFilmHorreur', 'quizTuPreferes'],
-    quizDuoVilains:      ['quizSuperVilain', 'quizPossession', 'quizMortFilmHorreur', 'jeuActionVerite'],
+    quizDuoVilains:      ['quizSuperVilain', 'quizPossession', 'quizTuPreferes', 'quizMortFilmHorreur', 'jeuActionVerite'],
   };
 
   const _relatedIcons = {
@@ -136,13 +150,19 @@
     jeuActionVerite: '🎲', jeuActionVeriteHot: '🌶️', jeuGages: '🎡',
     jeuPlateau: '🎲', jeuQuiDeNous: '👀', jeuDilemmes: '⚖️', pourContre: '👍', jeuJamais: '🙊', jeuQuiPourrait: '🏆', jeuQuestionsRapides: '⚡', jeuMarguerite: '🌼', jeuNouvelAn: '🥂', jeuxParMessage: '📱', jeuOuiNon: '✅', jeuPhrases: '💬', jeuDixMais: '🔟', jeuSoireeCouples: '🎉',
     quizSerialKiller: '🔪', quizMortFilmHorreur: '🎬', quizPossession: '👻', quizSuperVilain: '🦹', quizDuoVilains: '🎭',
+    testRedFlag: '🚩', testLoveBombing: '💐', testDependance: '⚓', testPretRelation: '🌱', testPersonnalite: '💘', testTrouverAmour: '🧭', testCelibataire: '🔍',
+    testCoupleOuCelibat: '🛋️', testJeLaimeEncore: '🕯️', testPurete: '🌡️', testAmourAttachement: '🌹', testDureeCelibat: '⏳', calculatriceAmour: '🧮', questionsCouple: '💬',
   };
 
   // La bannière de l'évaluation de couple est partials/bilan-banniere.ejs,
   // incluse au-dessus des cartes quand la page y renvoie (_bilan) ;
   // l'évaluation elle-même ne figure jamais parmi les cartes.
-  const _bilan = (typeof bilanEntree !== 'undefined' && bilanEntree && typeof bilanChemin !== 'undefined' && bilanChemin) ? bilanEntree : null;
-  const _relatedKeys = (_relatedMap[routeKey] || []).filter(function(k) {
+  // Un article de blog porte déjà la bannière dans son texte (sansBanniere),
+  // et passe ses propres pages (suiteRoutes, suiteArticle dans generate.js) :
+  // il n'a pas d'entrée dans _relatedMap.
+  const _bilan = (typeof sansBanniere === 'undefined' || !sansBanniere) && (typeof bilanEntree !== 'undefined' && bilanEntree && typeof bilanChemin !== 'undefined' && bilanChemin) ? bilanEntree : null;
+  const _cles = (typeof suiteRoutes !== 'undefined' && Array.isArray(suiteRoutes)) ? suiteRoutes : (_relatedMap[routeKey] || []);
+  const _relatedKeys = _cles.filter(function(k) {
     return getLocalizedUrl(k, lang) && k !== 'bilanCouple';
   }).slice(0, 4);
 
@@ -226,7 +246,7 @@
       <span class="bloc-trait" aria-hidden="true"></span>
       <p class="bloc-sous-titre"><%= _sousTitre %></p>
     </div>
-    <%- include('bilan-banniere') %>
+    <% if (_bilan) { %><%- include('bilan-banniere') %><% } %>
     <% if (_relatedKeys.length > 0) { %>
     <div class="suite-grille">
       <% _relatedKeys.forEach(function (rk, i) {

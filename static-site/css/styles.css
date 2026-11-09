@@ -4371,6 +4371,9 @@ a.blog-cta-btn:hover::after { transform: translateX(4px); }
   font-family: var(--font-display); font-weight: 700;
   font-size: 1rem; line-height: 1.3; margin: 0;
   color: hsl(var(--foreground));
+  /* « Liebeskompatibilität » ne tient pas dans une demi-carte de téléphone :
+     coupé à la syllabe plutôt qu'à la lettre qui dépasse. */
+  -webkit-hyphens: auto; hyphens: auto; overflow-wrap: break-word;
 }
 .suite-desc {
   margin-top: .4rem;
@@ -6107,6 +6110,22 @@ h1, h2, h3, h4, h5, h6,
 .qr-zone--suite .result-related-section { margin-top: 0; border-top: 0; padding-top: 0; }
 .qr-zone--suite .result-related-section > p { margin-top: 0; text-align: left; font-size: 1rem; margin-bottom: .75rem; }
 .qr-zone--suite .result-related-grid { grid-template-columns: 1fr; gap: .55rem; }
+/* Les cartes à image du bas de page, reprises dans le bloc de renvoi par
+   renderRelatedQuizzes, sous le résultat de la calculatrice et au bas de la
+   carte de résultat des outils (quiz-extras.js, cartesApresResultat ;
+   9 novembre 2026) : deux par rangée à toutes les largeurs, sans la phrase,
+   comme sur téléphone en bas de page. */
+.suite-resultat { margin-top: 1.75rem; padding-top: 1.35rem; border-top: 1px solid hsl(var(--border)); }
+.suite-resultat-titre { margin: 0 0 .85rem; text-align: center; font-family: var(--font-display); font-size: 1.05rem; font-weight: 700; color: hsl(var(--foreground)); }
+.suite-grille--resultat .suite-carte { text-align: left; }
+.suite-grille--resultat { gap: .75rem; }
+.suite-grille--resultat .suite-carte { flex: 0 1 calc((100% - .75rem) / 2); border-radius: 1rem; }
+.suite-grille--resultat .suite-corps { padding: .7rem .8rem .85rem; }
+.suite-grille--resultat .suite-desc { display: none; }
+.suite-grille--resultat .suite-nom { font-size: .9rem; }
+.suite-grille--resultat .suite-famille { font-size: .62rem; }
+.suite-grille--resultat .suite-emoji { top: .5rem; left: .5rem; width: 2rem; height: 2rem; border-radius: .65rem; font-size: 1rem; }
+.suite-grille--resultat .suite-cta { padding-top: .6rem; font-size: .8rem; }
 
 @media (min-width: 900px) {
   .qr-plan {

@@ -2515,6 +2515,124 @@ function carteArticle(internalSlug, lang) {
   return carte;
 }
 
+// La suite d'un article de blog (9 novembre 2026, Thomas : « voir comment on
+// peut améliorer le nombre de pages vues par utilisateur ») : un article
+// finissait sur la boîte de l'auteur, sans rien proposer à faire ou à lire
+// ensuite, alors que c'est par lui qu'arrive une bonne part des visites
+// (Google, Discover). Les cartes sont celles du bas des pages de test
+// (partials/related-tests.ejs). Les pages : celles que le texte cite, dans
+// l'ordre où il les cite, puis celles qui proposent l'article dans leurs
+// propres cartes (QUIZ_RELATED_ARTICLES), puis celles de sa catégorie ;
+// que des tests pour une catégorie sérieuse, jamais un jeu qu'aucun lien du
+// texte n'a choisi. Les articles : les plus proches de celui-ci, publiés et
+// traduits (suiteArticle dit comment ils sont choisis).
+const SUITE_PAR_CATEGORIE = {
+  astrologie: ['testAstroPrenoms', 'testDateNaissance', 'testSignesChinois', 'calculatriceAmour'],
+  'vie-de-couple': ['testCouple', 'testCoupleSain', 'testCompatibilite', 'testLangageAmour'],
+  psychologie: ['testAttachement', 'testToxic', 'testConfiance', 'testLangageAmour'],
+  ex: ['testEx', 'testEncoreAmoureuxEx', 'testOublierEx', 'testExRevenir'],
+  histoires: ['testCompatibilite', 'testAmeSoeur', 'calculatriceAmour', 'testCouple'],
+};
+const SUITE_PAR_DEFAUT = ['testCouple', 'testCompatibilite', 'testLangageAmour', 'quizKnowledge'];
+const pagesParChemin = new Map();
+function pageDuChemin(chemin, lang) {
+  if (!pagesParChemin.has(lang)) {
+    const table = new Map();
+    for (const rk of Object.keys(ROUTE_SLUGS)) {
+      if (!estPageJouable(rk) || pageEnAttente(rk, lang)) continue;
+      const p = getLocalizedPath(rk, lang);
+      if (p) table.set(p, rk);
+    }
+    pagesParChemin.set(lang, table);
+  }
+  return pagesParChemin.get(lang).get(chemin) || null;
+}
+function textesDe(valeur, sortie = []) {
+  if (typeof valeur === 'string') sortie.push(valeur);
+  else if (Array.isArray(valeur)) valeur.forEach((v) => textesDe(v, sortie));
+  else if (valeur && typeof valeur === 'object') {
+    for (const [k, v] of Object.entries(valeur)) if (k !== 'author') textesDe(v, sortie);
+  }
+  return sortie;
+}
+const articlesParChemin = new Map();
+function articleDuChemin(chemin, lang) {
+  if (!articlesParChemin.has(lang)) {
+    const table = new Map();
+    for (const a of BLOG_ARTICLES) if (a.slugs && a.slugs[lang]) table.set(getArticlePath(a.slugs[lang], lang), a.internalSlug);
+    articlesParChemin.set(lang, table);
+  }
+  return articlesParChemin.get(lang).get(chemin) || null;
+}
+// Les pages jouables et les articles qu'un article cite dans son texte, dans
+// l'ordre où il les cite. Calculé une fois par article et par langue.
+const liensParArticle = new Map();
+function liensDeLArticle(internalSlug, lang, article) {
+  const cle = `${internalSlug}-${lang}`;
+  if (liensParArticle.has(cle)) return liensParArticle.get(cle);
+  const texte = article || parseArticleTs(path.resolve(__dirname, '../../data/blog', lang, `${internalSlug}.ts`));
+  const pages = [], articles = [];
+  for (const m of textesDe(texte || {}).join('\n').matchAll(/href="([^"]+)"/g)) {
+    let chemin = m[1].replace(/^https?:\/\/(www\.)?quiz-couple\.com/, '').replace(/[?#].*$/, '');
+    if (!chemin.startsWith('/')) continue;
+    if (!chemin.endsWith('/')) chemin += '/';
+    const rk = pageDuChemin(chemin, lang);
+    if (rk) { if (!pages.includes(rk)) pages.push(rk); continue; }
+    const a = articleDuChemin(chemin, lang);
+    if (a && a !== internalSlug && !articles.includes(a)) articles.push(a);
+  }
+  const liens = { pages, articles };
+  liensParArticle.set(cle, liens);
+  return liens;
+}
+function suiteArticle(articleMeta, article, lang) {
+  const moi = liensDeLArticle(articleMeta.internalSlug, lang, article);
+  const routes = [];
+  const ajoute = (rk) => {
+    if (!rk || routes.includes(rk) || routes.length >= 4) return;
+    if (!estPageJouable(rk) || pageEnAttente(rk, lang) || !getLocalizedPath(rk, lang)) return;
+    routes.push(rk);
+  };
+  // Une page citée par le texte vaut 3, une page qui propose l'article dans
+  // ses cartes vaut 3, 2 ou 1 selon qu'elle le met en premier, en deuxième
+  // ou plus loin : le test red flag, cité et qui propose l'article sur les
+  // red flags en tête de ses cartes, passe devant le test d'attachement que
+  // le texte cite plus haut. À égalité, l'ordre du texte.
+  const points = new Map();
+  moi.pages.forEach((rk) => points.set(rk, 3));
+  for (const [rk, slugs] of Object.entries(QUIZ_RELATED_ARTICLES)) {
+    const i = slugs.indexOf(articleMeta.internalSlug);
+    if (i !== -1) points.set(rk, (points.get(rk) || 0) + Math.max(1, 3 - i));
+  }
+  const vus = [...points.keys()];
+  [...vus].sort((x, y) => (points.get(y) - points.get(x)) || (vus.indexOf(x) - vus.indexOf(y))).forEach(ajoute);
+  (SUITE_PAR_CATEGORIE[articleMeta.category] || SUITE_PAR_DEFAUT).forEach(ajoute);
+  SUITE_PAR_DEFAUT.forEach(ajoute);
+
+  // Les articles les plus proches : ceux que l'article cite, ceux qui le
+  // citent, ceux qui envoient vers les mêmes pages jouables, ceux de la même
+  // catégorie ; à égalité, les plus lus, puis les plus récents.
+  const date = (a) => Date.parse(/^\d{4}-\d{2}-\d{2}$/.test(a.publishedAt || '') ? `${a.publishedAt}T00:00:00Z` : a.publishedAt || '') || 0;
+  const articles = BLOG_ARTICLES
+    .filter((a) => a.internalSlug !== articleMeta.internalSlug)
+    .map((a) => {
+      const carte = carteArticle(a.internalSlug, lang);
+      if (!carte) return null;
+      const lui = liensDeLArticle(a.internalSlug, lang);
+      let score = 0;
+      if (moi.articles.includes(a.internalSlug)) score += 4;
+      if (lui.articles.includes(articleMeta.internalSlug)) score += 3;
+      score += 2 * lui.pages.filter((p) => moi.pages.includes(p)).length;
+      if (a.category && a.category === articleMeta.category) score += 2;
+      return score > 0 ? { a, carte, score } : null;
+    })
+    .filter(Boolean)
+    .sort((x, y) => (y.score - x.score) || ((y.carte.lectures || 0) - (x.carte.lectures || 0)) || (date(y.a) - date(x.a)))
+    .slice(0, 4)
+    .map((x) => x.carte);
+  return { routes, articles };
+}
+
 // Le bandeau du haut d'une page jouable : nombre de parties (ou de votes),
 // note moyenne et nombre d'avis. parties vaut null quand la base n'a pas
 // répondu à la construction (la page le demandera elle-même), avis aussi.
@@ -2598,6 +2716,7 @@ async function generateBlogArticle(articleMeta, lang) {
   const bl = breadcrumbLabels[lang] || breadcrumbLabels.fr;
 
   const { wordCount, readingMinutes } = tempsDeLecture(article);
+  const suite = suiteArticle(articleMeta, article, lang);
 
   const jsonLdItems = [
     {
@@ -2724,6 +2843,13 @@ async function generateBlogArticle(articleMeta, lang) {
     // Lectures lues à la construction (null : l'article les demande lui-même)
     lecturesCuites: lecturesDe(pagePath),
     seuilLectures: SEUIL_LECTURES,
+    // La suite de l'article : les cartes du bas des pages de test
+    // (partials/related-tests.ejs), sans la bannière de l'évaluation, que
+    // l'article porte déjà (suiteArticle).
+    suiteRoutes: suite.routes,
+    relatedArticles: suite.articles,
+    sansBanniere: true,
+    quizFeatured: QUIZ_FEATURED,
     // Category
     articleCategory: articleMeta.category || null,
     articleCategoryLabel: articleMeta.category && BLOG_CATEGORIES[articleMeta.category] ? BLOG_CATEGORIES[articleMeta.category][lang] || BLOG_CATEGORIES[articleMeta.category].fr : null,

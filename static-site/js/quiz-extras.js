@@ -605,6 +605,55 @@
     })();
   }
 
+  // ── Les cartes « À faire ensuite » sous le résultat des outils ────────
+  // Les outils hors moteur (date de naissance, signes chinois, prénoms et
+  // signes, compteur, noces, différence d'âge, marguerite) n'avaient rien sous
+  // leur résultat : la suite n'était qu'en bas de page, sous tout le texte. On
+  // recopie au bas de la carte de résultat les cartes à image du bas de page
+  // (related-tests.ejs), comme le bloc de renvoi du moteur commun et la
+  // calculatrice (9 novembre 2026, pages vues par visite). Dans la carte, et
+  // pas à côté : une carte de résultat masquée emporte ses cartes avec elle.
+  var OUTILS_A_SUITE = '#astro-form, #dn-outil, #sc-outil, #cc-outil, #nm-outil, #da-outil, #mg-outil';
+  function cartesApresResultat() {
+    var outil = document.querySelector(OUTILS_A_SUITE);
+    var grille = document.querySelector('.related-tests-section .suite-grille');
+    var cartes = grille ? grille.querySelectorAll('a.suite-carte') : [];
+    if (!outil || cartes.length < 2) return;
+    var pastille = document.querySelector('.related-tests-section .bloc-pastille');
+    var titre = pastille ? pastille.textContent.trim() : '';
+    function pose() {
+      var resultats = outil.querySelectorAll('.quiz-result-card');
+      for (var i = 0; i < resultats.length; i++) {
+        var carte = resultats[i];
+        if (carte.querySelector('.suite-resultat')) continue;
+        var bloc = document.createElement('div');
+        bloc.className = 'suite-resultat';
+        if (titre) {
+          var p = document.createElement('p');
+          p.className = 'suite-resultat-titre';
+          p.textContent = titre;
+          bloc.appendChild(p);
+        }
+        var copie = document.createElement('div');
+        copie.className = 'suite-grille suite-grille--resultat';
+        for (var j = 0; j < cartes.length && j < 4; j++) copie.appendChild(cartes[j].cloneNode(true));
+        bloc.appendChild(copie);
+        carte.appendChild(bloc);
+      }
+    }
+    // Un outil peut rendre son résultat dès le chargement (le compteur, les
+    // noces et la différence d'âge le gardent en mémoire) : les cartes
+    // attendent la feuille complète, sans quoi elles s'afficheraient un
+    // instant sans style, leurs images en pleine largeur, avant de se ranger.
+    function demarre() {
+      pose();
+      new MutationObserver(pose).observe(outil, { childList: true, subtree: true });
+    }
+    var feuille = document.querySelector('link[rel="preload"][href*="/css/styles"]');
+    if (feuille) feuille.addEventListener('load', function () { setTimeout(demarre, 0); });
+    else demarre();
+  }
+
   function boot() {
     document.body.classList.add('quiz-page');
     var pq = document.getElementById('pq-reviews');
@@ -617,6 +666,7 @@
     watchSalon(slug);
     initReviews(slug);
     resultRating();
+    cartesApresResultat();
     replaceSurLeMoteur();
   }
 

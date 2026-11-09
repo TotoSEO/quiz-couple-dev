@@ -136,7 +136,10 @@
           </div>
           <p id="calc-copie" class="calc-copie" hidden><%= t(ns + ':resultat.copie', '') %></p>
 
-          <div class="result-related-section mt-10">
+          <%# Les deux calculatrices voisines, remplacées au résultat par les
+              cartes à image du bas de page (related-tests.ejs) quand elles sont
+              là : le vrai test en vingt questions, la marguerite... %>
+          <div class="result-related-section mt-10" id="calc-suite-cartes" data-titre-cartes="<%= t(ns + ':suite.cartesTitre', '') %>">
             <p class="text-lg font-bold text-center mb-6"><%= t(ns + ':suite.autresTitre', '') %></p>
             <div class="result-related-grid result-related-grid--deux">
               <a class="result-related-card" href="<%= getLocalizedUrl('testAstroPrenoms', lang) %>">
@@ -390,6 +393,25 @@
   trait.style.strokeDasharray = RAYON;
   trait.style.strokeDashoffset = RAYON;
 
+  // Sous le résultat, les cartes à image du bas de page (related-tests.ejs)
+  // à la place des deux tuiles des calculatrices voisines : quatre pages, dont
+  // le vrai test de compatibilité (9 novembre 2026, pages vues par visite).
+  function cartesDeLaSuite() {
+    var place = document.getElementById('calc-suite-cartes');
+    if (!place || place.getAttribute('data-cartes')) return;
+    var grille = document.querySelector('.related-tests-section .suite-grille');
+    var cartes = grille ? grille.querySelectorAll('a.suite-carte') : [];
+    if (cartes.length < 2) return;
+    var nouvelle = document.createElement('div');
+    nouvelle.className = 'suite-grille suite-grille--resultat';
+    for (var i = 0; i < cartes.length && i < 4; i++) nouvelle.appendChild(cartes[i].cloneNode(true));
+    var ancienne = place.querySelector('.result-related-grid');
+    if (ancienne) place.replaceChild(nouvelle, ancienne); else place.appendChild(nouvelle);
+    var titre = place.querySelector('p');
+    if (titre && place.getAttribute('data-titre-cartes')) titre.textContent = place.getAttribute('data-titre-cartes');
+    place.setAttribute('data-cartes', '1');
+  }
+
   function esc(s) {
     return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) {
       return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
@@ -440,6 +462,7 @@
 
     bloc.hidden = false;
     document.getElementById('calc-carte').classList.add('calc-carte--resultat');
+    cartesDeLaSuite();
 
     // L'anneau et le compteur montent ensemble, puis on s'arrete net sur la valeur.
     var debut = null, duree = 900;
