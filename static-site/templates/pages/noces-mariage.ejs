@@ -50,9 +50,12 @@
   }
 
   const baseUrl = 'https://quiz-couple.com';
-  const imageNM = (typeof featuredImage !== 'undefined' && featuredImage) ? baseUrl + featuredImage : baseUrl + '/og-image.webp';
+  const imageNM = (typeof featuredImage !== 'undefined' && featuredImage) ? baseUrl + featuredImage : ((typeof ogImage !== 'undefined' && ogImage) ? ogImage : baseUrl + '/og-image.webp');
   const appNM = {
     '@context': 'https://schema.org', '@type': 'WebApplication',
+    // Même identifiant que le bloc du générateur, qui porte la note des avis :
+    // les deux se lisent comme une seule application.
+    '@id': canonical + '#application',
     name: t(ns + ':jsonLd.name', pageTitle),
     description: t('quizzes:nocesMariage.metaDescription', t('quizzes:nocesMariage.description', '')),
     applicationCategory: 'LifestyleApplication',

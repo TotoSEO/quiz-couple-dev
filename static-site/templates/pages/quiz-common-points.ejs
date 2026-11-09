@@ -13,11 +13,18 @@
     const qText = tgd('commonPoints.q' + qi, '');
     if (!qText || qText === 'commonPoints.q' + qi) break;
     const qObj = { "@type": "Question", "position": hasPart.length + 1, "name": qText };
+    // Les options dans les quatre formes que lit le chargeur (optionsDeQuestion,
+    // generate.js) : les questions 29 et suivantes portent une liste
+    // d'identifiants (q29opts) et n'avaient pas leurs réponses ici.
     const ans = [];
-    for (let oi = 0; oi < optLetters.length; oi++) {
-      const oText = tgd.local('commonPoints.q' + qi + optLetters[oi], '');
-      if (!oText || oText === 'commonPoints.q' + qi + optLetters[oi]) break;
-      ans.push({ "@type": "Answer", "position": oi + 1, "text": oText });
+    if (typeof optionsDeQuestion === 'function') {
+      optionsDeQuestion(tgd, 'commonPoints', qi).forEach(function(o, oi) { ans.push({ "@type": "Answer", "position": oi + 1, "text": o }); });
+    } else {
+      for (let oi = 0; oi < optLetters.length; oi++) {
+        const oText = tgd.local('commonPoints.q' + qi + optLetters[oi], '');
+        if (!oText || oText === 'commonPoints.q' + qi + optLetters[oi]) break;
+        ans.push({ "@type": "Answer", "position": oi + 1, "text": oText });
+      }
     }
     if (ans.length > 0) qObj.suggestedAnswer = ans;
     hasPart.push(qObj);

@@ -213,6 +213,21 @@
     if (!natif || natif === gdPrefix + '.q1') gdPrefix = 'couple';
   }
 
+  // Deux tests écrivent leurs réponses une seule fois pour toutes les
+  // questions : « qui aime le plus l'autre ? » (moi, l'autre, autant l'un que
+  // l'autre) et la charge mentale (de « toujours moi » à « toujours » l'autre).
+  // Chaque question les reçoit ; l'autre est X, comme partout où la page ne
+  // connaît pas le prénom.
+  const reponsesFixes = (function() {
+    const lire = function(k) { const v = tgd.local(k, ''); return v && v !== k ? String(v).replace(/\{\{\s*[ab]\s*\}\}/g, 'X') : ''; };
+    let cles = null;
+    if (quizType === 'qui-aime') cles = ['quiAime.optMoi', null, 'quiAime.optAutant'];
+    if (quizType === 'charge-mentale') cles = ['chargeMentale.optToujoursMoi', 'chargeMentale.optPlutotMoi', 'chargeMentale.optDeux', 'chargeMentale.optPlutotAutre', 'chargeMentale.optToujoursAutre'];
+    if (!cles) return [];
+    const r = cles.map(function(k) { return k === null ? 'X' : lire(k); });
+    return r.every(Boolean) ? r : [];
+  })();
+
   // Build hasPart with actual quiz questions from gd.json using tgd() for proper translations
   const hasPart = [];
   const optionLetters = ['a', 'b', 'c', 'd', 'e'];
@@ -221,18 +236,39 @@
     if (!qText || qText === gdPrefix + '.q' + qi) break;
     const questionObj = { "@type": "Question", "position": hasPart.length + 1, "name": qText };
     const answers = [];
-    // Deux nommages d'options cohabitent dans gd.json : q1a..q1d pour les
-    // series historiques, q1o0..q1o3 pour les series ecrites ensuite.
-    for (let oi = 0; oi < optionLetters.length; oi++) {
-      const cleLettre = gdPrefix + '.q' + qi + optionLetters[oi];
-      const cleRang = gdPrefix + '.q' + qi + 'o' + oi;
-      let optText = tgd.local(cleLettre, '');
-      if (!optText || optText === cleLettre) optText = tgd.local(cleRang, '');
-      if (!optText || optText === cleRang) break;
-      answers.push({ "@type": "Answer", "position": oi + 1, "text": optText });
+    if (typeof optionsDeQuestion === 'function') {
+      // Les quatre formes d'options que lit le chargeur (generate.js).
+      optionsDeQuestion(tgd, gdPrefix, qi).forEach(function(o, oi) { answers.push({ "@type": "Answer", "position": oi + 1, "text": o }); });
+    } else {
+      // Deux nommages d'options cohabitent dans gd.json : q1a..q1d pour les
+      // series historiques, q1o0..q1o3 pour les series ecrites ensuite.
+      for (let oi = 0; oi < optionLetters.length; oi++) {
+        const cleLettre = gdPrefix + '.q' + qi + optionLetters[oi];
+        const cleRang = gdPrefix + '.q' + qi + 'o' + oi;
+        let optText = tgd.local(cleLettre, '');
+        if (!optText || optText === cleLettre) optText = tgd.local(cleRang, '');
+        if (!optText || optText === cleRang) break;
+        answers.push({ "@type": "Answer", "position": oi + 1, "text": optText });
+      }
     }
+    if (!answers.length) reponsesFixes.forEach(function(o, oi) { answers.push({ "@type": "Answer", "position": oi + 1, "text": o }); });
     if (answers.length > 0) questionObj.suggestedAnswer = answers;
     hasPart.push(questionObj);
+  }
+  // Sans questions lues ici (un préfixe absent de la table ci-dessus, une
+  // série rangée par familles), le balisage reprend la liste que la page
+  // montre (questionsDuQuiz, generate.js) : jusqu'au 9 novembre 2026, six
+  // pages publiaient un bloc Quiz vide alors qu'elles affichaient leurs
+  // questions (est-ce le bon, mon ex pense-t-il encore à moi, charge
+  // mentale, premier rendez-vous...).
+  if (!hasPart.length && typeof questionsDuQuiz === 'function') {
+    const liste = questionsDuQuiz(quizType, tgd, lang);
+    if (liste) liste.items.forEach(function(it) {
+      const q = { "@type": "Question", "position": hasPart.length + 1, "name": it.q };
+      const opts = it.opts.length ? it.opts : reponsesFixes;
+      if (opts.length) q.suggestedAnswer = opts.map(function(o, oi) { return { "@type": "Answer", "position": oi + 1, "text": o }; });
+      hasPart.push(q);
+    });
   }
 
   const quizJsonLd = {
@@ -252,7 +288,8 @@
   };
   if (hasPart.length > 0) quizJsonLd.hasPart = hasPart;
 
-  const jsonLd = [quizJsonLd];
+  // Un bloc Quiz sans une seule question ne décrit rien : il n'est plus publié.
+  const jsonLd = hasPart.length > 0 ? [quizJsonLd] : [];
   if (faqEntries.length > 0) {
     jsonLd.push({
       "@context": "https://schema.org", "@type": "FAQPage",
@@ -278,7 +315,7 @@
     return tryKeys('seo.s' + s + 'Outro', 'seo.s' + s + '.outro', 'section' + s + '.outro');
   }
 %>
-<script type="application/ld+json"><%- JSON.stringify(jsonLd) %></script>
+<% if (jsonLd.length) { %><script type="application/ld+json"><%- JSON.stringify(jsonLd) %></script><% } %>
 
 <!-- Hero -->
 <section class="quiz-page-hero relative overflow-hidden">

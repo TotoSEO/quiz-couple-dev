@@ -837,12 +837,20 @@
         </div>
         <!-- Illustration -->
         <div class="relative">
+          <%# L'illustration est loin sous la ligne de flottaison et s'affiche a 350 px
+               de large sur mobile : elle se charge a l'approche. Depuis le
+               9 novembre 2026, c'est l'image de partage de la langue
+               (illustrationAccueil, generate.js), entiere, sans recadrage : la
+               carte prend sa hauteur (1200 x 630). %>
+          <% if (typeof illustrationAccueil !== 'undefined' && illustrationAccueil) { %>
+          <div class="glass-card rounded-3xl p-4 overflow-hidden">
+            <img src="<%= illustrationAccueil.src %>" srcset="<%= illustrationAccueil.srcset %>" sizes="(min-width: 1024px) 45vw, 92vw" alt="<%= illustrationAccueil.alt %>" class="block w-full rounded-2xl" style="height: auto" loading="lazy" decoding="async" width="1200" height="630">
+          </div>
+          <% } else { %>
           <div class="glass-card rounded-3xl p-4 overflow-hidden aspect-video">
-            <%# L'illustration est loin sous la ligne de flottaison et s'affiche a 350 px
-                 de large sur mobile : elle se charge a l'approche, dans une variante
-                 de 800 px, l'original de 1920 px restant pour les grands ecrans. %>
             <img src="/assets/quiz-couple-hero-800.webp" srcset="/assets/quiz-couple-hero-800.webp 800w, /assets/quiz-couple-hero.webp 1920w" sizes="(min-width: 1024px) 45vw, 92vw" alt="<%= t('home:whatIs.imageAlt', 'Quiz Couple') %>" class="w-full h-full rounded-2xl object-cover" loading="lazy" decoding="async" width="1920" height="1072">
           </div>
+          <% } %>
         </div>
       </div>
     </div>
