@@ -14,6 +14,32 @@ Les maquettes se refont avec `node livre/fabrique.mjs` (voir `livre/README.md`).
 Les notes des quatre recherches, avec leurs sources, sont dans
 `docs/livre/recherche/`.
 
+## La décision de Thomas (7 novembre 2026, le soir)
+
+Thomas ne suit pas la recommandation ci-dessous : il part sur **« 100 aventures
+à deux »**, en six langues, à 16,99 € (19,99 € depuis le 9 novembre 2026, sans prix imprimé sur le livre). Ses raisons : le livre se remplit sur le
+long terme sans obligation quotidienne (le journal demande trop, et trop de
+pages), il n'est pas fini en une soirée comme le livre de quiz (« t'as payé
+17 balles pour un usage unique »), et il devient un album souvenir à garder et
+à montrer, ce qui fait un bon argument de vente.
+
+Ce qu'il a demandé pour le livre final, et ce qui est fait (le livre complet
+est décrit dans `livre/README.md`, la publication dans `docs/livre/KDP.md`) :
+- les 100 aventures revues pour un couple de 16 à 23 ans : des choses courantes
+  que la plupart des gens font vraiment, quelques-unes plus insolites, et toute
+  sa liste (randonnée, parc d'attractions, parc aquatique, pique-nique, soirée
+  dégustation, sushis maison, raclette, bowling, laser game, karting, peinture,
+  pâte à sel ou poterie, jeux de société, sport, voyage, promener un chien,
+  monter un meuble, canoë ou kayak, rafting ou canyoning, plage, dîner aux
+  chandelles) ;
+- une ligne dédiée par aventure (le nom du chien et sa note sur 10 par chacun,
+  la meilleure attraction à l'unanimité...) ;
+- plus de page « refaites le test dans un an » ni de QR code, aucune adresse de
+  site dans le livre ; à la place, l'historique des tests Quiz Couple et le
+  résultat un an après, sur deux pages, sans nommer de test ;
+- dix pages pour des aventures à soi et dix pages de voyages ;
+- des pages blanches, et une couverture plus vendeuse.
+
 ## Le verdict
 
 1. **Le livre à faire en premier est « Le grand livre des quiz de couple ».**

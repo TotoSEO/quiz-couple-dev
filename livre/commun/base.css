@@ -2,10 +2,22 @@
    (design system « Quiz Couple Social », reseaux/charte/tokens.json), page
    à fond perdu au format KDP. Les tailles de texte sont en points, la
    géométrie en pouces, comme dans les gabarits d'imprimeur. */
-@font-face { font-family: 'Fredoka'; src: url('../../commun/fonts/Fredoka-latin-variable.woff2') format('woff2'); font-weight: 300 700; font-style: normal; }
-@font-face { font-family: 'Inter'; src: url('../../commun/fonts/Inter-latin-variable.woff2') format('woff2'); font-weight: 400 700; font-style: normal; }
+/* Polices statiques (une graisse par fichier, tirées des polices variables de
+   la charte par fontTools) : Chromium intègre une police variable en « Type 3 »
+   dans le PDF, ce que les imprimeurs n'aiment pas ; une police statique part en
+   TrueType. */
+@font-face { font-family: 'Fredoka'; src: url('../../commun/fonts/statiques/Fredoka-400.woff2') format('woff2'); font-weight: 400; font-style: normal; }
+@font-face { font-family: 'Fredoka'; src: url('../../commun/fonts/statiques/Fredoka-500.woff2') format('woff2'); font-weight: 500; font-style: normal; }
+@font-face { font-family: 'Fredoka'; src: url('../../commun/fonts/statiques/Fredoka-600.woff2') format('woff2'); font-weight: 600; font-style: normal; }
+@font-face { font-family: 'Fredoka'; src: url('../../commun/fonts/statiques/Fredoka-700.woff2') format('woff2'); font-weight: 700; font-style: normal; }
+@font-face { font-family: 'Inter'; src: url('../../commun/fonts/statiques/Inter-400.woff2') format('woff2'); font-weight: 400; font-style: normal; }
+@font-face { font-family: 'Inter'; src: url('../../commun/fonts/statiques/Inter-500.woff2') format('woff2'); font-weight: 500; font-style: normal; }
+@font-face { font-family: 'Inter'; src: url('../../commun/fonts/statiques/Inter-600.woff2') format('woff2'); font-weight: 600; font-style: normal; }
+@font-face { font-family: 'Inter'; src: url('../../commun/fonts/statiques/Inter-700.woff2') format('woff2'); font-weight: 700; font-style: normal; }
+@font-face { font-family: 'Playfair Display'; src: url('../../commun/fonts/statiques/PlayfairDisplay-Italic-400.woff2') format('woff2'); font-weight: 400; font-style: italic; }
+@font-face { font-family: 'Playfair Display'; src: url('../../commun/fonts/statiques/PlayfairDisplay-Italic-500.woff2') format('woff2'); font-weight: 500; font-style: italic; }
+@font-face { font-family: 'Playfair Display'; src: url('../../commun/fonts/statiques/PlayfairDisplay-Italic-600.woff2') format('woff2'); font-weight: 600; font-style: italic; }
 @font-face { font-family: 'Playfair Display'; src: url('../../commun/fonts/PlayfairDisplay-latin-variable.woff2') format('woff2'); font-weight: 400 700; font-style: normal; }
-@font-face { font-family: 'Playfair Display'; src: url('../../commun/fonts/PlayfairDisplay-italic-latin-variable.woff2') format('woff2'); font-weight: 400 700; font-style: italic; }
 
 :root {
   --c-rose: #e17398; --c-rose-fonce: #c9557c; --c-rose-clair: #f6d3df; --c-rose-pale: #fbe9ef; --c-rose-texte: #b12559;
@@ -34,7 +46,7 @@ body { font-family: var(--f-texte); color: var(--c-encre); font-size: 9.5pt; lin
 .zone { position: absolute; top: var(--marge-haut); bottom: var(--marge-bas); display: flex; flex-direction: column; }
 .feuille--recto .zone { left: var(--marge-int); right: var(--marge-ext); }
 .feuille--verso .zone { left: var(--marge-ext); right: var(--marge-int); }
-.folio { position: absolute; bottom: 0.32in; font-family: var(--f-titre); font-weight: 600; font-size: 8pt; color: var(--c-encre-douce); }
+.folio { position: absolute; bottom: 0.4in; font-family: var(--f-titre); font-weight: 600; font-size: 8pt; color: var(--c-encre-douce); }
 .feuille--recto .folio { right: var(--marge-ext); }
 .feuille--verso .folio { left: var(--marge-ext); }
 /* Décor à fond perdu : positionné sur la feuille entière. */

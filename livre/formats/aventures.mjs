@@ -1,366 +1,820 @@
-// Format B : « 100 aventures à deux », le livre souvenir. Carré de
-// 8,5 pouces, intérieur couleur, papier blanc, environ 120 pages : la liste
-// des 100 aventures, puis une page à remplir par aventure (date, lieu, notes,
-// ce qu'on retiendra, une photo au format instantané). Chaque aventure dit
-// ce qu'elle coûte, combien de temps elle prend et où elle se passe : les
-// livres de rendez-vous qui ne le disent pas sont les plus mal notés.
-import { t, mascotte, coeur, qr, fleur } from '../commun/outils.mjs';
+// « 100 aventures à deux » : le livre complet, au format KDP (broché carré
+// de 8,5 pouces, intérieur couleur standard, papier blanc, 136 pages).
+// La mise en page est ici ; les textes de chaque langue sont dans
+// aventures/<langue>.mjs (mêmes clés partout).
+//
+// Plan (folio : page) :
+//   1 titre · 2 mentions · 3 « ce livre est à nous » · 4 mode d'emploi ·
+//   5 les six familles · 6-7 la liste · 8 « nous deux, au début » ·
+//   9-108 les 100 aventures · 109-118 dix aventures à vous (101 à 110) ·
+//   119 nos voyages · 120-129 dix voyages · 130-131 l'historique des tests ·
+//   132 le palmarès · 133 les trophées · 134 « nous deux, à la fin » ·
+//   135 le mot de la fin · 136 les photos en plus.
+// Toutes les pages sont blanches, aucune adresse de site ni QR code. Les
+// lignes à remplir sont posées par __mettreEnPage() une fois la page
+// composée : elles prennent toute la place qui reste, et la page réduit un
+// peu ses textes (--k, jamais sous 7 pt) quand une langue plus longue ne
+// tient pas.
+import fs from 'node:fs';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
+import { fr, esc, mascotte, coeur } from '../commun/outils.mjs';
+import { cent } from '../commun/cent.mjs';
 
-// Catégories : couleur, nom, petit dessin au trait.
-const CAT = {
-  M: { nom: 'À la maison', c: '#e17398', p: '#fbe3ec', ico: '<path d="M4 11l8-7 8 7v9H4z"/><path d="M10 20v-5h4v5"/>' },
-  D: { nom: 'Dehors', c: '#5fa058', p: '#e3f1e0', ico: '<path d="M12 3c3 2.6 5 5.6 5 8.6a5 5 0 0 1-10 0C7 8.6 9 5.6 12 3z"/><path d="M12 21v-7"/>' },
-  B: { nom: 'Petit budget', c: '#d9a514', p: '#fdf1c9', ico: '<circle cx="12" cy="12" r="8"/><path d="M14.6 9.2a3 3 0 1 0 0 5.6M8.5 11h5M8.5 13.2h5"/>' },
-  A: { nom: 'Grand frisson', c: '#7f4db3', p: '#ece2f6', ico: '<path d="M3 19l6-10 4 6 3-4 5 8z"/><path d="M9 9l1.6-2.6"/>' },
-  R: { nom: 'Romantique', c: '#c43d6c', p: '#f9dce6', ico: '<path d="M12 19.5C6.4 15.3 3.3 12.2 3.3 8.3 3.3 5.6 5.4 3.6 8 3.6c1.7 0 3.1.9 4 2.2.9-1.3 2.3-2.2 4-2.2 2.6 0 4.7 2 4.7 4.7 0 3.9-3.1 7-8.7 11.2z"/>' },
-  F: { nom: 'Fou rire', c: '#3a8fc0', p: '#ddeffa', ico: '<circle cx="12" cy="12" r="8.5"/><path d="M8.2 13.6c1 1.9 2.3 2.8 3.8 2.8s2.8-.9 3.8-2.8"/><path d="M9 9.6h.01M15 9.6h.01"/>' },
-};
-const icone = (k, taille = 11, couleur = null) => `<svg class="ico" viewBox="0 0 24 24" style="width:${taille}pt;height:${taille}pt" aria-hidden="true"><g fill="none" stroke="${couleur || CAT[k].c}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">${CAT[k].ico}</g></svg>`;
-const COUT = ['Gratuit', '€', '€€', '€€€'];
-const DESC = {
-  M: 'Pour les soirs de semaine et les dimanches de pluie.',
-  D: 'Un parc, une colline, une rue inconnue : il suffit de sortir.',
-  B: 'Gratuit ou presque, la preuve que ça ne coûte pas grand-chose.',
-  A: "Celles qu'on raconte encore des années après.",
-  R: 'Les moments tendres, ceux qui se font à deux et pas autrement.',
-  F: 'Pour rire de vous, et un peu des autres aussi.',
-};
-
-// [titre, catégorie, coût] : les cent aventures, de la soirée canapé au grand frisson.
-const AVENTURES = [
-  ['Refaire notre premier rendez\u2011vous', 'R', 2], ["Cuisiner le plat préféré de l'autre", 'M', 1], ['Regarder le lever du soleil ensemble', 'D', 0],
-  ['Une soirée entière sans téléphone', 'M', 0], ['Pique-niquer au parc avec un vrai panier', 'D', 1], ['Un karaoké à deux dans le salon', 'F', 0],
-  ['Visiter une ville à moins de 100 km', 'A', 2], ['Un dîner aux chandelles un mardi soir', 'R', 1], ['Une cabane de draps pour y regarder un film', 'M', 0],
-  ['Prendre un train sans savoir où descendre', 'A', 2], ['Écrire chacun une lettre à ouvrir dans cinq ans', 'R', 0], ["Cuisiner un plat d'un pays où on n'est jamais allés", 'M', 1],
-  ['Un concours de grimaces en photo', 'F', 0], ['Un petit-déjeuner dehors, très tôt', 'D', 1], ['Chiner dans un vide-grenier avec 10 € chacun', 'B', 1],
-  ['Apprendre une danse avec un tuto vidéo', 'F', 0], ['Dormir à la belle étoile', 'A', 0], ["S'offrir un cadeau à moins de 5 €", 'B', 1],
-  ['Planter quelque chose et le garder en vie', 'M', 1], ["Un marathon de films d'une même saga", 'M', 0], ["Le concert d'un groupe qu'on ne connaît pas", 'A', 2],
-  ['Regarder les étoiles loin de la ville', 'R', 0], ['Recréer une photo de nous du début', 'F', 0], ['Une balade à vélo', 'D', 0],
-  ["Une journée à dire oui à tout ce que l'autre propose", 'F', 1], ['Écrire une chanson ridicule sur nous deux', 'F', 0], ['Prendre un cours ensemble', 'A', 2],
-  ['Faire un escape game', 'A', 2], ["Un brunch maison qui dure jusqu'à midi", 'M', 1], ['Se perdre exprès dans un quartier inconnu', 'D', 0],
-  ["Masser l'autre sans rien attendre en retour", 'R', 0], ['Partir en week-end avec un seul sac à dos', 'A', 2], ['Une soirée jeux de société', 'M', 0],
-  ['Regarder la pluie tomber sous une couverture', 'R', 0], ['Une bataille de boules de neige (ou d\'eau)', 'F', 0], ['Monter un meuble en kit sans se disputer', 'F', 1],
-  ['Photographier le même lieu, chacun de son côté', 'B', 0], ["Au musée, choisir l'œuvre préférée de l'autre", 'B', 1], ['Danser un slow dans la cuisine', 'R', 0],
-  ['Commander au hasard au restaurant', 'F', 2], ['Une randonnée avec un vrai sommet au bout', 'D', 0], ["Se raconter nos souvenirs d'enfance", 'R', 0],
-  ['Dormir dans un endroit insolite', 'A', 3], ['Un tour de manège comme des enfants', 'F', 1], ['Une soirée à thème rien que pour nous deux', 'M', 1],
-  ['Le coucher du soleil depuis un toit ou une colline', 'R', 0], ['Des crêpes avec une garniture inventée', 'M', 1], ['Une carte postale à nos futurs nous', 'B', 1],
-  ['Une journée entière en pyjama', 'M', 0], ["Écrire nos dix rêves, en réaliser un dans l'année", 'R', 1], ["Apprendre dix mots d'une langue inconnue", 'B', 0],
-  ['Une journée de bénévolat ensemble', 'B', 0], ['Se baigner dans un lac ou la mer hors saison', 'A', 0], ['Un road trip avec une playlist faite à deux', 'A', 2],
-  ['Un dîner où chacun cuisine un plat en secret', 'M', 1], ["Une nuit à l'hôtel dans notre propre ville", 'R', 3], ['Une course en sac, comme en maternelle', 'F', 0],
-  ['Lire le même livre en même temps', 'M', 1], ['Une séance photo déguisés', 'F', 1], ['Assister à un lever de lune', 'D', 0],
-  ["Le match d'un sport qu'on ne comprend pas", 'F', 2], ["Cuisiner ce qu'on trouve au marché", 'B', 1], ["Écrire 20 choses qu'on aime chez l'autre", 'R', 0],
-  ['Un week-end sans rien prévoir', 'M', 0], ['Des tatouages éphémères assortis', 'F', 1], ['Une soirée « on s\'habille chic » à la maison', 'R', 0],
-  ['Monter le plus haut possible dans une ville', 'D', 1], ['Fabriquer quelque chose de nos mains', 'M', 1], ["Le film préféré de l'autre, sans râler", 'M', 0],
-  ["Une chasse au trésor l'un pour l'autre", 'F', 0], ['Le test de couple de Quiz Couple, et le refaire dans un an', 'M', 0], ['Du kayak, du canoë ou du paddle', 'A', 2],
-  ['Aller à la fête foraine', 'F', 2], ['Le petit-déjeuner au lit', 'R', 1], ["Une journée où l'autre décide de tout", 'F', 1],
-  ["Un baptême de l'air (montgolfière, ULM...)", 'A', 3], ["Retourner là où on s'est rencontrés", 'R', 1], ['Chanter au karaoké, en public cette fois', 'F', 1],
-  ['Un pique-nique sous la pluie', 'F', 0], ['Cacher des mots doux dans la maison', 'R', 0], ['Visiter une ferme, un verger ou un vignoble', 'D', 1],
-  ['Un feu de camp et des chamallows grillés', 'D', 1], ['Une journée sans dépenser un seul euro', 'B', 0], ['Organiser un dîner pour nos amis', 'M', 2],
-  ['Une sieste dans un hamac', 'R', 0], ['Tenter une recette ratée d\'avance', 'F', 1], ["Une pièce de théâtre ou un spectacle d'impro", 'A', 2],
-  ['Une photo de nous au même endroit à chaque saison', 'D', 0], ['Une balade de nuit à la lampe frontale', 'A', 0], ['Inventer notre cocktail (ou notre mocktail)', 'M', 1],
-  ["Une journée sans écran, que du papier", 'B', 0], ['Danser sous la pluie', 'F', 0], ['Visiter une ville la nuit', 'D', 0],
-  ['Un album photo papier de notre année', 'M', 2], ["Apprendre à l'autre un truc qu'on sait faire", 'B', 0], ['Un petit-déjeuner surprise un jour de semaine', 'R', 1],
-  ["Un pays dont on ne parle pas la langue", 'A', 3], ['Un concert dans le salon avec nos chansons', 'M', 0], ['Écrire ensemble la suite de notre histoire', 'R', 0],
-  ['Choisir ensemble nos 100 prochaines aventures', 'R', 0],
-];
-
-// Le détail des pages d'exemple.
-const DETAILS = {
-  1: { duree: '3 h', ou: 'Là où tout a commencé', idee: "Même endroit, même heure si possible, et chacun essaie de remettre une tenue de ce jour-là. Celui qui se souvient le mieux de la conversation gagne le dessert.", bonus: "Racontez chacun ce que vous avez pensé de l'autre ce soir-là, sans rien cacher." },
-  2: { duree: '2 h', ou: 'À la maison', idee: "Chacun cuisine le plat préféré de l'autre, en secret et sans demander la recette. Ensuite, on goûte, on compare avec l'original et on se note sur dix.", bonus: "Demandez la recette de famille à un parent de l'autre. Ça marche à tous les coups." },
-  27: { duree: '2 h', ou: 'Dehors', idee: "Poterie, cuisine, salsa, escalade, peu importe : choisissez un truc que ni l'un ni l'autre ne sait faire. C'est beaucoup plus drôle quand vous êtes nuls tous les deux.", bonus: "Gardez l'objet raté que vous aurez fabriqué. Dans dix ans, il sera précieux." },
-  28: { duree: '1 h 30', ou: 'Dehors', idee: "Soixante minutes pour sortir d'une pièce, à deux. On voit très vite qui panique et qui garde la tête froide !", bonus: 'Notez qui a trouvé le plus d\'indices. Revanche dans six mois ?' },
-  70: { duree: '1 h', ou: 'À la maison ou dans le quartier', idee: "Chacun prépare cinq indices pour l'autre, cachés dans la maison ou dans le quartier. Au bout, un petit trésor : un mot, un gâteau, deux places de cinéma...", bonus: "Celui qui a mis le plus de temps à trouver prépare le petit-déjeuner." },
-  71: { duree: '15 min', ou: 'Sur votre canapé', idee: "Faites le test de couple sur quiz-couple.com, chacun sur son téléphone ou sur le même, et notez votre score ici. Dans un an, jour pour jour, refaites-le et comparez.", bonus: 'Écrivez la question qui vous a le plus surpris.', test: true },
+const ICI = path.dirname(fileURLToPath(import.meta.url));
+// L'éditeur, imprimé page 2 de chaque édition : le règlement européen sur la
+// sécurité générale des produits (règlement 2023/988, art. 9.6) demande, sur
+// tout produit vendu dans l'Union, le nom du fabricant (pour un livre,
+// l'éditeur qui le vend sous son nom), son adresse postale et une adresse
+// électronique. Une adresse de domiciliation peut remplacer celle-ci : on la
+// change ici, puis on refait les PDF des six langues.
+export const EDITEUR = {
+  nom: 'Visibilitea',
+  personne: 'Thomas Owaller',
+  adresse: '4\u00a0rue de Bruges, 67000\u00a0Strasbourg', // espaces insécables : le code postal reste avec la ville
+  email: 'infoquizcouple@gmail.com',
 };
 
-const css = `
-.fmt-aventures { --c-ligne: #c8b3bd; }
-.fmt-aventures .feuille { background: var(--c-papier); }
-.tag { display: inline-flex; align-items: center; gap: 4pt; padding: 2.5pt 8pt; border-radius: 99pt; font-family: var(--f-titre); font-weight: 600; font-size: 8pt; white-space: nowrap; background: #fff; border: 0.8pt solid #ead9e0; }
-.tags { display: flex; flex-wrap: wrap; gap: 4pt; }
-.av { flex: 1; display: grid; grid-template-columns: 1fr 2.6in; gap: 0.3in; }
-.feuille--verso .av { grid-template-columns: 2.6in 1fr; }
-.feuille--verso .av .av-photo { order: -1; }
-.av-texte { display: flex; flex-direction: column; gap: 9pt; min-width: 0; }
-.av-num { font-family: var(--f-titre); font-weight: 700; font-size: 64pt; line-height: 0.8; letter-spacing: -0.02em; }
-.av-titre { font-family: var(--f-titre); font-weight: 600; font-size: 23pt; line-height: 1.04; text-wrap: balance; }
-.av-idee { font-size: 10.6pt; line-height: 1.52; }
-.av-champ { display: grid; grid-template-columns: auto 1fr; gap: 6pt; align-items: end; font-family: var(--f-titre); font-weight: 600; font-size: 9pt; color: var(--c-encre-douce); }
-.av-champ .ligne { height: 0.28in; }
-.av-retenir h4 { font-family: var(--f-titre); font-weight: 600; font-size: 10pt; margin-bottom: 1pt; display: flex; align-items: center; gap: 5pt; }
-.av-retenir .ligne { height: 0.285in; }
-.av-retenir + .av-retenir { margin-top: -2pt; }
-.souvenir { width: 2.45in; height: 1.55in; border: 1.2pt dashed #cbb4bf; border-radius: 8pt; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3pt; text-align: center; color: #a48d98; font-size: 7.6pt; line-height: 1.3; padding: 8pt; background: rgba(255,255,255,.55); }
-.souvenir b { font-family: var(--f-titre); font-weight: 600; font-size: 9pt; color: #8f7783; }
-.cats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8pt; margin-top: 12pt; }
-.cat { border-radius: 12pt; padding: 9pt 10pt; display: flex; flex-direction: column; gap: 4pt; }
-.cat h4 { font-family: var(--f-titre); font-weight: 600; font-size: 11pt; display: flex; align-items: center; gap: 5pt; }
-.cat p { font-size: 8.4pt; line-height: 1.38; }
-.cat .compte { font-family: var(--f-titre); font-weight: 600; font-size: 8pt; opacity: .75; }
-.av-bonus { margin-top: 2pt; border-radius: 10pt; padding: 7pt 10pt; font-size: 8.8pt; line-height: 1.4; display: flex; gap: 7pt; align-items: flex-start; }
-.av-bonus b { font-family: var(--f-titre); font-weight: 600; }
-.av-photo { display: flex; flex-direction: column; gap: 12pt; align-items: center; }
-.cadre { position: relative; width: 2.45in; height: 3.75in; background: #fff; border-radius: 4pt; padding: 0.11in 0.11in 0.42in; transform: rotate(var(--rot, 2deg)); box-shadow: 0 0 0 0.8pt #e6d5dc; }
-.cadre-in { width: 100%; height: 100%; border: 1.2pt dashed #cbb4bf; border-radius: 2pt; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4pt; text-align: center; color: #a48d98; font-size: 7.6pt; line-height: 1.3; padding: 8pt; }
-.cadre-in b { font-family: var(--f-titre); font-weight: 600; font-size: 9pt; color: #8f7783; }
-.cadre .scotch { position: absolute; width: 0.9in; height: 0.26in; opacity: 0.75; }
-.cadre .legende { position: absolute; left: 0; right: 0; bottom: 0.1in; text-align: center; font-family: var(--f-plume); font-style: italic; font-size: 9pt; color: #a48d98; }
-.notes { width: 100%; display: flex; flex-direction: column; gap: 5pt; background: #fff; border-radius: 10pt; padding: 7pt 9pt; box-shadow: 0 0 0 0.8pt #ead9e0; }
-.notes h4 { font-family: var(--f-titre); font-weight: 600; font-size: 9pt; }
-.note-ligne { display: flex; align-items: center; justify-content: space-between; gap: 6pt; font-size: 8.4pt; }
-.note-ligne .qui { display: flex; align-items: center; gap: 4pt; font-family: var(--f-titre); font-weight: 600; }
-.note-ligne .coeurs { display: flex; gap: 2.5pt; }
-.liste { display: grid; grid-template-columns: 1fr 1fr; column-gap: 0.25in; }
-.liste-item { display: grid; grid-template-columns: 10pt 15pt 1fr auto; gap: 4pt; align-items: center; font-size: 8.5pt; line-height: 1.15; padding: 3.3pt 0; border-bottom: 0.6pt solid #eddde4; }
-.liste-item .n { font-family: var(--f-titre); font-weight: 600; color: var(--c-encre-douce); font-size: 7.6pt; text-align: right; }
-.liste-item .case { width: 8.5pt; height: 8.5pt; border: 1pt solid #9f8a95; border-radius: 2pt; background: #fff; }
-.liste-item .cout { font-family: var(--f-titre); font-weight: 600; font-size: 7pt; color: var(--c-encre-douce); }
-.page-tete { display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: 9pt; }
-.page-tete h2 { font-family: var(--f-titre); font-weight: 600; font-size: 22pt; line-height: 1; }
-.page-tete .etiquette { color: var(--c-rose-texte); display: block; margin-bottom: 3pt; }
-.legende-cats { display: flex; flex-wrap: wrap; gap: 5pt; justify-content: flex-end; max-width: 3.9in; }
-.mode { display: grid; grid-template-columns: 1fr 1fr; gap: 12pt 18pt; margin-top: 6pt; }
-.mode-bloc { background: #fff; border-radius: 12pt; padding: 10pt 12pt; box-shadow: 0 0 0 0.8pt #ead9e0; }
-.mode-bloc h3 { font-family: var(--f-titre); font-weight: 600; font-size: 12pt; margin-bottom: 3pt; display: flex; align-items: center; gap: 6pt; }
-.mode-bloc p { font-size: 9.2pt; line-height: 1.45; }
-.mode-n { width: 20pt; height: 20pt; border-radius: 99pt; background: var(--c-rose); color: #2a1e36; display: inline-flex; align-items: center; justify-content: center; font-weight: 700; font-size: 10pt; }
-.titre-av { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; gap: 12pt; }
-.titre-av h1 { font-family: var(--f-titre); font-weight: 700; font-size: 40pt; line-height: 0.95; }
-.titre-av h1 b { color: var(--c-rose-texte); font-size: 64pt; display: block; }
-.titre-av .noms { display: grid; grid-template-columns: 2.2in auto 2.2in; gap: 8pt; align-items: end; margin-top: 10pt; }
-.titre-av .noms .ligne { height: 0.36in; }
-.titre-av .et { font-family: var(--f-plume); font-style: italic; font-size: 18pt; color: var(--c-rose-texte); }
-.chemin { display: flex; align-items: flex-end; justify-content: center; gap: 0.15in; }
-.palmares { display: flex; flex-direction: column; gap: 9pt; }
-.podium { display: grid; grid-template-columns: repeat(5, 1fr); gap: 8pt; }
-.podium .marche { background: #fff; border-radius: 10pt; padding: 8pt; box-shadow: 0 0 0 0.8pt #ead9e0; display: flex; flex-direction: column; gap: 4pt; min-height: 1.15in; }
-.podium .rang { font-family: var(--f-titre); font-weight: 700; font-size: 20pt; color: var(--c-rose-texte); line-height: 1; }
-.podium .ligne { height: 0.24in; }
-.encart { background: #fff; border-radius: 12pt; padding: 9pt 12pt; box-shadow: 0 0 0 0.8pt #ead9e0; }
-.encart h3 { font-family: var(--f-titre); font-weight: 600; font-size: 12pt; margin-bottom: 2pt; display: flex; align-items: center; gap: 6pt; }
-.encart .ligne { height: 0.26in; }
-.vierge-num { font-family: var(--f-titre); font-weight: 700; font-size: 58pt; line-height: 0.8; color: #e8d6de; }
-.copy { flex: 1; display: flex; flex-direction: column; justify-content: flex-end; gap: 6pt; font-size: 7.6pt; line-height: 1.5; color: var(--c-encre-douce); max-width: 4.6in; }
-.copy b { color: var(--c-encre); }
-.score-test { display: grid; grid-template-columns: 1fr 1fr; gap: 8pt; }
-.score-test > div { background: #fff; border-radius: 10pt; padding: 7pt 9pt; box-shadow: 0 0 0 0.8pt #ead9e0; font-family: var(--f-titre); font-weight: 600; font-size: 9pt; color: var(--c-encre-douce); }
-.score-test .pct { font-size: 22pt; color: var(--c-rose-texte); line-height: 1.1; }
-`;
+export const LANGUES = ['fr', 'en', 'es', 'de', 'it', 'nl'];
+export const PAGES = 136;
+const DEBUT_AVENTURES = 9;
+const LOGO = '../../../reseaux/studio/public/marque/logo-quiz-couple-180.png';
 
-const scotch = (couleur, style) => `<svg class="scotch" viewBox="0 0 90 26" style="${style}" preserveAspectRatio="none" aria-hidden="true"><path d="M3 4 L87 1 L86 22 L4 25 Z" fill="${couleur}"/><path d="M3 4 l3 3 -2 3 3 3 -3 3 3 3 -3 3 M87 1 l-3 3 2 3 -3 3 3 3 -3 3 3 3" fill="none" stroke="${couleur}" stroke-width="2"/></svg>`;
+// Couleur de chaque famille : le trait, le texte (contraste suffisant sur
+// blanc) et la teinte pâle des étiquettes.
+const COULEURS = {
+  M: { c: '#e8892e', t: '#a85a12', p: '#fdebd8' },
+  D: { c: '#5fa058', t: '#3d7536', p: '#e3f1e0' },
+  S: { c: '#3a8fc0', t: '#246a93', p: '#ddeffa' },
+  A: { c: '#7f4db3', t: '#6834b2', p: '#ece2f6' },
+  R: { c: '#e17398', t: '#b12559', p: '#fbe3ec' },
+  F: { c: '#d9a514', t: '#8f6a00', p: '#fdf1c9' },
+};
+const ICONES = {
+  M: '<path d="M4 11l8-7 8 7v9H4z"/><path d="M10 20v-5h4v5"/>',
+  D: '<path d="M12 3c3 2.6 5 5.6 5 8.6a5 5 0 0 1-10 0C7 8.6 9 5.6 12 3z"/><path d="M12 21v-7"/>',
+  S: '<path d="M3.5 8.5a2 2 0 0 0 2-2h13a2 2 0 0 0 2 2v1.5a2 2 0 0 0 0 4v1.5a2 2 0 0 0-2 2h-13a2 2 0 0 0-2-2V14a2 2 0 0 0 0-4z"/><path d="M14.5 7v10" stroke-dasharray="1.6 2.2"/>',
+  A: '<path d="M13.5 2.5L5 13.5h6l-1.5 8 8.5-11h-6z"/>',
+  R: '<path d="M12 19.5C6.4 15.3 3.3 12.2 3.3 8.3 3.3 5.6 5.4 3.6 8 3.6c1.7 0 3.1.9 4 2.2.9-1.3 2.3-2.2 4-2.2 2.6 0 4.7 2 4.7 4.7 0 3.9-3.1 7-8.7 11.2z"/>',
+  F: '<circle cx="12" cy="12" r="8.5"/><path d="M8.2 13.6c1 1.9 2.3 2.8 3.8 2.8s2.8-.9 3.8-2.8"/><path d="M9 9.6h.01M15 9.6h.01"/>',
+};
+const PICTOS = {
+  horloge: '<circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/>',
+  ete: '<circle cx="12" cy="12" r="4"/><path d="M12 2.5v2.5M12 19v2.5M2.5 12H5M19 12h2.5M5.3 5.3l1.8 1.8M16.9 16.9l1.8 1.8M5.3 18.7l1.8-1.8M16.9 7.1l1.8-1.8"/>',
+  hiver: '<path d="M12 2.5v19M3.8 7.2l16.4 9.6M3.8 16.8l16.4-9.6"/><path d="M9.5 4.5L12 7l2.5-2.5M9.5 19.5L12 17l2.5 2.5"/>',
+  crayon: '<path d="M4 20l1-4.5L15.5 5a2 2 0 0 1 2.8 0l.7.7a2 2 0 0 1 0 2.8L8.5 19z"/><path d="M13.5 7l3.5 3.5"/>',
+  avion: '<path d="M21 4.5L3 11.5l6.5 2.5L12 20.5l3-5.5"/><path d="M9.5 14L21 4.5"/>',
+  coupe: '<path d="M7 4h10v4a5 5 0 0 1-10 0z"/><path d="M7 6H4.5a2.5 2.5 0 0 0 2.6 3.8M17 6h2.5a2.5 2.5 0 0 1-2.6 3.8"/><path d="M12 13v4M8.5 20.5h7M10 17h4"/>',
+  etoile: '<path d="M12 2.6l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 16.6l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z"/>',
+  photo: '<rect x="3" y="6.5" width="18" height="13" rx="2.5"/><circle cx="12" cy="13" r="3.6"/><path d="M8.5 6.5l1.4-2.5h4.2l1.4 2.5"/>',
+  monte: '<path d="M6 18L18 6M9 6h9v9"/>',
+  egal: '<path d="M5 9h14M5 15h14"/>',
+  descend: '<path d="M6 6l12 12M18 9v9H9"/>',
+  coche: '<path d="M4.5 12.5l5 5L19.5 6.5"/>',
+};
+const svg = (d, taille, couleur, epais = 2.2) => `<svg class="ico" viewBox="0 0 24 24" style="width:${taille}pt;height:${taille}pt" aria-hidden="true"><g fill="none" stroke="${couleur}" stroke-width="${epais}" stroke-linecap="round" stroke-linejoin="round">${d}</g></svg>`;
+const icone = (k, taille = 10, couleur = null) => svg(ICONES[k], taille, couleur || COULEURS[k].c);
+const picto = (k, taille = 10, couleur = '#785e6c') => svg(PICTOS[k], taille, couleur);
 
-function cadrePhoto(cat, rot = 2) {
-  return `<div class="cadre peut-deborder" style="--rot:${rot}deg">${scotch(CAT[cat].p.replace('#', '#') === CAT[cat].p ? CAT[cat].c : CAT[cat].c, `top:-0.12in;left:50%;transform:translateX(-50%) rotate(${-rot * 1.5}deg);opacity:.55`)}
-<div class="cadre-in"><b>${t('Collez votre photo ici')}</b>${t('format instantané (mini) ou une photo de téléphone découpée')}</div>
-<div class="legende">${t('nous, ce jour-là')}</div></div>`;
-}
-
-const notes = () => `<div class="notes"><h4>${t('Votre note')}</h4>
-<div class="note-ligne"><span class="qui">${pionMini('rose')} ${t('la rose')}</span><span class="coeurs">${coeur(11, { couleur: '#c9557c' }).repeat(5)}</span></div>
-<div class="note-ligne"><span class="qui">${pionMini('violet')} ${t('le violet')}</span><span class="coeurs">${coeur(11, { couleur: '#7f4db3' }).repeat(5)}</span></div></div>`;
-
-function pionMini(qui) {
+// Les deux pions : le rond de la rose, la gélule du violet.
+function pion(qui, taille = 9) {
   return qui === 'rose'
-    ? '<svg viewBox="0 0 20 20" style="width:9pt;height:9pt" aria-hidden="true"><circle cx="10" cy="10" r="8" fill="#e17398" stroke="#4a3540" stroke-width="2"/></svg>'
-    : '<svg viewBox="0 0 16 22" style="width:7.5pt;height:10pt" aria-hidden="true"><rect x="1.5" y="1.5" width="13" height="19" rx="6.5" fill="#7f4db3" stroke="#4a3540" stroke-width="2"/></svg>';
+    ? `<svg class="pion" viewBox="0 0 20 20" style="width:${taille}pt;height:${taille}pt" aria-hidden="true"><circle cx="10" cy="10" r="8" fill="#e17398" stroke="#4a3540" stroke-width="2"/></svg>`
+    : `<svg class="pion" viewBox="0 0 16 22" style="width:${taille * 0.82}pt;height:${taille * 1.12}pt" aria-hidden="true"><rect x="1.5" y="1.5" width="13" height="19" rx="6.5" fill="#7f4db3" stroke="#4a3540" stroke-width="2"/></svg>`;
+}
+// Le coût en pièces : de zéro à trois pleines.
+function pieces(n, taille = 7) {
+  let s = '';
+  for (let i = 0; i < 3; i++) {
+    const plein = i < n;
+    s += `<svg viewBox="0 0 20 20" style="width:${taille}pt;height:${taille}pt" aria-hidden="true"><circle cx="10" cy="10" r="7.6" fill="${plein ? '#f7cf5b' : '#fff'}" stroke="${plein ? '#a8730a' : '#b09ca6'}" stroke-width="2.5"/>${plein ? '<circle cx="10" cy="10" r="3.4" fill="none" stroke="#a8730a" stroke-width="2.2"/>' : ''}</svg>`;
+  }
+  return `<span class="pieces">${s}</span>`;
+}
+const caseVide = '<span class="case"></span>';
+const scotch = (couleur) => `<svg class="scotch" viewBox="0 0 90 26" preserveAspectRatio="none" aria-hidden="true"><path d="M3 4 L87 1 L86 22 L4 25 Z" fill="${couleur}"/><path d="M3 4 l3 3 -2 3 3 3 -3 3 3 3 -3 3 M87 1 l-3 3 2 3 -3 3 3 3 -3 3 3 3" fill="none" stroke="${couleur}" stroke-width="2"/></svg>`;
+
+let css = `
+:root { --k: 1; }
+.fmt-aventures { --c-ligne: #c4b2ba; --lh: 0.3in; }
+.feuille { --k: 1; }
+.ico, .pion { display: inline-block; vertical-align: middle; flex: none; }
+.pieces { display: inline-flex; gap: 1pt; vertical-align: middle; flex: none; }
+.case { display: inline-block; flex: none; width: 8.2pt; height: 8.2pt; border: 0.9pt solid #8a7480; border-radius: 2pt; background: #fff; vertical-align: middle; }
+.trait { flex: 1 1 auto; min-width: 0.45in; border-bottom: 0.8pt solid var(--c-ligne); height: calc(14pt * var(--k)); }
+.trait--court { flex: 0 0 0.42in; min-width: 0.42in; }
+.trait--moyen { flex: 0 0 0.9in; }
+.remplir { flex: 1 1 0; min-height: 0; display: flex; flex-direction: column; }
+.remplir--fixe { flex: none; }
+.remplir .ligne { flex: none; height: var(--lh); border-bottom: 0.8pt solid var(--c-ligne); }
+.remplir { position: relative; }
+.trait { position: relative; }
+.ecrit { position: absolute; left: 3pt; right: 0; bottom: 1.5pt; font-family: var(--f-plume); font-style: italic; font-weight: 500; font-size: 11.5pt; line-height: 1; color: #2f4f9a; white-space: nowrap; }
+.ecrit-bloc { position: absolute; left: 3pt; right: 4pt; top: 0; font-family: var(--f-plume); font-style: italic; font-weight: 500; font-size: 13pt; line-height: var(--lh); padding-top: 2pt; color: #2f4f9a; }
+.case--cochee { position: relative; }
+.case--cochee svg { position: absolute; left: -1pt; top: -3pt; width: 11pt; height: 11pt; }
+.photo-img { position: absolute; inset: 0; overflow: hidden; border-radius: 2pt; box-shadow: 0 0 0 1pt #2b1722; background: #fff; }
+.etiquette { font-size: calc(7pt * var(--k)); }
+.page-tete { display: flex; align-items: flex-end; justify-content: space-between; gap: 12pt; margin-bottom: calc(10pt * var(--k)); flex: none; }
+.page-tete h2 { font-family: var(--f-titre); font-weight: 600; font-size: calc(23pt * var(--k)); line-height: 1.02; text-wrap: balance; }
+.page-tete .etiquette { color: var(--c-rose-texte); display: block; margin-bottom: 3pt; }
+.page-tete .mascotte { flex: none; }
+.bloc-t { font-family: var(--f-titre); font-weight: 600; font-size: calc(10.5pt * var(--k)); display: flex; align-items: center; gap: 5pt; margin-bottom: calc(3pt * var(--k)); flex: none; }
+.champ { display: flex; flex-wrap: wrap; align-items: flex-end; column-gap: calc(6pt * var(--k)); row-gap: 2pt; font-family: var(--f-titre); font-weight: 500; font-size: calc(9pt * var(--k)); line-height: 1.2; color: var(--c-encre); }
+.champ-l { flex: 0 1 auto; padding-bottom: 1.5pt; }
+.champ-r { flex: 1 0 auto; display: flex; align-items: flex-end; gap: calc(9pt * var(--k)); min-width: 1.6in; }
+.chacun { flex: 1 1 0; display: flex; align-items: flex-end; gap: 3pt; min-width: 0.7in; }
+.chacun .pion { margin-bottom: 2pt; }
+.sur10 { flex: none; display: flex; align-items: flex-end; gap: 3pt; }
+.sur10 span.n { padding-bottom: 1.5pt; color: var(--c-encre-douce); }
+.opts { flex: 1 0 auto; display: flex; flex-wrap: wrap; align-items: center; gap: 3pt calc(10pt * var(--k)); padding-bottom: 1.5pt; }
+.opt { display: inline-flex; align-items: center; gap: 3pt; white-space: nowrap; }
+.ligne-l { display: flex; align-items: flex-end; gap: 6pt; font-family: var(--f-titre); font-weight: 500; font-size: calc(9.6pt * var(--k)); }
+.ligne-l > span:not(.trait) { padding-bottom: 1.5pt; }
+
+/* ── La page d'une aventure ── */
+.av { flex: 1; min-height: 0; display: flex; flex-direction: column; gap: calc(7pt * var(--k)); --cat: #e17398; --cat-t: #b12559; --cat-p: #fbe3ec; }
+.av-tete { display: flex; align-items: flex-start; gap: calc(12pt * var(--k)); flex: none; }
+.av-num { font-family: var(--f-titre); font-weight: 700; font-size: calc(52pt * var(--k)); line-height: 0.82; letter-spacing: -0.03em; color: var(--cat); flex: none; padding-top: 2pt; }
+.av-tete-d { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: calc(5pt * var(--k)); }
+.tags { display: flex; flex-wrap: wrap; gap: 4pt; }
+.tag { display: inline-flex; align-items: center; gap: 3.5pt; padding: 2pt 7pt; border-radius: 99pt; font-family: var(--f-titre); font-weight: 600; font-size: calc(7.8pt * var(--k)); white-space: nowrap; background: #fff; border: 0.8pt solid #e2d2d9; color: var(--c-encre); }
+.tag--cat { background: var(--cat-p); border-color: var(--cat-p); color: var(--cat-t); }
+.av-titre { font-family: var(--f-titre); font-weight: 600; font-size: calc(22pt * var(--k)); line-height: 1.03; text-wrap: balance; }
+.av-idee { font-size: calc(10pt * var(--k)); line-height: 1.46; flex: none; }
+.av-corps { flex: 1; min-height: 0; display: grid; grid-template-columns: minmax(0, 1fr) 2.5in; gap: 0.25in; }
+.feuille--verso .av-corps { grid-template-columns: 2.5in minmax(0, 1fr); }
+.feuille--verso .av-d { order: -1; }
+.av-g { min-height: 0; display: flex; flex-direction: column; gap: calc(8pt * var(--k)); }
+.av-quand { display: flex; align-items: flex-end; gap: 6pt; font-family: var(--f-titre); font-weight: 600; font-size: calc(9.5pt * var(--k)); color: var(--c-encre-douce); flex: none; }
+.av-quand > span:not(.trait) { padding-bottom: 1.5pt; }
+.av-quand .trait:first-of-type { flex: 0 0 1.35in; }
+.histoire { flex: none; border: 1.1pt solid var(--cat); border-radius: 9pt; padding: calc(6pt * var(--k)) calc(9pt * var(--k)) calc(7pt * var(--k)); display: flex; flex-direction: column; gap: calc(5.5pt * var(--k)); }
+.histoire-t { font-family: var(--f-titre); font-weight: 600; font-size: calc(8.6pt * var(--k)); color: var(--cat-t); display: flex; align-items: center; gap: 4pt; }
+.retenir { flex: 1 1 0; min-height: 0; display: flex; flex-direction: column; }
+.retenir h4 { font-family: var(--f-titre); font-weight: 600; font-size: calc(9.5pt * var(--k)); display: flex; align-items: center; gap: 5pt; flex: none; }
+.av-d { min-height: 0; display: flex; flex-direction: column; align-items: center; gap: calc(9pt * var(--k)); }
+.photo { position: relative; flex: none; width: 2.35in; height: 3.3in; margin-top: 4pt; transform: rotate(var(--rot, 1.6deg)); }
+.photo-in { position: absolute; inset: 0; border: 1.3pt dashed #c3abb7; border-radius: 3pt; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4pt; text-align: center; color: #9b8590; font-size: calc(7.6pt * var(--k)); line-height: 1.3; padding: 10pt; background: #fff; }
+.photo-in b { font-family: var(--f-titre); font-weight: 600; font-size: calc(9pt * var(--k)); color: #8a7480; }
+.photo .scotch { position: absolute; width: 0.85in; height: 0.25in; top: -0.11in; left: 50%; transform: translateX(-50%) rotate(-3deg); opacity: 0.55; }
+.photo-leg { flex: none; margin-top: -3pt; font-family: var(--f-plume); font-style: italic; font-size: calc(9pt * var(--k)); color: #9b8590; text-align: center; }
+.notes { flex: none; width: 100%; display: flex; flex-direction: column; gap: 4pt; border: 1pt solid #e2d2d9; border-radius: 9pt; padding: 6pt 9pt; }
+.notes h4 { font-family: var(--f-titre); font-weight: 600; font-size: calc(8.8pt * var(--k)); }
+.note-l { display: flex; align-items: center; justify-content: space-between; gap: 6pt; font-family: var(--f-titre); font-weight: 600; font-size: calc(8.4pt * var(--k)); }
+.note-l .qui { display: flex; align-items: center; gap: 4pt; }
+.note-l .coeurs { display: flex; gap: 2.5pt; }
+.souvenir { flex: 1 1 0; min-height: 0.7in; width: 100%; border: 1.2pt dashed #c9b4be; border-radius: 9pt; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2pt; text-align: center; color: #9b8590; font-size: calc(7.4pt * var(--k)); line-height: 1.3; padding: 6pt 10pt; }
+.souvenir b { font-family: var(--f-titre); font-weight: 600; font-size: calc(8.8pt * var(--k)); color: #8a7480; }
+
+/* ── Pages d'ouverture ── */
+.titre-p { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; gap: 14pt; }
+.titre-p .duo { display: flex; align-items: flex-end; gap: 0.12in; }
+.titre-p h1 { font-family: var(--f-titre); font-weight: 700; font-size: 40pt; line-height: 0.95; }
+.titre-p h1 .titre-cent { margin: 0 auto 4pt; }
+.titre-p h1 b { display: block; color: var(--c-rose); font-size: 96pt; line-height: 0.85; letter-spacing: -0.03em; -webkit-text-stroke: 2.2pt var(--c-encre); paint-order: stroke fill; }
+.titre-p .sous { font-family: var(--f-titre); font-weight: 500; font-size: 13pt; color: var(--c-violet-texte); }
+.titre-p .marque { margin-top: 18pt; display: flex; align-items: center; gap: 6pt; font-family: var(--f-titre); font-weight: 600; font-size: 11pt; color: var(--c-encre-douce); }
+.titre-p .marque img { width: 0.3in; height: 0.3in; }
+.copy { flex: 1; display: flex; flex-direction: column; justify-content: flex-end; gap: 7pt; font-size: 7.8pt; line-height: 1.5; color: var(--c-encre-douce); max-width: 4.8in; }
+.copy b { color: var(--c-encre); }
+.anous { flex: 1; min-height: 0; display: flex; flex-direction: column; gap: calc(14pt * var(--k)); }
+.noms { display: grid; grid-template-columns: 1fr 1fr; gap: 0.35in; }
+.nom { display: flex; flex-direction: column; gap: 6pt; align-items: center; text-align: center; }
+.nom .qui { display: flex; align-items: center; gap: 5pt; font-family: var(--f-titre); font-weight: 600; font-size: 11pt; }
+.nom .trait { width: 100%; height: 26pt; flex: none; }
+.nom small { font-size: 7pt; color: var(--c-encre-douce); }
+.cadeau { flex: 1; min-height: 0; border: 1.2pt dashed #d7b8c6; border-radius: 12pt; padding: 10pt 14pt; display: flex; flex-direction: column; gap: 6pt; }
+.etapes { display: grid; grid-template-columns: 1fr 1fr; gap: calc(10pt * var(--k)) calc(14pt * var(--k)); flex: none; }
+.etape { border: 1pt solid #e2d2d9; border-radius: 12pt; padding: calc(9pt * var(--k)) calc(11pt * var(--k)); }
+.etape h3 { font-family: var(--f-titre); font-weight: 600; font-size: calc(11.5pt * var(--k)); line-height: 1.15; margin-bottom: 3pt; display: flex; align-items: center; gap: 6pt; }
+.etape p { font-size: calc(9pt * var(--k)); line-height: 1.45; }
+.etape-n { flex: none; width: 18pt; height: 18pt; border-radius: 99pt; background: var(--c-rose); color: #fff; display: inline-flex; align-items: center; justify-content: center; font-weight: 700; font-size: 9.5pt; }
+.mode-bas { flex: 1; min-height: 0; display: grid; grid-template-columns: minmax(0, 1fr) 2.55in; gap: 0.3in; margin-top: calc(14pt * var(--k)); align-items: start; }
+.feuille--verso .mode-bas { grid-template-columns: 2.55in minmax(0, 1fr); }
+.feuille--verso .mode-bas .apercu-bloc { order: -1; }
+.legende-tags { display: grid; grid-template-columns: max-content minmax(0, 1fr); gap: calc(7pt * var(--k)) 10pt; align-items: center; font-size: calc(8.8pt * var(--k)); line-height: 1.35; }
+.legende-tags > div { display: contents; }
+.legende-tags .tag { justify-self: start; }
+.conseil { flex: none; display: flex; align-items: center; gap: 10pt; font-size: calc(8.6pt * var(--k)); line-height: 1.45; color: var(--c-encre-douce); border-top: 0.8pt solid #eadbe2; padding-top: 9pt; margin-top: calc(10pt * var(--k)); }
+.apercu-bloc { display: flex; flex-direction: column; align-items: center; gap: 6pt; }
+.apercu-bloc .photo-leg { margin: 0; }
+.apercu { position: relative; background: #fff; box-shadow: 0 0 0 1pt #e2d2d9; border-radius: 3pt; overflow: hidden; }
+.apercu-zone { position: absolute; transform-origin: 0 0; }
+.familles { display: grid; grid-template-columns: 1fr 1fr; gap: calc(10pt * var(--k)) calc(14pt * var(--k)); flex: none; }
+.famille { border: 1.1pt solid var(--cat); border-radius: 12pt; padding: calc(10pt * var(--k)) calc(12pt * var(--k)); display: flex; flex-direction: column; gap: 4pt; }
+.famille h3 { font-family: var(--f-titre); font-weight: 600; font-size: calc(13pt * var(--k)); display: flex; align-items: center; gap: 6pt; color: var(--cat-t); }
+.famille p { font-size: calc(9pt * var(--k)); line-height: 1.42; }
+.famille .ex { margin: 3pt 0 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 2pt; font-size: calc(8.4pt * var(--k)); }
+.famille .ex li { display: flex; gap: 5pt; align-items: baseline; }
+.famille .ex b { font-family: var(--f-titre); font-weight: 600; color: var(--cat-t); min-width: 16pt; text-align: right; }
+.famille .compte { font-family: var(--f-titre); font-weight: 600; font-size: calc(8.4pt * var(--k)); color: var(--c-encre-douce); }
+.famille-pref { margin-top: auto; padding-top: 10pt; display: flex; align-items: flex-end; gap: 12pt; flex: none; }
+.famille-pref .ligne-l { flex: 1; }
+
+/* ── La liste ── */
+.liste { flex: 1; display: grid; grid-template-columns: 1fr 1fr; grid-auto-flow: column; grid-template-rows: repeat(25, auto); column-gap: 0.22in; align-content: start; }
+.liste-item { display: grid; grid-template-columns: auto 13pt minmax(0, 1fr) auto auto; gap: 4pt; align-items: center; font-size: calc(8.4pt * var(--k)); line-height: 1.15; padding: calc(3.1pt * var(--k)) 0; border-bottom: 0.75pt solid #eadde3; }
+.liste-item .n { font-family: var(--f-titre); font-weight: 600; color: var(--c-encre-douce); font-size: calc(7.6pt * var(--k)); text-align: right; }
+.liste-item .t { display: flex; align-items: center; gap: 4pt; min-width: 0; }
+.liste-item .pg { font-family: var(--f-titre); font-weight: 500; font-size: 7pt; color: #8f7984; min-width: 19pt; text-align: right; }
+.legende-liste { flex: none; margin-top: calc(10pt * var(--k)); display: flex; flex-wrap: wrap; gap: 4pt 6pt; align-items: center; }
+
+/* ── Nous deux (début et fin) ── */
+.nd { flex: 1; min-height: 0; display: grid; grid-template-columns: minmax(0, 1fr) 2.3in; gap: 0.25in; }
+.feuille--verso .nd { grid-template-columns: 2.3in minmax(0, 1fr); }
+.feuille--verso .nd-d { order: -1; }
+.nd-g { min-height: 0; display: flex; flex-direction: column; gap: calc(9pt * var(--k)); }
+.nd-d { display: flex; flex-direction: column; gap: 12pt; align-items: center; }
+.nd-communs { display: grid; grid-template-columns: 1fr 1fr; gap: calc(7pt * var(--k)) 14pt; flex: none; }
+.nd-table { display: grid; grid-template-columns: minmax(1.2in, auto) 1fr 1fr; gap: calc(6pt * var(--k)) 10pt; align-items: end; font-family: var(--f-titre); font-weight: 500; font-size: calc(9pt * var(--k)); flex: none; }
+.nd-table .th { display: flex; align-items: center; gap: 4pt; font-weight: 600; justify-content: center; }
+.nd-table .l { max-width: 1.7in; line-height: 1.15; padding-bottom: 1.5pt; }
+.nd-table .trait { min-width: 0; }
+.nd-bloc { flex: 1 1 0; min-height: 0; display: flex; flex-direction: column; }
+.nd-bloc--fixe { flex: none; }
+.nd-bloc h4 { font-family: var(--f-titre); font-weight: 600; font-size: calc(9.5pt * var(--k)); flex: none; display: flex; align-items: center; gap: 5pt; }
+.photo--petite { width: 2.15in; height: 2.75in; }
+
+/* ── Aventure à vous ── */
+.choix-cats { display: flex; flex-wrap: wrap; gap: 4pt 9pt; align-items: center; font-family: var(--f-titre); font-weight: 600; font-size: calc(8.4pt * var(--k)); flex: none; }
+.vierge-num { font-family: var(--f-titre); font-weight: 700; font-size: calc(52pt * var(--k)); line-height: 0.82; color: #e3cfd8; flex: none; }
+
+/* ── Voyages ── */
+.voy-num { flex: none; display: flex; flex-direction: column; align-items: flex-start; gap: 1pt; }
+.voy-num .etiquette { color: var(--c-violet-texte); display: flex; align-items: center; gap: 4pt; }
+.voy-num b { font-family: var(--f-titre); font-weight: 700; font-size: calc(52pt * var(--k)); line-height: 0.82; color: var(--c-violet); letter-spacing: -0.03em; }
+.destination { font-family: var(--f-titre); font-weight: 600; font-size: calc(10.5pt * var(--k)); display: flex; align-items: flex-end; gap: 6pt; color: var(--c-encre-douce); }
+.destination > span:not(.trait) { padding-bottom: 2pt; }
+.destination .trait { height: 30pt; border-bottom-width: 1.1pt; }
+.billet { flex: 1 1 0; min-height: 0.8in; width: 100%; border: 1.2pt dashed #c3abb7; border-radius: 6pt; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; gap: 2pt; color: #9b8590; font-size: calc(7.4pt * var(--k)); padding: 6pt 10pt; }
+.billet b { font-family: var(--f-titre); font-weight: 600; font-size: calc(8.8pt * var(--k)); color: #8a7480; }
+.envies { flex: 1; min-height: 0; display: flex; flex-direction: column; }
+.envie { flex: 1 1 0; max-height: 0.44in; display: grid; grid-template-columns: auto 1fr auto; align-items: end; gap: 8pt; font-family: var(--f-titre); font-weight: 500; font-size: calc(8pt * var(--k)); color: var(--c-encre-douce); padding-bottom: 3pt; }
+.envie .trait { height: 100%; }
+.envie .qui { display: flex; align-items: center; gap: 4pt; }
+
+/* ── Historique des tests ── */
+.hist { flex: 1; min-height: 0; display: flex; flex-direction: column; justify-content: space-between; gap: calc(8pt * var(--k)); }
+.hist-intro { font-size: calc(9.2pt * var(--k)); line-height: 1.45; flex: none; max-width: 6.4in; }
+.htest { flex: none; border: 1.1pt solid #e2d2d9; border-radius: 11pt; padding: calc(8pt * var(--k)) calc(12pt * var(--k)) calc(9pt * var(--k)); display: flex; flex-direction: column; gap: calc(6pt * var(--k)); }
+.htest-tete { display: flex; align-items: flex-end; gap: 8pt; }
+.htest-type { flex: none; font-family: var(--f-titre); font-weight: 600; font-size: calc(8.4pt * var(--k)); color: #fff; background: var(--htype, var(--c-violet)); border-radius: 99pt; padding: 2.5pt 9pt; margin-bottom: 1pt; }
+.htest-aide { flex: none; font-size: calc(7.6pt * var(--k)); color: var(--c-encre-douce); padding-bottom: 2.5pt; max-width: 1.7in; line-height: 1.2; }
+.hgrille { display: grid; grid-template-columns: 0.95in 1.05in minmax(0, 1fr) auto; column-gap: 10pt; row-gap: calc(5pt * var(--k)); align-items: end; font-family: var(--f-titre); font-weight: 500; font-size: calc(9pt * var(--k)); }
+.hth { font-weight: 600; font-size: calc(7.6pt * var(--k)); color: var(--c-encre-douce); text-transform: uppercase; letter-spacing: 0.06em; }
+.hrang { font-weight: 600; color: var(--htype-t); padding-bottom: 1.5pt; line-height: 1.1; }
+.hcell { display: flex; align-items: flex-end; gap: 4pt; flex: 1 1 0; min-width: 0; }
+.hcell .trait { min-width: 0.3in; }
+.hcell .pion { margin-bottom: 2pt; }
+.hcell--date { display: flex; }
+.hcell--gagnant { flex: 0 0 auto; gap: 5pt; align-items: center; padding-bottom: 1.5pt; }
+.hres { display: flex; align-items: flex-end; gap: 9pt; min-width: 0; }
+.hevo { display: flex; gap: 6pt; align-items: center; padding-bottom: 1.5pt; color: var(--c-encre-douce); }
+
+/* ── Palmarès et trophées ── */
+.podium { display: flex; flex-direction: column; gap: calc(6pt * var(--k)); flex: none; }
+.marche { display: grid; grid-template-columns: 26pt auto auto 1fr; align-items: end; gap: 7pt; font-family: var(--f-titre); font-weight: 500; font-size: calc(9pt * var(--k)); }
+.marche > span:not(.trait):not(.rang) { padding-bottom: 1.5pt; }
+.marche .rang { font-weight: 700; font-size: calc(19pt * var(--k)); line-height: 1; color: var(--c-rose-texte); text-align: center; }
+.compteurs { display: grid; grid-template-columns: 1fr 1fr; gap: 8pt 18pt; flex: none; }
+.trophees { flex: 1; min-height: 0; display: grid; grid-template-columns: 1fr 1fr; grid-auto-rows: 1fr; gap: calc(9pt * var(--k)) calc(14pt * var(--k)); }
+.trophee { border: 1pt solid #e2d2d9; border-radius: 11pt; padding: calc(7pt * var(--k)) calc(10pt * var(--k)) calc(8pt * var(--k)); display: flex; flex-direction: column; justify-content: space-between; gap: 6pt; }
+.trophee h4 { font-family: var(--f-titre); font-weight: 600; font-size: calc(10pt * var(--k)); line-height: 1.15; display: flex; align-items: center; gap: 6pt; }
+.trophee .lignes-t { display: flex; flex-direction: column; gap: calc(5pt * var(--k)); }
+.photos4 { flex: 1; min-height: 0; display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; gap: 0.28in 0.35in; padding: 8pt 6pt 0; }
+.photos4 .cellule { display: flex; flex-direction: column; align-items: center; gap: 8pt; min-height: 0; }
+.photos4 .photo { width: 100%; height: auto; flex: 1; margin: 0; }
+.photos4 .trait { width: 80%; flex: none; }
+.mot { flex: 1; min-height: 0; display: flex; flex-direction: column; gap: calc(12pt * var(--k)); }
+.mot-tete { display: flex; align-items: center; gap: 0.2in; flex: none; }
+.mot-tete h2 { font-family: var(--f-titre); font-weight: 600; font-size: calc(26pt * var(--k)); line-height: 1.05; }
+.mot-tete p { font-size: calc(9.6pt * var(--k)); line-height: 1.5; margin-top: 6pt; }
+`;
+// Aucune taille de texte sous 7 pt, même réduite (règle d'impression de KDP).
+css = css.replace(/font-size: calc\(([\d.]+)pt \* var\(--k\)\)/g, (m, x) => (+x * 0.8 < 7 ? `font-size: max(7pt, calc(${x}pt * var(--k)))` : m));
+
+// La photo collée sur la page remplie : les deux personnages en pique-nique.
+function scenePiqueNique() {
+  const carreaux = Array.from({ length: 9 }, (_, i) => Array.from({ length: 4 }, (_, j) => ((i + j) % 2 ? '' : `<rect x="${10 + i * 9}" y="${104 + j * 7}" width="9" height="7" fill="#fff"/>`)).join('')).join('');
+  return `<svg viewBox="0 0 100 140" preserveAspectRatio="xMidYMid slice" style="position:absolute;inset:0;width:100%;height:100%" aria-hidden="true">
+<rect width="100" height="140" fill="#cfe9f8"/><circle cx="80" cy="20" r="8" fill="#f7cf5b" stroke="#2b1722" stroke-width="1.6"/>
+<rect x="0" y="86" width="100" height="54" fill="#94c78e"/><path d="M0 86 H100" stroke="#2b1722" stroke-width="1.4"/>
+<rect x="15" y="44" width="6" height="44" fill="#a8733f" stroke="#2b1722" stroke-width="1.4"/><circle cx="18" cy="38" r="17" fill="#6fb06a" stroke="#2b1722" stroke-width="1.6"/>
+<rect x="10" y="104" width="81" height="28" fill="#f2a5bf" stroke="#2b1722" stroke-width="1.4"/>${carreaux}<rect x="10" y="104" width="81" height="28" fill="none" stroke="#2b1722" stroke-width="1.4"/>
+<path d="M70 104 l2-11 h17 l2 11z" fill="#c98b4e" stroke="#2b1722" stroke-width="1.4" stroke-linejoin="round"/><path d="M74 93 c0-8 12-8 12 0" fill="none" stroke="#2b1722" stroke-width="1.4"/></svg>
+<div style="position:absolute;left:6%;bottom:9%;display:flex;align-items:flex-end;gap:2%">${mascotte('rose', 'joie', { hauteur: '1.15in' })}${mascotte('violet', 'amoureux', { hauteur: '1.35in' })}</div>`;
 }
 
-function pageAventure(n, folio) {
-  const [titre, cat, cout] = AVENTURES[n - 1];
-  const d = DETAILS[n];
-  const C = CAT[cat];
-  const photo = d.test
-    ? `<div class="av-photo"><div class="encart" style="width:100%;text-align:center;display:flex;flex-direction:column;align-items:center;gap:6pt;padding:12pt">${qr('https://quiz-couple.com/tester-son-couple/')}<div style="font-family:var(--f-titre);font-weight:600;font-size:9.5pt">${t('Le test de couple')}</div><div style="font-size:8pt;color:var(--c-encre-douce)">quiz-couple.com</div></div>
-<div class="score-test" style="width:100%"><div>${t('Notre score')}<div class="pct">___ %</div>${t('le ___ / ___ / ____')}</div><div>${t('Un an après')}<div class="pct">___ %</div>${t('le ___ / ___ / ____')}</div></div>${notes()}</div>`
-    : `<div class="av-photo">${cadrePhoto(cat, folio % 2 ? 2.2 : -2.2)}${notes()}<div class="souvenir"><b>${t('Le petit souvenir')}</b>${t('un ticket, une étiquette, une fleur séchée... à coller ici')}</div></div>`;
-  return {
-    folio, titre: `Aventure ${n}`,
-    html: `<div class="av">
-<div class="av-texte">
-  <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:8pt"><div class="av-num" style="color:${C.c}">${String(n).padStart(2, '0')}</div>${n === 71 ? mascotte('violet', 'clin' === 'x' ? 'repos' : 'repos', { hauteur: '0.75in', extra: { yeux: 'clin' } }) : ''}</div>
-  <div class="tags"><span class="tag" style="background:${C.p};border-color:${C.p}">${icone(cat, 10)} ${t(C.nom)}</span><span class="tag">${t(COUT[cout])}</span><span class="tag">${t(d.duree)}</span><span class="tag">${t(d.ou)}</span></div>
-  <div class="av-titre">${t(titre)}</div>
-  <div class="av-idee">${t(d.idee)}</div>
-  <div class="av-champ"><span>${t('Fait le')}</span><div class="ligne"></div></div>
-  <div class="av-champ"><span>${t('Où ?')}</span><div class="ligne"></div></div>
-  <div class="av-retenir"><h4>${pionMini('rose')} ${t('Ce que la rose retiendra')}</h4><div class="ligne"></div><div class="ligne"></div><div class="ligne"></div><div class="ligne"></div></div>
-  <div class="av-retenir"><h4>${pionMini('violet')} ${t('Ce que le violet retiendra')}</h4><div class="ligne"></div><div class="ligne"></div><div class="ligne"></div><div class="ligne"></div></div>
-  <div class="av-bonus" style="background:${C.p}">${icone(cat, 13)}<div><b>${t('Le bonus :')}</b> ${t(d.bonus)}</div></div>
+// ── Le texte de chaque langue ─────────────────────────────────────────────
+const CACHE = {};
+export async function charger(lang) {
+  const fichier = path.join(ICI, 'aventures', `${lang}.mjs`);
+  if (!fs.existsSync(fichier)) throw new Error(`pas de textes pour ${lang} : ${fichier}`);
+  CACHE[lang] = (await import(`./aventures/${lang}.mjs`)).default;
+}
+
+// ── Le livre ──────────────────────────────────────────────────────────────
+export default function construire(lang = 'fr') {
+  const T = CACHE[lang];
+  if (!T) throw new Error(`textes non chargés pour ${lang} (appeler charger() avant)`);
+  // Le français a ses espaces insécables ; dans toutes les langues, un nombre
+  // reste collé à son unité.
+  const tx = (s) => (lang === 'fr' ? esc(fr(s)) : esc(String(s).replace(/(\d) (€|£|\$|km\b|mi\b|min\b|hrs?\b|h\b|Std\.|ore\b|uur\b|%)/g, '$1\u00a0$2')));
+  const U = T.ui;
+  const lbl = (s) => tx(/[?!]$/.test(s.trim()) ? s : s + U.dp);
+  if (T.aventures.length !== 100) throw new Error(`${lang} : ${T.aventures.length} aventures au lieu de 100`);
+
+  const tagCat = (k) => `<span class="tag tag--cat">${icone(k, 9.5, COULEURS[k].t)} ${tx(T.cats[k].nom)}</span>`;
+  const tagCout = (p) => `<span class="tag">${pieces(p)} ${tx(T.couts[p])}</span>`;
+  const tagDuree = (d) => `<span class="tag">${picto('horloge', 9)} ${tx(d)}</span>`;
+  const tagSaison = (s) => `<span class="tag">${picto(s, 9, s === 'ete' ? '#d9a514' : '#3a8fc0')} ${tx(T.saisons[s])}</span>`;
+
+  // Un champ « pour la petite histoire » (v : la réponse écrite à la main,
+  // pour la page remplie du dos de la couverture).
+  const ecrit = (t) => (t === undefined || t === null || t === '' ? '' : `<span class="ecrit">${tx(String(t))}</span>`);
+  const trait = (v, classe = '') => `<span class="trait${classe}">${ecrit(v)}</span>`;
+  const boite = (coche) => (coche ? '<span class="case case--cochee"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3.5 10.5l4.5 5L17 3.5" fill="none" stroke="#2f4f9a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>' : caseVide);
+  const chacun = (a, b) => `<span class="chacun">${pion('rose', 8.5)}${trait(a)}</span><span class="chacun">${pion('violet', 8.5)}${trait(b)}</span>`;
+  const quiCoche = (autres = [], v) => `<span class="opts"><span class="opt">${pion('rose', 8.5)}${boite(v === 'rose')}</span><span class="opt">${pion('violet', 8.5)}${boite(v === 'violet')}</span>${autres.map((o, i) => `<span class="opt">${boite(v === i)} ${tx(o)}</span>`).join('')}</span>`;
+  function champ(code, v) {
+    const type = code[0];
+    const [libelle, ...choix] = code.slice(2).split('|');
+    const l = `<span class="champ-l">${lbl(libelle)}</span>`;
+    const deux = Array.isArray(v) ? v : [];
+    if (type === 'L') return `<div class="champ">${l}<span class="champ-r">${trait(v)}</span></div>`;
+    if (type === 'X') return `<div class="champ">${l}<span class="champ-r">${chacun(deux[0], deux[1])}</span></div>`;
+    if (type === 'N') {
+      const n = (qui, val) => `<span class="sur10">${pion(qui, 8.5)}${trait(val, ' trait--court')}<span class="n">${tx(U.sur10)}</span></span>`;
+      return `<div class="champ">${l}<span class="champ-r">${n('rose', deux[0])}${n('violet', deux[1])}</span></div>`;
+    }
+    if (type === 'Q') return `<div class="champ">${l}${quiCoche(choix, v)}</div>`;
+    if (type === 'C') return `<div class="champ">${l}<span class="opts">${choix.map((o, i) => `<span class="opt">${boite(v === i)} ${tx(o)}</span>`).join('')}</span></div>`;
+    throw new Error(`champ inconnu : ${code}`);
+  }
+
+  const coeurs = (couleur, plein = 0) => Array.from({ length: 5 }, (_, i) => coeur(11.5, { couleur, plein: i < plein })).join('');
+  const notes = (ex = null) => `<div class="notes"><h4>${tx(U.note)}</h4>
+<div class="note-l"><span class="qui">${pion('rose')} ${tx(U.rose)}</span><span class="coeurs">${coeurs('#c9557c', ex ? ex[0] : 0)}</span></div>
+<div class="note-l"><span class="qui">${pion('violet')} ${tx(U.violet)}</span><span class="coeurs">${coeurs('#7f4db3', ex ? ex[1] : 0)}</span></div></div>`;
+  const photo = (rot, couleur = '#e17398', classe = '', image = '') => `<div class="photo peut-deborder ${classe}" style="--rot:${rot}deg">${image ? `<div class="photo-img">${image}</div>` : `<div class="photo-in"><b>${tx(U.photo)}</b>${tx(U.photoAide)}</div>`}${scotch(couleur)}</div>`;
+  const remplir = (min, { fixe = 0, max = 0, texte = '' } = {}) => `<div class="remplir${fixe ? ' remplir--fixe' : ''}" data-min="${min}"${max ? ` data-max="${max}"` : ''}${fixe ? ` style="height:calc(var(--lh) * ${fixe})" data-max="${fixe}"` : ''}>${texte ? `<div class="ecrit-bloc">${tx(texte)}</div>` : ''}</div>`;
+  const retenir = (ex = null) => `<div class="retenir"><h4>${pion('rose')} ${tx(U.retenirRose)}</h4>${remplir(2, { texte: ex ? ex.rose : '' })}</div>
+<div class="retenir"><h4>${pion('violet')} ${tx(U.retenirViolet)}</h4>${remplir(2, { texte: ex ? ex.violet : '' })}</div>`;
+  const quand = (a = U.le, b = U.a, v = []) => `<div class="av-quand"><span>${tx(a)}</span>${trait(v[0])}<span>${tx(b)}</span>${trait(v[1])}</div>`;
+  const tete = (etiquette, titre, droite = '') => `<div class="page-tete"><div><span class="etiquette">${tx(etiquette)}</span><h2>${tx(titre)}</h2></div>${droite}</div>`;
+
+  function pageAventure(n, ex = null) {
+    const a = T.aventures[n - 1];
+    const C = COULEURS[a.c];
+    const folio = DEBUT_AVENTURES + n - 1;
+    const tags = [tagCat(a.c), tagCout(a.p), tagDuree(a.d)].concat(a.s ? [tagSaison(a.s)] : []).join('');
+    return {
+      folio, titre: `${U.aventure} ${n}`,
+      html: `<div class="av${ex ? ' av--rempli' : ''}" style="--cat:${C.c};--cat-t:${C.t};--cat-p:${C.p}">
+<div class="av-tete"><div class="av-num">${String(n).padStart(2, '0')}</div><div class="av-tete-d"><div class="tags">${tags}</div><h2 class="av-titre">${tx(a.t)}</h2></div></div>
+<p class="av-idee">${tx(a.i)}</p>
+<div class="av-corps">
+<div class="av-g">${quand(U.le, U.a, ex ? ex.quand : [])}
+<div class="histoire"><div class="histoire-t">${picto('crayon', 9, C.t)} ${tx(U.histoire)}</div>${a.f.map((f, i) => champ(f, ex ? ex.champs[i] : undefined)).join('')}</div>
+${retenir(ex)}
 </div>
-${photo}
+<div class="av-d">${photo(folio % 2 ? 1.6 : -1.6, C.c, '', ex ? scenePiqueNique() : '')}<div class="photo-leg">${tx(U.legende)}</div>${notes(ex ? ex.coeurs : null)}<div class="souvenir"><b>${tx(U.souvenir)}</b>${tx(U.souvenirAide)}</div></div>
+</div></div>`,
+    };
+  }
+  // Une page d'aventure en réduction (mode d'emploi, quatrième de couverture).
+  const ZONE_L = 8.5 - (0.55 + 0.1) - 0.5;
+  const ZONE_H = 8.5 - 0.55 - 0.72;
+  const apercu = (n, largeur, ex = null) => {
+    const s = largeur / 8.5;
+    return `<div class="apercu" style="width:${largeur}in;height:${largeur}in"><div class="apercu-zone feuille--recto" style="left:${0.65 * s}in;top:${0.55 * s}in;width:${ZONE_L}in;height:${ZONE_H}in;transform:scale(${s});display:flex;flex-direction:column">${pageAventure(n, ex).html}</div></div>`;
+  };
+
+  // ── Les pages ──
+  const P = T.pages;
+  const pages = [];
+
+  pages.push({
+    folio: 1, titre: 'Titre', sansFolio: true,
+    html: `<div class="titre-p">
+<div class="duo">${mascotte('rose', 'joie', { hauteur: '1.45in' })}${mascotte('violet', 'salut', { hauteur: '1.65in' })}</div>
+<h1>${T.couverture.titre1 === '100' ? cent({ taille: 96, epaisseur: 2.2, classe: 'titre-cent' }) : `<b>${tx(T.couverture.titre1)}</b>`}${tx(T.couverture.titre2)} ${tx(T.couverture.titre3)}</h1>
+<p class="sous">${tx(P.titre.sous)}</p>
+<div class="marque"><img src="${LOGO}" alt="">Quiz Couple</div>
 </div>`,
+  });
+
+  pages.push({
+    folio: 2, titre: 'Mentions', sansFolio: true,
+    html: `<div class="copy">${P.mentions.lignes.map((l, i) => `<p>${i === 0 ? `<b>${tx(l)}</b>` : tx(l)}</p>`).join('')}
+<p>${tx(P.mentions.editeur.replace(/\{(\w+)\}/g, (m, k) => EDITEUR[k] ?? m))}</p>
+${T.isbn ? `<p>${tx(P.mentions.isbn)} ${tx(T.isbn)}</p>` : ''}
+<p>${tx(P.mentions.impression)}</p>
+<p>${tx(P.mentions.prudence)}</p></div>`,
+  });
+
+  pages.push({
+    folio: 3, titre: P.nous.titre,
+    html: `${tete(P.nous.etiquette, P.nous.titre)}
+<div class="anous">
+<div class="noms">
+<div class="nom">${mascotte('rose', 'mignon', { hauteur: '1.35in' })}<div class="qui">${pion('rose', 11)} ${tx(U.roseNom)}</div><span class="trait"></span><small>${tx(P.nous.prenom)}</small></div>
+<div class="nom">${mascotte('violet', 'amoureux', { hauteur: '1.35in' })}<div class="qui">${pion('violet', 11)} ${tx(U.violetNom)}</div><span class="trait"></span><small>${tx(P.nous.prenom)}</small></div>
+</div>
+<div class="ligne-l"><span>${lbl(P.nous.ensemble)}</span><span class="trait"></span></div>
+<div class="ligne-l"><span>${lbl(P.nous.premiere)}</span><span class="trait"></span></div>
+<div class="cadeau"><div class="ligne-l"><span>${tx(P.nous.offert)}</span><span class="trait"></span><span>${tx(P.nous.offertLe)}</span><span class="trait trait--moyen"></span></div>
+<div class="bloc-t" style="margin-top:4pt">${coeur(10, { couleur: '#c9557c' })} ${tx(P.nous.mot)}</div>${remplir(3)}</div>
+</div>`,
+  });
+
+  const legende = `<div class="legende-tags">
+${T.couts.map((c, i) => `<div><span class="tag">${pieces(i)} ${tx(c)}</span><span>${tx(T.coutsAide[i] || '')}</span></div>`).join('')}
+<div><span class="tag">${picto('horloge', 9)} ${tx(T.aventures[0].d)}</span><span>${tx(P.mode.duree)}</span></div>
+<div><span class="tag">${picto('ete', 9, '#d9a514')} ${tx(T.saisons.ete)}</span><span>${tx(P.mode.saison)}</span></div>
+</div>`;
+  pages.push({
+    folio: 4, titre: P.mode.titre,
+    html: `${tete(P.mode.etiquette, P.mode.titre, mascotte('rose', 'salut', { hauteur: '0.85in' }))}
+<div class="etapes">${P.mode.etapes.map(([h, p], i) => `<div class="etape"><h3><span class="etape-n">${i + 1}</span>${tx(h)}</h3><p>${tx(p)}</p></div>`).join('')}</div>
+<div class="mode-bas tient"><div><div class="bloc-t">${tx(P.mode.legende)}</div>${legende}</div>
+<div class="apercu-bloc">${apercu(13, 2.55)}<div class="photo-leg">${tx(P.mode.apercu)}</div></div></div>
+<div class="conseil">${picto('etoile', 14, '#d9a514')}<span>${tx(P.mode.colle)}</span></div>`,
+  });
+
+  pages.push({
+    folio: 5, titre: P.familles.titre,
+    html: `${tete(P.familles.etiquette, P.familles.titre, mascotte('violet', 'joie', { hauteur: '0.9in' }))}
+<div class="familles">${Object.keys(COULEURS).map((k) => {
+      const liste = T.aventures.map((a, i) => ({ ...a, n: i + 1 })).filter((a) => a.c === k);
+      return `<div class="famille" style="--cat:${COULEURS[k].c};--cat-t:${COULEURS[k].t}"><h3>${icone(k, 15)} ${tx(T.cats[k].nom)}</h3><p>${tx(T.cats[k].desc)}</p>
+<ul class="ex">${liste.slice(0, 3).map((a) => `<li><b>${a.n}</b>${tx(a.t)}</li>`).join('')}</ul>
+<span class="compte">${liste.length} ${tx(P.familles.compte)}</span></div>`;
+    }).join('')}</div>
+<div class="famille-pref"><div class="ligne-l"><span>${lbl(P.familles.bas)}</span><span class="trait"></span></div></div>`,
+  });
+
+  const item = (n) => {
+    const a = T.aventures[n - 1];
+    return `<div class="liste-item">${caseVide}<span class="n">${n}</span><span class="t">${icone(a.c, 8.5)} ${tx(a.t)}</span>${pieces(a.p, 6.5)}<span class="pg">${tx(U.page)} ${DEBUT_AVENTURES + n - 1}</span></div>`;
+  };
+  const legendeCats = `<div class="legende-liste">${Object.keys(COULEURS).map((k) => `<span class="tag tag--cat" style="--cat-p:${COULEURS[k].p};--cat-t:${COULEURS[k].t}">${icone(k, 9, COULEURS[k].t)} ${tx(T.cats[k].nom)}</span>`).join('')}</div>`;
+  pages.push({ folio: 6, titre: P.liste.titre, html: `${tete(P.liste.etiquette, P.liste.titre)}<div class="liste">${Array.from({ length: 50 }, (_, i) => item(i + 1)).join('')}</div>` });
+  pages.push({ folio: 7, titre: P.liste.titre2, html: `${tete(P.liste.etiquette2, P.liste.titre2)}<div class="liste">${Array.from({ length: 50 }, (_, i) => item(i + 51)).join('')}</div>${legendeCats}` });
+
+  // Nous deux, au début et à la fin
+  function nousDeux(folio, Q, debut) {
+    return {
+      folio, titre: Q.titre,
+      html: `${tete(Q.etiquette, Q.titre)}
+<div class="nd"><div class="nd-g">
+<div class="ligne-l"><span>${lbl(Q.date)}</span><span class="trait"></span></div>
+<div class="ligne-l"><span>${lbl(Q.ensemble)}</span><span class="trait"></span></div>
+<div class="nd-bloc nd-bloc--fixe"><h4>${lbl(debut ? Q.rencontre : Q.change)}</h4>${remplir(2, { fixe: debut ? 2 : 3 })}</div>
+<div class="nd-communs">${Q.communs.map((c) => `<div class="ligne-l"><span>${lbl(c)}</span><span class="trait"></span></div>`).join('')}</div>
+<div class="nd-table"><span></span><span class="th">${pion('rose')} ${tx(U.rose)}</span><span class="th">${pion('violet')} ${tx(U.violet)}</span>
+${Q.chacun.map((c) => `<span class="l">${tx(c)}</span><span class="trait"></span><span class="trait"></span>`).join('')}</div>
+<div class="nd-bloc"><h4>${tx(debut ? Q.projection : Q.prochaine)}</h4>${remplir(2)}</div>
+</div>
+<div class="nd-d">${photo(folio % 2 ? 1.5 : -1.5, '#e17398', 'photo--petite')}<div class="photo-leg">${tx(Q.photo)}</div>${debut ? mascotte('rose', 'joie', { hauteur: '1.25in' }) : mascotte('violet', 'amoureux', { hauteur: '1.25in' })}</div>
+</div>`,
+    };
+  }
+  pages.push(nousDeux(8, P.debut, true));
+
+  for (let n = 1; n <= 100; n++) pages.push(pageAventure(n));
+
+  // Dix aventures à vous
+  const Vg = P.vierge;
+  const ligneLibre = `<div class="champ"><span class="champ-r"><span class="trait" style="flex:0 0 1.3in"></span><span style="padding-bottom:1.5pt">${tx(U.dp.trim())}</span><span class="trait"></span></span></div>`;
+  for (let i = 0; i < 10; i++) {
+    const n = 101 + i;
+    const folio = 109 + i;
+    pages.push({
+      folio, titre: `${U.aventure} ${n}`,
+      html: `<div class="av" style="--cat:#c9b4be;--cat-t:#785e6c;--cat-p:#f3ecef">
+<div class="av-tete"><div class="vierge-num">${n}</div><div class="av-tete-d"><span class="etiquette" style="color:var(--c-rose-texte)">${tx(Vg.etiquette)}</span>
+<div class="ligne-l"><span>${lbl(Vg.titre)}</span><span class="trait" style="height:24pt;border-bottom-width:1.1pt"></span></div></div></div>
+<div class="choix-cats"><span>${lbl(Vg.famille)}</span>${Object.keys(COULEURS).map((k) => `<span class="opt">${caseVide} ${icone(k, 9)} ${tx(T.cats[k].nom)}</span>`).join('')}</div>
+<div class="choix-cats"><span>${lbl(Vg.cout)}</span>${T.couts.map((c, p) => `<span class="opt">${caseVide} ${pieces(p)} ${tx(c)}</span>`).join('')}<span style="margin-left:6pt">${lbl(Vg.duree)}</span><span class="trait trait--moyen" style="height:10pt"></span></div>
+<div class="av-corps">
+<div class="av-g">${quand()}
+<div class="champ" style="flex:none"><span class="champ-l">${lbl(Vg.idee)}</span>${quiCoche()}</div>
+<div class="histoire" style="--cat:#c9b4be"><div class="histoire-t">${picto('crayon', 9)} ${tx(U.histoire)}</div>${ligneLibre.repeat(3)}</div>
+${retenir()}
+</div>
+<div class="av-d">${photo(folio % 2 ? 1.6 : -1.6, '#c9b4be')}<div class="photo-leg">${tx(U.legende)}</div>${notes()}<div class="souvenir"><b>${tx(U.souvenir)}</b>${tx(U.souvenirAide)}</div></div>
+</div></div>`,
+    });
+  }
+
+  // Nos voyages
+  const VI = P.voyagesIntro;
+  pages.push({
+    folio: 119, titre: VI.titre,
+    html: `${tete(VI.etiquette, VI.titre, `<div style="display:flex;align-items:flex-end;gap:4pt">${mascotte('rose', 'salut', { hauteur: '0.85in' })}${mascotte('violet', 'joie', { hauteur: '0.95in' })}</div>`)}
+<p class="hist-intro" style="margin-bottom:calc(12pt * var(--k))">${tx(VI.texte)}</p>
+<div class="bloc-t">${picto('avion', 12, '#7f4db3')} ${tx(VI.envies)}</div>
+<div class="envies">${Array.from({ length: 14 }, () => `<div class="envie">${caseVide}<span class="trait"></span><span class="qui">${tx(VI.qui)} ${pion('rose', 8.5)}${caseVide} ${pion('violet', 8.5)}${caseVide}</span></div>`).join('')}</div>`,
+  });
+  const V = P.voyage;
+  for (let i = 0; i < 10; i++) {
+    const folio = 120 + i;
+    pages.push({
+      folio, titre: `${V.titre} ${i + 1}`,
+      html: `<div class="av" style="--cat:#7f4db3;--cat-t:#6834b2;--cat-p:#ece2f6">
+<div class="av-tete" style="align-items:flex-end"><div class="voy-num"><span class="etiquette">${picto('avion', 9, '#6834b2')} ${tx(V.titre)}</span><b>${String(i + 1).padStart(2, '0')}</b></div>
+<div class="destination" style="flex:1"><span>${lbl(V.destination)}</span><span class="trait"></span></div></div>
+<div class="av-corps">
+<div class="av-g">${quand(V.du, V.au)}
+<div class="champ" style="flex:none"><span class="champ-l">${lbl(V.transport)}</span><span class="opts">${V.transports.map((m) => `<span class="opt">${caseVide} ${tx(m)}</span>`).join('')}<span class="opt">${caseVide} <span class="trait" style="flex:0 0 0.5in;min-width:0.5in;height:10pt"></span></span></span></div>
+<div class="histoire"><div class="histoire-t">${picto('crayon', 9, '#6834b2')} ${tx(U.histoire)}</div>
+${[V.dormi, V.repas, V.galere, V.phrase, V.rapporte].map((l) => `<div class="champ"><span class="champ-l">${lbl(l)}</span><span class="champ-r"><span class="trait"></span></span></div>`).join('')}
+<div class="champ"><span class="champ-l">${lbl(V.retour)}</span><span class="opts">${V.retours.map((r) => `<span class="opt">${caseVide} ${tx(r)}</span>`).join('')}</span></div></div>
+<div class="retenir"><h4>${picto('etoile', 10, '#d9a514')} ${tx(V.moment)}</h4>${remplir(2)}</div>
+${retenir()}
+</div>
+<div class="av-d">${photo(folio % 2 ? 1.6 : -1.6, '#7f4db3')}<div class="photo-leg">${tx(U.legende)}</div>${notes()}<div class="billet"><b>${tx(V.billet)}</b>${tx(V.billetAide)}</div></div>
+</div></div>`,
+    });
+  }
+
+  // L'historique des tests Quiz Couple : cinq façons de noter un résultat,
+  // sans jamais nommer un test (les noms changent, les formats restent).
+  const H = P.historique;
+  const TYPES = { A: ['#e17398', '#b12559'], B: ['#7f4db3', '#6834b2'], C: ['#3a8fc0', '#246a93'], D: ['#d9a514', '#8f6a00'], E: ['#5fa058', '#3d7536'] };
+  // Une boîte = le nom du test, puis deux rangées (la première fois, un an
+  // après) : la date, le résultat sous sa forme, et l'évolution.
+  const date = '<span class="hcell hcell--date"><span class="trait"></span></span>';
+  const resultat = (type) => {
+    if (type === 'A') return `<span class="hcell">${tx(H.score)}${tx(U.dp)}<span class="trait"></span></span>`;
+    if (type === 'B') return `<span class="hcell">${pion('rose', 8.5)}<span class="trait"></span></span><span class="hcell">${pion('violet', 8.5)}<span class="trait"></span></span><span class="hcell">${tx(H.ensemble)}${tx(U.dp)}<span class="trait"></span></span>`;
+    if (type === 'C') return `<span class="hcell">${pion('rose', 8.5)}<span class="trait"></span></span><span class="hcell">${pion('violet', 8.5)}<span class="trait"></span></span>`;
+    if (type === 'D') return `<span class="hcell">${pion('rose', 8.5)}<span class="trait"></span></span><span class="hcell">${pion('violet', 8.5)}<span class="trait"></span></span><span class="hcell hcell--gagnant">${tx(H.gagnant)}${tx(U.dp)} <span class="opt">${pion('rose', 8.5)}${caseVide}</span><span class="opt">${pion('violet', 8.5)}${caseVide}</span><span class="opt">${caseVide} ${tx(H.egalite)}</span></span>`;
+    return [0, 1, 2].map(() => `<span class="hcell"><span class="trait"></span>${tx(U.dp.trim())}<span class="trait trait--court"></span></span>`).join('');
+  };
+  const evolution = `<span class="hevo">${['monte', 'egal', 'descend'].map((k) => `<span class="opt">${caseVide}${picto(k, 8.5, '#785e6c')}</span>`).join('')}</span>`;
+  const boiteTest = (type) => `<div class="htest" style="--htype:${TYPES[type][0]};--htype-t:${TYPES[type][1]}">
+<div class="htest-tete"><span class="htest-type">${tx(H.types[type][0])}</span><span class="htest-aide">${tx(H.types[type][1])}</span><div class="ligne-l" style="flex:1"><span>${lbl(H.test)}</span><span class="trait"></span></div></div>
+<div class="hgrille">
+<span></span><span class="hth">${tx(H.le)}</span><span class="hth hth--res">${type === 'D' ? tx(H.points) : ''}</span><span class="hth">${tx(H.evolution)}</span>
+<span class="hrang">${tx(H.premiere)}</span>${date}<span class="hres hres--${type}">${resultat(type)}</span><span></span>
+<span class="hrang">${tx(H.apres)}</span>${date}<span class="hres hres--${type}">${resultat(type)}</span>${evolution}
+</div></div>`;
+  pages.push({
+    folio: 130, titre: H.titre,
+    html: `<div class="page-tete"><div><span class="etiquette">${tx(H.etiquette)}</span><h2>${tx(H.titre)}</h2><div class="plume" style="font-size:calc(13pt * var(--k));color:var(--c-violet-texte);margin-top:3pt">${tx(H.sous)}</div></div>${mascotte('violet', 'surprise', { hauteur: '0.9in' })}</div>
+<div class="hist"><p class="hist-intro">${tx(H.texte)}</p>${['A', 'A', 'A', 'B'].map(boiteTest).join('')}</div>`,
+  });
+  pages.push({ folio: 131, titre: `${H.titre} (2)`, html: `<div class="hist">${['B', 'C', 'C', 'D', 'E'].map(boiteTest).join('')}</div>` });
+
+  // Le palmarès, les trophées
+  const PA = P.palmares;
+  pages.push({
+    folio: 132, titre: PA.titre,
+    html: `${tete(PA.etiquette, PA.titre, mascotte('violet', 'joie', { hauteur: '0.95in' }))}
+<div class="nd" style="grid-template-columns:minmax(0,1fr) 2.4in"><div class="nd-g">
+<div class="bloc-t">${picto('coupe', 12, '#d9a514')} ${tx(PA.top)}</div>
+<div class="podium">${[1, 2, 3, 4, 5].map((r) => `<div class="marche"><span class="rang">${r}</span><span>${tx(PA.numero)}</span><span class="trait trait--court"></span><span class="trait"></span></div>`).join('')}</div>
+<div class="bloc-t" style="margin-top:calc(8pt * var(--k))">${picto('etoile', 12, '#e17398')} ${tx(PA.compteur)}</div>
+<div class="compteurs">${PA.compteurs.map((c, i) => `<div class="ligne-l"><span>${lbl(c)}</span>${i === 3 ? `<span style="font-family:var(--f-plume);font-style:italic;color:var(--c-rose-texte)">${tx(PA.fousRires)}</span>` : `<span class="trait"></span>${i === 0 ? '<span>/ 110</span>' : ''}`}</div>`).join('')}</div>
+<div class="nd-bloc" style="margin-top:calc(6pt * var(--k))"><h4>${picto('crayon', 10, '#7f4db3')} ${tx(PA.retenu)}</h4>${remplir(3)}</div>
+</div>
+<div class="nd-d" style="order:0">${photo(1.5, '#d9a514', 'photo--petite')}<div class="photo-leg">${tx(PA.photo)}</div><div class="photo-leg" style="font-family:var(--f-texte);font-style:normal;font-size:7.6pt">${tx(PA.photoAide)}</div></div>
+</div>`,
+  });
+  const TR = P.trophees;
+  pages.push({
+    folio: 133, titre: TR.titre,
+    html: `${tete(TR.etiquette, TR.titre, picto('coupe', 40, '#d9a514'))}
+<div class="trophees">${TR.liste.map((l, i) => `<div class="trophee"><h4>${picto(i % 2 ? 'etoile' : 'coupe', 13, ['#e17398', '#7f4db3', '#3a8fc0', '#5fa058', '#d9a514', '#e8892e'][i % 6])} ${tx(l)}</h4><div class="lignes-t"><div class="ligne-l"><span>${tx(PA.numero)}</span><span class="trait trait--court"></span><span class="trait"></span></div><div class="ligne-l"><span>${lbl(TR.pourquoi)}</span><span class="trait"></span></div></div></div>`).join('')}</div>`,
+  });
+
+  pages.push(nousDeux(134, P.fin, false));
+
+  const MF = P.motFin;
+  pages.push({
+    folio: 135, titre: MF.titre,
+    html: `<div class="mot"><div class="mot-tete">${mascotte('rose', 'amoureux', { hauteur: '1.35in' })}${mascotte('violet', 'amoureux', { hauteur: '1.5in' })}<div><h2>${tx(MF.titre)}</h2><p>${tx(MF.texte)}</p></div></div>
+<div class="nd-bloc"><h4>${pion('rose')} ${tx(MF.rose)}</h4>${remplir(3)}</div>
+<div class="nd-bloc"><h4>${pion('violet')} ${tx(MF.violet)}</h4>${remplir(3)}</div>
+<div class="ligne-l" style="max-width:3in;flex:none"><span>${tx(MF.date)}</span><span class="trait"></span></div></div>`,
+  });
+
+  const PH = P.photos;
+  pages.push({
+    folio: 136, titre: PH.titre,
+    html: `${tete(PH.etiquette, PH.titre, picto('photo', 34, '#e17398'))}
+<div class="photos4">${[-1.5, 1.2, 1.4, -1.2].map((r, i) => `<div class="cellule">${photo(r, ['#e17398', '#7f4db3', '#3a8fc0', '#d9a514'][i])}<span class="trait"></span></div>`).join('')}</div>`,
+  });
+
+  if (pages.length !== PAGES) throw new Error(`${lang} : ${pages.length} pages au lieu de ${PAGES}`);
+  return {
+    id: `aventures-${lang}`,
+    lang,
+    titre: T.livre.titre,
+    sousTitre: T.livre.sousTitre,
+    trim: { l: 8.5, h: 8.5 },
+    papier: 'standard',
+    encre: 'standard',
+    pagesFinales: PAGES,
+    margeInt: 0.55,
+    margeExt: 0.5,
+    margeHaut: 0.55,
+    margeBas: 0.72,
+    fond: '#ffffff',
+    css,
+    script: SCRIPT,
+    pages,
+    couverture: couverture(T, tx, lang, apercu),
+    textes: T,
   };
 }
 
-function itemListe(n) {
-  const [titre, cat, cout] = AVENTURES[n - 1];
-  return `<div class="liste-item"><span class="case"></span><span class="n">${n}</span><span>${icone(cat, 8)} ${t(titre)}</span><span class="cout">${t(COUT[cout])}</span></div>`;
-}
+// ── La mise en page dans le navigateur ────────────────────────────────────
+// Pour chaque page : on réduit l'échelle des textes (--k) tant que la page
+// déborde ou qu'un bloc à remplir n'a pas sa place minimale, puis on pose
+// autant de lignes que la place le permet dans chaque bloc (hauteurs de mise
+// en page, sans les réductions des aperçus).
+const SCRIPT = `
+window.__mettreEnPage = function () {
+  var essai = document.createElement('div');
+  essai.className = 'ligne';
+  essai.style.height = 'var(--lh)';
+  document.body.appendChild(essai);
+  var LH = essai.offsetHeight;
+  essai.remove();
+  function deborde(zone) {
+    var r = zone.getBoundingClientRect();
+    var tous = zone.querySelectorAll('*');
+    for (var i = 0; i < tous.length; i++) {
+      var el = tous[i];
+      if (el.ownerSVGElement || el.closest('.peut-deborder') || el.closest('.apercu')) continue;
+      var b = el.getBoundingClientRect();
+      if (b.width === 0 || b.height === 0) continue;
+      if (b.bottom > r.bottom + 0.5 || b.right > r.right + 0.5 || b.left < r.left - 0.5) return true;
+    }
+    // Un bloc .tient garde tout son contenu au-dessus de son bord bas : sans
+    // ça, la légende de l'aperçu du mode d'emploi passait sur le conseil du
+    // bas sans sortir de la zone, donc sans être vue.
+    var cs = zone.querySelectorAll('.tient');
+    for (var j = 0; j < cs.length; j++) {
+      var cb = cs[j].getBoundingClientRect();
+      var ds = cs[j].querySelectorAll('*');
+      for (var m = 0; m < ds.length; m++) {
+        var d = ds[m];
+        if (d.ownerSVGElement || (d.parentElement && d.parentElement.closest('.apercu'))) continue;
+        var db = d.getBoundingClientRect();
+        if (db.width === 0 || db.height === 0) continue;
+        if (db.bottom > cb.bottom + 0.5) return true;
+      }
+    }
+    return false;
+  }
+  function manque(zone) {
+    var rs = zone.querySelectorAll('.remplir');
+    for (var i = 0; i < rs.length; i++) {
+      if (rs[i].closest('.apercu')) continue;
+      var min = +(rs[i].dataset.min || 0);
+      if (rs[i].offsetHeight < min * LH - 0.5) return true;
+    }
+    return false;
+  }
+  var rapport = [];
+  document.querySelectorAll('.feuille').forEach(function (f) {
+    var zone = f.querySelector('.zone');
+    if (!zone) return;
+    var k = 1;
+    f.style.setProperty('--k', k);
+    while ((deborde(zone) || manque(zone)) && k > 0.8) {
+      k = Math.round((k - 0.02) * 100) / 100;
+      f.style.setProperty('--k', k);
+    }
+    if (k < 1) rapport.push(f.dataset.folio + ':' + k);
+  });
+  // Couverture : le titre tient dans sa largeur, le sous-titre dans sa
+  // hauteur, la colonne du dos dans sa page.
+  document.querySelectorAll('.ajuste-l').forEach(function (el) {
+    var parent = el.parentElement, fs = parseFloat(getComputedStyle(el).fontSize), min = fs * 0.6;
+    while (parent.scrollWidth > parent.clientWidth + 1 && fs > min) { fs *= 0.97; el.style.fontSize = fs + 'px'; }
+    if (fs < parseFloat(el.dataset.fs0 || 1e9)) rapport.push('titre:' + Math.round(fs * 0.75) + 'pt');
+  });
+  document.querySelectorAll('.ajuste-h').forEach(function (el) {
+    var t = document.createElement('div'); t.style.height = el.dataset.maxH; document.body.appendChild(t);
+    var maxH = t.offsetHeight; t.remove();
+    var fs = parseFloat(getComputedStyle(el).fontSize), min = fs * 0.7;
+    while (el.offsetHeight > maxH + 1 && fs > min) { fs *= 0.97; el.style.fontSize = fs + 'px'; }
+  });
+  var col = document.querySelector('.cvd-col');
+  if (col) {
+    var kc = 1;
+    while (col.scrollHeight > col.clientHeight + 1 && kc > 0.74) { kc = Math.round((kc - 0.02) * 100) / 100; col.style.setProperty('--kc', kc); }
+    if (kc < 1) rapport.push('dos:' + kc);
+  }
+  document.querySelectorAll('.remplir').forEach(function (r) {
+    var n = Math.floor((r.offsetHeight + 0.5) / LH);
+    var max = +(r.dataset.max || 0);
+    if (max) n = Math.min(n, max);
+    for (var i = 0; i < n; i++) { var l = document.createElement('div'); l.className = 'ligne'; r.appendChild(l); }
+  });
+  return rapport;
+};
+`;
 
-const legendeCats = `<div class="legende-cats">${Object.keys(CAT).map((k) => `<span class="tag" style="background:${CAT[k].p};border-color:${CAT[k].p}">${icone(k, 9)} ${t(CAT[k].nom)}</span>`).join('')}</div>`;
-
-const pages = [
-  {
-    folio: 1, titre: 'Page de titre', sansFolio: true,
-    html: `<div class="titre-av">
-  <div class="chemin">${mascotte('rose', 'joie', { hauteur: '1.35in' })}${mascotte('violet', 'salut', { hauteur: '1.5in' })}</div>
-  <h1><b>100</b>${t('aventures à deux')}</h1>
-  <p class="etiquette" style="color:var(--c-violet-texte)">${t('Le livre de nos souvenirs')}</p>
-  <div class="noms"><div class="ligne"></div><span class="et">&amp;</span><div class="ligne"></div></div>
-  <p style="font-family:var(--f-titre);font-weight:500;font-size:10.5pt;color:var(--c-encre-douce);margin-top:6pt">${t('Notre première aventure : le ___ / ___ / ______')}</p>
-</div>`,
-  },
-  {
-    folio: 2, titre: 'Mentions', sansFolio: true,
-    html: `<div class="copy"><p><b>${t('100 aventures à deux')}</b><br>${t('Un livre de Quiz Couple, quiz-couple.com')}</p>
-<p>${t('© 2026 Quiz Couple · Visibilitea, entreprise individuelle, Strasbourg. Tous droits réservés.')}</p>
-<p>${t("Les prix et les durées sont indicatifs. Certaines aventures demandent un peu de prudence (baignade, randonnée, nuit dehors) : renseignez-vous sur place, et faites-les quand vous le sentez.")}</p>
-<p>${t('ISBN : à venir · Imprimé à la demande par Amazon KDP.')}</p></div>`,
-  },
-  {
-    folio: 3, titre: 'Comment ça marche',
-    html: `<div class="page-tete"><div><span class="etiquette">${t('Avant de partir')}</span><h2>${t('Comment ça marche')}</h2></div>${mascotte('rose', 'salut', { hauteur: '0.85in' })}</div>
-<div class="mode">
-  <div class="mode-bloc"><h3><span class="mode-n">1</span>${t("Il n'y a pas d'ordre")}</h3><p>${t("Ouvrez une page au hasard, ou choisissez ensemble dans la liste. Il y a des aventures pour un soir de semaine, pour un dimanche pluvieux et pour les vacances.")}</p></div>
-  <div class="mode-bloc"><h3><span class="mode-n">2</span>${t('Regardez les étiquettes')}</h3><p>${t("Chaque aventure dit ce qu'elle coûte (de « gratuit » à « €€€ »), combien de temps elle prend et où elle se passe. Pratique pour choisir selon la soirée.")}</p></div>
-  <div class="mode-bloc"><h3><span class="mode-n">3</span>${t('Vivez-la, puis remplissez')}</h3><p>${t("La date, l'endroit, une note chacun, ce que vous voulez retenir, et une photo. Le cadre fait la taille d'une photo instantanée format mini, mais une photo de téléphone découpée marche aussi.")}</p></div>
-  <div class="mode-bloc"><h3><span class="mode-n">4</span>${t('Ajoutez les vôtres')}</h3><p>${t("À la fin du livre, dix pages vierges attendent vos propres idées. Et le palmarès, pour élire vos cinq meilleures aventures de l'année.")}</p></div>
-</div>
-<div style="margin-top:auto"><span class="etiquette" style="color:var(--c-encre-douce)">${t('Les six familles d\'aventures')}</span>
-<div class="cats">${Object.keys(CAT).map((k) => `<div class="cat" style="background:${CAT[k].p}"><h4>${icone(k, 13)} ${t(CAT[k].nom)}</h4><p>${t(DESC[k])}</p><span class="compte" style="color:${CAT[k].c}">${AVENTURES.filter((a) => a[1] === k).length} ${t('aventures')}</span></div>`).join('')}</div></div>`,
-  },
-  {
-    folio: 4, titre: 'La liste (1 à 50)',
-    html: `<div class="page-tete"><div><span class="etiquette">${t('Cochez au fur et à mesure')}</span><h2>${t('Nos 100 aventures')}</h2></div></div>
-<div class="liste">${Array.from({ length: 50 }, (_, i) => itemListe(i + 1)).join('')}</div>`,
-  },
-  {
-    folio: 5, titre: 'La liste (51 à 100)',
-    html: `<div class="page-tete"><div><span class="etiquette">${t('La suite')}</span><h2>${t('Et ce n\'est pas fini...')}</h2></div>${legendeCats}</div>
-<div class="liste">${Array.from({ length: 50 }, (_, i) => itemListe(i + 51)).join('')}</div>`,
-  },
-  pageAventure(1, 6),
-  pageAventure(2, 7),
-  pageAventure(27, 32),
-  pageAventure(28, 33),
-  pageAventure(70, 75),
-  pageAventure(71, 76),
-  {
-    folio: 106, titre: 'Une aventure à vous',
-    html: `<div class="av">
-<div class="av-photo">${cadrePhoto('M', -2.2)}${notes()}</div>
-<div class="av-texte">
-  <div class="vierge-num">101</div>
-  <div class="tags"><span class="tag">${t('Notre idée à nous')}</span><span class="tag">${t('Coût : ____')}</span><span class="tag">${t('Durée : ____')}</span></div>
-  <div class="av-champ"><span>${t("L'aventure")}</span><div class="ligne"></div></div>
-  <div class="av-champ"><span>${t("L'idée vient de")}</span><div class="ligne"></div></div>
-  <div class="av-champ"><span>${t('Fait le')}</span><div class="ligne"></div></div>
-  <div class="av-champ"><span>${t('Où ?')}</span><div class="ligne"></div></div>
-  <div class="av-retenir"><h4>${t("Ce qu'on retiendra")}</h4><div class="ligne"></div><div class="ligne"></div><div class="ligne"></div><div class="ligne"></div><div class="ligne"></div></div>
-</div></div>`,
-  },
-  {
-    folio: 117, titre: 'Le palmarès',
-    html: `<div class="page-tete"><div><span class="etiquette">${t('À remplir une fois par an')}</span><h2>${t('Le palmarès')}</h2></div>${mascotte('violet', 'joie', { hauteur: '0.95in' })}</div>
-<div class="palmares">
-  <div class="podium">${[1, 2, 3, 4, 5].map((r) => `<div class="marche"><div class="rang">${r}</div><div class="ligne"></div><div class="ligne"></div></div>`).join('')}</div>
-  <div class="encart"><h3>${icone('R', 12)} ${t("Celle qu'on refera l'an prochain")}</h3><div class="ligne"></div><div class="ligne"></div></div>
-  <div class="encart"><h3>${icone('F', 12)} ${t("Celle qu'on ne refera jamais (mais on en rit encore)")}</h3><div class="ligne"></div><div class="ligne"></div></div>
-  <div class="encart"><h3>${icone('A', 12)} ${t('Notre compteur')}</h3><p style="font-size:9.4pt;margin-top:3pt">${t('Aventures vécues cette année : ______ / 100 · Photos collées : ______ · Fous rires : beaucoup trop')}</p></div>
-  <div class="souvenir" style="width:100%;height:1.6in"><b>${t("La photo de l'année")}</b>${t('celle que vous accrocheriez au frigo')}</div>
-</div>`,
-  },
-  {
-    folio: 120, titre: 'La suite', sansFolio: true,
-    html: `<div class="titre-av">
-  ${mascotte('rose', 'amoureux', { hauteur: '1.1in' })}
-  <h1 style="font-size:28pt">${t('Cent aventures plus tard...')}</h1>
-  <p style="font-size:10.5pt;line-height:1.5;max-width:4.5in">${t("Il vous faut de nouvelles idées ? Sur quiz-couple.com, des dizaines de tests et de jeux à faire à deux, gratuitement, pour les soirs où vous restez à la maison.")}</p>
-  ${qr('https://quiz-couple.com/')}
-  <div style="font-family:var(--f-titre);font-weight:600;font-size:13pt;color:var(--c-rose-texte)">quiz-couple.com</div>
-</div>`,
-  },
-];
-
-// ── La couverture ────────────────────────────────────────────────────────
-const couverture = {
-  fond: '#fcf6f3',
-  fondDos: '#fcf6f3',
-  fondTranche: '#e17398',
-  css: `
-.cfa { position: absolute; inset: 0; }
-.cfa .marque { position: absolute; top: 0.55in; left: 0.375in; display: flex; align-items: center; gap: 6pt; font-family: var(--f-titre); font-weight: 600; font-size: 12pt; color: #2b1722; }
-.cfa .marque img { width: 0.36in; height: 0.36in; }
-.cfa h1 { position: absolute; top: 1.05in; left: 0.375in; right: 0.6in; font-family: var(--f-titre); font-weight: 700; line-height: 0.9; color: #2b1722; }
-.cfa h1 b { display: block; font-size: 112pt; color: #e17398; letter-spacing: -0.03em; line-height: 0.82; -webkit-text-stroke: 3pt #2b1722; paint-order: stroke fill; }
-.cfa h1 span { display: block; font-size: 38pt; margin-top: 4pt; }
-.cfa .sous { position: absolute; top: 3.62in; left: 0.375in; width: 3.6in; font-size: 11.5pt; line-height: 1.4; font-weight: 600; color: #6834b2; }
-.cfa .route { position: absolute; left: 0; right: 0; top: 0; bottom: 0; }
-.cfa .photo { position: absolute; background: #fff; padding: 6pt 6pt 18pt; box-shadow: 0 0 0 1.2pt #2b1722; border-radius: 3pt; }
-.cfa .photo .img { width: 100%; height: 100%; border-radius: 2pt; overflow: hidden; }
-.cfa .persos { position: absolute; right: 0.6in; bottom: 0.55in; display: flex; align-items: flex-end; gap: 0.12in; }
-.cfa .pastille { position: absolute; right: 0.55in; top: 0.5in; width: 1.05in; height: 1.05in; border-radius: 50%; background: #f7cf5b; color: #2b1722; font-family: var(--f-titre); font-weight: 700; font-size: 9.5pt; line-height: 1.05; text-align: center; display: flex; align-items: center; justify-content: center; transform: rotate(10deg); box-shadow: 0 0 0 1.4pt #2b1722; }
-.cda { position: absolute; inset: 0; color: #2b1722; }
-.cda .col { position: absolute; top: 0.6in; bottom: 0.6in; left: 0.6in; right: 0.55in; display: flex; flex-direction: column; gap: 16pt; }
-.cda .accroche { font-family: var(--f-titre); font-weight: 700; font-size: 25pt; line-height: 1.04; text-wrap: balance; }
-.cda .texte { font-size: 11.4pt; line-height: 1.55; }
-.cda ul { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 7pt; font-size: 11pt; line-height: 1.38; }
-.cda li { display: flex; gap: 8pt; align-items: flex-start; }
-.cda li .coeur { margin-top: 3pt; }
-.cda .citation { font-family: var(--f-plume); font-style: italic; font-size: 16pt; color: #b12559; }
-.cda .checklist { background: #fff; border-radius: 14pt; padding: 12pt 14pt; box-shadow: 0 0 0 1.2pt #2b1722; transform: rotate(-1.5deg); display: flex; flex-direction: column; gap: 7pt; width: 4.4in; }
-.cda .checklist div { display: flex; align-items: center; gap: 8pt; font-family: var(--f-titre); font-weight: 600; font-size: 11.5pt; }
-.cda .checklist i { width: 12pt; height: 12pt; border: 1.6pt solid #2b1722; border-radius: 3pt; flex: none; display: inline-flex; align-items: center; justify-content: center; font-style: normal; font-size: 10pt; color: #c9557c; }
-.cda .checklist s { color: #9d8a94; text-decoration-thickness: 1.4pt; }
-.cda .bas { margin-top: auto; display: flex; align-items: flex-end; gap: 10pt; font-family: var(--f-titre); font-weight: 600; font-size: 12pt; }
-.cta { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; }
-.cta .vertical { transform: rotate(90deg); white-space: nowrap; color: #2a1e36; font-family: var(--f-titre); font-weight: 600; font-size: 10pt; display: flex; align-items: center; gap: 12pt; }
+// ── La couverture ─────────────────────────────────────────────────────────
+// Face : le titre en très grand (lisible en vignette sur Amazon), la
+// promesse en une ligne, trois photos instantanées cochées et les deux
+// personnages. Dos : la question, le principe, trois points, une vraie page
+// du livre en réduction. Tranche, face et dos dans le même jaune, pour
+// qu'un léger décalage de la reliure ne se voie pas.
+const JAUNE = '#ffd45c';
+function couverture(T, tx, lang, apercu) {
+  const C = T.couverture;
+  const D = C.dos;
+  const coche = (fait) => fait
+    ? '<svg viewBox="0 0 40 40" class="coche" aria-hidden="true"><circle cx="20" cy="20" r="17" fill="#e17398" stroke="#2b1722" stroke-width="2.6"/><path d="M12 20.5l5.5 5.5L29 14" fill="none" stroke="#fff" stroke-width="4.2" stroke-linecap="round" stroke-linejoin="round"/></svg>'
+    : '<svg viewBox="0 0 40 40" class="coche" aria-hidden="true"><circle cx="20" cy="20" r="17" fill="#fff" stroke="#2b1722" stroke-width="2.6" stroke-dasharray="4 4"/></svg>';
+  const scenes = [
+    // la randonnée : soleil, montagnes
+    `<svg viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect width="100" height="100" fill="#cfe9f8"/><circle cx="72" cy="28" r="11" fill="#f7cf5b" stroke="#2b1722" stroke-width="2.4"/><path d="M-4 104 L-4 70 L26 38 L46 58 L62 44 L104 82 L104 104 Z" fill="#94c78e" stroke="#2b1722" stroke-width="2.4" stroke-linejoin="round"/><path d="M26 38 L33 46 L28 48 L22 43 Z M62 44 L68 50 L63 52 L58 48 Z" fill="#fff" stroke="#2b1722" stroke-width="1.8" stroke-linejoin="round"/><path d="M40 100 C44 86 52 80 50 70" fill="none" stroke="#e8f4e4" stroke-width="4" stroke-linecap="round" stroke-dasharray="1 7"/></svg>`,
+    // le bowling : une quille et la boule
+    `<svg viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect width="100" height="100" fill="#ece2f6"/><path d="M0 78 H100 V100 H0Z" fill="#f3d9a7" stroke="#2b1722" stroke-width="2.4"/><path d="M60 22c-4 0-6 4-6 9 0 4 2 7 1 11-2 8-7 13-7 22 0 7 5 13 12 13s12-6 12-13c0-9-5-14-7-22-1-4 1-7 1-11 0-5-2-9-6-9z" fill="#fff" stroke="#2b1722" stroke-width="2.4" stroke-linejoin="round"/><path d="M54.6 38h10.8M53.8 42.5h12.4" stroke="#e17398" stroke-width="3"/><circle cx="31" cy="64" r="15" fill="#7f4db3" stroke="#2b1722" stroke-width="2.4"/><circle cx="27" cy="58" r="2.2" fill="#2b1722"/><circle cx="34" cy="57" r="2.2" fill="#2b1722"/><circle cx="31" cy="63" r="2.2" fill="#2b1722"/></svg>`,
+    // la nuit sous la tente : étoiles, lune
+    `<svg viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect width="100" height="100" fill="#2a1e36"/><path d="M73 15a10 10 0 1 0 9 14 8 8 0 1 1-9-14z" fill="#f7cf5b"/><g fill="#f7cf5b"><circle cx="20" cy="18" r="1.8"/><circle cx="38" cy="10" r="1.3"/><circle cx="50" cy="26" r="1.6"/><circle cx="12" cy="40" r="1.2"/><circle cx="88" cy="46" r="1.4"/></g><path d="M0 84 H100 V100 H0Z" fill="#3f6b3a"/><path d="M16 84 L48 34 L82 84 Z" fill="#e8892e" stroke="#2b1722" stroke-width="2.4" stroke-linejoin="round"/><path d="M48 34 L48 84 M40 84 L48 60 L56 84" fill="#ffd45c" stroke="#2b1722" stroke-width="2.4" stroke-linejoin="round"/></svg>`,
+  ];
+  const pola = (i, style, fait) => `<div class="cv-pola" style="${style}"><div class="cv-pola-img">${scenes[i]}</div><div class="cv-pola-leg">${tx(C.polas[i])}</div>${coche(fait)}</div>`;
+  const prix = lang === 'fr' && T.prix ? `<div class="cv-prix">${tx(T.prix)}</div>` : '';
+  return {
+    fond: JAUNE,
+    fondDos: JAUNE,
+    fondTranche: JAUNE,
+    css: `
+.cv { position: absolute; inset: 0; color: #2b1722; }
+.cv-marque { position: absolute; top: 0.62in; left: 0.5in; display: inline-flex; align-items: center; gap: 7pt; padding: 5pt 12pt 5pt 6pt; background: #fff; border-radius: 99pt; box-shadow: 0 0 0 1.6pt #2b1722; font-family: var(--f-titre); font-weight: 600; font-size: 13pt; }
+.cv-marque img { width: 0.34in; height: 0.34in; }
+.cv-titre { position: absolute; left: 0.45in; right: 0.55in; top: 1.15in; display: flex; align-items: center; gap: 0.16in; }
+.cv-100 { font-family: var(--f-titre); font-weight: 700; font-size: 168pt; line-height: 0.8; letter-spacing: -0.045em; color: #e17398; -webkit-text-stroke: 5pt #2b1722; paint-order: stroke fill; text-shadow: 0.07in 0.07in 0 #2b1722; flex: none; }
+.cv-mots { font-family: var(--f-titre); font-weight: 700; font-size: 50pt; line-height: 0.92; letter-spacing: -0.01em; display: flex; flex-direction: column; }
+.cv-mots span + span { color: #6834b2; }
+.cv-sous { position: absolute; left: 0.5in; right: 0.6in; top: 3.55in; font-family: var(--f-titre); font-weight: 600; font-size: 17pt; line-height: 1.2; color: #2b1722; }
+.cv-pola { position: absolute; width: 1.78in; padding: 0.09in 0.09in 0; background: #fff; border-radius: 4pt; box-shadow: 0 0 0 1.6pt #2b1722, 0.05in 0.06in 0 0 rgba(43,23,34,.18); }
+.cv-pola-img { width: 100%; height: 1.6in; border-radius: 2pt; overflow: hidden; box-shadow: 0 0 0 1.2pt #2b1722; }
+.cv-pola-img svg { width: 100%; height: 100%; display: block; }
+.cv-pola-leg { height: 0.4in; display: flex; align-items: center; justify-content: center; font-family: var(--f-plume); font-style: italic; font-size: 13pt; color: #2b1722; }
+.cv-pola .coche { position: absolute; width: 0.46in; height: 0.46in; top: -0.17in; right: -0.17in; }
+.cv-persos { position: absolute; right: 0.5in; bottom: 0.45in; display: flex; align-items: flex-end; gap: 0.04in; }
+.cv-pastille { position: absolute; left: 4.95in; top: 3.35in; width: 1.28in; height: 1.28in; border-radius: 50%; background: #fff; box-shadow: 0 0 0 1.6pt #2b1722; display: flex; align-items: center; justify-content: center; text-align: center; font-family: var(--f-titre); font-weight: 600; font-size: 12.5pt; line-height: 1.05; transform: rotate(9deg); padding: 6pt; }
+.cv-pastille b { display: block; color: #b12559; font-size: 15pt; }
+.cv-route { position: absolute; inset: 0; }
+.cvd { position: absolute; inset: 0; color: #2b1722; }
+.cvd-col { position: absolute; top: 0.65in; left: 0.6in; width: 3.85in; bottom: 0.6in; display: flex; flex-direction: column; gap: calc(14pt * var(--kc, 1)); overflow: hidden; }
+.cvd-accroche { font-family: var(--f-titre); font-weight: 700; font-size: calc(25pt * var(--kc, 1)); line-height: 1.06; text-wrap: balance; }
+.cvd-texte { font-size: calc(11pt * var(--kc, 1)); line-height: 1.55; }
+.cvd ul { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 7pt; font-family: var(--f-titre); font-weight: 600; font-size: calc(12pt * var(--kc, 1)); line-height: 1.25; }
+.cvd li { display: flex; gap: 8pt; align-items: flex-start; }
+.cvd li .coeur { margin-top: 2pt; }
+.cvd-liste { margin-top: 4pt; align-self: flex-start; background: #fff; border-radius: 12pt; padding: 11pt 14pt; box-shadow: 0 0 0 1.6pt #2b1722, 0.05in 0.06in 0 0 rgba(43,23,34,.18); transform: rotate(-1.5deg); display: flex; flex-direction: column; gap: 7pt; }
+.cvd-liste div { display: flex; align-items: center; gap: 8pt; font-family: var(--f-titre); font-weight: 600; font-size: calc(11.5pt * var(--kc, 1)); }
+.cvd-liste i { width: 12pt; height: 12pt; border: 1.6pt solid #2b1722; border-radius: 3pt; flex: none; display: inline-flex; align-items: center; justify-content: center; font-style: normal; font-size: 10pt; font-weight: 700; color: #c9557c; }
+.cvd-liste .fait span { text-decoration: line-through; text-decoration-thickness: 1.4pt; color: #8f7984; }
+.cvd-fin { margin-top: auto; font-family: var(--f-plume); font-style: italic; font-size: calc(17pt * var(--kc, 1)); color: #b12559; }
+.cvd-marque { display: flex; align-items: center; gap: 7pt; font-family: var(--f-titre); font-weight: 600; font-size: 12pt; }
+.cvd-marque img { width: 0.32in; height: 0.32in; }
+.cvd-apercu { position: absolute; top: 0.8in; right: 0.5in; display: flex; flex-direction: column; align-items: center; gap: 7pt; transform: rotate(3deg); }
+.cvd-apercu .apercu { box-shadow: 0 0 0 1.6pt #2b1722, 0.06in 0.07in 0 0 rgba(43,23,34,.2); border-radius: 4pt; }
+.cvd-apercu-leg { font-family: var(--f-plume); font-style: italic; font-size: 12pt; }
+.cvd-persos { position: absolute; right: 1.25in; top: 5.05in; display: flex; align-items: flex-end; gap: 4pt; }
+.cv-prix { position: absolute; right: 0.3in; bottom: calc(var(--fond-perdu) + 1.55in); font-family: var(--f-titre); font-weight: 600; font-size: 10pt; }
+@media print { .cv-ecran { display: none !important; } }
+.cvt { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; }
+.cvt-v { transform: rotate(90deg); white-space: nowrap; display: flex; align-items: center; gap: 12pt; font-family: var(--f-titre); font-weight: 700; font-size: 9pt; line-height: 1; color: #2b1722; }
+.cvt-v span { font-weight: 600; font-size: 7.5pt; color: #6834b2; }
 `,
-  face: `<div class="cfa">
-  <svg class="route" viewBox="0 0 850 925" preserveAspectRatio="none" aria-hidden="true"><path d="M-10 520 C 120 470, 230 610, 360 560 S 560 420, 640 520 S 760 700, 870 640" fill="none" stroke="#c9557c" stroke-width="5" stroke-dasharray="2 16" stroke-linecap="round"/></svg>
-  <div class="marque"><img src="../../../reseaux/studio/public/marque/logo-quiz-couple-180.png" alt="">Quiz Couple</div>
-  <div class="pastille"><div>${t('une page')}<br>${t('souvenir')}<br>${t('pour chaque')}<br>${t('aventure')}</div></div>
-  <h1><b>100</b><span>${t('aventures')}<br>${t('à deux')}</span></h1>
-  <div class="sous">${t('Le livre de nos souvenirs : 100 choses à vivre ensemble, et une page à remplir pour chacune')}</div>
-  <div class="photo" style="left:0.45in;bottom:1.15in;width:1.45in;height:1.75in;transform:rotate(-7deg)"><div class="img" style="background:#d4ebf8"><svg viewBox="0 0 100 110" style="width:100%;height:100%" aria-hidden="true"><circle cx="72" cy="30" r="12" fill="#f7cf5b" stroke="#2b1722" stroke-width="2.5"/><path d="M0 110 L0 78 L28 50 L50 72 L66 58 L100 88 L100 110 Z" fill="#94c78e" stroke="#2b1722" stroke-width="2.5" stroke-linejoin="round"/></svg></div></div>
-  <div class="photo" style="left:2.05in;bottom:0.62in;width:1.3in;height:1.55in;transform:rotate(5deg)"><div class="img" style="background:#fbe3ec"><svg viewBox="0 0 100 110" style="width:100%;height:100%" aria-hidden="true"><path d="M50 84C26 66 14 54 14 38 14 27 23 19 33 19c7 0 13 4 17 9 4-5 10-9 17-9 10 0 19 8 19 19 0 16-12 28-36 46z" fill="#e17398" stroke="#2b1722" stroke-width="2.5"/></svg></div></div>
-  <div class="persos">${mascotte('rose', 'joie', { hauteur: '1.7in' })}${mascotte('violet', 'salut', { hauteur: '1.95in' })}</div>
+    face: `<div class="cv">
+<svg class="cv-route" viewBox="0 0 875 900" preserveAspectRatio="none" aria-hidden="true"><path d="M-10 640 C 90 600, 150 700, 260 690 S 420 560, 520 610 S 660 760, 900 700" fill="none" stroke="#fff" stroke-width="6" stroke-dasharray="1 17" stroke-linecap="round"/></svg>
+<div class="cv-marque"><img src="${LOGO}" alt="">Quiz Couple</div>
+<div class="cv-titre">${C.titre1 === '100' ? cent({ taille: 168, epaisseur: 5, ombre: 5.04, classe: 'cv-100' }) : `<div class="cv-100">${tx(C.titre1)}</div>`}<div class="cv-mots ajuste-l"><span>${tx(C.titre2)}</span><span>${tx(C.titre3)}</span></div></div>
+<div class="cv-sous ajuste-h" data-max-h="0.62in">${tx(C.sous)}</div>
+${pola(0, 'left:0.5in;top:4.55in;transform:rotate(-7deg)', true)}
+${pola(1, 'left:2.55in;top:4.9in;transform:rotate(4deg)', true)}
+${pola(2, 'left:4.55in;top:4.95in;transform:rotate(-3deg)', false)}
+<div class="cv-persos">${mascotte('rose', 'joie', { hauteur: '1.55in' })}${mascotte('violet', 'amoureux', { hauteur: '1.8in' })}</div>
 </div>`,
-  dos: `<div class="cda"><div class="col">
-  <div class="accroche">${t('Et si on arrêtait de dire « un jour, on fera ça » ?')}</div>
-  <div class="texte">${t("Cent idées de choses à vivre à deux, des plus simples (un pique-nique, une soirée sans téléphone) aux plus folles (dormir à la belle étoile, prendre un train sans savoir où descendre). Pour chacune, une page à remplir : la date, l'endroit, vos notes, ce que vous voulez retenir et une photo.")}</div>
-  <ul>
-    <li>${coeur(10, { plein: true, couleur: '#e17398' })}<span>${t('100 aventures, de la soirée canapé au grand frisson, avec leur coût et leur durée')}</span></li>
-    <li>${coeur(10, { plein: true, couleur: '#e17398' })}<span>${t('Une page souvenir par aventure et un cadre photo au format instantané')}</span></li>
-    <li>${coeur(10, { plein: true, couleur: '#e17398' })}<span>${t('Dix pages vierges pour vos propres idées, et le palmarès de l\'année')}</span></li>
-  </ul>
-  <div class="checklist">
-    <div><i>✓</i><s>${t('Une soirée entière sans téléphone')}</s></div>
-    <div><i>✓</i><s>${t('Refaire notre premier rendez-vous')}</s></div>
-    <div><i></i>${t('Dormir à la belle étoile')}</div>
-    <div><i></i>${t('Prendre un train sans savoir où descendre')}</div>
-  </div>
-  <div class="citation">${t('Le livre que vous relirez dans dix ans.')}</div>
-  <div class="bas">${mascotte('rose', 'mignon', { hauteur: '0.85in' })}${mascotte('violet', 'amoureux', { hauteur: '0.95in' })}<span style="margin-left:6pt">quiz-couple.com</span></div></div>
-  <div class="code-barres">${t('Code-barres (ajouté par KDP)')}</div>
+    dos: `<div class="cvd"><div class="cvd-col">
+<div class="cvd-accroche">${tx(D.accroche)}</div>
+<div class="cvd-texte">${tx(D.texte)}</div>
+<ul>${D.points.map((p) => `<li>${coeur(11, { plein: true, couleur: '#e17398' })}<span>${tx(p)}</span></li>`).join('')}</ul>
+<div class="cvd-liste">${D.coches.map(([n, fait]) => `<div class="${fait ? 'fait' : ''}">${fait ? `<i>${svg(PICTOS.coche, 9, '#c9557c', 3.2)}</i>` : '<i></i>'}<span>${tx(T.aventures[n - 1].t)}</span></div>`).join('')}</div>
+<div class="cvd-fin">${tx(D.fin)}</div>
+<div class="cvd-marque"><img src="${LOGO}" alt="">Quiz Couple</div>
+</div>
+<div class="cvd-apercu">${apercu(1, 3.3, C.exemple)}<div class="cvd-apercu-leg">${tx(D.apercu)}</div></div>
+<div class="cvd-persos">${mascotte('rose', 'mignon', { hauteur: '1.05in' })}${mascotte('violet', 'amoureux', { hauteur: '1.2in' })}</div>
+${prix}
+<div class="code-barres cv-ecran">${tx(D.codeBarres)}</div>
 </div>`,
-  tranche: `<div class="cta"><div class="vertical">${t('100 aventures à deux')} <span style="font-size:8pt;opacity:.8">Quiz Couple</span></div></div>`,
-};
-
-export default {
-  id: 'aventures',
-  titre: '100 aventures à deux',
-  sousTitre: 'Le livre de nos souvenirs : 100 choses à vivre ensemble, et une page à remplir pour chacune',
-  trim: { l: 8.5, h: 8.5 },
-  papier: 'premium',
-  encre: 'premium',
-  pagesFinales: 120,
-  margeExt: 0.55,
-  margeHaut: 0.6,
-  margeBas: 0.7,
-  fond: '#fcf6f3',
-  css,
-  pages,
-  couverture,
-};
+    tranche: `<div class="cvt"><div class="cvt-v">${tx(C.tranche)}<span>Quiz Couple</span></div></div>`,
+    textes: C,
+  };
+}
