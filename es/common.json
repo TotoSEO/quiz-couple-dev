@@ -135,7 +135,29 @@
     "bilanCouple": "Evaluación de pareja",
     "evaluer": "Evaluar tu pareja",
     "evaluerSous": "La evaluación completa, en pareja o a solas",
-    "bilanCoupleDesc": "100 preguntas cada uno por su lado, y un informe de 30 páginas"
+    "bilanCoupleDesc": "100 preguntas cada uno por su lado, y un informe de 30 páginas",
+    "sections": {
+      "compatibilite": "Tests de compatibilidad",
+      "instantanee": "Compatibilidad al instante",
+      "sante": "Salud de la pareja",
+      "sentiments": "Sentimientos",
+      "confiance": "Confianza y celos",
+      "alerte": "Señales de alerta",
+      "projets": "Proyectos en pareja",
+      "profil": "Tu perfil amoroso",
+      "outils": "Herramientas",
+      "trouverAmour": "Encontrar el amor",
+      "crush": "Crush y sentimientos",
+      "ex": "Tu ex",
+      "connaitre": "Conocerse mejor",
+      "amuser": "Para divertirse",
+      "soiree": "Noche de juegos",
+      "questions": "Juegos de preguntas",
+      "rire": "Para reír",
+      "pimenter": "Para darle chispa",
+      "halloween": "Halloween"
+    },
+    "retour": "Volver"
   },
   "footer": {
     "brandDescription": "Pon a prueba tu compatibilidad y descubre tu conexión amorosa con nuestros quiz gratuitos para parejas.",

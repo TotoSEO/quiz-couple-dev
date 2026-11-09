@@ -72,7 +72,6 @@
     "testSecret": "M'aime-t-il en secret ?",
     "testDistanceAime": "M'aime-t-il encore à distance ?",
     "testPurete": "Test de pureté",
-    "testVacances": "Où partir en vacances ?",
     "pourContre": "Pour ou contre",
     "testFinCouple": "Fin de couple ?",
     "testFinCoupleDesc": "Où en est vraiment votre relation",
@@ -137,7 +136,29 @@
     "bilanCouple": "Évaluation de couple",
     "evaluer": "Évaluer son couple",
     "evaluerSous": "L'évaluation complète, à deux ou seul(e)",
-    "bilanCoupleDesc": "100 questions chacun de son côté, et un rapport de 30 pages"
+    "bilanCoupleDesc": "100 questions chacun de son côté, et un rapport de 30 pages",
+    "sections": {
+      "compatibilite": "Tests de compatibilité",
+      "instantanee": "Compatibilité instantanée",
+      "sante": "Santé du couple",
+      "sentiments": "Sentiments",
+      "confiance": "Confiance et jalousie",
+      "alerte": "Signaux d'alerte",
+      "projets": "Projets à deux",
+      "profil": "Votre profil amoureux",
+      "outils": "Outils",
+      "trouverAmour": "Trouver l'amour",
+      "crush": "Crush et sentiments",
+      "ex": "Votre ex",
+      "connaitre": "Se connaître à deux",
+      "amuser": "Pour s'amuser",
+      "soiree": "Jeux de soirée",
+      "questions": "Jeux de questions",
+      "rire": "Pour rire",
+      "pimenter": "Pour pimenter",
+      "halloween": "Halloween"
+    },
+    "retour": "Retour"
   },
   "footer": {
     "brandDescription": "Testez votre complicité et découvrez votre compatibilité amoureuse avec nos quiz gratuits pour couples.",

@@ -113,7 +113,6 @@
     testAttachement: _svg('<path d="M9 12a3 3 0 0 1 0-4l2-2a3 3 0 0 1 4 4l-1 1"/><path d="M15 12a3 3 0 0 1 0 4l-2 2a3 3 0 0 1-4-4l1-1"/>'),
     testDependance: _svg('<circle cx="12" cy="5" r="3"/><path d="M12 22V8"/><path d="M5 12H2a10 10 0 0 0 20 0h-3"/>'),
     testPurete: _svg('<path d="M14 4v10.54a4 4 0 1 1-4 0V4a2 2 0 0 1 4 0z"/><path d="M12 9v7"/>'),
-    testVacances: _svg('<path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/>'),
     testAmourAttachement: _svg('<path d="M12 22v-7"/><path d="M12 15a5 5 0 0 0 5-5V5l-2.5 1.5L12 3 9.5 6.5 7 5v5a5 5 0 0 0 5 5z"/><path d="M12 19c-1.5-1.8-3.5-2.2-5-2 .2 1.6 1.8 3 5 2z"/>'),
     testJeLaimeEncore: _svg('<path d="M8 22h8"/><rect x="9" y="10" width="6" height="12" rx="1"/><path d="M12 10V8"/><path d="M12 8c-1.3-1-1.3-2.7 0-4.5 1.3 1.8 1.3 3.5 0 4.5z"/>'),
     testTrouverAmour: _svg('<path d="M12 22s-7-6.2-7-12a7 7 0 0 1 14 0c0 5.8-7 12-7 12z"/><path d="M12 12.6s-2.4-1.5-2.4-3.1a1.2 1.2 0 0 1 2.4-.6 1.2 1.2 0 0 1 2.4.6c0 1.6-2.4 3.1-2.4 3.1z"/>'),
@@ -180,6 +179,101 @@
     quizTentation: _svg('<path d="M12 3c3 3.5 4.5 6 4.5 8.5a4.5 4.5 0 0 1-9 0C7.5 9 9 6.5 12 3z"/><path d="M2 20c2.2-1.4 4.4-1.4 6.6 0 2.2 1.4 4.6 1.4 6.8 0 2.2-1.4 4.4-1.4 6.6 0"/>')
   };
   function navIcon(rk) { return navIcons[rk] || _svg('<path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5z"/><path d="M14 2v6h6"/>'); }
+
+  // ── Les sections du menu (9 novembre 2026) ──────────────────────────────
+  // Chaque famille range ses pages sous des titres de section (SECTIONS_NAV,
+  // config.js ; sectionsPour dans generate.js retire déjà ce qui n'existe pas
+  // dans la langue). Le même découpage sert au panneau de bureau, en colonnes,
+  // et au menu mobile, où chaque famille s'ouvre en plein écran sur deux
+  // colonnes. Une famille d'une seule section n'a pas de titre de section.
+  const esc = (x) => String(x).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+  const pageCourante = typeof routeKey !== 'undefined' ? routeKey : null;
+  const nomPage = (k) => t('common:nav.' + k, k);
+  const titreSection = (cle) => t('common:nav.sections.' + cle, cle);
+  const courant = (k) => (k === pageCourante ? ' aria-current="page"' : '');
+  const sectionsDe = (cle) => {
+    if (typeof sectionsNav !== 'undefined' && sectionsNav && sectionsNav[cle]) return sectionsNav[cle];
+    const routes = ((famillesNav && famillesNav[cle]) || []).filter((k) => getLocalizedUrl(k, lang));
+    return routes.length ? [{ cle: cle, routes }] : [];
+  };
+  const icFamille = {
+    tests: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>',
+    celib: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.2 3.6-7 8-7s8 2.8 8 7"/></svg>',
+    quiz: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg>',
+    jeux: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="6" width="20" height="12" rx="2"/><path d="M6 12h4M8 10v4"/><circle cx="16" cy="11" r="1"/><circle cx="18" cy="14" r="1"/></svg>',
+    speciaux: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3l1.9 4.6 4.9.4-3.7 3.2 1.1 4.8L12 13.5 7.8 16l1.1-4.8L5.2 8l4.9-.4z"/></svg>',
+  };
+  const familles = [
+    { cle: 'tests', nom: t('common:nav.categoryTests', 'Tests') },
+    { cle: 'celib', nom: t('common:nav.categorySingles', 'Tests célibataires') },
+    { cle: 'quiz', nom: t('common:nav.categoryQuizzes', 'Quiz') },
+    { cle: 'jeux', nom: t('common:nav.jeuxCouple', 'Jeux de couple'),
+      hub: getLocalizedUrl('jeuxCouple', lang), hubLibelle: t('common:nav.deployerJeux', 'Voir tous les jeux') },
+    { cle: 'speciaux', nom: t('common:nav.ongletSpeciaux', t('common:nav.categorySpeciaux', 'Quiz spéciaux')),
+      hub: getLocalizedUrl('speciauxCouple', lang), hubLibelle: t('common:nav.deployerSpeciaux', 'Voir tous les quiz spéciaux') },
+  ].map((f) => {
+    const sections = sectionsDe(f.cle);
+    return Object.assign(f, { sections, total: sections.reduce((n, s) => n + s.routes.length, 0), ic: icFamille[f.cle] });
+  }).filter((f) => f.total);
+  const familleDe = {};
+  for (const f of familles) familleDe[f.cle] = f;
+  const flecheDroite = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';
+
+  // Bureau : les sections en colonnes (CSS multi-colonnes, une section ne se
+  // coupe jamais), dans l'ordre de lecture. Quatre colonnes au plus, cinq
+  // pour les tests de couple au-dessus de 1 280 px (nav-megamenu--large),
+  // pour que leurs 45 pages tiennent dans la hauteur d'un portable. Une
+  // seule section : une grille de deux, sans titre.
+  function lienBureau(k) {
+    return '<li><a href="' + urlNav(k) + '"' + srcNav(k) + courant(k) + ' class="nav-sec-lien">'
+      + '<span class="nav-sec-ic" aria-hidden="true">' + navIcon(k) + '</span>'
+      + '<span class="nav-sec-nom">' + esc(nomPage(k)) + '</span></a></li>';
+  }
+  function panneauBureau(cle) {
+    const f = familleDe[cle];
+    if (!f) return '';
+    if (f.sections.length === 1) return '<ul class="nav-sec-liste nav-sec-liste--grille">' + f.sections[0].routes.map(lienBureau).join('') + '</ul>';
+    return '<div class="nav-colonnes">' + f.sections.map((s) =>
+      '<div class="nav-sec" role="group" aria-labelledby="nb-' + cle + '-' + s.cle + '">'
+      + '<p class="nav-sec-titre" id="nb-' + cle + '-' + s.cle + '">' + esc(titreSection(s.cle)) + '</p>'
+      + '<ul class="nav-sec-liste">' + s.routes.map(lienBureau).join('') + '</ul></div>').join('') + '</div>';
+  }
+  const classesBureau = (cle) => {
+    const f = familleDe[cle];
+    const n = f && f.sections.length > 1 ? Math.min(4, f.sections.length) : 2;
+    return 'nav-megamenu--n' + n + (f && f.sections.length >= 6 ? ' nav-megamenu--large' : '');
+  };
+
+  // Mobile : un panneau plein écran par famille, ouvert depuis la liste des
+  // familles (mobile-menu.js). Sous le nom de chaque famille, ses sections
+  // (ou ses premières pages quand elle n'en a qu'une) disent ce qu'on y trouve.
+  function sousTitreFamille(f) {
+    if (f.sections.length > 1) return f.sections.map((s) => titreSection(s.cle)).join(' · ');
+    return f.sections[0].routes.slice(0, 3).map(nomPage).join(' · ');
+  }
+  function lienMobile(k) {
+    return '<li><a href="' + urlNav(k) + '"' + srcNav(k) + courant(k) + ' class="mnav-lien">'
+      + '<span class="mnav-lien-ic" aria-hidden="true">' + navIcon(k) + '</span>'
+      + '<span class="mnav-lien-nom">' + esc(nomPage(k)) + '</span></a></li>';
+  }
+  function panneauMobile(f) {
+    const seul = f.sections.length === 1;
+    let h = '<div class="mnav-panneau fam--' + f.cle + '" id="mnav-' + f.cle + '" role="group" aria-labelledby="mnav-' + f.cle + '-titre" hidden>'
+      + '<div class="mnav-barre">'
+      + '<button type="button" class="mnav-retour" aria-label="' + esc(t('common:nav.retour', 'Retour')) + '">'
+      + '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg></button>'
+      + '<p class="mnav-barre-titre" id="mnav-' + f.cle + '-titre"><span class="mnav-barre-ic" aria-hidden="true">' + f.ic + '</span>'
+      + '<span class="mnav-barre-nom">' + esc(f.nom) + '</span><span class="mnav-nb">' + f.total + '</span></p>'
+      + '</div>';
+    for (const s of f.sections) {
+      const id = 'nm-' + f.cle + '-' + s.cle;
+      h += '<div class="mnav-section' + (seul ? ' mnav-section--seule"' : '" role="group" aria-labelledby="' + id + '"') + '>';
+      if (!seul) h += '<p class="mnav-section-titre" id="' + id + '"><span>' + esc(titreSection(s.cle)) + '</span></p>';
+      h += '<ul class="mnav-grille">' + s.routes.map(lienMobile).join('') + '</ul></div>';
+    }
+    if (f.hub) h += '<a href="' + f.hub + '" class="mnav-hub">' + esc(f.hubLibelle) + flecheDroite + '</a>';
+    return h + '</div>';
+  }
 %>
 
 <%# ── En-tête à deux niveaux ─────────────────────────────────────────────
@@ -324,16 +418,9 @@
                 <span class="n2-onglet-nb"><%= testLinksFiltered.length %></span>
                 <svg class="nav-chevron" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
               </button>
-              <div class="nav-megamenu nav-megamenu--tests nav-dropdown-content hidden">
+              <div class="nav-megamenu nav-megamenu--tests nav-megamenu--sections fam--tests <%= classesBureau('tests') %> nav-dropdown-content hidden">
                 <div class="nav-megamenu-inner">
-                  <div class="nav-megamenu-grid">
-                    <% for (const link of testLinksFiltered) { %>
-                    <a href="<%= urlNav(link.routeKey) %>"<%- srcNav(link.routeKey) %> class="nav-megamenu-item">
-                      <span class="nav-megamenu-icon"><%- navIcon(link.routeKey) %></span>
-                      <span class="nav-megamenu-label"><%= t('common:' + link.labelKey, link.labelKey) %></span>
-                    </a>
-                    <% } %>
-                  </div>
+                  <%- panneauBureau('tests') %>
                 </div>
               </div>
             </div>
@@ -346,16 +433,9 @@
                 <span class="n2-onglet-nb"><%= celibLinksFiltered.length %></span>
                 <svg class="nav-chevron" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
               </button>
-              <div class="nav-megamenu nav-megamenu--celib nav-dropdown-content hidden">
+              <div class="nav-megamenu nav-megamenu--celib nav-megamenu--sections fam--celib <%= classesBureau('celib') %> nav-dropdown-content hidden">
                 <div class="nav-megamenu-inner">
-                  <div class="nav-megamenu-grid">
-                    <% for (const link of celibLinksFiltered) { %>
-                    <a href="<%= urlNav(link.routeKey) %>"<%- srcNav(link.routeKey) %> class="nav-megamenu-item">
-                      <span class="nav-megamenu-icon"><%- navIcon(link.routeKey) %></span>
-                      <span class="nav-megamenu-label"><%= t('common:' + link.labelKey, link.labelKey) %></span>
-                    </a>
-                    <% } %>
-                  </div>
+                  <%- panneauBureau('celib') %>
                 </div>
               </div>
             </div>
@@ -368,16 +448,9 @@
                 <span class="n2-onglet-nb"><%= quizLinksFiltered.length %></span>
                 <svg class="nav-chevron" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
               </button>
-              <div class="nav-megamenu nav-megamenu--quiz nav-dropdown-content hidden">
+              <div class="nav-megamenu nav-megamenu--quiz nav-megamenu--sections fam--quiz <%= classesBureau('quiz') %> nav-dropdown-content hidden">
                 <div class="nav-megamenu-inner">
-                  <div class="nav-megamenu-grid">
-                    <% for (const link of quizLinksFiltered) { %>
-                    <a href="<%= urlNav(link.routeKey) %>"<%- srcNav(link.routeKey) %> class="nav-megamenu-item">
-                      <span class="nav-megamenu-icon"><%- navIcon(link.routeKey) %></span>
-                      <span class="nav-megamenu-label"><%= t('common:' + link.labelKey, link.labelKey) %></span>
-                    </a>
-                    <% } %>
-                  </div>
+                  <%- panneauBureau('quiz') %>
                 </div>
               </div>
             </div>
@@ -396,16 +469,9 @@
                   <svg class="nav-chevron" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
                 </button>
               </div>
-              <div class="nav-megamenu nav-megamenu--jeux nav-dropdown-content hidden">
+              <div class="nav-megamenu nav-megamenu--jeux nav-megamenu--sections fam--jeux <%= classesBureau('jeux') %> nav-dropdown-content hidden">
                 <div class="nav-megamenu-inner">
-                  <div class="nav-megamenu-grid">
-                    <% for (const link of jeuLinksFiltered) { %>
-                    <a href="<%= urlNav(link.routeKey) %>"<%- srcNav(link.routeKey) %> class="nav-megamenu-item">
-                      <span class="nav-megamenu-icon"><%- navIcon(link.routeKey) %></span>
-                      <span class="nav-megamenu-label"><%= t('common:' + link.labelKey, link.labelKey) %></span>
-                    </a>
-                    <% } %>
-                  </div>
+                  <%- panneauBureau('jeux') %>
                   <a href="<%= urlJeux %>" class="nav-megamenu-pied">
                     <%= t('common:nav.deployerJeux', 'Voir tous les jeux') %>
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
@@ -428,16 +494,9 @@
                   <svg class="nav-chevron" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
                 </button>
               </div>
-              <div class="nav-megamenu nav-megamenu--speciaux nav-dropdown-content hidden">
+              <div class="nav-megamenu nav-megamenu--speciaux nav-megamenu--sections fam--speciaux <%= classesBureau('speciaux') %> nav-dropdown-content hidden">
                 <div class="nav-megamenu-inner">
-                  <div class="nav-megamenu-grid">
-                    <% for (const link of speciauxLinksFiltered) { %>
-                    <a href="<%= urlNav(link.routeKey) %>"<%- srcNav(link.routeKey) %> class="nav-megamenu-item">
-                      <span class="nav-megamenu-icon"><%- navIcon(link.routeKey) %></span>
-                      <span class="nav-megamenu-label"><%= t('common:' + link.labelKey, link.labelKey) %></span>
-                    </a>
-                    <% } %>
-                  </div>
+                  <%- panneauBureau('speciaux') %>
                   <a href="<%= urlSpeciaux %>" class="nav-megamenu-pied">
                     <%= t('common:nav.deployerSpeciaux', 'Voir tous les quiz spéciaux') %>
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
@@ -453,10 +512,18 @@
       </div>
     </div>
 
-    <!-- Menu mobile déplié -->
+    <%# Menu mobile déplié (9 novembre 2026, Thomas : « quand t'ouvre le menu
+        [...] il s'affiche sur tout l'écran pour un max de visibilité de toutes
+        les pages et sections ») : il prend tout l'écran sous la rangée du
+        logo. D'abord la liste des familles, avec leurs sections en
+        sous-titre ; une famille touchée s'ouvre en plein écran, ses pages
+        rangées sous leurs titres de section, sur deux colonnes, et la flèche
+        de la barre ramène à la liste (mobile-menu.js). Les panneaux sont dans
+        la page dès le HTML : tous les liens restent lisibles par les robots. %>
     <div id="mobile-menu" class="hidden lg:hidden">
       <div class="container mx-auto px-4">
-        <div class="mobile-nav-inner">
+        <div class="mnav">
+          <div class="mnav-accueil">
           <% if (urlEval) { %>
           <a href="<%= urlEval %>" data-bilan-src="menu-mobile" class="mobile-eval">
             <span class="mobile-eval-ic"><%- icEval %></span>
@@ -467,123 +534,20 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
           </a>
           <% } %>
-          <!-- Tests -->
-          <div class="mobile-accordion" data-accordeon="tests" style="--cat: var(--primary)">
-            <button class="mobile-accordion-trigger" aria-expanded="false">
-              <span class="m-acc-titre">
-                <span class="m-acc-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg></span>
-                <%= t('common:nav.categoryTests', 'Tests') %>
-                <span class="mobile-nav-count"><%= testLinksFiltered.length %></span>
-              </span>
-              <svg class="h-4 w-4 transition-transform duration-200" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-            </button>
-            <div class="mobile-accordion-content hidden">
-              <div class="mobile-nav-grid">
-                <% for (const link of testLinksFiltered) { %>
-                <a href="<%= urlNav(link.routeKey) %>"<%- srcNav(link.routeKey) %> class="mobile-nav-item">
-                  <span class="mobile-nav-item-icon"><%- navIcon(link.routeKey) %></span>
-                  <span><%= t('common:' + link.labelKey, link.labelKey) %></span>
-                </a>
-                <% } %>
-              </div>
-            </div>
-          </div>
-
-          <!-- Tests célibataires -->
-          <div class="mobile-accordion" data-accordeon="celib" style="--cat: var(--celib)">
-            <button class="mobile-accordion-trigger" aria-expanded="false">
-              <span class="m-acc-titre">
-                <span class="m-acc-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.2 3.6-7 8-7s8 2.8 8 7"/></svg></span>
-                <%= t('common:nav.categorySingles', 'Tests célibataires') %>
-                <span class="mobile-nav-count"><%= celibLinksFiltered.length %></span>
-              </span>
-              <svg class="h-4 w-4 transition-transform duration-200" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-            </button>
-            <div class="mobile-accordion-content hidden">
-              <div class="mobile-nav-grid">
-                <% for (const link of celibLinksFiltered) { %>
-                <a href="<%= urlNav(link.routeKey) %>"<%- srcNav(link.routeKey) %> class="mobile-nav-item">
-                  <span class="mobile-nav-item-icon"><%- navIcon(link.routeKey) %></span>
-                  <span><%= t('common:' + link.labelKey, link.labelKey) %></span>
-                </a>
-                <% } %>
-              </div>
-            </div>
-          </div>
-
-          <!-- Quiz -->
-          <div class="mobile-accordion" data-accordeon="quiz" style="--cat: var(--secondary)">
-            <button class="mobile-accordion-trigger" aria-expanded="false">
-              <span class="m-acc-titre">
-                <span class="m-acc-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg></span>
-                <%= t('common:nav.categoryQuizzes', 'Quiz') %>
-                <span class="mobile-nav-count"><%= quizLinksFiltered.length %></span>
-              </span>
-              <svg class="h-4 w-4 transition-transform duration-200" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-            </button>
-            <div class="mobile-accordion-content hidden">
-              <div class="mobile-nav-grid">
-                <% for (const link of quizLinksFiltered) { %>
-                <a href="<%= urlNav(link.routeKey) %>"<%- srcNav(link.routeKey) %> class="mobile-nav-item">
-                  <span class="mobile-nav-item-icon"><%- navIcon(link.routeKey) %></span>
-                  <span><%= t('common:' + link.labelKey, link.labelKey) %></span>
-                </a>
-                <% } %>
-              </div>
-            </div>
-          </div>
-
-          <!-- Jeux : le libellé mène au hub, la flèche déplie. -->
-          <div class="mobile-accordion mobile-accordion--scinde" data-accordeon="jeux" style="--cat: 27 90% 52%">
-            <div class="mobile-accordion-trigger mobile-trigger-scinde">
-              <a href="<%= urlJeux %>" class="mobile-trigger-lien">
-                <span class="m-acc-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="6" width="20" height="12" rx="2"/><path d="M6 12h4M8 10v4"/><circle cx="16" cy="11" r="1"/><circle cx="18" cy="14" r="1"/></svg></span>
-                <%= t('common:nav.jeuxCouple', 'Jeux de couple') %>
-                <span class="mobile-nav-count"><%= jeuLinksFiltered.length %></span>
-              </a>
-              <button type="button" class="mobile-trigger-fleche" aria-expanded="false"
-                      aria-label="<%= t('common:nav.deployerJeux', 'Voir tous les jeux') %>">
-                <svg class="h-4 w-4 transition-transform duration-200" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          <ul class="mnav-familles">
+            <% for (const f of familles) { %>
+            <li>
+              <button type="button" class="mnav-famille fam--<%= f.cle %>" aria-expanded="false" aria-controls="mnav-<%= f.cle %>">
+                <span class="mnav-famille-ic" aria-hidden="true"><%- f.ic %></span>
+                <span class="mnav-famille-texte">
+                  <span class="mnav-famille-nom"><%= f.nom %> <span class="mnav-nb"><%= f.total %></span></span>
+                  <span class="mnav-famille-sous"><%= sousTitreFamille(f) %></span>
+                </span>
+                <svg class="mnav-famille-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>
               </button>
-            </div>
-            <div class="mobile-accordion-content hidden">
-              <div class="mobile-nav-grid">
-                <% for (const link of jeuLinksFiltered) { %>
-                <a href="<%= urlNav(link.routeKey) %>"<%- srcNav(link.routeKey) %> class="mobile-nav-item">
-                  <span class="mobile-nav-item-icon"><%- navIcon(link.routeKey) %></span>
-                  <span><%= t('common:' + link.labelKey, link.labelKey) %></span>
-                </a>
-                <% } %>
-              </div>
-            </div>
-          </div>
-
-          <% if (speciauxLinksFiltered.length) { %>
-          <!-- Quiz spéciaux : le libellé mène au hub, la flèche déplie. -->
-          <div class="mobile-accordion mobile-accordion--scinde" data-accordeon="speciaux" style="--cat: var(--speciaux)">
-            <div class="mobile-accordion-trigger mobile-trigger-scinde">
-              <a href="<%= urlSpeciaux %>" class="mobile-trigger-lien">
-                <span class="m-acc-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3l1.9 4.6 4.9.4-3.7 3.2 1.1 4.8L12 13.5 7.8 16l1.1-4.8L5.2 8l4.9-.4z"/></svg></span>
-                <%= t('common:nav.ongletSpeciaux', t('common:nav.categorySpeciaux', 'Quiz spéciaux')) %>
-                <span class="mobile-nav-count"><%= speciauxLinksFiltered.length %></span>
-              </a>
-              <button type="button" class="mobile-trigger-fleche" aria-expanded="false"
-                      aria-label="<%= t('common:nav.deployerSpeciaux', 'Voir tous les quiz spéciaux') %>">
-                <svg class="h-4 w-4 transition-transform duration-200" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-              </button>
-            </div>
-            <div class="mobile-accordion-content hidden">
-              <div class="mobile-nav-grid">
-                <% for (const link of speciauxLinksFiltered) { %>
-                <a href="<%= urlNav(link.routeKey) %>"<%- srcNav(link.routeKey) %> class="mobile-nav-item">
-                  <span class="mobile-nav-item-icon"><%- navIcon(link.routeKey) %></span>
-                  <span><%= t('common:' + link.labelKey, link.labelKey) %></span>
-                </a>
-                <% } %>
-              </div>
-            </div>
-          </div>
-          <% } %>
+            </li>
+            <% } %>
+          </ul>
 
           <div class="mobile-nav-divider"></div>
 
@@ -627,6 +591,8 @@
             </a>
             <% } %>
           </div>
+          </div>
+          <% for (const f of familles) { %><%- panneauMobile(f) %><% } %>
         </div>
       </div>
     </div>

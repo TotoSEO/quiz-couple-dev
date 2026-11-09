@@ -1691,19 +1691,16 @@ article a:not(.no-underline):hover, .seo-content a:hover { text-decoration-color
   max-width: min(58rem, calc(100vw - 1.5rem));
   padding-top: 0.6rem;
 }
-.nav-megamenu--tests { width: 54rem; }
-.nav-megamenu--quiz { width: 33rem; }
-.nav-megamenu--jeux { width: 33rem; }
-.nav-megamenu--celib { width: 33rem; }
-.nav-megamenu--speciaux { width: 33rem; }
 @keyframes menuDeplie {
   from { opacity: 0; transform: translateY(8px) scale(0.985); }
 }
 .nav-megamenu-inner {
   position: relative;
   border-radius: 1.1rem; border: 1px solid hsl(var(--border) / 0.7);
-  background: hsl(var(--popover) / 0.97);
-  backdrop-filter: blur(24px) saturate(1.3);
+  /* Opaque : avec des sections sur cinq colonnes, le titre de la page qui
+     transparaissait derrière gênait la lecture (thème sombre surtout). */
+  background: hsl(var(--popover));
+  backdrop-filter: none;
   box-shadow:
     0 28px 80px -18px rgb(0 0 0 / 0.28),
     0 6px 20px -6px rgb(0 0 0 / 0.1),
@@ -1713,7 +1710,7 @@ article a:not(.no-underline):hover, .seo-content a:hover { text-decoration-color
   animation: menuDeplie 0.22s cubic-bezier(0.22, 1, 0.36, 1);
 }
 .dark .nav-megamenu-inner {
-  background: hsl(var(--popover) / 0.97);
+  background: hsl(var(--popover));
   box-shadow:
     0 28px 80px -18px rgb(0 0 0 / 0.55),
     0 6px 20px -6px rgb(0 0 0 / 0.3),
@@ -1727,145 +1724,291 @@ article a:not(.no-underline):hover, .seo-content a:hover { text-decoration-color
     radial-gradient(28rem 7rem at 12% 0%, hsl(var(--cat, var(--primary)) / 0.13), transparent 65%),
     radial-gradient(20rem 6rem at 85% 0%, hsl(var(--cat, var(--primary)) / 0.06), transparent 70%);
 }
-/* minmax(0, 1fr) et non 1fr : sinon chaque colonne garde pour plancher la
-   largeur du plus long libellé et l'overflow rogne la colonne de droite. */
-.nav-megamenu-grid {
-  display: grid; grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 2px; padding: 0.7rem;
-}
-.nav-megamenu--tests .nav-megamenu-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
-@media (max-width: 1280px) {
-  .nav-megamenu--tests { width: 44rem; }
-  .nav-megamenu--tests .nav-megamenu-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-}
-.nav-megamenu-item {
-  display: flex; align-items: center; gap: 0.6rem;
-  padding: 0.5rem 0.6rem;
-  border-radius: 0.7rem;
-  font-size: 0.8125rem; font-weight: 500; color: hsl(var(--foreground));
-  transition: background 0.15s ease, color 0.15s ease, transform 0.15s ease;
-}
-.nav-megamenu-item:hover {
-  background: hsl(var(--cat, var(--primary)) / 0.09);
-  color: hsl(var(--cat, var(--primary)));
-  transform: translateX(2px);
-}
-.nav-megamenu-icon {
-  display: flex; align-items: center; justify-content: center;
-  width: 2rem; height: 2rem; border-radius: 0.6rem; flex-shrink: 0;
-  background: hsl(var(--cat, var(--primary)) / 0.1); color: hsl(var(--cat, var(--primary)));
-  transition: background 0.15s ease, color 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
-}
-.nav-megamenu-icon svg { width: 1.05rem; height: 1.05rem; }
-.nav-megamenu-item:hover .nav-megamenu-icon {
-  background: hsl(var(--cat, var(--primary)) / 0.18);
-  color: hsl(var(--cat, var(--primary)));
-  transform: scale(1.07);
-  box-shadow: 0 3px 10px -3px hsl(var(--cat, var(--primary)) / 0.4);
-}
-.nav-megamenu-label { min-width: 0; overflow-wrap: anywhere; line-height: 1.25; }
 .nav-megamenu-pied {
+  position: relative;
   display: flex; align-items: center; justify-content: center; gap: 0.4rem;
-  margin: 0.1rem 0.7rem 0.7rem; padding: 0.6rem;
+  margin: 0.1rem 0.95rem 0.95rem; padding: 0.6rem;
   border-radius: 0.7rem;
-  font-size: 0.8125rem; font-weight: 600; color: hsl(var(--cat, var(--primary)));
+  font-size: 0.8125rem; font-weight: 600; color: hsl(var(--cat-texte, var(--primary-texte)));
   background: hsl(var(--cat, var(--primary)) / 0.08);
   transition: background 0.15s ease;
 }
 .nav-megamenu-pied:hover { background: hsl(var(--cat, var(--primary)) / 0.14); }
 .nav-megamenu-pied svg { width: 0.9rem; height: 0.9rem; }
 
-/* ── Menu mobile déplié ───────────────────────────────────── */
+/* La couleur de chaque famille, et sa variante lisible en petit texte
+   (--cat-texte, plus claire en thème sombre) : panneau de bureau et menu
+   mobile. Les onglets de bureau gardent leur --cat écrit dans la page, pour
+   être teintés dès le premier affichage. */
+.fam--tests { --cat: var(--primary); --cat-texte: var(--primary-texte); }
+.fam--celib { --cat: var(--celib); --cat-texte: var(--celib-texte); }
+.fam--quiz { --cat: var(--secondary); --cat-texte: var(--secondary-texte); }
+.fam--jeux { --cat: 27 90% 52%; --cat-texte: 25 85% 36%; }
+.dark .fam--jeux { --cat-texte: 30 90% 66%; }
+.fam--speciaux { --cat: var(--speciaux); --cat-texte: var(--speciaux-texte); }
 
-#mobile-menu {
-  background: hsl(var(--background) / 0.98);
-  backdrop-filter: blur(20px) saturate(1.3);
-  border-top: 1px solid hsl(var(--border) / 0.4);
-  max-height: calc(100vh - 3rem);
-  max-height: calc(100dvh - 3rem);
-  overflow-y: auto;
-  -webkit-overflow-scrolling: touch;
+/* Les sections du panneau de bureau (9 novembre 2026) : en colonnes fluides
+   (multi-colonnes), une section ne se coupant jamais d'une colonne à
+   l'autre, dans l'ordre de lecture. --n donne le nombre de colonnes et la
+   largeur du panneau : quatre au plus, cinq pour les tests de couple
+   au-dessus de 1 280 px. Une famille d'une seule section garde une grille
+   de deux, sans titre. */
+.nav-megamenu.nav-megamenu--sections {
+  --n: 2;
+  width: calc(var(--n) * 15.5rem + 1.9rem);
+  max-width: calc(100vw - 1.5rem);
 }
-@media (min-width: 1024px) { #mobile-menu { display: none; } }
-.mobile-nav-inner {
-  display: flex; flex-direction: column; gap: 0.5rem;
-  padding: 0.85rem 0 1.5rem;
+.nav-megamenu.nav-megamenu--n3 { --n: 3; }
+.nav-megamenu.nav-megamenu--n4 { --n: 4; }
+@media (min-width: 1280px) {
+  .nav-megamenu.nav-megamenu--large { --n: 5; }
 }
-.mobile-accordion {
-  border: 1px solid hsl(var(--border) / 0.55);
-  border-radius: 1rem;
-  background: hsl(var(--card) / 0.75);
-  overflow: hidden;
+.nav-colonnes {
+  position: relative;
+  column-count: var(--n); column-gap: 1.1rem;
+  padding: 0.9rem 0.95rem 0.15rem;
 }
-.mobile-accordion-trigger {
-  display: flex; width: 100%; align-items: center; justify-content: space-between;
-  padding: 0.75rem 0.9rem;
-  font-size: 0.9375rem; font-weight: 600; color: hsl(var(--foreground));
-  background: transparent; border: none; cursor: pointer;
-  transition: background 0.2s ease;
-}
-.mobile-accordion-trigger:hover { background: hsl(var(--cat, var(--primary)) / 0.05); }
-.mobile-accordion-trigger[aria-expanded="true"] > svg:last-child { transform: rotate(180deg); }
-.m-acc-titre { display: flex; align-items: center; gap: 0.6rem; }
-.m-acc-ic {
-  display: inline-flex; align-items: center; justify-content: center;
-  width: 2rem; height: 2rem; border-radius: 0.65rem; flex-shrink: 0;
-  background: hsl(var(--cat, var(--primary)) / 0.12); color: hsl(var(--cat, var(--primary)));
-}
-.m-acc-ic svg { width: 1.05rem; height: 1.05rem; }
-.mobile-accordion-content.open { display: block; border-top: 1px dashed hsl(var(--border) / 0.7); }
-
-.mobile-nav-count {
-  display: inline-flex; align-items: center; justify-content: center;
-  min-width: 1.25rem; height: 1.25rem; padding: 0 0.375rem;
-  border-radius: 9999px; font-size: 0.6875rem; font-weight: 700;
-  background: hsl(var(--cat, var(--primary)) / 0.12); color: hsl(var(--cat, var(--primary)));
-}
-
-.mobile-nav-grid {
-  display: grid; grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 2px; padding: 0.5rem;
-}
-.mobile-nav-item {
+.nav-sec { min-width: 0; padding-bottom: 0.85rem; break-inside: avoid; -webkit-column-break-inside: avoid; }
+/* Le titre de section : petit, en capitales, à la couleur de la famille,
+   entre une barre et un filet. Rien à voir avec un lien, exprès. */
+.nav-sec-titre {
   display: flex; align-items: center; gap: 0.5rem;
-  padding: 0.6rem 0.65rem; border-radius: 0.65rem;
-  font-size: 0.8125rem; font-weight: 500; color: hsl(var(--foreground));
+  margin: 0 0 0.35rem; padding: 0 0.5rem;
+  font-family: var(--font-display, inherit); font-size: 0.72rem; font-weight: 700; line-height: 1.25;
+  letter-spacing: 0.07em; text-transform: uppercase;
+  color: hsl(var(--cat-texte, var(--primary-texte)));
+}
+.nav-sec-titre::before {
+  content: ''; flex: 0 0 auto; width: 0.28rem; height: 0.9rem; border-radius: 999px;
+  background: hsl(var(--cat, var(--primary)));
+}
+.nav-sec-titre::after { content: ''; flex: 1 1 auto; min-width: 0.75rem; height: 1px; background: hsl(var(--cat, var(--primary)) / 0.22); }
+.nav-sec-liste { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 1px; }
+.nav-sec-liste--grille {
+  position: relative;
+  display: grid; grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2px; padding: 0.75rem 0.75rem 0.5rem;
+}
+.nav-sec-lien {
+  display: flex; align-items: center; gap: 0.6rem;
+  padding: 0.3rem 0.5rem; border-radius: 0.65rem;
+  font-size: 0.8125rem; font-weight: 500; line-height: 1.25; color: hsl(var(--foreground));
+  text-decoration: none;
   transition: background 0.15s ease, color 0.15s ease;
 }
-.mobile-nav-item:hover { background: hsl(var(--cat, var(--primary)) / 0.07); color: hsl(var(--cat, var(--primary))); }
-.mobile-nav-item-icon {
-  display: flex; align-items: center; justify-content: center;
-  width: 1.9rem; height: 1.9rem; border-radius: 0.5rem; flex-shrink: 0;
-  background: hsl(var(--cat, var(--primary)) / 0.1); color: hsl(var(--cat, var(--primary)));
+.nav-sec-lien:hover,
+.nav-sec-lien:focus-visible { background: hsl(var(--cat, var(--primary)) / 0.09); color: hsl(var(--cat-texte, var(--primary-texte))); }
+.nav-sec-lien:focus-visible { outline: 2px solid hsl(var(--cat, var(--primary))); outline-offset: -2px; }
+.nav-sec-lien[aria-current="page"] { background: hsl(var(--cat, var(--primary)) / 0.1); color: hsl(var(--cat-texte, var(--primary-texte))); font-weight: 600; }
+.nav-sec-ic {
+  display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+  width: 1.75rem; height: 1.75rem; border-radius: 0.55rem;
+  background: hsl(var(--cat, var(--primary)) / 0.11); color: hsl(var(--cat-texte, var(--primary-texte)));
+  transition: background 0.15s ease, transform 0.15s ease;
 }
-.mobile-nav-item-icon svg { width: 1rem; height: 1rem; }
-.mobile-nav-item:hover .mobile-nav-item-icon { background: hsl(var(--cat, var(--primary)) / 0.18); }
+.nav-sec-ic svg { width: 1rem; height: 1rem; }
+.nav-sec-lien:hover .nav-sec-ic { background: hsl(var(--cat, var(--primary)) / 0.18); transform: scale(1.06); }
+.nav-sec-nom { min-width: 0; overflow-wrap: break-word; -webkit-hyphens: auto; hyphens: auto; }
 
-/* Variante scindée du déclencheur (jeux) */
-.mobile-trigger-scinde { display: flex; align-items: center; justify-content: space-between; gap: 0; }
-.mobile-trigger-lien {
-  display: flex; align-items: center; gap: 0.6rem; flex: 1 1 auto;
-  color: inherit; text-decoration: none; padding: 0.15rem 0;
+/* ── Menu mobile ──────────────────────────────────────────── */
+
+/* Plein écran depuis le 9 novembre 2026 (Thomas : « quand t'ouvre le menu
+   [...] il s'affiche sur tout l'écran pour un max de visibilité de toutes les
+   pages et sections ») : sous la rangée du logo (3,75 rem), l'en-tête collé
+   en haut de l'écran, le menu prend tout le reste et défile seul ; la page,
+   derrière, ne défile plus (html.menu-mobile-ouvert, mobile-menu.js). Il
+   montre d'abord la liste des familles ; une famille touchée s'ouvre en
+   plein écran, ses pages rangées sous leurs titres de section, sur deux
+   colonnes. Chaque propriété de l'ancien tiroir est réécrite ici : les
+   feuilles critiques gardent l'ancienne règle de #mobile-menu tant qu'elles
+   ne sont pas relevées de nouveau. */
+#mobile-menu {
+  height: calc(100vh - 3.75rem);
+  max-height: none;
+  overflow-x: hidden;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
+  background: hsl(var(--background));
+  backdrop-filter: none;
+  border-top: 1px solid hsl(var(--border) / 0.55);
 }
-.mobile-trigger-fleche {
+@supports (height: 100dvh) {
+  #mobile-menu { height: calc(100dvh - 3.75rem); }
+}
+@media (min-width: 1024px) { #mobile-menu { display: none; } }
+@media (max-width: 1023.98px) {
+  html.menu-mobile-ouvert,
+  html.menu-mobile-ouvert body { overflow: hidden; }
+}
+.mnav { padding: 0.85rem 0 2rem; }
+.mnav-accueil { display: flex; flex-direction: column; gap: 0.6rem; }
+.mnav-accueil[hidden],
+.mnav-panneau[hidden] { display: none; }
+
+/* La liste des familles : une carte par famille, ses sections en sous-titre. */
+.mnav-familles { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0.5rem; }
+.mnav-famille {
+  display: grid; grid-template-columns: 2.75rem minmax(0, 1fr) 1.15rem; align-items: center; gap: 0.85rem;
+  width: 100%; padding: 0.8rem 0.85rem 0.8rem 0.75rem;
+  border: 1px solid hsl(var(--border) / 0.75); border-radius: 1.05rem;
+  background: hsl(var(--card));
+  color: hsl(var(--foreground)); text-align: left; cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition: border-color 0.2s ease, background 0.2s ease, transform 0.15s ease;
+}
+.mnav-famille:active { transform: scale(0.985); background: hsl(var(--cat) / 0.06); }
+.mnav-famille:focus-visible { outline: 2px solid hsl(var(--cat)); outline-offset: 2px; }
+.mnav-famille-ic {
+  display: flex; align-items: center; justify-content: center;
+  width: 2.75rem; height: 2.75rem; border-radius: 0.85rem;
+  background: hsl(var(--cat) / 0.13); color: hsl(var(--cat-texte));
+}
+.mnav-famille-ic svg { width: 1.3rem; height: 1.3rem; }
+.mnav-famille-texte { display: flex; flex-direction: column; gap: 0.2rem; min-width: 0; }
+.mnav-famille-nom { display: flex; align-items: center; flex-wrap: wrap; gap: 0.2rem 0.45rem; font-size: 1rem; font-weight: 700; line-height: 1.25; }
+/* Sans rembourrage vertical : la troncature passe au bord du rembourrage. */
+.mnav-famille-sous {
+  display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden;
+  font-size: 0.78rem; font-weight: 500; line-height: 1.35; color: hsl(var(--muted-foreground));
+}
+.mnav-famille-chevron { width: 1.15rem; height: 1.15rem; color: hsl(var(--muted-foreground)); transition: transform 0.2s ease, color 0.2s ease; }
+.mnav-nb {
   display: inline-flex; align-items: center; justify-content: center;
-  flex: 0 0 auto; width: 2.5rem; height: 2.5rem; margin: -0.5rem -0.5rem -0.5rem 0;
-  border: 0; background: transparent; color: inherit; cursor: pointer;
-  border-radius: 0.5rem;
+  min-width: 1.35rem; height: 1.25rem; padding: 0 0.4rem; border-radius: 999px;
+  font-size: 0.6875rem; font-weight: 700; line-height: 1;
+  background: hsl(var(--cat) / 0.13); color: hsl(var(--cat-texte));
 }
-.mobile-trigger-fleche:hover { background: hsl(var(--cat, var(--primary)) / 0.1); }
-.mobile-trigger-fleche[aria-expanded="true"] svg { transform: rotate(180deg); }
+
+/* Le panneau d'une famille : une barre collée en haut (retour, nom), puis
+   les sections. */
+.mnav-panneau { padding-bottom: 0.5rem; }
+.mnav-barre {
+  position: sticky; top: 0; z-index: 2;
+  display: flex; align-items: center; gap: 0.65rem;
+  margin: -0.85rem -1rem 0; padding: 0.6rem 1rem 0.6rem 0.75rem;
+  background: hsl(var(--background) / 0.96);
+  -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px);
+  border-bottom: 1px solid hsl(var(--border) / 0.65);
+}
+.mnav-retour {
+  display: inline-flex; align-items: center; justify-content: center; flex: 0 0 auto;
+  width: 2.6rem; height: 2.6rem; padding: 0; border-radius: 0.85rem;
+  border: 1px solid hsl(var(--border) / 0.8); background: hsl(var(--card));
+  color: hsl(var(--foreground)); cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition: border-color 0.2s ease, color 0.2s ease, transform 0.15s ease;
+}
+.mnav-retour svg { width: 1.3rem; height: 1.3rem; }
+.mnav-retour:active { transform: scale(0.94); }
+.mnav-retour:focus-visible { outline: 2px solid hsl(var(--cat)); outline-offset: 2px; }
+.mnav-barre-titre { display: flex; align-items: center; gap: 0.55rem; min-width: 0; margin: 0; font-size: 1.05rem; font-weight: 800; line-height: 1.2; }
+.mnav-barre-ic {
+  display: inline-flex; align-items: center; justify-content: center; flex: 0 0 auto;
+  width: 2.1rem; height: 2.1rem; border-radius: 0.7rem;
+  background: hsl(var(--cat) / 0.13); color: hsl(var(--cat-texte));
+}
+.mnav-barre-ic svg { width: 1.1rem; height: 1.1rem; }
+.mnav-barre-nom { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.mnav-barre-titre .mnav-nb { flex: 0 0 auto; }
+
+/* Le titre de section : petit, en capitales, à la couleur de la famille,
+   entre une barre et un filet ; les pages, dessous, sont des cartes. */
+.mnav-section-titre {
+  display: flex; align-items: center; gap: 0.55rem;
+  margin: 1.4rem 0.1rem 0.65rem;
+  font-family: var(--font-display, inherit); font-size: 0.8rem; font-weight: 700; line-height: 1.25;
+  letter-spacing: 0.07em; text-transform: uppercase;
+  color: hsl(var(--cat-texte));
+}
+.mnav-section-titre::before {
+  content: ''; flex: 0 0 auto; width: 0.3rem; height: 1rem; border-radius: 999px;
+  background: hsl(var(--cat));
+}
+.mnav-section-titre::after { content: ''; flex: 1 1 auto; min-width: 1rem; height: 1px; background: hsl(var(--cat) / 0.25); }
+.mnav-section-titre > span { min-width: 0; }
+.mnav-section:first-of-type .mnav-section-titre { margin-top: 1.05rem; }
+.mnav-section--seule { margin-top: 1rem; }
+
+.mnav-grille {
+  list-style: none; margin: 0; padding: 0;
+  display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.5rem;
+}
+@media (min-width: 640px) {
+  .mnav-grille { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+.mnav-grille > li { display: flex; min-width: 0; }
+.mnav-lien {
+  display: flex; align-items: center; gap: 0.55rem; flex: 1 1 auto; min-width: 0;
+  min-height: 3.4rem; padding: 0.55rem 0.6rem 0.55rem 0.5rem;
+  border: 1px solid hsl(var(--border) / 0.75); border-radius: 0.9rem;
+  background: hsl(var(--card));
+  color: hsl(var(--foreground)); text-decoration: none;
+  font-size: 0.8125rem; font-weight: 600; line-height: 1.22;
+  -webkit-tap-highlight-color: transparent;
+  transition: border-color 0.15s ease, background 0.15s ease, transform 0.12s ease;
+}
+.mnav-lien:active { transform: scale(0.97); background: hsl(var(--cat) / 0.07); }
+.mnav-lien:focus-visible { outline: 2px solid hsl(var(--cat)); outline-offset: 2px; }
+.mnav-lien[aria-current="page"] {
+  border-color: hsl(var(--cat) / 0.75); background: hsl(var(--cat) / 0.09);
+  color: hsl(var(--cat-texte));
+}
+.mnav-lien-ic {
+  display: flex; align-items: center; justify-content: center; flex: 0 0 auto;
+  width: 2rem; height: 2rem; border-radius: 0.6rem;
+  background: hsl(var(--cat) / 0.12); color: hsl(var(--cat-texte));
+}
+.mnav-lien-ic svg { width: 1.1rem; height: 1.1rem; }
+.mnav-lien-nom { min-width: 0; overflow-wrap: break-word; -webkit-hyphens: auto; hyphens: auto; }
+/* Petits téléphones (320 à 359 px) : la vignette rétrécit pour laisser
+   ses deux lignes au libellé, toujours sur deux colonnes. */
+@media (max-width: 359.98px) {
+  .mnav-grille { gap: 0.4rem; }
+  .mnav-lien { gap: 0.45rem; padding: 0.5rem 0.45rem; font-size: 0.78rem; }
+  .mnav-lien-ic { width: 1.7rem; height: 1.7rem; border-radius: 0.5rem; }
+  .mnav-lien-ic svg { width: 0.95rem; height: 0.95rem; }
+}
+/* Le survol ne vaut qu'avec une souris : sur un écran tactile, il restait
+   posé sur la carte qui se trouvait sous le doigt à l'ouverture d'une
+   famille. */
+@media (hover: hover) {
+  .mnav-famille:hover { border-color: hsl(var(--cat) / 0.5); }
+  .mnav-famille:hover .mnav-famille-chevron { color: hsl(var(--cat-texte)); transform: translateX(2px); }
+  .mnav-retour:hover { color: hsl(var(--cat-texte)); border-color: hsl(var(--cat) / 0.5); }
+  .mnav-lien:hover { border-color: hsl(var(--cat) / 0.5); }
+  .mnav-hub:hover { background: hsl(var(--cat) / 0.16); }
+}
+/* Le hub de la famille (jeux, quiz spéciaux), en bas du panneau. */
+.mnav-hub {
+  display: flex; align-items: center; justify-content: center; gap: 0.45rem;
+  margin-top: 1.4rem; padding: 0.9rem 1rem; border-radius: 0.95rem;
+  font-size: 0.9rem; font-weight: 700; color: hsl(var(--cat-texte)); text-decoration: none;
+  background: hsl(var(--cat) / 0.1);
+  transition: background 0.15s ease;
+}
+.mnav-hub svg { width: 1.05rem; height: 1.05rem; }
+.mnav-hub:focus-visible { outline: 2px solid hsl(var(--cat)); outline-offset: 2px; }
 
 .mobile-nav-divider {
   height: 1px; margin: 0.35rem 0.25rem;
   background: linear-gradient(to right, transparent, hsl(var(--border)), transparent);
 }
-.mobile-nav-link {
-  display: block; padding: 0.8rem 0.9rem; border-radius: 0.85rem;
-  font-size: 0.9375rem; font-weight: 500; color: hsl(var(--foreground));
-  transition: background 0.2s ease, color 0.2s ease;
+
+/* Le plan du site range ses familles comme le menu : un petit titre par
+   section, à la couleur de la famille (sitemap.ejs). */
+.plan-section-titre {
+  display: flex; align-items: center; gap: 0.45rem;
+  margin: 1.15rem 0 0.55rem;
+  font-family: var(--font-display, inherit); font-size: 0.72rem; font-weight: 700; line-height: 1.25;
+  letter-spacing: 0.07em; text-transform: uppercase;
+  color: hsl(var(--cat-texte));
 }
-.mobile-nav-link:hover { background: hsl(var(--muted) / 0.5); color: hsl(var(--primary)); }
+.plan-section-titre::before {
+  content: ''; flex: 0 0 auto; width: 0.25rem; height: 0.85rem; border-radius: 999px;
+  background: hsl(var(--cat));
+}
+.plan-section-titre:first-child { margin-top: 0; }
 
 /* Les quatre liens du bas du menu mobile, en grille de 2 x 2 (17 octobre
    2026) : Instagram, créer un quiz, questions pour couple, blog. Des carrés en
@@ -1937,18 +2080,13 @@ article a:not(.no-underline):hover, .seo-content a:hover { text-decoration-color
   .mobile-tuile:active { transform: none; }
 }
 
-/* Deux colonnes aussi sur un vrai téléphone : un iPhone fait 375 à 430px de
-   large, l'ancienne coupure à 480px le faisait retomber sur une seule
-   colonne et obligeait à faire défiler tout le listing. Une seule colonne
-   uniquement sous 360px, où deux colonnes ne tiennent plus. */
-@media (max-width: 359px) {
-  .mobile-nav-grid { grid-template-columns: 1fr; }
-}
-
 /* Mouvement réduit : plus de niveaux qui glissent. */
 @media (prefers-reduced-motion: reduce) {
   .entete-n1, .entete-n1-inner, .entete-n2, .entete-logo, .entete-logo-mini,
   .nav-megamenu-inner, .nav-lang-dropdown { transition: none; animation: none; }
+  .nav-sec-lien, .nav-sec-ic, .mnav-famille, .mnav-famille-chevron, .mnav-retour, .mnav-lien { transition: none; }
+  .nav-sec-lien:hover .nav-sec-ic, .mnav-famille:active, .mnav-famille:hover .mnav-famille-chevron,
+  .mnav-retour:active, .mnav-lien:active { transform: none; }
 }
 
 /* ── Table styles for quiz pages ──────────────────────────── */
@@ -5908,14 +6046,6 @@ h1, h2, h3, h4, h5, h6,
   box-shadow: 0 0 0 100vmax hsl(var(--band-rose) / 0.55);
 }
 
-/* ── Méga-menu : tuiles d'icônes SVG colorées (fini les emojis) ──
-   Les couleurs vivent désormais dans la variable --cat, posée par famille
-   dans le gabarit ; l'ancien bloc rose/violet d'ici écrasait la teinte de
-   chaque sous-menu (les jeux et les quiz redevenaient roses). Seules les
-   tailles restent. */
-.nav-megamenu-icon svg { width: 1.15rem; height: 1.15rem; }
-.mobile-nav-item-icon svg { width: 1.15rem; height: 1.15rem; }
-
 /* ════════════════════════════════════════════════════════════════════
    PHASE C : bloc "avis par quiz" (formulaire progressif) + compteur
    ════════════════════════════════════════════════════════════════════ */
@@ -9203,110 +9333,6 @@ body { padding-bottom: var(--pub-footer, 0px); }
   .qc-relais { animation: none; transform: rotate(-1.2deg); }
 }
 
-/* ── Test « où partir en vacances ? » ─────────────────────────
-   Questionnaire plein cadre et cartes de destinations avec photo. La page
-   vit en français seulement. */
-
-.va-racine { max-width: 46rem; margin: 0 auto; scroll-margin-top: 6rem; }
-
-.va-progression {
-  height: 0.4rem; border-radius: 9999px; overflow: hidden;
-  background: hsl(var(--muted)); margin-bottom: 0.9rem;
-}
-.va-progression-barre {
-  height: 100%; border-radius: 9999px;
-  background: linear-gradient(90deg, hsl(var(--primary)), hsl(var(--secondary)));
-  transition: width 0.35s cubic-bezier(0.22, 1, 0.36, 1);
-}
-.va-etape { font-size: 0.75rem; font-weight: 700; color: hsl(var(--muted-foreground)); margin-bottom: 0.4rem; letter-spacing: 0.04em; }
-.va-titre-question { font-size: 1.35rem; font-weight: 800; margin-bottom: 0.35rem; }
-.va-sous-question { font-size: 0.9rem; color: hsl(var(--muted-foreground)); margin-bottom: 0.5rem; }
-
-.va-options { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.6rem; margin-top: 1.1rem; }
-@media (max-width: 560px) { .va-options { grid-template-columns: 1fr; } }
-.va-option {
-  display: flex; align-items: center; gap: 0.75rem; text-align: left;
-  padding: 0.9rem 1rem; border-radius: 1rem;
-  border: 1.5px solid hsl(var(--border)); background: hsl(var(--card) / 0.8);
-  font-size: 0.95rem; font-weight: 600; color: hsl(var(--foreground));
-  cursor: pointer;
-  transition: transform 0.15s ease, border-color 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
-}
-.va-option:hover {
-  border-color: hsl(var(--primary) / 0.55); background: hsl(var(--primary) / 0.05);
-  transform: translateY(-1px); box-shadow: 0 6px 18px -8px hsl(var(--primary) / 0.35);
-}
-.va-option-emoji {
-  display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0;
-  width: 2.5rem; height: 2.5rem; border-radius: 0.8rem; font-size: 1.35rem;
-  background: hsl(var(--primary) / 0.09);
-}
-.va-option-texte { display: flex; flex-direction: column; line-height: 1.25; }
-.va-option-texte small { font-weight: 500; color: hsl(var(--muted-foreground)); }
-
-.va-retour {
-  margin-top: 1.1rem; padding: 0.4rem 0.6rem; border: 0; background: none; cursor: pointer;
-  font-size: 0.85rem; font-weight: 600; color: hsl(var(--muted-foreground)); border-radius: 0.5rem;
-}
-.va-retour:hover { color: hsl(var(--primary)); background: hsl(var(--primary) / 0.06); }
-
-.va-analyse { text-align: center; padding: 3rem 1rem; }
-.va-analyse-globe { font-size: 3rem; animation: vaTangue 1.2s ease-in-out infinite; }
-@keyframes vaTangue { 0%, 100% { transform: rotate(-12deg); } 50% { transform: rotate(12deg); } }
-.va-analyse-texte { margin-top: 0.9rem; font-weight: 600; color: hsl(var(--muted-foreground)); }
-.va-erreur { text-align: center; color: hsl(var(--muted-foreground)); padding: 2rem 1rem; }
-
-/* Résultats */
-.va-resultats-titre { font-size: 1.5rem; font-weight: 800; text-align: center; margin-bottom: 0.9rem; }
-.va-recap { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.4rem; margin-bottom: 1rem; }
-.va-recap-puce {
-  padding: 0.3rem 0.75rem; border-radius: 9999px; font-size: 0.75rem; font-weight: 700;
-  background: hsl(var(--primary) / 0.1); color: hsl(var(--primary));
-}
-.va-note-elargi {
-  text-align: center; font-size: 0.85rem; color: hsl(var(--muted-foreground));
-  background: hsl(var(--muted) / 0.5); border-radius: 0.75rem;
-  padding: 0.6rem 1rem; margin-bottom: 1rem;
-}
-
-.va-liste { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; margin-top: 1.25rem; }
-@media (max-width: 700px) { .va-liste { grid-template-columns: 1fr; } }
-.va-carte {
-  display: flex; flex-direction: column; overflow: hidden;
-  border-radius: 1.1rem; border: 1px solid hsl(var(--border) / 0.8);
-  background: hsl(var(--card));
-  box-shadow: 0 2px 10px -6px rgb(0 0 0 / 0.12);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-.va-carte:hover { transform: translateY(-3px); box-shadow: 0 14px 30px -14px rgb(0 0 0 / 0.25); }
-.va-carte-visuel { position: relative; aspect-ratio: 640 / 420; overflow: hidden; background: linear-gradient(130deg, hsl(var(--primary) / 0.15), hsl(var(--secondary) / 0.15)); }
-.va-carte-visuel img { width: 100%; height: 100%; object-fit: cover; display: block; }
-.va-carte-visuel.va-sans-photo img { display: none; }
-.va-carte-nuits {
-  position: absolute; right: 0.6rem; top: 0.6rem;
-  padding: 0.25rem 0.6rem; border-radius: 9999px;
-  font-size: 0.7rem; font-weight: 700; color: #fff;
-  background: rgb(0 0 0 / 0.55); backdrop-filter: blur(4px);
-}
-.va-carte-corps { display: flex; flex-direction: column; gap: 0.3rem; padding: 0.9rem 1rem 1.1rem; }
-.va-carte-nom { font-size: 1.05rem; font-weight: 800; }
-.va-carte-meta { font-size: 0.78rem; font-weight: 600; color: hsl(var(--muted-foreground)); letter-spacing: 0.03em; }
-.va-carte-budget { color: hsl(var(--primary)); }
-.va-carte-accroche { font-size: 0.875rem; line-height: 1.45; color: hsl(var(--foreground) / 0.85); }
-.va-carte-etapes { font-size: 0.78rem; color: hsl(var(--muted-foreground)); margin-top: 0.2rem; }
-
-.va-refaire { display: block; margin: 2rem auto 0; }
-
-.va-credits { margin-top: 2rem; font-size: 0.72rem; color: hsl(var(--muted-foreground)); }
-.va-credits summary { cursor: pointer; font-weight: 600; }
-.va-credits ul { columns: 2; gap: 1.5rem; margin-top: 0.6rem; padding-left: 1rem; }
-@media (max-width: 640px) { .va-credits ul { columns: 1; } }
-
-@media (prefers-reduced-motion: reduce) {
-  .va-analyse-globe { animation: none; }
-  .va-option, .va-carte{ transition: none; }
-}
-
 /* ── Test des 5 langages de l'amour : définition et statistiques ────────
    La définition courte répond au H2 en quarante mots, dans un encadré qui
    se distingue du corps de texte : c'est le format que les moteurs
@@ -11071,7 +11097,7 @@ body { padding-bottom: var(--pub-footer, 0px); }
    bandes alternees des sections restent, mais a l'interieur de l'encart, dont
    les coins les rognent. Sous 1024 px rien ne change : il n'y a pas de
    colonne laterale a distinguer sur telephone. Les pages a sections
-   (vacances, ado) et le blog gardent leur mise en page. */
+   (pureté, ado) et le blog gardent leur mise en page. */
 @media (min-width: 1024px) {
   .seo-content .avec-colonne:not(.avec-colonne--sections) > .avec-colonne__contenu {
     position: relative;

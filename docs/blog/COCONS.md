@@ -107,7 +107,10 @@ commentaire en tête de chaque bloc.
 - Un test qui n'existe qu'en français (les vacances en couple, `testVacances`)
   ne reçoit pas de lien dans les cinq autres langues : la phrase du week-end
   (« alternez : ce mois-ci c'est toi qui choisis ») est écrite sans lui dès
-  le départ, au lieu de laisser `liens.py` retirer la balise.
+  le départ, au lieu de laisser `liens.py` retirer la balise. Le test lui-même
+  est retiré le 9 novembre 2026 (son adresse renvoie vers l'accueil) : la
+  phrase française qui le citait est partie, et les deux articles des
+  vacances sont sur les cartes du tu préfères.
 - Les repères changent avec la langue, même sur un sujet sans droit : le
   musée gratuit (premier dimanche du mois en France et en Italie, musées
   municipaux ailleurs), le cinéma à tarif réduit (mardi, mercredi en Italie,

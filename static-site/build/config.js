@@ -143,7 +143,6 @@ export const ROUTE_SLUGS = {
   testChargeMentale: { fr: 'test-charge-mentale-couple', en: 'mental-load-test-couples', es: 'test-carga-mental-pareja', de: 'mental-load-test-paare', it: 'test-carico-mentale-coppia', nl: 'mentale-belasting-test' },
   quizRencontre: { fr: 'questions-premier-rendez-vous', en: 'first-date-questions-game', es: 'preguntas-primera-cita', de: 'fragen-erstes-date', it: 'domande-primo-appuntamento', nl: 'vragen-eerste-date' },
   zamours: { fr: 'quiz-couple-les-zamours' },
-  testVacances: { fr: 'test-ou-partir-en-vacances' },
   jeuDilemmes: { fr: 'dilemmes-couple', en: 'couple-dilemmas-game', es: 'dilemas-de-pareja', de: 'dilemmata-fuer-paare', it: 'dilemmi-di-coppia', nl: 'dilemmas-voor-koppels' },
   testAmourAmitie: { fr: 'test-amour-ou-amitie', en: 'love-or-friendship-test', es: 'test-amor-o-amistad', de: 'liebe-oder-freundschaft-test', it: 'test-amore-o-amicizia', nl: 'liefde-of-vriendschap-test' },
   testCrush: { fr: 'test-amour-ou-crush', en: 'love-or-crush-test', es: 'test-amor-o-crush', de: 'liebe-oder-crush-test', it: 'test-amore-o-cotta', nl: 'crush-test' },
@@ -277,7 +276,6 @@ export const QUIZ_FEATURED = {
   quizRencontre:      { file: 'bistro-table-two-chairs',     old: null,                  alt: { fr: "Une petite table de bistrot en terrasse avec deux chaises vides face à face, une fleur dans un vase fin, des guirlandes lumineuses floues derrière", en: "A small bistro table on a terrace with two empty chairs facing each other, a flower in a slim vase, blurred string lights behind", es: "Una pequeña mesa de bistró en una terraza con dos sillas vacías frente a frente, una flor en un jarrón fino y luces de guirnalda desenfocadas detrás", de: "Ein kleiner Bistrotisch auf einer Terrasse mit zwei leeren Stühlen einander gegenüber, eine Blume in einer schmalen Vase, dahinter unscharfe Lichterketten", it: "Un tavolino da bistrot su una terrazza con due sedie vuote una di fronte all'altra, un fiore in un vaso sottile e ghirlande luminose sfocate dietro", nl: 'Een klein bistrotafeltje op een terras met twee lege stoelen tegenover elkaar, een bloem in een slank vaasje en wazige lichtslingers op de achtergrond' } },
   // langues: sans-nl (jeu réservé au français, frOnly)
   zamours:            { file: 'game-show-buzzers',           old: null,                  alt: { fr: "Deux gros boutons de jeu télévisé, un rose et un violet, sur un pupitre brillant sous les lumières d'un plateau", en: "Two large game show buzzer buttons, one pink and one violet, on a glossy desk under studio lights", es: "Dos grandes pulsadores de concurso de televisión, uno rosa y otro violeta, sobre un pupitre brillante bajo las luces del plató", de: "Zwei große Buzzer einer Fernsehshow, einer rosa und einer violett, auf einem glänzenden Pult unter Studiolicht", it: "Due grossi pulsanti da quiz televisivo, uno rosa e uno viola, su un bancone lucido sotto le luci di uno studio" } },
-  testVacances:      { file: 'carte-vacances-couple',      old: null,                  alt: { fr: 'Carte du monde stylisée rose et violette avec des épingles en forme de cœur, illustrant le test où partir en vacances en couple' } },
   jeuPlateau:         { file: 'board-path-pawns',            old: null,                  alt: { fr: "Deux pions en bois, un rose et un lavande, côte à côte sur le chemin dessiné d'un plateau de jeu, un dé blanc posé à côté", en: "Two wooden pawns, one pink and one lavender, side by side on the drawn path of a board game, a white die resting nearby", es: "Dos peones de madera, uno rosa y otro lavanda, uno al lado del otro en el camino dibujado de un tablero, con un dado blanco al lado", de: "Zwei Holzspielfiguren, eine rosa und eine lavendelfarben, nebeneinander auf dem gezeichneten Pfad eines Spielbretts, ein weißer Würfel daneben", it: "Due pedine di legno, una rosa e una lavanda, fianco a fianco sul percorso disegnato di un tabellone, con un dado bianco accanto", nl: 'Twee houten pionnen, een roze en een lavendelkleurige, naast elkaar op het getekende pad van een spelbord, met een witte dobbelsteen ernaast' } },
   jeuQuiDeNous:       { file: 'two-blank-signs',             old: null,                  alt: { fr: "Deux petites ardoises vierges sur chevalets, une rose et une lavande, face à face sur une nappe en lin, comme en attente de deux réponses", en: "Two small blank sign boards on easels, one pink and one lavender, facing each other on a linen tablecloth, as if waiting for two answers", es: "Dos pequeñas pizarras en blanco sobre caballetes, una rosa y otra lavanda, frente a frente en un mantel de lino, como esperando dos respuestas", de: "Zwei kleine leere Schilder auf Staffeleien, eines rosa und eines lavendelfarben, einander gegenüber auf einer Leinentischdecke, als warteten sie auf zwei Antworten", it: "Due piccole lavagnette bianche su cavalletti, una rosa e una lavanda, una di fronte all'altra su una tovaglia di lino, come in attesa di due risposte", nl: 'Twee kleine lege schoolbordjes op standaards, een roze en een lavendelkleurig, tegenover elkaar op een linnen tafelkleed, alsof ze op twee antwoorden wachten' } },
   jeuGages:           { file: 'pastel-prize-wheel',          old: null,                  alt: { fr: "Une petite roue de la fortune en bois peint aux cases pastel, rose, lavande, crème et menthe, posée sur une table de cuisine", en: "A small painted wooden prize wheel with pastel segments in pink, lavender, cream and mint, standing on a kitchen table", es: "Una pequeña ruleta de madera pintada con casillas pastel, rosa, lavanda, crema y menta, sobre una mesa de cocina", de: "Ein kleines bemaltes Glücksrad aus Holz mit Pastellfeldern in Rosa, Lavendel, Creme und Mint, auf einem Küchentisch", it: "Una piccola ruota della fortuna in legno dipinto con caselle pastello, rosa, lavanda, crema e menta, su un tavolo di cucina", nl: 'Een klein houten rad van fortuin met pastelkleurige vakken, roze, lavendel, crème en mint, op een keukentafel' } },
@@ -394,7 +392,6 @@ export const ROUTE_CONFIG = {
   testChargeMentale: { template: 'quiz-charge-mentale', namespaces: ['quiz-charge-mentale', 'quizzes', 'quizGames', 'gd', 'common'] },
   quizRencontre: { template: 'quiz-rencontre', namespaces: ['quiz-rencontre', 'quizzes', 'quizGames', 'gd', 'common'] },
   zamours: { template: 'quiz-zamours', namespaces: ['quiz-zamours', 'quizzes', 'quizGames', 'gd', 'common'], frOnly: true },
-  testVacances: { template: 'quiz-vacances', namespaces: ['quizzes', 'common'], frOnly: true },
   jeuDilemmes: { template: 'jeu-dilemmes', namespaces: ['jeu-dilemmes', 'quizzes', 'quizGames', 'gd', 'common'] },
   testAmourAmitie: { template: 'quiz-amour-amitie', namespaces: ['quiz-amour-amitie', 'quizzes', 'quizGames', 'gd', 'common'] },
   testCrush: { template: 'quiz-crush', namespaces: ['quiz-crush', 'quizzes', 'quizGames', 'gd', 'common'] },
@@ -523,7 +520,6 @@ export const BILAN_ENTREES = {
   testCouche: { groupe: 'score', id: 'couche', formule: 'point' },
   testPersonnalite: { groupe: 'score', id: 'personnalite' },
   testKarmique: { groupe: 'score', id: 'karmique', formule: 'point' },
-  testVacances: { groupe: 'projet', id: 'vacances' },
   quizCoquin: { groupe: 'score', id: 'coquin' },
   quizKnowledge: { groupe: 'score', id: 'connaissance' },
   quizGenant: { groupe: 'score', id: 'genant' },
@@ -634,55 +630,76 @@ export const ROUTES_JEUX = [
   'jeuMarguerite', 'jeuNouvelAn',
 ];
 
-// Les quatre familles de navigation, dans l'ordre d'affichage. C'est la seule
-// liste : le menu (header.ejs), les carrousels de l'accueil (home.ejs), le
-// pied de page (footer.ejs) et le plan du site (sitemap.ejs) la lisent tous.
-// Écrites à la main dans chaque gabarit, les quatre copies avaient dérivé :
-// pas le même ordre, le test de pureté et celui des vacances sur l'accueil
-// mais pas dans le menu, quatre tests absents du plan du site. Une page
-// réservée au français disparaît d'elle-même ailleurs, getLocalizedUrl ne lui
-// donnant pas d'adresse. Le libellé de chaque lien est `nav.<clé>` dans
-// common.json, le même partout.
-export const FAMILLES_NAV = {
+// Les familles de navigation et leurs sections, dans l'ordre d'affichage. C'est
+// la seule liste : le menu (header.ejs), les carrousels de l'accueil
+// (home.ejs), le pied de page (footer.ejs) et le plan du site (sitemap.ejs) la
+// lisent tous. Écrites à la main dans chaque gabarit, les copies avaient
+// dérivé jusqu'en octobre 2026 (pas le même ordre, quatre tests absents du
+// plan du site). Une page réservée au français disparaît d'elle-même
+// ailleurs, getLocalizedUrl ne lui donnant pas d'adresse. Le libellé de chaque
+// lien est `nav.<clé>` dans common.json, le même partout.
+//
+// Les sections (9 novembre 2026, Thomas : « Au sein de chaque menu, je veux
+// que tu tries les pages des sous menus dans des sections [...] tu peux
+// distinguer les tests de compatibilité version questions et ceux genre
+// résultats instantanés [...] pour le célibat tu peux mettre tous ceux qui
+// parlent de son ex ensemble ») : le menu, sur téléphone comme sur ordinateur,
+// et le plan du site rangent les pages de chaque famille sous un titre de
+// section, `nav.sections.<clé>` dans common.json. Une famille qui n'a qu'une
+// section (les quiz spéciaux) s'affiche sans titre. Une page ajoutée se range
+// dans la section qui dit ce qu'elle fait pour celui qui la cherche, jamais à
+// la fin de la famille.
+export const SECTIONS_NAV = {
   tests: [
-    // Le bilan de couple en tête des tests de couple, une fois ouvert.
-    ...(BILAN_OUVERT ? ['bilanCouple'] : []),
-    'testCouple', 'testCommonPoints', 'testCompatibilite', 'testCompatSexuelle', 'testQuiAime', 'testDistance',
-    'testFinCouple', 'testToxic', 'testRedFlag', 'testLoveBombing', 'testPervers', 'testEmprise',
-    'testAmourHabitude', 'testAmourAttachement', 'testEstCeLeBon',
-    'testJeLaimeEncore', 'testCoupleSain', 'testMariage', 'testDivorce',
-    'testParentalite', 'testVeuxEnfant', 'testEmmenager', 'calculatriceAmour', 'compteurCouple', 'nocesMariage', 'differenceAge',
-    'testAstroPrenoms', 'testDateNaissance', 'testSignesChinois',
-    'testJalousie', 'testLangageAmour', 'testPersonnalite', 'testAttachement',
-    'testConfiance', 'testDependance', 'testAmeSoeur', 'testKarmique',
-    'testInfidelite', 'testCouche', 'testAimeEncore', 'testOublieSonEx', 'testDistanceAime',
-    'testChargeMentale', 'testPurete', 'testVacances',
+    { cle: 'compatibilite', routes: ['testCouple', 'testCompatibilite', 'testCommonPoints', 'testCompatSexuelle', 'testAmeSoeur', 'testKarmique'] },
+    // Deux prénoms ou deux dates, et le résultat tombe : aucune question.
+    { cle: 'instantanee', routes: ['calculatriceAmour', 'testAstroPrenoms', 'testDateNaissance', 'testSignesChinois'] },
+    { cle: 'sante', routes: [
+      // L'évaluation de couple, une fois ouverte, en tête de la section qui
+      // fait le point sur la relation (et de la famille, voir FAMILLES_NAV).
+      ...(BILAN_OUVERT ? ['bilanCouple'] : []),
+      'testCoupleSain', 'testAmourHabitude', 'testEstCeLeBon', 'testChargeMentale', 'testDistance', 'testFinCouple', 'testDivorce',
+    ] },
+    { cle: 'sentiments', routes: ['testAimeEncore', 'testJeLaimeEncore', 'testDistanceAime', 'testAmourAttachement', 'testQuiAime'] },
+    { cle: 'confiance', routes: ['testConfiance', 'testJalousie', 'testInfidelite', 'testCouche', 'testOublieSonEx'] },
+    { cle: 'alerte', routes: ['testToxic', 'testRedFlag', 'testLoveBombing', 'testPervers', 'testEmprise'] },
+    { cle: 'projets', routes: ['testMariage', 'testEmmenager', 'testParentalite', 'testVeuxEnfant'] },
+    { cle: 'profil', routes: ['testLangageAmour', 'testAttachement', 'testPersonnalite', 'testDependance', 'testPurete'] },
+    { cle: 'outils', routes: ['compteurCouple', 'nocesMariage', 'differenceAge'] },
   ],
   celib: [
-    'testTrouverAmour', 'testCelibataire', 'testDureeCelibat', 'testCoupleOuCelibat',
-    'testPretRelation', 'testSuisJeAmoureux', 'testCrush', 'testAmourAmitie',
-    'testAmourAmi', 'testSecret', 'testEx', 'testEncoreAmoureuxEx', 'testOublierEx', 'testExRevenir', 'testRemettreEx', 'testPourquoiQuitte',
+    { cle: 'trouverAmour', routes: ['testTrouverAmour', 'testCelibataire', 'testDureeCelibat', 'testCoupleOuCelibat', 'testPretRelation'] },
+    { cle: 'crush', routes: ['testSuisJeAmoureux', 'testCrush', 'testSecret', 'testAmourAmitie', 'testAmourAmi'] },
+    { cle: 'ex', routes: ['testEx', 'testEncoreAmoureuxEx', 'testOublierEx', 'testExRevenir', 'testRemettreEx', 'testPourquoiQuitte'] },
   ],
   quiz: [
-    'quizAmoureux', 'quizTypeCouple', 'quizRencontre', 'quizCoquin',
-    'quizMarrant', 'quizKnowledge', 'quizMost', 'quizAdo', 'quizGenant',
-    'quizVraiFaux', 'zamours', 'quizTentation',
+    { cle: 'connaitre', routes: ['quizKnowledge', 'quizAmoureux', 'quizTypeCouple', 'quizRencontre', 'quizVraiFaux', 'quizAdo'] },
+    { cle: 'amuser', routes: ['quizMost', 'quizMarrant', 'quizGenant', 'quizCoquin', 'quizTentation', 'zamours'] },
   ],
   jeux: [
-    'jeuSoireeCouples',
-    'quizTuPreferes', 'jeuActionVerite', 'jeuActionVeriteHot', 'jeuGages',
-    'jeuPlateau', 'jeuQuiDeNous', 'jeuQuestionsRapides', 'jeuxParMessage', 'jeuMarguerite', 'jeuNouvelAn', 'jeuDilemmes', 'pourContre', 'jeuJamais',
-    'jeuQuiPourrait', 'jeuOuiNon', 'jeuPhrases', 'jeuDixMais',
+    // Le jeu de soirée pour couples en tête de la famille (27 octobre 2026).
+    { cle: 'soiree', routes: ['jeuSoireeCouples', 'jeuPlateau', 'jeuNouvelAn'] },
+    { cle: 'questions', routes: ['quizTuPreferes', 'jeuJamais', 'jeuPhrases', 'jeuOuiNon', 'jeuDilemmes', 'pourContre', 'jeuxParMessage'] },
+    { cle: 'rire', routes: ['jeuQuiDeNous', 'jeuQuiPourrait', 'jeuDixMais', 'jeuQuestionsRapides', 'jeuMarguerite'] },
+    { cle: 'pimenter', routes: ['jeuActionVerite', 'jeuActionVeriteHot', 'jeuGages'] },
   ],
   // Les quiz spéciaux de saison (16 octobre 2026, demande de Thomas) : le hub
   // speciauxCouple les répertorie tous et met en avant ceux de la saison en
-  // cours (SAISON). Pour le moment, les cinq quiz d'Halloween ; ceux de Noël
-  // viendront s'ajouter ici. Le menu, le pied de page, le plan du site et
-  // l'accueil lisent cette liste comme les quatre autres.
+  // cours (SAISON). Pour le moment, les cinq quiz d'Halloween, sans titre de
+  // section ; ceux de Noël viendront dans une section à eux.
   speciaux: [
-    'quizSerialKiller', 'quizMortFilmHorreur', 'quizPossession', 'quizSuperVilain', 'quizDuoVilains',
+    { cle: 'halloween', routes: ['quizSerialKiller', 'quizMortFilmHorreur', 'quizPossession', 'quizSuperVilain', 'quizDuoVilains'] },
   ],
 };
+// Les mêmes pages à plat, famille par famille, dans l'ordre des sections :
+// c'est ce que lisent l'accueil, le pied de page, les cartes « À faire
+// ensuite » et la carte des célibataires. L'évaluation de couple, une fois
+// ouverte, reste la première des tests de couple partout (accueil, pied de
+// page), comme depuis le 19 octobre 2026.
+export const FAMILLES_NAV = Object.fromEntries(Object.entries(SECTIONS_NAV).map(([famille, sections]) => {
+  const pages = sections.flatMap((s) => s.routes);
+  return [famille, pages.includes('bilanCouple') ? ['bilanCouple', ...pages.filter((k) => k !== 'bilanCouple')] : pages];
+}));
 // La saison de chaque quiz spécial : le hub et l'accueil mettent en avant ceux
 // de la saison en cours, les autres restent jouables toute l'année.
 export const SAISON_DES_QUIZ = {
@@ -2255,8 +2272,9 @@ export const QUIZ_RELATED_ARTICLES = {
   testAmeSoeur:     ['dependance-affective', 'love-bombing', 'arreter-ou-continuer-relation', 'citation-ame-soeur'],
   testDateNaissance: ['compatibilite-amoureuse-lion', 'compatibilite-amoureuse-scorpion', 'compatibilite-amoureuse-taureau'],
   testSignesChinois: ['compatibilite-amoureuse-belier', 'compatibilite-amoureuse-lion', 'compatibilite-amoureuse-scorpion', 'compatibilite-amoureuse-poissons'],
-  testVacances:     ['activites-couple-ete', 'disputes-couple-vacances', 'sauver-son-couple'],
-  quizTuPreferes:   ['comment-savoir-si-cest-le-bon', 'activites-couple-ete'],
+  // « mer ou montagne » : les deux articles des vacances, qui étaient sous le test
+  // « où partir en vacances ? », retiré le 9 novembre 2026.
+  quizTuPreferes:   ['comment-savoir-si-cest-le-bon', 'activites-couple-ete', 'week-end-en-amoureux-pas-cher', 'disputes-couple-vacances'],
   quizVraiFaux:     ['comment-savoir-si-cest-le-bon', 'manque-communication-couple'],
   quizMost:         ['activites-couple-ete', 'disputes-couple'],
   jeuxCouple:       ['activites-couple-ete', 'disputes-couple', 'sauver-son-couple'],
@@ -2323,7 +2341,6 @@ QUIZ_RELATED_ARTICLES.testLangageAmour.unshift('surprise-pour-son-copain-ou-sa-c
 QUIZ_RELATED_ARTICLES.compteurCouple.splice(2, 0, 'rituels-de-couple');
 QUIZ_RELATED_ARTICLES.testCompatSexuelle.unshift('pimenter-son-couple');
 QUIZ_RELATED_ARTICLES.quizCoquin.unshift('pimenter-son-couple');
-QUIZ_RELATED_ARTICLES.testVacances.unshift('week-end-en-amoureux-pas-cher');
 // Cocon 4 (l'argent dans le couple) : le pilier en tête du test de couple, du couple sain et d'emménager (où l'argent est
 // la première question), le compte commun sur emménager et le mariage, le budget et le partage sur le compteur et la charge
 // mentale, les disputes d'argent sur le couple sain et le test de confiance, l'infidélité financière sur la confiance et
