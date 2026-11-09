@@ -120,10 +120,138 @@ fixer les prix :
 Titre, sous-titre, description, mots-clés et catégories de chaque édition
 sont dans la clé `kdp` de `livre/formats/aventures/<langue>.mjs`.
 `node livre/fiches-kdp.mjs` les imprime toutes, prêtes à copier, et ce qui
-suit est sa sortie au 7 novembre 2026. Les catégories proposées sont à
-choisir dans l'arbre de KDP, qui peut les nommer un peu autrement.
+suit est sa sortie au 9 novembre 2026. Les catégories proposées n'ont pas pu
+être vérifiées (les boutiques Amazon refusent les lectures automatiques) : elles
+se choisissent dans l'arbre de KDP, qui peut les nommer autrement, trois au
+plus par édition.
 
-<!-- fiches -->
+### Français (fr)
+
+- **Titre** : 100 aventures à deux
+- **Sous-titre** : Le livre souvenir à remplir en couple : idées de sorties et d'activités à deux, avec une page et une photo pour chacune
+- **Auteur** : Quiz Couple
+- **Langue** : Français
+- **Mots-clés** (un par case) : « idées sorties couple », « livre couple à remplir », « cadeau couple original », « activités à deux », « bucket list couple », « carnet souvenir couple », « cadeau saint valentin »
+- **Catégories** : Livres > Famille et bien-être > Vie de couple ; Livres > Loisirs créatifs, décoration et passions > Jeux et activités ; Livres > Humour
+- **Fichiers** : `livre/sortie/aventures-fr/interieur.pdf` (136 pages) et `livre/sortie/aventures-fr/couverture.pdf`
+
+**Description** (à coller dans l'éditeur de description de KDP, en mode HTML) :
+
+```html
+<p><b>Et si on arrêtait de dire « un jour, on fera ça » ?</b></p>
+<p>Ce livre contient cent idées de choses à vivre à deux : un pique-nique au parc, une raclette, une partie de bowling, une nuit sous la tente, un parc d'attractions, du canoë, un dîner aux chandelles un mardi soir... Après chaque aventure, une page à remplir ensemble : la date, l'endroit, les petits détails qui font les souvenirs (le nom du chien, la meilleure attraction, qui a gagné), une note chacun, ce que vous voulez retenir, et un cadre pour coller votre photo.</p>
+<p><b>Dans ce livre :</b></p>
+<ul><li>100 aventures pour tous les budgets, dont près de 40 gratuites, avec le coût, la durée et la saison de chacune</li><li>Une page souvenir par aventure, avec un cadre photo à la taille d'une photo instantanée</li><li>Dix pages pour vos propres idées et dix pages pour vos voyages</li><li>Les pages « Nous deux » au début et à la fin, le palmarès et les trophées de vos aventures</li></ul>
+<p>Un cadeau de couple à offrir pour la Saint-Valentin, un anniversaire de rencontre ou Noël, et un livre à garder longtemps : dans quelques années, ce sera votre album de souvenirs.</p>
+<p>Format carré 21,6 x 21,6 cm, intérieur en couleur, papier blanc.</p>
+```
+
+### Anglais (en)
+
+- **Titre** : 100 Adventures for Two
+- **Sous-titre** : A Couples Bucket List and Memory Book with Space for Your Photos: Date Ideas and Things to Do Together, a Fill-In Couples Journal Gift
+- **Auteur** : Quiz Couple
+- **Langue** : Anglais
+- **Mots-clés** (un par case) : « couples bucket list book », « date night ideas for couples », « things to do together for couples », « couples memory book with photos », « couples journal gift », « adventure book for couples », « valentines anniversary gift for him or her »
+- **Catégories** : Books > Self-Help > Journal Writing ; Books > Parenting & Relationships > Family Activities ; Books > Self-Help > Relationships > Love & Romance
+- **Fichiers** : `livre/sortie/aventures-en/interieur.pdf` (136 pages) et `livre/sortie/aventures-en/couverture.pdf`
+
+**Description** (à coller dans l'éditeur de description de KDP, en mode HTML) :
+
+```html
+<p><b>What if we stopped saying “we should do that someday”?</b></p>
+<p>This book gives you 100 ideas for things to do together: a picnic in the park, a raclette or fondue night, bowling, a night in a tent, a day at a theme park, a canoe trip, a candlelit dinner on a Tuesday... After each adventure, you fill in its page together: the date, the place, the little details that make a memory (the dog’s name, the best ride, who won), a rating from each of you, what you each want to remember, and a frame for your photo.</p>
+<p><b>Inside this book:</b></p>
+<ul><li>100 adventures for every budget, 38 of them free, each tagged with its cost, how long it takes and, when it matters, the best season</li><li>A memory page for every adventure, with a photo frame sized for a mini instant photo</li><li>Ten blank pages for your own adventures and ten pages for your trips</li><li>A two-page log for the Quiz Couple tests and games you play together, so you can take them again a year later and compare</li><li>“The two of us” pages at the start and at the end, your top 5, your awards and four extra photo frames</li></ul>
+<p>Made for every kind of couple: instead of “his” and “hers,” the two of you are Pink and Purple, and you decide who’s who. A gift for Valentine’s Day, an anniversary or Christmas, and a book to keep: in a few years, it will be the album of everything you did together.</p>
+<p>Square 8.5 x 8.5 in paperback, 136 pages, color interior on white paper.</p>
+```
+
+### Espagnol (es)
+
+- **Titre** : 100 aventuras en pareja
+- **Sous-titre** : Ideas para hacer en pareja, en un libro para rellenar a cuatro manos: una página y una foto para cada plan. Álbum de recuerdos y regalo original para parejas
+- **Auteur** : Quiz Couple
+- **Langue** : Espagnol
+- **Mots-clés** (un par case) : « ideas para hacer en pareja », « libro para rellenar en pareja », « regalo original para parejas », « planes en pareja », « álbum de recuerdos de pareja », « regalo san valentín aniversario novio novia », « bucket list para parejas »
+- **Catégories** : Libros > Salud, familia y desarrollo personal > Familia y relaciones ; Libros > Humor
+- **Fichiers** : `livre/sortie/aventures-es/interieur.pdf` (136 pages) et `livre/sortie/aventures-es/couverture.pdf`
+
+**Description** (à coller dans l'éditeur de description de KDP, en mode HTML) :
+
+```html
+<p><b>¿Y si dejamos de decir «algún día lo haremos»?</b></p>
+<p>Este libro reúne cien ideas de cosas para vivir en pareja: un pícnic en el parque, una raclette, una partida de bolos, una noche en tienda de campaña, un parque de atracciones, una tarde en canoa, una cena con velas un martes cualquiera... Después de cada aventura, una página para rellenar a cuatro manos: la fecha, el sitio, los pequeños detalles que hacen los recuerdos (el nombre del perro, la mejor atracción, quién ganó), una nota de cada uno, lo que queréis recordar y un marco para pegar vuestra foto.</p>
+<p><b>En este libro:</b></p>
+<ul><li>100 aventuras para todos los bolsillos, 38 de ellas gratis, con el precio y la duración de cada una, y la mejor época cuando la hay</li><li>Una página de recuerdos por aventura, con un marco del tamaño de una foto instantánea</li><li>Diez páginas para vuestras propias aventuras y diez para vuestros viajes</li><li>Dos páginas para apuntar vuestros resultados en los tests de Quiz Couple y repetirlos un año después</li><li>Las páginas «Así somos» al principio y al final, vuestro top 5, el palmarés, los trofeos de vuestras aventuras y cuatro marcos más para fotos</li></ul>
+<p>Nada de «él» y «ella»: en el libro sois Rosa y Lila, los dos personajes de Quiz Couple, y decidís quién es quién.</p>
+<p>Un regalo para parejas en San Valentín, en un aniversario o en Navidad, y un libro para guardar mucho tiempo: dentro de unos años será vuestro álbum de recuerdos.</p>
+<p>Formato cuadrado de 21,6 x 21,6 cm, 136 páginas, interior a color, papel blanco.</p>
+```
+
+### Allemand (de)
+
+- **Titre** : 100 Abenteuer zu zweit
+- **Sous-titre** : Die Bucket List für Paare: Date-Ideen und Dinge, die man als Paar machen sollte. Ein Erinnerungsbuch zum Ausfüllen mit Platz für eure Fotos, als Geschenk für Paare
+- **Auteur** : Quiz Couple
+- **Langue** : Allemand
+- **Mots-clés** (un par case) : « paarbuch zum ausfüllen », « bucketliste für paare », « unternehmungen zu zweit », « aktivitäten für paare », « date night ideen », « erinnerungsalbum für paare mit fotos », « jahrestag valentinstag geschenk freund freundin »
+- **Catégories** : Bücher > Ratgeber > Partnerschaft & Familie ; Bücher > Freizeit, Haus & Garten > Spiele & Rätsel ; Bücher > Humor
+- **Fichiers** : `livre/sortie/aventures-de/interieur.pdf` (136 pages) et `livre/sortie/aventures-de/couverture.pdf`
+
+**Description** (à coller dans l'éditeur de description de KDP, en mode HTML) :
+
+```html
+<p><b>Wie wär’s, wenn ihr aufhört, „irgendwann mal“ zu sagen?</b></p>
+<p>In diesem Buch stecken hundert Ideen für Dinge, die ihr zu zweit erleben könnt: ein Picknick im Park, Raclette zu zweit, Bowling, eine Nacht im Zelt, ein Tag im Freizeitpark, eine Kanutour, ein Candle-Light-Dinner an einem ganz normalen Dienstag... Nach jedem Abenteuer füllt ihr zusammen seine Seite aus: Datum, Ort, die kleinen Details, an die man sich später gern erinnert (der Name des Hundes, die beste Achterbahn, wer gewonnen hat), eure Bewertung und das, was ihr beide nicht vergessen wollt. Dazu kommt ein Rahmen für euer Foto.</p>
+<p><b>Das steckt im Buch:</b></p>
+<ul><li>100 Abenteuer für jedes Budget, 38 davon kostenlos, jedes mit Kosten, Dauer und, wo es passt, der besten Jahreszeit</li><li>Eine Erinnerungsseite pro Abenteuer, mit einem Fotorahmen in der Größe eines Sofortbilds (Mini-Format)</li><li>Zehn leere Seiten für eure eigenen Abenteuer und zehn Seiten für eure Reisen</li><li>Zwei Seiten für die Tests und Spiele von Quiz Couple, die ihr zusammen macht: Ergebnis eintragen, ein Jahr später wiederholen, vergleichen</li><li>„Wir zwei“-Seiten am Anfang und am Ende, eure Top 5, die Trophäen eurer Abenteuer und vier zusätzliche Fotorahmen</li></ul>
+<p>Für jedes Paar gemacht: Statt „er“ und „sie“ gibt es zwei Figuren, Rosa und Lila, und ihr entscheidet, wer wer ist. Ein Geschenk zum Valentinstag, zum Jahrestag oder zu Weihnachten, und ein Buch, das bleibt: In ein paar Jahren ist es das Album von allem, was ihr zusammen erlebt habt.</p>
+<p>Quadratisches Format 21,6 x 21,6 cm, 136 Seiten, Innenteil in Farbe auf weißem Papier.</p>
+```
+
+### Italien (it)
+
+- **Titre** : 100 avventure in coppia
+- **Sous-titre** : Il libro da compilare in coppia: cose da fare insieme e idee per uscite di coppia, con una pagina e una foto per ognuna. Album dei ricordi e regalo per coppia
+- **Auteur** : Quiz Couple
+- **Langue** : Italien
+- **Mots-clés** (un par case) : « cose da fare in coppia », « libro da compilare in coppia », « diario di coppia da compilare », « album dei ricordi di coppia », « idee per uscite di coppia », « regalo per coppia originale », « regalo san valentino anniversario fidanzati »
+- **Catégories** : Libri > Famiglia, salute e benessere > Famiglia e relazioni > Relazioni di coppia ; Libri > Tempo libero > Giochi e quiz ; Libri > Humour
+- **Fichiers** : `livre/sortie/aventures-it/interieur.pdf` (136 pages) et `livre/sortie/aventures-it/couverture.pdf`
+
+**Description** (à coller dans l'éditeur de description de KDP, en mode HTML) :
+
+```html
+<p><b>E se smettessimo di dire «un giorno lo faremo»?</b></p>
+<p>Questo libro raccoglie cento idee di cose da vivere in due: un picnic al parco, una pizza fatta in casa, una partita a bowling, una notte in tenda, il parco divertimenti, la canoa, una cena a lume di candela di martedì sera... Dopo ogni avventura c'è una pagina da compilare insieme: la data, il posto, i piccoli dettagli che fanno i ricordi (il nome del cane, l'attrazione migliore, chi ha vinto), un voto a testa, quello che volete ricordare e una cornice per incollare la vostra foto.</p>
+<p><b>Nel libro:</b></p>
+<ul><li>100 avventure per tutte le tasche, di cui 38 gratis, con il costo, la durata e la stagione di ognuna</li><li>Una pagina dei ricordi per ogni avventura, con una cornice della misura di una foto istantanea</li><li>Dieci pagine per le vostre avventure e dieci pagine per i vostri viaggi</li><li>Due pagine per i vostri test Quiz Couple, da rifare un anno dopo per confrontare i risultati</li><li>Le pagine «Noi due» all'inizio e alla fine, la vostra top 5, i trofei delle vostre avventure e quattro cornici in più per le foto</li></ul>
+<p>Niente «lui» e «lei»: nel libro siete Rosa e Viola, i due personaggi di Quiz Couple, e decidete voi chi è chi.</p>
+<p>Un regalo per la coppia, a San Valentino, per un anniversario o a Natale, e un libro da tenere a lungo: tra qualche anno sarà il vostro album dei ricordi.</p>
+<p>Formato quadrato 21,6 x 21,6 cm, 136 pagine, interni a colori, carta bianca.</p>
+```
+
+### Néerlandais (nl)
+
+- **Titre** : 100 avonturen voor twee
+- **Sous-titre** : Bucketlist en invulboek voor koppels: 100 date-ideeën en dingen om samen te doen, met een herinneringenbladzijde en een fotokader bij elk avontuur
+- **Auteur** : Quiz Couple
+- **Langue** : Néerlandais
+- **Mots-clés** (un par case) : « bucketlist voor koppels », « invulboek voor koppels », « cadeau voor koppels », « date ideeën », « dingen om samen te doen », « herinneringenboek voor stelletjes », « valentijnscadeau voor vriend of vriendin »
+- **Catégories** : Boeken > Gezin & lifestyle > Partnerschap & relaties ; Boeken > Hobby's, kunstnijverheid & huis > Puzzels & spellen ; Boeken > Humor & entertainment
+- **Fichiers** : `livre/sortie/aventures-nl/interieur.pdf` (136 pages) et `livre/sortie/aventures-nl/couverture.pdf`
+
+**Description** (à coller dans l'éditeur de description de KDP, en mode HTML) :
+
+```html
+<p><b>Klaar met “dat moeten we ooit eens doen”?</b></p>
+<p>Dit boek staat vol met honderd ideeën om met z'n tweeën te beleven: een picknick in het park, raclette, een potje bowlen, een nacht in de tent, een dagje pretpark, kanoën, een kaarslichtdiner op een dinsdagavond... Na elk avontuur vullen jullie samen een bladzijde in: de datum, de plek, de kleine details die er een herinnering van maken (de naam van de hond, de beste attractie, wie er won), ieders oordeel in hartjes, wat ieder wil onthouden, en een kader voor jullie foto.</p>
+<p><b>In dit boek:</b></p>
+<ul><li>100 avonturen voor elk budget, waarvan 38 gratis, met bij elk avontuur de kosten, de duur en zo nodig het beste seizoen</li><li>Een herinneringenbladzijde per avontuur, met een fotokader op het formaat van een instantfoto</li><li>Tien lege bladzijden voor jullie eigen avonturen en tien bladzijden voor jullie reizen</li><li>Een overzicht van jullie Quiz Couple-tests op twee bladzijden, om een jaar later te vergelijken</li><li>Jullie top 5 en de trofeeën van jullie avonturen</li><li>De bladzijden ‘Wij tweeën’ aan het begin en aan het eind, en vier extra fotokaders</li></ul>
+<p>Een cadeau voor koppels om te geven met Valentijn, op jullie jubileum, met Sinterklaas of met Kerst, en een boek om lang te bewaren: over een paar jaar is het jullie album vol herinneringen.</p>
+<p>Vierkant formaat van 21,6 x 21,6 cm, binnenwerk in kleur op wit papier, 136 bladzijden.</p>
+```
 
 ## Sources
 
