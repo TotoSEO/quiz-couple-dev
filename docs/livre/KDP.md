@@ -47,7 +47,11 @@ Amazon et ses avis. Amazon ne réunit jamais deux langues sur une même page
 
 Une fois l'ISBN connu (KDP le donne à l'étape « Contenu », avant l'envoi du
 PDF), l'écrire dans la clé `isbn` de `livre/formats/aventures/<langue>.mjs` et
-refaire les fichiers : la page des mentions l'imprime. Commander ensuite une
+refaire les fichiers : la page des mentions l'imprime.
+
+| Édition | ISBN (KDP, marque « Independently published ») |
+|---|---|
+| Français | 9798141209154 (9 novembre 2026) | Commander ensuite une
 épreuve imprimée (« exemplaire d'épreuve ») au moins pour la première édition,
 pour voir les couleurs, la reliure et la tranche avant de publier.
 
