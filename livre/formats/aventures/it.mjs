@@ -547,9 +547,9 @@ export default {
       accroche: 'E se smettessimo di dire «un giorno lo faremo»?',
       texte: "Cento idee di cose da vivere in due, dal picnic al rafting, dalla pizza fatta in casa ai go-kart. Dopo ogni avventura, una pagina da compilare: la data, il posto, i piccoli dettagli (il nome del cane, l'attrazione migliore, chi ha vinto...), i vostri voti, quello che volete ricordare e la vostra foto.",
       points: [
-        'Avventure per tutte le tasche, di cui quasi 40 gratis',
-        'Il costo, la durata e la stagione di ognuna',
-        'Dieci pagine per le vostre idee, dieci per i vostri viaggi',
+        'Avventure per tutte le tasche, quasi 40 gratis',
+        'Il costo e la durata di ognuna, e la stagione quando conta',
+        'Dieci pagine per le vostre idee, dieci per i viaggi',
       ],
       apercu: 'Una pagina, una volta compilata',
       // La petite liste cochée du dos : [numéro de l'aventure, faite ?]
@@ -568,7 +568,7 @@ export default {
       '<b>E se smettessimo di dire «un giorno lo faremo»?</b>',
       "Questo libro raccoglie cento idee di cose da vivere in due: un picnic al parco, una pizza fatta in casa, una partita a bowling, una notte in tenda, il parco divertimenti, la canoa, una cena a lume di candela di martedì sera... Dopo ogni avventura c'è una pagina da compilare insieme: la data, il posto, i piccoli dettagli che fanno i ricordi (il nome del cane, l'attrazione migliore, chi ha vinto), un voto a testa, quello che volete ricordare e una cornice per incollare la vostra foto.",
       '<b>Nel libro:</b>',
-      "<ul><li>100 avventure per tutte le tasche, di cui 38 gratis, con il costo, la durata e la stagione di ognuna</li><li>Una pagina dei ricordi per ogni avventura, con una cornice della misura di una foto istantanea</li><li>Dieci pagine per le vostre avventure e dieci pagine per i vostri viaggi</li><li>Due pagine per i vostri test Quiz Couple, da rifare un anno dopo per confrontare i risultati</li><li>Le pagine «Noi due» all'inizio e alla fine, la vostra top 5, i trofei delle vostre avventure e quattro cornici in più per le foto</li></ul>",
+      "<ul><li>100 avventure per tutte le tasche, di cui 38 gratis, con il costo e la durata di ognuna, e la stagione migliore quando conta</li><li>Una pagina dei ricordi per ogni avventura, con una cornice della misura di una foto istantanea</li><li>Dieci pagine per le vostre avventure e dieci pagine per i vostri viaggi</li><li>Due pagine per i vostri test Quiz Couple, da rifare un anno dopo per confrontare i risultati</li><li>Le pagine «Noi due» all'inizio e alla fine, la vostra top 5, i trofei delle vostre avventure e quattro cornici in più per le foto</li></ul>",
       'Niente «lui» e «lei»: nel libro siete Rosa e Viola, i due personaggi di Quiz Couple, e decidete voi chi è chi.',
       'Un regalo per la coppia, a San Valentino, per un anniversario o a Natale, e un libro da tenere a lungo: tra qualche anno sarà il vostro album dei ricordi.',
       'Formato quadrato 21,6 x 21,6 cm, 136 pagine, interni a colori, carta bianca.',

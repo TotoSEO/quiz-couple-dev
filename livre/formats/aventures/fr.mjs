@@ -551,7 +551,7 @@ export default {
       texte: "Cent idées de choses à vivre à deux, du pique-nique au rafting, de la raclette au karting. Après chaque aventure, une page à remplir : la date, l'endroit, les petits détails (le nom du chien, la meilleure attraction, qui a gagné...), vos notes, ce que vous voulez retenir, et votre photo.",
       points: [
         'Des aventures pour tous les budgets, dont près de 40 gratuites',
-        'Le coût, la durée et la saison de chacune',
+        'Le coût et la durée de chacune, et la saison quand il y en a une',
         'Dix pages pour vos idées, dix pour vos voyages',
       ],
       apercu: 'Une page, une fois remplie',
@@ -571,7 +571,7 @@ export default {
       '<b>Et si on arrêtait de dire « un jour, on fera ça » ?</b>',
       "Ce livre contient cent idées de choses à vivre à deux : un pique-nique au parc, une raclette, une partie de bowling, une nuit sous la tente, un parc d'attractions, du canoë, un dîner aux chandelles un mardi soir... Après chaque aventure, une page à remplir ensemble : la date, l'endroit, les petits détails qui font les souvenirs (le nom du chien, la meilleure attraction, qui a gagné), une note chacun, ce que vous voulez retenir, et un cadre pour coller votre photo.",
       '<b>Dans ce livre :</b>',
-      '<ul><li>100 aventures pour tous les budgets, dont près de 40 gratuites, avec le coût, la durée et la saison de chacune</li><li>Une page souvenir par aventure, avec un cadre photo à la taille d\'une photo instantanée</li><li>Dix pages pour vos propres idées et dix pages pour vos voyages</li><li>Les pages « Nous deux » au début et à la fin, le palmarès et les trophées de vos aventures</li></ul>',
+      '<ul><li>100 aventures pour tous les budgets, dont près de 40 gratuites, avec le coût et la durée de chacune, et la meilleure saison quand il y en a une</li><li>Une page souvenir par aventure, avec un cadre photo à la taille d\'une photo instantanée</li><li>Dix pages pour vos propres idées et dix pages pour vos voyages</li><li>Les pages « Nous deux » au début et à la fin, le palmarès et les trophées de vos aventures</li></ul>',
       "Un cadeau de couple à offrir pour la Saint-Valentin, un anniversaire de rencontre ou Noël, et un livre à garder longtemps : dans quelques années, ce sera votre album de souvenirs.",
       'Format carré 21,6 x 21,6 cm, intérieur en couleur, papier blanc.',
     ],
