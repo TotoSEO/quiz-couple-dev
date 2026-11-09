@@ -22,6 +22,19 @@ import { fr, esc, mascotte, coeur } from '../commun/outils.mjs';
 import { cent } from '../commun/cent.mjs';
 
 const ICI = path.dirname(fileURLToPath(import.meta.url));
+// L'éditeur, imprimé page 2 de chaque édition : le règlement européen sur la
+// sécurité générale des produits (règlement 2023/988, art. 9.6) demande, sur
+// tout produit vendu dans l'Union, le nom du fabricant (pour un livre,
+// l'éditeur qui le vend sous son nom), son adresse postale et une adresse
+// électronique. Une adresse de domiciliation peut remplacer celle-ci : on la
+// change ici, puis on refait les PDF des six langues.
+export const EDITEUR = {
+  nom: 'Visibilitea',
+  personne: 'Thomas Owaller',
+  adresse: '4\u00a0rue de Bruges, 67000\u00a0Strasbourg', // espaces insécables : le code postal reste avec la ville
+  email: 'infoquizcouple@gmail.com',
+};
+
 export const LANGUES = ['fr', 'en', 'es', 'de', 'it', 'nl'];
 export const PAGES = 136;
 const DEBUT_AVENTURES = 9;
@@ -395,6 +408,7 @@ ${retenir(ex)}
   pages.push({
     folio: 2, titre: 'Mentions', sansFolio: true,
     html: `<div class="copy">${P.mentions.lignes.map((l, i) => `<p>${i === 0 ? `<b>${tx(l)}</b>` : tx(l)}</p>`).join('')}
+<p>${tx(P.mentions.editeur.replace(/\{(\w+)\}/g, (m, k) => EDITEUR[k] ?? m))}</p>
 ${T.isbn ? `<p>${tx(P.mentions.isbn)} ${tx(T.isbn)}</p>` : ''}
 <p>${tx(P.mentions.impression)}</p>
 <p>${tx(P.mentions.prudence)}</p></div>`,

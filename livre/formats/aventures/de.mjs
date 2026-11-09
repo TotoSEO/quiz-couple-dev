@@ -371,8 +371,9 @@ export default {
       lignes: [
         '100 Abenteuer zu zweit. Das Erinnerungsbuch zum gemeinsamen Ausfüllen.',
         'Ein Buch von Quiz Couple.',
-        '© 2026 Visibilitea, Einzelunternehmen, Straßburg (Frankreich). Alle Rechte vorbehalten. Nachdruck und Vervielfältigung, auch auszugsweise, nur mit Genehmigung.',
+        '© 2026 Visibilitea. Alle Rechte vorbehalten. Nachdruck und Vervielfältigung, auch auszugsweise, nur mit Genehmigung.',
       ],
+      editeur: 'Verlag: {nom} ({personne}, Einzelunternehmen), {adresse}, Frankreich. Kontakt: {email}',
       isbn: 'ISBN',
       impression: 'Gedruckt auf Bestellung von Amazon. Der Druckort steht auf der letzten Seite.',
       prudence: 'Preise und Zeiten sind nur Richtwerte. Manche Abenteuer verlangen etwas Vorsicht (Baden, Wandern, Sport, Nächte draußen): Informiert euch vor Ort, haltet euch an die Regeln und macht nur, womit ihr euch wohlfühlt.',
@@ -564,7 +565,6 @@ export default {
   // catégories sont des propositions : Thomas choisit les vraies dans KDP.
   kdp: {
     titre: '100 Abenteuer zu zweit',
-    sousTitre: 'Die Bucket List für Paare: Date-Ideen und Dinge, die man als Paar machen sollte. Ein Erinnerungsbuch zum Ausfüllen mit Platz für eure Fotos, als Geschenk für Paare',
     auteur: 'Quiz Couple',
     description: [
       '<b>Wie wär’s, wenn ihr aufhört, „irgendwann mal“ zu sagen?</b>',

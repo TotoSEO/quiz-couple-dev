@@ -43,7 +43,9 @@ Plan (folio : page) :
 Règles fixées par Thomas :
 - pages blanches, sans fond de couleur ;
 - aucune adresse de site ni QR code (le site peut changer d'adresse ou de
-  propriétaire) ;
+  propriétaire) ; seule la page 2 donne l'adresse postale et l'e-mail de
+  l'éditeur, que le règlement européen sur la sécurité des produits demande
+  sur chaque exemplaire (`EDITEUR` dans `formats/aventures.mjs`) ;
 - l'historique des tests ne nomme aucun test et prévoit les différentes
   façons dont le site donne un résultat : un score commun, un score chacun et
   un score commun, un résultat en mots, un jeu avec un gagnant, plusieurs

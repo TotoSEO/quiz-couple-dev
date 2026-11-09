@@ -372,8 +372,9 @@ export default {
       lignes: [
         '100 avonturen voor twee. Het herinneringenboek om samen in te vullen.',
         'Een boek van Quiz Couple.',
-        '© 2026 Visibilitea, eenmanszaak, Straatsburg (Frankrijk). Alle rechten voorbehouden. Niets uit deze uitgave mag zonder toestemming worden overgenomen, ook niet gedeeltelijk.',
+        '© 2026 Visibilitea. Alle rechten voorbehouden. Niets uit deze uitgave mag zonder toestemming worden overgenomen, ook niet gedeeltelijk.',
       ],
+      editeur: 'Uitgever: {nom} ({personne}, eenmanszaak), {adresse}, Frankrijk. Contact: {email}',
       isbn: 'ISBN',
       impression: 'Gedrukt op bestelling door Amazon. Waar dit exemplaar gedrukt is, staat op de laatste bladzijde.',
       prudence: 'Prijzen en tijden zijn een indicatie. Voor sommige avonturen is wat voorzichtigheid nodig (zwemmen, wandelen, sporten, een nacht buiten): vraag ter plekke na wat mag, hou je aan de regels en doe alleen wat voor jullie goed voelt.',
@@ -566,7 +567,6 @@ export default {
   // 7 novembre 2026), que KDP peut nommer un peu autrement.
   kdp: {
     titre: '100 avonturen voor twee',
-    sousTitre: 'Bucketlist en invulboek voor koppels: 100 date-ideeën en dingen om samen te doen, met een herinneringenbladzijde en een fotokader bij elk avontuur',
     auteur: 'Quiz Couple',
     description: [
       '<b>Klaar met “dat moeten we ooit eens doen”?</b>',

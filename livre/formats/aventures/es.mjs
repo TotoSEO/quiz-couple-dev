@@ -378,8 +378,9 @@ export default {
       lignes: [
         '100 aventuras en pareja. El libro de recuerdos para rellenar a cuatro manos.',
         'Un libro de Quiz Couple.',
-        '© 2026 Visibilitea, empresa individual, Estrasburgo (Francia). Todos los derechos reservados. Queda prohibida la reproducción total o parcial sin autorización.',
+        '© 2026 Visibilitea. Todos los derechos reservados. Queda prohibida la reproducción total o parcial sin autorización.',
       ],
+      editeur: 'Edita: {nom} ({personne}, empresa individual), {adresse}, Francia. Contacto: {email}',
       isbn: 'ISBN',
       impression: 'Impreso bajo demanda por Amazon. El lugar de impresión figura en la última página.',
       prudence: 'Los precios y las duraciones son orientativos. Algunas aventuras piden un poco de prudencia (baño, senderismo, deportes, noches al aire libre): informaos en el lugar, respetad sus normas y no hagáis nada con lo que no estéis a gusto.',
@@ -570,7 +571,6 @@ export default {
   // La fiche Amazon de cette édition (à recopier dans KDP, amazon.es).
   kdp: {
     titre: '100 aventuras en pareja',
-    sousTitre: 'Ideas para hacer en pareja, en un libro para rellenar a cuatro manos: una página y una foto para cada plan. Álbum de recuerdos y regalo original para parejas',
     auteur: 'Quiz Couple',
     description: [
       '<b>¿Y si dejamos de decir «algún día lo haremos»?</b>',

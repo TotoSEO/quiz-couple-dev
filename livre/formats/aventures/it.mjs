@@ -370,8 +370,9 @@ export default {
       lignes: [
         '100 avventure in coppia. Il libro dei ricordi da compilare insieme.',
         'Un libro Quiz Couple.',
-        '© 2026 Visibilitea, impresa individuale, Strasburgo (Francia). Tutti i diritti riservati. È vietata la riproduzione, anche parziale, senza autorizzazione.',
+        '© 2026 Visibilitea. Tutti i diritti riservati. È vietata la riproduzione, anche parziale, senza autorizzazione.',
       ],
+      editeur: 'Editore: {nom} ({personne}, impresa individuale), {adresse}, Francia. Contatti: {email}',
       isbn: 'ISBN',
       impression: "Stampato su richiesta da Amazon. Il luogo di stampa è indicato nell'ultima pagina.",
       prudence: "Prezzi e durate sono indicativi. Alcune avventure richiedono un po' di prudenza (bagni, escursioni, sport, notti all'aperto): informatevi sul posto, rispettate le regole dei luoghi e fate solo quello che vi sentite di fare.",
@@ -562,7 +563,6 @@ export default {
   // La fiche Amazon de cette édition (à recopier dans KDP, amazon.it).
   kdp: {
     titre: '100 avventure in coppia',
-    sousTitre: 'Il libro da compilare in coppia: cose da fare insieme e idee per uscite di coppia, con una pagina e una foto per ognuna. Album dei ricordi e regalo per coppia',
     auteur: 'Quiz Couple',
     description: [
       '<b>E se smettessimo di dire «un giorno lo faremo»?</b>',

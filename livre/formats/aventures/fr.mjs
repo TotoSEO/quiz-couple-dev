@@ -369,9 +369,10 @@ export default {
       lignes: [
         '100 aventures à deux. Le livre souvenir à remplir ensemble.',
         'Un livre Quiz Couple.',
-        '© 2026 Visibilitea, entreprise individuelle, Strasbourg (France). Tous droits réservés. Toute reproduction, même partielle, est interdite sans autorisation.',
+        '© 2026 Visibilitea. Tous droits réservés. Toute reproduction, même partielle, est interdite sans autorisation.',
         'Dépôt légal : novembre 2026.',
       ],
+      editeur: 'Éditeur : {nom} ({personne}, entreprise individuelle), {adresse}, France. Contact : {email}',
       isbn: 'ISBN',
       impression: "Imprimé à la demande par Amazon. Le lieu d'impression figure à la dernière page.",
       prudence: "Les prix et les durées sont indicatifs. Certaines aventures demandent un peu de prudence (baignade, randonnée, sports, nuit dehors) : renseignez-vous sur place, respectez les règles des lieux, et ne faites que ce que vous sentez.",
@@ -562,7 +563,6 @@ export default {
   // La fiche Amazon de cette édition (à recopier dans KDP).
   kdp: {
     titre: '100 aventures à deux',
-    sousTitre: 'Le livre souvenir à remplir en couple : idées de sorties et d\'activités à deux, avec une page et une photo pour chacune',
     auteur: 'Quiz Couple',
     description: [
       '<b>Et si on arrêtait de dire « un jour, on fera ça » ?</b>',

@@ -367,8 +367,9 @@ export default {
       lignes: [
         '100 Adventures for Two. The memory book you fill in together.',
         'A Quiz Couple book.',
-        '© 2026 Visibilitea, sole proprietorship, Strasbourg (France). All rights reserved. No part of this book may be reproduced without permission.',
+        '© 2026 Visibilitea. All rights reserved. No part of this book may be reproduced without permission.',
       ],
+      editeur: 'Publisher: {nom} ({personne}, sole proprietorship), {adresse}, France. Contact: {email}',
       isbn: 'ISBN',
       impression: 'Printed on demand by Amazon. The place of printing is shown on the last page.',
       prudence: 'Prices and times are only a guide. Some adventures call for a little caution (swimming, hiking, sports, nights outdoors): check locally, follow the rules of each place, and only do what you feel comfortable doing.',
@@ -559,7 +560,6 @@ export default {
   // La fiche Amazon de cette édition (amazon.com, à recopier dans KDP).
   kdp: {
     titre: '100 Adventures for Two',
-    sousTitre: 'A Couples Bucket List and Memory Book with Space for Your Photos: Date Ideas and Things to Do Together, a Fill-In Couples Journal Gift',
     auteur: 'Quiz Couple',
     description: [
       '<b>What if we stopped saying “we should do that someday”?</b>',

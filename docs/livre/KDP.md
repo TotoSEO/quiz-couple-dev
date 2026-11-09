@@ -40,6 +40,7 @@ Amazon et ses avis. Amazon ne réunit jamais deux langues sur une même page
 | ISBN | L'ISBN gratuit de KDP, un par édition (voir plus bas) |
 | Contenu généré par IA | Oui pour les textes et les traductions, écrits avec Claude. Les personnages sont ceux de la charte Quiz Couple ; s'ils ont été dessinés avec une IA, le déclarer aussi |
 | Langue | celle de l'édition |
+| Titre et sous-titre | ceux de la couverture, mot pour mot : KDP demande que titre, sous-titre et auteur saisis soient ceux imprimés sur la couverture ; les autres mots (bucket list, cadeau…) vont dans les sept cases de mots-clés |
 | Auteur | Quiz Couple |
 | Territoires | Tous |
 
@@ -91,15 +92,63 @@ fixer les prix :
   d'envoyer un exemplaire de l'édition française le jour de la mise en vente :
   c'est gratuit et sans risque. Il faut un exemplaire d'auteur, pas une
   épreuve : les épreuves portent la mention « Not for resale ».
-- **Les mentions de la page 2.** L'éditeur (Visibilitea, Strasbourg : la ville
-  suffit en autoédition), l'imprimeur (« imprimé à la demande par Amazon »),
-  « Dépôt légal : novembre 2026 » (mois prévu, à corriger si la sortie glisse),
-  et l'ISBN dès qu'il est connu.
+- **Les mentions de la page 2.** L'éditeur avec son adresse postale et son
+  adresse électronique (exigées par le règlement européen sur la sécurité des
+  produits, voir plus bas ; `EDITEUR` dans `livre/formats/aventures.mjs`, la
+  même ligne dans les six langues), l'imprimeur (« imprimé à la demande par
+  Amazon » ; KDP ajoute le lieu d'impression à la dernière page), « Dépôt
+  légal : novembre 2026 » (mois prévu, à corriger si la sortie glisse), et
+  l'ISBN dès qu'il est connu.
 - **L'ISBN.** Il en faut un par langue et par format. Celui de KDP est gratuit,
   sauf pour un livre « low-content », ce que ce livre n'est pas. L'AFNIL
   (37 € HT la première demande) exclut les « cahiers d'écriture », ce qui
   pourrait poser question ici. Avec l'ISBN de KDP, l'éditeur affiché est
   « Independently published ».
+
+## Le droit, dans les autres pays
+
+Le détail et les sources sont dans `docs/livre/recherche/vente.md` (relevé du
+9 novembre 2026).
+
+- **Le prix unique du livre.** KDP le rappelle pour les brochés vendus en
+  Autriche, en Belgique, en France, en Allemagne, en Italie, aux Pays-Bas et en
+  Espagne (entre autres) : un seul prix chez tous les vendeurs. Remise de 5 %
+  au plus en France, en Espagne, en Italie et en Autriche, aucune en
+  Allemagne. Aux Pays-Bas, la loi ne vise que les livres en néerlandais et
+  demande de déclarer leur prix au Commissariaat voor de Media. Tant que le
+  livre n'est vendu que par KDP, il suffit de fixer un prix par boutique et de
+  ne pas en jouer ; s'il est vendu un jour sur le site, c'est le même prix,
+  avec au moins 3 € de port en France sous 35 € de commande. Comme pour la
+  TVA, il n'est pas certain qu'un livre à remplir soit un « livre » au sens de
+  ces lois : on fait comme s'il l'était.
+- **La sécurité des produits** (règlement européen 2023/988). Les livres sont
+  concernés et le fabricant est l'éditeur qui vend sous son nom : son nom, son
+  adresse postale et une adresse électronique doivent être sur chaque
+  exemplaire, avec un identifiant (l'ISBN). Aucune page d'aide de KDP ne dit
+  comment Amazon s'en charge, d'où la ligne de l'éditeur page 2. Une adresse
+  de domiciliation peut remplacer l'adresse actuelle (une ligne à changer dans
+  `EDITEUR`, puis refaire les six PDF).
+- **Le dépôt légal** : un exemplaire de chaque édition à la BnF, quelle que
+  soit sa langue (la page de la BnF ne pose aucune condition de langue),
+  envoyé gratuitement (franchise postale).
+- **L'impôt américain** : dans l'entretien fiscal de KDP, le numéro fiscal
+  français fait tomber la retenue des États-Unis à 0 % (convention
+  France–États-Unis) ; sans lui, KDP retient 30 %.
+
+## Vendre autrement que par KDP
+
+Comparé le 9 novembre 2026 (`docs/livre/recherche/vente.md`), à 16,99 € TTC
+avec une TVA à 20 % :
+
+| Canal | Ce qui reste par livre | À avancer |
+|---|---|---|
+| KDP | environ 3 € | rien |
+| Lulu, vendu depuis le site | moins que KDP (9,80 $ d'impression, 1,75 $ par commande, environ 10 $ d'envoi vers la France) | rien |
+| Tirage de 1 000 exemplaires (3,93 € pièce), vendu sur le site | environ 10 € avant l'envoi, l'emballage et le paiement | environ 4 000 € par langue, plus le stock et les colis |
+| Le même stock vendu par Amazon (FBA) | de 2,60 à 3,20 €, moins 39 € par mois | environ 4 000 € par langue |
+
+KDP rapporte peu par livre mais ne demande rien. Un tirage ne se justifie qu'une
+fois les ventes connues, pour la langue qui vend le plus sur le site.
 
 ## Ce qui reste à vérifier dans KDP
 
@@ -128,7 +177,7 @@ plus par édition.
 ### Français (fr)
 
 - **Titre** : 100 aventures à deux
-- **Sous-titre** : Le livre souvenir à remplir en couple : idées de sorties et d'activités à deux, avec une page et une photo pour chacune
+- **Sous-titre** : Le livre souvenir à remplir ensemble, avec vos photos
 - **Auteur** : Quiz Couple
 - **Langue** : Français
 - **Mots-clés** (un par case) : « idées sorties couple », « livre couple à remplir », « cadeau couple original », « activités à deux », « bucket list couple », « carnet souvenir couple », « cadeau saint valentin »
@@ -149,7 +198,7 @@ plus par édition.
 ### Anglais (en)
 
 - **Titre** : 100 Adventures for Two
-- **Sous-titre** : A Couples Bucket List and Memory Book with Space for Your Photos: Date Ideas and Things to Do Together, a Fill-In Couples Journal Gift
+- **Sous-titre** : A memory book to fill in together, with your photos
 - **Auteur** : Quiz Couple
 - **Langue** : Anglais
 - **Mots-clés** (un par case) : « couples bucket list book », « date night ideas for couples », « things to do together for couples », « couples memory book with photos », « couples journal gift », « adventure book for couples », « valentines anniversary gift for him or her »
@@ -170,7 +219,7 @@ plus par édition.
 ### Espagnol (es)
 
 - **Titre** : 100 aventuras en pareja
-- **Sous-titre** : Ideas para hacer en pareja, en un libro para rellenar a cuatro manos: una página y una foto para cada plan. Álbum de recuerdos y regalo original para parejas
+- **Sous-titre** : El libro de recuerdos a cuatro manos, con vuestras fotos
 - **Auteur** : Quiz Couple
 - **Langue** : Espagnol
 - **Mots-clés** (un par case) : « ideas para hacer en pareja », « libro para rellenar en pareja », « regalo original para parejas », « planes en pareja », « álbum de recuerdos de pareja », « regalo san valentín aniversario novio novia », « bucket list para parejas »
@@ -192,7 +241,7 @@ plus par édition.
 ### Allemand (de)
 
 - **Titre** : 100 Abenteuer zu zweit
-- **Sous-titre** : Die Bucket List für Paare: Date-Ideen und Dinge, die man als Paar machen sollte. Ein Erinnerungsbuch zum Ausfüllen mit Platz für eure Fotos, als Geschenk für Paare
+- **Sous-titre** : Das Erinnerungsbuch zum Ausfüllen, mit euren Fotos
 - **Auteur** : Quiz Couple
 - **Langue** : Allemand
 - **Mots-clés** (un par case) : « paarbuch zum ausfüllen », « bucketliste für paare », « unternehmungen zu zweit », « aktivitäten für paare », « date night ideen », « erinnerungsalbum für paare mit fotos », « jahrestag valentinstag geschenk freund freundin »
@@ -213,7 +262,7 @@ plus par édition.
 ### Italien (it)
 
 - **Titre** : 100 avventure in coppia
-- **Sous-titre** : Il libro da compilare in coppia: cose da fare insieme e idee per uscite di coppia, con una pagina e una foto per ognuna. Album dei ricordi e regalo per coppia
+- **Sous-titre** : Il libro dei ricordi da compilare in due, con le vostre foto
 - **Auteur** : Quiz Couple
 - **Langue** : Italien
 - **Mots-clés** (un par case) : « cose da fare in coppia », « libro da compilare in coppia », « diario di coppia da compilare », « album dei ricordi di coppia », « idee per uscite di coppia », « regalo per coppia originale », « regalo san valentino anniversario fidanzati »
@@ -235,7 +284,7 @@ plus par édition.
 ### Néerlandais (nl)
 
 - **Titre** : 100 avonturen voor twee
-- **Sous-titre** : Bucketlist en invulboek voor koppels: 100 date-ideeën en dingen om samen te doen, met een herinneringenbladzijde en een fotokader bij elk avontuur
+- **Sous-titre** : Het herinneringenboek om in te vullen, met jullie foto's
 - **Auteur** : Quiz Couple
 - **Langue** : Néerlandais
 - **Mots-clés** (un par case) : « bucketlist voor koppels », « invulboek voor koppels », « cadeau voor koppels », « date ideeën », « dingen om samen te doen », « herinneringenboek voor stelletjes », « valentijnscadeau voor vriend of vriendin »
@@ -268,3 +317,7 @@ plus par édition.
 - BOFiP, définition du livre : https://bofip.impots.gouv.fr/bofip/1437-PGP.html/identifiant=BOI-TVA-LIQ-30-10-40-20260729
 - Prix du livre : https://www.legifrance.gouv.fr/loda/id/JORFTEXT000000859447
 - Dépôt légal en autoédition : https://www.bnf.fr/fr/le-depot-legal-de-lautoedition-la-bnf
+- Métadonnées (titre, sous-titre) : https://kdp.amazon.com/en_US/help/topic/G201097560
+- Prix unique du livre dans KDP : https://kdp.amazon.com/en_US/help/topic/G200641280
+- Sécurité des produits (règlement 2023/988) : https://data.consilium.europa.eu/doc/document/PE-79-2022-REV-1/en/pdf
+- Entretien fiscal KDP : https://kdp.amazon.com/en_US/help/topic/G201723290

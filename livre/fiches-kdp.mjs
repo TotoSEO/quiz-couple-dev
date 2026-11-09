@@ -2,6 +2,11 @@
 // dans KDP (titre, sous-titre, description, mots-clés, catégories) :
 //   node livre/fiches-kdp.mjs > fiches.md
 // Les textes viennent de la clé `kdp` de chaque livre/formats/aventures/<langue>.mjs.
+// Le sous-titre est celui de la couverture, mot pour mot : KDP demande que le
+// titre, le sous-titre et l'auteur saisis soient ceux imprimés sur la
+// couverture (règles des métadonnées, kdp.amazon.com/en_US/help/topic/G201097560).
+// Les mots qu'on voudrait y ajouter (bucket list, cadeau...) vont dans les
+// sept cases de mots-clés.
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -19,7 +24,7 @@ for (const lang of LANGUES) {
   lignes.push(
     `## ${NOMS[lang]} (${lang})`, '',
     `- **Titre** : ${k.titre}`,
-    `- **Sous-titre** : ${k.sousTitre}`,
+    `- **Sous-titre** : ${T.couverture.sous}`,
     `- **Auteur** : ${k.auteur}`,
     `- **Langue** : ${NOMS[lang]}`,
     `- **Mots-clés** (un par case) : ${k.motsCles.map((m) => `« ${m} »`).join(', ')}`,
