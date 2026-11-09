@@ -177,11 +177,11 @@ let css = `
 .etape h3 { font-family: var(--f-titre); font-weight: 600; font-size: calc(11.5pt * var(--k)); line-height: 1.15; margin-bottom: 3pt; display: flex; align-items: center; gap: 6pt; }
 .etape p { font-size: calc(9pt * var(--k)); line-height: 1.45; }
 .etape-n { flex: none; width: 18pt; height: 18pt; border-radius: 99pt; background: var(--c-rose); color: #fff; display: inline-flex; align-items: center; justify-content: center; font-weight: 700; font-size: 9.5pt; }
-.mode-bas { flex: 1; min-height: 0; display: grid; grid-template-columns: minmax(0, 1fr) 2.75in; gap: 0.3in; margin-top: calc(14pt * var(--k)); align-items: start; }
-.feuille--verso .mode-bas { grid-template-columns: 2.75in minmax(0, 1fr); }
+.mode-bas { flex: 1; min-height: 0; display: grid; grid-template-columns: minmax(0, 1fr) 2.55in; gap: 0.3in; margin-top: calc(14pt * var(--k)); align-items: start; }
+.feuille--verso .mode-bas { grid-template-columns: 2.55in minmax(0, 1fr); }
 .feuille--verso .mode-bas .apercu-bloc { order: -1; }
-.legende-tags { display: flex; flex-direction: column; gap: calc(7pt * var(--k)); font-size: calc(8.8pt * var(--k)); line-height: 1.35; }
-.legende-tags > div { display: grid; grid-template-columns: 1.25in 1fr; align-items: center; gap: 8pt; }
+.legende-tags { display: grid; grid-template-columns: max-content minmax(0, 1fr); gap: calc(7pt * var(--k)) 10pt; align-items: center; font-size: calc(8.8pt * var(--k)); line-height: 1.35; }
+.legende-tags > div { display: contents; }
 .legende-tags .tag { justify-self: start; }
 .conseil { flex: none; display: flex; align-items: center; gap: 10pt; font-size: calc(8.6pt * var(--k)); line-height: 1.45; color: var(--c-encre-douce); border-top: 0.8pt solid #eadbe2; padding-top: 9pt; margin-top: calc(10pt * var(--k)); }
 .apercu-bloc { display: flex; flex-direction: column; align-items: center; gap: 6pt; }
@@ -424,8 +424,8 @@ ${T.couts.map((c, i) => `<div><span class="tag">${pieces(i)} ${tx(c)}</span><spa
     folio: 4, titre: P.mode.titre,
     html: `${tete(P.mode.etiquette, P.mode.titre, mascotte('rose', 'salut', { hauteur: '0.85in' }))}
 <div class="etapes">${P.mode.etapes.map(([h, p], i) => `<div class="etape"><h3><span class="etape-n">${i + 1}</span>${tx(h)}</h3><p>${tx(p)}</p></div>`).join('')}</div>
-<div class="mode-bas"><div><div class="bloc-t">${tx(P.mode.legende)}</div>${legende}</div>
-<div class="apercu-bloc">${apercu(13, 2.75)}<div class="photo-leg">${tx(P.mode.apercu)}</div></div></div>
+<div class="mode-bas tient"><div><div class="bloc-t">${tx(P.mode.legende)}</div>${legende}</div>
+<div class="apercu-bloc">${apercu(13, 2.55)}<div class="photo-leg">${tx(P.mode.apercu)}</div></div></div>
 <div class="conseil">${picto('etoile', 14, '#d9a514')}<span>${tx(P.mode.colle)}</span></div>`,
   });
 
@@ -640,6 +640,21 @@ window.__mettreEnPage = function () {
       var b = el.getBoundingClientRect();
       if (b.width === 0 || b.height === 0) continue;
       if (b.bottom > r.bottom + 0.5 || b.right > r.right + 0.5 || b.left < r.left - 0.5) return true;
+    }
+    // Un bloc .tient garde tout son contenu au-dessus de son bord bas : sans
+    // ça, la légende de l'aperçu du mode d'emploi passait sur le conseil du
+    // bas sans sortir de la zone, donc sans être vue.
+    var cs = zone.querySelectorAll('.tient');
+    for (var j = 0; j < cs.length; j++) {
+      var cb = cs[j].getBoundingClientRect();
+      var ds = cs[j].querySelectorAll('*');
+      for (var m = 0; m < ds.length; m++) {
+        var d = ds[m];
+        if (d.ownerSVGElement || (d.parentElement && d.parentElement.closest('.apercu'))) continue;
+        var db = d.getBoundingClientRect();
+        if (db.width === 0 || db.height === 0) continue;
+        if (db.bottom > cb.bottom + 0.5) return true;
+      }
     }
     return false;
   }
