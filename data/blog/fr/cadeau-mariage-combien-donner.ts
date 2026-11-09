@@ -119,14 +119,7 @@ const article: BlogArticleData = {
 
 <p><strong>S'il y a une cagnotte, utilisez-la.</strong> C'est ce que les mariés ont demandé, c'est plus simple pour eux, et ça vous évite de chercher un distributeur en costume à 18 h.</p>
 
-<p><strong>S'il n'y a rien de précisé</strong>, l'enveloppe reste parfaitement correcte. Glissez-la dans une carte, avec un mot, et donnez-la à un témoin plutôt qu'aux mariés directement, ils ont mille choses à gérer ce jour-là.</p>
-
-<div class="blog-cta">
-<p class="blog-cta-titre">Vous organisez la cagnotte pour le groupe ?</p>
-<p class="blog-cta-texte">Créer une cagnotte commune prend deux minutes, chacun met ce qu'il veut de son côté, et les mariés reçoivent un seul montant sans savoir qui a mis quoi. C'est ce qui règle le plus de gêne pour le moins d'effort.</p>
-<a class="blog-cta-btn" href="https://c3po.link/Qkq3VF6M7a" target="_blank" rel="sponsored nofollow noopener">Créer une cagnotte de mariage</a>
-<p class="blog-cta-note">Gratuit pour l'organisateur &middot; Sans commission sur les participants</p>
-</div>`,
+<p><strong>S'il n'y a rien de précisé</strong>, l'enveloppe reste parfaitement correcte. Glissez-la dans une carte, avec un mot, et donnez-la à un témoin plutôt qu'aux mariés directement, ils ont mille choses à gérer ce jour-là.</p>`,
     },
     {
       id: 'comment-participer-sans-se-prendre-la-tete',
@@ -175,16 +168,7 @@ const article: BlogArticleData = {
       title: `En résumé`,
       content: `<p>Si vous êtes pressé et que vous voulez un chiffre : <strong>pour un bon ami, dans un mariage classique, 100 € par personne est le montant qui ne vous mettra jamais en difficulté</strong>, ni socialement ni financièrement. Montez si vous êtes de la famille ou témoin, descendez si le déplacement vous a déjà coûté cher ou si l'année a été chargée en événements.</p>
 
-<p>Et rappelez-vous le principal : vous avez été invité parce qu'ils voulaient vous voir ce jour-là. Pas pour l'enveloppe.</p>
-
-<div class="blog-cta">
-<p class="blog-cta-titre">Vous vous y mettez à plusieurs ?</p>
-<p class="blog-cta-texte">Une cagnotte commune, une date limite, un montant indicatif, et chacun participe de son côté. Les mariés reçoivent un seul montant et un message du groupe.</p>
-<a class="blog-cta-btn" href="https://c3po.link/Qkq3VF6M7a" target="_blank" rel="sponsored nofollow noopener">Ouvrir une cagnotte</a>
-<p class="blog-cta-note">Gratuit pour l'organisateur &middot; Sans commission sur les participants</p>
-</div>
-
-<p class="blog-affil-mention">Nous pouvons percevoir des commissions d'affiliation avec OnParticipe.</p>`,
+<p>Et rappelez-vous le principal : vous avez été invité parce qu'ils voulaient vous voir ce jour-là. Pas pour l'enveloppe.</p>`,
     },
   ],
 };

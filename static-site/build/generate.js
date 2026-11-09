@@ -296,8 +296,7 @@ function bandeauPromoPour(routeKey, articleMeta, lang) {
 // sondage qu'avec elle. Ses textes sont ceux du sondage de l'évaluation
 // (app.celib de {lang}/bilan.json, `carte` pour ce qui lui est propre) ; elle
 // ne se pose pas sous les verdicts de CELIB_SANS_CARTE (le premier verdict de
-// « dois-je me remettre avec mon ex » parle de peur et de violence, comme les
-// produits, qui n'y sont pas non plus).
+// « dois-je me remettre avec mon ex » parle de peur et de violence).
 const CELIB_SANS_CARTE = { testRemettreEx: ['gd:remettreEx.r1_t'] };
 const CLES_CARTE_CELIB = ['question', 'sujets', 'autre', 'email', 'consentement', 'emailAide', 'confidentialite',
   'envoyer', 'choixManque', 'consentManque', 'merciTitre', 'merci', 'merciEmail', 'carte'];
@@ -2051,18 +2050,14 @@ function copyStaticAssets() {
     }
   }
 
-  // Copy public/blog/, public/authors/, public/quiz/ and public/partenaires/
-  // (visuels des partenaires d'affiliation, hébergés chez nous et non appelés
-  // sur le serveur du partenaire : une image distante qui change ou disparaît
-  // casserait l'encart sans prévenir). Le dossier vacances porte les 200
-  // photos de destinations du test « où partir en vacances ? ».
-  // « produits » porte les visuels Amazon des encarts de resultat, copies chez
-  // nous plutot qu'appeles sur le CDN d'Amazon.
+  // Copy public/blog/, public/authors/ and public/quiz/. Le dossier vacances
+  // porte les 200 photos de destinations du test « où partir en vacances ? ».
   // « fonts » porte les polices du rapport du bilan (Fraunces et Inter, OFL),
   // « bilan » les aperçus du rapport montrés sur sa page, « email » les images
   // des e-mails du parcours (emails/gabarit.html les appelle par leur adresse
-  // sur le site).
-  for (const dir of ['blog', 'authors', 'quiz', 'partenaires', 'vacances', 'produits', 'fonts', 'bilan', 'email', 'og']) {
+  // sur le site). Les dossiers « partenaires » et « produits » (visuels des
+  // encarts d'affiliation) sont partis avec l'affiliation, le 9 novembre 2026.
+  for (const dir of ['blog', 'authors', 'quiz', 'vacances', 'fonts', 'bilan', 'email', 'og']) {
     const srcDir = path.join(publicDir, dir);
     const destDir = path.join(DIST_DIR, dir);
     if (fs.existsSync(srcDir)) {

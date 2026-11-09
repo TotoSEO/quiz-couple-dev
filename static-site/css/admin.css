@@ -9,8 +9,8 @@
    ce qui est actif ou cliquable ; les couleurs d'état (vert, ambre, rouge)
    ne servent qu'à dire un état, jamais à décorer.
 
-   Le contrat avec les scripts (admin.js, admin-reseaux.js,
-   admin-affiliation.js) : les identifiants du gabarit, les classes qu'ils
+   Le contrat avec les scripts (admin.js, admin-reseaux.js) : les
+   identifiants du gabarit, les classes qu'ils
    posent (.active, .hidden, .est-*, .tourne, .is-*) et les variables de
    couleur des séries --adm-s-*, que drawChart et teinte() lisent sur
    #admin-app (un hexadécimal à six chiffres, sinon le script prend son
@@ -160,15 +160,14 @@ body.page-admin{background:var(--adm-bg,#f6f6f7);color:#18181b;margin:0;}
 .adm .input:focus{outline:none;border-color:var(--adm-accent);box-shadow:0 0 0 3px var(--adm-focus);}
 /* Sous 16 px, Safari sur iPhone zoome la page à la saisie. */
 @media (hover:none) and (pointer:coarse){.adm .input,.adm select{font-size:16px;}}
-.adm select,.adm .afl-select,.adm .rsx-select{
+.adm select,.adm .rsx-select{
   appearance:none;-webkit-appearance:none;height:2.25rem;padding:0 2rem 0 .7rem;border-radius:var(--adm-r-sm);
   border:1px solid var(--adm-line);background:var(--adm-card);color:var(--adm-ink);font-size:.8125rem;font-weight:500;cursor:pointer;
   background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2371717a' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
   background-repeat:no-repeat;background-position:right .55rem center;background-size:.9rem;
 }
-.adm select:hover,.adm .afl-select:hover,.adm .rsx-select:hover{border-color:var(--adm-line-2);}
-.adm select:focus,.adm .afl-select:focus,.adm .rsx-select:focus{outline:none;border-color:var(--adm-accent);box-shadow:0 0 0 3px var(--adm-focus);}
-.adm .afl-select--full{width:100%;}
+.adm select:hover,.adm .rsx-select:hover{border-color:var(--adm-line-2);}
+.adm select:focus,.adm .rsx-select:focus{outline:none;border-color:var(--adm-accent);box-shadow:0 0 0 3px var(--adm-focus);}
 .adm input[type="checkbox"]{width:1rem;height:1rem;accent-color:var(--adm-ink);cursor:pointer;margin:0;}
 .adm input[type="password"]::-ms-reveal{display:none;}
 
@@ -405,13 +404,13 @@ button.adm-retour-site:disabled{opacity:.6;cursor:progress;}
 .adm-delta.est-moins{background:var(--adm-bad-bg);border-color:var(--adm-bad-line);color:var(--adm-bad);}
 
 /* ── Panneaux et graphiques ────────────────────────────────────────── */
-.adm .stats-panel,.adm .stats-details,.adm .afl-panel{background:var(--adm-card);border:1px solid var(--adm-line);border-radius:var(--adm-r);box-shadow:none;min-width:0;}
-.adm .stats-panel,.adm .afl-panel{padding:1.1rem 1.25rem 1.1rem;}
-.adm .stats-panel-head,.adm .afl-panel-head{display:flex;align-items:flex-start;justify-content:space-between;gap:.75rem;flex-wrap:wrap;margin-bottom:.9rem;}
-.adm .stats-panel-titre,.adm .afl-panel-titre{display:flex;align-items:center;gap:.45rem;flex-wrap:wrap;min-width:0;}
-.adm .stats-panel-title,.adm .afl-panel-title,.adm .stats-details-titre{font-size:.9375rem;font-weight:600;letter-spacing:-.01em;line-height:1.3;}
-.adm .stats-panel-sub,.adm .afl-panel-sub{flex-basis:100%;font-size:.78rem;color:var(--adm-ink-3);line-height:1.45;}
-.adm .stats-panel-sub:empty,.adm .afl-panel-sub:empty{display:none;}
+.adm .stats-panel,.adm .stats-details{background:var(--adm-card);border:1px solid var(--adm-line);border-radius:var(--adm-r);box-shadow:none;min-width:0;}
+.adm .stats-panel{padding:1.1rem 1.25rem 1.1rem;}
+.adm .stats-panel-head{display:flex;align-items:flex-start;justify-content:space-between;gap:.75rem;flex-wrap:wrap;margin-bottom:.9rem;}
+.adm .stats-panel-titre{display:flex;align-items:center;gap:.45rem;flex-wrap:wrap;min-width:0;}
+.adm .stats-panel-title,.adm .stats-details-titre{font-size:.9375rem;font-weight:600;letter-spacing:-.01em;line-height:1.3;}
+.adm .stats-panel-sub{flex-basis:100%;font-size:.78rem;color:var(--adm-ink-3);line-height:1.45;}
+.adm .stats-panel-sub:empty{display:none;}
 .adm .stats-canvas{width:100%;display:block;}
 .adm .adm-canvas--hero{height:clamp(280px,42vh,440px);}
 .adm .adm-canvas--sec{height:230px;}
@@ -443,16 +442,16 @@ button.adm-retour-site:disabled{opacity:.6;cursor:progress;}
 
 /* Sélecteurs de période et filtres : un groupe segmenté, l'option active en
    carte blanche (grise en sombre). */
-.adm .stats-comp,.adm .stats-range,.adm .afl-range,.adm .afl-chips,.adm .rsx-vues,.adm .rsx-comptes{
+.adm .stats-comp,.adm .stats-range,.adm .rsx-vues,.adm .rsx-comptes{
   display:inline-flex;align-items:center;gap:2px;max-width:100%;padding:2px;border-radius:var(--adm-r);border:1px solid var(--adm-line);background:var(--adm-muted);}
 .adm .stats-comp--periode{flex-wrap:wrap;}
-.adm .stats-comp-btn,.adm .stats-range-btn,.adm .afl-range-btn,.adm .afl-chip,.adm .rsx-vue,.adm .rsx-compte-chip{
+.adm .stats-comp-btn,.adm .stats-range-btn,.adm .rsx-vue,.adm .rsx-compte-chip{
   display:inline-flex;align-items:center;gap:.4rem;height:1.85rem;padding:0 .7rem;border-radius:var(--adm-r-sm);border:0;background:transparent;
   color:var(--adm-ink-2);font-size:.78rem;font-weight:500;white-space:nowrap;transition:background .12s,color .12s,box-shadow .12s;}
-.adm .stats-comp-btn:hover,.adm .stats-range-btn:hover,.adm .afl-range-btn:hover,.adm .afl-chip:hover,.adm .rsx-vue:hover,.adm .rsx-compte-chip:hover{color:var(--adm-ink);}
-.adm .stats-comp-btn.active,.adm .stats-range-btn.active,.adm .afl-range-btn.active,.adm .afl-chip.active,.adm .rsx-vue.active,.adm .rsx-compte-chip.active{
+.adm .stats-comp-btn:hover,.adm .stats-range-btn:hover,.adm .rsx-vue:hover,.adm .rsx-compte-chip:hover{color:var(--adm-ink);}
+.adm .stats-comp-btn.active,.adm .stats-range-btn.active,.adm .rsx-vue.active,.adm .rsx-compte-chip.active{
   background:var(--adm-card);color:var(--adm-ink);box-shadow:var(--adm-ombre),inset 0 0 0 1px var(--adm-line);font-weight:600;}
-.dark .adm .stats-comp-btn.active,.dark .adm .stats-range-btn.active,.dark .adm .afl-range-btn.active,.dark .adm .afl-chip.active,.dark .adm .rsx-vue.active,.dark .adm .rsx-compte-chip.active{
+.dark .adm .stats-comp-btn.active,.dark .adm .stats-range-btn.active,.dark .adm .rsx-vue.active,.dark .adm .rsx-compte-chip.active{
   background:var(--adm-muted-2);box-shadow:inset 0 0 0 1px var(--adm-line-2);}
 .adm .stats-comp-btn span:empty{display:none;}
 .adm .stats-comp-btn span{color:var(--adm-ink-3);font-weight:500;font-variant-numeric:tabular-nums;}
@@ -685,69 +684,6 @@ p.bil-fait-l{margin:1rem 0 .5rem;font-size:.8125rem;font-weight:600;color:var(--
   .rsx-case.is-ferme{display:none;}
 }
 
-/* ── Onglet Affiliation (admin-affiliation.js) ─────────────────────── */
-.afl-gate{display:flex;justify-content:center;padding:2rem 0 3rem;}
-.afl-gate-card{width:100%;max-width:24rem;display:grid;gap:.75rem;padding:1.75rem 1.5rem;border-radius:var(--adm-r-lg);background:var(--adm-card);border:1px solid var(--adm-line);text-align:left;}
-.afl-gate-icon{display:none;}
-.afl-gate-title{font-size:1rem;font-weight:600;letter-spacing:-.01em;}
-.afl-gate-text{font-size:.8375rem;color:var(--adm-ink-2);line-height:1.55;}
-.afl-gate-hint{font-size:.75rem;color:var(--adm-ink-3);}
-.afl-gate-error{font-size:.8rem;color:var(--adm-bad);}
-.afl-bar{display:flex;align-items:center;justify-content:space-between;gap:.75rem;flex-wrap:wrap;}
-.afl-bar-left,.afl-bar-right{display:flex;align-items:center;gap:.5rem;flex-wrap:wrap;}
-.afl-updated{font-size:.72rem;color:var(--adm-ink-3);font-variant-numeric:tabular-nums;}
-.afl-icon-btn{width:2.25rem;height:2.25rem;display:inline-flex;align-items:center;justify-content:center;border-radius:var(--adm-r-sm);border:1px solid var(--adm-line);background:var(--adm-card);color:var(--adm-ink-2);transition:background .12s,color .12s,border-color .12s;}
-.afl-icon-btn svg{width:.95rem;height:.95rem;}
-.afl-icon-btn:hover{color:var(--adm-ink);background:var(--adm-muted);border-color:var(--adm-line-2);}
-.afl-icon-btn--danger:hover{color:var(--adm-bad);border-color:var(--adm-bad-line);background:var(--adm-bad-bg);}
-.afl-icon-btn.tourne svg{animation:adm-spin .7s linear infinite;}
-.afl-error{padding:.65rem .9rem;border-radius:var(--adm-r-sm);background:var(--adm-bad-bg);border:1px solid var(--adm-bad-line);color:var(--adm-bad);font-size:.8125rem;}
-.afl-kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(10rem,1fr));gap:.75rem;}
-.afl-kpi{display:grid;gap:.3rem;padding:1rem 1.1rem;border-radius:var(--adm-r);background:var(--adm-card);border:1px solid var(--adm-line);}
-.afl-kpi-label{font-size:.8125rem;font-weight:500;color:var(--adm-ink-2);}
-.afl-kpi-value{font-size:1.6rem;font-weight:600;line-height:1.1;letter-spacing:-.02em;font-variant-numeric:tabular-nums;white-space:nowrap;}
-.afl-tablewrap{overflow-x:auto;border:1px solid var(--adm-line);border-radius:var(--adm-r);}
-.afl-table{width:100%;border-collapse:collapse;font-size:.8125rem;min-width:32rem;}
-.afl-table th{text-align:left;padding:.55rem .75rem;font-size:.72rem;font-weight:500;color:var(--adm-ink-3);background:var(--adm-muted);border-bottom:1px solid var(--adm-line);white-space:nowrap;}
-.afl-table td{padding:.6rem .75rem;border-top:1px solid var(--adm-line);vertical-align:middle;}
-.afl-table tbody tr:first-child td{border-top:0;}
-.afl-table tbody tr:hover td{background:var(--adm-muted);}
-.afl-num{text-align:right;font-variant-numeric:tabular-nums;}
-.afl-sort{cursor:pointer;user-select:none;}
-.afl-sort:hover{color:var(--adm-ink);}
-.afl-sort.tri{color:var(--adm-ink);font-weight:600;}
-.afl-sort.tri::after{content:'';display:inline-block;margin-left:.3rem;border-left:.25rem solid transparent;border-right:.25rem solid transparent;border-top:.3rem solid currentColor;vertical-align:middle;}
-.afl-sort.tri.asc::after{border-top:0;border-bottom:.3rem solid currentColor;}
-.afl-prog{font-weight:500;}
-.afl-remu{font-size:.76rem;color:var(--adm-ink-3);}
-.afl-vide{padding:1.75rem .5rem;text-align:center;color:var(--adm-ink-3);font-size:.8375rem;}
-.afl-statut{display:inline-flex;align-items:center;padding:.05rem .5rem;border-radius:999px;font-size:.7rem;font-weight:500;white-space:nowrap;border:1px solid var(--adm-line);background:var(--adm-muted);color:var(--adm-ink-2);}
-.afl-statut--active{background:var(--adm-ok-bg);border-color:var(--adm-ok-line);color:var(--adm-ok);}
-.afl-statut--pending{background:var(--adm-warn-bg);border-color:var(--adm-warn-line);color:var(--adm-warn);}
-.afl-gen{display:grid;grid-template-columns:repeat(auto-fit,minmax(12rem,1fr));gap:.75rem;align-items:end;}
-.afl-field{display:grid;gap:.3rem;min-width:0;}
-.afl-field>span{font-size:.78rem;font-weight:500;color:var(--adm-ink-2);}
-.afl-field>span em{font-style:normal;font-weight:400;color:var(--adm-ink-3);}
-.afl-field .input{height:2.25rem;}
-.afl-gen-btn{height:2.25rem;}
-.afl-gen-out{display:flex;align-items:center;gap:.6rem;margin-top:1rem;padding:.6rem .8rem;border-radius:var(--adm-r-sm);background:var(--adm-muted);border:1px solid var(--adm-line);}
-.afl-gen-out code{flex:1;min-width:0;font-size:.78rem;word-break:break-all;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;}
-.afl-copy{flex-shrink:0;height:1.9rem;padding:0 .7rem;border-radius:var(--adm-r-sm);border:1px solid var(--adm-line);background:var(--adm-card);color:var(--adm-ink);font-size:.76rem;font-weight:500;transition:background .12s;}
-.afl-copy:hover{background:var(--adm-muted-2);}
-.afl-gen-note{margin-top:.7rem;font-size:.78rem;color:var(--adm-ink-3);}
-.afl-conv-list{display:grid;gap:.4rem;}
-.afl-conv{display:flex;align-items:center;justify-content:space-between;gap:.75rem;padding:.6rem .8rem;border-radius:var(--adm-r-sm);border:1px solid var(--adm-line);}
-.afl-conv-nom{font-weight:500;font-size:.8375rem;}
-.afl-conv-meta{font-size:.72rem;color:var(--adm-ink-3);margin-top:.1rem;}
-.afl-conv-gain{font-weight:600;font-variant-numeric:tabular-nums;white-space:nowrap;}
-@media (max-width:640px){
-  .afl-hide-sm,.afl-table td:nth-child(3){display:none;}
-  .afl-bar-left{width:100%;}
-  .afl-kpi-value{font-size:1.35rem;}
-  .afl-gen-out{flex-direction:column;align-items:stretch;}
-  .afl-copy{width:100%;}
-}
-
 /* ── Tablette et téléphone ─────────────────────────────────────────── */
 @media (max-width:1100px){
   .adm{--adm-side:13.5rem;}
@@ -776,7 +712,7 @@ p.bil-fait-l{margin:1rem 0 .5rem;font-size:.8125rem;font-weight:600;color:var(--
   .adm .stats-tete-jour{font-size:1.5rem;}
 }
 @media (max-width:640px){
-  .adm .stats-panel,.adm .afl-panel{padding:.9rem 1rem;}
+  .adm .stats-panel{padding:.9rem 1rem;}
   .adm-puce{display:none;}
   .adm-cartes{grid-template-columns:1fr;}
   .adm .stats-comp--periode{flex-wrap:nowrap;}

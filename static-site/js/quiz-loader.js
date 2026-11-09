@@ -2162,42 +2162,6 @@
     return questions;
   }
 
-  // ── Encart partenaire affilie sur l'ecran de resultat ────────────────────
-  // Un seul partenaire par test, limite a sa langue : Wecandoo ne vend qu'en
-  // France, l'encart n'a rien a faire sur les quatre autres versions du site.
-  // Le lien porte rel="sponsored nofollow noopener" comme tous les liens
-  // affilies du site, et l'encart s'annonce comme tel au-dessus du titre.
-  // Retirer une entree d'ici suffit a retirer l'encart du site.
-  // Les pages qui ont un encart produits (PRODUITS_PAR_TEST dans le moteur,
-  // Amazon ou partenaire Affilae) n'ont plus d'entree ici : les deux se
-  // marcheraient dessus. Ce qui reste est un brouillon sans lien de suivi.
-  var PARTENAIRES_RESULTAT = {
-    // Couple sain : sortir du quotidien a deux. Winalist ouvre les domaines
-    // viticoles (visite et degustation chez le vigneron).
-    'sain': {
-      langues: ['fr'],
-      url: '',
-      textes: {
-        fr: {
-          mention: 'Lien affilié',
-          titre: 'Vous prenez encore le temps de sortir à deux ?',
-          texte: "Winalist ouvre les portes des domaines viticoles : visite et dégustation chez le vigneron, souvent à moins d'une heure de chez vous. Une après-midi qui change du restaurant, et la conversation vient toute seule.",
-          bouton: 'Voir les domaines autour de chez vous'
-        }
-      }
-    },
-  };
-
-  function partenaireResultat(quizType) {
-    var p = PARTENAIRES_RESULTAT[quizType];
-    // Sans lien de suivi, pas d'encart : un clic non compte est un clic perdu.
-    if (!p || !p.url || p.langues.indexOf(lang) === -1) return null;
-    var t = p.textes[lang];
-    if (!t) return null;
-    return { url: p.url, image: p.image, alt: p.alt, mention: t.mention,
-             titre: t.titre, texte: t.texte, bouton: t.bouton };
-  }
-
   function initSoloQuiz(cfg, questions) {
     // Barème explicite : par défaut un test solo donne 0, 1, 2, 3 points selon
     // le rang de la réponse, ce qui met toutes les questions sur le même pied.
@@ -2242,8 +2206,7 @@
       hasLocalStorage: cfg.hasLocalStorage || false,
       needsName: cfg.needsName || false,
       planchers: cfg.planchers || [],
-      plafonds: cfg.plafonds || [],
-      partenaire: partenaireResultat(cfg.quizType || 'solo')
+      plafonds: cfg.plafonds || []
     });
   }
 
@@ -2272,8 +2235,7 @@
       lang: lang,
       needsGender: cfg.needsGender || false,
       useScoring: cfg.useScoring || false,
-      modeSolo: cfg.modeSolo || false,
-      partenaire: partenaireResultat(quizType)
+      modeSolo: cfg.modeSolo || false
     };
     if (cfg.verdictsDuTest) {
       options.verdicts = verdictsEnPourcentage(cfg.prefix);
@@ -2350,8 +2312,7 @@
       results: results,
       prefix: usedPrefix,
       lang: lang,
-      reverseScore: usedHealthyNative,
-      partenaire: partenaireResultat(quizType)
+      reverseScore: usedHealthyNative
     }, optionsDistance(cfg, poolSain)));
   }
 

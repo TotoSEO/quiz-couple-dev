@@ -6,7 +6,7 @@
    quand l'évaluation est ouverte dans la langue (carteCelibPour, generate.js).
 
    Dès qu'une carte de résultat apparaît, la carte se pose sous le verdict
-   (après les produits s'il y en a), en petit : un titre, une phrase et la
+   (après l'encart de l'évaluation s'il y en a un), en petit : un titre, une phrase et la
    situation à choisir (jamais en couple, rupture de moins d'un an, histoires
    qui se répètent, autre). Le choix ouvre la suite : les sujets du sondage
    (les mêmes que celui du départ seul(e) de l'évaluation, C.SUJETS_CELIB),
@@ -254,8 +254,8 @@
   }
 
   // ── Où la poser ─────────────────────────────────────────────────────────
-  // Sous le verdict, après les produits s'il y en a : même rang que les
-  // produits dans le plan du résultat (styles.css, .qr-zone--celib), donc
+  // Sous le verdict, après l'encart de nos offres s'il y en a un : même rang
+  // que lui dans le plan du résultat (styles.css, .qr-zone--celib), donc
   // avant le bloc « à faire ensuite » sur téléphone. Sans plan, juste après
   // la carte de résultat.
   function grave(carte) {

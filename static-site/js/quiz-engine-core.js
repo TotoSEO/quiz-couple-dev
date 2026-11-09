@@ -2712,16 +2712,19 @@ var QuizEngine = (function() {
     // de la page. Sur telephone elle s'efface (display: contents) pour que le
     // bloc de renvoi garde sa place entre le resultat et les actions.
     var colonne = el('div', 'qr-colonne');
-    // L'encart produits se glisse entre le resultat et le reste : c'est la
-    // seule zone que le moteur ne construit pas lui-meme, elle depend de la
-    // page, pas du type de test.
+    // L'encart de nos propres offres se glisse entre le resultat et le
+    // reste : l'evaluation de couple ou le point sur ma relation, selon la
+    // page (BILAN_ENTREES). C'est la seule zone que le moteur ne construit pas
+    // lui-meme, elle depend de la page, pas du type de test. Les produits
+    // Amazon et les partenaires Affilae qui l'occupaient sur les autres pages
+    // sont partis le 9 novembre 2026 (Thomas : « ça ne fonctionne pas,
+    // utilise une partie des écrans de résultats », et le livre Quiz Couple
+    // sera le seul produit promu, une fois publié).
     if (!zones.produits) {
       var quizEl = document.getElementById('quiz-engine') || document.querySelector('[data-quiz]');
       var cleQuiz = quizEl ? quizEl.dataset.quiz : '';
       var langQuiz = quizEl ? (quizEl.dataset.lang || 'fr') : 'fr';
-      // Le bilan de couple payant passe avant les produits affiliés sur les
-      // tests de couple (un seul encart sous le verdict, jamais deux).
-      var produits = encartBilan(cleQuiz, langQuiz) || encartProduits(cleQuiz, langQuiz);
+      var produits = encartBilan(cleQuiz, langQuiz);
       if (produits) zones.produits = produits;
     }
     // Le pave de la regie (format 2) reste dans le texte, apres la premiere
@@ -2884,387 +2887,6 @@ var QuizEngine = (function() {
     return zone;
   }
 
-  // ── Encart produits sur l'ecran de resultat ─────────────────────────────
-  // Un ou plusieurs produits Amazon, poses juste sous la carte de resultat,
-  // avant le bloc de renvoi vers les autres tests. C'est le seul moment ou une
-  // proposition d'achat tombe juste : on vient de lire son verdict.
-  //
-  // La carte est faite pour le clic, rien d'autre : une image carree, le prix
-  // en bulle, le nom, la note, et un bouton. Pas de texte d'explication.
-  // L'image et le bouton portent le meme lien, tout l'encart mene au produit.
-  //
-  // Les liens sont des liens d'affiliation Amazon. Ils portent
-  // rel="sponsored nofollow noopener" comme tous les liens remuneres du site,
-  // s'ouvrent dans un nouvel onglet pour ne pas perdre l'ecran de resultat, et
-  // l'encart se ferme sur une mention discrete : le programme Partenaires
-  // Amazon impose de signaler les liens, et Google sanctionne un lien remunere
-  // non signale.
-  //
-  // Les visuels sont copies dans public/produits/ (WebP carre de 600 px) au
-  // lieu d'etre appeles chez Amazon : un visuel retire de leur CDN laissait un
-  // trou dans la carte, et une requete vers un domaine tiers partait avant meme
-  // que la personne ait clique.
-  //
-  // Chaque produit a une entree par langue, avec le lien d'affiliation de la
-  // place de marche correspondante (amazon.fr, .com, .de, .es, .it) : un tag
-  // francais ne rapporte rien sur une vente allemande. Une langue absente de
-  // l'entree n'affiche simplement pas de carte.
-  // langues: sans-nl : aucun identifiant d'affiliation Amazon.nl
-  // (docs/langues/CADRAGE-NL.md), donc aucune carte de produit en neerlandais.
-  var PRODUITS = {
-    lovebox: {
-      fr: { nom: 'Lovebox : messages à distance', prix: '99,99 €', note: 4.0, avis: 74, url: 'https://link.amazon/B07yg77Vv', images: ['/produits/lovebox-fr-1.webp'] },
-      en: { nom: 'Lovebox Black & White Love Note Messenger', prix: '$99.99', note: 4.3, avis: 495, url: 'https://amzn.to/4gYUvy8', images: ['/produits/lovebox-en-1.webp'] },
-      de: { nom: 'Lovebox Schwarz & Weiß, der Love Note Messenger', prix: '99,99 €', note: 4.2, avis: 72, url: 'https://amzn.to/4hoHM9c', images: ['/produits/lovebox-de-1.webp'] },
-      es: { nom: 'Lovebox Negro y Blanco, caja de amor conectada', prix: '99,99 €', note: 4.1, avis: 73, url: 'https://amzn.to/4hpG5bF', images: ['/produits/lovebox-es-1.webp'] },
-      it: { nom: 'Lovebox Nero e Bianco, scatola per amore connessa', prix: '99,99 €', note: 4.1, avis: 72, url: 'https://amzn.to/4inlC8o', images: ['/produits/lovebox-it-1.webp'] }
-    },
-    dimoi: {
-      fr: { nom: 'Dimoi, jeu de cartes pour couple', prix: '19,99 €', note: 4.5, avis: 1949, url: 'https://link.amazon/B06fYzJxd', images: ['/produits/dimoi-fr-1.webp', '/produits/dimoi-fr-2.webp'] },
-      en: { nom: 'We\'re Not Really Strangers, Couples Edition', prix: '$20.00', note: 4.6, avis: 2712, url: 'https://amzn.to/46lXrQw', images: ['/produits/dimoi-en-1.webp'] },
-      de: { nom: 'Quality Time, das Spiel für Paare (240 Fragen)', prix: '17,90 €', note: 4.6, avis: 487, url: 'https://amzn.to/4xrGcbw', images: ['/produits/dimoi-de-1.webp'] },
-      es: { nom: 'Desconocidos, juego para parejas (220 cartas)', prix: '19,69 €', note: 4.4, avis: 64, url: 'https://link.amazon/B08K4o9pG', images: ['/produits/dimoi-es-1.webp'] },
-      it: { nom: 'BLABLA Pocket per coppie, carte da conversazione', prix: '14,10 €', note: 4.2, avis: 261, url: 'https://amzn.to/3VtMSZh', images: ['/produits/dimoi-it-1.webp'] }
-    },
-    quiSaitMieux: {
-      fr: { nom: 'Qui Sait Mieux Qui ? Édition couple', prix: '24,99 €', note: 4.5, avis: 162, url: 'https://link.amazon/B0flcy3T3', images: ['/produits/quiSaitMieux-fr-1.webp', '/produits/quiSaitMieux-fr-2.webp'] },
-      en: { nom: 'Answer This, do you really know your partner?', prix: '$23.99', note: 4.6, avis: 1128, url: 'https://amzn.to/46osP0H', images: ['/produits/quiSaitMieux-en-1.webp'] },
-      de: { nom: 'Kennst du mich? Paare, 150 Fragen', prix: '24,99 €', note: 4.2, avis: 101, url: 'https://amzn.to/3VtN0If', images: ['/produits/quiSaitMieux-de-1.webp'] },
-      es: { nom: '¿Cuánto conoces a tu pareja? 150 preguntas', prix: '24,99 €', note: 4.5, avis: 1177, url: 'https://link.amazon/B0hzwNwbR', images: ['/produits/quiSaitMieux-es-1.webp'] },
-      it: { nom: 'Quanti mi conosci? Coppie, 150 domande', prix: '24,99 €', note: 4.2, avis: 108, url: 'https://amzn.to/4xWsBKu', images: ['/produits/quiSaitMieux-it-1.webp'] }
-    },
-    dilemmes: {
-      fr: { nom: 'Dilemmes de m*rde, le jeu (18+)', prix: '13,50 €', note: 4.5, avis: 8, url: 'https://link.amazon/B09o4lmdR', images: ['/produits/dilemmes-fr-1.webp', '/produits/dilemmes-fr-2.webp'] },
-      en: { nom: 'Pick Your Poison After Dark, adult party game', prix: '$24.95', note: 4.4, avis: 4368, url: 'https://amzn.to/4hqT6la', images: ['/produits/dilemmes-en-1.webp'] },
-      de: { nom: 'WHO? Wer von uns? Das Voting-Partyspiel', prix: '18,90 €', note: 4.5, avis: 60, url: 'https://amzn.to/46lCMMA', images: ['/produits/dilemmes-de-1.webp'] },
-      es: { nom: 'Pick Your Poison, ¿qué preferirías hacer?', prix: '27,99 €', note: 4.4, avis: 4579, url: 'https://link.amazon/B06xEltSk', images: ['/produits/dilemmes-es-1.webp'] },
-      it: { nom: 'Spietato, gioco di carte per adulti', prix: '24,90 €', note: 4.6, avis: 769, url: 'https://amzn.to/46o664Z', images: ['/produits/dilemmes-it-1.webp'] }
-    },
-    astro: {
-      fr: { nom: 'Le grand livre des compatibilités amoureuses astrologiques', prix: '32,00 €', note: 4.8, avis: 145, url: 'https://link.amazon/B01VDiOmZ', images: ['/produits/astro-fr-1.webp'] },
-      en: { nom: 'Linda Goodman\'s Love Signs', prix: '$13.03', note: 4.7, avis: 1091, url: 'https://amzn.to/4cGypiB', images: ['/produits/astro-en-1.webp'] },
-      de: { nom: 'Sage mir dein Sternzeichen, und ich sage dir, wie du liebst', prix: '13,00 €', note: 4.5, avis: 166, url: 'https://amzn.to/4gPlltL', images: ['/produits/astro-de-1.webp'] },
-      es: { nom: 'Escrito en las estrellas, secretos de la compatibilidad', prix: '9,45 €', note: 3.9, avis: 11, url: 'https://link.amazon/B0bcLDmeL', images: ['/produits/astro-es-1.webp'] },
-      it: { nom: 'Astrologia della relazione. Amore, sesso e compatibilità', prix: '26,60 €', note: 3.9, avis: 11, url: 'https://amzn.to/4h2eBYf', images: ['/produits/astro-it-1.webp'] }
-    },
-    pervers: {
-      fr: { nom: 'Pervers narcissique : détecter, comprendre, se protéger', prix: '28,99 €', note: 4.4, avis: 12, url: 'https://link.amazon/B03OHakJw', images: ['/produits/pervers-fr-1.webp'] },
-      en: { nom: 'Psychopath Free (Expanded Edition)', prix: '$10.73', note: 4.7, avis: 7876, url: 'https://amzn.to/4hp9oen', images: ['/produits/pervers-en-1.webp'] },
-      de: { nom: 'Verdeckter Narzissmus in Beziehungen', prix: '24,00 €', note: 4.7, avis: 228, url: 'https://amzn.to/4AhcUPI', images: ['/produits/pervers-de-1.webp'] },
-      es: { nom: 'Hasta la vista, narcisista', prix: '18,90 €', note: 4.8, avis: 134, url: 'https://link.amazon/B03WRXEB2', images: ['/produits/pervers-es-1.webp'] },
-      it: { nom: 'Narcisista perverso, guida completa', prix: '12,99 €', note: 4.1, avis: 242, url: 'https://amzn.to/4j29tpC', images: ['/produits/pervers-it-1.webp'] }
-    },
-    manipulateurs: {
-      fr: { nom: 'Les manipulateurs sont parmi nous', prix: '13,90 €', note: 4.6, avis: 733, url: 'https://link.amazon/B07PumVLh', images: ['/produits/manipulateurs-fr-1.webp'] },
-      en: { nom: 'The Gaslight Effect', prix: '$19.00', note: 4.5, avis: 1320, url: 'https://amzn.to/3TtT3fl', images: ['/produits/manipulateurs-en-1.webp'] },
-      de: { nom: 'Manipulationstechniken, die Macht der Manipulation', prix: '15,90 €', note: 4.3, avis: 191, url: 'https://amzn.to/4xqJOur', images: ['/produits/manipulateurs-de-1.webp'] },
-      es: { nom: 'Psicología oscura y manipulación', prix: '20,79 €', note: 4.5, avis: 18, url: 'https://link.amazon/B0dzzycBd', images: ['/produits/manipulateurs-es-1.webp'] },
-      it: { nom: 'La manipolazione affettiva nella coppia', prix: '20,00 €', note: 4.4, avis: 18, url: 'https://amzn.to/4r7qmS1', images: ['/produits/manipulateurs-it-1.webp'] }
-    },
-    dependance: {
-      fr: { nom: 'Vaincre la dépendance affective', prix: '18,90 €', note: 4.4, avis: 399, url: 'https://link.amazon/B0gHqDfVz', images: ['/produits/dependance-fr-1.webp'] },
-      en: { nom: 'Codependent No More (Revised and Updated)', prix: '$15.38', note: 4.7, avis: 19236, url: 'https://amzn.to/4yzvkcw', images: ['/produits/dependance-en-1.webp'] },
-      de: { nom: 'Mein Weg aus der emotionalen Abhängigkeit', prix: '15,90 €', note: 4.5, avis: 36, url: 'https://amzn.to/3Tr3joI', images: ['/produits/dependance-de-1.webp'] },
-      es: { nom: 'La superación de la dependencia emocional', prix: '18,00 €', note: 4.4, avis: 282, url: 'https://link.amazon/B0jdAiVqw', images: ['/produits/dependance-es-1.webp'] },
-      it: { nom: 'La dipendenza affettiva, strumenti e strategie', prix: '18,05 €', note: 4.6, avis: 14, url: 'https://amzn.to/3T1PtZC', images: ['/produits/dependance-it-1.webp'] }
-    },
-    jalousie: {
-      fr: { nom: 'J\'arrête d\'être jaloux(se) ! Programme de 21 jours', prix: '11,90 €', note: 4.2, avis: 144, url: 'https://link.amazon/B0geUNXuU', images: ['/produits/jalousie-fr-1.webp'] },
-      en: { nom: 'The Overcoming Jealousy Workbook', prix: '$16.97', note: 4.2, avis: 155, url: 'https://amzn.to/4xjZrDJ', images: ['/produits/jalousie-en-1.webp'] },
-      de: { nom: 'Eifersucht: Vertrauen lernen', prix: '12,80 €', note: 4.1, avis: 591, url: 'https://amzn.to/4xn0TW4', images: ['/produits/jalousie-de-1.webp'] },
-      es: { nom: 'Celos, comprender y superar los celos', prix: '14,25 €', note: 3.3, avis: 37, url: 'https://link.amazon/B08MU6VOP', images: ['/produits/jalousie-es-1.webp'] },
-      it: { nom: 'La cura della gelosia', prix: '15,67 €', note: 4.3, avis: 246, url: 'https://amzn.to/3TtTfLB', images: ['/produits/jalousie-it-1.webp'] }
-    },
-    sauver: {
-      fr: { nom: 'Sauver son couple : avec conscience', prix: '19,90 €', note: 4.8, avis: 15, url: 'https://link.amazon/B00bHorcS', images: ['/produits/sauver-fr-1.webp'] },
-      en: { nom: 'Hold Me Tight, seven conversations for a lifetime of love', prix: '$9.43', note: 4.6, avis: 6415, url: 'https://amzn.to/3TtFxZd', images: ['/produits/sauver-en-1.webp'] },
-      de: { nom: '8 Gespräche, die jedes Paar führen sollte', prix: '14,99 €', note: 4.5, avis: 349, url: 'https://amzn.to/4Ahd21E', images: ['/produits/sauver-de-1.webp'] },
-      es: { nom: 'Crisis, no ruptura', prix: '17,95 €', note: 5.0, avis: 10, url: 'https://link.amazon/B0gDm6ePT', images: ['/produits/sauver-es-1.webp'] },
-      it: { nom: 'Se la coppia è in crisi', prix: '29,00 €', note: 4.3, avis: 60, url: 'https://amzn.to/4yFR9HH', images: ['/produits/sauver-it-1.webp'] }
-    },
-    autotherapie: {
-      fr: { nom: 'Auto-thérapie de couple : communication, désir, routine', prix: '19,90 €', note: 4.1, avis: 320, url: 'https://link.amazon/B07ir65nf', images: ['/produits/autotherapie-fr-1.webp'] },
-      en: { nom: 'Couples Therapy Workbook', prix: '$17.95', note: 4.3, avis: 319, url: 'https://amzn.to/4A2OBEO', images: ['/produits/autotherapie-en-1.webp'] },
-      de: { nom: 'Paartherapie für Zuhause, in 8 Wochen', prix: '16,95 €', note: 4.7, avis: 63, url: 'https://amzn.to/4AcQ63n', images: ['/produits/autotherapie-de-1.webp'] },
-      es: { nom: 'El amor se construye juntos', prix: '17,05 €', note: 4.5, avis: 39, url: 'https://link.amazon/B070n5HKk', images: ['/produits/autotherapie-es-1.webp'] },
-      it: { nom: 'La comunicazione nella coppia', prix: '15,57 €', note: 4.4, avis: 207, url: 'https://amzn.to/4AcQhM5', images: ['/produits/autotherapie-it-1.webp'] }
-    },
-    divorce: {
-      fr: { nom: 'Divorce 2026 : le guide pratique', prix: '26,00 €', note: 5.0, avis: 2, url: 'https://link.amazon/B01zKWpYZ', images: ['/produits/divorce-fr-1.webp'] },
-      en: { nom: 'Nolo\'s Essential Guide to Divorce', prix: '$26.68', url: 'https://amzn.to/46iTcFt', images: ['/produits/divorce-en-1.webp'] },
-      de: { nom: 'Ich will die Scheidung! Der Rechtsratgeber', prix: '21,99 €', note: 5.0, avis: 2, url: 'https://amzn.to/4dBEwFc', images: ['/produits/divorce-de-1.webp'] },
-      es: { nom: 'Los procesos de separación y divorcio', prix: '15,00 €', note: 3.5, avis: 2, url: 'https://link.amazon/B0iVDZsU9', images: ['/produits/divorce-es-1.webp'] },
-      it: { nom: 'Come superare divorzio e separazione', prix: '17,78 €', note: 3.7, avis: 60, url: 'https://amzn.to/4Aijaqn', images: ['/produits/divorce-it-1.webp'] }
-    },
-    pacte: {
-      fr: { nom: 'Le pacte des (futurs) parents', prix: '14,90 €', note: 4.5, avis: 101, url: 'https://link.amazon/B0cQ6FpmA', images: ['/produits/pacte-fr-1.webp'] },
-      en: { nom: 'And Baby Makes Three', prix: '$16.99', note: 4.5, avis: 617, url: 'https://amzn.to/4xSLoX7', images: ['/produits/pacte-en-1.webp'] },
-      de: { nom: 'Eltern werden, Partner bleiben', prix: '25,00 €', note: 3.9, avis: 13, url: 'https://amzn.to/4j27lhy', images: ['/produits/pacte-de-1.webp'] },
-      es: { nom: 'Pareja en positivo', prix: '17,00 €', note: 5.0, avis: 1, url: 'https://link.amazon/B07blM4Du', images: ['/produits/pacte-es-1.webp'] },
-      it: { nom: 'Due cuori e una famiglia', prix: '11,30 €', note: 5.0, avis: 1, url: 'https://amzn.to/4j05TMG', images: ['/produits/pacte-it-1.webp'] }
-    },
-    cinqLangages: {
-      fr: { nom: 'Les cinq langages pour trouver l\'amour', prix: '18,00 €', note: 4.5, avis: 420, url: 'https://link.amazon/B052KO6xs', images: ['/produits/cinqLangages-fr-1.webp'] },
-      en: { nom: 'The 5 Love Languages, Singles Edition', prix: '$16.81', note: 4.7, avis: 1661, url: 'https://amzn.to/4gRCByD', images: ['/produits/cinqLangages-en-1.webp'] },
-      de: { nom: 'Die fünf Sprachen der Liebe für Singles', prix: '12,95 €', note: 4.6, avis: 301, url: 'https://amzn.to/4hqc0Zy', images: ['/produits/cinqLangages-de-1.webp'] },
-      es: { nom: 'Los 5 lenguajes del amor para solteros', prix: '6,17 €', note: 4.6, avis: 452, url: 'https://link.amazon/B07Sj6LE4', images: ['/produits/cinqLangages-es-1.webp'] },
-      it: { nom: 'I cinque linguaggi dell\'amore', prix: '9,50 €', note: 4.6, avis: 1501, url: 'https://amzn.to/4AcqRhs', images: ['/produits/cinqLangages-it-1.webp'] }
-    },
-    nuls: {
-      fr: { nom: 'Les relations amoureuses pour les Nuls', prix: '14,09 €', note: 3.8, avis: 47, url: 'https://link.amazon/B0dtxmJDG', images: ['/produits/nuls-fr-1.webp'] },
-      en: { nom: 'Relationships For Dummies', prix: '$19.24', note: 4.2, avis: 229, url: 'https://amzn.to/3T7IBdc', images: ['/produits/nuls-en-1.webp'] },
-      de: { nom: 'Die 7 Geheimnisse der glücklichen Ehe', prix: '14,99 €', note: 4.6, avis: 519, url: 'https://amzn.to/4AbDvNY', images: ['/produits/nuls-de-1.webp'] },
-      es: { nom: 'Corrígeme si me equivoco', prix: '9,97 €', note: 3.9, avis: 223, url: 'https://link.amazon/B058auBQg', images: ['/produits/nuls-es-1.webp'] },
-      it: { nom: 'La coppia strategica', prix: '14,25 €', note: 4.4, avis: 8, url: 'https://amzn.to/4hcgHoK', images: ['/produits/nuls-it-1.webp'] }
-    },
-    kodak: {
-      fr: { nom: 'Mini appareil photo rétro porte-clé Kodak', prix: '37,90 €', note: 4.4, avis: 3808, url: 'https://link.amazon/B09RiyWnF', images: ['/produits/kodak-fr-1.webp'] },
-      en: { nom: 'Kodak Charmera, mini keychain digital camera', prix: '$34.99', note: 4.5, avis: 3923, url: 'https://amzn.to/4h9X1ln', images: ['/produits/kodak-en-1.webp'] },
-      de: { nom: 'Nano Cam G6, Mini-Kamera im Retro-Design', prix: '29,90 €', note: 3.5, avis: 10, url: 'https://amzn.to/4dy3lSo', images: ['/produits/kodak-de-1.webp'] },
-      es: { nom: 'Kodak Charmera, mini cámara digital llavero', prix: '36,00 €', note: 4.5, avis: 3808, url: 'https://link.amazon/B0iDKyGoi', images: ['/produits/kodak-es-1.webp'] },
-      it: { nom: 'Kodak Charmera, mini fotocamera portachiavi', prix: '38,99 €', note: 4.5, avis: 3809, url: 'https://amzn.to/4indrZN', images: ['/produits/kodak-it-1.webp'] }
-    },
-    montgolfiere: {
-      fr: { nom: 'Vol en montgolfière à deux (Wonderbox)', prix: '184,90 €', note: 4.4, avis: 20, url: 'https://link.amazon/B0i62IhLU', images: ['/produits/montgolfiere-fr-1.webp'] },
-      en: { nom: 'Wonderbox, Getaway for 2, one hotel night', prix: '$199.00', note: 4.0, avis: 6, url: 'https://amzn.to/4xraxam', images: ['/produits/montgolfiere-en-1.webp'] },
-      de: { nom: 'Jochen Schweizer, Geschenkbox Fliegen & Fallen', prix: '249,90 €', note: 4.6, avis: 16, url: 'https://amzn.to/4cGUfmb', images: ['/produits/montgolfiere-de-1.webp'] },
-      es: { nom: 'Smartbox, Emociones para Dos', prix: '49,90 €', note: 4.4, avis: 177, url: 'https://link.amazon/B07R0ZtHj', images: ['/produits/montgolfiere-es-1.webp'] },
-      it: { nom: 'Smartbox, Emozioni Estreme', prix: '199,90 €', note: 4.9, avis: 18, url: 'https://amzn.to/3UPF2Jo', images: ['/produits/montgolfiere-it-1.webp'] }
-    },
-    insolite: {
-      fr: { nom: 'Nuits insolites en couple (Wonderbox)', prix: '149,90 €', note: 5.0, avis: 1, url: 'https://link.amazon/B0aCVtM55', images: ['/produits/insolite-fr-1.webp'] },
-      en: { nom: 'Wonderbox, Weekend Getaway for 2, two hotel nights', prix: '$399.00', note: 4.4, avis: 5, url: 'https://amzn.to/4gTaSO4', images: ['/produits/insolite-en-1.webp'] },
-      de: { nom: 'Jochen Schweizer, Geschenkbox Kurztrip', prix: '189,90 €', note: 4.8, avis: 18, url: 'https://amzn.to/4d2bZbV', images: ['/produits/insolite-de-1.webp'] },
-      es: { nom: 'Smartbox, 2 días con Encanto', prix: '69,90 €', note: 4.3, avis: 341, url: 'https://link.amazon/B06zB39T2', images: ['/produits/insolite-es-1.webp'] },
-      it: { nom: 'Smartbox, Città romantiche in Europa', prix: '199,90 €', note: 4.6, avis: 16, url: 'https://amzn.to/46lDKsc', images: ['/produits/insolite-it-1.webp'] }
-    },
-    // Les partenaires Affilae, ramenes a des cartes comme les autres : memes
-    // liens de suivi (c3po.link compte le clic avant de renvoyer), meme
-    // visuels copies en local, mais plus de texte d'explication. Pas de prix
-    // quand le lien mene a une boutique ou a un catalogue : il n'y en a pas
-    // un seul a annoncer. Francais seulement : ces trois-la ne vendent qu'en
-    // France.
-    passageDuDesir: {
-      fr: { nom: 'Le Passage du Désir : lingerie, jeux et accessoires', prix: null, url: 'https://c3po.link/Quyean9abC', bouton: 'Voir la boutique', images: ['/partenaires/passage-du-desir.webp'] }
-    },
-    gleese: {
-      fr: { nom: 'Gleese, la plateforme française des couples curieux', prix: null, url: 'https://gleese.com/?ae=103', bouton: 'Découvrir Gleese', emoji: '💞', images: [] }
-    },
-    wecandoo: {
-      fr: { nom: "Un atelier d'artisan à deux (Wecandoo)", prix: null, url: 'https://c3po.link/Q9Y6Z2a84u', bouton: 'Voir les ateliers', images: ['/partenaires/wecandoo-atelier.webp'] }
-    }
-  };
-
-  // Le ou les produits de chaque page, par cle de test (l'attribut data-quiz
-  // du moteur). Une seule cle : carte unique. Plusieurs : carrousel.
-  var COFFRETS_COUPLE = ['montgolfiere', 'insolite', 'lovebox', 'kodak', 'dimoi', 'wecandoo'];
-  var PRODUITS_PAR_TEST = {
-    'distance': ['lovebox'],
-    'distance-aime': ['lovebox'],
-    'common-points': ['dimoi'],
-    'knowledge': ['quiSaitMieux'],
-    'vrai-faux': ['quiSaitMieux'],
-    'qui-de-nous-deux': ['quiSaitMieux'],
-    'most': ['quiSaitMieux'],
-    'phrases': ['quiSaitMieux'],
-    'dix-mais': ['dilemmes'],
-    'dilemmes': ['dilemmes'],
-    'oui-non': ['dilemmes'],
-    'tu-preferes': ['dilemmes'],
-    'jamais': ['dilemmes'],
-    'qui-pourrait': ['dilemmes'],
-    'questions-rapides': ['quiSaitMieux'],
-    'nouvel-an': COFFRETS_COUPLE,
-    'pour-contre': ['dilemmes'],
-    'marrant': ['dilemmes'],
-    'astro-prenoms': ['astro'],
-    'signes-chinois': ['astro'],
-    'pervers': ['pervers'],
-    'emprise': ['manipulateurs'],
-    'dependance': ['dependance'],
-    'jalousie1': ['jalousie'],
-    'jalousie2': ['jalousie'],
-    'fin-couple': ['sauver'],
-    'aime-encore': ['autotherapie'],
-    'divorce': ['divorce'],
-    'parentalite': ['pacte'],
-    'trouver-amour': ['cinqLangages'],
-    'celibataire': ['nuls'],
-    'pret-nouvelle-relation': ['cinqLangages'],
-    'encore-amoureux-ex': ['dependance'],
-    'oublier-ex': ['dependance'],
-    'ex-revenir': ['dependance'],
-    'pourquoi-quitte': ['dependance'],
-    'oublie-son-ex': ['jalousie'],
-    // Aucun produit sur « dois-je me remettre avec mon ex » : son premier verdict
-    // parle de peur et de violence, un livre en dessous n'y a pas sa place.
-    'est-ce-le-bon': ['autotherapie'],
-    'red-flag': ['autotherapie'],
-    'type-couple': ['quiSaitMieux'],
-    'amour-habitude': ['wecandoo'],
-    // Les deux ecrans dont le contenu est deja pour adultes.
-    'coquin': ['passageDuDesir', 'gleese'],
-    'compatibilite-sexuelle': ['passageDuDesir', 'gleese'],
-    'action-ou-verite-coquin': ['passageDuDesir', 'gleese'],
-    'tester-couple': COFFRETS_COUPLE,
-    'compatibilite': COFFRETS_COUPLE,
-    'amoureux': COFFRETS_COUPLE,
-    'mariage': COFFRETS_COUPLE
-  };
-  // /en/couple-compatibility-test/ est la premiere page du site : elle recoit
-  // trois produits choisis pour ce moment-la, un souvenir et deux jeux a faire
-  // dans la foulee, plutot que le carrousel de six ou figurent des coffrets a
-  // 400 dollars. Sa cle de moteur est « tester-couple », pas
-  // « compatibilite » : les deux pages anglaises se ressemblent de nom mais ce
-  // n'est pas le meme test.
-  var PRODUITS_PAR_TEST_LANG = {
-    en: { 'tester-couple': ['kodak', 'quiSaitMieux', 'dimoi'] }
-  };
-  // langues: sans-nl : pas de produit en neerlandais (voir PRODUITS).
-  var PRODUITS_TEXTES = {
-    fr: {
-      un: 'Ce produit / cadeau pourrait vous intéresser !',
-      plusieurs: 'Ces produits / cadeaux pourraient vous intéresser',
-      bouton: 'Voir sur Amazon',
-      voir: 'Voir {{nom}} sur Amazon',
-      image: 'Image {{n}} sur {{total}}',
-      precedent: 'Produits précédents',
-      suivant: 'Produits suivants',
-      mention: 'Liens sponsorisés',
-      noteLue: 'Note {{note}} sur 5'
-    },
-    en: {
-      un: 'This gift might be just right for you!',
-      plusieurs: 'These gifts might be just right for you',
-      bouton: 'See it on Amazon',
-      voir: 'See {{nom}} on Amazon',
-      image: 'Image {{n}} of {{total}}',
-      precedent: 'Previous products',
-      suivant: 'Next products',
-      mention: 'Sponsored links',
-      noteLue: 'Rated {{note}} out of 5'
-    },
-    es: {
-      un: '¡Este producto o regalo podría interesarte!',
-      plusieurs: 'Estos productos o regalos podrían interesarte',
-      bouton: 'Verlo en Amazon',
-      voir: 'Ver {{nom}} en Amazon',
-      image: 'Imagen {{n}} de {{total}}',
-      precedent: 'Productos anteriores',
-      suivant: 'Productos siguientes',
-      mention: 'Enlaces patrocinados',
-      noteLue: 'Valoración {{note}} sobre 5'
-    },
-    de: {
-      un: 'Dieses Geschenk könnte dir gefallen!',
-      plusieurs: 'Diese Geschenke könnten euch gefallen',
-      bouton: 'Auf Amazon ansehen',
-      voir: '{{nom}} auf Amazon ansehen',
-      image: 'Bild {{n}} von {{total}}',
-      precedent: 'Vorherige Produkte',
-      suivant: 'Nächste Produkte',
-      mention: 'Gesponserte Links',
-      noteLue: 'Bewertet mit {{note}} von 5'
-    },
-    it: {
-      un: 'Questo regalo potrebbe fare al caso vostro!',
-      plusieurs: 'Questi regali potrebbero fare al caso vostro',
-      bouton: 'Vedi su Amazon',
-      voir: 'Vedi {{nom}} su Amazon',
-      image: 'Immagine {{n}} di {{total}}',
-      precedent: 'Prodotti precedenti',
-      suivant: 'Prodotti successivi',
-      mention: 'Link sponsorizzati',
-      noteLue: 'Valutazione {{note}} su 5'
-    }
-  };
-  var ICONE_LIEN = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' +
-    '<path d="M14 4h6v6"/><path d="M20 4l-9 9"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg>';
-
-  function carteProduit(p, t, lang) {
-    var carte = el('article', 'qr-produit');
-    var libelle = t.voir.replace('{{nom}}', p.nom);
-
-    // L'image entiere est le lien. Deux visuels ? Une piste a defilement dans
-    // le cadre carre, et des points de navigation sous le cadre, hors du lien :
-    // un bouton dans un lien ne serait pas du HTML valide.
-    var visuel = el('a', 'qr-produit-visuel');
-    visuel.href = p.url; visuel.target = '_blank'; visuel.rel = 'sponsored nofollow noopener';
-    visuel.setAttribute('aria-label', libelle);
-    var piste = el('span', 'qr-produit-piste');
-    if (!p.images.length) {
-      // Pas de visuel pour ce partenaire : le cadre porte un aplat et un
-      // emoji, pour que la carte garde la meme silhouette que ses voisines.
-      var vide = el('span', 'qr-produit-vide');
-      vide.setAttribute('aria-hidden', 'true');
-      vide.textContent = p.emoji || '🎁';
-      piste.appendChild(vide);
-    }
-    p.images.forEach(function(src, i) {
-      var img = document.createElement('img');
-      img.src = src; img.alt = p.images.length > 1 ? t.image.replace('{{n}}', i + 1).replace('{{total}}', p.images.length) : p.nom;
-      img.loading = 'lazy'; img.decoding = 'async'; img.width = 300; img.height = 300;
-      img.referrerPolicy = 'no-referrer';
-      piste.appendChild(img);
-    });
-    var cadre = el('span', 'qr-produit-cadre');
-    cadre.appendChild(piste);
-    visuel.appendChild(cadre);
-    if (p.prix) visuel.appendChild(el('span', 'qr-produit-prix', esc(p.prix)));
-    carte.appendChild(visuel);
-
-    if (p.images.length > 1) {
-      var points = el('span', 'qr-produit-points');
-      points.setAttribute('role', 'group');
-      p.images.forEach(function(_, i) {
-        var b = el('button', 'qr-produit-point' + (i === 0 ? ' est-actif' : ''));
-        b.type = 'button';
-        b.setAttribute('aria-label', t.image.replace('{{n}}', i + 1).replace('{{total}}', p.images.length));
-        b.addEventListener('click', function() {
-          piste.scrollTo({ left: piste.clientWidth * i, behavior: 'smooth' });
-        });
-        points.appendChild(b);
-      });
-      carte.appendChild(points);
-      var boutons = points.querySelectorAll('.qr-produit-point');
-      piste.addEventListener('scroll', function() {
-        var idx = Math.round(piste.scrollLeft / Math.max(1, piste.clientWidth));
-        for (var i = 0; i < boutons.length; i++) boutons[i].classList.toggle('est-actif', i === idx);
-      }, { passive: true });
-    }
-
-    var corps = el('span', 'qr-produit-corps');
-    corps.appendChild(el('span', 'qr-produit-nom', esc(p.nom)));
-    // La note, relevee sur la fiche Amazon. Arrondie au dixieme superieur, et
-    // ecrite avec le separateur decimal de la langue : « 4.6 » en anglais,
-    // « 4,6 » partout ailleurs.
-    //
-    // Le nombre d'avis n'est pas affiche : il monte tous les jours, et le
-    // chiffre fige dans le code serait faux au bout d'une semaine. Il sert
-    // quand meme, en coulisse : sous cinq avis la note ne veut rien dire, et
-    // un « 5,0/5 » venu d'un seul acheteur a l'air fabrique. Dans ce cas la
-    // carte n'affiche pas de note du tout.
-    if (p.note && p.avis && p.avis >= 5) {
-      var n = Math.ceil(p.note * 10) / 10;
-      var nTexte = n.toFixed(1);
-      try { nTexte = n.toLocaleString(lang, { minimumFractionDigits: 1, maximumFractionDigits: 1 }); } catch (e) {}
-      var ligne = el('span', 'qr-produit-note');
-      ligne.innerHTML = '<span class="qr-produit-etoile" aria-hidden="true">★</span>' + esc(nTexte) + '/5';
-      ligne.setAttribute('aria-label', t.noteLue.replace('{{note}}', nTexte));
-      corps.appendChild(ligne);
-    }
-    var btn = el('a', 'qr-produit-btn');
-    btn.href = p.url; btn.target = '_blank'; btn.rel = 'sponsored nofollow noopener';
-    btn.setAttribute('aria-label', libelle);
-    btn.innerHTML = '<span>' + esc(p.bouton || t.bouton) + '</span>' + ICONE_LIEN;
-    corps.appendChild(btn);
-    carte.appendChild(corps);
-    return carte;
-  }
-
-  // La zone entiere, ou null quand la page n'a rien a proposer ou n'est pas
-  // en francais. C'est ce que dispositionResultat pose sous le resultat, et ce
-  // que les pages a ecran de resultat propre (tu preferes) appellent.
   // ── Le bilan de couple, sous le verdict des tests de couple ──────────
   // Le body porte data-bilan (l'adresse de la page dans la langue) quand
   // l'évaluation de couple est ouverte (BILAN_OUVERT, config.js), et data-bilan-groupe et
@@ -3416,61 +3038,6 @@ var QuizEngine = (function() {
     return zone;
   }
 
-  function encartProduits(cle, lang, explicites) {
-    lang = lang || 'fr';
-    var t = PRODUITS_TEXTES[lang];
-    if (!t) return null;
-    var produits = explicites || [];
-    if (!explicites) {
-      // Une page peut vouloir une autre selection selon la langue : l'anglais
-      // du test de compatibilite, qui est la premiere page du site, montre
-      // trois produits choisis plutot que le carrousel complet.
-      var parLangue = PRODUITS_PAR_TEST_LANG[lang];
-      var cles = (parLangue && parLangue[cle]) || PRODUITS_PAR_TEST[cle];
-      if (!cles) return null;
-      for (var i = 0; i < cles.length; i++) {
-        // Un produit sans entree dans cette langue n'a pas de lien
-        // d'affiliation qui rapporte ici : on ne montre pas la carte.
-        var variante = PRODUITS[cles[i]] && PRODUITS[cles[i]][lang];
-        if (variante) produits.push(variante);
-      }
-    }
-    if (!produits.length) return null;
-    var plusieurs = produits.length > 1;
-
-    var zone = el('section', 'qr-produits' + (plusieurs ? ' qr-produits--carrousel' : ''));
-    var titre = plusieurs ? t.plusieurs : t.un;
-    zone.setAttribute('aria-label', titre);
-    zone.appendChild(el('h3', 'qr-produits-titre', esc(titre)));
-
-    var piste = el('div', 'qr-produits-piste');
-    produits.forEach(function(p) { piste.appendChild(carteProduit(p, t, lang)); });
-
-    if (plusieurs) {
-      // Deux fleches pour la souris ; au doigt, la piste defile toute seule.
-      var fenetre = el('div', 'qr-produits-fenetre');
-      fenetre.appendChild(piste);
-      [['precedent', -1], ['suivant', 1]].forEach(function(f) {
-        var b = el('button', 'qr-produits-fleche qr-produits-fleche--' + f[0]);
-        b.type = 'button';
-        b.setAttribute('aria-label', t[f[0]]);
-        b.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' +
-          (f[1] < 0 ? '<path d="M15 6l-6 6 6 6"/>' : '<path d="M9 6l6 6-6 6"/>') + '</svg>';
-        b.addEventListener('click', function() {
-          var carte = piste.firstElementChild;
-          var pas = carte ? carte.getBoundingClientRect().width + 16 : piste.clientWidth * 0.8;
-          piste.scrollBy({ left: f[1] * pas, behavior: 'smooth' });
-        });
-        fenetre.appendChild(b);
-      });
-      zone.appendChild(fenetre);
-    } else {
-      zone.appendChild(piste);
-    }
-    zone.appendChild(el('p', 'qr-produits-mention', esc(t.mention)));
-    return zone;
-  }
-
   function renderActionButtons(wrap, opts) {
     var quizEl = document.getElementById('quiz-engine') || document.querySelector('[data-quiz]');
     var currentKey = quizEl ? quizEl.dataset.quiz : '';
@@ -3610,20 +3177,6 @@ var QuizEngine = (function() {
   // SOLO TEST - toxic, divorce, mariage, ado
   // Single player, points-based scoring
   // ═══════════════════════════════════════════════════════════
-  // ── Encart partenaire affilie ────────────────────────────────────────────
-  // Banniere, mention, texte et bouton. Le survol et le focus sont geres en
-  // CSS : tout l'encart est cliquable, le bouton n'est qu'un reperage visuel.
-  function encartPartenaire(p) {
-    // Meme carte que les produits Amazon : titre, visuel, prix s'il y en a un,
-    // bouton. Le texte d'explication d'autrefois ne se lisait pas.
-    var quizEl = document.getElementById('quiz-engine') || document.querySelector('[data-quiz]');
-    var lang = quizEl ? (quizEl.dataset.lang || 'fr') : 'fr';
-    return encartProduits(null, lang, [{
-      nom: p.titre, prix: p.prix || null, url: p.url, bouton: p.bouton,
-      images: p.image ? [p.image] : [], emoji: p.emoji
-    }]) || document.createComment('partenaire sans encart');
-  }
-
   function SoloTest(config) {
     this.container = config.container;
     this.questions = config.questions;
@@ -3635,7 +3188,6 @@ var QuizEngine = (function() {
     this.hasSkip = config.hasSkip || false;
     this.hasLocalStorage = config.hasLocalStorage || false;
     this.needsName = config.needsName || false;
-    this.partenaire = config.partenaire || null;
     this.phase = 'intro';
     this.currentQ = 0;
     this.answers = [];
@@ -3959,12 +3511,6 @@ var QuizEngine = (function() {
       }
     }
 
-    // Encart partenaire affilie, quand le test en declare un. Il vient apres
-    // le verdict et le conseil : on lit d'abord son resultat, la suggestion
-    // ne passe jamais devant. Le lien s'annonce comme affilie et porte
-    // rel="sponsored nofollow noopener".
-    if (this.partenaire) resultat.appendChild(encartPartenaire(this.partenaire));
-
     // Fin de couple : le score dit ou en est la relation, il ne dit pas
     // pourquoi. Les trois pistes ci-dessous repondent chacune a une question
     // precise que ce test-la ne pose pas, et la piste « a distance » ne
@@ -4099,7 +3645,6 @@ var QuizEngine = (function() {
     this.modeSolo = config.modeSolo || false;
     this.setupTitle = config.setupTitle || '';
     this.setupDesc = config.setupDesc || '';
-    this.partenaire = config.partenaire || null;
     // Les verdicts propres au test, a la place des paliers du test de couple
     // (coupleLevel) : le test a distance passe les siens, en pourcentage, avec
     // leur conseil et une etiquette courte (initDuoMatchQuiz, quiz-loader.js).
@@ -4391,10 +3936,6 @@ var QuizEngine = (function() {
       wrap.appendChild(advice);
     }
 
-    // Encart partenaire affilie, quand le test en declare un : apres le
-    // verdict et le conseil, jamais devant.
-    if (this.partenaire) wrap.appendChild(encartPartenaire(this.partenaire));
-
     renderActionButtons(wrap, {
       share: { noms: nomsPartage(this), type: 'duo', pct: pct, verdict: result ? result.title : '' },
       restart: function() { self.phase = 'setup'; self.render(); }
@@ -4514,8 +4055,6 @@ var QuizEngine = (function() {
     }
 
     wrap.appendChild(box);
-
-    if (this.partenaire) wrap.appendChild(encartPartenaire(this.partenaire));
 
     renderActionButtons(wrap, {
       share: { noms: nomsPartage(this), type: 'duo', pct: pctG, verdict: (bG && bG.title) || '' },
@@ -5830,7 +5369,6 @@ var QuizEngine = (function() {
     this.currentQ = 0;
     this.currentPlayer = 0;
     this.reponses = [[], []];   // en solo, seul l'indice 0 sert
-    this.partenaire = config.partenaire || null;
     // Le mode a distance : le reservoir sert a rejouer le tirage du createur.
     this.quizType = config.quizType || '';
     this.modeId = config.modeId || null;
@@ -6178,10 +5716,6 @@ var QuizEngine = (function() {
       noteSecu.innerHTML = '<p class="text-sm">' + esc(tg('healthy.securiteNote', 'Une de vos réponses porte sur la peur, la manipulation ou l\'humiliation. Ce point compte davantage que le reste du score : il mérite d\'être regardé de près, seul·e ou accompagné·e.')) + '</p>';
       wrap.appendChild(noteSecu);
     }
-
-    // L'encart ne sort pas quand une reponse a declenche l'alerte securite :
-    // proposer une sortie ou une degustation sous ce message-la serait indecent.
-    if (this.partenaire && !alerte) wrap.appendChild(encartPartenaire(this.partenaire));
 
     renderActionButtons(wrap, {
       share: { noms: nomsPartage(this), type: 'duo', pct: pct, verdict: result ? result.title : '' },
@@ -15869,7 +15403,6 @@ var QuizEngine = (function() {
     BalanceQuiz: BalanceQuiz,
     DureeQuiz: DureeQuiz,
     AxesQuiz: AxesQuiz,
-    encartProduits: encartProduits,
     PiliersQuiz: PiliersQuiz,
     ChargeMentaleQuiz: ChargeMentaleQuiz,
     ZamoursQuiz: ZamoursQuiz,

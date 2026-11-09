@@ -368,46 +368,10 @@
 
     w.appendChild(blocPartage(score, pct));
     w.appendChild(blocCategories());
-    var partenaire = blocPartenaire();
-    if (partenaire) w.appendChild(partenaire);
     var suites = blocSuites();
     if (suites) w.appendChild(suites);
     w.appendChild(blocReprendre());
     return w;
-  }
-
-  // ─── Encart partenaire ──────────────────────────────────────────────────
-  // La boutique deja proposee sur le quiz coquin, avec le meme lien de suivi
-  // Affilae et le meme visuel copie en local, au format des cartes produit
-  // du site (memes classes .qr-produit* que le moteur commun) : un titre, une
-  // image, un bouton, et la mention de liens sponsorises en pied. Boutique
-  // francaise : l'encart ne sort qu'en francais.
-  function blocPartenaire() {
-    // Jamais sur la version tout public : celui qui a repondu « moins de
-    // 16 ans » a la porte d'age ne doit pas voir une boutique pour adultes.
-    if (LANGUE !== 'fr' || !adulte) return null;
-    var url = 'https://c3po.link/Quyean9abC';
-    var nom = 'Le Passage du Désir : lingerie, jeux et accessoires';
-    var zone = el('section', 'qr-produits');
-    zone.setAttribute('aria-label', 'Ce produit / cadeau pourrait vous intéresser !'); // langues: sans-nl : boutique française, encart en français seulement
-    zone.innerHTML =
-      '<h3 class="qr-produits-titre">Ce produit / cadeau pourrait vous intéresser !</h3>' +
-      '<div class="qr-produits-piste"><article class="qr-produit">' +
-        '<a class="qr-produit-visuel" href="' + url + '" target="_blank" rel="sponsored nofollow noopener" aria-label="Voir la boutique Le Passage du Désir">' + // langues: sans-nl : boutique française, encart en français seulement
-          '<span class="qr-produit-cadre"><span class="qr-produit-piste">' +
-            '<img src="/partenaires/passage-du-desir.webp" alt="Mannequin en lingerie de dentelle, campagne Le Passage du Désir" width="300" height="300" loading="lazy" decoding="async">' +
-          '</span></span>' +
-        '</a>' +
-        '<span class="qr-produit-corps">' +
-          '<span class="qr-produit-nom">' + nom + '</span>' +
-          '<a class="qr-produit-btn" href="' + url + '" target="_blank" rel="sponsored nofollow noopener" aria-label="Voir la boutique Le Passage du Désir">' + // langues: sans-nl : boutique française, encart en français seulement
-            '<span>Voir la boutique</span>' +
-            '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6"/><path d="M20 4l-9 9"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg>' +
-          '</a>' +
-        '</span>' +
-      '</article></div>' +
-      '<p class="qr-produits-mention">Liens sponsorisés</p>';
-    return zone;
   }
 
   // ─── Poursuivre ailleurs ────────────────────────────────────────────────

@@ -30,9 +30,6 @@ verify_jwt = false
 [functions.admin-stats]
 verify_jwt = false
 
-[functions.admin-reglages]
-verify_jwt = false
-
 [functions.bilan]
 verify_jwt = false
 

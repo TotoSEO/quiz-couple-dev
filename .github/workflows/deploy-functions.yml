@@ -61,15 +61,20 @@ jobs:
       # rien »), la fonction qui interrogeait les lieux et comptait les
       # recherches dans activity_validations part avec elle (la table est
       # supprimee par la migration 20261017120000_retrait_activites.sql).
+      # Le 9 novembre 2026, admin-reglages : elle ne gardait que le jeton
+      # d'API Affilae de l'onglet Affiliation de l'admin, retire avec toute
+      # l'affiliation du site (Thomas : « ça ne fonctionne pas »). La table
+      # fermee admin_reglages reste, sans plus rien qui la lise ; le jeton se
+      # revoque dans Affilae (menu « Jetons d'API »).
       # Retirer une fonction du depot, c'est aussi retirer sa section
       # [functions.<nom>] de supabase/config.toml : sinon l'etape de deploiement
       # cherche son dossier et echoue avant d'arriver ici (17 octobre 2026,
       # « entrypoint path does not exist » pour search-activities).
       # Les commandes ne font rien si c'est deja fait, et une erreur ne bloque
       # pas le deploiement : cette etape peut etre retiree une fois passee.
-      - name: Retirer trigger-deploy, admin-blog, blog-og, manage-ado-session, search-activities et les secrets (supprimés du dépôt)
+      - name: Retirer trigger-deploy, admin-blog, blog-og, manage-ado-session, search-activities, admin-reglages et les secrets (supprimés du dépôt)
         run: |
-          for f in trigger-deploy admin-blog blog-og manage-ado-session search-activities; do
+          for f in trigger-deploy admin-blog blog-og manage-ado-session search-activities admin-reglages; do
             supabase functions delete "$f" --project-ref "$SUPABASE_PROJECT_REF" --yes < /dev/null \
               || echo "$f : déjà absente"
           done

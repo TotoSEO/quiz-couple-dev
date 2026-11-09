@@ -221,9 +221,16 @@
        sous l'en-tête seul, descendent d'autant. */
     @media (max-width: 1023.98px) {
       html { --barre-promo: 3.9rem; scroll-padding-top: var(--barre-promo); }
-      html .qr-zone--avis, html .qr-rate--collant, html .qr-zone--suite { top: calc(4.5rem + var(--barre-promo)); }
+      html .qr-zone--avis, html .qr-rate--collant { top: calc(4.5rem + var(--barre-promo)); }
       html .qr-zone--avis { max-height: calc(100vh - 6rem - var(--barre-promo)); max-height: calc(100dvh - 6rem - var(--barre-promo)); }
       html .apr-profil-carte { top: calc(5.5rem + var(--barre-promo)); }
+    }
+    /* Le bloc « Poursuivez avec d'autres tests » n'est collé qu'à partir de
+       900 px (styles.css) ; en dessous il est en position relative, et ce
+       top le faisait descendre de 134 px sur les boutons « Recommencer » et
+       « Partager », qu'il cachait (9 novembre 2026). */
+    @media (min-width: 900px) and (max-width: 1023.98px) {
+      html .qr-zone--suite { top: calc(4.5rem + var(--barre-promo)); }
     }
     @media (min-width: 520px) and (max-width: 1023.98px) { html { --barre-promo: 2.65rem; } }
     @media (min-width: 1024px) { .bandeau-promo { display: none; } }
