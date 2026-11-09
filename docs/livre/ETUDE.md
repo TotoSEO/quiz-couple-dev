@@ -17,7 +17,7 @@ Les notes des quatre recherches, avec leurs sources, sont dans
 ## La décision de Thomas (7 novembre 2026, le soir)
 
 Thomas ne suit pas la recommandation ci-dessous : il part sur **« 100 aventures
-à deux »**, en six langues, à 16,99 €. Ses raisons : le livre se remplit sur le
+à deux »**, en six langues, à 16,99 € (19,99 € depuis le 9 novembre 2026, sans prix imprimé sur le livre). Ses raisons : le livre se remplit sur le
 long terme sans obligation quotidienne (le journal demande trop, et trop de
 pages), il n'est pas fini en une soirée comme le livre de quiz (« t'as payé
 17 balles pour un usage unique »), et il devient un album souvenir à garder et

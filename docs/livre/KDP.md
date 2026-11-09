@@ -1,7 +1,8 @@
 # « 100 aventures à deux » : publier sur Amazon KDP
 
 7 novembre 2026. Thomas a choisi un seul livre, « 100 aventures à deux », en
-six langues, à 16,99 €. Le livre complet est fabriqué par
+six langues, à 16,99 €, puis 19,99 € le 9 novembre 2026, sans prix imprimé sur
+le livre. Le livre complet est fabriqué par
 `node livre/fabrique.mjs aventures:toutes` (voir `livre/README.md`). Les
 règles de KDP et le droit français ci-dessous ont été relus sur les pages
 officielles le 7 novembre 2026 (sources en bas de page).
@@ -64,14 +65,38 @@ européens. Droits : 60 % du prix hors TVA moins l'impression (50 % sous
 | 16,99 €, noir et blanc (2,93 € d'impression) | 6,74 € | 5,57 € |
 
 Le taux de TVA n'est pas choisi par l'éditeur : voir « Le droit » plus bas.
-Le plus prudent est de compter sur 20 %, donc environ 3 € par livre en
-couleur à 16,99 €. Ailleurs, à vérifier dans le calculateur de KDP au moment de
-fixer les prix :
+Le plus prudent est de compter sur 20 %, donc environ 4,50 € par livre à
+19,99 €, le prix choisi par Thomas le 9 novembre 2026.
 
-- Amazon.com : 1,00 $ + 0,0402 $ par page, soit 6,47 $ d'impression. À 17,99 $,
-  il reste environ 4,30 $.
-- Amazon.co.uk : 0,85 £ + 0,027 £ par page, soit 4,52 £. À 14,99 £, il reste
-  environ 4,45 £ si le livre n'est pas taxé.
+### Les prix à saisir dans KDP
+
+Pour les Amazon d'Europe et du Royaume-Uni, KDP demande le prix hors TVA ;
+Amazon ajoute la TVA du pays, au taux qu'il choisit. Pour un prix affiché de
+19,99 € :
+
+| Boutique | Taux normal | Prix à saisir | Taux réduit des livres | Prix à saisir |
+|---|---|---|---|---|
+| Amazon.fr | 20 % | 16,66 € | 5,5 % | 18,95 € |
+| Amazon.de | 19 % | 16,80 € | 7 % | 18,68 € |
+| Amazon.es | 21 % | 16,52 € | 4 % | 19,22 € |
+| Amazon.it | 22 % | 16,38 € (19,98 € affichés) | 4 % | 19,22 € |
+| Amazon.nl | 21 % | 16,52 € | 9 % | 18,34 € |
+| Amazon.com.be | 21 % | 16,52 € | 6 % | 18,86 € |
+| Amazon.ie | 23 % | 16,25 € | 0 % | 19,99 € |
+
+On saisit d'abord le prix du taux normal, celui que KDP annonce pour les livres
+d'activités. Si le prix affiché une fois le livre en ligne est plus bas que
+19,99 €, c'est qu'Amazon applique le taux réduit : on passe à l'autre colonne.
+Les droits sont alors d'environ 4,50 € au taux normal et 5,86 € au taux réduit
+(sur Amazon.fr).
+
+Ailleurs, à vérifier dans le calculateur de KDP au moment de fixer les prix :
+
+- Amazon.com : 1,00 $ + 0,0402 $ par page, soit 6,47 $ d'impression. À 19,99 $
+  (prix sans taxe de vente), il reste environ 5,50 $.
+- Amazon.co.uk : 0,85 £ + 0,027 £ par page, soit 4,52 £. Pour 16,99 £
+  affichées : 14,16 £ à saisir au taux normal de 20 % (environ 4 £ de droits),
+  16,99 £ au taux zéro des livres (environ 5,65 £).
 
 ## Le droit, en France
 
@@ -82,14 +107,17 @@ fixer les prix :
   C'est très probablement le cas ici. KDP range lui-même les livres d'activités
   parmi ceux qui peuvent être taxés au taux normal. À confirmer avec le
   comptable.
-- **Le prix imprimé.** Pour un livre, le prix TTC doit figurer sur la couverture.
-  L'édition française l'imprime au dos, au-dessus du code-barres (`prix` dans
-  `fr.mjs`). Si le prix change, il faut refaire la couverture. Les autres
-  éditions n'en portent pas.
+- **Le prix imprimé.** Aucune édition n'en porte, à la demande de Thomas
+  (9 novembre 2026). La réglementation du prix unique demande que le prix d'un
+  livre figure sur l'ouvrage ; un livre dont plus d'un tiers est à remplir n'en
+  est très probablement pas un (voir la TVA, juste au-dessus), et Amazon
+  affiche le prix sur sa fiche. Si l'administration le traitait un jour comme
+  un livre, il suffirait d'écrire le prix dans `prix` de `fr.mjs` et de refaire
+  la couverture.
 - **Le dépôt légal à la BnF.** Il s'applique aux « livres et cahiers
   d'activités », pas aux « documents à remplir assimilés à de la papeterie »
   (carnets, agendas, journaux). Ce livre est entre les deux. Le plus simple est
-  d'envoyer un exemplaire de l'édition française le jour de la mise en vente :
+  d'envoyer un exemplaire de chaque édition le jour de sa mise en vente :
   c'est gratuit et sans risque. Il faut un exemplaire d'auteur, pas une
   épreuve : les épreuves portent la mention « Not for resale ».
 - **Les mentions de la page 2.** L'éditeur avec son adresse postale et son
@@ -137,15 +165,15 @@ Le détail et les sources sont dans `docs/livre/recherche/vente.md` (relevé du
 
 ## Vendre autrement que par KDP
 
-Comparé le 9 novembre 2026 (`docs/livre/recherche/vente.md`), à 16,99 € TTC
-avec une TVA à 20 % :
+Comparé le 9 novembre 2026 (`docs/livre/recherche/vente.md`, où le calcul est
+fait à 16,99 €), ici à 19,99 € TTC avec une TVA à 20 % :
 
 | Canal | Ce qui reste par livre | À avancer |
 |---|---|---|
-| KDP | environ 3 € | rien |
-| Lulu, vendu depuis le site | moins que KDP (9,80 $ d'impression, 1,75 $ par commande, environ 10 $ d'envoi vers la France) | rien |
-| Tirage de 1 000 exemplaires (3,93 € pièce), vendu sur le site | environ 10 € avant l'envoi, l'emballage et le paiement | environ 4 000 € par langue, plus le stock et les colis |
-| Le même stock vendu par Amazon (FBA) | de 2,60 à 3,20 €, moins 39 € par mois | environ 4 000 € par langue |
+| KDP | environ 4,50 € | rien |
+| Lulu, vendu depuis le site | impression plus chère que chez KDP (9,80 $ et 1,75 $ par commande, contre 5,51 €), plus environ 10 $ d'envoi vers la France | rien |
+| Tirage de 1 000 exemplaires (3,93 € pièce), vendu sur le site | environ 12,70 € avant l'envoi, l'emballage et le paiement | environ 4 000 € par langue, plus le stock et les colis |
+| Le même stock vendu par Amazon (FBA) | de 4,60 à 5,30 €, moins 39 € par mois | environ 4 000 € par langue |
 
 KDP rapporte peu par livre mais ne demande rien. Un tirage ne se justifie qu'une
 fois les ventes connues, pour la langue qui vend le plus sur le site.
