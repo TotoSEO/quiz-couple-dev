@@ -1,12 +1,12 @@
 {
-  "genere_le": "2026-11-08T10:17:04.812Z",
+  "genere_le": "2026-11-09T03:14:12.953Z",
   "langue": "fr",
   "compte": {
     "nom": "mipaps_stories",
     "actif": true
   },
   "fuseau": "Europe/Paris",
-  "aujourdhui": "2026-11-08",
+  "aujourdhui": "2026-11-09",
   "melange": {
     "midi": {
       "1": null,
@@ -28,39 +28,12 @@
     },
     "matin": "mipaps-anime"
   },
-  "reserve_jours": 144,
+  "reserve_jours": 143,
   "a_remplir": [],
   "a_corriger": [],
   "hors_grille": [],
   "refuses": [],
   "recents_et_prevus": [
-    {
-      "jour": "2026-10-09",
-      "creneau": "matin",
-      "gabarit": "mipaps-reel",
-      "categorie": "mipaps-anime",
-      "statut": "echec",
-      "texte": null,
-      "erreur": "créneau dépassé sans publication"
-    },
-    {
-      "jour": "2026-10-09",
-      "creneau": "midi",
-      "gabarit": "mipaps-post",
-      "categorie": "mipaps-post",
-      "statut": "echec",
-      "texte": "j'pense à toi là. c'est tout.",
-      "erreur": "créneau dépassé sans publication"
-    },
-    {
-      "jour": "2026-10-09",
-      "creneau": "soir",
-      "gabarit": "mipaps-carrousel",
-      "categorie": "mipaps-histoire",
-      "statut": "publie",
-      "texte": null,
-      "erreur": null
-    },
     {
       "jour": "2026-10-10",
       "creneau": "matin",
@@ -2891,7 +2864,7 @@
   "idees": [],
   "prochain_creneau": {
     "mipaps-anime": {
-      "jour": "2026-11-09",
+      "jour": "2026-11-10",
       "creneau": "matin"
     },
     "mipaps-statique": null,
