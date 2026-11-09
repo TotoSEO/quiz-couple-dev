@@ -549,7 +549,7 @@ export default {
       texte: 'Hundert Ideen für Dinge, die ihr zu zweit erleben könnt, vom Picknick bis zum Rafting, vom Raclette bis zur Kartbahn. Nach jedem Abenteuer füllt ihr eine Seite aus: Datum, Ort, die kleinen Details (der Name des Hundes, die beste Achterbahn, wer gewonnen hat...), eure Bewertung, was ihr nicht vergessen wollt, und euer Foto.',
       points: [
         'Abenteuer für jedes Budget, 38 davon kostenlos',
-        'Kosten und Dauer bei jedem, dazu die beste Jahreszeit',
+        'Kosten und Dauer bei jedem, dazu die beste Jahreszeit, wo es passt',
         'Zehn Seiten für eure Ideen, zehn für eure Reisen',
       ],
       apercu: 'Eine Seite, fertig ausgefüllt',

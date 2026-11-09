@@ -545,7 +545,7 @@ export default {
       texte: 'A hundred ideas for things to do together, from a picnic to white-water rafting, from a fondue night to go-karting. After each adventure, there’s a page to fill in: the date, the place, the little details (the dog’s name, the best ride, who won...), your ratings, what you want to remember, and your photo.',
       points: [
         'Adventures for every budget, 38 of them free',
-        'The cost and time of each one, plus the best season',
+        'The cost and time of each one, and the best season if there is one',
         'Ten pages for your own ideas, ten for your trips',
       ],
       apercu: 'A page, once it’s filled in',
