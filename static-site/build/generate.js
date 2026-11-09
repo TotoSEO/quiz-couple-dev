@@ -2518,13 +2518,12 @@ function carteArticle(internalSlug, lang) {
 // La suite d'un article de blog (9 novembre 2026, Thomas : « voir comment on
 // peut améliorer le nombre de pages vues par utilisateur ») : un article
 // finissait sur la boîte de l'auteur, sans rien proposer à faire ou à lire
-// ensuite, alors que c'est par lui qu'arrive une bonne part des visites
-// (Google, Discover). Les cartes sont celles du bas des pages de test
-// (partials/related-tests.ejs). Les pages : celles que le texte cite, dans
-// l'ordre où il les cite, puis celles qui proposent l'article dans leurs
-// propres cartes (QUIZ_RELATED_ARTICLES), puis celles de sa catégorie ;
-// que des tests pour une catégorie sérieuse, jamais un jeu qu'aucun lien du
-// texte n'a choisi. Les articles : les plus proches de celui-ci, publiés et
+// ensuite, et 79 % des lectures s'arrêtaient là (trafic-chiffres.yml, du 26
+// octobre au 8 novembre 2026). Les cartes sont celles du bas des pages de test
+// (partials/related-tests.ejs). Les pages : celles que le texte cite et
+// celles qui proposent l'article dans leurs propres cartes
+// (QUIZ_RELATED_ARTICLES), rangées par suiteArticle, puis celles de sa
+// catégorie : que des tests, jamais un jeu qu'aucun lien n'a choisi. Les articles : les plus proches de celui-ci, publiés et
 // traduits (suiteArticle dit comment ils sont choisis).
 const SUITE_PAR_CATEGORIE = {
   astrologie: ['testAstroPrenoms', 'testDateNaissance', 'testSignesChinois', 'calculatriceAmour'],
