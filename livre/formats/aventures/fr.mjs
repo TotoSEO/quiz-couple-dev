@@ -14,9 +14,12 @@
 // facultative : 'ete' ou 'hiver'.
 export default {
   lang: 'fr',
-  // Prix public imprimé sur la quatrième de couverture (édition française
-  // seulement : le prix d'un livre doit y être indiqué en France).
-  prix: '16,99 € TTC',
+  // Prix imprimé sur la quatrième de couverture : aucun, à la demande de
+  // Thomas (9 novembre 2026 ; le livre est vendu 19,99 €). La réglementation
+  // du prix unique le demande sur un « livre », ce qu'un livre dont plus d'un
+  // tiers est à remplir n'est très probablement pas (docs/livre/KDP.md).
+  // Pour l'imprimer quand même : prix: '19,99 € TTC'.
+  prix: '',
   // L'ISBN, une fois attribué par KDP ou l'AFNIL (page des mentions).
   isbn: '',
   livre: {
