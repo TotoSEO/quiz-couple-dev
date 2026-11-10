@@ -2419,3 +2419,36 @@ qui dit ce qu'est l'évaluation avant le départ.
 À regarder : les visites de la page venues de `score-*` (94 venues de l'encart
 en trente jours avant ce jour-là, sur environ 12 000 résultats du test de
 couple), puis les évaluations créées et payées de cette source.
+
+### Un seul téléphone, chacun son tour (le même jour)
+
+Sept évaluations à deux sur dix n'avaient jamais de partenaire, et la vente se
+fait quand les deux sont ensemble. L'écran d'invitation propose, sous
+« Commencer mes réponses », « Un seul téléphone pour vous deux ? » et le bouton
+« Chacun son tour sur ce téléphone » (tant que l'autre n'a pas accepté). Un
+écran dit comment ça se passe (une partie chacun, une quarantaine de minutes à
+deux), puis le créateur répond à la première partie ; à la fin de chaque partie,
+l'écran du relais (« À Julien de répondre ! ») attend que les réponses soient
+enregistrées avant de laisser passer le téléphone, et l'autre accepte
+l'invitation sur place au premier relais (son prénom, déjà écrit, son genre et
+sa case), puis répond à la même partie. Ainsi de suite jusqu'à la fin : chacun
+donne son adresse à la fin de ses propres réponses, et l'écran « rapport prêt »
+arrive sur le téléphone. Aucune réponse de l'autre ne s'affiche jamais ; chaque
+tour commence sur une session neuve.
+
+Les deux évaluations restent sur l'appareil, une entrée par rôle dans
+`qc-bilans`, avec `unTel` et `pos` (le rang dans `C.ORDRE` de la partie que la
+personne va commencer). Une partie revient à celui des deux qui en est au même
+point ou en retard (`tourDeLAutre`), et la partie par laquelle une session
+commence ne repasse jamais le téléphone (`sansRelais`). Si quelqu'un recharge la
+page, la liste de l'appareil propose les deux, et l'écran d'attente a un bouton
+« Passer le téléphone à Julien ». Rien ne change côté serveur, sauf deux
+comptes : `un_telephone` (le choix) et `invitation_vue` avec la clé `tel`
+(l'acceptation sur place), lus par `bilan-chiffres.yml`.
+
+À deux sur deux téléphones aussi, l'intro de chaque partie dit où en est
+l'autre (« Julien en est à 34 réponses sur 100. », ou « a fini ses réponses »),
+d'après la dernière réponse enregistrée.
+
+À regarder : `un_telephone` et `invitation_vue:tel` jour par jour, puis la part
+des évaluations à deux qui vont au bout.

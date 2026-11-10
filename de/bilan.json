@@ -78,7 +78,24 @@
       "monLien": "Dein persönlicher Link",
       "monLienAide": "Damit kannst du deine Antworten auf einem anderen Gerät fortsetzen. Gib ihn niemandem, auch nicht {{autre}}: Er ist der Schlüssel zu deinen Antworten.",
       "copierMonLien": "Meinen Link kopieren",
-      "dejaRejoint": "{{autre}} ist der Analyse beigetreten."
+      "dejaRejoint": "{{autre}} ist der Analyse beigetreten.",
+      "unTelTitre": "Nur ein Handy für euch beide?",
+      "unTelTexte": "Antwortet abwechselnd auf diesem: ein Teil für dich, dann derselbe Teil für {{autre}}, ohne die Antworten des anderen zu sehen.",
+      "unTelBouton": "Abwechselnd auf diesem Handy"
+    },
+    "unTel": {
+      "titre": "Abwechselnd, auf diesem Handy",
+      "texte": "{{moi}} beantwortet einen Teil und gibt das Handy dann an {{autre}} weiter, der oder die denselben Teil beantwortet. So geht es weiter bis zum Ende, Teil für Teil.",
+      "prive": "Die Antworten des anderen werden nie angezeigt: Jede Runde beginnt auf einem neuen Bildschirm. Und nicht über die Schulter schauen!",
+      "duree": "Etwa vierzig Minuten für euch beide, mit einer Pause, wann ihr wollt",
+      "commencer": "{{moi}} fängt an",
+      "retour": "Zurück zur Einladung",
+      "relaisTitre": "{{autre}} ist dran!",
+      "relaisTexte": "Gib das Handy an {{autre}} weiter. Deine Antworten sind gespeichert und werden nicht angezeigt.",
+      "relaisPremier": "{{autre}} trägt zuerst den eigenen Vornamen ein und setzt das Häkchen, dann kommt derselbe Teil wie bei dir.",
+      "relaisPartie": "Teil {{n}} von {{total}}: {{domaine}}",
+      "relaisFin": "{{moi}} ist fertig. {{autre}} hat noch ein paar Antworten vor sich.",
+      "relaisBouton": "Ich bin {{autre}}, los geht's"
     },
     "rejoindre": {
       "titre": "{{autre}} schlägt dir vor, eure Beziehungsanalyse zu machen",
@@ -96,7 +113,9 @@
       "nb": "{{n}} Fragen, etwa {{min}} Min.",
       "go": "Los geht's",
       "pause": "Pause machen",
-      "reprise": "Du machst da weiter, wo du aufgehört hast."
+      "reprise": "Du machst da weiter, wo du aufgehört hast.",
+      "autreProgression": "{{autre}} hat {{n}} von {{total}} Fragen beantwortet.",
+      "autreFini": "{{autre}} ist mit den Antworten fertig."
     },
     "question": {
       "progression": "Frage {{n}} von {{total}}",
@@ -141,7 +160,8 @@
       "payeTexte": "Danke! Er öffnet sich hier und geht per E-Mail raus, sobald {{autre}} mit den Antworten fertig ist.",
       "relance": "{{autre}} kurz erinnern",
       "relanceMessage": "Ich bin mit meinen Antworten für unsere Beziehungsanalyse fertig, ich warte auf dich! Du machst da weiter, wo du aufgehört hast, auf deinem Handy.",
-      "prevenu": "Wir schreiben dir an {{email}}, sobald {{autre}} fertig ist: Du kannst diese Seite schließen."
+      "prevenu": "Wir schreiben dir an {{email}}, sobald {{autre}} fertig ist: Du kannst diese Seite schließen.",
+      "tourAutre": "Das Handy an {{autre}} weitergeben"
     },
     "paywall": {
       "titre": "Euer vollständiger Bericht",

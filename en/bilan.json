@@ -78,7 +78,24 @@
       "monLien": "Your personal link",
       "monLienAide": "It lets you pick up your answers on another device. Don't give it to anyone, not even {{autre}}: it's the key to your answers.",
       "copierMonLien": "Copy my link",
-      "dejaRejoint": "{{autre}} has joined the assessment."
+      "dejaRejoint": "{{autre}} has joined the assessment.",
+      "unTelTitre": "Only one phone between you?",
+      "unTelTexte": "Take turns on this one: one part for you, then the same part for {{autre}}, without seeing each other's answers.",
+      "unTelBouton": "Take turns on this phone"
+    },
+    "unTel": {
+      "titre": "Taking turns on this phone",
+      "texte": "{{moi}} answers one part, then hands the phone to {{autre}}, who answers the same one. You keep going like that until the end, part by part.",
+      "prive": "The other person's answers are never shown: each turn starts on a fresh screen. And no peeking over the shoulder!",
+      "duree": "About forty minutes for the two of you, with a break whenever you like",
+      "commencer": "{{moi}} goes first",
+      "retour": "Back to the invitation",
+      "relaisTitre": "{{autre}}'s turn!",
+      "relaisTexte": "Hand the phone to {{autre}}. Your answers are saved, and they won't be shown.",
+      "relaisPremier": "{{autre}} first types their name and ticks the box, then answers the same part as you.",
+      "relaisPartie": "Part {{n}} of {{total}}: {{domaine}}",
+      "relaisFin": "{{moi}} has finished. {{autre}} still has a few answers to go.",
+      "relaisBouton": "I'm {{autre}}, let's go"
     },
     "rejoindre": {
       "titre": "{{autre}} would like you to do your relationship assessment together",
@@ -96,7 +113,9 @@
       "nb": "{{n}} questions, about {{min}} min",
       "go": "Let's go",
       "pause": "Take a break",
-      "reprise": "You're picking up where you left off."
+      "reprise": "You're picking up where you left off.",
+      "autreProgression": "{{autre}} has answered {{n}} questions out of {{total}}.",
+      "autreFini": "{{autre}} has finished."
     },
     "question": {
       "progression": "Question {{n}} of {{total}}",
@@ -141,7 +160,8 @@
       "payeTexte": "Thank you! It'll open here and go out by email as soon as {{autre}} has finished their answers.",
       "relance": "Send {{autre}} a little reminder",
       "relanceMessage": "I've finished my answers for our relationship assessment, I'm waiting for you! You'll pick up where you left off, on your phone.",
-      "prevenu": "We'll email you at {{email}} as soon as {{autre}} has finished, so you can close this page."
+      "prevenu": "We'll email you at {{email}} as soon as {{autre}} has finished, so you can close this page.",
+      "tourAutre": "Hand the phone to {{autre}}"
     },
     "paywall": {
       "titre": "Your full report",

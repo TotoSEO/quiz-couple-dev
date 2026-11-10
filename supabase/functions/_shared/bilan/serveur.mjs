@@ -188,7 +188,9 @@ export const JETONS_MAIL_MAX = ENVOIS_MAX + 5;
 // `celib_carte_vue` et `celib_carte_clic` (4 novembre 2026) : la carte « le
 // bilan célibataire arrive » à la fin des tests célibataires
 // (js/celib-bientot.js), la clé est l'identifiant de la page.
-export const ETAPES_PAGE = ['depart', 'depart_erreur', 'invitation_vue', 'situation_vue', 'email_vue', 'offre_vue', 'attente_vue', 'case_manquante', 'statut_solo', 'celib_carte_vue', 'celib_carte_clic'];
+// `un_telephone` (10 novembre 2026) : à deux, le choix « chacun son tour sur
+// ce téléphone » de l'écran d'invitation.
+export const ETAPES_PAGE = ['depart', 'depart_erreur', 'invitation_vue', 'situation_vue', 'email_vue', 'offre_vue', 'attente_vue', 'case_manquante', 'statut_solo', 'celib_carte_vue', 'celib_carte_clic', 'un_telephone'];
 // Les écrans comptés une seconde fois avec `_point` pour le point sur ma
 // relation (la page envoie `formule: 'point'`).
 const ETAPES_POINT = ['depart', 'depart_erreur', 'email_vue', 'offre_vue', 'case_manquante'];
@@ -450,8 +452,10 @@ export function creerServeur({ stockage, stripe = null, stripeTest = false, cour
     else if (quoi === 'email_vue') cle = corps.cle === 'b' ? 'b' : 'a';
     // Depuis le 27 octobre 2026 : le partenaire arrivé par le QR code de
     // l'invitation, et l'écran « rapport prêt » vu au prix d'une région. Le
-    // total de l'étape reste la somme de toutes ses clés.
-    else if (quoi === 'invitation_vue') cle = corps.cle === 'qr' ? 'qr' : '';
+    // total de l'étape reste la somme de toutes ses clés. Depuis le
+    // 10 novembre 2026, `tel` : le partenaire qui accepte sur le téléphone du
+    // créateur, chacun son tour.
+    else if (quoi === 'invitation_vue') cle = corps.cle === 'qr' || corps.cle === 'tel' ? corps.cle : '';
     else if (quoi === 'offre_vue') cle = C.zoneValide(corps.cle);
     else if (quoi === 'celib_carte_vue' || quoi === 'celib_carte_clic') cle = typeof corps.cle === 'string' && PAGE_SITE.test(corps.cle) ? corps.cle : 'autre';
     // Le départ du point : la page a déjà compté le départ (et le départ

@@ -631,14 +631,27 @@ body.bilan-focus .related-tests-section, body.bilan-focus .pqx-section { display
    (styles.css, .bilan-qr svg) : un appareil photo lit mal un code inversé. */
 .bilan-qr.bilan-qr--grand { display: block; width: min(13rem, 62vw); aspect-ratio: 1; margin: .9rem auto .1rem; }
 .bilan-qr.bilan-qr--grand svg { display: block; width: 100%; height: 100%; padding: .45rem; }
-/* Un téléphone court (640 px de haut) : les personnages laissent leur place
-   et le code rétrécit, pour garder le code et « Commencer » à l'écran. */
-@media (max-height: 700px) {
+/* Un téléphone court : les personnages laissent leur place et le code
+   rétrécit, pour garder le code et « Commencer » à l'écran. Jusqu'à 760 px de
+   haut depuis le 10 novembre 2026 (700 avant) : à 360 x 740, le bouton
+   finissait à 758 px. */
+@media (max-height: 760px) {
   .bilan-invitation .bilan-duo { display: none; }
   .bilan-qr.bilan-qr--grand { width: min(10rem, 62vw); margin-top: .6rem; }
 }
 .bilan-invite-suite { margin: 1.1rem 0 .25rem; text-align: center; }
 .bilan-invite-suite p { margin: 0 0 .7rem; font-weight: 600; line-height: 1.45; color: hsl(var(--foreground)); text-wrap: pretty; }
+/* Un seul téléphone pour deux (10 novembre 2026, choixUnTel et relais de
+   bilan.js) : sous « Commencer mes réponses », la proposition de répondre
+   chacun son tour ; l'écran qui passe le téléphone ; et, au début de chaque
+   partie, où en est l'autre. */
+.bilan-untel { margin: 1.25rem 0 .25rem; padding: 1rem 1rem 1.1rem; border-radius: var(--qe-rayon-i, 1rem); background: hsl(var(--secondary) / .09); text-align: center; }
+.bilan-untel-titre { margin: 0 0 .35rem; font-weight: 700; color: hsl(var(--foreground)); }
+.bilan-untel .bilan-note { margin: 0 auto .8rem; max-width: 30rem; text-wrap: pretty; }
+.bilan-relais .bilan-pastille-info, .bilan-untel-choix .bilan-pastille-info { margin-bottom: 1.1rem; text-align: center; }
+.bilan-relais .bilan-actions { justify-content: center; }
+.bilan-relais .bilan-envoi { display: block; min-height: 1.2em; margin: .5rem 0 0; text-align: center; }
+.bilan-autre-ligne { margin: .7rem 0 0; text-align: center; font-size: .9rem; color: hsl(var(--muted-foreground)); }
 .blp-citation--prix { margin-bottom: 1.5rem; }
 
 /* Le radar de la synthèse sur l'écran « rapport prêt » (22 octobre 2026) :
