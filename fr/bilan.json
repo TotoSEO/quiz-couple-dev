@@ -190,6 +190,14 @@
       "emailAutre": "Le recevoir à une autre adresse",
       "plie": "Débloquer le rapport dès maintenant",
       "accroche": "Vous n'avez pas encore vu ce que {{autre}} a répondu.",
+      "accrocheExtrait": "Il vous reste {{n}} réponses de {{autre}} à découvrir.",
+      "extrait": {
+        "titre": "Un extrait de votre rapport",
+        "ecart": "La question où vous êtes le plus loin l'un de l'autre :",
+        "proche": "Une question où vous n'avez pas répondu tout à fait pareil :",
+        "accord": "Une question où vous avez répondu pareil :",
+        "suite": "C'est une question sur {{n}}. Les autres sont dans le rapport, chacune avec vos deux réponses."
+      },
       "points": {
         "reponses": "Toutes les réponses de {{autre}} à côté des vôtres, question par question",
         "ecartsN": "Pour vos {{n}} écarts : pourquoi ça compte, et comment en parler sans vous disputer",

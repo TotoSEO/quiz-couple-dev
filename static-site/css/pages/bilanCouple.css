@@ -554,6 +554,30 @@ body.bilan-focus .related-tests-section, body.bilan-focus .pqx-section { display
 .dark .bilan-scene .bilan-tuile--ecart { background: hsl(359 50% 40% / .32); color: #f3a9aa; }
 .bilan-scene .bilan-pret-decisif { text-align: center; font-size: .88rem; font-weight: 700; line-height: 1.4; margin: 0 0 .3rem; }
 .bilan-scene .bilan-pret-quoi { text-align: center; font-size: .86rem; line-height: 1.4; color: hsl(var(--muted-foreground)); margin: 0 0 .7rem; }
+/* Une question du rapport, offerte (10 novembre 2026, blocExtrait dans
+   bilan.js) : le bandeau de verdict aux couleurs du rapport (le jaune porte
+   un texte foncé, le vert et le rouge du blanc), la question en citation,
+   puis les deux réponses côte à côte, chacune sous son prénom et à la
+   couleur de son personnage. */
+.bilan-scene .bilan-extrait { margin: .9rem 0 1rem; }
+.bilan-scene .bilan-extrait-sur { text-align: center; font-size: .72rem; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; color: hsl(var(--primary-texte)); margin: 0 0 .3rem; }
+.bilan-scene .bilan-extrait-intro { text-align: center; font-size: .95rem; font-weight: 700; line-height: 1.35; margin: 0 0 .6rem; }
+.bilan-scene .bilan-extrait-carte { border: 1px solid hsl(var(--border)); border-radius: .9rem; overflow: hidden; background: hsl(var(--card)); box-shadow: 0 10px 26px -20px hsl(var(--foreground) / .5); }
+.bilan-scene .bilan-extrait-bande { display: flex; justify-content: space-between; gap: .75rem; margin: 0; padding: .42rem .85rem; font-size: .76rem; font-weight: 800; letter-spacing: .04em; text-transform: uppercase; color: #fff; background: #b53436; }
+.bilan-scene .bilan-extrait-bande span:last-child { font-weight: 600; text-transform: none; letter-spacing: 0; opacity: .92; text-align: right; }
+.bilan-scene .bilan-extrait--proche .bilan-extrait-bande { background: #e0a92a; color: #3b2700; }
+.bilan-scene .bilan-extrait--accord .bilan-extrait-bande { background: #23744f; }
+.bilan-scene .bilan-extrait-q { margin: 0; padding: .8rem .95rem .65rem; font-family: var(--blp-titre); font-size: 1.04rem; line-height: 1.4; font-style: italic; }
+.bilan-scene .bilan-extrait-reps { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .5rem; padding: 0 .65rem .7rem; }
+.bilan-scene .bilan-extrait-rep { border-radius: .7rem; padding: .5rem .65rem .6rem; background: hsl(var(--primary) / .1); min-width: 0; }
+.bilan-scene .bilan-extrait-rep--violet { background: hsl(var(--secondary) / .12); }
+.bilan-scene .bilan-extrait-nom { margin: 0 0 .2rem; font-size: .78rem; font-weight: 800; color: hsl(var(--primary-texte)); overflow-wrap: anywhere; }
+.bilan-scene .bilan-extrait-rep--violet .bilan-extrait-nom { color: hsl(var(--secondary-texte)); }
+.bilan-scene .bilan-extrait-texte { margin: 0; font-size: .92rem; font-weight: 600; line-height: 1.35; overflow-wrap: break-word; }
+.bilan-scene .bilan-extrait-suite { text-align: center; font-size: .84rem; line-height: 1.4; color: hsl(var(--muted-foreground)); margin: .55rem 0 0; }
+.dark .bilan-scene .bilan-extrait-carte { box-shadow: none; }
+.dark .bilan-scene .bilan-extrait-rep { background: hsl(var(--primary) / .16); }
+.dark .bilan-scene .bilan-extrait-rep--violet { background: hsl(var(--secondary) / .22); }
 /* Pastille et prix sur une ligne quand la place le permet (bureau), le
    prix réduit sur une seule ligne sur téléphone. */
 .bilan-scene .bilan-offre--pret .bilan-prix { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; column-gap: .6rem; padding: .55rem .7rem .6rem; margin: 0 0 .55rem; }

@@ -826,8 +826,24 @@ test('rapport prêt : l\'e-mail au premier, l\'aperçu sans contenu, le rappel u
   const r = await appel({ action: 'resultat', ...A });
   assert.equal(r.statut, 402);
   const ap = r.json.apercu;
-  assert.deepEqual(Object.keys(ap).sort(), ['accords', 'conversations', 'decisifs', 'ecarts', 'inconnus', 'proches', 'questions', 'radar']);
-  const { radar, ...comptes } = ap;
+  assert.deepEqual(Object.keys(ap).sort(), ['accords', 'conversations', 'decisifs', 'ecarts', 'extrait', 'inconnus', 'proches', 'questions', 'radar']);
+  const { radar, extrait, ...comptes } = ap;
+  // Une seule question offerte (10 novembre 2026), hors des sujets sensibles,
+  // avec la réponse de chacun.
+  assert.deepEqual(Object.keys(extrait).sort(), ['a', 'b', 'cat', 'domaine', 'id']);
+  const qx = C.INDEX[extrait.id];
+  assert.ok(qx && qx.d.id === extrait.domaine, 'le domaine de la question');
+  assert.ok(['temps', 'quotidien', 'entourage', 'travail', 'argent', 'logement', 'enfants', 'valeurs'].includes(extrait.domaine), 'jamais la confiance, l\'intimité, les disputes ni le climat');
+  assert.ok(['echelle', 'choix'].includes(qx.q.type) && !qx.q.sensible, 'une question qui se lit telle quelle, pas sensible');
+  assert.equal(extrait.a, ra[extrait.id]);
+  assert.equal(extrait.b, rb[extrait.id]);
+  assert.ok(['accord', 'proche', 'ecart'].includes(extrait.cat));
+  // La plus grande différence possible : l'écart de plus haute priorité parmi
+  // les questions permises.
+  const an = C.analyser(SIT, { reponses: ra, nn: [] }, { reponses: rb, nn: [] }, 'duo');
+  const permis = an.items.filter((i) => ['temps', 'quotidien', 'entourage', 'travail', 'argent', 'logement', 'enfants', 'valeurs'].includes(i.domaine) && !i.sensible && ['echelle', 'choix'].includes(i.type));
+  const ecartsPermis = permis.filter((i) => i.cat === 'ecart').sort((x, y) => y.prio - x.prio || (x.id < y.id ? -1 : 1));
+  if (ecartsPermis.length) assert.equal(extrait.id, ecartsPermis[0].id, 'l\'écart le plus important');
   assert.ok(Object.values(comptes).every((v) => Number.isInteger(v) && v >= 0));
   // Onze domaines (le climat n'est pas sur le radar), chacun son score et sa bande.
   assert.equal(radar.length, C.DOMAINES.length - 1);
@@ -899,6 +915,7 @@ test('rappels : sans l\'annonce, après « ne plus recevoir », une fois payé, 
   assert.equal(avantRelance, 2, 'un e-mail « prêt » par évaluation à deux annoncée (arrêtée, payée), aucun en solo');
   const aps = (await appel({ action: 'resultat', id: s.id, jeton: s.jeton })).json.apercu;
   assert.ok(aps && aps.accords > 0);
+  assert.equal(aps.extrait, null, 'seul(e) : pas de question offerte');
 
   t = new Date(t.getTime() + 25 * 3600e3);
   const rel = await appel({ action: 'relancer' }, '1.2.3.4', true);

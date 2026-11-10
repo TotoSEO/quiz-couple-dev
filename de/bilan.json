@@ -190,6 +190,14 @@
       "emailAutre": "An eine andere Adresse schicken",
       "plie": "Den Bericht jetzt freischalten",
       "accroche": "Du hast noch nicht gesehen, was {{autre}} geantwortet hat.",
+      "accrocheExtrait": "Es warten noch {{n}} Antworten von {{autre}} auf dich.",
+      "extrait": {
+        "titre": "Ein Auszug aus eurem Bericht",
+        "ecart": "Die Frage, bei der ihr am weitesten auseinanderliegt:",
+        "proche": "Eine Frage, bei der ihr nicht ganz gleich geantwortet habt:",
+        "accord": "Eine Frage, bei der ihr gleich geantwortet habt:",
+        "suite": "Das ist eine von {{n}} Fragen. Die anderen stehen im Bericht, jede mit euren beiden Antworten."
+      },
       "points": {
         "reponses": "Alle Antworten von {{autre}} neben deinen, Frage für Frage",
         "ecartsN": "Zu euren {{n}} Unterschieden: warum sie zählen und wie ihr darüber redet, ohne zu streiten",

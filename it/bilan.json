@@ -190,6 +190,14 @@
       "emailAutre": "Riceverlo a un altro indirizzo",
       "plie": "Sbloccare il report adesso",
       "accroche": "Non hai ancora visto cosa ha risposto {{autre}}.",
+      "accrocheExtrait": "Ti restano {{n}} risposte di {{autre}} da scoprire.",
+      "extrait": {
+        "titre": "Un estratto del vostro report",
+        "ecart": "La domanda su cui siete più lontani:",
+        "proche": "Una domanda a cui non avete risposto proprio allo stesso modo:",
+        "accord": "Una domanda a cui avete risposto allo stesso modo:",
+        "suite": "È una domanda su {{n}}. Le altre sono nel report, ognuna con le vostre due risposte."
+      },
       "points": {
         "reponses": "Tutte le risposte di {{autre}} accanto alle tue, domanda per domanda",
         "ecartsN": "Per le vostre {{n}} differenze: perché contano, e come parlarne senza litigare",

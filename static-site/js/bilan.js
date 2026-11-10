@@ -1889,12 +1889,50 @@
       '<p class="bilan-pret-quoi">' + x('paywall.apercu.quoi') + '</p>';
   }
 
+  // Une question du rapport, offerte (10 novembre 2026 : depuis le
+  // 27 octobre, 70 % des couples allés au bout repartaient de cet écran sans
+  // ouvrir la page de paiement, et trois sur quatre de ceux qui l'ouvraient
+  // payaient). Le serveur choisit la plus grande différence hors des sujets
+  // sensibles (apercuDe, extraitDe) ; la carte la montre comme le rapport :
+  // le verdict et le domaine, la question sans prénom quand elle en a une
+  // version neutre, et les deux réponses, chacune lue par celui qui l'a
+  // donnée, sous son prénom et à sa couleur. Un serveur plus ancien n'envoie
+  // pas d'extrait : rien ne s'affiche.
+  function blocExtrait(ap, moi, autre, role, total) {
+    var e = ap && ap.extrait;
+    if (!e || !C || !C.INDEX[e.id] || !Q || !/^(accord|proche|ecart)$/.test(e.cat)) return '';
+    var t = texteQ(e.id);
+    if (!t.q || !Array.isArray(t.o)) return '';
+    var lue = function (p, v, nomAutre) {
+      var o = Number.isInteger(v) ? t.o[v] : null;
+      return o == null ? '' : C.remplir(C.accorder(o, p.genre), { autre: nomAutre });
+    };
+    var mienne = lue(moi, role === 'a' ? e.a : e.b, autre.prenom);
+    var sienne = lue(autre, role === 'a' ? e.b : e.a, moi.prenom);
+    if (!mienne || !sienne) return '';
+    var question = t.qNeutre ? C.accorder(t.qNeutre, null) : C.remplir(C.accorder(t.q, null), { autre: autre.prenom });
+    var rep = function (p, rang, texte) {
+      return '<div class="bilan-extrait-rep bilan-extrait-rep--' + perso(p.genre, rang) + '">' +
+        '<p class="bilan-extrait-nom">' + esc(p.prenom) + '</p><p class="bilan-extrait-texte">' + esc(ins(texte)) + '</p></div>';
+    };
+    return '<div class="bilan-extrait bilan-extrait--' + e.cat + '">' +
+      '<p class="bilan-extrait-sur">' + x('paywall.extrait.titre') + '</p>' +
+      '<p class="bilan-extrait-intro">' + x('paywall.extrait.' + e.cat) + '</p>' +
+      '<div class="bilan-extrait-carte">' +
+        '<p class="bilan-extrait-bande"><span>' + x('rapport.cat.' + e.cat) + '</span><span>' + esc(titreDomaine(e.domaine)) + '</span></p>' +
+        '<p class="bilan-extrait-q">' + esc(ins(question)) + '</p>' +
+        '<div class="bilan-extrait-reps">' + rep(moi, 0, mienne) + rep(autre, 1, sienne) + '</div>' +
+      '</div>' +
+      (total > 1 ? '<p class="bilan-extrait-suite">' + x('paywall.extrait.suite', { n: nombre(total) }) + '</p>' : '') +
+    '</div>';
+  }
+
   // Ce que contient le rapport, avec leurs chiffres (25 octobre 2026 : 39
   // couples avaient vu l'écran « rapport prêt », 3 avaient payé ; le sommaire
   // était dans la carte du dessous, et rien ne disait dans la première ce
   // qu'on achetait). À deux, l'accroche est ce qu'on n'a pas encore vu : les
   // réponses de l'autre. Rien du contenu, seulement les comptes de l'aperçu.
-  function blocPoints(ap, autre) {
+  function blocPoints(ap, autre, avecExtrait, total) {
     var v = { autre: autre };
     var points = [x('paywall.points.reponses', v)];
     if (ap.ecarts > 1) points.push(x('paywall.points.ecartsN', { n: nombre(ap.ecarts), autre: autre }));
@@ -1906,7 +1944,8 @@
     else if (ap.conversations === 1) points.push(x('paywall.points.conversationsUn'));
     if (MODE !== 'solo') points.push(x('paywall.points.climat'));
     points.push(x('paywall.points.pdf'));
-    return '<div class="bilan-inclus"><h3 class="bilan-inclus-titre">' + x('paywall.accroche', v) + '</h3>' +
+    var accroche = avecExtrait && total > 1 ? x('paywall.accrocheExtrait', { autre: autre, n: nombre(total - 1) }) : x('paywall.accroche', v);
+    return '<div class="bilan-inclus"><h3 class="bilan-inclus-titre">' + accroche + '</h3>' +
       '<ul class="bilan-inclus-liste">' + points.map(function (p) { return '<li>' + p + '</li>'; }).join('') + '</ul></div>';
   }
 
@@ -2194,12 +2233,17 @@
       moi: { prenom: moi.prenom, genre: moi.genre, email: res.moiEmail || null }, autre: { prenom: autre.prenom, genre: autre.genre },
     };
     var ap = res.apercu || null;
+    // Le nombre de questions de chacun (100 pour tout le monde), pour « une
+    // question sur 100 » et « il vous reste 99 réponses de X ».
+    var total = 0;
+    try { total = res.situation ? C.progression(res.situation, {}).total : 0; } catch (e) { total = 0; }
+    var extrait = ap && MODE !== 'solo' ? blocExtrait(ap, moi, autre, res.role, total) : '';
     afficher(
       (message ? carte('<p class="bilan-alerte bilan-alerte--doux">' + message + '</p>') : '') +
       offre(etat, true,
         '<p class="bilan-pret-sur">' + x('rapport.surtitre') + '</p>' +
         '<h2 class="bilan-titre bilan-pret-titre">' + x('paywall.pretTitre', { moi: moi.prenom, autre: autre.prenom }) + '</h2>' +
-        (ap ? blocApercu(ap, autre.prenom) + blocPoints(ap, autre.prenom) : '<p class="bilan-offre-intro">' + x('paywall.introPret', { autre: autre.prenom }) + '</p>')));
+        (ap ? blocApercu(ap, autre.prenom) + extrait + blocPoints(ap, autre.prenom, !!extrait, total) : '<p class="bilan-offre-intro">' + x('paywall.introPret', { autre: autre.prenom }) + '</p>')));
     compterVue('offre_vue', { mode: MODE, id: entree.id, cle: res.region || '' });
     ACTIONS = actionsOffre(entree, MODE);
     surveillerColle();
