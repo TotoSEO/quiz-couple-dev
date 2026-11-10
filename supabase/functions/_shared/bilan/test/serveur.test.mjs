@@ -16,7 +16,12 @@ const ici = path.dirname(fileURLToPath(import.meta.url));
 const RACINE = path.resolve(ici, '../../../../..');
 const SIT = { ensemble: 'oui', engagement: 'pacses', enfants: 'non', enfantsAvant: 'non', proprio: 'non', animal: 'oui' };
 
-function fauxStripe({ refuseCode = false } = {}) {
+// Une réduction d'essai : le site n'en a plus depuis le 10 novembre 2026,
+// mais la page de paiement doit toujours savoir l'appliquer (et se rabattre
+// sur le prix plein quand Stripe refuse le code).
+const PROMO_ESSAI = { code: 'ESSAI15', stripe: 'promo_essai15', pourcent: 15, fin: '' };
+
+function fauxStripe({ refuseCode = false, promo = null } = {}) {
   const sessions = new Map();
   let n = 0;
   return {
@@ -27,7 +32,8 @@ function fauxStripe({ refuseCode = false } = {}) {
       if (p.discounts && refuseCode) { const e = new Error('stripe: This promotion code cannot be redeemed because it is inactive.'); e.statut = 400; throw e; }
       const id = 'cs_test_' + String(++n).padStart(12, '0');
       const brut = p.line_items[0].price_data.unit_amount;
-      const montant = p.discounts && p.discounts[0].promotion_code === C.PROMO_STRIPE ? brut - Math.round(brut * C.PROMO_POURCENT / 100) : brut;
+      const P = promo || { stripe: C.PROMO_STRIPE, pourcent: C.PROMO_POURCENT };
+      const montant = p.discounts && p.discounts[0].promotion_code === P.stripe ? brut - Math.round(brut * P.pourcent / 100) : brut;
       const s = { id, url: 'https://checkout.stripe.com/c/pay/' + id, payment_status: 'unpaid', amount_total: montant, metadata: p.metadata, client_reference_id: p.client_reference_id, params: p };
       sessions.set(id, s);
       // Comme Stripe, la session créée porte déjà son montant, réduction comprise.
@@ -64,9 +70,9 @@ function fausseBoite() {
 
 function monter(options = {}) {
   const stockage = creerStockageMemoire();
-  const stripe = options.sansStripe ? null : fauxStripe(options.stripe || {});
+  const stripe = options.sansStripe ? null : fauxStripe({ ...(options.stripe || {}), promo: options.promo || null });
   const courriel = fausseBoite();
-  const { traiter, marquerPaye, marquerRembourse } = creerServeur({ stockage, stripe, courriel, stripeTest: !!options.stripeTest, sel: 'sel', ...(options.maintenant ? { maintenant: options.maintenant } : {}) });
+  const { traiter, marquerPaye, marquerRembourse } = creerServeur({ stockage, stripe, courriel, stripeTest: !!options.stripeTest, sel: 'sel', ...(options.maintenant ? { maintenant: options.maintenant } : {}), ...(options.promo ? { promo: options.promo } : {}) });
   const appel = (corps, ip = '1.2.3.4', interne = false) => traiter(corps, { ip, interne });
   return { stockage, stripe, courriel, traiter, appel, marquerPaye, marquerRembourse };
 }
@@ -427,34 +433,55 @@ async function pretAPayer(appel) {
   return { id: c.id, jeton: c.jeton };
 }
 
-test('la réduction en cours (LOVE20) : appliquée d\'office, refusée par Stripe sans bloquer la vente', async () => {
-  assert.ok(/^promo_[A-Za-z0-9]+$/.test(C.PROMO_STRIPE), 'identifiant de code de promotion Stripe');
-  assert.equal(C.prixPromo(), C.PRIX_CENTIMES - Math.round(C.PRIX_CENTIMES * C.PROMO_POURCENT / 100));
-  assert.ok(C.promoEnCours(), 'la réduction est en cours');
+test('sans réduction (depuis le 10 novembre 2026) : le prix affiché, sans champ des codes', async () => {
+  assert.equal(C.promoEnCours(), false, 'aucune réduction en cours');
+  assert.equal(C.PRIX_CENTIMES % 2, 0, 'un prix pair : les deux moitiés de l\'écran « rapport prêt » font le total');
+  const m = monter();
+  const A = await pretAPayer(m.appel);
+  const etat = (await m.appel({ action: 'etat', ...A })).json;
+  assert.equal(etat.prix, C.PRIX_CENTIMES);
+  assert.equal(etat.prixBase, C.PRIX_CENTIMES);
+  assert.equal(etat.promo, null);
+  const p = await m.appel({ action: 'payer', ...A, renonciation: true, lang: 'fr' });
+  assert.equal(p.statut, 200);
+  assert.equal(p.json.promo, false);
+  assert.equal(p.json.total, C.PRIX_CENTIMES);
+  const s = [...m.stripe.sessions.values()][0];
+  assert.equal(s.params.discounts, undefined);
+  assert.equal(s.params.allow_promotion_codes, undefined, 'pas de champ des codes vide sur la page de paiement');
+  assert.equal(s.params.line_items[0].price_data.unit_amount, C.PRIX_CENTIMES);
+});
+
+test('une réduction en cours : appliquée d\'office, refusée par Stripe sans bloquer la vente', async () => {
+  const P = PROMO_ESSAI;
+  const reduit = C.prixPromo(P.pourcent);
+  assert.equal(reduit, C.PRIX_CENTIMES - Math.round(C.PRIX_CENTIMES * P.pourcent / 100));
+  assert.ok(C.promoEnCours(new Date(), 0, P.fin, P.pourcent, P.stripe), 'la réduction d\'essai est en cours');
+  assert.equal(C.promoEnCours(new Date('2026-12-02T12:00:00Z'), 12, '2026-11-30', P.pourcent, P.stripe), false, 'finie après sa date et ses douze heures');
 
   // Appliquée d'office : discounts sans le champ des codes, montant réduit.
-  let m = monter();
+  let m = monter({ promo: P });
   let A = await pretAPayer(m.appel);
   const etat = (await m.appel({ action: 'etat', ...A })).json;
-  assert.equal(etat.prix, C.prixPromo());
+  assert.equal(etat.prix, reduit);
   assert.equal(etat.prixBase, C.PRIX_CENTIMES);
-  assert.deepEqual(etat.promo, { code: C.PROMO_CODE, pourcent: C.PROMO_POURCENT });
+  assert.deepEqual(etat.promo, { code: P.code, pourcent: P.pourcent });
   let p = await m.appel({ action: 'payer', ...A, renonciation: true, lang: 'fr' });
   assert.equal(p.statut, 200);
   assert.equal(p.json.promo, true);
-  assert.equal(p.json.total, C.prixPromo(), 'le montant calculé par Stripe revient à la page et à la sonde');
+  assert.equal(p.json.total, reduit, 'le montant calculé par Stripe revient à la page et à la sonde');
   let s = [...m.stripe.sessions.values()][0];
-  assert.deepEqual(s.params.discounts, [{ promotion_code: C.PROMO_STRIPE }]);
+  assert.deepEqual(s.params.discounts, [{ promotion_code: P.stripe }]);
   assert.equal(s.params.allow_promotion_codes, undefined);
   assert.equal(s.params.line_items[0].price_data.unit_amount, C.PRIX_CENTIMES, 'Stripe affiche le prix plein, puis la réduction');
-  assert.ok(encoderFormulaire(s.params).includes('discounts%5B0%5D%5Bpromotion_code%5D=' + C.PROMO_STRIPE));
+  assert.ok(encoderFormulaire(s.params).includes('discounts%5B0%5D%5Bpromotion_code%5D=' + P.stripe));
   m.stripe.payer(s.id);
   await m.appel({ action: 'verifier', ...A, session: s.id });
-  assert.equal(m.stockage.lignes.get(A.id).paiement_montant, C.prixPromo());
+  assert.equal(m.stockage.lignes.get(A.id).paiement_montant, reduit);
 
   // Code refusé par Stripe (expiré, désactivé, plafond) : la page de paiement
   // s'ouvre quand même, au prix plein, avec le champ des codes.
-  m = monter({ stripe: { refuseCode: true } });
+  m = monter({ promo: P, stripe: { refuseCode: true } });
   A = await pretAPayer(m.appel);
   p = await m.appel({ action: 'payer', ...A, renonciation: true, lang: 'fr' });
   assert.equal(p.statut, 200);
@@ -476,12 +503,13 @@ test('l\'aperçu de la page de paiement pour l\'admin : même page qu\'un client
   const r = await m.traiter({ action: 'apercu_paiement', lang: 'de', mode: 'solo' }, { ip: '1.2.3.4', admin: true });
   assert.equal(r.statut, 200, JSON.stringify(r.json));
   assert.match(r.json.url, /^https:\/\/checkout\.stripe\.com\//);
-  assert.equal(r.json.promo, true);
-  assert.equal(r.json.total, C.prixPromo());
+  assert.equal(r.json.promo, C.promoEnCours());
+  assert.equal(r.json.total, C.promoEnCours() ? C.prixPromo() : C.PRIX_CENTIMES);
   assert.equal(r.json.prixBase, C.PRIX_CENTIMES);
   const s = [...m.stripe.sessions.values()][0];
   assert.equal(s.params.locale, 'de');
-  assert.deepEqual(s.params.discounts, [{ promotion_code: C.PROMO_STRIPE }]);
+  assert.deepEqual(s.params.discounts, C.promoEnCours() ? [{ promotion_code: C.PROMO_STRIPE }] : undefined);
+  assert.equal(s.params.allow_promotion_codes, undefined);
   assert.equal(s.params.client_reference_id, undefined);
   assert.deepEqual(s.params.metadata, { apercu: 'admin', mode: 'solo' });
   assert.match(s.params.line_items[0].price_data.product_data.description, /allein|Partner|deine/i);
@@ -502,13 +530,17 @@ test('l\'aperçu de la page de paiement pour l\'admin : même page qu\'un client
 
 test('la fin de la réduction : jour de Paris, douze heures de grâce côté serveur', () => {
   const fin = '2026-11-02';
+  // Une réduction d'essai : coeur.mjs n'en a plus depuis le 10 novembre 2026.
+  const en = (instant, grace) => C.promoEnCours(new Date(instant), grace, fin, PROMO_ESSAI.pourcent, PROMO_ESSAI.stripe);
   // 2 novembre 23 h 30 à Paris (UTC+1) : encore en cours.
-  assert.equal(C.promoEnCours(new Date('2026-11-02T22:30:00Z'), 0, fin), true);
+  assert.equal(en('2026-11-02T22:30:00Z', 0), true);
   // 3 novembre 0 h 30 à Paris : finie pour le site...
-  assert.equal(C.promoEnCours(new Date('2026-11-02T23:30:00Z'), 0, fin), false);
+  assert.equal(en('2026-11-02T23:30:00Z', 0), false);
   // ...gardée douze heures par le serveur, puis finie aussi.
-  assert.equal(C.promoEnCours(new Date('2026-11-02T23:30:00Z'), 12, fin), true);
-  assert.equal(C.promoEnCours(new Date('2026-11-03T11:30:00Z'), 12, fin), false);
+  assert.equal(en('2026-11-02T23:30:00Z', 12), true);
+  assert.equal(en('2026-11-03T11:30:00Z', 12), false);
+  // Sans pourcentage (PROMO_POURCENT à 0), jamais en cours.
+  assert.equal(C.promoEnCours(new Date('2026-11-02T22:30:00Z'), 0, fin, 0, PROMO_ESSAI.stripe), false);
   assert.equal(C.jourParis(new Date('2026-07-01T22:30:00Z')), '2026-07-02', 'heure d\'été');
 });
 

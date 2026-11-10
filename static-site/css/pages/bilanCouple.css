@@ -109,8 +109,11 @@
   .blp-hero-grille { grid-template-columns: minmax(0, 1fr); gap: 3.5rem; }
   .blp-hero { padding: 2rem 0 4rem; }
 }
-/* Le premier écran d'un téléphone (390 x 844) : titre, phrase, les deux
-   offres avec leur prix et leur bouton, puis les moyens de paiement. */
+/* Le premier écran d'un téléphone (390 x 844) : titre, phrase, bouton,
+   prix, lien du point, moyens de paiement et la ligne « Quiz Couple ». */
+@media (max-width: 480px) {
+  .blp-ctas .blp-btn--grand { width: 100%; padding-left: 1.25rem; padding-right: 1.25rem; }
+}
 .blp-sur { display: inline-block; font-size: .78rem; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; color: hsl(var(--primary-texte)); margin: 0 0 1.1rem; }
 .blp-hero .blp-h1 { margin-bottom: 1.25rem; }
 .blp-hero .blp-lead { color: hsl(var(--muted-foreground)); max-width: 34rem; margin-bottom: 2rem; }
@@ -132,90 +135,20 @@
 .blp-preuve-masc { display: block; width: 1.75rem; height: auto; }
 .blp-preuve-masc + .blp-preuve-masc { margin-left: -.45rem; }
 .dark .blp-preuve { box-shadow: none; }
-/* Les deux offres (4 novembre 2026, Thomas : « Met les deux prix du coup,
-   En couple et Seul. Seul est maintenant à part entière de l'évaluation, il
-   faut bien le mettre en avant ») : deux cartes côte à côte dès 320 px, en
-   haut de page et au dernier appel ; la carte entière est le bouton. Les
-   prix, l'unité et le bouton sont calés en bas (margin-top: auto) : les
-   cartes ont la même hauteur dans la rangée, les deux prix sont donc sur
-   la même ligne, le prix habituel barré au-dessus du prix réduit, et la
-   réduction en pastille sur le bord haut de la carte à deux. */
-.blp-offres { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .75rem; max-width: 34rem; margin: 0; }
-.blp-offre {
-  position: relative; display: flex; flex-direction: column; align-items: flex-start; min-width: 0;
-  padding: .95rem .9rem 1rem; border-radius: 1.25rem; text-align: left; cursor: pointer;
-  font: inherit; color: hsl(var(--foreground)); background: hsl(var(--card));
-  border: 2px solid hsl(var(--primary) / .5); box-shadow: 0 18px 40px -28px hsl(var(--blp-nuit) / .5);
-  transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
-}
-.blp-offre--solo { border-color: hsl(var(--secondary) / .55); }
-.blp-offre:hover { transform: translateY(-2px); border-color: hsl(var(--primary)); box-shadow: 0 22px 44px -26px hsl(var(--blp-nuit) / .55); }
-.blp-offre--solo:hover { border-color: hsl(var(--secondary)); }
-.blp-offre:active { transform: translateY(0); }
-.blp-offre:focus-visible { outline: 3px solid hsl(var(--blp-or)); outline-offset: 3px; }
-.blp .blp-offre-promo { position: absolute; top: -.8rem; right: .7rem; padding: .2rem .55rem; font-size: .76rem; box-shadow: 0 6px 14px -8px hsl(var(--blp-nuit) / .6); }
-.blp-offre-promo-court { display: none; }
-/* Sur un petit téléphone, la carte fait 135 à 150 px : « -20 % » seul. Le
-   lecteur d'écran lit toujours la pastille entière. */
-@media (max-width: 399.98px) {
-  .blp-offre-promo-long { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
-  .blp-offre-promo-court { display: inline; }
-}
-.blp-offre-persos { display: flex; align-items: flex-end; height: 2.3rem; margin: 0 0 .5rem; }
-.blp-offre-masc { display: block; width: 2.1rem; height: auto; }
-.blp-offre-masc + .blp-offre-masc { margin-left: -.55rem; }
-.blp-offre-titre { font: 700 1.2rem/1.15 var(--blp-page); letter-spacing: -.01em; }
-.blp-offre-sous { margin-top: .25rem; font-size: .84rem; line-height: 1.35; color: hsl(var(--muted-foreground)); }
-.blp-offre-bas { display: flex; flex-direction: column; align-items: flex-start; width: 100%; margin-top: auto; padding-top: .85rem; }
-.blp-offre-prix { font: 700 clamp(1.4rem, 6.4vw, 1.65rem)/1.1 var(--blp-page); letter-spacing: -.02em; color: hsl(var(--primary-texte)); }
-.blp-offre--solo .blp-offre-prix { color: hsl(var(--secondary-texte)); }
-.blp-offre-prix .prix-promo { display: flex; flex-direction: column; align-items: flex-start; }
-.blp-offre-prix .prix-promo-avant { font-size: .55em; font-weight: 600; letter-spacing: 0; color: hsl(var(--muted-foreground)); }
-.blp-offre-prix .prix-promo-avant s { opacity: 1; }
-.blp-offre-prix .prix-promo-apres { font-weight: 700; }
-.blp-offre-unite { margin-top: .2rem; font-size: .78rem; line-height: 1.3; color: hsl(var(--muted-foreground)); }
-/* Sur téléphone, deux lignes réservées pour l'unité : les deux prix restent
-   sur la même ligne quand l'une passe à la ligne et pas l'autre (« pour vous
-   deux, en une fois » et « pour vous, en une fois »). Au-delà, elles tiennent
-   sur une ligne dans les six langues. */
-@media (max-width: 639.98px) { .blp-offre-unite { min-height: 2.6em; } }
-.blp-offre-cta {
-  display: flex; align-items: center; justify-content: center; gap: .4rem; width: 100%; min-height: 2.75rem; margin-top: .85rem;
-  padding: .55rem .7rem; border-radius: 999px; font: 700 1rem/1.2 var(--font-display, inherit); color: #fff;
-  background: linear-gradient(135deg, hsl(var(--blp-rose)), hsl(var(--blp-violet)));
-  box-shadow: 0 10px 24px -12px hsl(var(--blp-rose) / .75), inset 0 1px 0 hsl(0 0% 100% / .25);
-}
-.blp-offre--solo .blp-offre-cta { background: linear-gradient(135deg, hsl(var(--blp-violet)), hsl(268 42% 42%)); box-shadow: 0 10px 24px -12px hsl(var(--blp-violet) / .75), inset 0 1px 0 hsl(0 0% 100% / .25); }
-.blp-offre-cta .blp-fleche { width: 1.05rem; height: 1.05rem; }
-.blp-offre:hover .blp-fleche { transform: translateX(3px); }
-@media (min-width: 640px) {
-  .blp-offres { gap: 1rem; }
-  .blp-offre { padding: 1.15rem 1.15rem 1.2rem; }
-  .blp-offre-titre { font-size: 1.3rem; }
-  .blp-offre-masc { width: 2.4rem; }
-  .blp-offre-persos { height: 2.6rem; }
-}
-/* Sous 360 px, la flèche laisse la place au mot du bouton. */
-@media (max-width: 359.98px) {
-  .blp-offres { gap: .6rem; }
-  .blp-offre { padding: .85rem .7rem .9rem; }
-  .blp-offre-cta { padding-left: .5rem; padding-right: .5rem; }
-  .blp-offre-cta .blp-fleche { display: none; }
-}
-/* Un petit téléphone (360 x 740) : le haut de page un peu plus serré, pour
-   que les deux boutons restent dans le premier écran avec les titres longs
-   (l'allemand passait 26 px dessous). */
-@media (max-width: 479.98px) and (max-height: 760px) {
-  .blp-hero { padding-top: 1.25rem; }
-  .blp-hero .blp-sur { margin-bottom: .8rem; }
-  .blp-hero .blp-lead { margin-bottom: 1.4rem; }
-  .blp-offre-persos { height: 1.9rem; margin-bottom: .35rem; }
-  .blp-offre-masc { width: 1.75rem; }
-}
-/* Au dernier appel, centrées sur le fond de nuit. */
-.blp-offres--final { margin: 0 auto; }
-.dark .blp-final .blp-offre { box-shadow: none; }
-@media (prefers-reduced-motion: reduce) { .blp-offre, .blp-offre .blp-fleche { transition: none; } }
+/* Le point sur ma relation, en lien sous le gros bouton à deux (10 novembre
+   2026 : du 4 au 10 novembre, deux cartes de prix côte à côte faisaient du
+   haut de page une grille de tarifs). C'est un bouton
+   (data-bilan-commencer="solo"), qui compte cta_solo comme les autres. */
+.blp-solo { margin: .7rem 0 0; font-size: .92rem; line-height: 1.5; color: hsl(var(--muted-foreground)); }
+.blp-solo-lien { display: inline; padding: 0; border: 0; background: none; cursor: pointer; font: inherit; font-weight: 700; color: hsl(var(--secondary-texte));
+  text-decoration: underline; text-underline-offset: .22em; text-decoration-thickness: 1px; }
+.blp-solo-lien:hover { text-decoration-thickness: 2px; }
+.blp-solo-lien:focus-visible { outline: 2px solid hsl(var(--ring)); outline-offset: 2px; border-radius: .2rem; }
+.blp-hero .blp-solo { margin-top: 1rem; }
+.blp-depart-note { max-width: 34rem; }
+.blp-final .blp-depart-note { margin-left: auto; margin-right: auto; color: hsl(0 0% 100% / .82); opacity: 1; }
+.blp-final .blp-solo { color: hsl(0 0% 100% / .78); }
+.blp-final .blp-solo-lien { color: #fff; }
 /* Les moyens de paiement sous le prix du hero (20 octobre 2026) : le cadenas et
    « Paiement sécurisé par Stripe », puis six vignettes blanches de 46 x 30 px
    dessinées dans le gabarit ; le fond reste blanc en thème sombre pour que les
@@ -464,14 +397,13 @@
 
 /* ── La barre collée en bas, sur téléphone ───────────────────────────── */
 
-.blp-colle { position: fixed; left: 0; right: 0; bottom: 0; z-index: 60; display: flex; align-items: stretch; justify-content: space-between; gap: .75rem;
+.blp-colle { position: fixed; left: 0; right: 0; bottom: 0; z-index: 60; display: flex; align-items: center; justify-content: space-between; gap: .75rem;
   padding: .65rem 1rem calc(.65rem + env(safe-area-inset-bottom)); background: hsl(var(--card) / .96); border-top: 1px solid hsl(var(--border));
   box-shadow: 0 -10px 30px -16px hsl(var(--blp-nuit) / .5); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); }
 .blp-colle[hidden] { display: none; }
-.blp-colle-btn { flex: 1 1 0; min-width: 0; gap: .45rem; padding-left: .7rem; padding-right: .7rem; font-size: .95rem; }
-.blp-colle-prix { font-weight: 800; white-space: nowrap; opacity: .92; }
-.blp-colle-prix::before { content: '·'; margin-right: .45rem; opacity: .7; }
-@media (max-width: 359.98px) { .blp-colle { gap: .5rem; padding-left: .6rem; padding-right: .6rem; } .blp-colle-btn { font-size: .86rem; padding-left: .45rem; padding-right: .45rem; } }
+.blp-colle-texte { font-weight: 700; font-size: .95rem; min-width: 0; }
+.blp-colle .blp-btn { flex: none; }
+@media (max-width: 359.98px) { .blp-colle { gap: .5rem; padding-left: .6rem; padding-right: .6rem; } .blp-colle-texte { font-size: .88rem; } }
 @media (min-width: 900px) { .blp-colle { display: none; } }
 body.bilan-focus .blp-colle { display: none; }
 

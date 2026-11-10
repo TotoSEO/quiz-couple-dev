@@ -790,21 +790,13 @@
   "lp": {
     "badge": "Beziehungsanalyse",
     "titre": "Zieht Bilanz über eure Beziehung, ohne zur Paarberatung zu gehen",
-    "sousTitre": "20 Minuten pro Person auf dem Handy oder 12 Minuten allein, und ein Bericht, der zeigt, wo eure Beziehung steht und worüber ihr reden solltet.",
-    "offres": {
-      "cta": "Beginnen",
-      "duo": {
-        "titre": "Zu zweit",
-        "sous": "Jeder auf dem eigenen Handy",
-        "unite": "für euch beide, einmalig"
-      },
-      "solo": {
-        "titre": "Allein",
-        "sous": "Nur du antwortest",
-        "unite": "für dich, einmalig"
-      }
-    },
+    "sousTitre": "20 Minuten pro Person auf dem Handy, und ein Bericht, der euch zeigt, worin ihr euch einig seid und worüber ihr reden solltet.",
     "cta": "Analyse beginnen",
+    "departNote": "Die Fragen sind kostenlos: Ihr zahlt erst am Ende, wenn ihr den Bericht wollt ({{prix}} für euch beide).",
+    "departSolo": {
+      "question": "Lieber allein?",
+      "lien": "Zieh Bilanz über deine Beziehung ({{prixPoint}})"
+    },
     "preuve": "{{nom}}: Tausende Besucher jeden Tag",
     "paiements": "Sichere Zahlung über Stripe",
     "visuel": {
@@ -1036,6 +1028,10 @@
       "titre": "Bereit, Bilanz zu ziehen?",
       "texte": "Ob zu zweit oder allein: Der Bericht zeigt, wo die Beziehung steht und worüber zu reden ist."
     },
-    "avertissement": "Zu zweit zeigt diese Analyse jedem die Antworten des anderen. Wenn du Angst vor deinem Partner oder deiner Partnerin hast, mach sie nicht zu zweit: Mach den Check allein oder gar nicht. In Deutschland hilft das Hilfetelefon Gewalt gegen Frauen unter 116 016, kostenlos und anonym, rund um die Uhr."
+    "avertissement": "Zu zweit zeigt diese Analyse jedem die Antworten des anderen. Wenn du Angst vor deinem Partner oder deiner Partnerin hast, mach sie nicht zu zweit: Mach den Check allein oder gar nicht. In Deutschland hilft das Hilfetelefon Gewalt gegen Frauen unter 116 016, kostenlos und anonym, rund um die Uhr.",
+    "colle": {
+      "texte": "Beziehungsanalyse · {{prix}}",
+      "bouton": "Beginnen"
+    }
   }
 }

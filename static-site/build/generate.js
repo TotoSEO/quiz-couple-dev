@@ -149,7 +149,7 @@ for (const l of LANGUAGES) {
 
 // Le prix du rapport du bilan, lu dans le module partagé avec le serveur
 // (supabase/functions/_shared/bilan/coeur.mjs), écrit dans la langue de la
-// page : « 9,90 € », « €9.90 ».
+// page : « 7,90 € », « €7.90 ».
 const BILAN_COEUR_SRC = path.join(REPO_ROOT, 'supabase', 'functions', '_shared', 'bilan', 'coeur.mjs');
 const BILAN_CONST = (() => {
   const src = fs.existsSync(BILAN_COEUR_SRC) ? fs.readFileSync(BILAN_COEUR_SRC, 'utf-8') : '';

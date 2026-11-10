@@ -314,7 +314,11 @@ function destinataires(ligne) {
 //              même tant que le bilan n'est pas ouvert, pour l'essayer.
 // courriel : { envoyer({ a, sujet, html, texte, pieces, lang }) } ou null
 /** @param {{ stockage: any, stripe?: any, stripeTest?: boolean, courriel?: any, sel?: string, maintenant?: () => Date }} options */
-export function creerServeur({ stockage, stripe = null, stripeTest = false, courriel = null, sel = '', maintenant = () => new Date() }) {
+// `promo` : la réduction de coeur.mjs (PROMO_*), ou celle qu'un essai donne
+// pour vérifier la page de paiement avec une réduction quand il n'y en a pas.
+const PROMO_COEUR = { code: C.PROMO_CODE, stripe: C.PROMO_STRIPE, pourcent: C.PROMO_POURCENT, fin: C.PROMO_FIN };
+
+export function creerServeur({ stockage, stripe = null, stripeTest = false, courriel = null, sel = '', maintenant = () => new Date(), promo: P = PROMO_COEUR }) {
 
   // Un compteur qui rate ne doit jamais faire échouer une réponse.
   async function compter(evenement, cle, montant) {
@@ -351,7 +355,7 @@ export function creerServeur({ stockage, stripe = null, stripeTest = false, cour
   // La réduction appliquée à la page de paiement : douze heures de plus que
   // la fin affichée (coeur.mjs, PROMO_FIN), le temps que le site soit
   // reconstruit sans elle.
-  const promoActive = () => C.promoEnCours(maintenant(), 12);
+  const promoActive = () => C.promoEnCours(maintenant(), 12, P.fin, P.pourcent, P.stripe);
 
   // Ce que la page sait du paiement et du rapport. `zone` : celle que la page
   // envoie (coeur.mjs, PRIX_REGIONS) ; tant que rien n'est payé, le prix de
@@ -364,9 +368,9 @@ export function creerServeur({ stockage, stripe = null, stripeTest = false, cour
     const point = estPoint(ligne);
     const promo = !region && !point && promoActive();
     return {
-      prix: point ? C.prixPoint(region) : region ? C.PRIX_REGIONS[region] : promo ? C.prixPromo() : C.PRIX_CENTIMES,
+      prix: point ? C.prixPoint(region) : region ? C.PRIX_REGIONS[region] : promo ? C.prixPromo(P.pourcent) : C.PRIX_CENTIMES,
       prixBase: point ? C.PRIX_POINT_CENTIMES : C.PRIX_CENTIMES,
-      promo: promo ? { code: C.PROMO_CODE, pourcent: C.PROMO_POURCENT } : null,
+      promo: promo ? { code: P.code, pourcent: P.pourcent } : null,
       region: region || null,
       garantie: C.GARANTIE_JOURS,
       paiementOuvert: !!stripe,
@@ -767,8 +771,8 @@ export function creerServeur({ stockage, stripe = null, stripeTest = false, cour
     const zone = C.zoneValide(corps.zone);
     let ouverte;
     try {
-      ouverte = await ouvrirSession((avecPromo) => sessionStripe({
-        lang, solo, point, email, avecPromo, zone,
+      ouverte = await ouvrirSession((avecPromo, champCodes) => sessionStripe({
+        lang, solo, point, email, avecPromo, champCodes, zone,
         reference: ligne.id,
         metadata: { bilan: ligne.id, role, mode: solo ? 'solo' : 'duo', ...(point ? { formule: 'point' } : {}), ...(zone ? { zone } : {}) },
         succes: base + '?paiement={CHECKOUT_SESSION_ID}&b=' + ligne.id,
@@ -792,7 +796,7 @@ export function creerServeur({ stockage, stripe = null, stripeTest = false, cour
 
   // La page de paiement de Stripe, la même pour un client (payer) et pour
   // l'aperçu de l'admin (apercuPaiement) : prix, réduction, textes.
-  function sessionStripe({ lang, solo, point, email, avecPromo, zone, reference, metadata, succes, annule }) {
+  function sessionStripe({ lang, solo, point, email, avecPromo, champCodes, zone, reference, metadata, succes, annule }) {
     const t = PRODUIT[lang];
     const region = C.zoneValide(zone);
     return {
@@ -803,13 +807,14 @@ export function creerServeur({ stockage, stripe = null, stripeTest = false, cour
       success_url: succes,
       cancel_url: annule,
       // La réduction en cours est appliquée d'office (personne n'a de code à
-      // taper) ; Stripe refuse `allow_promotion_codes` avec `discounts`, le
-      // champ des codes ne revient donc que sans réduction. Le prix d'une
-      // région se paie tel quel, sans l'une ni l'autre, comme le point sur ma
-      // relation, qui n'a ni réduction ni champ des codes.
+      // taper) ; Stripe refuse `allow_promotion_codes` avec `discounts`. Le
+      // champ des codes ne vient que si Stripe a refusé la réduction affichée
+      // (`champCodes`, ouvrirSession) : sans réduction, un champ vide fait
+      // chercher un code ailleurs (10 novembre 2026). Le prix d'une région se
+      // paie tel quel, sans l'une ni l'autre, comme le point sur ma relation.
       ...(region || point ? {}
-        : avecPromo ? { discounts: [{ promotion_code: C.PROMO_STRIPE }] }
-        : { allow_promotion_codes: 'true' }),
+        : avecPromo ? { discounts: [{ promotion_code: P.stripe }] }
+        : champCodes ? { allow_promotion_codes: 'true' } : {}),
       metadata,
       payment_intent_data: { metadata },
       custom_text: { submit: { message: solo ? t.mentionSolo : t.mention } },
@@ -826,18 +831,19 @@ export function creerServeur({ stockage, stripe = null, stripeTest = false, cour
   }
 
   // Un code expiré, désactivé ou à son plafond ne bloque jamais une vente :
-  // la page de paiement se rouvre au prix plein, avec le champ des codes, et
-  // l'erreur part au journal de la fonction.
+  // la page de paiement se rouvre au prix plein, avec le champ des codes (le
+  // client a vu la réduction sur la page et peut taper le code), et l'erreur
+  // part au journal de la fonction.
   // `sansPromo` : le prix d'une région, qui ne prend pas la réduction.
   async function ouvrirSession(parametres, sansPromo) {
     const promo = !sansPromo && promoActive();
     try {
-      return { session: await stripe.creerSession(parametres(promo)), promo };
+      return { session: await stripe.creerSession(parametres(promo, false)), promo };
     } catch (e) {
       if (!promo) throw e;
-      console.warn('[bilan] réduction ' + C.PROMO_CODE + ' refusée par Stripe : ' + String(e.message || e).slice(0, 200));
+      console.warn('[bilan] réduction ' + P.code + ' refusée par Stripe : ' + String(e.message || e).slice(0, 200));
     }
-    return { session: await stripe.creerSession(parametres(false)), promo: false };
+    return { session: await stripe.creerSession(parametres(false, true)), promo: false };
   }
 
   // Le montant que Stripe demandera, réduction comprise, tel qu'il le calcule.
@@ -859,13 +865,13 @@ export function creerServeur({ stockage, stripe = null, stripeTest = false, cour
     const zone = C.zoneValide(corps.zone);
     const retour = SITE + '/admin/';
     try {
-      const { session, promo } = await ouvrirSession((avecPromo) => sessionStripe({
-        lang, solo, point, avecPromo, zone,
+      const { session, promo } = await ouvrirSession((avecPromo, champCodes) => sessionStripe({
+        lang, solo, point, avecPromo, champCodes, zone,
         metadata: { apercu: 'admin', mode: solo ? 'solo' : 'duo', ...(point ? { formule: 'point' } : {}), ...(zone ? { zone } : {}) },
         succes: retour,
         annule: retour,
       }), !!zone || point);
-      return ok({ url: session.url, promo, region: zone || null, code: promo ? C.PROMO_CODE : null, total: totalSession(session), prixBase: point ? C.PRIX_POINT_CENTIMES : C.PRIX_CENTIMES });
+      return ok({ url: session.url, promo, region: zone || null, code: promo ? P.code : null, total: totalSession(session), prixBase: point ? C.PRIX_POINT_CENTIMES : C.PRIX_CENTIMES });
     } catch (e) {
       return non(502, 'stripe', { detail: String(e.message || e).slice(0, 200) });
     }

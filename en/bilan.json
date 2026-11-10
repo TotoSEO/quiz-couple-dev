@@ -785,21 +785,13 @@
   "lp": {
     "badge": "Relationship assessment",
     "titre": "Take stock of your relationship, without seeing a professional",
-    "sousTitre": "20 minutes each on your phone, or 12 minutes on your own, and a report that shows you where you stand and what you need to talk about.",
-    "offres": {
-      "cta": "Start",
-      "duo": {
-        "titre": "Together",
-        "sous": "Each on your own phone",
-        "unite": "for both of you, paid once"
-      },
-      "solo": {
-        "titre": "On your own",
-        "sous": "Without your partner",
-        "unite": "for you, paid once"
-      }
-    },
+    "sousTitre": "20 minutes each on your phone, and a report that shows you where you agree and what you need to talk about.",
     "cta": "Start the assessment",
+    "departNote": "The questions are free: you only pay at the end, if you want the report ({{prix}} for both of you).",
+    "departSolo": {
+      "question": "Would you rather do it on your own?",
+      "lien": "Take My Relationship Check-Up ({{prixPoint}})"
+    },
     "preuve": "{{nom}}: thousands of visitors every day",
     "paiements": "Secure payment via Stripe",
     "visuel": {
@@ -1031,6 +1023,10 @@
       "titre": "Ready to take stock?",
       "texte": "Together or on your own, you'll know where you stand and what you need to talk about."
     },
-    "avertissement": "Together, this assessment shows each of you the other's answers. If you're afraid of your partner, don't do it together: do the check-up on your own, or nothing at all. A domestic abuse helpline can talk with you, free and anonymously."
+    "avertissement": "Together, this assessment shows each of you the other's answers. If you're afraid of your partner, don't do it together: do the check-up on your own, or nothing at all. A domestic abuse helpline can talk with you, free and anonymously.",
+    "colle": {
+      "texte": "Relationship assessment · {{prix}}",
+      "bouton": "Start"
+    }
   }
 }

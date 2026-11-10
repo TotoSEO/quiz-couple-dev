@@ -785,21 +785,13 @@
   "lp": {
     "badge": "Relatiecheck",
     "titre": "Relatiecheck: weet waar jullie staan, zonder therapeut",
-    "sousTitre": "20 minuten per persoon op de eigen telefoon, of 12 minuten alleen, en een rapport dat laat zien waar jullie relatie staat en waarover jullie moeten praten.",
-    "offres": {
-      "cta": "Beginnen",
-      "duo": {
-        "titre": "Samen",
-        "sous": "Ieder op de eigen telefoon",
-        "unite": "voor jullie samen, één keer"
-      },
-      "solo": {
-        "titre": "Alleen",
-        "sous": "Zonder je partner",
-        "unite": "voor jou, één keer"
-      }
-    },
+    "sousTitre": "20 minuten per persoon op de eigen telefoon, en een rapport dat laat zien waar jullie het eens zijn en waarover jullie moeten praten.",
     "cta": "Begin de relatiecheck",
+    "departNote": "De vragen zijn gratis: jullie betalen pas aan het eind, als jullie het rapport willen ({{prix}} voor jullie samen).",
+    "departSolo": {
+      "question": "Liever alleen?",
+      "lien": "Kijk waar je relatie staat ({{prixPoint}})"
+    },
     "preuve": "{{nom}}, elke dag duizenden bezoekers",
     "paiements": "Veilig betalen via Stripe",
     "visuel": {
@@ -1031,6 +1023,10 @@
       "titre": "Klaar om te kijken waar jullie staan?",
       "texte": "Samen of alleen: het rapport laat zien waar de relatie staat en waar het gesprek over moet gaan."
     },
-    "avertissement": "Samen ingevuld laat deze relatiecheck aan ieder de antwoorden van de ander zien. Ben je bang voor je partner, doe hem dan niet samen: doe de check alleen, of helemaal niet. In Nederland kun je gratis en anoniem bellen met Veilig Thuis (0800-2000), dag en nacht, in België met 1712, en bij direct gevaar met 112."
+    "avertissement": "Samen ingevuld laat deze relatiecheck aan ieder de antwoorden van de ander zien. Ben je bang voor je partner, doe hem dan niet samen: doe de check alleen, of helemaal niet. In Nederland kun je gratis en anoniem bellen met Veilig Thuis (0800-2000), dag en nacht, in België met 1712, en bij direct gevaar met 112.",
+    "colle": {
+      "texte": "Relatiecheck · {{prix}}",
+      "bouton": "Beginnen"
+    }
   }
 }
