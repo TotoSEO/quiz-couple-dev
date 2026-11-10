@@ -1,12 +1,12 @@
 {
-  "genere_le": "2026-11-09T11:28:35.429Z",
+  "genere_le": "2026-11-10T03:16:33.046Z",
   "langue": "fr",
   "compte": {
     "nom": "mipaps_stories",
     "actif": true
   },
   "fuseau": "Europe/Paris",
-  "aujourdhui": "2026-11-09",
+  "aujourdhui": "2026-11-10",
   "melange": {
     "midi": {
       "1": null,
@@ -28,39 +28,12 @@
     },
     "matin": "mipaps-anime"
   },
-  "reserve_jours": 143,
+  "reserve_jours": 142,
   "a_remplir": [],
   "a_corriger": [],
   "hors_grille": [],
   "refuses": [],
   "recents_et_prevus": [
-    {
-      "jour": "2026-10-10",
-      "creneau": "matin",
-      "gabarit": "mipaps-reel",
-      "categorie": "mipaps-anime",
-      "statut": "publie",
-      "texte": null,
-      "erreur": null
-    },
-    {
-      "jour": "2026-10-10",
-      "creneau": "midi",
-      "gabarit": "mipaps-post",
-      "categorie": "mipaps-post",
-      "statut": "publie",
-      "texte": "j'ai fait un schéma",
-      "erreur": null
-    },
-    {
-      "jour": "2026-10-10",
-      "creneau": "soir",
-      "gabarit": "mipaps-statique",
-      "categorie": "mipaps-statique",
-      "statut": "publie",
-      "texte": "j'aime bien quand t'es là et qu'on fait rien",
-      "erreur": null
-    },
     {
       "jour": "2026-10-11",
       "creneau": "matin",
@@ -2864,7 +2837,7 @@
   "idees": [],
   "prochain_creneau": {
     "mipaps-anime": {
-      "jour": "2026-11-10",
+      "jour": "2026-11-11",
       "creneau": "matin"
     },
     "mipaps-statique": null,
