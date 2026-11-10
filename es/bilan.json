@@ -78,7 +78,24 @@
       "monLien": "Tu enlace personal",
       "monLienAide": "Te permite retomar tus respuestas en otro dispositivo. No se lo des a nadie, ni siquiera a {{autre}}: es la llave de tus respuestas.",
       "copierMonLien": "Copiar mi enlace",
-      "dejaRejoint": "{{autre}} se ha unido a la evaluación."
+      "dejaRejoint": "{{autre}} se ha unido a la evaluación.",
+      "unTelTitre": "¿Solo tenéis un móvil?",
+      "unTelTexte": "Responded por turnos en este: una parte para ti y luego la misma parte para {{autre}}, sin ver las respuestas del otro.",
+      "unTelBouton": "Por turnos en este móvil"
+    },
+    "unTel": {
+      "titre": "Por turnos, en este móvil",
+      "texte": "{{moi}} responde a una parte y luego le pasa el móvil a {{autre}}, que responde a la misma. Seguís así hasta el final, parte por parte.",
+      "prive": "Las respuestas del otro no se muestran nunca: cada turno empieza en una pantalla nueva. ¡Y nada de mirar por encima del hombro!",
+      "duree": "Unos cuarenta minutos entre los dos, con una pausa cuando queráis",
+      "commencer": "Empieza {{moi}}",
+      "retour": "Volver a la invitación",
+      "relaisTitre": "¡Le toca a {{autre}}!",
+      "relaisTexte": "Pásale el móvil a {{autre}}. Tus respuestas están guardadas y no se van a mostrar.",
+      "relaisPremier": "{{autre}} escribe primero su nombre y marca la casilla, y luego responde a la misma parte que tú.",
+      "relaisPartie": "Parte {{n}} de {{total}}: {{domaine}}",
+      "relaisFin": "{{moi}} ha terminado. A {{autre}} le quedan unas cuantas respuestas.",
+      "relaisBouton": "Soy {{autre}}, vamos allá"
     },
     "rejoindre": {
       "titre": "{{autre}} te propone hacer vuestra evaluación de pareja",
@@ -96,7 +113,9 @@
       "nb": "{{n}} preguntas, unos {{min}} min",
       "go": "Vamos allá",
       "pause": "Hacer una pausa",
-      "reprise": "Sigues donde lo dejaste."
+      "reprise": "Sigues donde lo dejaste.",
+      "autreProgression": "{{autre}} va por {{n}} respuestas de {{total}}.",
+      "autreFini": "{{autre}} ha terminado sus respuestas."
     },
     "question": {
       "progression": "Pregunta {{n}} de {{total}}",
@@ -141,7 +160,8 @@
       "payeTexte": "¡Gracias! Se abrirá aquí y saldrá por correo en cuanto {{autre}} termine sus respuestas.",
       "relance": "Enviar un recordatorio a {{autre}}",
       "relanceMessage": "He terminado mis respuestas de nuestra evaluación de pareja, ¡te espero! Sigues donde lo dejaste, en tu móvil.",
-      "prevenu": "Te escribiremos a {{email}} en cuanto {{autre}} termine: puedes cerrar esta página."
+      "prevenu": "Te escribiremos a {{email}} en cuanto {{autre}} termine: puedes cerrar esta página.",
+      "tourAutre": "Pasarle el móvil a {{autre}}"
     },
     "paywall": {
       "titre": "Vuestro informe completo",

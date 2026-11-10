@@ -1344,6 +1344,15 @@ test('les comptes du 27 octobre : arrivée par le QR code, écran « rapport pr�
   assert.deepEqual(c, ['invitation_vue:qr', 'invitation_vue:', 'invitation_vue:', 'offre_vue:latam', 'offre_vue:', 'offre_vue_solo:']);
 });
 
+test('un seul téléphone : le choix compté, et le partenaire qui accepte sur place', async () => {
+  const m = monter();
+  const r = await m.appel({ action: 'vue', quoi: 'un_telephone', mode: 'duo' });
+  assert.equal(r.statut, 200, JSON.stringify(r.json));
+  await m.appel({ action: 'vue', quoi: 'invitation_vue', mode: 'duo', cle: 'tel' });
+  const c = m.stockage.compteurs.map((x) => `${x.evenement}:${x.cle}`);
+  assert.deepEqual(c, ['un_telephone:', 'invitation_vue:tel']);
+});
+
 test('l\'aperçu de l\'admin au prix de l\'Amérique latine', async () => {
   const m = monter();
   const r = await m.traiter({ action: 'apercu_paiement', lang: 'es', zone: 'latam' }, { ip: '1.2.3.4', admin: true });

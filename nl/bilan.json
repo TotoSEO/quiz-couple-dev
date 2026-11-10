@@ -78,7 +78,24 @@
       "monLien": "Je persoonlijke link",
       "monLienAide": "Daarmee kun je op een ander apparaat verder met je antwoorden. Geef hem aan niemand, ook niet aan {{autre}}: het is de sleutel tot je antwoorden.",
       "copierMonLien": "Mijn link kopiëren",
-      "dejaRejoint": "{{autre}} doet mee aan de relatiecheck."
+      "dejaRejoint": "{{autre}} doet mee aan de relatiecheck.",
+      "unTelTitre": "Maar één telefoon voor jullie samen?",
+      "unTelTexte": "Antwoord om de beurt op deze: een deel voor jou, daarna hetzelfde deel voor {{autre}}, zonder de antwoorden van de ander te zien.",
+      "unTelBouton": "Om de beurt op deze telefoon"
+    },
+    "unTel": {
+      "titre": "Om de beurt, op deze telefoon",
+      "texte": "{{moi}} beantwoordt een deel en geeft de telefoon dan aan {{autre}}, die hetzelfde deel beantwoordt. Zo gaan jullie door tot het einde, deel voor deel.",
+      "prive": "De antwoorden van de ander zie je nooit: elke beurt begint op een nieuw scherm. En niet over de schouder meekijken!",
+      "duree": "Een minuut of veertig samen, met een pauze wanneer jullie willen",
+      "commencer": "{{moi}} begint",
+      "retour": "Terug naar de uitnodiging",
+      "relaisTitre": "{{autre}} is aan de beurt!",
+      "relaisTexte": "Geef de telefoon aan {{autre}}. Je antwoorden zijn opgeslagen en worden niet getoond.",
+      "relaisPremier": "{{autre}} vult eerst de eigen voornaam in en vinkt het vakje aan, en beantwoordt dan hetzelfde deel als jij.",
+      "relaisPartie": "Deel {{n}} van {{total}}: {{domaine}}",
+      "relaisFin": "{{moi}} is klaar. {{autre}} heeft nog een paar antwoorden te gaan.",
+      "relaisBouton": "Ik ben {{autre}}, daar gaan we"
     },
     "rejoindre": {
       "titre": "{{autre}} nodigt je uit voor jullie relatiecheck",
@@ -96,7 +113,9 @@
       "nb": "{{n}} vragen, ongeveer {{min}} min",
       "go": "Daar gaan we",
       "pause": "Even pauzeren",
-      "reprise": "Je gaat verder waar je gebleven was."
+      "reprise": "Je gaat verder waar je gebleven was.",
+      "autreProgression": "{{autre}} heeft {{n}} van de {{total}} vragen beantwoord.",
+      "autreFini": "{{autre}} is klaar met de antwoorden."
     },
     "question": {
       "progression": "Vraag {{n}} van {{total}}",
@@ -141,7 +160,8 @@
       "payeTexte": "Bedankt! Het opent hier en gaat per e-mail de deur uit zodra {{autre}} klaar is met de antwoorden.",
       "relance": "Stuur {{autre}} een kleine herinnering",
       "relanceMessage": "Ik ben klaar met mijn antwoorden voor onze relatiecheck, ik wacht op jou! Je gaat verder waar je gebleven was, op je telefoon.",
-      "prevenu": "We mailen je op {{email}} zodra {{autre}} klaar is: je kunt deze pagina sluiten."
+      "prevenu": "We mailen je op {{email}} zodra {{autre}} klaar is: je kunt deze pagina sluiten.",
+      "tourAutre": "Geef de telefoon aan {{autre}}"
     },
     "paywall": {
       "titre": "Jullie volledige rapport",

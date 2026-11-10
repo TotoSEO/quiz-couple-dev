@@ -533,7 +533,7 @@
   }
 
   // Un lien (personnel ou d'invitation) : on demande au serveur qui on est.
-  function ouvrirLien(id, jeton, arret, parQr) {
+  function ouvrirLien(id, jeton, arret, parQr, unTel) {
     chargement();
     appel('etat', { id: id, jeton: jeton }).then(function (r) {
       if (r.statut === 404) {
@@ -543,7 +543,7 @@
       }
       if (r.statut !== 200) return messageErreur(r.json.erreur, function () { ouvrirLien(id, jeton, arret, parQr); });
       var e = r.json;
-      if (e.invite) return rejoindre(e, jeton, parQr);
+      if (e.invite) return rejoindre(e, jeton, parQr, unTel);
       var entree = { id: id, jeton: jeton, role: e.role, mode: e.mode || 'duo', formule: e.formule || null, moi: e.moi.prenom, autre: e.autre.prenom };
       var ancienne = lireListe().filter(function (x) { return x.id === id && x.role === e.role; })[0];
       if (ancienne && ancienne.invitation) entree.invitation = ancienne.invitation;
@@ -972,6 +972,12 @@
       // n'avaient jamais commencé).
       '<div class="bilan-invite-suite"><p>' + x('invitation.suite', { autre: autre }) + '</p>' +
       bouton('commencer', x('invitation.commencer'), 'btn-cta btn-gradient btn-lg') + '</div>' +
+      // Un seul téléphone pour deux (10 novembre 2026) : chacun son tour,
+      // une partie chacun (choixUnTel). Tant que l'autre n'a pas accepté.
+      (etat && etat.autre && etat.autre.rejoint ? '' :
+        '<div class="bilan-untel"><p class="bilan-untel-titre">' + x('invitation.unTelTitre') + '</p>' +
+        '<p class="bilan-note">' + x('invitation.unTelTexte', { autre: autre }) + '</p>' +
+        bouton('unTel', x('invitation.unTelBouton'), 'btn-outline') + '</div>') +
       '<hr class="bilan-sep">' +
       '<h3 class="bilan-sous-titre">' + x('invitation.distanceTitre', { autre: autre }) + '</h3>' +
       '<p class="bilan-note">' + x('invitation.texte', { autre: autre }) + '</p>' +
@@ -995,6 +1001,7 @@
       copierMoi: function (b) { copier(lienPersonnel(entree.id, entree.jeton), b); },
       envoyerLien: function (b) { envoyerLien(b, entree.id, entree.jeton); },
       commencer: function () { ouvrir(entree); },
+      unTel: function () { choixUnTel(entree, etat); },
     };
   }
 
@@ -1023,7 +1030,7 @@
   // demande à la fin de ses propres questions, comme pour le créateur
   // (2 novembre 2026, voir creation). La situation se confirme au fil des
   // domaines (questionSituation).
-  function rejoindre(etat, jetonInvitation, parQr) {
+  function rejoindre(etat, jetonInvitation, parQr, unTel) {
     var autre = etat.autre.prenom;
     var html = carte(
       duo('salut', 'mignon', 86, etat.autre.genre, etat.moi.genre) +
@@ -1047,7 +1054,7 @@
       p.textContent = ins(remplir(tr(cle, ''), {}));
       p.hidden = false;
     }
-    compterVue('invitation_vue', { mode: 'duo', id: etat.id, cle: parQr ? 'qr' : '' });
+    compterVue('invitation_vue', { mode: 'duo', id: etat.id, cle: unTel ? 'tel' : parQr ? 'qr' : '' });
     ACTIONS = {
       accepter: function (b) {
         var prenom = (document.getElementById('bilan-moi').value || '').trim();
@@ -1058,11 +1065,109 @@
           .then(function (r) {
             if (r.statut !== 200) { b.disabled = false; return erreur(r.statut === 409 ? 'rejoindre.lienUtilise' : 'erreurs.serveur'); }
             var entree = { id: etat.id, jeton: r.json.jeton, role: etat.role, moi: prenom, autre: autre, statut: 'encours' };
+            if (unTel) { entree.unTel = true; entree.pos = 0; }
             garder(entree);
             ouvrir(entree);
           })
           .catch(function () { b.disabled = false; erreur('erreurs.reseau'); });
       },
+    };
+  }
+
+  // ── Un seul téléphone, chacun son tour ──────────────────────────────────
+  // 10 novembre 2026 (Thomas : « Je suis d'accord avec tout » sur un mode à
+  // deux sur un seul téléphone ; sept évaluations à deux sur dix n'avaient
+  // jamais de partenaire). Le créateur répond à une partie et passe le
+  // téléphone ; l'autre accepte l'invitation sur place (son prénom, son
+  // genre, sa case) et répond à la même partie, et ainsi de suite jusqu'à la
+  // fin. Les deux évaluations restent sur l'appareil, une entrée par rôle
+  // (qc-bilans) qui porte `unTel` et `pos`, le rang dans C.ORDRE de la partie
+  // que la personne va commencer (C.ORDRE.length quand elle a tout répondu).
+  // Une partie revient à celui des deux qui en est au même point ou en
+  // retard (tourDeLAutre) ; la partie par laquelle une session commence ne
+  // repasse jamais le téléphone (sansRelais), sinon il ferait l'aller-retour.
+  function choixUnTel(entree, etat) {
+    var moi = entree.moi, autre = entree.autre;
+    afficher(carte(
+      duo('salut', 'mignon', 86, etat && etat.moi.genre, etat && etat.autre.genre) +
+      '<h2 class="bilan-titre">' + x('unTel.titre') + '</h2>' +
+      '<p class="bilan-texte">' + x('unTel.texte', { moi: moi, autre: autre }) + '</p>' +
+      '<p class="bilan-texte">' + x('unTel.prive', { moi: moi, autre: autre }) + '</p>' +
+      '<p class="bilan-pastille-info">' + x('unTel.duree') + '</p>' +
+      '<div class="bilan-actions">' + bouton('commencer', x('unTel.commencer', { moi: moi })) +
+      bouton('retour', x('unTel.retour'), 'btn-outline') + '</div>', 'bilan-untel-choix'));
+    ACTIONS = {
+      commencer: function () {
+        entree.unTel = true;
+        entree.pos = 0;
+        majEntree(entree.id, entree.role, { unTel: true, pos: 0 });
+        compterVue('un_telephone', { mode: 'duo', id: entree.id });
+        ouvrir(entree);
+      },
+      retour: function () { invitation(entree, etat); },
+    };
+  }
+  function roleAutre(role) { return role === 'a' ? 'b' : 'a'; }
+  // L'autre peut-il répondre sur ce téléphone ? Son évaluation y est
+  // (l'entrée), ou il n'a pas encore accepté et l'invitation du créateur est
+  // là ('inviter') ; sinon null : il répond ailleurs.
+  function autreIci(session, etat) {
+    var o = entreeRole(session.id, roleAutre(session.role));
+    if (o) return o;
+    var a = (etat && etat.autre) || session.autre || {};
+    return session.role === 'a' && !a.rejoint && session.entree && session.entree.invitation ? 'inviter' : null;
+  }
+  function notePos(session, rang) {
+    session.entree.pos = rang;
+    majEntree(session.id, session.role, { pos: rang });
+  }
+  function tourDeLAutre(session, rang) {
+    var o = autreIci(session);
+    if (!o) return false;
+    if (o === 'inviter') return true;
+    if ((session.autre && session.autre.fini) || o.statut === 'fini' || o.statut === 'pret' || o.statut === 'resultat') return false;
+    return (typeof o.pos === 'number' ? o.pos : 0) <= rang;
+  }
+  // Passer le téléphone : ce qui vient d'être répondu part d'abord, et le
+  // bouton attend l'enregistrement (une réponse en retard repartirait sinon
+  // avec la session de l'autre) ; puis la session de l'autre s'ouvre, ou son
+  // acceptation de l'invitation. `dom` : la partie qui commence (null à la
+  // fin de ses propres réponses).
+  function relais(dom, dejaEnregistre) {
+    var session = S;
+    var o = autreIci(session);
+    var moi = session.moi.prenom, autre = session.autre.prenom;
+    var rang = dom ? C.ORDRE.indexOf(dom) : -1;
+    var etape = o === 'inviter' ? x('unTel.relaisPremier', { autre: autre })
+      : dom ? x('unTel.relaisPartie', { n: rang + 1, total: C.ORDRE.length, domaine: titreDomaine(dom) })
+      : x('unTel.relaisFin', { moi: moi, autre: autre });
+    afficher(carte(
+      duo('mignon', 'joie', 86, session.moi.genre, session.autre.genre) +
+      '<h2 class="bilan-titre">' + x('unTel.relaisTitre', { autre: autre }) + '</h2>' +
+      '<p class="bilan-texte">' + x('unTel.relaisTexte', { moi: moi, autre: autre }) + '</p>' +
+      '<p class="bilan-pastille-info">' + etape + '</p>' +
+      '<div class="bilan-actions">' + bouton('passer', x('unTel.relaisBouton', { autre: autre }), 'btn-cta btn-gradient btn-lg', dejaEnregistre ? '' : ' disabled') + '</div>' +
+      '<p class="bilan-envoi" id="bilan-envoi" aria-live="polite"></p>' +
+      '<div class="bilan-q-bas">' + bouton('pause', x('question.pause'), 'btn-link') + '</div>', 'bilan-relais'));
+    var pret = !!dejaEnregistre;
+    if (!pret) {
+      sauver(false, function (r) {
+        if (r && r.statut === 409) return ouvrirResultat(session.entree);
+        pret = true;
+        var b = racine.querySelector('.bilan-relais [data-action="passer"]');
+        if (b) b.disabled = false;
+      });
+    }
+    ACTIONS = {
+      passer: function () {
+        if (!pret) return;
+        S = null;
+        var e = autreIci(session);
+        if (e === 'inviter') return ouvrirLien(session.id, session.entree.invitation, false, false, true);
+        if (e) { e.unTel = true; return ouvrir(e); }
+        ouvrir(session.entree);
+      },
+      pause: function () { pause(function () { relais(dom, true); }); },
     };
   }
 
@@ -1093,6 +1198,10 @@
     S.liste = listeQuestions();
     S.index = revoir ? 0 : premierSansReponse();
     if (S.index > 0 && S.index < S.liste.length) S.introsVues[S.liste[S.index].domaine] = !!revoir;
+    // Un seul téléphone : la partie où la session commence, notée, ne repasse
+    // pas le téléphone (voir choixUnTel).
+    S.sansRelais = S.index < S.liste.length ? S.liste[S.index].domaine : null;
+    if (entree.unTel && !revoir && S.mode === 'duo') notePos(S, S.sansRelais ? C.ORDRE.indexOf(S.sansRelais) : C.ORDRE.length);
     // À deux, le créateur qui n'a encore rien répondu et dont l'invitation
     // n'est pas acceptée commence par l'invitation.
     if (!revoir && S.mode === 'duo' && etat.role === 'a' && !etat.autre.rejoint && S.index === 0 && entree.invitation && !entree.invitationVue) {
@@ -1278,12 +1387,29 @@
     if (S.index >= S.liste.length) return terminer();
     var item = S.liste[S.index];
     var debutDomaine = S.index === 0 || S.liste[S.index - 1].domaine !== item.domaine;
-    if (debutDomaine && !S.introsVues[item.domaine]) return introDomaine(item.domaine);
+    if (debutDomaine && !S.introsVues[item.domaine]) {
+      // Un seul téléphone : la partie qui commence est peut-être à l'autre.
+      if (S.entree.unTel && S.mode === 'duo' && !S.revoir) {
+        var rang = C.ORDRE.indexOf(item.domaine);
+        notePos(S, rang);
+        if (item.domaine !== S.sansRelais && tourDeLAutre(S, rang)) return relais(item.domaine);
+      }
+      return introDomaine(item.domaine);
+    }
     var cles = clesAPoser(item.domaine);
     if (cles.length) return questionSituation(item.domaine, cles, 0);
     afficherQuestion();
   }
 
+  // À deux, l'autre en direct au début de chaque partie (10 novembre 2026) :
+  // ce que disait la dernière réponse enregistrée (majDepuisEtat), sur son
+  // téléphone comme sur le même.
+  function ligneAutre() {
+    var a = (S && S.autre) || {};
+    if (S.mode !== 'duo' || !a.rejoint || !a.prenom) return '';
+    return '<p class="bilan-autre-ligne">' + (a.fini ? x('domaine.autreFini', { autre: a.prenom })
+      : x('domaine.autreProgression', { autre: a.prenom, n: nombre(a.repondu || 0), total: nombre(a.total || S.liste.length) })) + '</p>';
+  }
   function introDomaine(dom) {
     var ordre = C.ORDRE;
     var n = ordre.indexOf(dom) + 1;
@@ -1300,6 +1426,7 @@
       '<h2 class="bilan-titre">' + esc(ins(D.titre || dom)) + '</h2>' +
       '<p class="bilan-texte">' + esc(ins(C.remplir(D.intro || '', { autre: S.autre.prenom }))) + '</p>' +
       '<p class="bilan-pastille-info">' + x('domaine.nb', { n: nb, min: min }) + '</p>' +
+      ligneAutre() +
       '<div class="bilan-actions">' + bouton('go', x('domaine.go')) + bouton('pause', x('domaine.pause'), 'btn-outline') + '</div>',
       'bilan-domaine-intro'));
     // À deux, l'état est relu pendant que l'intro est à l'écran quand le
@@ -1748,7 +1875,13 @@
       if (r.statut === 409) return ouvrirResultat(session.entree);
       var etat = r.json.etat;
       if (etat && etat.verrouille) return ouvrirResultat(session.entree);
-      if (r.json.fini) return attente(session.entree, etat);
+      if (r.json.fini) {
+        if (session.entree.unTel && session.mode === 'duo') {
+          notePos(session, C.ORDRE.length);
+          if (etat && !etat.autre.fini && autreIci(session, etat)) { S = session; return relais(null, true); }
+        }
+        return attente(session.entree, etat);
+      }
       if (r.json.emailManque) { S = session; session.moi.email = null; return ecranEmail(session); }
       // Il manque encore des réponses (une question ouverte par une autre),
       // ou une clé de situation jamais donnée : on la pose.
@@ -2160,10 +2293,14 @@
     S = null;
     var autre = etat.autre.prenom;
     var paye = !!etat.paye;
+    // Un seul téléphone : l'autre n'a pas fini et peut répondre ici.
+    var ici = { id: entree.id, role: etat.role, entree: entree, autre: etat.autre };
+    var tourIci = entree.unTel && !etat.autre.fini && autreIci(ici, etat);
     var html = carte(
       duo('joie', 'repos', 86, etat.moi.genre, etat.autre.genre) +
       '<h2 class="bilan-titre">' + x(paye ? 'attente.payeTitre' : 'attente.titre') + '</h2>' +
       '<p class="bilan-texte">' + x(paye ? 'attente.payeTexte' : 'attente.texte', { autre: autre }) + '</p>' +
+      (tourIci ? '<div class="bilan-actions">' + bouton('tourAutre', x('attente.tourAutre', { autre: autre }), 'btn-cta btn-gradient') + '</div>' : '') +
       // L'e-mail « rapport prêt » partira dès que l'autre aura fini.
       (!paye && etat.moi.prevenu && etat.moi.email ? '<p class="bilan-prevenu">' + x('attente.prevenu', { email: etat.moi.email, autre: autre }) + '</p>' : '') +
       blocAutre(entree, etat) +
@@ -2191,6 +2328,11 @@
     };
     actions.relancer = function (b) { relancer(b, autre); };
     actions.revoir = function () { commencerSession(entree, etat, true); };
+    actions.tourAutre = function () {
+      var e = autreIci(ici, etat);
+      if (e === 'inviter') return ouvrirLien(entree.id, entree.invitation, false, false, true);
+      if (e) { e.unTel = true; ouvrir(e); }
+    };
     actions.email = actionEmail(entree);
     ACTIONS = actions;
     var verifier = function () {

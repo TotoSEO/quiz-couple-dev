@@ -78,7 +78,24 @@
       "monLien": "Votre lien personnel",
       "monLienAide": "Il vous permet de reprendre vos réponses sur un autre appareil. Ne le donnez à personne, même pas à {{autre}} : c'est la clé de vos réponses.",
       "copierMonLien": "Copier mon lien",
-      "dejaRejoint": "{{autre}} a rejoint l'évaluation."
+      "dejaRejoint": "{{autre}} a rejoint l'évaluation.",
+      "unTelTitre": "Un seul téléphone pour vous deux ?",
+      "unTelTexte": "Répondez chacun votre tour sur celui‑ci : une partie pour vous, puis la même partie pour {{autre}}, sans voir les réponses de l'autre.",
+      "unTelBouton": "Chacun son tour sur ce téléphone"
+    },
+    "unTel": {
+      "titre": "Chacun son tour, sur ce téléphone",
+      "texte": "{{moi}} répond à une partie, puis passe le téléphone à {{autre}}, qui répond à la même. Vous continuez comme ça jusqu'à la fin, partie après partie.",
+      "prive": "Les réponses de l'autre ne s'affichent jamais : chaque tour commence sur un écran neuf. Et on ne regarde pas par-dessus l'épaule !",
+      "duree": "Une quarantaine de minutes à deux, et une pause quand vous voulez",
+      "commencer": "{{moi}} commence",
+      "retour": "Revenir à l'invitation",
+      "relaisTitre": "À {{autre}} de répondre !",
+      "relaisTexte": "Passez le téléphone à {{autre}}. Vos réponses sont enregistrées, et elles ne s'afficheront pas.",
+      "relaisPremier": "{{autre}} écrit d'abord son prénom et coche la case, puis répond à la même partie que vous.",
+      "relaisPartie": "Partie {{n}} sur {{total}} : {{domaine}}",
+      "relaisFin": "{{moi}} a fini ses réponses. Il reste à {{autre}} à finir les siennes.",
+      "relaisBouton": "Je suis {{autre}}, c'est parti"
     },
     "rejoindre": {
       "titre": "{{autre}} vous propose de faire votre évaluation de couple",
@@ -96,7 +113,9 @@
       "nb": "{{n}} questions, environ {{min}} min",
       "go": "C'est parti",
       "pause": "Faire une pause",
-      "reprise": "Vous reprenez où vous en étiez."
+      "reprise": "Vous reprenez où vous en étiez.",
+      "autreProgression": "{{autre}} en est à {{n}} réponses sur {{total}}.",
+      "autreFini": "{{autre}} a fini ses réponses."
     },
     "question": {
       "progression": "Question {{n}} sur {{total}}",
@@ -141,7 +160,8 @@
       "payeTexte": "Merci ! Il s'ouvrira ici et partira par e-mail dès que {{autre}} aura fini ses réponses.",
       "relance": "Envoyer un petit rappel à {{autre}}",
       "relanceMessage": "J'ai fini mes réponses pour notre évaluation de couple, je t'attends ! Tu reprends là où tu en étais, sur ton téléphone.",
-      "prevenu": "On vous écrit à {{email}} dès que {{autre}} a fini : vous pouvez fermer cette page."
+      "prevenu": "On vous écrit à {{email}} dès que {{autre}} a fini : vous pouvez fermer cette page.",
+      "tourAutre": "Passer le téléphone à {{autre}}"
     },
     "paywall": {
       "titre": "Votre rapport complet",

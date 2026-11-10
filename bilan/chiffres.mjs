@@ -261,9 +261,11 @@ async function analyse(base, jours) {
     // Depuis le 27 octobre 2026 : le partenaire arrivé par le QR code
     // (invitation_vue, clé qr), l'écran « rapport prêt » vu au prix d'une
     // région (offre_vue, clé de la zone) et les pages de paiement ouvertes à
-    // ce prix (paiement_region).
-    const cpt = await base.select('bilan_compteurs', 'select=jour,evenement,cle,n&evenement=in.(invitation_vue,offre_vue,paiement_region)&jour=gte.2026-10-27&order=jour.asc');
-    console.log('\nComptes du 27 octobre (QR code, prix d\'une région), jour par jour :');
+    // ce prix (paiement_region). Depuis le 10 novembre 2026, « chacun son
+    // tour sur ce téléphone » (un_telephone, puis invitation_vue clé tel
+    // quand le partenaire accepte sur place).
+    const cpt = await base.select('bilan_compteurs', 'select=jour,evenement,cle,n&evenement=in.(invitation_vue,offre_vue,paiement_region,un_telephone)&jour=gte.2026-10-27&order=jour.asc');
+    console.log('\nComptes du 27 octobre (QR code, prix d\'une région) et du 10 novembre (un seul téléphone), jour par jour :');
     for (const c of cpt) console.log(`  ${c.jour} · ${c.evenement}${c.cle ? ':' + c.cle : ''} · ${c.n}`);
   } catch (e) {
     console.log(`\nComptes du 27 octobre : ${e.message}`);
