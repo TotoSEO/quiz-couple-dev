@@ -902,8 +902,8 @@
   function libelleSourceBilan(src) {
     src = String(src || 'direct');
     if (BILAN_SOURCES[src]) return BILAN_SOURCES[src];
-    var m = /^(resultat|bas|moteur)-(.+)$/.exec(src);
-    if (m) return (m[1] === 'resultat' ? 'Résultat · ' : m[1] === 'moteur' ? 'Sous le moteur · ' : 'Bas de page · ') + m[2];
+    var m = /^(resultat|bas|moteur|score)-(.+)$/.exec(src);
+    if (m) return (m[1] === 'resultat' ? 'Résultat · ' : m[1] === 'moteur' ? 'Sous le moteur · ' : m[1] === 'score' ? 'Sous le score · ' : 'Bas de page · ') + m[2];
     m = /^article-(.+)$/.exec(src);
     if (m) return 'Dans un article · ' + m[1];
     return src;

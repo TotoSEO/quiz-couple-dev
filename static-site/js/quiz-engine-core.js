@@ -2746,8 +2746,18 @@ var QuizEngine = (function() {
       var quizEl = document.getElementById('quiz-engine') || document.querySelector('[data-quiz]');
       var cleQuiz = quizEl ? quizEl.dataset.quiz : '';
       var langQuiz = quizEl ? (quizEl.dataset.lang || 'fr') : 'fr';
-      var produits = encartBilan(cleQuiz, langQuiz);
-      if (produits) zones.produits = produits;
+      // Sous le score des tests à deux qui en donnent un (10 novembre 2026),
+      // une carte courte qui reprend leurs prénoms et leur score, à la place
+      // de l'encart sous le résultat : du 11 octobre au 9 novembre 2026,
+      // environ 12 000 résultats du test de couple vus, et 94 visites de la
+      // page de l'évaluation venues d'un encart posé loin sous le score.
+      var sousScore = zones.bilan ? carteBilanScore(cleQuiz, langQuiz, zones.bilan) : null;
+      if (sousScore) {
+        zones.bilan.apres.insertAdjacentElement('afterend', sousScore);
+      } else {
+        var produits = encartBilan(cleQuiz, langQuiz);
+        if (produits) zones.produits = produits;
+      }
     }
     // Le pave de la regie (format 2) reste dans le texte, apres la premiere
     // section : du 1er au 7 octobre 2026 il etait remonte ici, sous le
@@ -2992,6 +3002,89 @@ var QuizEngine = (function() {
           duoAvant: 'Liever samen, ieder op de eigen telefoon?', duoLien: 'Bekijk de relatiecheck' },
   };
   var COCHE_BILAN = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>';
+  // La carte sous le score (10 novembre 2026, Thomas : « Je suis d'accord
+  // avec tout » sur une carte remontée sous le score, avec leur score et
+  // leurs prénoms déjà remplis) : les tests à deux du groupe `score` de
+  // BILAN_ENTREES qui donnent un pourcentage (DuoMatchQuiz : test de couple,
+  // compatibilité, points communs, amoureux) la demandent par opts.bilan
+  // ({ pct, n, joueurs, moi, apres }, `apres` étant le bloc du score). Courte :
+  // le score et les prénoms, la phrase de Thomas, un bouton, le prix, sans
+  // image. Elle reste nette sous la porte e-mail (capture.js, HORS_PORTE) :
+  // la porte se pose sous le titre du verdict, la carte après le bloc du
+  // score. Le clic garde les deux prénoms et les genres une demi-heure sur
+  // l'appareil (qc-bilan-prenoms), et le départ de l'évaluation les reprend
+  // (bilan.js, creation) ; rien ne part au serveur avant la création. Source
+  // score-<id>, à part de resultat-<id> dans l'onglet Évaluation.
+  var BILAN_SCORE_TEXTES = {
+    fr: { titreNoms: '{{noms}}, vous avez eu {{pct}} sur {{n}} questions. L\'évaluation de couple en pose 100.',
+          titre: 'Vous avez eu {{pct}} sur {{n}} questions. L\'évaluation de couple en pose 100.',
+          suite: 'Chacun y répond sur son téléphone, sans voir les réponses de l\'autre, et le rapport vous montre sur quoi vous êtes d\'accord et de quoi il faudrait parler.',
+          bouton: 'Faire l\'évaluation à deux', et: 'et' },
+    en: { titreNoms: '{{noms}}, you scored {{pct}} on {{n}} questions. The relationship assessment has 100.',
+          titre: 'You scored {{pct}} on {{n}} questions. The relationship assessment has 100.',
+          suite: 'Each of you answers on your own phone, without seeing the other\'s answers, and the report shows where you agree and what you should talk about.',
+          bouton: 'Take the assessment together', et: 'and' },
+    es: { titreNoms: '{{noms}}, habéis sacado un {{pct}} en {{n}} preguntas. La evaluación de pareja tiene 100.',
+          titre: 'Habéis sacado un {{pct}} en {{n}} preguntas. La evaluación de pareja tiene 100.',
+          suite: 'Cada uno responde en su teléfono, sin ver las respuestas del otro, y el informe os muestra en qué estáis de acuerdo y de qué tendríais que hablar.',
+          bouton: 'Hacer la evaluación en pareja', et: 'y' },
+    de: { titreNoms: '{{noms}}, ihr habt bei {{n}} Fragen {{pct}} erreicht. Die Beziehungsanalyse stellt euch 100.',
+          titre: 'Ihr habt bei {{n}} Fragen {{pct}} erreicht. Die Beziehungsanalyse stellt euch 100.',
+          suite: 'Jeder antwortet auf dem eigenen Handy, ohne die Antworten des anderen zu sehen, und der Bericht zeigt euch, worin ihr euch einig seid und worüber ihr reden solltet.',
+          bouton: 'Die Analyse zu zweit machen', et: 'und' },
+    it: { titreNoms: '{{noms}}, il vostro punteggio è {{pct}} su {{n}} domande. La valutazione di coppia ne fa 100.',
+          titre: 'Il vostro punteggio è {{pct}} su {{n}} domande. La valutazione di coppia ne fa 100.',
+          suite: 'Ciascuno risponde sul proprio telefono, senza vedere le risposte dell\'altro, e il report vi mostra su cosa siete d\'accordo e di cosa dovreste parlare.',
+          bouton: 'Fare la valutazione in due', et: 'e' },
+    nl: { titreNoms: '{{noms}}, jullie scoorden {{pct}} op {{n}} vragen. De relatiecheck stelt er 100.',
+          titre: 'Jullie scoorden {{pct}} op {{n}} vragen. De relatiecheck stelt er 100.',
+          suite: 'Ieder antwoordt op de eigen telefoon, zonder de antwoorden van de ander te zien, en het rapport laat zien waar jullie het eens zijn en waarover jullie zouden moeten praten.',
+          bouton: 'Doe de relatiecheck samen', et: 'en' },
+  };
+  var CLE_PRENOMS_BILAN = 'qc-bilan-prenoms';
+  function carteBilanScore(cle, lang, ctx) {
+    var corps = document.body;
+    var chemin = corps && corps.getAttribute('data-bilan');
+    if (!chemin || corps.getAttribute('data-bilan-groupe') !== 'score' || corps.getAttribute('data-bilan-formule') === 'point') return null;
+    if (!ctx || !ctx.apres || !ctx.apres.parentNode) return null;
+    var pct = Number(ctx.pct), n = Number(ctx.n);
+    if (!isFinite(pct) || pct < 0 || pct > 100 || !(n > 0)) return null;
+    var t = BILAN_SCORE_TEXTES[lang] || BILAN_SCORE_TEXTES.fr;
+    var tb = BILAN_TEXTES[lang] || BILAN_TEXTES.fr;
+    // Les prénoms tapés au départ, celui du téléphone d'abord à distance ;
+    // « Joueur 1 » et « Joueur 2 », mis quand le champ est resté vide, ne
+    // comptent pas.
+    var defauts = [tg('playerSetup.player1', 'Joueur 1'), tg('playerSetup.player2', 'Joueur 2')];
+    var joueurs = (ctx.joueurs || []).slice(0, 2).map(function (j) {
+      var nom = String((j && j.name) || '').trim().slice(0, 30);
+      return { prenom: defauts.indexOf(nom) >= 0 ? '' : nom, genre: j && j.gender === 'femme' ? 'f' : j && j.gender === 'homme' ? 'h' : null };
+    });
+    if (ctx.moi === 1 && joueurs.length === 2) joueurs.reverse();
+    var deuxNoms = joueurs.length === 2 && !!joueurs[0].prenom && !!joueurs[1].prenom;
+    var et = t.et;
+    // En espagnol, « y » devient « e » devant un son « i » (Pablo e Inés).
+    if (lang === 'es' && deuxNoms && /^h?[ií](?![aeouáéóú])/i.test(joueurs[1].prenom)) et = 'e';
+    var vars = { pct: pctTexte(lang, Math.round(pct)), n: String(Math.round(n)), noms: deuxNoms ? joueurs[0].prenom + ' ' + et + ' ' + joueurs[1].prenom : '' };
+    var remplit = function (s) { return s.replace(/\{\{(\w+)\}\}/g, function (m, k) { return vars[k] != null ? vars[k] : m; }); };
+    var prix = corps.getAttribute('data-bilan-prix') || '';
+    var id = corps.getAttribute('data-bilan-id') || cle || 'test';
+    var zone = el('section', 'qr-bilan qr-bilan--score');
+    zone.setAttribute('aria-label', tb.sur);
+    zone.innerHTML = '<div class="qr-bilan-corps"><p class="qr-bilan-sur">' + esc(tb.sur) + '</p>' +
+      '<p class="qr-bilan-titre">' + esc(insecables(remplit(deuxNoms ? t.titreNoms : t.titre))) + '</p>' +
+      '<p class="qr-bilan-texte">' + esc(insecables(tb.commun[0] + ' ' + t.suite)) + '</p>' +
+      '<div class="qr-bilan-boutons"><a class="qr-bilan-bouton" href="' + esc(chemin) + '" data-bilan-src="' + esc('score-' + id) + '">' + esc(t.bouton) +
+      '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>' +
+      (prix ? '<p class="qr-bilan-prix">' + esc(insecables(tb.prix.replace('{{prix}}', prix))) + '</p>' : '') +
+      '</div>';
+    // Les prénoms qu'ils viennent de taper, pour ne pas les taper deux fois.
+    if (joueurs.length === 2 && (joueurs[0].prenom || joueurs[1].prenom)) {
+      zone.querySelector('.qr-bilan-bouton').addEventListener('click', function () {
+        try { localStorage.setItem(CLE_PRENOMS_BILAN, JSON.stringify({ t: Date.now(), a: joueurs[0], b: joueurs[1] })); } catch (e) { /* rien */ }
+      });
+    }
+    return zone;
+  }
   function encartBilan(cle, lang) {
     var corps = document.body;
     var chemin = corps && corps.getAttribute('data-bilan');
@@ -3075,7 +3168,7 @@ var QuizEngine = (function() {
     renderRelatedQuizzes(suite, currentKey, currentLang);
 
     dispositionResultat(wrap, {
-      resultat: resultat, actions: zoneActions(opts), avis: avis, suite: suite
+      resultat: resultat, actions: zoneActions(opts), avis: avis, suite: suite, bilan: opts.bilan || null
     });
   }
 
@@ -3751,6 +3844,7 @@ var QuizEngine = (function() {
         { name: n1, gender: genders[0] || null },
         { name: n2, gender: genders[1] || null }
       ];
+      self._moiDistance = null;
       self.phase = 'handoff';
       self.currentQ = 0;
       self.currentPlayer = 0;
@@ -3776,6 +3870,7 @@ var QuizEngine = (function() {
     var self = this;
     this.players = joueursDuSalon(moi, moiInfo, partenaireInfo);
     this.currentPlayer = moi;
+    this._moiDistance = moi;
     this.phase = 'playing';
     var couleurs = this.needsGender
       ? [getPlayerColor(this.players[0], this.players[1], 0), getPlayerColor(this.players[1], this.players[0], 1)]
@@ -3960,6 +4055,7 @@ var QuizEngine = (function() {
 
     renderActionButtons(wrap, {
       share: { noms: nomsPartage(this), type: 'duo', pct: pct, verdict: result ? result.title : '' },
+      bilan: { pct: pct, n: total, joueurs: this.players, moi: this._moiDistance, apres: hero },
       restart: function() { self.phase = 'setup'; self.render(); }
     });
 
@@ -4080,6 +4176,7 @@ var QuizEngine = (function() {
 
     renderActionButtons(wrap, {
       share: { noms: nomsPartage(this), type: 'duo', pct: pctG, verdict: (bG && bG.title) || '' },
+      bilan: { pct: pctG, n: total, joueurs: this.modeSolo ? [] : this.players, moi: this._moiDistance, apres: verdict },
       restart: function() { self.phase = 'setup'; self.render(); }
     });
 
