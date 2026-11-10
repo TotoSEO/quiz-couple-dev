@@ -190,6 +190,14 @@
       "emailAutre": "Op een ander adres ontvangen",
       "plie": "Het rapport nu al ontgrendelen",
       "accroche": "Je hebt nog niet gezien wat {{autre}} heeft geantwoord.",
+      "accrocheExtrait": "Er wachten nog {{n}} antwoorden van {{autre}} op je.",
+      "extrait": {
+        "titre": "Een stukje uit jullie rapport",
+        "ecart": "De vraag waarop jullie het verst uit elkaar liggen:",
+        "proche": "Een vraag waarop jullie niet helemaal hetzelfde antwoordden:",
+        "accord": "Een vraag waarop jullie hetzelfde antwoordden:",
+        "suite": "Dat is één vraag van de {{n}}. De andere staan in het rapport, elk met jullie twee antwoorden."
+      },
       "points": {
         "reponses": "Alle antwoorden van {{autre}} naast die van jou, vraag per vraag",
         "ecartsN": "Bij jullie {{n}} verschillen: waarom ze ertoe doen, en hoe je erover praat zonder ruzie",

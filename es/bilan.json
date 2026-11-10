@@ -190,6 +190,14 @@
       "emailAutre": "Recibirlo en otra dirección",
       "plie": "Desbloquear el informe ya",
       "accroche": "Todavía no has visto lo que ha respondido {{autre}}.",
+      "accrocheExtrait": "Te quedan {{n}} respuestas de {{autre}} por descubrir.",
+      "extrait": {
+        "titre": "Un adelanto de vuestro informe",
+        "ecart": "La pregunta en la que estáis más lejos el uno del otro:",
+        "proche": "Una pregunta en la que no habéis respondido exactamente igual:",
+        "accord": "Una pregunta en la que habéis respondido lo mismo:",
+        "suite": "Es una pregunta de {{n}}. Las demás están en el informe, cada una con vuestras dos respuestas."
+      },
       "points": {
         "reponses": "Todas las respuestas de {{autre}} junto a las tuyas, pregunta por pregunta",
         "ecartsN": "Para vuestras {{n}} diferencias: por qué importan, y cómo hablarlas sin discutir",

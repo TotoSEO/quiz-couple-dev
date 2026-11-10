@@ -190,6 +190,14 @@
       "emailAutre": "Get it at a different address",
       "plie": "Unlock the report now",
       "accroche": "You haven't seen what {{autre}} answered yet.",
+      "accrocheExtrait": "You still have {{n}} of {{autre}}'s answers to discover.",
+      "extrait": {
+        "titre": "A preview of your report",
+        "ecart": "The question where you're furthest apart:",
+        "proche": "A question where your answers weren't quite the same:",
+        "accord": "A question where you both gave the same answer:",
+        "suite": "That's one question out of {{n}}. The others are in the report, each with both your answers."
+      },
       "points": {
         "reponses": "All of {{autre}}'s answers next to yours, question by question",
         "ecartsN": "For your {{n}} gaps: why they matter, and how to talk about them without arguing",

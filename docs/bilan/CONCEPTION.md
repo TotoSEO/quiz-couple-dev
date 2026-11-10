@@ -2372,3 +2372,22 @@ des couples au bout qui paient. Les trois changements suivants (une vraie
 différence offerte sur l'écran « rapport prêt », la carte sous le score du
 test de couple avec les prénoms remplis, l'évaluation sur un seul téléphone)
 viennent chacun avec sa date dans les sections qui suivent.
+
+### La question offerte (le même jour)
+
+Sur l'écran « rapport prêt », à deux : après le radar et les trois tuiles, une
+carte « Un extrait de votre rapport » montre la question où les deux sont le
+plus loin l'un de l'autre, avec la réponse de chacun (la sienne d'abord), puis
+« C'est une question sur 100. Les autres sont dans le rapport, chacune avec vos
+deux réponses. » ; l'accroche de ce que contient le rapport devient « Il vous
+reste 99 réponses de X à découvrir. » La question vient de `extraitDe`
+(serveur.mjs) : l'écart de plus haute priorité du rapport, sinon des réponses
+proches, sinon un accord sur ce qui pèse le plus, et jamais la confiance,
+l'intimité, les disputes, le climat ni une question marquée sensible, pour
+qu'aucune réponse ne mette quelqu'un en danger ni ne gêne ; seulement une
+question d'échelle ou de choix, qui se lit telle quelle. Rien de plus ne quitte
+le serveur avant le paiement.
+
+À regarder : la part des couples allés au bout qui ouvrent la page de paiement
+(30 % depuis le 27 octobre), et la part de ceux-là qui paient (75 %).
+

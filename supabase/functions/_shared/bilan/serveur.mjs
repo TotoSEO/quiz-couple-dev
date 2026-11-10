@@ -314,6 +314,11 @@ function destinataires(ligne) {
 //              même tant que le bilan n'est pas ouvert, pour l'essayer.
 // courriel : { envoyer({ a, sujet, html, texte, pieces, lang }) } ou null
 /** @param {{ stockage: any, stripe?: any, stripeTest?: boolean, courriel?: any, sel?: string, maintenant?: () => Date }} options */
+// Les domaines d'où peut venir la question offerte sur l'écran « rapport
+// prêt » (apercuDe) : la vie de tous les jours et les projets, jamais la
+// confiance, l'intimité, les disputes ni le climat.
+const EXTRAIT_DOMAINES = new Set(['temps', 'quotidien', 'entourage', 'travail', 'argent', 'logement', 'enfants', 'valeurs']);
+
 // `promo` : la réduction de coeur.mjs (PROMO_*), ou celle qu'un essai donne
 // pour vérifier la page de paiement avec une réduction quand il n'y en a pas.
 const PROMO_COEUR = { code: C.PROMO_CODE, stripe: C.PROMO_STRIPE, pourcent: C.PROMO_POURCENT, fin: C.PROMO_FIN };
@@ -1078,7 +1083,29 @@ export function creerServeur({ stockage, stripe = null, stripeTest = false, cour
       // graphique araignée ») : le score de chaque domaine et sa bande, comme
       // le radar du rapport. Jamais une question ni une réponse.
       radar: an.domaines.filter((x) => !x.meteo && x.score !== null).map((x) => ({ id: x.id, score: x.score, bande: x.bande })),
+      // Une vraie question avec les deux réponses (10 novembre 2026 : depuis
+      // le 27 octobre, 70 % des couples allés au bout repartaient de cet
+      // écran sans ouvrir la page de paiement, et trois sur quatre de ceux
+      // qui l'ouvraient payaient ; à deux, ce qu'on achète, c'est de voir ce
+      // que l'autre a répondu). À deux seulement.
+      extrait: solo ? null : extraitDe(an),
     };
+  }
+
+  // La question montrée : la plus grande différence (la priorité du
+  // rapport), sinon des réponses proches, sinon un accord sur ce qui pèse le
+  // plus ; jamais un sujet sensible (confiance, intimité, disputes, le climat,
+  // ni une question marquée sensible), et seulement une question dont les
+  // réponses se lisent telles quelles (échelle ou choix, pas « qui fait
+  // quoi »). Les deux ont accepté que l'autre voie leurs réponses dans le
+  // rapport ; c'en est une page.
+  function extraitDe(an) {
+    const candidats = an.items.filter((i) => EXTRAIT_DOMAINES.has(i.domaine) && !i.sensible && (i.type === 'echelle' || i.type === 'choix'));
+    const meilleur = (liste, cle) => liste.slice().sort((x, y) => cle(y) - cle(x) || (x.id < y.id ? -1 : x.id > y.id ? 1 : 0))[0];
+    const i = meilleur(candidats.filter((x) => x.cat === 'ecart'), (x) => x.prio)
+      || meilleur(candidats.filter((x) => x.cat === 'proche'), (x) => x.prio)
+      || meilleur(candidats.filter((x) => x.cat === 'accord'), (x) => x.poids);
+    return i ? { id: i.id, domaine: i.domaine, cat: i.cat, a: i.a, b: i.b } : null;
   }
 
   function prevenu(ligne, role) {
