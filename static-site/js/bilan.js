@@ -709,8 +709,31 @@
   // deviennent une évaluation, facultative comprise, et les 102 e-mails de
   // reprise qu'elle permettait n'avaient ramené personne. Elle se demande à
   // la fin de ses propres questions (ecranEmail), comme du 21 au 25 octobre.
+  // Les prénoms du test qu'ils viennent de faire ensemble (10 novembre 2026,
+  // la carte sous le score des tests à deux, carteBilanScore de
+  // quiz-engine-core.js) : gardés une demi-heure sur l'appareil au clic,
+  // repris une seule fois au départ, puis effacés. Celui qui tenait le
+  // téléphone (le joueur 1, ou soi à distance) est « vous ».
+  function prenomsDuTest(b) {
+    var p = null;
+    try {
+      p = JSON.parse(localStorage.getItem('qc-bilan-prenoms') || 'null');
+      localStorage.removeItem('qc-bilan-prenoms');
+    } catch (e) { p = null; }
+    var age = p && typeof p.t === 'number' ? Date.now() - p.t : -1;
+    if (age < 0 || age > 30 * 60 * 1000) return;
+    var prenom = function (o) { return o && typeof o.prenom === 'string' ? o.prenom.trim().slice(0, 30) : ''; };
+    var genre = function (o) { return o && (o.genre === 'f' || o.genre === 'h') ? o.genre : null; };
+    b.moi = prenom(p.a);
+    b.autre = prenom(p.b);
+    b.genreMoi = genre(p.a);
+    b.genreAutre = genre(p.b);
+  }
   function creation() {
-    if (!brouillon) brouillon = { mode: modeDemande === 'solo' ? 'solo' : 'duo', statut: null, moi: '', autre: '', genreMoi: null, genreAutre: null, consent: false, celib: null };
+    if (!brouillon) {
+      brouillon = { mode: modeDemande === 'solo' ? 'solo' : 'duo', statut: null, moi: '', autre: '', genreMoi: null, genreAutre: null, consent: false, celib: null };
+      prenomsDuTest(brouillon);
+    }
     MODE = brouillon.mode;
     var solo = brouillon.mode === 'solo';
     // Seul(e), « Où en êtes-vous ? » d'abord (25 octobre 2026) : le formulaire

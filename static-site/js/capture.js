@@ -70,12 +70,14 @@
   // Jamais au-delà : l'encart de l'évaluation, les actions, les tests à faire
   // ensuite et la story restent nets (20 octobre 2026, Thomas : « ça floute
   // toute la zone même les produits liés, les autres tests » ; les produits
-  // affiliés sont partis le 9 novembre 2026).
-  var HORS_PORTE = '.qr-zone--avis, .qr-zone--produits, .qr-zone--actions, .qr-zone--suite, .qr-zone--pub, .story-share, .related-tests-section, .qc-porte';
+  // affiliés sont partis le 9 novembre 2026). La carte de l'évaluation posée
+  // sous le score des tests à deux (.qr-bilan--score, 10 novembre 2026) reste
+  // nette elle aussi : elle prend la place de l'encart du bas.
+  var HORS_PORTE = '.qr-zone--avis, .qr-zone--produits, .qr-zone--actions, .qr-zone--suite, .qr-zone--pub, .story-share, .related-tests-section, .qc-porte, .qr-bilan--score';
   function trouveTete(carte) {
     var cands = carte.querySelectorAll('h2, h3');
     for (var i = 0; i < cands.length; i++) {
-      if (!cands[i].closest('.qr-zone--avis, form, .story-share, .qr-zone--suite, .qr-zone--produits, .qc-porte')) return cands[i];
+      if (!cands[i].closest('.qr-zone--avis, form, .story-share, .qr-zone--suite, .qr-zone--produits, .qc-porte, .qr-bilan')) return cands[i];
     }
     return null;
   }

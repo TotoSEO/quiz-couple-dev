@@ -2391,3 +2391,31 @@ le serveur avant le paiement.
 À regarder : la part des couples allés au bout qui ouvrent la page de paiement
 (30 % depuis le 27 octobre), et la part de ceux-là qui paient (75 %).
 
+
+### La carte sous le score (le même jour)
+
+Sur le test de couple (à deux et « seul(e) ou à deux »), la compatibilité, les
+points communs et le quiz amoureux, c'est-à-dire les tests à deux du groupe
+`score` de `BILAN_ENTREES` que fait tourner `DuoMatchQuiz`, l'encart de
+l'évaluation ne vient plus après tout le résultat : une carte courte
+(`carteBilanScore`, quiz-engine-core.js, classe `.qr-bilan--score`) se pose
+juste après le bloc du score, avec leur score, leurs prénoms et le nombre de
+questions (« Léa et Tom, vous avez eu 75 % sur 20 questions. L'évaluation de
+couple en pose 100. »), la phrase de Thomas, une phrase sur ce qu'on y fait,
+le bouton « Faire l'évaluation à deux » et le prix. Sans prénoms (le mode
+seul(e) ou à deux, ou les champs laissés vides et remplacés par « Joueur 1 »),
+la phrase dit « Vous avez eu… ». La porte e-mail garde sa place sous le titre
+du verdict, et la carte reste nette après elle (`HORS_PORTE` de capture.js),
+comme l'encart du bas avant elle. Source : `score-<id>` (« Sous le score »
+dans l'onglet Évaluation).
+
+Au clic, les deux prénoms et les genres sont gardés une demi-heure sur
+l'appareil (`qc-bilan-prenoms`, localStorage, rien n'est envoyé), et le
+départ de l'évaluation les reprend une fois puis les efface (`prenomsDuTest`,
+bilan.js) : celui qui tenait le téléphone devient « vous », et à distance
+c'est le téléphone de chacun qui décide. Le bouton mène à la page de vente,
+qui dit ce qu'est l'évaluation avant le départ.
+
+À regarder : les visites de la page venues de `score-*` (94 venues de l'encart
+en trente jours avant ce jour-là, sur environ 12 000 résultats du test de
+couple), puis les évaluations créées et payées de cette source.
