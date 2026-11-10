@@ -6,12 +6,21 @@
     <atom:link href="https://quiz-couple.com/es/blog/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Los artículos de Quiz Couple sobre la vida en pareja, la psicología y las historias de amor.</description>
     <language>es</language>
-    <lastBuildDate>Sat, 07 Nov 2026 11:21:00 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 10 Nov 2026 09:20:00 GMT</lastBuildDate>
     <image>
       <url>https://quiz-couple.com/apple-touch-icon.png</url>
       <title>Quiz Couple · Blog</title>
       <link>https://quiz-couple.com/es/blog/</link>
     </image>
+    <item>
+      <title>Salir del dominio de un narcisista: las 4 etapas de la liberación</title>
+      <link>https://quiz-couple.com/es/blog/salir-del-control-de-un-narcisista/</link>
+      <guid isPermaLink="true">https://quiz-couple.com/es/blog/salir-del-control-de-un-narcisista/</guid>
+      <pubDate>Tue, 10 Nov 2026 09:20:00 GMT</pubDate>
+      <category>Psicología</category>
+      <description>Del dominio no se sale, se desmonta. El vínculo traumático explicado, las 4 etapas de la liberación mental y por qué volver no significa fracasar.</description>
+      <media:content url="https://quiz-couple.com/blog/sortir-emprise-pervers-narcissique.webp" medium="image" type="image/webp" width="1536" height="1024"/>
+    </item>
     <item>
       <title>Soy dependiente emocional de un manipulador: ¿qué hago?</title>
       <link>https://quiz-couple.com/es/blog/dependiente-emocional-y-manipulador/</link>
@@ -272,15 +281,6 @@
       <category>Psicología</category>
       <description>Acaba de cancelar la cita una hora antes. Qué significa la mayoría de las veces, la única señal que hay que mirar, y los mensajes que puedes enviarle.</description>
       <media:content url="https://quiz-couple.com/blog/il-annule-au-dernier-moment.webp" medium="image" type="image/webp" width="1200" height="630"/>
-    </item>
-    <item>
-      <title>Las señales que demuestran que un hombre está nervioso delante de una mujer</title>
-      <link>https://quiz-couple.com/es/blog/hombre-nervioso-delante-de-una-mujer/</link>
-      <guid isPermaLink="true">https://quiz-couple.com/es/blog/hombre-nervioso-delante-de-una-mujer/</guid>
-      <pubDate>Wed, 26 Aug 2026 14:20:00 GMT</pubDate>
-      <category>Psicología</category>
-      <description>Las 12 señales que demuestran que un hombre está nervioso delante de ti, qué pasa en su cuerpo en ese momento, y qué hacer para relajarlo.</description>
-      <media:content url="https://quiz-couple.com/blog/homme-nerveux-devant-une-femme.webp" medium="image" type="image/webp" width="1200" height="630"/>
     </item>
   </channel>
 </rss>

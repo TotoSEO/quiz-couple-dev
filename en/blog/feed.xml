@@ -6,12 +6,21 @@
     <atom:link href="https://quiz-couple.com/en/blog/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Quiz Couple articles on relationships, psychology and love stories.</description>
     <language>en</language>
-    <lastBuildDate>Sat, 07 Nov 2026 11:21:00 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 10 Nov 2026 09:20:00 GMT</lastBuildDate>
     <image>
       <url>https://quiz-couple.com/apple-touch-icon.png</url>
       <title>Quiz Couple · Blog</title>
       <link>https://quiz-couple.com/en/blog/</link>
     </image>
+    <item>
+      <title>Escaping a narcissist&#39;s hold: the 4 stages of liberation</title>
+      <link>https://quiz-couple.com/en/blog/escape-narcissistic-abuse/</link>
+      <guid isPermaLink="true">https://quiz-couple.com/en/blog/escape-narcissistic-abuse/</guid>
+      <pubDate>Tue, 10 Nov 2026 09:20:00 GMT</pubDate>
+      <category>Psychology</category>
+      <description>A coercive hold isn&#39;t left, it&#39;s dismantled. Trauma bonding explained, the 4 stages of mental liberation, and why going back doesn&#39;t mean failing.</description>
+      <media:content url="https://quiz-couple.com/blog/sortir-emprise-pervers-narcissique.webp" medium="image" type="image/webp" width="1536" height="1024"/>
+    </item>
     <item>
       <title>I am emotionally dependent on a manipulator: what can I do?</title>
       <link>https://quiz-couple.com/en/blog/codependent-and-manipulator/</link>
@@ -272,15 +281,6 @@
       <category>Psychology</category>
       <description>He has just called off your date an hour before. What that means most of the time, the one signal worth watching, and the messages to send him.</description>
       <media:content url="https://quiz-couple.com/blog/il-annule-au-dernier-moment.webp" medium="image" type="image/webp" width="1200" height="630"/>
-    </item>
-    <item>
-      <title>The signs that show a man is nervous around a woman</title>
-      <link>https://quiz-couple.com/en/blog/signs-a-man-is-nervous-around-you/</link>
-      <guid isPermaLink="true">https://quiz-couple.com/en/blog/signs-a-man-is-nervous-around-you/</guid>
-      <pubDate>Wed, 26 Aug 2026 14:20:00 GMT</pubDate>
-      <category>Psychology</category>
-      <description>The 12 signs that show a man is nervous around you, what is going on in his body at that moment, and what to do to put him at ease.</description>
-      <media:content url="https://quiz-couple.com/blog/homme-nerveux-devant-une-femme.webp" medium="image" type="image/webp" width="1200" height="630"/>
     </item>
   </channel>
 </rss>

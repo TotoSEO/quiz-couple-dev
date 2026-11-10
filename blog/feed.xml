@@ -6,12 +6,21 @@
     <atom:link href="https://quiz-couple.com/blog/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Les articles de Quiz Couple sur la vie de couple, la psychologie et les histoires d&#39;amour.</description>
     <language>fr</language>
-    <lastBuildDate>Sat, 07 Nov 2026 11:21:00 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 10 Nov 2026 09:20:00 GMT</lastBuildDate>
     <image>
       <url>https://quiz-couple.com/apple-touch-icon.png</url>
       <title>Quiz Couple · Le blog</title>
       <link>https://quiz-couple.com/blog/</link>
     </image>
+    <item>
+      <title>Sortir de l&#39;emprise d&#39;un pervers narcissique : les 4 étapes de la libération</title>
+      <link>https://quiz-couple.com/blog/sortir-emprise-pervers-narcissique/</link>
+      <guid isPermaLink="true">https://quiz-couple.com/blog/sortir-emprise-pervers-narcissique/</guid>
+      <pubDate>Tue, 10 Nov 2026 09:20:00 GMT</pubDate>
+      <category>Psychologie</category>
+      <description>L&#39;emprise ne se quitte pas, elle se démonte. Le lien traumatique expliqué, les 4 étapes de la libération mentale, et pourquoi retourner ne veut pas dire échouer.</description>
+      <media:content url="https://quiz-couple.com/blog/sortir-emprise-pervers-narcissique.webp" medium="image" type="image/webp" width="1536" height="1024"/>
+    </item>
     <item>
       <title>Je suis dépendante affective d&#39;un manipulateur : Que faire ?</title>
       <link>https://quiz-couple.com/blog/dependant-affectif-et-manipulateur/</link>
@@ -272,15 +281,6 @@
       <category>Psychologie</category>
       <description>Il vient d&#39;annuler votre rendez-vous une heure avant. Ce que ça veut dire la plupart du temps, le seul signal à regarder, et les messages à lui envoyer.</description>
       <media:content url="https://quiz-couple.com/blog/il-annule-au-dernier-moment.webp" medium="image" type="image/webp" width="1200" height="630"/>
-    </item>
-    <item>
-      <title>Les signes qui montrent qu&#39;un homme est nerveux devant une femme</title>
-      <link>https://quiz-couple.com/blog/homme-nerveux-devant-une-femme/</link>
-      <guid isPermaLink="true">https://quiz-couple.com/blog/homme-nerveux-devant-une-femme/</guid>
-      <pubDate>Wed, 26 Aug 2026 14:20:00 GMT</pubDate>
-      <category>Psychologie</category>
-      <description>Les 12 signes qui montrent qu&#39;un homme est nerveux devant vous, ce qui se passe dans son corps à ce moment-là, et quoi faire pour le détendre.</description>
-      <media:content url="https://quiz-couple.com/blog/homme-nerveux-devant-une-femme.webp" medium="image" type="image/webp" width="1200" height="630"/>
     </item>
   </channel>
 </rss>
