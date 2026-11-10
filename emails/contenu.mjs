@@ -124,12 +124,15 @@ export function formatPrix(centimes, lang) {
 
 // Le prix qu'on écrit ce soir. La réduction n'est annoncée que si elle vaut
 // encore le lendemain : un e-mail lu le matin ne promet pas un prix fini.
-export function prixDu(lang, instant = new Date(), promoForcee) {
-  const promo = typeof promoForcee === 'boolean' ? promoForcee : promoEnCours(new Date(instant.getTime() + 24 * 3600e3));
-  const centimes = promo ? prixPromo() : PRIX_CENTIMES;
+// `pourcent` : la réduction de coeur.mjs (0 depuis le 10 novembre 2026), ou
+// celle d'un aperçu ou d'un essai ; sans pourcentage, jamais de prix barré,
+// même quand `promoForcee` la demande.
+export function prixDu(lang, instant = new Date(), promoForcee, pourcent = PROMO_POURCENT) {
+  const promo = pourcent > 0 && (typeof promoForcee === 'boolean' ? promoForcee : promoEnCours(new Date(instant.getTime() + 24 * 3600e3)));
+  const centimes = promo ? prixPromo(pourcent) : PRIX_CENTIMES;
   return {
     promo,
-    pourcent: PROMO_POURCENT,
+    pourcent,
     code: PROMO_CODE,
     prix: formatPrix(centimes, lang),
     prixBase: formatPrix(PRIX_CENTIMES, lang),
@@ -276,13 +279,13 @@ function campagneSobre({ type, lang, t, e, ecrire, liens, variante, ev, sujet, a
 // est le nom d'expéditeur propre à la version, null pour celui des réglages.
 // Une langue de LANGUES_SANS_PRIX n'a jamais de prix ni de réduction,
 // `promo` compris.
-export function campagne(type, lang, instant = new Date(), { promo, version = 'a' } = {}) {
+export function campagne(type, lang, instant = new Date(), { promo, version = 'a', pourcent } = {}) {
   if (!TYPES.includes(type)) throw new Error(`e-mail inconnu : ${type}`);
   if (!VERSIONS.includes(version)) throw new Error(`version inconnue : ${version}`);
   const t = textes(lang);
   const e = t[type];
   const sansPrix = LANGUES_SANS_PRIX.includes(lang);
-  const p = prixDu(lang, instant, sansPrix ? false : promo);
+  const p = prixDu(lang, instant, sansPrix ? false : promo, pourcent);
   const variante = p.promo ? 'promo' : 'normal';
   const ev = EVALUATION[lang];
   const v = {

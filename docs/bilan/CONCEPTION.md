@@ -2289,3 +2289,86 @@ le bloc du prix et le dernier appel, la barre collée (deux boutons de même
 hauteur), l'accueil jusqu'au point créé avec la source `accueil-point`, aucune
 erreur dans la console. `scratchpad/encart/essai.mjs` (les encarts du point)
 passe toujours, son contrôle de l'accueil suit le nouveau bouton.
+
+## 10 novembre 2026 : trente jours de chiffres, le prix fixe et le bouton unique
+
+Thomas : « Je trouve que les ventes sont encore trop basses pour le trafic que
+fait le site. Si on pouvait faire ne serait-ce que 50 ventes par mois ça serait
+incroyable », puis « Je suis d'accord avec tout ce que tu as dit » sur les
+propositions ci-dessous.
+
+### Ce que disaient les chiffres
+
+Lus par `bilan-chiffres.yml` (30 jours) et `bilan-retrait.yml` (`lister`).
+
+- **9 ventes** du 23 octobre au 10 novembre, toutes à deux : 6 à 7,92 €, 3 au
+  prix Amérique latine (3,98 €, toutes depuis le 3 novembre), 59,46 € en tout,
+  soit environ 15 par mois.
+- **La vente se fait sur le moment, les deux ensemble** : sept couples sur
+  neuf ont payé moins de 30 minutes après la création, les deux autres en
+  moins de deux heures ; le partenaire arrive en une minute (médiane), et 97 %
+  des partenaires qui viennent arrivent dans l'heure. Rien ne rattrape les
+  autres : 58 rappels et 130 e-mails de reprise, aucune vente ; les 3 600
+  e-mails Brevo ont amené 80 visites de la page, une évaluation, aucune vente.
+- **La page de vente à deux cartes de prix** (4 novembre au soir) : les
+  visites de la page n'ont pas bougé (378 puis 385 par jour), mais les clics
+  sur « Commencer » sont passés de 23 % à 8 % des visites, les évaluations à
+  deux créées de 22,4 à 11,5 par jour et les couples allés au bout de 4,1 à
+  2,5 par jour (du 21 octobre au 4 novembre, puis du 5 au 9 novembre sans le
+  6). Les cartes marchaient (vérifié sur le site en ligne, chaque partie de la
+  carte, cinq langues) : le premier écran avait l'air d'une grille de tarifs
+  (« 7,92 €, payé une fois », « 4,90 € », Stripe, les logos des cartes).
+- **Le seul(e) n'a jamais vendu** : 262 évaluations seul(e) en 30 jours
+  (l'ancienne formule et le point), 24 au bout, aucune vente ; le point
+  depuis le 4 novembre : 24 commencés, 3 finis, aucune page Stripe.
+- **Où l'on perd les couples** (environ 420 évaluations à deux) : la moitié
+  des créateurs ne répond à aucune question ; sept évaluations sur dix n'ont
+  jamais de partenaire ; ceux qui commencent lâchent surtout dans les deux
+  premiers domaines (31 % puis 23 %), presque plus personne ensuite ; depuis
+  le 27 octobre, 30 % des couples allés au bout ouvrent la page Stripe et
+  trois sur quatre de ceux qui l'ouvrent paient (22 % des couples au bout).
+- **Par langue** : anglais 5 couples payés sur 13 au bout ; espagnol 3 sur 15
+  depuis le prix de l'Amérique latine (0 sur 22 avant) ; français 1 sur 10 ;
+  italien et allemand, 19 évaluations et aucune au bout.
+- **Les sources** des ventes : la section de l'accueil (3), la carte sous le
+  test de couple (2), les visites directes (2), le menu (1), le pied de page
+  (1). La barre « -20 % » sous le menu : 1 356 visites de la page, 33
+  évaluations, un couple au bout, aucune vente. L'encart sous le résultat du
+  test de couple : 94 visites pour environ 12 000 résultats vus, à 1 000 px
+  sous le score, après la porte e-mail.
+- Le 6 novembre, 11 départs à deux et aucune évaluation créée, sans changement
+  de code ce jour-là ; tout est revenu le 7 (les journaux de Supabase ne
+  remontent qu'à 24 heures). À surveiller.
+
+### Ce qui a changé ce jour-là
+
+- **Le prix** : 7,90 € pour les deux (3,95 € chacun), sans prix barré ni
+  pastille ; la barre sous le menu, qui ne s'affiche que pendant une
+  réduction, est partie avec elle. LOVE20 s'appliquait à tout le monde depuis
+  le 20 octobre et sans fin : c'était le prix pratiqué. Un « Black Friday à
+  -15 % » sur 9,90 € (proposé par Thomas) aurait donné 8,42 €, plus cher que
+  ce prix, présenté comme une réduction (article L112-1-1 : une réduction se
+  calcule depuis le prix le plus bas des trente jours d'avant). Pas de baisse
+  à 6,60 € : trois personnes sur quatre qui ouvrent la page Stripe paient, le
+  prix ne bloque pas en premier ; pas de hausse à 8,99 € tant que le parcours
+  change (8,99 ne se coupe d'ailleurs pas en deux). L'Amérique latine garde
+  3,98 €, le point 4,90 €. La page de paiement n'a plus de champ des codes
+  quand il n'y a pas de réduction (`champCodes`, serveur.mjs), et la sonde de
+  `bilan-sante.yml` vérifie que Stripe demande 7,90 €.
+- **Le haut de la page de vente** : un seul gros bouton à deux (« Commencer
+  l'évaluation »), dessous « Les questions sont gratuites : vous ne payez qu'à
+  la fin, si vous voulez le rapport (7,90 € pour vous deux) » (`lp.departNote`)
+  et le point en lien avec son prix (`lp.departSolo`) ; le dernier appel
+  pareil ; la barre collée sur téléphone : « Évaluation de couple · 7,90 € » et
+  un bouton (`lp.colle`). Les deux façons restent côte à côte plus bas
+  (`#facons`) et dans le bloc du prix ; l'accueil garde ses deux boutons.
+
+### Ce qu'il faut regarder
+
+Dans `bilan-chiffres.yml`, jour par jour : la part des visites de la page qui
+cliquent (`ctas` sur `vues`, 23 % avant le 4 novembre, 8 % après), les
+évaluations à deux créées et les couples au bout (`deux_finis`), puis la part
+des couples au bout qui paient. Les trois changements suivants (une vraie
+différence offerte sur l'écran « rapport prêt », la carte sous le score du
+test de couple avec les prénoms remplis, l'évaluation sur un seul téléphone)
+viennent chacun avec sa date dans les sections qui suivent.

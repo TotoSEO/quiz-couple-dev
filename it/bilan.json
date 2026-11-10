@@ -788,21 +788,13 @@
   "lp": {
     "badge": "Valutazione di coppia",
     "titre": "Fate il punto sulla vostra coppia, senza andare da un professionista",
-    "sousTitre": "20 minuti a testa sul telefono, oppure 12 minuti da solo/a, e un report che mostra a che punto è la vostra relazione e di cosa dovete parlare.",
-    "offres": {
-      "cta": "Iniziare",
-      "duo": {
-        "titre": "In due",
-        "sous": "Ciascuno sul proprio telefono",
-        "unite": "per tutti e due, in una volta"
-      },
-      "solo": {
-        "titre": "Da solo/a",
-        "sous": "Senza il tuo partner",
-        "unite": "per te, in una volta"
-      }
-    },
+    "sousTitre": "20 minuti a testa sul telefono, e un report che vi mostra su cosa siete d'accordo e di cosa dovete parlare.",
     "cta": "Iniziare la valutazione",
+    "departNote": "Le domande sono gratuite: pagate solo alla fine, se volete il report ({{prix}} per tutti e due).",
+    "departSolo": {
+      "question": "Preferisci farlo da solo/a?",
+      "lien": "Fai il punto sulla tua relazione ({{prixPoint}})"
+    },
     "preuve": "{{nom}}, migliaia di visitatori ogni giorno",
     "paiements": "Pagamento sicuro con Stripe",
     "visuel": {
@@ -1034,6 +1026,10 @@
       "titre": "Pronti a fare il punto?",
       "texte": "In due o da solo/a, il report mostra a che punto è la relazione e di cosa parlare."
     },
-    "avertissement": "In due, questa valutazione mostra a ciascuno le risposte dell'altro. Se hai paura del tuo partner, non farla in due: fai il punto da solo/a, o niente. In Italia il 1522 risponde gratis e in modo anonimo, 24 ore su 24."
+    "avertissement": "In due, questa valutazione mostra a ciascuno le risposte dell'altro. Se hai paura del tuo partner, non farla in due: fai il punto da solo/a, o niente. In Italia il 1522 risponde gratis e in modo anonimo, 24 ore su 24.",
+    "colle": {
+      "texte": "Valutazione di coppia · {{prix}}",
+      "bouton": "Iniziare"
+    }
   }
 }

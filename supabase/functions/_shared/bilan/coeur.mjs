@@ -12,7 +12,12 @@ export const VERSION = 3;
 
 // Le prix du rapport complet, pour le couple (un seul paiement débloque le
 // rapport des deux) comme pour une évaluation faite seul(e). En centimes.
-export const PRIX_CENTIMES = 990;
+// 9,90 € avec LOVE20 (-20 %, 7,92 €) du 20 octobre au 10 novembre 2026, puis
+// 7,90 € tout court (Thomas : « on continue avec le code promo mais
+// apparemment ça pose problème ») : la réduction s'appliquait à tout le monde
+// et sans fin, 9,90 € n'avait jamais été payé par personne. Le prix reste
+// pair, pour que les deux moitiés de l'écran « rapport prêt » fassent le total.
+export const PRIX_CENTIMES = 790;
 // « Satisfaits ou remboursés » : 0 pour retirer la promesse partout.
 // Aucune garantie « satisfait ou remboursé » depuis le 19 octobre 2026
 // (Thomas : « si jamais une personne n'est pas satisfaite du test, bah c'est
@@ -38,10 +43,18 @@ export const GARANTIE_JOURS = 0;
 // réduction douze heures après la fin, le temps que le site soit reconstruit :
 // personne ne paie plus que le prix affiché. Si Stripe refuse le code (expiré,
 // désactivé, plafond atteint), la page de paiement s'ouvre au prix plein, avec
-// le champ des codes, et la sonde de bilan-sante.yml le signale.
+// le champ des codes, et la sonde de bilan-sante.yml le signale. Sans
+// réduction, la page de paiement n'a pas de champ des codes : un champ vide
+// fait chercher un code ailleurs, et la vente se perd.
+// Arrêtée le 10 novembre 2026 (PROMO_POURCENT à 0). Une réduction se calcule
+// depuis le prix le plus bas pratiqué pendant les trente jours d'avant
+// (article L112-1-1 du Code de la consommation) et a une date de fin : pour
+// une prochaine, PROMO_FIN est obligatoire, et le prix barré est 7,90 €
+// jusqu'à trente jours passés à un autre prix. LOVE20 est encore actif chez
+// Stripe : seul ce fichier décide s'il s'applique.
 export const PROMO_CODE = 'LOVE20';
 export const PROMO_STRIPE = 'promo_1UShjWCqyRKQqXWFyb4ADMbH';
-export const PROMO_POURCENT = 20;
+export const PROMO_POURCENT = 0;
 export const PROMO_FIN = '';
 // Durées de conservation, en jours (reprises par la migration et la page).
 export const CONSERVATION = { nonPaye: 60, paye: 183 };
@@ -51,13 +64,14 @@ export function jourParis(instant) {
   return new Intl.DateTimeFormat('en-CA', { timeZone: 'Europe/Paris', year: 'numeric', month: '2-digit', day: '2-digit' }).format(instant);
 }
 // Le prix réduit, en centimes (Stripe arrondit de la même façon).
-export function prixPromo() {
-  return PRIX_CENTIMES - Math.round(PRIX_CENTIMES * PROMO_POURCENT / 100);
+// `pourcent` : la réduction de coeur.mjs, ou celle qu'un essai donne au serveur.
+export function prixPromo(pourcent = PROMO_POURCENT) {
+  return PRIX_CENTIMES - Math.round(PRIX_CENTIMES * pourcent / 100);
 }
 // La réduction est-elle en cours à cet instant ? `graceHeures` prolonge la
 // fin (le serveur en donne douze, voir plus haut).
-export function promoEnCours(instant = new Date(), graceHeures = 0, fin = PROMO_FIN) {
-  if (!(PROMO_POURCENT > 0 && PROMO_POURCENT < 100) || !PROMO_STRIPE) return false;
+export function promoEnCours(instant = new Date(), graceHeures = 0, fin = PROMO_FIN, pourcent = PROMO_POURCENT, stripe = PROMO_STRIPE) {
+  if (!(pourcent > 0 && pourcent < 100) || !stripe) return false;
   if (!fin) return true;
   return jourParis(new Date(instant.getTime() - graceHeures * 3600e3)) <= fin;
 }

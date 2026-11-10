@@ -15,6 +15,10 @@ function cles(o, prefixe = '') {
   return Object.entries(o).flatMap(([k, v]) => (v && typeof v === 'object' && !Array.isArray(v) ? cles(v, `${prefixe}${k}.`) : [`${prefixe}${k}${Array.isArray(v) ? `[${v.length}]` : ''}`]));
 }
 
+// Une réduction d'aperçu : coeur.mjs n'en a plus depuis le 10 novembre 2026
+// (PROMO_POURCENT à 0), mais les e-mails doivent toujours savoir l'afficher.
+const REDUC = 20;
+
 test('le parcours ne prend que les langues du site qui ont leurs textes, et au moins les cinq premières', () => {
   // Du 30 au 31 octobre 2026, une langue du site sans emails/textes/<langue>.json
   // (le néerlandais) faisait planter le module au chargement.
@@ -34,7 +38,7 @@ test('chaque campagne se rend, avec et sans réduction, et ne garde que les marq
   for (const type of TYPES) {
     for (const lang of LANGUES) {
       for (const promo of [true, false]) {
-        const c = campagne(type, lang, SOIR, { promo });
+        const c = campagne(type, lang, SOIR, { promo, pourcent: REDUC });
         // Une langue sans prix (l'espagnol) n'a jamais ni ticket ni réduction.
         const avecPrix = !LANGUES_SANS_PRIX.includes(lang);
         assert.equal(c.promo, promo && avecPrix);
@@ -56,21 +60,30 @@ test('chaque campagne se rend, avec et sans réduction, et ne garde que les marq
   }
 });
 
-test('les prix viennent de l\'évaluation : 9,90 € et 7,92 € avec -20 %, 3,96 € chacun', () => {
-  const p = prixDu('fr', SOIR, true);
-  assert.equal(p.prix, `7,92${NBSP}€`);
-  assert.equal(p.prixBase, `9,90${NBSP}€`);
-  assert.equal(p.prixChacun, `3,96${NBSP}€`);
-  assert.equal(prixDu('en', SOIR, false).prix, '€9.90');
-  assert.equal(prixDu('de', SOIR, false).prixChacun, `4,95${NBSP}€`);
-  const c = campagne('e2', 'fr', SOIR, { promo: true });
-  assert.ok(c.html.includes(`line-through;">9,90${NBSP}€</div>`));
-  assert.ok(c.html.includes(`>7,92${NBSP}€</div>`));
-  assert.ok(c.html.includes(`Soit 3,96${NBSP}€ chacun`));
-  const e1 = campagne('e1', 'fr', SOIR, { promo: true });
+test('les prix viennent de l\'évaluation : 7,90 €, 3,95 € chacun, et le prix barré seulement avec une vraie réduction', () => {
+  // Sans réduction depuis le 10 novembre 2026 : le prix tout court.
+  const p = prixDu('fr', SOIR);
+  assert.equal(p.promo, false);
+  assert.equal(p.prix, `7,90${NBSP}€`);
+  assert.equal(p.prixChacun, `3,95${NBSP}€`);
+  assert.equal(prixDu('en', SOIR, false).prix, '€7.90');
+  assert.equal(prixDu('de', SOIR, false).prixChacun, `3,95${NBSP}€`);
+  // Une réduction demandée sans pourcentage n'existe pas : pas de prix barré.
+  assert.equal(prixDu('fr', SOIR, true).promo, false);
+  const sans = campagne('e2', 'fr', SOIR, { promo: true });
+  assert.ok(!sans.html.includes('line-through') && sans.html.includes(`>7,90${NBSP}€</div>`));
+  assert.ok(sans.html.includes(`Soit 3,95${NBSP}€ chacun`));
+  // Avec une réduction (un aperçu à -20 %) : 7,90 € barré, 6,32 €, 3,16 € chacun.
+  const r = prixDu('fr', SOIR, true, 20);
+  assert.equal(r.prix, `6,32${NBSP}€`);
+  assert.equal(r.prixBase, `7,90${NBSP}€`);
+  assert.equal(r.prixChacun, `3,16${NBSP}€`);
+  const c = campagne('e2', 'fr', SOIR, { promo: true, pourcent: 20 });
+  assert.ok(c.html.includes(`line-through;">7,90${NBSP}€</div>`));
+  assert.ok(c.html.includes(`>6,32${NBSP}€</div>`));
+  assert.ok(c.html.includes(`Soit 3,16${NBSP}€ chacun`));
+  const e1 = campagne('e1', 'fr', SOIR, { promo: true, pourcent: 20 });
   assert.ok(e1.html.includes(`−20${NBSP}% en ce moment, déjà appliqué au paiement`));
-  const sans = campagne('e1', 'de', SOIR, { promo: false });
-  assert.ok(!sans.html.includes('line-through') && sans.html.includes(`>9,90${NBSP}€</div>`));
 });
 
 test('l\'espagnol ne dit aucun prix (3 novembre 2026) : ni ticket, ni réduction, ni montant, la note de l\'e1 à la place', () => {
@@ -79,7 +92,7 @@ test('l\'espagnol ne dit aucun prix (3 novembre 2026) : ni ticket, ni réduction
   for (const type of TYPES) {
     for (const version of VERSIONS) {
       for (const promo of [true, false]) {
-        const c = campagne(type, 'es', SOIR, { version, promo });
+        const c = campagne(type, 'es', SOIR, { version, promo, pourcent: REDUC });
         assert.equal(c.promo, false);
         assert.equal(c.sansPrix, true);
         assert.ok(!/€|9,90|7,92|3,96|4,95|class="prix-big"/.test(c.html), `${type} ${version} ${promo}`);
@@ -90,8 +103,8 @@ test('l\'espagnol ne dit aucun prix (3 novembre 2026) : ni ticket, ni réduction
     }
   }
   // Les autres langues gardent leur ticket et leur réduction.
-  assert.ok(campagne('e2', 'fr', SOIR, { promo: true }).html.includes('class="prix-big"'));
-  assert.equal(campagne('e1', 'it', SOIR, { promo: true }).promo, true);
+  assert.ok(campagne('e2', 'fr', SOIR, { promo: true, pourcent: REDUC }).html.includes('class="prix-big"'));
+  assert.equal(campagne('e1', 'it', SOIR, { promo: true, pourcent: REDUC }).promo, true);
 });
 
 test('le lien de l\'e-mail ne porte que la source et la façon de faire', () => {
@@ -158,7 +171,7 @@ test('typographie : insécables du français, pourcentage des autres langues', (
   assert.equal(typo('20% off: now', 'en'), '20% off: now');
   assert.equal(typo('entre 50 y 90 €', 'es'), `entre 50 y 90${NBSP}€`);
   assert.equal(typo('entre 60 et 100 €.', 'fr'), `entre 60 et 100${NBSP}€.`);
-  const c = campagne('e2', 'fr', SOIR, { promo: true });
+  const c = campagne('e2', 'fr', SOIR, { promo: true, pourcent: REDUC });
   assert.equal(c.sujet, `Compte commun ou chacun son argent${NBSP}?`);
 });
 
@@ -207,7 +220,7 @@ test('l\'e2 montre une vraie question de l\'évaluation, et l\'e1 signe du PS de
   for (const lang of LANGUES) {
     const argent = lire(`../../${lang}/bilan-questions.json`).domaines.argent;
     const q = argent.questions.arg1;
-    const e2 = campagne('e2', lang, SOIR, { promo: true });
+    const e2 = campagne('e2', lang, SOIR, { promo: true, pourcent: REDUC });
     // La carte : le domaine, la question et ses quatre réponses, telles que l'évaluation les pose.
     for (const x of [argent.titre, q.q, ...q.o]) assert.ok(e2.html.includes(esc(x)), `${lang} : ${x}`);
     // L'explication cite la première réponse, et la dernière jusqu'à sa virgule.
@@ -221,7 +234,7 @@ test('l\'e2 montre une vraie question de l\'évaluation, et l\'e1 signe du PS de
     assert.ok(e1.html.includes(esc(typo(accroche, lang))), `${lang} : PS`);
     assert.ok(!campagne('e2', lang, SOIR).html.includes(esc(typo(accroche, lang))), `${lang} : pas de PS dans l'e2`);
     // Le code n'est plus écrit dans le ticket : il s'applique tout seul.
-    assert.ok(!campagne('e1', lang, SOIR, { promo: true }).html.includes('LOVE20'), `${lang} : code dans l'e1`);
+    assert.ok(!campagne('e1', lang, SOIR, { promo: true, pourcent: REDUC }).html.includes('LOVE20'), `${lang} : code dans l'e1`);
   }
 });
 
@@ -251,7 +264,7 @@ test('la version sobre : sans image ni ticket, un seul lien vers l\'évaluation,
   for (const type of TYPES) {
     for (const lang of LANGUES) {
       for (const promo of [true, false]) {
-        const c = campagne(type, lang, SOIR, { version: 'b', promo });
+        const c = campagne(type, lang, SOIR, { version: 'b', promo, pourcent: REDUC });
         const t = lireT(lang);
         assert.equal(c.version, 'b');
         assert.equal(c.expediteur, t.sobre.expediteur, `${type} ${lang}`);
@@ -260,7 +273,7 @@ test('la version sobre : sans image ni ticket, un seul lien vers l\'évaluation,
         assert.match(c.html, new RegExp(`<html lang="${lang}"`));
         assert.ok(!/<img|line-through|<!--/.test(c.html), `${type} ${lang} : image, prix barré ou commentaire`);
         // Le même sujet et le même aperçu que la maquette : seul le corps change.
-        const a = campagne(type, lang, SOIR, { promo });
+        const a = campagne(type, lang, SOIR, { promo, pourcent: REDUC });
         assert.equal(c.sujet, a.sujet);
         assert.equal(c.apercu, a.apercu);
         assert.equal(a.expediteur, null);
@@ -271,7 +284,7 @@ test('la version sobre : sans image ni ticket, un seul lien vers l\'évaluation,
         assert.equal(liens.filter((x) => x.includes(`src=email-${type}-sobre`)).length, 1);
         assert.ok(liens.includes('{{ unsubscribe }}'));
         // Le prix, dit dans une phrase, et la réduction seulement quand elle vaut.
-        const p = prixDu(lang, SOIR, promo);
+        const p = prixDu(lang, SOIR, promo, REDUC);
         // Une fois chacun : avec la réduction, « 7,92 € ... au lieu de 9,90 € » ;
         // sans, le prix habituel seul.
         const fois = (x) => c.html.split(x).length - 1;

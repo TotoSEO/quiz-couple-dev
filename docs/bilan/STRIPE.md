@@ -195,7 +195,15 @@ l'admin.
   `supabase/functions/_shared/bilan/coeur.mjs`. Le serveur et le site le
   lisent au même endroit (le site à la construction, la fonction au
   déploiement).
-- **Une réduction** (LOVE20, -20 %, depuis le 20 octobre 2026) : créer le
+- **Le prix depuis le 10 novembre 2026** : 7,90 € pour les deux
+  (`PRIX_CENTIMES = 790`), sans réduction (`PROMO_POURCENT = 0`). LOVE20
+  s'appliquait d'office à tout le monde depuis le 20 octobre et sans date de
+  fin : 9,90 € n'avait été payé par personne. Le code LOVE20 est encore actif
+  dans Stripe ; le site ne l'applique plus et la page de paiement n'a plus de
+  champ des codes, donc personne ne peut le taper. Thomas peut le désactiver
+  dans Stripe (Produits > Coupons > LOVE20) pour que rien ne reste ouvert ; ça
+  ne change rien au site.
+- **Une réduction** (LOVE20, -20 %, du 20 octobre au 10 novembre 2026) : créer le
   code dans Stripe (Produits > Coupons, un coupon en pourcentage, puis un
   code de promotion), puis écrire ses quatre valeurs dans `coeur.mjs` :
   `PROMO_CODE` (le code lisible), `PROMO_STRIPE` (l'identifiant `promo_...`
@@ -223,7 +231,13 @@ l'admin.
   date d'expiration du code dans Stripe au moins un jour après `PROMO_FIN`.
   Le prix barré doit être un prix vraiment pratiqué : le plus bas des
   trente jours qui précèdent la réduction (article L112-1-1 du Code de la
-  consommation). 9,90 € l'était depuis l'ouverture.
+  consommation). 9,90 € l'était à l'ouverture ; depuis le 10 novembre 2026,
+  c'est 7,90 € : une prochaine réduction se calcule depuis 7,90 € tant que
+  le site n'a pas passé trente jours à un autre prix, et a toujours une date
+  de fin (`PROMO_FIN`), sans quoi le prix réduit devient le vrai prix et le
+  prix barré un prix de référence trompeur. Sans réduction, la page de
+  paiement n'a pas de champ des codes (`champCodes` dans serveur.mjs) : un
+  champ vide fait chercher un code ailleurs.
 - **Le prix d'une région** (27 octobre 2026) : `PRIX_REGIONS` dans
   `coeur.mjs` (`{ latam: 398 }`), montré sur l'écran « rapport prêt » quand
   le fuseau horaire du téléphone est en Amérique latine (`zoneDuFuseau`).
@@ -246,8 +260,8 @@ l'admin.
   textes, moyens de paiement), créée par l'action `apercu_paiement` de la
   fonction `bilan`, qui demande le jeton de l'admin. Aucune évaluation n'est
   créée : rien n'entre dans les compteurs ni dans l'entonnoir de l'onglet. La
-  ligne sous le bouton écrit le montant que Stripe demande (7,92 € au lieu
-  de 9,90 €, code LOVE20 appliqué). Stripe garde la session dans « Paiements
+  ligne sous le bouton écrit le montant que Stripe demande (7,90 € depuis le
+  10 novembre 2026 ; 7,92 € au lieu de 9,90 €, code LOVE20 appliqué, avant). Stripe garde la session dans « Paiements
   incomplets » jusqu'à son expiration, 24 heures plus tard. Payer sur cette
   page serait un vrai paiement, rattaché à aucune évaluation (le webhook
   l'ignore) : à rembourser depuis Stripe.

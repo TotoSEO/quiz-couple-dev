@@ -87,6 +87,11 @@ try {
     // 21 octobre 2026 ne le renvoie pas : rien à comparer).
     if (p.json.total != null && p.json.total !== C.prixPromo()) throw new Error('la page de paiement demande ' + p.json.total + ' centimes au lieu de ' + C.prixPromo() + ' : la réduction ' + C.PROMO_CODE + ' de Stripe ne fait pas ' + C.PROMO_POURCENT + ' % (vérifier le coupon dans Stripe)');
     console.log('réduction ' + C.PROMO_CODE + ' appliquée par Stripe (-' + C.PROMO_POURCENT + ' %)' + (p.json.total != null ? ' : la page demande ' + (p.json.total / 100).toFixed(2).replace('.', ',') + ' €' : ''));
+  } else {
+    // Sans réduction (depuis le 10 novembre 2026) : le prix affiché, rien de moins.
+    if (p.json.promo) throw new Error('une réduction est appliquée par la fonction alors que le site n\'en affiche aucune (coeur.mjs, PROMO_POURCENT)');
+    if (p.json.total != null && p.json.total !== C.PRIX_CENTIMES) throw new Error('la page de paiement demande ' + p.json.total + ' centimes au lieu de ' + C.PRIX_CENTIMES);
+    console.log('sans réduction : la page demande ' + (C.PRIX_CENTIMES / 100).toFixed(2).replace('.', ',') + ' €');
   }
   console.log('✓ le tunnel de vente marche jusqu\'au paiement');
   code = 0;

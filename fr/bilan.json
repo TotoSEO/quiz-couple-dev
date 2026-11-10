@@ -785,21 +785,13 @@
   "lp": {
     "badge": "Évaluation de couple",
     "titre": "Faites le point sur votre couple, sans aller chez un pro",
-    "sousTitre": "20 minutes chacun sur votre téléphone, ou 12 minutes seul(e), et un rapport qui vous montre où vous en êtes et de quoi il faut parler.",
-    "offres": {
-      "cta": "Commencer",
-      "duo": {
-        "titre": "À deux",
-        "sous": "Chacun répond sur son téléphone",
-        "unite": "pour vous deux, en une fois"
-      },
-      "solo": {
-        "titre": "Seul(e)",
-        "sous": "Sans votre partenaire",
-        "unite": "pour vous, en une fois"
-      }
-    },
+    "sousTitre": "20 minutes chacun sur votre téléphone, et un rapport qui vous montre où vous êtes d'accord et de quoi il faut parler.",
     "cta": "Commencer l'évaluation",
+    "departNote": "Les questions sont gratuites : vous ne payez qu'à la fin, si vous voulez le rapport ({{prix}} pour vous deux).",
+    "departSolo": {
+      "question": "Vous préférez le faire seul(e) ?",
+      "lien": "Faites le point sur votre relation ({{prixPoint}})"
+    },
     "preuve": "{{nom}}, des milliers de visiteurs chaque jour",
     "paiements": "Paiement sécurisé par Stripe",
     "visuel": {
@@ -1031,6 +1023,10 @@
       "titre": "Prêts à faire le point ?",
       "texte": "À deux ou seul(e), vous saurez où vous en êtes et de quoi il faut parler."
     },
-    "avertissement": "À deux, cette évaluation montre à chacun les réponses de l'autre. Si vous avez peur de votre partenaire, ne la faites pas à deux : faites le point seul(e), ou rien du tout. En France, le 3919 répond gratuitement et anonymement, 24 h sur 24."
+    "avertissement": "À deux, cette évaluation montre à chacun les réponses de l'autre. Si vous avez peur de votre partenaire, ne la faites pas à deux : faites le point seul(e), ou rien du tout. En France, le 3919 répond gratuitement et anonymement, 24 h sur 24.",
+    "colle": {
+      "texte": "Évaluation de couple · {{prix}}",
+      "bouton": "Commencer"
+    }
   }
 }
