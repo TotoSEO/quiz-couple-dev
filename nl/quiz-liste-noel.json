@@ -1,0 +1,88 @@
+{
+  "hero": {
+    "badge": "Kersttest • Met z'n tweeën, of alleen voor jullie samen",
+    "title": "Lief of stout: staan jullie op de lijst van de Kerstman?",
+    "titleHighlight": "de lijst van de Kerstman",
+    "description": "Zijn jullie braaf geweest dit jaar? Ieder beantwoordt twaalf vragen over zijn decembermaand, en de test vertelt op welke lijst van de Kerstman jullie als koppel staan... en wie van jullie twee het braafst was.",
+    "subtitle": "12 vragen • 3 minuten per persoon • op één telefoon",
+    "jumpBtn": "Doe de test"
+  },
+  "section1": {
+    "title": "Hoe de test werkt",
+    "p1": "Deze test is een kerstspel om met z'n tweeën te doen. Hij vertelt met een percentage of jullie als koppel eerder op de lijst met brave of met stoute kinderen staan. Hij stelt twaalf vragen over jullie decembermaand: de adventskalender, de verstopte cadeaus, het cadeaupapier, het kerstdiner bij de schoonfamilie, het laatste plakje kerststol, en tot slot <a href=\"/nl/oud-en-nieuw-spel-voor-koppels/\">de balans van jullie jaar samen</a>.",
+    "p2": "Bij de vraag ‘De cadeaus liggen ergens in huis verstopt:’ kunnen jullie bijvoorbeeld kiezen tussen ‘niet gezocht, de verrassing gaat voor’, ‘niet gezocht, maar de verstopplek is bekend’, ‘aan een of twee pakjes is geschud’ en ‘alles opengemaakt en netjes weer ingepakt’. Het eerste antwoord levert de meeste punten op, het laatste geen enkel.",
+    "p3": "Met z'n tweeën beantwoordt de eerste de twaalf vragen en geeft de telefoon door, waarna de tweede antwoordt zonder te zien wat de ander koos. Ieder antwoordt voor zichzelf. Aan het eind neemt de test het gemiddelde van jullie twee scores: dat is het percentage voor jullie als koppel. Hij vertelt ook wie van jullie twee het braafst was, en bij welke vragen de een veel braver was dan de ander.",
+    "p4": "Je kunt hem ook alleen doen, en voor jullie tweeën antwoorden. Maar dan weten jullie niet wie het gemiddelde omlaag haalt!"
+  },
+  "section2": {
+    "title": "De vijf plekken op de lijst van de Kerstman",
+    "intro": "Afhankelijk van jullie percentage zet de test jullie op een van deze vijf plekken. Elke plek heeft zijn foto, van de berg cadeaus tot de zak steenkool.",
+    "galerie": [
+      {
+        "id": "r5",
+        "titre": "Helemaal bovenaan de lijst met brave kinderen",
+        "texte": "Vanaf 85%. De adventskalender, de cadeaus, de kerststol: alles gaat zoals het hoort.",
+        "alt": "Een berg ingepakte cadeaus onder een grote verlichte kerstboom in een woonkamer"
+      },
+      {
+        "id": "r4",
+        "titre": "Op de lijst met brave kinderen",
+        "texte": "Van 65 tot 84%. Er staan twee of drie uitglijders in het dossier, maar de slee stopt bij jullie.",
+        "alt": "Twee kerstsokken, een roze en een paarse, vol kleine cadeautjes, boven een brandende open haard"
+      },
+      {
+        "id": "r3",
+        "titre": "Precies tussen de twee lijsten in",
+        "texte": "Van 45 tot 64%. De elfjes twijfelen nog, en jullie hebben een paar dagen om de balans te laten doorslaan.",
+        "alt": "Een ingepakt cadeau en een stuk steenkool met een rode strik, naast elkaar op een schoorsteenmantel"
+      },
+      {
+        "id": "r2",
+        "titre": "Eerder op de lijst met stoute kinderen",
+        "texte": "Van 25 tot 44%. Cadeaus op het laatste moment, pakjes waaraan geschud is: de Kerstman heeft zijn wenkbrauwen gefronst.",
+        "alt": "Twee kerstsokken, een roze en een paarse, gevuld met steenkool, met één zuurstok erbij"
+      },
+      {
+        "id": "r1",
+        "titre": "Steenkool voor jullie allebei",
+        "texte": "Onder de 25%. De adventskalender heeft geen tien dagen standgehouden, en de kerststol is in de keuken verdwenen.",
+        "alt": "Een jutezak vol steenkool, dichtgebonden met een grote rode strik, onder een kerstboom"
+      }
+    ]
+  },
+  "section3": {
+    "title": "Waar komt de lijst met brave en stoute kinderen vandaan?",
+    "p1": "Dat de Kerstman een lijst bijhoudt, komt vooral uit een Amerikaans liedje, ‘Santa Claus Is Comin' to Town’. Het is geschreven door Haven Gillespie en J. Fred Coots, en in november 1934 was het voor het eerst op de radio te horen. Het vertelt dat de Kerstman een lijst maakt, die twee keer naloopt, en zo te weten komt wie braaf is geweest en wie niet.",
+    "p2": "Bij ons is het idee veel ouder, alleen hoort het bij Sinterklaas. Hij heeft zijn grote boek, waarin staat hoe de kinderen zich het hele jaar hebben gedragen. ‘Wie zoet is krijgt lekkers, wie stout is de roe’, zingen we in ‘Zie ginds komt de stoomboot’.",
+    "p3": "Steenkool in je kerstsok kennen we vooral uit Amerikaanse films. In Italië brengt de Befana het, in de nacht van 5 op 6 januari. Tegenwoordig is die steenkool van suiker, en de kinderen eten hem gewoon op!"
+  },
+  "section4": {
+    "title": "En als jullie niet op dezelfde lijst staan?",
+    "p1": "Dat komt het vaakst voor, en het is ook het grappigst. Zit de een op 80% en de ander op 40%, kijk dan naar de lijst met vragen waarbij jullie het verst uit elkaar liggen: daar zit het verschil. Vaak pakt de een alle cadeaus in en ondertekent de ander alleen het kaartje, <a href=\"/nl/welke-kerstfiguren-zijn-jullie-quiz/\">een echt elfje en een Scrooge</a>.",
+    "p2": "Achter het spel gaan een paar vragen over het echte leven: wie de tafel afruimt, wie aan de cadeaus voor de hele familie denkt, wie na het eten opruimt. Kunnen jullie minder om het verschil lachen dan gedacht, kijk dan eens <a href=\"/nl/mentale-belasting-test/\">wie thuis wat doet</a> in de rest van het jaar: vaak is het hetzelfde verhaal.",
+    "p3": "En staan jullie allebei helemaal onderaan, geen paniek. Twee mensen die samen de doos bonbons leegeten, zijn nog altijd een koppel dat elkaar goed begrijpt."
+  },
+  "section5": {
+    "title": "Wat je over deze test moet weten",
+    "p1": "Deze test is een spel, gewoon voor de lol. Hij zegt niets serieus over jullie relatie: je kunt je adventskalender in tien dagen leegeten en de rest van het jaar een schat zijn.",
+    "p2": "Er wordt niets opgeslagen: jullie antwoorden blijven op jullie telefoon. Alleen de plek die eruit komt wordt geteld, zonder voornaam, om te zien welke uitslagen het vaakst voorkomen. De foto's zijn voor deze pagina gemaakt."
+  },
+  "seo": {
+    "faqTitle": "Veelgestelde vragen",
+    "faq1Q": "Hoe weten we of we op de lijst met brave kinderen staan?",
+    "faq1A": "Doe de test met z'n tweeën: ieder beantwoordt twaalf vragen over zijn decembermaand, en de test berekent een percentage voor jullie als koppel. Vanaf 65% staan jullie op de lijst met brave kinderen. Onder de 45% eerder op de andere.",
+    "faq2Q": "Hoe wordt het percentage berekend?",
+    "faq2A": "Elk antwoord levert 0 tot 4 punten op. Drie vragen tellen iets zwaarder dan de andere: de verstopte cadeaus, het kerstdiner bij de schoonfamilie en de balans van het jaar. Het totaal wordt omgerekend naar een percentage, en met z'n tweeën neemt de test het gemiddelde van jullie twee.",
+    "faq3Q": "Kun je de test alleen doen?",
+    "faq3A": "Ja. Je kiest ‘Alleen, voor ons tweeën’ en antwoordt met jullie tweeën in gedachten. Je krijgt jullie plek op de lijst, maar niet de vergelijking tussen jullie twee.",
+    "faq4Q": "Hoe weten we wie van ons twee het braafst was?",
+    "faq4A": "Met z'n tweeën laat de test onder de uitslag van het koppel het percentage van ieder zien, en zegt hij wie van jullie twee het braafst was. Hij toont ook de drie vragen waarbij jullie het verst uit elkaar liggen.",
+    "faq5Q": "Is de test voor kinderen bedoeld?",
+    "faq5A": "De vragen zijn geschreven voor volwassenen met een relatie: ze gaan over de schoonfamilie, het cadeaubudget en de vaatwasser. Er staat niets aanstootgevends in, maar een kind zal zich er niet in herkennen.",
+    "faq6Q": "Worden mijn antwoorden opgeslagen?",
+    "faq6A": "Nee. De antwoorden blijven op jullie telefoon. Alleen de plek op de lijst wordt geteld, zonder voornaam, voor de verdeling van de uitslagen."
+  },
+  "jsonLd": {
+    "about": "de lijst met brave en stoute kinderen van de Kerstman"
+  }
+}

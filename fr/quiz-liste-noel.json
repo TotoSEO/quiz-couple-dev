@@ -1,0 +1,88 @@
+{
+  "hero": {
+    "badge": "Quiz de Noël • À deux, ou seul(e) pour le couple",
+    "title": "Le test pour savoir si vous êtes sur la liste des enfants sages du Père Noël",
+    "titleHighlight": "la liste des enfants sages",
+    "description": "Sages ou pas sages, tous les deux ? Chacun répond à douze questions sur son mois de décembre, et le test vous dit sur quelle liste du Père Noël est votre couple... et lequel de vous deux est le plus sage.",
+    "subtitle": "12 questions • 3 minutes chacun • sur un seul téléphone",
+    "jumpBtn": "Faire le test"
+  },
+  "section1": {
+    "title": "Comment marche le test",
+    "p1": "Ce test est un jeu de Noël à faire à deux. Il vous dit si votre couple est plutôt sur la liste des enfants sages ou sur celle des pas sages, avec un taux de sagesse en pourcentage. Il pose douze questions sur votre mois de décembre : le calendrier de l'avent, les cadeaux cachés, l'emballage, le repas dans la belle-famille, la dernière part de bûche, et pour finir <a href=\"/jeu-nouvel-an-couple/\">le bilan de votre année à deux</a>.",
+    "p2": "Par exemple, à la question « Les cadeaux sont cachés quelque part chez vous : », vous avez le choix entre « aucune fouille, la surprise avant tout », « aucune fouille, mais la cachette est repérée », « un paquet ou deux ont été secoués » et « tout a été ouvert, puis remballé proprement ». La première réponse rapporte le plus de points de sagesse, la dernière n'en rapporte aucun.",
+    "p3": "À deux, le premier répond aux douze questions, passe le téléphone, et le second répond sans voir ce que l'autre a choisi. Chacun répond pour soi. À la fin, le test fait la moyenne de vos deux scores : c'est le taux de sagesse de votre couple. Il vous dit aussi lequel de vous deux est le plus sage, et sur quelles questions l'un a fait beaucoup mieux que l'autre.",
+    "p4": "Vous pouvez aussi le faire seul(e), en répondant pour vous deux. Mais vous ne saurez pas qui fait baisser la moyenne !"
+  },
+  "section2": {
+    "title": "Les cinq places sur la liste du Père Noël",
+    "intro": "Selon votre taux de sagesse, le test vous range à l'une de ces cinq places. Chacune a sa photo, du tas de cadeaux au sac de charbon.",
+    "galerie": [
+      {
+        "id": "r5",
+        "titre": "Tout en haut de la liste des enfants sages",
+        "texte": "À partir de 85 % de sagesse. Le calendrier de l'avent, les cadeaux, la bûche : tout est fait dans les règles.",
+        "alt": "Une montagne de cadeaux emballés au pied d'un grand sapin illuminé, dans un salon"
+      },
+      {
+        "id": "r4",
+        "titre": "Sur la liste des enfants sages",
+        "texte": "De 65 à 84 %. Il y a deux ou trois écarts dans le dossier, mais le traîneau s'arrêtera chez vous.",
+        "alt": "Deux chaussettes de Noël, une rose et une violette, remplies de petits cadeaux, accrochées au-dessus d'un feu de cheminée"
+      },
+      {
+        "id": "r3",
+        "titre": "Pile entre les deux listes",
+        "texte": "De 45 à 64 %. Les lutins hésitent encore, et il reste quelques jours pour faire pencher la balance.",
+        "alt": "Un cadeau emballé et un morceau de charbon noué d'un ruban rouge, côte à côte sur une cheminée"
+      },
+      {
+        "id": "r2",
+        "titre": "Plutôt sur la liste des pas sages",
+        "texte": "De 25 à 44 %. Des cadeaux de dernière minute, des paquets secoués : le Père Noël a froncé les sourcils.",
+        "alt": "Deux chaussettes de Noël, une rose et une violette, remplies de charbon, avec un seul sucre d'orge"
+      },
+      {
+        "id": "r1",
+        "titre": "Du charbon pour vous deux",
+        "texte": "Moins de 25 %. Le calendrier de l'avent n'a pas tenu dix jours, et la bûche a disparu dans la cuisine.",
+        "alt": "Un sac en toile de jute rempli de charbon, fermé par un gros ruban rouge, au pied d'un sapin"
+      }
+    ]
+  },
+  "section3": {
+    "title": "D'où vient la liste des enfants sages ?",
+    "p1": "L'idée que le Père Noël tient une liste vient surtout d'une chanson américaine, « Santa Claus Is Comin' to Town ». Elle a été écrite par Haven Gillespie et J. Fred Coots, et on l'a entendue pour la première fois à la radio en novembre 1934. Elle raconte que le Père Noël fait une liste, qu'il la vérifie deux fois, et qu'il finira par savoir qui a été sage et qui ne l'a pas été.",
+    "p2": "En France, l'histoire est plus ancienne et elle passe par saint Nicolas. Dans l'Est et dans le Nord, il vient le 6 décembre avec des friandises pour les enfants sages. Il est accompagné du Père Fouettard, qui s'occupe des autres : selon les régions, il promet des coups de martinet ou il laisse un morceau de charbon.",
+    "p3": "Le charbon, d'ailleurs, on le retrouve ailleurs en Europe. En Italie, c'est la Befana qui en glisse dans les chaussettes des enfants pas sages, dans la nuit du 5 au 6 janvier. En Espagne, ce sont les Rois mages qui en apportent. Aujourd'hui c'est du charbon en sucre, et les enfants le mangent !"
+  },
+  "section4": {
+    "title": "Et si vous n'êtes pas sur la même liste ?",
+    "p1": "C'est le cas le plus courant, et c'est aussi le plus drôle. Quand l'un est à 80 % et l'autre à 40 %, regardez la liste des questions où vous avez le plus d'écart : c'est là que ça se joue. La plupart du temps, il y en a un qui emballe tous les cadeaux et un qui signe l'étiquette, <a href=\"/quiz-quels-personnages-de-noel-etes-vous/\">un vrai lutin et un Scrooge</a>.",
+    "p2": "Derrière le jeu, certaines questions parlent de la vraie vie : qui débarrasse la table, qui pense aux cadeaux de toute la famille, qui range après le réveillon. Si l'écart vous fait moins rire que prévu, regardez <a href=\"/test-charge-mentale-couple/\">ce que chacun fait à la maison</a> le reste de l'année, c'est souvent la même histoire.",
+    "p3": "Et si vous êtes tous les deux tout en bas, pas de panique. Deux personnes qui finissent la boîte de chocolats ensemble, ça fait quand même un couple qui s'entend bien."
+  },
+  "section5": {
+    "title": "Ce qu'il faut savoir sur ce test",
+    "p1": "Ce test est un jeu, à prendre au second degré. Il ne dit rien de sérieux sur votre couple : on peut vider le calendrier de l'avent en dix jours et être adorable le reste de l'année.",
+    "p2": "Rien n'est enregistré : vos réponses restent sur votre téléphone. Seule la place obtenue est comptée, sans prénom, pour savoir quels résultats sortent le plus. Les photos ont été créées pour cette page."
+  },
+  "seo": {
+    "faqTitle": "Questions fréquentes",
+    "faq1Q": "Comment savoir si on est sur la liste des enfants sages ?",
+    "faq1A": "Faites le test à deux : chacun répond à douze questions sur son mois de décembre, et le test calcule un taux de sagesse pour votre couple. À partir de 65 %, vous êtes sur la liste des enfants sages. En dessous de 45 %, vous êtes plutôt sur l'autre.",
+    "faq2Q": "Comment le taux de sagesse est-il calculé ?",
+    "faq2A": "Chaque réponse rapporte de 0 à 4 points. Trois questions comptent un peu plus que les autres : les cadeaux cachés, le repas dans la belle-famille et le bilan de l'année. Le total est ramené à un pourcentage, et à deux le test fait la moyenne de vos deux pourcentages.",
+    "faq3Q": "Peut-on faire le test seul(e) ?",
+    "faq3A": "Oui. Vous choisissez « Seul(e), pour nous deux » et vous répondez en pensant à votre couple. Vous aurez votre place sur la liste, mais pas la comparaison entre vous deux.",
+    "faq4Q": "Comment savoir qui est le plus sage des deux ?",
+    "faq4A": "À deux, le test affiche le taux de sagesse de chacun sous le résultat du couple, et il dit lequel de vous deux est le plus sage. Il montre aussi les trois questions où l'écart entre vous est le plus grand.",
+    "faq5Q": "Le test convient-il aux enfants ?",
+    "faq5A": "Les questions sont écrites pour des adultes en couple : elles parlent de belle-famille, de budget cadeaux et de lave-vaisselle. Il n'y a rien de choquant, mais un enfant ne s'y retrouvera pas.",
+    "faq6Q": "Mes réponses sont-elles enregistrées ?",
+    "faq6A": "Non. Les réponses restent sur votre téléphone. Seule la place obtenue sur la liste est comptée, sans prénom, pour la répartition des résultats."
+  },
+  "jsonLd": {
+    "about": "la liste des enfants sages du Père Noël"
+  }
+}

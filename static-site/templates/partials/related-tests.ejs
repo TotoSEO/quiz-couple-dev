@@ -122,7 +122,7 @@
     jeuQuestionsRapides: ['quizKnowledge', 'jeuQuiDeNous', 'quizTuPreferes', 'jeuQuiPourrait'],
     jeuxParMessage:   ['quizTuPreferes', 'jeuJamais', 'jeuQuiDeNous', 'testDistance'],
     jeuMarguerite:    ['testSecret', 'testCrush', 'calculatriceAmour', 'testSuisJeAmoureux'],
-    jeuNouvelAn:      ['jeuQuestionsRapides', 'quizTuPreferes', 'jeuActionVeriteHot', 'compteurCouple'],
+    jeuNouvelAn:      ['jeuQuestionsRapides', 'quizDuoNoel', 'quizTuPreferes', 'jeuActionVeriteHot', 'compteurCouple'],
     jeuOuiNon:        ['jeuDilemmes', 'jeuDixMais', 'pourContre', 'jeuQuiDeNous'],
     jeuPhrases:       ['jeuQuiDeNous', 'jeuJamais', 'quizKnowledge', 'jeuQuiPourrait'],
     jeuDixMais:       ['jeuOuiNon', 'jeuDilemmes', 'quizTuPreferes', 'jeuJamais'],
@@ -140,6 +140,10 @@
     // deux, le test qui va avec le projet, puis un quiz ou un jeu léger
     quizChienNous:       ['quizMaisonNous', 'testEmmenager', 'quizTypeCouple', 'quizTuPreferes'],
     quizMaisonNous:      ['quizChienNous', 'testEmmenager', 'testMariage', 'quizTypeCouple'],
+    // Les deux quiz de Noël (novembre 2026) : l'autre quiz de Noël, le jeu du
+    // réveillon, puis un quiz fun et un jeu léger
+    quizListeNoel:       ['quizDuoNoel', 'jeuNouvelAn', 'jeuQuiDeNous', 'quizChienNous'],
+    quizDuoNoel:         ['quizListeNoel', 'jeuNouvelAn', 'quizTypeCouple', 'quizMaisonNous'],
   };
 
   const _relatedIcons = {
@@ -154,7 +158,7 @@
     jeuActionVerite: '🎲', jeuActionVeriteHot: '🌶️', jeuGages: '🎡',
     jeuPlateau: '🎲', jeuQuiDeNous: '👀', jeuDilemmes: '⚖️', pourContre: '👍', jeuJamais: '🙊', jeuQuiPourrait: '🏆', jeuQuestionsRapides: '⚡', jeuMarguerite: '🌼', jeuNouvelAn: '🥂', jeuxParMessage: '📱', jeuOuiNon: '✅', jeuPhrases: '💬', jeuDixMais: '🔟', jeuSoireeCouples: '🎉',
     quizSerialKiller: '🔪', quizMortFilmHorreur: '🎬', quizPossession: '👻', quizSuperVilain: '🦹', quizDuoVilains: '🎭',
-    quizChienNous: '🐶', quizMaisonNous: '🏡',
+    quizChienNous: '🐶', quizMaisonNous: '🏡', quizListeNoel: '🎅', quizDuoNoel: '🎄',
     testRedFlag: '🚩', testLoveBombing: '💐', testDependance: '⚓', testPretRelation: '🌱', testPersonnalite: '💘', testTrouverAmour: '🧭', testCelibataire: '🔍',
     testCoupleOuCelibat: '🛋️', testJeLaimeEncore: '🕯️', testPurete: '🌡️', testAmourAttachement: '🌹', testDureeCelibat: '⏳', calculatriceAmour: '🧮', questionsCouple: '💬',
   };
@@ -167,7 +171,7 @@
   // il n'a pas d'entrée dans _relatedMap.
   const _bilan = (typeof sansBanniere === 'undefined' || !sansBanniere) && (typeof bilanEntree !== 'undefined' && bilanEntree && typeof bilanChemin !== 'undefined' && bilanChemin) ? bilanEntree : null;
   const _cles = (typeof suiteRoutes !== 'undefined' && Array.isArray(suiteRoutes)) ? suiteRoutes : (_relatedMap[routeKey] || []);
-  const _relatedKeys = _cles.filter(function(k) {
+  let _relatedKeys = _cles.filter(function(k) {
     return getLocalizedUrl(k, lang) && k !== 'bilanCouple';
   }).slice(0, 4);
 
@@ -182,6 +186,23 @@
     }
     return /^jeu/.test(k) || k === 'pourContre' ? 'jeux' : (/^quiz/.test(k) || k === 'zamours' ? 'quiz' : 'tests');
   };
+
+  // Pendant une saison de quiz (SAISONS_QUIZ dans config.js : Halloween, Noël),
+  // un quiz de la saison prend la quatrième carte des pages de quiz et de jeux
+  // qui n'en proposent pas déjà un, à tour de rôle d'une page à l'autre : les
+  // quiz de saison sont trouvés depuis les pages légères pendant leur période,
+  // et disparaissent des cartes le reste de l'année. Les tests de couple, les
+  // tests célibataires et les articles gardent leurs cartes.
+  const _saisonQuiz = (typeof saisonQuiz !== 'undefined' && saisonQuiz) ? saisonQuiz : null;
+  const _quizDeSaison = (_saisonQuiz && typeof saisonDesQuiz !== 'undefined' && saisonDesQuiz)
+    ? Object.keys(saisonDesQuiz).filter(function (k) { return saisonDesQuiz[k] === _saisonQuiz && getLocalizedUrl(k, lang); }) : [];
+  if (_quizDeSaison.length && _relatedKeys.length === 4 && _cles !== (typeof suiteRoutes !== 'undefined' ? suiteRoutes : null)
+      && ['quiz', 'jeux', 'speciaux'].indexOf(_familleDe(routeKey)) !== -1 && _quizDeSaison.indexOf(routeKey) === -1
+      && !_relatedKeys.some(function (k) { return _quizDeSaison.indexOf(k) !== -1; })) {
+    let _rang = 0;
+    for (let _i = 0; _i < routeKey.length; _i++) _rang = (_rang * 31 + routeKey.charCodeAt(_i)) % 9973;
+    _relatedKeys = _relatedKeys.slice(0, 3).concat([_quizDeSaison[_rang % _quizDeSaison.length]]);
+  }
 
   const _TXT = {
     fr: { pastille: 'À faire ensuite', titre: 'Continuez l\'aventure',

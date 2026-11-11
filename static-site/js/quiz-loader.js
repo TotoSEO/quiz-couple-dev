@@ -475,6 +475,24 @@
                      axes: ['pavillon', 'appartement', 'campagne', 'loft', 'architecte', 'tiny', 'renover', 'van', 'peniche', 'palier'],
                      // Les logements les plus rares ne sortent que chez ceux qui les ont cherchés (voir `coefs` du moteur).
                      coefs: { peniche: 0.87, palier: 0.85, van: 0.9, tiny: 0.91, campagne: 0.95, architecte: 0.95, loft: 0.96 } },
+    // Les deux quiz de Noël « pour nous » (novembre 2026). Les personnages de
+    // Noël : le moteur des portraits en mode commun, huit duos (le Père Noël
+    // et la Mère Noël, deux lutins, deux rennes...), chacun avec sa photo ;
+    // les réponses sont mélangées, la lettre ne dit rien du duo. La liste du
+    // Père Noël : le moteur à jauge en mode commun (SurvieQuiz,
+    // renderResultsCommun), un taux de sagesse de 0 à 100 pour le couple,
+    // cinq paliers qui ont chacun leur image (r1.webp le charbon, r5.webp le
+    // haut de la liste), et qui des deux est le plus sage (`sens: 'haut'`).
+    'duo-noel':    { prefix: 'duoNoel', engine: 'portrait', totalQ: 12, pool: 12, quizType: 'duo-noel', needsGender: true,
+                     commun: true, duoDabord: true, base: 'fun', images: 'duo-noel', vignettes: true, icone: '🎄',
+                     axes: ['noel', 'lutins', 'epices', 'tomtes', 'neige', 'noisette', 'rennes', 'scrooge'],
+                     // Scrooge et l'esprit de Noël : le duo où un seul des deux râle. Il sort
+                     // dès qu'un seul des deux l'obtient de son côté (`contraste`), et le frein
+                     // le garde rare chez ceux qui répondent seuls.
+                     contraste: 'scrooge', coefs: { scrooge: 0.85 } },
+    'liste-noel':  { prefix: 'listeNoel', engine: 'survie', totalQ: 12, pool: 12, quizType: 'liste-noel', needsGender: true,
+                     mode: 'pourcent', sens: 'haut', paliers: [25, 45, 65, 85], commun: true, duoDabord: true,
+                     base: 'fun', images: 'liste-noel', icone: '🎅' },
     // Les quiz a jauge (moteur « survie ») : des points par reponse
     // (q{N}{lettre}_pts), la somme devient des minutes de survie dans le film
     // (de 5 a 150 : un film fait au plus 2 h 30, a 150 on tient jusqu'au
@@ -3058,6 +3076,7 @@
       duoDabord: !!cfg.duoDabord,
       sansMelange: !!cfg.sansMelange,
       coefs: cfg.coefs || null,
+      contraste: cfg.contraste || null,
       icone: cfg.icone
     }, optionsDistance(cfg, questions.slice())));
   }
@@ -3066,6 +3085,13 @@
     questions.sort(function(a, b) { return a.id - b.id; });
     appliquePointsExplicites(cfg.prefix, questions);
     if (!questions.length) { showUnavailable(cfg); return; }
+    // Une image par palier (quiz « pour nous ») : r1.webp, r2.webp... dans le
+    // dossier du quiz, du palier le plus bas au plus haut.
+    var imagesPaliers = null;
+    if (cfg.images && cfg.paliers) {
+      imagesPaliers = {};
+      for (var r = 1; r <= cfg.paliers.length + 1; r++) imagesPaliers[r] = { image: imagePortrait(cfg, 'r' + r) };
+    }
     new QuizEngine.SurvieQuiz(etendre({
       container: container,
       questions: questions,
@@ -3077,6 +3103,10 @@
       max: cfg.max,
       paliers: cfg.paliers,
       modes: cfg.facons || { solo: true, duo: true },
+      commun: !!cfg.commun,
+      duoDabord: !!cfg.duoDabord,
+      sens: cfg.sens,
+      imagesPaliers: imagesPaliers,
       icone: cfg.icone
     }, optionsDistance(cfg, questions.slice())));
   }

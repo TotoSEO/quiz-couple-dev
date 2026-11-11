@@ -18,7 +18,7 @@
     },
     "noel": {
       "titre": "Speciale Natale",
-      "intro": "I quiz di Natale arrivano prima delle feste: chi di voi due è nella lista dei buoni, e qualche altra sorpresa.",
+      "intro": "Due quiz per una sera di dicembre in due: in quale lista di Babbo Natale è la vostra coppia, e che personaggi di Natale formate. Ognuno risponde per conto suo, e la coppia riceve un solo risultato, con la sua foto.",
       "bientot": "Presto"
     }
   },
@@ -36,13 +36,17 @@
     "quizChienNousNom": "Che cane fa per noi?",
     "quizChienNousTagline": "Dodici domande a testa sulla vostra vita in due, e il cane della coppia con la sua foto: corgi, golden, bassotto, shiba, husky...",
     "quizMaisonNousNom": "Che casa fa per noi?",
-    "quizMaisonNousTagline": "Dodici domande a testa sulla vita che vi immaginate, e la casa della coppia in foto: appartamento, casa di campagna, loft, casa galleggiante, tiny house..."
+    "quizMaisonNousTagline": "Dodici domande a testa sulla vita che vi immaginate, e la casa della coppia in foto: appartamento, casa di campagna, loft, casa galleggiante, tiny house...",
+    "quizListeNoelNom": "Buoni o cattivi?",
+    "quizListeNoelTagline": "Dodici domande a testa sul vostro mese di dicembre: il posto della vostra coppia nella lista di Babbo Natale, e chi dei due è stato più buono.",
+    "quizDuoNoelNom": "Che personaggi di Natale siete?",
+    "quizDuoNoelTagline": "Dodici domande a testa sul vostro Natale in due, e il duo che formate con la sua foto: due elfi, due renne, lo Schiaccianoci e la Fata Confetto..."
   },
   "section1": {
     "title": "A cosa servono questi quiz",
     "p1": "I quiz di questa pagina non somigliano ai nostri test di coppia. Non misurano niente di serio e non danno un voto alla vostra relazione. Sono giochi: che cane andrebbe bene alla vostra coppia, in che casa stareste bene, o chi di voi due morirebbe per primo in un film horror.",
     "p2": "Funzionano perché ognuno risponde per conto suo. Scoprire che la tua dolce metà vuole un husky quando tu pensavi a un bassotto, o un rudere da ristrutturare quando tu sognavi un appartamento in centro, occupa buona parte della serata!",
-    "p3": "I quiz sul futuro in due sono qui tutto l'anno. Quelli di stagione (Halloween per ora, Natale tra poco) salgono in cima alla pagina quando arriva il loro periodo, e restano giocabili il resto del tempo."
+    "p3": "I quiz sul futuro in due sono qui tutto l'anno. Quelli di stagione salgono in cima alla pagina quando arriva il loro periodo: i quiz di Halloween a ottobre, poi quelli di Natale da metà novembre, per sapere <a href=\"/it/test-lista-dei-buoni-e-cattivi/\">se la vostra coppia è stata buona quest'anno</a> o <a href=\"/it/test-che-personaggi-di-natale-siete/\">che duo di Natale formate</a>. Restano giocabili il resto del tempo."
   },
   "section2": {
     "title": "E dopo questi quiz?",
@@ -51,7 +55,7 @@
   "section3": {
     "title": "Come si gioca",
     "p1": "Tutti questi quiz si giocano allo stesso modo. In due, il primo risponde a tutta la serie, passa il telefono, e il secondo risponde a sua volta senza vedere le risposte del primo. Da solo/a, rispondi e scopri il tuo risultato.",
-    "p2": "Per i quiz sul futuro in due, la coppia riceve un solo risultato, quello che va meglio con le vostre due serie di risposte, e l'elenco delle domande su cui non siete d'accordo. Per i quiz di stagione, ognuno ha il suo, e una modalità a distanza permette di giocare ognuno sul proprio telefono.",
+    "p2": "Per i quiz sul futuro in due e per quelli di Natale, la coppia riceve un solo risultato, quello che va meglio con le vostre due serie di risposte, e l'elenco delle domande su cui non siete d'accordo. Per i quiz di Halloween, ognuno ha il suo, e una modalità a distanza permette di giocare ognuno sul proprio telefono.",
     "p3": "Nessun account da creare, niente da installare, e niente viene salvato: le risposte restano sui vostri telefoni."
   },
   "faq": {
@@ -62,10 +66,10 @@
     "a2": "Non per forza. Quasi tutti si giocano da solo/a o in due, e solo il quiz del duo di supercattivi richiede due giocatori, visto che compone un duo. Ma sono pensati per essere fatti in due: il bello è confrontare le risposte.",
     "q3": "Che fine fanno i quiz una volta passata la stagione?",
     "a3": "Restano su questa pagina, un po' più in basso, e al loro indirizzo. Non cancelliamo niente: un quiz di Halloween in pieno marzo si può fare lo stesso.",
-    "q4": "Quando arrivano i quiz di Natale?",
-    "a4": "Prima delle feste. In programma: chi di voi due è nella lista dei buoni, e qualche altra sorpresa.",
+    "q4": "Ci sono quiz di Natale?",
+    "a4": "Sì, due. «Buoni o cattivi?» vi dice in quale lista di Babbo Natale è la vostra coppia, e chi dei due è stato più buono. Il quiz dei personaggi di Natale vi dà il duo che formate, da Babbo Natale e Mamma Natale a Scrooge e lo spirito del Natale. Salgono in cima a questa pagina da metà novembre a fine dicembre.",
     "q5": "Si può giocare a distanza?",
-    "a5": "Sì per i quiz di stagione: una persona crea la partita, l'altra si unisce con il codice, e rispondete ognuno sul proprio telefono. I quiz sul futuro in due si fanno su un solo telefono, che vi passate."
+    "a5": "Sì per i quiz di Halloween: una persona crea la partita, l'altra si unisce con il codice, e rispondete ognuno sul proprio telefono. I quiz sul futuro in due e quelli di Natale si fanno su un solo telefono, che vi passate."
   },
   "jsonLd": {
     "name": "Quiz originali da fare in coppia"

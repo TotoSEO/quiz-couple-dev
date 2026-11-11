@@ -134,6 +134,8 @@
     "quizDuoVilains": "Welk superschurken­duo zijn jullie",
     "quizChienNous": "Welke hond past bij ons?",
     "quizMaisonNous": "Welk huis past bij ons?",
+    "quizListeNoel": "Lief of stout?",
+    "quizDuoNoel": "Jullie kerstfiguren",
     "bilanCouple": "Relatiecheck",
     "evaluer": "Check je relatie",
     "evaluerSous": "De volledige relatiecheck, samen of alleen",
@@ -158,7 +160,8 @@
       "rire": "Om te lachen",
       "pimenter": "Iets pittiger",
       "halloween": "Halloween",
-      "futur": "Jullie toekomst samen"
+      "futur": "Jullie toekomst samen",
+      "noel": "Kerst"
     },
     "retour": "Terug"
   },

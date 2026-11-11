@@ -20,7 +20,7 @@
     "etape3Titre": "Répondez chacun votre tour",
     "etape3Texte": "Le jeu indique à qui c'est le tour de répondre, puis demande « Et toi ? » à l'autre. Quand vous avez répondu tous les deux, on passe à la question suivante, et c'est l'autre qui commence.",
     "etape4Titre": "Regardez qui a le plus avoué",
-    "etape4Texte": "À la fin de la partie, vous obtenez un graphique chacun, avec votre nombre de « j'ai déjà » et de « je n'ai jamais ». De quoi savoir une bonne fois pour toutes qui de vous deux est le plus sage !",
+    "etape4Texte": "À la fin de la partie, vous obtenez un graphique chacun, avec votre nombre de « j'ai déjà » et de « je n'ai jamais ». De quoi savoir une bonne fois pour toutes <a href=\"/test-liste-des-enfants-sages/\">qui de vous deux est le plus sage</a> !",
     "apres": "Vous l'avez compris, il n'y a <strong>ni gage ni alcool</strong> dans notre version : on répond, on en discute, et on passe à la suivante. Si vous préférez les parties où celui qui avoue doit payer, vous pouvez enchaîner en allant <a href=\"/gage-couple/\">faire tourner la roue et tirer un gage</a>, c'est le complément parfait."
   },
   "section2": {

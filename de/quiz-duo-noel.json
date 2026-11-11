@@ -1,0 +1,107 @@
+{
+  "hero": {
+    "badge": "Weihnachtstest • Zu zweit, oder allein für euch beide",
+    "title": "Der Test, der zeigt, welche Weihnachtsfiguren ihr beide seid",
+    "titleHighlight": "welche Weihnachtsfiguren ihr beide seid",
+    "description": "Der Weihnachtsmann und die Weihnachtsfrau, zwei Elfen, Scrooge und der Geist der Weihnacht? Jeder beantwortet zwölf Fragen zu eurem Weihnachten zu zweit, und der Test zeigt euch das Weihnachtsduo, das ihr seid, mit Foto.",
+    "subtitle": "12 Fragen • 3 Minuten pro Person • an einem Handy",
+    "jumpBtn": "Zum Test"
+  },
+  "section1": {
+    "title": "So funktioniert der Test",
+    "p1": "Dieser Test ist ein Weihnachtsspiel für Paare. Er sagt euch, welches Duo von Weihnachtsfiguren ihr seid, je nachdem, wie ihr die Feiertage verbringt. Er stellt zwölf Fragen zu eurem Weihnachten zu zweit: wann die Deko herauskommt, wie euer Baum aussieht, wo ihr an Heiligabend seid, was ihr am Morgen danach macht usw.",
+    "p2": "Zum Beispiel könnt ihr bei der Frage „An Heiligabend seid ihr:“ wählen zwischen „zu Hause, und wir sind die Gastgeber“, „unterwegs, zwischen zwei Familien“, „zu zweit, im Schlafanzug“ und „irgendwo, wo Schnee liegt, wenn es geht“. Jede Antwort gibt einem oder zwei Duos Punkte. Die erste gibt sie dem Weihnachtsmann und der Weihnachtsfrau, die zweite den beiden Rentieren, die dritte den beiden Wichteln und die letzte den Schneemännern.",
+    "p3": "Zu zweit beantwortet der Erste die zwölf Fragen, gibt das Handy weiter, und der Zweite antwortet, ohne zu sehen, was der andere gewählt hat. Der Test zählt eure beiden Antwortreihen zusammen und behält das Duo mit der besten Note. Ihr seht auch das Duo, das jeder für sich bekommen hätte, und die Liste der Fragen, bei denen ihr nicht gleich geantwortet habt.",
+    "p4": "Es gibt eine Ausnahme. Wenn nur einer von euch so antwortet wie jemand, dem Weihnachten auf die Nerven geht, seid ihr Scrooge und der Geist der Weihnacht, egal, was die Punkte sagen. Es ist das einzige Duo, in dem sich die beiden nicht ähneln!",
+    "p5": "Du kannst ihn auch allein machen und für euch beide antworten."
+  },
+  "section2": {
+    "title": "Die acht Weihnachtsduos im Test",
+    "intro": "Der Test kann acht Duos ergeben, jedes mit seinem Foto. Hier steht, zu welchen Paaren jedes am besten passt.",
+    "galerie": [
+      {
+        "id": "noel",
+        "titre": "Der Weihnachtsmann und die Weihnachtsfrau",
+        "texte": "Für Paare, die alles früh vorbereiten und die ganze Familie einladen.",
+        "alt": "Zwei Holzfiguren, der Weihnachtsmann und die Weihnachtsfrau, nebeneinander vor einer Tannengirlande"
+      },
+      {
+        "id": "lutins",
+        "titre": "Zwei Elfen aus der Weihnachtswerkstatt",
+        "texte": "Für alle, die ihre Geschenke selbst machen und liebevoll verpacken.",
+        "alt": "Zwei Filzelfen auf einer Werkbank, zwischen Schleifen und verpackten Geschenken"
+      },
+      {
+        "id": "rennes",
+        "titre": "Zwei Rentiere vor dem Schlitten",
+        "texte": "Für alle, die die Feiertage auf der Straße verbringen, von einer Familie zur anderen.",
+        "alt": "Zwei kleine Holzrentiere vor einem roten Schlitten voller Geschenke, im Schnee"
+      },
+      {
+        "id": "neige",
+        "titre": "Zwei Schneemänner",
+        "texte": "Für alle, die Kälte, einen langen Spaziergang und wenig Trubel mögen.",
+        "alt": "Zwei Schneemänner, einer mit rosa und einer mit lila Schal, in einem verschneiten Garten"
+      },
+      {
+        "id": "epices",
+        "titre": "Zwei Lebkuchenmänner",
+        "texte": "Für alle, die Weihnachten in der Küche verbringen, und danach am Tisch.",
+        "alt": "Zwei Lebkuchenmänner mit weißem Zuckerguss auf einem bemehlten Backblech, daneben Ausstechformen in Sternform"
+      },
+      {
+        "id": "noisette",
+        "titre": "Der Nussknacker und die Zuckerfee",
+        "texte": "Für alle, die Lichter, Weihnachtsmärkte und schön gedeckte Tische lieben.",
+        "alt": "Ein hölzerner Nussknacker und eine kleine Ballerina mit Feenflügeln vor einem beleuchteten Weihnachtsbaum"
+      },
+      {
+        "id": "scrooge",
+        "titre": "Scrooge und der Geist der Weihnacht",
+        "texte": "Für Paare, in denen einer Weihnachten liebt und der andere deutlich weniger.",
+        "alt": "Zwei Figuren auf einer verschneiten Fensterbank: ein alter Mann mit Schlafmütze und Kerze, und eine goldene Gestalt mit Stechpalmenkranz und Laterne"
+      },
+      {
+        "id": "tomtes",
+        "titre": "Zwei Weihnachtswichtel",
+        "texte": "Für alle, die Weihnachten zu Hause feiern, unter einer Decke.",
+        "alt": "Zwei Weihnachtswichtel mit langen Mützen, eine rosa und eine lila, auf einer Fensterbank neben einer Kerze"
+      }
+    ]
+  },
+  "section3": {
+    "title": "Woher kommen diese Weihnachtsfiguren?",
+    "p1": "Der Weihnachtsmann, wie ihn heute alle kennen, verdankt viel einem amerikanischen Gedicht von 1823, „A Visit from St. Nicholas“. Dieses Gedicht hat dem Schlitten seine acht Rentiere gegeben, mit ihren Namen: Zwei davon heißen heute Donner und Blitzen.",
+    "p2": "Der Nussknacker stammt aus einem deutschen Märchen von E. T. A. Hoffmann, „Nussknacker und Mausekönig“, das 1816 erschien. 1892 wurde daraus ein Ballett mit Musik von Tschaikowski, und die Zuckerfee ist eine Figur aus dem Ballett. Scrooge ist der alte Geizhals aus „Eine Weihnachtsgeschichte“, der Erzählung, die Charles Dickens 1843 veröffentlichte. Er hasst Weihnachten bis zu der Nacht, in der ihn drei Geister besuchen.",
+    "p3": "Die Wichtel mit den langen Mützen kommen aus Skandinavien, wo sie „Tomte“ oder „Nisse“ heißen. In den Geschichten sind es kleine Wesen, die über das Haus wachen, solange man an Heiligabend daran denkt, ihnen eine Schüssel Brei hinzustellen!"
+  },
+  "section4": {
+    "title": "Und wenn ihr Weihnachten nicht gleich feiert?",
+    "p1": "Das kommt sehr oft vor. Der eine ist mit drei Festessen und zwanzig Leuten am Tisch aufgewachsen, der andere mit Weihnachten zu viert vor einem Film. Der Test zeigt es sofort, in der Liste der Fragen, bei denen ihr nicht gleich geantwortet habt.",
+    "p2": "Am einfachsten nehmt ihr von jedem etwas: eine Tradition von dem einen, eine von dem anderen und eine dritte, die ihr gemeinsam erfindet. Nach ein paar Jahren sagen diese Gewohnheiten viel mehr darüber, <a href=\"/de/welcher-paartyp-seid-ihr-quiz/\">was für ein Paar ihr seid</a>, als der Baum.",
+    "p3": "Eine Frage beantwortet das Duo allerdings nicht: <a href=\"/de/artig-oder-unartig-test/\">wer von euch beiden dieses Jahr artiger war</a>. Das entscheidet der Weihnachtsmann."
+  },
+  "section5": {
+    "title": "Was ihr über diesen Test wissen solltet",
+    "p1": "Dieser Test ist ein Spiel, nur zum Spaß. Er misst nichts Ernstes: Man kann im Dezember zwei Weihnachtswichtel sein und den Rest des Jahres zwei Rentiere vor dem Schlitten.",
+    "p2": "Es wird nichts gespeichert: Eure Antworten bleiben auf eurem Handy. Gezählt wird nur das Duo, das herauskommt, ohne Vornamen, um zu sehen, welche Ergebnisse am häufigsten sind. Die Fotos wurden für diese Seite erstellt."
+  },
+  "seo": {
+    "faqTitle": "Häufige Fragen",
+    "faq1Q": "Welche Weihnachtsfiguren können herauskommen?",
+    "faq1A": "Es gibt acht mögliche Duos: der Weihnachtsmann und die Weihnachtsfrau, zwei Elfen aus der Weihnachtswerkstatt, zwei Rentiere vor dem Schlitten, zwei Schneemänner, zwei Lebkuchenmänner, der Nussknacker und die Zuckerfee, Scrooge und der Geist der Weihnacht, und zwei Weihnachtswichtel.",
+    "faq2Q": "Wie wird das Duo ausgewählt?",
+    "faq2A": "Jede Antwort gibt einem oder zwei Duos Punkte. Zum Beispiel gibt „Wir kochen zwei Tage lang, das ist das Schönste daran“ den Lebkuchenmännern Punkte. Zu zweit zählt der Test eure beiden Antwortreihen zusammen, und das Duo mit der besten Note wird eures.",
+    "faq3Q": "Kann man den Test allein machen?",
+    "faq3A": "Ja. Du wählst „Allein, für uns beide“ und antwortest so, wie es zu euch beiden passt. Du bekommst euer Duo, aber nicht den Vergleich eurer Antworten: Dafür muss man zu zweit sein.",
+    "faq4Q": "Warum sind wir Scrooge und der Geist der Weihnacht?",
+    "faq4A": "Weil nur einer von euch so geantwortet hat wie jemand, dem Weihnachten auf die Nerven geht: keine Deko, Geschenke auf den letzten Drücker, und am schönsten ist der 27. Dezember. In diesem Fall schaut der Test nicht mehr auf die Punkte und gibt euch dieses Duo. Es kommt auch heraus, wenn ihr beide meckert.",
+    "faq5Q": "Wann macht man diesen Test am besten?",
+    "faq5A": "Im Dezember, an einem Abend, an dem ihr den Baum schmückt, oder an Heiligabend, während ihr auf die Bescherung wartet. Es dauert drei Minuten pro Person. Ihr könnt ihn auch mit mehreren Paaren machen und eure Duos vergleichen.",
+    "faq6Q": "Werden meine Antworten gespeichert?",
+    "faq6A": "Nein. Die Antworten bleiben auf eurem Handy. Gezählt wird nur das Duo, das herauskommt, ohne Vornamen, für die Verteilung der Ergebnisse."
+  },
+  "jsonLd": {
+    "about": "Weihnachtsfiguren"
+  }
+}

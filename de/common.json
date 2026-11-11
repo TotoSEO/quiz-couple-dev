@@ -134,6 +134,8 @@
     "quizDuoVilains": "Welches Superschurken-Duo",
     "quizChienNous": "Welcher Hund passt zu uns?",
     "quizMaisonNous": "Welches Haus passt zu uns?",
+    "quizListeNoel": "Artig oder unartig?",
+    "quizDuoNoel": "Euer Weihnachtsduo",
     "bilanCouple": "Beziehungsanalyse",
     "evaluer": "Beziehung analysieren",
     "evaluerSous": "Die vollständige Analyse, zu zweit oder allein",
@@ -158,7 +160,8 @@
       "rire": "Zum Lachen",
       "pimenter": "Für mehr Prickeln",
       "halloween": "Halloween",
-      "futur": "Eure Zukunft zu zweit"
+      "futur": "Eure Zukunft zu zweit",
+      "noel": "Weihnachten"
     },
     "retour": "Zurück"
   },

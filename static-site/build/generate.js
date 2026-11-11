@@ -20,7 +20,7 @@ import {
   getArticlePath, getArticleUrl, getArticleAlternates,
   estPageJouable, genrePageJouable, pagePublicitaire, BILAN_OUVERT, bilanOuvertPour, BILAN_ENTREES, CAPTURE_PAGES, VENDEUR, MOYENS_PAIEMENT, ROUTES_JEUX,
 } from './config.js';
-import { saisonActive } from './config.js';
+import { saisonActive, saisonQuizActive } from './config.js';
 import { createT, createTgd, loadTranslations } from './i18n.js';
 import { buildGitDateIndex, dateLaPlusRecente } from './git-dates.js';
 
@@ -49,6 +49,9 @@ const BOITES_MASCOTTES = { rose: [260, 280], violet: [220, 300] };
 // du hero portent leurs deguisements (SAISONS du module des mascottes), comme
 // celles des moteurs le font d'elles-memes a partir de data-saison.
 const SAISON_ACTIVE = saisonActive();
+// La saison des quiz fun (config.js, SAISONS_QUIZ) : celle que le hub et
+// l'accueil mettent en avant, avec ou sans habillage du site.
+const SAISON_QUIZ_ACTIVE = saisonQuizActive();
 const CSS_SAISON = (() => {
   if (!SAISON_ACTIVE) return '';
   const chemin = path.resolve(__dirname, '../css/saison', `${SAISON_ACTIVE}.css`);
@@ -58,6 +61,7 @@ const CSS_SAISON = (() => {
   return sortie.styles;
 })();
 console.log(`[saison] ${SAISON_ACTIVE ? `${SAISON_ACTIVE} (feuille de ${CSS_SAISON.length} octets)` : 'aucune'}`);
+console.log(`[saison] quiz mis en avant : ${SAISON_QUIZ_ACTIVE || 'aucune saison'}`);
 function mascotteSvg(nom, pose, extra = {}, classe = '') {
   if (!MASCOTTES) return '';
   const deguisement = (SAISON_ACTIVE && MASCOTTES.SAISONS && MASCOTTES.SAISONS[SAISON_ACTIVE] && MASCOTTES.SAISONS[SAISON_ACTIVE][nom]) || {};
@@ -1349,7 +1353,7 @@ function renderTemplate(templateName, data) {
   }
   // La saison du site est connue de tous les gabarits (base.ejs la pose
   // sur le body et ecrit sa feuille), sans que chaque page la passe.
-  data = Object.assign({ saison: SAISON_ACTIVE, cssSaison: CSS_SAISON }, data || {});
+  data = Object.assign({ saison: SAISON_ACTIVE, saisonQuiz: SAISON_QUIZ_ACTIVE, cssSaison: CSS_SAISON }, data || {});
   return ejs.renderFile(templatePath, data, {
     views: [TEMPLATES_DIR],
     async: false,

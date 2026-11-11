@@ -610,6 +610,18 @@
     "metaDescription": "Appartement en ville, maison avec jardin, vieille bâtisse à retaper ou van ? Chacun répond à 12 questions, et le test montre la maison faite pour vous deux.",
     "description": "Douze questions chacun, et l'endroit où vous seriez bien tous les deux : appartement, maison de campagne, loft, tiny house..."
   },
+  "quizListeNoel": {
+    "title": "Sommes-nous sur la liste des enfants sages ? Le test de Noël",
+    "shortTitle": "Sages ou pas sages",
+    "metaDescription": "Chacun répond à 12 questions sur son mois de décembre : le test dit si votre couple est sur la liste des enfants sages du Père Noël, et qui est le plus sage.",
+    "description": "Douze questions chacun sur votre mois de décembre, et la place de votre couple sur la liste du Père Noël, avec sa photo."
+  },
+  "quizDuoNoel": {
+    "title": "Quels personnages de Noël êtes-vous ? Le quiz à faire à deux",
+    "shortTitle": "Quels personnages de Noël êtes-vous",
+    "metaDescription": "Chacun répond à 12 questions sur votre Noël à deux, et le quiz trouve votre duo : le Père Noël et la Mère Noël, deux lutins, Scrooge et l'esprit de Noël...",
+    "description": "Douze questions chacun, et le duo de Noël que vous formez, du Père Noël et la Mère Noël aux deux gnomes, avec sa photo."
+  },
   "bilanCouple": {
     "title": "Bilan de couple à faire en ligne | PDF résultats immédiats",
     "shortTitle": "Évaluation de couple",

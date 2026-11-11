@@ -179,7 +179,9 @@
       "quizSuperVilain": "Your entrance at the party, your costume, your laugh: the supervillain you're most like, from the Joker to Maleficent.",
       "quizDuoVilains": "The Halloween night heist: each of your roles, and the famous villain duo you form.",
       "quizChienNous": "You each answer separately, and the quiz finds the dog that suits you both, from the corgi to the Bernese mountain dog.",
-      "quizMaisonNous": "You each answer separately, and the quiz shows you the place where you'd both be happy, from the city apartment to the camper van."
+      "quizMaisonNous": "You each answer separately, and the quiz shows you the place where you'd both be happy, from the city apartment to the camper van.",
+      "quizListeNoel": "Twelve questions about your December, and your couple's spot on Santa's list, from the pile of presents to the sack of coal.",
+      "quizDuoNoel": "You each answer separately, and the quiz finds the Christmas duo you make: Santa and Mrs. Claus, two elves, Scrooge and the Christmas spirit..."
     },
     "testsEyebrow": "The tests",
     "quizzesEyebrow": "The quizzes",
@@ -187,7 +189,8 @@
     "speciauxEyebrow": "Fun quizzes",
     "speciauxTitle": "Your dog, your house: our fun quizzes to take together",
     "speciauxTitleSaison": {
-      "halloween": "Halloween special: our (slightly) scary quizzes"
+      "halloween": "Halloween special: our (slightly) scary quizzes",
+      "noel": "Christmas special: naughty or nice, and your Christmas duo"
     },
     "speciauxDesc": "{{n}} light-hearted quizzes to take together. You each answer separately, then compare.",
     "speciauxCta": "See all fun quizzes"

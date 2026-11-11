@@ -604,6 +604,18 @@
     "metaDescription": "Stadtwohnung, Haus mit Garten, Altbau zum Renovieren oder Campervan? Jeder beantwortet 12 Fragen, und der Test zeigt das Zuhause für euch beide.",
     "description": "Zwölf Fragen pro Person, und der Ort, an dem ihr euch beide wohlfühlt: Wohnung, Haus auf dem Land, Loft, Tiny House..."
   },
+  "quizListeNoel": {
+    "title": "Artig oder unartig? Der Weihnachtstest für Paare",
+    "shortTitle": "Artig oder unartig",
+    "metaDescription": "Jeder beantwortet 12 Fragen zu seinem Dezember, und der Test sagt, ob ihr als Paar beim Weihnachtsmann auf der Liste der Artigen oder der Unartigen steht.",
+    "description": "Zwölf Fragen pro Person zu eurem Dezember, und euer Platz als Paar auf der Liste des Weihnachtsmanns, mit Foto."
+  },
+  "quizDuoNoel": {
+    "title": "Welcher Weihnachtstyp seid ihr? Der Test für Paare",
+    "shortTitle": "Welcher Weihnachtstyp seid ihr",
+    "metaDescription": "Jeder beantwortet 12 Fragen zu eurem Weihnachten zu zweit, und der Test findet euer Duo: Weihnachtsmann und Weihnachtsfrau, zwei Elfen, Scrooge...",
+    "description": "Zwölf Fragen pro Person, und das Weihnachtsduo, das ihr seid, vom Weihnachtsmann und der Weihnachtsfrau bis zu den beiden Wichteln, mit Foto."
+  },
   "bilanCouple": {
     "title": "Beziehungscheck online | Ergebnis sofort, auch als PDF",
     "shortTitle": "Beziehungsanalyse",

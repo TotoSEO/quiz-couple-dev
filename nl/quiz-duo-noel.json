@@ -1,0 +1,107 @@
+{
+  "hero": {
+    "badge": "Kerstquiz • Met z'n tweeën, of alleen voor jullie samen",
+    "title": "De kerstquiz voor koppels: ontdek welke kerstfiguren jullie zijn",
+    "titleHighlight": "welke kerstfiguren jullie zijn",
+    "description": "De Kerstman en de Kerstvrouw, twee elfjes, Scrooge en de kerstgeest? Ieder beantwoordt twaalf vragen over jullie kerst samen, en de quiz geeft jullie het kerstduo dat jullie vormen, met foto.",
+    "subtitle": "12 vragen • 3 minuten per persoon • op één telefoon",
+    "jumpBtn": "Doe de quiz"
+  },
+  "section1": {
+    "title": "Hoe de quiz werkt",
+    "p1": "Deze quiz is een kerstspel om met z'n tweeën te doen. Hij vertelt welk duo van kerstfiguren jullie vormen, afhankelijk van hoe jullie de feestdagen doorbrengen. Hij stelt twaalf vragen over jullie kerst samen: wanneer de versiering tevoorschijn komt, hoe jullie boom eruitziet, waar jullie op kerstavond zijn, wat jullie op de ochtend van eerste kerstdag doen, enzovoort.",
+    "p2": "Bij de vraag ‘Op kerstavond zijn jullie:’ kunnen jullie bijvoorbeeld kiezen tussen ‘thuis, en iedereen komt bij ons’, ‘onderweg, tussen twee families’, ‘met z'n tweeën, in pyjama’ en ‘ergens waar sneeuw ligt, als het kan’. Elk antwoord geeft punten aan een of twee duo's. Het eerste geeft ze aan de Kerstman en de Kerstvrouw, het tweede aan de twee rendieren, het derde aan de twee kerstkabouters, en het laatste aan de sneeuwpoppen.",
+    "p3": "Met z'n tweeën beantwoordt de eerste de twaalf vragen en geeft de telefoon door, waarna de tweede antwoordt zonder te zien wat de ander koos. De quiz telt jullie twee reeksen antwoorden bij elkaar op en houdt het duo over dat het beste scoort. Jullie zien ook het duo dat ieder apart zou hebben gekregen, en de lijst met vragen waarop jullie niet hetzelfde antwoordden.",
+    "p4": "Er is één uitzondering. Antwoordt maar één van jullie als iemand die kerst vooral vermoeiend vindt, dan zijn jullie Scrooge en de kerstgeest, wat de punten ook zeggen. Het is het enige duo waarin de twee niet op elkaar lijken!",
+    "p5": "Je kunt hem ook alleen doen, en voor jullie tweeën antwoorden."
+  },
+  "section2": {
+    "title": "De acht kerstduo's van de quiz",
+    "intro": "De quiz kan acht duo's opleveren, elk met zijn foto. Hier lees je bij welke koppels elk duo het best past.",
+    "galerie": [
+      {
+        "id": "noel",
+        "titre": "De Kerstman en de Kerstvrouw",
+        "texte": "Voor koppels die alles ruim van tevoren regelen en de hele familie ontvangen.",
+        "alt": "Twee houten beeldjes van de Kerstman en de Kerstvrouw, naast elkaar voor een dennenslinger"
+      },
+      {
+        "id": "lutins",
+        "titre": "Twee elfjes uit de werkplaats",
+        "texte": "Voor wie zijn cadeaus zelf maakt en veel werk maakt van de pakjes.",
+        "alt": "Twee vilten elfjes op een werkbank, tussen linten en ingepakte cadeaus"
+      },
+      {
+        "id": "rennes",
+        "titre": "Twee rendieren voor de slee",
+        "texte": "Voor wie de feestdagen onderweg doorbrengt, van de ene familie naar de andere.",
+        "alt": "Twee kleine houten rendieren voor een rode slee vol cadeaus, in de sneeuw"
+      },
+      {
+        "id": "neige",
+        "titre": "Twee sneeuwpoppen",
+        "texte": "Voor wie van kou, een lange wandeling en weinig drukte houdt.",
+        "alt": "Twee sneeuwpoppen, een met een roze en een met een paarse sjaal, in een besneeuwde tuin"
+      },
+      {
+        "id": "epices",
+        "titre": "Twee peperkoekmannetjes",
+        "texte": "Voor wie kerst in de keuken doorbrengt, en daarna aan tafel.",
+        "alt": "Twee peperkoekmannetjes met wit glazuur op een bebloemde bakplaat, naast stervormige uitsteekvormpjes"
+      },
+      {
+        "id": "noisette",
+        "titre": "De Notenkraker en de Suikerfee",
+        "texte": "Voor wie dol is op lichtjes, kerstmarkten en mooi gedekte tafels.",
+        "alt": "Een houten notenkraker en een kleine ballerina met feeënvleugels voor een verlichte kerstboom"
+      },
+      {
+        "id": "scrooge",
+        "titre": "Scrooge en de kerstgeest",
+        "texte": "Voor koppels waarin de een dol is op kerst, en de ander een stuk minder.",
+        "alt": "Twee beeldjes op een besneeuwde vensterbank: een oude man met slaapmuts en een kaars, en een gouden figuur met een krans van hulst en een lantaarn"
+      },
+      {
+        "id": "tomtes",
+        "titre": "Twee kerstkabouters",
+        "texte": "Voor wie kerst thuis viert, onder een dekentje.",
+        "alt": "Twee kerstkabouters met lange mutsen, een roze en een paarse, op een vensterbank naast een kaars"
+      }
+    ]
+  },
+  "section3": {
+    "title": "Waar komen deze kerstfiguren vandaan?",
+    "p1": "De Kerstman zoals iedereen hem kent, heeft veel te danken aan een Amerikaans gedicht uit 1823, ‘A Visit from St. Nicholas’. Dat gedicht gaf de slee zijn acht rendieren, met hun namen. Twee ervan hadden in de eerste versie zelfs namen die uit het Nederlands komen: Dunder en Blixem, van donder en bliksem.",
+    "p2": "De Notenkraker komt uit een Duits sprookje van E.T.A. Hoffmann, dat in 1816 verscheen. In 1892 werd het een ballet, met muziek van Tsjaikovski, en de Suikerfee is een figuur uit dat ballet. Scrooge is de oude vrek uit ‘A Christmas Carol’, het verhaal dat Charles Dickens in 1843 publiceerde. Hij haat kerst, tot de nacht waarin drie geesten hem komen opzoeken.",
+    "p3": "De kerstkabouters met hun lange mutsen komen uit Scandinavië, waar ze ‘tomte’ of ‘nisse’ heten. In de verhalen zijn het kleine wezens die over het huis waken, zolang je er op kerstavond aan denkt een kom pap voor ze neer te zetten!"
+  },
+  "section4": {
+    "title": "En als jullie kerst niet op dezelfde manier vieren?",
+    "p1": "Dat komt heel vaak voor. De een is opgegroeid met drie kerstdiners en twintig mensen aan tafel, de ander met kerst met z'n vieren voor een film. De quiz laat het meteen zien, in de lijst met vragen waarop jullie niet hetzelfde antwoordden.",
+    "p2": "Het makkelijkst is van allebei iets te nemen: een traditie van de een, een van de ander, en een derde die jullie samen verzinnen. Na een paar jaar zeggen die gewoontes veel meer over <a href=\"/nl/wat-voor-koppel-zijn-jullie/\">wat voor koppel jullie zijn</a> dan de boom.",
+    "p3": "Op één vraag geeft het duo geen antwoord: <a href=\"/nl/lief-of-stout-test/\">wie van jullie dit jaar het braafst was</a>. Daar gaat de Kerstman over."
+  },
+  "section5": {
+    "title": "Wat je over deze quiz moet weten",
+    "p1": "Deze quiz is een spel, gewoon voor de lol. Hij meet niets serieus: je kunt in december prima twee kerstkabouters zijn en de rest van het jaar twee rendieren voor de slee.",
+    "p2": "Er wordt niets opgeslagen: jullie antwoorden blijven op jullie telefoon. Alleen het duo dat eruit komt wordt geteld, zonder voornaam, om te zien welke uitslagen het vaakst voorkomen. De foto's zijn voor deze pagina gemaakt."
+  },
+  "seo": {
+    "faqTitle": "Veelgestelde vragen",
+    "faq1Q": "Welke kerstfiguren kunnen eruit komen?",
+    "faq1A": "Er zijn acht duo's mogelijk: de Kerstman en de Kerstvrouw, twee elfjes uit de werkplaats, twee rendieren voor de slee, twee sneeuwpoppen, twee peperkoekmannetjes, de Notenkraker en de Suikerfee, Scrooge en de kerstgeest, en twee kerstkabouters.",
+    "faq2Q": "Hoe wordt het duo gekozen?",
+    "faq2A": "Elk antwoord geeft punten aan een of twee duo's. Zo geeft ‘we staan twee dagen in de keuken, dat is het leukste’ punten aan de peperkoekmannetjes. Met z'n tweeën telt de quiz jullie twee reeksen antwoorden bij elkaar op, en het duo dat het beste scoort wordt dat van jullie.",
+    "faq3Q": "Kun je de quiz alleen doen?",
+    "faq3A": "Ja. Je kiest ‘Alleen, voor ons tweeën’ en antwoordt met jullie tweeën in gedachten. Je krijgt jullie duo, maar niet de vergelijking van jullie antwoorden: daarvoor moet je met z'n tweeën zijn.",
+    "faq4Q": "Waarom zijn wij Scrooge en de kerstgeest?",
+    "faq4A": "Omdat maar één van jullie heeft geantwoord als iemand die kerst vooral vermoeiend vindt: geen versiering, cadeaus op het laatste moment, en 27 december als mooiste dag. In dat geval kijkt de quiz niet meer naar de punten en krijgen jullie dit duo. Het komt er ook uit als jullie allebei mopperen.",
+    "faq5Q": "Wanneer doe je deze quiz?",
+    "faq5A": "In december, op een avond waarop jullie de boom optuigen, of op kerstavond. Het duurt drie minuten per persoon. Jullie kunnen hem ook met meerdere koppels doen en jullie duo's vergelijken.",
+    "faq6Q": "Worden mijn antwoorden opgeslagen?",
+    "faq6A": "Nee. De antwoorden blijven op jullie telefoon. Alleen het duo dat eruit komt wordt geteld, zonder voornaam, voor de verdeling van de uitslagen."
+  },
+  "jsonLd": {
+    "about": "kerstfiguren"
+  }
+}

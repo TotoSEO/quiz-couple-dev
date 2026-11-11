@@ -135,6 +135,8 @@
     "quizDuoVilains": "Quel duo de super-vilains",
     "quizChienNous": "Quel chien pour nous ?",
     "quizMaisonNous": "Quelle maison pour nous ?",
+    "quizListeNoel": "Sages ou pas sages ?",
+    "quizDuoNoel": "Vos personnages de Noël",
     "bilanCouple": "Évaluation de couple",
     "evaluer": "Évaluer son couple",
     "evaluerSous": "L'évaluation complète, à deux ou seul(e)",
@@ -159,7 +161,8 @@
       "rire": "Pour rire",
       "pimenter": "Pour pimenter",
       "halloween": "Halloween",
-      "futur": "Votre futur à deux"
+      "futur": "Votre futur à deux",
+      "noel": "Noël"
     },
     "retour": "Retour"
   },

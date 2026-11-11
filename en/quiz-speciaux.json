@@ -18,7 +18,7 @@
     },
     "noel": {
       "titre": "Christmas special",
-      "intro": "The Christmas quizzes arrive before the holidays: which of you is on the nice list, and a few other surprises.",
+      "intro": "Two quizzes for a December evening together: which of Santa's lists your couple is on, and which Christmas characters you make. You each answer separately, and the couple gets a single result, with its photo.",
       "bientot": "Coming soon"
     }
   },
@@ -36,13 +36,17 @@
     "quizChienNousNom": "What dog should we get?",
     "quizChienNousTagline": "Twelve questions each about your life together, and the couple's dog with its photo: corgi, golden, dachshund, Shiba, husky...",
     "quizMaisonNousNom": "What kind of house should we live in?",
-    "quizMaisonNousTagline": "Twelve questions each about the life you picture, and the couple's home in a photo: apartment, country house, loft, houseboat, tiny house..."
+    "quizMaisonNousTagline": "Twelve questions each about the life you picture, and the couple's home in a photo: apartment, country house, loft, houseboat, tiny house...",
+    "quizListeNoelNom": "Naughty or nice?",
+    "quizListeNoelTagline": "Twelve questions each about your December: your couple's spot on Santa's list, and the nicer of the two.",
+    "quizDuoNoelNom": "Which Christmas characters are you?",
+    "quizDuoNoelTagline": "Twelve questions each about your Christmas together, and the duo you make with its photo: two elves, two reindeer, the Nutcracker and the Sugar Plum Fairy..."
   },
   "section1": {
     "title": "What these quizzes are for",
     "p1": "The quizzes on this page are nothing like our couple tests. They don't measure anything serious and they don't give your relationship a score. They're games: what dog would suit you as a couple, what kind of house you'd be happy in, or which of you would die first in a horror movie.",
     "p2": "They work because you each answer separately. Finding out your other half wants a husky when you had a dachshund in mind, or a fixer-upper when you were dreaming of a city apartment, keeps a good part of the evening busy!",
-    "p3": "The quizzes about your future together are here all year round. The seasonal ones (Halloween for now, Christmas soon) move to the top of the page when their time comes, and stay playable the rest of the year."
+    "p3": "The quizzes about your future together are here all year round. The seasonal ones move to the top of the page when their time comes: the Halloween quizzes in October, then the Christmas ones from mid-November, to find out <a href=\"/en/naughty-or-nice-quiz/\">whether your couple has been good this year</a> or <a href=\"/en/which-christmas-characters-are-you-quiz/\">which Christmas duo you make</a>. They stay playable the rest of the year."
   },
   "section2": {
     "title": "And after these quizzes?",
@@ -51,7 +55,7 @@
   "section3": {
     "title": "How to play",
     "p1": "All these quizzes play the same way. Together, the first one answers the whole series, passes the phone, and the second one answers in turn without seeing the first one's answers. Solo, you answer and discover your result.",
-    "p2": "For the quizzes about your future together, the couple gets a single result, the one that fits your two sets of answers best, and the list of questions where you don't agree. For the seasonal quizzes, each of you gets your own, and a remote mode lets you each play on your own phone.",
+    "p2": "For the quizzes about your future together and for the Christmas ones, the couple gets a single result, the one that fits your two sets of answers best, and the list of questions where you don't agree. For the Halloween quizzes, each of you gets your own, and a remote mode lets you each play on your own phone.",
     "p3": "No account to create, nothing to install, and nothing is saved: the answers stay on your phones."
   },
   "faq": {
@@ -62,10 +66,10 @@
     "a2": "Not necessarily. Almost all of them can be played solo or as a couple, and only the supervillain duo quiz needs two players, since it composes a duo. But they're designed to be taken together: comparing your answers is the fun part.",
     "q3": "What happens to the quizzes once the season is over?",
     "a3": "They stay on this page, a bit further down, and at their own address. Nothing gets deleted: a Halloween quiz in the middle of March is fine too.",
-    "q4": "When do the Christmas quizzes arrive?",
-    "a4": "Before the holidays. On the programme: which of you is on the nice list, and a few other surprises.",
+    "q4": "Are there Christmas quizzes?",
+    "a4": "Yes, two. “Naughty or nice?” tells you which of Santa's lists your couple is on, and which of you is the nicer one. The Christmas characters quiz gives you the duo you make, from Santa and Mrs. Claus to Scrooge and the Christmas spirit. They move to the top of this page from mid-November to the end of December.",
     "q5": "Can you play remotely?",
-    "a5": "Yes for the seasonal quizzes: one person creates the game, the other joins with the code, and you each answer on your own phone. The quizzes about your future together are played on a single phone that you pass to each other."
+    "a5": "Yes for the Halloween quizzes: one person creates the game, the other joins with the code, and you each answer on your own phone. The quizzes about your future together and the Christmas ones are played on a single phone that you pass to each other."
   },
   "jsonLd": {
     "name": "Fun quizzes for couples"

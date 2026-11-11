@@ -18,7 +18,7 @@
     },
     "noel": {
       "titre": "Kerst-special",
-      "intro": "De kerstquizzen komen vóór de feestdagen: wie van jullie op de lijst met brave kinderen staat, en nog een paar verrassingen.",
+      "intro": "Twee quizzen voor een decemberavond met z'n tweeën: op welke lijst van de Kerstman jullie als koppel staan, en welke kerstfiguren jullie vormen. Ieder antwoordt voor zich, en jullie krijgen als koppel één uitslag, met foto.",
       "bientot": "Binnenkort"
     }
   },
@@ -36,13 +36,17 @@
     "quizChienNousNom": "Welke hond past bij ons?",
     "quizChienNousTagline": "Twaalf vragen per persoon over jullie leven samen, en de hond voor jullie samen met foto: corgi, golden retriever, teckel, shiba, husky...",
     "quizMaisonNousNom": "Welk huis past bij ons?",
-    "quizMaisonNousTagline": "Twaalf vragen per persoon over het leven dat jullie voor je zien, en het huis voor jullie samen op de foto: appartement, huis op het platteland, loft, woonboot, tiny house..."
+    "quizMaisonNousTagline": "Twaalf vragen per persoon over het leven dat jullie voor je zien, en het huis voor jullie samen op de foto: appartement, huis op het platteland, loft, woonboot, tiny house...",
+    "quizListeNoelNom": "Lief of stout?",
+    "quizListeNoelTagline": "Twaalf vragen per persoon over jullie decembermaand: jullie plek als koppel op de lijst van de Kerstman, en wie van jullie het braafst was.",
+    "quizDuoNoelNom": "Welke kerstfiguren zijn jullie?",
+    "quizDuoNoelTagline": "Twaalf vragen per persoon over jullie kerst samen, en jullie duo met foto: twee elfjes, twee rendieren, de Notenkraker en de Suikerfee..."
   },
   "section1": {
     "title": "Waar deze quizzen voor dienen",
     "p1": "De quizzen op deze pagina lijken niet op onze relatietests. Ze meten niets serieus en geven jullie relatie geen cijfer. Het zijn spelletjes: welke hond bij jullie als koppel zou passen, in welk huis jullie je thuis zouden voelen, of wie van jullie als eerste doodgaat in een horrorfilm.",
     "p2": "Ze werken omdat ieder voor zich antwoordt. Ontdekken dat je partner een husky wil terwijl jij aan een teckel dacht, of een opknaphuis terwijl jij droomde van een appartement in de stad: daar ben je een flink deel van de avond zoet mee!",
-    "p3": "De quizzen over jullie toekomst samen staan hier het hele jaar. De seizoensquizzen (nu Halloween, binnenkort kerst) schuiven naar boven op de pagina als hun tijd komt, en blijven de rest van het jaar speelbaar."
+    "p3": "De quizzen over jullie toekomst samen staan hier het hele jaar. De seizoensquizzen schuiven naar boven op de pagina als hun tijd komt: de halloweenquizzen in oktober, en vanaf half november de kerstquizzen, om te ontdekken <a href=\"/nl/lief-of-stout-test/\">of jullie dit jaar braaf zijn geweest</a> of <a href=\"/nl/welke-kerstfiguren-zijn-jullie-quiz/\">welk kerstduo jullie vormen</a>. De rest van het jaar blijven ze speelbaar."
   },
   "section2": {
     "title": "En na deze quizzen?",
@@ -51,7 +55,7 @@
   "section3": {
     "title": "Hoe je speelt",
     "p1": "Al deze quizzen speel je op dezelfde manier. Met z'n tweeën beantwoordt de eerste de hele reeks en geeft de telefoon door, waarna de tweede antwoordt zonder de antwoorden van de eerste te zien. Speel je alleen, dan beantwoord je de vragen en zie je je uitslag.",
-    "p2": "Bij de quizzen over jullie toekomst samen krijgt het koppel één uitslag, die het best bij jullie twee reeksen antwoorden past, en de lijst met vragen waarover jullie het niet eens zijn. Bij de seizoensquizzen heeft ieder zijn eigen uitslag, en in de afstandsmodus speelt ieder op zijn eigen telefoon.",
+    "p2": "Bij de quizzen over jullie toekomst samen en bij de kerstquizzen krijgt het koppel één uitslag, die het best bij jullie twee reeksen antwoorden past, en de lijst met vragen waarover jullie het niet eens zijn. Bij de halloweenquizzen heeft ieder zijn eigen uitslag, en in de afstandsmodus speelt ieder op zijn eigen telefoon.",
     "p3": "Je hoeft geen account aan te maken of iets te installeren, en er wordt niets opgeslagen: de antwoorden blijven op jullie telefoons."
   },
   "faq": {
@@ -62,10 +66,10 @@
     "a2": "Niet per se. Bijna allemaal kun je ze alleen of met z'n tweeën spelen, en alleen de quiz over het superschurkenduo vraagt om twee spelers, omdat hij een duo samenstelt. Maar ze zijn bedoeld om samen te doen: het leuke is juist de antwoorden vergelijken.",
     "q3": "Wat gebeurt er met de quizzen als het seizoen voorbij is?",
     "a3": "Ze blijven op deze pagina staan, iets verder naar beneden, en op hun eigen adres. We halen niets weg: een halloweenquiz midden in maart kan ook.",
-    "q4": "Wanneer komen de kerstquizzen?",
-    "a4": "Vóór de feestdagen. Op het programma: wie van jullie op de lijst met brave kinderen staat, en nog een paar verrassingen.",
+    "q4": "Zijn er kerstquizzen?",
+    "a4": "Ja, twee. ‘Lief of stout?’ vertelt op welke lijst van de Kerstman jullie als koppel staan, en wie van jullie twee het braafst was. De quiz over de kerstfiguren geeft jullie het duo dat jullie vormen, van de Kerstman en de Kerstvrouw tot Scrooge en de kerstgeest. Van half november tot eind december staan ze bovenaan deze pagina.",
     "q5": "Kunnen we op afstand spelen?",
-    "a5": "Ja, bij de seizoensquizzen: de een maakt het spel aan, de ander doet mee met de code, en ieder antwoordt op zijn eigen telefoon. De quizzen over jullie toekomst samen speel je op één telefoon, die jullie doorgeven."
+    "a5": "Ja, bij de halloweenquizzen: de een maakt het spel aan, de ander doet mee met de code, en ieder antwoordt op zijn eigen telefoon. De quizzen over jullie toekomst samen en de kerstquizzen speel je op één telefoon, die jullie doorgeven."
   },
   "jsonLd": {
     "name": "Themaquizzen voor koppels"

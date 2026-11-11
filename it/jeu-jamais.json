@@ -20,7 +20,7 @@
     "etape3Titre": "Rispondete uno alla volta",
     "etape3Texte": "Il gioco indica a chi tocca rispondere, poi chiede «e tu?» all'altro. Quando avete risposto entrambi, si passa alla domanda successiva, e comincia l'altro.",
     "etape4Titre": "Guardate chi ha confessato di più",
-    "etape4Texte": "Alla fine della partita, ognuno riceve un grafico con il suo numero di «l'ho fatto» e di «non l'ho mai fatto». Così scoprirete una volta per tutte chi di voi due ha vissuto di più!",
+    "etape4Texte": "Alla fine della partita, ognuno riceve un grafico con il suo numero di «l'ho fatto» e di «non l'ho mai fatto». Così scoprirete una volta per tutte <a href=\"/it/test-lista-dei-buoni-e-cattivi/\">chi di voi due è stato più buono</a>!",
     "apres": "Come avrete capito, nella nostra versione non ci sono <strong>né alcol né penitenze</strong>: si risponde, se ne parla, e si passa alla successiva. Se preferite le partite in cui chi confessa deve pagare, potete continuare andando a <a href=\"/it/penitenze-di-coppia/\">girare la ruota e pescare una penitenza</a>, è il seguito perfetto."
   },
   "section2": {

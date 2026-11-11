@@ -1,0 +1,107 @@
+{
+  "hero": {
+    "badge": "Christmas quiz • Together, or on your own for the two of you",
+    "title": "The quiz to find out which Christmas characters you two are",
+    "titleHighlight": "which Christmas characters you two are",
+    "description": "Santa and Mrs. Claus, two elves, Scrooge and the Christmas spirit? You each answer twelve questions about your Christmas together, and the quiz gives you the Christmas duo you make, with its photo.",
+    "subtitle": "12 questions • 3 minutes each • on a single phone",
+    "jumpBtn": "Take the quiz"
+  },
+  "section1": {
+    "title": "How the quiz works",
+    "p1": "This quiz is a Christmas game for couples. It tells you which duo of Christmas characters you make, based on how you spend the holidays. It asks twelve questions about your Christmas together: when the decorations come out, what your tree looks like, where you are on Christmas Eve, what you do on Christmas morning, and so on.",
+    "p2": "For example, for the question “On Christmas Eve, you are:”, you can choose between “at our place, and we're the ones hosting”, “on the road, between two families”, “just the two of us, in pajamas” and “somewhere with snow, if possible”. Each answer gives points to one or two duos. The first gives points to Santa and Mrs. Claus, the second to the two reindeer, the third to the two gnomes, and the last to the snowmen.",
+    "p3": "With two of you, the first one answers the twelve questions, passes the phone, and the second one answers without seeing what the other picked. The quiz adds up your two sets of answers and keeps the duo with the best score. You also see the duo each of you would have got on your own, and the list of questions where you didn't give the same answer.",
+    "p4": "There is one exception. If only one of you answers like someone who's worn out by Christmas, you're Scrooge and the Christmas spirit, whatever the points say. It's the only duo where the two don't match!",
+    "p5": "You can also take it on your own, answering for the two of you."
+  },
+  "section2": {
+    "title": "The eight Christmas duos in the quiz",
+    "intro": "The quiz can land on eight duos, each with its photo. Here's which couples each one is most like.",
+    "galerie": [
+      {
+        "id": "noel",
+        "titre": "Santa and Mrs. Claus",
+        "texte": "For couples who get everything ready early and host the whole family.",
+        "alt": "Two wooden figurines of Santa and Mrs. Claus side by side in front of a pine garland"
+      },
+      {
+        "id": "lutins",
+        "titre": "Two elves from the workshop",
+        "texte": "For those who make their own presents and take pride in the wrapping.",
+        "alt": "Two felt elves sitting on a workbench among ribbons and wrapped presents"
+      },
+      {
+        "id": "rennes",
+        "titre": "Two of Santa's reindeer",
+        "texte": "For those who spend the holidays on the road, from one family to the other.",
+        "alt": "Two small wooden reindeer harnessed to a red sleigh loaded with presents, on the snow"
+      },
+      {
+        "id": "neige",
+        "titre": "Two snowmen",
+        "texte": "For those who want cold air, a long walk and not too many people.",
+        "alt": "Two snowmen side by side in a snowy garden, one with a pink scarf and one with a purple scarf"
+      },
+      {
+        "id": "epices",
+        "titre": "Two gingerbread men",
+        "texte": "For those who spend Christmas in the kitchen, then at the table.",
+        "alt": "Two gingerbread men decorated with white icing on a floured baking tray, next to star-shaped cookie cutters"
+      },
+      {
+        "id": "noisette",
+        "titre": "The Nutcracker and the Sugar Plum Fairy",
+        "texte": "For those who love the lights, the Christmas markets and a beautiful table.",
+        "alt": "A wooden nutcracker and a small ballerina with fairy wings in front of a lit Christmas tree"
+      },
+      {
+        "id": "scrooge",
+        "titre": "Scrooge and the Christmas spirit",
+        "texte": "For couples where one loves Christmas, and the other much less so.",
+        "alt": "Two figurines on a snowy windowsill: an old man in a nightcap holding a candle, and a golden figure crowned with holly carrying a lantern"
+      },
+      {
+        "id": "tomtes",
+        "titre": "Two Christmas gnomes",
+        "texte": "For those who celebrate Christmas at home, under a blanket.",
+        "alt": "Two Christmas gnomes with long hats, one pink and one purple, on a windowsill next to a candle"
+      }
+    ]
+  },
+  "section3": {
+    "title": "Where do these Christmas characters come from?",
+    "p1": "The Santa everyone knows owes a lot to an American poem from 1823, “A Visit from St. Nicholas”. That poem is what gave the sleigh its eight reindeer, along with their names, from Dasher and Dancer to Comet and Cupid.",
+    "p2": "The Nutcracker comes from a German tale by E. T. A. Hoffmann, published in 1816. It became a ballet in 1892, with music by Tchaikovsky, and the Sugar Plum Fairy is a character from the ballet. Scrooge is the old miser in “A Christmas Carol”, the story Charles Dickens published in 1843. He hates Christmas until the night three spirits come to visit him.",
+    "p3": "The Christmas gnomes with long hats come from Scandinavia, where they're called “tomte” or “nisse”. In the stories, they're little creatures who watch over the house, as long as someone remembers to leave them a bowl of porridge on Christmas Eve!"
+  },
+  "section4": {
+    "title": "What if you don't celebrate Christmas the same way?",
+    "p1": "It's very common. One of you grew up with three Christmas dinners and twenty people at the table, the other with a Christmas for four in front of a movie. The quiz shows it right away, in the list of questions where you didn't give the same answer.",
+    "p2": "The simplest thing is to take a bit of each: one tradition from one of you, one from the other, and a third that you make up together. After a few years, those habits say <a href=\"/en/what-type-of-couple-are-you-quiz/\">what kind of couple you are</a> far better than the tree does.",
+    "p3": "There's one question the duo doesn't settle: <a href=\"/en/naughty-or-nice-quiz/\">which of you has been nicer this year</a>. That one is for Santa to decide."
+  },
+  "section5": {
+    "title": "Good to know about this quiz",
+    "p1": "This quiz is a game, just for fun. It doesn't measure anything serious: you can perfectly well be two Christmas gnomes in December and two reindeer the rest of the year.",
+    "p2": "Nothing is saved: your answers stay on your phone. Only the duo you get is counted, with no name, so we know which results come up most. The photos were created for this page."
+  },
+  "seo": {
+    "faqTitle": "Frequently asked questions",
+    "faq1Q": "Which Christmas characters can we get?",
+    "faq1A": "Eight duos are possible: Santa and Mrs. Claus, two elves from the workshop, two of Santa's reindeer, two snowmen, two gingerbread men, the Nutcracker and the Sugar Plum Fairy, Scrooge and the Christmas spirit, and two Christmas gnomes.",
+    "faq2Q": "How is the duo chosen?",
+    "faq2A": "Each answer gives points to one or two duos. For example, “we cook for two days, and it's the best part” gives points to the gingerbread men. With two of you, the quiz adds up your two sets of answers, and the duo with the best score becomes yours.",
+    "faq3Q": "Can I take the quiz on my own?",
+    "faq3A": "Yes. Choose “On my own, for the two of us” and answer with the two of you in mind. You'll get your duo, but not the comparison of your answers: for that, there have to be two of you.",
+    "faq4Q": "Why are we Scrooge and the Christmas spirit?",
+    "faq4A": "Because only one of you answered like someone who's worn out by Christmas: no decorations, last-minute presents, and December 26th as the best part. In that case the quiz stops looking at the points and gives you that duo. It also comes up when you both grumble.",
+    "faq5Q": "When should we take this quiz?",
+    "faq5A": "In December, on an evening when you're decorating the tree, or on Christmas Eve while waiting for midnight. It takes three minutes each. You can also do it with several couples and compare your duos.",
+    "faq6Q": "Are my answers saved?",
+    "faq6A": "No. The answers stay on your phone. Only the duo you get is counted, with no name, for the breakdown of results."
+  },
+  "jsonLd": {
+    "about": "Christmas characters"
+  }
+}

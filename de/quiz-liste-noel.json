@@ -1,0 +1,88 @@
+{
+  "hero": {
+    "badge": "Weihnachtstest • Zu zweit, oder allein für euch beide",
+    "title": "Steht ihr beim Weihnachtsmann auf der Liste der Artigen? Der Test für Paare",
+    "titleHighlight": "Liste der Artigen",
+    "description": "Wart ihr beide artig? Jeder beantwortet zwölf Fragen zu seinem Dezember, und der Test sagt euch, auf welcher Liste vom Weihnachtsmann ihr als Paar steht ... und wer von euch beiden artiger war.",
+    "subtitle": "12 Fragen • 3 Minuten pro Person • an einem Handy",
+    "jumpBtn": "Zum Test"
+  },
+  "section1": {
+    "title": "So funktioniert der Test",
+    "p1": "Dieser Test ist ein Weihnachtsspiel für Paare. Er sagt euch mit einer Prozentzahl, ob ihr als Paar eher auf der Liste der Artigen oder der Unartigen steht. Er stellt zwölf Fragen zu eurem Dezember: der Adventskalender, die versteckten Geschenke, das Geschenkpapier, das Essen bei den Schwiegereltern, das letzte Stück Stollen, und zum Schluss <a href=\"/de/silvester-spiel-fuer-paare/\">die Bilanz eures Jahres zu zweit</a>.",
+    "p2": "Zum Beispiel könnt ihr bei der Frage „Die Geschenke sind irgendwo bei euch versteckt:“ wählen zwischen „nicht gesucht, die Überraschung geht vor“, „nicht gesucht, aber das Versteck ist bekannt“, „ein, zwei Päckchen wurden geschüttelt“ und „alles geöffnet und sauber wieder eingepackt“. Die erste Antwort bringt die meisten Punkte, die letzte gar keine.",
+    "p3": "Zu zweit beantwortet der Erste die zwölf Fragen, gibt das Handy weiter, und der Zweite antwortet, ohne zu sehen, was der andere gewählt hat. Jeder antwortet für sich selbst. Am Ende bildet der Test den Durchschnitt eurer beiden Werte: Das ist die Prozentzahl für euch als Paar. Er sagt euch auch, wer von euch beiden artiger war und bei welchen Fragen einer viel artiger war als der andere.",
+    "p4": "Du kannst ihn auch allein machen und für euch beide antworten. Dann erfahrt ihr aber nicht, wer den Schnitt nach unten zieht!"
+  },
+  "section2": {
+    "title": "Die fünf Plätze auf der Liste des Weihnachtsmanns",
+    "intro": "Je nach Prozentzahl landet ihr auf einem dieser fünf Plätze. Jeder hat sein Foto, vom Geschenkeberg bis zum Sack Kohle.",
+    "galerie": [
+      {
+        "id": "r5",
+        "titre": "Ganz oben auf der Liste der Artigen",
+        "texte": "Ab 85 %. Adventskalender, Geschenke, Stollen: Alles läuft, wie es sich gehört.",
+        "alt": "Ein Berg verpackter Geschenke unter einem großen, beleuchteten Weihnachtsbaum im Wohnzimmer"
+      },
+      {
+        "id": "r4",
+        "titre": "Auf der Liste der Artigen",
+        "texte": "Von 65 bis 84 %. Zwei oder drei Ausrutscher stehen in der Akte, aber der Schlitten hält bei euch.",
+        "alt": "Zwei Weihnachtsstrümpfe, einer rosa und einer lila, voller kleiner Geschenke, über einem brennenden Kamin"
+      },
+      {
+        "id": "r3",
+        "titre": "Genau zwischen den beiden Listen",
+        "texte": "Von 45 bis 64 %. Die Elfen zögern noch, und ihr habt ein paar Tage, um den Ausschlag zu geben.",
+        "alt": "Ein verpacktes Geschenk und ein Stück Kohle mit roter Schleife nebeneinander auf einem Kaminsims"
+      },
+      {
+        "id": "r2",
+        "titre": "Eher auf der Liste der Unartigen",
+        "texte": "Von 25 bis 44 %. Geschenke auf den letzten Drücker, geschüttelte Päckchen: Der Weihnachtsmann hat die Stirn gerunzelt.",
+        "alt": "Zwei Weihnachtsstrümpfe, einer rosa und einer lila, gefüllt mit Kohle, dazu eine einzige Zuckerstange"
+      },
+      {
+        "id": "r1",
+        "titre": "Kohle für euch beide",
+        "texte": "Unter 25 %. Der Adventskalender hat keine zehn Tage gehalten, und der Stollen ist in der Küche verschwunden.",
+        "alt": "Ein Jutesack voller Kohle, mit einer großen roten Schleife zugebunden, unter einem Weihnachtsbaum"
+      }
+    ]
+  },
+  "section3": {
+    "title": "Woher kommt die Liste der Artigen und Unartigen?",
+    "p1": "Dass der Weihnachtsmann eine Liste führt, kommt vor allem aus einem amerikanischen Lied, „Santa Claus Is Comin' to Town“. Geschrieben haben es Haven Gillespie und J. Fred Coots, und im November 1934 lief es zum ersten Mal im Radio. Darin heißt es, dass der Weihnachtsmann eine Liste schreibt, sie zweimal prüft und am Ende weiß, wer artig war und wer nicht.",
+    "p2": "Bei uns ist die Idee viel älter, nur gehört sie zum Nikolaus. Am 6. Dezember kommt er mit seinem goldenen Buch, in dem steht, was die Kinder im Jahr gut und weniger gut gemacht haben. Mit dabei ist Knecht Ruprecht mit der Rute, in Bayern und in Österreich der Krampus.",
+    "p3": "Die Kohle im Strumpf kennt man vor allem aus amerikanischen Filmen. In Italien bringt sie die Befana in der Nacht auf den 6. Januar. Heute ist sie aus Zucker, und die Kinder essen sie auf!"
+  },
+  "section4": {
+    "title": "Und wenn ihr nicht auf derselben Liste steht?",
+    "p1": "Das ist der häufigste Fall, und auch der lustigste. Wenn einer bei 80 % liegt und der andere bei 40 %, schaut euch die Liste der Fragen an, bei denen ihr am weitesten auseinanderliegt: Dort entscheidet es sich. Oft packt einer alle Geschenke ein, und der andere unterschreibt nur den Anhänger, <a href=\"/de/welcher-weihnachtstyp-seid-ihr-test/\">ein echter Weihnachtself und ein Scrooge</a>.",
+    "p2": "Hinter dem Spiel erzählen ein paar Fragen vom echten Leben: wer abräumt, wer an die Geschenke für die ganze Familie denkt, wer nach dem Essen aufräumt. Wenn ihr über den Abstand weniger lachen könnt als gedacht, schaut euch an, <a href=\"/de/mental-load-test-paare/\">wer zu Hause was macht</a>, auch im restlichen Jahr: Oft ist es dieselbe Geschichte.",
+    "p3": "Und wenn ihr beide ganz unten steht, keine Panik. Zwei, die zusammen die Pralinenschachtel leer essen, sind immer noch ein Paar, das sich gut versteht."
+  },
+  "section5": {
+    "title": "Was ihr über diesen Test wissen solltet",
+    "p1": "Dieser Test ist ein Spiel, nur zum Spaß. Er sagt nichts Ernstes über eure Beziehung: Man kann seinen Adventskalender in zehn Tagen leeren und den Rest des Jahres ein Schatz sein.",
+    "p2": "Es wird nichts gespeichert: Eure Antworten bleiben auf eurem Handy. Gezählt wird nur der Platz, der herauskommt, ohne Vornamen, um zu sehen, welche Ergebnisse am häufigsten sind. Die Fotos wurden für diese Seite erstellt."
+  },
+  "seo": {
+    "faqTitle": "Häufige Fragen",
+    "faq1Q": "Wie finden wir heraus, ob wir auf der Liste der Artigen stehen?",
+    "faq1A": "Macht den Test zu zweit: Jeder beantwortet zwölf Fragen zu seinem Dezember, und der Test berechnet eine Prozentzahl für euch als Paar. Ab 65 % steht ihr auf der Liste der Artigen. Unter 45 % eher auf der anderen.",
+    "faq2Q": "Wie wird die Prozentzahl berechnet?",
+    "faq2A": "Jede Antwort bringt 0 bis 4 Punkte. Drei Fragen zählen etwas mehr als die anderen: die versteckten Geschenke, das Essen bei den Schwiegereltern und die Jahresbilanz. Die Summe wird in Prozent umgerechnet, und zu zweit bildet der Test den Durchschnitt von euch beiden.",
+    "faq3Q": "Kann man den Test allein machen?",
+    "faq3A": "Ja. Du wählst „Allein, für uns beide“ und antwortest so, wie es zu euch beiden passt. Du bekommst euren Platz auf der Liste, aber nicht den Vergleich zwischen euch beiden.",
+    "faq4Q": "Wie erfahren wir, wer von uns beiden artiger war?",
+    "faq4A": "Zu zweit zeigt der Test unter dem Ergebnis für euch als Paar die Prozentzahl von jedem und sagt, wer von euch beiden artiger war. Er zeigt auch die drei Fragen, bei denen ihr am weitesten auseinanderliegt.",
+    "faq5Q": "Ist der Test für Kinder gedacht?",
+    "faq5A": "Die Fragen sind für Erwachsene in einer Beziehung geschrieben: Es geht um die Schwiegereltern, das Geschenkebudget und die Spülmaschine. Anstößig ist nichts daran, aber ein Kind wird sich darin nicht wiederfinden.",
+    "faq6Q": "Werden meine Antworten gespeichert?",
+    "faq6A": "Nein. Die Antworten bleiben auf eurem Handy. Gezählt wird nur der Platz auf der Liste, ohne Vornamen, für die Verteilung der Ergebnisse."
+  },
+  "jsonLd": {
+    "about": "die Liste der Artigen und Unartigen des Weihnachtsmanns"
+  }
+}

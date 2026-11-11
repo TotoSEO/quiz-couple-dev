@@ -414,7 +414,9 @@
     "quizSuperVilain": "quiz del supervillano",
     "quizDuoVilains": "quiz del dúo de supervillanos",
     "quizChienNous": "¿Qué perro es para nosotros?",
-    "quizMaisonNous": "¿Qué casa es para nosotros?"
+    "quizMaisonNous": "¿Qué casa es para nosotros?",
+    "quizListeNoel": "¿Os habéis portado bien?",
+    "quizDuoNoel": "¿Qué personajes de Navidad sois?"
   },
   "truefalse": {
     "ready": "¿Listo para el verdadero o falso?",

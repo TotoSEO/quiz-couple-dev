@@ -604,6 +604,18 @@
     "metaDescription": "Welk huis past bij ons? Appartement in de stad, huis met tuin, opknaphuis of camperbus: ieder beantwoordt 12 vragen en de test laat jullie plek zien.",
     "description": "Twaalf vragen per persoon, en de plek waar jullie je allebei thuis voelen: appartement, huis op het platteland, loft, tiny house..."
   },
+  "quizListeNoel": {
+    "title": "Lief of stout? De kersttest voor koppels",
+    "shortTitle": "Lief of stout",
+    "metaDescription": "Lief of stout geweest? Ieder beantwoordt 12 vragen over zijn decembermaand, en de test zegt op welke lijst van de Kerstman jullie als koppel staan.",
+    "description": "Twaalf vragen per persoon over jullie decembermaand, en jullie plek als koppel op de lijst van de Kerstman, met foto."
+  },
+  "quizDuoNoel": {
+    "title": "Welke kerstfiguren zijn jullie? De kerstquiz voor koppels",
+    "shortTitle": "Welke kerstfiguren zijn jullie",
+    "metaDescription": "Welke kerstfiguren zijn jullie? Ieder beantwoordt 12 vragen over jullie kerst, en de quiz vindt jullie duo: de Kerstman en de Kerstvrouw, twee elfjes...",
+    "description": "Twaalf vragen per persoon, en het kerstduo dat jullie vormen, van de Kerstman en de Kerstvrouw tot de twee kerstkabouters, met foto."
+  },
   "bilanCouple": {
     "title": "Relatiecheck online | Direct resultaat, ook als pdf",
     "shortTitle": "Relatiecheck",

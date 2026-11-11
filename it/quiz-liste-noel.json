@@ -1,0 +1,88 @@
+{
+  "hero": {
+    "badge": "Test di Natale • In due, o da solo/a per la coppia",
+    "title": "Il test per scoprire se siete nella lista dei buoni di Babbo Natale",
+    "titleHighlight": "nella lista dei buoni",
+    "description": "Siete stati buoni, tutti e due? Ognuno risponde a dodici domande sul suo mese di dicembre, e il test vi dice in quale lista di Babbo Natale è la vostra coppia... e chi dei due è stato più buono.",
+    "subtitle": "12 domande • 3 minuti a testa • su un solo telefono",
+    "jumpBtn": "Fai il test"
+  },
+  "section1": {
+    "title": "Come funziona il test",
+    "p1": "Questo test è un gioco di Natale da fare in coppia. Vi dice se la vostra coppia è più nella lista dei buoni o in quella dei cattivi, con una percentuale. Fa dodici domande sul vostro mese di dicembre: il calendario dell'Avvento, i regali nascosti, la carta regalo, il cenone dai suoceri, l'ultima fetta di panettone, e per finire <a href=\"/it/giochi-capodanno-coppia/\">il bilancio del vostro anno in due</a>.",
+    "p2": "Per esempio, alla domanda «I regali sono nascosti da qualche parte in casa:», potete scegliere tra «nessuna ricerca, la sorpresa prima di tutto», «nessuna ricerca, ma il nascondiglio è stato individuato», «uno o due pacchetti sono stati scossi» e «tutto aperto, e poi rincartato per bene». La prima risposta è quella che dà più punti, l'ultima non ne dà nessuno.",
+    "p3": "In due, il primo risponde alle dodici domande, passa il telefono, e il secondo risponde senza vedere cosa ha scelto l'altro. Ognuno risponde per sé. Alla fine il test fa la media dei vostri due punteggi: è la percentuale della vostra coppia. Vi dice anche chi dei due è stato più buono, e su quali domande uno ha fatto molto meglio dell'altro.",
+    "p4": "Puoi farlo anche da solo/a, rispondendo per tutti e due. Ma non saprete chi abbassa la media!"
+  },
+  "section2": {
+    "title": "I cinque posti nella lista di Babbo Natale",
+    "intro": "In base alla vostra percentuale, il test vi mette in uno di questi cinque posti. Ognuno ha la sua foto, dalla montagna di regali al sacco di carbone.",
+    "galerie": [
+      {
+        "id": "r5",
+        "titre": "In cima alla lista dei buoni",
+        "texte": "Dall'85 % in su. Il calendario dell'Avvento, i regali, il panettone: tutto viene fatto come si deve.",
+        "alt": "Una montagna di regali incartati ai piedi di un grande albero di Natale illuminato, in un salotto"
+      },
+      {
+        "id": "r4",
+        "titre": "Nella lista dei buoni",
+        "texte": "Dal 65 all'84 %. Nella pratica c'è qualche scivolone, ma la slitta si fermerà da voi.",
+        "alt": "Due calze di Natale, una rosa e una viola, piene di regalini, appese sopra un camino acceso"
+      },
+      {
+        "id": "r3",
+        "titre": "Proprio a metà tra le due liste",
+        "texte": "Dal 45 al 64 %. Gli elfi sono ancora indecisi, e restano pochi giorni per far pendere la bilancia.",
+        "alt": "Un regalo incartato e un pezzo di carbone legato con un nastro rosso, uno accanto all'altro sulla mensola di un camino"
+      },
+      {
+        "id": "r2",
+        "titre": "Piuttosto nella lista dei cattivi",
+        "texte": "Dal 25 al 44 %. Regali all'ultimo minuto, pacchetti scossi: Babbo Natale ha aggrottato le sopracciglia.",
+        "alt": "Due calze di Natale, una rosa e una viola, piene di carbone, con un solo bastoncino di zucchero"
+      },
+      {
+        "id": "r1",
+        "titre": "Carbone per tutti e due",
+        "texte": "Sotto il 25 %. Il calendario dell'Avvento non è durato dieci giorni, e il panettone è sparito in cucina.",
+        "alt": "Un sacco di iuta pieno di carbone, chiuso da un grande fiocco rosso, ai piedi di un albero di Natale"
+      }
+    ]
+  },
+  "section3": {
+    "title": "Da dove viene la lista dei buoni e dei cattivi?",
+    "p1": "L'idea che Babbo Natale tenga una lista viene soprattutto da una canzone americana, «Santa Claus Is Comin' to Town». L'hanno scritta Haven Gillespie e J. Fred Coots, ed è andata in onda alla radio per la prima volta nel novembre del 1934. Dice che Babbo Natale sta facendo una lista, che la controlla due volte, e che alla fine saprà chi è stato buono e chi no.",
+    "p2": "In Italia il carbone lo porta un'altra: la Befana. Nella notte tra il 5 e il 6 gennaio riempie le calze di dolci per i bambini buoni, e di carbone per quelli che hanno fatto i capricci. Oggi è carbone dolce, fatto di zucchero, e i bambini se lo mangiano!",
+    "p3": "Altrove funziona in modo simile. In Germania San Nicola arriva il 6 dicembre con un grande libro dorato in cui è scritto come si sono comportati i bambini. E in Spagna sono i Re Magi a lasciare il carbone, sempre la notte del 5 gennaio."
+  },
+  "section4": {
+    "title": "E se non siete nella stessa lista?",
+    "p1": "È il caso più frequente, ed è anche il più divertente. Quando uno è all'80 % e l'altro al 40 %, guardate l'elenco delle domande su cui siete più lontani: è lì che si decide tutto. Spesso c'è uno che incarta tutti i regali e uno che firma il bigliettino, <a href=\"/it/test-che-personaggi-di-natale-siete/\">un vero elfo e uno Scrooge</a>.",
+    "p2": "Dietro al gioco, alcune domande parlano della vita vera: chi sparecchia, chi pensa ai regali di tutta la famiglia, chi mette in ordine dopo il cenone. Se la differenza vi fa ridere meno del previsto, guardate <a href=\"/it/test-carico-mentale-coppia/\">chi fa cosa in casa</a> nel resto dell'anno: spesso è la stessa storia.",
+    "p3": "E se siete tutti e due in fondo, niente panico. Due persone che finiscono insieme la scatola di cioccolatini restano una coppia che si capisce."
+  },
+  "section5": {
+    "title": "Cosa sapere su questo test",
+    "p1": "Questo test è un gioco, da prendere per ridere. Non dice niente di serio sulla vostra coppia: si può svuotare il calendario dell'Avvento in dieci giorni ed essere un tesoro per il resto dell'anno.",
+    "p2": "Non viene salvato niente: le vostre risposte restano sul vostro telefono. Viene contato solo il posto ottenuto, senza nome, per sapere quali risultati escono di più. Le foto sono state create per questa pagina."
+  },
+  "seo": {
+    "faqTitle": "Domande frequenti",
+    "faq1Q": "Come sapere se siamo nella lista dei buoni?",
+    "faq1A": "Fate il test in due: ognuno risponde a dodici domande sul suo mese di dicembre, e il test calcola una percentuale per la vostra coppia. Dal 65 % in su, siete nella lista dei buoni. Sotto il 45 %, piuttosto nell'altra.",
+    "faq2Q": "Come viene calcolata la percentuale?",
+    "faq2A": "Ogni risposta vale da 0 a 4 punti. Tre domande contano un po' più delle altre: i regali nascosti, il cenone dai suoceri e il bilancio dell'anno. Il totale diventa una percentuale, e in due il test fa la media tra voi due.",
+    "faq3Q": "Si può fare il test da soli?",
+    "faq3A": "Sì. Scegli «Da solo/a, per noi due» e rispondi pensando alla vostra coppia. Avrai il vostro posto nella lista, ma non il confronto tra voi due.",
+    "faq4Q": "Come sapere chi dei due è stato più buono?",
+    "faq4A": "In due, il test mostra la percentuale di ognuno sotto il risultato della coppia, e dice chi dei due è stato più buono. Mostra anche le tre domande su cui siete più lontani.",
+    "faq5Q": "Il test è fatto per i bambini?",
+    "faq5A": "Le domande sono scritte per adulti in coppia: parlano dei suoceri, del budget per i regali e della lavastoviglie. Non c'è niente di sconveniente, ma un bambino non ci si ritroverà.",
+    "faq6Q": "Le mie risposte vengono salvate?",
+    "faq6A": "No. Le risposte restano sul vostro telefono. Viene contato solo il posto ottenuto nella lista, senza nome, per la distribuzione dei risultati."
+  },
+  "jsonLd": {
+    "about": "la lista dei buoni e dei cattivi di Babbo Natale"
+  }
+}
