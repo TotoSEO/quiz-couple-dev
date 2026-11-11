@@ -1,23 +1,23 @@
 {
   "hero": {
     "badge": "Quiz de Noël • À deux, ou seul(e) pour le couple",
-    "title": "Le quiz pour savoir quels personnages de Noël vous êtes, tous les deux",
+    "title": "Le quiz pour savoir quels personnages de Noël vous êtes",
     "titleHighlight": "quels personnages de Noël vous êtes",
-    "description": "Le Père Noël et la Mère Noël, deux lutins, Scrooge et l'esprit de Noël ? Chacun répond à douze questions sur votre Noël à deux, et le quiz vous donne le duo de Noël que vous formez, avec sa photo.",
+    "description": "Êtes-vous plutôt le Père Noël et la Mère Noël ou deux lutins de l'atelier ? Chacun répond à 12 questions sur votre façon de fêter Noël. Le quiz vous donne ensuite le duo de Noël que vous formez, avec sa photo.",
     "subtitle": "12 questions • 3 minutes chacun • sur un seul téléphone",
     "jumpBtn": "Faire le quiz"
   },
   "section1": {
     "title": "Comment marche le quiz",
-    "p1": "Ce quiz est un jeu de Noël à faire en couple. Il vous dit quel duo de personnages de Noël vous formez, d'après la façon dont vous passez les fêtes. Il pose douze questions sur votre Noël à deux : quand vous sortez la déco, à quoi ressemble votre sapin, où vous êtes le 24 au soir, ce que vous faites le matin du 25, etc.",
-    "p2": "Par exemple, à la question « Le 24 au soir, vous êtes : », vous avez le choix entre « chez nous, et c'est nous qui recevons », « sur la route, entre deux familles », « tous les deux, en pyjama » et « quelque part où il y a de la neige, si possible ». Chaque réponse donne des points à un ou deux duos. La première en donne au Père Noël et à la Mère Noël, la deuxième aux deux rennes du traîneau, la troisième aux deux gnomes, et la dernière aux bonshommes de neige.",
-    "p3": "À deux, le premier répond aux douze questions, passe le téléphone, et le second répond sans voir ce que l'autre a choisi. Le quiz additionne vos deux séries de réponses et garde le duo qui a la meilleure note. Vous voyez aussi le duo que chacun aurait eu tout seul, et la liste des questions où vous n'avez pas répondu pareil.",
-    "p4": "Il y a une exception. Si un seul de vous deux répond comme quelqu'un que Noël fatigue, vous êtes Scrooge et l'esprit de Noël, quoi que disent les points. C'est le seul duo où les deux ne se ressemblent pas !",
-    "p5": "Vous pouvez aussi le faire seul(e), en répondant pour vous deux."
+    "p1": "Ce quiz est un jeu de Noël à faire en couple. Il vous dit quel duo de personnages de Noël vous formez, d'après votre façon de passer les fêtes. Il pose 12 questions sur votre Noël. Il vous demande par exemple quand vous sortez la déco et ce que vous faites le matin du 25.",
+    "p2": "Prenons la question « Le 24 au soir, vous êtes : ». Vous avez le choix entre « chez nous, et c'est nous qui recevons », « sur la route, entre deux familles », « juste nous, en pyjama » et « quelque part où il y a de la neige ». Chaque réponse donne des points à un ou deux duos. Si vous répondez « chez nous », le quiz donne des points au Père Noël et à la Mère Noël. Si vous répondez « sur la route », il en donne aux deux rennes du traîneau.",
+    "p3": "Le premier répond aux 12 questions puis il passe le téléphone à l'autre. Le second répond sans voir ce que le premier a choisi. Le quiz additionne ensuite vos réponses et il garde le duo qui a le plus de points. Il vous montre aussi le duo que chacun aurait eu tout seul et les questions où vous n'avez pas répondu pareil.",
+    "p4": "Il y a une exception. Si un seul de vous répond comme quelqu'un que Noël fatigue, vous êtes Scrooge et l'esprit de Noël. Dans ce cas, le quiz ne regarde pas les points. C'est le seul duo où les deux personnages ne se ressemblent pas !",
+    "p5": "Vous pouvez aussi faire le quiz seul(e) en répondant pour votre couple."
   },
   "section2": {
-    "title": "Les huit duos de Noël du quiz",
-    "intro": "Le quiz peut tomber sur huit duos, chacun avec sa photo. Voici à quels couples chacun ressemble le plus.",
+    "title": "Les 8 duos de Noël du quiz",
+    "intro": "Le quiz peut donner 8 duos et chacun a sa photo. Voici à quels couples chaque duo ressemble le plus.",
     "galerie": [
       {
         "id": "noel",
@@ -40,66 +40,66 @@
       {
         "id": "neige",
         "titre": "Deux bonshommes de neige",
-        "texte": "Pour ceux qui veulent du froid, une grande balade et pas trop de monde.",
+        "texte": "Pour ceux qui aiment les grandes balades dans le froid.",
         "alt": "Deux bonshommes de neige côte à côte dans un jardin enneigé, l'un avec une écharpe rose, l'autre avec une écharpe violette"
       },
       {
         "id": "epices",
         "titre": "Deux bonshommes en pain d'épices",
-        "texte": "Pour ceux qui passent Noël en cuisine, puis à table.",
+        "texte": "Pour ceux qui passent Noël dans la cuisine.",
         "alt": "Deux bonshommes en pain d'épices décorés de glaçage blanc sur une plaque farinée, à côté d'emporte-pièces en étoile"
       },
       {
         "id": "noisette",
         "titre": "Casse-Noisette et la fée Dragée",
-        "texte": "Pour ceux qui aiment les lumières, les marchés de Noël et les belles tables.",
+        "texte": "Pour ceux qui aiment les marchés de Noël et les belles tables.",
         "alt": "Un casse-noisette en bois et une petite danseuse aux ailes de fée, devant un sapin illuminé"
       },
       {
         "id": "scrooge",
         "titre": "Scrooge et l'esprit de Noël",
-        "texte": "Pour les couples où l'un adore Noël, et l'autre beaucoup moins.",
+        "texte": "Pour les couples où l'un adore Noël et l'autre beaucoup moins.",
         "alt": "Deux figurines sur un rebord de fenêtre enneigé : un vieil homme en bonnet de nuit qui tient une bougie, et un personnage doré couronné de houx avec une lanterne"
       },
       {
         "id": "tomtes",
         "titre": "Deux gnomes de Noël",
-        "texte": "Pour ceux qui fêtent Noël à la maison, sous un plaid.",
+        "texte": "Pour ceux qui fêtent Noël à la maison sous un plaid.",
         "alt": "Deux gnomes de Noël au long bonnet, un rose et un violet, posés sur un rebord de fenêtre à côté d'une bougie"
       }
     ]
   },
   "section3": {
     "title": "D'où viennent ces personnages de Noël ?",
-    "p1": "Le Père Noël que tout le monde connaît doit beaucoup à un poème américain de 1823, « A Visit from St. Nicholas ». C'est ce poème qui a donné au traîneau ses huit rennes, avec leurs noms. En français, on les appelle Tornade, Danseur, Furie, Fringant, Comète, Cupidon, Tonnerre et Éclair.",
-    "p2": "Casse-Noisette vient d'un conte allemand d'E. T. A. Hoffmann, paru en 1816. Il est devenu un ballet en 1892, sur une musique de Tchaïkovski, et c'est dans le ballet qu'apparaît la fée Dragée. Scrooge, lui, est le vieil avare d'« Un chant de Noël », le conte que Charles Dickens a publié en 1843. Il déteste Noël jusqu'à la nuit où trois esprits viennent lui rendre visite.",
-    "p3": "Les gnomes de Noël au long bonnet viennent de Scandinavie, où on les appelle « tomte » ou « nisse ». Dans les contes, ce sont de petits êtres qui veillent sur la maison, à condition qu'on pense à leur laisser un bol de bouillie le soir de Noël !"
+    "p1": "Le Père Noël que tout le monde connaît vient en grande partie d'un poème américain de 1823 qui s'appelle « A Visit from St. Nicholas ». C'est ce poème qui a donné huit rennes au traîneau et qui leur a donné un nom. En français, on les appelle Tornade, Danseur, Furie, Fringant, Comète, Cupidon, Tonnerre et Éclair.",
+    "p2": "Casse-Noisette vient d'un conte allemand d'E. T. A. Hoffmann qui date de 1816. Il est devenu un ballet en 1892 avec la musique de Tchaïkovski, et c'est dans ce ballet qu'on voit la fée Dragée pour la première fois. Scrooge est le vieil avare d'« Un chant de Noël », un conte que Charles Dickens a publié en 1843. Il déteste Noël jusqu'à la nuit où trois esprits viennent lui rendre visite.",
+    "p3": "Les gnomes de Noël au long bonnet viennent de Scandinavie, où on les appelle « tomte » ou « nisse ». Dans les contes, ce sont de petits êtres qui veillent sur la maison. Il faut juste penser à leur laisser un bol de bouillie le soir de Noël !"
   },
   "section4": {
     "title": "Et si vous ne fêtez pas Noël de la même façon ?",
-    "p1": "C'est très courant. L'un a grandi avec trois réveillons et vingt personnes à table, l'autre avec un Noël à quatre devant un film. Le quiz le montre tout de suite, dans la liste des questions où vous n'avez pas répondu pareil.",
-    "p2": "Le plus simple, c'est de prendre un peu de chaque : une tradition de l'un, une tradition de l'autre, et une troisième que vous inventez à deux. Au bout de quelques années, ce sont ces habitudes-là qui disent <a href=\"/quel-type-de-couple-etes-vous/\">quel genre de couple vous êtes</a>, bien plus que le sapin.",
-    "p3": "Il reste une question que le duo ne règle pas : de vous deux, <a href=\"/test-liste-des-enfants-sages/\">lequel a été le plus sage cette année</a>. Ça, c'est le Père Noël qui tranche."
+    "p1": "C'est très courant. Par exemple, l'un a grandi avec trois réveillons et vingt personnes à table. L'autre a toujours fêté Noël à quatre devant un film. Le quiz le montre tout de suite dans la liste des questions où vous n'avez pas répondu pareil.",
+    "p2": "Le plus simple est de prendre un peu de chaque. Vous gardez une tradition de l'un et une tradition de l'autre, et vous en inventez une nouvelle ensemble. Au bout de quelques années, ce sont ces habitudes qui montrent <a href=\"/quel-type-de-couple-etes-vous/\">quel genre de couple vous êtes</a>.",
+    "p3": "Il reste une question que ce quiz ne règle pas. Il ne vous dit pas <a href=\"/test-liste-des-enfants-sages/\">lequel a été le plus sage cette année</a>. Pour ça, il y a un autre test."
   },
   "section5": {
     "title": "Ce qu'il faut savoir sur ce quiz",
-    "p1": "Ce quiz est un jeu, pour rire. Il ne mesure rien de sérieux : on peut très bien être deux gnomes de Noël en décembre et deux rennes du traîneau le reste de l'année.",
-    "p2": "Rien n'est enregistré : vos réponses restent sur votre téléphone. Seul le duo obtenu est compté, sans prénom, pour savoir quels résultats sortent le plus. Les photos ont été créées pour cette page."
+    "p1": "Ce quiz est un jeu pour rire et il ne mesure rien de sérieux. On peut très bien être deux gnomes de Noël en décembre et deux rennes du traîneau le reste de l'année.",
+    "p2": "Vos réponses ne sont pas enregistrées, elles restent sur votre téléphone. On compte seulement le duo obtenu pour savoir quels résultats sortent le plus. Votre prénom n'est pas enregistré non plus. Les photos ont été créées pour cette page."
   },
   "seo": {
     "faqTitle": "Questions fréquentes",
     "faq1Q": "Quels personnages de Noël peut-on obtenir ?",
-    "faq1A": "Huit duos sont possibles : le Père Noël et la Mère Noël, deux lutins de l'atelier, deux rennes du traîneau, deux bonshommes de neige, deux bonshommes en pain d'épices, Casse-Noisette et la fée Dragée, Scrooge et l'esprit de Noël, et deux gnomes de Noël.",
+    "faq1A": "Le quiz peut donner 8 duos : le Père Noël et la Mère Noël, deux lutins de l'atelier, deux rennes du traîneau, deux bonshommes de neige, deux bonshommes en pain d'épices, Casse-Noisette et la fée Dragée, Scrooge et l'esprit de Noël, et deux gnomes de Noël.",
     "faq2Q": "Comment le duo est-il choisi ?",
-    "faq2A": "Chaque réponse donne des points à un ou deux duos. Par exemple, « on cuisine pendant deux jours, c'est le meilleur moment » donne des points aux bonshommes en pain d'épices. À deux, le quiz additionne vos deux séries de réponses, et le duo qui a la meilleure note devient le vôtre.",
+    "faq2A": "Chaque réponse donne des points à un ou deux duos. Par exemple, si vous répondez « on cuisine pendant deux jours, c'est le meilleur moment », les bonshommes en pain d'épices gagnent des points. Quand vous faites le quiz à deux, il additionne vos réponses et le duo qui a le plus de points devient le vôtre.",
     "faq3Q": "Peut-on faire le quiz seul(e) ?",
-    "faq3A": "Oui. Vous choisissez « Seul(e), pour nous deux » et vous répondez en pensant à votre couple. Vous aurez votre duo, mais pas la comparaison de vos réponses : pour ça, il faut être deux.",
+    "faq3A": "Oui. Il suffit de choisir « Seul(e), pour notre couple » et de répondre en pensant à votre couple. Vous aurez votre duo mais vous ne pourrez pas comparer vos réponses.",
     "faq4Q": "Pourquoi sommes-nous Scrooge et l'esprit de Noël ?",
-    "faq4A": "Parce qu'un seul de vous deux a répondu comme quelqu'un que Noël fatigue : pas de déco, des cadeaux à la dernière minute, et le 26 décembre comme moment préféré. Dans ce cas, le quiz ne regarde plus les points, il vous donne ce duo-là. Il sort aussi quand vous râlez tous les deux.",
+    "faq4A": "Parce qu'un seul de vous a répondu comme quelqu'un que Noël fatigue. Par exemple, cette personne ne sort pas la déco et son moment préféré est le 26 décembre. Dans ce cas, le quiz ne regarde plus les points et il vous donne ce duo. Il sort aussi quand vous râlez l'un comme l'autre.",
     "faq5Q": "À quel moment faire ce quiz ?",
-    "faq5A": "En décembre, un soir où vous décorez le sapin, ou le 24 en attendant minuit. Il prend trois minutes chacun. Vous pouvez aussi le faire à plusieurs couples et comparer vos duos.",
+    "faq5A": "Vous pouvez le faire en décembre, par exemple le soir où vous décorez le sapin ou le 24 en attendant minuit. Il prend trois minutes chacun. Vous pouvez aussi le faire avec d'autres couples pour comparer vos duos.",
     "faq6Q": "Mes réponses sont-elles enregistrées ?",
-    "faq6A": "Non. Les réponses restent sur votre téléphone. Seul le duo obtenu est compté, sans prénom, pour la répartition des résultats."
+    "faq6A": "Non. Vos réponses restent sur votre téléphone. On compte seulement le duo obtenu pour savoir quels résultats sortent le plus, et votre prénom n'est pas enregistré."
   },
   "jsonLd": {
     "about": "les personnages de Noël"

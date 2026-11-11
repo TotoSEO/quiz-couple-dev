@@ -319,6 +319,57 @@ référent, et l'incise de style (« elle, », « lui, ») disparaît.
 La règle vaut pour tout nouveau contenu et pour toute réécriture, dans les
 cinq langues : on transpose le ton, pas seulement les mots.
 
+Des phrases simples, sans virgules à la chaîne (11 novembre 2026)
+
+Thomas, devant les pages des quiz fun (quel chien, quelle maison, les deux
+quiz de Noël, qui porte la culotte) : « Tu nous fous des virgules partout,
+les ", tous les deux" partout ça dégage ça, je veux du contenu humain !
+compréhensif, lisible, simple ! tu parles à des humains parle comme un
+humain, utilise les mêmes mots et le même style d'écriture qu'eux ». Ces
+pages avaient une virgule tous les 13 mots (une tous les 18 à 22 mots sur
+les pages de référence), « vous deux » ou « tous les deux » quatre à six
+fois par page, et des fiches de résultat faites de bouts de phrases.
+
+Ce qu'on n'écrit plus :
+
+- « tous les deux », « à tous les deux », « pour vous deux », « de vous
+  deux » collés en fin de phrase. On écrit « votre couple », « vous »,
+  « l'un comme l'autre », ou rien du tout.
+  ✗ « ...et le test vous montre l'endroit où vous seriez bien tous les
+     deux. »
+  ✓ « Le test vous montre ensuite le logement qui irait le mieux à votre
+     couple. »
+- La phrase qui empile les virgules : une incise, une liste de trois, puis
+  « , et... ». On coupe en deux ou trois phrases complètes.
+  ✗ « À deux, le premier répond aux douze questions, passe le téléphone, et
+     le second répond sans voir ce que l'autre a choisi. »
+  ✓ « Le premier répond aux 12 questions puis il passe le téléphone à
+     l'autre. Le second répond sans voir ce que le premier a choisi. »
+- La liste de trois ou quatre exemples après deux-points. Un ou deux
+  exemples suffisent, amenés par « par exemple ».
+  ✗ « Il pose douze questions : où vous habitez, ce que vous faites le
+     dimanche matin, combien de temps il resterait seul, etc. »
+  ✓ « Il pose 12 questions toutes simples. Par exemple, il vous demande où
+     vous habitez et combien de temps le chien resterait seul. »
+- Dans une fiche de résultat, le bout de phrase sans verbe et la petite
+  chute. Une fiche dit ce qu'est le résultat, platement, puis donne un
+  conseil.
+  ✗ « Le roi de l'appartement. Il est drôle, têtu juste ce qu'il faut, et
+     il ronfle plus fort que vous deux réunis. »
+  ✓ « Le bouledogue français est un chien parfait pour la vie en
+     appartement. Il est drôle et un peu têtu. Il ronfle aussi très fort ! »
+
+Les réponses d'un quiz suivent la même règle : « Un grand avec un potager »
+et pas « Un grand, avec un potager », « Du bois et peu d'objets » et pas
+« Du bois, du simple, peu d'objets ». Une vraie liste (les dix races de
+chiens, les huit rennes) reste une liste.
+
+Le contrôle : depuis static-site, « node build/tics-redaction.mjs
+../fr/quiz-<page>.json ../fr/gd.json:<préfixe> » compte les mots par
+virgule, les « tous les deux » et leurs équivalents dans chaque langue, les
+deux-points de style et les points d'exclamation, et signale « À REVOIR »
+sous une virgule pour 18 mots. Avec « --detail », il montre chaque phrase.
+
 
 10. VARIER LES TOURNURES : LA RÉSERVE DE FORMULATIONS
 -----------------------------------------------------
