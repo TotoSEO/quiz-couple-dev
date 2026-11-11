@@ -100,12 +100,14 @@ jeuOuiNon	ja-of-nee-vragen	ja of nee vragen	ja of nee vragen koppels; ja nee spe
 jeuPhrases	maak-de-zin-af	maak de zin af	zinnen afmaken spel; maak de zin af vragen		0	en anglais « finish the sentence game for couples »
 jeuDixMais	hij-is-een-10-maar	hij is een 10 maar	zij is een 10 maar; een 10 maar spel	c'est un 10 mais	6	
 jeuSoireeCouples	partyspel-voor-koppels	partyspel voor koppels	spel voor meerdere koppels; spelletjesavond koppels		0	aucun clic : la page date du 27 octobre
-speciauxCouple	themaquiz-voor-koppels	themaquiz voor koppels	halloween quiz koppels; kerstquiz koppels		0	la saison change le titre, pas le mot-clé
+speciauxCouple	themaquiz-voor-koppels	themaquiz voor koppels	halloween quiz koppels; kerstquiz koppels; leuke quizzen voor koppels		0	la saison change le titre, pas le mot-clé ; depuis le 11 novembre 2026 la famille a aussi des quiz de toute l'année (chien, maison)
 quizSerialKiller	seriemoordenaar-quiz	seriemoordenaar quiz	met welke seriemoordenaar match jij	quiz serial killer	1	
 quizMortFilmHorreur	wie-gaat-als-eerste-dood	wie gaat als eerste dood in een horrorfilm	horrorfilm quiz; overleef jij een horrorfilm		0	en anglais « which horror movie kills you first quiz »
 quizPossession	wie-wordt-bezeten-quiz	wie wordt bezeten quiz	wie van ons wordt bezeten	qui de nous	1	
 quizSuperVilain	welke-superschurk-ben-jij	welke superschurk ben jij	superschurk quiz	compatibilité prénom en pourcentage	1	
 quizDuoVilains	welk-superschurkenduo-zijn-jullie	welk superschurkenduo zijn jullie	superschurken koppel quiz		0	
+quizChienNous	welke-hond-past-bij-ons-test	welke hond past bij ons	welke hond past bij jullie; welke hond past bij mij test; hondenrassen test koppel		0	page du 11 novembre 2026 ; mots de la saisie semi-automatique de Google
+quizMaisonNous	welk-huis-past-bij-ons-test	welk huis past bij ons	welk huis past bij jullie; welk huis past bij mij test; droomhuis quiz		0	page du 11 novembre 2026 ; mots de la saisie semi-automatique de Google
 quizTentation	temptation-island-quiz	temptation island quiz	temptation island vragen		0	l'émission existe aux Pays-Bas et en Flandre sous ce nom
 admin	admin	-			0	administration, en noindex
 contact	contact	-			0	page d'information

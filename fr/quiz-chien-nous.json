@@ -1,0 +1,136 @@
+{
+  "hero": {
+    "badge": "Quiz fun • À deux, ou seul(e) pour le couple",
+    "title": "Le test pour savoir quel chien est fait pour vous deux",
+    "titleHighlight": "quel chien est fait pour vous deux",
+    "description": "Vous voulez un chien, mais pas forcément le même ? Chacun répond à douze questions sur votre vie à deux, et le test vous donne le chien qui vous correspond à tous les deux, avec sa photo.",
+    "subtitle": "12 questions • 3 minutes chacun • sur un seul téléphone",
+    "jumpBtn": "Faire le test"
+  },
+  "section1": {
+    "title": "Comment marche le test",
+    "p1": "Ce test sert à trouver le chien qui irait à votre couple, et pas seulement à l'un de vous deux. Il pose douze questions toutes simples sur la vie que vous auriez avec lui : où vous habitez, ce que vous faites le dimanche matin, combien de temps il resterait seul, si les poils sur le canapé vous dérangent, etc.",
+    "p2": "Par exemple, à la question « Sa taille : », vous avez le choix entre « petit, il tient sur les genoux », « moyen, on peut encore le porter », « grand, un vrai chien » et « énorme, presque un poney ». Si vous répondez « petit » et que votre moitié répond « énorme », le test en tient compte : il additionne vos deux séries de réponses et il garde le chien qui a la meilleure note pour vous deux.",
+    "p3": "À deux, le premier répond aux douze questions, passe le téléphone, et le second répond sans voir ce que l'autre a choisi. À la fin, vous avez le chien du couple avec sa photo, le chien que chacun aurait eu tout seul, et la liste des questions où vous n'avez pas répondu pareil. C'est souvent là que la discussion commence !",
+    "p4": "Vous pouvez aussi le faire seul(e), en répondant pour vous deux. Mais c'est quand même plus drôle de découvrir ce que l'autre a répondu."
+  },
+  "section2": {
+    "title": "Les douze chiens du test",
+    "intro": "Le test peut tomber sur douze résultats : dix races parmi les plus connues, le chien de refuge, et un dernier résultat pour les couples qui ne sont pas encore prêts. Voici à qui chacun convient le mieux.",
+    "galerie": [
+      {
+        "id": "golden",
+        "titre": "Le golden retriever",
+        "texte": "Pour les couples qui ont un jardin, du temps pour une grande balade tous les jours, et qui n'ont pas peur des poils.",
+        "alt": "Un golden retriever assis dans un pré au coucher du soleil"
+      },
+      {
+        "id": "corgi",
+        "titre": "Le corgi",
+        "texte": "Pour ceux qui veulent un chien de taille moyenne, joueur et malin, et que les aboiements font plutôt rire.",
+        "alt": "Un corgi roux et blanc debout sur une allée de jardin"
+      },
+      {
+        "id": "bouledogue",
+        "titre": "Le bouledogue français",
+        "texte": "Pour la vie en appartement, et pour les couples plutôt canapé que footing.",
+        "alt": "Un bouledogue français couché sur un plaid, sur un canapé"
+      },
+      {
+        "id": "cavalier",
+        "titre": "Le cavalier king charles",
+        "texte": "Pour ceux qui sont souvent à la maison et qui veulent un petit chien très câlin.",
+        "alt": "Un cavalier king charles roulé en boule dans un fauteuil"
+      },
+      {
+        "id": "aussie",
+        "titre": "Le berger australien",
+        "texte": "Pour les couples sportifs qui ont de la place et deux heures par jour à lui consacrer.",
+        "alt": "Un berger australien bleu merle qui court dans un champ"
+      },
+      {
+        "id": "teckel",
+        "titre": "Le teckel",
+        "texte": "Pour ceux qui veulent un petit chien avec beaucoup de caractère, et qui ont de la patience.",
+        "alt": "Un teckel à poil ras debout sur des feuilles d'automne"
+      },
+      {
+        "id": "caniche",
+        "titre": "Le caniche",
+        "texte": "Pour ceux qui ne veulent pas de poils sur le canapé et qui ont envie de lui apprendre plein de choses.",
+        "alt": "Un caniche abricot assis près d'une fenêtre, dans un appartement"
+      },
+      {
+        "id": "shiba",
+        "titre": "Le shiba inu",
+        "texte": "Pour les couples qui travaillent une partie de la journée et qui aiment les chiens indépendants.",
+        "alt": "Un shiba inu roux assis sur un trottoir, devant une terrasse de café"
+      },
+      {
+        "id": "husky",
+        "titre": "Le husky sibérien",
+        "texte": "Pour les grands sportifs qui vivent à la campagne, au frais de préférence.",
+        "alt": "Un husky sibérien aux yeux bleus dans une forêt enneigée"
+      },
+      {
+        "id": "bernois",
+        "titre": "Le bouvier bernois",
+        "texte": "Pour ceux qui ont une grande maison, un grand jardin, et envie d'un très grand chien très calme.",
+        "alt": "Un bouvier bernois couché dans un pré de montagne en fleurs"
+      },
+      {
+        "id": "refuge",
+        "titre": "Le chien de refuge",
+        "texte": "Pour les couples qui n'ont pas de race en tête et qui préfèrent adopter.",
+        "alt": "Un chien croisé au poil hirsute, un bandana rouge autour du cou, assis sur le pas d'une porte"
+      },
+      {
+        "id": "peluche",
+        "titre": "Un chien en peluche, pour l'instant",
+        "texte": "Pour ceux qui rentrent tard, qui voyagent beaucoup ou qui ne sont pas encore d'accord. Ça arrive, et le test le dit.",
+        "alt": "Un chien en peluche beige assis sur un canapé"
+      }
+    ]
+  },
+  "section3": {
+    "title": "Choisir un chien à deux : ce qu'il faut se demander",
+    "intro": "Un chien vit dix à quinze ans. C'est une décision qu'on prend à deux, et il y a quatre sujets sur lesquels il vaut mieux être d'accord avant d'aller en voir un.",
+    "sub1Title": "Qui s'en occupe, et quand ?",
+    "sub1Text": "C'est la question qui fâche le plus souvent. Un chien sort trois fois par jour, tous les jours, y compris le dimanche matin sous la pluie. Avant d'adopter, mettez-vous d'accord sur <a href=\"/test-charge-mentale-couple/\">qui fait quoi à la maison</a> : la sortie du matin, le retour du midi, le vétérinaire, et les nuits hachées si c'est un chiot.",
+    "sub2Title": "Votre logement et votre rythme",
+    "sub2Text": "Un grand chien sportif dans un studio, ou un petit chien très collant laissé seul dix heures par jour, ça se passe mal pour tout le monde. Regardez votre vie telle qu'elle est aujourd'hui, pas celle que vous aimeriez avoir. Et si vous n'êtes pas encore d'accord sur <a href=\"/test-quelle-maison-est-faite-pour-nous/\">l'endroit où vous voulez vivre</a>, commencez par là : un jardin change beaucoup de choses.",
+    "sub3Title": "Le budget",
+    "sub3Text": "Il n'y a pas que les croquettes. Il faut compter le vétérinaire, les vaccins, une assurance si vous en prenez une, le toilettage pour certaines races, et la garde quand vous partez sans lui. Un grand chien coûte plus cher qu'un petit, tout simplement parce qu'il mange plus. Faites le calcul à deux avant, ça évite les mauvaises surprises.",
+    "sub4Title": "Un chiot ou un adulte, un élevage ou un refuge",
+    "sub4Text": "Un chiot, c'est mignon, mais c'est aussi des mois d'éducation, de nuits courtes et de chaussures mâchouillées. Un chien adulte est souvent déjà propre, et on connaît son caractère. Dans un refuge, on trouve des chiens de tous les âges, des croisés mais aussi des chiens de race. Si vous passez par un élevage, allez voir les parents et l'endroit où les chiots grandissent."
+  },
+  "section4": {
+    "title": "Et si vous n'êtes pas d'accord ?",
+    "p1": "Le résultat du test, c'est un point de départ. Si l'un rêve d'un husky et l'autre d'un chien qui tient dans un sac, le plus intéressant est dans la liste de vos réponses différentes. Regardez sur quoi vous n'êtes pas d'accord (la taille, le temps qu'il passerait seul, les vacances) et parlez-en. La plupart du temps, ça coince sur deux ou trois questions, pas sur toutes.",
+    "p2": "Beaucoup de couples prennent un chien <a href=\"/test-parentalite-couple/\">avant d'avoir un enfant</a>. Ça n'a rien à voir, bien sûr, mais c'est déjà s'organiser à deux pour quelqu'un qui dépend de vous, et on voit vite comment chacun s'y prend.",
+    "p3": "Et si l'un de vous deux n'en veut pas du tout, n'insistez pas. Il vaut mieux attendre d'être deux à le vouloir que d'avoir un chien dont un seul s'occupe."
+  },
+  "section5": {
+    "title": "Ce qu'il faut savoir sur ce test",
+    "p1": "Ce test est un jeu. Les descriptions donnent le caractère le plus courant de chaque race, mais chaque chien est différent, et son éducation compte autant que sa race. Pour faire votre choix, allez voir des éleveurs, des refuges ou un vétérinaire, et passez du temps avec le chien avant de vous décider.",
+    "p2": "Rien n'est enregistré : vos réponses restent sur votre téléphone. Seul le chien obtenu est compté, sans prénom, pour savoir quels résultats sortent le plus. Les photos des chiens ont été créées pour cette page."
+  },
+  "seo": {
+    "faqTitle": "Questions fréquentes",
+    "faq1Q": "Quels chiens peut-on obtenir ?",
+    "faq1A": "Douze résultats sont possibles : le golden retriever, le corgi, le bouledogue français, le cavalier king charles, le berger australien, le teckel, le caniche, le shiba inu, le husky sibérien, le bouvier bernois, le chien de refuge, et « un chien en peluche, pour l'instant » pour les couples qui ne sont pas encore prêts.",
+    "faq2Q": "Comment le résultat est-il calculé ?",
+    "faq2A": "Chaque réponse donne des points aux chiens qui lui correspondent. Par exemple, « dans un appartement en ville, sans extérieur » donne des points au bouledogue français et au cavalier king charles, et aucun au husky. À deux, le test additionne vos deux séries de réponses, et le chien qui a la meilleure note devient celui du couple.",
+    "faq3Q": "Peut-on faire le test seul(e) ?",
+    "faq3A": "Oui. Vous choisissez « Seul(e), pour nous deux » et vous répondez en pensant à votre couple. Vous aurez un chien, mais pas la comparaison de vos réponses : pour ça, il faut être deux.",
+    "faq4Q": "Quel chien pour un jeune couple en appartement ?",
+    "faq4A": "Ça dépend surtout du temps que vous avez. En appartement, les chiens qui s'en sortent le mieux sont ceux qui n'ont pas besoin de courir pendant des heures : le bouledogue français, le cavalier king charles, le teckel ou le caniche. Le shiba inu convient aussi si vous travaillez une partie de la journée. Un berger australien ou un husky, eux, ont besoin d'espace et de beaucoup d'exercice.",
+    "faq5Q": "Comment savoir si on est prêts à avoir un chien ?",
+    "faq5A": "Le test a un résultat pour ça : « un chien en peluche, pour l'instant ». Il sort quand vos réponses disent que le chien resterait seul toute la journée, que vous voyagez beaucoup ou que l'envie n'est pas la même des deux côtés. Si vous tombez dessus, gardez le chien d'un ami pendant un week-end pour voir.",
+    "faq6Q": "Mes réponses sont-elles enregistrées ?",
+    "faq6A": "Non. Les réponses restent sur votre téléphone. Seul le chien obtenu est compté, sans prénom, pour la répartition des résultats."
+  },
+  "jsonLd": {
+    "about": "choisir un chien à deux"
+  }
+}

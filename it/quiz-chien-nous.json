@@ -1,0 +1,136 @@
+{
+  "hero": {
+    "badge": "Quiz originale • In due, o da solo/a per la coppia",
+    "title": "Il test per scoprire che cane fa per voi due",
+    "titleHighlight": "che cane fa per voi due",
+    "description": "Volete un cane, ma non per forza lo stesso? Ognuno risponde a dodici domande sulla vostra vita in due, e il test vi dà il cane che fa per tutti e due, con la sua foto.",
+    "subtitle": "12 domande • 3 minuti a testa • su un solo telefono",
+    "jumpBtn": "Fai il test"
+  },
+  "section1": {
+    "title": "Come funziona il test",
+    "p1": "Questo test serve a trovare il cane che andrebbe bene alla vostra coppia, e non solo a uno di voi due. Fa dodici domande semplicissime sulla vita che fareste con lui: dove abitate, cosa fate la domenica mattina, quanto tempo resterebbe da solo, se i peli sul divano vi danno fastidio, ecc.",
+    "p2": "Per esempio, alla domanda «La sua taglia:», potete scegliere tra «piccolo, sta sulle ginocchia», «medio, si riesce ancora a prenderlo in braccio», «grande, un cane vero» e «enorme, quasi un pony». Se tu rispondi «piccolo» e la tua dolce metà risponde «enorme», il test ne tiene conto: somma le vostre due serie di risposte e tiene il cane che ha il voto migliore per tutti e due.",
+    "p3": "In due, il primo risponde alle dodici domande, passa il telefono, e il secondo risponde senza vedere cosa ha scelto l'altro. Alla fine avete il cane della coppia con la sua foto, il cane che ognuno avrebbe avuto da solo, e l'elenco delle domande a cui non avete risposto uguale. Spesso è lì che comincia la discussione!",
+    "p4": "Puoi farlo anche da solo/a, rispondendo per tutti e due. Ma è comunque più divertente scoprire cosa ha risposto l'altro."
+  },
+  "section2": {
+    "title": "I dodici cani del test",
+    "intro": "Il test può dare dodici risultati: dieci razze tra le più conosciute, il cane del canile, e un ultimo risultato per le coppie che non sono ancora pronte. Ecco a chi va meglio ognuno.",
+    "galerie": [
+      {
+        "id": "golden",
+        "titre": "Il golden retriever",
+        "texte": "Per le coppie che hanno un giardino, tempo per una bella passeggiata tutti i giorni, e nessuna paura dei peli.",
+        "alt": "Un golden retriever seduto in un prato al tramonto"
+      },
+      {
+        "id": "corgi",
+        "titre": "Il corgi",
+        "texte": "Per chi vuole un cane di taglia media, giocherellone e furbo, e trova che l'abbaiare faccia più che altro ridere.",
+        "alt": "Un corgi rosso e bianco in piedi sul vialetto di un giardino"
+      },
+      {
+        "id": "bouledogue",
+        "titre": "Il bulldog francese",
+        "texte": "Per la vita in appartamento, e per le coppie più da divano che da corsetta.",
+        "alt": "Un bulldog francese sdraiato su un plaid, su un divano"
+      },
+      {
+        "id": "cavalier",
+        "titre": "Il cavalier king charles",
+        "texte": "Per chi è spesso a casa e vuole un cagnolino molto coccolone.",
+        "alt": "Un cavalier king charles acciambellato su una poltrona"
+      },
+      {
+        "id": "aussie",
+        "titre": "Il pastore australiano",
+        "texte": "Per le coppie sportive che hanno spazio e due ore al giorno da dedicargli.",
+        "alt": "Un pastore australiano blue merle che corre in un campo"
+      },
+      {
+        "id": "teckel",
+        "titre": "Il bassotto",
+        "texte": "Per chi vuole un cane piccolo con molto carattere, e ha pazienza.",
+        "alt": "Un bassotto a pelo corto in piedi sulle foglie d'autunno"
+      },
+      {
+        "id": "caniche",
+        "titre": "Il barboncino",
+        "texte": "Per chi non vuole peli sul divano e ha voglia di insegnargli un sacco di cose.",
+        "alt": "Un barboncino albicocca seduto vicino a una finestra, in un appartamento"
+      },
+      {
+        "id": "shiba",
+        "titre": "Lo shiba inu",
+        "texte": "Per le coppie che lavorano una parte della giornata e amano i cani indipendenti.",
+        "alt": "Uno shiba inu rosso seduto su un marciapiede, davanti ai tavolini di un bar"
+      },
+      {
+        "id": "husky",
+        "titre": "L'husky siberiano",
+        "texte": "Per i grandi sportivi che vivono in campagna, meglio se al fresco.",
+        "alt": "Un husky siberiano dagli occhi azzurri in un bosco innevato"
+      },
+      {
+        "id": "bernois",
+        "titre": "Il bovaro del bernese",
+        "texte": "Per chi ha una casa grande, un giardino grande, e voglia di un cane molto grande e molto calmo.",
+        "alt": "Un bovaro del bernese sdraiato in un prato di montagna in fiore"
+      },
+      {
+        "id": "refuge",
+        "titre": "Il cane del canile",
+        "texte": "Per le coppie che non hanno una razza in mente e preferiscono adottare.",
+        "alt": "Un meticcio dal pelo arruffato, con una bandana rossa al collo, seduto sulla soglia di una porta"
+      },
+      {
+        "id": "peluche",
+        "titre": "Un cane di peluche, per ora",
+        "texte": "Per chi rientra tardi, viaggia molto o non è ancora d'accordo. Succede, e il test lo dice.",
+        "alt": "Un cane di peluche beige seduto su un divano"
+      }
+    ]
+  },
+  "section3": {
+    "title": "Scegliere un cane in due: cosa bisogna chiedersi",
+    "intro": "Un cane vive dai dieci ai quindici anni. È una decisione che si prende in due, e ci sono quattro argomenti su cui è meglio essere d'accordo prima di andare a vederne uno.",
+    "sub1Title": "Chi se ne occupa, e quando?",
+    "sub1Text": "È la domanda che fa litigare più spesso. Un cane esce tre volte al giorno, tutti i giorni, compresa la domenica mattina sotto la pioggia. Prima di adottare, mettetevi d'accordo su <a href=\"/it/test-carico-mentale-coppia/\">chi fa cosa in casa</a>: l'uscita del mattino, il rientro a mezzogiorno, il veterinario, e le notti a pezzi se è un cucciolo.",
+    "sub2Title": "La vostra casa e i vostri ritmi",
+    "sub2Text": "Un cane grande e sportivo in un monolocale, o un cagnolino molto appiccicoso lasciato solo dieci ore al giorno: va male per tutti. Guardate la vostra vita com'è oggi, non quella che vi piacerebbe avere. E se non siete ancora d'accordo sul <a href=\"/it/test-che-casa-fa-per-noi/\">posto dove volete vivere</a>, cominciate da lì: un giardino cambia molte cose.",
+    "sub3Title": "Il budget",
+    "sub3Text": "Non ci sono solo le crocchette. Bisogna contare il veterinario, i vaccini, un'assicurazione se la fate, la toelettatura per certe razze, e chi lo tiene quando partite senza di lui. Un cane grande costa più di uno piccolo, semplicemente perché mangia di più. Fate i conti in due prima, evita le brutte sorprese.",
+    "sub4Title": "Un cucciolo o un adulto, un allevamento o un canile",
+    "sub4Text": "Un cucciolo è tenero, ma vuol dire anche mesi di educazione, di notti corte e di scarpe mordicchiate. Un cane adulto è spesso già abituato alla casa, e se ne conosce il carattere. In un canile si trovano cani di tutte le età, meticci ma anche cani di razza. Se passate da un allevamento, andate a vedere i genitori e il posto dove crescono i cuccioli."
+  },
+  "section4": {
+    "title": "E se non siete d'accordo?",
+    "p1": "Il risultato del test è un punto di partenza. Se uno sogna un husky e l'altro un cane che sta in una borsa, la parte più interessante è nell'elenco delle vostre risposte diverse. Guardate su cosa non siete d'accordo (la taglia, il tempo che passerebbe da solo, le vacanze) e parlatene. Il più delle volte ci si blocca su due o tre domande, non su tutte.",
+    "p2": "Molte coppie prendono un cane <a href=\"/it/test-genitorialita-coppia/\">prima di avere un figlio</a>. Non c'entra niente, certo, ma è già organizzarsi in due per qualcuno che dipende da voi, e si vede in fretta come se la cava ognuno.",
+    "p3": "E se uno di voi due non lo vuole proprio, non insistete. Meglio aspettare di volerlo in due che avere un cane di cui si occupa uno solo."
+  },
+  "section5": {
+    "title": "Cosa sapere su questo test",
+    "p1": "Questo test è un gioco. Le descrizioni danno il carattere più comune di ogni razza, ma ogni cane è diverso, e la sua educazione conta quanto la razza. Per scegliere, andate da allevatori, canili o da un veterinario, e passate del tempo con il cane prima di decidere.",
+    "p2": "Non viene salvato niente: le vostre risposte restano sul vostro telefono. Viene contato solo il cane ottenuto, senza nome, per sapere quali risultati escono di più. Le foto dei cani sono state create per questa pagina."
+  },
+  "seo": {
+    "faqTitle": "Domande frequenti",
+    "faq1Q": "Quali cani possono uscire?",
+    "faq1A": "I risultati possibili sono dodici: il golden retriever, il corgi, il bulldog francese, il cavalier king charles, il pastore australiano, il bassotto, il barboncino, lo shiba inu, l'husky siberiano, il bovaro del bernese, il cane del canile, e «un cane di peluche, per ora» per le coppie che non sono ancora pronte.",
+    "faq2Q": "Come viene calcolato il risultato?",
+    "faq2A": "Ogni risposta dà punti ai cani che le corrispondono. Per esempio, «in un appartamento in città, senza spazi esterni» dà punti al bulldog francese e al cavalier king charles, e nessuno all'husky. In due, il test somma le vostre due serie di risposte, e il cane con il voto migliore diventa quello della coppia.",
+    "faq3Q": "Si può fare il test da soli?",
+    "faq3A": "Sì. Scegli «Da solo/a, per noi due» e rispondi pensando alla vostra coppia. Avrai un cane, ma non il confronto delle vostre risposte: per quello bisogna essere in due.",
+    "faq4Q": "Che cane per una giovane coppia in appartamento?",
+    "faq4A": "Dipende soprattutto dal tempo che avete. In appartamento, i cani che se la cavano meglio sono quelli che non hanno bisogno di correre per ore: il bulldog francese, il cavalier king charles, il bassotto o il barboncino. Anche lo shiba inu va bene se lavorate una parte della giornata. Un pastore australiano o un husky, invece, hanno bisogno di spazio e di molto movimento.",
+    "faq5Q": "Come capire se siamo pronti ad avere un cane?",
+    "faq5A": "Il test ha un risultato per questo: «un cane di peluche, per ora». Esce quando le vostre risposte dicono che il cane resterebbe solo tutto il giorno, che viaggiate molto o che la voglia non è la stessa da tutte e due le parti. Se vi capita, tenete il cane di un amico per un fine settimana e vedete come va.",
+    "faq6Q": "Le mie risposte vengono salvate?",
+    "faq6A": "No. Le risposte restano sul vostro telefono. Viene contato solo il cane ottenuto, senza nome, per la distribuzione dei risultati."
+  },
+  "jsonLd": {
+    "about": "scegliere un cane in coppia"
+  }
+}

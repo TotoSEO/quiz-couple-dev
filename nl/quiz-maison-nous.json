@@ -1,0 +1,123 @@
+{
+  "hero": {
+    "badge": "Themaquiz • Met z'n tweeën, of alleen voor jullie samen",
+    "title": "Welk huis past bij jullie twee? De test om samen te doen",
+    "titleHighlight": "Welk huis past bij jullie twee?",
+    "description": "Een appartement in de stad, een huis met tuin, een opknaphuis of een camperbus? Ieder beantwoordt twaalf vragen over het leven dat hij of zij voor zich ziet, en de test laat de plek zien waar jullie je allebei thuis zouden voelen.",
+    "subtitle": "12 vragen • 3 minuten per persoon • op één telefoon",
+    "jumpBtn": "Doe de test"
+  },
+  "section1": {
+    "title": "Hoe de test werkt",
+    "p1": "Deze test zoekt het soort plek waar jullie je met z'n tweeën thuis zouden voelen: in de stad of midden tussen de weilanden, in nieuwbouw of in een oud huis, met buren vlakbij of zonder iemand in de buurt. Hij stelt twaalf vragen over jullie dagelijks leven: wat jullie 's ochtends door het raam zien, wat jullie op zaterdagavond doen, hoeveel plek jullie spullen innemen, enzovoort.",
+    "p2": "Bij de vraag ‘Klussen:’ kunnen jullie bijvoorbeeld antwoorden met ‘nooit, we willen alleen onze koffers neerzetten’, ‘een likje verf, meer niet’, ‘we klussen graag in het weekend’ of ‘alles zelf opnieuw doen, dat is een levensproject’. Antwoord jij ‘nooit’ en droomt je partner ervan om alles opnieuw te doen, dan ziet de test dat: hij telt jullie twee reeksen antwoorden bij elkaar op en houdt de woning over die voor jullie samen het beste scoort.",
+    "p3": "Met z'n tweeën beantwoordt de eerste de twaalf vragen en geeft de telefoon door, waarna de tweede antwoordt zonder te zien wat de ander koos. Aan het eind hebben jullie het huis voor jullie samen met zijn foto, het huis dat ieder apart zou hebben gekozen, en de lijst met vragen waarop jullie niet hetzelfde antwoordden.",
+    "p4": "Je kunt hem ook alleen doen, en voor jullie tweeën antwoorden. Maar dan mis je de vergelijking, en dat is het interessantste deel."
+  },
+  "section2": {
+    "title": "De tien huizen uit de test",
+    "intro": "De test kan op tien uitslagen uitkomen, van de klassiekste tot de meest onverwachte. Hier lees je bij wie welke het best past.",
+    "galerie": [
+      {
+        "id": "pavillon",
+        "titre": "Het huis met tuin",
+        "texte": "Voor koppels die zich voorgoed willen settelen, met ruimte, een barbecue en een logeerkamer.",
+        "alt": "Een huis met een verdieping in een rustige straat, met een heg, een fiets tegen het hek en een tuin"
+      },
+      {
+        "id": "appartement",
+        "titre": "Het appartement in de stad",
+        "texte": "Voor wie alles te voet wil doen en liever een balkon heeft dan een grasmaaier.",
+        "alt": "Een smeedijzeren balkon met een bistrotafeltje en twee stoelen, boven de daken van een stad"
+      },
+      {
+        "id": "campagne",
+        "titre": "Het huis op het platteland",
+        "texte": "Voor wie droomt van ruimte, een moestuin en stilte in de avond.",
+        "alt": "Een oud stenen huis met blauwe luiken, begroeid met rozen, achter een moestuin"
+      },
+      {
+        "id": "loft",
+        "titre": "De loft",
+        "texte": "Voor stadsmensen die van grote ruimtes houden en vaak mensen over de vloer hebben.",
+        "alt": "Een loft met bakstenen muren, hoge fabrieksramen, een bank en een metalen trap"
+      },
+      {
+        "id": "architecte",
+        "titre": "De architectenwoning",
+        "texte": "Voor wie een uitgesproken smaak heeft, een budget, en geen enkele zin om te verbouwen.",
+        "alt": "Een modern huis van beton en glas aan een zwembad, in de schemering"
+      },
+      {
+        "id": "tiny",
+        "titre": "Het tiny house",
+        "texte": "Voor koppels die weinig spullen hebben en in de natuur willen wonen, in het klein.",
+        "alt": "Een klein houten huisje op wielen, verlicht door een lichtsnoer, aan de rand van een bos"
+      },
+      {
+        "id": "renover",
+        "titre": "Het opknaphuis",
+        "texte": "Voor geduldige klussers die alles naar eigen idee opnieuw willen doen.",
+        "alt": "Een oud stenen landhuis vol klimop, met een steiger en een kruiwagen ervoor"
+      },
+      {
+        "id": "van",
+        "titre": "De camperbus",
+        "texte": "Voor wie niet stil kan zitten en alleen een bed en een weg nodig heeft.",
+        "alt": "Een busje met open achterdeuren en zicht op het bed, geparkeerd op een klif bij zonsondergang"
+      },
+      {
+        "id": "peniche",
+        "titre": "De woonboot",
+        "texte": "Voor wie op het water wil wonen, op een plek die op geen enkele andere lijkt.",
+        "alt": "Een woonboot aan een gracht, het dek vol planten, met een tafel en fietsen"
+      },
+      {
+        "id": "palier",
+        "titre": "Twee appartementen naast elkaar",
+        "texte": "Voor koppels die van elkaar houden en toch ieder hun eigen huis willen.",
+        "alt": "Twee voordeuren naast elkaar op een overloop, een roze en een paarse, elk met een eigen deurmat"
+      }
+    ]
+  },
+  "section3": {
+    "title": "Samen kiezen waar je woont: de onderwerpen die op tafel moeten",
+    "intro": "Samen een woning zoeken is zelden alleen een kwestie van smaak. Achter ‘ik vind dit huis leuk’ zitten vier onderwerpen waar veel minder over wordt gepraat.",
+    "sub1Title": "De stad of het platteland",
+    "sub1Text": "Dit is het meest voorkomende meningsverschil. De een groeide op in een dorp en krijgt het benauwd in de stad, de ander ziet zichzelf niet op twintig minuten rijden van de dichtstbijzijnde bakker wonen. Vertel elkaar, voordat jullie advertenties gaan bekijken, hoe een gewone dag eruitziet op de plek die jullie voor je zien, van het opstaan tot het slapengaan. Dan merk je snel waar het wringt.",
+    "sub2Title": "Klussen",
+    "sub2Text": "Een huis waar veel aan moet gebeuren kost minder bij aankoop, en veel meer in weekenden. Als de een dat heerlijk vindt en de ander er een hekel aan heeft, wordt de verbouwing al snel iets om ruzie over te maken. Spreek af wat jullie zelf kunnen, wat het budget is, en hoelang jullie bereid zijn in het stof te leven.",
+    "sub3Title": "Het geld",
+    "sub3Text": "Kopen of huren, hoeveel er naar de huur of de hypotheek mag gaan, wie wat betaalt als de een meer verdient dan de ander: dat zijn vragen die je beter regelt voordat je tekent. Koppels die <a href=\"/nl/samenwonen-test/\">voor het eerst gaan samenwonen</a> ontdekken ze vaak onderweg.",
+    "sub4Title": "Ieders eigen plek",
+    "sub4Text": "Samenwonen betekent niet dat je alles deelt. Sommige mensen hebben een eigen kamer nodig, een werkkamer, een werkplaats, of gewoon een hoekje van de bank waar niemand tegen ze praat. Andere koppels kiezen er zelfs voor om apart te wonen, en ze houden daarom niet minder van elkaar. Vraag je af <a href=\"/nl/wat-voor-koppel-zijn-jullie/\">wat voor koppel jullie zijn</a>, meer onafscheidelijk of meer onafhankelijk: het juiste huis is dan niet hetzelfde."
+  },
+  "section4": {
+    "title": "En als jullie het niet eens zijn?",
+    "p1": "Dat gebeurt bijna altijd, en het is eerder een goed teken: het betekent dat ieder eerlijk heeft geantwoord. Bekijk de lijst met jullie verschillende antwoorden. Gaan ze over de stijl of de grootte, dan vinden jullie zonder veel moeite een compromis. Gaan ze over de stad of het platteland, of over wel of niet samenwonen, neem dan de tijd om erover te praten.",
+    "p2": "Denk ook aan wat er met het huis meekomt. Een tuin betekent dat jullie <a href=\"/nl/welke-hond-past-bij-ons-test/\">een hond kunnen nemen</a>, en een extra kamer is misschien ooit een kind. Het huis dat jullie kiezen zegt veel over het leven dat jullie voor ogen hebben."
+  },
+  "section5": {
+    "title": "Wat je over deze test moet weten",
+    "p1": "Deze test is een spel. Hij kent jullie budget niet, en ook niet de huizenprijzen bij jullie in de buurt: hij zegt alleen naar wat voor plek jullie antwoorden leiden. Zie hem als een manier om het gesprek te openen, niet als het advies van een makelaar.",
+    "p2": "Er wordt niets opgeslagen: jullie antwoorden blijven op jullie telefoon. Alleen de uitslag wordt geteld, zonder voornaam, om te zien welke het vaakst voorkomen. De foto's zijn voor deze pagina gemaakt."
+  },
+  "seo": {
+    "faqTitle": "Veelgestelde vragen",
+    "faq1Q": "Welke huizen kunnen eruit komen?",
+    "faq1A": "Er zijn tien uitslagen mogelijk: het huis met tuin, het appartement in de stad, het huis op het platteland, de loft, de architectenwoning, het tiny house, het opknaphuis, de camperbus, de woonboot, en twee appartementen naast elkaar voor koppels die liever ieder in hun eigen huis wonen.",
+    "faq2Q": "Hoe wordt de uitslag berekend?",
+    "faq2A": "Elk antwoord geeft punten aan de woningen die erbij passen. Zo geeft ‘een restaurant of een café op tien minuten lopen’ punten aan het appartement in de stad en de loft, en geen aan het huis op het platteland. Met z'n tweeën telt de test jullie twee reeksen antwoorden bij elkaar op, en de woning met de beste score wordt het huis voor jullie samen.",
+    "faq3Q": "Kun je de test alleen doen?",
+    "faq3A": "Ja. Je kiest ‘Alleen, voor ons tweeën’ en antwoordt met jullie tweeën in gedachten. Je krijgt een uitslag, maar niet de vergelijking van jullie antwoorden: daarvoor moet je met z'n tweeën zijn.",
+    "faq4Q": "Huis of appartement: hoe kies je dat samen?",
+    "faq4A": "Het makkelijkst is om van jullie week uit te gaan, niet van de woning. Gaan jullie veel uit en hebben jullie geen zin om een tuin te onderhouden, dan past een goed gelegen appartement beter bij jullie. Hebben jullie vaak mensen over de vloer, willen jullie een tuin of denken jullie aan gezinsuitbreiding, dan ligt een huis al snel voor de hand. De test stelt precies die vragen, aan ieder apart.",
+    "faq5Q": "En als een van ons liever alleen woont?",
+    "faq5A": "Dat hoeft geen slecht teken te zijn. Er zijn koppels die bewust apart wonen, om hun gewoontes of hun ruimte te houden, en die daar heel gelukkig mee zijn: een latrelatie. De test heeft daar een uitslag voor: ‘twee appartementen naast elkaar’. Het gaat erom dat jullie het allebei willen.",
+    "faq6Q": "Worden mijn antwoorden opgeslagen?",
+    "faq6A": "Nee. De antwoorden blijven op jullie telefoon. Alleen de uitslag wordt geteld, zonder voornaam, voor de verdeling van de uitslagen."
+  },
+  "jsonLd": {
+    "about": "samen een woning kiezen"
+  }
+}

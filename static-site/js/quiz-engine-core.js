@@ -2401,6 +2401,9 @@ var QuizEngine = (function() {
     { type: 'quiz', key: 'possession', icon: '👻', route: 'quizPossession' },
     { type: 'quiz', key: 'super-vilain', icon: '🦹', route: 'quizSuperVilain' },
     { type: 'quiz', key: 'duo-vilains', icon: '🎭', route: 'quizDuoVilains' },
+    // Les quiz fun « pour nous » (11 novembre 2026)
+    { type: 'quiz', key: 'chien-nous', icon: '🐶', route: 'quizChienNous' },
+    { type: 'quiz', key: 'maison-nous', icon: '🏡', route: 'quizMaisonNous' },
     { type: 'test', key: 'charge-mentale', icon: '🧠', route: 'testChargeMentale' },
     { type: 'quiz', key: 'rencontre', icon: '💬', route: 'quizRencontre' },
     { type: 'test', key: 'langage-amour', icon: '💬', route: 'testLangageAmour' },
@@ -2581,6 +2584,9 @@ var QuizEngine = (function() {
     'possession':       ['quizMortFilmHorreur', 'quizSerialKiller', 'quizSuperVilain'],
     'super-vilain':     ['quizDuoVilains', 'quizSerialKiller', 'quizMortFilmHorreur'],
     'duo-vilains':      ['quizSuperVilain', 'quizPossession', 'quizTuPreferes'],
+    // Les quiz fun « pour nous » : l'autre projet à deux, puis le test qui va avec
+    'chien-nous':       ['quizMaisonNous', 'testEmmenager', 'quizTypeCouple'],
+    'maison-nous':      ['quizChienNous', 'testEmmenager', 'testMariage'],
     'action-ou-verite-coquin': ['quizCoquin', 'jeuGages', 'quizTentation'],
     'tentation':               ['testInfidelite', 'quizCoquin', 'testConfiance'],
 
@@ -3235,14 +3241,17 @@ var QuizEngine = (function() {
   // Seul(e) ou a deux : la question se pose avant les prenoms.
   function saisonRenderModes() {
     var self = this;
+    var modes = [
+      { id: 'solo', emoji: '🙋', titre: this.etg('modeSolo', 'Seul(e)'), desc: this.etg('modeSoloDesc', ''), meta: this.etg('modeSoloMeta', '') },
+      { id: 'duo', emoji: '👫', titre: this.etg('modeDuo', 'À deux'), desc: this.etg('modeDuoDesc', ''), meta: this.etg('modeDuoMeta', '') }
+    ];
+    // Les quiz « pour nous » se jouent d'abord à deux : ce mode passe en tête.
+    if (this.duoDabord) modes.reverse();
     this.container.appendChild(ecranModes({
       icone: this.icone,
       titre: this.etg('modesTitre', 'Seul(e) ou à deux ?'),
       desc: this.etg('modesDesc', ''),
-      modes: [
-        { id: 'solo', emoji: '🙋', titre: this.etg('modeSolo', 'Seul(e)'), desc: this.etg('modeSoloDesc', ''), meta: this.etg('modeSoloMeta', '') },
-        { id: 'duo', emoji: '👫', titre: this.etg('modeDuo', 'À deux'), desc: this.etg('modeDuoDesc', ''), meta: this.etg('modeDuoMeta', '') }
-      ],
+      modes: modes,
       onChoix: function(id) { self.mode = id; self.phase = 'setup'; self.render(); smoothScroll(self.container, 'start'); }
     }));
   }
@@ -14795,6 +14804,17 @@ var QuizEngine = (function() {
     this.modes = config.modes || { solo: true, duo: true };
     this.icone = config.icone || '🎃';
     this.distance = !!config.distance;
+    // Les quiz « pour nous » (11 novembre 2026) : à deux, un seul résultat
+    // pour le couple (voir renderResultsCommun), et le mode à deux en tête.
+    this.commun = !!config.commun;
+    this.duoDabord = !!config.duoDabord;
+    // Des réponses rangées d'un bout à l'autre (petit, moyen, grand, énorme)
+    // se lisent dans leur ordre : pas de mélange à l'affichage.
+    this.sansMelange = !!config.sansMelange;
+    // Un frein par résultat (0 à 1) : les plus rares (la péniche, les deux
+    // appartements sur le même palier) ne sortent que chez ceux qui les ont
+    // cherchés. Il s'applique au classement comme aux pourcentages affichés.
+    this.coefs = config.coefs || {};
     this.mode = this.modes.solo && this.modes.duo ? null : (this.modes.duo ? 'duo' : 'solo');
     this.phase = this.mode ? 'setup' : 'modes';
     this.players = [{ name: '', gender: null }, { name: '', gender: null }];
@@ -14849,12 +14869,12 @@ var QuizEngine = (function() {
     var t = this.tally(reponses);
     var self = this;
     var meilleur = this.axes[0], score = -1;
-    this.axes.forEach(function(a) {
-      var pct = self.maxParAxe[a] ? t[a] / self.maxParAxe[a] : 0;
-      if (pct > score) { score = pct; meilleur = a; }
-    });
     var pcts = {};
-    this.axes.forEach(function(a) { pcts[a] = self.maxParAxe[a] ? Math.round(t[a] / self.maxParAxe[a] * 100) : 0; });
+    this.axes.forEach(function(a) {
+      var pct = self.maxParAxe[a] ? t[a] / self.maxParAxe[a] * (self.coefs[a] || 1) : 0;
+      if (pct > score) { score = pct; meilleur = a; }
+      pcts[a] = Math.round(pct * 100);
+    });
     return { id: meilleur, tally: t, pcts: pcts };
   };
 
@@ -14938,7 +14958,7 @@ var QuizEngine = (function() {
     var lettres = ['A', 'B', 'C', 'D', 'E'];
     // L'ordre des reponses est melange a l'affichage : la lettre ne dit rien
     // du portrait, et personne ne peut repondre « toujours a » sans lire.
-    shuffleArray(q.options).forEach(function(opt, k) {
+    (this.sansMelange ? q.options : shuffleArray(q.options)).forEach(function(opt, k) {
       var b = el('button', 'quiz-option');
       b.type = 'button';
       b.innerHTML = '<span class="quiz-option-letter">' + (lettres[k] || '') + '</span><span>' + esc(self.texteOption(q, opt)) + '</span>';
@@ -15047,7 +15067,148 @@ var QuizEngine = (function() {
     return n;
   };
 
+  // ── Le résultat « pour vous deux » (11 novembre 2026) ───────────────
+  // Les quiz fun du type « quel chien est fait pour nous ? » (Thomas : « tous
+  // ces types de tests doivent être "nous" »). A deux, les deux séries
+  // s'additionnent et le couple reçoit UN résultat, avec son image ; dessous,
+  // ce que chacun aurait eu de son côté, le nombre de réponses identiques,
+  // les questions où les deux ne sont pas d'accord, puis toutes les réponses
+  // repliées. Seul(e), la personne répond pour le couple : un résultat, et
+  // l'invitation à refaire le quiz à deux.
+  PortraitQuiz.prototype.portraitCommun = function() {
+    var self = this;
+    var tA = this.tally(this.answers.p1), tB = this.tally(this.answers.p2);
+    var pcts = {}, meilleur = this.axes[0], score = -1;
+    this.axes.forEach(function(a) {
+      var max = self.maxParAxe[a] * 2;
+      var v = max ? (tA[a] + tB[a]) / max * (self.coefs[a] || 1) : 0;
+      pcts[a] = Math.round(v * 100);
+      if (v > score) { score = v; meilleur = a; }
+    });
+    return { id: meilleur, pcts: pcts };
+  };
+
+  // Les deux réponses de chaque question, et à quel point elles s'écartent :
+  // 0 pour la même réponse, sinon 1 plus la différence de ce que les deux
+  // réponses donnent à chaque résultat (les plus éloignées passent en tête).
+  PortraitQuiz.prototype.reponsesDeux = function() {
+    var self = this, liste = [];
+    this.questions.forEach(function(q, i) {
+      var a = self.optionDe(q, self.answers.p1[i]), b = self.optionDe(q, self.answers.p2[i]);
+      if (!a || !b) return;
+      var d = 0;
+      if (a.id !== b.id) {
+        d = 1;
+        self.axes.forEach(function(x) { d += Math.abs(((a.axes || {})[x] || 0) - ((b.axes || {})[x] || 0)); });
+      }
+      liste.push({ q: q, a: a, b: b, d: d });
+    });
+    return liste;
+  };
+
+  PortraitQuiz.prototype.listeDeux = function(liste, persos) {
+    var self = this;
+    var ul = el('ul', 'ech-liste');
+    liste.forEach(function(e) {
+      var li = el('li', 'ech-liste-item ech-liste-item--' + (e.d === 0 ? 'pareil' : 'loin'));
+      li.innerHTML = '<p class="ech-liste-q">' + esc(self.texteQuestion(e.q)) + '</p>' +
+        '<p class="ech-liste-r"><b class="ech-nom--' + persos[0] + '">' + esc(self.players[0].name) + '</b> ' + esc(self.texteOption(e.q, e.a)) + '</p>' +
+        '<p class="ech-liste-r"><b class="ech-nom--' + persos[1] + '">' + esc(self.players[1].name) + '</b> ' + esc(self.texteOption(e.q, e.b)) + '</p>';
+      ul.appendChild(li);
+    });
+    return ul;
+  };
+
+  PortraitQuiz.prototype.renderResultsCommun = function() {
+    var self = this;
+    var duo = this.mode === 'duo';
+    var wrap = el('div', 'quiz-engine quiz-result-card port-resultat port-resultat--commun text-center');
+    var r = duo ? this.portraitCommun() : this.portraitDe(this.answers.p1);
+    var profil = this.profils[r.id] || {};
+    enregistreProfilResultat(this, r.id);
+    if (duo) wrap.appendChild(el('p', 'port-noms', esc(this.players[0].name + ' & ' + this.players[1].name)));
+    wrap.appendChild(this.cartePortrait(profil, { etiquette: this.etg(duo ? 'resLibelleDuo' : 'resLibelleSolo', ''), conseil: true, classe: 'port-carte--seul' }));
+
+    if (duo) {
+      var persos = persosDe(this.players);
+      var seuls = [this.portraitDe(this.answers.p1), this.portraitDe(this.answers.p2)];
+      // Ce que chacun aurait eu de son côté, avec sa petite image.
+      var chacun = el('div', 'port-chacun');
+      chacun.appendChild(el('h3', 'port-bloc-titre', esc(this.etg('chacunTitre', 'Chacun de son côté'))));
+      var rangee = el('div', 'port-chacun-rangee');
+      seuls.forEach(function(x, k) {
+        var p = self.profils[x.id] || {};
+        var ligne = el('div', 'port-chacun-ligne port-chacun-ligne--' + persos[k]);
+        var src = p.vignette || p.image;
+        ligne.innerHTML = (src ? '<img class="port-chacun-img" src="' + esc(src) + '" alt="" width="120" height="120" loading="lazy" decoding="async">' : '') +
+          '<p class="port-chacun-texte"><b class="port-nom--' + persos[k] + '">' + esc(self.players[k].name) + '</b>' +
+          '<span class="port-chacun-nom">' + esc(self.etg('axe_' + x.id, p.title || x.id)) + '</span></p>';
+        rangee.appendChild(ligne);
+      });
+      chacun.appendChild(rangee);
+      // Le même des deux côtés, celui de l'un des deux, ou un compromis.
+      var cleChacun = 'chacunCompromis', gagnant = -1;
+      if (seuls[0].id === seuls[1].id) cleChacun = 'chacunMeme';
+      else if (seuls[0].id === r.id) { cleChacun = 'chacunGagne'; gagnant = 0; }
+      else if (seuls[1].id === r.id) { cleChacun = 'chacunGagne'; gagnant = 1; }
+      var phraseChacun = this.etg(cleChacun, '');
+      if (gagnant >= 0) phraseChacun = phraseChacun.replace(/\{\{nom\}\}/g, this.players[gagnant].name).replace(/\{\{autre\}\}/g, this.players[1 - gagnant].name);
+      if (phraseChacun) chacun.appendChild(el('p', 'port-chacun-note', escRiche(phraseChacun)));
+      wrap.appendChild(chacun);
+
+      var deux = this.reponsesDeux();
+      var n = deux.filter(function(d) { return d.d === 0; }).length;
+      var taux = deux.length ? n / deux.length : 0;
+      var phrase = this.etg(taux >= 0.7 ? 'accordHaut' : (taux >= 0.4 ? 'accordMoyen' : 'accordBas'), '');
+      // Zéro et une seule réponse identique ont leur phrase (« Aucune réponse identique », « 1 réponse identique »).
+      var modeleMemes = this.etg(n === 0 ? 'memesReponsesZero' : (n === 1 ? 'memesReponsesUne' : 'memesReponses'), '') || this.etg('memesReponses', '{{n}} réponses identiques sur {{total}}');
+      wrap.appendChild(el('p', 'port-bilan', '<strong>' + esc(modeleMemes.replace('{{n}}', n).replace('{{total}}', deux.length)) + '</strong>' + (phrase ? ' ' + escRiche(phrase) : '')));
+
+      var ecarts = deux.filter(function(d) { return d.d > 0; }).sort(function(x, y) { return y.d - x.d; });
+      if (ecarts.length) {
+        var be = el('div', 'ech-ecarts');
+        be.appendChild(el('h3', 'port-bloc-titre', esc(this.etg('ecartsTitre', 'Là où vous n\'êtes pas d\'accord'))));
+        be.appendChild(this.listeDeux(ecarts.slice(0, 3), persos));
+        wrap.appendChild(be);
+      }
+      wrap.appendChild(this.jauges(r.pcts, this.etg('jaugesTitre', '')));
+      var tout = el('details', 'ech-tout');
+      tout.appendChild(el('summary', 'ech-tout-titre', esc(this.etg('toutTitre', 'Toutes vos réponses'))));
+      tout.appendChild(this.listeDeux(deux, persos));
+      wrap.appendChild(tout);
+    } else {
+      wrap.appendChild(this.jauges(r.pcts, this.etg('jaugesTitre', '')));
+      if (this.modes.duo) {
+        // Seul(e), une seule voix : l'invitation à refaire le quiz à deux.
+        var inv = el('div', 'qa-invitation');
+        inv.appendChild(el('p', 'qa-invitation-texte', esc(this.etg('invitationDuo', ''))));
+        var bouton = el('button', 'btn btn-outline qa-invitation-btn', esc(this.etg('boutonDuo', 'Refaire à deux')));
+        bouton.type = 'button';
+        bouton.addEventListener('click', function() {
+          self.mode = 'duo'; self.phase = 'setup'; self.render(); smoothScroll(self.container, 'start');
+        });
+        inv.appendChild(bouton);
+        wrap.appendChild(inv);
+      }
+    }
+    var note = this.etg('noteFin', '');
+    if (note) wrap.appendChild(el('p', 'port-note', escRiche(note)));
+
+    renderActionButtons(wrap, {
+      share: { noms: nomsPartage(this), type: 'profil', verdict: profil.title || '' },
+      restart: function() {
+        self.phase = (self.modes.solo && self.modes.duo) ? 'modes' : 'setup';
+        if (self.phase === 'modes') self.mode = null;
+        self.render();
+        smoothScroll(self.container, 'start');
+      }
+    });
+    this.container.appendChild(wrap);
+    smoothScroll(wrap, 'center');
+  };
+
   PortraitQuiz.prototype.renderResults = function() {
+    if (this.commun) return this.renderResultsCommun();
     var self = this;
     var duo = this.mode === 'duo';
     var wrap = el('div', 'quiz-engine quiz-result-card port-resultat text-center');

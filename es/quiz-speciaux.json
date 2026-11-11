@@ -1,9 +1,9 @@
 {
   "hero": {
-    "badge": "Quiz de temporada • Gratis • Solo/a o en pareja",
-    "title": "Nuestros quiz especiales para hacer en pareja, según la temporada",
-    "titleHighlight": "quiz especiales",
-    "description": "Quiz un poco locos, que no se hacen todo el año: los de Halloween ahora, los de Navidad pronto. Se juegan solo/a, en pareja con un móvil o cada uno con el suyo, y se quedan aquí cuando pasa la temporada."
+    "badge": "Quiz originales • Gratis • En pareja o solo/a",
+    "title": "Nuestros quiz originales para hacer en pareja",
+    "titleHighlight": "quiz originales",
+    "description": "Quiz ligeros, que no miden nada serio: qué perro es para vosotros dos, qué casa, y quiz de temporada para Halloween o Navidad. Cada uno responde por su lado, y luego comparáis."
   },
   "enCeMoment": "Ahora mismo",
   "horsSaison": "Todo el año",
@@ -18,7 +18,7 @@
     },
     "noel": {
       "titre": "Especial Navidad",
-      "intro": "Los quiz de Navidad llegan en diciembre: cuánto estáis dispuestos a gastar el uno en el otro, quién regalará el peor regalo, y alguna que otra sorpresa.",
+      "intro": "Los quiz de Navidad llegan antes de las fiestas: quién de los dos está en la lista de los que se han portado bien, y alguna que otra sorpresa.",
       "bientot": "Muy pronto"
     }
   },
@@ -32,38 +32,49 @@
     "quizSuperVilainNom": "¿A qué supervillano te pareces más?",
     "quizSuperVilainTagline": "Tu entrada en la fiesta, tu disfraz, tus secuaces, tu risa: el supervillano que se parece a ti, del Joker a Maléfica.",
     "quizDuoVilainsNom": "¿Qué dúo de supervillanos formáis?",
-    "quizDuoVilainsTagline": "El golpe de la noche de Halloween: el papel de cada uno, el cerebro, el caos, la fuerza, el encanto, la sombra o el corazón, y el dúo de malvados célebre que formáis."
+    "quizDuoVilainsTagline": "El golpe de la noche de Halloween: el papel de cada uno, el cerebro, el caos, la fuerza, el encanto, la sombra o el corazón, y el dúo de malvados célebre que formáis.",
+    "quizChienNousNom": "¿Qué perro es para nosotros?",
+    "quizChienNousTagline": "Doce preguntas cada uno sobre vuestra vida en pareja, y el perro de la pareja con su foto: corgi, golden, teckel, shiba, husky...",
+    "quizMaisonNousNom": "¿Qué casa es para nosotros?",
+    "quizMaisonNousTagline": "Doce preguntas cada uno sobre la vida que os imagináis, y la casa de la pareja en foto: piso, casa de campo, loft, casa flotante, tiny house..."
   },
   "section1": {
-    "title": "Por qué quiz de temporada",
-    "p1": "Los quiz de esta página no se parecen a nuestros tests de pareja. No miden nada serio, no dan consejos, y no hablan de vuestra relación. Son juegos para una noche concreta: una noche de Halloween entre dos películas de terror, una Nochebuena esperando los regalos.",
-    "p2": "Funcionan porque están hechos para reírse de uno mismo y del otro. Descubrir que tu pareja moriría a los doce minutos en una película de terror, o que formáis el dúo Pinky y Cerebro, da para buena parte de la noche.",
-    "p3": "Los guardamos todos aquí, temporada tras temporada. Los de la temporada en curso están arriba de la página; los demás se pueden jugar todo el año, un poco más abajo."
+    "title": "Para qué sirven estos quiz",
+    "p1": "Los quiz de esta página no se parecen a nuestros tests de pareja. No miden nada serio y no le ponen nota a vuestra relación. Son juegos: qué perro le iría bien a vuestra pareja, en qué casa estaríais a gusto, o quién de los dos moriría primero en una película de terror.",
+    "p2": "Funcionan porque cada uno responde por su lado. Descubrir que tu pareja quiere un husky cuando tú pensabas en un teckel, o una casa antigua para reformar cuando tú soñabas con un piso en el centro, ¡da para buena parte de la noche!",
+    "p3": "Los quiz sobre el futuro en pareja están aquí todo el año. Los de temporada (Halloween por ahora, Navidad dentro de poco) suben al principio de la página cuando llega su época, y se pueden seguir haciendo el resto del tiempo."
   },
   "section2": {
-    "title": "Y el resto del año",
-    "p1": "Cuando pasa la temporada, <a href=\"/es/juegos-para-parejas/\">los juegos para hacer en pareja</a> todo el año toman el relevo: <a href=\"/es/quiz-preferirias-pareja/\">los dilemas «qué preferirías»</a>, verdad o reto, el tablero, y una decena más. Y para quien quiera <a href=\"/es/test-compatibilidad-pareja/\">una respuesta de verdad sobre su pareja</a>, hay con qué comparar vuestras respuestas sobre lo que importa."
+    "title": "¿Y después de estos quiz?",
+    "p1": "Cuando los hayáis hecho todos, <a href=\"/es/juegos-para-parejas/\">los juegos para hacer en pareja</a> todo el año toman el relevo: <a href=\"/es/quiz-preferirias-pareja/\">los dilemas «qué preferirías»</a>, verdad o reto, el tablero, y una quincena más. Y para quien quiera <a href=\"/es/test-compatibilidad-pareja/\">una respuesta de verdad sobre su pareja</a>, hay con qué comparar vuestras respuestas sobre lo que importa."
   },
   "section3": {
     "title": "Cómo se juega",
-    "p1": "Todos estos quiz se juegan igual. Solo/a, respondes y descubres tu resultado. En pareja, el primero responde a toda la serie, pasa el móvil, y el segundo responde a su vez sin ver las respuestas del primero: los dos resultados aparecen al final, uno al lado del otro, con lo que os separa.",
-    "p2": "Si no estáis en el mismo sitio, cada quiz tiene un modo a distancia: una persona crea la partida, la otra se une con el código o el código QR, y cada uno responde en su móvil. Veis vuestras dos respuestas después de cada pregunta, y el resultado es el mismo en los dos lados.",
+    "p1": "Todos estos quiz se juegan igual. En pareja, el primero responde a toda la serie, pasa el móvil, y el segundo responde a su vez sin ver las respuestas del primero. Solo/a, respondes y descubres tu resultado.",
+    "p2": "En los quiz sobre el futuro en pareja, la pareja recibe un solo resultado, el que mejor encaja con vuestras dos series de respuestas, y la lista de las preguntas en las que no estáis de acuerdo. En los quiz de temporada, cada uno tiene el suyo, y un modo a distancia permite jugar cada uno en su móvil.",
     "p3": "Sin crear ninguna cuenta, sin instalar nada, y sin guardar nada: las respuestas se quedan en vuestros móviles."
   },
   "faq": {
     "title": "Preguntas frecuentes",
-    "q1": "¿Los quiz especiales son gratis?",
+    "q1": "¿Los quiz originales son gratis?",
     "a1": "Sí, todos, sin registro y sin aplicación que instalar. Se juegan en el navegador del móvil.",
     "q2": "¿Hay que ser dos?",
-    "a2": "No necesariamente. Cuatro de los cinco quiz de Halloween se juegan solo/a o en pareja. Solo el quiz del dúo de supervillanos pide dos jugadores, puesto que compone un dúo.",
+    "a2": "No necesariamente. Casi todos se juegan solo/a o en pareja, y solo el quiz del dúo de supervillanos pide dos jugadores, puesto que compone un dúo. Pero están pensados para hacerlos entre dos: lo divertido es comparar las respuestas.",
     "q3": "¿Qué pasa con los quiz cuando pasa la temporada?",
     "a3": "Se quedan en esta página, un poco más abajo, y en su propia dirección. No borramos nada: un quiz de Halloween en pleno marzo también se puede hacer.",
     "q4": "¿Cuándo llegan los quiz de Navidad?",
-    "a4": "En diciembre. En el programa: cuánto estáis dispuestos a gastar el uno en el otro, quién regalará el peor regalo, y alguna que otra idea de fin de año.",
+    "a4": "Antes de las fiestas. En el programa: quién de los dos está en la lista de los que se han portado bien, y alguna que otra sorpresa.",
     "q5": "¿Se puede jugar a distancia?",
-    "a5": "Sí, cada quiz tiene un modo a distancia. Una persona crea la partida, la otra se une con el código, y respondéis cada uno en vuestro móvil."
+    "a5": "Sí en los quiz de temporada: una persona crea la partida, la otra se une con el código, y respondéis cada uno en vuestro móvil. Los quiz sobre el futuro en pareja se hacen en un solo móvil, que os vais pasando."
   },
   "jsonLd": {
-    "name": "Quiz especiales para hacer en pareja"
+    "name": "Quiz originales para hacer en pareja"
+  },
+  "resultatCommun": "Un resultado para los dos",
+  "sections": {
+    "futur": {
+      "titre": "El futuro en pareja",
+      "intro": "El perro que tendréis, la casa donde viviréis: cada uno responde por su lado, y el quiz busca lo que os va a los dos, con una foto de regalo."
+    }
   }
 }

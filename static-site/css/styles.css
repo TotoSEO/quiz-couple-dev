@@ -13360,6 +13360,43 @@ img[src^="/bilan/apercu-"] { pointer-events: none; user-select: none; -webkit-us
 }
 
 /* ═══════════════════════════════════════════════════════════════════
+   Quiz fun « pour nous » (11 novembre 2026) : le résultat du couple
+   (PortraitQuiz avec `commun`). Une photo, pas un dessin sombre : le fond
+   et le dégradé de l'image s'allègent. Dessous, ce que chacun aurait eu de
+   son côté, en deux vignettes aux couleurs des personnages.
+   ═══════════════════════════════════════════════════════════════════ */
+.port-resultat--commun .port-image { background: hsl(var(--muted)); }
+.port-resultat--commun .port-image::after { background: linear-gradient(to top, hsl(var(--card)) 0%, transparent 16%); }
+.port-chacun { max-width: 34rem; margin: 1.5rem auto 0; }
+.port-chacun-rangee { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.75rem; }
+.port-chacun-ligne {
+  display: flex; align-items: center; gap: 0.75rem; min-width: 0; padding: 0.625rem; text-align: left;
+  border-radius: var(--radius); border: 1px solid hsl(var(--border)); background: hsl(var(--card));
+}
+.port-chacun-ligne--rose { border-color: hsl(var(--primary) / 0.4); background: hsl(var(--primary) / 0.06); }
+.port-chacun-ligne--violet { border-color: hsl(var(--secondary) / 0.4); background: hsl(var(--secondary) / 0.06); }
+.port-chacun-img { flex: none; width: 3.5rem; height: 3.5rem; border-radius: 0.75rem; object-fit: cover; }
+.port-chacun-texte { margin: 0; min-width: 0; font-size: 0.8rem; line-height: 1.3; }
+.port-chacun-texte b { display: block; overflow-wrap: anywhere; }
+.port-chacun-nom { display: block; font-size: 0.95rem; font-weight: 800; color: hsl(var(--foreground)); overflow-wrap: anywhere; }
+.port-chacun-note { margin: 0.75rem 0 0; font-size: 0.92rem; line-height: 1.5; color: hsl(var(--muted-foreground)); }
+.port-resultat--commun .port-bilan strong { display: block; font-size: 1.05rem; }
+@media (max-width: 400px) { .port-chacun-rangee { grid-template-columns: minmax(0, 1fr); } }
+
+/* La galerie des résultats dans le texte de la page (sectionN.galerie,
+   quiz-generic.ejs) : la vignette de chaque résultat, son nom, à qui il va. */
+.galerie-resultats { display: grid; gap: 0.875rem; margin: 1.5rem 0 0; padding: 0; list-style: none; }
+.galerie-resultat {
+  display: flex; align-items: flex-start; gap: 0.875rem; padding: 0.75rem;
+  border-radius: var(--radius); border: 1px solid hsl(var(--border)); background: hsl(var(--card));
+}
+.galerie-resultat img { flex: none; width: 5.5rem; height: 5.5rem; border-radius: 0.75rem; object-fit: cover; }
+.galerie-resultat-corps { min-width: 0; }
+.galerie-resultat-titre { margin: 0 0 0.25rem; font-size: 1.05rem; font-weight: 700; line-height: 1.3; }
+.galerie-resultat-texte { margin: 0; font-size: 0.92rem; line-height: 1.5; color: hsl(var(--muted-foreground)); }
+@media (min-width: 768px) { .galerie-resultats { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+
+/* ═══════════════════════════════════════════════════════════════════
    Téléphone : les animations infinies qui repeignent à chaque image
    ═══════════════════════════════════════════════════════════════════
    Elles n'animent ni transform ni opacity : dégradé qui glisse dans le

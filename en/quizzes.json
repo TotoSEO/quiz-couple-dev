@@ -557,10 +557,10 @@
     "metaDescription": "Who loves more in your relationship? A 20-question quiz about the little gestures, to take alone or together, each of you on your own."
   },
   "speciauxCouple": {
-    "title": "Special couple quizzes: Christmas, Halloween…",
-    "shortTitle": "Special quizzes",
-    "metaDescription": "Seasonal quizzes to take as a couple. For Halloween: which serial killer matches you, who dies first in a horror movie, who would get possessed, which supervillain are you. Free.",
-    "description": "The slightly crazy quizzes to take as a couple depending on the season: Halloween for now, Christmas next."
+    "title": "Fun Quizzes for Couples: What Dog, What House for Us?",
+    "shortTitle": "Fun quizzes",
+    "metaDescription": "Fun quizzes for couples: what dog should we get, what kind of house, plus seasonal quizzes. You each answer separately, then compare your results.",
+    "description": "Light-hearted quizzes to take together: your dog and your house in a photo, and the seasonal quizzes."
   },
   "quizSerialKiller": {
     "title": "Quiz: which serial killer are you compatible with? (solo or as a couple)",
@@ -591,6 +591,18 @@
     "shortTitle": "Which supervillain duo are you",
     "metaDescription": "As a couple: the Halloween night heist in 15 questions each, your role in the duo (the brains, the chaos, the muscle...) and the famous villain duo you form, from the Joker and Harley Quinn to Bonnie and Clyde.",
     "description": "Each of you answers separately, and the quiz gives you your role in the duo and the famous villain duo you form."
+  },
+  "quizChienNous": {
+    "title": "What Dog Should We Get? The Quiz for Couples",
+    "shortTitle": "What Dog Should We Get",
+    "metaDescription": "You each answer 12 questions (home, walks, hair on the sofa) and the quiz finds the dog that suits you both, with its photo: corgi, golden, Shiba...",
+    "description": "Twelve questions each, and the dog that would suit you as a couple, from the corgi to the Bernese mountain dog, with its photo."
+  },
+  "quizMaisonNous": {
+    "title": "What Kind of House Should We Live In? Dream House Quiz",
+    "shortTitle": "What House Should We Live In",
+    "metaDescription": "A city apartment, a house with a garden, a fixer-upper or a camper van? You each answer 12 questions, and the quiz shows the home that suits you both.",
+    "description": "Twelve questions each, and the place where you'd both be happy: apartment, country house, loft, tiny house..."
   },
   "bilanCouple": {
     "title": "Relationship Assessment Online | Instant Results + PDF",

@@ -1,0 +1,136 @@
+{
+  "hero": {
+    "badge": "Quiz original • En pareja, o solo/a para los dos",
+    "title": "El test para saber qué perro es para vosotros dos",
+    "titleHighlight": "qué perro es para vosotros dos",
+    "description": "¿Queréis un perro, pero no necesariamente el mismo? Cada uno responde a doce preguntas sobre vuestra vida en pareja, y el test os da el perro que os corresponde a los dos, con su foto.",
+    "subtitle": "12 preguntas • 3 minutos cada uno • en un solo móvil",
+    "jumpBtn": "Hacer el test"
+  },
+  "section1": {
+    "title": "Cómo funciona el test",
+    "p1": "Este test sirve para encontrar el perro que le iría bien a vuestra pareja, y no solo a uno de los dos. Hace doce preguntas muy sencillas sobre la vida que tendríais con él: dónde vivís, qué hacéis los domingos por la mañana, cuánto tiempo se quedaría solo, si os molestan los pelos en el sofá, etc.",
+    "p2": "Por ejemplo, en la pregunta «Su tamaño:», podéis elegir entre «pequeño, cabe en el regazo», «mediano, todavía se le puede coger en brazos», «grande, un perro de verdad» y «enorme, casi un poni». Si tú respondes «pequeño» y tu pareja responde «enorme», el test lo tiene en cuenta: suma vuestras dos series de respuestas y se queda con el perro que saca la mejor nota para los dos.",
+    "p3": "En pareja, el primero responde a las doce preguntas, pasa el móvil, y el segundo responde sin ver lo que ha elegido el otro. Al final tenéis el perro de la pareja con su foto, el perro que cada uno habría tenido por su cuenta, y la lista de las preguntas en las que no habéis respondido lo mismo. ¡Ahí suele empezar la conversación!",
+    "p4": "También puedes hacerlo solo/a, respondiendo por los dos. Pero es bastante más divertido descubrir lo que ha respondido el otro."
+  },
+  "section2": {
+    "title": "Los doce perros del test",
+    "intro": "El test puede dar doce resultados: diez de las razas más conocidas, el perro de protectora, y un último resultado para las parejas que todavía no están preparadas. Aquí va a quién le encaja mejor cada uno.",
+    "galerie": [
+      {
+        "id": "golden",
+        "titre": "El golden retriever",
+        "texte": "Para las parejas que tienen jardín, tiempo para un buen paseo todos los días y ningún miedo a los pelos.",
+        "alt": "Un golden retriever sentado en un prado al atardecer"
+      },
+      {
+        "id": "corgi",
+        "titre": "El corgi",
+        "texte": "Para quienes quieren un perro mediano, juguetón y listo, y a quienes los ladridos más bien les hacen gracia.",
+        "alt": "Un corgi rojo y blanco de pie en el camino de un jardín"
+      },
+      {
+        "id": "bouledogue",
+        "titre": "El bulldog francés",
+        "texte": "Para la vida en un piso, y para las parejas más de sofá que de salir a correr.",
+        "alt": "Un bulldog francés tumbado sobre una manta, en un sofá"
+      },
+      {
+        "id": "cavalier",
+        "titre": "El cavalier king charles",
+        "texte": "Para quienes pasan mucho tiempo en casa y quieren un perro pequeño y muy mimoso.",
+        "alt": "Un cavalier king charles hecho un ovillo en un sillón"
+      },
+      {
+        "id": "aussie",
+        "titre": "El pastor australiano",
+        "texte": "Para las parejas deportistas que tienen sitio y dos horas al día para dedicarle.",
+        "alt": "Un pastor australiano azul mirlo corriendo por un campo"
+      },
+      {
+        "id": "teckel",
+        "titre": "El teckel",
+        "texte": "Para quienes quieren un perro pequeño con mucho carácter, y tienen paciencia.",
+        "alt": "Un teckel de pelo corto de pie sobre hojas de otoño"
+      },
+      {
+        "id": "caniche",
+        "titre": "El caniche",
+        "texte": "Para quienes no quieren pelos en el sofá y tienen ganas de enseñarle un montón de cosas.",
+        "alt": "Un caniche color albaricoque sentado junto a una ventana, en un piso"
+      },
+      {
+        "id": "shiba",
+        "titre": "El shiba inu",
+        "texte": "Para las parejas que trabajan parte del día y a las que les gustan los perros independientes.",
+        "alt": "Un shiba inu rojo sentado en una acera, delante de la terraza de un café"
+      },
+      {
+        "id": "husky",
+        "titre": "El husky siberiano",
+        "texte": "Para los muy deportistas que viven en el campo, mejor donde haga fresco.",
+        "alt": "Un husky siberiano de ojos azules en un bosque nevado"
+      },
+      {
+        "id": "bernois",
+        "titre": "El boyero de Berna",
+        "texte": "Para quienes tienen una casa grande, un jardín grande y ganas de un perro muy grande y muy tranquilo.",
+        "alt": "Un boyero de Berna tumbado en un prado de montaña en flor"
+      },
+      {
+        "id": "refuge",
+        "titre": "El perro de protectora",
+        "texte": "Para las parejas que no tienen una raza en mente y prefieren adoptar.",
+        "alt": "Un perro mestizo de pelo revuelto, con un pañuelo rojo al cuello, sentado en el umbral de una puerta"
+      },
+      {
+        "id": "peluche",
+        "titre": "Un perro de peluche, de momento",
+        "texte": "Para quienes vuelven tarde, viajan mucho o todavía no se ponen de acuerdo. Pasa, y el test lo dice.",
+        "alt": "Un perro de peluche beige sentado en un sofá"
+      }
+    ]
+  },
+  "section3": {
+    "title": "Elegir un perro en pareja: lo que hay que preguntarse",
+    "intro": "Un perro vive entre diez y quince años. Es una decisión que se toma entre los dos, y hay cuatro temas en los que conviene estar de acuerdo antes de ir a ver uno.",
+    "sub1Title": "¿Quién se ocupa de él, y cuándo?",
+    "sub1Text": "Es la pregunta que más discusiones trae. Un perro sale tres veces al día, todos los días, también el domingo por la mañana bajo la lluvia. Antes de adoptar, poneos de acuerdo en <a href=\"/es/test-carga-mental-pareja/\">quién hace qué en casa</a>: el paseo de la mañana, la vuelta al mediodía, el veterinario, y las noches a trozos si es un cachorro.",
+    "sub2Title": "Vuestra casa y vuestro ritmo",
+    "sub2Text": "Un perro grande y deportista en un estudio, o un perro pequeño muy pegajoso que se queda solo diez horas al día: eso sale mal para todos. Mirad vuestra vida tal como es hoy, no la que os gustaría tener. Y si todavía no estáis de acuerdo en <a href=\"/es/test-que-casa-es-para-nosotros/\">el sitio donde queréis vivir</a>, empezad por ahí: un jardín cambia muchas cosas.",
+    "sub3Title": "El presupuesto",
+    "sub3Text": "No es solo el pienso. Hay que contar el veterinario, las vacunas, un seguro si lo contratáis, la peluquería en algunas razas, y quién lo cuida cuando os vais sin él. Un perro grande cuesta más que uno pequeño, sencillamente porque come más. Haced las cuentas entre los dos antes, así os ahorráis sorpresas.",
+    "sub4Title": "Un cachorro o un adulto, un criador o una protectora",
+    "sub4Text": "Un cachorro es muy mono, pero también son meses de educación, de noches cortas y de zapatos mordidos. Un perro adulto suele estar ya educado, y se conoce su carácter. En una protectora hay perros de todas las edades, mestizos pero también de raza. Si vais a un criador, id a ver a los padres y el sitio donde crecen los cachorros."
+  },
+  "section4": {
+    "title": "¿Y si no estáis de acuerdo?",
+    "p1": "El resultado del test es un punto de partida. Si uno sueña con un husky y el otro con un perro que quepa en un bolso, lo más interesante está en la lista de vuestras respuestas distintas. Mirad en qué no coincidís (el tamaño, el tiempo que pasaría solo, las vacaciones) y habladlo. La mayoría de las veces el problema está en dos o tres preguntas, no en todas.",
+    "p2": "Muchas parejas tienen un perro <a href=\"/es/test-parentalidad-pareja/\">antes de tener un hijo</a>. No tiene nada que ver, claro, pero ya es organizarse entre los dos para alguien que depende de vosotros, y enseguida se ve cómo se las apaña cada uno.",
+    "p3": "Y si uno de los dos no quiere perro para nada, no insistáis. Es mejor esperar a que lo queráis los dos que tener un perro del que solo se ocupa uno."
+  },
+  "section5": {
+    "title": "Lo que hay que saber sobre este test",
+    "p1": "Este test es un juego. Las descripciones dan el carácter más habitual de cada raza, pero cada perro es distinto, y su educación cuenta tanto como su raza. Para elegir, id a ver criadores, protectoras o a un veterinario, y pasad tiempo con el perro antes de decidiros.",
+    "p2": "No se guarda nada: vuestras respuestas se quedan en vuestro móvil. Solo se cuenta el perro obtenido, sin nombre, para saber qué resultados salen más. Las fotos de los perros se han creado para esta página."
+  },
+  "seo": {
+    "faqTitle": "Preguntas frecuentes",
+    "faq1Q": "¿Qué perros pueden salir?",
+    "faq1A": "Hay doce resultados posibles: el golden retriever, el corgi, el bulldog francés, el cavalier king charles, el pastor australiano, el teckel, el caniche, el shiba inu, el husky siberiano, el boyero de Berna, el perro de protectora, y «un perro de peluche, de momento» para las parejas que todavía no están preparadas.",
+    "faq2Q": "¿Cómo se calcula el resultado?",
+    "faq2A": "Cada respuesta da puntos a los perros que le corresponden. Por ejemplo, «en un piso en la ciudad, sin exterior» da puntos al bulldog francés y al cavalier king charles, y ninguno al husky. En pareja, el test suma vuestras dos series de respuestas, y el perro con mejor nota pasa a ser el de la pareja.",
+    "faq3Q": "¿Se puede hacer el test solo/a?",
+    "faq3A": "Sí. Eliges «Solo/a, para los dos» y respondes pensando en vuestra pareja. Tendrás un perro, pero no la comparación de vuestras respuestas: para eso hay que ser dos.",
+    "faq4Q": "¿Qué perro para una pareja joven en un piso?",
+    "faq4A": "Depende sobre todo del tiempo que tengáis. En un piso, los perros que mejor se adaptan son los que no necesitan correr durante horas: el bulldog francés, el cavalier king charles, el teckel o el caniche. El shiba inu también encaja si trabajáis parte del día. Un pastor australiano o un husky, en cambio, necesitan espacio y mucho ejercicio.",
+    "faq5Q": "¿Cómo saber si estamos preparados para tener un perro?",
+    "faq5A": "El test tiene un resultado para eso: «un perro de peluche, de momento». Sale cuando vuestras respuestas dicen que el perro se quedaría solo todo el día, que viajáis mucho o que las ganas no son las mismas por los dos lados. Si os sale, cuidad el perro de un amigo durante un fin de semana, a ver qué tal.",
+    "faq6Q": "¿Se guardan mis respuestas?",
+    "faq6A": "No. Las respuestas se quedan en vuestro móvil. Solo se cuenta el perro obtenido, sin nombre, para el reparto de los resultados."
+  },
+  "jsonLd": {
+    "about": "elegir un perro en pareja"
+  }
+}

@@ -11,9 +11,11 @@
   const ns = 'quiz-speciaux';
   const pageTitle = t('quizzes:speciauxCouple.title', 'Quiz spéciaux à faire en couple');
   const saisonCourante = (typeof saison !== 'undefined' && saison) ? saison : null;
-  const EMOJIS = { quizSerialKiller: '🔪', quizMortFilmHorreur: '🎬', quizPossession: '👻', quizSuperVilain: '🦹', quizDuoVilains: '🎭' };
-  const ACCENTS = { quizSerialKiller: '0 55% 42%', quizMortFilmHorreur: '222 48% 46%', quizPossession: '150 40% 38%', quizSuperVilain: '292 55% 45%', quizDuoVilains: '27 90% 48%' };
+  const EMOJIS = { quizSerialKiller: '🔪', quizMortFilmHorreur: '🎬', quizPossession: '👻', quizSuperVilain: '🦹', quizDuoVilains: '🎭', quizChienNous: '🐶', quizMaisonNous: '🏡' };
+  const ACCENTS = { quizSerialKiller: '0 55% 42%', quizMortFilmHorreur: '222 48% 46%', quizPossession: '150 40% 38%', quizSuperVilain: '292 55% 45%', quizDuoVilains: '27 90% 48%', quizChienNous: '32 80% 46%', quizMaisonNous: '162 45% 36%' };
   const DUO_SEUL = { quizDuoVilains: true };
+  // Les quiz « pour nous » : un seul résultat pour le couple, pas de mode à distance.
+  const COMMUN = { quizChienNous: true, quizMaisonNous: true };
   const toutes = (famillesNav.speciaux || []).map(function (k) {
     const f = quizFeatured && quizFeatured[k];
     return {
@@ -23,6 +25,7 @@
       emoji: EMOJIS[k] || '🎃',
       accent: ACCENTS[k] || '340 65% 62%',
       duoSeul: !!DUO_SEUL[k],
+      commun: !!COMMUN[k],
       img: f && f.file ? f.file : 'test-couple',
       alt: f ? (f.alt[lang] || f.alt.fr) : '',
       nom: t(ns + ':quiz.' + k + 'Nom', t('quizzes:' + k + '.shortTitle', '')),
@@ -35,10 +38,29 @@
   const ordre = Object.keys(saisonsTextes).sort(function (a, b) {
     return (a === saisonCourante ? -1 : 0) - (b === saisonCourante ? -1 : 0);
   });
-  const blocs = ordre.map(function (id) {
+  const blocsSaison = ordre.map(function (id) {
     return { id: id, textes: saisonsTextes[id] || {}, quiz: toutes.filter(function (q) { return q.saison === id; }), enCours: id === saisonCourante };
   });
-  const horsSaison = toutes.filter(function (q) { return !q.saison || !saisonsTextes[q.saison]; });
+  // Les sections de toute l'année (11 novembre 2026) : celles de
+  // SECTIONS_NAV.speciaux qui ne sont pas une saison (« Votre futur à deux »),
+  // avec leur titre et leur phrase dans `sections` du JSON. L'ordre de la
+  // page : la saison en cours, les sections de toute l'année, puis les autres
+  // saisons.
+  const sectionsFamille = (typeof sectionsNav !== 'undefined' && sectionsNav && sectionsNav.speciaux) || [];
+  const sectionsTextes = t(ns + ':sections', {}) || {};
+  const parCle = {};
+  toutes.forEach(function (q) { parCle[q.routeKey] = q; });
+  const blocsAnnee = sectionsFamille.filter(function (s) { return !saisonsTextes[s.cle]; }).map(function (s) {
+    return {
+      id: s.cle, annee: true,
+      textes: sectionsTextes[s.cle] || { titre: t('common:nav.sections.' + s.cle, s.cle) },
+      quiz: s.routes.map(function (k) { return parCle[k]; }).filter(Boolean), enCours: false
+    };
+  }).filter(function (b) { return b.quiz.length; });
+  const blocs = blocsSaison.filter(function (b) { return b.enCours; }).concat(blocsAnnee, blocsSaison.filter(function (b) { return !b.enCours; }));
+  const places = {};
+  blocs.forEach(function (b) { b.quiz.forEach(function (q) { places[q.routeKey] = true; }); });
+  const horsSaison = toutes.filter(function (q) { return !places[q.routeKey]; });
   const faqNums = [1, 2, 3, 4, 5].filter(function (i) { return t(ns + ':faq.q' + i, ''); });
   const jsonLd = [
     {
@@ -123,7 +145,7 @@
             <p class="jeu-card-tagline"><%= q.tagline %></p>
             <ul class="jeu-card-meta">
               <li><%= q.duoSeul ? t(ns + ':duoSeul', 'À deux seulement') : t(ns + ':soloOuDuo', 'Seul(e) ou à deux') %></li>
-              <li><%= t(ns + ':distance', 'Mode à distance') %></li>
+              <li><%= q.commun ? t(ns + ':resultatCommun', 'Un résultat pour vous deux') : t(ns + ':distance', 'Mode à distance') %></li>
             </ul>
             <span class="jeu-card-cta">
               <%= t(ns + ':jouer', 'Faire le quiz') %>

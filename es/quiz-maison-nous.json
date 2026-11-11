@@ -1,0 +1,123 @@
+{
+  "hero": {
+    "badge": "Quiz original • En pareja, o solo/a para los dos",
+    "title": "El test para saber qué casa es para vosotros dos",
+    "titleHighlight": "qué casa es para vosotros dos",
+    "description": "¿Un piso en la ciudad, una casa con jardín, una casa antigua para reformar o una furgoneta camper? Cada uno responde a doce preguntas sobre la vida que se imagina, y el test os enseña el sitio donde estaríais a gusto los dos.",
+    "subtitle": "12 preguntas • 3 minutos cada uno • en un solo móvil",
+    "jumpBtn": "Hacer el test"
+  },
+  "section1": {
+    "title": "Cómo funciona el test",
+    "p1": "Este test sirve para encontrar el tipo de sitio donde estaríais a gusto los dos: en la ciudad o en medio del campo, en algo nuevo o en algo antiguo, con vecinos al lado o sin nadie alrededor. Hace doce preguntas sobre vuestro día a día: qué veis por la ventana por la mañana, qué hacéis los sábados por la noche, cuánto sitio ocupan vuestras cosas, etc.",
+    "p2": "Por ejemplo, en la pregunta «Las obras:», podéis responder «nunca, solo queremos dejar las maletas», «una mano de pintura, nada más», «nos gusta hacer bricolaje el fin de semana» o «rehacerlo todo nosotros, es el proyecto de una vida». Si tú respondes «nunca» y tu pareja sueña con rehacerlo todo, el test lo ve: suma vuestras dos series de respuestas y se queda con la casa que saca la mejor nota para los dos.",
+    "p3": "En pareja, el primero responde a las doce preguntas, pasa el móvil, y el segundo responde sin ver lo que ha elegido el otro. Al final tenéis la casa de la pareja con su foto, la que cada uno habría elegido por su cuenta, y la lista de las preguntas en las que no habéis respondido lo mismo.",
+    "p4": "También puedes hacerlo solo/a, respondiendo por los dos. Pero no tendrás la comparación, que es la parte más interesante."
+  },
+  "section2": {
+    "title": "Las diez casas del test",
+    "intro": "El test puede dar diez resultados, del más clásico al más inesperado. Aquí va a quién le encaja mejor cada uno.",
+    "galerie": [
+      {
+        "id": "pavillon",
+        "titre": "La casa con jardín",
+        "texte": "Para las parejas que quieren asentarse de verdad, con sitio, una barbacoa y un cuarto de invitados.",
+        "alt": "Una casa de dos plantas en una calle tranquila, con un seto, una bici apoyada en la valla y un jardín"
+      },
+      {
+        "id": "appartement",
+        "titre": "El piso en el centro",
+        "texte": "Para quienes quieren ir a todas partes a pie y prefieren un balcón a un cortacésped.",
+        "alt": "Un balcón de hierro forjado con una mesa de bistró y dos sillas, sobre los tejados de una ciudad"
+      },
+      {
+        "id": "campagne",
+        "titre": "La casa de campo",
+        "texte": "Para quienes sueñan con espacio, un huerto y silencio por la noche.",
+        "alt": "Una vieja casa de piedra con contraventanas azules, cubierta de rosales, delante de un huerto"
+      },
+      {
+        "id": "loft",
+        "titre": "El loft",
+        "texte": "Para la gente de ciudad a la que le gustan los espacios amplios y que invita a menudo.",
+        "alt": "Un loft con paredes de ladrillo, grandes ventanales, un sofá y una escalera de metal"
+      },
+      {
+        "id": "architecte",
+        "titre": "La casa de diseño",
+        "texte": "Para quienes tienen gustos claros, presupuesto y ningunas ganas de hacer obras.",
+        "alt": "Una casa contemporánea de hormigón y cristal, junto a una piscina, al anochecer"
+      },
+      {
+        "id": "tiny",
+        "titre": "La tiny house",
+        "texte": "Para las parejas que tienen pocas cosas y quieren vivir en la naturaleza, en pequeño.",
+        "alt": "Una casita de madera sobre ruedas, iluminada por una guirnalda, al borde de un bosque"
+      },
+      {
+        "id": "renover",
+        "titre": "La casa antigua para reformar",
+        "texte": "Para los manitas con paciencia que quieren rehacerlo todo a su gusto.",
+        "alt": "Una vieja casona de piedra cubierta de hiedra, con un andamio y una carretilla delante"
+      },
+      {
+        "id": "van",
+        "titre": "La furgoneta camper",
+        "texte": "Para quienes no paran quietos y solo necesitan una cama y una carretera.",
+        "alt": "Una furgoneta con las puertas traseras abiertas sobre una cama, aparcada al borde de un acantilado al atardecer"
+      },
+      {
+        "id": "peniche",
+        "titre": "La casa flotante",
+        "texte": "Para quienes quieren vivir sobre el agua, en un sitio que no se parece a ningún otro.",
+        "alt": "Un barco vivienda amarrado en un canal, con la cubierta llena de plantas, una mesa y bicis"
+      },
+      {
+        "id": "palier",
+        "titre": "Dos pisos en el mismo rellano",
+        "texte": "Para las parejas que se quieren y aun así prefieren tener cada uno su casa.",
+        "alt": "Dos puertas de piso una al lado de la otra en un rellano, una rosa y otra violeta, cada una con su felpudo"
+      }
+    ]
+  },
+  "section3": {
+    "title": "Elegir dónde vivir en pareja: los temas que hay que poner sobre la mesa",
+    "intro": "Buscar casa entre dos casi nunca es solo cuestión de gustos. Detrás de «me gusta esta casa» hay cuatro temas de los que se habla mucho menos.",
+    "sub1Title": "La ciudad o el campo",
+    "sub1Text": "Es el desacuerdo más habitual. Uno creció en un pueblo y se ahoga en la ciudad, el otro no se ve a veinte minutos en coche de la primera panadería. Antes de mirar anuncios, contaos un día normal en el sitio que os imagináis, desde que os levantáis hasta que os acostáis. Enseguida se ve dónde está el problema.",
+    "sub2Title": "Las obras",
+    "sub2Text": "Una casa para reformar cuesta menos al comprarla, y mucho más en fines de semana. Si a uno le encanta y el otro lo odia, la obra se convierte pronto en motivo de discusión. Poneos de acuerdo en lo que sois capaces de hacer vosotros mismos, en el presupuesto, y en el tiempo que aceptáis vivir entre polvo.",
+    "sub3Title": "El dinero",
+    "sub3Text": "Comprar o alquilar, cuánto destinar al alquiler o a la hipoteca, quién paga qué si uno gana más que el otro: son preguntas que conviene resolver antes de firmar. Las parejas que <a href=\"/es/test-vivir-juntos-pareja/\">se van a vivir juntas por primera vez</a> suelen descubrirlas por el camino.",
+    "sub4Title": "El sitio de cada uno",
+    "sub4Text": "Vivir en pareja no significa compartirlo todo. Hay quien necesita una habitación propia, un despacho, un taller, o solo un rincón del sofá donde no le hablen. Otras parejas eligen incluso vivir cada uno en su casa, y no por eso se quieren menos. Preguntaos <a href=\"/es/que-tipo-de-pareja-sois-quiz/\">qué tipo de pareja sois</a>, más de hacerlo todo juntos o más independientes: la casa adecuada no será la misma."
+  },
+  "section4": {
+    "title": "¿Y si no estáis de acuerdo?",
+    "p1": "Pasa casi siempre, y más bien es buena señal: quiere decir que cada uno ha respondido de verdad. Mirad la lista de vuestras respuestas distintas. Si tienen que ver con el estilo o con el tamaño, encontraréis un punto medio sin mucho esfuerzo. Si tienen que ver con la ciudad o el campo, o con vivir juntos o no, tomaos el tiempo de hablarlo.",
+    "p2": "Pensad también en lo que vendrá con la casa. Un jardín es la posibilidad de <a href=\"/es/test-que-perro-es-para-nosotros/\">tener un perro</a>, y una habitación de más quizá sea un hijo algún día. La casa que elegís dice mucho de la vida que tenéis prevista."
+  },
+  "section5": {
+    "title": "Lo que hay que saber sobre este test",
+    "p1": "Este test es un juego. No conoce vuestro presupuesto ni los precios de la vivienda donde vivís: solo os dice hacia qué tipo de sitio os llevan vuestras respuestas. Tomadlo como una forma de abrir la conversación, no como el consejo de un agente inmobiliario.",
+    "p2": "No se guarda nada: vuestras respuestas se quedan en vuestro móvil. Solo se cuenta el resultado obtenido, sin nombre, para saber cuáles salen más. Las fotos se han creado para esta página."
+  },
+  "seo": {
+    "faqTitle": "Preguntas frecuentes",
+    "faq1Q": "¿Qué casas pueden salir?",
+    "faq1A": "Hay diez resultados posibles: la casa con jardín, el piso en el centro, la casa de campo, el loft, la casa de diseño, la tiny house, la casa antigua para reformar, la furgoneta camper, la casa flotante, y dos pisos en el mismo rellano para las parejas que prefieren vivir cada uno en su casa.",
+    "faq2Q": "¿Cómo se calcula el resultado?",
+    "faq2A": "Cada respuesta da puntos a las casas que le corresponden. Por ejemplo, «un restaurante o un bar a diez minutos a pie» da puntos al piso en el centro y al loft, y ninguno a la casa de campo. En pareja, el test suma vuestras dos series de respuestas, y la casa con mejor nota pasa a ser la de la pareja.",
+    "faq3Q": "¿Se puede hacer el test solo/a?",
+    "faq3A": "Sí. Eliges «Solo/a, para los dos» y respondes pensando en vuestra pareja. Tendrás un resultado, pero no la comparación de vuestras respuestas: para eso hay que ser dos.",
+    "faq4Q": "Casa o piso: ¿cómo elegir en pareja?",
+    "faq4A": "Lo más sencillo es partir de vuestra semana, no de la vivienda. Si salís mucho y no os apetece cuidar de un exterior, os irá mejor un piso bien situado. Si invitáis a menudo, queréis un jardín o pensáis en ampliar la familia, la casa se impone bastante rápido. El test hace justo esas preguntas, a cada uno por su lado.",
+    "faq5Q": "¿Y si uno de los dos prefiere vivir solo?",
+    "faq5A": "No tiene por qué ser mala señal. Hay parejas que viven cada uno en su casa por decisión propia, para conservar sus costumbres o su espacio, y les va muy bien. El test tiene un resultado para eso: «dos pisos en el mismo rellano». Lo que cuenta es que lo queráis los dos.",
+    "faq6Q": "¿Se guardan mis respuestas?",
+    "faq6A": "No. Las respuestas se quedan en vuestro móvil. Solo se cuenta el resultado obtenido, sin nombre, para el reparto de los resultados."
+  },
+  "jsonLd": {
+    "about": "elegir una vivienda en pareja"
+  }
+}

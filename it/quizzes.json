@@ -557,10 +557,10 @@
     "metaDescription": "Chi ama di più nella tua coppia? Un test di 20 domande sui piccoli gesti di ogni giorno, da fare da soli o in due, ognuno per conto suo."
   },
   "speciauxCouple": {
-    "title": "Quiz speciali da fare in coppia: Natale, Halloween…",
-    "shortTitle": "Quiz speciali",
-    "metaDescription": "I quiz di stagione da fare in due. Per Halloween: quale serial killer ti corrisponde, chi muore per primo in un film horror, chi potrebbe essere posseduto, quale supercattivo sei. Gratis.",
-    "description": "I quiz un po' folli da fare in due a seconda della stagione: Halloween per ora, Natale poi."
+    "title": "Quiz originali di coppia: il vostro cane, la vostra casa",
+    "shortTitle": "Quiz originali",
+    "metaDescription": "Quiz originali da fare in coppia: il cane e la casa che fanno per voi, e i quiz di stagione. Ognuno risponde per conto suo, e poi confrontate i risultati.",
+    "description": "Quiz leggeri da fare in due: il vostro cane e la vostra casa in foto, e i quiz di stagione."
   },
   "quizSerialKiller": {
     "title": "Quiz: con quale serial killer sei compatibile? (da solo o in due)",
@@ -591,6 +591,18 @@
     "shortTitle": "Quale duo di supercattivi siete",
     "metaDescription": "In coppia: il colpo della notte di Halloween in 15 domande ciascuno, il vostro ruolo nel duo (il cervello, il caos, la forza...) e il duo di cattivi celebre che formate, da Joker e Harley Quinn a Bonnie e Clyde.",
     "description": "Ognuno risponde per conto suo, e il quiz vi dà il vostro ruolo nel duo e il duo di cattivi celebre che formate."
+  },
+  "quizChienNous": {
+    "title": "Che cane fa per noi? Il test da fare in coppia",
+    "shortTitle": "Che cane fa per noi",
+    "metaDescription": "Ognuno risponde a 12 domande (casa, passeggiate, peli sul divano) e il test trova il cane che fa per voi due, con la sua foto: corgi, golden, shiba...",
+    "description": "Dodici domande a testa, e il cane che andrebbe bene alla vostra coppia, dal corgi al bovaro del bernese, con la sua foto."
+  },
+  "quizMaisonNous": {
+    "title": "Che casa fa per noi? Il test da fare in coppia",
+    "shortTitle": "Che casa fa per noi",
+    "metaDescription": "Appartamento in città, casa con giardino, rudere da ristrutturare o van? Ognuno risponde a 12 domande e il test mostra la casa che fa per voi due.",
+    "description": "Dodici domande a testa, e il posto dove stareste bene tutti e due: appartamento, casa di campagna, loft, tiny house..."
   },
   "bilanCouple": {
     "title": "Bilancio di coppia online | Risultati subito e in PDF",

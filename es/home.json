@@ -177,18 +177,20 @@
       "quizMortFilmHorreur": "Quince situaciones, un tiempo de supervivencia en minutos, y la primera víctima cuando jugáis en pareja.",
       "quizPossession": "Un riesgo de posesión en porcentaje para cada uno, y a quién elegirían los demonios.",
       "quizSuperVilain": "Tu entrada en la fiesta, tu disfraz, tu risa: el supervillano que se parece a ti, del Joker a Maléfica.",
-      "quizDuoVilains": "El golpe de la noche de Halloween: el papel de cada uno, y el dúo de malvados célebre que formáis."
+      "quizDuoVilains": "El golpe de la noche de Halloween: el papel de cada uno, y el dúo de malvados célebre que formáis.",
+      "quizChienNous": "Cada uno responde por su lado, y el test encuentra el perro que os va a los dos, del corgi al boyero de Berna.",
+      "quizMaisonNous": "Cada uno responde por su lado, y el test os enseña el sitio donde estaríais a gusto los dos, del piso en el centro a la furgoneta camper."
     },
     "testsEyebrow": "Los tests",
     "quizzesEyebrow": "Los quiz",
     "jeuxEyebrow": "Los juegos",
-    "speciauxEyebrow": "Edición especial",
-    "speciauxTitle": "Nuestros quiz especiales, según la temporada",
+    "speciauxEyebrow": "Quiz originales",
+    "speciauxTitle": "Vuestro perro, vuestra casa: nuestros quiz originales para hacer en pareja",
     "speciauxTitleSaison": {
       "halloween": "Especial Halloween: nuestros quiz que dan (un poco de) miedo"
     },
-    "speciauxDesc": "{{n}} quiz para hacer solo/a o en pareja, para una noche distinta a las demás. Cada uno tiene modo a distancia.",
-    "speciauxCta": "Ver todos los quiz especiales"
+    "speciauxDesc": "{{n}} quiz ligeros para hacer en pareja. Cada uno responde por su lado, y luego comparáis.",
+    "speciauxCta": "Ver todos los quiz originales"
   },
   "customQuizPromo": {
     "eyebrow": "Quiz personalizado",

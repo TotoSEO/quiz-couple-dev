@@ -16,14 +16,14 @@
   const _relatedMap = {
     // Tests à faire à deux, ambiance posée
     testCouple:       ['testCompatibilite', 'quizKnowledge', 'testCoupleSain', 'testCommonPoints'],
-    testCommonPoints: ['jeuQuiDeNous', 'quizKnowledge', 'testCompatibilite', 'testCouple'],
+    testCommonPoints: ['jeuQuiDeNous', 'quizKnowledge', 'quizChienNous', 'testCompatibilite', 'testCouple'],
     testCompatibilite:['testCouple', 'testMariage', 'testEmmenager', 'testCompatSexuelle'],
     testCoupleSain:   ['testConfiance', 'testCouple', 'testCompatibilite', 'testLangageAmour'],
     testDistance:     ['testDistanceAime', 'quizKnowledge', 'testCouple', 'jeuxParMessage', 'testConfiance'],
 
     // Étapes de vie
-    testMariage:      ['testEmmenager', 'testParentalite', 'testCompatibilite', 'nocesMariage'],
-    testEmmenager:    ['testParentalite', 'testMariage', 'testCompatibilite', 'testChargeMentale'],
+    testMariage:      ['testEmmenager', 'quizMaisonNous', 'testParentalite', 'nocesMariage', 'testCompatibilite'],
+    testEmmenager:    ['testParentalite', 'testMariage', 'quizMaisonNous', 'testCompatibilite', 'testChargeMentale'],
     testParentalite:  ['testVeuxEnfant', 'testEmmenager', 'testMariage', 'testCoupleSain'],
     testVeuxEnfant:   ['testParentalite', 'testEstCeLeBon', 'testMariage', 'testCoupleSain'],
 
@@ -74,7 +74,7 @@
     testChargeMentale:['testCoupleSain', 'testParentalite', 'testEmmenager', 'testCouple'],
     quizRencontre:    ['testAmourAmitie', 'questionsCouple', 'quizAmoureux', 'testSuisJeAmoureux'],
     testPersonnalite: ['testLangageAmour', 'testAttachement', 'testCouple', 'testCoupleSain'],
-    quizTypeCouple:   ['testPersonnalite', 'testLangageAmour', 'testCouple', 'quizKnowledge'],
+    quizTypeCouple:   ['testPersonnalite', 'testLangageAmour', 'quizChienNous', 'testCouple', 'quizKnowledge'],
     testPretRelation: ['testTrouverAmour', 'testEx', 'testAttachement', 'testOublierEx'],
     testDureeCelibat: ['testCelibataire', 'testTrouverAmour', 'testPretRelation', 'testCoupleOuCelibat'],
     testTrouverAmour: ['testCelibataire', 'testAttachement', 'testDependance', 'testDureeCelibat'],
@@ -95,7 +95,7 @@
 
     // Quiz légers
     quizAmoureux:     ['jeuDilemmes', 'quizTuPreferes', 'quizKnowledge', 'quizMarrant'],
-    quizMarrant:      ['quizGenant', 'quizMost', 'jeuActionVerite', 'quizMortFilmHorreur', 'quizTuPreferes'],
+    quizMarrant:      ['quizGenant', 'quizMost', 'jeuActionVerite', 'quizChienNous', 'quizTuPreferes'],
     quizGenant:       ['quizMarrant', 'jeuActionVerite', 'quizMost', 'quizTuPreferes'],
     quizKnowledge:    ['jeuQuiDeNous', 'jeuQuestionsRapides', 'zamours', 'testCommonPoints', 'quizMost'],
     quizMost:         ['jeuSoireeCouples', 'jeuActionVerite', 'quizMarrant', 'quizTuPreferes'],
@@ -131,11 +131,15 @@
 
     // Les quiz spéciaux d'Halloween (16 octobre 2026) : d'un quiz de saison à
     // l'autre, puis un jeu
-    quizSerialKiller:    ['quizSuperVilain', 'quizMortFilmHorreur', 'quizPossession', 'quizTuPreferes'],
+    quizSerialKiller:    ['quizSuperVilain', 'quizMortFilmHorreur', 'quizPossession', 'quizChienNous', 'quizTuPreferes'],
     quizMortFilmHorreur: ['quizPossession', 'quizSerialKiller', 'quizDuoVilains', 'jeuDilemmes'],
     quizPossession:      ['quizMortFilmHorreur', 'quizSerialKiller', 'quizSuperVilain', 'jeuJamais'],
     quizSuperVilain:     ['quizDuoVilains', 'quizSerialKiller', 'quizMortFilmHorreur', 'quizTuPreferes'],
-    quizDuoVilains:      ['quizSuperVilain', 'quizPossession', 'quizTuPreferes', 'quizMortFilmHorreur', 'jeuActionVerite'],
+    quizDuoVilains:      ['quizSuperVilain', 'quizPossession', 'quizMaisonNous', 'quizTuPreferes', 'quizMortFilmHorreur', 'jeuActionVerite'],
+    // Les quiz fun « pour nous » (11 novembre 2026) : l'autre quiz du futur à
+    // deux, le test qui va avec le projet, puis un quiz ou un jeu léger
+    quizChienNous:       ['quizMaisonNous', 'testEmmenager', 'quizTypeCouple', 'quizTuPreferes'],
+    quizMaisonNous:      ['quizChienNous', 'testEmmenager', 'testMariage', 'quizTypeCouple'],
   };
 
   const _relatedIcons = {
@@ -150,6 +154,7 @@
     jeuActionVerite: '🎲', jeuActionVeriteHot: '🌶️', jeuGages: '🎡',
     jeuPlateau: '🎲', jeuQuiDeNous: '👀', jeuDilemmes: '⚖️', pourContre: '👍', jeuJamais: '🙊', jeuQuiPourrait: '🏆', jeuQuestionsRapides: '⚡', jeuMarguerite: '🌼', jeuNouvelAn: '🥂', jeuxParMessage: '📱', jeuOuiNon: '✅', jeuPhrases: '💬', jeuDixMais: '🔟', jeuSoireeCouples: '🎉',
     quizSerialKiller: '🔪', quizMortFilmHorreur: '🎬', quizPossession: '👻', quizSuperVilain: '🦹', quizDuoVilains: '🎭',
+    quizChienNous: '🐶', quizMaisonNous: '🏡',
     testRedFlag: '🚩', testLoveBombing: '💐', testDependance: '⚓', testPretRelation: '🌱', testPersonnalite: '💘', testTrouverAmour: '🧭', testCelibataire: '🔍',
     testCoupleOuCelibat: '🛋️', testJeLaimeEncore: '🕯️', testPurete: '🌡️', testAmourAttachement: '🌹', testDureeCelibat: '⏳', calculatriceAmour: '🧮', questionsCouple: '💬',
   };
@@ -181,31 +186,31 @@
   const _TXT = {
     fr: { pastille: 'À faire ensuite', titre: 'Continuez l\'aventure',
           sous: { tests: 'Ces tests pourraient aussi vous plaire', quiz: 'Ces quiz pourraient aussi vous plaire', jeux: 'Ces jeux pourraient aussi vous plaire', mix: 'D\'autres idées qui pourraient vous plaire' },
-          famille: { tests: 'Test de couple', celib: 'Test célibataire', quiz: 'Quiz de couple', jeux: 'Jeu de couple', outil: 'Outil', speciaux: 'Quiz spécial' },
+          famille: { tests: 'Test de couple', celib: 'Test célibataire', quiz: 'Quiz de couple', jeux: 'Jeu de couple', outil: 'Outil', speciaux: 'Quiz fun' },
           essayer: 'Essayer',
           blogPastille: 'Le blog', blogTitre: 'Pour aller plus loin', blogSous: 'Nos articles pour approfondir le sujet',
           lire: 'Lire l\'article', minutes: '{n} min', lu: 'Lu {n} fois' },
     en: { pastille: 'Up next', titre: 'Keep exploring',
           sous: { tests: 'You might also enjoy these tests', quiz: 'You might also enjoy these quizzes', jeux: 'You might also enjoy these games', mix: 'More ideas you might enjoy' },
-          famille: { tests: 'Couple test', celib: 'Singles test', quiz: 'Couple quiz', jeux: 'Couple game', outil: 'Tool', speciaux: 'Special quiz' },
+          famille: { tests: 'Couple test', celib: 'Singles test', quiz: 'Couple quiz', jeux: 'Couple game', outil: 'Tool', speciaux: 'Fun quiz' },
           essayer: 'Try it',
           blogPastille: 'The blog', blogTitre: 'Go further', blogSous: 'Our articles to dig deeper',
           lire: 'Read the article', minutes: '{n} min', lu: 'Read {n} times' },
     es: { pastille: 'Lo siguiente', titre: 'Sigue explorando',
           sous: { tests: 'Estos tests también te pueden gustar', quiz: 'Estos quiz también te pueden gustar', jeux: 'Estos juegos también te pueden gustar', mix: 'Más ideas que te pueden gustar' },
-          famille: { tests: 'Test de pareja', celib: 'Test para solteros', quiz: 'Quiz de pareja', jeux: 'Juego en pareja', outil: 'Herramienta', speciaux: 'Quiz especial' },
+          famille: { tests: 'Test de pareja', celib: 'Test para solteros', quiz: 'Quiz de pareja', jeux: 'Juego en pareja', outil: 'Herramienta', speciaux: 'Quiz original' },
           essayer: 'Probar',
           blogPastille: 'El blog', blogTitre: 'Para profundizar', blogSous: 'Nuestros artículos para profundizar',
           lire: 'Leer el artículo', minutes: '{n} min', lu: 'Leído {n} veces' },
     de: { pastille: 'Als Nächstes', titre: 'Weiter entdecken',
           sous: { tests: 'Diese Tests könnten euch auch gefallen', quiz: 'Diese Quiz könnten euch auch gefallen', jeux: 'Diese Spiele könnten euch auch gefallen', mix: 'Weitere Ideen, die euch gefallen könnten' },
-          famille: { tests: 'Beziehungstest', celib: 'Single-Test', quiz: 'Paar-Quiz', jeux: 'Paarspiel', outil: 'Tool', speciaux: 'Besonderes Quiz' },
+          famille: { tests: 'Beziehungstest', celib: 'Single-Test', quiz: 'Paar-Quiz', jeux: 'Paarspiel', outil: 'Tool', speciaux: 'Spaß-Quiz' },
           essayer: 'Ausprobieren',
           blogPastille: 'Der Blog', blogTitre: 'Mehr erfahren', blogSous: 'Unsere Artikel zum Vertiefen',
           lire: 'Artikel lesen', minutes: '{n} Min.', lu: '{n} Mal gelesen' },
     it: { pastille: 'Da fare dopo', titre: 'Continua a esplorare',
           sous: { tests: 'Potrebbero piacerti anche questi test', quiz: 'Potrebbero piacerti anche questi quiz', jeux: 'Potrebbero piacerti anche questi giochi', mix: 'Altre idee che potrebbero piacerti' },
-          famille: { tests: 'Test di coppia', celib: 'Test per single', quiz: 'Quiz di coppia', jeux: 'Gioco di coppia', outil: 'Strumento', speciaux: 'Quiz speciale' },
+          famille: { tests: 'Test di coppia', celib: 'Test per single', quiz: 'Quiz di coppia', jeux: 'Gioco di coppia', outil: 'Strumento', speciaux: 'Quiz originale' },
           essayer: 'Prova',
           blogPastille: 'Il blog', blogTitre: 'Per approfondire', blogSous: 'I nostri articoli per approfondire',
           lire: 'Leggi l\'articolo', minutes: '{n} min', lu: 'Letto {n} volte' },

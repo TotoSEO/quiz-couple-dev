@@ -412,7 +412,9 @@
     "quizMortFilmHorreur": "“who dies first in a horror movie” quiz",
     "quizPossession": "“who could get possessed” quiz",
     "quizSuperVilain": "supervillain quiz",
-    "quizDuoVilains": "supervillain duo quiz"
+    "quizDuoVilains": "supervillain duo quiz",
+    "quizChienNous": "What dog should we get?",
+    "quizMaisonNous": "What kind of house should we live in?"
   },
   "truefalse": {
     "ready": "Ready for true or false?",

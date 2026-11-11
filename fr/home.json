@@ -177,18 +177,20 @@
       "quizMortFilmHorreur": "Quinze situations, un temps de survie en minutes, et la première victime quand vous jouez à deux.",
       "quizPossession": "Un risque de possession en pourcentage pour chacun, et celui que les démons choisiraient.",
       "quizSuperVilain": "Ton entrée à la fête, ton déguisement, ton rire : le super-vilain qui te ressemble, du Joker à Maléfique.",
-      "quizDuoVilains": "Le casse de la nuit d'Halloween : votre rôle à chacun, et le duo de méchants célèbre que vous formez."
+      "quizDuoVilains": "Le casse de la nuit d'Halloween : votre rôle à chacun, et le duo de méchants célèbre que vous formez.",
+      "quizChienNous": "Chacun répond de son côté, et le test trouve le chien qui vous va à tous les deux, du corgi au bouvier bernois.",
+      "quizMaisonNous": "Chacun répond de son côté, et le test vous montre l'endroit où vous seriez bien tous les deux, de l'appartement en ville au van aménagé."
     },
     "testsEyebrow": "Les tests",
     "quizzesEyebrow": "Les quiz",
     "jeuxEyebrow": "Les jeux",
-    "speciauxEyebrow": "Édition spéciale",
-    "speciauxTitle": "Nos quiz spéciaux, selon la saison",
+    "speciauxEyebrow": "Quiz fun",
+    "speciauxTitle": "Votre chien, votre maison : nos quiz fun à faire à deux",
     "speciauxTitleSaison": {
       "halloween": "Spécial Halloween : nos quiz qui font (un peu) peur"
     },
-    "speciauxDesc": "{{n}} quiz à faire seul(e) ou à deux, pour une soirée pas comme les autres. Chacun existe en mode à distance.",
-    "speciauxCta": "Voir tous les quiz spéciaux"
+    "speciauxDesc": "{{n}} quiz légers à faire à deux. Chacun répond de son côté, et on compare.",
+    "speciauxCta": "Voir tous les quiz fun"
   },
   "customQuizPromo": {
     "eyebrow": "Quiz personnalisé",

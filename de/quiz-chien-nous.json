@@ -1,0 +1,136 @@
+{
+  "hero": {
+    "badge": "Spaß-Quiz • Zu zweit, oder allein für euch beide",
+    "title": "Der Test, der zeigt, welcher Hund zu euch beiden passt",
+    "titleHighlight": "welcher Hund zu euch beiden passt",
+    "description": "Ihr wollt einen Hund, aber nicht unbedingt denselben? Jeder beantwortet zwölf Fragen zu eurem Leben zu zweit, und der Test zeigt euch den Hund, der zu euch beiden passt, mit Foto.",
+    "subtitle": "12 Fragen • 3 Minuten pro Person • an einem Handy",
+    "jumpBtn": "Zum Test"
+  },
+  "section1": {
+    "title": "So funktioniert der Test",
+    "p1": "Dieser Test soll den Hund finden, der zu euch als Paar passt, und nicht nur zu einem von euch. Er stellt zwölf ganz einfache Fragen zu dem Leben, das ihr mit ihm hättet: wo ihr wohnt, was ihr am Sonntagmorgen macht, wie lange er allein wäre, ob euch Haare auf dem Sofa stören usw.",
+    "p2": "Zum Beispiel könnt ihr bei der Frage „Seine Größe:“ wählen zwischen „klein, er passt auf den Schoß“, „mittel, man kann ihn noch tragen“, „groß, ein richtiger Hund“ und „riesig, fast ein Pony“. Wenn du „klein“ antwortest und dein Schatz „riesig“, berücksichtigt der Test das: Er zählt eure beiden Antwortreihen zusammen und behält den Hund, der für euch beide die beste Note hat.",
+    "p3": "Zu zweit beantwortet der Erste die zwölf Fragen, gibt das Handy weiter, und der Zweite antwortet, ohne zu sehen, was der andere gewählt hat. Am Ende habt ihr den Hund für euch als Paar mit Foto, den Hund, den jeder für sich bekommen hätte, und die Liste der Fragen, bei denen ihr nicht gleich geantwortet habt. Oft fängt genau da das Gespräch an!",
+    "p4": "Du kannst ihn auch allein machen und für euch beide antworten. Aber es macht einfach mehr Spaß zu entdecken, was der andere geantwortet hat."
+  },
+  "section2": {
+    "title": "Die zwölf Hunde im Test",
+    "intro": "Der Test kann bei zwölf Ergebnissen landen: zehn der bekanntesten Rassen, der Hund aus dem Tierheim, und ein letztes Ergebnis für Paare, die noch nicht so weit sind. Hier steht, zu wem welcher am besten passt.",
+    "galerie": [
+      {
+        "id": "golden",
+        "titre": "Der Golden Retriever",
+        "texte": "Für Paare mit Garten, Zeit für einen großen Spaziergang jeden Tag und ohne Angst vor Haaren.",
+        "alt": "Ein Golden Retriever sitzt bei Sonnenuntergang auf einer Wiese"
+      },
+      {
+        "id": "corgi",
+        "titre": "Der Corgi",
+        "texte": "Für alle, die einen mittelgroßen, verspielten und schlauen Hund wollen und Bellen eher lustig finden.",
+        "alt": "Ein rot-weißer Corgi steht auf einem Gartenweg"
+      },
+      {
+        "id": "bouledogue",
+        "titre": "Die Französische Bulldogge",
+        "texte": "Für das Leben in der Wohnung, und für Paare, die lieber auf dem Sofa liegen als joggen gehen.",
+        "alt": "Eine Französische Bulldogge liegt auf einer Decke auf dem Sofa"
+      },
+      {
+        "id": "cavalier",
+        "titre": "Der Cavalier King Charles Spaniel",
+        "texte": "Für alle, die oft zu Hause sind und einen kleinen, sehr verschmusten Hund wollen.",
+        "alt": "Ein Cavalier King Charles Spaniel liegt zusammengerollt in einem Sessel"
+      },
+      {
+        "id": "aussie",
+        "titre": "Der Australian Shepherd",
+        "texte": "Für sportliche Paare, die Platz haben und zwei Stunden am Tag für ihn.",
+        "alt": "Ein Australian Shepherd in Blue Merle rennt über ein Feld"
+      },
+      {
+        "id": "teckel",
+        "titre": "Der Dackel",
+        "texte": "Für alle, die einen kleinen Hund mit viel Charakter wollen und Geduld haben.",
+        "alt": "Ein Kurzhaardackel steht auf Herbstlaub"
+      },
+      {
+        "id": "caniche",
+        "titre": "Der Pudel",
+        "texte": "Für alle, die keine Haare auf dem Sofa wollen und Lust haben, ihm viel beizubringen.",
+        "alt": "Ein apricotfarbener Pudel sitzt in einer Wohnung am Fenster"
+      },
+      {
+        "id": "shiba",
+        "titre": "Der Shiba Inu",
+        "texte": "Für Paare, die einen Teil des Tages arbeiten und unabhängige Hunde mögen.",
+        "alt": "Ein roter Shiba Inu sitzt auf einem Gehweg vor einer Café-Terrasse"
+      },
+      {
+        "id": "husky",
+        "titre": "Der Siberian Husky",
+        "texte": "Für sehr Sportliche, die auf dem Land wohnen, am liebsten dort, wo es kühl ist.",
+        "alt": "Ein Siberian Husky mit blauen Augen in einem verschneiten Wald"
+      },
+      {
+        "id": "bernois",
+        "titre": "Der Berner Sennenhund",
+        "texte": "Für alle mit großem Haus, großem Garten und Lust auf einen sehr großen, sehr ruhigen Hund.",
+        "alt": "Ein Berner Sennenhund liegt auf einer blühenden Bergwiese"
+      },
+      {
+        "id": "refuge",
+        "titre": "Der Hund aus dem Tierheim",
+        "texte": "Für Paare, die keine Rasse im Kopf haben und lieber adoptieren.",
+        "alt": "Ein struppiger Mischling mit rotem Halstuch sitzt auf einer Türschwelle"
+      },
+      {
+        "id": "peluche",
+        "titre": "Erst mal ein Plüschhund",
+        "texte": "Für alle, die spät heimkommen, viel reisen oder sich noch nicht einig sind. Das kommt vor, und der Test sagt es.",
+        "alt": "Ein beiger Plüschhund sitzt auf einem Sofa"
+      }
+    ]
+  },
+  "section3": {
+    "title": "Einen Hund als Paar aussuchen: was ihr euch fragen solltet",
+    "intro": "Ein Hund lebt zehn bis fünfzehn Jahre. Das ist eine Entscheidung, die man zu zweit trifft, und es gibt vier Themen, bei denen ihr euch besser einig seid, bevor ihr euch einen anschaut.",
+    "sub1Title": "Wer kümmert sich, und wann?",
+    "sub1Text": "Das ist die Frage, über die am häufigsten gestritten wird. Ein Hund muss dreimal am Tag raus, jeden Tag, auch am Sonntagmorgen im Regen. Einigt euch vor der Anschaffung darauf, <a href=\"/de/mental-load-test-paare/\">wer zu Hause was übernimmt</a>: die Morgenrunde, die Runde am Mittag, der Tierarzt und die unterbrochenen Nächte, wenn es ein Welpe ist.",
+    "sub2Title": "Eure Wohnung und euer Rhythmus",
+    "sub2Text": "Ein großer, sportlicher Hund in einer Einzimmerwohnung, oder ein kleiner, sehr anhänglicher Hund, der zehn Stunden am Tag allein ist: Das geht für alle schief. Schaut euch euer Leben an, wie es heute ist, nicht so, wie ihr es gern hättet. Und wenn ihr euch noch nicht einig seid, <a href=\"/de/welches-haus-passt-zu-uns-test/\">wo ihr wohnen wollt</a>, fangt damit an: Ein Garten ändert vieles.",
+    "sub3Title": "Das Budget",
+    "sub3Text": "Es ist nicht nur das Futter. Dazu kommen der Tierarzt, die Impfungen, die Hundesteuer, eine Versicherung, wenn ihr eine abschließt, der Hundefriseur bei manchen Rassen und die Betreuung, wenn ihr ohne ihn wegfahrt. Ein großer Hund kostet mehr als ein kleiner, ganz einfach, weil er mehr frisst. Rechnet das vorher zu zweit durch, das erspart böse Überraschungen.",
+    "sub4Title": "Welpe oder erwachsener Hund, Züchter oder Tierheim",
+    "sub4Text": "Ein Welpe ist süß, bedeutet aber auch Monate voller Erziehung, kurzer Nächte und angekauter Schuhe. Ein erwachsener Hund ist oft schon stubenrein, und man kennt seinen Charakter. Im Tierheim gibt es Hunde jeden Alters, Mischlinge, aber auch Rassehunde. Wenn ihr zu einem Züchter geht, schaut euch die Elterntiere an und den Ort, an dem die Welpen aufwachsen."
+  },
+  "section4": {
+    "title": "Und wenn ihr euch nicht einig seid?",
+    "p1": "Das Ergebnis des Tests ist ein Ausgangspunkt. Wenn einer von einem Husky träumt und der andere von einem Hund, der in die Tasche passt, steckt das Spannendste in der Liste eurer unterschiedlichen Antworten. Schaut, worin ihr euch nicht einig seid (die Größe, wie lange er allein wäre, der Urlaub), und redet darüber. Meistens hakt es an zwei oder drei Fragen, nicht an allen.",
+    "p2": "Viele Paare holen sich einen Hund, <a href=\"/de/elternschafts-bereitschaftstest/\">bevor sie ein Kind bekommen</a>. Das ist natürlich nicht dasselbe, aber man organisiert sich schon zu zweit für jemanden, der von einem abhängt, und man sieht schnell, wie jeder das angeht.",
+    "p3": "Und wenn einer von euch gar keinen will, drängt nicht. Es ist besser zu warten, bis ihr es beide wollt, als einen Hund zu haben, um den sich nur einer kümmert."
+  },
+  "section5": {
+    "title": "Was ihr über diesen Test wissen solltet",
+    "p1": "Dieser Test ist ein Spiel. Die Beschreibungen geben den typischen Charakter jeder Rasse wieder, aber jeder Hund ist anders, und seine Erziehung zählt genauso viel wie seine Rasse. Für eure Entscheidung geht zu Züchtern, ins Tierheim oder zum Tierarzt, und verbringt Zeit mit dem Hund, bevor ihr euch festlegt.",
+    "p2": "Es wird nichts gespeichert: Eure Antworten bleiben auf eurem Handy. Gezählt wird nur der Hund, der herauskommt, ohne Vornamen, um zu sehen, welche Ergebnisse am häufigsten sind. Die Hundefotos wurden für diese Seite erstellt."
+  },
+  "seo": {
+    "faqTitle": "Häufige Fragen",
+    "faq1Q": "Welche Hunde können herauskommen?",
+    "faq1A": "Zwölf Ergebnisse sind möglich: der Golden Retriever, der Corgi, die Französische Bulldogge, der Cavalier King Charles Spaniel, der Australian Shepherd, der Dackel, der Pudel, der Shiba Inu, der Siberian Husky, der Berner Sennenhund, der Hund aus dem Tierheim, und „erst mal ein Plüschhund“ für Paare, die noch nicht so weit sind.",
+    "faq2Q": "Wie wird das Ergebnis berechnet?",
+    "faq2A": "Jede Antwort gibt den Hunden Punkte, die dazu passen. Zum Beispiel gibt „in einer Stadtwohnung, ohne Balkon oder Garten“ der Französischen Bulldogge und dem Cavalier King Charles Spaniel Punkte, und dem Husky keinen. Zu zweit zählt der Test eure beiden Antwortreihen zusammen, und der Hund mit der besten Note wird der Hund für euch als Paar.",
+    "faq3Q": "Kann man den Test allein machen?",
+    "faq3A": "Ja. Du wählst „Allein, für uns beide“ und antwortest so, wie es zu euch beiden passt. Du bekommst einen Hund, aber nicht den Vergleich eurer Antworten: Dafür muss man zu zweit sein.",
+    "faq4Q": "Welcher Hund für ein junges Paar in der Wohnung?",
+    "faq4A": "Das hängt vor allem davon ab, wie viel Zeit ihr habt. In der Wohnung kommen die Hunde am besten zurecht, die nicht stundenlang rennen müssen: die Französische Bulldogge, der Cavalier King Charles Spaniel, der Dackel oder der Pudel. Der Shiba Inu passt auch, wenn ihr einen Teil des Tages arbeitet. Ein Australian Shepherd oder ein Husky dagegen braucht Platz und viel Bewegung.",
+    "faq5Q": "Woher wissen wir, ob wir bereit für einen Hund sind?",
+    "faq5A": "Dafür hat der Test ein Ergebnis: „erst mal ein Plüschhund“. Es kommt heraus, wenn eure Antworten sagen, dass der Hund den ganzen Tag allein wäre, dass ihr viel reist oder dass der Wunsch nicht auf beiden Seiten gleich groß ist. Wenn ihr dort landet, passt ein Wochenende lang auf den Hund von Freunden auf und schaut, wie es läuft.",
+    "faq6Q": "Werden meine Antworten gespeichert?",
+    "faq6A": "Nein. Die Antworten bleiben auf eurem Handy. Gezählt wird nur der Hund, der herauskommt, ohne Vornamen, für die Verteilung der Ergebnisse."
+  },
+  "jsonLd": {
+    "about": "als Paar einen Hund aussuchen"
+  }
+}

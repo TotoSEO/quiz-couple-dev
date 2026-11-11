@@ -557,10 +557,10 @@
     "metaDescription": "Wer liebt mehr in eurer Beziehung? Der Test mit 20 Fragen zu den kleinen Gesten im Alltag, allein oder zu zweit, jeder für sich."
   },
   "speciauxCouple": {
-    "title": "Besondere Paar-Quiz: Weihnachten, Halloween…",
-    "shortTitle": "Besondere Quiz",
-    "metaDescription": "Die saisonalen Quiz für Paare. Zu Halloween: Welcher Serienmörder passt zu dir, wer stirbt zuerst im Horrorfilm, wer würde besessen werden, welcher Superschurke bist du. Kostenlos.",
-    "description": "Die etwas verrückten Quiz für Paare je nach Jahreszeit: jetzt Halloween, danach Weihnachten."
+    "title": "Spaß-Quiz für Paare: euer Hund, euer Haus und mehr",
+    "shortTitle": "Spaß-Quiz",
+    "metaDescription": "Spaß-Quiz für Paare: Welcher Hund passt zu uns, welches Haus, dazu die Quiz der Saison. Jeder antwortet für sich, dann vergleicht ihr eure Ergebnisse.",
+    "description": "Leichte Quiz für zwei: euer Hund und euer Haus im Foto, dazu die Quiz der Saison."
   },
   "quizSerialKiller": {
     "title": "Quiz: Welcher Serienmörder passt zu dir? (allein oder zu zweit)",
@@ -591,6 +591,18 @@
     "shortTitle": "Welches Superschurken-Duo seid ihr",
     "metaDescription": "Zu zweit: der Coup der Halloween-Nacht in je 15 Fragen, eure Rolle im Duo (das Gehirn, das Chaos, die Kraft...) und das berühmte Schurken-Duo, das ihr bildet, vom Joker und Harley Quinn bis Bonnie und Clyde.",
     "description": "Jeder antwortet für sich, und das Quiz verrät euch eure Rolle im Duo und das berühmte Schurken-Duo, das ihr bildet."
+  },
+  "quizChienNous": {
+    "title": "Welcher Hund passt zu uns? Der Test für Paare",
+    "shortTitle": "Welcher Hund passt zu uns",
+    "metaDescription": "Jeder beantwortet 12 Fragen (Wohnung, Spaziergänge, Haare auf dem Sofa), und der Test findet den Hund, der zu euch beiden passt, mit Foto.",
+    "description": "Zwölf Fragen pro Person, und der Hund, der zu euch als Paar passt, vom Corgi bis zum Berner Sennenhund, mit Foto."
+  },
+  "quizMaisonNous": {
+    "title": "Welches Haus passt zu uns? Der Test für Paare",
+    "shortTitle": "Welches Haus passt zu uns",
+    "metaDescription": "Stadtwohnung, Haus mit Garten, Altbau zum Renovieren oder Campervan? Jeder beantwortet 12 Fragen, und der Test zeigt das Zuhause für euch beide.",
+    "description": "Zwölf Fragen pro Person, und der Ort, an dem ihr euch beide wohlfühlt: Wohnung, Haus auf dem Land, Loft, Tiny House..."
   },
   "bilanCouple": {
     "title": "Beziehungscheck online | Ergebnis sofort, auch als PDF",
