@@ -178,11 +178,11 @@
       "quizPossession": "Un risque de possession en pourcentage pour chacun, et celui que les démons choisiraient.",
       "quizSuperVilain": "Ton entrée à la fête, ton déguisement, ton rire : le super-vilain qui te ressemble, du Joker à Maléfique.",
       "quizDuoVilains": "Le casse de la nuit d'Halloween : votre rôle à chacun, et le duo de méchants célèbre que vous formez.",
-      "quizChienNous": "Chacun répond de son côté, et le test trouve le chien qui vous va à tous les deux, du corgi au bouvier bernois.",
-      "quizMaisonNous": "Chacun répond de son côté, et le test vous montre l'endroit où vous seriez bien tous les deux, de l'appartement en ville au van aménagé.",
-      "quizListeNoel": "Douze questions sur votre mois de décembre, et la place de votre couple sur la liste du Père Noël, du tas de cadeaux au sac de charbon.",
-      "quizDuoNoel": "Chacun répond de son côté, et le quiz trouve le duo de Noël que vous formez : le Père Noël et la Mère Noël, deux lutins, Scrooge et l'esprit de Noël...",
-      "quizPorteCulotte": "Vingt questions sur les décisions de tous les jours, et la part de chacun : le film du soir, les vacances, les comptes, le dernier mot."
+      "quizChienNous": "Chacun répond de son côté et le test vous montre le chien qui irait à votre couple, avec sa photo.",
+      "quizMaisonNous": "Chacun répond de son côté et le test vous montre la maison qui irait à votre couple, avec sa photo.",
+      "quizListeNoel": "Répondez à 12 questions sur votre mois de décembre pour savoir si votre couple est sur la liste des enfants sages du Père Noël.",
+      "quizDuoNoel": "Chacun répond de son côté et le quiz vous donne le duo de Noël que vous formez, par exemple deux lutins ou deux rennes.",
+      "quizPorteCulotte": "Répondez à 20 questions sur les décisions de tous les jours pour savoir qui a le plus souvent le dernier mot."
     },
     "testsEyebrow": "Les tests",
     "quizzesEyebrow": "Les quiz",
@@ -193,7 +193,7 @@
       "halloween": "Spécial Halloween : nos quiz qui font (un peu) peur",
       "noel": "Spécial Noël : sages ou pas sages, et votre duo de Noël"
     },
-    "speciauxDesc": "{{n}} quiz légers à faire à deux. Chacun répond de son côté, et on compare.",
+    "speciauxDesc": "{{n}} quiz légers à faire en couple. Chacun répond de son côté puis vous comparez vos réponses.",
     "speciauxCta": "Voir tous les quiz fun"
   },
   "customQuizPromo": {

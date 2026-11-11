@@ -565,8 +565,8 @@
   "speciauxCouple": {
     "title": "Quiz fun à deux : quel chien, quelle maison pour nous ?",
     "shortTitle": "Quiz fun",
-    "metaDescription": "Les quiz fun à faire à deux : quel chien est fait pour nous, quelle maison, et les quiz de saison. Chacun répond de son côté, puis vous comparez vos résultats.",
-    "description": "Les quiz légers à faire à deux : votre chien et votre maison en photo, et les quiz de saison."
+    "metaDescription": "Nos quiz fun à faire à deux : quel chien est fait pour nous, quelle maison est faite pour nous et les quiz de Noël. Chacun répond de son côté et vous comparez.",
+    "description": "Des quiz légers à faire en couple, par exemple pour trouver votre chien ou votre maison."
   },
   "quizSerialKiller": {
     "title": "Quiz : avec quel serial killer es-tu compatible ? (seul ou à deux)",
@@ -601,32 +601,32 @@
   "quizChienNous": {
     "title": "Quel chien est fait pour nous ? Le test à faire à deux",
     "shortTitle": "Quel chien est fait pour nous",
-    "metaDescription": "Chacun répond à 12 questions (logement, sorties, poils sur le canapé) et le test trouve le chien fait pour vous deux, avec sa photo : corgi, golden, shiba...",
-    "description": "Douze questions chacun, et le chien qui irait à votre couple, du corgi au bouvier bernois, avec sa photo."
+    "metaDescription": "Chacun répond à 12 questions sur votre vie de couple et le test vous dit quel chien est fait pour vous : corgi, golden retriever, shiba... avec sa photo.",
+    "description": "Chacun répond à 12 questions et le test vous montre le chien qui irait à votre couple, avec sa photo."
   },
   "quizMaisonNous": {
     "title": "Quelle maison est faite pour nous ? Le test à faire à deux",
     "shortTitle": "Quelle maison est faite pour nous",
-    "metaDescription": "Appartement en ville, maison avec jardin, vieille bâtisse à retaper ou van ? Chacun répond à 12 questions, et le test montre la maison faite pour vous deux.",
-    "description": "Douze questions chacun, et l'endroit où vous seriez bien tous les deux : appartement, maison de campagne, loft, tiny house..."
+    "metaDescription": "Vous hésitez entre un appartement en ville et une maison avec jardin ? Chacun répond à 12 questions et le test vous montre la maison faite pour votre couple.",
+    "description": "Chacun répond à 12 questions et le test vous montre le logement qui irait à votre couple, avec sa photo."
   },
   "quizListeNoel": {
     "title": "Sommes-nous sur la liste des enfants sages ? Le test de Noël",
     "shortTitle": "Sages ou pas sages",
-    "metaDescription": "Chacun répond à 12 questions sur son mois de décembre : le test dit si votre couple est sur la liste des enfants sages du Père Noël, et qui est le plus sage.",
-    "description": "Douze questions chacun sur votre mois de décembre, et la place de votre couple sur la liste du Père Noël, avec sa photo."
+    "metaDescription": "Chacun répond à 12 questions sur son mois de décembre. Le test vous dit si votre couple est sur la liste des enfants sages du Père Noël et qui est le plus sage.",
+    "description": "Chacun répond à 12 questions sur son mois de décembre et le test vous donne la place de votre couple sur la liste du Père Noël."
   },
   "quizDuoNoel": {
     "title": "Quels personnages de Noël êtes-vous ? Le quiz à faire à deux",
     "shortTitle": "Quels personnages de Noël êtes-vous",
-    "metaDescription": "Chacun répond à 12 questions sur votre Noël à deux, et le quiz trouve votre duo : le Père Noël et la Mère Noël, deux lutins, Scrooge et l'esprit de Noël...",
-    "description": "Douze questions chacun, et le duo de Noël que vous formez, du Père Noël et la Mère Noël aux deux gnomes, avec sa photo."
+    "metaDescription": "Chacun répond à 12 questions sur votre façon de fêter Noël et le quiz vous donne votre duo, par exemple deux lutins ou le Père Noël et la Mère Noël.",
+    "description": "Chacun répond à 12 questions et le quiz vous donne le duo de Noël que vous formez, avec sa photo."
   },
   "quizPorteCulotte": {
     "title": "Qui porte la culotte dans notre couple ? Le test à deux",
     "shortTitle": "Qui porte la culotte ?",
-    "metaDescription": "Qui porte la culotte dans votre couple ? Le test en 20 questions sur les décisions de tous les jours, à faire seul(e) ou à deux, chacun de son côté.",
-    "description": "Vingt questions sur les décisions de tous les jours, seul(e) ou à deux, pour voir qui a le plus souvent le dernier mot."
+    "metaDescription": "Qui porte la culotte dans votre couple ? Répondez à 20 questions sur les décisions de tous les jours, seul(e) ou à deux, pour savoir qui décide le plus.",
+    "description": "Répondez à 20 questions sur les décisions de tous les jours pour voir qui a le plus souvent le dernier mot."
   },
   "bilanCouple": {
     "title": "Bilan de couple à faire en ligne | PDF résultats immédiats",
