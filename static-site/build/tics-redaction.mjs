@@ -14,7 +14,7 @@ import fs from 'fs';
 
 const TICS = {
   fr: ['tous les deux', 'toutes les deux', 'vous deux', 'nous deux'],
-  en: ['the two of you', 'both of you', 'you both', 'you two', 'the two of us', 'both of us'],
+  en: ['the two of you', 'both of you', 'you both', 'you two', 'the two of us'],
   es: ['los dos', 'las dos', 'vosotros dos', 'ustedes dos', 'nosotros dos'],
   de: ['euch beide', 'ihr beide', 'euch beiden', 'ihr beiden', 'uns beide', 'uns beiden', 'zu zweit'],
   it: ['tutti e due', 'tutte e due', 'voi due', 'noi due', 'entrambi'],

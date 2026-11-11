@@ -1,39 +1,39 @@
 {
   "hero": {
-    "badge": "Fun quiz • Together, or on your own for the two of you",
-    "title": "The quiz to find out what dog you two should get",
-    "titleHighlight": "what dog you two should get",
-    "description": "You both want a dog, but maybe not the same one? You each answer twelve questions about your life together, and the quiz gives you the dog that suits you both, with its photo.",
+    "badge": "Fun quiz • Together, or on your own for your couple",
+    "title": "What dog should we get? The quiz to take as a couple",
+    "titleHighlight": "What dog should we get?",
+    "description": "Do you want a dog but can't agree on which one? You each answer 12 questions and the quiz tells you which dog would suit your couple best. There's a photo for every result!",
     "subtitle": "12 questions • 3 minutes each • on one phone",
     "jumpBtn": "Take the quiz"
   },
   "section1": {
     "title": "How the quiz works",
-    "p1": "This quiz is here to find the dog that would suit you as a couple, and not just one of you. It asks twelve very simple questions about the life you'd have with it: where you live, what you do on a Sunday morning, how long it would be left alone, whether dog hair on the sofa bothers you, etc.",
-    "p2": "For example, for the question “Its size:”, you can choose between “small, it fits on your lap”, “medium, you can still carry it”, “big, a proper dog” and “huge, almost a pony”. If you answer “small” and your other half answers “huge”, the quiz takes that into account: it adds up your two sets of answers and keeps the dog with the best score for the two of you.",
-    "p3": "Together, the first one answers the twelve questions, passes the phone, and the second one answers without seeing what the other chose. At the end, you get the couple's dog with its photo, the dog each of you would have got on your own, and the list of questions where you didn't give the same answer. That's often where the conversation starts!",
-    "p4": "You can also take it on your own, answering for the two of you. But it's a lot more fun to find out what the other one answered."
+    "p1": "This quiz is a game to play as a couple. It helps you find the dog that would fit your life, whether that's a golden retriever or a rescue dog. It asks 12 very simple questions. For example, it asks where you live and how long the dog would be left alone.",
+    "p2": "Take the question about the dog's size. You can choose between “small, it fits on your lap”, “medium, you can still carry it”, “big, a proper dog” and “huge, almost a pony”. If you answer “small”, the quiz gives points to small dogs like the dachshund. If your partner answers “huge”, it gives points to the Bernese mountain dog. At the end, the quiz adds up your answers and keeps the dog with the most points.",
+    "p3": "The first person answers the 12 questions and then passes the phone. The second person answers without seeing what the first one chose. Then the quiz shows you your dog as a couple, with its photo. It also shows the dog each of you would have got alone and the questions where you gave different answers. That's often where the conversation starts!",
+    "p4": "You can also take the quiz on your own and answer for your couple. But it's more fun to find out what your partner answered."
   },
   "section2": {
-    "title": "The twelve dogs in the quiz",
-    "intro": "The quiz can land on twelve results: ten of the best-known breeds, the rescue dog, and one last result for couples who aren't ready yet. Here's who each one suits best.",
+    "title": "The 12 dogs in the quiz",
+    "intro": "The quiz can give 12 results. There are ten well-known breeds and the rescue dog. There's also a result for couples who aren't ready for a dog yet. Here's who each dog suits best.",
     "galerie": [
       {
         "id": "golden",
         "titre": "The golden retriever",
-        "texte": "For couples with a garden, time for a long walk every day, and no fear of dog hair.",
+        "texte": "For couples who have a garden and time for a long walk every day.",
         "alt": "A golden retriever sitting in a meadow at sunset"
       },
       {
         "id": "corgi",
         "titre": "The corgi",
-        "texte": "For those who want a medium-sized dog that's playful and clever, and who find barking rather funny.",
+        "texte": "For couples who want a medium-sized dog that loves to play.",
         "alt": "A red and white corgi standing on a garden path"
       },
       {
         "id": "bouledogue",
         "titre": "The French bulldog",
-        "texte": "For apartment life, and for couples who are more sofa than jogging.",
+        "texte": "For couples who live in an apartment and prefer the sofa to a run.",
         "alt": "A French bulldog lying on a blanket on a sofa"
       },
       {
@@ -51,7 +51,7 @@
       {
         "id": "teckel",
         "titre": "The dachshund",
-        "texte": "For those who want a small dog with a big personality, and who have patience.",
+        "texte": "For couples who want a small dog with a lot of character.",
         "alt": "A smooth-haired dachshund standing on autumn leaves"
       },
       {
@@ -69,13 +69,13 @@
       {
         "id": "husky",
         "titre": "The Siberian husky",
-        "texte": "For very sporty couples who live in the countryside, preferably somewhere cool.",
+        "texte": "For very sporty couples who live in the countryside.",
         "alt": "A Siberian husky with blue eyes in a snowy forest"
       },
       {
         "id": "bernois",
         "titre": "The Bernese mountain dog",
-        "texte": "For those with a big house, a big garden, and a wish for a very big, very calm dog.",
+        "texte": "For couples who have a big house with a garden and want a very big, very calm dog.",
         "alt": "A Bernese mountain dog lying in a flowering mountain meadow"
       },
       {
@@ -87,48 +87,48 @@
       {
         "id": "peluche",
         "titre": "A plush dog, for now",
-        "texte": "For those who get home late, travel a lot or don't agree yet. It happens, and the quiz says so.",
+        "texte": "For couples who get home late or travel a lot. It's not the right time yet, and the quiz tells you so.",
         "alt": "A beige plush dog sitting on a sofa"
       }
     ]
   },
   "section3": {
     "title": "Choosing a dog as a couple: what to ask yourselves",
-    "intro": "A dog lives ten to fifteen years. It's a decision you make together, and there are four subjects it's better to agree on before you go and see one.",
-    "sub1Title": "Who looks after it, and when?",
-    "sub1Text": "This is the question that causes the most arguments. A dog goes out three times a day, every day, including Sunday mornings in the rain. Before you adopt, agree on <a href=\"/en/mental-load-test-couples/\">who does what at home</a>: the morning walk, the lunchtime visit, the vet, and the broken nights if it's a puppy.",
+    "intro": "A dog lives between ten and fifteen years, so it's a decision you make together. Before you go and see one, there are four subjects it's better to agree on.",
+    "sub1Title": "Who's going to look after it?",
+    "sub1Text": "This is the question that causes the most arguments. A dog has to go out three times a day, even on a rainy Sunday morning. Before you adopt, agree on <a href=\"/en/mental-load-test-couples/\">who does what at home</a>. For example: who walks it in the morning and who takes it to the vet.",
     "sub2Title": "Your home and your routine",
-    "sub2Text": "A big sporty dog in a studio, or a very clingy little dog left alone ten hours a day: that goes badly for everyone. Look at your life as it is today, not the one you'd like to have. And if you don't yet agree on <a href=\"/en/what-kind-of-house-should-we-live-in-quiz/\">where you want to live</a>, start there: a garden changes a lot of things.",
+    "sub2Text": "A big sporty dog will be unhappy in a studio. A very clingy little dog will be unhappy too if it's alone ten hours a day. Look at your life as it is today and not as you'd like it to be. And if you don't agree yet on <a href=\"/en/what-kind-of-house-should-we-live-in-quiz/\">where you want to live</a>, start there, because a garden changes a lot of things.",
     "sub3Title": "The budget",
-    "sub3Text": "It's not just the food. You need to count the vet, the vaccinations, insurance if you take some out, grooming for certain breeds, and someone to look after it when you go away without it. A big dog costs more than a small one, quite simply because it eats more. Do the sums together beforehand, it avoids nasty surprises.",
-    "sub4Title": "A puppy or an adult, a breeder or a shelter",
-    "sub4Text": "A puppy is cute, but it also means months of training, short nights and chewed shoes. An adult dog is often already house-trained, and you know its character. In a shelter you'll find dogs of all ages, mixed breeds but pedigree dogs too. If you go through a breeder, go and see the parents and the place where the puppies grow up."
+    "sub3Text": "A dog costs more than people think. On top of the food, there's the vet and someone to look after it when you go on holiday without it. Some breeds also need regular grooming. A big dog costs more than a small one, simply because it eats more. The best thing is to do the sums together before you adopt.",
+    "sub4Title": "A puppy or an adult dog?",
+    "sub4Text": "A puppy is very cute, but it needs months of training and it will wake you up at night. An adult dog is often already house-trained and you already know its character. In a shelter you'll find dogs of all ages, and even pedigree dogs. If you'd rather go to a breeder, go and see the puppy's parents and the place where it grew up."
   },
   "section4": {
     "title": "What if you don't agree?",
-    "p1": "The quiz result is a starting point. If one of you dreams of a husky and the other of a dog that fits in a bag, the most interesting part is in the list of your different answers. Look at what you disagree on (size, how long it would be alone, holidays) and talk about it. Most of the time, it comes down to two or three questions, not all of them.",
-    "p2": "Lots of couples get a dog <a href=\"/en/parenthood-readiness-test/\">before having a child</a>. The two have nothing in common, of course, but it already means getting organised together for someone who depends on you, and you soon see how each of you goes about it.",
-    "p3": "And if one of you doesn't want one at all, don't push. It's better to wait until you both want it than to have a dog only one of you looks after."
+    "p1": "It's not a big deal, and it happens to a lot of couples! If one of you dreams of a husky and the other wants a dog that fits in a bag, look at the list of your different answers. You'll see what you disagree on, for example the dog's size or how long it would be alone. Most of the time, you're only stuck on two or three questions.",
+    "p2": "Lots of couples get a dog <a href=\"/en/parenthood-readiness-test/\">before having a child</a>. The two are very different of course, but it already shows how you get organised when someone depends on you.",
+    "p3": "And if one of you doesn't want a dog at all, don't push. It's better to wait until each of you wants one, otherwise the same person will always end up looking after it."
   },
   "section5": {
     "title": "What you should know about this quiz",
-    "p1": "This quiz is a game. The descriptions give the most common character of each breed, but every dog is different, and its upbringing matters as much as its breed. To make your choice, go and see breeders, shelters or a vet, and spend time with the dog before you decide.",
-    "p2": "Nothing is saved: your answers stay on your phone. Only the dog you get is counted, with no name attached, to see which results come up most. The photos of the dogs were created for this page."
+    "p1": "This quiz is a game. The descriptions give the most common character of each breed, but every dog is different and its training matters as much as its breed. Before you choose, go and see breeders or shelters and spend time with the dog.",
+    "p2": "Your answers aren't saved, they stay on your phone. We only count which dog you get, to see which results come up most. Your name isn't saved either. The photos of the dogs were created for this page."
   },
   "seo": {
     "faqTitle": "Frequently asked questions",
     "faq1Q": "Which dogs can you get?",
-    "faq1A": "Twelve results are possible: the golden retriever, the corgi, the French bulldog, the Cavalier King Charles spaniel, the Australian shepherd, the dachshund, the poodle, the Shiba Inu, the Siberian husky, the Bernese mountain dog, the rescue dog, and “a plush dog, for now” for couples who aren't ready yet.",
+    "faq1A": "The quiz can give 12 results. There are ten breeds: the golden retriever, the corgi, the French bulldog, the Cavalier King Charles spaniel, the Australian shepherd, the dachshund, the poodle, the Shiba Inu, the Siberian husky and the Bernese mountain dog. There's also the rescue dog and “a plush dog, for now” for couples who aren't ready yet.",
     "faq2Q": "How is the result worked out?",
-    "faq2A": "Each answer gives points to the dogs that match it. For example, “in a city apartment, with no outdoor space” gives points to the French bulldog and the Cavalier King Charles spaniel, and none to the husky. With two of you, the quiz adds up your two sets of answers, and the dog with the best score becomes the couple's dog.",
+    "faq2A": "Each answer gives points to the dogs that match it. For example, if you answer that you live “in a city apartment, with no outdoor space”, the French bulldog and the Cavalier King Charles spaniel get points but the husky doesn't. When you take the quiz together, it adds up your answers and the dog with the most points becomes your dog as a couple.",
     "faq3Q": "Can you take the quiz on your own?",
-    "faq3A": "Yes. Choose “On my own, for the two of us” and answer with the two of you in mind. You'll get a dog, but not the comparison of your answers: for that, there have to be two of you.",
+    "faq3A": "Yes. Just choose “On my own, for our couple” and answer with your couple in mind. You'll get a dog but you won't be able to compare your answers.",
     "faq4Q": "What dog for a young couple in an apartment?",
-    "faq4A": "It mostly depends on how much time you have. In an apartment, the dogs that do best are the ones that don't need to run for hours: the French bulldog, the Cavalier King Charles spaniel, the dachshund or the poodle. The Shiba Inu also works if you're out at work part of the day. An Australian shepherd or a husky, on the other hand, needs space and a lot of exercise.",
+    "faq4A": "It mostly depends on how much time you have. In an apartment, it's better to have a dog that doesn't need to run for hours. That's the case for the French bulldog, the Cavalier King Charles spaniel, the dachshund and the poodle. The Shiba Inu also works if you're at work part of the day. On the other hand, an Australian shepherd or a husky needs space and a lot of exercise.",
     "faq5Q": "How do we know if we're ready for a dog?",
-    "faq5A": "The quiz has a result for that: “a plush dog, for now”. It comes up when your answers say the dog would be alone all day, that you travel a lot, or that you don't both want it as much. If you land on it, look after a friend's dog for a weekend and see how it goes.",
+    "faq5A": "The quiz has a result for that: “a plush dog, for now”. It comes up when the dog would be alone all day or when you travel a lot. It also comes up when one of you wants a dog more than the other. If you get it, look after a friend's dog for a weekend to see how it goes.",
     "faq6Q": "Are my answers saved?",
-    "faq6A": "No. The answers stay on your phone. Only the dog you get is counted, with no name attached, for the breakdown of results."
+    "faq6A": "No. Your answers stay on your phone. We only count which dog you get, to see which results come up most, and your name isn't saved."
   },
   "jsonLd": {
     "about": "choosing a dog as a couple"

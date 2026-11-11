@@ -178,11 +178,11 @@
       "quizPossession": "A possession risk in percent for each of you, and the one the demons would choose.",
       "quizSuperVilain": "Your entrance at the party, your costume, your laugh: the supervillain you're most like, from the Joker to Maleficent.",
       "quizDuoVilains": "The Halloween night heist: each of your roles, and the famous villain duo you form.",
-      "quizChienNous": "You each answer separately, and the quiz finds the dog that suits you both, from the corgi to the Bernese mountain dog.",
-      "quizMaisonNous": "You each answer separately, and the quiz shows you the place where you'd both be happy, from the city apartment to the camper van.",
-      "quizListeNoel": "Twelve questions about your December, and your couple's spot on Santa's list, from the pile of presents to the sack of coal.",
-      "quizDuoNoel": "You each answer separately, and the quiz finds the Christmas duo you make: Santa and Mrs. Claus, two elves, Scrooge and the Christmas spirit...",
-      "quizPorteCulotte": "Twenty questions about everyday decisions, and each person's share: tonight's movie, the vacation, the budget, the last word."
+      "quizChienNous": "You each answer separately and the quiz shows you the dog that would suit your couple, with its photo.",
+      "quizMaisonNous": "You each answer separately and the quiz shows you the home that would suit your couple, with its photo.",
+      "quizListeNoel": "Answer 12 questions about your December to find out if your couple is on Santa's nice list.",
+      "quizDuoNoel": "You each answer separately and the quiz gives you the Christmas duo you make, for example two elves or two reindeer.",
+      "quizPorteCulotte": "Answer 20 questions about everyday decisions to find out who gets the last word more often."
     },
     "testsEyebrow": "The tests",
     "quizzesEyebrow": "The quizzes",
@@ -193,7 +193,7 @@
       "halloween": "Halloween special: our (slightly) scary quizzes",
       "noel": "Christmas special: naughty or nice, and your Christmas duo"
     },
-    "speciauxDesc": "{{n}} light-hearted quizzes to take together. You each answer separately, then compare.",
+    "speciauxDesc": "{{n}} light-hearted quizzes to take as a couple. You each answer separately, then you compare your answers.",
     "speciauxCta": "See all fun quizzes"
   },
   "customQuizPromo": {
