@@ -134,6 +134,8 @@
     "quizDuoVilains": "Qué dúo de supervillanos",
     "quizChienNous": "¿Qué perro para nosotros?",
     "quizMaisonNous": "¿Qué casa para nosotros?",
+    "quizListeNoel": "¿Os habéis portado bien?",
+    "quizDuoNoel": "Vuestros personajes de Navidad",
     "bilanCouple": "Evaluación de pareja",
     "evaluer": "Evaluar tu pareja",
     "evaluerSous": "La evaluación completa, en pareja o a solas",
@@ -158,7 +160,8 @@
       "rire": "Para reír",
       "pimenter": "Para darle chispa",
       "halloween": "Halloween",
-      "futur": "El futuro en pareja"
+      "futur": "El futuro en pareja",
+      "noel": "Navidad"
     },
     "retour": "Volver"
   },

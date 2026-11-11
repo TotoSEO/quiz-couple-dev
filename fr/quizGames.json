@@ -415,7 +415,9 @@
     "quizSuperVilain": "quiz du super-vilain",
     "quizDuoVilains": "quiz du duo de super-vilains",
     "quizChienNous": "Quel chien est fait pour nous ?",
-    "quizMaisonNous": "Quelle maison est faite pour nous ?"
+    "quizMaisonNous": "Quelle maison est faite pour nous ?",
+    "quizListeNoel": "Sages ou pas sages ?",
+    "quizDuoNoel": "Quels personnages de Noël êtes-vous ?"
   },
   "truefalse": {
     "ready": "Prêt pour le vrai ou faux ?",

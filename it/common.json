@@ -134,6 +134,8 @@
     "quizDuoVilains": "Quale duo di supercattivi",
     "quizChienNous": "Che cane fa per noi?",
     "quizMaisonNous": "Che casa fa per noi?",
+    "quizListeNoel": "Buoni o cattivi?",
+    "quizDuoNoel": "I vostri personaggi di Natale",
     "bilanCouple": "Valutazione di coppia",
     "evaluer": "Valutare la coppia",
     "evaluerSous": "La valutazione completa, in due o da soli",
@@ -158,7 +160,8 @@
       "rire": "Per ridere",
       "pimenter": "Un po' piccanti",
       "halloween": "Halloween",
-      "futur": "Il futuro in due"
+      "futur": "Il futuro in due",
+      "noel": "Natale"
     },
     "retour": "Indietro"
   },

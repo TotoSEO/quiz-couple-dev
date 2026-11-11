@@ -414,7 +414,9 @@
     "quizSuperVilain": "supervillain quiz",
     "quizDuoVilains": "supervillain duo quiz",
     "quizChienNous": "What dog should we get?",
-    "quizMaisonNous": "What kind of house should we live in?"
+    "quizMaisonNous": "What kind of house should we live in?",
+    "quizListeNoel": "Naughty or Nice?",
+    "quizDuoNoel": "Which Christmas Characters Are You?"
   },
   "truefalse": {
     "ready": "Ready for true or false?",

@@ -604,6 +604,18 @@
     "metaDescription": "Appartamento in città, casa con giardino, rudere da ristrutturare o van? Ognuno risponde a 12 domande e il test mostra la casa che fa per voi due.",
     "description": "Dodici domande a testa, e il posto dove stareste bene tutti e due: appartamento, casa di campagna, loft, tiny house..."
   },
+  "quizListeNoel": {
+    "title": "Lista dei buoni e cattivi di Babbo Natale: il test di coppia",
+    "shortTitle": "Lista dei buoni e dei cattivi",
+    "metaDescription": "Ognuno risponde a 12 domande sul suo mese di dicembre, e il test dice se la vostra coppia è nella lista dei buoni o dei cattivi di Babbo Natale.",
+    "description": "Dodici domande a testa sul vostro mese di dicembre, e il posto della vostra coppia nella lista di Babbo Natale, con la sua foto."
+  },
+  "quizDuoNoel": {
+    "title": "Che personaggi di Natale siete? Il test da fare in coppia",
+    "shortTitle": "Che personaggi di Natale siete",
+    "metaDescription": "Ognuno risponde a 12 domande sul vostro Natale in due, e il test trova il vostro duo: Babbo Natale e Mamma Natale, due elfi, Scrooge...",
+    "description": "Dodici domande a testa, e il duo di Natale che formate, da Babbo Natale e Mamma Natale ai due gnomi, con la sua foto."
+  },
   "bilanCouple": {
     "title": "Bilancio di coppia online | Risultati subito e in PDF",
     "shortTitle": "Valutazione di coppia",

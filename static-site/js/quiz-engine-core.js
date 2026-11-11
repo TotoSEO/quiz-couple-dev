@@ -14815,6 +14815,10 @@ var QuizEngine = (function() {
     // appartements sur le même palier) ne sortent que chez ceux qui les ont
     // cherchés. Il s'applique au classement comme aux pourcentages affichés.
     this.coefs = config.coefs || {};
+    // Un résultat « de contraste » (Scrooge et l'esprit de Noël : l'un râle,
+    // l'autre adore) : à deux, il sort dès qu'un seul des deux l'obtient de
+    // son côté, quel que soit le total des deux séries.
+    this.contraste = config.contraste || null;
     this.mode = this.modes.solo && this.modes.duo ? null : (this.modes.duo ? 'duo' : 'solo');
     this.phase = this.mode ? 'setup' : 'modes';
     this.players = [{ name: '', gender: null }, { name: '', gender: null }];
@@ -15085,7 +15089,15 @@ var QuizEngine = (function() {
       pcts[a] = Math.round(v * 100);
       if (v > score) { score = v; meilleur = a; }
     });
-    return { id: meilleur, pcts: pcts };
+    var r = { id: meilleur, pcts: pcts };
+    if (this.contraste) {
+      var seulA = this.portraitDe(this.answers.p1).id, seulB = this.portraitDe(this.answers.p2).id;
+      if ((seulA === this.contraste) !== (seulB === this.contraste)) {
+        r.id = this.contraste;
+        r.contraste = seulA === this.contraste ? 0 : 1;
+      }
+    }
+    return r;
   };
 
   // Les deux réponses de chaque question, et à quel point elles s'écartent :
@@ -15151,6 +15163,8 @@ var QuizEngine = (function() {
       if (seuls[0].id === seuls[1].id) cleChacun = 'chacunMeme';
       else if (seuls[0].id === r.id) { cleChacun = 'chacunGagne'; gagnant = 0; }
       else if (seuls[1].id === r.id) { cleChacun = 'chacunGagne'; gagnant = 1; }
+      // Le résultat de contraste : {{nom}} est celui des deux qui l'a obtenu seul.
+      if (r.contraste !== undefined && this.etg('chacunContraste', '')) { cleChacun = 'chacunContraste'; gagnant = r.contraste; }
       var phraseChacun = this.etg(cleChacun, '');
       if (gagnant >= 0) phraseChacun = phraseChacun.replace(/\{\{nom\}\}/g, this.players[gagnant].name).replace(/\{\{autre\}\}/g, this.players[1 - gagnant].name);
       if (phraseChacun) chacun.appendChild(el('p', 'port-chacun-note', escRiche(phraseChacun)));
@@ -15171,7 +15185,9 @@ var QuizEngine = (function() {
         be.appendChild(this.listeDeux(ecarts.slice(0, 3), persos));
         wrap.appendChild(be);
       }
-      wrap.appendChild(this.jauges(r.pcts, this.etg('jaugesTitre', '')));
+      // Les jauges classent les résultats aux points : sous un résultat de
+      // contraste, qui ne vient pas des points, elles diraient autre chose.
+      if (r.contraste === undefined) wrap.appendChild(this.jauges(r.pcts, this.etg('jaugesTitre', '')));
       var tout = el('details', 'ech-tout');
       tout.appendChild(el('summary', 'ech-tout-titre', esc(this.etg('toutTitre', 'Toutes vos réponses'))));
       tout.appendChild(this.listeDeux(deux, persos));
@@ -15305,9 +15321,19 @@ var QuizEngine = (function() {
     // Pour la possession, plus de points = plus de risque ; pour le film,
     // plus de points = plus de minutes. Le sens de « qui perd » suit.
     this.perdLe = this.echelle === 'minutes' ? 'min' : 'max';
+    // `sens: 'haut'` : la valeur haute est la bonne (un taux de sagesse), celui
+    // qui en a le moins « perd », à l'inverse du risque de possession.
+    if (config.sens === 'haut') this.perdLe = 'min';
     this.modes = config.modes || { solo: true, duo: true };
     this.icone = config.icone || '🎃';
     this.distance = !!config.distance;
+    // Les quiz fun « pour nous » (novembre 2026, « sages ou pas sages ? ») : à
+    // deux, un seul résultat pour le couple, la moyenne des deux valeurs, avec
+    // l'image de son palier (voir renderResultsCommun), et le mode à deux en
+    // tête de l'écran des modes.
+    this.commun = !!config.commun;
+    this.duoDabord = !!config.duoDabord;
+    this.imagesPaliers = config.imagesPaliers || {};
     this.mode = this.modes.solo && this.modes.duo ? null : (this.modes.duo ? 'duo' : 'solo');
     this.phase = this.mode ? 'setup' : 'modes';
     this.players = [{ name: '', gender: null }, { name: '', gender: null }];
@@ -15492,7 +15518,9 @@ var QuizEngine = (function() {
   // joueur : la mascotte quand on sait qui joue, un point sinon.
   SurvieQuiz.prototype.ligne = function(reperes) {
     var self = this;
-    var bloc = el('div', 'surv-ligne' + (this.echelle === 'pourcent' ? ' surv-ligne--pourcent' : ''));
+    // Sur une échelle où la valeur haute est la bonne (`sens: 'haut'`), la ligne
+    // se colore dans l'autre sens : surv-ligne--haut.
+    var bloc = el('div', 'surv-ligne' + (this.echelle === 'pourcent' ? ' surv-ligne--pourcent' + (this.perdLe === 'min' ? ' surv-ligne--haut' : '') : ''));
     var piste = el('div', 'surv-piste');
     piste.setAttribute('aria-hidden', 'true');
     var pas = this.echelle === 'pourcent' ? [0, 25, 50, 75, 100] : [0, 30, 60, 90, 120, 150];
@@ -15557,7 +15585,197 @@ var QuizEngine = (function() {
     return bloc;
   };
 
+  // ── Le résultat « pour vous deux » (novembre 2026) ──────────────────
+  // « Sages ou pas sages ? » : à deux, la place du couple sur l'échelle est la
+  // moyenne des deux valeurs, avec l'image de son palier, son verdict et son
+  // conseil ; dessous, qui des deux a la valeur la plus haute, les deux
+  // personnages sur la même ligne, les questions où l'un a fait bien mieux
+  // que l'autre, ce qui a joué pour et contre avec le prénom de chacun, puis
+  // toutes les réponses repliées. Seul(e), la personne répond pour le couple :
+  // un résultat, ce qui a joué, et l'invitation à refaire le quiz à deux.
+  SurvieQuiz.prototype.cartePalier = function(v, duo) {
+    var r = this.rang(v);
+    var img = this.imagesPaliers[r] || null;
+    var carte = el('div', 'port-carte port-carte--seul surv-carte-palier');
+    if (img && img.image) {
+      var fig = el('div', 'port-image');
+      fig.innerHTML = '<img src="' + esc(img.image) + '" alt="" width="600" height="600" loading="lazy" decoding="async">';
+      carte.appendChild(fig);
+    }
+    var corps = el('div', 'port-corps');
+    var libelle = this.etg(duo ? 'resLibelleDuo' : 'resLibelleSolo', '');
+    if (libelle) corps.appendChild(el('p', 'port-etiquette', escRiche(libelle)));
+    corps.appendChild(el('p', 'surv-valeur surv-valeur--palier', esc(this.formate(v))));
+    corps.appendChild(el('h2', 'port-titre', esc(this.etg('r' + r + '_t', ''))));
+    var desc = this.etg('r' + r + '_d', '');
+    if (desc) corps.appendChild(el('p', 'port-desc', escRiche(desc)));
+    var conseil = this.etg('r' + r + '_a', '');
+    if (conseil) {
+      var c = el('div', 'port-conseil');
+      c.innerHTML = '<strong>' + esc(this.etg('conseilTitre', tg('result.ourAdvice', 'Notre conseil'))) + '</strong>' + escRiche(conseil);
+      corps.appendChild(c);
+    }
+    carte.appendChild(corps);
+    return carte;
+  };
+
+  // Ce qui a joué pour et contre, à deux : les réponses au maximum et à zéro
+  // de chacun, la même réponse des deux côtés écrite une fois, sous les deux
+  // prénoms. Trois lignes au plus par bloc, en alternant les joueurs.
+  SurvieQuiz.prototype.blocFaitsDeux = function(persos) {
+    var self = this;
+    var p = [this.pesees(this.answers.p1), this.pesees(this.answers.p2)];
+    var fusion = function(cle) {
+      var liste = [], vus = {};
+      for (var rang = 0; rang < 3; rang++) {
+        [0, 1].forEach(function(k) {
+          var x = p[k][cle][rang];
+          if (!x) return;
+          var id = x.q.id + '|' + x.o.id;
+          if (vus[id]) { if (vus[id].joueurs.indexOf(k) < 0) vus[id].joueurs.push(k); return; }
+          vus[id] = { q: x.q, o: x.o, joueurs: [k] };
+          liste.push(vus[id]);
+        });
+      }
+      return liste.slice(0, 3);
+    };
+    var ul = function(items) {
+      var liste = el('ul', 'surv-faits');
+      items.forEach(function(x) {
+        var noms = x.joueurs.slice().sort().map(function(k) {
+          return '<b class="ech-nom--' + persos[k] + '">' + esc(self.players[k].name) + '</b>';
+        }).join(' &amp; ');
+        var li = el('li', '');
+        li.innerHTML = '<span class="surv-fait-q">' + esc(self.texteQuestion(x.q)) + '</span>' +
+          '<span class="surv-fait-r">' + noms + ' ' + esc(self.texteOption(x.q, x.o)) + '</span>';
+        liste.appendChild(li);
+      });
+      return liste;
+    };
+    var bloc = el('div', 'surv-pistes');
+    var pour = fusion('bonnes'), contre = fusion('mauvaises');
+    var titrePour = this.etg(this.echelle === 'minutes' ? 'sauveTitre' : 'protegeTitre', '');
+    var titreContre = this.etg(this.echelle === 'minutes' ? 'perduTitre' : 'exposeTitre', '');
+    if (pour.length && titrePour) {
+      var a = el('div', 'surv-piste-bloc surv-piste-bloc--pour');
+      a.appendChild(el('h3', 'port-bloc-titre', esc(titrePour)));
+      a.appendChild(ul(pour));
+      bloc.appendChild(a);
+    }
+    if (contre.length && titreContre) {
+      var b = el('div', 'surv-piste-bloc surv-piste-bloc--contre');
+      b.appendChild(el('h3', 'port-bloc-titre', esc(titreContre)));
+      b.appendChild(ul(contre));
+      bloc.appendChild(b);
+    }
+    return bloc;
+  };
+
+  SurvieQuiz.prototype.renderResultsCommun = function() {
+    var self = this;
+    var duo = this.mode === 'duo';
+    var wrap = el('div', 'quiz-engine quiz-result-card surv-resultat surv-resultat--commun text-center');
+    var vA = this.valeur(this.answers.p1);
+    var vB = duo ? this.valeur(this.answers.p2) : vA;
+    var v = duo ? Math.round((vA + vB) / 2) : vA;
+    var r = this.rang(v);
+    var titre = this.etg('r' + r + '_t', '');
+    enregistreProfilResultat(this, 'r' + r);
+    if (duo) wrap.appendChild(el('p', 'port-noms', esc(this.players[0].name + ' & ' + this.players[1].name)));
+    wrap.appendChild(this.cartePalier(v, duo));
+
+    if (duo) {
+      var persos = persosDe(this.players);
+      var egal = vA === vB;
+      var pire = this.perdLe === 'min' ? (vA <= vB ? 0 : 1) : (vA >= vB ? 0 : 1);
+      // Qui des deux : la phrase, les deux personnages sur la même ligne, et
+      // la valeur de chacun avec son palier en deux mots.
+      var qui = el('div', 'surv-qui');
+      var quiTitre = this.etg('quiTitre', '');
+      if (quiTitre) qui.appendChild(el('h3', 'port-bloc-titre', esc(quiTitre)));
+      var phrase = (egal ? this.etg('duoEgal', '') : this.etg('duoPerd', ''))
+        .replace(/\{\{nom\}\}/g, this.players[pire].name).replace(/\{\{autre\}\}/g, this.players[1 - pire].name)
+        .replace(/\{\{valeur\}\}/g, this.formate(vA))
+        .replace(/\{\{vp\}\}/g, this.formate(pire === 0 ? vA : vB)).replace(/\{\{va\}\}/g, this.formate(pire === 0 ? vB : vA));
+      if (phrase) qui.appendChild(el('p', 'surv-qui-phrase', escRiche(phrase)));
+      qui.appendChild(this.ligne([
+        { valeur: vA, perso: persos[0], nom: this.players[0].name, pose: (pire === 0 && !egal) ? 'surprise' : 'joie' },
+        { valeur: vB, perso: persos[1], nom: this.players[1].name, pose: (pire === 1 && !egal) ? 'surprise' : 'joie' }
+      ]));
+      var deux = el('div', 'surv-deux');
+      [[0, vA], [1, vB]].forEach(function(x) {
+        var k = x[0], val = x[1], rk = self.rang(val);
+        var carte = el('div', 'surv-carte surv-carte--' + persos[k]);
+        carte.innerHTML = '<p class="surv-carte-nom"><b class="port-nom--' + persos[k] + '">' + esc(self.players[k].name) + '</b></p>' +
+          '<p class="surv-carte-valeur">' + esc(self.formate(val)) + '</p>' +
+          '<p class="surv-carte-titre">' + esc(self.etg('r' + rk + '_court', self.etg('r' + rk + '_t', ''))) + '</p>';
+        deux.appendChild(carte);
+      });
+      qui.appendChild(deux);
+      wrap.appendChild(qui);
+
+      // Les deux réponses de chaque question, et l'écart de points entre elles.
+      var paires = [];
+      this.questions.forEach(function(q, i) {
+        var a = self.optionDe(q, self.answers.p1[i]), b = self.optionDe(q, self.answers.p2[i]);
+        if (!a || !b) return;
+        paires.push({ q: q, a: a, b: b, d: Math.abs((a.points || 0) - (b.points || 0)) });
+      });
+      var ligneDeux = function(e) {
+        var li = el('li', 'ech-liste-item ech-liste-item--' + (e.a.id === e.b.id ? 'pareil' : 'loin'));
+        li.innerHTML = '<p class="ech-liste-q">' + esc(self.texteQuestion(e.q)) + '</p>' +
+          '<p class="ech-liste-r"><b class="ech-nom--' + persos[0] + '">' + esc(self.players[0].name) + '</b> ' + esc(self.texteOption(e.q, e.a)) + '</p>' +
+          '<p class="ech-liste-r"><b class="ech-nom--' + persos[1] + '">' + esc(self.players[1].name) + '</b> ' + esc(self.texteOption(e.q, e.b)) + '</p>';
+        return li;
+      };
+      var ecarts = paires.filter(function(e) { return e.d >= 2; }).sort(function(x, y) { return y.d - x.d; });
+      if (ecarts.length) {
+        var be = el('div', 'surv-ecarts');
+        be.appendChild(el('h3', 'port-bloc-titre', esc(this.etg('ecartsTitre', 'Là où vous n\'avez pas réagi pareil'))));
+        var ulE = el('ul', 'ech-liste');
+        ecarts.slice(0, 3).forEach(function(e) { ulE.appendChild(ligneDeux(e)); });
+        be.appendChild(ulE);
+        wrap.appendChild(be);
+      }
+      wrap.appendChild(this.blocFaitsDeux(persos));
+      var tout = el('details', 'ech-tout');
+      tout.appendChild(el('summary', 'ech-tout-titre', esc(this.etg('toutTitre', 'Toutes vos réponses'))));
+      var ulT = el('ul', 'ech-liste');
+      paires.forEach(function(e) { ulT.appendChild(ligneDeux(e)); });
+      tout.appendChild(ulT);
+      wrap.appendChild(tout);
+    } else {
+      wrap.appendChild(this.blocFaits(this.answers.p1));
+      if (this.modes.duo) {
+        // Seul(e), une seule voix : l'invitation à refaire le quiz à deux.
+        var inv = el('div', 'qa-invitation');
+        inv.appendChild(el('p', 'qa-invitation-texte', esc(this.etg('invitationDuo', ''))));
+        var bouton = el('button', 'btn btn-outline qa-invitation-btn', esc(this.etg('boutonDuo', 'Refaire à deux')));
+        bouton.type = 'button';
+        bouton.addEventListener('click', function() {
+          self.mode = 'duo'; self.phase = 'setup'; self.render(); smoothScroll(self.container, 'start');
+        });
+        inv.appendChild(bouton);
+        wrap.appendChild(inv);
+      }
+    }
+    var note = this.etg('noteFin', '');
+    if (note) wrap.appendChild(el('p', 'port-note', escRiche(note)));
+    renderActionButtons(wrap, {
+      share: { noms: nomsPartage(this), type: 'profil', verdict: this.formate(v) + avantPonct() + ': ' + titre },
+      restart: function() {
+        self.phase = (self.modes.solo && self.modes.duo) ? 'modes' : 'setup';
+        if (self.phase === 'modes') self.mode = null;
+        self.render();
+        smoothScroll(self.container, 'start');
+      }
+    });
+    this.container.appendChild(wrap);
+    smoothScroll(wrap, 'center');
+  };
+
   SurvieQuiz.prototype.renderResults = function() {
+    if (this.commun) return this.renderResultsCommun();
     var self = this;
     var duo = this.mode === 'duo';
     var wrap = el('div', 'quiz-engine quiz-result-card surv-resultat text-center');

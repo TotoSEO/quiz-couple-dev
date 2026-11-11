@@ -604,6 +604,18 @@
     "metaDescription": "A city apartment, a house with a garden, a fixer-upper or a camper van? You each answer 12 questions, and the quiz shows the home that suits you both.",
     "description": "Twelve questions each, and the place where you'd both be happy: apartment, country house, loft, tiny house..."
   },
+  "quizListeNoel": {
+    "title": "Naughty or Nice Quiz for Couples: Which List Are You On?",
+    "shortTitle": "Naughty or Nice Quiz",
+    "metaDescription": "You each answer 12 questions about your December, and the quiz says whether your couple is on Santa's nice list or naughty list, and which of you is nicer.",
+    "description": "Twelve questions each about your December, and your couple's spot on Santa's list, with its photo."
+  },
+  "quizDuoNoel": {
+    "title": "Which Christmas Characters Are You? The Couples Quiz",
+    "shortTitle": "Which Christmas Characters Are You",
+    "metaDescription": "You each answer 12 questions about your Christmas together, and the quiz finds your duo: Santa and Mrs. Claus, two elves, Scrooge and the Christmas spirit...",
+    "description": "Twelve questions each, and the Christmas duo you make, from Santa and Mrs. Claus to the two gnomes, with its photo."
+  },
   "bilanCouple": {
     "title": "Relationship Assessment Online | Instant Results + PDF",
     "shortTitle": "Relationship assessment",

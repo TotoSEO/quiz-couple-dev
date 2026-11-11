@@ -179,7 +179,9 @@
       "quizSuperVilain": "Dein Auftritt auf der Party, dein Kostüm, dein Lachen: der Superschurke, der dir ähnelt, vom Joker bis Maleficent.",
       "quizDuoVilains": "Der Coup der Halloween-Nacht: eure Rollen, und das berühmte Schurken-Duo, das ihr bildet.",
       "quizChienNous": "Jeder antwortet für sich, und der Test findet den Hund, der zu euch beiden passt, vom Corgi bis zum Berner Sennenhund.",
-      "quizMaisonNous": "Jeder antwortet für sich, und der Test zeigt euch den Ort, an dem ihr euch beide wohlfühlen würdet, von der Stadtwohnung bis zum Campervan."
+      "quizMaisonNous": "Jeder antwortet für sich, und der Test zeigt euch den Ort, an dem ihr euch beide wohlfühlen würdet, von der Stadtwohnung bis zum Campervan.",
+      "quizListeNoel": "Zwölf Fragen zu eurem Dezember, und euer Platz als Paar auf der Liste des Weihnachtsmanns, vom Geschenkeberg bis zum Sack Kohle.",
+      "quizDuoNoel": "Jeder antwortet für sich, und der Test findet das Weihnachtsduo, das ihr seid: Weihnachtsmann und Weihnachtsfrau, zwei Elfen, Scrooge und der Geist der Weihnacht..."
     },
     "testsEyebrow": "Die Tests",
     "quizzesEyebrow": "Die Quiz",
@@ -187,7 +189,8 @@
     "speciauxEyebrow": "Spaß-Quiz",
     "speciauxTitle": "Euer Hund, euer Haus: unsere Spaß-Quiz für zwei",
     "speciauxTitleSaison": {
-      "halloween": "Halloween-Special: unsere (ein bisschen) gruseligen Quiz"
+      "halloween": "Halloween-Special: unsere (ein bisschen) gruseligen Quiz",
+      "noel": "Weihnachts-Special: artig oder unartig, und euer Weihnachtsduo"
     },
     "speciauxDesc": "{{n}} leichte Quiz für zwei. Jeder antwortet für sich, dann wird verglichen.",
     "speciauxCta": "Alle Spaß-Quiz anzeigen"

@@ -179,7 +179,9 @@
       "quizSuperVilain": "Il tuo ingresso alla festa, il tuo costume, la tua risata: il supercattivo che ti somiglia, da Joker a Malefica.",
       "quizDuoVilains": "Il colpo della notte di Halloween: il ruolo di ciascuno, e il duo di cattivi celebre che formate.",
       "quizChienNous": "Ognuno risponde per conto suo, e il test trova il cane che va bene a tutti e due, dal corgi al bovaro del bernese.",
-      "quizMaisonNous": "Ognuno risponde per conto suo, e il test vi mostra il posto dove stareste bene tutti e due, dall'appartamento in centro al van camperizzato."
+      "quizMaisonNous": "Ognuno risponde per conto suo, e il test vi mostra il posto dove stareste bene tutti e due, dall'appartamento in centro al van camperizzato.",
+      "quizListeNoel": "Dodici domande sul vostro mese di dicembre, e il posto della vostra coppia nella lista di Babbo Natale, dalla montagna di regali al sacco di carbone.",
+      "quizDuoNoel": "Ognuno risponde per conto suo, e il test trova il duo di Natale che formate: Babbo Natale e Mamma Natale, due elfi, Scrooge e lo spirito del Natale..."
     },
     "testsEyebrow": "I test",
     "quizzesEyebrow": "I quiz",
@@ -187,7 +189,8 @@
     "speciauxEyebrow": "Quiz originali",
     "speciauxTitle": "Il vostro cane, la vostra casa: i nostri quiz originali da fare in due",
     "speciauxTitleSaison": {
-      "halloween": "Speciale Halloween: i nostri quiz che fanno (un po') paura"
+      "halloween": "Speciale Halloween: i nostri quiz che fanno (un po') paura",
+      "noel": "Speciale Natale: buoni o cattivi, e il vostro duo di Natale"
     },
     "speciauxDesc": "{{n}} quiz leggeri da fare in due. Ognuno risponde per conto suo, e poi si confronta.",
     "speciauxCta": "Vedi tutti i quiz originali"

@@ -179,7 +179,9 @@
       "quizSuperVilain": "Tu entrada en la fiesta, tu disfraz, tu risa: el supervillano que se parece a ti, del Joker a Maléfica.",
       "quizDuoVilains": "El golpe de la noche de Halloween: el papel de cada uno, y el dúo de malvados célebre que formáis.",
       "quizChienNous": "Cada uno responde por su lado, y el test encuentra el perro que os va a los dos, del corgi al boyero de Berna.",
-      "quizMaisonNous": "Cada uno responde por su lado, y el test os enseña el sitio donde estaríais a gusto los dos, del piso en el centro a la furgoneta camper."
+      "quizMaisonNous": "Cada uno responde por su lado, y el test os enseña el sitio donde estaríais a gusto los dos, del piso en el centro a la furgoneta camper.",
+      "quizListeNoel": "Doce preguntas sobre vuestro mes de diciembre, y el puesto de vuestra pareja en la lista de Papá Noel, del montón de regalos al saco de carbón.",
+      "quizDuoNoel": "Cada uno responde por su lado, y el test encuentra el dúo de Navidad que formáis: Papá Noel y Mamá Noel, dos duendes, Scrooge y el espíritu de la Navidad..."
     },
     "testsEyebrow": "Los tests",
     "quizzesEyebrow": "Los quiz",
@@ -187,7 +189,8 @@
     "speciauxEyebrow": "Quiz originales",
     "speciauxTitle": "Vuestro perro, vuestra casa: nuestros quiz originales para hacer en pareja",
     "speciauxTitleSaison": {
-      "halloween": "Especial Halloween: nuestros quiz que dan (un poco de) miedo"
+      "halloween": "Especial Halloween: nuestros quiz que dan (un poco de) miedo",
+      "noel": "Especial Navidad: buenos o traviesos, y vuestro dúo navideño"
     },
     "speciauxDesc": "{{n}} quiz ligeros para hacer en pareja. Cada uno responde por su lado, y luego comparáis.",
     "speciauxCta": "Ver todos los quiz originales"

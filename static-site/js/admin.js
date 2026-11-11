@@ -263,6 +263,9 @@
     // Les quiz fun « pour nous » (novembre 2026)
     quizChienNous: 'Quel chien pour nous',
     quizMaisonNous: 'Quelle maison pour nous',
+    // Les deux quiz de Noël (novembre 2026)
+    quizListeNoel: 'Sages ou pas sages (liste du Père Noël)',
+    quizDuoNoel: 'Personnages de Noël',
     testAttachement: "Style d'attachement",
     testConfiance: 'Confiance',
     testInfidelite: 'Infidélité',
@@ -419,6 +422,8 @@
     'duo-vilains': 'quizDuoVilains',
     'chien-nous': 'quizChienNous',
     'maison-nous': 'quizMaisonNous',
+    'liste-noel': 'quizListeNoel',
+    'duo-noel': 'quizDuoNoel',
     'type-couple': 'quizTypeCouple',
     'amour-ou-attachement': 'testAmourAttachement',
     'je-l-aime-encore': 'testJeLaimeEncore',
@@ -457,7 +462,9 @@
            'quizSerialKiller', 'serial-killer', 'quizMortFilmHorreur', 'film-horreur', 'quizPossession', 'possession',
            'quizSuperVilain', 'super-vilain', 'quizDuoVilains', 'duo-vilains',
            // les quiz fun « pour nous » (11 novembre 2026)
-           'quizChienNous', 'chien-nous', 'quizMaisonNous', 'maison-nous']
+           'quizChienNous', 'chien-nous', 'quizMaisonNous', 'maison-nous',
+           // les deux quiz de Noël (novembre 2026)
+           'quizListeNoel', 'liste-noel', 'quizDuoNoel', 'duo-noel']
   };
   var LIBELLE_FAMILLE = { test: 'Tests', quiz: 'Quiz', jeu: 'Jeux' };
 

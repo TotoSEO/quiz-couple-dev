@@ -124,6 +124,9 @@
     // les quiz fun « pour nous » (11 novembre 2026)
     quizChienNous: { icon: '🐶', img: 'quiz-marrant' },
     quizMaisonNous: { icon: '🏡', img: 'quiz-marrant' },
+    // les deux quiz de Noël (novembre 2026)
+    quizListeNoel: { icon: '🎅', img: 'quiz-marrant' },
+    quizDuoNoel: { icon: '🎄', img: 'quiz-marrant' },
   };
   const versCartes = (cles) => cles.map((k) => ({ routeKey: k, key: k, icon: (VISUELS[k] || {}).icon || '💞', img: (VISUELS[k] || {}).img || 'test-couple' }));
 
@@ -171,7 +174,7 @@
   const speciauxFiltered = speciaux.filter(item => getLocalizedUrl(item.routeKey, lang));
   // La saison en cours (SAISON dans config.js, posée par le générateur) donne
   // son titre au bloc des quiz spéciaux et met ses quiz en tête.
-  const saisonCourante = (typeof saison !== 'undefined' && saison) ? saison : null;
+  const saisonCourante = (typeof saisonQuiz !== 'undefined' && saisonQuiz) ? saisonQuiz : ((typeof saison !== 'undefined' && saison) ? saison : null);
   const saisonDe = (k) => (typeof saisonDesQuiz !== 'undefined' && saisonDesQuiz[k]) || null;
   speciauxFiltered.sort((a, b) => (saisonDe(a.routeKey) === saisonCourante ? -1 : 0) - (saisonDe(b.routeKey) === saisonCourante ? -1 : 0));
 

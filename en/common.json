@@ -134,6 +134,8 @@
     "quizDuoVilains": "Which supervillain duo",
     "quizChienNous": "What dog should we get?",
     "quizMaisonNous": "What house suits us?",
+    "quizListeNoel": "Naughty or Nice?",
+    "quizDuoNoel": "Your Christmas Characters",
     "bilanCouple": "Relationship assessment",
     "evaluer": "Assess your relationship",
     "evaluerSous": "The complete assessment, together or on your own",
@@ -158,7 +160,8 @@
       "rire": "For a laugh",
       "pimenter": "Spice it up",
       "halloween": "Halloween",
-      "futur": "Your future together"
+      "futur": "Your future together",
+      "noel": "Christmas"
     },
     "retour": "Back"
   },

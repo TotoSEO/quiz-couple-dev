@@ -174,6 +174,10 @@ export const ROUTE_SLUGS = {
   // moi", c'est "pour nous" ») : le chien et la maison du couple.
   quizChienNous: { fr: 'test-quel-chien-est-fait-pour-nous', en: 'what-dog-should-we-get-quiz', es: 'test-que-perro-es-para-nosotros', de: 'welcher-hund-passt-zu-uns-test', it: 'test-che-cane-fa-per-noi', nl: 'welke-hond-past-bij-ons-test' },
   quizMaisonNous: { fr: 'test-quelle-maison-est-faite-pour-nous', en: 'what-kind-of-house-should-we-live-in-quiz', es: 'test-que-casa-es-para-nosotros', de: 'welches-haus-passt-zu-uns-test', it: 'test-che-casa-fa-per-noi', nl: 'welk-huis-past-bij-ons-test' },
+  // Les deux quiz de Noël « pour nous » (novembre 2026) : la liste du Père
+  // Noël (sages ou pas sages) et les personnages de Noël que forme le couple.
+  quizListeNoel: { fr: 'test-liste-des-enfants-sages', en: 'naughty-or-nice-quiz', es: 'test-lista-de-ninos-buenos-y-malos', de: 'artig-oder-unartig-test', it: 'test-lista-dei-buoni-e-cattivi', nl: 'lief-of-stout-test' },
+  quizDuoNoel: { fr: 'quiz-quels-personnages-de-noel-etes-vous', en: 'which-christmas-characters-are-you-quiz', es: 'test-que-personajes-de-navidad-sois', de: 'welcher-weihnachtstyp-seid-ihr-test', it: 'test-che-personaggi-di-natale-siete', nl: 'welke-kerstfiguren-zijn-jullie-quiz' },
   quizTentation: { fr: 'quiz-ile-de-la-tentation', en: 'temptation-island-quiz', es: 'quiz-la-isla-de-las-tentaciones', de: 'temptation-island-quiz', it: 'quiz-temptation-island', nl: 'temptation-island-quiz' },
   admin: { fr: 'admin', en: 'admin', es: 'admin', de: 'admin', it: 'admin', nl: 'admin' },
   contact: { fr: 'contact', en: 'contact', es: 'contacto', de: 'kontakt', it: 'contatto', nl: 'contact' },
@@ -312,6 +316,9 @@ export const QUIZ_FEATURED = {
   // Les quiz fun « pour nous » (11 novembre 2026) : des photos générées pour les pages, sans personne
   quizChienNous:     { file: 'chien-laisses-entree', old: null, alt: { fr: "L'entrée d'une maison : deux laisses, une rose et une violette, accrochées au mur au-dessus d'un panier vide avec une balle de tennis et d'une gamelle", en: 'A home entrance: two dog leashes, one pink and one purple, hanging on the wall above an empty dog bed with a tennis ball and a bowl', es: 'La entrada de una casa: dos correas, una rosa y una morada, colgadas en la pared sobre una cama de perro vacía con una pelota de tenis y un cuenco', de: 'Ein Hausflur: zwei Hundeleinen, eine rosa und eine lila, hängen an der Wand über einem leeren Hundekorb mit einem Tennisball und einem Napf', it: "L'ingresso di una casa: due guinzagli, uno rosa e uno viola, appesi al muro sopra una cuccia vuota con una pallina da tennis e una ciotola", nl: 'De hal van een huis: twee hondenriemen, een roze en een paarse, aan de muur boven een lege hondenmand met een tennisbal en een voerbak' } },
   quizMaisonNous:    { file: 'maison-cles-maquette', old: null, alt: { fr: "Une petite maison en bois posée sur une table à côté d'un trousseau de clés aux porte-clés rose et violet, de plans roulés et d'un mètre ruban", en: 'A small wooden model house on a table next to a bunch of keys with pink and purple key tags, rolled-up plans and a tape measure', es: 'Una casita de madera sobre una mesa junto a un manojo de llaves con llaveros rosa y morado, planos enrollados y una cinta métrica', de: 'Ein kleines Holzhaus auf einem Tisch neben einem Schlüsselbund mit einem rosa und einem lila Anhänger, gerollten Bauplänen und einem Maßband', it: 'Una casetta di legno su un tavolo accanto a un mazzo di chiavi con portachiavi rosa e viola, progetti arrotolati e un metro a nastro', nl: 'Een houten huisje op een tafel naast een sleutelbos met een roze en een paarse sleutelhanger, opgerolde bouwtekeningen en een rolmaat' } },
+  // Les deux quiz de Noël (novembre 2026) : des photos générées pour les pages, sans personne
+  quizListeNoel:     { file: 'noel-chaussettes-cheminee', old: null, alt: { fr: "Deux chaussettes de Noël accrochées à une cheminée décorée : la rose déborde de petits cadeaux et de sucres d'orge, la violette laisse dépasser des morceaux de charbon", en: 'Two Christmas stockings hanging on a decorated mantelpiece: the pink one overflows with small gifts and candy canes, the purple one has lumps of coal sticking out', es: 'Dos calcetines de Navidad colgados de una chimenea decorada: el rosa rebosa de regalitos y bastones de caramelo, del morado asoman trozos de carbón', de: 'Zwei Weihnachtsstrümpfe an einem geschmückten Kaminsims: der rosa quillt über vor kleinen Geschenken und Zuckerstangen, aus dem lila ragen Kohlestücke', it: "Due calze di Natale appese a un camino decorato: quella rosa trabocca di regalini e bastoncini di zucchero, da quella viola spuntano pezzi di carbone", nl: 'Twee kerstsokken aan een versierde schoorsteenmantel: de roze puilt uit van de cadeautjes en zuurstokken, uit de paarse steken stukken steenkool' } },
+  quizDuoNoel:       { file: 'noel-figurines-duos', old: null, alt: { fr: "Une étagère décorée d'une guirlande de sapin et de boules roses et violettes, où des figurines de Noël sont rangées deux par deux : le Père Noël et la Mère Noël, deux lutins, deux rennes, un casse-noisette et une danseuse, deux gnomes", en: 'A shelf decorated with a pine garland and pink and purple baubles, lined with Christmas figurines two by two: Santa and Mrs. Claus, two elves, two reindeer, a nutcracker and a ballerina, two gnomes', es: 'Una repisa decorada con una guirnalda de abeto y bolas rosas y moradas, con figuritas de Navidad de dos en dos: Papá Noel y Mamá Noel, dos elfos, dos renos, un cascanueces y una bailarina, dos gnomos', de: 'Ein Regal mit Tannengirlande und rosa und lila Kugeln, auf dem Weihnachtsfiguren paarweise stehen: der Weihnachtsmann und seine Frau, zwei Elfen, zwei Rentiere, ein Nussknacker und eine Ballerina, zwei Wichtel', it: "Una mensola decorata con una ghirlanda di abete e palline rosa e viola, con statuine di Natale a due a due: Babbo Natale e Mamma Natale, due elfi, due renne, uno schiaccianoci e una ballerina, due gnomi", nl: 'Een plank met een dennenslinger en roze en paarse kerstballen, met kerstfiguurtjes twee aan twee: de Kerstman en de Kerstvrouw, twee elfjes, twee rendieren, een notenkraker en een ballerina, twee kerstkabouters' } },
   quizTentation:     { file: 'island-bonfire',            old: null,                  alt: { fr: 'Feu de camp sur une plage tropicale la nuit, avec palmiers et pleine lune', en: 'Bonfire on a tropical beach at night, with palm trees and a full moon', es: 'Hoguera en una playa tropical de noche, con palmeras y luna llena', de: 'Lagerfeuer an einem tropischen Strand bei Nacht, mit Palmen und Vollmond', it: 'Falò su una spiaggia tropicale di notte, con palme e luna piena', nl: 'Kampvuur op een tropisch strand bij nacht, met palmbomen en een volle maan' } },
 };
 
@@ -422,6 +429,8 @@ export const ROUTE_CONFIG = {
   quizDuoVilains: { template: 'quiz-duo-vilains', namespaces: ['quiz-duo-vilains', 'quizzes', 'quizGames', 'gd', 'common'] },
   quizChienNous: { template: 'quiz-chien-nous', namespaces: ['quiz-chien-nous', 'quizzes', 'quizGames', 'gd', 'common'] },
   quizMaisonNous: { template: 'quiz-maison-nous', namespaces: ['quiz-maison-nous', 'quizzes', 'quizGames', 'gd', 'common'] },
+  quizListeNoel: { template: 'quiz-liste-noel', namespaces: ['quiz-liste-noel', 'quizzes', 'quizGames', 'gd', 'common'] },
+  quizDuoNoel: { template: 'quiz-duo-noel', namespaces: ['quiz-duo-noel', 'quizzes', 'quizGames', 'gd', 'common'] },
   quizTentation: { template: 'quiz-tentation', namespaces: ['quiz-tentation', 'quizzes', 'quizGames', 'gd', 'common'] },
   testPurete: { template: 'test-purete', namespaces: ['test-purete', 'quizzes', 'common'] },
   admin: { template: 'admin', namespaces: ['common'] },
@@ -552,6 +561,9 @@ export const BILAN_ENTREES = {
   // l'encart et la bannière de l'évaluation, sans la porte e-mail.
   quizChienNous: { groupe: 'jeu', id: 'chien-nous' },
   quizMaisonNous: { groupe: 'jeu', id: 'maison-nous' },
+  // Les deux quiz de Noël (novembre 2026), comme les autres quiz fun.
+  quizListeNoel: { groupe: 'jeu', id: 'liste-noel' },
+  quizDuoNoel: { groupe: 'jeu', id: 'duo-noel' },
   questionsCouple: { groupe: 'questions', id: 'questions-couple' },
 };
 // Les mentions obligatoires d'un vendeur (mentions légales et conditions de
@@ -627,6 +639,32 @@ export function saisonActive(maintenant = new Date()) {
   const jour = new Intl.DateTimeFormat('en-CA', { timeZone: 'Europe/Paris', year: 'numeric', month: '2-digit', day: '2-digit' }).format(maintenant);
   return jour >= SAISON.du && jour <= SAISON.au ? SAISON.nom : null;
 }
+// Le calendrier des quiz de saison (novembre 2026) : la saison que le hub des
+// quiz fun, l'accueil et le menu mettent en avant, sans habillage du site
+// (l'habillage, c'est SAISON, plus haut). Les dates sont des mois-jours, les
+// mêmes chaque année, jours inclus, heure de Paris ; hors de ces périodes
+// aucune saison n'est en avant, et les quiz restent jouables toute l'année. La
+// reconstruction programmée fait passer d'une saison à l'autre ;
+// QC_SAISON_QUIZ=aucune, halloween ou noel force le choix pour une
+// construction.
+export const SAISONS_QUIZ = [
+  { nom: 'halloween', du: '10-01', au: '11-01' },
+  { nom: 'noel', du: '11-10', au: '12-31' },
+];
+export function saisonQuizActive(maintenant = new Date()) {
+  const force = process.env.QC_SAISON_QUIZ;
+  if (force) return ['aucune', 'none', '0'].includes(force) ? null : force;
+  const morceaux = new Intl.DateTimeFormat('en-CA', { timeZone: 'Europe/Paris', year: 'numeric', month: '2-digit', day: '2-digit' }).format(maintenant).split('-');
+  const jour = morceaux[1] + '-' + morceaux[2];
+  const s = SAISONS_QUIZ.find((x) => jour >= x.du && jour <= x.au);
+  return s ? s.nom : null;
+}
+// La section de la saison en cours passe en tête de sa famille (menu, plan du
+// site, pied de page) ; hors saison, l'ordre écrit dans SECTIONS_NAV.
+function saisonEnTete(sections) {
+  const s = saisonQuizActive();
+  return s ? [...sections.filter((x) => x.cle === s), ...sections.filter((x) => x.cle !== s)] : sections;
+}
 // La régie du site est The Moneytizer. Le fichier ads.txt qu'elle fournit est
 // écrit tel quel dans public/, il déclare quiz-couple.com comme propriétaire
 // et themoneytizer.com comme gestionnaire. Il n'y a plus d'identifiant
@@ -700,12 +738,14 @@ export const SECTIONS_NAV = {
   // « tous les quiz un peu fun »). Depuis le 11 novembre 2026 la famille vit
   // toute l'année : les quiz « pour nous » (votre chien, votre maison...) dans
   // la section `futur`, puis les quiz de saison, chaque saison dans sa section
-  // (Halloween, Noël ensuite). Le hub speciauxCouple les répertorie tous et
-  // met en avant ceux de la saison en cours (SAISON).
-  speciaux: [
+  // (Halloween, Noël). Le hub speciauxCouple les répertorie tous et met en
+  // avant ceux de la saison en cours, dont la section passe aussi en tête du
+  // menu (SAISONS_QUIZ, saisonEnTete).
+  speciaux: saisonEnTete([
     { cle: 'futur', routes: ['quizChienNous', 'quizMaisonNous'] },
     { cle: 'halloween', routes: ['quizSerialKiller', 'quizMortFilmHorreur', 'quizPossession', 'quizSuperVilain', 'quizDuoVilains'] },
-  ],
+    { cle: 'noel', routes: ['quizListeNoel', 'quizDuoNoel'] },
+  ]),
 };
 // Les mêmes pages à plat, famille par famille, dans l'ordre des sections :
 // c'est ce que lisent l'accueil, le pied de page, les cartes « À faire
@@ -721,6 +761,7 @@ export const FAMILLES_NAV = Object.fromEntries(Object.entries(SECTIONS_NAV).map(
 export const SAISON_DES_QUIZ = {
   quizSerialKiller: 'halloween', quizMortFilmHorreur: 'halloween', quizPossession: 'halloween',
   quizSuperVilain: 'halloween', quizDuoVilains: 'halloween',
+  quizListeNoel: 'noel', quizDuoNoel: 'noel',
 };
 
 // Les outils : on donne deux prenoms ou deux dates, la page rend un resultat,

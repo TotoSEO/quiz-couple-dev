@@ -13396,6 +13396,19 @@ img[src^="/bilan/apercu-"] { pointer-events: none; user-select: none; -webkit-us
 .galerie-resultat-texte { margin: 0; font-size: 0.92rem; line-height: 1.5; color: hsl(var(--muted-foreground)); }
 @media (min-width: 768px) { .galerie-resultats { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 
+/* « Sages ou pas sages ? » (novembre 2026) : le quiz à jauge en mode commun
+   (SurvieQuiz, renderResultsCommun). La carte du palier reprend celle des
+   portraits, avec le taux du couple entre l'étiquette et le titre ; dessous,
+   « qui est le plus sage des deux » : la phrase, les deux personnages sur la
+   même ligne, une carte chacun. Sur cette échelle la valeur haute est la
+   bonne : la ligne va du charbon (à gauche) au vert (à droite). */
+.surv-resultat--commun .port-image { background: hsl(var(--muted)); }
+.surv-resultat--commun .port-image::after { background: linear-gradient(to top, hsl(var(--card)) 0%, transparent 16%); }
+.surv-valeur--palier { display: block; margin: 0.15rem 0 0.35rem; font-size: clamp(2.2rem, 10vw, 3rem); }
+.surv-qui { max-width: 34rem; margin: 1.5rem auto 0; }
+.surv-qui-phrase { margin: 0 0 0.25rem; font-size: 1.02rem; line-height: 1.5; }
+.surv-ligne--haut .surv-piste { background: linear-gradient(90deg, hsl(0 0% 32%), hsl(38 90% 55%) 50%, hsl(142 55% 42%)); }
+
 /* ═══════════════════════════════════════════════════════════════════
    Téléphone : les animations infinies qui repeignent à chaque image
    ═══════════════════════════════════════════════════════════════════

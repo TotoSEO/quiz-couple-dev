@@ -179,7 +179,9 @@
       "quizSuperVilain": "Je entree op het feest, je kostuum, je lach: de superschurk op wie je lijkt, van de Joker tot Maleficent.",
       "quizDuoVilains": "De kraak van de halloweennacht: ieders rol, en het beroemde schurkenduo dat jullie samen vormen.",
       "quizChienNous": "Ieder antwoordt voor zich, en de test vindt de hond die bij jullie allebei past, van de corgi tot de Berner sennenhond.",
-      "quizMaisonNous": "Ieder antwoordt voor zich, en de test laat de plek zien waar jullie je allebei thuis zouden voelen, van het appartement in de stad tot de camperbus."
+      "quizMaisonNous": "Ieder antwoordt voor zich, en de test laat de plek zien waar jullie je allebei thuis zouden voelen, van het appartement in de stad tot de camperbus.",
+      "quizListeNoel": "Twaalf vragen over jullie decembermaand, en jullie plek als koppel op de lijst van de Kerstman, van de berg cadeaus tot de zak steenkool.",
+      "quizDuoNoel": "Ieder antwoordt voor zich, en de quiz vindt het kerstduo dat jullie vormen: de Kerstman en de Kerstvrouw, twee elfjes, Scrooge en de kerstgeest..."
     },
     "testsEyebrow": "De tests",
     "quizzesEyebrow": "De quizzen",
@@ -187,7 +189,8 @@
     "speciauxEyebrow": "Themaquizzen",
     "speciauxTitle": "Jullie hond, jullie huis: onze themaquizzen om samen te doen",
     "speciauxTitleSaison": {
-      "halloween": "Speciaal voor Halloween: onze (een beetje) enge quizzen"
+      "halloween": "Speciaal voor Halloween: onze (een beetje) enge quizzen",
+      "noel": "Speciaal voor kerst: lief of stout, en jullie kerstduo"
     },
     "speciauxDesc": "{{n}} luchtige quizzen om samen te doen. Ieder antwoordt voor zich, en daarna vergelijken jullie.",
     "speciauxCta": "Bekijk alle themaquizzen"
