@@ -1,12 +1,12 @@
 {
-  "genere_le": "2026-11-10T11:06:37.123Z",
+  "genere_le": "2026-11-11T03:15:44.727Z",
   "langue": "fr",
   "compte": {
     "nom": "mipaps_stories",
     "actif": true
   },
   "fuseau": "Europe/Paris",
-  "aujourdhui": "2026-11-10",
+  "aujourdhui": "2026-11-11",
   "melange": {
     "midi": {
       "1": null,
@@ -28,39 +28,12 @@
     },
     "matin": "mipaps-anime"
   },
-  "reserve_jours": 142,
+  "reserve_jours": 141,
   "a_remplir": [],
   "a_corriger": [],
   "hors_grille": [],
   "refuses": [],
   "recents_et_prevus": [
-    {
-      "jour": "2026-10-11",
-      "creneau": "matin",
-      "gabarit": "mipaps-reel",
-      "categorie": "mipaps-anime",
-      "statut": "publie",
-      "texte": null,
-      "erreur": null
-    },
-    {
-      "jour": "2026-10-11",
-      "creneau": "midi",
-      "gabarit": "mipaps-post",
-      "categorie": "mipaps-post",
-      "statut": "publie",
-      "texte": "même quand on est pas d'accord, on est dans la même équipe.",
-      "erreur": null
-    },
-    {
-      "jour": "2026-10-11",
-      "creneau": "soir",
-      "gabarit": "mipaps-carrousel",
-      "categorie": "mipaps-histoire",
-      "statut": "publie",
-      "texte": null,
-      "erreur": null
-    },
     {
       "jour": "2026-10-12",
       "creneau": "matin",
@@ -2837,7 +2810,7 @@
   "idees": [],
   "prochain_creneau": {
     "mipaps-anime": {
-      "jour": "2026-11-11",
+      "jour": "2026-11-12",
       "creneau": "matin"
     },
     "mipaps-statique": null,
