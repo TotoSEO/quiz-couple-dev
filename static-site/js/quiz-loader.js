@@ -453,6 +453,28 @@
                          'muscle+ombre': 'magneto', 'ombre+ombre': 'magneto', 'charme+ombre': 'magneto',
                          'coeur+muscle': 'bonnie', 'coeur+coeur': 'bonnie', 'charme+muscle': 'bonnie'
                        } },
+
+    // Les quiz fun « pour nous » (11 novembre 2026, Thomas : « c'est pas "pour
+    // moi", c'est "pour nous" [...] je veux des images dans les résultats.
+    // Genre pour le test de chien, si ça dit qu'un corgi est votre chien, il
+    // faut une image de corgi »). Le moteur des portraits avec `commun` : à
+    // deux, chacun répond à toute la série et le couple reçoit UN résultat,
+    // celui que les deux séries additionnées mettent en tête, avec ce que
+    // chacun aurait eu de son côté et les réponses qui diffèrent ; seul(e),
+    // on répond pour le couple. `duoDabord` met le mode à deux en premier, et
+    // `sansMelange` garde les réponses dans l'ordre du fichier (du plus petit
+    // au plus grand, du moins au plus).
+    // Les images : public/quiz/fun/<images>/<id>.webp (600 px) et
+    // <id>-240.webp. Les axes sont rangés du plus courant au plus rare : à
+    // égalité, le premier gagne.
+    'chien-nous':  { prefix: 'chienNous', engine: 'portrait', totalQ: 12, pool: 12, quizType: 'chien-nous', needsGender: true,
+                     commun: true, duoDabord: true, sansMelange: true, base: 'fun', images: 'chien-nous', vignettes: true, icone: '🐶',
+                     axes: ['golden', 'refuge', 'corgi', 'bouledogue', 'cavalier', 'aussie', 'teckel', 'caniche', 'shiba', 'husky', 'bernois', 'peluche'] },
+    'maison-nous': { prefix: 'maisonNous', engine: 'portrait', totalQ: 12, pool: 12, quizType: 'maison-nous', needsGender: true,
+                     commun: true, duoDabord: true, sansMelange: true, base: 'fun', images: 'maison-nous', vignettes: true, icone: '🏡',
+                     axes: ['pavillon', 'appartement', 'campagne', 'loft', 'architecte', 'tiny', 'renover', 'van', 'peniche', 'palier'],
+                     // Les logements les plus rares ne sortent que chez ceux qui les ont cherchés (voir `coefs` du moteur).
+                     coefs: { peniche: 0.87, palier: 0.85, van: 0.9, tiny: 0.91, campagne: 0.95, architecte: 0.95, loft: 0.96 } },
     // Les quiz a jauge (moteur « survie ») : des points par reponse
     // (q{N}{lettre}_pts), la somme devient des minutes de survie dans le film
     // (de 5 a 150 : un film fait au plus 2 h 30, a 150 on tient jusqu'au
@@ -2977,6 +2999,14 @@
   function imageHalloween(dossier, id) {
     return dossier ? '/quiz/halloween/' + dossier + '/' + id + '.webp' : null;
   }
+  // L'image d'un résultat : public/quiz/<base>/<images>/<id>.webp. Les quiz
+  // d'Halloween n'ont pas de `base` (dossier halloween) ; les quiz fun « pour
+  // nous » rangent les leurs sous `fun`, avec une vignette de 240 px à côté
+  // (<id>-240.webp) pour les petites images du résultat.
+  function imagePortrait(cfg, id) {
+    if (!cfg.images) return null;
+    return cfg.base ? '/quiz/' + cfg.base + '/' + cfg.images + '/' + id + '.webp' : imageHalloween(cfg.images, id);
+  }
   function initPortraitQuiz(cfg) {
     var questions = parseGdQuestions(cfg.prefix, (cfg.pool || 15) + 5, false);
     questions.sort(function(a, b) { return a.id - b.id; });
@@ -2995,7 +3025,8 @@
         title: lu('p_' + id + '_t', id),
         description: lu('p_' + id + '_d', ''),
         advice: lu('p_' + id + '_a', ''),
-        image: imageHalloween(cfg.images, id)
+        image: imagePortrait(cfg, id),
+        vignette: cfg.vignettes ? imagePortrait(cfg, id + '-240') : null
       };
     });
     var duoProfils = null;
@@ -3008,7 +3039,7 @@
           title: lu('d_' + id + '_t', id),
           description: lu('d_' + id + '_d', ''),
           advice: lu('d_' + id + '_a', ''),
-          image: imageHalloween(cfg.images, 'duo-' + id)
+          image: imagePortrait(cfg, 'duo-' + id)
         };
       });
     }
@@ -3023,6 +3054,10 @@
       duos: cfg.duos || null,
       duoProfils: duoProfils || {},
       modes: cfg.facons || { solo: true, duo: true },
+      commun: !!cfg.commun,
+      duoDabord: !!cfg.duoDabord,
+      sansMelange: !!cfg.sansMelange,
+      coefs: cfg.coefs || null,
       icone: cfg.icone
     }, optionsDistance(cfg, questions.slice())));
   }

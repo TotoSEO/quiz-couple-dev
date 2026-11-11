@@ -17,6 +17,9 @@
   if (typeof ns === 'undefined') var ns = 'quiz-' + quizType;
   if (typeof totalQ === 'undefined') var totalQ = 20;
   if (typeof sectionCount === 'undefined') var sectionCount = 7;
+  // Le dossier des images de résultat d'un quiz fun (public/quiz/fun/<dossier>),
+  // pour la galerie des résultats dans le texte (sectionN.galerie).
+  if (typeof galerieDossier === 'undefined') var galerieDossier = null;
 
   const quizTitle = t('quizzes:' + routeKey + '.title', 'Quiz Couple');
   const quizDesc = t('quizzes:' + routeKey + '.metaDescription', '');
@@ -201,7 +204,9 @@
     'type-couple': 'typeCouple',
     // les quiz spéciaux d'Halloween (16 octobre 2026)
     'serial-killer': 'serialKiller', 'film-horreur': 'filmHorreur', 'possession': 'possession',
-    'super-vilain': 'superVilain', 'duo-vilains': 'duoVilains'
+    'super-vilain': 'superVilain', 'duo-vilains': 'duoVilains',
+    // les quiz fun « pour nous » (11 novembre 2026)
+    'chien-nous': 'chienNous', 'maison-nous': 'maisonNous'
   };
   let gdPrefix = gdPrefixMap[quizType] || quizType;
   // Le test de couple sain n'a de questions propres que hors français ; en
@@ -582,6 +587,24 @@
         </div>
         <% } %>
       </div>
+      <% } %>
+
+      <%/* La galerie des résultats illustrés (quiz fun « pour nous », 11 novembre
+           2026) : sectionN.galerie = [{ id, titre, texte, alt }], images dans
+           public/quiz/fun/<galerieDossier>/<id>-240.webp. */%>
+      <% const galerie = t(ns + ':section' + s + '.galerie', '');
+        if (Array.isArray(galerie) && galerie.length && galerieDossier) { %>
+      <ul class="galerie-resultats">
+        <% for (const g of galerie) { %>
+        <li class="galerie-resultat">
+          <img src="/quiz/fun/<%= galerieDossier %>/<%= g.id %>-240.webp" alt="<%= g.alt || g.titre %>" width="240" height="240" loading="lazy" decoding="async">
+          <div class="galerie-resultat-corps">
+            <h3 class="galerie-resultat-titre"><%= g.titre %></h3>
+            <p class="galerie-resultat-texte"><%- g.texte %></p>
+          </div>
+        </li>
+        <% } %>
+      </ul>
       <% } %>
 
       <%/* Signal list (quiz-couple-sain style) */%>

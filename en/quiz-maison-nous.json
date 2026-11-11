@@ -1,0 +1,123 @@
+{
+  "hero": {
+    "badge": "Fun quiz • Together, or on your own for the two of you",
+    "title": "The quiz to find out what kind of house you two should live in",
+    "titleHighlight": "what kind of house you two should live in",
+    "description": "A city apartment, a house with a garden, an old place to do up, or a camper van? You each answer twelve questions about the life you picture, and the quiz shows you the place where you'd both be happy.",
+    "subtitle": "12 questions • 3 minutes each • on one phone",
+    "jumpBtn": "Take the quiz"
+  },
+  "section1": {
+    "title": "How the quiz works",
+    "p1": "This quiz is here to find the kind of place where the two of you would be happy: in the city or surrounded by fields, in something new or something old, with neighbours close by or nobody around. It asks twelve questions about your everyday life: what you see out of the window in the morning, what you do on a Saturday night, how much room your stuff takes up, etc.",
+    "p2": "For example, for the question “Renovation work:”, you can answer “never, we just want to unpack”, “a coat of paint, no more”, “we like a bit of DIY at the weekend” or “redoing it all ourselves, the project of a lifetime”. If you answer “never” and your other half dreams of redoing everything, the quiz sees it: it adds up your two sets of answers and keeps the home with the best score for the two of you.",
+    "p3": "Together, the first one answers the twelve questions, passes the phone, and the second one answers without seeing what the other chose. At the end, you get the couple's home with its photo, the one each of you would have picked on your own, and the list of questions where you didn't give the same answer.",
+    "p4": "You can also take it on your own, answering for the two of you. But you won't get the comparison, and that's the most interesting part."
+  },
+  "section2": {
+    "title": "The ten homes in the quiz",
+    "intro": "The quiz can land on ten results, from the most classic to the most unexpected. Here's who each one suits best.",
+    "galerie": [
+      {
+        "id": "pavillon",
+        "titre": "The house with a garden",
+        "texte": "For couples who want to settle down for good, with space, a barbecue and a spare room.",
+        "alt": "A two-storey house on a quiet street, with a hedge, a bike against the fence and a garden"
+      },
+      {
+        "id": "appartement",
+        "titre": "The city apartment",
+        "texte": "For those who want to do everything on foot and would take a balcony over a lawnmower.",
+        "alt": "A wrought-iron balcony with a bistro table and two chairs, above the rooftops of a city"
+      },
+      {
+        "id": "campagne",
+        "titre": "The country house",
+        "texte": "For those who dream of space, a vegetable patch and silence in the evening.",
+        "alt": "An old stone house with blue shutters, covered in roses, in front of a vegetable patch"
+      },
+      {
+        "id": "loft",
+        "titre": "The loft",
+        "texte": "For city people who love big open spaces and often have people over.",
+        "alt": "A loft with brick walls, tall factory windows, a sofa and a metal staircase"
+      },
+      {
+        "id": "architecte",
+        "titre": "The architect-designed house",
+        "texte": "For those with precise tastes, a budget, and no wish to do any building work.",
+        "alt": "A contemporary house in concrete and glass beside a pool, at dusk"
+      },
+      {
+        "id": "tiny",
+        "titre": "The tiny house",
+        "texte": "For couples who own very little and want to live in nature, on a small scale.",
+        "alt": "A small wooden house on wheels, lit by a string of lights, at the edge of a forest"
+      },
+      {
+        "id": "renover",
+        "titre": "The fixer-upper",
+        "texte": "For patient DIY lovers who want to redo everything their own way.",
+        "alt": "An old stone manor covered in ivy, with scaffolding and a wheelbarrow in front"
+      },
+      {
+        "id": "van",
+        "titre": "The camper van",
+        "texte": "For those who can't sit still and only need a bed and a road.",
+        "alt": "A van with its back doors open onto a bed, parked on a clifftop at sunset"
+      },
+      {
+        "id": "peniche",
+        "titre": "The houseboat",
+        "texte": "For those who want to live on the water, in a place like no other.",
+        "alt": "A houseboat moored on a canal, its deck covered in plants, with a table and bikes"
+      },
+      {
+        "id": "palier",
+        "titre": "Two apartments across the hall",
+        "texte": "For couples who love each other and still want a place of their own each.",
+        "alt": "Two apartment doors side by side on a landing, one pink and one purple, each with its doormat"
+      }
+    ]
+  },
+  "section3": {
+    "title": "Choosing where to live together: what to put on the table",
+    "intro": "Looking for a home together is rarely just a matter of taste. Behind “I like this house”, there are four subjects people talk about far less.",
+    "sub1Title": "City or countryside",
+    "sub1Text": "This is the most common disagreement. One of you grew up in a village and feels stifled in the city, the other can't imagine being a twenty-minute drive from the nearest bakery. Before you look at listings, tell each other about an ordinary day in the place you picture, from waking up to going to bed. You soon see where the sticking points are.",
+    "sub2Title": "Renovation work",
+    "sub2Text": "A house that needs redoing costs less to buy, and a lot more in weekends. If one of you loves that and the other hates it, the building site soon becomes something you argue about. Agree on what you can do yourselves, on the budget, and on how long you're willing to live in the dust.",
+    "sub3Title": "Money",
+    "sub3Text": "Buying or renting, how much to put into the rent or the mortgage, who pays what if one of you earns more: these are questions it's better to settle before you sign. Couples who <a href=\"/en/moving-in-together-test/\">move in together for the first time</a> often discover them along the way.",
+    "sub4Title": "Each person's space",
+    "sub4Text": "Living together doesn't mean sharing everything. Some people need a room of their own, a study, a workshop, or just a corner of the sofa where nobody talks to them. Other couples even choose to live in separate homes, and they don't love each other any less. Ask yourselves <a href=\"/en/what-type-of-couple-are-you-quiz/\">what kind of couple you are</a>, more joined at the hip or more independent: the right home won't be the same."
+  },
+  "section4": {
+    "title": "What if you don't agree?",
+    "p1": "It almost always happens, and it's rather a good sign: it means each of you answered honestly. Look at the list of your different answers. If they're about style or size, you'll find a compromise without too much trouble. If they're about city or countryside, or about living together or not, take the time to talk about it.",
+    "p2": "Think about what will come with the house too. A garden means you could <a href=\"/en/what-dog-should-we-get-quiz/\">have a dog</a>, and an extra bedroom may mean a child one day. The home you choose says a lot about the life you're planning."
+  },
+  "section5": {
+    "title": "What you should know about this quiz",
+    "p1": "This quiz is a game. It doesn't know your budget, or property prices where you live: it only tells you what kind of place your answers are leading you to. Take it as a way to open the conversation, not as an estate agent's advice.",
+    "p2": "Nothing is saved: your answers stay on your phone. Only the result you get is counted, with no name attached, to see which ones come up most. The photos were created for this page."
+  },
+  "seo": {
+    "faqTitle": "Frequently asked questions",
+    "faq1Q": "Which homes can you get?",
+    "faq1A": "Ten results are possible: the house with a garden, the city apartment, the country house, the loft, the architect-designed house, the tiny house, the fixer-upper, the camper van, the houseboat, and two apartments across the hall for couples who'd rather each have their own place.",
+    "faq2Q": "How is the result worked out?",
+    "faq2A": "Each answer gives points to the homes that match it. For example, “a restaurant or a bar ten minutes' walk away” gives points to the city apartment and the loft, and none to the country house. With two of you, the quiz adds up your two sets of answers, and the home with the best score becomes the couple's home.",
+    "faq3Q": "Can you take the quiz on your own?",
+    "faq3A": "Yes. Choose “On my own, for the two of us” and answer with the two of you in mind. You'll get a result, but not the comparison of your answers: for that, there have to be two of you.",
+    "faq4Q": "House or apartment: how do you choose as a couple?",
+    "faq4A": "The simplest thing is to start from your week, not from the home. If you go out a lot and have no wish to look after an outdoor space, a well-located apartment will suit you better. If you often have people over, want a garden or are thinking of growing the family, a house soon becomes the obvious choice. The quiz asks exactly those questions, to each of you separately.",
+    "faq5Q": "What if one of us would rather live alone?",
+    "faq5A": "That's not necessarily a bad sign. Some couples live apart by choice, to keep their habits or their space, and are very happy that way. The quiz has a result for that: “two apartments across the hall”. What matters is that you both want it.",
+    "faq6Q": "Are my answers saved?",
+    "faq6A": "No. The answers stay on your phone. Only the result you get is counted, with no name attached, for the breakdown of results."
+  },
+  "jsonLd": {
+    "about": "choosing a home as a couple"
+  }
+}

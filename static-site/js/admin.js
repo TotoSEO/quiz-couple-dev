@@ -260,6 +260,9 @@
     quizPossession: 'Qui pourrait se faire posséder',
     quizSuperVilain: 'Quel super-vilain',
     quizDuoVilains: 'Duo de super-vilains',
+    // Les quiz fun « pour nous » (novembre 2026)
+    quizChienNous: 'Quel chien pour nous',
+    quizMaisonNous: 'Quelle maison pour nous',
     testAttachement: "Style d'attachement",
     testConfiance: 'Confiance',
     testInfidelite: 'Infidélité',
@@ -414,6 +417,8 @@
     'possession': 'quizPossession',
     'super-vilain': 'quizSuperVilain',
     'duo-vilains': 'quizDuoVilains',
+    'chien-nous': 'quizChienNous',
+    'maison-nous': 'quizMaisonNous',
     'type-couple': 'quizTypeCouple',
     'amour-ou-attachement': 'testAmourAttachement',
     'je-l-aime-encore': 'testJeLaimeEncore',
@@ -450,7 +455,9 @@
            'vrai-faux', 'ado', 'tentation', 'rencontre',
            // les quiz spéciaux d'Halloween (16 octobre 2026)
            'quizSerialKiller', 'serial-killer', 'quizMortFilmHorreur', 'film-horreur', 'quizPossession', 'possession',
-           'quizSuperVilain', 'super-vilain', 'quizDuoVilains', 'duo-vilains']
+           'quizSuperVilain', 'super-vilain', 'quizDuoVilains', 'duo-vilains',
+           // les quiz fun « pour nous » (11 novembre 2026)
+           'quizChienNous', 'chien-nous', 'quizMaisonNous', 'maison-nous']
   };
   var LIBELLE_FAMILLE = { test: 'Tests', quiz: 'Quiz', jeu: 'Jeux' };
 

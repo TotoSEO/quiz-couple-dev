@@ -1,9 +1,9 @@
 {
   "hero": {
-    "badge": "Seasonal quizzes • Free • Solo or as a couple",
-    "title": "Our special quizzes to take as a couple, by season",
-    "titleHighlight": "special quizzes",
-    "description": "Slightly crazy quizzes you don't take all year round: the Halloween ones now, the Christmas ones soon. They're played solo, as a couple on one phone or each on your own, and they stay here once the season is over."
+    "badge": "Fun quizzes • Free • Together or solo",
+    "title": "Our fun quizzes for couples",
+    "titleHighlight": "fun quizzes",
+    "description": "Light-hearted quizzes that don't measure anything serious: what dog you two should get, what kind of house, and seasonal quizzes for Halloween or Christmas. You each answer separately, then compare."
   },
   "enCeMoment": "Right now",
   "horsSaison": "All year round",
@@ -18,7 +18,7 @@
     },
     "noel": {
       "titre": "Christmas special",
-      "intro": "The Christmas quizzes arrive in December: how much you're willing to spend on each other, who'll give the worst gift, and a few other surprises.",
+      "intro": "The Christmas quizzes arrive before the holidays: which of you is on the nice list, and a few other surprises.",
       "bientot": "Coming soon"
     }
   },
@@ -32,38 +32,49 @@
     "quizSuperVilainNom": "Which supervillain are you most like?",
     "quizSuperVilainTagline": "Your entrance at the party, your costume, your henchmen, your laugh: the supervillain you're most like, from the Joker to Maleficent.",
     "quizDuoVilainsNom": "Which supervillain duo are you?",
-    "quizDuoVilainsTagline": "The Halloween night heist: each of your roles, the brains, the chaos, the muscle, the charm, the shadow or the heart, and the famous villain duo you form."
+    "quizDuoVilainsTagline": "The Halloween night heist: each of your roles, the brains, the chaos, the muscle, the charm, the shadow or the heart, and the famous villain duo you form.",
+    "quizChienNousNom": "What dog should we get?",
+    "quizChienNousTagline": "Twelve questions each about your life together, and the couple's dog with its photo: corgi, golden, dachshund, Shiba, husky...",
+    "quizMaisonNousNom": "What kind of house should we live in?",
+    "quizMaisonNousTagline": "Twelve questions each about the life you picture, and the couple's home in a photo: apartment, country house, loft, houseboat, tiny house..."
   },
   "section1": {
-    "title": "Why seasonal quizzes",
-    "p1": "The quizzes on this page are nothing like our couple tests. They don't measure anything serious, they don't give advice, and they don't talk about your relationship. They're games for a specific evening: a Halloween night between two horror movies, a Christmas Eve while waiting for the presents.",
-    "p2": "They work because they're made for laughing at yourself and at each other. Finding out your partner would die after twelve minutes in a horror movie, or that you're Pinky and the Brain, keeps a good part of the evening busy.",
-    "p3": "We keep them all here, season after season. The current season's quizzes are at the top of the page; the others stay playable all year round, a bit further down."
+    "title": "What these quizzes are for",
+    "p1": "The quizzes on this page are nothing like our couple tests. They don't measure anything serious and they don't give your relationship a score. They're games: what dog would suit you as a couple, what kind of house you'd be happy in, or which of you would die first in a horror movie.",
+    "p2": "They work because you each answer separately. Finding out your other half wants a husky when you had a dachshund in mind, or a fixer-upper when you were dreaming of a city apartment, keeps a good part of the evening busy!",
+    "p3": "The quizzes about your future together are here all year round. The seasonal ones (Halloween for now, Christmas soon) move to the top of the page when their time comes, and stay playable the rest of the year."
   },
   "section2": {
-    "title": "And the rest of the year",
-    "p1": "Once the season is over, <a href=\"/en/couple-games/\">the games to play as a couple</a> all year round take over: <a href=\"/en/would-you-rather-couple-quiz/\">the “would you rather” dilemmas</a>, truth or dare, the board game, and a dozen others. And for those who want <a href=\"/en/couple-compatibility-test/\">a real answer about their relationship</a>, there's a way to compare your answers on what matters."
+    "title": "And after these quizzes?",
+    "p1": "Once you've been through them all, <a href=\"/en/couple-games/\">the games to play as a couple all year round</a> take over: <a href=\"/en/would-you-rather-couple-quiz/\">the “would you rather” dilemmas</a>, truth or dare, the board game, and a dozen others. And for those who want <a href=\"/en/couple-compatibility-test/\">a real answer about their relationship</a>, there's a way to compare your answers on what matters."
   },
   "section3": {
     "title": "How to play",
-    "p1": "All these quizzes play the same way. Solo, you answer and discover your result. As a couple, the first player answers the whole series, passes the phone, and the second answers in turn without seeing the first one's answers: both results show up at the end, side by side, with what sets you apart.",
-    "p2": "If you're not in the same place, each quiz has a remote mode: one person creates the game, the other joins with the code or the QR code, and each of you answers on your own phone. You see both answers after each question, and the result is the same on both sides.",
+    "p1": "All these quizzes play the same way. Together, the first one answers the whole series, passes the phone, and the second one answers in turn without seeing the first one's answers. Solo, you answer and discover your result.",
+    "p2": "For the quizzes about your future together, the couple gets a single result, the one that fits your two sets of answers best, and the list of questions where you don't agree. For the seasonal quizzes, each of you gets your own, and a remote mode lets you each play on your own phone.",
     "p3": "No account to create, nothing to install, and nothing is saved: the answers stay on your phones."
   },
   "faq": {
     "title": "Frequently asked questions",
-    "q1": "Are the special quizzes free?",
+    "q1": "Are the fun quizzes free?",
     "a1": "Yes, all of them, with no sign-up and no app to install. They're played in your phone's browser.",
     "q2": "Do you have to be two?",
-    "a2": "Not necessarily. Four of the five Halloween quizzes are played solo or as a couple. Only the supervillain duo quiz needs two players, since it composes a duo.",
+    "a2": "Not necessarily. Almost all of them can be played solo or as a couple, and only the supervillain duo quiz needs two players, since it composes a duo. But they're designed to be taken together: comparing your answers is the fun part.",
     "q3": "What happens to the quizzes once the season is over?",
     "a3": "They stay on this page, a bit further down, and at their own address. Nothing gets deleted: a Halloween quiz in the middle of March is fine too.",
     "q4": "When do the Christmas quizzes arrive?",
-    "a4": "In December. On the programme: how much you're willing to spend on each other, who'll give the worst gift, and a few other end-of-year ideas.",
+    "a4": "Before the holidays. On the programme: which of you is on the nice list, and a few other surprises.",
     "q5": "Can you play remotely?",
-    "a5": "Yes, every quiz has a remote mode. One person creates the game, the other joins with the code, and you each answer on your own phone."
+    "a5": "Yes for the seasonal quizzes: one person creates the game, the other joins with the code, and you each answer on your own phone. The quizzes about your future together are played on a single phone that you pass to each other."
   },
   "jsonLd": {
-    "name": "Special couple quizzes"
+    "name": "Fun quizzes for couples"
+  },
+  "resultatCommun": "One result for the two of you",
+  "sections": {
+    "futur": {
+      "titre": "Your future together",
+      "intro": "The dog you'll have, the house you'll live in: you each answer separately, and the quiz looks for what suits you both, with a photo at the end."
+    }
   }
 }

@@ -121,6 +121,9 @@
     quizPossession: { icon: '👻', img: 'quiz-marrant' },
     quizSuperVilain: { icon: '🦹', img: 'quiz-marrant' },
     quizDuoVilains: { icon: '🎭', img: 'quiz-marrant' },
+    // les quiz fun « pour nous » (11 novembre 2026)
+    quizChienNous: { icon: '🐶', img: 'quiz-marrant' },
+    quizMaisonNous: { icon: '🏡', img: 'quiz-marrant' },
   };
   const versCartes = (cles) => cles.map((k) => ({ routeKey: k, key: k, icon: (VISUELS[k] || {}).icon || '💞', img: (VISUELS[k] || {}).img || 'test-couple' }));
 
@@ -714,7 +717,7 @@
     <div class="quiz-section-block quiz-section-speciaux">
       <div class="quiz-section-block-inner">
         <div class="bloc-entete">
-          <span class="bloc-pastille">🎃 <%= t('home:quizGrid.speciauxEyebrow', 'Édition spéciale') %></span>
+          <span class="bloc-pastille"><%= saisonCourante === 'halloween' ? '🎃' : (saisonCourante === 'noel' ? '🎄' : '✨') %> <%= t('home:quizGrid.speciauxEyebrow', 'Quiz fun') %></span>
           <h2 class="bloc-titre"><%= titreSpeciaux %></h2>
           <span class="bloc-trait" aria-hidden="true"></span>
           <p class="bloc-sous-titre"><%= t('home:quizGrid.speciauxDesc', '').replace('{{n}}', speciauxFiltered.length) %></p>

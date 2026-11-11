@@ -177,17 +177,19 @@
       "quizMortFilmHorreur": "Vijftien situaties, een overlevingstijd in minuten, en wie als eerste sterft als jullie met z'n tweeën spelen.",
       "quizPossession": "Voor ieder een kans op bezetenheid in procenten, en wie de demonen zouden kiezen.",
       "quizSuperVilain": "Je entree op het feest, je kostuum, je lach: de superschurk op wie je lijkt, van de Joker tot Maleficent.",
-      "quizDuoVilains": "De kraak van de halloweennacht: ieders rol, en het beroemde schurkenduo dat jullie samen vormen."
+      "quizDuoVilains": "De kraak van de halloweennacht: ieders rol, en het beroemde schurkenduo dat jullie samen vormen.",
+      "quizChienNous": "Ieder antwoordt voor zich, en de test vindt de hond die bij jullie allebei past, van de corgi tot de Berner sennenhond.",
+      "quizMaisonNous": "Ieder antwoordt voor zich, en de test laat de plek zien waar jullie je allebei thuis zouden voelen, van het appartement in de stad tot de camperbus."
     },
     "testsEyebrow": "De tests",
     "quizzesEyebrow": "De quizzen",
     "jeuxEyebrow": "De spelletjes",
-    "speciauxEyebrow": "Speciale editie",
-    "speciauxTitle": "Onze themaquizzen, per seizoen",
+    "speciauxEyebrow": "Themaquizzen",
+    "speciauxTitle": "Jullie hond, jullie huis: onze themaquizzen om samen te doen",
     "speciauxTitleSaison": {
       "halloween": "Speciaal voor Halloween: onze (een beetje) enge quizzen"
     },
-    "speciauxDesc": "{{n}} quizzen om alleen of met z'n tweeën te doen, voor een avond die anders is dan anders. Je kunt ze allemaal ook op afstand spelen, ieder op een eigen telefoon.",
+    "speciauxDesc": "{{n}} luchtige quizzen om samen te doen. Ieder antwoordt voor zich, en daarna vergelijken jullie.",
     "speciauxCta": "Bekijk alle themaquizzen"
   },
   "customQuizPromo": {

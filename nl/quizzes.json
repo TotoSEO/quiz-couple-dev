@@ -557,10 +557,10 @@
     "metaDescription": "Wie houdt het meest van wie in jullie relatie? Een test van 20 vragen over de kleine gebaren, alleen of samen, ieder voor zich."
   },
   "speciauxCouple": {
-    "title": "Themaquiz voor koppels: Halloween, kerst en meer",
+    "title": "Themaquiz voor koppels: jullie hond, jullie huis en meer",
     "shortTitle": "Themaquizzen",
-    "metaDescription": "Een themaquiz voor koppels, per seizoen. Voor Halloween: welke seriemoordenaar bij jou past, wie als eerste doodgaat in een horrorfilm, wie bezeten raakt.",
-    "description": "De wat gekkere quizzen voor met z’n tweeën, per seizoen: nu Halloween, straks kerst."
+    "metaDescription": "Een themaquiz voor koppels om samen te doen: de hond en het huis die bij jullie passen, plus de seizoensquizzen. Ieder antwoordt apart, dan vergelijken.",
+    "description": "Luchtige quizzen om samen te doen: jullie hond en jullie huis op de foto, en de seizoensquizzen."
   },
   "quizSerialKiller": {
     "title": "Seriemoordenaar quiz: welke past bij jou? Alleen of samen",
@@ -591,6 +591,18 @@
     "shortTitle": "Welk superschurkenduo zijn jullie",
     "metaDescription": "Welk superschurkenduo zijn jullie? De halloweenkraak in 15 vragen elk, ieders rol in het duo en het beroemde schurkenduo dat jullie samen vormen.",
     "description": "Ieder antwoordt voor zich, en de quiz geeft jullie ieders rol in het duo en het beroemde schurkenduo dat jullie vormen."
+  },
+  "quizChienNous": {
+    "title": "Welke hond past bij ons? De test voor koppels",
+    "shortTitle": "Welke hond past bij ons",
+    "metaDescription": "Welke hond past bij ons? Ieder beantwoordt 12 vragen (huis, wandelen, haren op de bank) en de test vindt de hond voor jullie twee, met foto.",
+    "description": "Twaalf vragen per persoon, en de hond die bij jullie als koppel past, van de corgi tot de Berner sennenhond, met foto."
+  },
+  "quizMaisonNous": {
+    "title": "Welk huis past bij ons? De test voor koppels",
+    "shortTitle": "Welk huis past bij ons",
+    "metaDescription": "Welk huis past bij ons? Appartement in de stad, huis met tuin, opknaphuis of camperbus: ieder beantwoordt 12 vragen en de test laat jullie plek zien.",
+    "description": "Twaalf vragen per persoon, en de plek waar jullie je allebei thuis voelen: appartement, huis op het platteland, loft, tiny house..."
   },
   "bilanCouple": {
     "title": "Relatiecheck online | Direct resultaat, ook als pdf",

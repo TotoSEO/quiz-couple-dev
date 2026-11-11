@@ -177,18 +177,20 @@
       "quizMortFilmHorreur": "Fünfzehn Situationen, eine Überlebenszeit in Minuten, und das erste Opfer, wenn ihr zu zweit spielt.",
       "quizPossession": "Ein Besessenheitsrisiko in Prozent für jeden, und die Person, die die Dämonen wählen würden.",
       "quizSuperVilain": "Dein Auftritt auf der Party, dein Kostüm, dein Lachen: der Superschurke, der dir ähnelt, vom Joker bis Maleficent.",
-      "quizDuoVilains": "Der Coup der Halloween-Nacht: eure Rollen, und das berühmte Schurken-Duo, das ihr bildet."
+      "quizDuoVilains": "Der Coup der Halloween-Nacht: eure Rollen, und das berühmte Schurken-Duo, das ihr bildet.",
+      "quizChienNous": "Jeder antwortet für sich, und der Test findet den Hund, der zu euch beiden passt, vom Corgi bis zum Berner Sennenhund.",
+      "quizMaisonNous": "Jeder antwortet für sich, und der Test zeigt euch den Ort, an dem ihr euch beide wohlfühlen würdet, von der Stadtwohnung bis zum Campervan."
     },
     "testsEyebrow": "Die Tests",
     "quizzesEyebrow": "Die Quiz",
     "jeuxEyebrow": "Die Spiele",
-    "speciauxEyebrow": "Sonderausgabe",
-    "speciauxTitle": "Unsere besonderen Quiz, je nach Jahreszeit",
+    "speciauxEyebrow": "Spaß-Quiz",
+    "speciauxTitle": "Euer Hund, euer Haus: unsere Spaß-Quiz für zwei",
     "speciauxTitleSaison": {
       "halloween": "Halloween-Special: unsere (ein bisschen) gruseligen Quiz"
     },
-    "speciauxDesc": "{{n}} Quiz für allein oder zu zweit, für einen Abend, der anders ist als die anderen. Jedes gibt es auch im Fernmodus.",
-    "speciauxCta": "Alle besonderen Quiz anzeigen"
+    "speciauxDesc": "{{n}} leichte Quiz für zwei. Jeder antwortet für sich, dann wird verglichen.",
+    "speciauxCta": "Alle Spaß-Quiz anzeigen"
   },
   "customQuizPromo": {
     "eyebrow": "Eigenes Quiz",

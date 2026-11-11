@@ -412,7 +412,9 @@
     "quizMortFilmHorreur": "Quiz „Wer stirbt zuerst im Horrorfilm“",
     "quizPossession": "Quiz „Wer könnte besessen werden“",
     "quizSuperVilain": "Superschurken-Quiz",
-    "quizDuoVilains": "Superschurken-Duo-Quiz"
+    "quizDuoVilains": "Superschurken-Duo-Quiz",
+    "quizChienNous": "Welcher Hund passt zu uns?",
+    "quizMaisonNous": "Welches Haus passt zu uns?"
   },
   "truefalse": {
     "ready": "Bereit für Richtig oder Falsch?",

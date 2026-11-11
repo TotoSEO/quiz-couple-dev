@@ -177,18 +177,20 @@
       "quizMortFilmHorreur": "Fifteen situations, a survival time in minutes, and the first victim when you play as a couple.",
       "quizPossession": "A possession risk in percent for each of you, and the one the demons would choose.",
       "quizSuperVilain": "Your entrance at the party, your costume, your laugh: the supervillain you're most like, from the Joker to Maleficent.",
-      "quizDuoVilains": "The Halloween night heist: each of your roles, and the famous villain duo you form."
+      "quizDuoVilains": "The Halloween night heist: each of your roles, and the famous villain duo you form.",
+      "quizChienNous": "You each answer separately, and the quiz finds the dog that suits you both, from the corgi to the Bernese mountain dog.",
+      "quizMaisonNous": "You each answer separately, and the quiz shows you the place where you'd both be happy, from the city apartment to the camper van."
     },
     "testsEyebrow": "The tests",
     "quizzesEyebrow": "The quizzes",
     "jeuxEyebrow": "The games",
-    "speciauxEyebrow": "Special edition",
-    "speciauxTitle": "Our special quizzes, by season",
+    "speciauxEyebrow": "Fun quizzes",
+    "speciauxTitle": "Your dog, your house: our fun quizzes to take together",
     "speciauxTitleSaison": {
       "halloween": "Halloween special: our (slightly) scary quizzes"
     },
-    "speciauxDesc": "{{n}} quizzes to take solo or as a couple, for an evening unlike any other. Each one has a remote mode.",
-    "speciauxCta": "See all special quizzes"
+    "speciauxDesc": "{{n}} light-hearted quizzes to take together. You each answer separately, then compare.",
+    "speciauxCta": "See all fun quizzes"
   },
   "customQuizPromo": {
     "eyebrow": "Custom quiz",

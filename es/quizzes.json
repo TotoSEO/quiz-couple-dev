@@ -557,10 +557,10 @@
     "metaDescription": "¿Quién ama más en tu pareja? Un test de 20 preguntas sobre los pequeños gestos, para hacer solo o en pareja, cada uno por su lado."
   },
   "speciauxCouple": {
-    "title": "Quiz especiales para hacer en pareja: Navidad, Halloween…",
-    "shortTitle": "Quiz especiales",
-    "metaDescription": "Los quiz de temporada para hacer en pareja. Para Halloween: qué asesino en serie te corresponde, quién muere primero en una película de terror, quién podría ser poseído, qué supervillano eres. Gratis.",
-    "description": "Los quiz un poco locos para hacer en pareja según la temporada: Halloween por ahora, Navidad después."
+    "title": "Quiz originales para parejas: ¿qué perro, qué casa?",
+    "shortTitle": "Quiz originales",
+    "metaDescription": "Quiz originales para hacer en pareja: vuestro perro, vuestra casa, y los quiz de temporada. Cada uno responde por su lado, y luego comparáis los resultados.",
+    "description": "Quiz ligeros para hacer en pareja: vuestro perro y vuestra casa en foto, y los quiz de temporada."
   },
   "quizSerialKiller": {
     "title": "Quiz: ¿con qué asesino en serie eres compatible? (solo o en pareja)",
@@ -591,6 +591,18 @@
     "shortTitle": "Qué dúo de supervillanos formáis",
     "metaDescription": "En pareja: el golpe de la noche de Halloween en 15 preguntas cada uno, vuestro papel en el dúo (el cerebro, el caos, la fuerza...) y el dúo de malvados célebre que formáis, del Joker y Harley Quinn a Bonnie y Clyde.",
     "description": "Cada uno responde por su lado, y el quiz os da vuestro papel en el dúo y el dúo de malvados célebre que formáis."
+  },
+  "quizChienNous": {
+    "title": "¿Qué perro es para nosotros? El test para hacer en pareja",
+    "shortTitle": "Qué perro es para nosotros",
+    "metaDescription": "Cada uno responde a 12 preguntas (casa, paseos, pelos en el sofá) y el test encuentra el perro para vosotros dos, con su foto: corgi, golden, shiba...",
+    "description": "Doce preguntas cada uno, y el perro que le iría bien a vuestra pareja, del corgi al boyero de Berna, con su foto."
+  },
+  "quizMaisonNous": {
+    "title": "¿Qué casa es para nosotros? El test para hacer en pareja",
+    "shortTitle": "Qué casa es para nosotros",
+    "metaDescription": "¿Piso en la ciudad, casa con jardín, casa para reformar o furgoneta camper? Cada uno responde a 12 preguntas y el test enseña la casa para vosotros dos.",
+    "description": "Doce preguntas cada uno, y el sitio donde estaríais a gusto los dos: piso, casa de campo, loft, tiny house..."
   },
   "bilanCouple": {
     "title": "Evaluación de pareja online | Resultados al instante y PDF",

@@ -563,10 +563,10 @@
     "metaDescription": "Qui aime le plus l'autre dans votre couple ? Le test en 20 questions sur les petits gestes, à faire seul(e) ou à deux, chacun de son côté."
   },
   "speciauxCouple": {
-    "title": "Quiz spéciaux à faire en couple : Noël, Halloween…",
-    "shortTitle": "Quiz spéciaux",
-    "metaDescription": "Les quiz de saison à faire à deux. Pour Halloween : quel serial killer te correspond, qui meurt en premier dans un film d'horreur, qui pourrait se faire posséder, quel super-vilain es-tu. Gratuits.",
-    "description": "Les quiz un peu fous à faire à deux selon la saison : Halloween pour le moment, Noël ensuite."
+    "title": "Quiz fun à deux : quel chien, quelle maison pour nous ?",
+    "shortTitle": "Quiz fun",
+    "metaDescription": "Les quiz fun à faire à deux : quel chien est fait pour nous, quelle maison, et les quiz de saison. Chacun répond de son côté, puis vous comparez vos résultats.",
+    "description": "Les quiz légers à faire à deux : votre chien et votre maison en photo, et les quiz de saison."
   },
   "quizSerialKiller": {
     "title": "Quiz : avec quel serial killer es-tu compatible ? (seul ou à deux)",
@@ -597,6 +597,18 @@
     "shortTitle": "Quel duo de super-vilains formez-vous",
     "metaDescription": "À deux : le casse de la nuit d'Halloween en 15 questions chacun, votre rôle dans le duo (le cerveau, le chaos, la force...) et le duo de méchants célèbre que vous formez, du Joker et Harley Quinn à Bonnie et Clyde.",
     "description": "Chacun répond de son côté, et le quiz vous donne votre rôle dans le duo et le duo de méchants célèbre que vous formez."
+  },
+  "quizChienNous": {
+    "title": "Quel chien est fait pour nous ? Le test à faire à deux",
+    "shortTitle": "Quel chien est fait pour nous",
+    "metaDescription": "Chacun répond à 12 questions (logement, sorties, poils sur le canapé) et le test trouve le chien fait pour vous deux, avec sa photo : corgi, golden, shiba...",
+    "description": "Douze questions chacun, et le chien qui irait à votre couple, du corgi au bouvier bernois, avec sa photo."
+  },
+  "quizMaisonNous": {
+    "title": "Quelle maison est faite pour nous ? Le test à faire à deux",
+    "shortTitle": "Quelle maison est faite pour nous",
+    "metaDescription": "Appartement en ville, maison avec jardin, vieille bâtisse à retaper ou van ? Chacun répond à 12 questions, et le test montre la maison faite pour vous deux.",
+    "description": "Douze questions chacun, et l'endroit où vous seriez bien tous les deux : appartement, maison de campagne, loft, tiny house..."
   },
   "bilanCouple": {
     "title": "Bilan de couple à faire en ligne | PDF résultats immédiats",

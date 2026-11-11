@@ -1,0 +1,123 @@
+{
+  "hero": {
+    "badge": "Quiz fun • À deux, ou seul(e) pour le couple",
+    "title": "Le test pour savoir quelle maison est faite pour vous deux",
+    "titleHighlight": "quelle maison est faite pour vous deux",
+    "description": "Un appartement en ville, une maison avec jardin, une vieille bâtisse à retaper ou un van ? Chacun répond à douze questions sur la vie qu'il imagine, et le test vous montre l'endroit où vous seriez bien tous les deux.",
+    "subtitle": "12 questions • 3 minutes chacun • sur un seul téléphone",
+    "jumpBtn": "Faire le test"
+  },
+  "section1": {
+    "title": "Comment marche le test",
+    "p1": "Ce test sert à trouver le genre d'endroit où vous seriez bien à deux : en ville ou au milieu des champs, dans du neuf ou dans de l'ancien, avec des voisins tout près ou sans personne autour. Il pose douze questions sur votre vie de tous les jours : ce que vous voyez le matin par la fenêtre, ce que vous faites le samedi soir, la place que prennent vos affaires, etc.",
+    "p2": "Par exemple, à la question « Les travaux : », vous pouvez répondre « jamais, on veut juste poser nos valises », « un coup de peinture, pas plus », « on aime bricoler le week-end » ou « tout refaire nous-mêmes, c'est le projet d'une vie ». Si vous répondez « jamais » et que votre moitié rêve de tout refaire, le test le voit : il additionne vos deux séries de réponses et il garde le logement qui a la meilleure note pour vous deux.",
+    "p3": "À deux, le premier répond aux douze questions, passe le téléphone, et le second répond sans voir ce que l'autre a choisi. À la fin, vous avez la maison du couple avec sa photo, celle que chacun aurait choisie tout seul, et la liste des questions où vous n'avez pas répondu pareil.",
+    "p4": "Vous pouvez aussi le faire seul(e), en répondant pour vous deux. Mais vous n'aurez pas la comparaison, et c'est la partie la plus intéressante."
+  },
+  "section2": {
+    "title": "Les dix maisons du test",
+    "intro": "Le test peut tomber sur dix résultats, du plus classique au plus inattendu. Voici à qui chacun convient le mieux.",
+    "galerie": [
+      {
+        "id": "pavillon",
+        "titre": "La maison avec jardin",
+        "texte": "Pour les couples qui veulent s'installer pour de bon, avec de la place, un barbecue et une chambre d'amis.",
+        "alt": "Une maison à étage dans une rue calme, avec une haie, un vélo contre la clôture et un jardin"
+      },
+      {
+        "id": "appartement",
+        "titre": "L'appartement en centre-ville",
+        "texte": "Pour ceux qui veulent tout faire à pied et qui préfèrent un balcon à une tondeuse.",
+        "alt": "Un balcon en fer forgé avec une table de bistrot et deux chaises, au-dessus des toits d'une ville"
+      },
+      {
+        "id": "campagne",
+        "titre": "La maison de campagne",
+        "texte": "Pour ceux qui rêvent d'espace, d'un potager et de silence le soir.",
+        "alt": "Une vieille maison en pierre aux volets bleus, couverte de rosiers, devant un potager"
+      },
+      {
+        "id": "loft",
+        "titre": "Le loft",
+        "texte": "Pour les citadins qui aiment les grands volumes et qui reçoivent souvent.",
+        "alt": "Un loft aux murs de briques, avec de grandes verrières, un canapé et un escalier en métal"
+      },
+      {
+        "id": "architecte",
+        "titre": "La maison d'architecte",
+        "texte": "Pour ceux qui ont des goûts précis, un budget, et aucune envie de faire des travaux.",
+        "alt": "Une maison contemporaine en béton et en verre, au bord d'une piscine, à la tombée du jour"
+      },
+      {
+        "id": "tiny",
+        "titre": "La tiny house",
+        "texte": "Pour les couples qui ont peu d'affaires et qui veulent vivre dans la nature, en petit.",
+        "alt": "Une petite maison en bois sur roues, éclairée par une guirlande, au bord d'une forêt"
+      },
+      {
+        "id": "renover",
+        "titre": "La vieille bâtisse à retaper",
+        "texte": "Pour les bricoleurs patients qui veulent tout refaire à leur idée.",
+        "alt": "Un vieux manoir en pierre couvert de lierre, avec un échafaudage et une brouette devant"
+      },
+      {
+        "id": "van",
+        "titre": "Le van aménagé",
+        "texte": "Pour ceux qui ne tiennent pas en place et qui n'ont besoin que d'un lit et d'une route.",
+        "alt": "Un van aux portes arrière ouvertes sur un lit, garé au bord d'une falaise au coucher du soleil"
+      },
+      {
+        "id": "peniche",
+        "titre": "La péniche",
+        "texte": "Pour ceux qui veulent vivre sur l'eau, dans un endroit qui ne ressemble à aucun autre.",
+        "alt": "Une péniche amarrée sur un canal, le pont couvert de plantes, avec une table et des vélos"
+      },
+      {
+        "id": "palier",
+        "titre": "Deux appartements sur le même palier",
+        "texte": "Pour les couples qui s'aiment et qui tiennent quand même à avoir chacun leur chez-soi.",
+        "alt": "Deux portes d'appartement côte à côte sur un palier, une rose et une violette, chacune avec son paillasson"
+      }
+    ]
+  },
+  "section3": {
+    "title": "Choisir où vivre à deux : les sujets à mettre sur la table",
+    "intro": "Chercher un logement à deux, c'est rarement une simple affaire de goût. Derrière « j'aime bien cette maison », il y a quatre sujets dont on parle beaucoup moins.",
+    "sub1Title": "La ville ou la campagne",
+    "sub1Text": "C'est le désaccord le plus courant. L'un a grandi dans un village et étouffe en ville, l'autre ne se voit pas à vingt minutes de voiture de la première boulangerie. Avant de regarder les annonces, racontez-vous une journée ordinaire dans l'endroit que vous imaginez, du réveil au coucher. On se rend vite compte de ce qui coince.",
+    "sub2Title": "Les travaux",
+    "sub2Text": "Une maison à refaire coûte moins cher à l'achat, et beaucoup plus en week-ends. Si l'un adore ça et que l'autre déteste, le chantier devient vite un sujet de dispute. Mettez-vous d'accord sur ce que vous êtes capables de faire vous-mêmes, sur le budget, et sur le temps pendant lequel vous acceptez de vivre dans la poussière.",
+    "sub3Title": "L'argent",
+    "sub3Text": "Acheter ou louer, combien mettre dans le loyer ou le crédit, qui paie quoi si l'un gagne plus que l'autre : ce sont des questions qu'il vaut mieux régler avant de signer. Les couples qui <a href=\"/test-habiter-vivre-ensemble/\">s'installent ensemble pour la première fois</a> les découvrent souvent en route.",
+    "sub4Title": "La place de chacun",
+    "sub4Text": "Vivre à deux, ça ne veut pas dire tout partager. Certains ont besoin d'une pièce à eux, d'un bureau, d'un atelier, ou juste d'un coin de canapé où on ne leur parle pas. D'autres couples choisissent même de vivre chacun chez soi, et ils ne s'aiment pas moins pour autant. Demandez-vous <a href=\"/quel-type-de-couple-etes-vous/\">quel genre de couple vous êtes</a>, plutôt fusionnel ou plutôt indépendant : la bonne maison ne sera pas la même."
+  },
+  "section4": {
+    "title": "Et si vous n'êtes pas d'accord ?",
+    "p1": "Ça arrive presque toujours, et c'est plutôt bon signe : ça veut dire que chacun a répondu pour de vrai. Regardez la liste de vos réponses différentes. Si elles portent sur le style ou sur la taille, vous trouverez un compromis sans trop de mal. Si elles portent sur la ville ou la campagne, ou sur le fait de vivre ensemble ou non, prenez le temps d'en parler.",
+    "p2": "Pensez aussi à ce qui viendra avec la maison. Un jardin, c'est la possibilité d'<a href=\"/test-quel-chien-est-fait-pour-nous/\">avoir un chien</a>, et une chambre en plus, c'est peut-être un enfant un jour. Le logement que vous choisissez en dit long sur la vie que vous prévoyez."
+  },
+  "section5": {
+    "title": "Ce qu'il faut savoir sur ce test",
+    "p1": "Ce test est un jeu. Il ne connaît pas votre budget, ni les prix de l'immobilier chez vous : il vous dit seulement vers quel genre d'endroit vos réponses vous emmènent. Prenez-le comme une façon d'ouvrir la discussion, pas comme le conseil d'un agent immobilier.",
+    "p2": "Rien n'est enregistré : vos réponses restent sur votre téléphone. Seul le résultat obtenu est compté, sans prénom, pour savoir lesquels sortent le plus. Les photos ont été créées pour cette page."
+  },
+  "seo": {
+    "faqTitle": "Questions fréquentes",
+    "faq1Q": "Quels logements peut-on obtenir ?",
+    "faq1A": "Dix résultats sont possibles : la maison avec jardin, l'appartement en centre-ville, la maison de campagne, le loft, la maison d'architecte, la tiny house, la vieille bâtisse à retaper, le van aménagé, la péniche, et deux appartements sur le même palier pour les couples qui préfèrent vivre chacun chez soi.",
+    "faq2Q": "Comment le résultat est-il calculé ?",
+    "faq2A": "Chaque réponse donne des points aux logements qui lui correspondent. Par exemple, « un resto ou un bar à dix minutes à pied » donne des points à l'appartement en centre-ville et au loft, et aucun à la maison de campagne. À deux, le test additionne vos deux séries de réponses, et le logement qui a la meilleure note devient celui du couple.",
+    "faq3Q": "Peut-on faire le test seul(e) ?",
+    "faq3A": "Oui. Vous choisissez « Seul(e), pour nous deux » et vous répondez en pensant à votre couple. Vous aurez un résultat, mais pas la comparaison de vos réponses : pour ça, il faut être deux.",
+    "faq4Q": "Maison ou appartement : comment choisir à deux ?",
+    "faq4A": "Le plus simple est de partir de votre semaine, pas du logement. Si vous sortez beaucoup et que vous n'avez pas envie d'entretenir un extérieur, un appartement bien placé vous ira mieux. Si vous recevez souvent, que vous voulez un jardin ou que vous pensez agrandir la famille, la maison s'impose assez vite. Le test pose justement ces questions-là, à chacun de son côté.",
+    "faq5Q": "Et si l'un de nous préfère vivre seul ?",
+    "faq5A": "Ce n'est pas forcément mauvais signe. Des couples vivent chacun chez soi par choix, pour garder leurs habitudes ou leur espace, et s'en portent très bien. Le test a un résultat pour ça : « deux appartements sur le même palier ». Ce qui compte, c'est que vous soyez deux à le vouloir.",
+    "faq6Q": "Mes réponses sont-elles enregistrées ?",
+    "faq6A": "Non. Les réponses restent sur votre téléphone. Seul le résultat obtenu est compté, sans prénom, pour la répartition des résultats."
+  },
+  "jsonLd": {
+    "about": "choisir un logement à deux"
+  }
+}
