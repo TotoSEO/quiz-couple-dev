@@ -136,6 +136,7 @@
     "quizMaisonNous": "Che casa fa per noi?",
     "quizListeNoel": "Buoni o cattivi?",
     "quizDuoNoel": "I vostri personaggi di Natale",
+    "quizPorteCulotte": "Chi porta i pantaloni?",
     "bilanCouple": "Valutazione di coppia",
     "evaluer": "Valutare la coppia",
     "evaluerSous": "La valutazione completa, in due o da soli",
@@ -161,6 +162,7 @@
       "pimenter": "Un po' piccanti",
       "halloween": "Halloween",
       "futur": "Il futuro in due",
+      "vous": "Voi due",
       "noel": "Natale"
     },
     "retour": "Indietro"

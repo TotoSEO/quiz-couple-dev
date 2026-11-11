@@ -208,7 +208,9 @@
     // les quiz fun « pour nous » (11 novembre 2026)
     'chien-nous': 'chienNous', 'maison-nous': 'maisonNous',
     // les deux quiz de Noël (novembre 2026)
-    'liste-noel': 'listeNoel', 'duo-noel': 'duoNoel'
+    'liste-noel': 'listeNoel', 'duo-noel': 'duoNoel',
+    // qui porte la culotte (11 novembre 2026), sur le moteur de « qui aime le plus »
+    'porte-culotte': 'culotte'
   };
   let gdPrefix = gdPrefixMap[quizType] || quizType;
   // Le test de couple sain n'a de questions propres que hors français ; en
@@ -220,15 +222,15 @@
     if (!natif || natif === gdPrefix + '.q1') gdPrefix = 'couple';
   }
 
-  // Deux tests écrivent leurs réponses une seule fois pour toutes les
-  // questions : « qui aime le plus l'autre ? » (moi, l'autre, autant l'un que
-  // l'autre) et la charge mentale (de « toujours moi » à « toujours » l'autre).
+  // Trois pages écrivent leurs réponses une seule fois pour toutes les
+  // questions : « qui aime le plus l'autre ? » et « qui porte la culotte ? »
+  // (moi, l'autre, autant l'un que l'autre), et la charge mentale (de « toujours moi » à « toujours » l'autre).
   // Chaque question les reçoit ; l'autre est X, comme partout où la page ne
   // connaît pas le prénom.
   const reponsesFixes = (function() {
     const lire = function(k) { const v = tgd.local(k, ''); return v && v !== k ? String(v).replace(/\{\{\s*[ab]\s*\}\}/g, 'X') : ''; };
     let cles = null;
-    if (quizType === 'qui-aime') cles = ['quiAime.optMoi', null, 'quiAime.optAutant'];
+    if (quizType === 'qui-aime' || quizType === 'porte-culotte') cles = [gdPrefix + '.optMoi', null, gdPrefix + '.optAutant'];
     if (quizType === 'charge-mentale') cles = ['chargeMentale.optToujoursMoi', 'chargeMentale.optPlutotMoi', 'chargeMentale.optDeux', 'chargeMentale.optPlutotAutre', 'chargeMentale.optToujoursAutre'];
     if (!cles) return [];
     const r = cles.map(function(k) { return k === null ? 'X' : lire(k); });

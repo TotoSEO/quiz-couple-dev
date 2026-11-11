@@ -40,11 +40,13 @@
     "quizListeNoelNom": "Artig oder unartig?",
     "quizListeNoelTagline": "Zwölf Fragen pro Person zu eurem Dezember: euer Platz als Paar auf der Liste des Weihnachtsmanns, und wer von euch artiger war.",
     "quizDuoNoelNom": "Welcher Weihnachtstyp seid ihr?",
-    "quizDuoNoelTagline": "Zwölf Fragen pro Person zu eurem Weihnachten zu zweit, und euer Duo mit Foto: zwei Elfen, zwei Rentiere, der Nussknacker und die Zuckerfee..."
+    "quizDuoNoelTagline": "Zwölf Fragen pro Person zu eurem Weihnachten zu zweit, und euer Duo mit Foto: zwei Elfen, zwei Rentiere, der Nussknacker und die Zuckerfee...",
+    "quizPorteCulotteNom": "Wer hat die Hosen an?",
+    "quizPorteCulotteTagline": "Zwanzig Fragen dazu, wer bei euch entscheidet, allein oder zu zweit: der Anteil von jedem und die Fragen, bei denen ihr euch nicht einig seid."
   },
   "section1": {
     "title": "Wozu diese Quiz gut sind",
-    "p1": "Die Quiz auf dieser Seite haben nichts mit unseren Paartests gemein. Sie messen nichts Ernstes und geben eurer Beziehung keine Note. Es sind Spiele: welcher Hund zu euch als Paar passen würde, in welchem Haus ihr euch wohlfühlen würdet, oder wer von euch im Horrorfilm zuerst sterben würde.",
+    "p1": "Die Quiz auf dieser Seite haben nichts mit unseren Paartests gemein. Sie messen nichts Ernstes und geben eurer Beziehung keine Note. Es sind Spiele: welcher Hund zu euch als Paar passen würde, in welchem Haus ihr euch wohlfühlen würdet, <a href=\"/de/wer-hat-die-hosen-an-test/\">wer bei euch das letzte Wort hat</a>, oder wer von euch im Horrorfilm zuerst sterben würde.",
     "p2": "Sie funktionieren, weil jeder für sich antwortet. Herauszufinden, dass dein Schatz einen Husky will, während du an einen Dackel gedacht hast, oder ein altes Haus zum Renovieren, während du von einer Stadtwohnung geträumt hast, füllt einen guten Teil des Abends!",
     "p3": "Die Quiz zu eurer Zukunft zu zweit gibt es das ganze Jahr. Die saisonalen rücken an den Anfang der Seite, wenn ihre Zeit kommt: die Halloween-Quiz im Oktober, dann ab Mitte November die Weihnachts-Quiz, mit denen ihr herausfindet, <a href=\"/de/artig-oder-unartig-test/\">ob ihr als Paar dieses Jahr artig wart</a> oder <a href=\"/de/welcher-weihnachtstyp-seid-ihr-test/\">welches Weihnachtsduo ihr seid</a>. Sie bleiben auch sonst spielbar."
   },
@@ -69,7 +71,7 @@
     "q4": "Gibt es Weihnachts-Quiz?",
     "a4": "Ja, zwei. „Artig oder unartig?“ sagt euch, auf welcher Liste des Weihnachtsmanns ihr als Paar steht und wer von euch beiden artiger war. Das Quiz zu den Weihnachtsfiguren zeigt euch das Duo, das ihr seid, vom Weihnachtsmann und der Weihnachtsfrau bis zu Scrooge und dem Geist der Weihnacht. Von Mitte November bis Ende Dezember stehen sie am Anfang dieser Seite.",
     "q5": "Kann man aus der Ferne spielen?",
-    "a5": "Ja, bei den Halloween-Quiz: Eine Person erstellt die Partie, die andere tritt mit dem Code bei, und ihr antwortet jeder auf dem eigenen Handy. Die Quiz zu eurer Zukunft zu zweit und die Weihnachts-Quiz spielt man an einem einzigen Handy, das ihr weitergebt."
+    "a5": "Ja, bei den Halloween-Quiz: Eine Person erstellt die Partie, die andere tritt mit dem Code bei, und ihr antwortet jeder auf dem eigenen Handy. Die anderen Quiz spielt man an einem einzigen Handy, das ihr weitergebt."
   },
   "jsonLd": {
     "name": "Spaß-Quiz für Paare"
@@ -79,6 +81,10 @@
     "futur": {
       "titre": "Eure Zukunft zu zweit",
       "intro": "Der Hund, den ihr haben werdet, das Haus, in dem ihr wohnen werdet: Jeder antwortet für sich, und das Quiz sucht, was zu euch beiden passt, mit einem Foto obendrauf."
+    },
+    "vous": {
+      "titre": "Ihr zwei",
+      "intro": "Wer bei euch entscheidet, wer das letzte Wort hat: Quiz über eure Beziehung, so wie sie ist, allein oder abwechselnd auf demselben Handy."
     }
   }
 }

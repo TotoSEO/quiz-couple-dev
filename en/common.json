@@ -136,6 +136,7 @@
     "quizMaisonNous": "What house suits us?",
     "quizListeNoel": "Naughty or Nice?",
     "quizDuoNoel": "Your Christmas Characters",
+    "quizPorteCulotte": "Who Wears the Pants?",
     "bilanCouple": "Relationship assessment",
     "evaluer": "Assess your relationship",
     "evaluerSous": "The complete assessment, together or on your own",
@@ -161,6 +162,7 @@
       "pimenter": "Spice it up",
       "halloween": "Halloween",
       "futur": "Your future together",
+      "vous": "The two of you",
       "noel": "Christmas"
     },
     "retour": "Back"

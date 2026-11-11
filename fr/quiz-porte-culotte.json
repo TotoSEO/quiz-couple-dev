@@ -1,0 +1,71 @@
+{
+  "hero": {
+    "badge": "Quiz fun • Seul(e) ou à deux",
+    "title": "Le test pour savoir qui porte la culotte dans votre couple",
+    "titleHighlight": "qui porte la culotte",
+    "description": "Le film du soir, les vacances, les comptes, le dernier mot pendant une dispute... Répondez seul(e), ou chacun de votre côté, et découvrez qui décide le plus chez vous.",
+    "subtitle": "Vingt questions, quatre à huit minutes, gratuit et sans inscription",
+    "jumpBtn": "Faire le test"
+  },
+  "section1": {
+    "title": "Comment marche le test « qui porte la culotte » ?",
+    "intro": "Ce test est un jeu à faire en couple. Il pose vingt questions sur les décisions de tous les jours, et pour chacune vous répondez « Moi », le prénom de votre partenaire, ou « Autant l'un que l'autre ».",
+    "p1": "Par exemple : « Qui choisit la destination des vacances ? » Si c'est presque toujours vous, vous répondez « Moi ». Si c'est votre partenaire, vous choisissez son prénom. Et si vous en discutez à chaque fois, c'est « Autant l'un que l'autre ».",
+    "p2": "Toutes les questions ne pèsent pas pareil. Choisir la musique en voiture compte moins que tenir les comptes, décider pour les grosses dépenses ou avoir le dernier mot pendant une dispute. À la fin, le test additionne tout et montre la part de chacun, comme une balance.",
+    "p3": "À deux, le premier répond aux vingt questions, passe le téléphone, et le second répond sans voir ce que l'autre a choisi. Le test additionne vos deux séries de réponses, et il vous dit aussi sur combien de questions vous êtes d'accord. C'est souvent le plus drôle : il y a des couples où chacun est persuadé que c'est lui qui décide !"
+  },
+  "section2": {
+    "title": "D'où vient l'expression « porter la culotte » ?",
+    "p1": "« Porter la culotte », ça veut dire être celui ou celle qui commande dans le couple. L'expression vient d'une époque où la culotte était un vêtement d'homme, et où c'était l'homme qui dirigeait le ménage. Dire d'une femme qu'elle « portait la culotte », c'était dire que chez elle, c'était elle qui décidait. D'ailleurs, dans les exemples que donne le Wiktionnaire, c'est toujours une femme qui porte la culotte !",
+    "p2": "On disait aussi « porter le pantalon », et on retrouve la même image dans beaucoup de langues : les Anglais disent « wear the trousers », les Américains « wear the pants », les Allemands « die Hosen anhaben », les Italiens « portare i pantaloni », les Espagnols « llevar los pantalones » et les Néerlandais « de broek aanhebben ».",
+    "p3": "Aujourd'hui, on l'emploie surtout pour rire, et pour les deux. Dans un couple, celui ou celle qui porte la culotte, c'est simplement la personne qui a le plus souvent le dernier mot."
+  },
+  "section3": {
+    "title": "Qui décide le plus souvent dans un couple ?",
+    "p1": "On pourrait penser que c'est une affaire de caractère, et c'est en partie vrai. Mais des chercheurs se sont posé la question. En 2008, le Pew Research Center a interrogé 1 260 Américains mariés ou en couple sur quatre décisions : ce qu'on fait le week-end, les comptes du ménage, les gros achats pour la maison et le programme télé.",
+    "p2": "Dans 43 % des couples, c'est la femme qui décide dans le plus de domaines. Dans 26 %, c'est l'homme. Et 31 % des couples se partagent les décisions à égalité. Pour les comptes, par exemple, c'est la femme qui s'en occupe dans 38 % des couples, l'homme dans 30 %, et les deux ensemble dans 28 %.",
+    "p3": "L'enquête montre aussi que ça change avec l'âge : les plus de 65 ans disent deux fois plus souvent que les moins de 30 ans qu'ils décident à deux. Et décider n'est pas tout. Celui qui choisit les vacances n'est pas toujours celui qui les réserve, qui fait les valises et qui cherche les passeports ! Avoir le dernier mot et <a href=\"/test-charge-mentale-couple/\">penser à tout pour deux</a>, ce n'est pas la même chose."
+  },
+  "section4": {
+    "title": "Est-ce grave si l'un décide plus que l'autre ?",
+    "p1": "Non, tant que ça convient aux deux. Il y a des gens qui adorent organiser, et d'autres qui sont ravis qu'on choisisse le restaurant à leur place. Beaucoup de couples se répartissent aussi les domaines : l'un décide pour les vacances, l'autre pour l'argent, et tout le monde s'y retrouve.",
+    "p2": "Ça devient un problème quand celui qui ne décide jamais n'ose plus donner son avis, ou quand celui qui décide de tout en a assez de tout porter. Si <a href=\"/blog/disputes-couple/\">vous vous disputez souvent</a> pour savoir qui aura le dernier mot, c'est plutôt de ça qu'il faut parler.",
+    "p3": "Il y a aussi une limite à ne pas confondre avec le reste. Quand l'un décide de <a href=\"/test-emprise-psychologique/\">qui l'autre a le droit de voir</a>, de ce qu'il porte ou de ce qu'il dépense, on ne parle plus de « porter la culotte » : c'est du contrôle, et ce n'est plus un jeu."
+  },
+  "section5": {
+    "title": "Comment lire votre résultat ?",
+    "p1": "Le résultat donne la part des décisions de chacun, en pourcentage. À deux, le test additionne les réponses des deux : si chacun répond « Moi » à toutes les questions, la balance reste au milieu... mais vous n'êtes d'accord sur rien !",
+    "p2": "Le résultat à deux montre donc aussi les questions où chacun pense que c'est lui qui décide, puis celles où chacun pense que c'est l'autre. Ce sont de bons sujets de discussion pour la soirée.",
+    "p3": "Ce test est un jeu, pour rire : il ne dit rien de sérieux sur votre couple. Prenez-le comme une occasion de parler de la façon dont vous décidez, sans chercher qui a raison.",
+    "headerScore": "Part de celui qui décide le plus",
+    "headerLevel": "Résultat",
+    "headerAnalysis": "Ce que ça veut dire",
+    "row1Score": "50 à 56 %",
+    "row1Level": "Vous la portez à deux",
+    "row1Analysis": "Les décisions se partagent, et chacun a ses domaines.",
+    "row2Score": "57 à 66 %",
+    "row2Level": "Un peu plus d'un côté",
+    "row2Analysis": "L'un des deux a un peu plus souvent le dernier mot. C'est le cas de beaucoup de couples.",
+    "row3Score": "67 % et plus",
+    "row3Level": "Nettement d'un côté",
+    "row3Analysis": "L'un des deux décide de presque tout. Vérifiez que ça convient aux deux."
+  },
+  "seo": {
+    "faqTitle": "Vos questions sur le test « qui porte la culotte »",
+    "faq1Q": "Comment savoir qui porte la culotte dans un couple ?",
+    "faq1A": "Regardez qui a le dernier mot sur les décisions qui comptent : l'argent, les vacances, le logement, et la fin des disputes. C'est ce que fait ce test, avec vingt questions qui pèsent plus ou moins lourd. À deux, il montre aussi si vous êtes d'accord sur la réponse.",
+    "faq2Q": "Que veut dire « porter la culotte » ?",
+    "faq2A": "C'est être celui ou celle qui commande dans le couple, qui prend la plupart des décisions. L'expression date d'une époque où la culotte était un vêtement d'homme. On dit aussi « porter le pantalon ».",
+    "faq3Q": "Est-ce l'homme ou la femme qui décide le plus souvent ?",
+    "faq3A": "D'après une enquête du Pew Research Center de 2008 auprès de 1 260 personnes en couple aux États-Unis, c'est la femme qui décide dans le plus de domaines dans 43 % des couples, l'homme dans 26 %, et 31 % des couples partagent à égalité.",
+    "faq4Q": "Peut-on faire le test seul(e) ?",
+    "faq4A": "Oui. Seul(e), vous répondez pour vous deux, d'après ce qui se passe chez vous, et vous voyez qui décide le plus selon vous. À deux, c'est plus drôle : chacun répond de son côté, et le test montre si vous êtes d'accord.",
+    "faq5Q": "Est-ce un problème si c'est toujours le même qui décide ?",
+    "faq5A": "Pas forcément. Certains aiment décider, d'autres préfèrent suivre, et ça marche très bien tant que les deux sont contents. Ça vaut le coup d'en parler si l'un des deux se sent écarté des décisions importantes, ou fatigué de tout porter.",
+    "faq6Q": "Comment mieux partager les décisions ?",
+    "faq6A": "Le plus simple est de se répartir les domaines : l'un a le dernier mot sur les vacances, l'autre sur la déco, et les grosses dépenses se décident à deux. Vous pouvez aussi alterner, par exemple pour le film du soir ou le restaurant."
+  },
+  "jsonLd": {
+    "about": "Qui porte la culotte dans un couple"
+  }
+}

@@ -137,6 +137,7 @@
     "quizMaisonNous": "Quelle maison pour nous ?",
     "quizListeNoel": "Sages ou pas sages ?",
     "quizDuoNoel": "Vos personnages de Noël",
+    "quizPorteCulotte": "Qui porte la culotte ?",
     "bilanCouple": "Évaluation de couple",
     "evaluer": "Évaluer son couple",
     "evaluerSous": "L'évaluation complète, à deux ou seul(e)",
@@ -162,6 +163,7 @@
       "pimenter": "Pour pimenter",
       "halloween": "Halloween",
       "futur": "Votre futur à deux",
+      "vous": "Vous deux",
       "noel": "Noël"
     },
     "retour": "Retour"

@@ -622,6 +622,12 @@
     "metaDescription": "Chacun répond à 12 questions sur votre Noël à deux, et le quiz trouve votre duo : le Père Noël et la Mère Noël, deux lutins, Scrooge et l'esprit de Noël...",
     "description": "Douze questions chacun, et le duo de Noël que vous formez, du Père Noël et la Mère Noël aux deux gnomes, avec sa photo."
   },
+  "quizPorteCulotte": {
+    "title": "Qui porte la culotte dans notre couple ? Le test à deux",
+    "shortTitle": "Qui porte la culotte ?",
+    "metaDescription": "Qui porte la culotte dans votre couple ? Le test en 20 questions sur les décisions de tous les jours, à faire seul(e) ou à deux, chacun de son côté.",
+    "description": "Vingt questions sur les décisions de tous les jours, seul(e) ou à deux, pour voir qui a le plus souvent le dernier mot."
+  },
   "bilanCouple": {
     "title": "Bilan de couple à faire en ligne | PDF résultats immédiats",
     "shortTitle": "Évaluation de couple",

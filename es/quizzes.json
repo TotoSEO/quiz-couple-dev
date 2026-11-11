@@ -616,6 +616,12 @@
     "metaDescription": "Cada uno responde a 12 preguntas sobre vuestra Navidad en pareja, y el test encuentra vuestro dúo: Papá Noel y Mamá Noel, dos duendes, Scrooge...",
     "description": "Doce preguntas cada uno, y el dúo de Navidad que formáis, de Papá Noel y Mamá Noel a los dos gnomos, con su foto."
   },
+  "quizPorteCulotte": {
+    "title": "¿Quién lleva los pantalones en la relación? El test",
+    "shortTitle": "¿Quién lleva los pantalones?",
+    "metaDescription": "¿Quién lleva los pantalones en vuestra relación? El test de 20 preguntas sobre las decisiones de cada día, para hacer solo o en pareja, cada uno por su lado.",
+    "description": "Veinte preguntas sobre las decisiones de cada día, solo o en pareja, para ver quién tiene más veces la última palabra."
+  },
   "bilanCouple": {
     "title": "Evaluación de pareja online | Resultados al instante y PDF",
     "shortTitle": "Evaluación de pareja",

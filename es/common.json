@@ -136,6 +136,7 @@
     "quizMaisonNous": "¿Qué casa para nosotros?",
     "quizListeNoel": "¿Os habéis portado bien?",
     "quizDuoNoel": "Vuestros personajes de Navidad",
+    "quizPorteCulotte": "¿Quién lleva los pantalones?",
     "bilanCouple": "Evaluación de pareja",
     "evaluer": "Evaluar tu pareja",
     "evaluerSous": "La evaluación completa, en pareja o a solas",
@@ -161,6 +162,7 @@
       "pimenter": "Para darle chispa",
       "halloween": "Halloween",
       "futur": "El futuro en pareja",
+      "vous": "Vosotros dos",
       "noel": "Navidad"
     },
     "retour": "Volver"

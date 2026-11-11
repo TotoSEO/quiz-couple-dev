@@ -616,6 +616,12 @@
     "metaDescription": "Ognuno risponde a 12 domande sul vostro Natale in due, e il test trova il vostro duo: Babbo Natale e Mamma Natale, due elfi, Scrooge...",
     "description": "Dodici domande a testa, e il duo di Natale che formate, da Babbo Natale e Mamma Natale ai due gnomi, con la sua foto."
   },
+  "quizPorteCulotte": {
+    "title": "Chi porta i pantaloni nella coppia? Il test da fare in due",
+    "shortTitle": "Chi porta i pantaloni?",
+    "metaDescription": "Chi porta i pantaloni nella vostra coppia? Il test di 20 domande sulle decisioni di ogni giorno, da fare da soli o in due, ognuno per conto suo.",
+    "description": "Venti domande sulle decisioni di ogni giorno, da soli o in due, per vedere chi ha più spesso l'ultima parola."
+  },
   "bilanCouple": {
     "title": "Bilancio di coppia online | Risultati subito e in PDF",
     "shortTitle": "Valutazione di coppia",

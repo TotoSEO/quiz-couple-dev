@@ -1,0 +1,71 @@
+{
+  "hero": {
+    "badge": "Spaß-Quiz • Allein oder zu zweit",
+    "title": "Der Test, der zeigt, wer bei euch die Hosen anhat",
+    "titleHighlight": "wer bei euch die Hosen anhat",
+    "description": "Der Film am Abend, der Urlaub, die Finanzen, das letzte Wort im Streit... Allein oder zu zweit, jeder für sich: Findet heraus, wer bei euch öfter entscheidet.",
+    "subtitle": "Zwanzig Fragen, vier bis acht Minuten, kostenlos und ohne Anmeldung",
+    "jumpBtn": "Zum Test"
+  },
+  "section1": {
+    "title": "So funktioniert der Test „Wer hat die Hosen an?“",
+    "intro": "Dieser Test ist ein Spiel für Paare. Er stellt zwanzig Fragen zu den Entscheidungen im Alltag, und bei jeder antwortet ihr mit „Ich“, dem Namen eures Schatzes oder „Beide gleich oft“.",
+    "p1": "Zum Beispiel: „Wer sucht das Urlaubsziel aus?“ Wenn du das fast immer bist, antwortest du „Ich“. Wenn es dein Schatz ist, wählst du den Namen. Und wenn ihr es jedes Mal besprecht, ist es „Beide gleich oft“.",
+    "p2": "Nicht alle Fragen zählen gleich viel. Die Musik im Auto auszusuchen zählt weniger, als die Finanzen im Blick zu haben, bei großen Anschaffungen zu entscheiden oder im Streit das letzte Wort zu haben. Am Ende rechnet der Test alles zusammen und zeigt den Anteil von jedem, wie eine Waage.",
+    "p3": "Zu zweit beantwortet der Erste die zwanzig Fragen, gibt das Handy weiter, und der Zweite antwortet, ohne zu sehen, was der andere gewählt hat. Der Test zählt eure beiden Antwortreihen zusammen und sagt euch auch, bei wie vielen Fragen ihr euch einig seid. Das ist oft das Lustigste: Es gibt Paare, bei denen jeder überzeugt ist, selbst zu entscheiden!"
+  },
+  "section2": {
+    "title": "Woher kommt die Redewendung „die Hosen anhaben“?",
+    "p1": "„Die Hosen anhaben“ heißt, in der Beziehung das Sagen zu haben. Die Redewendung stammt aus einer Zeit, in der Hosen Männerkleidung waren und der Mann den Haushalt führte. Wenn man von einer Frau sagte, sie habe „die Hosen an“, hieß das: Bei ihr zu Hause entscheidet sie. Im Wiktionary steht bis heute bei der Bedeutung dabei: „als Frau“!",
+    "p2": "Dasselbe Bild gibt es in vielen Sprachen: Die Franzosen sagen „porter la culotte“, die Engländer „wear the trousers“, die Amerikaner „wear the pants“, die Italiener „portare i pantaloni“, die Spanier „llevar los pantalones“ und die Niederländer „de broek aanhebben“.",
+    "p3": "Heute sagt man es meist im Spaß, und über beide. In einem Paar hat einfach die Person die Hosen an, die am häufigsten das letzte Wort hat."
+  },
+  "section3": {
+    "title": "Wer entscheidet in einer Beziehung öfter?",
+    "p1": "Man könnte meinen, das sei eine Frage des Charakters, und zum Teil stimmt das auch. Aber Forscher haben sich die Frage gestellt. 2008 hat das Pew Research Center 1.260 verheiratete oder in einer Partnerschaft lebende Amerikaner zu vier Entscheidungen befragt: was man am Wochenende unternimmt, die Finanzen des Haushalts, große Anschaffungen fürs Zuhause und das Fernsehprogramm.",
+    "p2": "Bei 43 % der Paare entscheidet die Frau in mehr Bereichen als der Mann. Bei 26 % ist es der Mann. Und 31 % der Paare teilen sich die Entscheidungen gleichmäßig. Um die Finanzen zum Beispiel kümmert sich bei 38 % der Paare die Frau, bei 30 % der Mann und bei 28 % beide zusammen.",
+    "p3": "Die Umfrage zeigt auch, dass sich das mit dem Alter ändert: Menschen ab 65 sagen doppelt so oft wie unter 30-Jährige, dass sie gemeinsam entscheiden. Und Entscheiden ist nicht alles. Wer den Urlaub aussucht, ist nicht immer derjenige, der ihn bucht, die Koffer packt und die Pässe sucht! Das letzte Wort zu haben und <a href=\"/de/mental-load-test-paare/\">für zwei an alles zu denken</a>, ist nicht dasselbe."
+  },
+  "section4": {
+    "title": "Ist es schlimm, wenn einer mehr entscheidet?",
+    "p1": "Nein, solange es für beide passt. Manche organisieren für ihr Leben gern, andere sind froh, wenn jemand anderes das Restaurant aussucht. Viele Paare teilen sich auch die Bereiche auf: Einer entscheidet beim Urlaub, der andere beim Geld, und alle sind zufrieden.",
+    "p2": "Zum Problem wird es, wenn sich derjenige, der nie entscheidet, nicht mehr traut, seine Meinung zu sagen, oder wenn derjenige, der alles entscheidet, es leid ist, alles zu tragen. Wenn ihr euch oft darum streitet, wer das letzte Wort hat, solltet ihr eher darüber reden.",
+    "p3": "Es gibt auch eine Grenze, die man nicht mit dem Rest verwechseln darf. Wenn einer bestimmt, <a href=\"/de/psychische-kontrolle-beziehung-test/\">wen der andere treffen darf</a>, was er anzieht oder wofür er Geld ausgibt, geht es nicht mehr ums „Hosenanhaben“: Das ist Kontrolle und kein Spiel mehr."
+  },
+  "section5": {
+    "title": "Wie lest ihr euer Ergebnis?",
+    "p1": "Das Ergebnis zeigt den Anteil von jedem an den Entscheidungen, in Prozent. Zu zweit zählt der Test die Antworten von beiden zusammen: Wenn jeder bei allen Fragen „Ich“ antwortet, bleibt die Waage in der Mitte... aber ihr seid euch bei nichts einig!",
+    "p2": "Deshalb zeigt das Ergebnis zu zweit auch die Fragen, bei denen jeder glaubt, selbst zu entscheiden, und dann die, bei denen jeder glaubt, der andere entscheidet. Das sind gute Gesprächsthemen für den Abend.",
+    "p3": "Dieser Test ist ein Spiel, einfach zum Spaß: Er sagt nichts Ernstes über eure Beziehung aus. Nehmt ihn als Anlass, darüber zu reden, wie ihr entscheidet, ohne zu klären, wer recht hat.",
+    "headerScore": "Anteil der Person, die öfter entscheidet",
+    "headerLevel": "Ergebnis",
+    "headerAnalysis": "Was das heißt",
+    "row1Score": "50 bis 56 %",
+    "row1Level": "Ihr habt beide die Hosen an",
+    "row1Analysis": "Die Entscheidungen sind verteilt, und jeder hat seine Bereiche.",
+    "row2Score": "57 bis 66 %",
+    "row2Level": "Ein bisschen mehr auf einer Seite",
+    "row2Analysis": "Einer von euch hat etwas öfter das letzte Wort. Das ist bei vielen Paaren so.",
+    "row3Score": "ab 67 %",
+    "row3Level": "Deutlich auf einer Seite",
+    "row3Analysis": "Einer von euch entscheidet fast alles. Prüft, ob das für beide passt."
+  },
+  "seo": {
+    "faqTitle": "Eure Fragen zum Test „Wer hat die Hosen an?“",
+    "faq1Q": "Woran merkt man, wer in der Beziehung die Hosen anhat?",
+    "faq1A": "Schaut, wer bei den Entscheidungen, die zählen, das letzte Wort hat: beim Geld, beim Urlaub, bei der Wohnung und am Ende eines Streits. Genau das macht dieser Test, mit zwanzig Fragen, die unterschiedlich viel zählen. Zu zweit zeigt er auch, ob ihr euch bei der Antwort einig seid.",
+    "faq2Q": "Was bedeutet „die Hosen anhaben“?",
+    "faq2A": "Es heißt, in der Beziehung das Sagen zu haben und die meisten Entscheidungen zu treffen. Die Redewendung stammt aus einer Zeit, in der Hosen Männerkleidung waren. Man sagt auch „das Sagen haben“.",
+    "faq3Q": "Entscheidet öfter der Mann oder die Frau?",
+    "faq3A": "Laut einer Umfrage des Pew Research Center von 2008 unter 1.260 Menschen in Partnerschaften in den USA entscheidet bei 43 % der Paare die Frau in mehr Bereichen, bei 26 % der Mann, und 31 % der Paare teilen sich die Entscheidungen gleichmäßig.",
+    "faq4Q": "Kann man den Test allein machen?",
+    "faq4A": "Ja. Allein antwortest du für euch beide, nach dem, was bei euch passiert, und siehst, wer aus deiner Sicht öfter entscheidet. Zu zweit ist es lustiger: Jeder antwortet für sich, und der Test zeigt, ob ihr euch einig seid.",
+    "faq5Q": "Ist es ein Problem, wenn immer derselbe entscheidet?",
+    "faq5A": "Nicht unbedingt. Manche entscheiden gern, andere lassen lieber entscheiden, und das klappt sehr gut, solange beide zufrieden sind. Reden lohnt sich, wenn sich einer von den wichtigen Entscheidungen ausgeschlossen fühlt oder es leid ist, alles zu tragen.",
+    "faq6Q": "Wie teilt man Entscheidungen besser auf?",
+    "faq6A": "Am einfachsten teilt ihr die Bereiche auf: Einer hat beim Urlaub das letzte Wort, der andere bei der Einrichtung, und große Anschaffungen entscheidet ihr gemeinsam. Ihr könnt euch auch abwechseln, zum Beispiel beim Film am Abend oder beim Restaurant."
+  },
+  "jsonLd": {
+    "about": "Wer in einer Beziehung die Hosen anhat"
+  }
+}
