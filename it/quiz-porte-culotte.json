@@ -1,0 +1,71 @@
+{
+  "hero": {
+    "badge": "Quiz originale • Da soli o in due",
+    "title": "Il test per scoprire chi porta i pantaloni nella vostra coppia",
+    "titleHighlight": "chi porta i pantaloni",
+    "description": "Il film della sera, le vacanze, i conti, l'ultima parola in un litigio... Da soli o in due, ognuno per conto suo: scoprite chi decide di più a casa vostra.",
+    "subtitle": "Venti domande, da quattro a otto minuti, gratis e senza registrazione",
+    "jumpBtn": "Fai il test"
+  },
+  "section1": {
+    "title": "Come funziona il test «chi porta i pantaloni»?",
+    "intro": "Questo test è un gioco da fare in coppia. Fa venti domande sulle decisioni di ogni giorno, e per ognuna rispondete «Io», il nome del vostro partner oppure «Tutti e due allo stesso modo».",
+    "p1": "Per esempio: «Chi sceglie la meta delle vacanze?». Se quasi sempre sei tu, rispondi «Io». Se è il tuo partner, scegli il suo nome. E se ne parlate ogni volta, è «Tutti e due allo stesso modo».",
+    "p2": "Non tutte le domande pesano allo stesso modo. Scegliere la musica in macchina conta meno che tenere i conti, decidere per le spese grosse o avere l'ultima parola in un litigio. Alla fine il test somma tutto e mostra la parte di ciascuno, come una bilancia.",
+    "p3": "In due, il primo risponde alle venti domande, passa il telefono, e il secondo risponde senza vedere cosa ha scelto l'altro. Il test somma le vostre due serie di risposte, e vi dice anche su quante domande siete d'accordo. Spesso è la parte più divertente: ci sono coppie in cui ognuno è convinto di essere quello che decide!"
+  },
+  "section2": {
+    "title": "Da dove viene l'espressione «portare i pantaloni»?",
+    "p1": "«Portare i pantaloni» vuol dire essere quello che comanda nella coppia. L'espressione viene da un'epoca in cui i pantaloni erano un indumento da uomo, ed era l'uomo a dirigere la casa. Dire di una donna che «portava i pantaloni» voleva dire che a casa sua era lei a decidere.",
+    "p2": "La stessa immagine esiste in tante lingue: i francesi dicono «porter la culotte», gli inglesi «wear the trousers», gli americani «wear the pants», i tedeschi «die Hosen anhaben», gli spagnoli «llevar los pantalones» e gli olandesi «de broek aanhebben».",
+    "p3": "Oggi si dice soprattutto per scherzo, e per tutti e due. In una coppia, chi porta i pantaloni è semplicemente la persona che ha più spesso l'ultima parola."
+  },
+  "section3": {
+    "title": "Chi decide più spesso in una coppia?",
+    "p1": "Si potrebbe pensare che sia una questione di carattere, e in parte è vero. Ma alcuni ricercatori se lo sono chiesto. Nel 2008 il Pew Research Center ha intervistato 1.260 americani sposati o conviventi su quattro decisioni: che cosa fare nel fine settimana, i conti di casa, gli acquisti importanti per la casa e che cosa guardare in TV.",
+    "p2": "Nel 43 % delle coppie è la donna a decidere in più ambiti. Nel 26 % è l'uomo. E il 31 % delle coppie si divide le decisioni alla pari. Dei conti, per esempio, si occupa la donna nel 38 % delle coppie, l'uomo nel 30 % e tutti e due insieme nel 28 %.",
+    "p3": "Il sondaggio mostra anche che le cose cambiano con l'età: chi ha più di 65 anni dice di decidere insieme il doppio delle volte rispetto a chi ne ha meno di 30. E decidere non è tutto. Chi sceglie le vacanze non è sempre quello che le prenota, fa le valigie e cerca i passaporti! Avere l'ultima parola e <a href=\"/it/test-carico-mentale-coppia/\">pensare a tutto per due</a> non sono la stessa cosa."
+  },
+  "section4": {
+    "title": "È grave se uno decide più dell'altro?",
+    "p1": "No, finché va bene a tutti e due. C'è chi adora organizzare, e chi è felicissimo che qualcun altro scelga il ristorante. Tante coppie si dividono anche gli ambiti: uno decide per le vacanze, l'altro per i soldi, e sono tutti contenti.",
+    "p2": "Diventa un problema quando chi non decide mai non osa più dire la sua, o quando chi decide tutto è stanco di portare tutto sulle spalle. Se litigate spesso per stabilire chi avrà l'ultima parola, è piuttosto di questo che bisogna parlare.",
+    "p3": "C'è anche un limite da non confondere con il resto. Quando uno decide <a href=\"/it/test-manipolazione-psicologica-coppia/\">chi l'altro può vedere</a>, come si veste o quanto spende, non si parla più di «portare i pantaloni»: è controllo, e non è più un gioco."
+  },
+  "section5": {
+    "title": "Come leggere il vostro risultato?",
+    "p1": "Il risultato dà la parte delle decisioni di ciascuno, in percentuale. In due, il test somma le risposte di tutti e due: se ognuno risponde «Io» a tutte le domande, la bilancia resta al centro... ma non siete d'accordo su niente!",
+    "p2": "Per questo il risultato in due mostra anche le domande in cui ognuno pensa di essere quello che decide, e poi quelle in cui ognuno pensa che decida l'altro. Sono buoni argomenti di cui parlare a cena.",
+    "p3": "Questo test è un gioco, da prendere per ridere: non dice niente di serio sulla vostra coppia. Prendetelo come un'occasione per parlare di come decidete, senza cercare chi ha ragione.",
+    "headerScore": "Parte di chi decide di più",
+    "headerLevel": "Risultato",
+    "headerAnalysis": "Che cosa vuol dire",
+    "row1Score": "da 50 a 56 %",
+    "row1Level": "I pantaloni li portate in due",
+    "row1Analysis": "Le decisioni si dividono, e ognuno ha i suoi ambiti.",
+    "row2Score": "da 57 a 66 %",
+    "row2Level": "Un po' di più da una parte",
+    "row2Analysis": "Uno dei due ha l'ultima parola un po' più spesso. Succede a tante coppie.",
+    "row3Score": "67 % e oltre",
+    "row3Level": "Nettamente da una parte",
+    "row3Analysis": "Uno dei due decide quasi tutto. Verificate che vada bene a tutti e due."
+  },
+  "seo": {
+    "faqTitle": "Le vostre domande sul test «chi porta i pantaloni»",
+    "faq1Q": "Come capire chi porta i pantaloni in una coppia?",
+    "faq1A": "Guardate chi ha l'ultima parola sulle decisioni che contano: i soldi, le vacanze, la casa e la fine dei litigi. È quello che fa questo test, con venti domande che pesano più o meno. In due, mostra anche se siete d'accordo sulla risposta.",
+    "faq2Q": "Che cosa vuol dire «portare i pantaloni»?",
+    "faq2A": "Vuol dire essere quello che comanda nella coppia, che prende la maggior parte delle decisioni. L'espressione viene da un'epoca in cui i pantaloni erano un indumento da uomo.",
+    "faq3Q": "Decide più spesso l'uomo o la donna?",
+    "faq3A": "Secondo un sondaggio del Pew Research Center del 2008 su 1.260 persone in coppia negli Stati Uniti, la donna decide in più ambiti nel 43 % delle coppie, l'uomo nel 26 %, e il 31 % delle coppie si divide le decisioni alla pari.",
+    "faq4Q": "Si può fare il test da soli?",
+    "faq4A": "Sì. Da solo, rispondi per tutti e due, in base a quello che succede a casa vostra, e vedi chi decide di più secondo te. In due è più divertente: ognuno risponde per conto suo, e il test mostra se siete d'accordo.",
+    "faq5Q": "È un problema se decide sempre la stessa persona?",
+    "faq5A": "Non per forza. C'è chi ama decidere e chi preferisce seguire, e funziona benissimo finché sono contenti tutti e due. Vale la pena parlarne se uno dei due si sente escluso dalle decisioni importanti, o stanco di portare tutto sulle spalle.",
+    "faq6Q": "Come dividersi meglio le decisioni?",
+    "faq6A": "La cosa più semplice è dividersi gli ambiti: uno ha l'ultima parola sulle vacanze, l'altro sull'arredamento, e le spese grosse si decidono insieme. Potete anche fare a turno, per esempio per il film della sera o il ristorante."
+  },
+  "jsonLd": {
+    "about": "Chi porta i pantaloni in una coppia"
+  }
+}

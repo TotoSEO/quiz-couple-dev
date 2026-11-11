@@ -1,0 +1,10 @@
+<%
+  // Qui porte la culotte dans notre couple ? (11 novembre 2026, quiz fun) :
+  // vingt questions « qui décide... », trois réponses (moi, le prénom de
+  // l'autre, autant l'un que l'autre), un poids de 1 à 3 par question, seul(e)
+  // ou à deux sur le même téléphone : le moteur de « qui aime le plus l'autre »
+  // (QuiAimeQuiz, préfixe `culotte`), sur le gabarit générique. Les textes
+  // sont dans quiz-porte-culotte.json.
+  var quizType = 'porte-culotte'; var ns = 'quiz-porte-culotte'; var totalQ = 20; var sectionCount = 5;
+%>
+<%- include('quiz-generic', { quizType, ns, totalQ, sectionCount, t, lang, routeKey, getLocalizedUrl, canonical, JSON }) %>

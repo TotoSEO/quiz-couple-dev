@@ -2404,6 +2404,7 @@ var QuizEngine = (function() {
     // Les quiz fun « pour nous » (11 novembre 2026)
     { type: 'quiz', key: 'chien-nous', icon: '🐶', route: 'quizChienNous' },
     { type: 'quiz', key: 'maison-nous', icon: '🏡', route: 'quizMaisonNous' },
+    { type: 'quiz', key: 'porte-culotte', icon: '👖', route: 'quizPorteCulotte' },
     { type: 'test', key: 'charge-mentale', icon: '🧠', route: 'testChargeMentale' },
     { type: 'quiz', key: 'rencontre', icon: '💬', route: 'quizRencontre' },
     { type: 'test', key: 'langage-amour', icon: '💬', route: 'testLangageAmour' },
@@ -2587,6 +2588,8 @@ var QuizEngine = (function() {
     // Les quiz fun « pour nous » : l'autre projet à deux, puis le test qui va avec
     'chien-nous':       ['quizMaisonNous', 'testEmmenager', 'quizTypeCouple'],
     'maison-nous':      ['quizChienNous', 'testEmmenager', 'testMariage'],
+    // Qui porte la culotte : qui pense a tout, qui aime le plus, puis un quiz leger
+    'porte-culotte':    ['testChargeMentale', 'testQuiAime', 'quizTypeCouple'],
     'action-ou-verite-coquin': ['quizCoquin', 'jeuGages', 'quizTentation'],
     'tentation':               ['testInfidelite', 'quizCoquin', 'testConfiance'],
 
@@ -14466,6 +14469,11 @@ var QuizEngine = (function() {
     this.questions = config.questions || [];
     this.quizType = config.quizType || 'qui-aime';
     this.icone = config.icone || '💞';
+    // L'embleme entre les deux personnages de la balance et leurs poses : le
+    // coeur et les amoureux pour « qui aime le plus », le jean pour « qui porte
+    // la culotte » (quiz-loader.js).
+    this.embleme = config.embleme || '💞';
+    this.poses = config.poses || {};
     this.seuils = config.seuils || { egal: 6, unPeu: 16 };
     this.modes = { solo: true, duo: true };
     this.mode = null;
@@ -14512,7 +14520,7 @@ var QuizEngine = (function() {
     corps.push(grille);
     var ecran = ecranDepart({
       icone: this.icone,
-      poses: ['amoureux', 'amoureux'],
+      poses: this.poses.depart || ['amoureux', 'amoureux'],
       titre: duo ? this.etg('setupTitreDuo', '') : this.etg('setupTitreSolo', ''),
       desc: duo ? this.etg('setupDescDuo', '') : this.etg('setupDescSolo', ''),
       corps: corps,
@@ -14659,7 +14667,8 @@ var QuizEngine = (function() {
   QuiAimeQuiz.prototype.balance = function(res) {
     var persos = persosDe(this.players);
     var teintes = [persos[0], persos[1] === persos[0] ? persos[1] + '-fonce' : persos[1]];
-    var poses = res.tete === null ? ['amoureux', 'amoureux'] : (res.tete === 0 ? ['amoureux', 'joie'] : ['joie', 'amoureux']);
+    var pTete = this.poses.tete || 'amoureux', pAutre = this.poses.autre || 'joie';
+    var poses = res.tete === null ? (this.poses.egal || ['amoureux', 'amoureux']) : (res.tete === 0 ? [pTete, pAutre] : [pAutre, pTete]);
     var lang = langueDuMoteur();
     var self = this;
     var noms = [this.mode === 'duo' || this.players[0].saisi ? this.players[0].name : this.etg('moiDefaut', 'Vous'), this.players[1].name];
@@ -14670,7 +14679,7 @@ var QuizEngine = (function() {
         '<span class="qa-nom">' + esc(noms[k]) + '</span></div>';
     };
     var bloc = el('div', 'qa-balance-bloc');
-    bloc.innerHTML = '<div class="qa-balance">' + cote(0) + '<span class="qa-coeur" aria-hidden="true">💞</span>' + cote(1) + '</div>' +
+    bloc.innerHTML = '<div class="qa-balance">' + cote(0) + '<span class="qa-coeur" aria-hidden="true">' + this.embleme + '</span>' + cote(1) + '</div>' +
       '<div class="qa-barre" role="img" aria-label="' + esc(noms[0] + ' ' + pctTexte(lang, res.part[0]) + ', ' + noms[1] + ' ' + pctTexte(lang, res.part[1])) + '">' +
       '<span class="qa-part qa-part--' + teintes[0] + '" style="width:0%"></span><span class="qa-part qa-part--' + teintes[1] + '" style="width:0%"></span></div>' +
       '<p class="qa-legende">' + esc(this.etg('balanceLegende', '')) + '</p>';

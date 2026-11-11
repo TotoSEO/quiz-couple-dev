@@ -40,11 +40,13 @@
     "quizListeNoelNom": "Naughty or nice?",
     "quizListeNoelTagline": "Twelve questions each about your December: your couple's spot on Santa's list, and the nicer of the two.",
     "quizDuoNoelNom": "Which Christmas characters are you?",
-    "quizDuoNoelTagline": "Twelve questions each about your Christmas together, and the duo you make with its photo: two elves, two reindeer, the Nutcracker and the Sugar Plum Fairy..."
+    "quizDuoNoelTagline": "Twelve questions each about your Christmas together, and the duo you make with its photo: two elves, two reindeer, the Nutcracker and the Sugar Plum Fairy...",
+    "quizPorteCulotteNom": "Who wears the pants?",
+    "quizPorteCulotteTagline": "Twenty questions about who decides at your place, on your own or together: each person's share, and the questions where you disagree."
   },
   "section1": {
     "title": "What these quizzes are for",
-    "p1": "The quizzes on this page are nothing like our couple tests. They don't measure anything serious and they don't give your relationship a score. They're games: what dog would suit you as a couple, what kind of house you'd be happy in, or which of you would die first in a horror movie.",
+    "p1": "The quizzes on this page are nothing like our couple tests. They don't measure anything serious and they don't give your relationship a score. They're games: what dog would suit you as a couple, what kind of house you'd be happy in, <a href=\"/en/who-wears-the-pants-quiz/\">who gets the last word at your place</a>, or which of you would die first in a horror movie.",
     "p2": "They work because you each answer separately. Finding out your other half wants a husky when you had a dachshund in mind, or a fixer-upper when you were dreaming of a city apartment, keeps a good part of the evening busy!",
     "p3": "The quizzes about your future together are here all year round. The seasonal ones move to the top of the page when their time comes: the Halloween quizzes in October, then the Christmas ones from mid-November, to find out <a href=\"/en/naughty-or-nice-quiz/\">whether your couple has been good this year</a> or <a href=\"/en/which-christmas-characters-are-you-quiz/\">which Christmas duo you make</a>. They stay playable the rest of the year."
   },
@@ -69,7 +71,7 @@
     "q4": "Are there Christmas quizzes?",
     "a4": "Yes, two. “Naughty or nice?” tells you which of Santa's lists your couple is on, and which of you is the nicer one. The Christmas characters quiz gives you the duo you make, from Santa and Mrs. Claus to Scrooge and the Christmas spirit. They move to the top of this page from mid-November to the end of December.",
     "q5": "Can you play remotely?",
-    "a5": "Yes for the Halloween quizzes: one person creates the game, the other joins with the code, and you each answer on your own phone. The quizzes about your future together and the Christmas ones are played on a single phone that you pass to each other."
+    "a5": "Yes for the Halloween quizzes: one person creates the game, the other joins with the code, and you each answer on your own phone. The other quizzes are played on a single phone that you pass to each other."
   },
   "jsonLd": {
     "name": "Fun quizzes for couples"
@@ -79,6 +81,10 @@
     "futur": {
       "titre": "Your future together",
       "intro": "The dog you'll have, the house you'll live in: you each answer separately, and the quiz looks for what suits you both, with a photo at the end."
+    },
+    "vous": {
+      "titre": "The two of you",
+      "intro": "Who decides at your place, who gets the last word: quizzes about your relationship as it is, to take on your own or taking turns on the same phone."
     }
   }
 }

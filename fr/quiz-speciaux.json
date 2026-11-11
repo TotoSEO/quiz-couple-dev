@@ -40,11 +40,13 @@
     "quizListeNoelNom": "Sages ou pas sages ?",
     "quizListeNoelTagline": "Douze questions chacun sur votre mois de décembre : la place de votre couple sur la liste du Père Noël, et le plus sage des deux.",
     "quizDuoNoelNom": "Quels personnages de Noël êtes-vous ?",
-    "quizDuoNoelTagline": "Douze questions chacun sur votre Noël à deux, et le duo que vous formez avec sa photo : deux lutins, deux rennes, Casse-Noisette et la fée Dragée..."
+    "quizDuoNoelTagline": "Douze questions chacun sur votre Noël à deux, et le duo que vous formez avec sa photo : deux lutins, deux rennes, Casse-Noisette et la fée Dragée...",
+    "quizPorteCulotteNom": "Qui porte la culotte ?",
+    "quizPorteCulotteTagline": "Vingt questions sur qui décide chez vous, seul(e) ou à deux : la part de chacun, et les questions où vous n'êtes pas d'accord."
   },
   "section1": {
     "title": "À quoi servent ces quiz",
-    "p1": "Les quiz de cette page ne ressemblent pas à nos tests de couple. Ils ne mesurent rien de sérieux et ils ne donnent pas de note à votre relation. Ce sont des jeux : quel chien irait à votre couple, dans quelle maison vous seriez bien, ou qui de vous deux mourrait en premier dans un film d'horreur.",
+    "p1": "Les quiz de cette page ne ressemblent pas à nos tests de couple. Ils ne mesurent rien de sérieux et ils ne donnent pas de note à votre relation. Ce sont des jeux : quel chien irait à votre couple, dans quelle maison vous seriez bien, <a href=\"/test-qui-porte-la-culotte/\">qui a le dernier mot chez vous</a>, ou qui de vous deux mourrait en premier dans un film d'horreur.",
     "p2": "Ils marchent parce qu'on y répond chacun de son côté. Découvrir que votre moitié veut un husky quand vous pensiez à un teckel, ou une vieille bâtisse à retaper quand vous rêviez d'un appartement en ville, ça occupe une bonne partie de la soirée !",
     "p3": "Les quiz sur votre futur à deux sont là toute l'année. Ceux de saison passent en tête de la page quand leur période arrive : les quiz d'Halloween en octobre, puis ceux de Noël à partir de la mi-novembre, pour savoir <a href=\"/test-liste-des-enfants-sages/\">si votre couple a été sage cette année</a> ou <a href=\"/quiz-quels-personnages-de-noel-etes-vous/\">quel duo de Noël vous formez</a>. Ils restent jouables le reste du temps."
   },
@@ -69,7 +71,7 @@
     "q4": "Y a-t-il des quiz de Noël ?",
     "a4": "Oui, deux. « Sages ou pas sages ? » vous dit sur quelle liste du Père Noël est votre couple, et lequel de vous deux est le plus sage. Le quiz des personnages de Noël vous donne le duo que vous formez, du Père Noël et la Mère Noël à Scrooge et l'esprit de Noël. Ils passent en tête de cette page de la mi-novembre à la fin décembre.",
     "q5": "Peut-on jouer à distance ?",
-    "a5": "Oui pour les quiz d'Halloween : une personne crée la partie, l'autre rejoint avec le code, et vous répondez chacun sur votre téléphone. Les quiz sur votre futur à deux et ceux de Noël se font sur un seul téléphone, qu'on se passe."
+    "a5": "Oui pour les quiz d'Halloween : une personne crée la partie, l'autre rejoint avec le code, et vous répondez chacun sur votre téléphone. Les autres quiz se font sur un seul téléphone, qu'on se passe."
   },
   "jsonLd": {
     "name": "Quiz fun à faire à deux"
@@ -79,6 +81,10 @@
     "futur": {
       "titre": "Votre futur à deux",
       "intro": "Le chien que vous aurez, la maison où vous vivrez : chacun répond de son côté, et le quiz cherche ce qui vous va à tous les deux, avec une photo à la clé."
+    },
+    "vous": {
+      "titre": "Vous deux",
+      "intro": "Qui décide chez vous, qui a le dernier mot : des quiz sur votre couple tel qu'il est, à faire seul(e) ou chacun son tour sur le même téléphone."
     }
   }
 }

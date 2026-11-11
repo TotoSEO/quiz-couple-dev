@@ -427,6 +427,13 @@
     // doit pas en chercher (voir la charge mentale).
     'qui-aime': { prefix: 'quiAime', engine: 'qui-aime', totalQ: 20, pool: 20, quizType: 'qui-aime',
                   textOnly: true, seuils: { egal: 6, unPeu: 16 } },
+    // Qui porte la culotte ? (11 novembre 2026, quiz fun) : le même moteur, avec
+    // des questions « qui décide... ». `embleme` remplace le cœur entre les
+    // deux personnages de la balance, `poses` leurs poses (départ, égalité,
+    // celui vers qui la balance penche, l'autre).
+    'porte-culotte': { prefix: 'culotte', engine: 'qui-aime', totalQ: 20, pool: 20, quizType: 'porte-culotte',
+                       textOnly: true, seuils: { egal: 6, unPeu: 16 }, icone: '👖', embleme: '👖',
+                       poses: { depart: ['salut', 'mignon'], egal: ['joie', 'joie'], tete: 'joie', autre: 'mignon' } },
 
     // Les quiz speciaux d'Halloween (16 octobre 2026, demande de Thomas), tous
     // a distance possible. Les quiz a portrait (moteur « portrait ») : chaque
@@ -3001,7 +3008,9 @@
       lang: lang,
       quizType: cfg.quizType || 'qui-aime',
       seuils: cfg.seuils,
-      icone: cfg.icone
+      icone: cfg.icone,
+      embleme: cfg.embleme,
+      poses: cfg.poses
     });
   }
 

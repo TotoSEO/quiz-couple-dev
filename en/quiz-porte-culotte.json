@@ -1,0 +1,71 @@
+{
+  "hero": {
+    "badge": "Fun quiz • On your own or together",
+    "title": "The quiz to find out who wears the pants in your relationship",
+    "titleHighlight": "who wears the pants",
+    "description": "Tonight's movie, the vacation, the budget, the last word in an argument... Answer on your own, or each on your side, and find out who decides more at your place.",
+    "subtitle": "Twenty questions, four to eight minutes, free and no sign-up",
+    "jumpBtn": "Take the quiz"
+  },
+  "section1": {
+    "title": "How does the “who wears the pants” quiz work?",
+    "intro": "This quiz is a game for couples. It asks twenty questions about everyday decisions, and for each one you answer “Me”, your partner's name, or “Both of us equally”.",
+    "p1": "For example: “Who chooses where you go on vacation?” If it's almost always you, you answer “Me”. If it's your partner, you pick their name. And if you talk it over every time, it's “Both of us equally”.",
+    "p2": "Not every question weighs the same. Picking the music in the car counts less than keeping track of the money, deciding on the big purchases or getting the last word in an argument. At the end, the quiz adds everything up and shows each person's share, like a scale.",
+    "p3": "Together, the first person answers the twenty questions, hands over the phone, and the second answers without seeing what the other chose. The quiz adds up your two sets of answers, and it also tells you how many questions you agree on. That's often the funniest part: there are couples where each one is convinced they're the one who decides!"
+  },
+  "section2": {
+    "title": "Where does “wear the pants” come from?",
+    "p1": "“To wear the pants” means to be the one in charge in a relationship. The expression goes back to a time when pants were men's clothing, and the man was the one who ran the household. Saying that a woman “wore the pants” meant that at her place, she was the one who decided. Wiktionary still notes that it's “typically” said of a woman!",
+    "p2": "Americans say “pants”, the British say “wear the trousers”, and there's an older version, “wear the breeches”. You find the same image in lots of languages: the French say “porter la culotte”, the Germans “die Hosen anhaben”, the Italians “portare i pantaloni”, the Spanish “llevar los pantalones” and the Dutch “de broek aanhebben”.",
+    "p3": "Today it's mostly said as a joke, and about either partner. In a couple, the one who wears the pants is simply the person who gets the last word most often."
+  },
+  "section3": {
+    "title": "Who usually decides in a couple?",
+    "p1": "You might think it's a matter of personality, and that's partly true. But researchers have looked into it. In 2008, the Pew Research Center asked 1,260 Americans who were married or living with a partner about four decisions: what to do on the weekend, the household finances, big purchases for the home and what to watch on TV.",
+    "p2": "In 43% of couples, the woman decides in more areas than the man. In 26%, it's the man. And 31% of couples split the decisions equally. For the finances, for example, the woman manages them in 38% of couples, the man in 30%, and both together in 28%.",
+    "p3": "The survey also shows that it changes with age: people 65 and over are twice as likely as those under 30 to say they decide together. And deciding isn't everything. The one who picks the vacation isn't always the one who books it, packs the bags and hunts for the passports! Getting the last word and <a href=\"/en/mental-load-test-couples/\">thinking of everything for two</a> are not the same thing."
+  },
+  "section4": {
+    "title": "Is it a problem if one of you decides more?",
+    "p1": "No, as long as it suits you both. Some people love organizing, and others are delighted when someone else picks the restaurant. Lots of couples also split things up: one decides on vacations, the other on money, and everyone's happy.",
+    "p2": "It becomes a problem when the one who never decides no longer dares to speak up, or when the one who decides everything is tired of carrying it all. If you often argue over who gets the last word, that's the thing to talk about.",
+    "p3": "There's also a line not to confuse with the rest. When one of you decides <a href=\"/en/coercive-control-test/\">who the other is allowed to see</a>, what they wear or what they spend, it's no longer about “wearing the pants”: it's control, and it's not a game anymore."
+  },
+  "section5": {
+    "title": "How do you read your result?",
+    "p1": "The result gives each person's share of the decisions, as a percentage. Together, the quiz adds up both sets of answers: if you each answer “Me” to every question, the scale stays in the middle... but you don't agree on anything!",
+    "p2": "So the result for two also shows the questions where you each think you're the one who decides, then the ones where you each think it's the other. They make good things to talk about over dinner.",
+    "p3": "This quiz is a game, just for fun: it says nothing serious about your relationship. Take it as a chance to talk about how you make decisions, without trying to work out who's right.",
+    "headerScore": "Share of the one who decides more",
+    "headerLevel": "Result",
+    "headerAnalysis": "What it means",
+    "row1Score": "50 to 56%",
+    "row1Level": "You both wear the pants",
+    "row1Analysis": "Decisions are shared, and you each have your areas.",
+    "row2Score": "57 to 66%",
+    "row2Level": "A little more on one side",
+    "row2Analysis": "One of you gets the last word a little more often. That's the case for lots of couples.",
+    "row3Score": "67% and over",
+    "row3Level": "Clearly on one side",
+    "row3Analysis": "One of you decides almost everything. Check that it suits you both."
+  },
+  "seo": {
+    "faqTitle": "Your questions about the “who wears the pants” quiz",
+    "faq1Q": "How do you know who wears the pants in a relationship?",
+    "faq1A": "Look at who gets the last word on the decisions that matter: money, vacations, where you live, and how arguments end. That's what this quiz does, with twenty questions that weigh more or less. Together, it also shows whether you agree on the answer.",
+    "faq2Q": "What does “wear the pants” mean?",
+    "faq2A": "It means being the one in charge in a couple, the one who makes most of the decisions. The expression dates from a time when pants were men's clothing. The British say “wear the trousers”.",
+    "faq3Q": "Is it the man or the woman who decides more often?",
+    "faq3A": "According to a 2008 Pew Research Center survey of 1,260 people in couples in the United States, the woman decides in more areas in 43% of couples, the man in 26%, and 31% of couples split decisions equally.",
+    "faq4Q": "Can I take the quiz on my own?",
+    "faq4A": "Yes. On your own, you answer for both of you, based on what happens at home, and you see who decides more in your eyes. Together it's more fun: you each answer separately, and the quiz shows whether you agree.",
+    "faq5Q": "Is it a problem if the same person always decides?",
+    "faq5A": "Not necessarily. Some people like deciding, others would rather follow, and it works very well as long as both are happy. It's worth talking about if one of you feels left out of the important decisions, or tired of carrying everything.",
+    "faq6Q": "How can we share decisions better?",
+    "faq6A": "The simplest way is to split up the areas: one gets the last word on vacations, the other on the decor, and big purchases are decided together. You can also take turns, for the movie or the restaurant for example."
+  },
+  "jsonLd": {
+    "about": "Who wears the pants in a relationship"
+  }
+}

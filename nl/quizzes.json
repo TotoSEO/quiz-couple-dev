@@ -616,6 +616,12 @@
     "metaDescription": "Welke kerstfiguren zijn jullie? Ieder beantwoordt 12 vragen over jullie kerst, en de quiz vindt jullie duo: de Kerstman en de Kerstvrouw, twee elfjes...",
     "description": "Twaalf vragen per persoon, en het kerstduo dat jullie vormen, van de Kerstman en de Kerstvrouw tot de twee kerstkabouters, met foto."
   },
+  "quizPorteCulotte": {
+    "title": "Wie heeft de broek aan? De test voor koppels",
+    "shortTitle": "Wie heeft de broek aan?",
+    "metaDescription": "Wie heeft de broek aan in jullie relatie? De test met 20 vragen over de beslissingen van elke dag, alleen of samen, ieder voor zich.",
+    "description": "Twintig vragen over de beslissingen van elke dag, alleen of samen, om te zien wie het vaakst het laatste woord heeft."
+  },
   "bilanCouple": {
     "title": "Relatiecheck online | Direct resultaat, ook als pdf",
     "shortTitle": "Relatiecheck",
