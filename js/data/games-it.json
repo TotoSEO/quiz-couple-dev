@@ -414,7 +414,9 @@
     "quizSuperVilain": "quiz del supercattivo",
     "quizDuoVilains": "quiz del duo di supercattivi",
     "quizChienNous": "Che cane fa per noi?",
-    "quizMaisonNous": "Che casa fa per noi?"
+    "quizMaisonNous": "Che casa fa per noi?",
+    "quizListeNoel": "Buoni o cattivi?",
+    "quizDuoNoel": "Che personaggi di Natale siete?"
   },
   "truefalse": {
     "ready": "Pronto per il vero o falso?",

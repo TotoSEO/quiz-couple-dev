@@ -414,7 +414,9 @@
     "quizSuperVilain": "Superschurken-Quiz",
     "quizDuoVilains": "Superschurken-Duo-Quiz",
     "quizChienNous": "Welcher Hund passt zu uns?",
-    "quizMaisonNous": "Welches Haus passt zu uns?"
+    "quizMaisonNous": "Welches Haus passt zu uns?",
+    "quizListeNoel": "Artig oder unartig?",
+    "quizDuoNoel": "Welcher Weihnachtstyp seid ihr?"
   },
   "truefalse": {
     "ready": "Bereit für Richtig oder Falsch?",

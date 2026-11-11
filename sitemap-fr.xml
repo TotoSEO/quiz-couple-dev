@@ -1098,7 +1098,7 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/non-ho-mai-gioco-coppia/"/>
     <xhtml:link rel="alternate" hreflang="nl" href="https://quiz-couple.com/nl/ik-heb-nog-nooit-vragen/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/je-nai-jamais-jeu-couple/"/>
-    <lastmod>2026-11-06</lastmod>
+    <lastmod>2026-11-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -1319,6 +1319,32 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/test-che-casa-fa-per-noi/"/>
     <xhtml:link rel="alternate" hreflang="nl" href="https://quiz-couple.com/nl/welk-huis-past-bij-ons-test/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/test-quelle-maison-est-faite-pour-nous/"/>
+    <lastmod>2026-11-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://quiz-couple.com/test-liste-des-enfants-sages/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/test-liste-des-enfants-sages/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://quiz-couple.com/en/naughty-or-nice-quiz/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://quiz-couple.com/es/test-lista-de-ninos-buenos-y-malos/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://quiz-couple.com/de/artig-oder-unartig-test/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/test-lista-dei-buoni-e-cattivi/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://quiz-couple.com/nl/lief-of-stout-test/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/test-liste-des-enfants-sages/"/>
+    <lastmod>2026-11-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://quiz-couple.com/quiz-quels-personnages-de-noel-etes-vous/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/quiz-quels-personnages-de-noel-etes-vous/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://quiz-couple.com/en/which-christmas-characters-are-you-quiz/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://quiz-couple.com/es/test-que-personajes-de-navidad-sois/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://quiz-couple.com/de/welcher-weihnachtstyp-seid-ihr-test/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/test-che-personaggi-di-natale-siete/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://quiz-couple.com/nl/welke-kerstfiguren-zijn-jullie-quiz/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/quiz-quels-personnages-de-noel-etes-vous/"/>
     <lastmod>2026-11-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
