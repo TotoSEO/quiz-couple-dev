@@ -11,7 +11,7 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/"/>
     <xhtml:link rel="alternate" hreflang="nl" href="https://quiz-couple.com/nl/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/"/>
-    <lastmod>2026-11-09</lastmod>
+    <lastmod>2026-11-11</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -50,7 +50,7 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/test-compatibilita-amorosa/"/>
     <xhtml:link rel="alternate" hreflang="nl" href="https://quiz-couple.com/nl/passen-we-bij-elkaar/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/test-compatibilite-amoureuse/"/>
-    <lastmod>2026-11-06</lastmod>
+    <lastmod>2026-11-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -297,7 +297,7 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/domande-coppia/"/>
     <xhtml:link rel="alternate" hreflang="nl" href="https://quiz-couple.com/nl/vragen-voor-koppels/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/questions-couple/"/>
-    <lastmod>2026-11-07</lastmod>
+    <lastmod>2026-11-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -1077,7 +1077,7 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/gioco-pro-o-contro-coppia/"/>
     <xhtml:link rel="alternate" hreflang="nl" href="https://quiz-couple.com/nl/voor-of-tegen-stellingen/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/quiz-pour-contre-couple/"/>
-    <lastmod>2026-11-06</lastmod>
+    <lastmod>2026-11-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -1220,7 +1220,7 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/quiz-speciali-per-coppie/"/>
     <xhtml:link rel="alternate" hreflang="nl" href="https://quiz-couple.com/nl/themaquiz-voor-koppels/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/quiz-speciaux-pour-couple/"/>
-    <lastmod>2026-11-06</lastmod>
+    <lastmod>2026-11-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -1286,6 +1286,32 @@
     <xhtml:link rel="alternate" hreflang="nl" href="https://quiz-couple.com/nl/welk-superschurkenduo-zijn-jullie/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/quiz-quel-duo-de-super-vilains-formez-vous/"/>
     <lastmod>2026-11-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://quiz-couple.com/en/what-dog-should-we-get-quiz/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/test-quel-chien-est-fait-pour-nous/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://quiz-couple.com/en/what-dog-should-we-get-quiz/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://quiz-couple.com/es/test-que-perro-es-para-nosotros/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://quiz-couple.com/de/welcher-hund-passt-zu-uns-test/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/test-che-cane-fa-per-noi/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://quiz-couple.com/nl/welke-hond-past-bij-ons-test/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/test-quel-chien-est-fait-pour-nous/"/>
+    <lastmod>2026-11-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://quiz-couple.com/en/what-kind-of-house-should-we-live-in-quiz/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/test-quelle-maison-est-faite-pour-nous/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://quiz-couple.com/en/what-kind-of-house-should-we-live-in-quiz/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://quiz-couple.com/es/test-que-casa-es-para-nosotros/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://quiz-couple.com/de/welches-haus-passt-zu-uns-test/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/test-che-casa-fa-per-noi/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://quiz-couple.com/nl/welk-huis-past-bij-ons-test/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/test-quelle-maison-est-faite-pour-nous/"/>
+    <lastmod>2026-11-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>

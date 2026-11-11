@@ -412,7 +412,9 @@
     "quizMortFilmHorreur": "quiz «chi muore per primo in un film horror»",
     "quizPossession": "quiz «chi potrebbe essere posseduto»",
     "quizSuperVilain": "quiz del supercattivo",
-    "quizDuoVilains": "quiz del duo di supercattivi"
+    "quizDuoVilains": "quiz del duo di supercattivi",
+    "quizChienNous": "Che cane fa per noi?",
+    "quizMaisonNous": "Che casa fa per noi?"
   },
   "truefalse": {
     "ready": "Pronto per il vero o falso?",
