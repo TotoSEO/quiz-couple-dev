@@ -219,7 +219,7 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/quiz-innamorati/"/>
     <xhtml:link rel="alternate" hreflang="nl" href="https://quiz-couple.com/nl/quiz-over-liefde/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/quiz-amoureux/"/>
-    <lastmod>2026-11-06</lastmod>
+    <lastmod>2026-11-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -622,7 +622,7 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/test-linguaggio-amore-coppia/"/>
     <xhtml:link rel="alternate" hreflang="nl" href="https://quiz-couple.com/nl/liefdestaal-test/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/test-langage-amour-couple/"/>
-    <lastmod>2026-11-06</lastmod>
+    <lastmod>2026-11-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -1376,6 +1376,32 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/test-chi-porta-i-pantaloni/"/>
     <xhtml:link rel="alternate" hreflang="nl" href="https://quiz-couple.com/nl/wie-heeft-de-broek-aan-test/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/test-qui-porte-la-culotte/"/>
+    <lastmod>2026-11-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://quiz-couple.com/es/test-que-tipo-de-novios-somos/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/test-quel-genre-de-partenaires-sommes-nous/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://quiz-couple.com/en/what-kind-of-partners-are-we-quiz/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://quiz-couple.com/es/test-que-tipo-de-novios-somos/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://quiz-couple.com/de/was-fuer-partner-sind-wir-test/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/test-che-tipo-di-fidanzati-siamo/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://quiz-couple.com/nl/wat-voor-partners-zijn-wij-test/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/test-quel-genre-de-partenaires-sommes-nous/"/>
+    <lastmod>2026-11-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://quiz-couple.com/es/test-que-pareja-de-animales-somos/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/test-quel-couple-d-animaux-sommes-nous/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://quiz-couple.com/en/what-animal-couple-are-we-quiz/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://quiz-couple.com/es/test-que-pareja-de-animales-somos/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://quiz-couple.com/de/welches-tierpaar-sind-wir-test/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/test-che-coppia-di-animali-siamo/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://quiz-couple.com/nl/welk-dierenkoppel-zijn-wij-test/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/test-quel-couple-d-animaux-sommes-nous/"/>
     <lastmod>2026-11-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>

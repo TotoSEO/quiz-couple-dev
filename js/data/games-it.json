@@ -419,7 +419,9 @@
     "quizMariageNous": "Che matrimonio fa per noi?",
     "quizListeNoel": "Buoni o cattivi?",
     "quizDuoNoel": "Che personaggi di Natale siete?",
-    "quizPorteCulotte": "Chi porta i pantaloni?"
+    "quizPorteCulotte": "Chi porta i pantaloni?",
+    "quizAnimauxNous": "Che coppia di animali siamo?",
+    "quizPartenairesNous": "Che tipo di fidanzati siamo?"
   },
   "truefalse": {
     "ready": "Pronto per il vero o falso?",

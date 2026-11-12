@@ -419,7 +419,9 @@
     "quizMariageNous": "What kind of wedding should we have?",
     "quizListeNoel": "Naughty or Nice?",
     "quizDuoNoel": "Which Christmas Characters Are You?",
-    "quizPorteCulotte": "Who Wears the Pants?"
+    "quizPorteCulotte": "Who Wears the Pants?",
+    "quizAnimauxNous": "What animal couple are we?",
+    "quizPartenairesNous": "What kind of partners are we?"
   },
   "truefalse": {
     "ready": "Ready for true or false?",
