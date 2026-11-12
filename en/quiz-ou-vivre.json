@@ -1,0 +1,123 @@
+{
+  "hero": {
+    "badge": "Fun quiz • Together, or on your own for your couple",
+    "title": "Where should we live in 10 years? The quiz to take as a couple",
+    "titleHighlight": "Where should we live in 10 years?",
+    "description": "Can't decide between the city and the countryside, or between the sea and the mountains? You each answer 12 questions about the life you picture. Then the quiz shows you the place that would suit your couple best.",
+    "subtitle": "12 questions • 3 minutes each • on one phone",
+    "jumpBtn": "Take the quiz"
+  },
+  "section1": {
+    "title": "How the quiz works",
+    "p1": "This quiz is a game to play as a couple. It helps you find the kind of place where you could be living in 10 years, for example in the mountains or in a big city. It asks 12 questions about your everyday life. For example, it asks what you want to hear in the morning and how you go and buy bread.",
+    "p2": "Take the question about your family and friends. You can choose between “less than twenty minutes away, that matters to us”, “an hour or two away by car”, “far away, we'll see them in the holidays” and “very far away, we'll video call”. If you answer “less than twenty minutes away”, the quiz gives most of its points to the result “right where you are”. If your partner answers “very far away”, it gives points to living abroad and to the island. At the end, the quiz adds up your answers and keeps the place with the most points.",
+    "p3": "The first person answers the 12 questions and then passes the phone. The second person answers without seeing what the first one chose. Then the quiz shows you your place as a couple, with its photo. It also shows the place each of you would have picked alone and the list of questions where you gave different answers.",
+    "p4": "You can also take the quiz on your own and answer for your couple. But you won't be able to compare your answers, and that's the most interesting part."
+  },
+  "section2": {
+    "title": "The 10 places in the quiz",
+    "intro": "The quiz can give 10 results. Some are close to home, like the small town. Others are much further away, like the island or living abroad. Here's who each place suits best.",
+    "galerie": [
+      {
+        "id": "montagne",
+        "titre": "In the mountains",
+        "texte": "For those who want real seasons and trails right outside the door.",
+        "alt": "A wooden chalet at the edge of an alpine village, with geraniums at the windows, in front of snow-capped peaks"
+      },
+      {
+        "id": "campagne",
+        "titre": "In the countryside",
+        "texte": "For those who want space and quiet.",
+        "alt": "An old stone farmhouse with pale blue shutters in the middle of the fields, with a few hens in the yard"
+      },
+      {
+        "id": "mer",
+        "titre": "By the sea",
+        "texte": "For those who need to see the water and the horizon, even in winter.",
+        "alt": "A small fishing harbour at sunrise, with colourful boats and a white house with blue shutters on the quay"
+      },
+      {
+        "id": "metropole",
+        "titre": "In a big city",
+        "texte": "For those who go out a lot and want everything ten minutes away.",
+        "alt": "A big city at dusk seen from a balcony with plants, with lit towers and avenues"
+      },
+      {
+        "id": "petiteVille",
+        "titre": "In a small town",
+        "texte": "For those who want to do everything on foot and know their neighbours.",
+        "alt": "The square of a small town on a market morning, with a fountain, plane trees and stalls of fruit and flowers"
+      },
+      {
+        "id": "banlieue",
+        "titre": "Just outside a big city",
+        "texte": "For those who want a garden without giving up the city.",
+        "alt": "A quiet street lined with houses and small gardens, a bike against a gate and the city towers in the distance"
+      },
+      {
+        "id": "etranger",
+        "titre": "Abroad",
+        "texte": "For those who can't sit still and like starting from scratch.",
+        "alt": "A window open onto the rooftops and palm trees of a southern city, with two suitcases standing by the window"
+      },
+      {
+        "id": "ile",
+        "titre": "On an island",
+        "texte": "For those who dream of a slower life in the sun.",
+        "alt": "A small white house on a tropical island surrounded by a turquoise lagoon, with a jetty and palm trees"
+      },
+      {
+        "id": "lac",
+        "titre": "By a lake, in the middle of nature",
+        "texte": "For those who want peace and aren't afraid of being far from everything.",
+        "alt": "A wooden cabin and its jetty by a lake surrounded by pine trees, with a rowing boat tied up in the morning mist"
+      },
+      {
+        "id": "ici",
+        "titre": "Right where you are",
+        "texte": "For those who are happy where they are, close to their family and friends.",
+        "alt": "A front door seen from the doorstep, with a doormat, two pairs of rain boots side by side and a bunch of keys in the lock"
+      }
+    ]
+  },
+  "section3": {
+    "title": "City or countryside, sea or mountains: what matters more than the view",
+    "intro": "When you dream of a place, you think of the view first. But when a couple starts <a href=\"/en/blog/future-questions-for-couples/\">talking about their future</a>, four other topics come up quickly.",
+    "sub1Title": "Family and friends",
+    "sub1Text": "This is often the first disagreement. For example, one of you wants to stay close to their parents and the other would happily move a thousand miles away. It matters even more <a href=\"/en/parenthood-readiness-test/\">the day you think about having a child</a>, because grandparents twenty minutes away change your life. Tell each other honestly how far from your loved ones each of you still feels fine.",
+    "sub2Title": "Work",
+    "sub2Text": "A beautiful place isn't enough if neither of you can find work there. Look at what each of you could do there. For example, you could keep your job and work remotely, or change careers. If only one of you has a job there, talk about what that changes for the other one and for your money as a couple.",
+    "sub3Title": "Everyday life",
+    "sub3Text": "Holidays don't tell you much about living somewhere. The seaside is very different in January. In the countryside, it can take half an hour by car to buy a loaf of bread! Before you decide, go and spend a week there in the off season and live as if you lived there.",
+    "sub4Title": "The home itself",
+    "sub4Text": "The place isn't everything. In the same town, life isn't the same in a fifth-floor studio and in a house with a garden. Once you agree on the area, you'll still have to choose <a href=\"/en/what-kind-of-house-should-we-live-in-quiz/\">between an apartment and a house</a>."
+  },
+  "section4": {
+    "title": "What if you don't see yourselves in the same place?",
+    "p1": "It happens very often and it doesn't mean you're not made to live together. Start by looking at the list of your different answers. If they're about the weather or the view, you'll find a place that suits each of you. If they're about your loved ones or about moving abroad, it's a more serious topic. It's better to talk about it now than in five years.",
+    "p2": "You can also try before you choose. Lots of couples leave for a year or two to see, and keep the option of coming back. Others find a middle ground, for example a small town an hour from the sea. And nothing forces you to choose forever!"
+  },
+  "section5": {
+    "title": "What you should know about this quiz",
+    "p1": "This quiz is a game. It doesn't know your job or your budget, and it doesn't know rent prices either. It only tells you what kind of place your answers lead to. It won't give you the name of a town or a country. It's mostly a way to start the conversation in your couple.",
+    "p2": "Your answers aren't saved, they stay on your phone. We only count which result you get, to see which ones come up most. Your name isn't saved either. The photos were created for this page."
+  },
+  "seo": {
+    "faqTitle": "Frequently asked questions",
+    "faq1Q": "Which places can you get?",
+    "faq1A": "The quiz can give 10 results: the mountains, the countryside, the seaside, a big city, a small town, just outside a big city, abroad, an island and a lake in the middle of nature. The last result is called “right where you are”. It's for couples who have no wish to move.",
+    "faq2Q": "How is the result worked out?",
+    "faq2A": "Each answer gives points to the places that match it. For example, if you answer “mountain peaks” to the question about the view from the living room, the mountains get points but the big city doesn't. When you take the quiz together, it adds up your answers and the place with the most points becomes your place as a couple.",
+    "faq3Q": "Does the quiz tell you which city or country to live in?",
+    "faq3A": "No. It gives you a kind of place and not an address, for example the mountains or a small town. It's then up to you to find the spot that looks like it, in your country or elsewhere. That will also depend on your work and your budget.",
+    "faq4Q": "City or countryside: how do you choose as a couple?",
+    "faq4A": "The easiest way is to look at what your weeks are like. For example, ask yourselves how many evenings a month you go out and how long you're willing to spend in the car. If your answers are very different, a middle ground often works better. It could be a small town or a house half an hour from a big city.",
+    "faq5Q": "What if one of us wants to move abroad and the other doesn't?",
+    "faq5A": "It's a hard disagreement because you can't half leave. Talk about how long first. Leaving for two years with a planned return isn't the same plan as leaving for good. The one who hesitates often finds two years easier to accept.",
+    "faq6Q": "Can you take the quiz on your own?",
+    "faq6A": "Yes. Just choose “On my own, for our couple” and answer with your couple in mind. You'll get a result but you won't be able to compare your answers."
+  },
+  "jsonLd": {
+    "about": "choosing where to live as a couple"
+  }
+}

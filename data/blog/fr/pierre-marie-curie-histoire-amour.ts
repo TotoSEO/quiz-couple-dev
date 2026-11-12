@@ -32,7 +32,7 @@ const article: BlogArticleData = {
     {
       id: 'un-mariage-sans-robe-blanche',
       title: "Un mariage sans robe blanche",
-      content: `<p>Le mariage a lieu le 26 juillet 1895, à la mairie de Sceaux. <strong>Pas d'église, pas d'alliances</strong> : un mariage civil, avec la famille et quelques amis.</p>
+      content: `<p>Le mariage a lieu le 26 juillet 1895, à la mairie de Sceaux. <strong>Pas d'église, pas d'alliances</strong> : <a href="/test-quel-mariage-est-fait-pour-nous/">un mariage civil</a>, avec la famille et quelques amis.</p>
 <p>Pas de robe blanche non plus. Marie choisit une tenue bleu foncé, simple, qu'elle pourra remettre tous les jours. Et c'est ce qu'elle fait : elle la portera ensuite au laboratoire pendant des années.</p>
 <figure class="blog-portrait"><img src="/blog/pierre-marie-curie-1895.webp" alt="Photographie de Pierre et Marie Curie en 1895, debout côte à côte, elle lui tient le bras" width="620" height="826" loading="lazy"><figcaption>Pierre et Marie Curie en 1895, l'année de leur mariage.</figcaption></figure>
 <aside class="blog-tip-box" role="note">

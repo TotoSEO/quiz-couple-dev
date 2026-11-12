@@ -41,7 +41,7 @@ import { createRequire } from 'node:module';
 import { fileURLToPath } from 'node:url';
 import {
   LANGUAGES, LANGUES_CACHEES, ROUTE_SLUGS, ROUTE_CONFIG, BLOG_ARTICLES,
-  getLocalizedPath, getArticlePath, cheminDeclare, pageEnAttente, bilanOuvertPour, BASE_URL,
+  getLocalizedPath, getArticlePath, cheminDeclare, pageEnAttente, ROUTES_EN_PREPARATION, bilanOuvertPour, BASE_URL,
 } from './config.js';
 
 const ICI = path.dirname(fileURLToPath(import.meta.url));
@@ -616,7 +616,9 @@ function controleTextes() {
           if (estFichier(h)) continue;
           if (langueDuChemin(h) !== LANGUE) erreur(C, loc, `lien vers une page d'une autre langue : ${h}`);
           else if (!cibleDe(h)) erreur(C, loc, `lien vers une adresse inconnue : ${h}`);
-          else if (cibleDe(h).startsWith('route:') && pageEnAttente(cibleDe(h).slice(6), LANGUE)) afaire(C, loc, `lien vers ${cibleDe(h).slice(6)}, page en attente de traduction : neutralisé jusqu'à ce qu'elle sorte de PAGES_EN_ATTENTE`);
+          else if (cibleDe(h).startsWith('route:') && pageEnAttente(cibleDe(h).slice(6), LANGUE)) afaire(C, loc, ROUTES_EN_PREPARATION.includes(cibleDe(h).slice(6))
+            ? `lien vers ${cibleDe(h).slice(6)}, page en préparation : neutralisé jusqu'à ce qu'elle sorte de ROUTES_EN_PREPARATION`
+            : `lien vers ${cibleDe(h).slice(6)}, page en attente de traduction : neutralisé jusqu'à ce qu'elle sorte de PAGES_EN_ATTENTE`);
         }
         const attendues = lRef.filter((h) => h.startsWith('/')).map((h) => cibleDe(h) || `?${h}`);
         const posees = internes.map((h) => cibleDe(h)).filter(Boolean);

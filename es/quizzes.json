@@ -604,6 +604,18 @@
     "metaDescription": "¿Dudáis entre un piso en la ciudad y una casa con jardín? Cada uno responde a 12 preguntas y el test os enseña la casa hecha para vuestra pareja.",
     "description": "Cada uno responde a 12 preguntas y el test os enseña la vivienda que le iría bien a vuestra pareja, con su foto."
   },
+  "quizOuVivre": {
+    "title": "¿Dónde deberíamos vivir? El test para hacer en pareja",
+    "shortTitle": "Dónde deberíamos vivir",
+    "metaDescription": "¿Dudáis entre la ciudad, el campo, el mar y la montaña? Cada uno responde a 12 preguntas y el test enseña dónde podría vivir vuestra pareja dentro de 10 años.",
+    "description": "Cada uno responde a 12 preguntas y el test os enseña el sitio donde podría vivir vuestra pareja dentro de 10 años, con su foto."
+  },
+  "quizMariageNous": {
+    "title": "¿Qué tipo de boda queremos? Test de estilo de boda en pareja",
+    "shortTitle": "Qué tipo de boda queremos",
+    "metaDescription": "¿Dudáis entre un castillo, una finca y una playa? Cada uno responde a 12 preguntas y el test os enseña el estilo de boda hecho para vuestra pareja.",
+    "description": "Cada uno responde a 12 preguntas y el test os enseña el estilo de boda que le iría bien a vuestra pareja, con su foto."
+  },
   "quizListeNoel": {
     "title": "Lista de niños buenos y malos: ¿en cuál estáis? El test",
     "shortTitle": "Lista de niños buenos y malos",

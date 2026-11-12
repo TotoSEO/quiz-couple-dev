@@ -68,7 +68,7 @@ const article: BlogArticleData = {
     {
       id: "de-toekomst-in-het-we",
       title: "6. Hij praat over de toekomst in het ‘we’",
-      content: `<p>‘Als we een huis hebben’, ‘als we kinderen hebben’, ‘daar gaan we heen voor onze vijftigste’. En vooral: hij verandert niet meer van onderwerp als trouwen in het gesprek opduikt. Hij stelt zelfs vragen: groot feest of kleine kring, kerk of gemeentehuis, welke naam je zou willen. Een man die niet van plan is te trouwen, ontwijkt die vragen; een man die zijn aanzoek voorbereidt, verzamelt ze.</p>`,
+      content: `<p>‘Als we een huis hebben’, ‘als we kinderen hebben’, ‘daar gaan we heen voor onze vijftigste’. En vooral: hij verandert niet meer van onderwerp als trouwen in het gesprek opduikt. Hij stelt zelfs vragen: <a href="/nl/wat-voor-bruiloft-past-bij-ons-test/">groot feest of kleine kring</a>, kerk of gemeentehuis, welke naam je zou willen. Een man die niet van plan is te trouwen, ontwijkt die vragen; een man die zijn aanzoek voorbereidt, verzamelt ze.</p>`,
     },
     {
       id: "de-bruiloften-van-anderen",

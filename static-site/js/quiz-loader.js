@@ -482,6 +482,16 @@
                      axes: ['pavillon', 'appartement', 'campagne', 'loft', 'architecte', 'tiny', 'renover', 'van', 'peniche', 'palier'],
                      // Les logements les plus rares ne sortent que chez ceux qui les ont cherchés (voir `coefs` du moteur).
                      coefs: { peniche: 0.87, palier: 0.85, van: 0.9, tiny: 0.91, campagne: 0.95, architecte: 0.95, loft: 0.96 } },
+    // « Où vivrons-nous dans 10 ans ? » et « Quel mariage est fait pour nous ? » :
+    // les mêmes réglages, dix résultats chacun.
+    'ou-vivre':    { prefix: 'ouVivre', engine: 'portrait', totalQ: 12, pool: 12, quizType: 'ou-vivre', needsGender: true,
+                     commun: true, duoDabord: true, sansMelange: true, base: 'fun', images: 'ou-vivre', vignettes: true, icone: '🗺️',
+                     axes: ['montagne', 'campagne', 'mer', 'metropole', 'petiteVille', 'banlieue', 'etranger', 'ile', 'lac', 'ici'],
+                     coefs: { campagne: 0.96, banlieue: 0.96, petiteVille: 0.97, etranger: 0.97 } },
+    'mariage-nous': { prefix: 'mariageNous', engine: 'portrait', totalQ: 12, pool: 12, quizType: 'mariage-nous', needsGender: true,
+                     commun: true, duoDabord: true, sansMelange: true, base: 'fun', images: 'mariage-nous', vignettes: true, icone: '💍',
+                     axes: ['chateau', 'champetre', 'jardin', 'foret', 'plage', 'mairie', 'montagne', 'deux', 'vignes', 'fete'],
+                     coefs: { vignes: 0.94, fete: 0.95, mairie: 0.95, chateau: 0.97 } },
     // Les deux quiz de Noël « pour nous » (novembre 2026). Les personnages de
     // Noël : le moteur des portraits en mode commun, huit duos (le Père Noël
     // et la Mère Noël, deux lutins, deux rennes...), chacun avec sa photo ;

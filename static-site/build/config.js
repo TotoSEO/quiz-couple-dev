@@ -38,7 +38,15 @@ export const PAGES_EN_ATTENTE = {
 // déjà ouverte : un article n'y existe que traduit, et un fichier de textes
 // qu'elle n'a pas encore vient du français.
 export function langueEnCours(lang) { return langueCachee(lang) || Object.prototype.hasOwnProperty.call(PAGES_EN_ATTENTE, lang); }
-export function pageEnAttente(routeKey, lang) { return (PAGES_EN_ATTENTE[lang] || []).includes(routeKey); }
+// Une page en préparation (ROUTES_EN_PREPARATION) : ses textes et son code
+// sont dans le dépôt, il ne lui manque que ses images. Elle n'est construite
+// dans aucune langue, exactement comme une page en attente de traduction
+// (ni menu, ni carte, ni sitemap, liens écrits vers elle neutralisés), mais
+// sans que ses langues deviennent « en cours ». Le jour où les images sont
+// là, on retire sa clé de la liste. `QC_PREPARATION=ouvert` construit ces
+// pages, pour les essayer sur un build local.
+export const ROUTES_EN_PREPARATION = process.env.QC_PREPARATION === 'ouvert' ? [] : ['quizOuVivre', 'quizMariageNous'];
+export function pageEnAttente(routeKey, lang) { return ROUTES_EN_PREPARATION.includes(routeKey) || (PAGES_EN_ATTENTE[lang] || []).includes(routeKey); }
 export const DEFAULT_LANG = 'fr';
 
 export const LOCALES = {
@@ -174,6 +182,11 @@ export const ROUTE_SLUGS = {
   // moi", c'est "pour nous" ») : le chien et la maison du couple.
   quizChienNous: { fr: 'test-quel-chien-est-fait-pour-nous', en: 'what-dog-should-we-get-quiz', es: 'test-que-perro-es-para-nosotros', de: 'welcher-hund-passt-zu-uns-test', it: 'test-che-cane-fa-per-noi', nl: 'welke-hond-past-bij-ons-test' },
   quizMaisonNous: { fr: 'test-quelle-maison-est-faite-pour-nous', en: 'what-kind-of-house-should-we-live-in-quiz', es: 'test-que-casa-es-para-nosotros', de: 'welches-haus-passt-zu-uns-test', it: 'test-che-casa-fa-per-noi', nl: 'welk-huis-past-bij-ons-test' },
+  // Le lot suivant des quiz fun « pour nous » : l'endroit où le couple vivra
+  // dans dix ans et son style de mariage (en préparation tant que les images
+  // manquent, voir ROUTES_EN_PREPARATION).
+  quizOuVivre: { fr: 'test-ou-devrions-nous-vivre', en: 'where-should-we-live-quiz', es: 'test-donde-deberiamos-vivir', de: 'wo-sollen-wir-leben-test', it: 'test-dove-dovremmo-vivere', nl: 'waar-moeten-we-wonen-test' },
+  quizMariageNous: { fr: 'test-quel-mariage-est-fait-pour-nous', en: 'what-kind-of-wedding-should-we-have-quiz', es: 'test-que-tipo-de-boda-queremos', de: 'welche-hochzeit-passt-zu-uns-test', it: 'test-che-matrimonio-fa-per-noi', nl: 'wat-voor-bruiloft-past-bij-ons-test' },
   // Les deux quiz de Noël « pour nous » (novembre 2026) : la liste du Père
   // Noël (sages ou pas sages) et les personnages de Noël que forme le couple.
   quizListeNoel: { fr: 'test-liste-des-enfants-sages', en: 'naughty-or-nice-quiz', es: 'test-lista-de-ninos-buenos-y-malos', de: 'artig-oder-unartig-test', it: 'test-lista-dei-buoni-e-cattivi', nl: 'lief-of-stout-test' },
@@ -434,6 +447,8 @@ export const ROUTE_CONFIG = {
   quizDuoVilains: { template: 'quiz-duo-vilains', namespaces: ['quiz-duo-vilains', 'quizzes', 'quizGames', 'gd', 'common'] },
   quizChienNous: { template: 'quiz-chien-nous', namespaces: ['quiz-chien-nous', 'quizzes', 'quizGames', 'gd', 'common'] },
   quizMaisonNous: { template: 'quiz-maison-nous', namespaces: ['quiz-maison-nous', 'quizzes', 'quizGames', 'gd', 'common'] },
+  quizOuVivre: { template: 'quiz-ou-vivre', namespaces: ['quiz-ou-vivre', 'quizzes', 'quizGames', 'gd', 'common'] },
+  quizMariageNous: { template: 'quiz-mariage-nous', namespaces: ['quiz-mariage-nous', 'quizzes', 'quizGames', 'gd', 'common'] },
   quizListeNoel: { template: 'quiz-liste-noel', namespaces: ['quiz-liste-noel', 'quizzes', 'quizGames', 'gd', 'common'] },
   quizDuoNoel: { template: 'quiz-duo-noel', namespaces: ['quiz-duo-noel', 'quizzes', 'quizGames', 'gd', 'common'] },
   quizPorteCulotte: { template: 'quiz-porte-culotte', namespaces: ['quiz-porte-culotte', 'quizzes', 'quizGames', 'gd', 'common'] },
@@ -567,6 +582,8 @@ export const BILAN_ENTREES = {
   // l'encart et la bannière de l'évaluation, sans la porte e-mail.
   quizChienNous: { groupe: 'jeu', id: 'chien-nous' },
   quizMaisonNous: { groupe: 'jeu', id: 'maison-nous' },
+  quizOuVivre: { groupe: 'jeu', id: 'ou-vivre' },
+  quizMariageNous: { groupe: 'jeu', id: 'mariage-nous' },
   // Les deux quiz de Noël (novembre 2026), comme les autres quiz fun.
   quizListeNoel: { groupe: 'jeu', id: 'liste-noel' },
   quizDuoNoel: { groupe: 'jeu', id: 'duo-noel' },
@@ -751,7 +768,7 @@ export const SECTIONS_NAV = {
   // avant ceux de la saison en cours, dont la section passe aussi en tête du
   // menu (SAISONS_QUIZ, saisonEnTete).
   speciaux: saisonEnTete([
-    { cle: 'futur', routes: ['quizChienNous', 'quizMaisonNous'] },
+    { cle: 'futur', routes: ['quizChienNous', 'quizMaisonNous', 'quizOuVivre', 'quizMariageNous'] },
     { cle: 'vous', routes: ['quizPorteCulotte'] },
     { cle: 'halloween', routes: ['quizSerialKiller', 'quizMortFilmHorreur', 'quizPossession', 'quizSuperVilain', 'quizDuoVilains'] },
     { cle: 'noel', routes: ['quizListeNoel', 'quizDuoNoel'] },

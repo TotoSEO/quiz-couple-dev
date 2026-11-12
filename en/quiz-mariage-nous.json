@@ -1,0 +1,123 @@
+{
+  "hero": {
+    "badge": "Fun quiz • Together, or on your own for your couple",
+    "title": "What kind of wedding should we have? The quiz to take as a couple",
+    "titleHighlight": "What kind of wedding should we have?",
+    "description": "Do you dream of a castle while your partner dreams of a beach? You each answer 12 questions about the wedding day. Then the quiz shows you the wedding style that would suit your couple best.",
+    "subtitle": "12 questions • 3 minutes each • on one phone",
+    "jumpBtn": "Take the quiz"
+  },
+  "section1": {
+    "title": "How the quiz works",
+    "p1": "This quiz is a game to play as a couple. It helps you find the wedding style that suits you, for example a big party in a castle or a simple meal after city hall. It asks 12 questions about the wedding day. For example, it asks how many guests you want and what music you picture.",
+    "p2": "Take the question about the number of guests. You can choose between “just us and two witnesses”, “about thirty, the closest ones”, “about a hundred, family and friends” and “more than two hundred, we invite everyone”. If you answer “about thirty”, the quiz gives points to small weddings, like the garden wedding. If your partner answers “more than two hundred”, it gives points to the castle and to the festival wedding. At the end, the quiz adds up your answers and keeps the wedding with the most points.",
+    "p3": "The first person answers the 12 questions and then passes the phone. The second person answers without seeing what the first one chose. Then the quiz shows you your wedding as a couple, with its photo. It also shows the wedding each of you would have picked alone and the list of questions where you gave different answers.",
+    "p4": "You can take this quiz <a href=\"/en/blog/marriage-proposal/\">before you're even engaged</a>, just for fun. You can also take it at the start of the planning, to agree before you visit venues. It works on your own too, but you won't be able to compare your answers."
+  },
+  "section2": {
+    "title": "The 10 weddings in the quiz",
+    "intro": "The quiz can give 10 results. Some are very classic, like the castle wedding. Others are much less so, like the festival wedding. Here's who each wedding suits best.",
+    "galerie": [
+      {
+        "id": "chateau",
+        "titre": "The castle wedding",
+        "texte": "For those who want a big day with both families there.",
+        "alt": "The driveway and steps of a castle decorated for a wedding, with white flowers and rows of chairs on the lawn"
+      },
+      {
+        "id": "champetre",
+        "titre": "The rustic barn wedding",
+        "texte": "For those who want long wooden tables and guests who feel at ease.",
+        "alt": "A wedding dinner in a meadow at dusk, with a big tent, long wooden tables and string lights"
+      },
+      {
+        "id": "jardin",
+        "titre": "The garden wedding, in town",
+        "texte": "For those who would rather have about thirty guests they can talk to.",
+        "alt": "A long table set in a small walled town garden covered in ivy, with peonies and champagne flutes"
+      },
+      {
+        "id": "foret",
+        "titre": "The woodland wedding",
+        "texte": "For those who want a ceremony like no other.",
+        "alt": "A wedding ceremony set up in a forest clearing, with an arch of branches and flowers and wooden benches under the trees"
+      },
+      {
+        "id": "plage",
+        "titre": "The beach wedding",
+        "texte": "For those who want to get married barefoot, facing the sea.",
+        "alt": "A wedding arch draped in white on a beach at sunset, with a few wooden chairs and a basket of sandals"
+      },
+      {
+        "id": "mairie",
+        "titre": "City hall, then a great restaurant",
+        "texte": "For those who want a simple wedding and a good meal.",
+        "alt": "The steps of a small town hall covered in petals and confetti, with a bouquet on a step and a bike decorated with ribbons"
+      },
+      {
+        "id": "montagne",
+        "titre": "The mountain wedding",
+        "texte": "For those who want few guests, a chalet and mountain peaks in the photos.",
+        "alt": "A wedding ceremony set up in an alpine meadow next to a chalet, with a wooden arch and benches in front of snow-capped peaks"
+      },
+      {
+        "id": "deux",
+        "titre": "Eloping, far from everything",
+        "texte": "For those who want to live this moment with no guests and no speeches.",
+        "alt": "Two wedding rings and a small bouquet on an old leather suitcase, at the top of a cliff above the ocean"
+      },
+      {
+        "id": "vignes",
+        "titre": "The vineyard wedding",
+        "texte": "For those who love long dinners outdoors at the end of summer.",
+        "alt": "A long wedding table set between two rows of vines at sunset, with candles and string lights"
+      },
+      {
+        "id": "fete",
+        "titre": "The festival wedding",
+        "texte": "For those who want a very big party over three days.",
+        "alt": "A wedding party in a field at night, with lit tents, a small stage, bunting and hay bales"
+      }
+    ]
+  },
+  "section3": {
+    "title": "Choosing your wedding style: what to settle first",
+    "intro": "Before you visit a venue, there are four topics it's better to agree on. The style of the wedding depends on them almost entirely.",
+    "sub1Title": "The number of guests",
+    "sub1Text": "This is the first question to settle because the venue, the budget and the mood depend on it. With about thirty guests, you can talk to everyone. With two hundred, you have a big party but you'll only see some guests for five minutes. Each write your own list and then compare them. You'll see straight away whether you have the same wedding in mind.",
+    "sub2Title": "The budget",
+    "sub2Text": "A wedding can cost the price of a good meal in a restaurant or the price of a new car. Money is one of the <a href=\"/en/marriage-compatibility-test/\">topics couples avoid before they get married</a>. The party budget is often the first real conversation about it. Before you look at venues, set the amount you're ready to spend. Tell each other who pays for what too, for example you or your parents.",
+    "sub3Title": "The ceremony",
+    "sub3Text": "The rules depend on where you live. In England and Wales, for example, a legal wedding has to take place at a register office, in a place of worship or at an approved venue. A ceremony in a forest clearing is usually symbolic there. In most of the United States, an officiant can marry you almost anywhere as long as you have a marriage license. Lots of couples sign the papers a few days before with a few loved ones. They keep the big ceremony for the day of the party.",
+    "sub4Title": "The families",
+    "sub4Text": "Your parents often have their own idea of the wedding and it isn't always yours. For example, a grandmother insists on a church or a father wants to invite his colleagues. Agree as a couple before you talk about it with anyone else. It's easier to stick to a decision you made together."
+  },
+  "section4": {
+    "title": "What if you don't picture the same wedding?",
+    "p1": "It's very common. For example, one of you has always dreamed of a big party and the other has no wish to be the centre of attention for twelve hours! Look at the list of your different answers. If they're about the decoration or the music, you can sort that out in one evening. If they're about the number of guests or the budget, take the time to talk about it because everything else depends on it.",
+    "p2": "There's almost always a middle ground. For example, you could have a ceremony with a few loved ones and then a big party a month later. And a wedding only lasts one day! What you'll celebrate every year after that is your <a href=\"/en/wedding-anniversaries-by-year/\">paper, cotton or silver anniversary</a>."
+  },
+  "section5": {
+    "title": "What you should know about this quiz",
+    "p1": "This quiz is a game. It doesn't know your budget or your families, and it doesn't know the venues available near you either. It only tells you what wedding style your answers lead to. It's mostly a way to start the conversation in your couple.",
+    "p2": "Your answers aren't saved, they stay on your phone. We only count which result you get, to see which ones come up most. Your name isn't saved either. The photos were created for this page."
+  },
+  "seo": {
+    "faqTitle": "Frequently asked questions",
+    "faq1Q": "Which weddings can you get?",
+    "faq1A": "The quiz can give 10 results: the castle wedding, the rustic barn wedding, the garden wedding in town, the woodland wedding, the beach wedding, city hall followed by a great restaurant, the mountain wedding, the vineyard wedding and the festival wedding. The last result is eloping, far from everything. It's for couples who don't want any guests.",
+    "faq2Q": "How is the result worked out?",
+    "faq2A": "Each answer gives points to the weddings that match it. For example, if you answer “barefoot or nearly” to the question about the outfits, the beach wedding gets points but the castle wedding doesn't. When you take the quiz together, it adds up your answers and the wedding with the most points becomes your wedding as a couple.",
+    "faq3Q": "What are the different wedding styles?",
+    "faq3A": "There are a good dozen. The best known are the classic wedding in a castle or a manor, the rustic wedding and the boho wedding in the middle of nature. There's also the beach wedding, the small wedding with a few loved ones and the civil wedding followed by a simple meal. The quiz offers 10, with a photo for each one.",
+    "faq4Q": "Small wedding or big party: how do you choose?",
+    "faq4A": "Start from what you want to experience that day. If you want to talk to every guest, stay under fifty people. If you want a full dance floor at two in the morning, you need a crowd. If you don't agree, you can have a ceremony with your closest people and then a party with more guests.",
+    "faq5Q": "Can you take the quiz if you're not engaged?",
+    "faq5A": "Yes, and lots of couples take it just for fun. You don't need a date or a ring to know whether you'd rather have a castle or a beach. It's also a good way to find out what your partner pictures.",
+    "faq6Q": "Can you take the quiz on your own?",
+    "faq6A": "Yes. Just choose “On my own, for our couple” and answer with your couple in mind. You'll get a result but you won't be able to compare your answers."
+  },
+  "jsonLd": {
+    "about": "choosing a wedding style as a couple"
+  }
+}

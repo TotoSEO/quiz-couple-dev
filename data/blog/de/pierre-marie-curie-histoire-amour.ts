@@ -32,7 +32,7 @@ const article: BlogArticleData = {
     {
       id: 'eine-hochzeit-ohne-weisses-kleid',
       title: "Eine Hochzeit ohne weißes Kleid",
-      content: `<p>Die Hochzeit findet am 26. Juli 1895 im Rathaus von Sceaux statt, gleich bei Paris. <strong>Keine Kirche, keine Ringe</strong>: eine standesamtliche Trauung, mit der Familie und ein paar Freunden.</p>
+      content: `<p>Die Hochzeit findet am 26. Juli 1895 im Rathaus von Sceaux statt, gleich bei Paris. <strong>Keine Kirche, keine Ringe</strong>: <a href="/de/welche-hochzeit-passt-zu-uns-test/">eine standesamtliche Trauung</a>, mit der Familie und ein paar Freunden.</p>
 <p>Ein weißes Kleid gibt es auch nicht. Marie wählt ein schlichtes dunkelblaues Kostüm, das sie jeden Tag wieder anziehen kann. Und genau das macht sie: Sie trägt es danach jahrelang im Labor.</p>
 <figure class="blog-portrait"><img src="/blog/pierre-marie-curie-1895.webp" alt="Fotografie von Pierre und Marie Curie im Jahr 1895, nebeneinander stehend, sie hält seinen Arm" width="620" height="826" loading="lazy"><figcaption>Pierre und Marie Curie 1895, im Jahr ihrer Hochzeit.</figcaption></figure>
 <aside class="blog-tip-box" role="note">

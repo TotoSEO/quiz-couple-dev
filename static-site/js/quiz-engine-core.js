@@ -2404,6 +2404,8 @@ var QuizEngine = (function() {
     // Les quiz fun « pour nous » (11 novembre 2026)
     { type: 'quiz', key: 'chien-nous', icon: '🐶', route: 'quizChienNous' },
     { type: 'quiz', key: 'maison-nous', icon: '🏡', route: 'quizMaisonNous' },
+    { type: 'quiz', key: 'ou-vivre', icon: '🗺️', route: 'quizOuVivre' },
+    { type: 'quiz', key: 'mariage-nous', icon: '💍', route: 'quizMariageNous' },
     { type: 'quiz', key: 'porte-culotte', icon: '👖', route: 'quizPorteCulotte' },
     { type: 'test', key: 'charge-mentale', icon: '🧠', route: 'testChargeMentale' },
     { type: 'quiz', key: 'rencontre', icon: '💬', route: 'quizRencontre' },
@@ -2588,6 +2590,8 @@ var QuizEngine = (function() {
     // Les quiz fun « pour nous » : l'autre projet à deux, puis le test qui va avec
     'chien-nous':       ['quizMaisonNous', 'testEmmenager', 'quizTypeCouple'],
     'maison-nous':      ['quizChienNous', 'testEmmenager', 'testMariage'],
+    'ou-vivre':         ['quizMaisonNous', 'testEmmenager', 'quizChienNous'],
+    'mariage-nous':     ['testMariage', 'quizOuVivre', 'quizMaisonNous'],
     // Qui porte la culotte : qui pense a tout, qui aime le plus, puis un quiz leger
     'porte-culotte':    ['testChargeMentale', 'testQuiAime', 'quizTypeCouple'],
     'action-ou-verite-coquin': ['quizCoquin', 'jeuGages', 'quizTentation'],

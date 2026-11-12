@@ -68,7 +68,7 @@ const article: BlogArticleData = {
     {
       id: "the-future-as-we",
       title: "6. He talks about the future as 'we'",
-      content: `<p>'When we have a house', 'when we have kids', 'we'll go there for our fiftieth'. And above all, he no longer changes the subject when marriage comes into the conversation. He even asks questions: big party or small gathering, church or registry office, what name you'd want. A man who has no intention of marrying avoids those questions; a man planning his proposal collects them.</p>`,
+      content: `<p>'When we have a house', 'when we have kids', 'we'll go there for our fiftieth'. And above all, he no longer changes the subject when marriage comes into the conversation. He even asks questions: <a href="/en/what-kind-of-wedding-should-we-have-quiz/">big party or small gathering</a>, church or registry office, what name you'd want. A man who has no intention of marrying avoids those questions; a man planning his proposal collects them.</p>`,
     },
     {
       id: "other-peoples-weddings",

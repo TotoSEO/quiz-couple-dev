@@ -604,6 +604,18 @@
     "metaDescription": "Siete indecisi tra un appartamento in città e una casa con giardino? Ognuno risponde a 12 domande e il test vi mostra la casa che fa per la vostra coppia.",
     "description": "Ognuno risponde a 12 domande e il test vi mostra la casa che andrebbe bene alla vostra coppia, con la sua foto."
   },
+  "quizOuVivre": {
+    "title": "Dove dovremmo vivere tra 10 anni? Il test da fare in coppia",
+    "shortTitle": "Dove dovremmo vivere",
+    "metaDescription": "Siete indecisi tra città, campagna, mare e montagna? Ognuno risponde a 12 domande e il test mostra dove potrebbe vivere la vostra coppia tra 10 anni.",
+    "description": "Ognuno risponde a 12 domande e il test vi mostra il posto dove potrebbe vivere la vostra coppia tra 10 anni, con la sua foto."
+  },
+  "quizMariageNous": {
+    "title": "Che matrimonio fa per noi? Il test sullo stile di matrimonio",
+    "shortTitle": "Che matrimonio fa per noi",
+    "metaDescription": "Siete indecisi tra una villa, un casale e una spiaggia? Ognuno risponde a 12 domande e il test vi mostra lo stile di matrimonio che fa per la vostra coppia.",
+    "description": "Ognuno risponde a 12 domande e il test vi mostra lo stile di matrimonio che andrebbe bene alla vostra coppia, con la sua foto."
+  },
   "quizListeNoel": {
     "title": "Lista dei buoni e cattivi di Babbo Natale: il test di coppia",
     "shortTitle": "Lista dei buoni e dei cattivi",

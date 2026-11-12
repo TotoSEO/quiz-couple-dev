@@ -22,8 +22,8 @@
     testDistance:     ['testDistanceAime', 'quizKnowledge', 'testCouple', 'jeuxParMessage', 'testConfiance'],
 
     // Étapes de vie
-    testMariage:      ['testEmmenager', 'quizMaisonNous', 'testParentalite', 'nocesMariage', 'testCompatibilite'],
-    testEmmenager:    ['testParentalite', 'testMariage', 'quizMaisonNous', 'testCompatibilite', 'testChargeMentale'],
+    testMariage:      ['testEmmenager', 'quizMariageNous', 'testParentalite', 'nocesMariage', 'quizMaisonNous', 'testCompatibilite'],
+    testEmmenager:    ['testParentalite', 'testMariage', 'quizMaisonNous', 'quizOuVivre', 'testCompatibilite', 'testChargeMentale'],
     testParentalite:  ['testVeuxEnfant', 'testEmmenager', 'testMariage', 'testCoupleSain'],
     testVeuxEnfant:   ['testParentalite', 'testEstCeLeBon', 'testMariage', 'testCoupleSain'],
 
@@ -40,7 +40,7 @@
     compteurCouple:   ['nocesMariage', 'calculatriceAmour', 'testAmourHabitude', 'testCoupleSain'],
     // La calculatrice, l'une des premières pages d'entrée : le vrai test, puis les autres lectures de deux prénoms
     calculatriceAmour: ['testCompatibilite', 'testAstroPrenoms', 'jeuMarguerite', 'testDateNaissance'],
-    nocesMariage:     ['compteurCouple', 'testMariage', 'testLangageAmour', 'quizKnowledge'],
+    nocesMariage:     ['compteurCouple', 'testMariage', 'quizMariageNous', 'testLangageAmour', 'quizKnowledge'],
     differenceAge:    ['testCompatibilite', 'calculatriceAmour', 'testParentalite', 'testDateNaissance'],
 
     // Doute et soupçon
@@ -138,8 +138,12 @@
     quizDuoVilains:      ['quizSuperVilain', 'quizPossession', 'quizMaisonNous', 'quizTuPreferes', 'quizMortFilmHorreur', 'jeuActionVerite'],
     // Les quiz fun « pour nous » (11 novembre 2026) : l'autre quiz du futur à
     // deux, le test qui va avec le projet, puis un quiz ou un jeu léger
-    quizChienNous:       ['quizMaisonNous', 'testEmmenager', 'quizTypeCouple', 'quizTuPreferes'],
-    quizMaisonNous:      ['quizChienNous', 'testEmmenager', 'testMariage', 'quizTypeCouple'],
+    quizChienNous:       ['quizMaisonNous', 'quizOuVivre', 'testEmmenager', 'quizTypeCouple', 'quizTuPreferes'],
+    quizMaisonNous:      ['quizOuVivre', 'quizChienNous', 'testEmmenager', 'testMariage', 'quizTypeCouple'],
+    // L'endroit où vivre et le style de mariage : l'autre projet à deux, le test
+    // qui va avec, puis un quiz du futur à deux
+    quizOuVivre:         ['quizMaisonNous', 'testEmmenager', 'quizChienNous', 'quizMariageNous'],
+    quizMariageNous:     ['testMariage', 'nocesMariage', 'quizOuVivre', 'quizMaisonNous'],
     // Les deux quiz de Noël (novembre 2026) : l'autre quiz de Noël, le jeu du
     // réveillon, puis un quiz fun et un jeu léger
     quizListeNoel:       ['quizDuoNoel', 'jeuNouvelAn', 'jeuQuiDeNous', 'quizChienNous'],
@@ -161,7 +165,7 @@
     jeuActionVerite: '🎲', jeuActionVeriteHot: '🌶️', jeuGages: '🎡',
     jeuPlateau: '🎲', jeuQuiDeNous: '👀', jeuDilemmes: '⚖️', pourContre: '👍', jeuJamais: '🙊', jeuQuiPourrait: '🏆', jeuQuestionsRapides: '⚡', jeuMarguerite: '🌼', jeuNouvelAn: '🥂', jeuxParMessage: '📱', jeuOuiNon: '✅', jeuPhrases: '💬', jeuDixMais: '🔟', jeuSoireeCouples: '🎉',
     quizSerialKiller: '🔪', quizMortFilmHorreur: '🎬', quizPossession: '👻', quizSuperVilain: '🦹', quizDuoVilains: '🎭',
-    quizChienNous: '🐶', quizMaisonNous: '🏡', quizListeNoel: '🎅', quizDuoNoel: '🎄', quizPorteCulotte: '👖',
+    quizChienNous: '🐶', quizMaisonNous: '🏡', quizOuVivre: '🗺️', quizMariageNous: '💍', quizListeNoel: '🎅', quizDuoNoel: '🎄', quizPorteCulotte: '👖',
     testRedFlag: '🚩', testLoveBombing: '💐', testDependance: '⚓', testPretRelation: '🌱', testPersonnalite: '💘', testTrouverAmour: '🧭', testCelibataire: '🔍',
     testCoupleOuCelibat: '🛋️', testJeLaimeEncore: '🕯️', testPurete: '🌡️', testAmourAttachement: '🌹', testDureeCelibat: '⏳', calculatriceAmour: '🧮', questionsCouple: '💬',
   };

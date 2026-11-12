@@ -1,0 +1,123 @@
+{
+  "hero": {
+    "badge": "Themaquiz • Met z'n tweeën of alleen voor jullie als koppel",
+    "title": "Waar wonen we over 10 jaar? De test om samen te doen",
+    "titleHighlight": "Waar wonen we over 10 jaar?",
+    "description": "Twijfelen jullie tussen de stad en het platteland, of tussen de zee en de bergen? Ieder beantwoordt 12 vragen over het leven dat hij of zij voor zich ziet. Daarna laat de test de plek zien die het best bij jullie als koppel past.",
+    "subtitle": "12 vragen • 3 minuten per persoon • op één telefoon",
+    "jumpBtn": "Doe de test"
+  },
+  "section1": {
+    "title": "Hoe de test werkt",
+    "p1": "Deze test is een spel om samen te doen. Hij helpt jullie het soort plek te vinden waar jullie over 10 jaar zouden kunnen wonen, bijvoorbeeld in de bergen of in een grote stad. Hij stelt 12 vragen over jullie dagelijks leven. Hij vraagt bijvoorbeeld wat jullie 's ochtends willen horen en hoe jullie brood gaan halen.",
+    "p2": "Neem de vraag over jullie familie en vrienden. Jullie kunnen kiezen tussen ‘op minder dan twintig minuten, dat vinden we belangrijk’, ‘op een uur of twee rijden’, ‘ver weg, we zien elkaar in de vakanties’ en ‘heel ver weg, we gaan videobellen’. Als jij ‘op minder dan twintig minuten’ antwoordt, geeft de test vooral punten aan de uitslag ‘precies waar jullie nu wonen’. Als je partner ‘heel ver weg’ antwoordt, krijgen het buitenland en het eiland punten. Aan het eind telt de test jullie antwoorden bij elkaar op en houdt hij de plek met de meeste punten over.",
+    "p3": "De eerste beantwoordt de 12 vragen en geeft dan de telefoon door. De tweede antwoordt zonder te zien wat de eerste heeft gekozen. Daarna laat de test de plek zien die bij jullie als koppel past, met een foto erbij. Hij laat ook de plek zien die ieder alleen zou hebben gekozen en de lijst met vragen waarop jullie niet hetzelfde hebben geantwoord.",
+    "p4": "Je kunt de test ook alleen doen en voor jullie als koppel antwoorden. Dan kun je jullie antwoorden wel niet vergelijken en dat is juist het interessantste deel."
+  },
+  "section2": {
+    "title": "De 10 plekken uit de test",
+    "intro": "De test kan 10 uitslagen geven. Sommige zijn vlak bij huis, zoals de kleine stad. Andere zijn veel verder weg, zoals het eiland of het buitenland. Hier lees je bij wie welke plek het best past.",
+    "galerie": [
+      {
+        "id": "montagne",
+        "titre": "In de bergen",
+        "texte": "Voor wie echte seizoenen wil en wandelpaden vanaf de voordeur.",
+        "alt": "Een houten chalet aan de rand van een bergdorp, met geraniums voor de ramen en besneeuwde toppen op de achtergrond"
+      },
+      {
+        "id": "campagne",
+        "titre": "Op het platteland",
+        "texte": "Voor wie ruimte en rust wil.",
+        "alt": "Een oude stenen boerderij met lichtblauwe luiken midden tussen de velden, met een paar kippen op het erf"
+      },
+      {
+        "id": "mer",
+        "titre": "Aan zee",
+        "texte": "Voor wie het water en de horizon moet kunnen zien, ook in de winter.",
+        "alt": "Een klein vissershaventje bij zonsopgang, met gekleurde bootjes en een wit huis met blauwe luiken op de kade"
+      },
+      {
+        "id": "metropole",
+        "titre": "In een grote stad",
+        "texte": "Voor wie veel uitgaat en alles op tien minuten wil hebben.",
+        "alt": "Een grote stad bij het vallen van de avond, gezien vanaf een balkon vol planten, met verlichte torens en lanen"
+      },
+      {
+        "id": "petiteVille",
+        "titre": "In een kleine stad",
+        "texte": "Voor wie alles te voet wil doen en de buren wil kennen.",
+        "alt": "Het plein van een kleine stad op een marktochtend, met een fontein, bomen en kramen met fruit en bloemen"
+      },
+      {
+        "id": "banlieue",
+        "titre": "Aan de rand van een grote stad",
+        "texte": "Voor wie een tuin wil zonder de stad op te geven.",
+        "alt": "Een rustige straat met huizen en kleine tuinen, een fiets tegen een hek en de torens van de stad in de verte"
+      },
+      {
+        "id": "etranger",
+        "titre": "In het buitenland",
+        "texte": "Voor wie niet stil kan zitten en graag opnieuw begint.",
+        "alt": "Een open raam met uitzicht op de daken en palmen van een zuidelijke stad, met twee koffers onder het raam"
+      },
+      {
+        "id": "ile",
+        "titre": "Op een eiland",
+        "texte": "Voor wie droomt van een rustiger leven in de zon.",
+        "alt": "Een klein wit huis op een tropisch eiland, omringd door een turquoise lagune, met een steiger en palmen"
+      },
+      {
+        "id": "lac",
+        "titre": "Aan een meer, midden in de natuur",
+        "texte": "Voor wie rust zoekt en het niet erg vindt om ver van alles te wonen.",
+        "alt": "Een houten hut met een steiger aan een meer tussen de sparren, met een roeiboot aan de kant in de ochtendmist"
+      },
+      {
+        "id": "ici",
+        "titre": "Precies waar jullie nu wonen",
+        "texte": "Voor wie goed zit waar hij zit, dicht bij familie en vrienden.",
+        "alt": "Een voordeur gezien vanaf de drempel, met een deurmat, twee paar regenlaarzen naast elkaar en een sleutelbos in het slot"
+      }
+    ]
+  },
+  "section3": {
+    "title": "Stad of platteland, zee of bergen: wat belangrijker is dan het uitzicht",
+    "intro": "Wie van een plek droomt, denkt eerst aan het landschap. Maar als een koppel begint te <a href=\"/nl/blog/vragen-over-de-toekomst-als-koppel/\">praten over de toekomst</a>, komen er al snel vier andere onderwerpen op tafel.",
+    "sub1Title": "Familie en vrienden",
+    "sub1Text": "Dit is vaak het eerste meningsverschil. De een wil bijvoorbeeld dicht bij zijn ouders blijven en de ander zou zo duizend kilometer verderop gaan wonen. Het onderwerp weegt nog zwaarder op de dag <a href=\"/nl/klaar-voor-een-baby-test/\">dat jullie aan een kind denken</a>, want grootouders op twintig minuten maken een groot verschil. Vertel elkaar eerlijk op welke afstand van familie en vrienden ieder zich nog prettig voelt.",
+    "sub2Title": "Het werk",
+    "sub2Text": "Een prachtige plek is niet genoeg als geen van jullie er werk vindt. Kijk wat ieder er zou kunnen doen. Jullie kunnen bijvoorbeeld je baan houden en op afstand werken of van beroep veranderen. Heeft maar een van jullie werk in de buurt, praat dan over wat dat betekent voor de ander en voor jullie geld.",
+    "sub3Title": "Het dagelijks leven",
+    "sub3Text": "Een vakantie zegt weinig over hoe het is om ergens te wonen. De kust is in januari heel anders. Op het platteland ben je soms een halfuur onderweg voor een brood! Ga er een week buiten het seizoen naartoe voordat jullie beslissen en leef alsof jullie er wonen.",
+    "sub4Title": "De woning",
+    "sub4Text": "De plek is niet alles. In dezelfde stad woon je heel anders in een studio op de vijfde verdieping dan in een huis met een tuin. Als jullie het eens zijn over de streek, moeten jullie alleen nog kiezen <a href=\"/nl/welk-huis-past-bij-ons-test/\">tussen een appartement en een huis</a>."
+  },
+  "section4": {
+    "title": "En als jullie jezelf niet op dezelfde plek zien?",
+    "p1": "Dat gebeurt heel vaak en het betekent niet dat jullie niet bij elkaar passen. Bekijk eerst de lijst met jullie verschillende antwoorden. Gaan ze over het weer of over het uitzicht, dan vinden jullie wel een plek waar ieder zich goed voelt. Gaan ze over familie en vrienden of over een vertrek naar het buitenland, dan is het een serieuzer onderwerp. Jullie kunnen er beter nu over praten dan over vijf jaar.",
+    "p2": "Jullie kunnen het ook eerst uitproberen. Veel koppels gaan een jaar of twee weg om te kijken hoe het bevalt en houden de mogelijkheid open om terug te komen. Andere vinden iets ertussenin, bijvoorbeeld een kleine stad op een uur van de zee. En niets verplicht jullie om voor altijd te kiezen!"
+  },
+  "section5": {
+    "title": "Wat je over deze test moet weten",
+    "p1": "Deze test is een spel. Hij kent jullie werk en jullie budget niet en hij kent ook de huurprijzen niet. Hij zegt alleen naar wat voor plek jullie antwoorden leiden. Hij geeft jullie geen naam van een stad of een land. Hij is er vooral om het gesprek tussen jullie op gang te brengen.",
+    "p2": "Jullie antwoorden worden niet opgeslagen, ze blijven op jullie telefoon. We tellen alleen welke uitslag eruit komt, om te zien welke het vaakst voorkomen. Jullie voornaam wordt ook niet opgeslagen. De foto's zijn voor deze pagina gemaakt."
+  },
+  "seo": {
+    "faqTitle": "Veelgestelde vragen",
+    "faq1Q": "Welke plekken kunnen eruit komen?",
+    "faq1A": "De test kan 10 uitslagen geven: de bergen, het platteland, de zee, de grote stad, de kleine stad, de rand van een grote stad, het buitenland, het eiland en het meer midden in de natuur. De laatste uitslag heet ‘precies waar jullie nu wonen’. Die is bedoeld voor koppels die helemaal geen zin hebben om te verhuizen.",
+    "faq2Q": "Hoe wordt de uitslag berekend?",
+    "faq2A": "Elk antwoord geeft punten aan de plekken die erbij passen. Als jullie bijvoorbeeld bij de vraag over het raam van de woonkamer ‘bergtoppen’ antwoorden, krijgen de bergen punten, maar de grote stad niet. Als jullie de test met z'n tweeën doen, telt hij jullie antwoorden bij elkaar op. De plek met de meeste punten wordt dan de plek van jullie koppel.",
+    "faq3Q": "Zegt de test in welke stad of in welk land we moeten wonen?",
+    "faq3A": "Nee. Hij geeft een soort plek en geen adres, bijvoorbeeld de bergen of een kleine stad. Daarna is het aan jullie om de streek te zoeken die erop lijkt, in eigen land of ergens anders. Dat hangt ook af van jullie werk en jullie budget.",
+    "faq4Q": "Stad of platteland: hoe kies je dat samen?",
+    "faq4A": "Het makkelijkst is om te kijken hoe jullie weken eruitzien. Vraag je bijvoorbeeld af hoeveel avonden per maand jullie uitgaan en hoelang jullie in de auto willen zitten. Zijn jullie antwoorden heel verschillend, dan werkt iets ertussenin vaak beter. Dat kan een kleine stad zijn of een huis op een halfuur van een grote stad.",
+    "faq5Q": "En als een van ons naar het buitenland wil en de ander niet?",
+    "faq5A": "Dat is een lastig meningsverschil, want je kunt niet half vertrekken. Praat eerst over de duur. Twee jaar weggaan met een afgesproken terugkeer is niet hetzelfde plan als voorgoed weggaan. Wie twijfelt, zegt vaak makkelijker ja tegen twee jaar.",
+    "faq6Q": "Kun je de test alleen doen?",
+    "faq6A": "Ja. Kies gewoon ‘Alleen, voor ons als koppel’ en antwoord met jullie als koppel in gedachten. Je krijgt een uitslag, maar je kunt jullie antwoorden niet vergelijken."
+  },
+  "jsonLd": {
+    "about": "samen kiezen waar je gaat wonen"
+  }
+}

@@ -32,7 +32,7 @@ const article: BlogArticleData = {
     {
       id: 'un-matrimonio-senza-abito-bianco',
       title: "Un matrimonio senza abito bianco",
-      content: `<p>Il matrimonio si celebra il 26 luglio 1895, nel municipio di Sceaux, alle porte di Parigi. <strong>Niente chiesa, niente fedi</strong>: un matrimonio civile, con la famiglia e qualche amico.</p>
+      content: `<p>Il matrimonio si celebra il 26 luglio 1895, nel municipio di Sceaux, alle porte di Parigi. <strong>Niente chiesa, niente fedi</strong>: <a href="/it/test-che-matrimonio-fa-per-noi/">un matrimonio civile</a>, con la famiglia e qualche amico.</p>
 <p>Niente abito bianco, nemmeno. Marie sceglie un completo blu scuro, semplice, da poter rimettere tutti i giorni. Ed è proprio quello che fa: lo porterà poi in laboratorio per anni.</p>
 <figure class="blog-portrait"><img src="/blog/pierre-marie-curie-1895.webp" alt="Fotografia di Pierre e Marie Curie nel 1895, in piedi uno accanto all'altra, lei gli tiene il braccio" width="620" height="826" loading="lazy"><figcaption>Pierre e Marie Curie nel 1895, l'anno del loro matrimonio.</figcaption></figure>
 <aside class="blog-tip-box" role="note">

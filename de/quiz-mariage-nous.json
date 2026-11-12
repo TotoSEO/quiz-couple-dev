@@ -1,0 +1,123 @@
+{
+  "hero": {
+    "badge": "Spaß-Quiz • Zu zweit oder allein für euch als Paar",
+    "title": "Welche Hochzeit passt zu uns? Der Test für Paare",
+    "titleHighlight": "Welche Hochzeit passt zu uns?",
+    "description": "Du träumst von einem Schloss und dein Schatz von einem Strand? Jeder beantwortet 12 Fragen zum Hochzeitstag. Danach zeigt euch der Test den Hochzeitsstil, der am besten zu euch als Paar passt.",
+    "subtitle": "12 Fragen • 3 Minuten pro Person • an einem Handy",
+    "jumpBtn": "Zum Test"
+  },
+  "section1": {
+    "title": "So funktioniert der Test",
+    "p1": "Dieser Test ist ein Spiel für Paare. Er hilft euch, den Hochzeitsstil zu finden, der zu euch passt, zum Beispiel ein großes Fest im Schloss oder ein einfaches Essen nach dem Standesamt. Er stellt 12 Fragen zum Hochzeitstag. Er fragt zum Beispiel, wie viele Gäste ihr wollt und welche Musik ihr euch vorstellt.",
+    "p2": "Nehmen wir die Frage zur Zahl der Gäste. Ihr könnt wählen zwischen „nur wir und zwei Trauzeugen“, „etwa dreißig, die Allerengsten“, „um die hundert, Familie und Freunde“ und „mehr als zweihundert, wir laden alle ein“. Antwortet einer „etwa dreißig“, gibt der Test den kleinen Hochzeiten Punkte, zum Beispiel der Gartenhochzeit. Antwortet der andere „mehr als zweihundert“, bekommen das Schloss und die Festival-Hochzeit Punkte. Am Ende zählt der Test eure Antworten zusammen und behält die Hochzeit mit den meisten Punkten.",
+    "p3": "Der Erste beantwortet die 12 Fragen und gibt dann das Handy weiter. Der Zweite antwortet, ohne zu sehen, was der Erste gewählt hat. Danach zeigt euch der Test eure Hochzeit als Paar, mit Foto. Er zeigt euch auch die Hochzeit, die jeder allein gewählt hätte, und die Liste der Fragen, bei denen ihr nicht gleich geantwortet habt.",
+    "p4": "Ihr könnt den Test machen, <a href=\"/de/blog/heiratsantrag/\">bevor ihr überhaupt verlobt seid</a>, einfach zum Spaß. Ihr könnt ihn auch am Anfang der Planung machen, um euch zu einigen, bevor ihr Orte besichtigt. Er geht auch allein, aber dann kannst du eure Antworten nicht vergleichen."
+  },
+  "section2": {
+    "title": "Die 10 Hochzeiten im Test",
+    "intro": "Der Test kann 10 Ergebnisse liefern. Manche sind ganz klassisch, wie die Schlosshochzeit. Andere sind es viel weniger, wie die Festival-Hochzeit. Hier steht, zu wem welche Hochzeit am besten passt.",
+    "galerie": [
+      {
+        "id": "chateau",
+        "titre": "Die Schlosshochzeit",
+        "texte": "Für alle, die einen großen Tag mit beiden Familien wollen.",
+        "alt": "Die Auffahrt und die Freitreppe eines Schlosses, für eine Hochzeit geschmückt, mit weißen Blumen und Stuhlreihen auf dem Rasen"
+      },
+      {
+        "id": "champetre",
+        "titre": "Die Scheunenhochzeit auf dem Land",
+        "texte": "Für alle, die lange Holztische wollen und Gäste, die sich wohlfühlen.",
+        "alt": "Ein Hochzeitsessen auf einer Wiese in der Abenddämmerung, mit einem großen Zelt, langen Holztischen und Lichterketten"
+      },
+      {
+        "id": "jardin",
+        "titre": "Die Gartenhochzeit in der Stadt",
+        "texte": "Für alle, die lieber etwa dreißig Gäste haben, mit denen sie reden können.",
+        "alt": "Ein langer gedeckter Tisch in einem kleinen Stadtgarten mit efeubewachsenen Mauern, mit Pfingstrosen und Sektgläsern"
+      },
+      {
+        "id": "foret",
+        "titre": "Die Waldhochzeit",
+        "texte": "Für alle, die eine Trauung wollen, die keiner anderen gleicht.",
+        "alt": "Eine Trauung auf einer Waldlichtung, mit einem Bogen aus Zweigen und Blumen und Holzbänken unter den Bäumen"
+      },
+      {
+        "id": "plage",
+        "titre": "Die Strandhochzeit",
+        "texte": "Für alle, die barfuß am Meer heiraten wollen.",
+        "alt": "Ein mit weißem Stoff geschmückter Traubogen an einem Strand bei Sonnenuntergang, mit ein paar Holzstühlen und einem Korb voller Sandalen"
+      },
+      {
+        "id": "mairie",
+        "titre": "Standesamt, danach ein gutes Restaurant",
+        "texte": "Für alle, die einfach heiraten und gut essen wollen.",
+        "alt": "Die Treppe eines kleinen Rathauses, bedeckt mit Blütenblättern und Konfetti, mit einem Brautstrauß auf einer Stufe und einem mit Bändern geschmückten Fahrrad"
+      },
+      {
+        "id": "montagne",
+        "titre": "Die Berghochzeit",
+        "texte": "Für alle, die wenige Gäste, eine Hütte und Gipfel auf den Fotos wollen.",
+        "alt": "Eine Trauung auf einer Almwiese neben einer Berghütte, mit einem Holzbogen und Bänken, vor verschneiten Gipfeln"
+      },
+      {
+        "id": "deux",
+        "titre": "Heiraten nur zu zweit, weit weg von allem",
+        "texte": "Für alle, die diesen Moment ohne Gäste und ohne Reden erleben wollen.",
+        "alt": "Zwei Eheringe und ein kleiner Strauß auf einem alten Lederkoffer, oben auf einer Klippe über dem Meer"
+      },
+      {
+        "id": "vignes",
+        "titre": "Die Hochzeit im Weinberg",
+        "texte": "Für alle, die lange Abendessen draußen am Ende des Sommers lieben.",
+        "alt": "Ein langer Hochzeitstisch zwischen zwei Rebzeilen bei Sonnenuntergang, mit Kerzen und Lichterketten"
+      },
+      {
+        "id": "fete",
+        "titre": "Die Festival-Hochzeit",
+        "texte": "Für alle, die ein sehr großes Fest über drei Tage wollen.",
+        "alt": "Ein Hochzeitsfest nachts auf einem Feld, mit beleuchteten Zelten, einer kleinen Bühne, Wimpeln und Strohballen"
+      }
+    ]
+  },
+  "section3": {
+    "title": "Den Hochzeitsstil finden: was ihr zuerst klären solltet",
+    "intro": "Bevor ihr einen Ort besichtigt, solltet ihr euch bei vier Themen einig sein. Der Stil der Hochzeit hängt fast ganz davon ab.",
+    "sub1Title": "Die Zahl der Gäste",
+    "sub1Text": "Das ist die erste Frage, die ihr klären müsst, weil der Ort, das Budget und die Stimmung davon abhängen. Mit etwa dreißig Gästen könnt ihr mit allen reden. Mit zweihundert feiert ihr ein großes Fest, aber manche Gäste seht ihr nur fünf Minuten. Schreibt jeder für sich eine Liste und vergleicht sie dann. Ihr seht sofort, ob ihr an dieselbe Hochzeit denkt.",
+    "sub2Title": "Das Budget",
+    "sub2Text": "Eine Hochzeit kann so viel kosten wie ein gutes Essen im Restaurant oder wie ein neues Auto. Geld gehört zu den <a href=\"/de/ehe-kompatibilitaetstest/\">Themen, die Paare vor der Hochzeit gern vermeiden</a>. Das Budget für das Fest ist oft das erste echte Gespräch darüber. Legt die Summe fest, die ihr ausgeben wollt, bevor ihr Orte anschaut. Sagt euch auch, wer was bezahlt, zum Beispiel ihr oder eure Eltern.",
+    "sub3Title": "Die Trauung",
+    "sub3Text": "In Deutschland ist nur die standesamtliche Trauung rechtsgültig. Die Zeremonie auf einer Lichtung oder am Strand ist deshalb eine freie Trauung. Sie hat keine rechtliche Wirkung, aber ihr könnt sie gestalten, wie ihr wollt, und von einem Freund halten lassen. Viele Paare gehen ein paar Tage vorher im kleinen Kreis aufs Standesamt. Die große Zeremonie heben sie sich für den Tag der Feier auf.",
+    "sub4Title": "Die Familien",
+    "sub4Text": "Eure Eltern haben oft ihre eigene Vorstellung von der Hochzeit und das ist nicht immer eure. Eine Großmutter besteht zum Beispiel auf der Kirche oder ein Vater will seine Kollegen einladen. Einigt euch als Paar, bevor ihr mit irgendjemandem darüber redet. Eine Entscheidung, die man zusammen getroffen hat, lässt sich leichter durchhalten."
+  },
+  "section4": {
+    "title": "Und wenn ihr euch nicht dieselbe Hochzeit vorstellt?",
+    "p1": "Das ist ganz normal. Der eine träumt zum Beispiel schon immer von einem großen Fest und der andere hat keine Lust, zwölf Stunden lang im Mittelpunkt zu stehen! Schaut euch die Liste eurer unterschiedlichen Antworten an. Wenn es um die Deko oder die Musik geht, ist das an einem Abend geklärt. Wenn es um die Zahl der Gäste oder das Budget geht, nehmt euch Zeit zum Reden, denn alles andere hängt davon ab.",
+    "p2": "Es gibt fast immer einen Mittelweg. Ihr könnt zum Beispiel eine Trauung im kleinen Kreis machen und einen Monat später ein großes Fest. Und die Hochzeit dauert nur einen Tag! Was ihr danach jedes Jahr feiert, ist eure <a href=\"/de/hochzeitstage/\">papierne, hölzerne oder silberne Hochzeit</a>."
+  },
+  "section5": {
+    "title": "Was ihr über diesen Test wissen solltet",
+    "p1": "Dieser Test ist ein Spiel. Er kennt weder euer Budget noch eure Familien und auch nicht die Orte, die es in eurer Nähe gibt. Er sagt euch nur, zu welchem Hochzeitsstil eure Antworten führen. Er soll vor allem ein Gespräch zwischen euch anstoßen.",
+    "p2": "Eure Antworten werden nicht gespeichert, sie bleiben auf eurem Handy. Wir zählen nur, welches Ergebnis herauskommt, um zu sehen, welche am häufigsten sind. Euer Vorname wird auch nicht gespeichert. Die Fotos wurden für diese Seite erstellt."
+  },
+  "seo": {
+    "faqTitle": "Häufige Fragen",
+    "faq1Q": "Welche Hochzeiten können herauskommen?",
+    "faq1A": "Der Test kann 10 Ergebnisse liefern: die Schlosshochzeit, die Scheunenhochzeit, die Gartenhochzeit in der Stadt, die Waldhochzeit, die Strandhochzeit, das Standesamt mit einem guten Restaurant, die Berghochzeit, die Hochzeit im Weinberg und die Festival-Hochzeit. Das letzte Ergebnis ist die Hochzeit nur zu zweit, weit weg von allem. Sie ist für Paare, die keine Gäste wollen.",
+    "faq2Q": "Wie wird das Ergebnis berechnet?",
+    "faq2A": "Jede Antwort gibt den Hochzeiten Punkte, die dazu passen. Wenn ihr zum Beispiel bei der Frage zur Kleidung „barfuß oder fast“ antwortet, bekommt die Strandhochzeit Punkte, die Schlosshochzeit aber nicht. Wenn ihr den Test zu zweit macht, zählt er eure Antworten zusammen und die Hochzeit mit den meisten Punkten wird eure Hochzeit als Paar.",
+    "faq3Q": "Welche Hochzeitsstile gibt es?",
+    "faq3A": "Es gibt gut ein Dutzend. Am bekanntesten sind die klassische Hochzeit im Schloss, die Hochzeit im Landhausstil und die Boho-Hochzeit mitten in der Natur. Es gibt auch die Strandhochzeit, die kleine Hochzeit im engsten Kreis und die standesamtliche Hochzeit mit einem einfachen Essen. Der Test bietet 10 an, jede mit einem Foto.",
+    "faq4Q": "Kleine Hochzeit oder großes Fest: Wie entscheidet man sich?",
+    "faq4A": "Geht von dem aus, was ihr an diesem Tag erleben wollt. Wenn ihr mit jedem Gast reden wollt, bleibt unter fünfzig Personen. Wenn ihr um zwei Uhr morgens eine volle Tanzfläche wollt, braucht ihr viele Leute. Wenn ihr euch nicht einig seid, könnt ihr eine Trauung im engsten Kreis machen und danach ein Fest mit mehr Gästen.",
+    "faq5Q": "Kann man den Test machen, ohne verlobt zu sein?",
+    "faq5A": "Ja, und viele Paare machen ihn einfach zum Spaß. Ihr braucht weder ein Datum noch einen Ring, um zu wissen, ob ihr lieber ein Schloss oder einen Strand hättet. Es ist auch eine gute Art herauszufinden, was sich dein Schatz vorstellt.",
+    "faq6Q": "Kann man den Test allein machen?",
+    "faq6A": "Ja. Wähle einfach „Allein, für uns als Paar“ und antworte so, wie es zu euch als Paar passt. Du bekommst ein Ergebnis, kannst eure Antworten aber nicht vergleichen."
+  },
+  "jsonLd": {
+    "about": "zu zweit den Hochzeitsstil finden"
+  }
+}
