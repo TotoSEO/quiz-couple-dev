@@ -1,0 +1,111 @@
+{
+  "hero": {
+    "badge": "Fun quiz • Together, or on your own for your couple",
+    "title": "Which legendary couple are we? The quiz in 12 questions",
+    "titleHighlight": "Which legendary couple are we?",
+    "description": "Romeo and Juliet, Bonnie and Clyde or Marie and Pierre Curie? You each answer 12 questions about your story. Then the quiz shows you the legendary couple you're most like, with its photo.",
+    "subtitle": "12 questions • 3 minutes each • on one phone",
+    "jumpBtn": "Take the quiz"
+  },
+  "section1": {
+    "title": "How the quiz works",
+    "p1": "This quiz is a <strong>game to play as a couple</strong>. It finds the famous couple whose story is most like yours. It asks 12 questions about your relationship. For example, it asks how you met and what you do <a href=\"/en/long-distance-relationship-quiz/\">when you're far apart</a>.",
+    "p2": "Take the question about how you met. If you answer “love at first sight”, the quiz gives points to Romeo and Juliet. If your partner answers “we couldn't stand each other at first”, it gives points to Elizabeth Bennet and Mr Darcy. At the end, the quiz <strong>adds up your answers</strong> and keeps the couple with the most points.",
+    "p3": "The first person answers the 12 questions and then passes the phone. The second person answers <strong>without seeing what the first one chose</strong>. Then the quiz shows you the legendary couple you're most like, with its photo. It also shows the couple each of you would have got alone and the list of questions where you gave different answers.",
+    "p4": "You can also take the quiz on your own and answer for your couple. But you won't be able to compare your answers. That's a pity, because two people never tell the story of how they met in the same way!"
+  },
+  "section2": {
+    "title": "The 8 legendary couples in the quiz",
+    "intro": "The quiz can give 8 results. Four of these couples were real people. The other four come from a play, a novel or a myth. Here's who each one is most like.",
+    "galerie": [
+      {
+        "id": "romeo",
+        "titre": "Romeo and Juliet",
+        "texte": "For couples who fell in love at first sight and have stayed side by side ever since.",
+        "alt": "An old stone balcony covered in red roses and ivy, with a lit lantern, at nightfall"
+      },
+      {
+        "id": "ulysse",
+        "titre": "Odysseus and Penelope",
+        "texte": "For patient couples who don't let distance make them doubt.",
+        "alt": "A wooden loom in front of a stone window open onto the sea, with a small ancient sailing ship on the horizon"
+      },
+      {
+        "id": "cleopatre",
+        "titre": "Cleopatra and Mark Antony",
+        "texte": "For couples who love big parties and think big.",
+        "alt": "A golden barge with purple sails moored on the Nile at sunset, in front of palm trees"
+      },
+      {
+        "id": "bonnie",
+        "titre": "Bonnie and Clyde",
+        "texte": "For close couples who stick together against everyone else.",
+        "alt": "A black 1930s car on a dirt road in the middle of the plains, with a felt hat and a beret on the bonnet"
+      },
+      {
+        "id": "darcy",
+        "titre": "Elizabeth Bennet and Mr Darcy",
+        "texte": "For couples who annoyed each other at first and still tease each other.",
+        "alt": "A large English country house seen from across a lake, at the end of a lawn, in the morning mist"
+      },
+      {
+        "id": "curie",
+        "titre": "Marie and Pierre Curie",
+        "texte": "For couples who always have a shared project.",
+        "alt": "An old laboratory bench with glass flasks, a set of scales, an open notebook and a small vial glowing blue-green"
+      },
+      {
+        "id": "hugo",
+        "titre": "Juliette Drouet and Victor Hugo",
+        "texte": "For couples who message each other from morning till night.",
+        "alt": "A wooden desk covered in bundles of letters tied with red ribbon, with a quill in an inkwell and a lit candle"
+      },
+      {
+        "id": "philemon",
+        "titre": "Baucis and Philemon",
+        "texte": "For couples who dream of growing old together.",
+        "alt": "Two old trees with their trunks pressed together in front of a small stone house, in the evening light"
+      }
+    ]
+  },
+  "section3": {
+    "title": "The story of 4 couples in the quiz",
+    "intro": "Everybody knows their names but fewer people know their story. Here is the story of 4 couples in the quiz.",
+    "sub1Title": "Romeo and Juliet, a story of a few days",
+    "sub1Text": "Shakespeare wrote the play in the 1590s. The story takes place in Verona, in Italy. Romeo and Juliet meet at a ball on a Sunday evening and marry in secret the next day. The whole story lasts <strong>less than a week</strong>. That's why people mention them when a couple falls in love at first sight.",
+    "sub2Title": "Odysseus and Penelope, 20 years of waiting",
+    "sub2Text": "In Homer's “Odyssey”, Odysseus leaves to fight the Trojan War and takes <strong>20 years to come home</strong>. Meanwhile, suitors want to marry Penelope. She promises to choose once she has finished weaving a large cloth. Every night, she undoes what she wove during the day! Their story speaks to every couple who has to hold on despite the distance.",
+    "sub3Title": "Marie and Pierre Curie, a wedding without a white dress",
+    "sub3Text": "<a href=\"/en/blog/pierre-marie-curie-love-story/\">Marie and Pierre Curie got married</a> in July 1895 at the town hall in Sceaux, near Paris. With the money they were given as a present, they bought two bicycles for their honeymoon. Three years later, they discovered polonium and radium together. They received the <strong>Nobel Prize in Physics in 1903</strong>.",
+    "sub4Title": "Juliette Drouet and Victor Hugo, 22,000 letters",
+    "sub4Text": "Juliette Drouet was an actress when she met Victor Hugo in 1833. She then <a href=\"/en/blog/juliette-drouet-victor-hugo-letters/\">wrote to him almost every day</a> for 50 years. That makes about <strong>22,000 letters</strong>! Hugo was married and their story was no fairy tale. For example, Juliette lived almost shut away for years because he didn't want her to go out without him."
+  },
+  "section4": {
+    "title": "What if you don't get the same couple?",
+    "p1": "It happens a lot. For example, one of you sees your story as Romeo and Juliet's and the other as Elizabeth Bennet and Mr Darcy's. It just means you don't have the same memories of your early days.",
+    "p2": "Look at the list of questions where your answers are different instead. The question about how you met and the one about the first “I love you” are often the funniest to compare. Ask the other person <strong>to tell their version</strong>!"
+  },
+  "section5": {
+    "title": "What you should know about this quiz",
+    "p1": "This quiz is a game. It plays with the image we have of these couples and <strong>it says nothing serious about yours</strong>. These couples aren't role models. Romeo and Juliet die at the end of the play. The real Bonnie Parker and Clyde Barrow were criminals and their gang killed several people. The quiz only keeps what people remember about them, for example love at first sight or closeness.",
+    "p2": "Your answers aren't saved, they stay on your phone. We only count which result you get, to see which ones come up most. Your name isn't saved either. The photos were created for this page and none of them shows a real person."
+  },
+  "seo": {
+    "faqTitle": "Frequently asked questions",
+    "faq1Q": "Which legendary couples can you get?",
+    "faq1A": "The quiz can give 8 results: Romeo and Juliet, Odysseus and Penelope, Cleopatra and Mark Antony, Bonnie and Clyde, Elizabeth Bennet and Mr Darcy, Marie and Pierre Curie, Juliette Drouet and Victor Hugo, or Baucis and Philemon.",
+    "faq2Q": "How is the result worked out?",
+    "faq2A": "Each answer gives points to one or two couples. For example, if you answer “writing to them every day” to the question about proof of love, Juliette Drouet and Victor Hugo get points. When you take the quiz together, it adds up your answers and the couple with the most points becomes yours.",
+    "faq3Q": "Which couples in the quiz were real people?",
+    "faq3A": "Four couples were real: Cleopatra and Mark Antony, Bonnie and Clyde, Marie and Pierre Curie, Juliette Drouet and Victor Hugo. Romeo and Juliet come from a play by Shakespeare. Elizabeth Bennet and Mr Darcy come from Jane Austen's novel “Pride and Prejudice”, published in 1813. Odysseus and Penelope and Baucis and Philemon are couples from mythology.",
+    "faq4Q": "Who are Baucis and Philemon?",
+    "faq4A": "They are an old couple from mythology whose story the poet Ovid tells in the “Metamorphoses”. They are poor but they welcome two travellers into their home, who turn out to be gods. To thank them, the gods grant them a wish. They ask to die at the same moment. When they die, they are turned into two trees growing side by side, an oak and a linden.",
+    "faq5Q": "Why are Bonnie and Clyde in the quiz?",
+    "faq5A": "Because people often say “they're like Bonnie and Clyde” about a very close couple. The real Bonnie Parker and Clyde Barrow robbed banks and shops in the United States in the early 1930s. They were killed by the police in 1934. The quiz only keeps the idea of the inseparable pair.",
+    "faq6Q": "Can you take the quiz on your own?",
+    "faq6A": "Yes. Just choose “On my own, for our couple” and answer with your couple in mind. You'll get a result but you won't be able to compare your answers."
+  },
+  "jsonLd": {
+    "about": "the legendary couple that matches your relationship"
+  }
+}

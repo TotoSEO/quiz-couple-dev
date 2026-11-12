@@ -616,6 +616,12 @@
     "metaDescription": "Wat voor bruiloft past bij ons? Twijfelen jullie tussen een kasteel en een strand? Ieder beantwoordt 12 vragen en de test laat jullie trouwstijl zien.",
     "description": "Ieder beantwoordt 12 vragen en de test laat de trouwstijl zien die bij jullie als koppel past, met foto."
   },
+  "quizEnfantsNous": {
+    "title": "Hoeveel kinderen krijgen wij? De test voor koppels",
+    "shortTitle": "Hoeveel kinderen krijgen wij",
+    "metaDescription": "Hoeveel kinderen krijgen wij? Eén kind, twee of een heel elftal? Ieder beantwoordt 12 vragen en de test laat het gezin zien dat bij jullie antwoorden past.",
+    "description": "Ieder beantwoordt 12 vragen over het leven dat hij voor zich ziet en de test laat het gezin zien dat bij jullie antwoorden past, met foto."
+  },
   "quizListeNoel": {
     "title": "Lief of stout? De kersttest voor koppels",
     "shortTitle": "Lief of stout",
@@ -645,6 +651,12 @@
     "shortTitle": "Wat voor partners zijn wij",
     "metaDescription": "Wat voor partners zijn wij? Zorgzaam, grappig of heel onafhankelijk? Ieder beantwoordt 12 vragen en de test laat zien hoe jullie in de liefde zijn.",
     "description": "Ieder beantwoordt 12 vragen en de test laat met een foto zien wat voor partners jullie zijn."
+  },
+  "quizCoupleLegende": {
+    "title": "Welk legendarisch koppel zijn wij? De test voor koppels",
+    "shortTitle": "Welk legendarisch koppel zijn wij",
+    "metaDescription": "Welk legendarisch koppel zijn wij? Romeo en Julia, Bonnie en Clyde of Marie en Pierre Curie? Ieder beantwoordt 12 vragen en de test laat het zien.",
+    "description": "Ieder beantwoordt 12 vragen en de test laat het legendarische koppel zien waar jullie het meest op lijken, met foto."
   },
   "bilanCouple": {
     "title": "Relatiecheck online | Direct resultaat, ook als pdf",

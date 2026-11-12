@@ -616,6 +616,12 @@
     "metaDescription": "Can't decide between a castle, a barn and a beach? You each answer 12 questions and the quiz shows you the wedding style that's right for your couple.",
     "description": "You each answer 12 questions and the quiz shows you the wedding style that would suit your couple, with its photo."
   },
+  "quizEnfantsNous": {
+    "title": "How Many Kids Will You Have? The Quiz for Couples",
+    "shortTitle": "How many kids will we have",
+    "metaDescription": "One child, two or a whole tribe? You each answer 12 questions about the life you picture and the quiz shows the family that best matches your answers.",
+    "description": "You each answer 12 questions about the life you picture and the quiz shows you the family that matches your answers, with its photo."
+  },
   "quizListeNoel": {
     "title": "Naughty or Nice Quiz for Couples: Which List Are You On?",
     "shortTitle": "Naughty or Nice Quiz",
@@ -645,6 +651,12 @@
     "shortTitle": "What Kind of Partners Are We",
     "metaDescription": "Caring, hopelessly romantic or very independent? You each answer 12 questions and the quiz shows what kind of partners you are in your relationship.",
     "description": "You each answer 12 questions and the quiz shows you what kind of partners you are, with a photo."
+  },
+  "quizCoupleLegende": {
+    "title": "Which Famous Couple Are You? The Quiz to Take Together",
+    "shortTitle": "Which legendary couple are we",
+    "metaDescription": "Romeo and Juliet, Bonnie and Clyde or Marie and Pierre Curie? You each answer 12 questions and the quiz shows the legendary couple you're most like.",
+    "description": "You each answer 12 questions and the quiz shows you the legendary couple you're most like, with its photo."
   },
   "bilanCouple": {
     "title": "Relationship Assessment Online | Instant Results + PDF",

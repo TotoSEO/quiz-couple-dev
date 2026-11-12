@@ -1,0 +1,97 @@
+{
+  "hero": {
+    "badge": "Quiz original • En pareja, o solo/a para la pareja",
+    "title": "¿Cuántos hijos tendremos? El test en 12 preguntas",
+    "titleHighlight": "¿Cuántos hijos tendremos?",
+    "description": "¿Un solo hijo, dos o toda una tropa? Cada uno responde a 12 preguntas sobre la vida que imagina dentro de unos años. Después el test os enseña la familia que más se parece a vuestras respuestas, con su foto. ¡Es un juego y no una predicción!",
+    "subtitle": "12 preguntas • 3 minutos cada uno • en un solo móvil",
+    "jumpBtn": "Hacer el test"
+  },
+  "section1": {
+    "title": "Cómo funciona el test",
+    "p1": "Este test es un <strong>juego para hacer en pareja</strong>. No lee el futuro. Mira la vida que imagináis y busca la familia que se le parece. Hace 12 preguntas muy sencillas. Por ejemplo, os pregunta cómo será un domingo por la mañana dentro de 10 años y cuál será vuestro próximo coche.",
+    "p2": "Tomemos la pregunta sobre el coche. Si respondéis «un descapotable de dos plazas», el test da puntos a la vida en pareja. Si tu pareja responde «un monovolumen de 7 plazas», se los da a la familia numerosa. Al final, el test <strong>suma vuestras respuestas</strong> y se queda con el resultado que tiene más puntos.",
+    "p3": "El primero responde a las 12 preguntas y luego le pasa el móvil al otro. El segundo responde <strong>sin ver lo que ha elegido el primero</strong>. Después el test os enseña el resultado de vuestra pareja, con su foto. También os enseña el resultado que le habría salido a cada uno por separado y la lista de preguntas en las que no habéis respondido lo mismo.",
+    "p4": "También puedes hacer el test solo/a respondiendo por vuestra pareja. Eso sí, no sabrás lo que habría respondido tu pareja. Es una pena, porque es una buena ocasión para <a href=\"/es/blog/preguntas-sobre-el-futuro-pareja/\">hablar de vuestro futuro</a>."
+  },
+  "section2": {
+    "title": "Los 6 resultados del test",
+    "intro": "El test puede dar 6 resultados. Van de la vida en pareja a la familia numerosa. También hay un resultado para las parejas que no tienen prisa.",
+    "galerie": [
+      {
+        "id": "zero",
+        "titre": "Una vida en pareja",
+        "texte": "Para las parejas que valoran su libertad y sus viajes.",
+        "alt": "Un pequeño descapotable antiguo aparcado en una carretera junto al mar, al atardecer, con equipaje en la parte de atrás"
+      },
+      {
+        "id": "un",
+        "titre": "Un hijo",
+        "texte": "Para las parejas que quieren un hijo y tiempo para ellas.",
+        "alt": "Una habitación infantil con una sola camita de madera, un osito de peluche en la almohada y un móvil de estrellas de fieltro"
+      },
+      {
+        "id": "deux",
+        "titre": "Dos hijos",
+        "texte": "Para las parejas que imaginan una casa animada pero no desbordada.",
+        "alt": "Una habitación infantil con una litera de madera, un osito de peluche en la cama de arriba y un conejo de peluche en la de abajo"
+      },
+      {
+        "id": "trois",
+        "titre": "Tres hijos",
+        "texte": "Para las parejas a las que el ruido no les molesta nada.",
+        "alt": "Tres pares pequeños de botas de agua de colores alineados entre dos pares grandes, sobre un felpudo delante de una puerta de madera"
+      },
+      {
+        "id": "tribu",
+        "titre": "Cuatro hijos o más",
+        "texte": "Para las parejas que sueñan con una mesa llena.",
+        "alt": "Una mesa larga de cocina de madera preparada para el desayuno, con cuencos y tazas de todos los colores alrededor de una pila de tortitas"
+      },
+      {
+        "id": "plustard",
+        "titre": "Todavía no",
+        "texte": "Para las parejas que antes tienen otros planes.",
+        "alt": "Una habitación vacía y soleada con un bote de pintura cerrado, un rodillo y una pequeña escalera junto a la ventana"
+      }
+    ]
+  },
+  "section3": {
+    "title": "¿Cuántos hijos se tienen hoy en España?",
+    "intro": "El test es un juego pero la pregunta es seria. Esto es lo que dicen las cifras en España.",
+    "sub1Title": "Poco más de un hijo por mujer",
+    "sub1Text": "En España, las mujeres tienen de media <strong>1,10 hijos</strong>. Es la cifra del INE para 2024. Ese año nacieron 318.005 bebés. Es la cifra más baja desde 1941.",
+    "sub2Title": "La familia que se imagina y la que se tiene",
+    "sub2Text": "La gente imagina familias más grandes que las que tiene. En la Encuesta de Fecundidad del INE de 2025, <strong>el 69 % de las mujeres</strong> de 18 a 55 años quería tener al menos dos hijos. Entre la idea y la realidad suelen estar el trabajo y la vivienda. También están <a href=\"/es/test-quiero-tener-hijos/\">las ganas de tener un hijo</a>, que no siempre son las mismas para uno y para otro.",
+    "sub3Title": "Un hijo cada vez",
+    "sub3Text": "El número de hijos casi nunca se decide de una sola vez. La mayoría de las parejas decide primero tener un hijo. Luego ve cómo va. Conviene hablar de algunos temas <a href=\"/es/test-parentalidad-pareja/\">antes de ser padres</a>. Por ejemplo, quién se levantará por la noche y quién reducirá su jornada."
+  },
+  "section4": {
+    "title": "¿Y si no os sale el mismo resultado?",
+    "p1": "Pasa a menudo. Por ejemplo, a uno le sale «dos hijos» y al otro «todavía no». No es grave. El test cuenta los puntos de vuestras respuestas y bastan unos pocos puntos para cambiar el resultado.",
+    "p2": "Mirad mejor la lista de preguntas en las que vuestras respuestas son distintas. Si son sobre el coche o sobre las vacaciones, no es grave. Si son sobre la pregunta «¿y para cuándo?», <strong>tomaos el tiempo de hablarlo</strong>. Es mejor saber pronto que no tenéis las mismas ganas."
+  },
+  "section5": {
+    "title": "Lo que hay que saber sobre este test",
+    "p1": "Este test es un juego. <strong>No predice el número de hijos que tendréis</strong>. No sabe nada de vuestra salud, de vuestra edad ni de vuestra situación. Tener un hijo no depende solo de las ganas y no siempre sale como estaba previsto. Si el tema os duele en este momento, puede que este juego no sea para hoy.",
+    "p2": "Vuestras respuestas no se guardan, se quedan en vuestro móvil. Solo contamos el resultado obtenido para saber cuáles salen más. Vuestro nombre tampoco se guarda. Las fotos se han creado para esta página."
+  },
+  "seo": {
+    "faqTitle": "Preguntas frecuentes",
+    "faq1Q": "¿Se puede saber cuántos hijos vamos a tener?",
+    "faq1A": "No. Nadie puede predecirlo y este test tampoco. Solo mira la vida que imagináis, por ejemplo vuestra casa y vuestras vacaciones. Después os enseña la familia que más se parece a vuestras respuestas.",
+    "faq2Q": "¿Qué resultados pueden salir?",
+    "faq2A": "El test puede dar 6 resultados: una vida en pareja, un hijo, dos hijos, tres hijos, cuatro hijos o más, y «todavía no».",
+    "faq3Q": "¿Cómo se calcula el resultado?",
+    "faq3A": "Cada respuesta da puntos a uno o dos resultados. Por ejemplo, si respondéis «una casa con jardín» en la pregunta sobre la casa, los resultados «dos hijos» y «tres hijos» ganan puntos. Cuando hacéis el test en pareja, suma vuestras respuestas y el resultado con más puntos pasa a ser el de vuestra pareja.",
+    "faq4Q": "¿Cuántos hijos se tienen de media en España?",
+    "faq4A": "Las mujeres tienen de media 1,10 hijos en España en 2024 según el INE. Ese año nacieron 318.005 bebés, la cifra más baja desde 1941. En la Encuesta de Fecundidad de 2025, el 69 % de las mujeres de 18 a 55 años quería tener al menos dos hijos.",
+    "faq5Q": "¿Qué hacemos si no queremos el mismo número de hijos?",
+    "faq5A": "Es muy habitual y se puede hablar. Decid primero lo que imagina cada uno y por qué. La diferencia suele venir de un miedo concreto, por ejemplo el de quedarse sin dinero o sin tiempo. No hace falta decidir el número ahora mismo. La mayoría de las parejas va hijo a hijo.",
+    "faq6Q": "¿Se puede hacer el test solo/a?",
+    "faq6A": "Sí. Basta con elegir «Solo/a, para nuestra pareja» y responder pensando en vuestra pareja. Tendrás un resultado pero no podrás comparar vuestras respuestas."
+  },
+  "jsonLd": {
+    "about": "la familia que se parece a la vida que imagináis"
+  }
+}

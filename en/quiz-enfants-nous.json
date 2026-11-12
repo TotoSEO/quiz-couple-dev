@@ -1,0 +1,97 @@
+{
+  "hero": {
+    "badge": "Fun quiz • Together, or on your own for your couple",
+    "title": "How many kids will we have? The quiz in 12 questions",
+    "titleHighlight": "How many kids will we have?",
+    "description": "Just one child, two or a whole tribe? You each answer 12 questions about the life you picture a few years from now. Then the quiz shows you the family that best matches your answers, with its photo. It's a game and not a prediction!",
+    "subtitle": "12 questions • 3 minutes each • on one phone",
+    "jumpBtn": "Take the quiz"
+  },
+  "section1": {
+    "title": "How the quiz works",
+    "p1": "This quiz is a <strong>game to play as a couple</strong>. It doesn't read the future. It looks at the life you picture and finds the family that goes with it. It asks 12 very simple questions. For example, it asks what a Sunday morning will look like in 10 years and what your next car will be.",
+    "p2": "Take the question about the car. If you answer “a two-seater convertible”, the quiz gives points to the life for two. If your partner answers “a 7-seater people carrier”, it gives points to the big family. At the end, the quiz <strong>adds up your answers</strong> and keeps the result with the most points.",
+    "p3": "The first person answers the 12 questions and then passes the phone. The second person answers <strong>without seeing what the first one chose</strong>. Then the quiz shows you your result as a couple, with its photo. It also shows the result each of you would have got alone and the list of questions where you gave different answers.",
+    "p4": "You can also take the quiz on your own and answer for your couple. But you won't know what your partner would have answered. That's a pity, because it's a good chance to <a href=\"/en/blog/future-questions-for-couples/\">talk about your future</a>!"
+  },
+  "section2": {
+    "title": "The 6 results of the quiz",
+    "intro": "The quiz can give 6 results. They go from a life for two to a big family. There's also a result for couples who are in no hurry.",
+    "galerie": [
+      {
+        "id": "zero",
+        "titre": "A life for two",
+        "texte": "For couples who value their freedom and their travels.",
+        "alt": "A small vintage convertible parked on a road by the sea at sunset, with luggage on the back"
+      },
+      {
+        "id": "un",
+        "titre": "One child",
+        "texte": "For couples who want a child and time for themselves.",
+        "alt": "A child's bedroom with a single small wooden bed, a teddy bear on the pillow and a mobile of felt stars"
+      },
+      {
+        "id": "deux",
+        "titre": "Two children",
+        "texte": "For couples who picture a lively home but not an overwhelmed one.",
+        "alt": "A child's bedroom with a wooden bunk bed, a teddy bear on the top bunk and a toy rabbit on the bottom one"
+      },
+      {
+        "id": "trois",
+        "titre": "Three children",
+        "texte": "For couples who don't mind noise at all.",
+        "alt": "Three small pairs of colourful wellies lined up between two big pairs, on a doormat in front of a wooden door"
+      },
+      {
+        "id": "tribu",
+        "titre": "Four children or more",
+        "texte": "For couples who dream of a full table.",
+        "alt": "A long wooden kitchen table laid for breakfast, with bowls and mugs in every colour around a stack of pancakes"
+      },
+      {
+        "id": "plustard",
+        "titre": "Not just yet",
+        "texte": "For couples who have other plans first.",
+        "alt": "An empty sunlit room with a closed tin of paint, a roller and a small stepladder by the window"
+      }
+    ]
+  },
+  "section3": {
+    "title": "How many children do people have today?",
+    "intro": "The quiz is a game but the question is a serious one. Here's what the figures say.",
+    "sub1Title": "Fewer than 2 children per woman",
+    "sub1Text": "In England and Wales, women have <strong>1.41 children</strong> on average. That's the figure from the Office for National Statistics for 2024 and it's the lowest on record. In the United States, the figure was just under 1.6 the same year. That's a record low too.",
+    "sub2Title": "The family people picture and the one they have",
+    "sub2Text": "People picture bigger families than the ones they have. In 2023, the polling firm Gallup asked Americans what the ideal family size is. <strong>45% said three or more children</strong>, the highest share since 1971. Between the idea and real life, there's often work and housing. There's also <a href=\"/en/do-i-want-kids-quiz/\">whether you want a child at all</a>, and the answer isn't always the same for each partner.",
+    "sub3Title": "One child at a time",
+    "sub3Text": "The number of children is rarely decided in one go. Most couples first decide to have one child. Then they see how it goes. It's better to talk about a few things <a href=\"/en/parenthood-readiness-test/\">before you become parents</a>. For example, who will get up at night and who will cut back on work."
+  },
+  "section4": {
+    "title": "What if you don't get the same result?",
+    "p1": "It happens a lot. For example, one of you gets “two children” and the other gets “not just yet”. It's no big deal. The quiz counts the points from your answers and a few points are enough to change the result.",
+    "p2": "Look at the list of questions where your answers are different instead. If they're about the car or holidays, it doesn't matter much. If they're about the question “so, when's it happening?”, <strong>take the time to talk about it</strong>. It's better to find out early that you don't want the same thing."
+  },
+  "section5": {
+    "title": "What you should know about this quiz",
+    "p1": "This quiz is a game. <strong>It doesn't predict how many children you'll have</strong>. It knows nothing about your health, your age or your situation. Having a child doesn't depend only on wanting one and it doesn't always go to plan. If this is a painful subject for you right now, this game may not be for today.",
+    "p2": "Your answers aren't saved, they stay on your phone. We only count which result you get, to see which ones come up most. Your name isn't saved either. The photos were created for this page."
+  },
+  "seo": {
+    "faqTitle": "Frequently asked questions",
+    "faq1Q": "Can you know how many kids you'll have?",
+    "faq1A": "No. Nobody can predict it and neither can this quiz. It only looks at the life you picture, for example your home and your holidays. Then it shows you the family that best matches your answers.",
+    "faq2Q": "Which results can you get?",
+    "faq2A": "The quiz can give 6 results: a life for two, one child, two children, three children, four children or more, and “not just yet”.",
+    "faq3Q": "How is the result worked out?",
+    "faq3A": "Each answer gives points to one or two results. For example, if you answer “a house with a garden” to the question about your home, the results “two children” and “three children” get points. When you take the quiz together, it adds up your answers and the result with the most points becomes your result as a couple.",
+    "faq4Q": "How many children do people have on average?",
+    "faq4A": "In England and Wales, women have 1.41 children on average according to the Office for National Statistics figure for 2024. In the United States, the figure was just under 1.6 the same year. Both are record lows.",
+    "faq5Q": "What if we don't want the same number of children?",
+    "faq5A": "It's very common and you can talk it through. Start by each saying what you picture and why. The gap often comes from one specific fear, for example running short of money or time. You don't have to settle on a number straight away. Most couples go one child at a time.",
+    "faq6Q": "Can you take the quiz on your own?",
+    "faq6A": "Yes. Just choose “On my own, for our couple” and answer with your couple in mind. You'll get a result but you won't be able to compare your answers."
+  },
+  "jsonLd": {
+    "about": "the family that matches the life you picture"
+  }
+}

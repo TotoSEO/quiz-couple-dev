@@ -1,0 +1,97 @@
+{
+  "hero": {
+    "badge": "Quiz fun • À deux, ou seul(e) pour le couple",
+    "title": "Combien d'enfants aurons-nous ? Le test en 12 questions",
+    "titleHighlight": "Combien d'enfants aurons-nous ?",
+    "description": "Un seul enfant, deux ou toute une tribu ? Chacun répond à 12 questions sur la vie qu'il imagine dans quelques années. Le test vous montre ensuite la famille qui ressemble le plus à vos réponses, avec sa photo. C'est un jeu et pas une prédiction !",
+    "subtitle": "12 questions • 3 minutes chacun • sur un seul téléphone",
+    "jumpBtn": "Faire le test"
+  },
+  "section1": {
+    "title": "Comment marche le test",
+    "p1": "Ce test est un <strong>jeu à faire en couple</strong>. Il ne lit pas l'avenir. Il regarde la vie que vous imaginez et il cherche la famille qui lui ressemble. Il pose 12 questions toutes simples. Il vous demande par exemple à quoi ressemblera un dimanche matin dans 10 ans et quelle sera votre prochaine voiture.",
+    "p2": "Prenons la question sur la voiture. Si vous répondez « un cabriolet à deux places », le test donne des points à la vie à deux. Si votre partenaire répond « un monospace à 7 places », il en donne à la grande famille. À la fin, le test <strong>additionne vos réponses</strong> et il garde le résultat qui a le plus de points.",
+    "p3": "Le premier répond aux 12 questions puis il passe le téléphone à l'autre. Le second répond <strong>sans voir ce que le premier a choisi</strong>. Ensuite le test vous montre le résultat de votre couple, avec sa photo. Il vous montre aussi le résultat que chacun aurait eu de son côté et la liste des questions où vous n'avez pas répondu pareil.",
+    "p4": "Vous pouvez aussi faire le test seul(e) en répondant pour votre couple. Par contre, vous ne saurez pas ce que votre partenaire aurait répondu. C'est pourtant une bonne occasion de <a href=\"/blog/questions-avenir-couple/\">parler de votre avenir</a> !"
+  },
+  "section2": {
+    "title": "Les 6 résultats du test",
+    "intro": "Le test peut donner 6 résultats. Ils vont de la vie à deux à la grande famille. Il y a aussi un résultat pour les couples qui ne sont pas pressés.",
+    "galerie": [
+      {
+        "id": "zero",
+        "titre": "Une vie à deux",
+        "texte": "Pour les couples qui tiennent à leur liberté et à leurs voyages.",
+        "alt": "Une petite décapotable ancienne garée sur une route au bord de la mer, au coucher du soleil, avec des bagages à l'arrière"
+      },
+      {
+        "id": "un",
+        "titre": "Un enfant",
+        "texte": "Pour les couples qui veulent un enfant et du temps pour eux.",
+        "alt": "Une chambre d'enfant avec un seul petit lit en bois, un ours en peluche sur l'oreiller et un mobile d'étoiles en feutre"
+      },
+      {
+        "id": "deux",
+        "titre": "Deux enfants",
+        "texte": "Pour les couples qui imaginent une maison animée mais pas débordée.",
+        "alt": "Une chambre d'enfant avec un lit superposé en bois, un ours en peluche sur le lit du haut et un lapin en peluche sur celui du bas"
+      },
+      {
+        "id": "trois",
+        "titre": "Trois enfants",
+        "texte": "Pour les couples que le bruit ne dérange pas du tout.",
+        "alt": "Trois petites paires de bottes de pluie de couleur alignées entre deux grandes paires, sur un paillasson devant une porte en bois"
+      },
+      {
+        "id": "tribu",
+        "titre": "Quatre enfants ou plus",
+        "texte": "Pour les couples qui rêvent d'une grande tablée.",
+        "alt": "Une longue table de cuisine en bois dressée pour le petit-déjeuner, avec des bols et des tasses de toutes les couleurs autour d'une pile de pancakes"
+      },
+      {
+        "id": "plustard",
+        "titre": "Pas pour tout de suite",
+        "texte": "Pour les couples qui ont d'abord d'autres projets.",
+        "alt": "Une pièce vide et ensoleillée avec un pot de peinture fermé, un rouleau et un petit escabeau près de la fenêtre"
+      }
+    ]
+  },
+  "section3": {
+    "title": "Combien d'enfants les Français ont-ils aujourd'hui ?",
+    "intro": "Le test est un jeu mais la question est sérieuse. Voici ce que disent les chiffres en France.",
+    "sub1Title": "Moins de 2 enfants par femme",
+    "sub1Text": "En France, les femmes ont en moyenne <strong>1,56 enfant</strong>. C'est le chiffre de l'Insee pour 2025. Il n'avait jamais été aussi bas depuis la fin de la Première Guerre mondiale. En 2010, il était encore de 2,02.",
+    "sub2Title": "La famille qu'on imagine et celle qu'on a",
+    "sub2Text": "Les Français imaginent des familles plus grandes que celles qu'ils ont. Quand l'Ined leur demande le nombre idéal d'enfants dans une famille, ils répondent <strong>2,3 en moyenne</strong> en 2024. Ils répondaient 2,7 en 1998. Entre l'idée et la réalité, il y a souvent le travail et le logement. Il y a aussi <a href=\"/test-est-ce-que-je-veux-un-enfant/\">l'envie d'avoir un enfant</a>, qui n'est pas toujours la même chez l'un et chez l'autre.",
+    "sub3Title": "Un enfant à la fois",
+    "sub3Text": "Le nombre d'enfants se décide rarement en une seule fois. La plupart des couples décident d'abord d'avoir un premier enfant. Ils voient ensuite comment ça se passe. Il vaut mieux parler de quelques sujets <a href=\"/test-parentalite-couple/\">avant de devenir parents</a>. Par exemple, qui se lèvera la nuit et qui réduira son temps de travail."
+  },
+  "section4": {
+    "title": "Et si vous n'avez pas le même résultat ?",
+    "p1": "Ça arrive souvent. Par exemple, l'un obtient « deux enfants » et l'autre « pas pour tout de suite ». Ce n'est pas grave. Le test compte les points de vos réponses et quelques points suffisent à changer le résultat.",
+    "p2": "Regardez plutôt la liste des questions où vos réponses sont différentes. Si elles portent sur la voiture ou sur les vacances, ce n'est pas bien grave. Si elles portent sur la question « c'est pour quand ? », <strong>prenez le temps d'en parler</strong>. Mieux vaut savoir tôt que vous n'avez pas la même envie."
+  },
+  "section5": {
+    "title": "Ce qu'il faut savoir sur ce test",
+    "p1": "Ce test est un jeu. <strong>Il ne prédit pas le nombre d'enfants que vous aurez</strong>. Il ne sait rien de votre santé, de votre âge ni de votre situation. Avoir un enfant ne dépend pas seulement de l'envie et ça ne se passe pas toujours comme prévu. Si le sujet est douloureux pour vous en ce moment, ce jeu n'est peut-être pas fait pour aujourd'hui.",
+    "p2": "Vos réponses ne sont pas enregistrées, elles restent sur votre téléphone. On compte seulement le résultat obtenu pour savoir lesquels sortent le plus. Votre prénom n'est pas enregistré non plus. Les photos ont été créées pour cette page."
+  },
+  "seo": {
+    "faqTitle": "Questions fréquentes",
+    "faq1Q": "Peut-on savoir combien d'enfants on aura ?",
+    "faq1A": "Non. Personne ne peut le prédire et ce test non plus. Il regarde seulement la vie que vous imaginez, par exemple votre logement et vos vacances. Il vous montre ensuite la famille qui ressemble le plus à vos réponses.",
+    "faq2Q": "Quels résultats peut-on obtenir ?",
+    "faq2A": "Le test peut donner 6 résultats : une vie à deux, un enfant, deux enfants, trois enfants, quatre enfants ou plus, et « pas pour tout de suite ».",
+    "faq3Q": "Comment le résultat est-il calculé ?",
+    "faq3A": "Chaque réponse donne des points à un ou deux résultats. Par exemple, si vous répondez « une maison avec un jardin » à la question sur le logement, les résultats « deux enfants » et « trois enfants » gagnent des points. Quand vous faites le test à deux, il additionne vos réponses et le résultat qui a le plus de points devient celui de votre couple.",
+    "faq4Q": "Combien d'enfants a-t-on en moyenne en France ?",
+    "faq4A": "Les femmes ont en moyenne 1,56 enfant en France en 2025 d'après l'Insee. C'est le chiffre le plus bas depuis la fin de la Première Guerre mondiale. Quand on leur demande le nombre idéal d'enfants dans une famille, les Français répondent 2,3 en moyenne d'après l'Ined.",
+    "faq5Q": "Que faire si on ne veut pas le même nombre d'enfants ?",
+    "faq5A": "C'est très courant et ça se discute. Dites d'abord ce que chacun imagine et pourquoi. L'écart vient souvent d'une peur précise, par exemple celle de manquer d'argent ou de temps. Vous n'avez pas besoin de décider du nombre tout de suite. La plupart des couples avancent un enfant à la fois.",
+    "faq6Q": "Peut-on faire le test seul(e) ?",
+    "faq6A": "Oui. Il suffit de choisir « Seul(e), pour notre couple » et de répondre en pensant à votre couple. Vous aurez un résultat mais vous ne pourrez pas comparer vos réponses."
+  },
+  "jsonLd": {
+    "about": "la famille qui ressemble à la vie que vous imaginez"
+  }
+}

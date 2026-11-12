@@ -269,6 +269,8 @@
     quizListeNoel: 'Sages ou pas sages (liste du Père Noël)',
     quizDuoNoel: 'Personnages de Noël',
     quizPorteCulotte: 'Qui porte la culotte',
+    quizCoupleLegende: 'Quel couple de légende',
+    quizEnfantsNous: "Combien d'enfants",
     quizPartenairesNous: 'Quel genre de partenaires',
     quizAnimauxNous: "Quel couple d'animaux",
     testAttachement: "Style d'attachement",
@@ -432,6 +434,8 @@
     'liste-noel': 'quizListeNoel',
     'duo-noel': 'quizDuoNoel',
     'porte-culotte': 'quizPorteCulotte',
+    'couple-legende': 'quizCoupleLegende',
+    'enfants-nous': 'quizEnfantsNous',
     'partenaires-nous': 'quizPartenairesNous',
     'animaux-nous': 'quizAnimauxNous',
     'type-couple': 'quizTypeCouple',
@@ -478,6 +482,8 @@
            'quizListeNoel', 'liste-noel', 'quizDuoNoel', 'duo-noel',
            // qui porte la culotte (11 novembre 2026)
            'quizPorteCulotte', 'porte-culotte',
+           'quizCoupleLegende', 'couple-legende',
+           'quizEnfantsNous', 'enfants-nous',
            'quizPartenairesNous', 'partenaires-nous',
            'quizAnimauxNous', 'animaux-nous']
   };

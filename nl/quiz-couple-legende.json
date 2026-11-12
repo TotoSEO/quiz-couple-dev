@@ -1,0 +1,111 @@
+{
+  "hero": {
+    "badge": "Themaquiz • Met z'n tweeën of alleen voor jullie als koppel",
+    "title": "Welk legendarisch koppel zijn wij? De test in 12 vragen",
+    "titleHighlight": "Welk legendarisch koppel zijn wij?",
+    "description": "Romeo en Julia, Bonnie en Clyde of Marie en Pierre Curie? Ieder beantwoordt 12 vragen over jullie verhaal. Daarna laat de test het legendarische koppel zien waar jullie het meest op lijken, met foto.",
+    "subtitle": "12 vragen • 3 minuten per persoon • op één telefoon",
+    "jumpBtn": "Doe de test"
+  },
+  "section1": {
+    "title": "Zo werkt de test",
+    "p1": "Deze test is een <strong>spel om samen te doen</strong>. Hij zoekt het beroemde koppel van wie het verhaal het meest op dat van jullie lijkt. Hij stelt 12 vragen over jullie relatie. Hij vraagt bijvoorbeeld hoe jullie elkaar hebben ontmoet en wat jullie doen <a href=\"/nl/lange-afstandsrelatie-test/\">als jullie ver van elkaar zijn</a>.",
+    "p2": "Neem de vraag over jullie ontmoeting. Antwoorden jullie ‘liefde op het eerste gezicht’, dan krijgen Romeo en Julia punten. Antwoordt je partner ‘in het begin konden we elkaar niet uitstaan’, dan krijgen Elizabeth Bennet en Mr. Darcy punten. Aan het eind <strong>telt de test jullie antwoorden bij elkaar op</strong> en houdt hij het koppel met de meeste punten over.",
+    "p3": "De eerste beantwoordt de 12 vragen en geeft dan de telefoon door. De tweede antwoordt <strong>zonder te zien wat de eerste heeft gekozen</strong>. Daarna laat de test jullie legendarische koppel zien, met foto. Hij laat ook het koppel zien dat ieder voor zich had gekregen en de vragen waarop jullie verschillend hebben geantwoord.",
+    "p4": "Je kunt de test ook alleen doen en voor jullie als koppel antwoorden. Dan kunnen jullie de antwoorden alleen niet vergelijken. Dat is jammer, want geen twee mensen vertellen hun ontmoeting op dezelfde manier!"
+  },
+  "section2": {
+    "title": "De 8 legendarische koppels van de test",
+    "intro": "De test heeft 8 mogelijke uitslagen. Vier van deze koppels hebben bestaan. De andere vier komen uit een toneelstuk, een roman of een mythe. Hier zie je bij wie elk koppel het best past.",
+    "galerie": [
+      {
+        "id": "romeo",
+        "titre": "Romeo en Julia",
+        "texte": "Voor koppels bij wie het meteen raak was en die sindsdien onafscheidelijk zijn.",
+        "alt": "Een oud stenen balkon vol rode rozen en klimop, met een brandende lantaarn, bij het vallen van de avond"
+      },
+      {
+        "id": "ulysse",
+        "titre": "Odysseus en Penelope",
+        "texte": "Voor geduldige koppels die door afstand niet gaan twijfelen.",
+        "alt": "Een houten weefgetouw voor een stenen raam met uitzicht op zee, met een klein antiek zeilschip aan de horizon"
+      },
+      {
+        "id": "cleopatre",
+        "titre": "Cleopatra en Marcus Antonius",
+        "texte": "Voor koppels die van grote feesten houden en groot denken.",
+        "alt": "Een gouden boot met paarse zeilen ligt bij zonsondergang op de Nijl, voor een rij palmbomen"
+      },
+      {
+        "id": "bonnie",
+        "titre": "Bonnie en Clyde",
+        "texte": "Voor hechte koppels die één front vormen tegen de rest.",
+        "alt": "Een zwarte auto uit de jaren dertig op een zandweg midden in de vlakte, met een vilten hoed en een baret op de motorkap"
+      },
+      {
+        "id": "darcy",
+        "titre": "Elizabeth Bennet en Mr. Darcy",
+        "texte": "Voor koppels die zich eerst aan elkaar ergerden en elkaar nog altijd plagen.",
+        "alt": "Een groot Engels landhuis gezien vanaf de overkant van een meer, aan het eind van een gazon, in de ochtendmist"
+      },
+      {
+        "id": "curie",
+        "titre": "Marie en Pierre Curie",
+        "texte": "Voor koppels die altijd een gezamenlijk project hebben.",
+        "alt": "Een oude laboratoriumtafel met glazen kolven, een weegschaal, een open schrift en een klein flesje dat blauwgroen gloeit"
+      },
+      {
+        "id": "hugo",
+        "titre": "Juliette Drouet en Victor Hugo",
+        "texte": "Voor koppels die elkaar van 's ochtends tot 's avonds schrijven.",
+        "alt": "Een houten bureau vol stapeltjes brieven met een rood lint erom, met een ganzenveer in een inktpot en een brandende kaars"
+      },
+      {
+        "id": "philemon",
+        "titre": "Philemon en Baucis",
+        "texte": "Voor koppels die ervan dromen samen oud te worden.",
+        "alt": "Twee oude bomen met hun stammen dicht tegen elkaar voor een klein stenen huis, in het avondlicht"
+      }
+    ]
+  },
+  "section3": {
+    "title": "Het verhaal van 4 koppels uit de test",
+    "intro": "Iedereen kent hun namen, maar minder mensen kennen hun verhaal. Dit is het verhaal van 4 koppels uit de test.",
+    "sub1Title": "Romeo en Julia, een verhaal van een paar dagen",
+    "sub1Text": "Shakespeare schreef het stuk in de jaren 1590. Het verhaal speelt in Verona, in Italië. Romeo en Julia ontmoeten elkaar op een zondagavond op een bal en trouwen de dag erna in het geheim. Het hele verhaal duurt <strong>minder dan een week</strong>. Daarom worden ze genoemd als het bij een koppel meteen raak is.",
+    "sub2Title": "Odysseus en Penelope, 20 jaar wachten",
+    "sub2Text": "In de ‘Odyssee’ van Homerus vertrekt Odysseus naar de Trojaanse Oorlog en doet hij er <strong>20 jaar over om thuis te komen</strong>. In die tijd willen vrijers met Penelope trouwen. Ze belooft te kiezen zodra ze een groot doek af heeft geweven. Elke nacht haalt ze weer uit wat ze overdag heeft geweven! Hun verhaal zegt iets tegen alle koppels die het ondanks de afstand moeten volhouden.",
+    "sub3Title": "Marie en Pierre Curie, een bruiloft zonder witte jurk",
+    "sub3Text": "<a href=\"/nl/blog/pierre-en-marie-curie-liefdesverhaal/\">Marie en Pierre Curie trouwen</a> in juli 1895 op het gemeentehuis van Sceaux, bij Parijs. Van het geld dat ze cadeau krijgen, kopen ze twee fietsen voor hun huwelijksreis. Drie jaar later ontdekken ze samen polonium en radium. Ze krijgen de <strong>Nobelprijs voor Natuurkunde in 1903</strong>.",
+    "sub4Title": "Juliette Drouet en Victor Hugo, 22.000 brieven",
+    "sub4Text": "Juliette Drouet is actrice als ze in 1833 Victor Hugo ontmoet. Daarna <a href=\"/nl/blog/juliette-drouet-victor-hugo-brieven/\">schrijft ze hem bijna elke dag</a>, 50 jaar lang. Dat zijn ongeveer <strong>22.000 brieven</strong>! Hugo is getrouwd en hun verhaal is geen sprookje. Juliette leefde bijvoorbeeld jarenlang bijna opgesloten omdat hij niet wilde dat ze zonder hem de deur uit ging."
+  },
+  "section4": {
+    "title": "En als jullie niet hetzelfde koppel krijgen?",
+    "p1": "Dat gebeurt vaak. De een ziet jullie verhaal bijvoorbeeld als dat van Romeo en Julia en de ander als dat van Elizabeth Bennet en Mr. Darcy. Het betekent alleen dat jullie niet dezelfde herinneringen aan het begin hebben.",
+    "p2": "Kijk liever naar de vragen waarop jullie verschillend hebben geantwoord. De vraag over jullie ontmoeting en die over de eerste ‘ik hou van je’ zijn vaak het leukst om te vergelijken. Vraag de ander <strong>om zijn of haar versie te vertellen</strong>!"
+  },
+  "section5": {
+    "title": "Wat je over deze test moet weten",
+    "p1": "Deze test is een spel. Hij speelt met het beeld dat we van deze koppels hebben en <strong>hij zegt niets serieus over jullie relatie</strong>. Deze koppels zijn geen voorbeelden om na te volgen. Romeo en Julia sterven aan het eind van het stuk. De echte Bonnie Parker en Clyde Barrow waren misdadigers en hun bende heeft meerdere mensen gedood. De test houdt alleen over wat mensen van hen onthouden, bijvoorbeeld de liefde op het eerste gezicht of de hechte band.",
+    "p2": "Jullie antwoorden worden niet opgeslagen, ze blijven op jullie telefoon. We tellen alleen welke uitslag eruit komt, om te zien welke het vaakst voorkomen. Jullie voornaam wordt ook niet opgeslagen. De foto's zijn voor deze pagina gemaakt en op geen enkele staat een echt persoon."
+  },
+  "seo": {
+    "faqTitle": "Veelgestelde vragen",
+    "faq1Q": "Welke legendarische koppels kun je krijgen?",
+    "faq1A": "De test heeft 8 mogelijke uitslagen: Romeo en Julia, Odysseus en Penelope, Cleopatra en Marcus Antonius, Bonnie en Clyde, Elizabeth Bennet en Mr. Darcy, Marie en Pierre Curie, Juliette Drouet en Victor Hugo of Philemon en Baucis.",
+    "faq2Q": "Hoe wordt de uitslag berekend?",
+    "faq2A": "Elk antwoord geeft punten aan één of twee koppels. Antwoorden jullie bijvoorbeeld ‘hem of haar elke dag schrijven’ bij de vraag over het liefdesbewijs, dan krijgen Juliette Drouet en Victor Hugo punten. Doen jullie de test met z'n tweeën, dan telt hij jullie antwoorden bij elkaar op. Het koppel met de meeste punten wordt jullie koppel.",
+    "faq3Q": "Welke koppels uit de test hebben bestaan?",
+    "faq3A": "Vier koppels hebben bestaan: Cleopatra en Marcus Antonius, Bonnie en Clyde, Marie en Pierre Curie, Juliette Drouet en Victor Hugo. Romeo en Julia komen uit een toneelstuk van Shakespeare. Elizabeth Bennet en Mr. Darcy komen uit de roman ‘Trots en vooroordeel’ van Jane Austen uit 1813. Odysseus en Penelope en Philemon en Baucis zijn koppels uit de mythologie.",
+    "faq4Q": "Wie zijn Philemon en Baucis?",
+    "faq4A": "Dat is een oud echtpaar uit de mythologie over wie de dichter Ovidius vertelt in de ‘Metamorfosen’. Ze zijn arm, maar ze ontvangen twee reizigers in hun huis. Die reizigers blijken goden te zijn. Als dank mogen ze een wens doen. Ze vragen om op hetzelfde moment te sterven. Bij hun dood veranderen ze in twee bomen die naast elkaar groeien, een eik en een linde.",
+    "faq5Q": "Waarom zitten Bonnie en Clyde in de test?",
+    "faq5A": "Omdat mensen over een heel hecht koppel vaak zeggen: ‘het zijn net Bonnie en Clyde’. De echte Bonnie Parker en Clyde Barrow overvielen begin jaren dertig banken en winkels in de Verenigde Staten. In 1934 werden ze door de politie doodgeschoten. De test houdt alleen het idee van het onafscheidelijke duo over.",
+    "faq6Q": "Kun je de test alleen doen?",
+    "faq6A": "Ja. Kies gewoon ‘Alleen, voor ons als koppel’ en antwoord met jullie als koppel in gedachten. Je krijgt een uitslag, maar je kunt jullie antwoorden niet vergelijken."
+  },
+  "jsonLd": {
+    "about": "het legendarische koppel dat bij jullie relatie past"
+  }
+}

@@ -622,6 +622,12 @@
     "metaDescription": "Vous hésitez entre un château, un pré et une plage ? Chacun répond à 12 questions et le test vous montre le style de mariage fait pour votre couple.",
     "description": "Chacun répond à 12 questions et le test vous montre le style de mariage qui irait à votre couple, avec sa photo."
   },
+  "quizEnfantsNous": {
+    "title": "Combien d'enfants aurez-vous ? Le test à faire à deux",
+    "shortTitle": "Combien d'enfants aurons-nous",
+    "metaDescription": "Un enfant, deux ou toute une tribu ? Chacun répond à 12 questions sur la vie qu'il imagine et le test montre la famille qui ressemble le plus à vos réponses.",
+    "description": "Chacun répond à 12 questions sur la vie qu'il imagine et le test vous montre la famille qui ressemble à vos réponses, avec sa photo."
+  },
   "quizListeNoel": {
     "title": "Sommes-nous sur la liste des enfants sages ? Le test de Noël",
     "shortTitle": "Sages ou pas sages",
@@ -651,6 +657,12 @@
     "shortTitle": "Quel genre de partenaires sommes-nous",
     "metaDescription": "Aux petits soins, fleur bleue ou très indépendants ? Chacun répond à 12 questions et le test montre quel genre de partenaires vous êtes dans votre couple.",
     "description": "Chacun répond à 12 questions et le test vous montre le genre de partenaires que vous êtes, avec sa photo."
+  },
+  "quizCoupleLegende": {
+    "title": "Quel couple célèbre êtes-vous ? Le test à faire à deux",
+    "shortTitle": "Quel couple de légende sommes-nous",
+    "metaDescription": "Roméo et Juliette, Bonnie et Clyde ou Marie et Pierre Curie ? Chacun répond à 12 questions et le test montre le couple de légende qui vous ressemble le plus.",
+    "description": "Chacun répond à 12 questions et le test vous montre le couple de légende qui vous ressemble, avec sa photo."
   },
   "bilanCouple": {
     "title": "Bilan de couple à faire en ligne | PDF résultats immédiats",

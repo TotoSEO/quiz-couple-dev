@@ -41,6 +41,8 @@
     "quizOuVivreTagline": "Chacun répond à 12 questions sur la vie qu'il imagine et le test vous montre l'endroit de votre couple en photo.",
     "quizMariageNousNom": "Quel mariage est fait pour nous ?",
     "quizMariageNousTagline": "Chacun répond à 12 questions sur le jour du mariage et le test vous montre le mariage de votre couple en photo.",
+    "quizEnfantsNousNom": "Combien d'enfants aurons-nous ?",
+    "quizEnfantsNousTagline": "Chacun répond à 12 questions sur la vie qu'il imagine et le test vous montre la famille qui lui ressemble en photo.",
     "quizListeNoelNom": "Sages ou pas sages ?",
     "quizListeNoelTagline": "Chacun répond à 12 questions sur son mois de décembre. Le test vous dit si votre couple est sur la liste des enfants sages et qui est le plus sage.",
     "quizDuoNoelNom": "Quels personnages de Noël êtes-vous ?",
@@ -50,7 +52,9 @@
     "quizAnimauxNousNom": "Quel couple d'animaux sommes-nous ?",
     "quizAnimauxNousTagline": "Chacun répond à 12 questions sur votre vie à deux et le test vous montre votre couple d'animaux en photo.",
     "quizPartenairesNousNom": "Quel genre de partenaires sommes-nous ?",
-    "quizPartenairesNousTagline": "Chacun répond à 12 questions sur la vie de tous les jours et le test vous montre votre genre de partenaires en photo."
+    "quizPartenairesNousTagline": "Chacun répond à 12 questions sur la vie de tous les jours et le test vous montre votre genre de partenaires en photo.",
+    "quizCoupleLegendeNom": "Quel couple de légende sommes-nous ?",
+    "quizCoupleLegendeTagline": "Chacun répond à 12 questions sur votre histoire et le test vous montre votre couple de légende en photo."
   },
   "section1": {
     "title": "À quoi servent ces quiz",

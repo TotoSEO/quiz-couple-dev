@@ -41,6 +41,8 @@
     "quizOuVivreTagline": "You each answer 12 questions about the life you picture and the quiz shows you your place as a couple in a photo.",
     "quizMariageNousNom": "What kind of wedding should we have?",
     "quizMariageNousTagline": "You each answer 12 questions about the wedding day and the quiz shows you your wedding as a couple in a photo.",
+    "quizEnfantsNousNom": "How many kids will we have?",
+    "quizEnfantsNousTagline": "You each answer 12 questions about the life you picture and the quiz shows you the family that goes with it in a photo.",
     "quizListeNoelNom": "Naughty or nice?",
     "quizListeNoelTagline": "You each answer 12 questions about your December. The quiz tells you if your couple is on the nice list and who is the nicer one.",
     "quizDuoNoelNom": "Which Christmas characters are you?",
@@ -50,7 +52,9 @@
     "quizAnimauxNousNom": "What animal couple are we?",
     "quizAnimauxNousTagline": "You each answer 12 questions about your life together and the quiz shows you your animal couple in a photo.",
     "quizPartenairesNousNom": "What kind of partners are we?",
-    "quizPartenairesNousTagline": "You each answer 12 questions about everyday life and the quiz shows you your kind of partners in a photo."
+    "quizPartenairesNousTagline": "You each answer 12 questions about everyday life and the quiz shows you your kind of partners in a photo.",
+    "quizCoupleLegendeNom": "Which legendary couple are we?",
+    "quizCoupleLegendeTagline": "You each answer 12 questions about your story and the quiz shows you your legendary couple in a photo."
   },
   "section1": {
     "title": "What these quizzes are for",

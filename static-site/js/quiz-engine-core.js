@@ -2407,6 +2407,8 @@ var QuizEngine = (function() {
     { type: 'quiz', key: 'ou-vivre', icon: '🗺️', route: 'quizOuVivre' },
     { type: 'quiz', key: 'mariage-nous', icon: '💍', route: 'quizMariageNous' },
     { type: 'quiz', key: 'porte-culotte', icon: '👖', route: 'quizPorteCulotte' },
+    { type: 'quiz', key: 'couple-legende', icon: '🌹', route: 'quizCoupleLegende' },
+    { type: 'quiz', key: 'enfants-nous', icon: '🧸', route: 'quizEnfantsNous' },
     { type: 'quiz', key: 'partenaires-nous', icon: '💑', route: 'quizPartenairesNous' },
     { type: 'quiz', key: 'animaux-nous', icon: '🐾', route: 'quizAnimauxNous' },
     { type: 'test', key: 'charge-mentale', icon: '🧠', route: 'testChargeMentale' },
@@ -2596,6 +2598,8 @@ var QuizEngine = (function() {
     'mariage-nous':     ['testMariage', 'quizOuVivre', 'quizMaisonNous'],
     // Qui porte la culotte : qui pense a tout, qui aime le plus, puis un quiz leger
     'porte-culotte':    ['testChargeMentale', 'testQuiAime', 'quizTypeCouple'],
+    'couple-legende': ['quizAnimauxNous', 'quizTypeCouple', 'quizPartenairesNous'],
+    'enfants-nous': ['testVeuxEnfant', 'testParentalite', 'quizOuVivre'],
     'partenaires-nous': ['testLangageAmour', 'quizTypeCouple', 'quizAnimauxNous'],
     'animaux-nous': ['quizPartenairesNous', 'quizTypeCouple', 'quizChienNous'],
     'action-ou-verite-coquin': ['quizCoquin', 'jeuGages', 'quizTentation'],

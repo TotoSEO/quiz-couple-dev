@@ -616,6 +616,12 @@
     "metaDescription": "¿Dudáis entre un castillo, una finca y una playa? Cada uno responde a 12 preguntas y el test os enseña el estilo de boda hecho para vuestra pareja.",
     "description": "Cada uno responde a 12 preguntas y el test os enseña el estilo de boda que le iría bien a vuestra pareja, con su foto."
   },
+  "quizEnfantsNous": {
+    "title": "¿Cuántos hijos tendréis? El test para hacer en pareja",
+    "shortTitle": "Cuántos hijos tendremos",
+    "metaDescription": "¿Un hijo, dos o toda una tropa? Cada uno responde a 12 preguntas sobre la vida que imagina y el test enseña la familia que más se parece a vuestras respuestas.",
+    "description": "Cada uno responde a 12 preguntas sobre la vida que imagina y el test os enseña la familia que se parece a vuestras respuestas, con su foto."
+  },
   "quizListeNoel": {
     "title": "Lista de niños buenos y malos: ¿en cuál estáis? El test",
     "shortTitle": "Lista de niños buenos y malos",
@@ -645,6 +651,12 @@
     "shortTitle": "Qué tipo de novios somos",
     "metaDescription": "¿Detallistas, románticos o muy independientes? Cada uno responde a 12 preguntas y el test enseña qué tipo de novios sois en vuestra relación.",
     "description": "Cada uno responde a 12 preguntas y el test os enseña qué tipo de novios sois, con su foto."
+  },
+  "quizCoupleLegende": {
+    "title": "¿Qué pareja famosa sois? El test para hacer en pareja",
+    "shortTitle": "Qué pareja de leyenda somos",
+    "metaDescription": "¿Romeo y Julieta, Bonnie y Clyde o Marie y Pierre Curie? Cada uno responde a 12 preguntas y el test enseña la pareja de leyenda que más se os parece.",
+    "description": "Cada uno responde a 12 preguntas y el test os enseña la pareja de leyenda que más se os parece, con su foto."
   },
   "bilanCouple": {
     "title": "Evaluación de pareja online | Resultados al instante y PDF",

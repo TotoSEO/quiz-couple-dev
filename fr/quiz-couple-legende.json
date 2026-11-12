@@ -1,0 +1,111 @@
+{
+  "hero": {
+    "badge": "Quiz fun • À deux, ou seul(e) pour le couple",
+    "title": "Quel couple de légende sommes-nous ? Le test en 12 questions",
+    "titleHighlight": "Quel couple de légende sommes-nous ?",
+    "description": "Roméo et Juliette, Bonnie et Clyde ou Marie et Pierre Curie ? Chacun répond à 12 questions sur votre histoire. Le test vous montre ensuite le couple de légende qui vous ressemble le plus, avec sa photo.",
+    "subtitle": "12 questions • 3 minutes chacun • sur un seul téléphone",
+    "jumpBtn": "Faire le test"
+  },
+  "section1": {
+    "title": "Comment marche le test",
+    "p1": "Ce test est un <strong>jeu à faire en couple</strong>. Il cherche le couple célèbre dont l'histoire ressemble le plus à la vôtre. Il pose 12 questions sur votre couple. Il vous demande par exemple comment vous vous êtes rencontrés et ce que vous faites <a href=\"/quiz-couple-distance/\">quand vous êtes loin l'un de l'autre</a>.",
+    "p2": "Prenons la question sur la rencontre. Si vous répondez « un coup de foudre au premier regard », le test donne des points à Roméo et Juliette. Si votre partenaire répond « au début on ne se supportait pas », il en donne à Elizabeth Bennet et Mr Darcy. À la fin, le test <strong>additionne vos réponses</strong> et il garde le couple qui a le plus de points.",
+    "p3": "Le premier répond aux 12 questions puis il passe le téléphone à l'autre. Le second répond <strong>sans voir ce que le premier a choisi</strong>. Ensuite le test vous montre le couple de légende qui vous ressemble, avec sa photo. Il vous montre aussi le couple que chacun aurait eu de son côté et la liste des questions où vous n'avez pas répondu pareil.",
+    "p4": "Vous pouvez aussi faire le test seul(e) en répondant pour votre couple. Par contre, vous ne pourrez pas comparer vos réponses. C'est dommage parce qu'on ne raconte jamais sa rencontre de la même façon !"
+  },
+  "section2": {
+    "title": "Les 8 couples de légende du test",
+    "intro": "Le test peut donner 8 résultats. Quatre de ces couples ont existé. Les quatre autres sortent d'une pièce de théâtre, d'un roman ou d'un mythe. Voici à qui chacun ressemble le plus.",
+    "galerie": [
+      {
+        "id": "romeo",
+        "titre": "Roméo et Juliette",
+        "texte": "Pour les couples qui ont eu le coup de foudre et qui ne se quittent plus.",
+        "alt": "Un vieux balcon de pierre couvert de roses rouges et de lierre, avec une lanterne allumée, à la tombée de la nuit"
+      },
+      {
+        "id": "ulysse",
+        "titre": "Ulysse et Pénélope",
+        "texte": "Pour les couples patients que la distance ne fait pas douter.",
+        "alt": "Un métier à tisser en bois devant une fenêtre de pierre ouverte sur la mer, avec un petit voilier antique à l'horizon"
+      },
+      {
+        "id": "cleopatre",
+        "titre": "Cléopâtre et Marc Antoine",
+        "texte": "Pour les couples qui aiment les grandes fêtes et qui voient grand.",
+        "alt": "Une barque dorée aux voiles pourpres amarrée sur le Nil au coucher du soleil, devant des palmiers"
+      },
+      {
+        "id": "bonnie",
+        "titre": "Bonnie et Clyde",
+        "texte": "Pour les couples complices qui font bloc face aux autres.",
+        "alt": "Une voiture noire des années 1930 sur une route de terre au milieu des plaines, un chapeau de feutre et un béret posés sur le capot"
+      },
+      {
+        "id": "darcy",
+        "titre": "Elizabeth Bennet et Mr Darcy",
+        "texte": "Pour les couples qui se sont d'abord agacés et qui se taquinent encore.",
+        "alt": "Un grand manoir anglais vu de l'autre côté d'un lac, au bout d'une pelouse, dans la brume du matin"
+      },
+      {
+        "id": "curie",
+        "titre": "Marie et Pierre Curie",
+        "texte": "Pour les couples qui ont toujours un projet commun.",
+        "alt": "Une paillasse de laboratoire ancienne avec des flacons en verre, une balance, un carnet ouvert et une petite fiole qui luit en bleu-vert"
+      },
+      {
+        "id": "hugo",
+        "titre": "Juliette Drouet et Victor Hugo",
+        "texte": "Pour les couples qui s'écrivent du matin au soir.",
+        "alt": "Un bureau en bois couvert de liasses de lettres nouées d'un ruban rouge, avec une plume dans un encrier et une bougie allumée"
+      },
+      {
+        "id": "philemon",
+        "titre": "Philémon et Baucis",
+        "texte": "Pour les couples qui rêvent de vieillir ensemble.",
+        "alt": "Deux vieux arbres aux troncs serrés l'un contre l'autre devant une petite maison de pierre, dans la lumière du soir"
+      }
+    ]
+  },
+  "section3": {
+    "title": "L'histoire de 4 couples du test",
+    "intro": "Tout le monde connaît leurs noms mais on connaît moins bien leur histoire. Voici celle de 4 couples du test.",
+    "sub1Title": "Roméo et Juliette, une histoire de quelques jours",
+    "sub1Text": "Shakespeare a écrit la pièce dans les années 1590. L'histoire se passe à Vérone, en Italie. Roméo et Juliette se rencontrent à un bal un dimanche soir et ils se marient en secret le lendemain. Toute l'histoire dure <strong>moins d'une semaine</strong>. C'est pour ça qu'on parle d'eux quand un couple a le coup de foudre.",
+    "sub2Title": "Ulysse et Pénélope, 20 ans d'attente",
+    "sub2Text": "Dans « L'Odyssée » d'Homère, Ulysse part faire la guerre de Troie et il met <strong>20 ans à rentrer</strong>. Pendant ce temps, des prétendants veulent épouser Pénélope. Elle promet de choisir quand elle aura fini de tisser une grande toile. Chaque nuit, elle défait ce qu'elle a tissé dans la journée ! Leur histoire parle à tous les couples qui doivent tenir malgré la distance.",
+    "sub3Title": "Marie et Pierre Curie, un mariage sans robe blanche",
+    "sub3Text": "<a href=\"/blog/pierre-marie-curie-histoire-amour/\">Marie et Pierre Curie se marient</a> en juillet 1895 à la mairie de Sceaux. Avec l'argent reçu en cadeau, ils achètent deux vélos pour leur voyage de noces. Trois ans plus tard, ils découvrent ensemble le polonium et le radium. Ils reçoivent le <strong>prix Nobel de physique en 1903</strong>.",
+    "sub4Title": "Juliette Drouet et Victor Hugo, 22 000 lettres",
+    "sub4Text": "Juliette Drouet est actrice quand elle rencontre Victor Hugo en 1833. Elle <a href=\"/blog/juliette-drouet-victor-hugo-lettres/\">lui écrit ensuite presque tous les jours</a> pendant 50 ans. Ça fait environ <strong>22 000 lettres</strong> ! Hugo est marié et leur histoire n'a rien d'un conte de fées. Juliette a par exemple vécu presque enfermée pendant des années parce qu'il ne voulait pas qu'elle sorte sans lui."
+  },
+  "section4": {
+    "title": "Et si vous n'avez pas le même couple ?",
+    "p1": "Ça arrive souvent. Par exemple, l'un voit votre histoire comme celle de Roméo et Juliette et l'autre comme celle d'Elizabeth Bennet et Mr Darcy. Ça veut juste dire que vous ne gardez pas les mêmes souvenirs de vos débuts.",
+    "p2": "Regardez plutôt la liste des questions où vos réponses sont différentes. La question sur votre rencontre et celle sur le premier « je t'aime » sont souvent les plus drôles à comparer. Demandez à l'autre <strong>de raconter sa version</strong> !"
+  },
+  "section5": {
+    "title": "Ce qu'il faut savoir sur ce test",
+    "p1": "Ce test est un jeu. Il s'amuse avec l'image qu'on a de ces couples et <strong>il ne dit rien de sérieux sur le vôtre</strong>. Ces couples ne sont pas des modèles à suivre. Roméo et Juliette meurent à la fin de la pièce. Les vrais Bonnie Parker et Clyde Barrow étaient des criminels et leur bande a tué plusieurs personnes. Le test garde seulement ce qu'on retient d'eux, par exemple le coup de foudre ou la complicité.",
+    "p2": "Vos réponses ne sont pas enregistrées, elles restent sur votre téléphone. On compte seulement le résultat obtenu pour savoir lesquels sortent le plus. Votre prénom n'est pas enregistré non plus. Les photos ont été créées pour cette page et aucune ne montre une vraie personne."
+  },
+  "seo": {
+    "faqTitle": "Questions fréquentes",
+    "faq1Q": "Quels couples de légende peut-on obtenir ?",
+    "faq1A": "Le test peut donner 8 résultats : Roméo et Juliette, Ulysse et Pénélope, Cléopâtre et Marc Antoine, Bonnie et Clyde, Elizabeth Bennet et Mr Darcy, Marie et Pierre Curie, Juliette Drouet et Victor Hugo, ou Philémon et Baucis.",
+    "faq2Q": "Comment le résultat est-il calculé ?",
+    "faq2A": "Chaque réponse donne des points à un ou deux couples. Par exemple, si vous répondez « lui écrire tous les jours » à la question sur la preuve d'amour, Juliette Drouet et Victor Hugo gagnent des points. Quand vous faites le test à deux, il additionne vos réponses et le couple qui a le plus de points devient le vôtre.",
+    "faq3Q": "Quels couples du test ont existé ?",
+    "faq3A": "Quatre couples ont existé : Cléopâtre et Marc Antoine, Bonnie et Clyde, Marie et Pierre Curie, Juliette Drouet et Victor Hugo. Roméo et Juliette viennent d'une pièce de Shakespeare. Elizabeth Bennet et Mr Darcy viennent du roman « Orgueil et Préjugés » de Jane Austen, paru en 1813. Ulysse et Pénélope et Philémon et Baucis sont des couples de la mythologie.",
+    "faq4Q": "Qui sont Philémon et Baucis ?",
+    "faq4A": "C'est un vieux couple de la mythologie que le poète Ovide raconte dans « Les Métamorphoses ». Ils sont pauvres mais ils accueillent chez eux deux voyageurs, qui sont en réalité des dieux. Pour les remercier, les dieux leur accordent un vœu. Ils demandent à mourir en même temps. À leur mort, ils sont changés en deux arbres qui poussent côte à côte, un chêne et un tilleul.",
+    "faq5Q": "Pourquoi Bonnie et Clyde sont-ils dans le test ?",
+    "faq5A": "Parce qu'on dit souvent « ils sont comme Bonnie et Clyde » pour parler d'un couple très complice. Les vrais Bonnie Parker et Clyde Barrow ont braqué des banques et des magasins aux États-Unis au début des années 1930. Ils ont été tués par la police en 1934. Le test ne garde que l'idée du duo inséparable.",
+    "faq6Q": "Peut-on faire le test seul(e) ?",
+    "faq6A": "Oui. Il suffit de choisir « Seul(e), pour notre couple » et de répondre en pensant à votre couple. Vous aurez un résultat mais vous ne pourrez pas comparer vos réponses."
+  },
+  "jsonLd": {
+    "about": "le couple de légende qui ressemble à votre couple"
+  }
+}

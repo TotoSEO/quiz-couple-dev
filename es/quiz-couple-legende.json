@@ -1,0 +1,111 @@
+{
+  "hero": {
+    "badge": "Quiz original • En pareja, o solo/a para la pareja",
+    "title": "¿Qué pareja de leyenda somos? El test en 12 preguntas",
+    "titleHighlight": "¿Qué pareja de leyenda somos?",
+    "description": "¿Romeo y Julieta, Bonnie y Clyde o Marie y Pierre Curie? Cada uno responde a 12 preguntas sobre vuestra historia. Después el test os enseña la pareja de leyenda que más se os parece, con su foto.",
+    "subtitle": "12 preguntas • 3 minutos cada uno • en un solo móvil",
+    "jumpBtn": "Hacer el test"
+  },
+  "section1": {
+    "title": "Cómo funciona el test",
+    "p1": "Este test es un <strong>juego para hacer en pareja</strong>. Busca la pareja famosa cuya historia más se parece a la vuestra. Hace 12 preguntas sobre vuestra relación. Por ejemplo, os pregunta cómo os conocisteis y qué hacéis <a href=\"/es/quiz-pareja-distancia/\">cuando estáis lejos el uno del otro</a>.",
+    "p2": "Tomemos la pregunta sobre cómo os conocisteis. Si respondéis «un flechazo a primera vista», el test da puntos a Romeo y Julieta. Si tu pareja responde «al principio no nos soportábamos», se los da a Elizabeth Bennet y el señor Darcy. Al final, el test <strong>suma vuestras respuestas</strong> y se queda con la pareja que tiene más puntos.",
+    "p3": "El primero responde a las 12 preguntas y luego le pasa el móvil al otro. El segundo responde <strong>sin ver lo que ha elegido el primero</strong>. Después el test os enseña la pareja de leyenda que más se os parece, con su foto. También os enseña la pareja que le habría salido a cada uno por separado y la lista de preguntas en las que no habéis respondido lo mismo.",
+    "p4": "También puedes hacer el test solo/a respondiendo por vuestra pareja. Eso sí, no podréis comparar vuestras respuestas. ¡Es una pena, porque nadie cuenta igual cómo se conocieron!"
+  },
+  "section2": {
+    "title": "Las 8 parejas de leyenda del test",
+    "intro": "El test puede dar 8 resultados. Cuatro de estas parejas existieron. Las otras cuatro salen de una obra de teatro, de una novela o de un mito. Aquí tenéis a quién se parece más cada una.",
+    "galerie": [
+      {
+        "id": "romeo",
+        "titre": "Romeo y Julieta",
+        "texte": "Para las parejas que tuvieron un flechazo y ya no se separan.",
+        "alt": "Un viejo balcón de piedra cubierto de rosas rojas y de hiedra, con un farol encendido, al anochecer"
+      },
+      {
+        "id": "ulysse",
+        "titre": "Ulises y Penélope",
+        "texte": "Para las parejas pacientes a las que la distancia no hace dudar.",
+        "alt": "Un telar de madera delante de una ventana de piedra abierta al mar, con un pequeño velero antiguo en el horizonte"
+      },
+      {
+        "id": "cleopatre",
+        "titre": "Cleopatra y Marco Antonio",
+        "texte": "Para las parejas a las que les gustan las grandes fiestas y piensan a lo grande.",
+        "alt": "Una barca dorada con velas púrpura amarrada en el Nilo al atardecer, delante de unas palmeras"
+      },
+      {
+        "id": "bonnie",
+        "titre": "Bonnie y Clyde",
+        "texte": "Para las parejas cómplices que hacen piña frente a los demás.",
+        "alt": "Un coche negro de los años 30 en un camino de tierra en medio de las llanuras, con un sombrero de fieltro y una boina sobre el capó"
+      },
+      {
+        "id": "darcy",
+        "titre": "Elizabeth Bennet y el señor Darcy",
+        "texte": "Para las parejas que al principio se sacaban de quicio y todavía se pican.",
+        "alt": "Una gran mansión inglesa vista desde el otro lado de un lago, al final de un césped, entre la niebla de la mañana"
+      },
+      {
+        "id": "curie",
+        "titre": "Marie y Pierre Curie",
+        "texte": "Para las parejas que siempre tienen un proyecto en común.",
+        "alt": "Una antigua mesa de laboratorio con frascos de cristal, una balanza, un cuaderno abierto y un frasquito que brilla en azul verdoso"
+      },
+      {
+        "id": "hugo",
+        "titre": "Juliette Drouet y Victor Hugo",
+        "texte": "Para las parejas que se escriben de la mañana a la noche.",
+        "alt": "Un escritorio de madera cubierto de fajos de cartas atados con cinta roja, con una pluma en un tintero y una vela encendida"
+      },
+      {
+        "id": "philemon",
+        "titre": "Filemón y Baucis",
+        "texte": "Para las parejas que sueñan con envejecer juntas.",
+        "alt": "Dos árboles viejos con los troncos pegados delante de una casita de piedra, con la luz del atardecer"
+      }
+    ]
+  },
+  "section3": {
+    "title": "La historia de 4 parejas del test",
+    "intro": "Todo el mundo conoce sus nombres pero se conoce menos su historia. Esta es la de 4 parejas del test.",
+    "sub1Title": "Romeo y Julieta, una historia de pocos días",
+    "sub1Text": "Shakespeare escribió la obra en la década de 1590. La historia pasa en Verona, en Italia. Romeo y Julieta se conocen en un baile un domingo por la noche y se casan en secreto al día siguiente. Toda la historia dura <strong>menos de una semana</strong>. Por eso se habla de ellos cuando una pareja tiene un flechazo.",
+    "sub2Title": "Ulises y Penélope, 20 años de espera",
+    "sub2Text": "En la «Odisea» de Homero, Ulises se va a la guerra de Troya y tarda <strong>20 años en volver</strong>. Mientras tanto, unos pretendientes quieren casarse con Penélope. Ella promete elegir cuando termine de tejer una gran tela. ¡Cada noche deshace lo que ha tejido durante el día! Su historia les dice mucho a todas las parejas que tienen que aguantar a pesar de la distancia.",
+    "sub3Title": "Marie y Pierre Curie, una boda sin vestido blanco",
+    "sub3Text": "<a href=\"/es/blog/pierre-marie-curie-historia-amor/\">Marie y Pierre Curie se casan</a> en julio de 1895 en el ayuntamiento de Sceaux, cerca de París. Con el dinero que reciben de regalo, compran dos bicicletas para su viaje de novios. Tres años después descubren juntos el polonio y el radio. Reciben el <strong>Premio Nobel de Física en 1903</strong>.",
+    "sub4Title": "Juliette Drouet y Victor Hugo, 22.000 cartas",
+    "sub4Text": "Juliette Drouet es actriz cuando conoce a Victor Hugo en 1833. Después <a href=\"/es/blog/juliette-drouet-victor-hugo-cartas/\">le escribe casi todos los días</a> durante 50 años. ¡Son unas <strong>22.000 cartas</strong>! Hugo está casado y su historia no tiene nada de cuento de hadas. Por ejemplo, Juliette vivió casi encerrada durante años porque él no quería que saliera sin él."
+  },
+  "section4": {
+    "title": "¿Y si no os sale la misma pareja?",
+    "p1": "Pasa a menudo. Por ejemplo, uno ve vuestra historia como la de Romeo y Julieta y el otro como la de Elizabeth Bennet y el señor Darcy. Solo quiere decir que no guardáis los mismos recuerdos de vuestros comienzos.",
+    "p2": "Mirad mejor la lista de preguntas en las que vuestras respuestas son distintas. La pregunta sobre cómo os conocisteis y la del primer «te quiero» suelen ser las más divertidas de comparar. ¡Pedidle al otro <strong>que cuente su versión</strong>!"
+  },
+  "section5": {
+    "title": "Lo que hay que saber sobre este test",
+    "p1": "Este test es un juego. Juega con la imagen que tenemos de estas parejas y <strong>no dice nada serio sobre la vuestra</strong>. Estas parejas no son modelos a seguir. Romeo y Julieta mueren al final de la obra. Los verdaderos Bonnie Parker y Clyde Barrow eran delincuentes y su banda mató a varias personas. El test solo se queda con lo que se recuerda de ellos, por ejemplo el flechazo o la complicidad.",
+    "p2": "Vuestras respuestas no se guardan, se quedan en vuestro móvil. Solo contamos el resultado obtenido para saber cuáles salen más. Vuestro nombre tampoco se guarda. Las fotos se han creado para esta página y ninguna muestra a una persona real."
+  },
+  "seo": {
+    "faqTitle": "Preguntas frecuentes",
+    "faq1Q": "¿Qué parejas de leyenda pueden salir?",
+    "faq1A": "El test puede dar 8 resultados: Romeo y Julieta, Ulises y Penélope, Cleopatra y Marco Antonio, Bonnie y Clyde, Elizabeth Bennet y el señor Darcy, Marie y Pierre Curie, Juliette Drouet y Victor Hugo, o Filemón y Baucis.",
+    "faq2Q": "¿Cómo se calcula el resultado?",
+    "faq2A": "Cada respuesta da puntos a una o dos parejas. Por ejemplo, si respondéis «escribirle todos los días» en la pregunta sobre la prueba de amor, Juliette Drouet y Victor Hugo ganan puntos. Cuando hacéis el test en pareja, suma vuestras respuestas y la pareja con más puntos pasa a ser la vuestra.",
+    "faq3Q": "¿Qué parejas del test existieron?",
+    "faq3A": "Cuatro parejas existieron: Cleopatra y Marco Antonio, Bonnie y Clyde, Marie y Pierre Curie, Juliette Drouet y Victor Hugo. Romeo y Julieta salen de una obra de Shakespeare. Elizabeth Bennet y el señor Darcy salen de la novela «Orgullo y prejuicio» de Jane Austen, publicada en 1813. Ulises y Penélope y Filemón y Baucis son parejas de la mitología.",
+    "faq4Q": "¿Quiénes son Filemón y Baucis?",
+    "faq4A": "Son una pareja de ancianos de la mitología que el poeta Ovidio cuenta en «Las metamorfosis». Son pobres pero acogen en su casa a dos viajeros, que en realidad son dioses. Para darles las gracias, los dioses les conceden un deseo. Piden morir al mismo tiempo. Cuando mueren, se convierten en dos árboles que crecen uno al lado del otro, un roble y un tilo.",
+    "faq5Q": "¿Por qué están Bonnie y Clyde en el test?",
+    "faq5A": "Porque se suele decir «son como Bonnie y Clyde» de una pareja muy cómplice. Los verdaderos Bonnie Parker y Clyde Barrow atracaron bancos y tiendas en Estados Unidos a principios de los años 30. La policía los mató en 1934. El test solo se queda con la idea del dúo inseparable.",
+    "faq6Q": "¿Se puede hacer el test solo/a?",
+    "faq6A": "Sí. Basta con elegir «Solo/a, para nuestra pareja» y responder pensando en vuestra pareja. Tendrás un resultado pero no podrás comparar vuestras respuestas."
+  },
+  "jsonLd": {
+    "about": "la pareja de leyenda que se parece a vuestra relación"
+  }
+}

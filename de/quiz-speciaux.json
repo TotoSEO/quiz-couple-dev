@@ -41,6 +41,8 @@
     "quizOuVivreTagline": "Jeder beantwortet 12 Fragen zu dem Leben, das er sich vorstellt, und der Test zeigt euch euren Ort als Paar im Foto.",
     "quizMariageNousNom": "Welche Hochzeit passt zu uns?",
     "quizMariageNousTagline": "Jeder beantwortet 12 Fragen zum Hochzeitstag und der Test zeigt euch eure Hochzeit als Paar im Foto.",
+    "quizEnfantsNousNom": "Wie viele Kinder werden wir haben?",
+    "quizEnfantsNousTagline": "Jeder beantwortet 12 Fragen zu dem Leben, das er sich vorstellt, und der Test zeigt euch die passende Familie als Foto.",
     "quizListeNoelNom": "Artig oder unartig?",
     "quizListeNoelTagline": "Jeder beantwortet 12 Fragen zu seinem Dezember. Der Test sagt euch, ob ihr als Paar auf der Liste der Artigen steht und wer artiger war.",
     "quizDuoNoelNom": "Welcher Weihnachtstyp seid ihr?",
@@ -50,7 +52,9 @@
     "quizAnimauxNousNom": "Welches Tierpaar sind wir?",
     "quizAnimauxNousTagline": "Jeder beantwortet 12 Fragen zu eurem Leben als Paar und der Test zeigt euch euer Tierpaar im Foto.",
     "quizPartenairesNousNom": "Was für Partner sind wir?",
-    "quizPartenairesNousTagline": "Jeder beantwortet 12 Fragen zum Alltag und der Test zeigt euch im Foto, was für Partner ihr seid."
+    "quizPartenairesNousTagline": "Jeder beantwortet 12 Fragen zum Alltag und der Test zeigt euch im Foto, was für Partner ihr seid.",
+    "quizCoupleLegendeNom": "Welches legendäre Paar sind wir?",
+    "quizCoupleLegendeTagline": "Jeder beantwortet 12 Fragen zu eurer Geschichte und der Test zeigt euch euer legendäres Paar als Foto."
   },
   "section1": {
     "title": "Wozu diese Quiz gut sind",

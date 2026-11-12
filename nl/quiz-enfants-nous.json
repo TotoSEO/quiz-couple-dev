@@ -1,0 +1,97 @@
+{
+  "hero": {
+    "badge": "Themaquiz • Met z'n tweeën of alleen voor jullie als koppel",
+    "title": "Hoeveel kinderen krijgen wij? De test in 12 vragen",
+    "titleHighlight": "Hoeveel kinderen krijgen wij?",
+    "description": "Eén kind, twee of een heel elftal? Ieder beantwoordt 12 vragen over het leven dat hij over een paar jaar voor zich ziet. Daarna laat de test het gezin zien dat het best bij jullie antwoorden past, met foto. Het is een spel en geen voorspelling!",
+    "subtitle": "12 vragen • 3 minuten per persoon • op één telefoon",
+    "jumpBtn": "Doe de test"
+  },
+  "section1": {
+    "title": "Zo werkt de test",
+    "p1": "Deze test is een <strong>spel om samen te doen</strong>. Hij voorspelt de toekomst niet. Hij kijkt naar het leven dat jullie voor je zien en zoekt het gezin dat daarbij past. Hij stelt 12 heel eenvoudige vragen. Hij vraagt bijvoorbeeld hoe een zondagochtend er over 10 jaar uitziet en wat jullie volgende auto wordt.",
+    "p2": "Neem de vraag over de auto. Antwoorden jullie ‘een cabrio met twee stoelen’, dan krijgt het leven met z'n tweeën punten. Antwoordt je partner ‘een busje met 7 stoelen’, dan krijgt het grote gezin punten. Aan het eind <strong>telt de test jullie antwoorden bij elkaar op</strong> en houdt hij de uitslag met de meeste punten over.",
+    "p3": "De eerste beantwoordt de 12 vragen en geeft dan de telefoon door. De tweede antwoordt <strong>zonder te zien wat de eerste heeft gekozen</strong>. Daarna laat de test de uitslag voor jullie als koppel zien, met foto. Hij laat ook de uitslag zien die ieder voor zich had gekregen en de vragen waarop jullie verschillend hebben geantwoord.",
+    "p4": "Je kunt de test ook alleen doen en voor jullie als koppel antwoorden. Dan weet je alleen niet wat je partner had geantwoord. Dat is jammer, want de test is een mooie aanleiding om <a href=\"/nl/blog/vragen-over-de-toekomst-als-koppel/\">over jullie toekomst te praten</a>."
+  },
+  "section2": {
+    "title": "De 6 uitslagen van de test",
+    "intro": "De test heeft 6 mogelijke uitslagen. Ze gaan van een leven met z'n tweeën tot een groot gezin. Er is ook een uitslag voor koppels die geen haast hebben.",
+    "galerie": [
+      {
+        "id": "zero",
+        "titre": "Een leven met z'n tweeën",
+        "texte": "Voor koppels die hechten aan hun vrijheid en hun reizen.",
+        "alt": "Een kleine oude cabrio staat bij zonsondergang geparkeerd op een weg langs de zee, met bagage achterop"
+      },
+      {
+        "id": "un",
+        "titre": "Eén kind",
+        "texte": "Voor koppels die een kind willen en tijd voor zichzelf.",
+        "alt": "Een kinderkamer met één klein houten bed, een teddybeer op het kussen en een mobiel van vilten sterren"
+      },
+      {
+        "id": "deux",
+        "titre": "Twee kinderen",
+        "texte": "Voor koppels die een levendig huis voor zich zien, maar geen overvol huis.",
+        "alt": "Een kinderkamer met een houten stapelbed, een teddybeer op het bovenste bed en een knuffelkonijn op het onderste"
+      },
+      {
+        "id": "trois",
+        "titre": "Drie kinderen",
+        "texte": "Voor koppels die lawaai helemaal niet erg vinden.",
+        "alt": "Drie kleine paren gekleurde regenlaarzen staan tussen twee grote paren op een deurmat voor een houten deur"
+      },
+      {
+        "id": "tribu",
+        "titre": "Vier kinderen of meer",
+        "texte": "Voor koppels die dromen van een volle tafel.",
+        "alt": "Een lange houten keukentafel gedekt voor het ontbijt, met kommen en bekers in alle kleuren rond een stapel pannenkoeken"
+      },
+      {
+        "id": "plustard",
+        "titre": "Nu nog niet",
+        "texte": "Voor koppels die eerst andere plannen hebben.",
+        "alt": "Een lege, zonnige kamer met een dicht verfblik, een verfroller en een klein trapje bij het raam"
+      }
+    ]
+  },
+  "section3": {
+    "title": "Hoeveel kinderen krijgen mensen tegenwoordig?",
+    "intro": "De test is een spel, maar de vraag is serieus. Dit zeggen de cijfers voor Nederland en België.",
+    "sub1Title": "Minder dan 2 kinderen per vrouw",
+    "sub1Text": "In Nederland krijgen vrouwen gemiddeld <strong>1,43 kinderen</strong>. Dat is het cijfer van het CBS voor 2024. Tien jaar eerder was het nog 1,71. In België lag het in 2024 op 1,44 volgens Statbel.",
+    "sub2Title": "Het gezin dat je voor je ziet en het gezin dat je krijgt",
+    "sub2Text": "Niet iedereen krijgt het gezin dat hij voor ogen had. Tussen de wens en de werkelijkheid zitten vaak het werk en de woning. Volgens het CBS willen veel mensen <strong>pas een kind als ze een geschikte woning hebben</strong>. Daar komt <a href=\"/nl/wil-ik-kinderen-test/\">de kinderwens zelf</a> nog bij, en die is niet bij iedereen even sterk.",
+    "sub3Title": "Eén kind tegelijk",
+    "sub3Text": "Het aantal kinderen staat zelden van tevoren vast. De meeste koppels kiezen eerst voor één kind. Daarna kijken ze hoe het gaat. Over een paar dingen kun je het best praten <a href=\"/nl/klaar-voor-een-baby-test/\">voordat jullie ouders worden</a>. Bijvoorbeeld over wie er 's nachts uit bed gaat en wie minder gaat werken."
+  },
+  "section4": {
+    "title": "En als jullie niet dezelfde uitslag krijgen?",
+    "p1": "Dat gebeurt vaak. De een krijgt bijvoorbeeld ‘twee kinderen’ en de ander ‘nu nog niet’. Dat is niet erg. De test telt de punten van jullie antwoorden en een paar punten zijn al genoeg voor een andere uitslag.",
+    "p2": "Kijk liever naar de vragen waarop jullie verschillend hebben geantwoord. Gaan ze over de auto of over de vakantie, dan is er weinig aan de hand. Gaan ze over de vraag ‘en, wanneer komt er een?’, <strong>neem dan de tijd om erover te praten</strong>. Je kunt beter vroeg weten dat jullie niet dezelfde wens hebben."
+  },
+  "section5": {
+    "title": "Wat je over deze test moet weten",
+    "p1": "Deze test is een spel. <strong>Hij voorspelt niet hoeveel kinderen jullie krijgen</strong>. Hij weet niets over jullie gezondheid, jullie leeftijd of jullie situatie. Een kind krijgen hangt niet alleen af van de wens en het loopt niet altijd zoals gepland. Doet dit onderwerp jullie op dit moment pijn, dan is dit spel misschien niet voor vandaag.",
+    "p2": "Jullie antwoorden worden niet opgeslagen, ze blijven op jullie telefoon. We tellen alleen welke uitslag eruit komt, om te zien welke het vaakst voorkomen. Jullie voornaam wordt ook niet opgeslagen. De foto's zijn voor deze pagina gemaakt."
+  },
+  "seo": {
+    "faqTitle": "Veelgestelde vragen",
+    "faq1Q": "Kun je weten hoeveel kinderen je krijgt?",
+    "faq1A": "Nee. Niemand kan dat voorspellen en deze test ook niet. Hij kijkt alleen naar het leven dat jullie voor je zien, bijvoorbeeld jullie huis en jullie vakanties. Daarna laat hij het gezin zien dat het best bij jullie antwoorden past.",
+    "faq2Q": "Welke uitslagen kun je krijgen?",
+    "faq2A": "De test heeft 6 mogelijke uitslagen: een leven met z'n tweeën, één kind, twee kinderen, drie kinderen, vier kinderen of meer en ‘nu nog niet’.",
+    "faq3Q": "Hoe wordt de uitslag berekend?",
+    "faq3A": "Elk antwoord geeft punten aan één of twee uitslagen. Antwoorden jullie bijvoorbeeld ‘een huis met een tuin’ bij de vraag over het huis, dan krijgen de uitslagen ‘twee kinderen’ en ‘drie kinderen’ punten. Doen jullie de test met z'n tweeën, dan telt hij jullie antwoorden bij elkaar op. De uitslag met de meeste punten wordt de uitslag voor jullie als koppel.",
+    "faq4Q": "Hoeveel kinderen krijgen mensen gemiddeld in Nederland en België?",
+    "faq4A": "In Nederland krijgen vrouwen gemiddeld 1,43 kinderen. Dat is het cijfer van het CBS voor 2024. In België lag het gemiddelde in 2024 op 1,44 volgens Statbel.",
+    "faq5Q": "Wat als we niet evenveel kinderen willen?",
+    "faq5A": "Dat komt heel vaak voor en je kunt erover praten. Zeg eerst wat ieder voor zich ziet en waarom. Het verschil komt vaak door één bepaalde angst, bijvoorbeeld voor te weinig geld of te weinig tijd. Jullie hoeven het aantal niet meteen vast te leggen. De meeste koppels bekijken het per kind.",
+    "faq6Q": "Kun je de test alleen doen?",
+    "faq6A": "Ja. Kies gewoon ‘Alleen, voor ons als koppel’ en antwoord met jullie als koppel in gedachten. Je krijgt een uitslag, maar je kunt jullie antwoorden niet vergelijken."
+  },
+  "jsonLd": {
+    "about": "het gezin dat past bij het leven dat jullie voor je zien"
+  }
+}
