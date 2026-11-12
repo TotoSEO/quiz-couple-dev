@@ -559,8 +559,8 @@
   "speciauxCouple": {
     "title": "Themaquiz voor koppels: jullie hond, jullie huis en meer",
     "shortTitle": "Themaquizzen",
-    "metaDescription": "Een themaquiz voor koppels om samen te doen: de hond en het huis die bij jullie passen, plus de seizoensquizzen. Ieder antwoordt apart, dan vergelijken.",
-    "description": "Luchtige quizzen om samen te doen: jullie hond en jullie huis op de foto, en de seizoensquizzen."
+    "metaDescription": "Een themaquiz voor koppels om samen te doen: welke hond past bij ons, welk huis past bij ons en de kerstquizzen. Ieder antwoordt apart, dan vergelijken.",
+    "description": "Luchtige quizzen om samen te doen, bijvoorbeeld om jullie hond of jullie huis te vinden."
   },
   "quizSerialKiller": {
     "title": "Seriemoordenaar quiz: welke past bij jou? Alleen of samen",
@@ -595,32 +595,32 @@
   "quizChienNous": {
     "title": "Welke hond past bij ons? De test voor koppels",
     "shortTitle": "Welke hond past bij ons",
-    "metaDescription": "Welke hond past bij ons? Ieder beantwoordt 12 vragen (huis, wandelen, haren op de bank) en de test vindt de hond voor jullie twee, met foto.",
-    "description": "Twaalf vragen per persoon, en de hond die bij jullie als koppel past, van de corgi tot de Berner sennenhond, met foto."
+    "metaDescription": "Welke hond past bij ons? Ieder beantwoordt 12 vragen over jullie leven als koppel en de test zegt welke hond bij jullie past, met foto.",
+    "description": "Ieder beantwoordt 12 vragen en de test laat de hond zien die bij jullie als koppel past, met foto."
   },
   "quizMaisonNous": {
     "title": "Welk huis past bij ons? De test voor koppels",
     "shortTitle": "Welk huis past bij ons",
-    "metaDescription": "Welk huis past bij ons? Appartement in de stad, huis met tuin, opknaphuis of camperbus: ieder beantwoordt 12 vragen en de test laat jullie plek zien.",
-    "description": "Twaalf vragen per persoon, en de plek waar jullie je allebei thuis voelen: appartement, huis op het platteland, loft, tiny house..."
+    "metaDescription": "Welk huis past bij ons? Twijfelen jullie tussen een appartement en een huis met tuin? Ieder beantwoordt 12 vragen en de test laat jullie huis zien.",
+    "description": "Ieder beantwoordt 12 vragen en de test laat het huis zien dat bij jullie als koppel past, met foto."
   },
   "quizListeNoel": {
     "title": "Lief of stout? De kersttest voor koppels",
     "shortTitle": "Lief of stout",
-    "metaDescription": "Lief of stout geweest? Ieder beantwoordt 12 vragen over zijn decembermaand, en de test zegt op welke lijst van de Kerstman jullie als koppel staan.",
-    "description": "Twaalf vragen per persoon over jullie decembermaand, en jullie plek als koppel op de lijst van de Kerstman, met foto."
+    "metaDescription": "Lief of stout geweest? Ieder beantwoordt 12 vragen over zijn decembermaand en de test zegt op welke lijst van de Kerstman jullie als koppel staan.",
+    "description": "Ieder beantwoordt 12 vragen over zijn decembermaand en de test geeft jullie plek als koppel op de lijst van de Kerstman."
   },
   "quizDuoNoel": {
     "title": "Welke kerstfiguren zijn jullie? De kerstquiz voor koppels",
     "shortTitle": "Welke kerstfiguren zijn jullie",
-    "metaDescription": "Welke kerstfiguren zijn jullie? Ieder beantwoordt 12 vragen over jullie kerst, en de quiz vindt jullie duo: de Kerstman en de Kerstvrouw, twee elfjes...",
-    "description": "Twaalf vragen per persoon, en het kerstduo dat jullie vormen, van de Kerstman en de Kerstvrouw tot de twee kerstkabouters, met foto."
+    "metaDescription": "Welke kerstfiguren zijn jullie? Ieder beantwoordt 12 vragen over hoe jullie kerst vieren en de quiz geeft jullie duo, bijvoorbeeld twee elfjes.",
+    "description": "Ieder beantwoordt 12 vragen en de quiz geeft jullie het kerstduo dat jullie vormen, met foto."
   },
   "quizPorteCulotte": {
     "title": "Wie heeft de broek aan? De test voor koppels",
     "shortTitle": "Wie heeft de broek aan?",
-    "metaDescription": "Wie heeft de broek aan in jullie relatie? De test met 20 vragen over de beslissingen van elke dag, alleen of samen, ieder voor zich.",
-    "description": "Twintig vragen over de beslissingen van elke dag, alleen of samen, om te zien wie het vaakst het laatste woord heeft."
+    "metaDescription": "Wie heeft de broek aan in jullie relatie? Beantwoord 20 vragen over de beslissingen van elke dag, alleen of samen, en zie wie het vaakst beslist.",
+    "description": "Beantwoord 20 vragen over de beslissingen van elke dag en zie wie het vaakst het laatste woord heeft."
   },
   "bilanCouple": {
     "title": "Relatiecheck online | Direct resultaat, ook als pdf",

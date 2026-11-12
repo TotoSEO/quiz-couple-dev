@@ -178,11 +178,11 @@
       "quizPossession": "Voor ieder een kans op bezetenheid in procenten, en wie de demonen zouden kiezen.",
       "quizSuperVilain": "Je entree op het feest, je kostuum, je lach: de superschurk op wie je lijkt, van de Joker tot Maleficent.",
       "quizDuoVilains": "De kraak van de halloweennacht: ieders rol, en het beroemde schurkenduo dat jullie samen vormen.",
-      "quizChienNous": "Ieder antwoordt voor zich, en de test vindt de hond die bij jullie allebei past, van de corgi tot de Berner sennenhond.",
-      "quizMaisonNous": "Ieder antwoordt voor zich, en de test laat de plek zien waar jullie je allebei thuis zouden voelen, van het appartement in de stad tot de camperbus.",
-      "quizListeNoel": "Twaalf vragen over jullie decembermaand, en jullie plek als koppel op de lijst van de Kerstman, van de berg cadeaus tot de zak steenkool.",
-      "quizDuoNoel": "Ieder antwoordt voor zich, en de quiz vindt het kerstduo dat jullie vormen: de Kerstman en de Kerstvrouw, twee elfjes, Scrooge en de kerstgeest...",
-      "quizPorteCulotte": "Twintig vragen over de beslissingen van elke dag, en ieders deel: de film van vanavond, de vakantie, de geldzaken, het laatste woord."
+      "quizChienNous": "Ieder antwoordt voor zich en de test laat de hond zien die bij jullie als koppel past, met foto.",
+      "quizMaisonNous": "Ieder antwoordt voor zich en de test laat het huis zien dat bij jullie als koppel past, met foto.",
+      "quizListeNoel": "Beantwoord 12 vragen over jullie decembermaand en ontdek of jullie als koppel op de lijst met brave kinderen staan.",
+      "quizDuoNoel": "Ieder antwoordt voor zich en de quiz geeft jullie het kerstduo dat jullie vormen, bijvoorbeeld twee elfjes of twee rendieren.",
+      "quizPorteCulotte": "Beantwoord 20 vragen over de beslissingen van elke dag en zie wie het vaakst het laatste woord heeft."
     },
     "testsEyebrow": "De tests",
     "quizzesEyebrow": "De quizzen",
@@ -193,7 +193,7 @@
       "halloween": "Speciaal voor Halloween: onze (een beetje) enge quizzen",
       "noel": "Speciaal voor kerst: lief of stout, en jullie kerstduo"
     },
-    "speciauxDesc": "{{n}} luchtige quizzen om samen te doen. Ieder antwoordt voor zich, en daarna vergelijken jullie.",
+    "speciauxDesc": "{{n}} luchtige quizzen om samen te doen. Ieder antwoordt voor zich en daarna vergelijken jullie je antwoorden.",
     "speciauxCta": "Bekijk alle themaquizzen"
   },
   "customQuizPromo": {
