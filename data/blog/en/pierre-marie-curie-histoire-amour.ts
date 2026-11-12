@@ -32,7 +32,7 @@ const article: BlogArticleData = {
     {
       id: 'a-wedding-with-no-white-dress',
       title: "A wedding with no white dress",
-      content: `<p>The wedding took place on July 26, 1895, at the town hall of Sceaux, just outside Paris. <strong>No church, no rings</strong>: a civil wedding, with family and a few friends.</p>
+      content: `<p>The wedding took place on July 26, 1895, at the town hall of Sceaux, just outside Paris. <strong>No church, no rings</strong>: <a href="/en/what-kind-of-wedding-should-we-have-quiz/">a civil wedding</a>, with family and a few friends.</p>
 <p>No white dress either. Marie chose a simple dark blue outfit, something she could wear again every day. And that's exactly what she did: she wore it in the lab for years afterwards.</p>
 <figure class="blog-portrait"><img src="/blog/pierre-marie-curie-1895.webp" alt="Photograph of Pierre and Marie Curie in 1895, standing side by side, her hand on his arm" width="620" height="826" loading="lazy"><figcaption>Pierre and Marie Curie in 1895, the year they got married.</figcaption></figure>
 <aside class="blog-tip-box" role="note">

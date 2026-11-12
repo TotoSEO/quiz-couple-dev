@@ -68,7 +68,7 @@ const article: BlogArticleData = {
     {
       id: "l-avenir-au-on",
       title: "6. Il parle de l'avenir au « on »",
-      content: `<p>« Quand on aura une maison », « quand on aura des enfants », « on ira là-bas pour nos cinquante ans ». Et surtout, il ne change plus de sujet quand le mariage arrive dans la conversation. Il pose même des questions : grande fête ou petit comité, église ou mairie, quel nom tu voudrais. Un homme qui n'a pas l'intention de se marier évite ces questions ; un homme qui prépare sa demande les collectionne.</p>`,
+      content: `<p>« Quand on aura une maison », « quand on aura des enfants », « on ira là-bas pour nos cinquante ans ». Et surtout, il ne change plus de sujet quand le mariage arrive dans la conversation. Il pose même des questions : <a href="/test-quel-mariage-est-fait-pour-nous/">grande fête ou petit comité</a>, église ou mairie, quel nom tu voudrais. Un homme qui n'a pas l'intention de se marier évite ces questions ; un homme qui prépare sa demande les collectionne.</p>`,
     },
     {
       id: "le-mariage-des-autres",

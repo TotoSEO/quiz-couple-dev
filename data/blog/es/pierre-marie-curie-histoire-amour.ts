@@ -32,7 +32,7 @@ const article: BlogArticleData = {
     {
       id: 'una-boda-sin-vestido-blanco',
       title: "Una boda sin vestido blanco",
-      content: `<p>La boda se celebra el 26 de julio de 1895 en el ayuntamiento de Sceaux, a las afueras de París. <strong>Ni iglesia ni alianzas</strong>: una boda civil, con la familia y unos pocos amigos.</p>
+      content: `<p>La boda se celebra el 26 de julio de 1895 en el ayuntamiento de Sceaux, a las afueras de París. <strong>Ni iglesia ni alianzas</strong>: <a href="/es/test-que-tipo-de-boda-queremos/">una boda civil</a>, con la familia y unos pocos amigos.</p>
 <p>Tampoco hay vestido blanco. Marie elige un traje azul oscuro, sencillo, que pueda volver a ponerse cualquier día. Y eso es lo que hace: lo llevará después en el laboratorio durante años.</p>
 <figure class="blog-portrait"><img src="/blog/pierre-marie-curie-1895.webp" alt="Fotografía de Pierre y Marie Curie en 1895, de pie uno al lado del otro, ella apoyada en su brazo" width="620" height="826" loading="lazy"><figcaption>Pierre y Marie Curie en 1895, el año de su boda.</figcaption></figure>
 <aside class="blog-tip-box" role="note">

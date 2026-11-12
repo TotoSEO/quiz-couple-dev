@@ -1,0 +1,123 @@
+{
+  "hero": {
+    "badge": "Quiz original • En pareja, o solo/a para la pareja",
+    "title": "¿Dónde viviremos dentro de 10 años? El test para saber dónde vivir en pareja",
+    "titleHighlight": "¿Dónde viviremos dentro de 10 años?",
+    "description": "¿Dudáis entre la ciudad y el campo, o entre el mar y la montaña? Cada uno responde a 12 preguntas sobre la vida que se imagina. Después el test os enseña el sitio que le iría mejor a vuestra pareja.",
+    "subtitle": "12 preguntas • 3 minutos cada uno • en un solo móvil",
+    "jumpBtn": "Hacer el test"
+  },
+  "section1": {
+    "title": "Cómo funciona el test",
+    "p1": "Este test es un juego para hacer en pareja. Sirve para encontrar el tipo de sitio donde podríais vivir dentro de 10 años, por ejemplo en la montaña o en una gran ciudad. Hace 12 preguntas sobre vuestra vida de todos los días. Por ejemplo, os pregunta qué queréis oír por la mañana y cómo vais a comprar el pan.",
+    "p2": "Pongamos la pregunta sobre vuestra familia y vuestros amigos. Podéis elegir entre «a menos de veinte minutos, es importante para nosotros», «a una o dos horas en coche», «lejos, nos veremos en vacaciones» y «muy lejos, haremos videollamadas». Si uno responde «a menos de veinte minutos», el test da puntos sobre todo al resultado «justo donde estáis». Si el otro responde «muy lejos», se los da al extranjero y a la isla. Al final, el test suma vuestras respuestas y se queda con el sitio que tiene más puntos.",
+    "p3": "El primero responde a las 12 preguntas y luego le pasa el móvil al otro. El segundo responde sin ver lo que ha elegido el primero. Después el test os enseña el sitio de vuestra pareja con su foto. También os enseña el que habría elegido cada uno por su cuenta y la lista de las preguntas en las que no habéis respondido lo mismo.",
+    "p4": "También puedes hacer el test solo/a y responder por vuestra pareja. Eso sí, no podrás comparar vuestras respuestas, y esa es justo la parte más interesante."
+  },
+  "section2": {
+    "title": "Los 10 sitios del test",
+    "intro": "El test puede dar 10 resultados. Algunos están muy cerca de casa, como la ciudad pequeña. Otros están mucho más lejos, como la isla o el extranjero. Aquí tenéis a quién le va mejor cada sitio.",
+    "galerie": [
+      {
+        "id": "montagne",
+        "titre": "En la montaña",
+        "texte": "Para los que quieren estaciones de verdad y senderos al lado de casa.",
+        "alt": "Un chalet de madera a la entrada de un pueblo de montaña, con geranios en las ventanas, delante de cumbres nevadas"
+      },
+      {
+        "id": "campagne",
+        "titre": "En el campo",
+        "texte": "Para los que quieren espacio y tranquilidad.",
+        "alt": "Una vieja casa de piedra con contraventanas azul claro en medio del campo, con unas gallinas en el patio"
+      },
+      {
+        "id": "mer",
+        "titre": "Junto al mar",
+        "texte": "Para los que necesitan ver el agua y el horizonte, incluso en invierno.",
+        "alt": "Un pequeño puerto pesquero al amanecer, con barcas de colores y una casa blanca de contraventanas azules en el muelle"
+      },
+      {
+        "id": "metropole",
+        "titre": "En una gran ciudad",
+        "texte": "Para los que salen mucho y quieren tenerlo todo a diez minutos.",
+        "alt": "Una gran ciudad al anochecer vista desde un balcón con plantas, con torres iluminadas y avenidas"
+      },
+      {
+        "id": "petiteVille",
+        "titre": "En una ciudad pequeña",
+        "texte": "Para los que quieren hacerlo todo a pie y conocer a sus vecinos.",
+        "alt": "La plaza de una ciudad pequeña una mañana de mercado, con una fuente, árboles y puestos de fruta y flores"
+      },
+      {
+        "id": "banlieue",
+        "titre": "A las afueras de una gran ciudad",
+        "texte": "Para los que quieren un jardín sin renunciar a la ciudad.",
+        "alt": "Una calle tranquila con casas y pequeños jardines, una bici apoyada en una verja y las torres de la ciudad a lo lejos"
+      },
+      {
+        "id": "etranger",
+        "titre": "En el extranjero",
+        "texte": "Para los que no paran quietos y les gusta empezar de cero.",
+        "alt": "Una ventana abierta a los tejados y las palmeras de una ciudad del sur, con dos maletas al pie de la ventana"
+      },
+      {
+        "id": "ile",
+        "titre": "En una isla",
+        "texte": "Para los que sueñan con una vida más lenta al sol.",
+        "alt": "Una casita blanca en una isla tropical rodeada de una laguna turquesa, con un embarcadero y palmeras"
+      },
+      {
+        "id": "lac",
+        "titre": "Junto a un lago, en plena naturaleza",
+        "texte": "Para los que buscan tranquilidad y no tienen miedo de estar lejos de todo.",
+        "alt": "Una cabaña de madera y su embarcadero junto a un lago rodeado de pinos, con una barca amarrada en la niebla de la mañana"
+      },
+      {
+        "id": "ici",
+        "titre": "Justo donde estáis",
+        "texte": "Para los que están bien donde están, cerca de su gente.",
+        "alt": "Una puerta de entrada vista desde el umbral, con un felpudo, dos pares de botas de agua y un manojo de llaves en la cerradura"
+      }
+    ]
+  },
+  "section3": {
+    "title": "Ciudad o campo, mar o montaña: lo que pesa más que el paisaje",
+    "intro": "Cuando se sueña con un sitio, primero se piensa en el paisaje. Pero cuando una pareja empieza a <a href=\"/es/blog/preguntas-sobre-el-futuro-pareja/\">hablar de su futuro</a>, hay otros cuatro temas que salen enseguida.",
+    "sub1Title": "La familia y los amigos",
+    "sub1Text": "Suele ser el primer desacuerdo. Por ejemplo, uno quiere quedarse cerca de sus padres y el otro se iría a mil kilómetros. El tema pesa todavía más <a href=\"/es/test-parentalidad-pareja/\">el día que pensáis en tener un hijo</a>, porque unos abuelos a veinte minutos cambian la vida. Decíos con franqueza a qué distancia de vuestra gente se siente bien cada uno.",
+    "sub2Title": "El trabajo",
+    "sub2Text": "Un sitio precioso no basta si ninguno encuentra trabajo allí. Mirad qué podría hacer cada uno. Por ejemplo, podéis conservar vuestro puesto y teletrabajar, o cambiar de oficio. Si solo uno tiene trabajo en la zona, hablad de lo que eso cambia para el otro y para el dinero de la pareja.",
+    "sub3Title": "El día a día",
+    "sub3Text": "Las vacaciones no dicen gran cosa de la vida en un sitio. La costa es muy distinta en enero. ¡En el campo, a veces hace falta media hora de coche para comprar una barra de pan! Antes de decidir, id a pasar una semana allí fuera de temporada y vivid como si fuerais de allí.",
+    "sub4Title": "La vivienda",
+    "sub4Text": "El sitio no lo es todo. En la misma ciudad no se vive igual en un estudio en un quinto piso que en una casa con jardín. Cuando estéis de acuerdo en la zona, os quedará elegir <a href=\"/es/test-que-casa-es-para-nosotros/\">entre un piso y una casa</a>."
+  },
+  "section4": {
+    "title": "¿Y si no os veis en el mismo sitio?",
+    "p1": "Pasa muy a menudo y no quiere decir que no estéis hechos para vivir juntos. Mirad primero la lista de vuestras respuestas distintas. Si tienen que ver con el tiempo o con las vistas, encontraréis un sitio que le vaya bien a cada uno. Si tienen que ver con vuestra gente o con irse al extranjero, es un tema más serio. Es mejor hablarlo ahora que dentro de cinco años.",
+    "p2": "También podéis probar antes de elegir. Muchas parejas se van un año o dos para ver, con la posibilidad de volver. Otras encuentran un término medio, por ejemplo una ciudad pequeña a una hora del mar. ¡Y nada os obliga a elegir para siempre!"
+  },
+  "section5": {
+    "title": "Lo que hay que saber sobre este test",
+    "p1": "Este test es un juego. No conoce vuestro trabajo ni vuestro presupuesto, y tampoco conoce el precio de los alquileres. Solo os dice hacia qué tipo de sitio os llevan vuestras respuestas. No os dará el nombre de una ciudad ni de un país. Sirve sobre todo para empezar a hablar del tema en pareja.",
+    "p2": "Vuestras respuestas no se guardan, se quedan en vuestro móvil. Solo contamos el resultado obtenido para saber cuáles salen más. Vuestro nombre tampoco se guarda. Las fotos se han creado para esta página."
+  },
+  "seo": {
+    "faqTitle": "Preguntas frecuentes",
+    "faq1Q": "¿Qué sitios pueden salir?",
+    "faq1A": "El test puede dar 10 resultados: la montaña, el campo, la costa, la gran ciudad, la ciudad pequeña, las afueras de una gran ciudad, el extranjero, la isla y el lago en plena naturaleza. El último resultado se llama «justo donde estáis». Es para las parejas que no tienen ninguna gana de moverse.",
+    "faq2Q": "¿Cómo se calcula el resultado?",
+    "faq2A": "Cada respuesta da puntos a los sitios que le corresponden. Por ejemplo, si respondéis «montañas» en la pregunta sobre lo que se ve desde el salón, la montaña gana puntos pero la gran ciudad no. Cuando hacéis el test en pareja, suma vuestras respuestas y el sitio con más puntos pasa a ser el de vuestra pareja.",
+    "faq3Q": "¿El test dice en qué ciudad o en qué país vivir?",
+    "faq3A": "No. Da un tipo de sitio y no una dirección, por ejemplo la montaña o una ciudad pequeña. Después os toca a vosotros buscar el rincón que se le parezca, en vuestro país o en otro. Eso dependerá también de vuestro trabajo y de vuestro presupuesto.",
+    "faq4Q": "Ciudad o campo: ¿cómo elegir en pareja?",
+    "faq4A": "Lo más sencillo es mirar cómo son vuestras semanas. Preguntaos por ejemplo cuántas noches al mes salís y cuánto tiempo aceptáis pasar en el coche. Si vuestras respuestas son muy distintas, un término medio suele funcionar mejor. Puede ser una ciudad pequeña o una casa a media hora de una gran ciudad.",
+    "faq5Q": "¿Y si uno quiere irse al extranjero y el otro no?",
+    "faq5A": "Es un desacuerdo difícil porque uno no se puede ir a medias. Hablad primero del tiempo. Irse dos años con la vuelta prevista no es el mismo plan que irse para siempre. El que duda suele aceptar mejor dos años.",
+    "faq6Q": "¿Se puede hacer el test solo/a?",
+    "faq6A": "Sí. Basta con elegir «Solo/a, para nuestra pareja» y responder pensando en vuestra pareja. Tendrás un resultado pero no podrás comparar vuestras respuestas."
+  },
+  "jsonLd": {
+    "about": "elegir dónde vivir en pareja"
+  }
+}

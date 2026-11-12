@@ -68,7 +68,7 @@ const article: BlogArticleData = {
     {
       id: "il-futuro-al-noi",
       title: "6. Parla di futuro al « noi »",
-      content: `<p>« Quando avremo una casa », « quando avremo dei figli », « andremo lì per i nostri cinquant'anni insieme ». E soprattutto non cambia più argomento quando nella conversazione spunta il matrimonio. Fa perfino domande: festa grande o pochi intimi, chiesa o Comune, quale cognome vorresti. Un uomo che non ha intenzione di sposarsi evita queste domande; un uomo che prepara la proposta le colleziona.</p>`,
+      content: `<p>« Quando avremo una casa », « quando avremo dei figli », « andremo lì per i nostri cinquant'anni insieme ». E soprattutto non cambia più argomento quando nella conversazione spunta il matrimonio. Fa perfino domande: <a href="/it/test-che-matrimonio-fa-per-noi/">festa grande o pochi intimi</a>, chiesa o Comune, quale cognome vorresti. Un uomo che non ha intenzione di sposarsi evita queste domande; un uomo che prepara la proposta le colleziona.</p>`,
     },
     {
       id: "i-matrimoni-degli-altri",

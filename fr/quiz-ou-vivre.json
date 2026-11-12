@@ -1,0 +1,123 @@
+{
+  "hero": {
+    "badge": "Quiz fun • À deux, ou seul(e) pour le couple",
+    "title": "Où vivrons-nous dans 10 ans ? Le test pour savoir où vivre à deux",
+    "titleHighlight": "Où vivrons-nous dans 10 ans ?",
+    "description": "Vous hésitez entre la ville et la campagne, ou entre la mer et la montagne ? Chacun répond à 12 questions sur la vie qu'il imagine. Le test vous montre ensuite l'endroit qui irait le mieux à votre couple.",
+    "subtitle": "12 questions • 3 minutes chacun • sur un seul téléphone",
+    "jumpBtn": "Faire le test"
+  },
+  "section1": {
+    "title": "Comment marche le test",
+    "p1": "Ce test est un jeu à faire en couple. Il sert à trouver le genre d'endroit où vous pourriez vivre dans 10 ans, par exemple à la montagne ou dans une grande ville. Il pose 12 questions sur votre vie de tous les jours. Il vous demande par exemple ce que vous voulez entendre le matin et comment vous allez acheter le pain.",
+    "p2": "Prenons la question sur vos proches. Vous avez le choix entre « à moins de vingt minutes, on y tient », « à une ou deux heures de route », « loin, on se verra pendant les vacances » et « très loin, on s'appellera en visio ». Si vous répondez « à moins de vingt minutes », le test donne surtout des points au résultat « exactement là où vous êtes ». Si votre partenaire répond « très loin », il en donne à l'étranger et à l'île. À la fin, le test additionne vos réponses et il garde l'endroit qui a le plus de points.",
+    "p3": "Le premier répond aux 12 questions puis il passe le téléphone à l'autre. Le second répond sans voir ce que le premier a choisi. Ensuite le test vous montre l'endroit de votre couple avec sa photo. Il vous montre aussi celui que chacun aurait choisi tout seul et la liste des questions où vous n'avez pas répondu pareil.",
+    "p4": "Vous pouvez aussi faire le test seul(e) en répondant pour votre couple. Par contre, vous ne pourrez pas comparer vos réponses et c'est justement la partie la plus intéressante."
+  },
+  "section2": {
+    "title": "Les 10 endroits du test",
+    "intro": "Le test peut donner 10 résultats. Certains sont tout près de chez vous, comme la petite ville. D'autres sont beaucoup plus loin, comme l'île ou l'étranger. Voici à qui chaque endroit convient le mieux.",
+    "galerie": [
+      {
+        "id": "montagne",
+        "titre": "À la montagne",
+        "texte": "Pour ceux qui veulent de vraies saisons et des sentiers au pied de chez eux.",
+        "alt": "Un chalet en bois à l'entrée d'un village de montagne, des géraniums aux fenêtres, devant des sommets enneigés"
+      },
+      {
+        "id": "campagne",
+        "titre": "À la campagne",
+        "texte": "Pour ceux qui veulent de l'espace et du calme.",
+        "alt": "Une vieille ferme en pierre aux volets bleu pâle au milieu des champs, avec quelques poules dans la cour"
+      },
+      {
+        "id": "mer",
+        "titre": "Au bord de la mer",
+        "texte": "Pour ceux qui ont besoin de voir l'eau et l'horizon, même en hiver.",
+        "alt": "Un petit port de pêche au lever du soleil, des barques colorées et une maison blanche aux volets bleus sur le quai"
+      },
+      {
+        "id": "metropole",
+        "titre": "Dans une grande ville",
+        "texte": "Pour ceux qui sortent beaucoup et qui veulent tout avoir à dix minutes.",
+        "alt": "Une grande ville à la tombée de la nuit vue depuis un balcon fleuri, avec des tours éclairées et des avenues"
+      },
+      {
+        "id": "petiteVille",
+        "titre": "Dans une petite ville",
+        "texte": "Pour ceux qui veulent tout faire à pied et connaître leurs voisins.",
+        "alt": "La place d'une petite ville un matin de marché, avec une fontaine, des platanes et des étals de fruits et de fleurs"
+      },
+      {
+        "id": "banlieue",
+        "titre": "Aux portes d'une grande ville",
+        "texte": "Pour ceux qui veulent un jardin sans renoncer à la ville.",
+        "alt": "Une rue calme bordée de maisons et de petits jardins, un vélo contre un portail, et les tours de la ville au loin"
+      },
+      {
+        "id": "etranger",
+        "titre": "À l'étranger",
+        "texte": "Pour ceux qui ont la bougeotte et qui aiment repartir de zéro.",
+        "alt": "Une fenêtre ouverte sur les toits et les palmiers d'une ville du Sud, avec deux valises posées au pied de la fenêtre"
+      },
+      {
+        "id": "ile",
+        "titre": "Sur une île",
+        "texte": "Pour ceux qui rêvent d'une vie plus lente au soleil.",
+        "alt": "Une petite maison blanche sur une île tropicale, entourée d'un lagon turquoise, avec un ponton et des palmiers"
+      },
+      {
+        "id": "lac",
+        "titre": "Au bord d'un lac, en pleine nature",
+        "texte": "Pour ceux qui cherchent le calme et qui n'ont pas peur d'être loin de tout.",
+        "alt": "Une cabane en bois et son ponton au bord d'un lac entouré de sapins, une barque attachée, dans la brume du matin"
+      },
+      {
+        "id": "ici",
+        "titre": "Exactement là où vous êtes",
+        "texte": "Pour ceux qui sont bien là où ils sont, près de leurs proches.",
+        "alt": "Une porte d'entrée vue du seuil, avec un paillasson, deux paires de bottes de pluie côte à côte et un trousseau de clés dans la serrure"
+      }
+    ]
+  },
+  "section3": {
+    "title": "Ville ou campagne, mer ou montagne : ce qui compte plus que le paysage",
+    "intro": "Quand on rêve d'un endroit, on pense d'abord au paysage. Mais quand un couple commence à <a href=\"/blog/questions-avenir-couple/\">parler de son avenir</a>, il y a quatre autres sujets qui arrivent vite.",
+    "sub1Title": "Les proches",
+    "sub1Text": "C'est souvent le premier désaccord. Par exemple, l'un veut rester près de ses parents et l'autre partirait bien à mille kilomètres. Le sujet pèse encore plus le jour où <a href=\"/test-parentalite-couple/\">vous pensez à avoir un enfant</a>, parce que des grands-parents à vingt minutes changent la vie. Dites-vous franchement à quelle distance de vos proches chacun se sent encore bien.",
+    "sub2Title": "Le travail",
+    "sub2Text": "Un endroit magnifique ne suffit pas si aucun de vous n'y trouve de travail. Regardez ce que chacun pourrait y faire. Vous pouvez par exemple garder votre poste à distance ou changer de métier. Si un seul de vous a du travail sur place, parlez de ce que ça change pour l'autre et pour l'argent du couple.",
+    "sub3Title": "Le quotidien",
+    "sub3Text": "Les vacances ne disent pas grand-chose de la vie sur place. Le bord de mer est très différent en janvier. À la campagne, il faut parfois une demi-heure de voiture pour acheter une baguette ! Avant de vous décider, allez passer une semaine sur place hors saison et vivez comme si vous y habitiez.",
+    "sub4Title": "Le logement",
+    "sub4Text": "L'endroit ne fait pas tout. Dans la même ville, on ne vit pas pareil dans un studio au cinquième étage et dans une maison avec un jardin. Quand vous serez d'accord sur le coin, il vous restera à choisir <a href=\"/test-quelle-maison-est-faite-pour-nous/\">entre un appartement et une maison</a>."
+  },
+  "section4": {
+    "title": "Et si vous ne vous voyez pas au même endroit ?",
+    "p1": "Ça arrive très souvent et ça ne veut pas dire que vous n'êtes pas faits pour vivre ensemble. Regardez d'abord la liste de vos réponses différentes. Si elles portent sur la météo ou sur la vue, vous trouverez un endroit qui vous convient à l'un comme à l'autre. Si elles portent sur vos proches ou sur un départ à l'étranger, c'est un sujet plus sérieux. Il vaut mieux en parler maintenant que dans cinq ans.",
+    "p2": "Vous pouvez aussi essayer avant de choisir. Beaucoup de couples partent un an ou deux pour voir, en gardant la possibilité de revenir. D'autres trouvent un entre-deux, par exemple une petite ville à une heure de la mer. Et rien ne vous oblige à choisir pour toujours !"
+  },
+  "section5": {
+    "title": "Ce qu'il faut savoir sur ce test",
+    "p1": "Ce test est un jeu. Il ne connaît pas votre métier ni votre budget, et il ne connaît pas non plus le prix des loyers. Il vous dit seulement vers quel genre d'endroit vos réponses vous emmènent. Il ne vous donnera pas le nom d'une ville ou d'un pays. Il sert surtout à lancer la discussion dans votre couple.",
+    "p2": "Vos réponses ne sont pas enregistrées, elles restent sur votre téléphone. On compte seulement le résultat obtenu pour savoir lesquels sortent le plus. Votre prénom n'est pas enregistré non plus. Les photos ont été créées pour cette page."
+  },
+  "seo": {
+    "faqTitle": "Questions fréquentes",
+    "faq1Q": "Quels endroits peut-on obtenir ?",
+    "faq1A": "Le test peut donner 10 résultats : la montagne, la campagne, le bord de la mer, la grande ville, la petite ville, les portes d'une grande ville, l'étranger, l'île et le bord d'un lac en pleine nature. Le dernier résultat s'appelle « exactement là où vous êtes ». Il est fait pour les couples qui n'ont aucune envie de bouger.",
+    "faq2Q": "Comment le résultat est-il calculé ?",
+    "faq2A": "Chaque réponse donne des points aux endroits qui lui correspondent. Par exemple, si vous répondez « des sommets » à la question sur la vue du salon, la montagne gagne des points mais pas la grande ville. Quand vous faites le test à deux, il additionne vos réponses et l'endroit qui a le plus de points devient celui de votre couple.",
+    "faq3Q": "Le test dit-il dans quelle ville ou dans quel pays vivre ?",
+    "faq3A": "Non. Il donne un genre d'endroit et pas une adresse, par exemple la montagne ou une petite ville. C'est ensuite à vous de chercher le coin qui y ressemble, en France ou ailleurs. Ça dépendra aussi de votre travail et de votre budget.",
+    "faq4Q": "Ville ou campagne : comment choisir à deux ?",
+    "faq4A": "Le plus simple est de regarder comment se passent vos semaines. Demandez-vous par exemple combien de fois par mois vous sortez le soir et combien de temps vous acceptez de passer en voiture. Si vos réponses sont très différentes, un entre-deux marche souvent mieux. Ça peut être une petite ville ou une maison à une demi-heure d'une grande ville.",
+    "faq5Q": "Et si l'un de nous veut partir à l'étranger et pas l'autre ?",
+    "faq5A": "C'est un désaccord difficile parce qu'on ne peut pas partir à moitié. Parlez d'abord de la durée. Partir deux ans avec un retour prévu n'est pas le même projet que partir pour toujours. Celui qui hésite accepte souvent plus facilement un départ de deux ans.",
+    "faq6Q": "Peut-on faire le test seul(e) ?",
+    "faq6A": "Oui. Il suffit de choisir « Seul(e), pour notre couple » et de répondre en pensant à votre couple. Vous aurez un résultat mais vous ne pourrez pas comparer vos réponses."
+  },
+  "jsonLd": {
+    "about": "choisir où vivre à deux"
+  }
+}

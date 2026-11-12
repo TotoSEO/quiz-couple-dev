@@ -68,7 +68,7 @@ const article: BlogArticleData = {
     {
       id: "die-zukunft-im-wir",
       title: "6. Er spricht über die Zukunft im „wir“",
-      content: `<p>„Wenn wir ein Haus haben“, „wenn wir Kinder haben“, „da fahren wir zu unserem Fünfzigsten hin“. Und vor allem wechselt er nicht mehr das Thema, wenn die Hochzeit im Gespräch auftaucht. Er stellt sogar Fragen: große Feier oder kleiner Kreis, Kirche oder Standesamt, welchen Namen du gern hättest. Ein Mann, der nicht vorhat zu heiraten, meidet diese Fragen; ein Mann, der seinen Antrag vorbereitet, sammelt sie.</p>`,
+      content: `<p>„Wenn wir ein Haus haben“, „wenn wir Kinder haben“, „da fahren wir zu unserem Fünfzigsten hin“. Und vor allem wechselt er nicht mehr das Thema, wenn die Hochzeit im Gespräch auftaucht. Er stellt sogar Fragen: <a href="/de/welche-hochzeit-passt-zu-uns-test/">große Feier oder kleiner Kreis</a>, Kirche oder Standesamt, welchen Namen du gern hättest. Ein Mann, der nicht vorhat zu heiraten, meidet diese Fragen; ein Mann, der seinen Antrag vorbereitet, sammelt sie.</p>`,
     },
     {
       id: "die-hochzeiten-der-anderen",

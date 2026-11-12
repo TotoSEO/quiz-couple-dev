@@ -14,7 +14,7 @@ import { minify as minifyJs } from 'terser';
 import CleanCSS from 'clean-css';
 import { analyseMoteur, litQuizConfig, ensemblesPossibles, moteursDeLaPage, nomDuPaquet, ecrisPaquets, TABLE_MOTEURS } from './moteurs.js';
 import {
-  BASE_URL, INSTAGRAM_URL, LANGUAGES, LANGUES_PUBLIQUES, langueCachee, langueEnCours, PAGES_EN_ATTENTE, pageEnAttente, cheminDeclare, LOCALES, ROUTE_SLUGS, ROUTE_CONFIG, GA_ID,
+  BASE_URL, INSTAGRAM_URL, LANGUAGES, LANGUES_PUBLIQUES, langueCachee, langueEnCours, PAGES_EN_ATTENTE, ROUTES_EN_PREPARATION, pageEnAttente, cheminDeclare, LOCALES, ROUTE_SLUGS, ROUTE_CONFIG, GA_ID,
   SUPABASE_URL, SUPABASE_ANON_KEY, BLOG_ARTICLES, BLOG_CATEGORIES, AUTHORS,
   QUIZ_RELATED_ARTICLES, ARTICLES_QUESTIONS, QUIZ_FEATURED, IMAGE_PARTAGE, FAMILLES_NAV, SECTIONS_NAV, SAISON_DES_QUIZ, getLocalizedPath, getLocalizedUrl, getRouteAlternates, escapeHtml,
   getArticlePath, getArticleUrl, getArticleAlternates,
@@ -129,6 +129,14 @@ for (const a of BLOG_ARTICLES) {
 // page sort de la liste.
 for (const [l, routes] of Object.entries(PAGES_EN_ATTENTE)) {
   for (const r of routes) {
+    const p = cheminDeclare(r, l);
+    if (p) FUTURE_BLOG_URLS.add(p);
+  }
+}
+// Même chose pour une page en préparation (ROUTES_EN_PREPARATION), dans
+// toutes les langues.
+for (const r of ROUTES_EN_PREPARATION) {
+  for (const l of LANGUAGES) {
     const p = cheminDeclare(r, l);
     if (p) FUTURE_BLOG_URLS.add(p);
   }

@@ -32,7 +32,7 @@ const article: BlogArticleData = {
     {
       id: 'bruiloft-zonder-witte-jurk',
       title: "Een bruiloft zonder witte jurk",
-      content: `<p>Het huwelijk vindt plaats op 26 juli 1895, op het gemeentehuis van Sceaux. <strong>Geen kerk, geen trouwringen</strong>: een burgerlijk huwelijk, met de familie en een paar vrienden.</p>
+      content: `<p>Het huwelijk vindt plaats op 26 juli 1895, op het gemeentehuis van Sceaux. <strong>Geen kerk, geen trouwringen</strong>: <a href="/nl/wat-voor-bruiloft-past-bij-ons-test/">een burgerlijk huwelijk</a>, met de familie en een paar vrienden.</p>
 <p>Ook geen witte jurk. Marie kiest een eenvoudige donkerblauwe jurk die ze elke dag weer kan dragen. En dat doet ze ook: ze draagt hem daarna jarenlang in het laboratorium.</p>
 <figure class="blog-portrait"><img src="/blog/pierre-marie-curie-1895.webp" alt="Foto van Pierre en Marie Curie in 1895, naast elkaar staand, zij houdt zijn arm vast" width="620" height="826" loading="lazy"><figcaption>Pierre en Marie Curie in 1895, het jaar van hun huwelijk.</figcaption></figure>
 <aside class="blog-tip-box" role="note">

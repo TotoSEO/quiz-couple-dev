@@ -68,7 +68,7 @@ const article: BlogArticleData = {
     {
       id: "el-futuro-en-nosotros",
       title: "6. Habla del futuro en «nosotros»",
-      content: `<p>«Cuando tengamos una casa», «cuando tengamos hijos», «iremos allí para nuestros cincuenta». Y sobre todo, ya no cambia de tema cuando la boda sale en la conversación. Hasta hace preguntas: fiesta grande o pocos invitados, iglesia o juzgado, qué apellido te gustaría. Un hombre que no tiene intención de casarse evita esas preguntas; un hombre que prepara su pedida las colecciona.</p>`,
+      content: `<p>«Cuando tengamos una casa», «cuando tengamos hijos», «iremos allí para nuestros cincuenta». Y sobre todo, ya no cambia de tema cuando la boda sale en la conversación. Hasta hace preguntas: <a href="/es/test-que-tipo-de-boda-queremos/">fiesta grande o pocos invitados</a>, iglesia o juzgado, qué apellido te gustaría. Un hombre que no tiene intención de casarse evita esas preguntas; un hombre que prepara su pedida las colecciona.</p>`,
     },
     {
       id: "las-bodas-de-los-demas",

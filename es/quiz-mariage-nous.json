@@ -1,0 +1,123 @@
+{
+  "hero": {
+    "badge": "Quiz original • En pareja, o solo/a para la pareja",
+    "title": "¿Qué tipo de boda queremos? El test para hacer en pareja",
+    "titleHighlight": "¿Qué tipo de boda queremos?",
+    "description": "¿Tú sueñas con un castillo y tu pareja con una playa? Cada uno responde a 12 preguntas sobre el día de la boda. Después el test os enseña el estilo de boda que le iría mejor a vuestra pareja.",
+    "subtitle": "12 preguntas • 3 minutos cada uno • en un solo móvil",
+    "jumpBtn": "Hacer el test"
+  },
+  "section1": {
+    "title": "Cómo funciona el test",
+    "p1": "Este test es un juego para hacer en pareja. Sirve para encontrar el estilo de boda que va con vosotros, por ejemplo una gran fiesta en un castillo o una comida sencilla después del juzgado. Hace 12 preguntas sobre el día de la boda. Por ejemplo, os pregunta cuántos invitados queréis y qué música os imagináis.",
+    "p2": "Pongamos la pregunta sobre el número de invitados. Podéis elegir entre «solo nosotros y dos testigos», «unos treinta, los más cercanos», «un centenar, la familia y los amigos» y «más de doscientos, invitamos a todo el mundo». Si uno responde «unos treinta», el test da puntos a las bodas pequeñas, como la boda en un jardín. Si el otro responde «más de doscientos», se los da al castillo y a la boda festival. Al final, el test suma vuestras respuestas y se queda con la boda que tiene más puntos.",
+    "p3": "El primero responde a las 12 preguntas y luego le pasa el móvil al otro. El segundo responde sin ver lo que ha elegido el primero. Después el test os enseña la boda de vuestra pareja con su foto. También os enseña la que habría elegido cada uno por su cuenta y la lista de las preguntas en las que no habéis respondido lo mismo.",
+    "p4": "Podéis hacer este test <a href=\"/es/blog/pedida-de-mano/\">antes incluso de estar prometidos</a>, solo para reíros. También podéis hacerlo al principio de los preparativos para poneros de acuerdo antes de visitar sitios. También funciona solo/a, pero no podrás comparar vuestras respuestas."
+  },
+  "section2": {
+    "title": "Las 10 bodas del test",
+    "intro": "El test puede dar 10 resultados. Algunos son muy clásicos, como la boda en un castillo. Otros lo son mucho menos, como la boda festival. Aquí tenéis a quién le va mejor cada boda.",
+    "galerie": [
+      {
+        "id": "chateau",
+        "titre": "La boda en un castillo",
+        "texte": "Para los que quieren un gran día con las dos familias al completo.",
+        "alt": "La avenida y la escalinata de un castillo decoradas para una boda, con flores blancas y filas de sillas en el césped"
+      },
+      {
+        "id": "champetre",
+        "titre": "La boda en una finca, en el campo",
+        "texte": "Para los que quieren mesas largas de madera e invitados a gusto.",
+        "alt": "Una cena de boda en un prado al atardecer, con una gran carpa, mesas largas de madera y guirnaldas de luces"
+      },
+      {
+        "id": "jardin",
+        "titre": "La boda en un jardín, en la ciudad",
+        "texte": "Para los que prefieren unos treinta invitados con los que poder hablar.",
+        "alt": "Una mesa larga puesta en un pequeño jardín de ciudad rodeado de muros con hiedra, con peonías y copas de champán"
+      },
+      {
+        "id": "foret",
+        "titre": "La boda en el bosque",
+        "texte": "Para los que quieren una ceremonia que no se parezca a ninguna otra.",
+        "alt": "Una ceremonia de boda montada en un claro del bosque, con un arco de ramas y flores y bancos de madera bajo los árboles"
+      },
+      {
+        "id": "plage",
+        "titre": "La boda en la playa",
+        "texte": "Para los que quieren casarse descalzos frente al mar.",
+        "alt": "Un arco de boda con telas blancas en una playa al atardecer, con unas sillas de madera y una cesta de sandalias"
+      },
+      {
+        "id": "mairie",
+        "titre": "Una boda civil y un buen restaurante",
+        "texte": "Para los que quieren casarse de forma sencilla y comer bien.",
+        "alt": "La escalera de un pequeño ayuntamiento cubierta de pétalos y confeti, con un ramo en un escalón y una bici adornada con cintas"
+      },
+      {
+        "id": "montagne",
+        "titre": "La boda en la montaña",
+        "texte": "Para los que quieren pocos invitados, un refugio y cumbres en las fotos.",
+        "alt": "Una ceremonia de boda montada en un prado de montaña junto a un refugio, con un arco de madera y bancos, delante de cumbres nevadas"
+      },
+      {
+        "id": "deux",
+        "titre": "Una boda solo para dos, lejos de todo",
+        "texte": "Para los que quieren vivir ese momento sin invitados ni discursos.",
+        "alt": "Dos alianzas y un pequeño ramo sobre una vieja maleta de cuero, en lo alto de un acantilado sobre el océano"
+      },
+      {
+        "id": "vignes",
+        "titre": "La boda entre viñedos",
+        "texte": "Para los que disfrutan de las cenas largas al aire libre al final del verano.",
+        "alt": "Una mesa larga de boda puesta entre dos hileras de viñas al atardecer, con velas y guirnaldas de luces"
+      },
+      {
+        "id": "fete",
+        "titre": "La boda festival",
+        "texte": "Para los que quieren una fiesta muy grande durante tres días.",
+        "alt": "Una fiesta de boda en un campo por la noche, con tiendas iluminadas, un pequeño escenario, banderines y balas de paja"
+      }
+    ]
+  },
+  "section3": {
+    "title": "Elegir el estilo de boda: lo que hay que decidir primero",
+    "intro": "Antes de visitar un sitio, hay cuatro temas en los que conviene poneros de acuerdo. El estilo de la boda depende casi por completo de ellos.",
+    "sub1Title": "El número de invitados",
+    "sub1Text": "Es la primera pregunta que hay que resolver porque el sitio, el presupuesto y el ambiente dependen de ella. Con unos treinta invitados podéis hablar con todo el mundo. Con doscientos hacéis una gran fiesta pero a algunos invitados solo los veréis cinco minutos. Escribid cada uno vuestra lista por separado y luego comparadlas. Veréis enseguida si pensáis en la misma boda.",
+    "sub2Title": "El presupuesto",
+    "sub2Text": "Una boda puede costar lo que una buena comida en un restaurante o lo que un coche nuevo. El dinero es uno de los <a href=\"/es/test-compatibilidad-matrimonio/\">temas que se evitan antes de casarse</a>. El presupuesto de la fiesta suele ser la primera conversación de verdad sobre el tema. Antes de mirar sitios, fijad la cantidad que estáis dispuestos a gastar. Decíos también quién paga qué, por ejemplo vosotros o vuestros padres.",
+    "sub3Title": "La ceremonia",
+    "sub3Text": "En España tiene valor legal casarse ante el juez, en el ayuntamiento o ante notario. También lo tienen las bodas religiosas reconocidas. La ceremonia en un claro del bosque o en una playa suele ser simbólica. No tiene valor oficial pero podéis escribirla como queráis y pedirle a un amigo que la oficie. Muchas parejas firman unos días antes con poca gente. Guardan la gran ceremonia para el día de la fiesta.",
+    "sub4Title": "Las familias",
+    "sub4Text": "Vuestros padres suelen tener su idea de la boda y no siempre es la vuestra. Por ejemplo, una abuela quiere que os caséis por la iglesia o un padre quiere invitar a sus compañeros de trabajo. Poneos de acuerdo en pareja antes de hablarlo con nadie. Es más fácil mantener una decisión que se ha tomado juntos."
+  },
+  "section4": {
+    "title": "¿Y si no os imagináis la misma boda?",
+    "p1": "Es muy habitual. Por ejemplo, uno sueña con una gran fiesta desde siempre ¡y el otro no tiene ninguna gana de ser el centro de atención durante doce horas! Mirad la lista de vuestras respuestas distintas. Si tienen que ver con la decoración o con la música, se arregla en una tarde. Si tienen que ver con el número de invitados o con el presupuesto, tomaos el tiempo de hablarlo porque todo lo demás depende de eso.",
+    "p2": "Casi siempre hay un término medio. Por ejemplo, podéis hacer una ceremonia con unos pocos y luego una gran fiesta un mes después. ¡Y la boda solo dura un día! Lo que celebraréis después cada año son vuestras <a href=\"/es/aniversarios-de-boda/\">bodas de papel, de algodón o de plata</a>."
+  },
+  "section5": {
+    "title": "Lo que hay que saber sobre este test",
+    "p1": "Este test es un juego. No conoce vuestro presupuesto ni a vuestras familias, y tampoco conoce los sitios disponibles cerca de vosotros. Solo os dice hacia qué estilo de boda os llevan vuestras respuestas. Sirve sobre todo para empezar a hablar del tema en pareja.",
+    "p2": "Vuestras respuestas no se guardan, se quedan en vuestro móvil. Solo contamos el resultado obtenido para saber cuáles salen más. Vuestro nombre tampoco se guarda. Las fotos se han creado para esta página."
+  },
+  "seo": {
+    "faqTitle": "Preguntas frecuentes",
+    "faq1Q": "¿Qué bodas pueden salir?",
+    "faq1A": "El test puede dar 10 resultados: la boda en un castillo, la boda en una finca, la boda en un jardín de ciudad, la boda en el bosque, la boda en la playa, la boda civil con un buen restaurante, la boda en la montaña, la boda entre viñedos y la boda festival. El último resultado es la boda solo para dos, lejos de todo. Es para las parejas que no quieren invitados.",
+    "faq2Q": "¿Cómo se calcula el resultado?",
+    "faq2A": "Cada respuesta da puntos a las bodas que le corresponden. Por ejemplo, si respondéis «descalzos o casi» en la pregunta sobre la ropa, la boda en la playa gana puntos pero la boda en un castillo no. Cuando hacéis el test en pareja, suma vuestras respuestas y la boda con más puntos pasa a ser la de vuestra pareja.",
+    "faq3Q": "¿Qué estilos de boda hay?",
+    "faq3A": "Hay una buena decena. Los más conocidos son la boda clásica en un castillo o en un palacio, la boda rústica en una finca y la boda boho en plena naturaleza. También están la boda en la playa, la boda íntima con poca gente y la boda civil seguida de una comida sencilla. El test propone 10, con una foto para cada uno.",
+    "faq4Q": "Boda íntima o gran fiesta: ¿cómo elegir?",
+    "faq4A": "Partid de lo que queréis vivir ese día. Si queréis hablar con cada invitado, quedaos por debajo de cincuenta personas. Si queréis una pista de baile llena a las dos de la mañana, hace falta gente. Si no estáis de acuerdo, podéis hacer una ceremonia con los más cercanos y luego una fiesta con más gente.",
+    "faq5Q": "¿Se puede hacer el test sin estar prometidos?",
+    "faq5A": "Sí, y muchas parejas lo hacen solo para reírse. No hace falta una fecha ni un anillo para saber si preferís un castillo o una playa. También es una buena forma de descubrir qué se imagina tu pareja.",
+    "faq6Q": "¿Se puede hacer el test solo/a?",
+    "faq6A": "Sí. Basta con elegir «Solo/a, para nuestra pareja» y responder pensando en vuestra pareja. Tendrás un resultado pero no podrás comparar vuestras respuestas."
+  },
+  "jsonLd": {
+    "about": "elegir el estilo de boda en pareja"
+  }
+}

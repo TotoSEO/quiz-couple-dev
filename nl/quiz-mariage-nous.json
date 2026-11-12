@@ -1,0 +1,123 @@
+{
+  "hero": {
+    "badge": "Themaquiz • Met z'n tweeën of alleen voor jullie als koppel",
+    "title": "Wat voor bruiloft past bij ons? De test om samen te doen",
+    "titleHighlight": "Wat voor bruiloft past bij ons?",
+    "description": "Droom jij van een kasteel en je partner van een strand? Ieder beantwoordt 12 vragen over de trouwdag. Daarna laat de test de trouwstijl zien die het best bij jullie als koppel past.",
+    "subtitle": "12 vragen • 3 minuten per persoon • op één telefoon",
+    "jumpBtn": "Doe de test"
+  },
+  "section1": {
+    "title": "Hoe de test werkt",
+    "p1": "Deze test is een spel om samen te doen. Hij helpt jullie de trouwstijl te vinden die bij jullie past, bijvoorbeeld een groot feest op een kasteel of een eenvoudige lunch na het gemeentehuis. Hij stelt 12 vragen over de trouwdag. Hij vraagt bijvoorbeeld hoeveel gasten jullie willen en aan welke muziek jullie denken.",
+    "p2": "Neem de vraag over het aantal gasten. Jullie kunnen kiezen tussen ‘alleen wij en twee getuigen’, ‘een stuk of dertig, onze naaste kring’, ‘een stuk of honderd, familie en vrienden’ en ‘meer dan tweehonderd, we nodigen iedereen uit’. Als jij ‘een stuk of dertig’ antwoordt, geeft de test punten aan de kleine bruiloften, zoals de tuinbruiloft. Als je partner ‘meer dan tweehonderd’ antwoordt, krijgen het kasteel en de festivalbruiloft punten. Aan het eind telt de test jullie antwoorden bij elkaar op en houdt hij de bruiloft met de meeste punten over.",
+    "p3": "De eerste beantwoordt de 12 vragen en geeft dan de telefoon door. De tweede antwoordt zonder te zien wat de eerste heeft gekozen. Daarna laat de test de bruiloft zien die bij jullie als koppel past, met een foto erbij. Hij laat ook de bruiloft zien die ieder alleen zou hebben gekozen en de lijst met vragen waarop jullie niet hetzelfde hebben geantwoord.",
+    "p4": "Jullie kunnen deze test doen <a href=\"/nl/blog/huwelijksaanzoek/\">nog voordat jullie verloofd zijn</a>, gewoon voor de lol. Jullie kunnen hem ook aan het begin van de voorbereidingen doen om het eens te worden voordat jullie locaties gaan bekijken. Je kunt hem ook alleen doen, maar dan kun je jullie antwoorden niet vergelijken."
+  },
+  "section2": {
+    "title": "De 10 bruiloften uit de test",
+    "intro": "De test kan 10 uitslagen geven. Sommige zijn heel klassiek, zoals de bruiloft op een kasteel. Andere zijn dat veel minder, zoals de festivalbruiloft. Hier lees je bij wie welke bruiloft het best past.",
+    "galerie": [
+      {
+        "id": "chateau",
+        "titre": "De bruiloft op een kasteel",
+        "texte": "Voor wie een grote dag wil met de hele familie van beide kanten.",
+        "alt": "De oprijlaan en het bordes van een kasteel, versierd voor een bruiloft, met witte bloemen en rijen stoelen op het gazon"
+      },
+      {
+        "id": "champetre",
+        "titre": "De landelijke bruiloft",
+        "texte": "Voor wie lange houten tafels wil en gasten die zich op hun gemak voelen.",
+        "alt": "Een bruiloftsdiner in een weiland bij het vallen van de avond, met een grote tent, lange houten tafels en lichtsnoeren"
+      },
+      {
+        "id": "jardin",
+        "titre": "De tuinbruiloft in de stad",
+        "texte": "Voor wie liever een stuk of dertig gasten heeft om echt mee te praten.",
+        "alt": "Een lange gedekte tafel in een kleine stadstuin tussen muren vol klimop, met pioenrozen en champagneglazen"
+      },
+      {
+        "id": "foret",
+        "titre": "De bruiloft in het bos",
+        "texte": "Voor wie een ceremonie wil die op geen enkele andere lijkt.",
+        "alt": "Een huwelijksceremonie op een open plek in het bos, met een boog van takken en bloemen en houten banken onder de bomen"
+      },
+      {
+        "id": "plage",
+        "titre": "De strandbruiloft",
+        "texte": "Voor wie op blote voeten aan zee wil trouwen.",
+        "alt": "Een trouwboog met witte doeken op een strand bij zonsondergang, met een paar houten stoelen en een mand met sandalen"
+      },
+      {
+        "id": "mairie",
+        "titre": "Het gemeentehuis en daarna een goed restaurant",
+        "texte": "Voor wie eenvoudig wil trouwen en lekker wil eten.",
+        "alt": "De trappen van een klein gemeentehuis vol bloemblaadjes en confetti, met een boeket op een trede en een fiets versierd met linten"
+      },
+      {
+        "id": "montagne",
+        "titre": "De bruiloft in de bergen",
+        "texte": "Voor wie weinig gasten wil, een chalet en bergtoppen op de foto's.",
+        "alt": "Een huwelijksceremonie op een alpenweide naast een chalet, met een houten boog en banken, voor besneeuwde toppen"
+      },
+      {
+        "id": "deux",
+        "titre": "Trouwen met z'n tweetjes, ver weg van alles",
+        "texte": "Voor wie dit moment wil beleven zonder gasten en zonder speeches.",
+        "alt": "Twee trouwringen en een klein boeket op een oude leren koffer, boven op een klif boven de oceaan"
+      },
+      {
+        "id": "vignes",
+        "titre": "De bruiloft in de wijngaard",
+        "texte": "Voor wie houdt van lange diners buiten in de nazomer.",
+        "alt": "Een lange bruiloftstafel tussen twee rijen wijnranken bij zonsondergang, met kaarsen en lichtsnoeren"
+      },
+      {
+        "id": "fete",
+        "titre": "De festivalbruiloft",
+        "texte": "Voor wie drie dagen lang een heel groot feest wil.",
+        "alt": "Een bruiloftsfeest in een weiland in de nacht, met verlichte tenten, een klein podium, vlaggetjes en strobalen"
+      }
+    ]
+  },
+  "section3": {
+    "title": "Een trouwstijl kiezen: wat jullie eerst moeten regelen",
+    "intro": "Voordat jullie een locatie gaan bekijken, zijn er vier onderwerpen waarover jullie het beter eens kunnen worden. De stijl van de bruiloft hangt er bijna helemaal van af.",
+    "sub1Title": "Het aantal gasten",
+    "sub1Text": "Dit is de eerste vraag om te regelen, want de locatie, het budget en de sfeer hangen ervan af. Met een stuk of dertig gasten kunnen jullie met iedereen praten. Met tweehonderd geven jullie een groot feest, maar sommige gasten zien jullie maar vijf minuten. Schrijf ieder apart je lijst op en leg ze daarna naast elkaar. Jullie zien meteen of jullie aan dezelfde bruiloft denken.",
+    "sub2Title": "Het budget",
+    "sub2Text": "Een bruiloft kan zoveel kosten als een goed etentje of zoveel als een nieuwe auto. Geld is een van de <a href=\"/nl/klaar-om-te-trouwen-test/\">onderwerpen die je voor het trouwen ontwijkt</a>. Het budget voor het feest is vaak het eerste echte gesprek erover. Leg het bedrag vast dat jullie willen uitgeven voordat jullie locaties gaan bekijken. Spreek ook af wie wat betaalt, bijvoorbeeld jullie zelf of jullie ouders.",
+    "sub3Title": "De ceremonie",
+    "sub3Text": "In Nederland en in België telt voor de wet alleen het burgerlijk huwelijk. Een kerkelijke ceremonie kan pas daarna. In Nederland mag je bij veel gemeenten trouwen op een locatie die je zelf kiest, als de gemeente die goedkeurt. Vaak mag zelfs een vriend of een familielid voor één dag jullie trouwambtenaar zijn. In België trouw je op het gemeentehuis of op een plek die de gemeente daarvoor heeft aangewezen. Een ceremonie in het bos of op het strand heeft daar dus geen wettelijke waarde, maar jullie mogen die schrijven zoals jullie willen. Veel koppels gaan een paar dagen eerder met een klein groepje naar het gemeentehuis. De grote ceremonie bewaren ze voor de dag van het feest.",
+    "sub4Title": "De families",
+    "sub4Text": "Jullie ouders hebben vaak hun eigen idee over de bruiloft en dat is niet altijd dat van jullie. Een oma hecht bijvoorbeeld aan de kerk of een vader wil zijn collega's uitnodigen. Word het als koppel eens voordat jullie er met iemand anders over praten. Een beslissing die je samen hebt genomen, houd je makkelijker vol."
+  },
+  "section4": {
+    "title": "En als jullie niet dezelfde bruiloft voor ogen hebben?",
+    "p1": "Dat komt heel vaak voor. De een droomt bijvoorbeeld al zijn hele leven van een groot feest en de ander heeft geen enkele zin om twaalf uur lang in het middelpunt te staan! Bekijk de lijst met jullie verschillende antwoorden. Gaan ze over de aankleding of over de muziek, dan is dat in één avond geregeld. Gaan ze over het aantal gasten of over het budget, neem dan de tijd om erover te praten. Al het andere hangt daarvan af.",
+    "p2": "Er bestaat bijna altijd iets ertussenin. Jullie kunnen bijvoorbeeld een ceremonie houden met een klein groepje en een maand later een groot feest geven. En de bruiloft duurt maar één dag! Wat jullie daarna vieren, zijn jullie trouwdagen, zoals de <a href=\"/nl/trouwdagen/\">koperen, zilveren of gouden bruiloft</a>."
+  },
+  "section5": {
+    "title": "Wat je over deze test moet weten",
+    "p1": "Deze test is een spel. Hij kent jullie budget en jullie families niet en hij weet ook niet welke locaties er bij jullie in de buurt vrij zijn. Hij zegt alleen naar welke trouwstijl jullie antwoorden leiden. Hij is er vooral om het gesprek tussen jullie op gang te brengen.",
+    "p2": "Jullie antwoorden worden niet opgeslagen, ze blijven op jullie telefoon. We tellen alleen welke uitslag eruit komt, om te zien welke het vaakst voorkomen. Jullie voornaam wordt ook niet opgeslagen. De foto's zijn voor deze pagina gemaakt."
+  },
+  "seo": {
+    "faqTitle": "Veelgestelde vragen",
+    "faq1Q": "Welke bruiloften kunnen eruit komen?",
+    "faq1A": "De test kan 10 uitslagen geven: de bruiloft op een kasteel, de landelijke bruiloft, de tuinbruiloft in de stad, de bruiloft in het bos, de strandbruiloft, het gemeentehuis met daarna een goed restaurant, de bruiloft in de bergen, de bruiloft in de wijngaard en de festivalbruiloft. De laatste uitslag is trouwen met z'n tweetjes, ver weg van alles. Die is bedoeld voor koppels die geen gasten willen.",
+    "faq2Q": "Hoe wordt de uitslag berekend?",
+    "faq2A": "Elk antwoord geeft punten aan de bruiloften die erbij passen. Als jullie bijvoorbeeld bij de vraag over de kleding ‘op blote voeten of bijna’ antwoorden, krijgt de strandbruiloft punten, maar de bruiloft op een kasteel niet. Als jullie de test met z'n tweeën doen, telt hij jullie antwoorden bij elkaar op. De bruiloft met de meeste punten wordt dan de bruiloft van jullie koppel.",
+    "faq3Q": "Welke trouwstijlen zijn er?",
+    "faq3A": "Er zijn er zeker een stuk of tien. De bekendste zijn de klassieke bruiloft op een kasteel, de landelijke bruiloft en de bohemian bruiloft midden in de natuur. Er zijn ook de strandbruiloft, de kleine bruiloft met een klein groepje en het burgerlijk huwelijk met daarna een eenvoudig etentje. De test heeft er 10, elk met een foto.",
+    "faq4Q": "Klein of groot trouwen: hoe kies je dat?",
+    "faq4A": "Ga uit van wat jullie die dag willen beleven. Willen jullie met elke gast praten, blijf dan onder de vijftig mensen. Willen jullie om twee uur 's nachts een volle dansvloer, dan heb je veel mensen nodig. Zijn jullie het niet eens, dan kunnen jullie een ceremonie houden met een klein groepje en daarna een feest geven met meer mensen.",
+    "faq5Q": "Kun je de test doen als je niet verloofd bent?",
+    "faq5A": "Ja, en veel koppels doen hem gewoon voor de lol. Jullie hebben geen datum en geen ring nodig om te weten of jullie liever een kasteel of een strand hebben. Het is ook een goede manier om te ontdekken wat je partner voor zich ziet.",
+    "faq6Q": "Kun je de test alleen doen?",
+    "faq6A": "Ja. Kies gewoon ‘Alleen, voor ons als koppel’ en antwoord met jullie als koppel in gedachten. Je krijgt een uitslag, maar je kunt jullie antwoorden niet vergelijken."
+  },
+  "jsonLd": {
+    "about": "samen een trouwstijl kiezen"
+  }
+}

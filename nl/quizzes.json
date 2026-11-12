@@ -604,6 +604,18 @@
     "metaDescription": "Welk huis past bij ons? Twijfelen jullie tussen een appartement en een huis met tuin? Ieder beantwoordt 12 vragen en de test laat jullie huis zien.",
     "description": "Ieder beantwoordt 12 vragen en de test laat het huis zien dat bij jullie als koppel past, met foto."
   },
+  "quizOuVivre": {
+    "title": "Waar moeten we wonen over 10 jaar? De test voor koppels",
+    "shortTitle": "Waar wonen we over 10 jaar",
+    "metaDescription": "Waar moeten we wonen over 10 jaar? Twijfelen jullie tussen stad, platteland, zee en bergen? Ieder beantwoordt 12 vragen en de test laat jullie plek zien.",
+    "description": "Ieder beantwoordt 12 vragen en de test laat de plek zien waar jullie als koppel over 10 jaar zouden kunnen wonen, met foto."
+  },
+  "quizMariageNous": {
+    "title": "Wat voor bruiloft past bij ons? Trouwstijl-test voor koppels",
+    "shortTitle": "Wat voor bruiloft past bij ons",
+    "metaDescription": "Wat voor bruiloft past bij ons? Twijfelen jullie tussen een kasteel en een strand? Ieder beantwoordt 12 vragen en de test laat jullie trouwstijl zien.",
+    "description": "Ieder beantwoordt 12 vragen en de test laat de trouwstijl zien die bij jullie als koppel past, met foto."
+  },
   "quizListeNoel": {
     "title": "Lief of stout? De kersttest voor koppels",
     "shortTitle": "Lief of stout",

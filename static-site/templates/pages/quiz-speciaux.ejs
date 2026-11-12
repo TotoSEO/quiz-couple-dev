@@ -13,11 +13,11 @@
   // La saison mise en avant : celle du calendrier des quiz (SAISONS_QUIZ,
   // config.js), sinon celle de l'habillage du site.
   const saisonCourante = (typeof saisonQuiz !== 'undefined' && saisonQuiz) ? saisonQuiz : ((typeof saison !== 'undefined' && saison) ? saison : null);
-  const EMOJIS = { quizSerialKiller: '🔪', quizMortFilmHorreur: '🎬', quizPossession: '👻', quizSuperVilain: '🦹', quizDuoVilains: '🎭', quizChienNous: '🐶', quizMaisonNous: '🏡', quizListeNoel: '🎅', quizDuoNoel: '🎄', quizPorteCulotte: '👖' };
-  const ACCENTS = { quizSerialKiller: '0 55% 42%', quizMortFilmHorreur: '222 48% 46%', quizPossession: '150 40% 38%', quizSuperVilain: '292 55% 45%', quizDuoVilains: '27 90% 48%', quizChienNous: '32 80% 46%', quizMaisonNous: '162 45% 36%', quizListeNoel: '355 62% 44%', quizDuoNoel: '152 48% 32%', quizPorteCulotte: '218 52% 48%' };
+  const EMOJIS = { quizSerialKiller: '🔪', quizMortFilmHorreur: '🎬', quizPossession: '👻', quizSuperVilain: '🦹', quizDuoVilains: '🎭', quizChienNous: '🐶', quizMaisonNous: '🏡', quizOuVivre: '🗺️', quizMariageNous: '💍', quizListeNoel: '🎅', quizDuoNoel: '🎄', quizPorteCulotte: '👖' };
+  const ACCENTS = { quizSerialKiller: '0 55% 42%', quizMortFilmHorreur: '222 48% 46%', quizPossession: '150 40% 38%', quizSuperVilain: '292 55% 45%', quizDuoVilains: '27 90% 48%', quizChienNous: '32 80% 46%', quizMaisonNous: '162 45% 36%', quizOuVivre: '200 62% 40%', quizMariageNous: '338 58% 48%', quizListeNoel: '355 62% 44%', quizDuoNoel: '152 48% 32%', quizPorteCulotte: '218 52% 48%' };
   const DUO_SEUL = { quizDuoVilains: true };
   // Les quiz « pour nous » : un seul résultat pour le couple, pas de mode à distance.
-  const COMMUN = { quizChienNous: true, quizMaisonNous: true, quizListeNoel: true, quizDuoNoel: true, quizPorteCulotte: true };
+  const COMMUN = { quizChienNous: true, quizMaisonNous: true, quizOuVivre: true, quizMariageNous: true, quizListeNoel: true, quizDuoNoel: true, quizPorteCulotte: true };
   const toutes = (famillesNav.speciaux || []).map(function (k) {
     const f = quizFeatured && quizFeatured[k];
     return {

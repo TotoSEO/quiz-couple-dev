@@ -1,0 +1,123 @@
+{
+  "hero": {
+    "badge": "Quiz fun • À deux, ou seul(e) pour le couple",
+    "title": "Quel mariage est fait pour nous ? Le test à faire en couple",
+    "titleHighlight": "Quel mariage est fait pour nous ?",
+    "description": "Vous rêvez d'un château et votre partenaire d'une plage ? Chacun répond à 12 questions sur le jour du mariage. Le test vous montre ensuite le style de mariage qui irait le mieux à votre couple.",
+    "subtitle": "12 questions • 3 minutes chacun • sur un seul téléphone",
+    "jumpBtn": "Faire le test"
+  },
+  "section1": {
+    "title": "Comment marche le test",
+    "p1": "Ce test est un jeu à faire en couple. Il sert à trouver le style de mariage qui vous ressemble, par exemple une grande fête dans un château ou un simple repas après la mairie. Il pose 12 questions sur le jour du mariage. Il vous demande par exemple combien d'invités vous voulez et quelle musique vous imaginez.",
+    "p2": "Prenons la question sur le nombre d'invités. Vous avez le choix entre « juste nous et deux témoins », « une trentaine, les très proches », « une centaine, la famille et les amis » et « plus de deux cents, on invite tout le monde ». Si vous répondez « une trentaine », le test donne des points aux petits mariages, comme le mariage dans un jardin. Si votre partenaire répond « plus de deux cents », il en donne au château et au mariage façon festival. À la fin, le test additionne vos réponses et il garde le mariage qui a le plus de points.",
+    "p3": "Le premier répond aux 12 questions puis il passe le téléphone à l'autre. Le second répond sans voir ce que le premier a choisi. Ensuite le test vous montre le mariage de votre couple avec sa photo. Il vous montre aussi celui que chacun aurait choisi tout seul et la liste des questions où vous n'avez pas répondu pareil.",
+    "p4": "Vous pouvez faire ce test <a href=\"/blog/demande-en-mariage/\">avant même d'être fiancés</a>, juste pour rire. Vous pouvez aussi le faire au début des préparatifs pour vous mettre d'accord avant de visiter des salles. Il marche aussi seul(e), mais vous ne pourrez pas comparer vos réponses."
+  },
+  "section2": {
+    "title": "Les 10 mariages du test",
+    "intro": "Le test peut donner 10 résultats. Certains sont très classiques, comme le mariage au château. D'autres le sont beaucoup moins, comme le mariage façon festival. Voici à qui chaque mariage convient le mieux.",
+    "galerie": [
+      {
+        "id": "chateau",
+        "titre": "Le mariage au château",
+        "texte": "Pour ceux qui veulent un grand jour avec les deux familles au complet.",
+        "alt": "L'allée et le perron d'un château décorés pour un mariage, avec des fleurs blanches et des rangées de chaises sur la pelouse"
+      },
+      {
+        "id": "champetre",
+        "titre": "Le mariage champêtre",
+        "texte": "Pour ceux qui veulent de longues tables en bois et des invités à l'aise.",
+        "alt": "Un repas de mariage dans un pré à la tombée du jour, avec une grande tente, de longues tables en bois et des guirlandes de lumières"
+      },
+      {
+        "id": "jardin",
+        "titre": "Le mariage dans un jardin, en ville",
+        "texte": "Pour ceux qui préfèrent une trentaine d'invités à qui ils pourront parler.",
+        "alt": "Une longue table dressée dans un petit jardin de ville entouré de murs couverts de lierre, avec des pivoines et des flûtes de champagne"
+      },
+      {
+        "id": "foret",
+        "titre": "Le mariage en forêt",
+        "texte": "Pour ceux qui veulent une cérémonie qui ne ressemble à aucune autre.",
+        "alt": "Une cérémonie de mariage installée dans une clairière, avec une arche de branches et de fleurs et des bancs en bois sous les arbres"
+      },
+      {
+        "id": "plage",
+        "titre": "Le mariage sur la plage",
+        "texte": "Pour ceux qui veulent se marier pieds nus face à la mer.",
+        "alt": "Une arche de mariage drapée de blanc sur une plage au coucher du soleil, avec quelques chaises en bois et un panier de sandales"
+      },
+      {
+        "id": "mairie",
+        "titre": "La mairie, puis un bon restaurant",
+        "texte": "Pour ceux qui veulent se marier simplement et bien manger.",
+        "alt": "Les marches d'une petite mairie couvertes de pétales et de confettis, avec un bouquet posé sur une marche et un vélo décoré de rubans"
+      },
+      {
+        "id": "montagne",
+        "titre": "Le mariage à la montagne",
+        "texte": "Pour ceux qui veulent peu d'invités, un chalet et des sommets sur les photos.",
+        "alt": "Une cérémonie de mariage installée dans un alpage à côté d'un chalet, avec une arche en bois et des bancs, devant des sommets enneigés"
+      },
+      {
+        "id": "deux",
+        "titre": "Le mariage à deux, loin de tout",
+        "texte": "Pour ceux qui veulent vivre ce moment sans invités ni discours.",
+        "alt": "Deux alliances et un petit bouquet posés sur une vieille valise en cuir, en haut d'une falaise au-dessus de l'océan"
+      },
+      {
+        "id": "vignes",
+        "titre": "Le mariage dans les vignes",
+        "texte": "Pour ceux qui aiment les longs dîners dehors à la fin de l'été.",
+        "alt": "Une longue table de mariage dressée entre deux rangs de vigne au coucher du soleil, avec des bougies et des guirlandes de lumières"
+      },
+      {
+        "id": "fete",
+        "titre": "Le mariage façon festival",
+        "texte": "Pour ceux qui veulent une très grande fête pendant trois jours.",
+        "alt": "Une fête de mariage dans un champ la nuit, avec des tentes éclairées, une petite scène, des fanions et des bottes de paille"
+      }
+    ]
+  },
+  "section3": {
+    "title": "Choisir son style de mariage : les sujets à régler d'abord",
+    "intro": "Avant de visiter un lieu, il y a quatre sujets sur lesquels il vaut mieux vous mettre d'accord. Le style du mariage en dépend presque entièrement.",
+    "sub1Title": "Le nombre d'invités",
+    "sub1Text": "C'est la première question à régler parce que le lieu, le budget et l'ambiance en dépendent. Avec une trentaine d'invités, vous pouvez parler à tout le monde. Avec deux cents, vous faites une grande fête mais vous ne verrez certains invités que cinq minutes. Écrivez chacun votre liste de votre côté puis comparez-les. Vous verrez tout de suite si vous pensez au même mariage.",
+    "sub2Title": "Le budget",
+    "sub2Text": "Un mariage peut coûter le prix d'un bon repas au restaurant ou celui d'une voiture neuve. L'argent fait partie des <a href=\"/test-couple-mariage/\">sujets qu'on évite avant de se marier</a>. Le budget de la fête est souvent la première vraie discussion sur ce sujet. Avant de regarder les lieux, fixez la somme que vous êtes prêts à dépenser. Dites-vous aussi qui paie quoi, par exemple vous ou vos parents.",
+    "sub3Title": "La cérémonie",
+    "sub3Text": "En France, seul le mariage à la mairie a une valeur légale. Il doit avoir lieu avant la cérémonie religieuse s'il y en a une. La cérémonie dans une clairière ou sur une plage est donc une cérémonie laïque. Elle n'a pas de valeur officielle mais vous pouvez l'écrire comme vous voulez et la faire animer par un ami. Beaucoup de couples passent à la mairie la veille avec quelques proches. Ils gardent la grande cérémonie pour le jour de la fête.",
+    "sub4Title": "Les familles",
+    "sub4Text": "Vos parents ont souvent leur idée du mariage et ce n'est pas toujours la vôtre. Par exemple, une grand-mère tient à l'église ou un père veut inviter ses collègues. Mettez-vous d'accord dans votre couple avant d'en parler à qui que ce soit. C'est plus facile de tenir une décision qu'on a prise ensemble."
+  },
+  "section4": {
+    "title": "Et si vous n'imaginez pas le même mariage ?",
+    "p1": "C'est très courant. Par exemple, l'un rêve d'une grande fête depuis toujours et l'autre n'a aucune envie d'être au centre de l'attention pendant douze heures ! Regardez la liste de vos réponses différentes. Si elles portent sur la décoration ou sur la musique, ça se règle en une soirée. Si elles portent sur le nombre d'invités ou sur le budget, prenez le temps d'en parler parce que tout le reste en dépend.",
+    "p2": "Il existe presque toujours un entre-deux. Vous pouvez par exemple faire une cérémonie avec quelques proches puis une grande fête un mois plus tard. Et le mariage ne dure qu'une journée ! Ce que vous fêterez ensuite chaque année, ce sont vos <a href=\"/noces-de-mariage/\">noces de coton, de cuir ou de porcelaine</a>."
+  },
+  "section5": {
+    "title": "Ce qu'il faut savoir sur ce test",
+    "p1": "Ce test est un jeu. Il ne connaît pas votre budget ni vos familles, et il ne connaît pas non plus les lieux disponibles près de chez vous. Il vous dit seulement vers quel style de mariage vos réponses vous emmènent. Il sert surtout à lancer la discussion dans votre couple.",
+    "p2": "Vos réponses ne sont pas enregistrées, elles restent sur votre téléphone. On compte seulement le résultat obtenu pour savoir lesquels sortent le plus. Votre prénom n'est pas enregistré non plus. Les photos ont été créées pour cette page."
+  },
+  "seo": {
+    "faqTitle": "Questions fréquentes",
+    "faq1Q": "Quels mariages peut-on obtenir ?",
+    "faq1A": "Le test peut donner 10 résultats : le mariage au château, le mariage champêtre, le mariage dans un jardin en ville, le mariage en forêt, le mariage sur la plage, la mairie suivie d'un bon restaurant, le mariage à la montagne, le mariage dans les vignes et le mariage façon festival. Le dernier résultat est le mariage à deux, loin de tout. Il est fait pour les couples qui ne veulent pas d'invités.",
+    "faq2Q": "Comment le résultat est-il calculé ?",
+    "faq2A": "Chaque réponse donne des points aux mariages qui lui correspondent. Par exemple, si vous répondez « pieds nus ou presque » à la question sur la tenue, le mariage sur la plage gagne des points mais pas le mariage au château. Quand vous faites le test à deux, il additionne vos réponses et le mariage qui a le plus de points devient celui de votre couple.",
+    "faq3Q": "Quels sont les différents styles de mariage ?",
+    "faq3A": "Il y en a une bonne dizaine. Les plus connus sont le mariage classique dans un château, le mariage champêtre et le mariage bohème en pleine nature. Il y a aussi le mariage sur la plage, le petit mariage avec quelques proches et le mariage civil suivi d'un simple repas. Le test en propose 10, avec une photo pour chacun.",
+    "faq4Q": "Petit comité ou grande fête : comment choisir ?",
+    "faq4A": "Partez de ce que vous voulez vivre ce jour-là. Si vous voulez parler à chaque invité, restez sous cinquante personnes. Si vous voulez une piste de danse pleine à deux heures du matin, il faut du monde. Si vous n'êtes pas d'accord, vous pouvez faire une cérémonie avec les très proches puis une fête avec plus de monde.",
+    "faq5Q": "Peut-on faire le test sans être fiancés ?",
+    "faq5A": "Oui, et beaucoup de couples le font juste pour rire. Vous n'avez pas besoin d'une date ni d'une bague pour savoir si vous préférez un château ou une plage. C'est aussi une bonne façon de découvrir ce que votre partenaire imagine.",
+    "faq6Q": "Peut-on faire le test seul(e) ?",
+    "faq6A": "Oui. Il suffit de choisir « Seul(e), pour notre couple » et de répondre en pensant à votre couple. Vous aurez un résultat mais vous ne pourrez pas comparer vos réponses."
+  },
+  "jsonLd": {
+    "about": "choisir son style de mariage à deux"
+  }
+}

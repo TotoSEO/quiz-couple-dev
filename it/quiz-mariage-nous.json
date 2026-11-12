@@ -1,0 +1,123 @@
+{
+  "hero": {
+    "badge": "Quiz originale • In due, o da solo/a per la coppia",
+    "title": "Che matrimonio fa per noi? Il test da fare in coppia",
+    "titleHighlight": "Che matrimonio fa per noi?",
+    "description": "Tu sogni una villa e la tua dolce metà una spiaggia? Ognuno risponde a 12 domande sul giorno del matrimonio. Poi il test vi mostra lo stile di matrimonio che andrebbe meglio alla vostra coppia.",
+    "subtitle": "12 domande • 3 minuti a testa • su un solo telefono",
+    "jumpBtn": "Fai il test"
+  },
+  "section1": {
+    "title": "Come funziona il test",
+    "p1": "Questo test è un gioco da fare in coppia. Serve a trovare lo stile di matrimonio che vi assomiglia, per esempio una grande festa in villa o un pranzo semplice dopo il comune. Fa 12 domande sul giorno del matrimonio. Per esempio, vi chiede quanti invitati volete e che musica vi immaginate.",
+    "p2": "Prendiamo la domanda sul numero di invitati. Potete scegliere tra «solo noi e due testimoni», «una trentina, gli intimi», «un centinaio, la famiglia e gli amici» e «più di duecento, invitiamo tutti». Se uno risponde «una trentina», il test dà punti ai matrimoni piccoli, come il matrimonio in giardino. Se l'altro risponde «più di duecento», li dà alla villa e al matrimonio stile festival. Alla fine il test somma le vostre risposte e tiene il matrimonio che ha più punti.",
+    "p3": "Il primo risponde alle 12 domande e poi passa il telefono all'altro. Il secondo risponde senza vedere cosa ha scelto il primo. Poi il test vi mostra il matrimonio della vostra coppia con la sua foto. Vi mostra anche quello che ognuno avrebbe scelto da solo e l'elenco delle domande a cui non avete risposto uguale.",
+    "p4": "Potete fare questo test <a href=\"/it/blog/proposta-di-matrimonio/\">prima ancora di essere fidanzati ufficialmente</a>, solo per ridere. Potete farlo anche all'inizio dei preparativi, per mettervi d'accordo prima di visitare i posti. Funziona anche da soli, ma non potrai confrontare le vostre risposte."
+  },
+  "section2": {
+    "title": "I 10 matrimoni del test",
+    "intro": "Il test può dare 10 risultati. Alcuni sono molto classici, come il matrimonio in villa. Altri lo sono molto meno, come il matrimonio stile festival. Ecco a chi va meglio ogni matrimonio.",
+    "galerie": [
+      {
+        "id": "chateau",
+        "titre": "Il matrimonio in villa o in castello",
+        "texte": "Per chi vuole un grande giorno con le due famiglie al completo.",
+        "alt": "Il viale e la scalinata di una villa decorati per un matrimonio, con fiori bianchi e file di sedie sul prato"
+      },
+      {
+        "id": "champetre",
+        "titre": "Il matrimonio country, in campagna",
+        "texte": "Per chi vuole lunghi tavoli di legno e invitati a proprio agio.",
+        "alt": "Una cena di nozze in un prato al tramonto, con un grande tendone, lunghi tavoli di legno e lucine"
+      },
+      {
+        "id": "jardin",
+        "titre": "Il matrimonio in un giardino, in città",
+        "texte": "Per chi preferisce una trentina di invitati con cui poter parlare.",
+        "alt": "Una lunga tavola apparecchiata in un piccolo giardino di città circondato da muri coperti d'edera, con peonie e calici"
+      },
+      {
+        "id": "foret",
+        "titre": "Il matrimonio nel bosco",
+        "texte": "Per chi vuole una cerimonia che non assomigli a nessun'altra.",
+        "alt": "Una cerimonia di nozze allestita in una radura, con un arco di rami e fiori e panche di legno sotto gli alberi"
+      },
+      {
+        "id": "plage",
+        "titre": "Il matrimonio in spiaggia",
+        "texte": "Per chi vuole sposarsi a piedi nudi davanti al mare.",
+        "alt": "Un arco nuziale drappeggiato di bianco su una spiaggia al tramonto, con qualche sedia di legno e una cesta di sandali"
+      },
+      {
+        "id": "mairie",
+        "titre": "In comune, poi un buon ristorante",
+        "texte": "Per chi vuole sposarsi in modo semplice e mangiare bene.",
+        "alt": "La scalinata di un piccolo municipio coperta di petali e coriandoli, con un bouquet su un gradino e una bici decorata con nastri"
+      },
+      {
+        "id": "montagne",
+        "titre": "Il matrimonio in montagna",
+        "texte": "Per chi vuole pochi invitati, una baita e le cime nelle foto.",
+        "alt": "Una cerimonia di nozze allestita in un pascolo accanto a una baita, con un arco di legno e delle panche, davanti a cime innevate"
+      },
+      {
+        "id": "deux",
+        "titre": "Un matrimonio solo in due, lontano da tutto",
+        "texte": "Per chi vuole vivere quel momento senza invitati né discorsi.",
+        "alt": "Due fedi e un piccolo bouquet su una vecchia valigia di cuoio, in cima a una scogliera sull'oceano"
+      },
+      {
+        "id": "vignes",
+        "titre": "Il matrimonio tra le vigne",
+        "texte": "Per chi ama le lunghe cene all'aperto a fine estate.",
+        "alt": "Una lunga tavola di nozze apparecchiata tra due filari al tramonto, con candele e lucine"
+      },
+      {
+        "id": "fete",
+        "titre": "Il matrimonio stile festival",
+        "texte": "Per chi vuole una festa molto grande per tre giorni.",
+        "alt": "Una festa di nozze in un campo di notte, con tende illuminate, un piccolo palco, bandierine e balle di fieno"
+      }
+    ]
+  },
+  "section3": {
+    "title": "Scegliere lo stile di matrimonio: le cose da decidere per prime",
+    "intro": "Prima di visitare un posto, ci sono quattro argomenti su cui conviene mettervi d'accordo. Lo stile del matrimonio dipende quasi del tutto da questi.",
+    "sub1Title": "Il numero di invitati",
+    "sub1Text": "È la prima domanda da risolvere perché il posto, il budget e l'atmosfera dipendono da questa. Con una trentina di invitati potete parlare con tutti. Con duecento fate una grande festa ma alcuni invitati li vedrete solo cinque minuti. Scrivete ognuno la propria lista e poi confrontatele. Vedrete subito se pensate allo stesso matrimonio.",
+    "sub2Title": "Il budget",
+    "sub2Text": "Un matrimonio può costare quanto un buon pranzo al ristorante o quanto un'auto nuova. I soldi sono uno degli <a href=\"/it/test-compatibilita-matrimonio/\">argomenti che si evitano prima di sposarsi</a>. Il budget della festa è spesso la prima vera discussione sul tema. Prima di guardare i posti, fissate la cifra che siete disposti a spendere. Ditevi anche chi paga cosa, per esempio voi o i vostri genitori.",
+    "sub3Title": "La cerimonia",
+    "sub3Text": "In Italia hanno valore legale il matrimonio civile celebrato in comune e il matrimonio religioso con effetti civili. La cerimonia in una radura o in spiaggia di solito è un rito simbolico. Non ha valore ufficiale ma potete scriverla come volete e farla celebrare da un amico. Molte coppie passano in comune qualche giorno prima con pochi intimi. Tengono la grande cerimonia per il giorno della festa.",
+    "sub4Title": "Le famiglie",
+    "sub4Text": "I vostri genitori hanno spesso la loro idea del matrimonio e non sempre è la vostra. Per esempio, una nonna tiene alla chiesa o un padre vuole invitare i colleghi. Mettetevi d'accordo in coppia prima di parlarne con chiunque. È più facile mantenere una decisione che si è presa insieme."
+  },
+  "section4": {
+    "title": "E se non vi immaginate lo stesso matrimonio?",
+    "p1": "È molto comune. Per esempio, uno sogna da sempre una grande festa e l'altro non ha nessuna voglia di essere al centro dell'attenzione per dodici ore! Guardate l'elenco delle vostre risposte diverse. Se riguardano gli allestimenti o la musica, si risolve in una serata. Se riguardano il numero di invitati o il budget, prendetevi il tempo di parlarne perché tutto il resto dipende da questo.",
+    "p2": "C'è quasi sempre una via di mezzo. Per esempio, potete fare una cerimonia con pochi intimi e poi una grande festa un mese dopo. E il matrimonio dura solo un giorno! Quello che festeggerete dopo, ogni anno, sono le vostre <a href=\"/it/anniversari-di-matrimonio/\">nozze di carta, d'argento o d'oro</a>."
+  },
+  "section5": {
+    "title": "Cosa sapere su questo test",
+    "p1": "Questo test è un gioco. Non conosce il vostro budget né le vostre famiglie, e non conosce nemmeno i posti disponibili dalle vostre parti. Vi dice solo verso che stile di matrimonio vi portano le vostre risposte. Serve soprattutto ad aprire la discussione nella vostra coppia.",
+    "p2": "Le vostre risposte non vengono salvate, restano sul vostro telefono. Contiamo solo il risultato ottenuto per sapere quali escono di più. Nemmeno il vostro nome viene salvato. Le foto sono state create per questa pagina."
+  },
+  "seo": {
+    "faqTitle": "Domande frequenti",
+    "faq1Q": "Quali matrimoni possono uscire?",
+    "faq1A": "Il test può dare 10 risultati: il matrimonio in villa o in castello, il matrimonio country, il matrimonio in un giardino in città, il matrimonio nel bosco, il matrimonio in spiaggia, il comune seguito da un buon ristorante, il matrimonio in montagna, il matrimonio tra le vigne e il matrimonio stile festival. L'ultimo risultato è il matrimonio solo in due, lontano da tutto. È per le coppie che non vogliono invitati.",
+    "faq2Q": "Come viene calcolato il risultato?",
+    "faq2A": "Ogni risposta dà punti ai matrimoni che le corrispondono. Per esempio, se alla domanda sull'abito rispondete «a piedi nudi o quasi», il matrimonio in spiaggia prende punti ma il matrimonio in villa no. Quando fate il test in due, somma le vostre risposte e il matrimonio che ha più punti diventa quello della vostra coppia.",
+    "faq3Q": "Quali sono gli stili di matrimonio?",
+    "faq3A": "Ce n'è una buona decina. I più conosciuti sono il matrimonio classico in villa, il matrimonio country e il matrimonio boho in mezzo alla natura. Ci sono anche il matrimonio in spiaggia, il matrimonio intimo con poche persone e il matrimonio civile seguito da un pranzo semplice. Il test ne propone 10, con una foto per ognuno.",
+    "faq4Q": "Matrimonio intimo o grande festa: come scegliere?",
+    "faq4A": "Partite da quello che volete vivere quel giorno. Se volete parlare con ogni invitato, restate sotto le cinquanta persone. Se volete una pista da ballo piena alle due di notte, serve tanta gente. Se non siete d'accordo, potete fare una cerimonia con gli intimi e poi una festa con più persone.",
+    "faq5Q": "Si può fare il test senza essere fidanzati ufficialmente?",
+    "faq5A": "Sì, e molte coppie lo fanno solo per ridere. Non servono una data né un anello per sapere se preferite una villa o una spiaggia. È anche un buon modo per scoprire cosa si immagina la tua dolce metà.",
+    "faq6Q": "Si può fare il test da soli?",
+    "faq6A": "Sì. Basta scegliere «Da solo/a, per la nostra coppia» e rispondere pensando alla vostra coppia. Avrai un risultato ma non potrai confrontare le vostre risposte."
+  },
+  "jsonLd": {
+    "about": "scegliere lo stile di matrimonio in coppia"
+  }
+}

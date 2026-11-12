@@ -610,6 +610,18 @@
     "metaDescription": "Vous hésitez entre un appartement en ville et une maison avec jardin ? Chacun répond à 12 questions et le test vous montre la maison faite pour votre couple.",
     "description": "Chacun répond à 12 questions et le test vous montre le logement qui irait à votre couple, avec sa photo."
   },
+  "quizOuVivre": {
+    "title": "Où devrions-nous vivre dans 10 ans ? Le test à faire à deux",
+    "shortTitle": "Où vivrons-nous dans 10 ans",
+    "metaDescription": "Vous hésitez entre la ville, la campagne, la mer et la montagne ? Chacun répond à 12 questions et le test montre où votre couple pourrait vivre dans 10 ans.",
+    "description": "Chacun répond à 12 questions et le test vous montre l'endroit où votre couple pourrait vivre dans 10 ans, avec sa photo."
+  },
+  "quizMariageNous": {
+    "title": "Quel style de mariage est fait pour nous ? Le test à deux",
+    "shortTitle": "Quel mariage est fait pour nous",
+    "metaDescription": "Vous hésitez entre un château, un pré et une plage ? Chacun répond à 12 questions et le test vous montre le style de mariage fait pour votre couple.",
+    "description": "Chacun répond à 12 questions et le test vous montre le style de mariage qui irait à votre couple, avec sa photo."
+  },
   "quizListeNoel": {
     "title": "Sommes-nous sur la liste des enfants sages ? Le test de Noël",
     "shortTitle": "Sages ou pas sages",
