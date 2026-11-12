@@ -50,10 +50,17 @@ export const GARANTIE_JOURS = 0;
 // depuis le prix le plus bas pratiqué pendant les trente jours d'avant
 // (article L112-1-1 du Code de la consommation) et a une date de fin : pour
 // une prochaine, PROMO_FIN est obligatoire, et le prix barré est 7,90 €
-// jusqu'à trente jours passés à un autre prix. LOVE20 est encore actif chez
-// Stripe : seul ce fichier décide s'il s'applique.
-export const PROMO_CODE = 'LOVE20';
-export const PROMO_STRIPE = 'promo_1UShjWCqyRKQqXWFyb4ADMbH';
+// jusqu'à trente jours passés à un autre prix.
+// LOVE20 n'est plus déclaré ici depuis le 12 novembre 2026 (Thomas : « oui
+// désactive love 20 ») : sans identifiant de code (PROMO_STRIPE vide), il n'y
+// a de réduction ni sur le site ni sur la page de paiement, quel que soit
+// PROMO_POURCENT, et un pourcentage remis par erreur ne peut plus afficher un
+// prix que Stripe refuserait. Une prochaine réduction prend un nouveau code,
+// créé dans Stripe (docs/bilan/STRIPE.md) ; le workflow bilan-code-promo.yml
+// lit, arrête ou rouvre un code chez Stripe (LOVE20 :
+// promo_1UShjWCqyRKQqXWFyb4ADMbH).
+export const PROMO_CODE = '';
+export const PROMO_STRIPE = '';
 export const PROMO_POURCENT = 0;
 export const PROMO_FIN = '';
 // Durées de conservation, en jours (reprises par la migration et la page).

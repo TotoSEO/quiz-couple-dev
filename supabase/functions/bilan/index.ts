@@ -10,7 +10,9 @@
 //
 // La fabrique du PDF (bilan/fabrique.mjs) appelle l'action interne
 // `envoyer_rapport` avec la clé de service en Authorization et en
-// x-cle-service, et bilan/relance.mjs l'action `relancer` de la même façon.
+// x-cle-service, et bilan/relance.mjs l'action `relancer` de la même façon,
+// comme bilan/code-promo.mjs l'action `code_promo` (lire, arrêter ou rouvrir
+// un code de promotion chez Stripe).
 // L'admin appelle `apercu_paiement` avec son jeton en x-admin-token (le même
 // que verify-admin fabrique et que admin-stats vérifie).
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
