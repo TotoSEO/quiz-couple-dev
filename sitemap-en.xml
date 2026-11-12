@@ -297,7 +297,7 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/domande-coppia/"/>
     <xhtml:link rel="alternate" hreflang="nl" href="https://quiz-couple.com/nl/vragen-voor-koppels/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/questions-couple/"/>
-    <lastmod>2026-11-11</lastmod>
+    <lastmod>2026-11-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -1311,6 +1311,32 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/test-che-casa-fa-per-noi/"/>
     <xhtml:link rel="alternate" hreflang="nl" href="https://quiz-couple.com/nl/welk-huis-past-bij-ons-test/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/test-quelle-maison-est-faite-pour-nous/"/>
+    <lastmod>2026-11-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://quiz-couple.com/en/where-should-we-live-quiz/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/test-ou-devrions-nous-vivre/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://quiz-couple.com/en/where-should-we-live-quiz/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://quiz-couple.com/es/test-donde-deberiamos-vivir/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://quiz-couple.com/de/wo-sollen-wir-leben-test/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/test-dove-dovremmo-vivere/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://quiz-couple.com/nl/waar-moeten-we-wonen-test/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/test-ou-devrions-nous-vivre/"/>
+    <lastmod>2026-11-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://quiz-couple.com/en/what-kind-of-wedding-should-we-have-quiz/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/test-quel-mariage-est-fait-pour-nous/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://quiz-couple.com/en/what-kind-of-wedding-should-we-have-quiz/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://quiz-couple.com/es/test-que-tipo-de-boda-queremos/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://quiz-couple.com/de/welche-hochzeit-passt-zu-uns-test/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/test-che-matrimonio-fa-per-noi/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://quiz-couple.com/nl/wat-voor-bruiloft-past-bij-ons-test/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/test-quel-mariage-est-fait-pour-nous/"/>
     <lastmod>2026-11-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
