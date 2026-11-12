@@ -16,12 +16,15 @@ const TICS = {
   fr: ['tous les deux', 'toutes les deux', 'vous deux', 'nous deux'],
   en: ['the two of you', 'both of you', 'you both', 'you two', 'the two of us'],
   es: ['los dos', 'las dos', 'vosotros dos', 'ustedes dos', 'nosotros dos'],
-  de: ['euch beide', 'ihr beide', 'euch beiden', 'ihr beiden', 'uns beide', 'uns beiden', 'zu zweit'],
+  // « zu zweit » et « met z'n tweeën » n'y sont pas : c'est « à deux », le nom du mode
+  de: ['euch beiden', 'euch beide', 'ihr beiden', 'ihr beide', 'uns beiden', 'uns beide', 'wir beiden', 'wir beide', 'alle beide'],
   it: ['tutti e due', 'tutte e due', 'voi due', 'noi due', 'entrambi'],
-  nl: ['jullie allebei', 'jullie beiden', 'jullie twee', 'ons allebei', 'ons beiden', 'met z\'n tweeën', 'met zijn tweeën'],
+  nl: ['jullie allebei', 'jullie beiden', 'jullie twee', 'ons allebei', 'ons beiden', 'wij allebei', 'we allebei'],
 };
 // Un mot par virgule en dessous de ce seuil : le texte enchaîne les incises.
-const MOTS_PAR_VIRGULE = 18;
+// L'allemand met une virgule devant chaque subordonnée et chaque groupe infinitif :
+// ses pages de référence (« Würdest du eher », le Partnertest) sont à une pour 10 mots.
+const MOTS_PAR_VIRGULE = { fr: 18, en: 18, es: 18, it: 18, nl: 18, de: 11 };
 // Au plus tant de tics par fichier (un nom de jeu comme « Qui de nous deux » en est un).
 const TICS_MAX = 2;
 const EXCLAMATIONS_MAX = 4;
@@ -62,16 +65,16 @@ for (const cible of cibles) {
       style++;
       lignes.push(`   DEUX-POINTS ${chemin} → ${m[0].trim().slice(0, 150)}`);
     }
-    for (const tic of TICS[lang]) {
-      const re = new RegExp(`[^.!?]*${tic}[^.!?]*`, 'gi');
-      for (const m of t.matchAll(re)) {
-        // « Qui de nous deux », « qui de vous deux » : le nom d'un jeu et une vraie question
-        if (/qui de (nous|vous) deux/i.test(m[0])) continue;
-        // le libellé d'une réponse (« autant l'un que l'autre ») dans chaque langue
-        if (/los dos por igual|tutti e due allo stesso modo|beide gleich oft|allebei even vaak/i.test(m[0])) continue;
-        tics++;
-        lignes.push(`   TIC ${chemin} → ${m[0].trim().slice(0, 150)}`);
-      }
+    // chaque phrase qui porte un tic compte une fois, quel que soit le nombre de formes qui s'y trouvent
+    const reTic = new RegExp(`(?<![\\p{L}])(${TICS[lang].join('|')})(?![\\p{L}])`, 'iu');
+    for (const m of t.matchAll(/[^.!?]+[.!?]*/g)) {
+      if (!reTic.test(m[0])) continue;
+      // « Qui de nous deux », « qui de vous deux » : le nom d'un jeu et une vraie question, dans chaque langue
+      if (/qui de (nous|vous) deux|wer von (uns|euch) beiden|chi di (noi|voi) due|qui[eé]n de (los|las|nosotros|vosotros) dos|wie van (ons|jullie) (twee|beiden)|which of (you|us) two/i.test(m[0])) continue;
+      // le libellé d'une réponse (« autant l'un que l'autre ») dans chaque langue
+      if (/los dos por igual|tutti e due allo stesso modo|beide gleich oft|allebei even vaak/i.test(m[0])) continue;
+      tics++;
+      lignes.push(`   TIC ${chemin} → ${m[0].trim().slice(0, 150)}`);
     }
     for (const m of t.matchAll(/[^.!?«»“”„"]*,[^.!?«»“”„"]*,[^.!?«»“”„"]*,[^.!?«»“”„"]*/g)) {
       lignes.push(`   3 VIRGULES ${chemin} → ${m[0].trim().slice(0, 150)}`);
@@ -79,7 +82,7 @@ for (const cible of cibles) {
   }
   const ratio = mots / Math.max(virgules, 1);
   const defauts = [];
-  if (ratio < MOTS_PAR_VIRGULE) defauts.push('VIRGULES');
+  if (ratio < MOTS_PAR_VIRGULE[lang]) defauts.push('VIRGULES');
   if (tics > TICS_MAX) defauts.push('TICS');
   if (!bloc && exclamations > EXCLAMATIONS_MAX) defauts.push('EXCLAMATIONS');
   if (defauts.length) signales++;

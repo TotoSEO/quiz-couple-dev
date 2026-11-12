@@ -1,27 +1,27 @@
 {
   "hero": {
-    "badge": "Spaß-Quiz • Zu zweit, oder allein für euch beide",
-    "title": "Der Test, der zeigt, welches Haus zu euch beiden passt",
-    "titleHighlight": "welches Haus zu euch beiden passt",
-    "description": "Eine Stadtwohnung, ein Haus mit Garten, ein altes Haus zum Renovieren oder ein Campervan? Jeder beantwortet zwölf Fragen zu dem Leben, das er sich vorstellt, und der Test zeigt euch den Ort, an dem ihr euch beide wohlfühlen würdet.",
+    "badge": "Spaß-Quiz • Zu zweit oder allein für euch als Paar",
+    "title": "Welches Haus passt zu uns? Der Test für Paare",
+    "titleHighlight": "Welches Haus passt zu uns?",
+    "description": "Ihr schwankt zwischen einer Wohnung in der Stadt und einem Haus mit Garten? Jeder beantwortet 12 Fragen zu dem Leben, das er sich vorstellt. Danach zeigt euch der Test das Zuhause, das am besten zu euch als Paar passt.",
     "subtitle": "12 Fragen • 3 Minuten pro Person • an einem Handy",
     "jumpBtn": "Zum Test"
   },
   "section1": {
     "title": "So funktioniert der Test",
-    "p1": "Dieser Test soll herausfinden, an was für einem Ort ihr euch zu zweit wohlfühlen würdet: in der Stadt oder mitten zwischen Feldern, im Neubau oder im Altbau, mit Nachbarn ganz in der Nähe oder ohne jemanden ringsum. Er stellt zwölf Fragen zu eurem Alltag: was ihr morgens aus dem Fenster seht, was ihr am Samstagabend macht, wie viel Platz eure Sachen brauchen usw.",
-    "p2": "Zum Beispiel könnt ihr bei der Frage „Renovieren:“ antworten mit „nie, wir wollen nur die Koffer abstellen“, „einmal streichen, mehr nicht“, „wir werkeln gern am Wochenende“ oder „alles selbst neu machen, das ist ein Lebensprojekt“. Wenn du „nie“ antwortest und dein Schatz davon träumt, alles neu zu machen, sieht der Test das: Er zählt eure beiden Antwortreihen zusammen und behält das Zuhause, das für euch beide die beste Note hat.",
-    "p3": "Zu zweit beantwortet der Erste die zwölf Fragen, gibt das Handy weiter, und der Zweite antwortet, ohne zu sehen, was der andere gewählt hat. Am Ende habt ihr das Zuhause für euch als Paar mit Foto, das Zuhause, das jeder für sich gewählt hätte, und die Liste der Fragen, bei denen ihr nicht gleich geantwortet habt.",
-    "p4": "Du kannst ihn auch allein machen und für euch beide antworten. Dann fehlt dir aber der Vergleich, und das ist der spannendste Teil."
+    "p1": "Dieser Test ist ein Spiel für Paare. Er hilft euch, den Ort zu finden, an dem ihr euch wohlfühlen würdet, zum Beispiel in der Stadt oder mitten zwischen Feldern. Er stellt 12 Fragen zu eurem Alltag. Er fragt zum Beispiel, was ihr morgens aus dem Fenster seht und was ihr am Samstagabend macht.",
+    "p2": "Nehmen wir die Frage zum Renovieren. Ihr könnt wählen zwischen „nie, wir wollen nur die Koffer abstellen“, „einmal streichen, mehr nicht“, „wir werkeln gern am Wochenende“ und „alles selbst neu machen, das ist ein Lebensprojekt“. Wenn du „nie“ antwortest, gibt der Test den Häusern Punkte, an denen nichts zu tun ist, zum Beispiel dem Architektenhaus. Wenn dein Schatz „alles selbst neu machen“ antwortet, bekommt das alte Haus zum Renovieren Punkte. Am Ende zählt der Test eure Antworten zusammen und behält das Zuhause mit den meisten Punkten.",
+    "p3": "Der Erste beantwortet die 12 Fragen und gibt dann das Handy weiter. Der Zweite antwortet, ohne zu sehen, was der Erste gewählt hat. Danach zeigt euch der Test euer Zuhause als Paar, mit Foto. Er zeigt euch auch das Zuhause, das jeder allein gewählt hätte, und die Liste der Fragen, bei denen ihr nicht gleich geantwortet habt.",
+    "p4": "Du kannst den Test auch allein machen und für euch als Paar antworten. Dann kannst du eure Antworten aber nicht vergleichen und genau das ist der spannendste Teil."
   },
   "section2": {
-    "title": "Die zehn Häuser im Test",
-    "intro": "Der Test kann bei zehn Ergebnissen landen, vom klassischsten bis zum unerwartetsten. Hier steht, zu wem welches am besten passt.",
+    "title": "Die 10 Häuser im Test",
+    "intro": "Der Test kann 10 Ergebnisse liefern. Manche sind ganz klassisch, wie das Haus mit Garten. Andere sind es viel weniger, wie das Hausboot oder der Campervan. Hier steht, zu wem welches Zuhause am besten passt.",
     "galerie": [
       {
         "id": "pavillon",
         "titre": "Das Haus mit Garten",
-        "texte": "Für Paare, die sich richtig niederlassen wollen, mit Platz, einem Grill und einem Gästezimmer.",
+        "texte": "Für Paare, die sich richtig niederlassen wollen und Platz brauchen.",
         "alt": "Ein zweistöckiges Haus in einer ruhigen Straße, mit Hecke, einem Fahrrad am Zaun und einem Garten"
       },
       {
@@ -33,25 +33,25 @@
       {
         "id": "campagne",
         "titre": "Das Haus auf dem Land",
-        "texte": "Für alle, die von Platz, einem Gemüsegarten und Stille am Abend träumen.",
+        "texte": "Für alle, die von einem Gemüsegarten und von Stille am Abend träumen.",
         "alt": "Ein altes Steinhaus mit blauen Fensterläden, von Rosen bewachsen, vor einem Gemüsegarten"
       },
       {
         "id": "loft",
         "titre": "Das Loft",
-        "texte": "Für Stadtmenschen, die große Räume lieben und oft Gäste haben.",
+        "texte": "Für alle, die die Stadt lieben und oft Gäste haben.",
         "alt": "Ein Loft mit Backsteinwänden, großen Fabrikfenstern, einem Sofa und einer Metalltreppe"
       },
       {
         "id": "architecte",
         "titre": "Das Architektenhaus",
-        "texte": "Für alle mit klarem Geschmack, Budget und null Lust auf Baustelle.",
+        "texte": "Für alle, die einen klaren Geschmack haben und keine Lust auf eine Baustelle.",
         "alt": "Ein modernes Haus aus Beton und Glas an einem Pool, in der Abenddämmerung"
       },
       {
         "id": "tiny",
         "titre": "Das Tiny House",
-        "texte": "Für Paare, die wenig besitzen und in der Natur leben wollen, im Kleinformat.",
+        "texte": "Für Paare, die wenig besitzen und in der Natur leben wollen.",
         "alt": "Ein kleines Holzhaus auf Rädern, von einer Lichterkette beleuchtet, am Waldrand"
       },
       {
@@ -63,59 +63,59 @@
       {
         "id": "van",
         "titre": "Der Campervan",
-        "texte": "Für alle, die nicht stillsitzen können und nur ein Bett und eine Straße brauchen.",
+        "texte": "Für alle, die nicht stillsitzen können und das ganze Jahr reisen wollen.",
         "alt": "Ein Van mit offenen Hecktüren und Blick aufs Bett, bei Sonnenuntergang an einer Klippe geparkt"
       },
       {
         "id": "peniche",
         "titre": "Das Hausboot",
-        "texte": "Für alle, die auf dem Wasser wohnen wollen, an einem Ort, der keinem anderen gleicht.",
+        "texte": "Für alle, die an einem besonderen Ort auf dem Wasser wohnen wollen.",
         "alt": "Ein Hausboot an einem Kanal, das Deck voller Pflanzen, mit Tisch und Fahrrädern"
       },
       {
         "id": "palier",
         "titre": "Zwei Wohnungen Tür an Tür",
-        "texte": "Für Paare, die sich lieben und trotzdem jeder ihr eigenes Zuhause wollen.",
+        "texte": "Für Paare, bei denen jeder sein eigenes Zuhause behalten will.",
         "alt": "Zwei Wohnungstüren nebeneinander in einem Treppenhaus, eine rosa und eine lila, jede mit ihrer Fußmatte"
       }
     ]
   },
   "section3": {
-    "title": "Zu zweit entscheiden, wo man wohnt: die Themen, die auf den Tisch gehören",
-    "intro": "Zu zweit ein Zuhause zu suchen, ist selten nur Geschmackssache. Hinter „mir gefällt dieses Haus“ stecken vier Themen, über die viel seltener geredet wird.",
-    "sub1Title": "Stadt oder Land",
-    "sub1Text": "Das ist die häufigste Uneinigkeit. Der eine ist im Dorf aufgewachsen und erstickt in der Stadt, der andere kann sich nicht vorstellen, zwanzig Autominuten vom nächsten Bäcker entfernt zu wohnen. Erzählt euch, bevor ihr Anzeigen anschaut, einen ganz normalen Tag an dem Ort, den ihr euch vorstellt, vom Aufstehen bis zum Schlafengehen. Man merkt schnell, wo es hakt.",
+    "title": "Wo wollt ihr als Paar wohnen? Die Themen, über die ihr reden solltet",
+    "intro": "Wenn man zu zweit ein Zuhause sucht, geht es nicht nur um Geschmack. Es gibt vier Themen, über die ihr reden solltet, bevor ihr mit den Besichtigungen anfangt.",
+    "sub1Title": "Stadt oder Land?",
+    "sub1Text": "Das ist der häufigste Streitpunkt. Der eine ist zum Beispiel im Dorf aufgewachsen und fühlt sich in der Stadt eingeengt. Der andere kann sich nicht vorstellen, zwanzig Autominuten vom nächsten Bäcker entfernt zu wohnen. Bevor ihr Anzeigen anschaut, erzählt euch einen ganz normalen Tag an dem Ort, den ihr euch vorstellt. Dann merkt ihr schnell, wo es hakt.",
     "sub2Title": "Renovieren",
-    "sub2Text": "Ein Haus, an dem viel zu machen ist, kostet beim Kauf weniger, und viel mehr an Wochenenden. Wenn der eine das liebt und der andere es hasst, wird die Baustelle schnell zum Streitthema. Einigt euch darauf, was ihr selbst könnt, auf das Budget und darauf, wie lange ihr bereit seid, im Staub zu leben.",
+    "sub2Text": "Ein Haus, an dem viel zu machen ist, kostet beim Kauf weniger, aber es kostet viele Wochenenden. Wenn der eine gern heimwerkt und der andere es hasst, wird die Baustelle schnell zum Streitthema. Einigt euch darauf, was ihr selbst machen könnt, und auf das Budget. Fragt euch auch, wie lange ihr im Staub leben wollt.",
     "sub3Title": "Das Geld",
-    "sub3Text": "Kaufen oder mieten, wie viel für Miete oder Kredit draufgehen darf, wer was zahlt, wenn einer mehr verdient: Das sind Fragen, die man besser klärt, bevor man unterschreibt. Paare, die <a href=\"/de/zusammenziehen-test-paare/\">zum ersten Mal zusammenziehen</a>, entdecken sie oft erst unterwegs.",
+    "sub3Text": "Vor der Unterschrift solltet ihr ein paar Fragen klären. Kauft ihr oder mietet ihr? Und wer zahlt was, wenn einer mehr verdient als der andere? Paare, die <a href=\"/de/zusammenziehen-test-paare/\">zum ersten Mal zusammenziehen</a>, stoßen oft erst unterwegs auf diese Fragen.",
     "sub4Title": "Der Platz für jeden",
-    "sub4Text": "Zusammenleben heißt nicht, alles zu teilen. Manche brauchen ein eigenes Zimmer, ein Arbeitszimmer, eine Werkstatt oder einfach eine Sofaecke, in der sie niemand anspricht. Andere Paare entscheiden sich sogar dafür, getrennt zu wohnen, und lieben sich deshalb nicht weniger. Fragt euch, <a href=\"/de/welcher-paartyp-seid-ihr-quiz/\">was für ein Paar ihr seid</a>, eher unzertrennlich oder eher unabhängig: Das richtige Zuhause sieht dann anders aus."
+    "sub4Text": "Zusammenleben heißt nicht, alles zu teilen. Manche Menschen brauchen ein eigenes Zimmer, zum Beispiel ein Arbeitszimmer oder eine Werkstatt. Es gibt sogar Paare, die getrennt wohnen und sich deshalb nicht weniger lieben. Fragt euch, <a href=\"/de/welcher-paartyp-seid-ihr-quiz/\">was für ein Paar ihr seid</a>. Ein unzertrennliches Paar und ein eher unabhängiges Paar suchen nicht dasselbe Zuhause."
   },
   "section4": {
     "title": "Und wenn ihr euch nicht einig seid?",
-    "p1": "Das passiert fast immer, und es ist eher ein gutes Zeichen: Es heißt, dass jeder ehrlich geantwortet hat. Schaut euch die Liste eurer unterschiedlichen Antworten an. Geht es um den Stil oder die Größe, findet ihr ohne große Mühe einen Kompromiss. Geht es um Stadt oder Land, oder darum, ob ihr zusammenwohnt oder nicht, nehmt euch die Zeit, darüber zu reden.",
-    "p2": "Denkt auch an das, was mit dem Haus dazukommt. Ein Garten heißt, ihr könntet <a href=\"/de/welcher-hund-passt-zu-uns-test/\">einen Hund haben</a>, und ein Zimmer mehr ist vielleicht eines Tages ein Kind. Das Zuhause, das ihr wählt, sagt viel über das Leben, das ihr plant."
+    "p1": "Das passiert fast immer und es ist eher ein gutes Zeichen, denn es heißt, dass jeder ehrlich geantwortet hat. Schaut euch die Liste eurer unterschiedlichen Antworten an. Wenn es um den Stil oder die Größe geht, findet ihr leicht einen Kompromiss. Wenn es um Stadt oder Land geht, nehmt euch Zeit für ein Gespräch. Das gilt auch, wenn einer von euch lieber getrennt wohnen möchte.",
+    "p2": "Denkt auch an das, was mit dem Zuhause dazukommt. Mit einem Garten könnt ihr <a href=\"/de/welcher-hund-passt-zu-uns-test/\">einen Hund haben</a>. Mit einem Zimmer mehr habt ihr eines Tages Platz für ein Kind. Euer Zuhause hängt also auch davon ab, welches Leben ihr plant."
   },
   "section5": {
     "title": "Was ihr über diesen Test wissen solltet",
-    "p1": "Dieser Test ist ein Spiel. Er kennt weder euer Budget noch die Immobilienpreise bei euch: Er sagt euch nur, zu was für einem Ort eure Antworten führen. Nehmt ihn als Anlass, ins Gespräch zu kommen, nicht als Rat eines Maklers.",
-    "p2": "Es wird nichts gespeichert: Eure Antworten bleiben auf eurem Handy. Gezählt wird nur das Ergebnis, ohne Vornamen, um zu sehen, welche am häufigsten herauskommen. Die Fotos wurden für diese Seite erstellt."
+    "p1": "Dieser Test ist ein Spiel. Er kennt euer Budget nicht und auch nicht die Immobilienpreise in eurer Gegend. Er sagt euch nur, zu was für einem Ort eure Antworten führen. Er soll vor allem ein Gespräch zwischen euch anstoßen.",
+    "p2": "Eure Antworten werden nicht gespeichert, sie bleiben auf eurem Handy. Wir zählen nur, welches Ergebnis herauskommt, um zu sehen, welche am häufigsten sind. Euer Vorname wird auch nicht gespeichert. Die Fotos wurden für diese Seite erstellt."
   },
   "seo": {
     "faqTitle": "Häufige Fragen",
     "faq1Q": "Welche Häuser können herauskommen?",
-    "faq1A": "Zehn Ergebnisse sind möglich: das Haus mit Garten, die Stadtwohnung, das Haus auf dem Land, das Loft, das Architektenhaus, das Tiny House, das alte Haus zum Renovieren, der Campervan, das Hausboot, und zwei Wohnungen Tür an Tür für Paare, die lieber getrennt wohnen.",
+    "faq1A": "Der Test kann 10 Ergebnisse liefern: das Haus mit Garten, die Stadtwohnung, das Haus auf dem Land, das Loft, das Architektenhaus, das Tiny House, das alte Haus zum Renovieren, den Campervan und das Hausboot. Das letzte Ergebnis heißt „zwei Wohnungen Tür an Tür“. Es ist für Paare gedacht, die lieber getrennt wohnen.",
     "faq2Q": "Wie wird das Ergebnis berechnet?",
-    "faq2A": "Jede Antwort gibt den Wohnformen Punkte, die dazu passen. Zum Beispiel gibt „ein Restaurant oder eine Bar, zehn Minuten zu Fuß“ der Stadtwohnung und dem Loft Punkte, und dem Haus auf dem Land keinen. Zu zweit zählt der Test eure beiden Antwortreihen zusammen, und das Zuhause mit der besten Note wird das Zuhause für euch als Paar.",
+    "faq2A": "Jede Antwort gibt den Häusern Punkte, die dazu passen. Wenn ihr zum Beispiel bei der Frage zum Samstagabend „ein Restaurant oder eine Bar, zehn Minuten zu Fuß“ antwortet, bekommen die Stadtwohnung und das Loft Punkte, das Haus auf dem Land aber nicht. Wenn ihr den Test zu zweit macht, zählt er eure Antworten zusammen und das Zuhause mit den meisten Punkten wird euer Zuhause als Paar.",
     "faq3Q": "Kann man den Test allein machen?",
-    "faq3A": "Ja. Du wählst „Allein, für uns beide“ und antwortest so, wie es zu euch beiden passt. Du bekommst ein Ergebnis, aber nicht den Vergleich eurer Antworten: Dafür muss man zu zweit sein.",
+    "faq3A": "Ja. Wähle einfach „Allein, für uns als Paar“ und antworte so, wie es zu euch als Paar passt. Du bekommst ein Ergebnis, kannst eure Antworten aber nicht vergleichen.",
     "faq4Q": "Haus oder Wohnung: Wie entscheidet man das zu zweit?",
-    "faq4A": "Am einfachsten geht ihr von eurer Woche aus, nicht von der Immobilie. Wenn ihr viel ausgeht und keine Lust habt, einen Garten zu pflegen, passt eine gut gelegene Wohnung besser zu euch. Wenn ihr oft Gäste habt, einen Garten wollt oder an Familienzuwachs denkt, spricht ziemlich schnell alles für ein Haus. Genau diese Fragen stellt der Test, jedem für sich.",
+    "faq4A": "Am einfachsten schaut ihr euch an, wie eure Woche aussieht. Wenn ihr viel ausgeht und keine Lust auf Gartenarbeit habt, passt eine gut gelegene Wohnung besser zu euch. Wenn ihr oft Gäste habt oder an Familienzuwachs denkt, braucht ihr eher ein Haus. Genau solche Fragen stellt der Test jedem von euch.",
     "faq5Q": "Und wenn einer von uns lieber allein wohnt?",
-    "faq5A": "Das muss kein schlechtes Zeichen sein. Manche Paare wohnen aus freien Stücken getrennt, um ihre Gewohnheiten oder ihren Raum zu behalten, und es geht ihnen sehr gut damit. Dafür hat der Test ein Ergebnis: „zwei Wohnungen Tür an Tür“. Wichtig ist, dass ihr es beide wollt.",
+    "faq5A": "Das muss kein schlechtes Zeichen sein. Es gibt Paare, die aus freien Stücken getrennt wohnen, um ihre Gewohnheiten zu behalten, und denen es damit sehr gut geht. Der Test hat dafür übrigens ein Ergebnis: „zwei Wohnungen Tür an Tür“. Wichtig ist nur, dass ihr euch darin einig seid.",
     "faq6Q": "Werden meine Antworten gespeichert?",
-    "faq6A": "Nein. Die Antworten bleiben auf eurem Handy. Gezählt wird nur das Ergebnis, ohne Vornamen, für die Verteilung der Ergebnisse."
+    "faq6A": "Nein. Eure Antworten bleiben auf eurem Handy. Wir zählen nur, welches Ergebnis herauskommt, um zu sehen, welche am häufigsten sind. Euer Vorname wird nicht gespeichert."
   },
   "jsonLd": {
     "about": "zu zweit ein Zuhause aussuchen"
