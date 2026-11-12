@@ -1,12 +1,12 @@
 {
-  "genere_le": "2026-11-11T10:51:53.384Z",
+  "genere_le": "2026-11-12T03:14:22.736Z",
   "langue": "en",
   "compte": {
     "nom": "quiz_couple_official",
     "actif": true
   },
   "fuseau": "Europe/Paris",
-  "aujourdhui": "2026-11-11",
+  "aujourdhui": "2026-11-12",
   "melange": {
     "midi": {
       "1": null,
@@ -28,39 +28,12 @@
     },
     "matin": null
   },
-  "reserve_jours": 141,
+  "reserve_jours": 140,
   "a_remplir": [],
   "a_corriger": [],
   "hors_grille": [],
   "refuses": [],
   "recents_et_prevus": [
-    {
-      "jour": "2026-10-12",
-      "creneau": "matin",
-      "gabarit": "pov",
-      "categorie": "pov",
-      "statut": "publie",
-      "texte": null,
-      "erreur": null
-    },
-    {
-      "jour": "2026-10-12",
-      "creneau": "midi",
-      "gabarit": "connais-tu",
-      "categorie": "connais-tu",
-      "statut": "publie",
-      "texte": "How well do you know your partner?",
-      "erreur": null
-    },
-    {
-      "jour": "2026-10-12",
-      "creneau": "soir",
-      "gabarit": "pov",
-      "categorie": "pov",
-      "statut": "publie",
-      "texte": null,
-      "erreur": null
-    },
     {
       "jour": "2026-10-13",
       "creneau": "matin",
@@ -867,7 +840,7 @@
       "creneau": "soir",
       "gabarit": "tu-preferes",
       "categorie": "tu-preferes",
-      "statut": "rendu",
+      "statut": "publie",
       "texte": "Would you rather: couple edition",
       "erreur": null
     },
@@ -921,7 +894,7 @@
       "creneau": "soir",
       "gabarit": "connais-tu",
       "categorie": "connais-tu",
-      "statut": "a_rendre",
+      "statut": "rendu",
       "texte": "How well do you know your partner?",
       "erreur": null
     },
@@ -3498,7 +3471,7 @@
       "creneau": "soir"
     },
     "tu-preferes": {
-      "jour": "2026-11-11",
+      "jour": "2026-11-12",
       "creneau": "soir"
     },
     "phrase": null,
@@ -4716,19 +4689,37 @@
       "jour": "2026-11-03",
       "creneau": "soir",
       "theme": null
+    },
+    {
+      "variante_id": "ba96045a-808d-47a7-9020-8e332ea93a60",
+      "releve": "j7",
+      "vues": 107713,
+      "portee": 87121,
+      "likes": 1347,
+      "commentaires": 2,
+      "partages": 4142,
+      "enregistrements": 1479,
+      "releve_le": "2026-11-12T03:14:20.384031+00:00",
+      "publie_le": "2026-11-04T15:30:11.116+00:00",
+      "categorie": "tu-preferes",
+      "format": "reel",
+      "gabarit": "tu-preferes",
+      "jour": "2026-11-04",
+      "creneau": "soir",
+      "theme": null
     }
   ],
   "statistiques_par_categorie": [
     {
       "categorie": "tu-preferes",
-      "posts": 17,
-      "vues_mediane": 2502,
-      "vues_moyenne": 10126,
-      "vues_max": 74587,
-      "partages": 5771,
-      "enregistrements": 2223,
-      "likes": 2378,
-      "commentaires": 5
+      "posts": 18,
+      "vues_mediane": 2557,
+      "vues_moyenne": 15548,
+      "vues_max": 107713,
+      "partages": 9913,
+      "enregistrements": 3702,
+      "likes": 3725,
+      "commentaires": 7
     },
     {
       "categorie": "connais-tu",
