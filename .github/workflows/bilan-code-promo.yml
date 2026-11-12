@@ -1,0 +1,58 @@
+name: Évaluation de couple · code de promotion
+
+# Lire, arrêter ou rouvrir un code de promotion de Stripe sans ouvrir son
+# tableau de bord (bilan/code-promo.mjs, qui appelle l'action interne
+# `code_promo` de la fonction bilan ; docs/bilan/STRIPE.md). La clé Stripe ne
+# vit que dans la fonction : c'est elle qui parle à Stripe.
+#
+# À lancer à la main (« Run workflow »), jamais programmé. « lire » ne change
+# rien. La fonction refuse d'arrêter le code qu'une réduction en cours
+# applique à la page de paiement : on arrête d'abord la réduction (coeur.mjs,
+# PROMO_POURCENT). Le journal est public : il dit le nom du code, s'il est
+# actif, sa date de fin et son coupon, jamais le nombre d'utilisations.
+
+on:
+  workflow_dispatch:
+    inputs:
+      action:
+        description: 'lire (ne change rien), desactiver ou reactiver'
+        type: choice
+        options:
+          - lire
+          - desactiver
+          - reactiver
+        default: lire
+      code:
+        description: 'Identifiant du code de promotion chez Stripe (promo_...), pas celui du coupon'
+        required: true
+        type: string
+
+concurrency:
+  group: bilan-code-promo
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  code:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    env:
+      SUPABASE_ACCESS_TOKEN: ${{ secrets.SUPABASE_ACCESS_TOKEN }}
+      SUPABASE_PROJECT_REF: ${{ secrets.SUPABASE_PROJECT_REF }}
+      # Les saisies passent par l'environnement, jamais dans la ligne de
+      # commande : le script les contrôle avant tout appel.
+      CODE_ACTION: ${{ inputs.action }}
+      CODE_ID: ${{ inputs.code }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            bilan/code-promo.mjs
+          sparse-checkout-cone-mode: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Code de promotion
+        run: node bilan/code-promo.mjs "$CODE_ACTION" "$CODE_ID"

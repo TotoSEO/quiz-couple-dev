@@ -10,7 +10,7 @@ import { fileURLToPath } from 'node:url';
 import * as C from '../coeur.mjs';
 import { creerServeur, traiterWebhook, CHEMINS, CREATIONS_PAR_HEURE, CELIB_PAR_HEURE, CELIB_PAR_JOUR, REPRISES_PAR_JOUR, ENVOIS_AVANT_RESERVE, RAPPELS_PAR_JOUR, empreinte } from '../serveur.mjs';
 import { creerStockageMemoire } from '../stockage-rest.mjs';
-import { verifierSignature, signer, encoderFormulaire } from '../stripe.mjs';
+import { verifierSignature, signer, encoderFormulaire, creerStripe } from '../stripe.mjs';
 
 const ici = path.dirname(fileURLToPath(import.meta.url));
 const RACINE = path.resolve(ici, '../../../../..');
@@ -21,11 +21,27 @@ const SIT = { ensemble: 'oui', engagement: 'pacses', enfants: 'non', enfantsAvan
 // sur le prix plein quand Stripe refuse le code).
 const PROMO_ESSAI = { code: 'ESSAI15', stripe: 'promo_essai15', pourcent: 15, fin: '' };
 
-function fauxStripe({ refuseCode = false, promo = null } = {}) {
+function fauxStripe({ refuseCode = false, promo = null, codes = [], cleRestreinte = false } = {}) {
   const sessions = new Map();
+  // Les codes de promotion du compte, comme Stripe les rend (le coupon dans
+  // `coupon`, ou dans `promotion.coupon` avec les versions récentes de l'API).
+  const codesPromo = new Map(codes.map((c) => [c.id, { object: 'promotion_code', times_redeemed: 37, ...c }]));
   let n = 0;
   return {
     sessions,
+    codesPromo,
+    async lireCodePromo(id) {
+      const c = codesPromo.get(id);
+      if (!c) { const e = new Error('stripe: No such promotion code: \'' + id + '\''); e.statut = 404; throw e; }
+      return { ...c };
+    },
+    async majCodePromo(id, params) {
+      if (cleRestreinte) { const e = new Error('stripe: The provided key \'rk_live_********************abcd\' does not have the required permissions for this endpoint on account \'acct_1AbCdEfGh\'.'); e.statut = 403; throw e; }
+      const c = codesPromo.get(id);
+      if (!c) { const e = new Error('stripe: No such promotion code: \'' + id + '\''); e.statut = 404; throw e; }
+      if (typeof params.active === 'boolean') c.active = params.active;
+      return { ...c };
+    },
     async creerSession(p) {
       // Comme Stripe : les deux ensemble sont refusés, et un code périmé aussi.
       if (p.discounts && p.allow_promotion_codes) { const e = new Error('stripe: You may only specify one of these parameters: allow_promotion_codes, discounts.'); e.statut = 400; throw e; }
@@ -624,6 +640,7 @@ test('le webhook signé débloque le bilan, une fausse signature est refusée', 
 
 test('encoderFormulaire suit le format de Stripe', () => {
   assert.equal(encoderFormulaire({ a: 1, b: { c: 'x y' }, d: [{ e: 2 }], f: undefined }), 'a=1&b%5Bc%5D=x%20y&d%5B0%5D%5Be%5D=2');
+  assert.equal(encoderFormulaire({ active: false }), 'active=false');
 });
 
 test('le parcours seul(e) : ma réponse et ce que l\'autre répondrait, pas d\'invitation, figé dès ma fin', async () => {
@@ -1364,4 +1381,115 @@ test('l\'aperçu de l\'admin au prix de l\'Amérique latine', async () => {
   assert.deepEqual(s.params.metadata, { apercu: 'admin', mode: 'duo', zone: 'latam' });
   assert.equal(s.params.discounts, undefined);
   assert.equal(s.params.allow_promotion_codes, undefined);
+});
+
+// 12 novembre 2026, Thomas : « oui désactive love 20 ». La clé Stripe ne vit
+// que dans la fonction : une action interne lit un code de promotion, l'arrête
+// ou le rouvre (bilan/code-promo.mjs, workflow bilan-code-promo.yml).
+const CODE_ANCIEN = { id: 'promo_1AncienCodeDeLOffre', code: 'ANCIEN20', active: true, expires_at: null, coupon: { id: 'co_ancien', percent_off: 20, valid: true, times_redeemed: 37 } };
+
+test('code_promo : réservé à la clé de service, un identifiant de code et rien d\'autre', async () => {
+  const m = monter({ stripe: { codes: [CODE_ANCIEN] } });
+  assert.equal((await m.appel({ action: 'code_promo', id: CODE_ANCIEN.id })).statut, 403);
+  assert.equal((await m.appel({ action: 'code_promo', id: CODE_ANCIEN.id, actif: false })).statut, 403);
+  assert.equal(m.stripe.codesPromo.get(CODE_ANCIEN.id).active, true, 'rien ne change sans la clé de service');
+  for (const id of [undefined, '', 'LOVE20', 'promo_', 'promo_abc', 'co_ancien', 'promo_1Ancien/../x', 'promo_1Ancien CodeDeLOffre', 42]) {
+    const r = await m.appel({ action: 'code_promo', id }, '1.2.3.4', true);
+    assert.equal(r.statut, 400, String(id));
+    assert.equal(r.json.erreur, 'id');
+  }
+  const inconnu = await m.appel({ action: 'code_promo', id: 'promo_1CodeQuiNExistePas' }, '1.2.3.4', true);
+  assert.equal(inconnu.statut, 404);
+  assert.equal(inconnu.json.erreur, 'introuvable');
+  const sans = creerServeur({ stockage: creerStockageMemoire(), stripe: null, courriel: null, sel: 'sel' });
+  assert.equal((await sans.traiter({ action: 'code_promo', id: CODE_ANCIEN.id }, { ip: '1.2.3.4', interne: true })).statut, 503);
+});
+
+test('code_promo : lit l\'état, arrête le code, puis le rouvre', async () => {
+  const m = monter({ stripe: { codes: [CODE_ANCIEN] } });
+  const interne = (corps) => m.appel({ action: 'code_promo', id: CODE_ANCIEN.id, ...corps }, '1.2.3.4', true);
+  const lu = await interne({});
+  assert.equal(lu.statut, 200);
+  assert.deepEqual(lu.json, {
+    id: CODE_ANCIEN.id, code: 'ANCIEN20', actif: true, expire: null,
+    coupon: { id: 'co_ancien', pourcent: 20, valide: true }, avant: true, change: false,
+  });
+  // Le nombre d'utilisations ne sort jamais : le journal du workflow est public.
+  assert.ok(!JSON.stringify(lu.json).includes('37'));
+  assert.equal(m.stripe.codesPromo.get(CODE_ANCIEN.id).active, true, 'lire ne change rien');
+  // Une valeur qui n'est pas un booléen ne change rien non plus.
+  for (const actif of ['false', 0, null, 'non']) assert.equal((await interne({ actif })).json.change, false, String(actif));
+  assert.equal(m.stripe.codesPromo.get(CODE_ANCIEN.id).active, true);
+
+  const arrete = await interne({ actif: false });
+  assert.equal(arrete.statut, 200);
+  assert.equal(arrete.json.avant, true);
+  assert.equal(arrete.json.actif, false);
+  assert.equal(arrete.json.change, true);
+  assert.equal(m.stripe.codesPromo.get(CODE_ANCIEN.id).active, false);
+  const encore = await interne({ actif: false });
+  assert.equal(encore.json.actif, false);
+  assert.equal(encore.json.change, false, 'déjà arrêté : rien à changer');
+
+  const rouvert = await interne({ actif: true });
+  assert.equal(rouvert.json.avant, false);
+  assert.equal(rouvert.json.actif, true);
+  assert.equal(rouvert.json.change, true);
+});
+
+test('code_promo : le coupon des versions récentes de l\'API, et une date de fin', async () => {
+  const recent = { id: 'promo_1CodeDeLaNouvelleApi', code: 'NOEL10', active: false, expires_at: 1798761600, promotion: { type: 'coupon', coupon: 'co_noel' } };
+  const m = monter({ stripe: { codes: [recent] } });
+  const r = await m.appel({ action: 'code_promo', id: recent.id }, '1.2.3.4', true);
+  assert.deepEqual(r.json, {
+    id: recent.id, code: 'NOEL10', actif: false, expire: '2027-01-01T00:00:00.000Z',
+    coupon: { id: 'co_noel', pourcent: null, valide: null }, avant: false, change: false,
+  });
+});
+
+test('code_promo : le code d\'une réduction en cours ne s\'arrête pas, et une clé refusée ne dit rien d\'elle', async () => {
+  const enCours = { id: PROMO_ESSAI.stripe, code: PROMO_ESSAI.code, active: true, coupon: { id: 'co_essai', percent_off: 15, valid: true } };
+  let m = monter({ promo: PROMO_ESSAI, stripe: { codes: [enCours] } });
+  const refus = await m.appel({ action: 'code_promo', id: enCours.id, actif: false }, '1.2.3.4', true);
+  assert.equal(refus.statut, 409);
+  assert.equal(refus.json.erreur, 'reduction_en_cours');
+  assert.equal(m.stripe.codesPromo.get(enCours.id).active, true);
+  // Le lire reste possible, et un autre code s'arrête pendant la réduction.
+  assert.equal((await m.appel({ action: 'code_promo', id: enCours.id }, '1.2.3.4', true)).json.actif, true);
+  m = monter({ promo: PROMO_ESSAI, stripe: { codes: [enCours, CODE_ANCIEN] } });
+  assert.equal((await m.appel({ action: 'code_promo', id: CODE_ANCIEN.id, actif: false }, '1.2.3.4', true)).json.actif, false);
+  // La réduction finie (douze heures de grâce passées), son code s'arrête.
+  const fini = { ...PROMO_ESSAI, fin: '2026-11-01' };
+  m = monter({ promo: fini, stripe: { codes: [enCours] }, maintenant: () => new Date('2026-11-03T10:00:00Z') });
+  assert.equal((await m.appel({ action: 'code_promo', id: enCours.id, actif: false }, '1.2.3.4', true)).json.actif, false);
+
+  // Une clé restreinte sans le droit d'écrire les codes : 502, sans la clé ni le compte.
+  m = monter({ stripe: { codes: [CODE_ANCIEN], cleRestreinte: true } });
+  const r = await m.appel({ action: 'code_promo', id: CODE_ANCIEN.id, actif: false }, '1.2.3.4', true);
+  assert.equal(r.statut, 502);
+  assert.equal(r.json.erreur, 'stripe');
+  assert.ok(r.json.detail.includes('required permissions'), r.json.detail);
+  assert.ok(!/rk_live|acct_1/.test(r.json.detail), r.json.detail);
+  assert.equal(m.stripe.codesPromo.get(CODE_ANCIEN.id).active, true);
+});
+
+test('creerStripe : lire un code de promotion, puis l\'arrêter', async () => {
+  const appels = [];
+  const stripe = creerStripe({
+    cle: 'sk_test_essai',
+    fetch: async (url, options) => {
+      appels.push({ url, ...options });
+      return { ok: true, status: 200, json: async () => ({ id: 'promo_1AncienCodeDeLOffre', active: options.method === 'GET' }) };
+    },
+  });
+  assert.equal((await stripe.lireCodePromo('promo_1AncienCodeDeLOffre')).active, true);
+  assert.equal((await stripe.majCodePromo('promo_1AncienCodeDeLOffre', { active: false })).active, false);
+  assert.equal(appels[0].url, 'https://api.stripe.com/v1/promotion_codes/promo_1AncienCodeDeLOffre');
+  assert.equal(appels[0].method, 'GET');
+  assert.equal(appels[0].body, undefined);
+  assert.equal(appels[1].url, 'https://api.stripe.com/v1/promotion_codes/promo_1AncienCodeDeLOffre');
+  assert.equal(appels[1].method, 'POST');
+  assert.equal(appels[1].body, 'active=false');
+  assert.equal(appels[1].headers['Content-Type'], 'application/x-www-form-urlencoded');
+  assert.equal(appels[1].headers.Authorization, 'Bearer sk_test_essai');
 });

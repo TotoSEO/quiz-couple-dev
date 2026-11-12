@@ -323,6 +323,30 @@ const EXTRAIT_DOMAINES = new Set(['temps', 'quotidien', 'entourage', 'travail', 
 
 // `promo` : la réduction de coeur.mjs (PROMO_*), ou celle qu'un essai donne
 // pour vérifier la page de paiement avec une réduction quand il n'y en a pas.
+// L'identifiant d'un code de promotion chez Stripe (action `code_promo`).
+const CODE_PROMO = /^promo_[A-Za-z0-9]{6,64}$/;
+// Ce qu'on dit d'un code de promotion : son nom, s'il est actif, sa date de
+// fin et son coupon. Selon la version de l'API du compte, le coupon est dans
+// `coupon` (un objet) ou dans `promotion.coupon` (un objet ou son identifiant).
+// Jamais le nombre d'utilisations : le dépôt est public, et le journal du
+// workflow qui appelle cette action aussi.
+function etatCodePromo(c) {
+  const coupon = (c && (c.coupon || (c.promotion && c.promotion.coupon))) || null;
+  const o = coupon && typeof coupon === 'object' ? coupon : null;
+  return {
+    id: c && typeof c.id === 'string' ? c.id : null,
+    code: c && typeof c.code === 'string' ? c.code : null,
+    actif: !!c && c.active === true,
+    expire: c && Number.isInteger(c.expires_at) ? new Date(c.expires_at * 1000).toISOString() : null,
+    coupon: o ? { id: typeof o.id === 'string' ? o.id : null, pourcent: typeof o.percent_off === 'number' ? o.percent_off : null, valide: o.valid === true }
+      : (typeof coupon === 'string' ? { id: coupon, pourcent: null, valide: null } : null),
+  };
+}
+// Un message d'erreur de Stripe peut citer la clé (masquée, avec ses derniers
+// signes) et le compte : on ne les recopie pas dans une réponse.
+function sansCle(message) {
+  return String(message).replace(/\b(?:sk|rk|pk)_(?:live|test)_[A-Za-z0-9*]+/g, '(clé)').replace(/\bacct_[A-Za-z0-9]+/g, '(compte)').slice(0, 200);
+}
 const PROMO_COEUR = { code: C.PROMO_CODE, stripe: C.PROMO_STRIPE, pourcent: C.PROMO_POURCENT, fin: C.PROMO_FIN };
 
 export function creerServeur({ stockage, stripe = null, stripeTest = false, courriel = null, sel = '', maintenant = () => new Date(), promo: P = PROMO_COEUR }) {
@@ -883,6 +907,32 @@ export function creerServeur({ stockage, stripe = null, stripeTest = false, cour
       return ok({ url: session.url, promo, region: zone || null, code: promo ? P.code : null, total: totalSession(session), prixBase: point ? C.PRIX_POINT_CENTIMES : C.PRIX_CENTIMES });
     } catch (e) {
       return non(502, 'stripe', { detail: String(e.message || e).slice(0, 200) });
+    }
+  }
+
+  // Réservé à bilan/code-promo.mjs (clé de service, vérifiée par index.ts ;
+  // workflow bilan-code-promo.yml) : l'état d'un code de promotion chez
+  // Stripe et, sur demande, son arrêt ou sa réouverture (12 novembre 2026,
+  // Thomas : « oui désactive love 20 » ; la clé Stripe ne vit que dans cette
+  // fonction, et le tableau de bord de Stripe n'est pas joignable depuis une
+  // session de travail). Le code qu'une réduction en cours applique à la page
+  // de paiement ne s'arrête pas ici : la page afficherait une réduction que
+  // Stripe refuse. On arrête d'abord la réduction (coeur.mjs, PROMO_POURCENT).
+  async function codePromo(corps, ctx) {
+    if (!ctx?.interne) return non(403, 'interne');
+    if (!stripe || !stripe.lireCodePromo || !stripe.majCodePromo) return non(503, 'paiement_ferme');
+    const id = typeof corps.id === 'string' && CODE_PROMO.test(corps.id) ? corps.id : '';
+    if (!id) return non(400, 'id');
+    const voulu = typeof corps.actif === 'boolean' ? corps.actif : null;
+    if (voulu === false && id === P.stripe && promoActive()) return non(409, 'reduction_en_cours');
+    try {
+      let code = await stripe.lireCodePromo(id);
+      const avant = code?.active === true;
+      const change = voulu !== null && voulu !== avant;
+      if (change) code = await stripe.majCodePromo(id, { active: voulu });
+      return ok({ ...etatCodePromo(code), avant, change });
+    } catch (e) {
+      return non(e && e.statut === 404 ? 404 : 502, e && e.statut === 404 ? 'introuvable' : 'stripe', { detail: sansCle(e && e.message || e) });
     }
   }
 
@@ -1464,7 +1514,7 @@ export function creerServeur({ stockage, stripe = null, stripeTest = false, cour
   const ACTIONS = {
     vue, creer, etat, consentir, situation, repondre, resultat, payer, verifier,
     email, pdf, supprimer, lien, retrouver, rappels, envoyer_rapport: envoyerRapport, relancer, inviter,
-    apercu_paiement: apercuPaiement, celib,
+    apercu_paiement: apercuPaiement, celib, code_promo: codePromo,
   };
 
   async function traiter(corps, ctx) {

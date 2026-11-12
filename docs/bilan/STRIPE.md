@@ -198,11 +198,28 @@ l'admin.
 - **Le prix depuis le 10 novembre 2026** : 7,90 € pour les deux
   (`PRIX_CENTIMES = 790`), sans réduction (`PROMO_POURCENT = 0`). LOVE20
   s'appliquait d'office à tout le monde depuis le 20 octobre et sans date de
-  fin : 9,90 € n'avait été payé par personne. Le code LOVE20 est encore actif
-  dans Stripe ; le site ne l'applique plus et la page de paiement n'a plus de
-  champ des codes, donc personne ne peut le taper. Thomas peut le désactiver
-  dans Stripe (Produits > Coupons > LOVE20) pour que rien ne reste ouvert ; ça
-  ne change rien au site.
+  fin : 9,90 € n'avait été payé par personne. La page de paiement n'a plus de
+  champ des codes, donc personne ne peut en taper un. Depuis le 12 novembre
+  2026 (Thomas : « oui désactive love 20 »), le site ne déclare plus LOVE20
+  (`PROMO_CODE` et `PROMO_STRIPE` vides) : sans identifiant de code, aucune
+  réduction ne s'affiche ni ne s'applique, quel que soit `PROMO_POURCENT`.
+- **Arrêter ou rouvrir un code chez Stripe, sans ouvrir Stripe** : le workflow
+  « Évaluation de couple · code de promotion » (`bilan-code-promo.yml`, à
+  lancer à la main dans GitHub Actions) prend une action (`lire`, qui ne
+  change rien, `desactiver` ou `reactiver`) et l'identifiant `promo_...` du
+  code de promotion, pas celui du coupon (LOVE20 :
+  `promo_1UShjWCqyRKQqXWFyb4ADMbH`). Il appelle l'action interne `code_promo`
+  de la fonction `bilan`, la seule à tenir la clé Stripe
+  (`bilan/code-promo.mjs`, clé de service). Le journal dit le nom du code,
+  s'il est actif, sa date de fin et son coupon, jamais le nombre
+  d'utilisations (le dépôt et ses journaux sont publics). La fonction refuse
+  d'arrêter le code de la réduction en cours (409) : on arrête d'abord la
+  réduction, sinon le site afficherait un prix que Stripe refuse. Un code
+  arrêté ne supprime pas son coupon, et Stripe ne rouvre un code que si son
+  coupon est encore valide. Si la clé Stripe de la fonction est une clé
+  restreinte sans le droit d'écrire les codes de promotion, le workflow
+  échoue avec le refus de Stripe, et le code s'arrête alors à la main dans
+  Stripe (Produits > Coupons).
 - **Une réduction** (LOVE20, -20 %, du 20 octobre au 10 novembre 2026) : créer le
   code dans Stripe (Produits > Coupons, un coupon en pourcentage, puis un
   code de promotion), puis écrire ses quatre valeurs dans `coeur.mjs` :
@@ -227,7 +244,9 @@ l'admin.
   le montant calculé par Stripe n'est pas le prix réduit. Pour arrêter : `PROMO_POURCENT = 0` ou une date dans
   `PROMO_FIN` (la reconstruction programmée de 2 h UTC retire l'affichage
   dans la nuit qui suit ; le serveur garde la réduction douze heures de
-  plus). Garder la
+  plus) ; une fois la réduction arrêtée, vider `PROMO_CODE` et
+  `PROMO_STRIPE`, et arrêter le code chez Stripe par le workflow ci-dessus.
+  Garder la
   date d'expiration du code dans Stripe au moins un jour après `PROMO_FIN`.
   Le prix barré doit être un prix vraiment pratiqué : le plus bas des
   trente jours qui précèdent la réduction (article L112-1-1 du Code de la

@@ -1,6 +1,7 @@
-// Stripe sans bibliothèque : deux appels HTTP (créer une session de paiement,
-// la relire) et la vérification de la signature des webhooks. JavaScript pur,
-// pour tourner dans les fonctions Supabase (Deno) comme dans les tests (Node).
+// Stripe sans bibliothèque : quatre appels HTTP (créer une session de paiement,
+// la relire, lire un code de promotion, l'arrêter ou le rouvrir) et la
+// vérification de la signature des webhooks. JavaScript pur, pour tourner dans
+// les fonctions Supabase (Deno) comme dans les tests (Node).
 
 const API = 'https://api.stripe.com/v1';
 
@@ -45,6 +46,11 @@ export function creerStripe({ cle, fetch: f = fetch }) {
   return {
     creerSession: (params) => appel('POST', '/checkout/sessions', params),
     lireSession: (id) => appel('GET', '/checkout/sessions/' + encodeURIComponent(id)),
+    // Un code de promotion (promo_...) : son état, puis `{ active: false }`
+    // pour l'arrêter ou `{ active: true }` pour le rouvrir (Stripe ne rouvre
+    // un code que si son coupon est encore valide).
+    lireCodePromo: (id) => appel('GET', '/promotion_codes/' + encodeURIComponent(id)),
+    majCodePromo: (id, params) => appel('POST', '/promotion_codes/' + encodeURIComponent(id), params),
   };
 }
 
