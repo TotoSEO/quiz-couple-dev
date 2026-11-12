@@ -417,11 +417,13 @@
     "quizMaisonNous": "Welches Haus passt zu uns?",
     "quizOuVivre": "Wo sollen wir in 10 Jahren leben?",
     "quizMariageNous": "Welche Hochzeit passt zu uns?",
+    "quizEnfantsNous": "Wie viele Kinder werden wir haben?",
     "quizListeNoel": "Artig oder unartig?",
     "quizDuoNoel": "Welcher Weihnachtstyp seid ihr?",
     "quizPorteCulotte": "Wer hat die Hosen an?",
     "quizAnimauxNous": "Welches Tierpaar sind wir?",
-    "quizPartenairesNous": "Was für Partner sind wir?"
+    "quizPartenairesNous": "Was für Partner sind wir?",
+    "quizCoupleLegende": "Welches legendäre Paar sind wir?"
   },
   "truefalse": {
     "ready": "Bereit für Richtig oder Falsch?",
