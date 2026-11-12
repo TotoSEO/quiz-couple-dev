@@ -203,6 +203,11 @@ l'admin.
   2026 (Thomas : « oui désactive love 20 »), le site ne déclare plus LOVE20
   (`PROMO_CODE` et `PROMO_STRIPE` vides) : sans identifiant de code, aucune
   réduction ne s'affiche ni ne s'applique, quel que soit `PROMO_POURCENT`.
+  Le code est arrêté chez Stripe depuis ce jour-là, 16 h 03 à Paris, par le
+  workflow ci-dessous (« actif avant, arrêté maintenant », puis relu
+  « arrêté ») ; il n'avait pas de date de fin. Son coupon (`love20`) reste
+  dans Stripe, sans code qui s'en serve. Une prochaine réduction prend un
+  nouveau code.
 - **Arrêter ou rouvrir un code chez Stripe, sans ouvrir Stripe** : le workflow
   « Évaluation de couple · code de promotion » (`bilan-code-promo.yml`, à
   lancer à la main dans GitHub Actions) prend une action (`lire`, qui ne

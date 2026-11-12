@@ -2452,3 +2452,45 @@ d'après la dernière réponse enregistrée.
 
 À regarder : `un_telephone` et `invitation_vue:tel` jour par jour, puis la part
 des évaluations à deux qui vont au bout.
+
+## 12 novembre 2026 : LOVE20 arrêté chez Stripe
+
+Thomas : « oui désactive love 20 ». Depuis le 10 novembre, le site
+n'appliquait plus le code et la page de paiement n'avait plus de champ des
+codes : personne ne pouvait s'en servir. Il restait pourtant actif chez Stripe,
+sans date de fin, et le fichier du prix le déclarait encore.
+
+- **Le site ne le déclare plus.** `PROMO_CODE` et `PROMO_STRIPE` sont vides
+  dans `coeur.mjs`. Sans identifiant de code, il n'y a de réduction ni sur le
+  site ni sur la page de paiement, quel que soit `PROMO_POURCENT` : un
+  pourcentage remis par erreur ne peut plus afficher un prix que Stripe
+  refuserait. Rien ne change à l'écran, la réduction étant arrêtée depuis le
+  10 novembre.
+- **Le code est arrêté chez Stripe**, sans passer par son tableau de bord,
+  injoignable depuis une session de travail. La clé Stripe ne vit que dans la
+  fonction `bilan` : une action interne `code_promo` (clé de service, comme
+  `relancer`) lit un code de promotion, l'arrête ou le rouvre, et le workflow
+  « Évaluation de couple · code de promotion » (`bilan-code-promo.yml`,
+  `bilan/code-promo.mjs`, à la main) l'appelle. L'action n'accepte qu'un
+  identifiant `promo_...` et un booléen, refuse d'arrêter le code d'une
+  réduction en cours (le site afficherait un prix que Stripe refuse), ne rend
+  jamais le nombre d'utilisations et retire la clé et le compte d'un message
+  d'erreur de Stripe : le dépôt est public, les journaux de ses workflows
+  aussi.
+- **Ce qui a été lancé**, sur `promo_1UShjWCqyRKQqXWFyb4ADMbH` : `lire`
+  (« LOVE20 : actif », sans date de fin), `desactiver` (« actif avant, arrêté
+  maintenant », 15 h 03 UTC), `lire` de nouveau (« arrêté »), puis
+  « Évaluation de couple · santé » : la page de paiement demande 7,90 € à
+  deux et 4,90 € pour le point, le webhook refuse un événement non signé. Le
+  coupon (`love20`) reste dans Stripe, sans code qui s'en serve, et le code
+  peut être rouvert par `reactiver` tant que le coupon est valide.
+- **La sonde n'écrit plus l'adresse de la page de paiement** dans le journal
+  du contrôle de santé, seulement son hôte. Elle ne coupait que la forme
+  `/c/pay/`, et Stripe écrit aussi `/g/pay/` : l'adresse entière de la page
+  de la sonde sortait dans un journal public. Rien d'exploitable (l'évaluation
+  de la sonde est supprimée dans la seconde, un paiement fait là ne
+  débloquerait rien), mais ce n'était pas voulu.
+
+Une prochaine réduction prend un nouveau code, créé dans Stripe, avec une date
+de fin, et se calcule depuis 7,90 € (section du 10 novembre). Le Black Friday
+attend toujours la réponse de Thomas.
