@@ -1,0 +1,117 @@
+{
+  "hero": {
+    "badge": "Themaquiz • Met z'n tweeën of alleen voor jullie als koppel",
+    "title": "Wat voor partners zijn wij? De test in 12 vragen",
+    "titleHighlight": "Wat voor partners zijn wij?",
+    "description": "Zorgzaam, hopeloos romantisch of heel onafhankelijk? Ieder beantwoordt 12 vragen over wat hij of zij in het dagelijks leven doet. Daarna laat de test met een foto zien wat voor partners jullie zijn.",
+    "subtitle": "12 vragen • 3 minuten per persoon • op één telefoon",
+    "jumpBtn": "Doe de test"
+  },
+  "section1": {
+    "title": "Zo werkt de test",
+    "p1": "Deze test is een <strong>spel om samen te doen</strong>. Hij zoekt uit wat voor partners jullie zijn, bijvoorbeeld partners die graag knuffelen of partners die van avontuur houden. Hij stelt 12 vragen over het dagelijks leven. Hij vraagt bijvoorbeeld wat jullie doen als de ander ziek is en hoe jullie zijn of haar verjaardag vieren.",
+    "p2": "Neem de vraag over de slechte dag van de ander. Antwoord je ‘een lange knuffel zonder woorden’, dan krijgt de uitslag ‘eerst knuffelen’ punten. Antwoordt je partner ‘samen een frisse neus halen’, dan krijgt ‘avontuur voorop’ punten. Aan het eind <strong>telt de test jullie antwoorden bij elkaar op</strong> en houdt hij het soort met de meeste punten over.",
+    "p3": "De eerste beantwoordt de 12 vragen en geeft dan de telefoon door. Ieder antwoordt voor zichzelf, <strong>zonder te zien wat de ander heeft gekozen</strong>. Daarna laat de test met een foto zien wat voor partners jullie zijn. Hij laat ook zien wat ieder voor zich had gekregen en de vragen waarop jullie verschillend hebben geantwoord.",
+    "p4": "Je kunt de test ook alleen doen. Antwoord dan zoals het bij jullie meestal gaat."
+  },
+  "section2": {
+    "title": "De 9 soorten partners van de test",
+    "intro": "De test heeft 9 mogelijke uitslagen. Geen enkele is beter dan een andere. Elke uitslag heeft zijn goede kanten en zijn kleine minpuntje!",
+    "galerie": [
+      {
+        "id": "soins",
+        "titre": "In de watten leggen",
+        "texte": "Partners die eerst aan de ander denken.",
+        "alt": "Een houten dienblad op een bank met een dampende kom soep, een lepel en een kruik in een gebreide hoes, naast een dekentje"
+      },
+      {
+        "id": "clown",
+        "titre": "Altijd in voor een grapje",
+        "texte": "Partners die elkaar ook op slechte dagen aan het lachen maken.",
+        "alt": "Twee fopbrillen met een nepneus en een snor, tussen confetti en serpentines"
+      },
+      {
+        "id": "romantique",
+        "titre": "Hopeloos romantisch",
+        "texte": "Partners die van lieve briefjes en verrassingen houden.",
+        "alt": "Een gedekte tafel voor twee op een balkon in de avond, met kaarsen en een rode roos, met de lichtjes van de stad erachter"
+      },
+      {
+        "id": "aventure",
+        "titre": "Avontuur voorop",
+        "texte": "Partners die een weekend weggaan zonder iets te boeken.",
+        "alt": "Twee rugzakken en twee paar wandelschoenen voor een open deur met uitzicht op een bergpad, met een kaart op de grond"
+      },
+      {
+        "id": "organise",
+        "titre": "Alles geregeld",
+        "texte": "Partners die altijd een plan hebben en niets vergeten.",
+        "alt": "Een prikbord van kurk vol netjes opgeplakte roze, gele en blauwe memoblaadjes, met daaronder twee sleutelbossen aan haakjes"
+      },
+      {
+        "id": "calin",
+        "titre": "Eerst knuffelen",
+        "texte": "Partners die graag dicht bij elkaar zijn.",
+        "alt": "Twee teddyberen die elkaar omhelzen onder een wollen dekentje op een bank"
+      },
+      {
+        "id": "zen",
+        "titre": "De rust zelve",
+        "texte": "Rustige partners die goed kunnen luisteren.",
+        "alt": "Twee houten ligstoelen naast elkaar aan de oever van een heel rustig bergmeer bij zonsondergang"
+      },
+      {
+        "id": "coach",
+        "titre": "Altijd aanmoedigen",
+        "texte": "Partners die in elkaar geloven en dat ook zeggen.",
+        "alt": "Een gouden beker tussen twee blauw-wit-rode pompons op een houten tribune vol confetti"
+      },
+      {
+        "id": "independant",
+        "titre": "Ieder zijn eigen ruimte",
+        "texte": "Partners die hun eigen hobby's houden en elkaar vertrouwen.",
+        "alt": "Twee fauteuils naast elkaar in een woonkamer, een blauwe en een beige, elk met een eigen lamp en een eigen boek"
+      }
+    ]
+  },
+  "section3": {
+    "title": "Hoe ben je elke dag een goede partner?",
+    "intro": "Er bestaat niet één goed soort partner. Er zijn wel 4 gewoontes die bijna elk koppel goeddoen.",
+    "sub1Title": "Ingaan op de kleine vragen van de ander",
+    "sub1Text": "De Amerikaanse psycholoog John Gottman observeerde pasgetrouwde stellen en zag ze 6 jaar later terug. De stellen die nog samen waren, waren <strong>86% van de keren</strong> ingegaan op de kleine vragen om aandacht van de ander, bijvoorbeeld ‘kijk die vogel eens’. De gescheiden stellen hadden dat maar 33% van de keren gedaan. Vaak is opkijken van je telefoon al genoeg.",
+    "sub2Title": "Geven waar de ander op hoopt",
+    "sub2Text": "We geven vaak wat we zelf graag zouden krijgen. De een geeft bijvoorbeeld cadeaus terwijl de ander vooral tijd samen wil. Iedereen heeft <a href=\"/nl/liefdestaal-test/\">zijn eigen manier om zich geliefd te voelen</a> en die is niet altijd dezelfde. Het makkelijkst is om het gewoon <strong>te vragen</strong>.",
+    "sub3Title": "Dank je wel zeggen",
+    "sub3Text": "Je went snel aan wat de ander voor je doet. Op een dag zie je het niet meer. Na een tijd kan ieder het gevoel krijgen dat <a href=\"/nl/blog/mijn-vriend-doet-geen-moeite/\">de ander geen moeite doet</a>. Een simpel dank je wel voor het eten of de boodschappen verandert veel.",
+    "sub4Title": "Tijd voor jezelf houden",
+    "sub4Text": "Een goede partner zijn betekent niet dat je alles samen doet. Je eigen vrienden en hobby's houden <strong>is goed voor je relatie</strong>. Dan heb je elkaar 's avonds meer te vertellen!"
+  },
+  "section4": {
+    "title": "En als jullie niet hetzelfde soort partner zijn?",
+    "p1": "Dat is bij veel koppels zo en het is geen probleem. De een regelt bijvoorbeeld alles en de ander houdt meer van het onverwachte. Jullie vullen elkaar meer aan dan jullie denken. Veel heel verschillende koppels <a href=\"/nl/welk-dierenkoppel-zijn-wij-test/\">leven als kat en hond</a> en kunnen het toch heel goed vinden.",
+    "p2": "Het risico zit ergens anders. Is de een heel zorgzaam en de ander heel onafhankelijk, dan lijkt het al snel alsof <a href=\"/nl/wie-houdt-het-meest-van-wie-test/\">de een meer doet dan de ander</a>. Kijk naar de vragen waarop jullie verschillend hebben geantwoord en <strong>zeg tegen elkaar wat je fijn vindt</strong>. De ander doet het makkelijker als hij of zij het weet."
+  },
+  "section5": {
+    "title": "Wat je over deze test moet weten",
+    "p1": "Deze test is een spel. Hij zegt niet of jullie goede of slechte partners zijn en <strong>hij vervangt geen echt gesprek</strong>. Jullie antwoorden kunnen met de tijd ook veranderen. Na 6 maanden ben je niet dezelfde partner als na 10 jaar!",
+    "p2": "Jullie antwoorden worden niet opgeslagen, ze blijven op jullie telefoon. We tellen alleen welke uitslag eruit komt, om te zien welke het vaakst voorkomen. Jullie voornaam wordt ook niet opgeslagen. De foto's zijn voor deze pagina gemaakt."
+  },
+  "seo": {
+    "faqTitle": "Veelgestelde vragen",
+    "faq1Q": "Welke soorten partners kun je krijgen?",
+    "faq1A": "De test heeft 9 mogelijke uitslagen: in de watten leggen, altijd in voor een grapje, hopeloos romantisch, avontuur voorop, alles geregeld, eerst knuffelen, de rust zelve, altijd aanmoedigen en ieder zijn eigen ruimte.",
+    "faq2Q": "Hoe wordt de uitslag berekend?",
+    "faq2A": "Elk antwoord geeft punten aan één soort partner. Antwoord je bijvoorbeeld ‘het ontbijt klaarmaken’ bij de vraag over de kleine gebaren, dan krijgt de uitslag ‘in de watten leggen’ punten. Doen jullie de test met z'n tweeën, dan telt hij jullie antwoorden bij elkaar op. Het soort met de meeste punten wordt jullie uitslag als koppel.",
+    "faq3Q": "Wat voor vriend of vriendin ben ik?",
+    "faq3A": "Doe de test met z'n tweeën. Onder jullie uitslag als koppel laat de test zien wat ieder voor zich had gekregen. Daar zie je wat voor vriend of vriendin je bent.",
+    "faq4Q": "Is het ene soort partner beter dan het andere?",
+    "faq4A": "Nee. Elk soort heeft zijn goede kanten en zijn kleine minpuntje. Heel georganiseerde partners vergeten bijvoorbeeld niets, maar ze laten weinig ruimte voor het onverwachte. De test geeft bij elke uitslag een kleine tip.",
+    "faq5Q": "Wat doen we als we niet dezelfde uitslag hebben?",
+    "faq5A": "Niets bijzonders, dat komt heel vaak voor. Een relatie loopt vaak goed als ieder iets meebrengt wat de ander niet heeft. Kijk liever naar de vragen waarop jullie verschillend hebben geantwoord en praat over wat ieder verwacht.",
+    "faq6Q": "Kun je de test alleen doen?",
+    "faq6A": "Ja. Kies gewoon ‘Alleen, voor ons als koppel’ en antwoord zoals het bij jullie meestal gaat. Je krijgt een uitslag, maar je kunt jullie antwoorden niet vergelijken."
+  },
+  "jsonLd": {
+    "about": "wat voor partners jullie zijn in jullie relatie"
+  }
+}

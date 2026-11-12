@@ -1,0 +1,123 @@
+{
+  "hero": {
+    "badge": "Fun quiz • Together, or on your own for your couple",
+    "title": "What animal couple are we? The quiz in 12 questions",
+    "titleHighlight": "What animal couple are we?",
+    "description": "Two otters who never let go of each other's paw, or a cat and a dog who bicker all day? You each answer 12 questions about your life together. Then the quiz shows you the animal couple you're most like, with its photo.",
+    "subtitle": "12 questions • 3 minutes each • on one phone",
+    "jumpBtn": "Take the quiz"
+  },
+  "section1": {
+    "title": "How the quiz works",
+    "p1": "This quiz is a <strong>game to play as a couple</strong>. It finds the animal couple you're most like, for example two otters or two wolves. It asks 12 questions about your life together. For example, it asks what your Sundays look like and how your arguments end.",
+    "p2": "Take the question about the night. If you answer “wrapped around each other”, the quiz gives points to the otters. If your partner answers “each on our own side of the bed”, it gives points to the cats. At the end, the quiz <strong>adds up your answers</strong> and keeps the animals with the most points.",
+    "p3": "The first person answers the 12 questions and then passes the phone. The second person answers <strong>without seeing what the first one chose</strong>. Then the quiz shows you the animal couple you're most like, with its photo. It also shows the animals each of you would have got alone and the list of questions where you gave different answers.",
+    "p4": "You can also take the quiz on your own and answer for your couple. But you won't be able to compare your answers, and that's the funniest part!"
+  },
+  "section2": {
+    "title": "The 10 animal couples in the quiz",
+    "intro": "The quiz can give 10 results. Some animal couples are very close, like the otters. Others are more independent, like the cats. Here's who each one is most like.",
+    "galerie": [
+      {
+        "id": "loutres",
+        "titre": "Two otters",
+        "texte": "For very affectionate couples who love being close to each other.",
+        "alt": "Two sea otters floating on their backs side by side, holding paws"
+      },
+      {
+        "id": "manchots",
+        "titre": "Two penguins",
+        "texte": "For couples who have their habits and give each other little presents.",
+        "alt": "Two penguins facing each other on a pebble beach, leaning over a pebble lying between them, with snowy mountains behind"
+      },
+      {
+        "id": "loups",
+        "titre": "Two wolves",
+        "texte": "For close-knit couples who put family and friends first.",
+        "alt": "Two grey wolves side by side in a snowy forest, looking in the same direction"
+      },
+      {
+        "id": "cygnes",
+        "titre": "Two swans",
+        "texte": "For romantic couples who love declarations of love and special dates.",
+        "alt": "Two white swans facing each other on a lake at sunrise, their necks forming a heart"
+      },
+      {
+        "id": "dauphins",
+        "titre": "Two dolphins",
+        "texte": "For playful couples who always have people around them.",
+        "alt": "Two dolphins leaping together out of a turquoise sea"
+      },
+      {
+        "id": "renards",
+        "titre": "Two foxes",
+        "texte": "For close couples who tease each other from morning to night.",
+        "alt": "Two red foxes playing in tall grass at sunset"
+      },
+      {
+        "id": "chats",
+        "titre": "Two cats",
+        "texte": "For independent couples who meet up again in the evening.",
+        "alt": "Two cats sitting at either end of a windowsill, one grey and one ginger, looking outside"
+      },
+      {
+        "id": "castors",
+        "titre": "Two beavers",
+        "texte": "For couples who always have a project on the go.",
+        "alt": "Two beavers side by side on their dam of branches, at the water's edge in a forest"
+      },
+      {
+        "id": "chouettes",
+        "titre": "Two owls",
+        "texte": "For couples who come alive at night and talk for hours.",
+        "alt": "Two little owls huddled together on a branch at night, under a full moon"
+      },
+      {
+        "id": "chienchat",
+        "titre": "A cat and a dog",
+        "texte": "For very different couples who bicker and then laugh about it.",
+        "alt": "A golden retriever and a tabby cat sitting face to face in a living room, nose to nose"
+      }
+    ]
+  },
+  "section3": {
+    "title": "What we know about animals that live in pairs",
+    "intro": "The animals in the quiz weren't picked at random. Each one has <a href=\"/en/what-type-of-couple-are-you-quiz/\">a way of living as a couple</a> that looks a lot like some human couples. Here's what we know about 4 of them.",
+    "sub1Title": "Sea otters and their nap",
+    "sub1Text": "Sea otters sleep on their backs at the surface of the water. To avoid drifting away during a nap, they wrap themselves in long strands of kelp. Sometimes two otters <strong>hold paws</strong> as well. It's rarer than the videos suggest but it does happen!",
+    "sub2Title": "Penguins and their pebbles",
+    "sub2Text": "Gentoo and Adélie penguins build their nests out of small pebbles. During courtship, <strong>the male brings some to the female</strong>. People often say he searches the beach for the most beautiful pebble. That's an exaggeration because any pebble will do. For us, the pebble can be a small present or a kind word. Everyone has <a href=\"/en/love-language-test-couple/\">their own way of showing love</a>.",
+    "sub3Title": "Swans and beavers",
+    "sub3Text": "A pair of swans can stay together <strong>for many years</strong>, sometimes for life. Beavers live in pairs too. They build their dam and their lodge together and then raise their young there. Among mammals, that's rare. Researchers at the University of Cambridge looked at 2,500 species in 2013. Only about 9% of them live in pairs.",
+    "sub4Title": "Wolves and their pack",
+    "sub4Text": "For a long time, people thought a pack was led by a male who had fought his way to the top. Today we know that a pack is usually <strong>a family</strong>. It's made up of a breeding pair and their young from the last few years. The parents guide the pack the way parents guide their children."
+  },
+  "section4": {
+    "title": "What if you don't get the same animals?",
+    "p1": "It happens a lot. For example, one of you sees your couple as two otters and the other sees two cats. It doesn't mean your relationship is in trouble. Each person's result mostly shows <a href=\"/en/what-kind-of-partners-are-we-quiz/\">how they behave in a relationship</a> and what they need.",
+    "p2": "Look at the list of questions where your answers are different instead. If they're about evenings out or holidays, it's no big deal. If they're about how much time you spend together, <strong>talk about it calmly</strong>. One of you may need more time together and the other more space."
+  },
+  "section5": {
+    "title": "What you should know about this quiz",
+    "p1": "This quiz is a game. It plays with the image we have of these animals and <strong>it says nothing serious about your relationship</strong>. Getting “a cat and a dog” doesn't mean you're going to break up! It's mostly there to make you laugh and compare your answers.",
+    "p2": "Your answers aren't saved, they stay on your phone. We only count which result you get, to see which ones come up most. Your name isn't saved either. The photos were created for this page."
+  },
+  "seo": {
+    "faqTitle": "Frequently asked questions",
+    "faq1Q": "Which animal couples can you get?",
+    "faq1A": "The quiz can give 10 results: two otters, two penguins, two wolves, two swans, two dolphins, two foxes, two cats, two beavers, two owls, or a cat and a dog.",
+    "faq2Q": "How is the result worked out?",
+    "faq2A": "Each answer gives points to the animals that match it. For example, if you answer “we laugh about everything” to the question about your strength, the foxes and the dolphins get points. When you take the quiz together, it adds up your answers and the animals with the most points become your animal couple.",
+    "faq3Q": "Which animal best stands for a faithful couple?",
+    "faq3A": "People often mention the swan because a pair of swans can stay together for many years. Beavers and wolves also live in pairs for a long time. In the quiz, couples who are loyal to their habits often get the penguins.",
+    "faq4Q": "What does the result “a cat and a dog” mean?",
+    "faq4A": "People say two people “fight like cat and dog” when they argue all the time. In the quiz, it's meant as a joke. This result goes to very different couples who bicker a lot and laugh about it afterwards.",
+    "faq5Q": "Can we be two different animals, for example an otter and a cat?",
+    "faq5A": "The result for your couple is always one of the 10 pairs in the quiz. But when you play together, the quiz also shows the animals each of you would have got alone. That's where you'll see if one of you is more of an otter and the other more of a cat.",
+    "faq6Q": "Can you take the quiz on your own?",
+    "faq6A": "Yes. Just choose “On my own, for our couple” and answer with your couple in mind. You'll get a result but you won't be able to compare your answers."
+  },
+  "jsonLd": {
+    "about": "the animal couple that matches your relationship"
+  }
+}

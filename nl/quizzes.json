@@ -634,6 +634,18 @@
     "metaDescription": "Wie heeft de broek aan in jullie relatie? Beantwoord 20 vragen over de beslissingen van elke dag, alleen of samen, en zie wie het vaakst beslist.",
     "description": "Beantwoord 20 vragen over de beslissingen van elke dag en zie wie het vaakst het laatste woord heeft."
   },
+  "quizAnimauxNous": {
+    "title": "Welk dierenkoppel zijn wij? De test voor koppels",
+    "shortTitle": "Welk dierenkoppel zijn wij",
+    "metaDescription": "Welk dierenkoppel zijn wij? Twee otters, twee wolven of een kat en een hond? Ieder beantwoordt 12 vragen en de test laat jullie dierenkoppel zien.",
+    "description": "Ieder beantwoordt 12 vragen en de test laat het dierenkoppel zien waar jullie het meest op lijken, met foto."
+  },
+  "quizPartenairesNous": {
+    "title": "Wat voor partners zijn wij? De test voor koppels",
+    "shortTitle": "Wat voor partners zijn wij",
+    "metaDescription": "Wat voor partners zijn wij? Zorgzaam, grappig of heel onafhankelijk? Ieder beantwoordt 12 vragen en de test laat zien hoe jullie in de liefde zijn.",
+    "description": "Ieder beantwoordt 12 vragen en de test laat met een foto zien wat voor partners jullie zijn."
+  },
   "bilanCouple": {
     "title": "Relatiecheck online | Direct resultaat, ook als pdf",
     "shortTitle": "Relatiecheck",

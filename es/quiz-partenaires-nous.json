@@ -1,0 +1,117 @@
+{
+  "hero": {
+    "badge": "Quiz original • En pareja, o solo/a para la pareja",
+    "title": "¿Qué tipo de novios somos? El test en 12 preguntas",
+    "titleHighlight": "¿Qué tipo de novios somos?",
+    "description": "¿Detallistas, románticos o muy independientes? Cada uno responde a 12 preguntas sobre lo que hace en el día a día. Después el test os enseña qué tipo de novios sois, con su foto.",
+    "subtitle": "12 preguntas • 3 minutos cada uno • en un solo móvil",
+    "jumpBtn": "Hacer el test"
+  },
+  "section1": {
+    "title": "Cómo funciona el test",
+    "p1": "Este test es un <strong>juego para hacer en pareja</strong>. Busca qué tipo de novios sois, por ejemplo unos novios muy mimosos o unos novios a los que les gusta la aventura. Hace 12 preguntas sobre el día a día. Por ejemplo, os pregunta qué hacéis cuando vuestra pareja está enferma y cómo celebráis su cumpleaños.",
+    "p2": "Tomemos la pregunta sobre el mal día de tu pareja. Si respondes «un abrazo largo sin hablar», el test da puntos al resultado «primero los mimos». Si tu pareja responde «salir juntos a tomar el aire», se los da a «la aventura ante todo». Al final, el test <strong>suma vuestras respuestas</strong> y se queda con el tipo que tiene más puntos.",
+    "p3": "El primero responde a las 12 preguntas y luego le pasa el móvil al otro. Cada uno responde por sí mismo, <strong>sin ver lo que ha elegido el otro</strong>. Después el test os enseña qué tipo de novios sois, con su foto. También os enseña lo que le habría salido a cada uno por separado y la lista de preguntas en las que no habéis respondido lo mismo.",
+    "p4": "También puedes hacer el test solo/a. En ese caso, responde pensando en lo que pasa más a menudo en vuestra pareja."
+  },
+  "section2": {
+    "title": "Los 9 tipos de novios del test",
+    "intro": "El test puede dar 9 resultados. Ninguno es mejor que otro. ¡Cada uno tiene su lado bueno y su pequeño defecto!",
+    "galerie": [
+      {
+        "id": "soins",
+        "titre": "Mil detalles",
+        "texte": "Novios que piensan en el otro antes que en sí mismos.",
+        "alt": "Una bandeja de madera sobre un sofá con un cuenco de sopa humeante, una cuchara y una bolsa de agua caliente con funda de punto, junto a una manta"
+      },
+      {
+        "id": "clown",
+        "titre": "Siempre de broma",
+        "texte": "Novios que se hacen reír incluso en los días malos.",
+        "alt": "Dos gafas de broma con nariz postiza y bigote, entre confeti y serpentinas"
+      },
+      {
+        "id": "romantique",
+        "titre": "Puro romanticismo",
+        "texte": "Novios a los que les gustan las notas cariñosas y las sorpresas.",
+        "alt": "Una mesa para dos preparada en un balcón por la noche, con velas y una rosa roja, frente a las luces de la ciudad"
+      },
+      {
+        "id": "aventure",
+        "titre": "La aventura ante todo",
+        "texte": "Novios que se van de fin de semana sin reservar nada.",
+        "alt": "Dos mochilas y dos pares de botas de montaña delante de una puerta abierta a un sendero de montaña, con un mapa en el suelo"
+      },
+      {
+        "id": "organise",
+        "titre": "Todo planeado",
+        "texte": "Novios que siempre tienen un plan y no se olvidan de nada.",
+        "alt": "Un tablero de corcho cubierto de notas adhesivas rosas, amarillas y azules bien alineadas, encima de dos juegos de llaves colgados"
+      },
+      {
+        "id": "calin",
+        "titre": "Primero los mimos",
+        "texte": "Novios que necesitan estar pegados el uno al otro.",
+        "alt": "Dos osos de peluche abrazados bajo una manta de lana en un sofá"
+      },
+      {
+        "id": "zen",
+        "titre": "Siempre zen",
+        "texte": "Novios tranquilos que saben escuchar.",
+        "alt": "Dos tumbonas de madera una al lado de la otra a la orilla de un lago de montaña muy tranquilo, al atardecer"
+      },
+      {
+        "id": "coach",
+        "titre": "Siempre animando",
+        "texte": "Novios que creen en el otro y se lo dicen.",
+        "alt": "Una copa dorada entre dos pompones de animadora azules, blancos y rojos, sobre unas gradas de madera cubiertas de confeti"
+      },
+      {
+        "id": "independant",
+        "titre": "Cada uno su espacio",
+        "texte": "Novios que conservan sus aficiones y confían el uno en el otro.",
+        "alt": "Dos sillones uno al lado del otro en un salón, uno azul y otro beige, cada uno con su lámpara y su libro"
+      }
+    ]
+  },
+  "section3": {
+    "title": "¿Cómo ser un buen novio o una buena novia en el día a día?",
+    "intro": "No hay un solo tipo de pareja bueno. Eso sí, hay 4 costumbres que les sientan bien a casi todas las parejas.",
+    "sub1Title": "Responder a las pequeñas llamadas del otro",
+    "sub1Text": "El psicólogo estadounidense John Gottman observó a parejas recién casadas y volvió a verlas 6 años después. Las que seguían juntas habían respondido <strong>el 86 % de las veces</strong> a las pequeñas llamadas de atención del otro, por ejemplo «mira ese pájaro». Las que se habían divorciado solo habían respondido el 33 % de las veces. Muchas veces basta con levantar la vista del móvil.",
+    "sub2Title": "Dar lo que el otro espera",
+    "sub2Text": "Solemos dar lo que nos gustaría recibir. Por ejemplo, uno hace regalos cuando el otro preferiría pasar tiempo juntos. Cada uno tiene <a href=\"/es/test-lenguaje-amor-pareja/\">su forma de sentirse querido</a> y no siempre es la misma. Lo más sencillo es <strong>preguntar</strong>.",
+    "sub3Title": "Dar las gracias",
+    "sub3Text": "Nos acostumbramos rápido a lo que el otro hace por nosotros. Al final dejamos de verlo. Con el tiempo, cada uno puede tener la impresión de que <a href=\"/es/blog/novio-no-hace-esfuerzo/\">el otro no se esfuerza nada</a>. Un simple gracias por la comida o por la compra cambia muchas cosas.",
+    "sub4Title": "Guardar tiempo para uno mismo",
+    "sub4Text": "Ser buena pareja no quiere decir hacerlo todo juntos. Conservar a los amigos y las aficiones <strong>le sienta bien a la pareja</strong>. ¡Hay más cosas que contarse por la noche!"
+  },
+  "section4": {
+    "title": "¿Y si no sois el mismo tipo de pareja?",
+    "p1": "Les pasa a muchas parejas y no es un problema. Por ejemplo, uno lo organiza todo y el otro prefiere lo imprevisto. Os complementáis más de lo que creéis. Muchas parejas muy distintas <a href=\"/es/test-que-pareja-de-animales-somos/\">discuten como el perro y el gato</a> y se quieren igual.",
+    "p2": "El riesgo está en otra parte. Cuando uno es muy detallista y el otro muy independiente, es fácil pensar que <a href=\"/es/test-quien-ama-mas/\">uno hace más que el otro</a>. Mirad la lista de preguntas en las que no habéis respondido lo mismo y <strong>decíos lo que os gusta</strong>. El otro lo hará más fácilmente si lo sabe."
+  },
+  "section5": {
+    "title": "Lo que hay que saber sobre este test",
+    "p1": "Este test es un juego. No dice si sois buena o mala pareja y <strong>no sustituye a una conversación de verdad</strong>. Vuestras respuestas también pueden cambiar con el tiempo. ¡No se es la misma pareja a los 6 meses que a los 10 años!",
+    "p2": "Vuestras respuestas no se guardan, se quedan en vuestro móvil. Solo contamos el resultado obtenido para saber cuáles salen más. Vuestro nombre tampoco se guarda. Las fotos se han creado para esta página."
+  },
+  "seo": {
+    "faqTitle": "Preguntas frecuentes",
+    "faq1Q": "¿Qué tipos de novios pueden salir?",
+    "faq1A": "El test puede dar 9 resultados: mil detalles, siempre de broma, puro romanticismo, la aventura ante todo, todo planeado, primero los mimos, siempre zen, siempre animando y cada uno su espacio.",
+    "faq2Q": "¿Cómo se calcula el resultado?",
+    "faq2A": "Cada respuesta da puntos a un tipo de pareja. Por ejemplo, si respondes «prepararle el desayuno» en la pregunta sobre los pequeños gestos, el resultado «mil detalles» gana puntos. Cuando hacéis el test en pareja, suma vuestras respuestas y el tipo con más puntos pasa a ser el de vuestra pareja.",
+    "faq3Q": "¿Qué tipo de novio o de novia soy?",
+    "faq3A": "Haced el test en pareja. Debajo del resultado de la pareja, el test enseña lo que le habría salido a cada uno por separado. Ahí verás qué tipo de novio o de novia eres.",
+    "faq4Q": "¿Hay un tipo de pareja mejor que los demás?",
+    "faq4A": "No. Cada tipo tiene su lado bueno y su pequeño defecto. Por ejemplo, unos novios muy organizados no se olvidan de nada pero dejan poco sitio a lo imprevisto. El test da un pequeño consejo con cada resultado.",
+    "faq5Q": "¿Qué hacemos si no nos sale el mismo resultado?",
+    "faq5A": "Nada especial, es muy habitual. Una pareja suele funcionar bien cuando cada uno aporta lo que el otro no tiene. Mirad mejor las preguntas en las que no habéis respondido lo mismo y hablad de lo que espera cada uno.",
+    "faq6Q": "¿Se puede hacer el test solo/a?",
+    "faq6A": "Sí. Basta con elegir «Solo/a, para nuestra pareja» y responder pensando en lo que pasa más a menudo en vuestra pareja. Tendrás un resultado pero no podrás comparar vuestras respuestas."
+  },
+  "jsonLd": {
+    "about": "el tipo de novios que sois en vuestra relación"
+  }
+}

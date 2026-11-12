@@ -1,0 +1,123 @@
+{
+  "hero": {
+    "badge": "Quiz originale • In due, o da solo/a per la coppia",
+    "title": "Che coppia di animali siamo? Il test in 12 domande",
+    "titleHighlight": "Che coppia di animali siamo?",
+    "description": "Due lontre che non si lasciano mai la zampa o un cane e un gatto che si punzecchiano tutto il giorno? Ognuno risponde a 12 domande sulla vostra vita di coppia. Poi il test vi mostra la coppia di animali che vi somiglia di più, con la sua foto.",
+    "subtitle": "12 domande • 3 minuti a testa • su un solo telefono",
+    "jumpBtn": "Fai il test"
+  },
+  "section1": {
+    "title": "Come funziona il test",
+    "p1": "Questo test è un <strong>gioco da fare in coppia</strong>. Cerca a quale coppia di animali somigliate, per esempio a due lontre o a due lupi. Fa 12 domande sulla vostra vita di coppia. Per esempio, vi chiede come sono le vostre domeniche e come finiscono i vostri litigi.",
+    "p2": "Prendiamo la domanda sulla notte. Se rispondete «abbracciati stretti», il test dà punti alle lontre. Se la tua dolce metà risponde «ognuno dalla sua parte del letto», li dà ai gatti. Alla fine il test <strong>somma le vostre risposte</strong> e tiene gli animali che hanno più punti.",
+    "p3": "Il primo risponde alle 12 domande e poi passa il telefono all'altro. Il secondo risponde <strong>senza vedere cosa ha scelto il primo</strong>. Poi il test vi mostra la coppia di animali che vi somiglia di più, con la sua foto. Vi mostra anche gli animali che ognuno avrebbe avuto per conto suo e l'elenco delle domande a cui non avete risposto allo stesso modo.",
+    "p4": "Puoi fare il test anche da solo/a rispondendo per la vostra coppia. Però non potrete confrontare le risposte. Ed è proprio la parte più divertente!"
+  },
+  "section2": {
+    "title": "Le 10 coppie di animali del test",
+    "intro": "Il test può dare 10 risultati. Alcune coppie di animali stanno sempre appiccicate, come le lontre. Altre sono più indipendenti, come i gatti. Ecco a chi somiglia di più ognuna.",
+    "galerie": [
+      {
+        "id": "loutres",
+        "titre": "Due lontre",
+        "texte": "Per le coppie molto tenere a cui piace stare appiccicate.",
+        "alt": "Due lontre marine che galleggiano sulla schiena una accanto all'altra e si tengono per la zampa"
+      },
+      {
+        "id": "manchots",
+        "titre": "Due pinguini",
+        "texte": "Per le coppie che hanno le loro abitudini e si fanno regalini.",
+        "alt": "Due pinguini uno di fronte all'altro su una spiaggia di ciottoli, chinati su un sassolino posato tra loro, con montagne innevate sullo sfondo"
+      },
+      {
+        "id": "loups",
+        "titre": "Due lupi",
+        "texte": "Per le coppie unite che mettono famiglia e amici prima di tutto.",
+        "alt": "Due lupi grigi fianco a fianco in un bosco innevato, che guardano nella stessa direzione"
+      },
+      {
+        "id": "cygnes",
+        "titre": "Due cigni",
+        "texte": "Per le coppie romantiche che amano le dichiarazioni e le date che contano.",
+        "alt": "Due cigni bianchi uno di fronte all'altro su un lago all'alba, con i colli che disegnano un cuore"
+      },
+      {
+        "id": "dauphins",
+        "titre": "Due delfini",
+        "texte": "Per le coppie giocherellone che hanno sempre gente intorno.",
+        "alt": "Due delfini che saltano insieme fuori da un mare turchese"
+      },
+      {
+        "id": "renards",
+        "titre": "Due volpi",
+        "texte": "Per le coppie complici che si stuzzicano dalla mattina alla sera.",
+        "alt": "Due volpi rosse che giocano nell'erba alta al tramonto"
+      },
+      {
+        "id": "chats",
+        "titre": "Due gatti",
+        "texte": "Per le coppie indipendenti che si ritrovano la sera.",
+        "alt": "Due gatti seduti ai due lati di un davanzale, uno grigio e uno rosso, che guardano fuori dalla finestra"
+      },
+      {
+        "id": "castors",
+        "titre": "Due castori",
+        "texte": "Per le coppie che hanno sempre un progetto in corso.",
+        "alt": "Due castori fianco a fianco sulla loro diga di rami, in riva all'acqua in un bosco"
+      },
+      {
+        "id": "chouettes",
+        "titre": "Due gufi",
+        "texte": "Per le coppie che vivono di notte e parlano per ore.",
+        "alt": "Due civette strette l'una all'altra su un ramo, di notte, sotto la luna piena"
+      },
+      {
+        "id": "chienchat",
+        "titre": "Un cane e un gatto",
+        "texte": "Per le coppie molto diverse che si punzecchiano e poi ci ridono su.",
+        "alt": "Un golden retriever e un gatto tigrato seduti uno di fronte all'altro in un soggiorno, muso contro muso"
+      }
+    ]
+  },
+  "section3": {
+    "title": "Cosa sappiamo degli animali che vivono in coppia",
+    "intro": "Gli animali del test non sono lì per caso. Ognuno ha <a href=\"/it/che-tipo-di-coppia-siete-quiz/\">un modo di vivere in coppia</a> che ricorda quello di certe coppie. Ecco cosa sappiamo di 4 di loro.",
+    "sub1Title": "Le lontre marine e il loro sonnellino",
+    "sub1Text": "Le lontre marine dormono sulla schiena, a pelo d'acqua. Per non farsi portare via dalla corrente durante il sonnellino, si avvolgono in lunghe alghe. A volte due lontre <strong>si tengono anche per la zampa</strong>. È più raro di quanto fanno pensare i video ma succede!",
+    "sub2Title": "I pinguini e i loro sassolini",
+    "sub2Text": "I pinguini papua e i pinguini di Adelia fanno il nido con dei sassolini. Durante il corteggiamento, <strong>il maschio ne porta alcuni alla femmina</strong>. Si racconta spesso che cerchi il sasso più bello della spiaggia. È un'esagerazione perché va bene un sasso qualsiasi. Per noi il sassolino può essere un regalino o una parola gentile. Ognuno ha <a href=\"/it/test-linguaggio-amore-coppia/\">il suo modo di dimostrare amore</a>.",
+    "sub3Title": "I cigni e i castori",
+    "sub3Text": "Una coppia di cigni può restare insieme <strong>per molti anni</strong>, a volte per tutta la vita. Anche i castori vivono in coppia. Costruiscono insieme la diga e la tana e poi ci crescono i piccoli. Tra i mammiferi è raro. Dei ricercatori dell'Università di Cambridge hanno studiato 2.500 specie nel 2013. Solo il 9% circa vive in coppia.",
+    "sub4Title": "I lupi e il loro branco",
+    "sub4Text": "Per molto tempo si è creduto che un branco fosse guidato da un maschio che aveva lottato per diventare il capo. Oggi si sa che un branco è quasi sempre <strong>una famiglia</strong>. È formato da una coppia e dai cuccioli degli ultimi anni. I genitori guidano il branco come dei genitori guidano i figli."
+  },
+  "section4": {
+    "title": "E se non avete gli stessi animali?",
+    "p1": "Succede spesso. Per esempio, uno vede la vostra coppia come due lontre e l'altro come due gatti. Non vuol dire che la vostra coppia vada male. Il risultato di ognuno dice soprattutto <a href=\"/it/test-che-tipo-di-fidanzati-siamo/\">come si comporta in coppia</a> e di cosa ha bisogno.",
+    "p2": "Guardate piuttosto l'elenco delle domande a cui avete risposto in modo diverso. Se riguardano le feste o le vacanze, non è grave. Se riguardano il tempo che passate insieme, <strong>parlatene con calma</strong>. Magari uno ha bisogno di più momenti a due e l'altro di più aria."
+  },
+  "section5": {
+    "title": "Cosa sapere su questo test",
+    "p1": "Questo test è un gioco. Gioca con l'immagine che abbiamo di questi animali e <strong>non dice niente di serio sulla vostra coppia</strong>. Un risultato «cane e gatto» non vuol dire che vi lascerete! Serve soprattutto a ridere e a confrontare le risposte.",
+    "p2": "Le vostre risposte non vengono salvate, restano sul vostro telefono. Contiamo solo il risultato ottenuto per sapere quali escono di più. Nemmeno il vostro nome viene salvato. Le foto sono state create per questa pagina."
+  },
+  "seo": {
+    "faqTitle": "Domande frequenti",
+    "faq1Q": "Quali coppie di animali si possono ottenere?",
+    "faq1A": "Il test può dare 10 risultati: due lontre, due pinguini, due lupi, due cigni, due delfini, due volpi, due gatti, due castori, due gufi, oppure un cane e un gatto.",
+    "faq2Q": "Come viene calcolato il risultato?",
+    "faq2A": "Ogni risposta dà punti agli animali che le corrispondono. Per esempio, se alla domanda sul vostro punto di forza rispondete «ridiamo di tutto», le volpi e i delfini prendono punti. Quando fate il test in due, somma le vostre risposte e gli animali che hanno più punti diventano quelli della vostra coppia.",
+    "faq3Q": "Quale animale rappresenta meglio una coppia fedele?",
+    "faq3A": "Si cita spesso il cigno perché una coppia di cigni può restare insieme per molti anni. Anche il castoro e il lupo vivono in coppia a lungo. Nel test, le coppie fedeli alle loro abitudini ottengono spesso i pinguini.",
+    "faq4Q": "Cosa vuol dire il risultato «un cane e un gatto»?",
+    "faq4A": "Si dice che due persone sono «come cane e gatto» quando litigano sempre. Nel test è detto con ironia. Questo risultato va alle coppie molto diverse che si punzecchiano spesso e poi ci ridono su.",
+    "faq5Q": "Possiamo essere due animali diversi, per esempio una lontra e un gatto?",
+    "faq5A": "Il risultato della coppia è sempre una delle 10 coppie del test. Però quando giocate in due il test mostra anche gli animali che ognuno avrebbe avuto per conto suo. Lì vedrete se uno è più lontra e l'altro più gatto.",
+    "faq6Q": "Si può fare il test da soli?",
+    "faq6A": "Sì. Basta scegliere «Da solo/a, per la nostra coppia» e rispondere pensando alla vostra coppia. Avrai un risultato ma non potrai confrontare le vostre risposte."
+  },
+  "jsonLd": {
+    "about": "la coppia di animali che somiglia alla vostra coppia"
+  }
+}

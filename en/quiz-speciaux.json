@@ -46,7 +46,11 @@
     "quizDuoNoelNom": "Which Christmas characters are you?",
     "quizDuoNoelTagline": "You each answer 12 questions about how you celebrate Christmas and the quiz gives you the duo you make, with its photo.",
     "quizPorteCulotteNom": "Who wears the pants?",
-    "quizPorteCulotteTagline": "You answer 20 questions to find out who decides in your relationship. Together, the quiz also shows you the questions where you disagree."
+    "quizPorteCulotteTagline": "You answer 20 questions to find out who decides in your relationship. Together, the quiz also shows you the questions where you disagree.",
+    "quizAnimauxNousNom": "What animal couple are we?",
+    "quizAnimauxNousTagline": "You each answer 12 questions about your life together and the quiz shows you your animal couple in a photo.",
+    "quizPartenairesNousNom": "What kind of partners are we?",
+    "quizPartenairesNousTagline": "You each answer 12 questions about everyday life and the quiz shows you your kind of partners in a photo."
   },
   "section1": {
     "title": "What these quizzes are for",

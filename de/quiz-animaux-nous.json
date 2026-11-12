@@ -1,0 +1,123 @@
+{
+  "hero": {
+    "badge": "Spaß-Quiz • Zu zweit oder allein für euch als Paar",
+    "title": "Welches Tierpaar sind wir? Der Test in 12 Fragen",
+    "titleHighlight": "Welches Tierpaar sind wir?",
+    "description": "Zwei Otter, die sich nicht loslassen, oder Hund und Katze, die sich ständig kabbeln? Jeder beantwortet 12 Fragen zu eurem Leben als Paar. Danach zeigt euch der Test das Tierpaar, das euch am ähnlichsten ist, mit Foto.",
+    "subtitle": "12 Fragen • 3 Minuten pro Person • an einem Handy",
+    "jumpBtn": "Zum Test"
+  },
+  "section1": {
+    "title": "So funktioniert der Test",
+    "p1": "Dieser Test ist ein <strong>Spiel für Paare</strong>. Er sucht das Tierpaar, das euch am ähnlichsten ist, zum Beispiel zwei Otter oder zwei Wölfe. Er stellt 12 Fragen zu eurem Leben als Paar. Er fragt zum Beispiel nach euren Sonntagen und danach, wie eure Streits enden.",
+    "p2": "Nehmen wir die Frage zur Nacht. Antwortet ihr „eng aneinandergekuschelt“, bekommen die Otter Punkte. Antwortet dein Schatz „jeder auf seiner Seite des Betts“, bekommen die Katzen Punkte. Am Ende <strong>zählt der Test eure Antworten zusammen</strong> und nimmt die Tiere mit den meisten Punkten.",
+    "p3": "Der Erste beantwortet die 12 Fragen und gibt dann das Handy weiter. Der Zweite antwortet, <strong>ohne die Antworten des Ersten zu sehen</strong>. Danach zeigt euch der Test euer Tierpaar mit Foto. Er zeigt auch die Tiere, die jeder für sich bekommen hätte, und die Fragen mit unterschiedlichen Antworten.",
+    "p4": "Du kannst den Test auch allein machen und für euch als Paar antworten. Dann könnt ihr eure Antworten aber nicht vergleichen. Und genau das ist der lustigste Teil!"
+  },
+  "section2": {
+    "title": "Die 10 Tierpaare im Test",
+    "intro": "Der Test hat 10 mögliche Ergebnisse. Manche Tierpaare kleben aneinander, so wie die Otter. Andere sind unabhängiger, so wie die Katzen. Hier seht ihr, zu wem welches Paar passt.",
+    "galerie": [
+      {
+        "id": "loutres",
+        "titre": "Zwei Otter",
+        "texte": "Für sehr zärtliche Paare, die gern ganz nah beieinander sind.",
+        "alt": "Zwei Seeotter treiben nebeneinander auf dem Rücken im Wasser und halten sich an den Pfoten"
+      },
+      {
+        "id": "manchots",
+        "titre": "Zwei Pinguine",
+        "texte": "Für Paare mit festen Gewohnheiten und kleinen Geschenken.",
+        "alt": "Zwei Pinguine stehen sich an einem Kiesstrand gegenüber und beugen sich über einen Stein zwischen ihnen, dahinter verschneite Berge"
+      },
+      {
+        "id": "loups",
+        "titre": "Zwei Wölfe",
+        "texte": "Für Paare, die fest zusammenhalten und Familie und Freunde an die erste Stelle setzen.",
+        "alt": "Zwei graue Wölfe stehen nebeneinander in einem verschneiten Wald und schauen in dieselbe Richtung"
+      },
+      {
+        "id": "cygnes",
+        "titre": "Zwei Schwäne",
+        "texte": "Für romantische Paare, die Liebeserklärungen und besondere Daten mögen.",
+        "alt": "Zwei weiße Schwäne schwimmen sich bei Sonnenaufgang auf einem See gegenüber, ihre Hälse bilden ein Herz"
+      },
+      {
+        "id": "dauphins",
+        "titre": "Zwei Delfine",
+        "texte": "Für verspielte Paare, die immer Leute um sich haben.",
+        "alt": "Zwei Delfine springen gemeinsam aus einem türkisfarbenen Meer"
+      },
+      {
+        "id": "renards",
+        "titre": "Zwei Füchse",
+        "texte": "Für eingespielte Paare, die sich von morgens bis abends necken.",
+        "alt": "Zwei Rotfüchse spielen bei Sonnenuntergang im hohen Gras"
+      },
+      {
+        "id": "chats",
+        "titre": "Zwei Katzen",
+        "texte": "Für unabhängige Paare, die sich abends wieder treffen.",
+        "alt": "Zwei Katzen sitzen an den beiden Enden einer Fensterbank, eine graue und eine rote, und schauen nach draußen"
+      },
+      {
+        "id": "castors",
+        "titre": "Zwei Biber",
+        "texte": "Für Paare, bei denen immer ein Projekt läuft.",
+        "alt": "Zwei Biber sitzen nebeneinander auf ihrem Damm aus Ästen am Ufer in einem Wald"
+      },
+      {
+        "id": "chouettes",
+        "titre": "Zwei Eulen",
+        "texte": "Für Paare, die nachts aufblühen und stundenlang reden.",
+        "alt": "Zwei kleine Eulen sitzen nachts eng aneinandergeschmiegt auf einem Ast, darüber der Vollmond"
+      },
+      {
+        "id": "chienchat",
+        "titre": "Hund und Katze",
+        "texte": "Für sehr verschiedene Paare, die sich kabbeln und darüber lachen.",
+        "alt": "Ein Golden Retriever und eine getigerte Katze sitzen sich in einem Wohnzimmer gegenüber, Nase an Nase"
+      }
+    ]
+  },
+  "section3": {
+    "title": "Was man über Tiere weiß, die als Paar leben",
+    "intro": "Die Tiere im Test sind nicht zufällig dabei. Jedes hat <a href=\"/de/welcher-paartyp-seid-ihr-quiz/\">eine eigene Art, als Paar zu leben</a>. Sie erinnert an manche Paare. Das weiß man über 4 von ihnen.",
+    "sub1Title": "Seeotter und ihr Mittagsschlaf",
+    "sub1Text": "Seeotter schlafen auf dem Rücken an der Wasseroberfläche. Damit sie im Schlaf nicht abtreiben, wickeln sie sich in lange Algen. Manchmal <strong>halten sich zwei Otter auch an den Pfoten</strong>. Das ist seltener, als die Videos vermuten lassen. Aber es kommt vor!",
+    "sub2Title": "Pinguine und ihre Steinchen",
+    "sub2Text": "Eselspinguine und Adeliepinguine bauen ihr Nest aus kleinen Steinen. Bei der Balz <strong>bringt das Männchen dem Weibchen welche</strong>. Oft heißt es, er suche den schönsten Stein am ganzen Strand. Das ist übertrieben, denn jeder Stein tut es. Bei uns kann das Steinchen ein kleines Geschenk oder ein liebes Wort sein. Jeder hat <a href=\"/de/liebessprache-test-paar/\">seine eigene Art, Liebe zu zeigen</a>.",
+    "sub3Title": "Schwäne und Biber",
+    "sub3Text": "Ein Schwanenpaar kann <strong>viele Jahre</strong> zusammenbleiben, manchmal ein Leben lang. Auch Biber leben als Paar. Sie bauen ihren Damm und ihre Burg gemeinsam und ziehen dort ihre Jungen groß. Bei Säugetieren ist das selten. Forscher der Universität Cambridge haben 2013 rund 2.500 Arten untersucht. Nur etwa 9 % leben als Paar.",
+    "sub4Title": "Wölfe und ihr Rudel",
+    "sub4Text": "Lange dachte man, ein Rudel werde von einem Männchen angeführt, das sich nach oben gekämpft hat. Heute weiß man, dass ein Rudel meistens <strong>eine Familie</strong> ist. Es besteht aus einem Elternpaar und seinen Jungen der letzten Jahre. Die Eltern führen das Rudel so, wie Eltern ihre Kinder führen."
+  },
+  "section4": {
+    "title": "Und wenn ihr nicht dieselben Tiere bekommt?",
+    "p1": "Das kommt oft vor. Einer sieht euch zum Beispiel als zwei Otter und der andere als zwei Katzen. Das heißt nicht, dass es in eurer Beziehung schlecht läuft. Das Ergebnis von jedem zeigt vor allem, <a href=\"/de/was-fuer-partner-sind-wir-test/\">wie er sich in der Beziehung verhält</a> und was er braucht.",
+    "p2": "Schaut euch lieber die Fragen mit unterschiedlichen Antworten an. Geht es um Feiern oder um den Urlaub, ist das halb so wild. Geht es um die Zeit, die ihr zusammen verbringt, dann <strong>redet in Ruhe darüber</strong>. Vielleicht braucht einer mehr Zeit zu zweit und der andere mehr Luft."
+  },
+  "section5": {
+    "title": "Was ihr über diesen Test wissen solltet",
+    "p1": "Dieser Test ist ein Spiel. Er spielt mit dem Bild, das wir von diesen Tieren haben, und <strong>sagt nichts Ernstes über eure Beziehung</strong>. Das Ergebnis „Hund und Katze“ heißt nicht, dass ihr euch trennt! Der Test soll euch vor allem zum Lachen bringen und eure Antworten vergleichen lassen.",
+    "p2": "Eure Antworten werden nicht gespeichert, sie bleiben auf eurem Handy. Wir zählen nur, welches Ergebnis herauskommt, um zu sehen, welche am häufigsten sind. Euer Vorname wird auch nicht gespeichert. Die Fotos wurden für diese Seite erstellt."
+  },
+  "seo": {
+    "faqTitle": "Häufige Fragen",
+    "faq1Q": "Welche Tierpaare kann man bekommen?",
+    "faq1A": "Der Test hat 10 mögliche Ergebnisse: zwei Otter, zwei Pinguine, zwei Wölfe, zwei Schwäne, zwei Delfine, zwei Füchse, zwei Katzen, zwei Biber, zwei Eulen oder Hund und Katze.",
+    "faq2Q": "Wie wird das Ergebnis berechnet?",
+    "faq2A": "Jede Antwort gibt den Tieren Punkte, die dazu passen. Antwortet ihr zum Beispiel bei der Frage nach eurer Stärke „wir lachen über alles“, bekommen die Füchse und die Delfine Punkte. Macht ihr den Test zu zweit, zählt er eure Antworten zusammen. Die Tiere mit den meisten Punkten werden euer Tierpaar.",
+    "faq3Q": "Welches Tier steht am besten für ein treues Paar?",
+    "faq3A": "Oft wird der Schwan genannt, weil ein Schwanenpaar viele Jahre zusammenbleiben kann. Auch Biber und Wölfe leben lange als Paar. Im Test bekommen Paare mit festen Gewohnheiten oft die Pinguine.",
+    "faq4Q": "Was bedeutet das Ergebnis „Hund und Katze“?",
+    "faq4A": "Man sagt, zwei Menschen seien „wie Hund und Katze“, wenn sie sich ständig streiten. Im Test ist das mit Humor gemeint. Dieses Ergebnis bekommen sehr verschiedene Paare, die sich oft kabbeln und danach darüber lachen.",
+    "faq5Q": "Können wir zwei verschiedene Tiere sein, zum Beispiel ein Otter und eine Katze?",
+    "faq5A": "Das Ergebnis für euch als Paar ist immer eines der 10 Tierpaare. Spielt ihr zu zweit, zeigt der Test aber auch die Tiere, die jeder für sich bekommen hätte. Dort seht ihr, ob einer eher Otter ist und der andere eher Katze.",
+    "faq6Q": "Kann man den Test allein machen?",
+    "faq6A": "Ja. Wähle einfach „Allein, für uns als Paar“ und antworte so, wie es zu euch als Paar passt. Du bekommst ein Ergebnis, kannst eure Antworten aber nicht vergleichen."
+  },
+  "jsonLd": {
+    "about": "das Tierpaar, das zu eurer Beziehung passt"
+  }
+}

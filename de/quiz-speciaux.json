@@ -46,7 +46,11 @@
     "quizDuoNoelNom": "Welcher Weihnachtstyp seid ihr?",
     "quizDuoNoelTagline": "Jeder beantwortet 12 Fragen dazu, wie ihr Weihnachten feiert, und der Test zeigt euch euer Weihnachtsduo, mit Foto.",
     "quizPorteCulotteNom": "Wer hat die Hosen an?",
-    "quizPorteCulotteTagline": "Ihr beantwortet 20 Fragen dazu, wer in eurer Beziehung entscheidet. Zu zweit zeigt euch der Test auch die Fragen, bei denen ihr euch nicht einig seid."
+    "quizPorteCulotteTagline": "Ihr beantwortet 20 Fragen dazu, wer in eurer Beziehung entscheidet. Zu zweit zeigt euch der Test auch die Fragen, bei denen ihr euch nicht einig seid.",
+    "quizAnimauxNousNom": "Welches Tierpaar sind wir?",
+    "quizAnimauxNousTagline": "Jeder beantwortet 12 Fragen zu eurem Leben als Paar und der Test zeigt euch euer Tierpaar im Foto.",
+    "quizPartenairesNousNom": "Was für Partner sind wir?",
+    "quizPartenairesNousTagline": "Jeder beantwortet 12 Fragen zum Alltag und der Test zeigt euch im Foto, was für Partner ihr seid."
   },
   "section1": {
     "title": "Wozu diese Quiz gut sind",

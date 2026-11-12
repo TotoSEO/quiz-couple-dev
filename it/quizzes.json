@@ -634,6 +634,18 @@
     "metaDescription": "Chi porta i pantaloni nella vostra coppia? Rispondete a 20 domande sulle decisioni di ogni giorno, da soli o in due, per sapere chi decide di più.",
     "description": "Rispondete a 20 domande sulle decisioni di ogni giorno per vedere chi ha più spesso l'ultima parola."
   },
+  "quizAnimauxNous": {
+    "title": "Che coppia di animali siete? Il test da fare in due",
+    "shortTitle": "Che coppia di animali siamo",
+    "metaDescription": "Due lontre, due lupi o un cane e un gatto? Ognuno risponde a 12 domande e il test mostra la coppia di animali che somiglia di più alla vostra.",
+    "description": "Ognuno risponde a 12 domande e il test vi mostra la coppia di animali che vi somiglia di più, con la sua foto."
+  },
+  "quizPartenairesNous": {
+    "title": "Che tipo di fidanzato o fidanzata sei? Il test in due",
+    "shortTitle": "Che tipo di fidanzati siamo",
+    "metaDescription": "Pieni di attenzioni, romantici o molto indipendenti? Ognuno risponde a 12 domande e il test mostra che tipo di fidanzati siete nella vostra coppia.",
+    "description": "Ognuno risponde a 12 domande e il test vi mostra che tipo di fidanzati siete, con la sua foto."
+  },
   "bilanCouple": {
     "title": "Bilancio di coppia online | Risultati subito e in PDF",
     "shortTitle": "Valutazione di coppia",

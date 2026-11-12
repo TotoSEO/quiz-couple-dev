@@ -640,6 +640,18 @@
     "metaDescription": "Qui porte la culotte dans votre couple ? Répondez à 20 questions sur les décisions de tous les jours, seul(e) ou à deux, pour savoir qui décide le plus.",
     "description": "Répondez à 20 questions sur les décisions de tous les jours pour voir qui a le plus souvent le dernier mot."
   },
+  "quizAnimauxNous": {
+    "title": "Quel couple d'animaux êtes-vous ? Le test à faire à deux",
+    "shortTitle": "Quel couple d'animaux sommes-nous",
+    "metaDescription": "Deux loutres, deux loups ou un chien et un chat ? Chacun répond à 12 questions et le test montre le couple d'animaux qui ressemble le plus à votre couple.",
+    "description": "Chacun répond à 12 questions et le test vous montre le couple d'animaux qui vous ressemble, avec sa photo."
+  },
+  "quizPartenairesNous": {
+    "title": "Quel genre de partenaire êtes-vous ? Le test à faire à deux",
+    "shortTitle": "Quel genre de partenaires sommes-nous",
+    "metaDescription": "Aux petits soins, fleur bleue ou très indépendants ? Chacun répond à 12 questions et le test montre quel genre de partenaires vous êtes dans votre couple.",
+    "description": "Chacun répond à 12 questions et le test vous montre le genre de partenaires que vous êtes, avec sa photo."
+  },
   "bilanCouple": {
     "title": "Bilan de couple à faire en ligne | PDF résultats immédiats",
     "shortTitle": "Évaluation de couple",
