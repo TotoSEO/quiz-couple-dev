@@ -1,23 +1,23 @@
 {
   "hero": {
-    "badge": "Test de Navidad • En pareja, o solo/a para los dos",
-    "title": "El test para saber qué personajes de Navidad sois los dos",
+    "badge": "Test de Navidad • En pareja, o solo/a para la pareja",
+    "title": "El test para saber qué personajes de Navidad sois",
     "titleHighlight": "qué personajes de Navidad sois",
-    "description": "¿Papá Noel y Mamá Noel, dos duendes, Scrooge y el espíritu de la Navidad? Cada uno responde a doce preguntas sobre vuestra Navidad en pareja, y el test os da el dúo navideño que formáis, con su foto.",
+    "description": "¿Sois más bien Papá Noel y Mamá Noel o dos duendes del taller? Cada uno responde a 12 preguntas sobre vuestra forma de celebrar la Navidad. Después el test os da el dúo navideño que formáis, con su foto.",
     "subtitle": "12 preguntas • 3 minutos cada uno • en un solo móvil",
     "jumpBtn": "Hacer el test"
   },
   "section1": {
     "title": "Cómo funciona el test",
-    "p1": "Este test es un juego de Navidad para hacer en pareja. Os dice qué dúo de personajes navideños formáis, según cómo pasáis las fiestas. Hace doce preguntas sobre vuestra Navidad en pareja: cuándo sacáis los adornos, cómo es vuestro árbol, dónde estáis el 24 por la noche, qué hacéis la mañana del 25, etc.",
-    "p2": "Por ejemplo, en la pregunta «El 24 por la noche, estáis:», podéis elegir entre «en casa, y los anfitriones somos nosotros», «en la carretera, entre dos familias», «los dos solos, en pijama» y «en algún sitio con nieve, si se puede». Cada respuesta da puntos a uno o dos dúos. La primera se los da a Papá Noel y Mamá Noel, la segunda a los dos renos del trineo, la tercera a los dos gnomos, y la última a los muñecos de nieve.",
-    "p3": "En pareja, el primero responde a las doce preguntas, pasa el móvil, y el segundo responde sin ver lo que ha elegido el otro. El test suma vuestras dos series de respuestas y se queda con el dúo que tiene mejor nota. También veis el dúo que cada uno habría tenido por su cuenta, y la lista de preguntas en las que no habéis respondido lo mismo.",
-    "p4": "Hay una excepción. Si solo uno de los dos responde como alguien a quien la Navidad le cansa, sois Scrooge y el espíritu de la Navidad, digan lo que digan los puntos. ¡Es el único dúo en el que los dos no se parecen!",
-    "p5": "También puedes hacerlo solo/a, respondiendo por los dos."
+    "p1": "Este test es un juego de Navidad para hacer en pareja. Os dice qué dúo de personajes navideños formáis, según cómo pasáis las fiestas. Hace 12 preguntas sobre vuestra Navidad. Por ejemplo, os pregunta cuándo sacáis los adornos y qué hacéis la mañana del 25.",
+    "p2": "Pongamos la pregunta «El 24 por la noche, estáis:». Podéis elegir entre «en casa, y los anfitriones somos nosotros», «en la carretera, entre dos familias», «solo nosotros, en pijama» y «en algún sitio con nieve». Cada respuesta da puntos a uno o dos dúos. Si respondéis «en casa», el test da puntos a Papá Noel y Mamá Noel. Si respondéis «en la carretera», se los da a los dos renos del trineo.",
+    "p3": "El primero responde a las 12 preguntas y luego le pasa el móvil al otro. El segundo responde sin ver lo que ha elegido el primero. Después el test suma vuestras respuestas y se queda con el dúo que tiene más puntos. También os enseña el dúo que habría tenido cada uno por su cuenta y las preguntas en las que no habéis respondido lo mismo.",
+    "p4": "Hay una excepción. Si solo uno de vosotros responde como alguien a quien la Navidad le cansa, sois Scrooge y el espíritu de la Navidad. En ese caso, el test no mira los puntos. ¡Es el único dúo en el que los personajes no se parecen!",
+    "p5": "También puedes hacer el test solo/a y responder por vuestra pareja."
   },
   "section2": {
-    "title": "Los ocho dúos navideños del test",
-    "intro": "El test puede dar ocho dúos, cada uno con su foto. Esto es a qué parejas se parece más cada uno.",
+    "title": "Los 8 dúos navideños del test",
+    "intro": "El test puede dar 8 dúos y cada uno tiene su foto. Aquí tenéis a qué parejas se parece más cada dúo.",
     "galerie": [
       {
         "id": "noel",
@@ -40,66 +40,66 @@
       {
         "id": "neige",
         "titre": "Dos muñecos de nieve",
-        "texte": "Para quienes quieren frío, un buen paseo y poca gente.",
+        "texte": "Para las parejas a las que les gustan los paseos largos con frío.",
         "alt": "Dos muñecos de nieve, uno con bufanda rosa y otro con bufanda morada, en un jardín nevado"
       },
       {
         "id": "epices",
         "titre": "Dos muñecos de jengibre",
-        "texte": "Para quienes pasan la Navidad en la cocina, y luego en la mesa.",
+        "texte": "Para las parejas que pasan la Navidad en la cocina.",
         "alt": "Dos muñecos de jengibre decorados con glaseado blanco sobre una bandeja enharinada, junto a cortadores en forma de estrella"
       },
       {
         "id": "noisette",
         "titre": "El Cascanueces y el Hada de Azúcar",
-        "texte": "Para quienes adoran las luces, los mercadillos navideños y las mesas bonitas.",
+        "texte": "Para las parejas que adoran los mercadillos navideños y las mesas bonitas.",
         "alt": "Un cascanueces de madera y una pequeña bailarina con alas de hada, delante de un árbol de Navidad iluminado"
       },
       {
         "id": "scrooge",
         "titre": "Scrooge y el espíritu de la Navidad",
-        "texte": "Para las parejas en las que a uno le encanta la Navidad, y al otro bastante menos.",
+        "texte": "Para las parejas en las que a uno le encanta la Navidad y al otro bastante menos.",
         "alt": "Dos figuritas en el alféizar de una ventana nevada: un anciano con gorro de dormir que sostiene una vela, y un personaje dorado coronado de acebo con un farol"
       },
       {
         "id": "tomtes",
         "titre": "Dos gnomos navideños",
-        "texte": "Para quienes celebran la Navidad en casa, debajo de una manta.",
+        "texte": "Para las parejas que celebran la Navidad en casa debajo de una manta.",
         "alt": "Dos gnomos navideños de gorro largo, uno rosa y otro morado, en el alféizar de una ventana junto a una vela"
       }
     ]
   },
   "section3": {
     "title": "¿De dónde vienen estos personajes de Navidad?",
-    "p1": "El Papá Noel que todo el mundo conoce le debe mucho a un poema estadounidense de 1823, «A Visit from St. Nicholas». Ese poema es el que le dio al trineo sus ocho renos, con sus nombres: Cometa y Cupido están entre ellos.",
-    "p2": "El Cascanueces viene de un cuento alemán de E. T. A. Hoffmann, publicado en 1816. Se convirtió en ballet en 1892, con música de Chaikovski, y el Hada de Azúcar es un personaje del ballet. Scrooge es el viejo avaro de «Cuento de Navidad», el relato que Charles Dickens publicó en 1843. Odia la Navidad hasta la noche en que tres espíritus van a visitarlo.",
-    "p3": "Los gnomos navideños de gorro largo vienen de Escandinavia, donde los llaman «tomte» o «nisse». En los cuentos son unos seres pequeños que cuidan de la casa, ¡siempre que alguien se acuerde de dejarles un cuenco de gachas en Nochebuena!"
+    "p1": "El Papá Noel que todo el mundo conoce viene en gran parte de un poema estadounidense de 1823 que se llama «A Visit from St. Nicholas». Ese poema le dio al trineo sus ocho renos y les puso nombre. Cometa y Cupido están entre ellos.",
+    "p2": "El Cascanueces viene de un cuento alemán de E. T. A. Hoffmann que es de 1816. Se convirtió en ballet en 1892 con música de Chaikovski, y en ese ballet aparece por primera vez el Hada de Azúcar. Scrooge es el viejo avaro de «Cuento de Navidad», un relato que Charles Dickens publicó en 1843. Odia la Navidad hasta la noche en que tres espíritus van a visitarlo.",
+    "p3": "Los gnomos navideños de gorro largo vienen de Escandinavia, donde los llaman «tomte» o «nisse». En los cuentos son unos seres pequeños que cuidan de la casa. ¡Solo hay que acordarse de dejarles un cuenco de gachas en Nochebuena!"
   },
   "section4": {
     "title": "¿Y si no celebráis la Navidad de la misma manera?",
-    "p1": "Es muy habitual. Uno ha crecido con tres cenas y veinte personas en la mesa, el otro con una Navidad de cuatro delante de una película. El test lo enseña enseguida, en la lista de preguntas en las que no habéis respondido lo mismo.",
-    "p2": "Lo más sencillo es coger un poco de cada uno: una tradición de uno, una del otro, y una tercera que os inventáis juntos. Al cabo de unos años, esas costumbres dicen <a href=\"/es/que-tipo-de-pareja-sois-quiz/\">qué tipo de pareja sois</a> mucho mejor que el árbol.",
-    "p3": "Queda una pregunta que el dúo no resuelve: <a href=\"/es/test-lista-de-ninos-buenos-y-malos/\">quién de los dos se ha portado mejor</a> este año. Eso lo decide Papá Noel."
+    "p1": "Es muy habitual. Por ejemplo, uno ha crecido con tres cenas y veinte personas en la mesa. El otro siempre ha pasado la Navidad con cuatro personas delante de una película. El test lo enseña enseguida en la lista de preguntas en las que no habéis respondido lo mismo.",
+    "p2": "Lo más sencillo es coger un poco de cada uno. Os quedáis con una tradición de uno y una del otro, y os inventáis una nueva juntos. Al cabo de unos años, esas costumbres muestran <a href=\"/es/que-tipo-de-pareja-sois-quiz/\">qué tipo de pareja sois</a>.",
+    "p3": "Queda una pregunta que este test no resuelve. No os dice <a href=\"/es/test-lista-de-ninos-buenos-y-malos/\">quién de los dos se ha portado mejor</a> este año. Para eso hay otro test."
   },
   "section5": {
     "title": "Lo que hay que saber sobre este test",
-    "p1": "Este test es un juego, para reír. No mide nada serio: se puede ser perfectamente dos gnomos navideños en diciembre y dos renos del trineo el resto del año.",
-    "p2": "No se guarda nada: vuestras respuestas se quedan en el móvil. Solo se cuenta el dúo obtenido, sin nombre, para saber qué resultados salen más. Las fotos se han creado para esta página."
+    "p1": "Este test es un juego para reír y no mide nada serio. Se puede ser perfectamente dos gnomos navideños en diciembre y dos renos del trineo el resto del año.",
+    "p2": "Vuestras respuestas no se guardan, se quedan en vuestro móvil. Solo contamos el dúo obtenido para saber qué resultados salen más. Vuestro nombre tampoco se guarda. Las fotos se han creado para esta página."
   },
   "seo": {
     "faqTitle": "Preguntas frecuentes",
     "faq1Q": "¿Qué personajes de Navidad pueden salir?",
-    "faq1A": "Hay ocho dúos posibles: Papá Noel y Mamá Noel, dos duendes del taller, dos renos del trineo, dos muñecos de nieve, dos muñecos de jengibre, el Cascanueces y el Hada de Azúcar, Scrooge y el espíritu de la Navidad, y dos gnomos navideños.",
+    "faq1A": "El test puede dar 8 dúos: Papá Noel y Mamá Noel, dos duendes del taller, dos renos del trineo, dos muñecos de nieve, dos muñecos de jengibre, el Cascanueces y el Hada de Azúcar, Scrooge y el espíritu de la Navidad, y dos gnomos navideños.",
     "faq2Q": "¿Cómo se elige el dúo?",
-    "faq2A": "Cada respuesta da puntos a uno o dos dúos. Por ejemplo, «cocinamos durante dos días, es lo mejor de todo» da puntos a los muñecos de jengibre. En pareja, el test suma vuestras dos series de respuestas, y el dúo con mejor nota pasa a ser el vuestro.",
+    "faq2A": "Cada respuesta da puntos a uno o dos dúos. Por ejemplo, si respondéis «cocinamos durante dos días, es lo mejor de todo», los muñecos de jengibre ganan puntos. Cuando hacéis el test en pareja, suma vuestras respuestas y el dúo con más puntos pasa a ser el vuestro.",
     "faq3Q": "¿Se puede hacer el test solo/a?",
-    "faq3A": "Sí. Eliges «Solo/a, para los dos» y respondes pensando en vuestra pareja. Tendrás vuestro dúo, pero no la comparación de las respuestas: para eso hacen falta dos.",
+    "faq3A": "Sí. Basta con elegir «Solo/a, para nuestra pareja» y responder pensando en vuestra pareja. Tendrás vuestro dúo pero no podrás comparar vuestras respuestas.",
     "faq4Q": "¿Por qué somos Scrooge y el espíritu de la Navidad?",
-    "faq4A": "Porque solo uno de los dos ha respondido como alguien a quien la Navidad le cansa: sin adornos, con regalos a última hora, y con el 26 de diciembre como mejor momento. En ese caso el test deja de mirar los puntos y os da ese dúo. También sale cuando protestáis los dos.",
+    "faq4A": "Porque solo uno de vosotros ha respondido como alguien a quien la Navidad le cansa. Por ejemplo, esa persona no saca los adornos y su momento preferido es el 26 de diciembre. En ese caso, el test deja de mirar los puntos y os da este dúo. También sale cuando protestáis tanto uno como otro.",
     "faq5Q": "¿Cuándo hacer este test?",
-    "faq5A": "En diciembre, una tarde en la que decoráis el árbol, o el 24 mientras esperáis la medianoche. Son tres minutos cada uno. También podéis hacerlo entre varias parejas y comparar vuestros dúos.",
+    "faq5A": "Podéis hacerlo en diciembre, por ejemplo la tarde en la que decoráis el árbol o el 24 mientras esperáis la medianoche. Son tres minutos cada uno. También podéis hacerlo con otras parejas para comparar vuestros dúos.",
     "faq6Q": "¿Se guardan mis respuestas?",
-    "faq6A": "No. Las respuestas se quedan en el móvil. Solo se cuenta el dúo obtenido, sin nombre, para el reparto de los resultados."
+    "faq6A": "No. Vuestras respuestas se quedan en vuestro móvil. Solo contamos el dúo obtenido para saber qué resultados salen más, y vuestro nombre no se guarda."
   },
   "jsonLd": {
     "about": "los personajes de Navidad"

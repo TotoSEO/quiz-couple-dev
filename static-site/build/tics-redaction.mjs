@@ -67,6 +67,8 @@ for (const cible of cibles) {
       for (const m of t.matchAll(re)) {
         // « Qui de nous deux », « qui de vous deux » : le nom d'un jeu et une vraie question
         if (/qui de (nous|vous) deux/i.test(m[0])) continue;
+        // le libellé d'une réponse (« autant l'un que l'autre ») dans chaque langue
+        if (/los dos por igual|tutti e due allo stesso modo|beide gleich oft|allebei even vaak/i.test(m[0])) continue;
         tics++;
         lignes.push(`   TIC ${chemin} → ${m[0].trim().slice(0, 150)}`);
       }

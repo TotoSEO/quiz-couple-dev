@@ -1,86 +1,86 @@
 {
   "hero": {
-    "badge": "Test de Navidad • En pareja, o solo/a para los dos",
+    "badge": "Test de Navidad • En pareja, o solo/a para la pareja",
     "title": "El test para saber si estáis en la lista de niños buenos de Papá Noel",
     "titleHighlight": "la lista de niños buenos",
-    "description": "¿Os habéis portado bien los dos? Cada uno responde a doce preguntas sobre su mes de diciembre, y el test os dice en qué lista de Papá Noel está vuestra pareja... y quién de los dos se ha portado mejor.",
+    "description": "¿Vuestra pareja se ha portado bien este año? Cada uno responde a 12 preguntas sobre su mes de diciembre. Después el test os dice en qué lista de Papá Noel estáis y quién se ha portado mejor.",
     "subtitle": "12 preguntas • 3 minutos cada uno • en un solo móvil",
     "jumpBtn": "Hacer el test"
   },
   "section1": {
     "title": "Cómo funciona el test",
-    "p1": "Este test es un juego de Navidad para hacer en pareja. Os dice si vuestra pareja está más bien en la lista de los niños buenos o en la de los malos, con un porcentaje. Hace doce preguntas sobre vuestro mes de diciembre: el calendario de Adviento, los regalos escondidos, el papel de regalo, la cena en casa de los suegros, el último trozo de turrón, y para terminar <a href=\"/es/juego-de-nochevieja-en-pareja/\">el balance de vuestro año en pareja</a>.",
-    "p2": "Por ejemplo, en la pregunta «Los regalos están escondidos en algún sitio de casa:», podéis elegir entre «nada de buscar, la sorpresa ante todo», «nada de buscar, pero el escondite está localizado», «se ha agitado algún que otro paquete» y «todo abierto, y vuelto a envolver con cuidado». La primera respuesta es la que más puntos da, la última no da ninguno.",
-    "p3": "En pareja, el primero responde a las doce preguntas, pasa el móvil, y el segundo responde sin ver lo que ha elegido el otro. Cada uno responde por sí mismo. Al final, el test hace la media de vuestras dos notas: ese es el porcentaje de vuestra pareja. También os dice quién de los dos se ha portado mejor, y en qué preguntas uno lo ha hecho mucho mejor que el otro.",
-    "p4": "También puedes hacerlo solo/a, respondiendo por los dos. ¡Pero no sabréis quién baja la media!"
+    "p1": "Este test es un juego de Navidad para hacer en pareja. Os dice si estáis en la lista de los niños buenos de Papá Noel o en la de los malos. Para eso calcula un porcentaje. Hace 12 preguntas sobre vuestro mes de diciembre. Hablan por ejemplo del calendario de Adviento o del último trozo de turrón, y la última hace <a href=\"/es/juego-de-nochevieja-en-pareja/\">el balance de vuestro año en pareja</a>.",
+    "p2": "Pongamos la pregunta sobre los regalos escondidos en casa. Podéis elegir entre «nada de buscar, la sorpresa ante todo», «nada de buscar, pero el escondite está localizado», «se ha agitado algún que otro paquete» y «todo abierto, y vuelto a envolver con cuidado». Si elegís la primera respuesta, ganáis el máximo de puntos. Si elegís la última, no ganáis ninguno.",
+    "p3": "El primero responde a las 12 preguntas y luego le pasa el móvil al otro. El segundo responde sin ver lo que ha elegido el primero. Cada uno responde por sí mismo. Al final, el test hace la media de vuestras dos notas y eso da el porcentaje de vuestra pareja. También os dice quién se ha portado mejor y en qué preguntas hay más diferencia entre vosotros.",
+    "p4": "También puedes hacer el test solo/a y responder por vuestra pareja. ¡Eso sí, no sabréis quién baja la media!"
   },
   "section2": {
-    "title": "Los cinco puestos de la lista de Papá Noel",
-    "intro": "Según vuestro porcentaje, el test os coloca en uno de estos cinco puestos. Cada uno tiene su foto, del montón de regalos al saco de carbón.",
+    "title": "Los 5 puestos de la lista de Papá Noel",
+    "intro": "El test os da uno de estos cinco puestos según vuestro porcentaje. Cada puesto tiene su foto.",
     "galerie": [
       {
         "id": "r5",
         "titre": "En lo más alto de la lista de los niños buenos",
-        "texte": "A partir del 85 %. El calendario de Adviento, los regalos, el turrón: todo se hace como es debido.",
+        "texte": "A partir del 85 %. Lo habéis hecho todo como es debido, del calendario de Adviento al turrón.",
         "alt": "Una montaña de regalos envueltos al pie de un gran árbol de Navidad iluminado, en un salón"
       },
       {
         "id": "r4",
         "titre": "En la lista de los niños buenos",
-        "texte": "Del 65 al 84 %. Hay dos o tres deslices en el expediente, pero el trineo parará en vuestra casa.",
+        "texte": "Del 65 al 84 %. Habéis tenido dos o tres deslices pero Papá Noel pasará por vuestra casa.",
         "alt": "Dos calcetines de Navidad, uno rosa y otro morado, llenos de regalitos, colgados sobre una chimenea encendida"
       },
       {
         "id": "r3",
         "titre": "Justo entre las dos listas",
-        "texte": "Del 45 al 64 %. Los duendes siguen dudando, y quedan unos días para inclinar la balanza.",
+        "texte": "Del 45 al 64 %. Los duendes siguen dudando y os quedan unos días para arreglarlo.",
         "alt": "Un regalo envuelto y un trozo de carbón atado con un lazo rojo, uno al lado del otro sobre una chimenea"
       },
       {
         "id": "r2",
         "titre": "Más bien en la lista de los traviesos",
-        "texte": "Del 25 al 44 %. Regalos de última hora, paquetes agitados: Papá Noel ha fruncido el ceño.",
+        "texte": "Del 25 al 44 %. Habéis comprado los regalos a última hora y Papá Noel no está muy contento.",
         "alt": "Dos calcetines de Navidad, uno rosa y otro morado, llenos de carbón, con un solo bastón de caramelo"
       },
       {
         "id": "r1",
-        "titre": "Carbón para los dos",
-        "texte": "Menos del 25 %. El calendario de Adviento no ha durado ni diez días, y el turrón ha desaparecido en la cocina.",
+        "titre": "Carbón por Navidad",
+        "texte": "Menos del 25 %. El calendario de Adviento estaba vacío a los diez días y el turrón ha desaparecido en la cocina.",
         "alt": "Un saco de arpillera lleno de carbón, cerrado con un gran lazo rojo, al pie de un árbol de Navidad"
       }
     ]
   },
   "section3": {
     "title": "¿De dónde viene la lista de niños buenos y malos?",
-    "p1": "La idea de que Papá Noel lleva una lista viene sobre todo de una canción estadounidense, «Santa Claus Is Comin' to Town». La escribieron Haven Gillespie y J. Fred Coots, y se oyó por primera vez en la radio en noviembre de 1934. Cuenta que Papá Noel está haciendo una lista, que la repasa dos veces, y que acabará sabiendo quién se ha portado bien y quién no.",
-    "p2": "En España, el carbón no lo trae Papá Noel: lo traen los Reyes Magos. La noche del 5 de enero dejan regalos a los niños que se han portado bien, y carbón a los que no. Hoy es carbón dulce, hecho de azúcar, ¡y los niños se lo comen!",
-    "p3": "En otros países pasa algo parecido. En Italia es la Befana quien mete carbón en los calcetines de los niños traviesos, esa misma noche. Y en los Países Bajos, San Nicolás tiene un gran libro donde apunta quién se ha portado bien."
+    "p1": "La idea de que Papá Noel lleva una lista viene sobre todo de una canción estadounidense que se llama «Santa Claus Is Comin' to Town». La escribieron Haven Gillespie y J. Fred Coots. Se oyó por primera vez en la radio en noviembre de 1934. En la canción, Papá Noel hace una lista y la repasa dos veces para saber quién se ha portado bien.",
+    "p2": "En España, el carbón no lo trae Papá Noel sino los Reyes Magos. La noche del 5 de enero dejan regalos a los niños que se han portado bien y carbón a los que no. Hoy es carbón dulce, hecho de azúcar, ¡y los niños se lo comen!",
+    "p3": "En otros países pasa algo parecido. En Italia es la Befana quien mete carbón en los calcetines de los niños traviesos, esa misma noche. En los Países Bajos, San Nicolás tiene un gran libro donde apunta quién se ha portado bien."
   },
   "section4": {
     "title": "¿Y si no estáis en la misma lista?",
-    "p1": "Es lo más habitual, y también lo más divertido. Cuando uno está en el 80 % y el otro en el 40 %, mirad la lista de preguntas en las que más os separáis: ahí está la clave. Casi siempre hay uno que envuelve todos los regalos y otro que firma la etiqueta, <a href=\"/es/test-que-personajes-de-navidad-sois/\">un auténtico duende y un Scrooge</a>.",
-    "p2": "Detrás del juego, algunas preguntas hablan de la vida real: quién recoge la mesa, quién piensa en los regalos de toda la familia, quién ordena después de la cena. Si la diferencia os hace menos gracia de lo previsto, mirad <a href=\"/es/test-carga-mental-pareja/\">quién hace qué en casa</a> el resto del año: suele ser la misma historia.",
-    "p3": "Y si los dos estáis abajo del todo, que no cunda el pánico. Dos personas que se terminan juntas la caja de bombones siguen siendo una pareja que se entiende."
+    "p1": "Es lo más habitual y también lo más divertido. Por ejemplo, si uno tiene un 80 % y el otro un 40 %, mirad las preguntas en las que hay más diferencia. Casi siempre hay uno que envuelve todos los regalos mientras el otro solo firma la etiqueta. Entonces hay <a href=\"/es/test-que-personajes-de-navidad-sois/\">un auténtico duende y un Scrooge</a> en la misma pareja.",
+    "p2": "Algunas preguntas también hablan de la vida real. Por ejemplo: quién recoge la mesa y quién piensa en los regalos de toda la familia. Si la diferencia no os hace gracia, mirad <a href=\"/es/test-carga-mental-pareja/\">quién hace qué en casa</a> el resto del año. Suele ser lo mismo.",
+    "p3": "Y si tanto uno como otro estáis abajo del todo, no pasa nada. Dos personas que se terminan juntas la caja de bombones siguen siendo una pareja que se entiende."
   },
   "section5": {
     "title": "Lo que hay que saber sobre este test",
-    "p1": "Este test es un juego, para tomárselo a broma. No dice nada serio sobre vuestra pareja: se puede vaciar el calendario de Adviento en diez días y ser un encanto el resto del año.",
-    "p2": "No se guarda nada: vuestras respuestas se quedan en el móvil. Solo se cuenta el puesto obtenido, sin nombre, para saber qué resultados salen más. Las fotos se han creado para esta página."
+    "p1": "Este test es un juego y no hay que tomárselo en serio. No dice nada sobre vuestra pareja. Se puede vaciar el calendario de Adviento en diez días y ser un encanto el resto del año.",
+    "p2": "Vuestras respuestas no se guardan, se quedan en vuestro móvil. Solo contamos el puesto obtenido para saber qué resultados salen más. Vuestro nombre tampoco se guarda. Las fotos se han creado para esta página."
   },
   "seo": {
     "faqTitle": "Preguntas frecuentes",
     "faq1Q": "¿Cómo saber si estamos en la lista de niños buenos?",
-    "faq1A": "Haced el test en pareja: cada uno responde a doce preguntas sobre su mes de diciembre, y el test calcula un porcentaje para vuestra pareja. A partir del 65 %, estáis en la lista de los niños buenos. Por debajo del 45 %, más bien en la otra.",
+    "faq1A": "Basta con hacer el test en pareja. Cada uno responde a 12 preguntas sobre su mes de diciembre y el test calcula el porcentaje de vuestra pareja. A partir del 65 %, estáis en la lista de los niños buenos. Por debajo del 45 %, estáis más bien en la de los malos.",
     "faq2Q": "¿Cómo se calcula el porcentaje?",
-    "faq2A": "Cada respuesta vale de 0 a 4 puntos. Tres preguntas cuentan un poco más que las demás: los regalos escondidos, la cena en casa de los suegros y el balance del año. El total se convierte en porcentaje, y en pareja el test hace la media de los dos.",
+    "faq2A": "Cada respuesta vale entre 0 y 4 puntos. Tres preguntas cuentan un poco más que las demás: los regalos escondidos, la cena en casa de los suegros y el balance del año. Después el test convierte vuestro total en un porcentaje. Cuando lo hacéis en pareja, hace la media de vuestros dos porcentajes.",
     "faq3Q": "¿Se puede hacer el test solo/a?",
-    "faq3A": "Sí. Eliges «Solo/a, para los dos» y respondes pensando en vuestra pareja. Tendrás vuestro puesto en la lista, pero no la comparación entre los dos.",
+    "faq3A": "Sí. Basta con elegir «Solo/a, para nuestra pareja» y responder pensando en vuestra pareja. Tendrás vuestro puesto en la lista pero no sabrás quién se ha portado mejor.",
     "faq4Q": "¿Cómo saber quién se ha portado mejor de los dos?",
-    "faq4A": "En pareja, el test muestra el porcentaje de cada uno debajo del resultado de la pareja, y dice quién de los dos se ha portado mejor. También enseña las tres preguntas en las que más diferencia hay entre vosotros.",
+    "faq4A": "Cuando hacéis el test en pareja, muestra el porcentaje de cada uno debajo del resultado de vuestra pareja. Os dice quién se ha portado mejor y os enseña las tres preguntas en las que hay más diferencia entre vosotros.",
     "faq5Q": "¿El test es para niños?",
-    "faq5A": "Las preguntas están escritas para adultos en pareja: hablan de los suegros, del presupuesto para regalos y del lavavajillas. No hay nada que escandalice, pero un niño no se verá reflejado.",
+    "faq5A": "Las preguntas están escritas para adultos en pareja. Hablan por ejemplo de los suegros o del presupuesto para los regalos. No hay nada que escandalice pero un niño no se verá reflejado.",
     "faq6Q": "¿Se guardan mis respuestas?",
-    "faq6A": "No. Las respuestas se quedan en el móvil. Solo se cuenta el puesto obtenido en la lista, sin nombre, para el reparto de los resultados."
+    "faq6A": "No. Vuestras respuestas se quedan en vuestro móvil. Solo contamos el puesto obtenido en la lista para saber qué resultados salen más, y vuestro nombre no se guarda."
   },
   "jsonLd": {
     "about": "la lista de niños buenos y malos de Papá Noel"
