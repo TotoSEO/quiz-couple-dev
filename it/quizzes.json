@@ -559,8 +559,8 @@
   "speciauxCouple": {
     "title": "Quiz originali di coppia: il vostro cane, la vostra casa",
     "shortTitle": "Quiz originali",
-    "metaDescription": "Quiz originali da fare in coppia: il cane e la casa che fanno per voi, e i quiz di stagione. Ognuno risponde per conto suo, e poi confrontate i risultati.",
-    "description": "Quiz leggeri da fare in due: il vostro cane e la vostra casa in foto, e i quiz di stagione."
+    "metaDescription": "I nostri quiz originali da fare in coppia: che cane fa per noi, che casa fa per noi e i quiz di Natale. Ognuno risponde per conto suo e poi confrontate.",
+    "description": "Quiz leggeri da fare in coppia, per esempio per trovare il vostro cane o la vostra casa."
   },
   "quizSerialKiller": {
     "title": "Quiz: con quale serial killer sei compatibile? (da solo o in due)",
@@ -595,32 +595,32 @@
   "quizChienNous": {
     "title": "Che cane fa per noi? Il test da fare in coppia",
     "shortTitle": "Che cane fa per noi",
-    "metaDescription": "Ognuno risponde a 12 domande (casa, passeggiate, peli sul divano) e il test trova il cane che fa per voi due, con la sua foto: corgi, golden, shiba...",
-    "description": "Dodici domande a testa, e il cane che andrebbe bene alla vostra coppia, dal corgi al bovaro del bernese, con la sua foto."
+    "metaDescription": "Ognuno risponde a 12 domande sulla vostra vita di coppia e il test vi dice che cane fa per voi: corgi, golden retriever, shiba... con la sua foto.",
+    "description": "Ognuno risponde a 12 domande e il test vi mostra il cane che andrebbe bene alla vostra coppia, con la sua foto."
   },
   "quizMaisonNous": {
     "title": "Che casa fa per noi? Il test da fare in coppia",
     "shortTitle": "Che casa fa per noi",
-    "metaDescription": "Appartamento in città, casa con giardino, rudere da ristrutturare o van? Ognuno risponde a 12 domande e il test mostra la casa che fa per voi due.",
-    "description": "Dodici domande a testa, e il posto dove stareste bene tutti e due: appartamento, casa di campagna, loft, tiny house..."
+    "metaDescription": "Siete indecisi tra un appartamento in città e una casa con giardino? Ognuno risponde a 12 domande e il test vi mostra la casa che fa per la vostra coppia.",
+    "description": "Ognuno risponde a 12 domande e il test vi mostra la casa che andrebbe bene alla vostra coppia, con la sua foto."
   },
   "quizListeNoel": {
     "title": "Lista dei buoni e cattivi di Babbo Natale: il test di coppia",
     "shortTitle": "Lista dei buoni e dei cattivi",
-    "metaDescription": "Ognuno risponde a 12 domande sul suo mese di dicembre, e il test dice se la vostra coppia è nella lista dei buoni o dei cattivi di Babbo Natale.",
-    "description": "Dodici domande a testa sul vostro mese di dicembre, e il posto della vostra coppia nella lista di Babbo Natale, con la sua foto."
+    "metaDescription": "Ognuno risponde a 12 domande sul suo mese di dicembre. Il test vi dice se la vostra coppia è nella lista dei buoni o dei cattivi di Babbo Natale.",
+    "description": "Ognuno risponde a 12 domande sul suo mese di dicembre e il test vi dà il posto della vostra coppia nella lista di Babbo Natale."
   },
   "quizDuoNoel": {
     "title": "Che personaggi di Natale siete? Il test da fare in coppia",
     "shortTitle": "Che personaggi di Natale siete",
-    "metaDescription": "Ognuno risponde a 12 domande sul vostro Natale in due, e il test trova il vostro duo: Babbo Natale e Mamma Natale, due elfi, Scrooge...",
-    "description": "Dodici domande a testa, e il duo di Natale che formate, da Babbo Natale e Mamma Natale ai due gnomi, con la sua foto."
+    "metaDescription": "Ognuno risponde a 12 domande su come festeggiate il Natale e il test vi dà il vostro duo, per esempio due elfi o Babbo Natale e Mamma Natale.",
+    "description": "Ognuno risponde a 12 domande e il test vi dà il duo di Natale che formate, con la sua foto."
   },
   "quizPorteCulotte": {
     "title": "Chi porta i pantaloni nella coppia? Il test da fare in due",
     "shortTitle": "Chi porta i pantaloni?",
-    "metaDescription": "Chi porta i pantaloni nella vostra coppia? Il test di 20 domande sulle decisioni di ogni giorno, da fare da soli o in due, ognuno per conto suo.",
-    "description": "Venti domande sulle decisioni di ogni giorno, da soli o in due, per vedere chi ha più spesso l'ultima parola."
+    "metaDescription": "Chi porta i pantaloni nella vostra coppia? Rispondete a 20 domande sulle decisioni di ogni giorno, da soli o in due, per sapere chi decide di più.",
+    "description": "Rispondete a 20 domande sulle decisioni di ogni giorno per vedere chi ha più spesso l'ultima parola."
   },
   "bilanCouple": {
     "title": "Bilancio di coppia online | Risultati subito e in PDF",
