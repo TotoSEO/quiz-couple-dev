@@ -418,11 +418,13 @@
     "quizMaisonNous": "Quelle maison est faite pour nous ?",
     "quizOuVivre": "Où vivrons-nous dans 10 ans ?",
     "quizMariageNous": "Quel mariage est fait pour nous ?",
+    "quizEnfantsNous": "Combien d'enfants aurons-nous ?",
     "quizListeNoel": "Sages ou pas sages ?",
     "quizDuoNoel": "Quels personnages de Noël êtes-vous ?",
     "quizPorteCulotte": "Qui porte la culotte ?",
     "quizAnimauxNous": "Quel couple d'animaux sommes-nous ?",
-    "quizPartenairesNous": "Quel genre de partenaires sommes-nous ?"
+    "quizPartenairesNous": "Quel genre de partenaires sommes-nous ?",
+    "quizCoupleLegende": "Quel couple de légende sommes-nous ?"
   },
   "truefalse": {
     "ready": "Prêt pour le vrai ou faux ?",

@@ -1,0 +1,97 @@
+{
+  "hero": {
+    "badge": "Quiz originale • In due, o da solo/a per la coppia",
+    "title": "Quanti figli avremo? Il test in 12 domande",
+    "titleHighlight": "Quanti figli avremo?",
+    "description": "Un figlio solo, due o tutta una tribù? Ognuno risponde a 12 domande sulla vita che immagina tra qualche anno. Poi il test vi mostra la famiglia che somiglia di più alle vostre risposte, con la sua foto. È un gioco e non una previsione!",
+    "subtitle": "12 domande • 3 minuti a testa • su un solo telefono",
+    "jumpBtn": "Fai il test"
+  },
+  "section1": {
+    "title": "Come funziona il test",
+    "p1": "Questo test è un <strong>gioco da fare in coppia</strong>. Non legge il futuro. Guarda la vita che immaginate e cerca la famiglia che le somiglia. Fa 12 domande molto semplici. Per esempio, vi chiede come sarà una domenica mattina tra 10 anni e quale sarà la vostra prossima macchina.",
+    "p2": "Prendiamo la domanda sulla macchina. Se rispondete «una decappottabile a due posti», il test dà punti alla vita a due. Se la tua dolce metà risponde «un monovolume a 7 posti», li dà alla famiglia numerosa. Alla fine il test <strong>somma le vostre risposte</strong> e tiene il risultato che ha più punti.",
+    "p3": "Il primo risponde alle 12 domande e poi passa il telefono all'altro. Il secondo risponde <strong>senza vedere cosa ha scelto il primo</strong>. Poi il test vi mostra il risultato della vostra coppia, con la sua foto. Vi mostra anche il risultato che ognuno avrebbe avuto per conto suo e l'elenco delle domande a cui non avete risposto allo stesso modo.",
+    "p4": "Puoi fare il test anche da solo/a rispondendo per la vostra coppia. Però non saprai cosa avrebbe risposto la tua dolce metà. È un peccato, perché è una buona occasione per <a href=\"/it/blog/domande-sul-futuro-di-coppia/\">parlare del vostro futuro</a>."
+  },
+  "section2": {
+    "title": "I 6 risultati del test",
+    "intro": "Il test può dare 6 risultati. Vanno dalla vita a due alla famiglia numerosa. C'è anche un risultato per le coppie che non hanno fretta.",
+    "galerie": [
+      {
+        "id": "zero",
+        "titre": "Una vita a due",
+        "texte": "Per le coppie che tengono alla loro libertà e ai loro viaggi.",
+        "alt": "Una piccola decappottabile d'epoca parcheggiata su una strada in riva al mare, al tramonto, con i bagagli sul retro"
+      },
+      {
+        "id": "un",
+        "titre": "Un figlio",
+        "texte": "Per le coppie che vogliono un figlio e del tempo per sé.",
+        "alt": "Una cameretta con un solo lettino di legno, un orsacchiotto sul cuscino e una giostrina di stelle di feltro"
+      },
+      {
+        "id": "deux",
+        "titre": "Due figli",
+        "texte": "Per le coppie che immaginano una casa vivace ma non travolta.",
+        "alt": "Una cameretta con un letto a castello di legno, un orsacchiotto sul letto di sopra e un coniglio di peluche su quello di sotto"
+      },
+      {
+        "id": "trois",
+        "titre": "Tre figli",
+        "texte": "Per le coppie a cui il rumore non dà nessun fastidio.",
+        "alt": "Tre piccole paia di stivali da pioggia colorati in fila tra due paia grandi, su uno zerbino davanti a una porta di legno"
+      },
+      {
+        "id": "tribu",
+        "titre": "Quattro figli o più",
+        "texte": "Per le coppie che sognano una grande tavolata.",
+        "alt": "Un lungo tavolo da cucina di legno apparecchiato per la colazione, con ciotole e tazze di tutti i colori intorno a una pila di pancake"
+      },
+      {
+        "id": "plustard",
+        "titre": "Non adesso",
+        "texte": "Per le coppie che prima hanno altri progetti.",
+        "alt": "Una stanza vuota e piena di sole con un barattolo di vernice chiuso, un rullo e una piccola scaletta vicino alla finestra"
+      }
+    ]
+  },
+  "section3": {
+    "title": "Quanti figli si fanno oggi in Italia?",
+    "intro": "Il test è un gioco ma la domanda è seria. Ecco cosa dicono i numeri in Italia.",
+    "sub1Title": "Poco più di un figlio per donna",
+    "sub1Text": "In Italia le donne hanno in media <strong>1,18 figli</strong>. È il dato dell'Istat per il 2024 ed è il più basso mai registrato. Nel 2023 era 1,20.",
+    "sub2Title": "La famiglia che si immagina e quella che si ha",
+    "sub2Text": "Si immaginano famiglie più grandi di quelle che si hanno. Nel 2024 l'Istat ha chiesto il numero ideale di figli a chi pensa di averne. <strong>Il 41,7% ha risposto due</strong> e il 14,4% tre o più. Tra l'idea e la realtà ci sono spesso il lavoro e la casa. C'è anche <a href=\"/it/test-voglio-un-figlio/\">la voglia di avere un figlio</a>, che non è sempre la stessa per l'uno e per l'altra.",
+    "sub3Title": "Un figlio alla volta",
+    "sub3Text": "Il numero di figli non si decide quasi mai in una volta sola. La maggior parte delle coppie decide prima di avere un figlio. Poi vede come va. Conviene parlare di alcune cose <a href=\"/it/test-genitorialita-coppia/\">prima di diventare genitori</a>. Per esempio, chi si alzerà di notte e chi ridurrà il lavoro."
+  },
+  "section4": {
+    "title": "E se non avete lo stesso risultato?",
+    "p1": "Succede spesso. Per esempio, a uno esce «due figli» e all'altro «non adesso». Non è grave. Il test conta i punti delle vostre risposte e bastano pochi punti per cambiare il risultato.",
+    "p2": "Guardate piuttosto l'elenco delle domande a cui avete risposto in modo diverso. Se riguardano la macchina o le vacanze, non è grave. Se riguardano la domanda «e allora, quando?», <strong>prendetevi il tempo di parlarne</strong>. È meglio sapere presto che non avete la stessa voglia."
+  },
+  "section5": {
+    "title": "Cosa sapere su questo test",
+    "p1": "Questo test è un gioco. <strong>Non prevede il numero di figli che avrete</strong>. Non sa niente della vostra salute, della vostra età né della vostra situazione. Avere un figlio non dipende solo dalla voglia e non va sempre come previsto. Se in questo momento l'argomento vi fa male, forse questo gioco non è per oggi.",
+    "p2": "Le vostre risposte non vengono salvate, restano sul vostro telefono. Contiamo solo il risultato ottenuto per sapere quali escono di più. Nemmeno il vostro nome viene salvato. Le foto sono state create per questa pagina."
+  },
+  "seo": {
+    "faqTitle": "Domande frequenti",
+    "faq1Q": "Si può sapere quanti figli avremo?",
+    "faq1A": "No. Nessuno può prevederlo e nemmeno questo test. Guarda solo la vita che immaginate, per esempio la casa e le vacanze. Poi vi mostra la famiglia che somiglia di più alle vostre risposte.",
+    "faq2Q": "Quali risultati si possono ottenere?",
+    "faq2A": "Il test può dare 6 risultati: una vita a due, un figlio, due figli, tre figli, quattro figli o più, e «non adesso».",
+    "faq3Q": "Come viene calcolato il risultato?",
+    "faq3A": "Ogni risposta dà punti a uno o due risultati. Per esempio, se alla domanda sulla casa rispondete «una casa con il giardino», i risultati «due figli» e «tre figli» prendono punti. Quando fate il test in due, somma le vostre risposte e il risultato che ha più punti diventa quello della vostra coppia.",
+    "faq4Q": "Quanti figli si fanno in media in Italia?",
+    "faq4A": "In Italia le donne hanno in media 1,18 figli nel 2024 secondo l'Istat. È il dato più basso mai registrato. Tra chi pensa di avere figli, il 41,7% indica due come numero ideale.",
+    "faq5Q": "Cosa fare se non vogliamo lo stesso numero di figli?",
+    "faq5A": "Succede molto spesso e se ne può parlare. Dite prima cosa immagina ognuno e perché. La differenza nasce spesso da una paura precisa, per esempio quella di restare senza soldi o senza tempo. Non serve decidere subito il numero. La maggior parte delle coppie va avanti un figlio alla volta.",
+    "faq6Q": "Si può fare il test da soli?",
+    "faq6A": "Sì. Basta scegliere «Da solo/a, per la nostra coppia» e rispondere pensando alla vostra coppia. Avrai un risultato ma non potrai confrontare le vostre risposte."
+  },
+  "jsonLd": {
+    "about": "la famiglia che somiglia alla vita che immaginate"
+  }
+}

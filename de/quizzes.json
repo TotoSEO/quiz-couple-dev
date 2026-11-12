@@ -616,6 +616,12 @@
     "metaDescription": "Ihr schwankt zwischen Schloss, Scheune und Strand? Jeder beantwortet 12 Fragen und der Test zeigt euch den Hochzeitsstil, der zu euch als Paar passt.",
     "description": "Jeder beantwortet 12 Fragen und der Test zeigt euch den Hochzeitsstil, der zu euch als Paar passt, mit Foto."
   },
+  "quizEnfantsNous": {
+    "title": "Wie viele Kinder bekommt ihr? Der Test für Paare",
+    "shortTitle": "Wie viele Kinder werden wir haben",
+    "metaDescription": "Ein Kind, zwei oder eine ganze Rasselbande? Jeder beantwortet 12 Fragen zu seinem Wunschleben und der Test zeigt die Familie, die zu euren Antworten passt.",
+    "description": "Jeder beantwortet 12 Fragen zu dem Leben, das er sich vorstellt, und der Test zeigt euch die Familie, die zu euren Antworten passt, mit Foto."
+  },
   "quizListeNoel": {
     "title": "Artig oder unartig? Der Weihnachtstest für Paare",
     "shortTitle": "Artig oder unartig",
@@ -645,6 +651,12 @@
     "shortTitle": "Was für Partner sind wir",
     "metaDescription": "Fürsorglich, romantisch oder sehr unabhängig? Jeder beantwortet 12 Fragen und der Test zeigt, was für Partner ihr in eurer Beziehung seid.",
     "description": "Jeder beantwortet 12 Fragen und der Test zeigt euch mit Foto, was für Partner ihr seid."
+  },
+  "quizCoupleLegende": {
+    "title": "Welches berühmte Paar seid ihr? Der Test für Paare",
+    "shortTitle": "Welches legendäre Paar sind wir",
+    "metaDescription": "Romeo und Julia, Bonnie und Clyde oder Marie und Pierre Curie? Jeder beantwortet 12 Fragen und der Test zeigt das legendäre Paar, das euch am ähnlichsten ist.",
+    "description": "Jeder beantwortet 12 Fragen und der Test zeigt euch das legendäre Paar, das euch am ähnlichsten ist, mit Foto."
   },
   "bilanCouple": {
     "title": "Beziehungscheck online | Ergebnis sofort, auch als PDF",

@@ -417,11 +417,13 @@
     "quizMaisonNous": "¿Qué casa es para nosotros?",
     "quizOuVivre": "¿Dónde viviremos dentro de 10 años?",
     "quizMariageNous": "¿Qué tipo de boda queremos?",
+    "quizEnfantsNous": "¿Cuántos hijos tendremos?",
     "quizListeNoel": "¿Os habéis portado bien?",
     "quizDuoNoel": "¿Qué personajes de Navidad sois?",
     "quizPorteCulotte": "¿Quién lleva los pantalones?",
     "quizAnimauxNous": "¿Qué pareja de animales somos?",
-    "quizPartenairesNous": "¿Qué tipo de novios somos?"
+    "quizPartenairesNous": "¿Qué tipo de novios somos?",
+    "quizCoupleLegende": "¿Qué pareja de leyenda somos?"
   },
   "truefalse": {
     "ready": "¿Listo para el verdadero o falso?",

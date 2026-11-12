@@ -417,11 +417,13 @@
     "quizMaisonNous": "What kind of house should we live in?",
     "quizOuVivre": "Where should we live in 10 years?",
     "quizMariageNous": "What kind of wedding should we have?",
+    "quizEnfantsNous": "How many kids will we have?",
     "quizListeNoel": "Naughty or Nice?",
     "quizDuoNoel": "Which Christmas Characters Are You?",
     "quizPorteCulotte": "Who Wears the Pants?",
     "quizAnimauxNous": "What animal couple are we?",
-    "quizPartenairesNous": "What kind of partners are we?"
+    "quizPartenairesNous": "What kind of partners are we?",
+    "quizCoupleLegende": "Which legendary couple are we?"
   },
   "truefalse": {
     "ready": "Ready for true or false?",

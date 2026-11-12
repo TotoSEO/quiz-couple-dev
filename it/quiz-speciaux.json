@@ -41,6 +41,8 @@
     "quizOuVivreTagline": "Ognuno risponde a 12 domande sulla vita che si immagina e il test vi mostra il posto della vostra coppia in foto.",
     "quizMariageNousNom": "Che matrimonio fa per noi?",
     "quizMariageNousTagline": "Ognuno risponde a 12 domande sul giorno del matrimonio e il test vi mostra il matrimonio della vostra coppia in foto.",
+    "quizEnfantsNousNom": "Quanti figli avremo?",
+    "quizEnfantsNousTagline": "Ognuno risponde a 12 domande sulla vita che immagina e il test vi mostra in foto la famiglia che le somiglia.",
     "quizListeNoelNom": "Buoni o cattivi?",
     "quizListeNoelTagline": "Ognuno risponde a 12 domande sul suo mese di dicembre. Il test vi dice se la vostra coppia è nella lista dei buoni e chi è stato più buono.",
     "quizDuoNoelNom": "Che personaggi di Natale siete?",
@@ -50,7 +52,9 @@
     "quizAnimauxNousNom": "Che coppia di animali siamo?",
     "quizAnimauxNousTagline": "Ognuno risponde a 12 domande sulla vostra vita di coppia e il test vi mostra la vostra coppia di animali in foto.",
     "quizPartenairesNousNom": "Che tipo di fidanzati siamo?",
-    "quizPartenairesNousTagline": "Ognuno risponde a 12 domande sulla vita di tutti i giorni e il test vi mostra che tipo di fidanzati siete in foto."
+    "quizPartenairesNousTagline": "Ognuno risponde a 12 domande sulla vita di tutti i giorni e il test vi mostra che tipo di fidanzati siete in foto.",
+    "quizCoupleLegendeNom": "Che coppia leggendaria siamo?",
+    "quizCoupleLegendeTagline": "Ognuno risponde a 12 domande sulla vostra storia e il test vi mostra la vostra coppia leggendaria in foto."
   },
   "section1": {
     "title": "A cosa servono questi quiz",

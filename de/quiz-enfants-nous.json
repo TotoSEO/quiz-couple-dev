@@ -1,0 +1,97 @@
+{
+  "hero": {
+    "badge": "Spaß-Quiz • Zu zweit oder allein für euch als Paar",
+    "title": "Wie viele Kinder werden wir haben? Der Test in 12 Fragen",
+    "titleHighlight": "Wie viele Kinder werden wir haben?",
+    "description": "Ein Kind, zwei oder eine ganze Rasselbande? Jeder beantwortet 12 Fragen zu dem Leben, das er sich in ein paar Jahren vorstellt. Danach zeigt euch der Test die Familie, die am besten zu euren Antworten passt, mit Foto. Das ist ein Spiel und keine Vorhersage!",
+    "subtitle": "12 Fragen • 3 Minuten pro Person • an einem Handy",
+    "jumpBtn": "Zum Test"
+  },
+  "section1": {
+    "title": "So funktioniert der Test",
+    "p1": "Dieser Test ist ein <strong>Spiel für Paare</strong>. Er sagt die Zukunft nicht voraus. Er schaut auf das Leben, das ihr euch vorstellt, und sucht die Familie dazu. Er stellt 12 ganz einfache Fragen. Er fragt zum Beispiel nach einem Sonntagmorgen in 10 Jahren und nach eurem nächsten Auto.",
+    "p2": "Nehmen wir die Frage zum Auto. Antwortet ihr „ein Cabrio mit zwei Sitzen“, bekommt das Leben zu zweit Punkte. Antwortet dein Schatz „ein Van mit 7 Sitzen“, bekommt die Großfamilie Punkte. Am Ende <strong>zählt der Test eure Antworten zusammen</strong> und nimmt das Ergebnis mit den meisten Punkten.",
+    "p3": "Der Erste beantwortet die 12 Fragen und gibt dann das Handy weiter. Der Zweite antwortet, <strong>ohne die Antworten des Ersten zu sehen</strong>. Danach zeigt euch der Test euer Ergebnis als Paar mit Foto. Er zeigt auch das Ergebnis, das jeder für sich bekommen hätte, und die Fragen mit unterschiedlichen Antworten.",
+    "p4": "Du kannst den Test auch allein machen und für euch als Paar antworten. Dann erfährst du aber nicht, was dein Schatz geantwortet hätte. Das ist schade, denn der Test ist ein guter Anlass, <a href=\"/de/blog/zukunftsfragen-fuer-paare/\">über eure Zukunft zu reden</a>."
+  },
+  "section2": {
+    "title": "Die 6 Ergebnisse im Test",
+    "intro": "Der Test hat 6 mögliche Ergebnisse. Sie reichen vom Leben zu zweit bis zur Großfamilie. Es gibt auch ein Ergebnis für Paare, die es nicht eilig haben.",
+    "galerie": [
+      {
+        "id": "zero",
+        "titre": "Ein Leben zu zweit",
+        "texte": "Für Paare, denen ihre Freiheit und ihre Reisen wichtig sind.",
+        "alt": "Ein kleines altes Cabrio parkt bei Sonnenuntergang an einer Straße am Meer, mit Gepäck auf dem Heck"
+      },
+      {
+        "id": "un",
+        "titre": "Ein Kind",
+        "texte": "Für Paare, die ein Kind und Zeit für sich wollen.",
+        "alt": "Ein Kinderzimmer mit einem einzelnen kleinen Holzbett, einem Teddybären auf dem Kissen und einem Mobile aus Filzsternen"
+      },
+      {
+        "id": "deux",
+        "titre": "Zwei Kinder",
+        "texte": "Für Paare, die sich ein lebendiges, aber kein überfülltes Zuhause vorstellen.",
+        "alt": "Ein Kinderzimmer mit einem Stockbett aus Holz, einem Teddybären im oberen Bett und einem Stoffhasen im unteren"
+      },
+      {
+        "id": "trois",
+        "titre": "Drei Kinder",
+        "texte": "Für Paare, die Lärm überhaupt nicht stört.",
+        "alt": "Drei kleine Paar bunte Gummistiefel stehen zwischen zwei großen Paaren auf einer Fußmatte vor einer Holztür"
+      },
+      {
+        "id": "tribu",
+        "titre": "Vier Kinder oder mehr",
+        "texte": "Für Paare, die von einem vollen Tisch träumen.",
+        "alt": "Ein langer Küchentisch aus Holz, fürs Frühstück gedeckt, mit Schüsseln und Tassen in allen Farben rund um einen Stapel Pfannkuchen"
+      },
+      {
+        "id": "plustard",
+        "titre": "Noch nicht jetzt",
+        "texte": "Für Paare, die erst andere Pläne haben.",
+        "alt": "Ein leeres, sonniges Zimmer mit einem geschlossenen Farbeimer, einer Farbrolle und einer kleinen Trittleiter am Fenster"
+      }
+    ]
+  },
+  "section3": {
+    "title": "Wie viele Kinder bekommen Paare heute in Deutschland?",
+    "intro": "Der Test ist ein Spiel, aber die Frage ist ernst. Das sagen die Zahlen für Deutschland.",
+    "sub1Title": "Weniger als 2 Kinder pro Frau",
+    "sub1Text": "In Deutschland bekommen Frauen im Schnitt <strong>1,32 Kinder</strong>. Das ist die Zahl des Statistischen Bundesamts für 2025. Im Jahr davor waren es noch 1,35.",
+    "sub2Title": "Die Familie im Kopf und die Familie im Leben",
+    "sub2Text": "Viele wünschen sich mehr Kinder, als sie bekommen. Das Bundesinstitut für Bevölkerungsforschung hat das 2025 ausgewertet. Frauen wünschen sich im Schnitt <strong>1,76 Kinder</strong>. Zwischen Wunsch und Wirklichkeit stehen oft der Job und die Wohnung. Dazu kommt <a href=\"/de/will-ich-kinder-test/\">der Kinderwunsch selbst</a>, und der ist nicht bei jedem gleich stark.",
+    "sub3Title": "Ein Kind nach dem anderen",
+    "sub3Text": "Die Zahl der Kinder steht selten von Anfang an fest. Die meisten Paare entscheiden sich erst einmal für ein Kind. Danach sehen sie, wie es läuft. Über ein paar Dinge redet ihr am besten, <a href=\"/de/elternschafts-bereitschaftstest/\">bevor ihr Eltern werdet</a>. Zum Beispiel darüber, wer nachts aufsteht und wer im Job kürzertritt."
+  },
+  "section4": {
+    "title": "Und wenn ihr nicht dasselbe Ergebnis bekommt?",
+    "p1": "Das kommt oft vor. Einer bekommt zum Beispiel „zwei Kinder“ und der andere „noch nicht jetzt“. Das ist nicht schlimm. Der Test zählt die Punkte eurer Antworten und schon wenige Punkte ändern das Ergebnis.",
+    "p2": "Schaut euch lieber die Fragen mit unterschiedlichen Antworten an. Geht es um das Auto oder um den Urlaub, ist das halb so wild. Geht es um die Frage „Und, wann ist es so weit?“, dann <strong>nehmt euch Zeit für ein Gespräch</strong>. Es ist besser, früh zu wissen, dass ihr nicht denselben Wunsch habt."
+  },
+  "section5": {
+    "title": "Was ihr über diesen Test wissen solltet",
+    "p1": "Dieser Test ist ein Spiel. <strong>Er sagt nicht voraus, wie viele Kinder ihr bekommt</strong>. Er weiß nichts über eure Gesundheit, euer Alter oder eure Lage. Ein Kind zu bekommen hängt nicht nur vom Wunsch ab und läuft nicht immer wie geplant. Wenn das Thema für euch gerade schmerzhaft ist, dann ist dieses Spiel vielleicht nichts für heute.",
+    "p2": "Eure Antworten werden nicht gespeichert, sie bleiben auf eurem Handy. Wir zählen nur, welches Ergebnis herauskommt, um zu sehen, welche am häufigsten sind. Euer Vorname wird auch nicht gespeichert. Die Fotos wurden für diese Seite erstellt."
+  },
+  "seo": {
+    "faqTitle": "Häufige Fragen",
+    "faq1Q": "Kann man wissen, wie viele Kinder man bekommt?",
+    "faq1A": "Nein. Das kann niemand vorhersagen und dieser Test auch nicht. Er schaut nur auf das Leben, das ihr euch vorstellt, zum Beispiel auf euer Zuhause und euren Urlaub. Danach zeigt er euch die Familie, die am besten zu euren Antworten passt.",
+    "faq2Q": "Welche Ergebnisse kann man bekommen?",
+    "faq2A": "Der Test hat 6 mögliche Ergebnisse: ein Leben zu zweit, ein Kind, zwei Kinder, drei Kinder, vier Kinder oder mehr und „noch nicht jetzt“.",
+    "faq3Q": "Wie wird das Ergebnis berechnet?",
+    "faq3A": "Jede Antwort gibt einem oder zwei Ergebnissen Punkte. Antwortet ihr zum Beispiel bei der Frage zum Zuhause „ein Haus mit Garten“, bekommen die Ergebnisse „zwei Kinder“ und „drei Kinder“ Punkte. Macht ihr den Test zu zweit, zählt er eure Antworten zusammen. Das Ergebnis mit den meisten Punkten wird euer Ergebnis als Paar.",
+    "faq4Q": "Wie viele Kinder bekommt man in Deutschland im Schnitt?",
+    "faq4A": "Frauen bekommen in Deutschland im Schnitt 1,32 Kinder. Das ist die Zahl des Statistischen Bundesamts für 2025. Gewünscht sind mehr. Nach einer Auswertung des Bundesinstituts für Bevölkerungsforschung von 2025 wünschen sich Frauen im Schnitt 1,76 Kinder.",
+    "faq5Q": "Was tun, wenn wir nicht gleich viele Kinder wollen?",
+    "faq5A": "Das kommt sehr oft vor und lässt sich besprechen. Sagt euch erst einmal, was sich jeder vorstellt und warum. Oft steckt hinter dem Unterschied eine bestimmte Angst, zum Beispiel vor zu wenig Geld oder zu wenig Zeit. Ihr müsst die Zahl nicht sofort festlegen. Die meisten Paare gehen ein Kind nach dem anderen an.",
+    "faq6Q": "Kann man den Test allein machen?",
+    "faq6A": "Ja. Wähle einfach „Allein, für uns als Paar“ und antworte so, wie es zu euch als Paar passt. Du bekommst ein Ergebnis, kannst eure Antworten aber nicht vergleichen."
+  },
+  "jsonLd": {
+    "about": "die Familie, die zu dem Leben passt, das ihr euch vorstellt"
+  }
+}

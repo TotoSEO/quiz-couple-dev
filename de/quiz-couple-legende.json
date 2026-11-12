@@ -1,0 +1,111 @@
+{
+  "hero": {
+    "badge": "Spaß-Quiz • Zu zweit oder allein für euch als Paar",
+    "title": "Welches legendäre Paar sind wir? Der Test in 12 Fragen",
+    "titleHighlight": "Welches legendäre Paar sind wir?",
+    "description": "Romeo und Julia, Bonnie und Clyde oder Marie und Pierre Curie? Jeder beantwortet 12 Fragen zu eurer Geschichte. Danach zeigt euch der Test das legendäre Paar, das euch am ähnlichsten ist, mit Foto.",
+    "subtitle": "12 Fragen • 3 Minuten pro Person • an einem Handy",
+    "jumpBtn": "Zum Test"
+  },
+  "section1": {
+    "title": "So funktioniert der Test",
+    "p1": "Dieser Test ist ein <strong>Spiel für Paare</strong>. Er sucht das berühmte Paar, dessen Geschichte eurer am ähnlichsten ist. Er stellt 12 Fragen zu eurer Beziehung. Er fragt zum Beispiel nach eurem Kennenlernen und danach, was ihr macht, <a href=\"/de/fernbeziehung-quiz/\">wenn ihr weit voneinander weg seid</a>.",
+    "p2": "Nehmen wir die Frage zum Kennenlernen. Antwortet ihr „Liebe auf den ersten Blick“, bekommen Romeo und Julia Punkte. Antwortet dein Schatz „am Anfang konnten wir uns nicht ausstehen“, bekommen Elizabeth Bennet und Mr. Darcy Punkte. Am Ende <strong>zählt der Test eure Antworten zusammen</strong> und nimmt das Paar mit den meisten Punkten.",
+    "p3": "Der Erste beantwortet die 12 Fragen und gibt dann das Handy weiter. Der Zweite antwortet, <strong>ohne die Antworten des Ersten zu sehen</strong>. Danach zeigt euch der Test euer legendäres Paar mit Foto. Er zeigt auch das Paar, das jeder für sich bekommen hätte, und die Fragen mit unterschiedlichen Antworten.",
+    "p4": "Du kannst den Test auch allein machen und für euch als Paar antworten. Dann könnt ihr eure Antworten aber nicht vergleichen. Das ist schade, denn kein Paar erzählt sein Kennenlernen auf dieselbe Weise!"
+  },
+  "section2": {
+    "title": "Die 8 legendären Paare im Test",
+    "intro": "Der Test hat 8 mögliche Ergebnisse. Vier dieser Paare haben gelebt. Die anderen vier stammen aus einem Theaterstück, einem Roman oder einem Mythos. Hier seht ihr, zu wem welches Paar passt.",
+    "galerie": [
+      {
+        "id": "romeo",
+        "titre": "Romeo und Julia",
+        "texte": "Für Paare, bei denen es sofort gefunkt hat und die seitdem unzertrennlich sind.",
+        "alt": "Ein alter Steinbalkon voller roter Rosen und Efeu, mit einer brennenden Laterne, in der Abenddämmerung"
+      },
+      {
+        "id": "ulysse",
+        "titre": "Odysseus und Penelope",
+        "texte": "Für geduldige Paare, die auch auf Entfernung nicht zweifeln.",
+        "alt": "Ein Webstuhl aus Holz vor einem Steinfenster mit Blick aufs Meer, am Horizont ein kleines antikes Segelschiff"
+      },
+      {
+        "id": "cleopatre",
+        "titre": "Kleopatra und Marcus Antonius",
+        "texte": "Für Paare, die große Feste lieben und groß denken.",
+        "alt": "Eine goldene Barke mit purpurnen Segeln liegt bei Sonnenuntergang auf dem Nil vor Palmen"
+      },
+      {
+        "id": "bonnie",
+        "titre": "Bonnie und Clyde",
+        "texte": "Für eingeschworene Paare, die gegen alle anderen zusammenhalten.",
+        "alt": "Ein schwarzes Auto aus den 1930er-Jahren auf einem Feldweg mitten in der Prärie, auf der Motorhaube ein Filzhut und eine Baskenmütze"
+      },
+      {
+        "id": "darcy",
+        "titre": "Elizabeth Bennet und Mr. Darcy",
+        "texte": "Für Paare, die sich erst genervt haben und sich bis heute necken.",
+        "alt": "Ein großes englisches Herrenhaus, über einen See hinweg gesehen, am Ende einer Rasenfläche im Morgennebel"
+      },
+      {
+        "id": "curie",
+        "titre": "Marie und Pierre Curie",
+        "texte": "Für Paare, die immer ein gemeinsames Projekt haben.",
+        "alt": "Ein alter Labortisch mit Glaskolben, einer Waage, einem offenen Notizbuch und einem kleinen Fläschchen, das blaugrün leuchtet"
+      },
+      {
+        "id": "hugo",
+        "titre": "Juliette Drouet und Victor Hugo",
+        "texte": "Für Paare, die sich von morgens bis abends schreiben.",
+        "alt": "Ein Schreibtisch aus Holz voller Briefbündel mit rotem Band, dazu eine Feder im Tintenfass und eine brennende Kerze"
+      },
+      {
+        "id": "philemon",
+        "titre": "Philemon und Baucis",
+        "texte": "Für Paare, die davon träumen, zusammen alt zu werden.",
+        "alt": "Zwei alte Bäume mit eng aneinanderstehenden Stämmen vor einem kleinen Steinhaus im Abendlicht"
+      }
+    ]
+  },
+  "section3": {
+    "title": "Die Geschichte von 4 Paaren aus dem Test",
+    "intro": "Ihre Namen kennt jeder, ihre Geschichte kennen weniger Leute. Hier ist die Geschichte von 4 Paaren aus dem Test.",
+    "sub1Title": "Romeo und Julia, eine Geschichte von wenigen Tagen",
+    "sub1Text": "Shakespeare hat das Stück in den 1590er-Jahren geschrieben. Die Geschichte spielt in Verona in Italien. Romeo und Julia lernen sich an einem Sonntagabend auf einem Ball kennen und heiraten am nächsten Tag heimlich. Die ganze Geschichte dauert <strong>weniger als eine Woche</strong>. Deshalb fällt ihr Name, wenn es bei einem Paar sofort funkt.",
+    "sub2Title": "Odysseus und Penelope, 20 Jahre Warten",
+    "sub2Text": "In Homers „Odyssee“ zieht Odysseus in den Trojanischen Krieg und braucht <strong>20 Jahre für den Heimweg</strong>. In dieser Zeit wollen Freier Penelope heiraten. Sie verspricht, sich zu entscheiden, sobald sie ein großes Tuch fertig gewebt hat. Jede Nacht trennt sie wieder auf, was sie am Tag gewebt hat! Ihre Geschichte sagt allen Paaren etwas, die trotz der Entfernung durchhalten müssen.",
+    "sub3Title": "Marie und Pierre Curie, eine Hochzeit ohne weißes Kleid",
+    "sub3Text": "<a href=\"/de/blog/pierre-marie-curie-liebesgeschichte/\">Marie und Pierre Curie heiraten</a> im Juli 1895 im Rathaus von Sceaux bei Paris. Vom geschenkten Geld kaufen sie zwei Fahrräder für ihre Hochzeitsreise. Drei Jahre später entdecken sie zusammen Polonium und Radium. Sie bekommen den <strong>Nobelpreis für Physik 1903</strong>.",
+    "sub4Title": "Juliette Drouet und Victor Hugo, 22.000 Briefe",
+    "sub4Text": "Juliette Drouet ist Schauspielerin, als sie 1833 Victor Hugo kennenlernt. Danach <a href=\"/de/blog/juliette-drouet-victor-hugo-briefe/\">schreibt sie ihm fast jeden Tag</a>, 50 Jahre lang. Das sind etwa <strong>22.000 Briefe</strong>! Hugo ist verheiratet und ihre Geschichte ist kein Märchen. Juliette lebte zum Beispiel jahrelang fast eingesperrt, weil er nicht wollte, dass sie ohne ihn ausgeht."
+  },
+  "section4": {
+    "title": "Und wenn ihr nicht dasselbe Paar bekommt?",
+    "p1": "Das kommt oft vor. Einer sieht eure Geschichte zum Beispiel wie die von Romeo und Julia und der andere wie die von Elizabeth Bennet und Mr. Darcy. Das heißt nur, dass ihr euch nicht gleich an eure Anfänge erinnert.",
+    "p2": "Schaut euch lieber die Fragen mit unterschiedlichen Antworten an. Die Frage zum Kennenlernen und die zum ersten „Ich liebe dich“ sind oft am lustigsten zu vergleichen. Bittet den anderen, <strong>seine Version zu erzählen</strong>!"
+  },
+  "section5": {
+    "title": "Was ihr über diesen Test wissen solltet",
+    "p1": "Dieser Test ist ein Spiel. Er spielt mit dem Bild, das wir von diesen Paaren haben, und <strong>sagt nichts Ernstes über eure Beziehung</strong>. Diese Paare sind keine Vorbilder. Romeo und Julia sterben am Ende des Stücks. Die echten Bonnie Parker und Clyde Barrow waren Verbrecher und ihre Bande hat mehrere Menschen getötet. Der Test behält nur, was von ihnen in Erinnerung geblieben ist, zum Beispiel die Liebe auf den ersten Blick oder den Zusammenhalt.",
+    "p2": "Eure Antworten werden nicht gespeichert, sie bleiben auf eurem Handy. Wir zählen nur, welches Ergebnis herauskommt, um zu sehen, welche am häufigsten sind. Euer Vorname wird auch nicht gespeichert. Die Fotos wurden für diese Seite erstellt und keines zeigt eine echte Person."
+  },
+  "seo": {
+    "faqTitle": "Häufige Fragen",
+    "faq1Q": "Welche legendären Paare kann man bekommen?",
+    "faq1A": "Der Test hat 8 mögliche Ergebnisse: Romeo und Julia, Odysseus und Penelope, Kleopatra und Marcus Antonius, Bonnie und Clyde, Elizabeth Bennet und Mr. Darcy, Marie und Pierre Curie, Juliette Drouet und Victor Hugo oder Philemon und Baucis.",
+    "faq2Q": "Wie wird das Ergebnis berechnet?",
+    "faq2A": "Jede Antwort gibt einem oder zwei Paaren Punkte. Antwortet ihr zum Beispiel bei der Frage zum Liebesbeweis „ihm jeden Tag schreiben“, bekommen Juliette Drouet und Victor Hugo Punkte. Macht ihr den Test zu zweit, zählt er eure Antworten zusammen. Das Paar mit den meisten Punkten wird euer Paar.",
+    "faq3Q": "Welche Paare aus dem Test haben gelebt?",
+    "faq3A": "Vier Paare haben gelebt: Kleopatra und Marcus Antonius, Bonnie und Clyde, Marie und Pierre Curie, Juliette Drouet und Victor Hugo. Romeo und Julia stammen aus einem Stück von Shakespeare. Elizabeth Bennet und Mr. Darcy stammen aus Jane Austens Roman „Stolz und Vorurteil“ von 1813. Odysseus und Penelope sowie Philemon und Baucis sind Paare aus der Mythologie.",
+    "faq4Q": "Wer sind Philemon und Baucis?",
+    "faq4A": "Das ist ein altes Ehepaar aus der Mythologie, von dem der Dichter Ovid in den „Metamorphosen“ erzählt. Die zwei sind arm, nehmen aber zwei Wanderer bei sich auf. Die Wanderer sind in Wahrheit Götter. Zum Dank gewähren ihnen die Götter einen Wunsch. Sie wünschen sich, im selben Augenblick zu sterben. Bei ihrem Tod werden sie in zwei Bäume verwandelt, die nebeneinander wachsen, eine Eiche und eine Linde.",
+    "faq5Q": "Warum sind Bonnie und Clyde im Test?",
+    "faq5A": "Weil man über ein eingeschworenes Paar oft sagt: „Die sind wie Bonnie und Clyde.“ Die echten Bonnie Parker und Clyde Barrow haben Anfang der 1930er-Jahre in den USA Banken und Läden überfallen. 1934 wurden sie von der Polizei erschossen. Der Test behält nur die Idee vom unzertrennlichen Duo.",
+    "faq6Q": "Kann man den Test allein machen?",
+    "faq6A": "Ja. Wähle einfach „Allein, für uns als Paar“ und antworte so, wie es zu euch als Paar passt. Du bekommst ein Ergebnis, kannst eure Antworten aber nicht vergleichen."
+  },
+  "jsonLd": {
+    "about": "das legendäre Paar, das zu eurer Beziehung passt"
+  }
+}

@@ -616,6 +616,12 @@
     "metaDescription": "Siete indecisi tra una villa, un casale e una spiaggia? Ognuno risponde a 12 domande e il test vi mostra lo stile di matrimonio che fa per la vostra coppia.",
     "description": "Ognuno risponde a 12 domande e il test vi mostra lo stile di matrimonio che andrebbe bene alla vostra coppia, con la sua foto."
   },
+  "quizEnfantsNous": {
+    "title": "Quanti figli avrete? Il test da fare in due",
+    "shortTitle": "Quanti figli avremo",
+    "metaDescription": "Un figlio, due o tutta una tribù? Ognuno risponde a 12 domande sulla vita che immagina e il test mostra la famiglia che somiglia di più alle vostre risposte.",
+    "description": "Ognuno risponde a 12 domande sulla vita che immagina e il test vi mostra la famiglia che somiglia alle vostre risposte, con la sua foto."
+  },
   "quizListeNoel": {
     "title": "Lista dei buoni e cattivi di Babbo Natale: il test di coppia",
     "shortTitle": "Lista dei buoni e dei cattivi",
@@ -645,6 +651,12 @@
     "shortTitle": "Che tipo di fidanzati siamo",
     "metaDescription": "Pieni di attenzioni, romantici o molto indipendenti? Ognuno risponde a 12 domande e il test mostra che tipo di fidanzati siete nella vostra coppia.",
     "description": "Ognuno risponde a 12 domande e il test vi mostra che tipo di fidanzati siete, con la sua foto."
+  },
+  "quizCoupleLegende": {
+    "title": "Che coppia famosa siete? Il test da fare in due",
+    "shortTitle": "Che coppia leggendaria siamo",
+    "metaDescription": "Romeo e Giulietta, Bonnie e Clyde o Marie e Pierre Curie? Ognuno risponde a 12 domande e il test mostra la coppia leggendaria che vi somiglia di più.",
+    "description": "Ognuno risponde a 12 domande e il test vi mostra la coppia leggendaria che vi somiglia di più, con la sua foto."
   },
   "bilanCouple": {
     "title": "Bilancio di coppia online | Risultati subito e in PDF",
