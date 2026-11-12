@@ -3,7 +3,7 @@
     "badge": "Fun quizzes • Free • Together or solo",
     "title": "Our fun quizzes for couples",
     "titleHighlight": "fun quizzes",
-    "description": "Light-hearted quizzes that don't measure anything serious: what dog you two should get, what kind of house, and seasonal quizzes for Halloween or Christmas. You each answer separately, then compare."
+    "description": "These quizzes are games to play as a couple and they don't measure anything serious. For example, you can find out what dog or what kind of house would suit your couple. There are also quizzes for Halloween and for Christmas."
   },
   "enCeMoment": "Right now",
   "horsSaison": "All year round",
@@ -14,77 +14,77 @@
   "saisons": {
     "halloween": {
       "titre": "Halloween special",
-      "intro": "Five quizzes for a Halloween night as a couple: a killer portrait, a survival timer, a possession risk, a supervillain portrait and the villain duo you form. It's all for fun, and each one takes five minutes."
+      "intro": "Here are 5 quizzes to take on Halloween night. For example, you can find out how long you'd survive in a horror movie or which supervillain you're most like. It's all for fun and each quiz takes about five minutes."
     },
     "noel": {
       "titre": "Christmas special",
-      "intro": "Two quizzes for a December evening together: which of Santa's lists your couple is on, and which Christmas characters you make. You each answer separately, and the couple gets a single result, with its photo.",
+      "intro": "Here are 2 quizzes to take on a December evening. The first one tells you which of Santa's lists your couple is on. The second one tells you which Christmas characters you make. You each answer separately and you get a single result for your couple, with its photo.",
       "bientot": "Coming soon"
     }
   },
   "quiz": {
     "quizSerialKillerNom": "Which serial killer are you compatible with?",
-    "quizSerialKillerTagline": "Fifteen situations from a Halloween night, and the famous killer you're most like, blown way out of proportion.",
+    "quizSerialKillerTagline": "You answer 15 situations from a Halloween night and the quiz tells you which famous killer you're most like.",
     "quizMortFilmHorreurNom": "Which of us dies first in a horror movie?",
-    "quizMortFilmHorreurTagline": "Fifteen situations, from arriving at the cabin to the end credits, a survival time in minutes, and the name of the first victim when you play as a couple.",
+    "quizMortFilmHorreurTagline": "You answer 15 situations from a horror movie and the quiz works out your survival time in minutes. As a couple, it tells you who dies first.",
     "quizPossessionNom": "Which of us could get possessed?",
-    "quizPossessionTagline": "Ten days in a house whose story nobody wants to tell, a possession risk as a percentage, and the one the demons would pick.",
+    "quizPossessionTagline": "You spend ten days in a haunted house and the quiz works out your risk of possession as a percentage. As a couple, it tells you who the demons would pick.",
     "quizSuperVilainNom": "Which supervillain are you most like?",
-    "quizSuperVilainTagline": "Your entrance at the party, your costume, your henchmen, your laugh: the supervillain you're most like, from the Joker to Maleficent.",
+    "quizSuperVilainTagline": "You answer 15 situations from a Halloween party and the quiz tells you which supervillain you're most like, for example the Joker or Maleficent.",
     "quizDuoVilainsNom": "Which supervillain duo are you?",
-    "quizDuoVilainsTagline": "The Halloween night heist: each of your roles, the brains, the chaos, the muscle, the charm, the shadow or the heart, and the famous villain duo you form.",
+    "quizDuoVilainsTagline": "You plan the Halloween night heist. The quiz gives each of you a role, for example the brains or the muscle. Then it tells you which famous villain duo you form.",
     "quizChienNousNom": "What dog should we get?",
-    "quizChienNousTagline": "Twelve questions each about your life together, and the couple's dog with its photo: corgi, golden, dachshund, Shiba, husky...",
+    "quizChienNousTagline": "You each answer 12 questions and the quiz shows you the dog that would suit your couple, with its photo.",
     "quizMaisonNousNom": "What kind of house should we live in?",
-    "quizMaisonNousTagline": "Twelve questions each about the life you picture, and the couple's home in a photo: apartment, country house, loft, houseboat, tiny house...",
+    "quizMaisonNousTagline": "You each answer 12 questions about the life you picture and the quiz shows you your home as a couple in a photo.",
     "quizListeNoelNom": "Naughty or nice?",
-    "quizListeNoelTagline": "Twelve questions each about your December: your couple's spot on Santa's list, and the nicer of the two.",
+    "quizListeNoelTagline": "You each answer 12 questions about your December. The quiz tells you if your couple is on the nice list and who is the nicer one.",
     "quizDuoNoelNom": "Which Christmas characters are you?",
-    "quizDuoNoelTagline": "Twelve questions each about your Christmas together, and the duo you make with its photo: two elves, two reindeer, the Nutcracker and the Sugar Plum Fairy...",
+    "quizDuoNoelTagline": "You each answer 12 questions about how you celebrate Christmas and the quiz gives you the duo you make, with its photo.",
     "quizPorteCulotteNom": "Who wears the pants?",
-    "quizPorteCulotteTagline": "Twenty questions about who decides at your place, on your own or together: each person's share, and the questions where you disagree."
+    "quizPorteCulotteTagline": "You answer 20 questions to find out who decides in your relationship. Together, the quiz also shows you the questions where you disagree."
   },
   "section1": {
     "title": "What these quizzes are for",
-    "p1": "The quizzes on this page are nothing like our couple tests. They don't measure anything serious and they don't give your relationship a score. They're games: what dog would suit you as a couple, what kind of house you'd be happy in, <a href=\"/en/who-wears-the-pants-quiz/\">who gets the last word at your place</a>, or which of you would die first in a horror movie.",
-    "p2": "They work because you each answer separately. Finding out your other half wants a husky when you had a dachshund in mind, or a fixer-upper when you were dreaming of a city apartment, keeps a good part of the evening busy!",
-    "p3": "The quizzes about your future together are here all year round. The seasonal ones move to the top of the page when their time comes: the Halloween quizzes in October, then the Christmas ones from mid-November, to find out <a href=\"/en/naughty-or-nice-quiz/\">whether your couple has been good this year</a> or <a href=\"/en/which-christmas-characters-are-you-quiz/\">which Christmas duo you make</a>. They stay playable the rest of the year."
+    "p1": "The quizzes on this page are nothing like our couple tests. They don't measure anything serious and they don't give your relationship a score. They're games. For example, you can find out what dog would suit your couple or <a href=\"/en/who-wears-the-pants-quiz/\">who gets the last word at your place</a>.",
+    "p2": "What's fun is that you each answer separately. For example, you may find out that your partner wants a husky when you had a dachshund in mind. That keeps a good part of the evening busy!",
+    "p3": "The quizzes about your future together are here all year round. The seasonal quizzes move to the top of the page when their time comes. The Halloween quizzes are at the top in October. The Christmas ones arrive in mid-November, and that's when you can find out <a href=\"/en/naughty-or-nice-quiz/\">whether your couple has been good this year</a> or <a href=\"/en/which-christmas-characters-are-you-quiz/\">which Christmas duo you make</a>. You can still play them the rest of the year."
   },
   "section2": {
     "title": "And after these quizzes?",
-    "p1": "Once you've been through them all, <a href=\"/en/couple-games/\">the games to play as a couple all year round</a> take over: <a href=\"/en/would-you-rather-couple-quiz/\">the “would you rather” dilemmas</a>, truth or dare, the board game, and a dozen others. And for those who want <a href=\"/en/couple-compatibility-test/\">a real answer about their relationship</a>, there's a way to compare your answers on what matters."
+    "p1": "Once you've been through all these quizzes, you can carry on with <a href=\"/en/couple-games/\">the games to play as a couple all year round</a>. For example, there are <a href=\"/en/would-you-rather-couple-quiz/\">the “would you rather” dilemmas</a> or truth or dare. And if you want <a href=\"/en/couple-compatibility-test/\">a real answer about your relationship</a>, there's a test for that too."
   },
   "section3": {
     "title": "How to play",
-    "p1": "All these quizzes play the same way. Together, the first one answers the whole series, passes the phone, and the second one answers in turn without seeing the first one's answers. Solo, you answer and discover your result.",
-    "p2": "For the quizzes about your future together and for the Christmas ones, the couple gets a single result, the one that fits your two sets of answers best, and the list of questions where you don't agree. For the Halloween quizzes, each of you gets your own, and a remote mode lets you each play on your own phone.",
-    "p3": "No account to create, nothing to install, and nothing is saved: the answers stay on your phones."
+    "p1": "All these quizzes play the same way. Together, the first person answers all the questions and then passes the phone. The second person answers without seeing the first one's answers. You can also play on your own.",
+    "p2": "In the quizzes about your future together and in the Christmas ones, you get a single result for your couple. The quiz also gives you the list of questions where you don't agree. In the Halloween quizzes, each of you gets your own result. They also have a remote mode so you can each play on your own phone.",
+    "p3": "You don't have an account to create and there's nothing to install. Your answers aren't saved, they stay on your phone."
   },
   "faq": {
     "title": "Frequently asked questions",
     "q1": "Are the fun quizzes free?",
-    "a1": "Yes, all of them, with no sign-up and no app to install. They're played in your phone's browser.",
+    "a1": "Yes, they're all free. There's no sign-up and no app to install. You play them right on your phone.",
     "q2": "Do you have to be two?",
-    "a2": "Not necessarily. Almost all of them can be played solo or as a couple, and only the supervillain duo quiz needs two players, since it composes a duo. But they're designed to be taken together: comparing your answers is the fun part.",
+    "a2": "Not necessarily. Almost all the quizzes can be played on your own or as a couple. Only the supervillain duo quiz needs two players. They're still more fun together, because you can compare your answers.",
     "q3": "What happens to the quizzes once the season is over?",
-    "a3": "They stay on this page, a bit further down, and at their own address. Nothing gets deleted: a Halloween quiz in the middle of March is fine too.",
+    "a3": "They stay on this page, a bit further down. Nothing gets deleted, so you can very well take a Halloween quiz in March.",
     "q4": "Are there Christmas quizzes?",
-    "a4": "Yes, two. “Naughty or nice?” tells you which of Santa's lists your couple is on, and which of you is the nicer one. The Christmas characters quiz gives you the duo you make, from Santa and Mrs. Claus to Scrooge and the Christmas spirit. They move to the top of this page from mid-November to the end of December.",
+    "a4": "Yes, there are two. “Naughty or nice?” tells you which of Santa's lists your couple is on and who is the nicer one. The Christmas characters quiz gives you the duo you make, for example Santa and Mrs. Claus. They're at the top of this page from mid-November to the end of December.",
     "q5": "Can you play remotely?",
-    "a5": "Yes for the Halloween quizzes: one person creates the game, the other joins with the code, and you each answer on your own phone. The other quizzes are played on a single phone that you pass to each other."
+    "a5": "Yes, for the Halloween quizzes. One of you creates the game and the other joins with a code. Then you each answer on your own phone. The other quizzes are played on a single phone that you pass to each other."
   },
   "jsonLd": {
     "name": "Fun quizzes for couples"
   },
-  "resultatCommun": "One result for the two of you",
+  "resultatCommun": "One result for your couple",
   "sections": {
     "futur": {
       "titre": "Your future together",
-      "intro": "The dog you'll have, the house you'll live in: you each answer separately, and the quiz looks for what suits you both, with a photo at the end."
+      "intro": "These quizzes are about your future, for example the dog you'll have or the house you'll live in. You each answer separately and the quiz looks for the result that suits your couple best."
     },
     "vous": {
-      "titre": "The two of you",
-      "intro": "Who decides at your place, who gets the last word: quizzes about your relationship as it is, to take on your own or taking turns on the same phone."
+      "titre": "Your relationship",
+      "intro": "These quizzes are about your relationship as it is today, for example who decides at your place. You can take them on your own or take turns on the same phone."
     }
   }
 }

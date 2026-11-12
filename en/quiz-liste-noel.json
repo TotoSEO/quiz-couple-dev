@@ -1,86 +1,86 @@
 {
   "hero": {
-    "badge": "Christmas quiz • Together, or on your own for the two of you",
+    "badge": "Christmas quiz • Together, or on your own for your couple",
     "title": "The naughty or nice quiz to take as a couple",
     "titleHighlight": "naughty or nice quiz",
-    "description": "Naughty or nice, the two of you? You each answer twelve questions about your December, and the quiz tells you which of Santa's lists your couple is on... and which of you is the nicer one.",
+    "description": "Has your couple been naughty or nice this year? You each answer 12 questions about your December. Then the quiz tells you which of Santa's lists you're on and who is the nicer one.",
     "subtitle": "12 questions • 3 minutes each • on a single phone",
     "jumpBtn": "Take the quiz"
   },
   "section1": {
     "title": "How the quiz works",
-    "p1": "This quiz is a Christmas game for two. It tells you whether your couple belongs on the nice list or the naughty list, with a niceness score as a percentage. It asks twelve questions about your December: the advent calendar, the hidden presents, the wrapping, dinner at the in-laws', the last Christmas cookie, and to finish, <a href=\"/en/new-years-questions-for-couples/\">a look back at your year together</a>.",
-    "p2": "For example, for the question “The presents are hidden somewhere in your home:”, you can choose between “no snooping, the surprise comes first”, “no snooping, but the hiding place has been spotted”, “a box or two got shaken” and “everything was opened, then neatly rewrapped”. The first answer earns the most niceness points, the last one earns none.",
-    "p3": "With two of you, the first one answers the twelve questions, passes the phone, and the second one answers without seeing what the other picked. You each answer for yourself. At the end, the quiz averages your two scores: that's your couple's niceness score. It also tells you which of you is the nicer one, and on which questions one of you did much better than the other.",
-    "p4": "You can also take it on your own, answering for the two of you. But then you won't know who's bringing the average down!"
+    "p1": "This quiz is a Christmas game to play as a couple. It tells you if you're on Santa's nice list or on his naughty list. To do that, it works out a niceness score as a percentage. It asks 12 questions about your December. For example, they're about the advent calendar or the last Christmas cookie, and the last one takes <a href=\"/en/new-years-questions-for-couples/\">a look back at your year together</a>.",
+    "p2": "Take the question about the presents hidden in your home. You can choose between “no snooping, the surprise comes first”, “no snooping, but the hiding place has been spotted”, “a box or two got shaken” and “everything was opened, then neatly rewrapped”. If you choose the first answer, you earn the most niceness points. If you choose the last one, you earn none.",
+    "p3": "The first person answers the 12 questions and then passes the phone. The second person answers without seeing what the first one chose. You each answer for yourself. At the end, the quiz averages your two scores and that gives your couple's niceness score. It also tells you who is the nicer one and which questions you're furthest apart on.",
+    "p4": "You can also take the quiz on your own and answer for your couple. But then you won't know who's bringing the average down!"
   },
   "section2": {
-    "title": "The five spots on Santa's list",
-    "intro": "Depending on your niceness score, the quiz puts you in one of these five spots. Each has its own photo, from the pile of presents to the sack of coal.",
+    "title": "The 5 spots on Santa's list",
+    "intro": "The quiz gives you one of these five spots, depending on your niceness score. Each spot has its own photo.",
     "galerie": [
       {
         "id": "r5",
         "titre": "Top of the nice list",
-        "texte": "From 85% niceness. The advent calendar, the presents, the last cookie: everything is done by the book.",
+        "texte": "From 85% niceness. You did everything by the book, from the advent calendar to the last cookie.",
         "alt": "A mountain of wrapped presents at the foot of a tall, lit Christmas tree in a living room"
       },
       {
         "id": "r4",
         "titre": "On the nice list",
-        "texte": "From 65 to 84%. There are two or three slips in your file, but the sleigh will stop at your place.",
+        "texte": "From 65 to 84%. You slipped up two or three times but Santa will still stop at your place.",
         "alt": "Two Christmas stockings, one pink and one purple, filled with small presents, hanging above a fireplace"
       },
       {
         "id": "r3",
         "titre": "Right between the two lists",
-        "texte": "From 45 to 64%. The elves are still undecided, and you have a few days left to tip the scales.",
+        "texte": "From 45 to 64%. The elves are still undecided and you have a few days left to make up for it.",
         "alt": "A wrapped present and a lump of coal tied with a red ribbon, side by side on a mantelpiece"
       },
       {
         "id": "r2",
         "titre": "Leaning toward the naughty list",
-        "texte": "From 25 to 44%. Last-minute presents, shaken boxes: Santa has raised an eyebrow.",
+        "texte": "From 25 to 44%. You bought your presents at the last minute and Santa isn't very happy.",
         "alt": "Two Christmas stockings, one pink and one purple, filled with coal, with a single candy cane"
       },
       {
         "id": "r1",
-        "titre": "Coal for both of you",
-        "texte": "Under 25%. The advent calendar didn't last ten days, and the last cookie vanished in the kitchen.",
+        "titre": "Coal for Christmas",
+        "texte": "Under 25%. The advent calendar was empty after ten days and the last cookie vanished in the kitchen.",
         "alt": "A burlap sack full of coal, tied with a big red ribbon, at the foot of a Christmas tree"
       }
     ]
   },
   "section3": {
     "title": "Where does the naughty or nice list come from?",
-    "p1": "The idea that Santa keeps a list comes mostly from a song, “Santa Claus Is Comin' to Town”. It was written by Haven Gillespie and J. Fred Coots, and was first heard on the radio in November 1934. It says that Santa is making a list, checking it twice, and that he's going to find out who's naughty or nice.",
-    "p2": "The lump of coal is an older story. In the tradition, good children find presents in their stocking on Christmas morning, and naughty ones find coal. Nobody knows exactly where the custom started, but coal was what sat right next to the fireplace Santa was supposed to come down.",
-    "p3": "Other countries have their own version. In Italy, it's the Befana who slips coal into naughty children's stockings on the night of January 5th. In Spain, the Three Kings bring it, and these days it's coal made of sugar that the children eat! In the Netherlands, Sinterklaas keeps a big book where he writes down who has been good."
+    "p1": "The idea that Santa keeps a list comes mostly from a song called “Santa Claus Is Comin' to Town”. It was written by Haven Gillespie and J. Fred Coots. It was first heard on the radio in November 1934. In the song, Santa makes a list and checks it twice to find out who's naughty or nice.",
+    "p2": "The lump of coal is an older story. In the tradition, good children find presents in their stocking on Christmas morning and naughty children find coal. Nobody knows exactly where the custom started. What we do know is that coal was kept right next to the fireplace Santa was supposed to come down.",
+    "p3": "Other countries have their own version. In Italy, it's the Befana who puts coal in naughty children's stockings on the night of January 5th. In Spain, the Three Kings bring it. These days it's coal made of sugar and the children eat it! In the Netherlands, Sinterklaas keeps a big book where he writes down who has been good."
   },
   "section4": {
     "title": "What if you're not on the same list?",
-    "p1": "That's the most common case, and it's also the funniest. When one of you is at 80% and the other at 40%, look at the list of questions where you're furthest apart: that's where it all happens. Most of the time, one of you wraps all the presents and the other signs the tag, <a href=\"/en/which-christmas-characters-are-you-quiz/\">a real elf and a Scrooge</a>.",
-    "p2": "Behind the game, some questions are about real life: who clears the table, who thinks of presents for the whole family, who tidies up after Christmas dinner. If the gap makes you laugh less than expected, take a look at <a href=\"/en/mental-load-test-couples/\">who does what at home</a> the rest of the year: it's often the same story.",
-    "p3": "And if you're both right at the bottom, don't panic. Two people who finish the box of chocolates together still make a couple that gets along."
+    "p1": "That's the most common case and it's also the funniest. For example, if one of you gets 80% and the other 40%, look at the questions where you're furthest apart. Most of the time, one of you wraps all the presents while the other just signs the tag. That makes <a href=\"/en/which-christmas-characters-are-you-quiz/\">a real elf and a Scrooge</a> in the same couple.",
+    "p2": "Some questions are also about real life. For example: who clears the table and who thinks of presents for the whole family. If the gap doesn't make you laugh, take a look at <a href=\"/en/mental-load-test-couples/\">who does what at home</a> the rest of the year. It's often the same thing.",
+    "p3": "And if each of you is right at the bottom of the list, it's not a big deal. Two people who finish the box of chocolates together still make a couple that gets along."
   },
   "section5": {
     "title": "Good to know about this quiz",
-    "p1": "This quiz is a game, not to be taken seriously. It says nothing serious about your couple: you can empty the advent calendar in ten days and be lovely the rest of the year.",
-    "p2": "Nothing is saved: your answers stay on your phone. Only the spot you get is counted, with no name, so we know which results come up most. The photos were created for this page."
+    "p1": "This quiz is a game and you shouldn't take it seriously. It says nothing about your couple. You can very well empty the advent calendar in ten days and be lovely the rest of the year.",
+    "p2": "Your answers aren't saved, they stay on your phone. We only count which spot you get, to see which results come up most. Your name isn't saved either. The photos were created for this page."
   },
   "seo": {
     "faqTitle": "Frequently asked questions",
     "faq1Q": "How do we know if we're on the naughty or nice list?",
-    "faq1A": "Take the quiz together: you each answer twelve questions about your December, and the quiz works out a niceness score for your couple. From 65%, you're on the nice list. Under 45%, you're leaning toward the other one.",
+    "faq1A": "Just take the quiz together. You each answer 12 questions about your December and the quiz works out your couple's niceness score. From 65%, you're on the nice list. Under 45%, you're more on the naughty list.",
     "faq2Q": "How is the niceness score calculated?",
-    "faq2A": "Each answer is worth 0 to 4 points. Three questions count a little more than the others: the hidden presents, dinner at the in-laws' and the year in review. The total is turned into a percentage, and with two of you the quiz averages your two percentages.",
+    "faq2A": "Each answer is worth between 0 and 4 points. Three questions count a little more than the others: the hidden presents, dinner at the in-laws' and the year in review. The quiz then turns your total into a percentage. When you take it together, it averages your two percentages.",
     "faq3Q": "Can I take the quiz on my own?",
-    "faq3A": "Yes. Choose “On my own, for the two of us” and answer with the two of you in mind. You'll get your spot on the list, but not the comparison between the two of you.",
+    "faq3A": "Yes. Just choose “On my own, for our couple” and answer with your couple in mind. You'll get your spot on the list but you won't know who is the nicer one.",
     "faq4Q": "How do we find out who's the nicer of the two?",
-    "faq4A": "With two of you, the quiz shows each person's niceness score under the couple's result, and says which of you is the nicer one. It also shows the three questions where the gap between you is widest.",
+    "faq4A": "When you take the quiz together, it shows each person's niceness score under your couple's result. It tells you who is the nicer one and it shows you the three questions where you're furthest apart.",
     "faq5Q": "Is this a naughty or nice quiz for adults or for kids?",
-    "faq5A": "For adults. The questions are written for grown-ups in a couple: they talk about in-laws, the present budget and the dishwasher. There's nothing shocking in it, but a child won't relate to it.",
+    "faq5A": "It's for adults. The questions are written for grown-ups in a couple. For example, they're about the in-laws or the budget for presents. There's nothing shocking in it but a child won't relate to it.",
     "faq6Q": "Are my answers saved?",
-    "faq6A": "No. The answers stay on your phone. Only the spot you get on the list is counted, with no name, for the breakdown of results."
+    "faq6A": "No. Your answers stay on your phone. We only count which spot you get on the list, to see which results come up most, and your name isn't saved."
   },
   "jsonLd": {
     "about": "Santa's naughty or nice list"

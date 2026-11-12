@@ -1,39 +1,39 @@
 {
   "hero": {
-    "badge": "Themaquiz • Met z'n tweeën, of alleen voor jullie samen",
-    "title": "Welke hond past bij jullie twee? De test om samen te doen",
-    "titleHighlight": "Welke hond past bij jullie twee?",
-    "description": "Jullie willen een hond, maar niet per se dezelfde? Ieder beantwoordt twaalf vragen over jullie leven samen, en de test geeft jullie de hond die bij jullie allebei past, met foto.",
+    "badge": "Themaquiz • Met z'n tweeën of alleen voor jullie als koppel",
+    "title": "Welke hond past bij ons? De test om samen te doen",
+    "titleHighlight": "Welke hond past bij ons?",
+    "description": "Jullie willen een hond maar worden het niet eens over welke? Ieder beantwoordt 12 vragen en de test zegt welke hond het best bij jullie als koppel past. Bij elke uitslag hoort een foto!",
     "subtitle": "12 vragen • 3 minuten per persoon • op één telefoon",
     "jumpBtn": "Doe de test"
   },
   "section1": {
     "title": "Hoe de test werkt",
-    "p1": "Deze test zoekt de hond die bij jullie als koppel past, en niet alleen bij een van jullie twee. Hij stelt twaalf heel eenvoudige vragen over het leven dat jullie met hem zouden hebben: waar jullie wonen, wat jullie op zondagochtend doen, hoelang hij alleen zou zijn, of haren op de bank jullie storen, enzovoort.",
-    "p2": "Bij de vraag ‘Zijn formaat:’ kunnen jullie bijvoorbeeld kiezen tussen ‘klein, hij past op schoot’, ‘middelgroot, je kunt hem nog tillen’, ‘groot, een flinke hond’ en ‘enorm, bijna een pony’. Antwoord jij ‘klein’ en je partner ‘enorm’, dan houdt de test daar rekening mee: hij telt jullie twee reeksen antwoorden bij elkaar op en houdt de hond over die voor jullie samen het beste scoort.",
-    "p3": "Met z'n tweeën beantwoordt de eerste de twaalf vragen en geeft de telefoon door, waarna de tweede antwoordt zonder te zien wat de ander koos. Aan het eind hebben jullie de hond voor jullie samen met zijn foto, de hond die ieder apart zou hebben gekregen, en de lijst met vragen waarop jullie niet hetzelfde antwoordden. Vaak begint daar het gesprek!",
-    "p4": "Je kunt hem ook alleen doen, en voor jullie tweeën antwoorden. Maar het is toch leuker om te ontdekken wat de ander heeft geantwoord."
+    "p1": "Deze test is een spel om samen te doen. Hij helpt jullie de hond te vinden die bij jullie leven past. Dat kan een golden retriever zijn of een hond uit het asiel. De test stelt 12 heel eenvoudige vragen. Hij vraagt bijvoorbeeld waar jullie wonen en hoelang de hond alleen zou zijn.",
+    "p2": "Neem de vraag over het formaat van de hond. Jullie kunnen kiezen tussen ‘klein, hij past op schoot’, ‘middelgroot, je kunt hem nog tillen’, ‘groot, een flinke hond’ en ‘enorm, bijna een pony’. Als jij ‘klein’ antwoordt, geeft de test punten aan kleine honden zoals de teckel. Als je partner ‘enorm’ antwoordt, krijgt de Berner sennenhond punten. Aan het eind telt de test jullie antwoorden bij elkaar op en houdt hij de hond met de meeste punten over.",
+    "p3": "De eerste beantwoordt de 12 vragen en geeft dan de telefoon door. De tweede antwoordt zonder te zien wat de eerste heeft gekozen. Daarna laat de test de hond zien die bij jullie als koppel past, met zijn foto. Hij laat ook de hond zien die ieder alleen zou hebben gekregen en de vragen waarop jullie niet hetzelfde hebben geantwoord. Vaak begint daar het gesprek!",
+    "p4": "Je kunt de test ook alleen doen en voor jullie als koppel antwoorden. Maar het is leuker om te ontdekken wat je partner heeft geantwoord."
   },
   "section2": {
-    "title": "De twaalf honden uit de test",
-    "intro": "De test kan op twaalf uitslagen uitkomen: tien van de bekendste rassen, de asielhond, en een laatste uitslag voor koppels die er nog niet klaar voor zijn. Hier lees je bij wie welke het best past.",
+    "title": "De 12 honden uit de test",
+    "intro": "De test kan 12 uitslagen geven. Er zijn tien bekende rassen en de asielhond. Er is ook een uitslag voor koppels die nog niet klaar zijn voor een hond. Hier lees je bij wie welke hond het best past.",
     "galerie": [
       {
         "id": "golden",
         "titre": "De golden retriever",
-        "texte": "Voor koppels met een tuin, tijd voor een flinke wandeling elke dag, en geen angst voor haren.",
+        "texte": "Voor koppels met een tuin en tijd voor een lange wandeling elke dag.",
         "alt": "Een golden retriever zit bij zonsondergang in een weiland"
       },
       {
         "id": "corgi",
         "titre": "De corgi",
-        "texte": "Voor wie een middelgrote, speelse en slimme hond wil, en om blaffen eerder moet lachen.",
+        "texte": "Voor koppels die een middelgrote hond willen die graag speelt.",
         "alt": "Een rood-witte corgi staat op een tuinpad"
       },
       {
         "id": "bouledogue",
         "titre": "De Franse bulldog",
-        "texte": "Voor het leven in een appartement, en voor koppels die liever op de bank zitten dan gaan hardlopen.",
+        "texte": "Voor koppels die in een appartement wonen en liever op de bank zitten dan gaan hardlopen.",
         "alt": "Een Franse bulldog ligt op een plaid op de bank"
       },
       {
@@ -51,7 +51,7 @@
       {
         "id": "teckel",
         "titre": "De teckel",
-        "texte": "Voor wie een kleine hond met veel karakter wil, en geduld heeft.",
+        "texte": "Voor koppels die een kleine hond met veel karakter willen.",
         "alt": "Een kortharige teckel staat op herfstbladeren"
       },
       {
@@ -69,13 +69,13 @@
       {
         "id": "husky",
         "titre": "De Siberische husky",
-        "texte": "Voor heel sportieve mensen die op het platteland wonen, het liefst waar het koel is.",
+        "texte": "Voor heel sportieve koppels die op het platteland wonen.",
         "alt": "Een Siberische husky met blauwe ogen in een besneeuwd bos"
       },
       {
         "id": "bernois",
         "titre": "De Berner sennenhond",
-        "texte": "Voor wie een groot huis en een grote tuin heeft, en zin in een heel grote, heel rustige hond.",
+        "texte": "Voor koppels met een groot huis en een tuin die een heel grote en heel rustige hond willen.",
         "alt": "Een Berner sennenhond ligt in een bloeiende bergweide"
       },
       {
@@ -87,48 +87,48 @@
       {
         "id": "peluche",
         "titre": "Voorlopig een knuffelhond",
-        "texte": "Voor wie laat thuiskomt, veel reist of het nog niet eens is. Dat kan gebeuren, en de test zegt het.",
+        "texte": "Voor koppels die laat thuiskomen of veel reizen. Het is nog niet het moment en de test zegt dat ook.",
         "alt": "Een beige knuffelhond zit op een bank"
       }
     ]
   },
   "section3": {
     "title": "Samen een hond kiezen: wat jullie je moeten afvragen",
-    "intro": "Een hond leeft tien tot vijftien jaar. Het is een beslissing die je met z'n tweeën neemt, en er zijn vier onderwerpen waarover jullie het beter eens kunnen zijn voordat jullie er een gaan bekijken.",
-    "sub1Title": "Wie zorgt er voor hem, en wanneer?",
-    "sub1Text": "Dit is de vraag waar het vaakst ruzie over komt. Een hond moet drie keer per dag naar buiten, elke dag, ook op zondagochtend in de regen. Spreek voordat jullie een hond nemen af <a href=\"/nl/mentale-belasting-test/\">wie thuis wat doet</a>: het ochtendrondje, het rondje tussen de middag, de dierenarts, en de gebroken nachten als het een pup is.",
+    "intro": "Een hond leeft tien tot vijftien jaar. Het is dus een beslissing die je met z'n tweeën neemt. Voordat jullie een hond gaan bekijken, kunnen jullie het beter over vier onderwerpen eens zijn.",
+    "sub1Title": "Wie zorgt er voor hem?",
+    "sub1Text": "Dit is de vraag waar het vaakst ruzie over komt. Een hond moet drie keer per dag naar buiten, ook op zondagochtend in de regen. Spreek voordat jullie een hond nemen af <a href=\"/nl/mentale-belasting-test/\">wie thuis wat doet</a>. Bijvoorbeeld: wie 's ochtends met hem naar buiten gaat en wie met hem naar de dierenarts gaat.",
     "sub2Title": "Jullie huis en jullie ritme",
-    "sub2Text": "Een grote, sportieve hond in een studio, of een klein, heel aanhankelijk hondje dat tien uur per dag alleen zit: dat loopt voor iedereen slecht af. Kijk naar jullie leven zoals het nu is, niet zoals jullie het graag zouden hebben. En zijn jullie het nog niet eens over <a href=\"/nl/welk-huis-past-bij-ons-test/\">waar jullie willen wonen</a>, begin dan daar: een tuin verandert veel.",
+    "sub2Text": "Een grote, sportieve hond is ongelukkig in een studio. Een klein, heel aanhankelijk hondje is dat ook als het tien uur per dag alleen zit. Kijk naar jullie leven zoals het nu is en niet zoals jullie het graag zouden hebben. En als jullie het nog niet eens zijn over <a href=\"/nl/welk-huis-past-bij-ons-test/\">waar jullie willen wonen</a>, begin dan daar. Een tuin verandert namelijk veel.",
     "sub3Title": "Het budget",
-    "sub3Text": "Het zijn niet alleen de brokken. Reken ook de dierenarts mee, de vaccinaties, een verzekering als jullie die afsluiten, de trimmer bij sommige rassen, en de opvang als jullie zonder hem weggaan. Een grote hond kost meer dan een kleine, simpelweg omdat hij meer eet. Maak die som vooraf samen, dat voorkomt nare verrassingen.",
-    "sub4Title": "Een pup of een volwassen hond, een fokker of een asiel",
-    "sub4Text": "Een pup is schattig, maar betekent ook maanden opvoeden, korte nachten en aangevreten schoenen. Een volwassen hond is vaak al zindelijk, en je kent zijn karakter. In een asiel vind je honden van alle leeftijden, kruisingen maar ook rashonden. Gaan jullie naar een fokker, bekijk dan de ouderdieren en de plek waar de pups opgroeien."
+    "sub3Text": "Een hond kost meer dan je denkt. Naast de brokken zijn er de dierenarts en de opvang als jullie zonder hem weggaan. Sommige rassen moeten ook vaak naar de trimmer. Een grote hond kost meer dan een kleine, simpelweg omdat hij meer eet. Maak die som het liefst samen voordat jullie een hond nemen.",
+    "sub4Title": "Een pup of een volwassen hond?",
+    "sub4Text": "Een pup is heel schattig, maar hij vraagt maanden opvoeden en maakt jullie 's nachts wakker. Een volwassen hond is vaak al zindelijk en je kent zijn karakter. In een asiel vind je honden van alle leeftijden en zelfs rashonden. Gaan jullie liever naar een fokker, bekijk dan de ouderdieren en de plek waar de pup is opgegroeid."
   },
   "section4": {
     "title": "En als jullie het niet eens zijn?",
-    "p1": "De uitslag van de test is een beginpunt. Droomt de een van een husky en de ander van een hond die in een tas past, dan zit het interessantste in de lijst met jullie verschillende antwoorden. Kijk waarover jullie het niet eens zijn (het formaat, hoelang hij alleen zou zijn, de vakanties) en praat erover. Meestal wringt het bij twee of drie vragen, niet bij allemaal.",
-    "p2": "Veel koppels nemen een hond <a href=\"/nl/klaar-voor-een-baby-test/\">voordat ze een kind krijgen</a>. Dat is natuurlijk niet te vergelijken, maar je regelt samen al dingen voor iemand die van jullie afhankelijk is, en je ziet snel hoe ieder dat aanpakt.",
-    "p3": "En wil een van jullie er helemaal geen, dring dan niet aan. Het is beter te wachten tot jullie het allebei willen dan een hond te hebben waar maar één van jullie voor zorgt."
+    "p1": "Dat is niet erg en het gebeurt bij veel koppels! Droomt de een van een husky en wil de ander een hond die in een tas past, kijk dan naar de lijst met jullie verschillende antwoorden. Dan zien jullie waarover jullie het niet eens zijn, bijvoorbeeld over het formaat van de hond of over hoelang hij alleen zou zijn. Meestal wringt het maar bij twee of drie vragen.",
+    "p2": "Veel koppels nemen een hond <a href=\"/nl/klaar-voor-een-baby-test/\">voordat ze een kind krijgen</a>. Dat is natuurlijk niet hetzelfde, maar je ziet al hoe jullie het regelen als iemand van jullie afhankelijk is.",
+    "p3": "En wil een van jullie helemaal geen hond, dring dan niet aan. Het is beter te wachten tot ieder van jullie er zin in heeft. Anders zorgt uiteindelijk steeds dezelfde persoon voor hem."
   },
   "section5": {
     "title": "Wat je over deze test moet weten",
-    "p1": "Deze test is een spel. De beschrijvingen geven het meest voorkomende karakter van elk ras, maar elke hond is anders, en zijn opvoeding telt net zo zwaar als zijn ras. Ga voor jullie keuze langs bij fokkers, asielen of een dierenarts, en breng tijd door met de hond voordat jullie beslissen.",
-    "p2": "Er wordt niets opgeslagen: jullie antwoorden blijven op jullie telefoon. Alleen de hond die eruit komt wordt geteld, zonder voornaam, om te zien welke uitslagen het vaakst voorkomen. De foto's van de honden zijn voor deze pagina gemaakt."
+    "p1": "Deze test is een spel. De beschrijvingen geven het meest voorkomende karakter van elk ras, maar elke hond is anders en zijn opvoeding telt net zo zwaar als zijn ras. Ga voordat jullie beslissen langs bij een fokker of een asiel en breng tijd door met de hond.",
+    "p2": "Jullie antwoorden worden niet opgeslagen, ze blijven op jullie telefoon. We tellen alleen welke hond eruit komt, om te zien welke uitslagen het vaakst voorkomen. Jullie voornaam wordt ook niet opgeslagen. De foto's van de honden zijn voor deze pagina gemaakt."
   },
   "seo": {
     "faqTitle": "Veelgestelde vragen",
     "faq1Q": "Welke honden kunnen eruit komen?",
-    "faq1A": "Er zijn twaalf uitslagen mogelijk: de golden retriever, de corgi, de Franse bulldog, de cavalier king charles spaniël, de Australische herder, de teckel, de poedel, de shiba inu, de Siberische husky, de Berner sennenhond, de asielhond, en ‘voorlopig een knuffelhond’ voor koppels die er nog niet klaar voor zijn.",
+    "faq1A": "De test kan 12 uitslagen geven. Er zijn tien rassen: de golden retriever, de corgi, de Franse bulldog, de cavalier king charles spaniël, de Australische herder, de teckel, de poedel, de shiba inu, de Siberische husky en de Berner sennenhond. Daarnaast zijn er de asielhond en ‘voorlopig een knuffelhond’ voor koppels die er nog niet klaar voor zijn.",
     "faq2Q": "Hoe wordt de uitslag berekend?",
-    "faq2A": "Elk antwoord geeft punten aan de honden die erbij passen. Zo geeft ‘in een appartement in de stad, zonder buitenruimte’ punten aan de Franse bulldog en de cavalier king charles spaniël, en geen aan de husky. Met z'n tweeën telt de test jullie twee reeksen antwoorden bij elkaar op, en de hond met de beste score wordt de hond voor jullie samen.",
+    "faq2A": "Elk antwoord geeft punten aan de honden die erbij passen. Als jullie bijvoorbeeld antwoorden dat jullie ‘in een appartement in de stad, zonder buitenruimte’ wonen, krijgen de Franse bulldog en de cavalier king charles spaniël punten, maar de husky niet. Als jullie de test met z'n tweeën doen, telt hij jullie antwoorden bij elkaar op. De hond met de meeste punten wordt dan de hond van jullie koppel.",
     "faq3Q": "Kun je de test alleen doen?",
-    "faq3A": "Ja. Je kiest ‘Alleen, voor ons tweeën’ en antwoordt met jullie tweeën in gedachten. Je krijgt een hond, maar niet de vergelijking van jullie antwoorden: daarvoor moet je met z'n tweeën zijn.",
+    "faq3A": "Ja. Kies gewoon ‘Alleen, voor ons als koppel’ en antwoord met jullie als koppel in gedachten. Je krijgt een hond, maar je kunt jullie antwoorden niet vergelijken.",
     "faq4Q": "Welke hond voor een jong koppel in een appartement?",
-    "faq4A": "Dat hangt vooral af van hoeveel tijd jullie hebben. In een appartement redden de honden zich het best die niet urenlang hoeven te rennen: de Franse bulldog, de cavalier king charles spaniël, de teckel of de poedel. De shiba inu past ook als jullie een deel van de dag werken. Een Australische herder of een husky heeft juist ruimte en veel beweging nodig.",
+    "faq4A": "Dat hangt vooral af van hoeveel tijd jullie hebben. In een appartement is een hond die niet urenlang hoeft te rennen beter. Dat geldt voor de Franse bulldog, de cavalier king charles spaniël, de teckel en de poedel. De shiba inu past ook als jullie een deel van de dag werken. Een Australische herder of een husky heeft juist ruimte en veel beweging nodig.",
     "faq5Q": "Hoe weten we of we klaar zijn voor een hond?",
-    "faq5A": "Daar heeft de test een uitslag voor: ‘voorlopig een knuffelhond’. Die komt eruit als jullie antwoorden zeggen dat de hond de hele dag alleen zou zijn, dat jullie veel reizen of dat de wens niet aan beide kanten even groot is. Komen jullie daarop uit, pas dan een weekend op de hond van vrienden en kijk hoe het gaat.",
+    "faq5A": "Daar heeft de test een uitslag voor: ‘voorlopig een knuffelhond’. Die komt eruit als de hond de hele dag alleen zou zijn of als jullie veel reizen. Hij komt er ook uit als een van jullie de hond liever wil dan de ander. Komen jullie daarop uit, pas dan een weekend op de hond van vrienden en kijk hoe het gaat.",
     "faq6Q": "Worden mijn antwoorden opgeslagen?",
-    "faq6A": "Nee. De antwoorden blijven op jullie telefoon. Alleen de hond die eruit komt wordt geteld, zonder voornaam, voor de verdeling van de uitslagen."
+    "faq6A": "Nee. Jullie antwoorden blijven op jullie telefoon. We tellen alleen welke hond eruit komt, om te zien welke uitslagen het vaakst voorkomen. Jullie voornaam wordt niet opgeslagen."
   },
   "jsonLd": {
     "about": "samen een hond kiezen"

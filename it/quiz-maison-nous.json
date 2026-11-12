@@ -1,27 +1,27 @@
 {
   "hero": {
     "badge": "Quiz originale • In due, o da solo/a per la coppia",
-    "title": "Il test per scoprire che casa fa per voi due",
-    "titleHighlight": "che casa fa per voi due",
-    "description": "Un appartamento in città, una casa con giardino, un rudere da ristrutturare o un van? Ognuno risponde a dodici domande sulla vita che si immagina, e il test vi mostra il posto dove stareste bene tutti e due.",
+    "title": "Che casa fa per noi? Il test da fare in coppia",
+    "titleHighlight": "Che casa fa per noi?",
+    "description": "Siete indecisi tra un appartamento in città e una casa con giardino? Ognuno risponde a 12 domande sulla vita che si immagina. Poi il test vi mostra la casa che andrebbe meglio alla vostra coppia.",
     "subtitle": "12 domande • 3 minuti a testa • su un solo telefono",
     "jumpBtn": "Fai il test"
   },
   "section1": {
     "title": "Come funziona il test",
-    "p1": "Questo test serve a trovare il tipo di posto dove stareste bene in due: in città o in mezzo ai campi, nel nuovo o nell'antico, con i vicini a due passi o senza nessuno intorno. Fa dodici domande sulla vostra vita di tutti i giorni: cosa vedete la mattina dalla finestra, cosa fate il sabato sera, quanto spazio occupano le vostre cose, ecc.",
-    "p2": "Per esempio, alla domanda «I lavori:», potete rispondere «mai, vogliamo solo posare le valigie», «una mano di pittura, non di più», «ci piace fare lavoretti nel fine settimana» o «rifare tutto da soli, è il progetto di una vita». Se tu rispondi «mai» e la tua dolce metà sogna di rifare tutto, il test lo vede: somma le vostre due serie di risposte e tiene la casa che ha il voto migliore per tutti e due.",
-    "p3": "In due, il primo risponde alle dodici domande, passa il telefono, e il secondo risponde senza vedere cosa ha scelto l'altro. Alla fine avete la casa della coppia con la sua foto, quella che ognuno avrebbe scelto da solo, e l'elenco delle domande a cui non avete risposto uguale.",
-    "p4": "Puoi farlo anche da solo/a, rispondendo per tutti e due. Ma non avrai il confronto, ed è la parte più interessante."
+    "p1": "Questo test è un gioco da fare in coppia. Serve a trovare il tipo di posto dove stareste bene, per esempio in città o in mezzo ai campi. Fa 12 domande sulla vostra vita di tutti i giorni. Per esempio, vi chiede cosa vedete la mattina dalla finestra e cosa fate il sabato sera.",
+    "p2": "Prendiamo la domanda sui lavori. Potete scegliere tra «mai, vogliamo solo posare le valigie», «una mano di pittura, non di più», «ci piace fare lavoretti nel fine settimana» e «rifare tutto da soli, è il progetto di una vita». Se tu rispondi «mai», il test dà punti alle case dove non c'è niente da fare, come la casa di design. Se la tua dolce metà risponde «rifare tutto da soli», dà punti al rudere da ristrutturare. Alla fine il test somma le vostre risposte e tiene la casa che ha più punti.",
+    "p3": "Il primo risponde alle 12 domande e poi passa il telefono all'altro. Il secondo risponde senza vedere cosa ha scelto il primo. Poi il test vi mostra la casa della vostra coppia con la sua foto. Vi mostra anche quella che ognuno avrebbe scelto da solo e l'elenco delle domande a cui non avete risposto uguale.",
+    "p4": "Puoi fare il test anche da solo/a, rispondendo per la vostra coppia. Però non potrai confrontare le vostre risposte ed è proprio la parte più interessante."
   },
   "section2": {
-    "title": "Le dieci case del test",
-    "intro": "Il test può dare dieci risultati, dal più classico al più inaspettato. Ecco a chi va meglio ognuno.",
+    "title": "Le 10 case del test",
+    "intro": "Il test può dare 10 risultati. Alcuni sono molto classici, come la casa con giardino. Altri lo sono molto meno, come la casa galleggiante o il van. Ecco a chi va meglio ogni casa.",
     "galerie": [
       {
         "id": "pavillon",
         "titre": "La casa con giardino",
-        "texte": "Per le coppie che vogliono sistemarsi per davvero, con spazio, un barbecue e una camera per gli ospiti.",
+        "texte": "Per le coppie che vogliono sistemarsi per davvero e avere spazio.",
         "alt": "Una casa a due piani in una via tranquilla, con una siepe, una bici appoggiata alla recinzione e un giardino"
       },
       {
@@ -33,25 +33,25 @@
       {
         "id": "campagne",
         "titre": "La casa di campagna",
-        "texte": "Per chi sogna spazio, un orto e il silenzio la sera.",
+        "texte": "Per chi sogna un orto e il silenzio la sera.",
         "alt": "Una vecchia casa in pietra con le persiane azzurre, coperta di rose, davanti a un orto"
       },
       {
         "id": "loft",
         "titre": "Il loft",
-        "texte": "Per chi ama la città e gli spazi ampi, e ha spesso gente a casa.",
+        "texte": "Per chi ama la città e ha spesso gente a casa.",
         "alt": "Un loft con pareti di mattoni, grandi vetrate, un divano e una scala di metallo"
       },
       {
         "id": "architecte",
         "titre": "La casa di design",
-        "texte": "Per chi ha gusti precisi, un budget, e nessuna voglia di fare lavori.",
+        "texte": "Per chi ha gusti precisi e nessuna voglia di fare lavori.",
         "alt": "Una casa contemporanea in cemento e vetro, a bordo piscina, all'imbrunire"
       },
       {
         "id": "tiny",
         "titre": "La tiny house",
-        "texte": "Per le coppie che hanno poche cose e vogliono vivere nella natura, in piccolo.",
+        "texte": "Per le coppie che hanno poche cose e vogliono vivere nella natura.",
         "alt": "Una casetta di legno su ruote, illuminata da un filo di lucine, al limitare di un bosco"
       },
       {
@@ -63,59 +63,59 @@
       {
         "id": "van",
         "titre": "Il van camperizzato",
-        "texte": "Per chi non sta mai fermo e ha bisogno solo di un letto e di una strada.",
+        "texte": "Per chi non sta mai fermo e vuole viaggiare tutto l'anno.",
         "alt": "Un van con le porte posteriori aperte su un letto, parcheggiato sul bordo di una scogliera al tramonto"
       },
       {
         "id": "peniche",
         "titre": "La casa galleggiante",
-        "texte": "Per chi vuole vivere sull'acqua, in un posto che non somiglia a nessun altro.",
+        "texte": "Per chi vuole vivere sull'acqua in un posto originale.",
         "alt": "Una casa galleggiante ormeggiata su un canale, con il ponte coperto di piante, un tavolo e delle bici"
       },
       {
         "id": "palier",
         "titre": "Due appartamenti sullo stesso pianerottolo",
-        "texte": "Per le coppie che si amano e ci tengono lo stesso ad avere ognuno casa sua.",
+        "texte": "Per le coppie in cui ognuno ci tiene ad avere casa sua.",
         "alt": "Due porte d'appartamento una accanto all'altra su un pianerottolo, una rosa e una viola, ognuna con il suo zerbino"
       }
     ]
   },
   "section3": {
-    "title": "Scegliere dove vivere in due: gli argomenti da mettere sul tavolo",
-    "intro": "Cercare casa in due è raramente solo una questione di gusti. Dietro «mi piace questa casa» ci sono quattro argomenti di cui si parla molto meno.",
-    "sub1Title": "La città o la campagna",
-    "sub1Text": "È il disaccordo più comune. Uno è cresciuto in un paese e in città soffoca, l'altro non si vede a venti minuti di macchina dal primo panificio. Prima di guardare gli annunci, raccontatevi una giornata qualunque nel posto che vi immaginate, dal risveglio a quando andate a letto. Ci si accorge in fretta di cosa non va.",
+    "title": "Scegliere dove vivere in due: gli argomenti di cui parlare",
+    "intro": "Quando si cerca casa in due, non è solo una questione di gusti. Ci sono quattro argomenti di cui è meglio parlare prima di cominciare le visite.",
+    "sub1Title": "La città o la campagna?",
+    "sub1Text": "È il disaccordo più comune. Per esempio, uno è cresciuto in un paese e in città soffoca. L'altro non si vede a venti minuti di macchina dal primo panificio. Prima di guardare gli annunci, raccontatevi una giornata qualunque nel posto che vi immaginate. Capirete in fretta cosa non va.",
     "sub2Title": "I lavori",
-    "sub2Text": "Una casa da rifare costa meno all'acquisto, e molto di più in fine settimana. Se uno adora farli e l'altro li detesta, il cantiere diventa in fretta un motivo di litigio. Mettetevi d'accordo su cosa siete capaci di fare da soli, sul budget, e su quanto tempo accettate di vivere nella polvere.",
+    "sub2Text": "Una casa da rifare costa meno all'acquisto ma occupa molti fine settimana. Se uno adora i lavori e l'altro li detesta, il cantiere diventa in fretta un motivo di litigio. Mettetevi d'accordo su cosa sapete fare da soli e sul budget. Chiedetevi anche quanto tempo accettate di vivere nella polvere.",
     "sub3Title": "I soldi",
-    "sub3Text": "Comprare o affittare, quanto mettere nell'affitto o nel mutuo, chi paga cosa se uno guadagna più dell'altro: sono domande che è meglio risolvere prima di firmare. Le coppie che <a href=\"/it/test-andare-a-vivere-insieme/\">vanno a vivere insieme per la prima volta</a> le scoprono spesso strada facendo.",
+    "sub3Text": "Ci sono alcune domande da risolvere prima di firmare. Comprate o affittate? E chi paga cosa se uno guadagna più dell'altro? Le coppie che <a href=\"/it/test-andare-a-vivere-insieme/\">vanno a vivere insieme per la prima volta</a> scoprono spesso queste domande strada facendo.",
     "sub4Title": "Lo spazio di ognuno",
-    "sub4Text": "Vivere in due non vuol dire condividere tutto. C'è chi ha bisogno di una stanza sua, di uno studio, di un laboratorio, o solo di un angolo di divano dove nessuno gli parla. Altre coppie scelgono addirittura di vivere ognuno a casa sua, e non per questo si amano di meno. Chiedetevi <a href=\"/it/che-tipo-di-coppia-siete-quiz/\">che tipo di coppia siete</a>, più simbiotici o più indipendenti: la casa giusta non sarà la stessa."
+    "sub4Text": "Vivere in due non vuol dire condividere tutto. Alcune persone hanno bisogno di una stanza tutta loro, per esempio uno studio o un laboratorio. Ci sono perfino coppie che scelgono di vivere ognuno a casa sua e non per questo si amano di meno. Chiedetevi <a href=\"/it/che-tipo-di-coppia-siete-quiz/\">che tipo di coppia siete</a>. Una coppia molto simbiotica e una coppia più indipendente non cercano la stessa casa."
   },
   "section4": {
     "title": "E se non siete d'accordo?",
-    "p1": "Succede quasi sempre, ed è più che altro un buon segno: vuol dire che ognuno ha risposto sul serio. Guardate l'elenco delle vostre risposte diverse. Se riguardano lo stile o le dimensioni, troverete un compromesso senza troppa fatica. Se riguardano la città o la campagna, o il fatto di vivere insieme oppure no, prendetevi il tempo di parlarne.",
-    "p2": "Pensate anche a quello che arriverà insieme alla casa. Un giardino è la possibilità di <a href=\"/it/test-che-cane-fa-per-noi/\">avere un cane</a>, e una stanza in più è forse un figlio un giorno. La casa che scegliete dice molto della vita che avete in mente."
+    "p1": "Succede quasi sempre ed è piuttosto un buon segno, perché vuol dire che ognuno ha risposto sinceramente. Guardate l'elenco delle vostre risposte diverse. Se riguardano lo stile o le dimensioni della casa, troverete facilmente un compromesso. Se riguardano la città o la campagna, prendetevi il tempo di parlarne. Vale lo stesso se uno di voi preferisce vivere ognuno a casa sua.",
+    "p2": "Pensate anche a quello che arriva insieme alla casa. Con un giardino potete <a href=\"/it/test-che-cane-fa-per-noi/\">avere un cane</a>. Con una stanza in più avete spazio per un figlio un giorno. La casa che scegliete dipende quindi anche dalla vita che avete in mente."
   },
   "section5": {
     "title": "Cosa sapere su questo test",
-    "p1": "Questo test è un gioco. Non conosce il vostro budget, né i prezzi delle case dalle vostre parti: vi dice solo verso che tipo di posto vi portano le vostre risposte. Prendetelo come un modo per aprire la discussione, non come il consiglio di un agente immobiliare.",
-    "p2": "Non viene salvato niente: le vostre risposte restano sul vostro telefono. Viene contato solo il risultato ottenuto, senza nome, per sapere quali escono di più. Le foto sono state create per questa pagina."
+    "p1": "Questo test è un gioco. Non conosce il vostro budget e non conosce nemmeno i prezzi delle case dalle vostre parti. Vi dice solo verso che tipo di posto vi portano le vostre risposte. Serve soprattutto ad aprire la discussione nella vostra coppia.",
+    "p2": "Le vostre risposte non vengono salvate, restano sul vostro telefono. Contiamo solo il risultato ottenuto per sapere quali escono di più. Nemmeno il vostro nome viene salvato. Le foto sono state create per questa pagina."
   },
   "seo": {
     "faqTitle": "Domande frequenti",
     "faq1Q": "Quali case possono uscire?",
-    "faq1A": "I risultati possibili sono dieci: la casa con giardino, l'appartamento in centro, la casa di campagna, il loft, la casa di design, la tiny house, il rudere da ristrutturare, il van camperizzato, la casa galleggiante, e due appartamenti sullo stesso pianerottolo per le coppie che preferiscono vivere ognuno a casa sua.",
+    "faq1A": "Il test può dare 10 risultati: la casa con giardino, l'appartamento in centro, la casa di campagna, il loft, la casa di design, la tiny house, il rudere da ristrutturare, il van camperizzato e la casa galleggiante. L'ultimo risultato si chiama «due appartamenti sullo stesso pianerottolo». È pensato per le coppie che preferiscono vivere ognuno a casa sua.",
     "faq2Q": "Come viene calcolato il risultato?",
-    "faq2A": "Ogni risposta dà punti alle case che le corrispondono. Per esempio, «un ristorante o un locale a dieci minuti a piedi» dà punti all'appartamento in centro e al loft, e nessuno alla casa di campagna. In due, il test somma le vostre due serie di risposte, e la casa con il voto migliore diventa quella della coppia.",
+    "faq2A": "Ogni risposta dà punti alle case che le corrispondono. Per esempio, se alla domanda sul sabato sera rispondete «un ristorante o un locale a dieci minuti a piedi», l'appartamento in centro e il loft prendono punti ma la casa di campagna no. Quando fate il test in due, somma le vostre risposte e la casa che ha più punti diventa quella della vostra coppia.",
     "faq3Q": "Si può fare il test da soli?",
-    "faq3A": "Sì. Scegli «Da solo/a, per noi due» e rispondi pensando alla vostra coppia. Avrai un risultato, ma non il confronto delle vostre risposte: per quello bisogna essere in due.",
+    "faq3A": "Sì. Basta scegliere «Da solo/a, per la nostra coppia» e rispondere pensando alla vostra coppia. Avrai un risultato ma non potrai confrontare le vostre risposte.",
     "faq4Q": "Casa o appartamento: come scegliere in due?",
-    "faq4A": "La cosa più semplice è partire dalla vostra settimana, non dalla casa. Se uscite molto e non avete voglia di curare uno spazio esterno, vi andrà meglio un appartamento in una buona posizione. Se avete spesso ospiti, volete un giardino o pensate di allargare la famiglia, la casa si impone abbastanza in fretta. Il test fa proprio queste domande, a ognuno per conto suo.",
+    "faq4A": "La cosa più semplice è guardare come passate la settimana. Se uscite molto e non avete voglia di curare un giardino, vi andrà meglio un appartamento in una buona posizione. Se avete spesso ospiti o pensate di allargare la famiglia, vi servirà piuttosto una casa. Il test fa proprio questo tipo di domande a ognuno di voi.",
     "faq5Q": "E se uno di noi preferisce vivere da solo?",
-    "faq5A": "Non è per forza un brutto segno. Ci sono coppie che vivono ognuno a casa sua per scelta, per tenersi le proprie abitudini o il proprio spazio, e stanno benissimo. Il test ha un risultato per questo: «due appartamenti sullo stesso pianerottolo». Quello che conta è che lo vogliate tutti e due.",
+    "faq5A": "Non è per forza un brutto segno. Ci sono coppie che vivono ognuno a casa sua per scelta, per tenersi le proprie abitudini, e stanno benissimo. Il test ha infatti un risultato per questo: «due appartamenti sullo stesso pianerottolo». Quello che conta è che siate d'accordo.",
     "faq6Q": "Le mie risposte vengono salvate?",
-    "faq6A": "No. Le risposte restano sul vostro telefono. Viene contato solo il risultato ottenuto, senza nome, per la distribuzione dei risultati."
+    "faq6A": "No. Le vostre risposte restano sul vostro telefono. Contiamo solo il risultato ottenuto per sapere quali escono di più. Il vostro nome non viene salvato."
   },
   "jsonLd": {
     "about": "scegliere una casa in coppia"

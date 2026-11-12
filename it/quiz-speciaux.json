@@ -3,7 +3,7 @@
     "badge": "Quiz originali • Gratis • In due o da solo/a",
     "title": "I nostri quiz originali da fare in coppia",
     "titleHighlight": "quiz originali",
-    "description": "Quiz leggeri, che non misurano niente di serio: che cane fa per voi due, che casa, e dei quiz di stagione per Halloween o Natale. Ognuno risponde per conto suo, e poi si confronta."
+    "description": "Questi quiz sono giochi da fare in coppia e non misurano niente di serio. Per esempio, potete scoprire che cane o che casa andrebbe bene alla vostra coppia. Ci sono anche quiz per Halloween e per Natale."
   },
   "enCeMoment": "In questo momento",
   "horsSaison": "Tutto l'anno",
@@ -14,77 +14,77 @@
   "saisons": {
     "halloween": {
       "titre": "Speciale Halloween",
-      "intro": "Cinque quiz per una sera di Halloween in due: un ritratto da killer, un cronometro di sopravvivenza, un rischio di possessione, un ritratto da supercattivo e il duo di cattivi che formate. Tutto per ridere, e tutto si gioca in cinque minuti."
+      "intro": "Ecco 5 quiz da fare la sera di Halloween. Per esempio, potete scoprire quanto tempo sopravvivreste in un film horror o a quale supercattivo somigliate. È tutto per ridere e ogni quiz dura circa cinque minuti."
     },
     "noel": {
       "titre": "Speciale Natale",
-      "intro": "Due quiz per una sera di dicembre in due: in quale lista di Babbo Natale è la vostra coppia, e che personaggi di Natale formate. Ognuno risponde per conto suo, e la coppia riceve un solo risultato, con la sua foto.",
+      "intro": "Ecco 2 quiz da fare una sera di dicembre. Il primo vi dice in quale lista di Babbo Natale è la vostra coppia. Il secondo vi dice che personaggi di Natale formate. Ognuno risponde per conto suo e avete un solo risultato per la vostra coppia, con la sua foto.",
       "bientot": "Presto"
     }
   },
   "quiz": {
     "quizSerialKillerNom": "Con quale serial killer sei compatibile?",
-    "quizSerialKillerTagline": "Quindici situazioni di una sera di Halloween, e l'assassino celebre che ti somiglia di più, in versione molto ingrandita.",
+    "quizSerialKillerTagline": "Rispondi a 15 situazioni di una sera di Halloween e il quiz ti dice quale assassino celebre ti somiglia di più.",
     "quizMortFilmHorreurNom": "Chi di noi due muore per primo in un film horror?",
-    "quizMortFilmHorreurTagline": "Quindici situazioni, dall'arrivo allo chalet ai titoli di coda, un tempo di sopravvivenza in minuti, e il nome della prima vittima quando giocate in coppia.",
+    "quizMortFilmHorreurTagline": "Rispondete a 15 situazioni di un film horror e il quiz calcola il vostro tempo di sopravvivenza in minuti. In due, vi dice chi muore per primo.",
     "quizPossessionNom": "Chi di noi due potrebbe essere posseduto?",
-    "quizPossessionTagline": "Dieci giorni in una casa di cui nessuno vuole raccontare la storia, un rischio di possessione in percentuale, e chi sceglierebbero i demoni.",
+    "quizPossessionTagline": "Passate dieci giorni in una casa infestata e il quiz calcola il vostro rischio di possessione in percentuale. In due, vi dice chi sceglierebbero i demoni.",
     "quizSuperVilainNom": "A quale supercattivo somigli di più?",
-    "quizSuperVilainTagline": "Il tuo ingresso alla festa, il tuo costume, i tuoi scagnozzi, la tua risata: il supercattivo che ti somiglia, da Joker a Malefica.",
+    "quizSuperVilainTagline": "Rispondi a 15 situazioni di una festa di Halloween e il quiz ti dice a quale supercattivo somigli, per esempio Joker o Malefica.",
     "quizDuoVilainsNom": "Quale duo di supercattivi siete?",
-    "quizDuoVilainsTagline": "Il colpo della notte di Halloween: il ruolo di ciascuno, il cervello, il caos, la forza, il fascino, l'ombra o il cuore, e il duo di cattivi celebre che formate.",
+    "quizDuoVilainsTagline": "Preparate il colpo della notte di Halloween. Il quiz dà un ruolo a ciascuno, per esempio il cervello o la forza, e vi dice quale duo di cattivi celebre formate.",
     "quizChienNousNom": "Che cane fa per noi?",
-    "quizChienNousTagline": "Dodici domande a testa sulla vostra vita in due, e il cane della coppia con la sua foto: corgi, golden, bassotto, shiba, husky...",
+    "quizChienNousTagline": "Ognuno risponde a 12 domande e il test vi mostra il cane che andrebbe bene alla vostra coppia, con la sua foto.",
     "quizMaisonNousNom": "Che casa fa per noi?",
-    "quizMaisonNousTagline": "Dodici domande a testa sulla vita che vi immaginate, e la casa della coppia in foto: appartamento, casa di campagna, loft, casa galleggiante, tiny house...",
+    "quizMaisonNousTagline": "Ognuno risponde a 12 domande sulla vita che si immagina e il test vi mostra la casa della vostra coppia in foto.",
     "quizListeNoelNom": "Buoni o cattivi?",
-    "quizListeNoelTagline": "Dodici domande a testa sul vostro mese di dicembre: il posto della vostra coppia nella lista di Babbo Natale, e chi dei due è stato più buono.",
+    "quizListeNoelTagline": "Ognuno risponde a 12 domande sul suo mese di dicembre. Il test vi dice se la vostra coppia è nella lista dei buoni e chi è stato più buono.",
     "quizDuoNoelNom": "Che personaggi di Natale siete?",
-    "quizDuoNoelTagline": "Dodici domande a testa sul vostro Natale in due, e il duo che formate con la sua foto: due elfi, due renne, lo Schiaccianoci e la Fata Confetto...",
+    "quizDuoNoelTagline": "Ognuno risponde a 12 domande su come festeggiate il Natale e il test vi dà il duo che formate, con la sua foto.",
     "quizPorteCulotteNom": "Chi porta i pantaloni?",
-    "quizPorteCulotteTagline": "Venti domande su chi decide a casa vostra, da soli o in due: la parte di ciascuno, e le domande su cui non siete d'accordo."
+    "quizPorteCulotteTagline": "Rispondete a 20 domande per sapere chi decide nella vostra coppia. In due, il test vi mostra anche le domande su cui non siete d'accordo."
   },
   "section1": {
     "title": "A cosa servono questi quiz",
-    "p1": "I quiz di questa pagina non somigliano ai nostri test di coppia. Non misurano niente di serio e non danno un voto alla vostra relazione. Sono giochi: che cane andrebbe bene alla vostra coppia, in che casa stareste bene, <a href=\"/it/test-chi-porta-i-pantaloni/\">chi ha l'ultima parola a casa vostra</a>, o chi di voi due morirebbe per primo in un film horror.",
-    "p2": "Funzionano perché ognuno risponde per conto suo. Scoprire che la tua dolce metà vuole un husky quando tu pensavi a un bassotto, o un rudere da ristrutturare quando tu sognavi un appartamento in centro, occupa buona parte della serata!",
-    "p3": "I quiz sul futuro in due sono qui tutto l'anno. Quelli di stagione salgono in cima alla pagina quando arriva il loro periodo: i quiz di Halloween a ottobre, poi quelli di Natale da metà novembre, per sapere <a href=\"/it/test-lista-dei-buoni-e-cattivi/\">se la vostra coppia è stata buona quest'anno</a> o <a href=\"/it/test-che-personaggi-di-natale-siete/\">che duo di Natale formate</a>. Restano giocabili il resto del tempo."
+    "p1": "I quiz di questa pagina non somigliano ai nostri test di coppia. Non misurano niente di serio e non danno un voto alla vostra relazione. Sono giochi. Per esempio, potete scoprire che cane andrebbe bene alla vostra coppia o <a href=\"/it/test-chi-porta-i-pantaloni/\">chi ha l'ultima parola a casa vostra</a>.",
+    "p2": "Il bello è che ognuno risponde per conto suo. Per esempio, puoi scoprire che la tua dolce metà vuole un husky mentre tu pensavi a un bassotto. Occupa buona parte della serata!",
+    "p3": "I quiz sul futuro in due sono qui tutto l'anno. Quelli di stagione salgono in cima alla pagina quando arriva il loro periodo. I quiz di Halloween sono in cima a ottobre. Quelli di Natale arrivano a metà novembre e allora potete sapere <a href=\"/it/test-lista-dei-buoni-e-cattivi/\">se la vostra coppia è stata buona quest'anno</a> o <a href=\"/it/test-che-personaggi-di-natale-siete/\">che duo di Natale formate</a>. Potete comunque giocarci il resto dell'anno."
   },
   "section2": {
     "title": "E dopo questi quiz?",
-    "p1": "Quando li avrete fatti tutti, <a href=\"/it/giochi-di-coppia/\">i giochi da fare in due tutto l'anno</a> prendono il testimone: <a href=\"/it/preferiresti-quiz-coppia/\">i dilemmi «preferiresti»</a>, obbligo o verità, il gioco da tavolo, e una quindicina di altri. E per chi vuole <a href=\"/it/test-compatibilita-coppia/\">una vera risposta sulla propria coppia</a>, c'è di che confrontare le vostre risposte su quello che conta."
+    "p1": "Quando avrete fatto tutti questi quiz, potete continuare con <a href=\"/it/giochi-di-coppia/\">i giochi da fare in due tutto l'anno</a>. Ci sono per esempio <a href=\"/it/preferiresti-quiz-coppia/\">i dilemmi «preferiresti»</a> oppure obbligo o verità. E se volete <a href=\"/it/test-compatibilita-coppia/\">una vera risposta sulla vostra coppia</a>, c'è un test anche per questo."
   },
   "section3": {
     "title": "Come si gioca",
-    "p1": "Tutti questi quiz si giocano allo stesso modo. In due, il primo risponde a tutta la serie, passa il telefono, e il secondo risponde a sua volta senza vedere le risposte del primo. Da solo/a, rispondi e scopri il tuo risultato.",
-    "p2": "Per i quiz sul futuro in due e per quelli di Natale, la coppia riceve un solo risultato, quello che va meglio con le vostre due serie di risposte, e l'elenco delle domande su cui non siete d'accordo. Per i quiz di Halloween, ognuno ha il suo, e una modalità a distanza permette di giocare ognuno sul proprio telefono.",
-    "p3": "Nessun account da creare, niente da installare, e niente viene salvato: le risposte restano sui vostri telefoni."
+    "p1": "Tutti questi quiz si giocano allo stesso modo. In due, il primo risponde a tutte le domande e poi passa il telefono all'altro. Il secondo risponde senza vedere le risposte del primo. Potete anche giocare da soli.",
+    "p2": "Nei quiz sul futuro in due e in quelli di Natale avete un solo risultato per la vostra coppia. Il quiz vi dà anche l'elenco delle domande su cui non siete d'accordo. Nei quiz di Halloween ognuno ha il suo risultato. Hanno anche una modalità a distanza per giocare ognuno sul proprio telefono.",
+    "p3": "Non dovete creare un account né installare niente. Le vostre risposte non vengono salvate, restano sul vostro telefono."
   },
   "faq": {
     "title": "Domande frequenti",
     "q1": "I quiz originali sono gratis?",
-    "a1": "Sì, tutti, senza iscrizione e senza app da installare. Si giocano nel browser del telefono.",
+    "a1": "Sì, sono tutti gratis. Non c'è iscrizione e non c'è nessuna app da installare. Ci giocate direttamente sul telefono.",
     "q2": "Bisogna essere in due?",
-    "a2": "Non per forza. Quasi tutti si giocano da solo/a o in due, e solo il quiz del duo di supercattivi richiede due giocatori, visto che compone un duo. Ma sono pensati per essere fatti in due: il bello è confrontare le risposte.",
+    "a2": "Non per forza. Quasi tutti i quiz si giocano da soli o in due. Solo il quiz del duo di supercattivi richiede due giocatori. In due sono comunque più divertenti, perché potete confrontare le vostre risposte.",
     "q3": "Che fine fanno i quiz una volta passata la stagione?",
-    "a3": "Restano su questa pagina, un po' più in basso, e al loro indirizzo. Non cancelliamo niente: un quiz di Halloween in pieno marzo si può fare lo stesso.",
+    "a3": "Restano su questa pagina, un po' più in basso. Non cancelliamo niente, quindi potete benissimo fare un quiz di Halloween a marzo.",
     "q4": "Ci sono quiz di Natale?",
-    "a4": "Sì, due. «Buoni o cattivi?» vi dice in quale lista di Babbo Natale è la vostra coppia, e chi dei due è stato più buono. Il quiz dei personaggi di Natale vi dà il duo che formate, da Babbo Natale e Mamma Natale a Scrooge e lo spirito del Natale. Salgono in cima a questa pagina da metà novembre a fine dicembre.",
+    "a4": "Sì, ce ne sono due. «Buoni o cattivi?» vi dice in quale lista di Babbo Natale è la vostra coppia e chi è stato più buono. Il quiz dei personaggi di Natale vi dà il duo che formate, per esempio Babbo Natale e Mamma Natale. Sono in cima a questa pagina da metà novembre a fine dicembre.",
     "q5": "Si può giocare a distanza?",
-    "a5": "Sì per i quiz di Halloween: una persona crea la partita, l'altra si unisce con il codice, e rispondete ognuno sul proprio telefono. Gli altri quiz si fanno su un solo telefono, che vi passate."
+    "a5": "Sì, per i quiz di Halloween. Uno di voi crea la partita e l'altro si unisce con un codice. Poi rispondete ognuno sul proprio telefono. Gli altri quiz si fanno su un solo telefono che vi passate."
   },
   "jsonLd": {
     "name": "Quiz originali da fare in coppia"
   },
-  "resultatCommun": "Un risultato per tutti e due",
+  "resultatCommun": "Un solo risultato per la vostra coppia",
   "sections": {
     "futur": {
       "titre": "Il futuro in due",
-      "intro": "Il cane che avrete, la casa dove vivrete: ognuno risponde per conto suo, e il quiz cerca quello che va bene a tutti e due, con tanto di foto."
+      "intro": "Questi quiz parlano del vostro futuro, per esempio del cane che avrete o della casa dove vivrete. Ognuno risponde per conto suo e il quiz cerca il risultato che va meglio alla vostra coppia."
     },
     "vous": {
-      "titre": "Voi due",
-      "intro": "Chi decide a casa vostra, chi ha l'ultima parola: quiz sulla vostra coppia così com'è, da fare da soli o a turno sullo stesso telefono."
+      "titre": "La vostra coppia",
+      "intro": "Questi quiz parlano della vostra coppia com'è oggi, per esempio di chi decide a casa vostra. Potete farli da soli o a turno sullo stesso telefono."
     }
   }
 }

@@ -1,23 +1,23 @@
 {
   "hero": {
     "badge": "Test di Natale • In due, o da solo/a per la coppia",
-    "title": "Il test per scoprire che personaggi di Natale siete voi due",
+    "title": "Il test per scoprire che personaggi di Natale siete",
     "titleHighlight": "che personaggi di Natale siete",
-    "description": "Babbo Natale e Mamma Natale, due elfi, Scrooge e lo spirito del Natale? Ognuno risponde a dodici domande sul vostro Natale in due, e il test vi dà il duo di Natale che formate, con la sua foto.",
+    "description": "Siete più Babbo Natale e Mamma Natale o due elfi del laboratorio? Ognuno risponde a 12 domande su come festeggiate il Natale. Poi il test vi dà il duo di Natale che formate, con la sua foto.",
     "subtitle": "12 domande • 3 minuti a testa • su un solo telefono",
     "jumpBtn": "Fai il test"
   },
   "section1": {
     "title": "Come funziona il test",
-    "p1": "Questo test è un gioco di Natale da fare in coppia. Vi dice che duo di personaggi di Natale formate, in base a come passate le feste. Fa dodici domande sul vostro Natale in due: quando tirate fuori gli addobbi, com'è il vostro albero, dove siete la sera della Vigilia, cosa fate la mattina del 25, ecc.",
-    "p2": "Per esempio, alla domanda «La sera della Vigilia siete:», potete scegliere tra «a casa nostra, e ospitiamo noi», «in viaggio, tra due famiglie», «noi due, in pigiama» e «da qualche parte dove c'è la neve, se possibile». Ogni risposta dà punti a uno o due duo. La prima li dà a Babbo Natale e Mamma Natale, la seconda alle due renne della slitta, la terza ai due gnomi, e l'ultima ai pupazzi di neve.",
-    "p3": "In due, il primo risponde alle dodici domande, passa il telefono, e il secondo risponde senza vedere cosa ha scelto l'altro. Il test somma le vostre due serie di risposte e tiene il duo che ha il voto migliore. Vedete anche il duo che ognuno avrebbe avuto per conto suo, e l'elenco delle domande a cui non avete risposto uguale.",
-    "p4": "C'è un'eccezione. Se solo uno di voi due risponde come qualcuno a cui il Natale dà sui nervi, siete Scrooge e lo spirito del Natale, qualunque cosa dicano i punti. È l'unico duo in cui i due non si somigliano!",
-    "p5": "Puoi farlo anche da solo/a, rispondendo per tutti e due."
+    "p1": "Questo test è un gioco di Natale da fare in coppia. Vi dice che duo di personaggi di Natale formate, in base a come passate le feste. Fa 12 domande sul vostro Natale. Per esempio, vi chiede quando tirate fuori gli addobbi e cosa fate la mattina del 25.",
+    "p2": "Prendiamo la domanda «La sera della Vigilia siete:». Potete scegliere tra «a casa nostra, e ospitiamo noi», «in viaggio, tra due famiglie», «solo noi, in pigiama» e «da qualche parte dove c'è la neve». Ogni risposta dà punti a uno o due duo. Se rispondete «a casa nostra», il test dà punti a Babbo Natale e Mamma Natale. Se rispondete «in viaggio», li dà alle due renne della slitta.",
+    "p3": "Il primo risponde alle 12 domande e poi passa il telefono all'altro. Il secondo risponde senza vedere cosa ha scelto il primo. Poi il test somma le vostre risposte e tiene il duo che ha più punti. Vi mostra anche il duo che ognuno avrebbe avuto da solo e le domande a cui non avete risposto uguale.",
+    "p4": "C'è un'eccezione. Se solo uno di voi risponde come qualcuno a cui il Natale dà sui nervi, siete Scrooge e lo spirito del Natale, qualunque sia il numero di punti. È l'unico duo in cui i due personaggi non si somigliano!",
+    "p5": "Puoi fare il test anche da solo/a, rispondendo per la vostra coppia."
   },
   "section2": {
-    "title": "Gli otto duo di Natale del test",
-    "intro": "Il test può dare otto duo, ognuno con la sua foto. Ecco a quali coppie somiglia di più ciascuno.",
+    "title": "Gli 8 duo di Natale del test",
+    "intro": "Il test può dare 8 duo e ognuno ha la sua foto. Ecco a quali coppie somiglia di più ogni duo.",
     "galerie": [
       {
         "id": "noel",
@@ -40,66 +40,66 @@
       {
         "id": "neige",
         "titre": "Due pupazzi di neve",
-        "texte": "Per chi vuole il freddo, una bella passeggiata e poca gente.",
+        "texte": "Per chi ama le lunghe passeggiate al freddo.",
         "alt": "Due pupazzi di neve, uno con la sciarpa rosa e uno con la sciarpa viola, in un giardino innevato"
       },
       {
         "id": "epices",
         "titre": "Due omini di pan di zenzero",
-        "texte": "Per chi passa il Natale in cucina, e poi a tavola.",
+        "texte": "Per chi passa il Natale in cucina.",
         "alt": "Due omini di pan di zenzero decorati con glassa bianca su una teglia infarinata, accanto a formine a stella"
       },
       {
         "id": "noisette",
         "titre": "Lo Schiaccianoci e la Fata Confetto",
-        "texte": "Per chi adora le luci, i mercatini di Natale e le tavole ben apparecchiate.",
+        "texte": "Per chi ama i mercatini di Natale e le tavole ben apparecchiate.",
         "alt": "Uno schiaccianoci di legno e una piccola ballerina con ali da fata, davanti a un albero di Natale illuminato"
       },
       {
         "id": "scrooge",
         "titre": "Scrooge e lo spirito del Natale",
-        "texte": "Per le coppie in cui uno adora il Natale, e l'altro molto meno.",
+        "texte": "Per le coppie in cui uno adora il Natale e l'altro molto meno.",
         "alt": "Due statuine sul davanzale di una finestra innevata: un vecchio con il berretto da notte che regge una candela, e un personaggio dorato incoronato di agrifoglio con una lanterna"
       },
       {
         "id": "tomtes",
         "titre": "Due gnomi di Natale",
-        "texte": "Per chi festeggia il Natale a casa, sotto una coperta.",
+        "texte": "Per chi festeggia il Natale a casa sotto una coperta.",
         "alt": "Due gnomi di Natale con il cappello lungo, uno rosa e uno viola, sul davanzale di una finestra accanto a una candela"
       }
     ]
   },
   "section3": {
     "title": "Da dove vengono questi personaggi di Natale?",
-    "p1": "Il Babbo Natale che conoscono tutti deve molto a una poesia americana del 1823, «A Visit from St. Nicholas». È quella poesia che ha dato alla slitta le sue otto renne, con i loro nomi: Cometa e Cupido sono tra queste.",
-    "p2": "Lo Schiaccianoci viene da una fiaba tedesca di E. T. A. Hoffmann, pubblicata nel 1816. È diventato un balletto nel 1892, con la musica di Čajkovskij, e la Fata Confetto è un personaggio del balletto. Scrooge è il vecchio avaro del «Canto di Natale», il racconto che Charles Dickens ha pubblicato nel 1843. Odia il Natale fino alla notte in cui tre spiriti vanno a trovarlo.",
-    "p3": "Gli gnomi di Natale con il cappello lungo vengono dalla Scandinavia, dove si chiamano «tomte» o «nisse». Nei racconti sono piccoli esseri che vegliano sulla casa, a patto che la sera della Vigilia ci si ricordi di lasciargli una ciotola di riso al latte!"
+    "p1": "Il Babbo Natale che conoscono tutti viene in gran parte da una poesia americana del 1823 che si chiama «A Visit from St. Nicholas». È quella poesia che ha dato alla slitta le sue otto renne e che ha dato loro un nome. Due di loro si chiamano Cometa e Cupido.",
+    "p2": "Lo Schiaccianoci viene da una fiaba tedesca di E. T. A. Hoffmann che risale al 1816. È diventato un balletto nel 1892 con la musica di Čajkovskij, ed è in questo balletto che si vede la Fata Confetto per la prima volta. Scrooge è il vecchio avaro del «Canto di Natale», un racconto che Charles Dickens ha pubblicato nel 1843. Odia il Natale fino alla notte in cui tre spiriti vanno a trovarlo.",
+    "p3": "Gli gnomi di Natale con il cappello lungo vengono dalla Scandinavia, dove si chiamano «tomte» o «nisse». Nei racconti sono piccoli esseri che vegliano sulla casa. Bisogna solo ricordarsi di lasciargli una ciotola di riso al latte la sera della Vigilia!"
   },
   "section4": {
     "title": "E se non festeggiate il Natale allo stesso modo?",
-    "p1": "Succede spessissimo. Uno è cresciuto con tre cenoni e venti persone a tavola, l'altro con un Natale in quattro davanti a un film. Il test lo fa vedere subito, nell'elenco delle domande a cui non avete risposto uguale.",
-    "p2": "La cosa più semplice è prendere un po' da ognuno: una tradizione dell'uno, una dell'altro, e una terza che vi inventate insieme. Dopo qualche anno, queste abitudini dicono <a href=\"/it/che-tipo-di-coppia-siete-quiz/\">che tipo di coppia siete</a> molto meglio dell'albero.",
-    "p3": "Resta una domanda a cui il duo non risponde: <a href=\"/it/test-lista-dei-buoni-e-cattivi/\">chi dei due è stato più buono quest'anno</a>. Quello lo decide Babbo Natale."
+    "p1": "Succede spessissimo. Per esempio, uno è cresciuto con tre cenoni e venti persone a tavola. L'altro ha sempre festeggiato il Natale in quattro davanti a un film. Il test lo fa vedere subito nell'elenco delle domande a cui non avete risposto uguale.",
+    "p2": "La cosa più semplice è prendere un po' da ognuno. Tenete una tradizione dell'uno e una dell'altro, e ne inventate una nuova insieme. Dopo qualche anno sono queste abitudini a mostrare <a href=\"/it/che-tipo-di-coppia-siete-quiz/\">che tipo di coppia siete</a>.",
+    "p3": "Resta una domanda a cui questo test non risponde. Non vi dice <a href=\"/it/test-lista-dei-buoni-e-cattivi/\">chi dei due è stato più buono quest'anno</a>. Per quello c'è un altro test."
   },
   "section5": {
     "title": "Cosa sapere su questo test",
-    "p1": "Questo test è un gioco, per ridere. Non misura niente di serio: si può benissimo essere due gnomi di Natale a dicembre e due renne della slitta per il resto dell'anno.",
-    "p2": "Non viene salvato niente: le vostre risposte restano sul vostro telefono. Viene contato solo il duo ottenuto, senza nome, per sapere quali risultati escono di più. Le foto sono state create per questa pagina."
+    "p1": "Questo test è un gioco per ridere e non misura niente di serio. Si può benissimo essere due gnomi di Natale a dicembre e due renne della slitta per il resto dell'anno.",
+    "p2": "Le vostre risposte non vengono salvate, restano sul vostro telefono. Contiamo solo il duo ottenuto per sapere quali risultati escono di più. Nemmeno il vostro nome viene salvato. Le foto sono state create per questa pagina."
   },
   "seo": {
     "faqTitle": "Domande frequenti",
     "faq1Q": "Quali personaggi di Natale possono uscire?",
-    "faq1A": "Ci sono otto duo possibili: Babbo Natale e Mamma Natale, due elfi del laboratorio, due renne della slitta, due pupazzi di neve, due omini di pan di zenzero, lo Schiaccianoci e la Fata Confetto, Scrooge e lo spirito del Natale, e due gnomi di Natale.",
+    "faq1A": "Il test può dare 8 duo: Babbo Natale e Mamma Natale, due elfi del laboratorio, due renne della slitta, due pupazzi di neve, due omini di pan di zenzero, lo Schiaccianoci e la Fata Confetto, Scrooge e lo spirito del Natale, e due gnomi di Natale.",
     "faq2Q": "Come viene scelto il duo?",
-    "faq2A": "Ogni risposta dà punti a uno o due duo. Per esempio, «cuciniamo per due giorni, è il momento più bello» dà punti agli omini di pan di zenzero. In due, il test somma le vostre due serie di risposte, e il duo con il voto migliore diventa il vostro.",
+    "faq2A": "Ogni risposta dà punti a uno o due duo. Per esempio, se rispondete «cuciniamo per due giorni, è il momento più bello», gli omini di pan di zenzero prendono punti. Quando fate il test in due, somma le vostre risposte e il duo che ha più punti diventa il vostro.",
     "faq3Q": "Si può fare il test da soli?",
-    "faq3A": "Sì. Scegli «Da solo/a, per noi due» e rispondi pensando alla vostra coppia. Avrai il vostro duo, ma non il confronto delle vostre risposte: per quello bisogna essere in due.",
+    "faq3A": "Sì. Basta scegliere «Da solo/a, per la nostra coppia» e rispondere pensando alla vostra coppia. Avrai il vostro duo ma non potrai confrontare le vostre risposte.",
     "faq4Q": "Perché siamo Scrooge e lo spirito del Natale?",
-    "faq4A": "Perché solo uno di voi due ha risposto come qualcuno a cui il Natale dà sui nervi: niente addobbi, regali all'ultimo minuto, e il 27 dicembre come momento preferito. In quel caso il test smette di guardare i punti e vi dà questo duo. Esce anche quando brontolate tutti e due.",
+    "faq4A": "Perché solo uno di voi ha risposto come qualcuno a cui il Natale dà sui nervi. Per esempio, questa persona non tira fuori gli addobbi e il suo momento preferito è il 27 dicembre. In quel caso il test non guarda più i punti e vi dà questo duo. Esce anche quando brontolate in due.",
     "faq5Q": "Quando fare questo test?",
-    "faq5A": "A dicembre, una sera in cui fate l'albero, o la Vigilia aspettando la mezzanotte. Ci vogliono tre minuti a testa. Potete anche farlo tra più coppie e confrontare i vostri duo.",
+    "faq5A": "Potete farlo a dicembre, per esempio la sera in cui fate l'albero o la Vigilia aspettando la mezzanotte. Ci vogliono tre minuti a testa. Potete anche farlo con altre coppie per confrontare i vostri duo.",
     "faq6Q": "Le mie risposte vengono salvate?",
-    "faq6A": "No. Le risposte restano sul vostro telefono. Viene contato solo il duo ottenuto, senza nome, per la distribuzione dei risultati."
+    "faq6A": "No. Le vostre risposte restano sul vostro telefono. Contiamo solo il duo ottenuto per sapere quali risultati escono di più. Il vostro nome non viene salvato."
   },
   "jsonLd": {
     "about": "i personaggi di Natale"

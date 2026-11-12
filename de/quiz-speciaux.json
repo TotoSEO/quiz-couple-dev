@@ -3,7 +3,7 @@
     "badge": "Spaß-Quiz • Kostenlos • Zu zweit oder allein",
     "title": "Unsere Spaß-Quiz für Paare",
     "titleHighlight": "Spaß-Quiz",
-    "description": "Leichte Quiz, die nichts Ernstes messen: welcher Hund zu euch beiden passt, welches Haus, dazu saisonale Quiz zu Halloween oder Weihnachten. Jeder antwortet für sich, dann wird verglichen."
+    "description": "Diese Quiz sind Spiele für Paare und sie messen nichts Ernstes. Ihr könnt zum Beispiel herausfinden, welcher Hund oder welches Haus zu euch als Paar passt. Es gibt auch Quiz zu Halloween und zu Weihnachten."
   },
   "enCeMoment": "Gerade jetzt",
   "horsSaison": "Das ganze Jahr",
@@ -14,77 +14,77 @@
   "saisons": {
     "halloween": {
       "titre": "Halloween-Special",
-      "intro": "Fünf Quiz für einen Halloween-Abend zu zweit: ein Mörderporträt, eine Überlebensuhr, ein Besessenheitsrisiko, ein Superschurkenporträt und das Schurken-Duo, das ihr bildet. Alles zum Lachen, und alles in fünf Minuten gespielt."
+      "intro": "Hier sind 5 Quiz für einen Halloween-Abend. Ihr könnt zum Beispiel herausfinden, wie lange ihr in einem Horrorfilm überleben würdet oder welchem Superschurken ihr ähnelt. Alles ist zum Lachen und jedes Quiz dauert etwa fünf Minuten."
     },
     "noel": {
       "titre": "Weihnachts-Special",
-      "intro": "Zwei Quiz für einen Dezemberabend zu zweit: auf welcher Liste des Weihnachtsmanns ihr als Paar steht, und welche Weihnachtsfiguren ihr seid. Jeder antwortet für sich, und ihr bekommt als Paar ein einziges Ergebnis, mit Foto.",
+      "intro": "Hier sind 2 Quiz für einen Dezemberabend. Das erste sagt euch, auf welcher Liste des Weihnachtsmanns ihr als Paar steht. Das zweite sagt euch, welche Weihnachtsfiguren ihr seid. Jeder antwortet für sich und ihr bekommt ein einziges Ergebnis als Paar, mit Foto.",
       "bientot": "Bald"
     }
   },
   "quiz": {
     "quizSerialKillerNom": "Welcher Serienmörder passt zu dir?",
-    "quizSerialKillerTagline": "Fünfzehn Situationen eines Halloween-Abends, und der berühmte Killer, der dir am meisten ähnelt, stark vergrößert.",
+    "quizSerialKillerTagline": "Du beantwortest 15 Situationen eines Halloween-Abends und das Quiz sagt dir, welcher berühmte Killer dir am meisten ähnelt.",
     "quizMortFilmHorreurNom": "Wer von uns stirbt zuerst im Horrorfilm?",
-    "quizMortFilmHorreurTagline": "Fünfzehn Situationen, von der Ankunft an der Hütte bis zum Abspann, eine Überlebenszeit in Minuten, und der Name des ersten Opfers, wenn ihr zu zweit spielt.",
+    "quizMortFilmHorreurTagline": "Ihr beantwortet 15 Situationen aus einem Horrorfilm und das Quiz berechnet eure Überlebenszeit in Minuten. Zu zweit sagt es euch, wer zuerst stirbt.",
     "quizPossessionNom": "Wer von uns könnte besessen werden?",
-    "quizPossessionTagline": "Zehn Tage in einem Haus, dessen Geschichte niemand erzählen will, ein Besessenheitsrisiko in Prozent, und wen die Dämonen wählen würden.",
+    "quizPossessionTagline": "Ihr verbringt zehn Tage in einem Spukhaus und das Quiz berechnet euer Besessenheitsrisiko in Prozent. Zu zweit sagt es euch, wen die Dämonen wählen würden.",
     "quizSuperVilainNom": "Welchem Superschurken ähnelst du am meisten?",
-    "quizSuperVilainTagline": "Dein Auftritt auf der Party, dein Kostüm, deine Handlanger, dein Lachen: der Superschurke, der dir ähnelt, vom Joker bis Maleficent.",
+    "quizSuperVilainTagline": "Du beantwortest 15 Situationen einer Halloween-Party und das Quiz sagt dir, welchem Superschurken du ähnelst, zum Beispiel dem Joker oder Maleficent.",
     "quizDuoVilainsNom": "Welches Superschurken-Duo seid ihr?",
-    "quizDuoVilainsTagline": "Der Coup der Halloween-Nacht: eure Rollen, das Gehirn, das Chaos, die Kraft, der Charme, der Schatten oder das Herz, und das berühmte Schurken-Duo, das ihr bildet.",
+    "quizDuoVilainsTagline": "Ihr plant den Coup der Halloween-Nacht. Das Quiz gibt jedem eine Rolle, zum Beispiel das Gehirn oder die Kraft, und sagt euch, welches berühmte Schurken-Duo ihr bildet.",
     "quizChienNousNom": "Welcher Hund passt zu uns?",
-    "quizChienNousTagline": "Zwölf Fragen pro Person zu eurem Leben zu zweit, und der Hund für euch als Paar mit Foto: Corgi, Golden Retriever, Dackel, Shiba, Husky...",
+    "quizChienNousTagline": "Jeder beantwortet 12 Fragen und der Test zeigt euch den Hund, der zu euch als Paar passt, mit Foto.",
     "quizMaisonNousNom": "Welches Haus passt zu uns?",
-    "quizMaisonNousTagline": "Zwölf Fragen pro Person zu dem Leben, das ihr euch vorstellt, und das Zuhause für euch als Paar im Foto: Wohnung, Haus auf dem Land, Loft, Hausboot, Tiny House...",
+    "quizMaisonNousTagline": "Jeder beantwortet 12 Fragen zu dem Leben, das er sich vorstellt, und der Test zeigt euch euer Zuhause als Paar im Foto.",
     "quizListeNoelNom": "Artig oder unartig?",
-    "quizListeNoelTagline": "Zwölf Fragen pro Person zu eurem Dezember: euer Platz als Paar auf der Liste des Weihnachtsmanns, und wer von euch artiger war.",
+    "quizListeNoelTagline": "Jeder beantwortet 12 Fragen zu seinem Dezember. Der Test sagt euch, ob ihr als Paar auf der Liste der Artigen steht und wer artiger war.",
     "quizDuoNoelNom": "Welcher Weihnachtstyp seid ihr?",
-    "quizDuoNoelTagline": "Zwölf Fragen pro Person zu eurem Weihnachten zu zweit, und euer Duo mit Foto: zwei Elfen, zwei Rentiere, der Nussknacker und die Zuckerfee...",
+    "quizDuoNoelTagline": "Jeder beantwortet 12 Fragen dazu, wie ihr Weihnachten feiert, und der Test zeigt euch euer Weihnachtsduo, mit Foto.",
     "quizPorteCulotteNom": "Wer hat die Hosen an?",
-    "quizPorteCulotteTagline": "Zwanzig Fragen dazu, wer bei euch entscheidet, allein oder zu zweit: der Anteil von jedem und die Fragen, bei denen ihr euch nicht einig seid."
+    "quizPorteCulotteTagline": "Ihr beantwortet 20 Fragen dazu, wer in eurer Beziehung entscheidet. Zu zweit zeigt euch der Test auch die Fragen, bei denen ihr euch nicht einig seid."
   },
   "section1": {
     "title": "Wozu diese Quiz gut sind",
-    "p1": "Die Quiz auf dieser Seite haben nichts mit unseren Paartests gemein. Sie messen nichts Ernstes und geben eurer Beziehung keine Note. Es sind Spiele: welcher Hund zu euch als Paar passen würde, in welchem Haus ihr euch wohlfühlen würdet, <a href=\"/de/wer-hat-die-hosen-an-test/\">wer bei euch das letzte Wort hat</a>, oder wer von euch im Horrorfilm zuerst sterben würde.",
-    "p2": "Sie funktionieren, weil jeder für sich antwortet. Herauszufinden, dass dein Schatz einen Husky will, während du an einen Dackel gedacht hast, oder ein altes Haus zum Renovieren, während du von einer Stadtwohnung geträumt hast, füllt einen guten Teil des Abends!",
-    "p3": "Die Quiz zu eurer Zukunft zu zweit gibt es das ganze Jahr. Die saisonalen rücken an den Anfang der Seite, wenn ihre Zeit kommt: die Halloween-Quiz im Oktober, dann ab Mitte November die Weihnachts-Quiz, mit denen ihr herausfindet, <a href=\"/de/artig-oder-unartig-test/\">ob ihr als Paar dieses Jahr artig wart</a> oder <a href=\"/de/welcher-weihnachtstyp-seid-ihr-test/\">welches Weihnachtsduo ihr seid</a>. Sie bleiben auch sonst spielbar."
+    "p1": "Die Quiz auf dieser Seite sind anders als unsere Paartests. Sie messen nichts Ernstes und geben eurer Beziehung keine Note. Es sind Spiele. Ihr könnt zum Beispiel herausfinden, welcher Hund zu euch als Paar passt oder <a href=\"/de/wer-hat-die-hosen-an-test/\">wer bei euch das letzte Wort hat</a>.",
+    "p2": "Lustig ist, dass jeder für sich antwortet. Du erfährst zum Beispiel, dass dein Schatz einen Husky will, während du an einen Dackel gedacht hast. Damit ist ein guter Teil des Abends gefüllt!",
+    "p3": "Die Quiz zu eurer Zukunft zu zweit gibt es das ganze Jahr. Die Quiz der Saison rücken an den Anfang der Seite, wenn ihre Zeit kommt. Die Halloween-Quiz stehen im Oktober oben. Die Weihnachts-Quiz kommen Mitte November und dann könnt ihr herausfinden, <a href=\"/de/artig-oder-unartig-test/\">ob ihr als Paar dieses Jahr artig wart</a> oder <a href=\"/de/welcher-weihnachtstyp-seid-ihr-test/\">welches Weihnachtsduo ihr seid</a>. Ihr könnt sie trotzdem das ganze Jahr spielen."
   },
   "section2": {
     "title": "Und nach diesen Quiz?",
-    "p1": "Wenn ihr alle durchhabt, übernehmen <a href=\"/de/paarspiele/\">die Spiele für zwei</a>, die das ganze Jahr gehen: <a href=\"/de/was-wuerdest-du-lieber-paar-quiz/\">die „Würdest du eher“-Fragen</a>, Wahrheit oder Pflicht, das Brettspiel und ein gutes Dutzend weitere. Und für alle, die <a href=\"/de/paar-kompatibilitaetstest/\">eine echte Antwort über ihre Beziehung</a> wollen: Es gibt die Möglichkeit, eure Antworten zu dem zu vergleichen, was zählt."
+    "p1": "Wenn ihr alle Quiz durchhabt, könnt ihr mit <a href=\"/de/paarspiele/\">den Spielen für zwei</a> weitermachen, die das ganze Jahr gehen. Es gibt zum Beispiel <a href=\"/de/was-wuerdest-du-lieber-paar-quiz/\">die „Würdest du eher“-Fragen</a> oder Wahrheit oder Pflicht. Und wenn ihr <a href=\"/de/paar-kompatibilitaetstest/\">eine echte Antwort über eure Beziehung</a> wollt, gibt es auch dafür einen Test."
   },
   "section3": {
     "title": "So wird gespielt",
-    "p1": "Alle diese Quiz spielen sich gleich. Zu zweit beantwortet der Erste die ganze Reihe, gibt das Handy weiter, und der Zweite antwortet danach, ohne die Antworten des Ersten zu sehen. Allein antwortest du und entdeckst dein Ergebnis.",
-    "p2": "Bei den Quiz zu eurer Zukunft zu zweit und bei den Weihnachts-Quiz bekommt das Paar ein einziges Ergebnis, das am besten zu euren beiden Antwortreihen passt, und die Liste der Fragen, bei denen ihr euch nicht einig seid. Bei den Halloween-Quiz hat jeder sein eigenes, und im Fernmodus spielt jeder am eigenen Handy.",
-    "p3": "Kein Konto anlegen, nichts installieren, und nichts wird gespeichert: Die Antworten bleiben auf euren Handys."
+    "p1": "Alle diese Quiz spielt man auf dieselbe Art. Zu zweit beantwortet der Erste alle Fragen und gibt dann das Handy weiter. Der Zweite antwortet, ohne die Antworten des Ersten zu sehen. Ihr könnt auch allein spielen.",
+    "p2": "Bei den Quiz zu eurer Zukunft zu zweit und bei den Weihnachts-Quiz bekommt ihr ein einziges Ergebnis als Paar. Das Quiz zeigt euch auch die Liste der Fragen, bei denen ihr euch nicht einig seid. Bei den Halloween-Quiz hat jeder sein eigenes Ergebnis. Sie haben auch einen Fernmodus, in dem jeder am eigenen Handy spielt.",
+    "p3": "Ihr müsst kein Konto anlegen und nichts installieren. Eure Antworten werden nicht gespeichert, sie bleiben auf eurem Handy."
   },
   "faq": {
     "title": "Häufige Fragen",
     "q1": "Sind die Spaß-Quiz kostenlos?",
-    "a1": "Ja, alle, ohne Anmeldung und ohne App. Sie werden im Browser des Handys gespielt.",
+    "a1": "Ja, sie sind alle kostenlos. Es gibt keine Anmeldung und keine App. Ihr spielt sie direkt auf dem Handy.",
     "q2": "Muss man zu zweit sein?",
-    "a2": "Nicht unbedingt. Fast alle spielt man allein oder zu zweit, nur das Quiz zum Superschurken-Duo braucht zwei Spieler, weil es ein Duo zusammenstellt. Gedacht sind sie aber für zwei: Lustig ist der Vergleich der Antworten.",
+    "a2": "Nicht unbedingt. Fast alle Quiz kann man allein oder zu zweit spielen. Nur das Quiz zum Superschurken-Duo braucht zwei Spieler. Zu zweit sind sie trotzdem lustiger, weil ihr eure Antworten vergleichen könnt.",
     "q3": "Was passiert mit den Quiz, wenn die Saison vorbei ist?",
-    "a3": "Sie bleiben auf dieser Seite, etwas weiter unten, und unter ihrer eigenen Adresse. Wir löschen nichts: Ein Halloween-Quiz mitten im März geht auch.",
+    "a3": "Sie bleiben auf dieser Seite, etwas weiter unten. Wir löschen nichts, also könnt ihr ein Halloween-Quiz auch mitten im März machen.",
     "q4": "Gibt es Weihnachts-Quiz?",
-    "a4": "Ja, zwei. „Artig oder unartig?“ sagt euch, auf welcher Liste des Weihnachtsmanns ihr als Paar steht und wer von euch beiden artiger war. Das Quiz zu den Weihnachtsfiguren zeigt euch das Duo, das ihr seid, vom Weihnachtsmann und der Weihnachtsfrau bis zu Scrooge und dem Geist der Weihnacht. Von Mitte November bis Ende Dezember stehen sie am Anfang dieser Seite.",
+    "a4": "Ja, es gibt zwei. „Artig oder unartig?“ sagt euch, auf welcher Liste des Weihnachtsmanns ihr als Paar steht und wer artiger war. Das Quiz zu den Weihnachtsfiguren zeigt euch euer Duo, zum Beispiel den Weihnachtsmann und die Weihnachtsfrau. Von Mitte November bis Ende Dezember stehen sie am Anfang dieser Seite.",
     "q5": "Kann man aus der Ferne spielen?",
-    "a5": "Ja, bei den Halloween-Quiz: Eine Person erstellt die Partie, die andere tritt mit dem Code bei, und ihr antwortet jeder auf dem eigenen Handy. Die anderen Quiz spielt man an einem einzigen Handy, das ihr weitergebt."
+    "a5": "Ja, bei den Halloween-Quiz. Einer von euch erstellt die Partie und der andere tritt mit einem Code bei. Dann antwortet jeder auf dem eigenen Handy. Die anderen Quiz spielt man an einem einzigen Handy, das ihr weitergebt."
   },
   "jsonLd": {
     "name": "Spaß-Quiz für Paare"
   },
-  "resultatCommun": "Ein Ergebnis für euch beide",
+  "resultatCommun": "Ein Ergebnis für euch als Paar",
   "sections": {
     "futur": {
       "titre": "Eure Zukunft zu zweit",
-      "intro": "Der Hund, den ihr haben werdet, das Haus, in dem ihr wohnen werdet: Jeder antwortet für sich, und das Quiz sucht, was zu euch beiden passt, mit einem Foto obendrauf."
+      "intro": "In diesen Quiz geht es um eure Zukunft, zum Beispiel um den Hund, den ihr haben werdet, oder um das Haus, in dem ihr wohnen werdet. Jeder antwortet für sich und das Quiz sucht das Ergebnis, das am besten zu euch als Paar passt."
     },
     "vous": {
-      "titre": "Ihr zwei",
-      "intro": "Wer bei euch entscheidet, wer das letzte Wort hat: Quiz über eure Beziehung, so wie sie ist, allein oder abwechselnd auf demselben Handy."
+      "titre": "Eure Beziehung",
+      "intro": "In diesen Quiz geht es um eure Beziehung, so wie sie heute ist, zum Beispiel darum, wer bei euch entscheidet. Ihr könnt sie allein machen oder abwechselnd auf demselben Handy."
     }
   }
 }

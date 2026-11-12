@@ -370,6 +370,14 @@ virgule, les « tous les deux » et leurs équivalents dans chaque langue, les
 deux-points de style et les points d'exclamation, et signale « À REVOIR »
 sous une virgule pour 18 mots. Avec « --detail », il montre chaque phrase.
 
+En allemand, le seuil est d'une virgule pour 11 mots : la grammaire
+allemande met une virgule devant chaque subordonnée et chaque groupe
+infinitif, et les pages allemandes de référence sont à une virgule pour
+10 mots. « Zu zweit » et « met z'n tweeën » ne sont pas des tics : c'est
+« à deux », le nom du mode de jeu. La règle est la même dans les six
+langues, et on n'y traduit pas le français mot à mot : chaque langue garde
+ses exemples et ses mots de tous les jours.
+
 
 10. VARIER LES TOURNURES : LA RÉSERVE DE FORMULATIONS
 -----------------------------------------------------

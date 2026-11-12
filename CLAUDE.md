@@ -987,11 +987,28 @@ résultat faites de bouts de phrases sans verbe.
 Le contrôle, depuis `static-site` : `node build/tics-redaction.mjs
 ../fr/quiz-<page>.json ../fr/gd.json:<préfixe>` compte les mots par
 virgule, les « tous les deux » et leurs équivalents dans chaque langue
-(`TICS`), les deux-points de style et les « ! », et signale « À REVOIR »
-sous une virgule pour 18 mots ; `--detail` montre chaque phrase. Les cinq
-quiz fun et leur page ont été réécrits ainsi ce jour-là (français : une
-virgule pour 27 à 45 mots, plus aucun « tous les deux »), avec leurs
-descriptions, leurs cartes de l'accueil et leurs textes de moteur.
+(`TICS` : “both of you”, «los dos», „euch beide“, «tutti e due», "jullie
+allebei"… ; « zu zweit » et "met z'n tweeën" n'y sont pas, c'est « à deux »,
+le nom du mode), les deux-points de style et les « ! », et signale
+« À REVOIR » sous une virgule pour 18 mots (11 en allemand, qui met une
+virgule devant chaque subordonnée : ses pages de référence sont à une pour
+10) ; `--detail` montre chaque phrase. Les cinq quiz fun et leur page ont
+été réécrits ainsi, le français le 11 novembre 2026 et les cinq autres
+langues le 12 : une virgule pour 25 à 60 mots en français, en anglais, en
+espagnol, en italien et en néerlandais, pour 13 à 20 en allemand, et plus
+aucun « tous les deux » ni équivalent, avec leurs descriptions, leurs cartes
+de l'accueil, leurs textes de moteur et le hub. Dans chaque langue, le mode
+seul(e) dit « pour notre couple » (“On my own, for our couple”, «Solo/a,
+para nuestra pareja», „Allein, für uns als Paar“, «Da solo/a, per la nostra
+coppia», "Alleen, voor ons als koppel"), la section du menu « Votre couple »
+(“Your relationship”, «Vuestra pareja», „Eure Beziehung“, «La vostra
+coppia», "Jullie relatie"), et le H1 du chien et de la maison est la
+question que les gens tapent suivie du test (« Welcher Hund passt zu uns?
+Der Test für Paare », « Che cane fa per noi? Il test da fare in coppia »,
+« Welke hond past bij ons? De test om samen te doen »). On ne traduit pas
+la version française mot à mot : chaque langue garde ses faits (la
+Hundesteuer, le Stollen, la Befana, Sinterklaas) et ses mots de tous les
+jours.
 
 ### Varier les tournures : la réserve de formulations
 
