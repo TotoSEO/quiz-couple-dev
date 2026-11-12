@@ -1,5 +1,5 @@
 {
-  "genere_le": "2026-11-12T03:14:22.736Z",
+  "genere_le": "2026-11-12T11:04:06.843Z",
   "langue": "en",
   "compte": {
     "nom": "quiz_couple_official",
@@ -912,7 +912,7 @@
       "creneau": "midi",
       "gabarit": "tu-preferes",
       "categorie": "tu-preferes",
-      "statut": "a_rendre",
+      "statut": "rendu",
       "texte": "Would you rather: couple edition",
       "erreur": null
     },
