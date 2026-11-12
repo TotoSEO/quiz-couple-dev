@@ -1,12 +1,12 @@
 {
-  "genere_le": "2026-11-11T10:52:04.701Z",
+  "genere_le": "2026-11-12T03:14:26.449Z",
   "langue": "fr",
   "compte": {
     "nom": "mipaps_stories",
     "actif": true
   },
   "fuseau": "Europe/Paris",
-  "aujourdhui": "2026-11-11",
+  "aujourdhui": "2026-11-12",
   "melange": {
     "midi": {
       "1": null,
@@ -28,39 +28,12 @@
     },
     "matin": "mipaps-anime"
   },
-  "reserve_jours": 141,
+  "reserve_jours": 140,
   "a_remplir": [],
   "a_corriger": [],
   "hors_grille": [],
   "refuses": [],
   "recents_et_prevus": [
-    {
-      "jour": "2026-10-12",
-      "creneau": "matin",
-      "gabarit": "mipaps-reel",
-      "categorie": "mipaps-anime",
-      "statut": "publie",
-      "texte": null,
-      "erreur": null
-    },
-    {
-      "jour": "2026-10-12",
-      "creneau": "midi",
-      "gabarit": "mipaps-post",
-      "categorie": "mipaps-post",
-      "statut": "publie",
-      "texte": "reviens vite stp",
-      "erreur": null
-    },
-    {
-      "jour": "2026-10-12",
-      "creneau": "soir",
-      "gabarit": "mipaps-carrousel",
-      "categorie": "mipaps-histoire",
-      "statut": "publie",
-      "texte": null,
-      "erreur": null
-    },
     {
       "jour": "2026-10-13",
       "creneau": "matin",
@@ -2810,7 +2783,7 @@
   "idees": [],
   "prochain_creneau": {
     "mipaps-anime": {
-      "jour": "2026-11-12",
+      "jour": "2026-11-13",
       "creneau": "matin"
     },
     "mipaps-statique": null,
