@@ -634,6 +634,18 @@
     "metaDescription": "¿Quién lleva los pantalones en vuestra relación? Responded a 20 preguntas sobre las decisiones de cada día, solos o en pareja, para saber quién decide más.",
     "description": "Responded a 20 preguntas sobre las decisiones de cada día para ver quién tiene más veces la última palabra."
   },
+  "quizAnimauxNous": {
+    "title": "¿Qué pareja de animales sois? El test para hacer en pareja",
+    "shortTitle": "Qué pareja de animales somos",
+    "metaDescription": "¿Dos nutrias, dos lobos o un perro y un gato? Cada uno responde a 12 preguntas y el test enseña la pareja de animales que más se parece a la vuestra.",
+    "description": "Cada uno responde a 12 preguntas y el test os enseña la pareja de animales que más se os parece, con su foto."
+  },
+  "quizPartenairesNous": {
+    "title": "¿Qué tipo de novio o novia eres? El test en pareja",
+    "shortTitle": "Qué tipo de novios somos",
+    "metaDescription": "¿Detallistas, románticos o muy independientes? Cada uno responde a 12 preguntas y el test enseña qué tipo de novios sois en vuestra relación.",
+    "description": "Cada uno responde a 12 preguntas y el test os enseña qué tipo de novios sois, con su foto."
+  },
   "bilanCouple": {
     "title": "Evaluación de pareja online | Resultados al instante y PDF",
     "shortTitle": "Evaluación de pareja",

@@ -39,7 +39,7 @@
   },
   "section1": {
     "title": "Un jeu de questions-réponses sur votre histoire d'amour",
-    "p1": "Ce quiz amoureux se joue à deux, en questions-réponses : vingt questions sur votre histoire, tirées parmi trente à chaque partie, avec quatre réponses au choix. Par exemple « Si on était des animaux, on serait… », « Comment réconfortes-tu l'autre quand ça ne va pas ? » ou encore « Quel moment t'a fait réaliser que tu m'aimais ? »",
+    "p1": "Ce quiz amoureux se joue à deux, en questions-réponses : vingt questions sur votre histoire, tirées parmi trente à chaque partie, avec quatre réponses au choix. Par exemple « <a href=\"/test-quel-couple-d-animaux-sommes-nous/\">Si on était des animaux, on serait…</a> », « Comment réconfortes-tu l'autre quand ça ne va pas ? » ou encore « Quel moment t'a fait réaliser que tu m'aimais ? »",
     "p2": "Relancez le jeu et une partie des questions change, de quoi refaire une partie un autre soir sans retomber exactement sur les mêmes !"
   }
 }

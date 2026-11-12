@@ -1,0 +1,117 @@
+{
+  "hero": {
+    "badge": "Quiz fun • À deux, ou seul(e) pour le couple",
+    "title": "Quel genre de partenaires sommes-nous ? Le test en 12 questions",
+    "titleHighlight": "Quel genre de partenaires sommes-nous ?",
+    "description": "Plutôt aux petits soins, fleur bleue ou très indépendants ? Chacun répond à 12 questions sur ce qu'il fait dans la vie de tous les jours. Le test vous montre ensuite le genre de partenaires que vous êtes, avec sa photo.",
+    "subtitle": "12 questions • 3 minutes chacun • sur un seul téléphone",
+    "jumpBtn": "Faire le test"
+  },
+  "section1": {
+    "title": "Comment marche le test",
+    "p1": "Ce test est un <strong>jeu à faire en couple</strong>. Il cherche quel genre de partenaires vous êtes, par exemple des partenaires très câlins ou des partenaires qui aiment l'aventure. Il pose 12 questions sur la vie de tous les jours. Il vous demande par exemple ce que vous faites quand l'autre est malade et comment vous fêtez son anniversaire.",
+    "p2": "Prenons la question sur la mauvaise journée de l'autre. Si vous répondez « un long câlin sans parler », le test donne des points au résultat « les câlins d'abord ». Si votre partenaire répond « l'emmener prendre l'air », il en donne à « l'aventure avant tout ». À la fin, le test <strong>additionne vos réponses</strong> et il garde le genre qui a le plus de points.",
+    "p3": "Le premier répond aux 12 questions puis il passe le téléphone à l'autre. Chacun répond pour lui, <strong>sans voir ce que l'autre a choisi</strong>. Ensuite le test vous montre le genre de partenaires que vous êtes, avec sa photo. Il vous montre aussi ce que chacun aurait obtenu de son côté et la liste des questions où vous n'avez pas répondu pareil.",
+    "p4": "Vous pouvez aussi faire le test seul(e). Dans ce cas, répondez en pensant à ce qui se passe le plus souvent dans votre couple."
+  },
+  "section2": {
+    "title": "Les 9 genres de partenaires du test",
+    "intro": "Le test peut donner 9 résultats. Aucun n'est meilleur qu'un autre. Chacun a ses bons côtés et son petit défaut !",
+    "galerie": [
+      {
+        "id": "soins",
+        "titre": "Aux petits soins",
+        "texte": "Des partenaires qui pensent à l'autre avant de penser à eux.",
+        "alt": "Un plateau en bois posé sur un canapé avec un bol de soupe fumante, une cuillère et une bouillotte en tricot, à côté d'un plaid"
+      },
+      {
+        "id": "clown",
+        "titre": "Toujours le mot pour rire",
+        "texte": "Des partenaires qui se font rire même les mauvais jours.",
+        "alt": "Deux paires de lunettes de farces et attrapes avec un faux nez et une moustache, au milieu de confettis et de serpentins"
+      },
+      {
+        "id": "romantique",
+        "titre": "Fleur bleue",
+        "texte": "Des partenaires qui aiment les mots doux et les surprises.",
+        "alt": "Une table pour deux dressée sur un balcon le soir, avec des bougies et une rose rouge, devant les lumières de la ville"
+      },
+      {
+        "id": "aventure",
+        "titre": "L'aventure avant tout",
+        "texte": "Des partenaires qui partent en week-end sans rien réserver.",
+        "alt": "Deux sacs à dos et deux paires de chaussures de randonnée devant une porte ouverte sur un sentier de montagne, avec une carte posée au sol"
+      },
+      {
+        "id": "organise",
+        "titre": "Tout est prévu",
+        "texte": "Des partenaires qui ont toujours un programme et qui n'oublient rien.",
+        "alt": "Un tableau en liège couvert de papiers repositionnables roses, jaunes et bleus bien alignés, au-dessus de deux trousseaux de clés suspendus"
+      },
+      {
+        "id": "calin",
+        "titre": "Les câlins d'abord",
+        "texte": "Des partenaires qui ont besoin d'être collés l'un à l'autre.",
+        "alt": "Deux ours en peluche serrés l'un contre l'autre sous un plaid en laine, sur un canapé"
+      },
+      {
+        "id": "zen",
+        "titre": "Toujours zen",
+        "texte": "Des partenaires calmes qui savent écouter.",
+        "alt": "Deux transats en bois côte à côte au bord d'un lac de montagne très calme, au coucher du soleil"
+      },
+      {
+        "id": "coach",
+        "titre": "Toujours là pour encourager",
+        "texte": "Des partenaires qui croient en l'autre et qui le lui disent.",
+        "alt": "Une coupe dorée entre deux pompons de supporter bleu, blanc et rouge, posée sur des gradins en bois couverts de confettis"
+      },
+      {
+        "id": "independant",
+        "titre": "Chacun sa liberté",
+        "texte": "Des partenaires qui gardent leurs activités et qui se font confiance.",
+        "alt": "Deux fauteuils côte à côte dans un salon, un bleu et un beige, chacun avec sa lampe et son livre"
+      }
+    ]
+  },
+  "section3": {
+    "title": "Comment être un bon partenaire au quotidien ?",
+    "intro": "Il n'y a pas un seul bon genre de partenaire. Par contre, il y a 4 habitudes qui font du bien à presque tous les couples.",
+    "sub1Title": "Répondre aux petites demandes de l'autre",
+    "sub1Text": "Le psychologue américain John Gottman a observé de jeunes mariés puis il les a revus 6 ans plus tard. Les couples encore ensemble avaient répondu <strong>86 % du temps</strong> aux petites demandes d'attention de l'autre, par exemple « regarde cet oiseau ». Ceux qui avaient divorcé n'y avaient répondu que 33 % du temps. Il suffit souvent de lever les yeux de son téléphone.",
+    "sub2Title": "Donner ce que l'autre attend",
+    "sub2Text": "On donne souvent ce qu'on aimerait recevoir. Par exemple, l'un offre des cadeaux alors que l'autre voudrait surtout passer du temps ensemble. Chacun a <a href=\"/test-langage-amour-couple/\">sa façon de se sentir aimé</a> et ce n'est pas toujours la même. Le plus simple est de <strong>poser la question</strong>.",
+    "sub3Title": "Dire merci",
+    "sub3Text": "On s'habitue vite à ce que l'autre fait pour nous. On finit par ne plus le voir. À force, chacun peut avoir l'impression que <a href=\"/blog/copain-ne-fait-pas-effort/\">l'autre ne fait aucun effort</a>. Un simple merci pour le repas ou pour les courses change beaucoup de choses.",
+    "sub4Title": "Garder du temps pour soi",
+    "sub4Text": "Être un bon partenaire ne veut pas dire tout faire ensemble. Garder ses amis et ses activités <strong>fait du bien au couple</strong>. On a plus de choses à se raconter le soir !"
+  },
+  "section4": {
+    "title": "Et si vous n'êtes pas le même genre de partenaire ?",
+    "p1": "C'est le cas de beaucoup de couples et ce n'est pas un problème. Par exemple, l'un organise tout et l'autre préfère l'imprévu. Vous vous complétez plus que vous ne le croyez. Beaucoup de couples très différents <a href=\"/test-quel-couple-d-animaux-sommes-nous/\">se chamaillent comme chien et chat</a> et s'entendent très bien.",
+    "p2": "Le risque est ailleurs. Quand l'un est aux petits soins et l'autre très indépendant, on peut vite croire que <a href=\"/test-qui-aime-le-plus-l-autre/\">l'un en fait plus que l'autre</a>. Regardez la liste des questions où vous n'avez pas répondu pareil et <strong>dites-vous ce qui vous fait plaisir</strong>. L'autre le fera plus facilement s'il le sait."
+  },
+  "section5": {
+    "title": "Ce qu'il faut savoir sur ce test",
+    "p1": "Ce test est un jeu. Il ne dit pas si vous êtes un bon ou un mauvais partenaire et <strong>il ne remplace pas une vraie discussion</strong>. Vos réponses peuvent aussi changer avec le temps. On n'est pas le même partenaire après 6 mois et après 10 ans !",
+    "p2": "Vos réponses ne sont pas enregistrées, elles restent sur votre téléphone. On compte seulement le résultat obtenu pour savoir lesquels sortent le plus. Votre prénom n'est pas enregistré non plus. Les photos ont été créées pour cette page."
+  },
+  "seo": {
+    "faqTitle": "Questions fréquentes",
+    "faq1Q": "Quels genres de partenaires peut-on obtenir ?",
+    "faq1A": "Le test peut donner 9 résultats : aux petits soins, toujours le mot pour rire, fleur bleue, l'aventure avant tout, tout est prévu, les câlins d'abord, toujours zen, toujours là pour encourager et chacun sa liberté.",
+    "faq2Q": "Comment le résultat est-il calculé ?",
+    "faq2A": "Chaque réponse donne des points à un genre de partenaire. Par exemple, si vous répondez « préparer son petit déjeuner » à la question sur les petits gestes, le résultat « aux petits soins » gagne des points. Quand vous faites le test à deux, il additionne vos réponses et le genre qui a le plus de points devient celui de votre couple.",
+    "faq3Q": "Quel genre de copain ou de copine suis-je ?",
+    "faq3A": "Faites le test à deux. Sous le résultat de votre couple, le test montre ce que chacun aurait obtenu de son côté. C'est là que vous verrez quel genre de copain ou de copine vous êtes.",
+    "faq4Q": "Y a-t-il un genre de partenaire meilleur que les autres ?",
+    "faq4A": "Non. Chaque genre a ses bons côtés et son petit défaut. Par exemple, des partenaires très organisés n'oublient rien mais ils laissent peu de place à l'imprévu. Le test donne un petit conseil avec chaque résultat.",
+    "faq5Q": "Que faire si on n'a pas le même résultat ?",
+    "faq5A": "Rien de spécial, c'est très courant. Un couple marche souvent bien quand chacun apporte ce que l'autre n'a pas. Regardez plutôt les questions où vous n'avez pas répondu pareil et parlez de ce que chacun attend.",
+    "faq6Q": "Peut-on faire le test seul(e) ?",
+    "faq6A": "Oui. Il suffit de choisir « Seul(e), pour notre couple » et de répondre en pensant à ce qui se passe le plus souvent dans votre couple. Vous aurez un résultat mais vous ne pourrez pas comparer vos réponses."
+  },
+  "jsonLd": {
+    "about": "le genre de partenaires que vous êtes dans votre couple"
+  }
+}

@@ -1,0 +1,117 @@
+{
+  "hero": {
+    "badge": "Spaß-Quiz • Zu zweit oder allein für euch als Paar",
+    "title": "Was für Partner sind wir? Der Test in 12 Fragen",
+    "titleHighlight": "Was für Partner sind wir?",
+    "description": "Fürsorglich, romantisch oder sehr unabhängig? Jeder beantwortet 12 Fragen dazu, was er im Alltag tut. Danach zeigt euch der Test mit Foto, was für Partner ihr seid.",
+    "subtitle": "12 Fragen • 3 Minuten pro Person • an einem Handy",
+    "jumpBtn": "Zum Test"
+  },
+  "section1": {
+    "title": "So funktioniert der Test",
+    "p1": "Dieser Test ist ein <strong>Spiel für Paare</strong>. Er sucht heraus, was für Partner ihr seid, zum Beispiel sehr verschmuste Partner oder Partner mit Lust auf Abenteuer. Er stellt 12 Fragen zum Alltag. Er fragt zum Beispiel, was ihr tut, wenn der andere krank ist, und wie ihr seinen Geburtstag feiert.",
+    "p2": "Nehmen wir die Frage zum schlechten Tag des anderen. Antwortest du „eine lange Umarmung ohne Worte“, bekommt das Ergebnis „Kuscheln geht vor“ Punkte. Antwortet dein Schatz „zusammen an die frische Luft gehen“, bekommt „Hauptsache Abenteuer“ Punkte. Am Ende <strong>zählt der Test eure Antworten zusammen</strong> und nimmt das Ergebnis mit den meisten Punkten.",
+    "p3": "Der Erste beantwortet die 12 Fragen und gibt dann das Handy weiter. Jeder antwortet für sich selbst, <strong>ohne die Antworten des anderen zu sehen</strong>. Danach zeigt euch der Test mit Foto, was für Partner ihr seid. Er zeigt auch, was jeder für sich bekommen hätte, und die Fragen mit unterschiedlichen Antworten.",
+    "p4": "Du kannst den Test auch allein machen. Dann antworte so, wie es bei euch meistens läuft."
+  },
+  "section2": {
+    "title": "Die 9 Partnertypen im Test",
+    "intro": "Der Test hat 9 mögliche Ergebnisse. Keines ist besser als ein anderes. Jedes hat seine guten Seiten und seine kleine Schwäche!",
+    "galerie": [
+      {
+        "id": "soins",
+        "titre": "Fürsorglich durch und durch",
+        "texte": "Partner, die zuerst an den anderen denken.",
+        "alt": "Ein Holztablett auf einem Sofa mit einer dampfenden Schale Suppe, einem Löffel und einer Wärmflasche im Strickbezug, daneben eine Decke"
+      },
+      {
+        "id": "clown",
+        "titre": "Immer für einen Spaß zu haben",
+        "texte": "Partner, die sich auch an schlechten Tagen zum Lachen bringen.",
+        "alt": "Zwei Scherzbrillen mit falscher Nase und Schnurrbart zwischen Konfetti und Luftschlangen"
+      },
+      {
+        "id": "romantique",
+        "titre": "Hoffnungslos romantisch",
+        "texte": "Partner, die liebe Zettel und Überraschungen mögen.",
+        "alt": "Ein für zwei gedeckter Tisch abends auf einem Balkon mit Kerzen und einer roten Rose, dahinter die Lichter der Stadt"
+      },
+      {
+        "id": "aventure",
+        "titre": "Hauptsache Abenteuer",
+        "texte": "Partner, die übers Wochenende losfahren, ohne etwas zu buchen.",
+        "alt": "Zwei Rucksäcke und zwei Paar Wanderschuhe vor einer offenen Tür mit Blick auf einen Bergpfad, auf dem Boden liegt eine Karte"
+      },
+      {
+        "id": "organise",
+        "titre": "Alles durchgeplant",
+        "texte": "Partner, die immer einen Plan haben und nichts vergessen.",
+        "alt": "Eine Pinnwand aus Kork voller ordentlich aufgereihter rosa, gelber und blauer Haftnotizen, darunter hängen zwei Schlüsselbunde"
+      },
+      {
+        "id": "calin",
+        "titre": "Kuscheln geht vor",
+        "texte": "Partner, die viel Nähe brauchen.",
+        "alt": "Zwei Teddybären, die sich auf einem Sofa unter einer Wolldecke umarmen"
+      },
+      {
+        "id": "zen",
+        "titre": "Die Ruhe selbst",
+        "texte": "Ruhige Partner, die gut zuhören können.",
+        "alt": "Zwei Liegestühle aus Holz nebeneinander am Ufer eines sehr ruhigen Bergsees bei Sonnenuntergang"
+      },
+      {
+        "id": "coach",
+        "titre": "Immer am Anfeuern",
+        "texte": "Partner, die aneinander glauben und es auch sagen.",
+        "alt": "Ein goldener Pokal zwischen zwei Pompons in Blau, Weiß und Rot auf einer Holztribüne voller Konfetti"
+      },
+      {
+        "id": "independant",
+        "titre": "Viel Freiraum",
+        "texte": "Partner, die ihre Hobbys behalten und einander vertrauen.",
+        "alt": "Zwei Sessel nebeneinander in einem Wohnzimmer, ein blauer und ein beiger, jeder mit eigener Lampe und eigenem Buch"
+      }
+    ]
+  },
+  "section3": {
+    "title": "Wie ist man im Alltag ein guter Partner?",
+    "intro": "Den einen guten Partnertyp gibt es nicht. Es gibt aber 4 Gewohnheiten, die fast jedem Paar guttun.",
+    "sub1Title": "Auf die kleinen Bitten des anderen eingehen",
+    "sub1Text": "Der amerikanische Psychologe John Gottman beobachtete frisch verheiratete Paare und sah sie 6 Jahre später wieder. Die Paare, die noch zusammen waren, waren <strong>in 86 % der Fälle</strong> auf die kleinen Bitten um Aufmerksamkeit eingegangen, zum Beispiel auf „Schau mal, der Vogel“. Die geschiedenen Paare hatten das nur in 33 % der Fälle getan. Oft reicht es schon, vom Handy aufzuschauen.",
+    "sub2Title": "Geben, was der andere sich wünscht",
+    "sub2Text": "Oft geben wir das, was wir selbst gern bekommen würden. Einer macht zum Beispiel Geschenke, obwohl der andere lieber Zeit zu zweit hätte. Jeder hat <a href=\"/de/liebessprache-test-paar/\">seine eigene Art, sich geliebt zu fühlen</a>, und sie ist nicht immer dieselbe. Am einfachsten ist es, <strong>nachzufragen</strong>.",
+    "sub3Title": "Danke sagen",
+    "sub3Text": "Man gewöhnt sich schnell an das, was der andere für einen tut. Irgendwann sieht man es nicht mehr. Mit der Zeit hat dann jeder das Gefühl, dass <a href=\"/de/blog/freund-gibt-sich-keine-muehe/\">der andere sich keine Mühe gibt</a>. Ein einfaches Danke für das Essen oder den Einkauf ändert viel.",
+    "sub4Title": "Zeit für sich behalten",
+    "sub4Text": "Ein guter Partner zu sein heißt nicht, alles zusammen zu machen. Eigene Freunde und Hobbys <strong>tun der Beziehung gut</strong>. Abends hat man sich dann mehr zu erzählen!"
+  },
+  "section4": {
+    "title": "Und wenn ihr nicht die gleiche Art Partner seid?",
+    "p1": "So ist es bei vielen Paaren und das ist kein Problem. Einer plant zum Beispiel alles und der andere mag es lieber spontan. Ihr ergänzt euch mehr, als ihr denkt. Viele sehr verschiedene Paare <a href=\"/de/welches-tierpaar-sind-wir-test/\">sind wie Hund und Katze</a> und verstehen sich trotzdem sehr gut.",
+    "p2": "Das Risiko liegt woanders. Ist einer sehr fürsorglich und der andere sehr unabhängig, entsteht schnell das Gefühl, dass <a href=\"/de/wer-liebt-mehr-test/\">einer mehr tut als der andere</a>. Schaut euch die Fragen mit unterschiedlichen Antworten an und <strong>sagt euch, was euch guttut</strong>. Der andere macht es leichter, wenn er es weiß."
+  },
+  "section5": {
+    "title": "Was ihr über diesen Test wissen solltet",
+    "p1": "Dieser Test ist ein Spiel. Er sagt nicht, ob ihr gute oder schlechte Partner seid, und <strong>er ersetzt kein echtes Gespräch</strong>. Eure Antworten können sich mit der Zeit auch ändern. Nach 6 Monaten ist man nicht derselbe Partner wie nach 10 Jahren!",
+    "p2": "Eure Antworten werden nicht gespeichert, sie bleiben auf eurem Handy. Wir zählen nur, welches Ergebnis herauskommt, um zu sehen, welche am häufigsten sind. Euer Vorname wird auch nicht gespeichert. Die Fotos wurden für diese Seite erstellt."
+  },
+  "seo": {
+    "faqTitle": "Häufige Fragen",
+    "faq1Q": "Welche Partnertypen kann man bekommen?",
+    "faq1A": "Der Test hat 9 mögliche Ergebnisse: fürsorglich durch und durch, immer für einen Spaß zu haben, hoffnungslos romantisch, Hauptsache Abenteuer, alles durchgeplant, Kuscheln geht vor, die Ruhe selbst, immer am Anfeuern und viel Freiraum.",
+    "faq2Q": "Wie wird das Ergebnis berechnet?",
+    "faq2A": "Jede Antwort gibt einem Partnertyp Punkte. Antwortest du zum Beispiel bei der Frage zu den kleinen Gesten „das Frühstück machen“, bekommt das Ergebnis „fürsorglich durch und durch“ Punkte. Macht ihr den Test zu zweit, zählt er eure Antworten zusammen. Der Typ mit den meisten Punkten wird euer Ergebnis als Paar.",
+    "faq3Q": "Was für ein Freund oder was für eine Freundin bin ich?",
+    "faq3A": "Macht den Test zu zweit. Unter eurem Ergebnis als Paar zeigt der Test, was jeder für sich bekommen hätte. Dort siehst du, was für ein Freund oder was für eine Freundin du bist.",
+    "faq4Q": "Gibt es einen Partnertyp, der besser ist als die anderen?",
+    "faq4A": "Nein. Jeder Typ hat seine guten Seiten und seine kleine Schwäche. Sehr organisierte Partner vergessen zum Beispiel nichts, lassen aber wenig Platz für Ungeplantes. Der Test gibt zu jedem Ergebnis einen kleinen Tipp.",
+    "faq5Q": "Was tun, wenn wir nicht dasselbe Ergebnis haben?",
+    "faq5A": "Nichts Besonderes, das ist ganz normal. Eine Beziehung läuft oft gut, wenn jeder etwas mitbringt, das dem anderen fehlt. Schaut euch lieber die Fragen mit unterschiedlichen Antworten an und redet darüber, was sich jeder wünscht.",
+    "faq6Q": "Kann man den Test allein machen?",
+    "faq6A": "Ja. Wähle einfach „Allein, für uns als Paar“ und antworte so, wie es bei euch meistens läuft. Du bekommst ein Ergebnis, kannst eure Antworten aber nicht vergleichen."
+  },
+  "jsonLd": {
+    "about": "was für Partner ihr in eurer Beziehung seid"
+  }
+}

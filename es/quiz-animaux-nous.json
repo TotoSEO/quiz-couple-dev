@@ -1,0 +1,123 @@
+{
+  "hero": {
+    "badge": "Quiz original • En pareja, o solo/a para la pareja",
+    "title": "¿Qué pareja de animales somos? El test en 12 preguntas",
+    "titleHighlight": "¿Qué pareja de animales somos?",
+    "description": "¿Dos nutrias que no se sueltan la pata o un perro y un gato que se pican todo el día? Cada uno responde a 12 preguntas sobre vuestra vida en pareja. Después el test os enseña la pareja de animales que más se os parece, con su foto.",
+    "subtitle": "12 preguntas • 3 minutos cada uno • en un solo móvil",
+    "jumpBtn": "Hacer el test"
+  },
+  "section1": {
+    "title": "Cómo funciona el test",
+    "p1": "Este test es un <strong>juego para hacer en pareja</strong>. Busca a qué pareja de animales os parecéis, por ejemplo a dos nutrias o a dos lobos. Hace 12 preguntas sobre vuestra vida en pareja. Por ejemplo, os pregunta cómo son vuestros domingos y cómo acaban vuestras discusiones.",
+    "p2": "Tomemos la pregunta sobre la noche. Si respondéis «pegados el uno al otro», el test da puntos a las nutrias. Si tu pareja responde «cada uno en su lado de la cama», se los da a los gatos. Al final, el test <strong>suma vuestras respuestas</strong> y se queda con los animales que tienen más puntos.",
+    "p3": "El primero responde a las 12 preguntas y luego le pasa el móvil al otro. El segundo responde <strong>sin ver lo que ha elegido el primero</strong>. Después el test os enseña la pareja de animales que más se os parece, con su foto. También os enseña los animales que le habrían salido a cada uno por separado y la lista de preguntas en las que no habéis respondido lo mismo.",
+    "p4": "También puedes hacer el test solo/a respondiendo por vuestra pareja. Eso sí, no podréis comparar vuestras respuestas. ¡Y esa es justo la parte más divertida!"
+  },
+  "section2": {
+    "title": "Las 10 parejas de animales del test",
+    "intro": "El test puede dar 10 resultados. Algunas parejas de animales van siempre pegadas, como las nutrias. Otras son más independientes, como los gatos. Aquí tenéis a quién se parece más cada una.",
+    "galerie": [
+      {
+        "id": "loutres",
+        "titre": "Dos nutrias",
+        "texte": "Para las parejas muy cariñosas a las que les gusta estar pegadas.",
+        "alt": "Dos nutrias marinas que flotan boca arriba una al lado de la otra y se cogen de la pata"
+      },
+      {
+        "id": "manchots",
+        "titre": "Dos pingüinos",
+        "texte": "Para las parejas que tienen sus costumbres y se hacen regalitos.",
+        "alt": "Dos pingüinos frente a frente en una playa de guijarros, inclinados sobre una piedrecita que hay entre los dos, con montañas nevadas al fondo"
+      },
+      {
+        "id": "loups",
+        "titre": "Dos lobos",
+        "texte": "Para las parejas muy unidas que ponen a la familia y a los amigos por delante.",
+        "alt": "Dos lobos grises uno al lado del otro en un bosque nevado, mirando en la misma dirección"
+      },
+      {
+        "id": "cygnes",
+        "titre": "Dos cisnes",
+        "texte": "Para las parejas románticas a las que les gustan las declaraciones y las fechas señaladas.",
+        "alt": "Dos cisnes blancos frente a frente en un lago al amanecer, con los cuellos formando un corazón"
+      },
+      {
+        "id": "dauphins",
+        "titre": "Dos delfines",
+        "texte": "Para las parejas juguetonas que siempre tienen gente alrededor.",
+        "alt": "Dos delfines que saltan juntos fuera de un mar turquesa"
+      },
+      {
+        "id": "renards",
+        "titre": "Dos zorros",
+        "texte": "Para las parejas cómplices que se pican de la mañana a la noche.",
+        "alt": "Dos zorros rojos que juegan en la hierba alta al atardecer"
+      },
+      {
+        "id": "chats",
+        "titre": "Dos gatos",
+        "texte": "Para las parejas independientes que se encuentran por la noche.",
+        "alt": "Dos gatos sentados cada uno en un extremo del alféizar de una ventana, uno gris y otro naranja, mirando hacia fuera"
+      },
+      {
+        "id": "castors",
+        "titre": "Dos castores",
+        "texte": "Para las parejas que siempre tienen un proyecto en marcha.",
+        "alt": "Dos castores uno al lado del otro sobre su presa de ramas, a la orilla del agua en un bosque"
+      },
+      {
+        "id": "chouettes",
+        "titre": "Dos búhos",
+        "texte": "Para las parejas que viven de noche y hablan durante horas.",
+        "alt": "Dos mochuelos muy juntos en una rama, de noche, bajo la luna llena"
+      },
+      {
+        "id": "chienchat",
+        "titre": "Un perro y un gato",
+        "texte": "Para las parejas muy distintas que se pican y luego se ríen.",
+        "alt": "Un golden retriever y un gato atigrado sentados frente a frente en un salón, hocico con hocico"
+      }
+    ]
+  },
+  "section3": {
+    "title": "Lo que se sabe de los animales que viven en pareja",
+    "intro": "Los animales del test no están ahí por casualidad. Cada uno tiene <a href=\"/es/que-tipo-de-pareja-sois-quiz/\">una forma de vivir en pareja</a> que recuerda a la de algunas parejas. Esto es lo que se sabe de 4 de ellos.",
+    "sub1Title": "Las nutrias marinas y su siesta",
+    "sub1Text": "Las nutrias marinas duermen boca arriba en la superficie del agua. Para que la corriente no se las lleve durante la siesta, se enrollan en algas largas. A veces dos nutrias también <strong>se cogen de la pata</strong>. ¡Es menos frecuente de lo que parece en los vídeos pero existe!",
+    "sub2Title": "Los pingüinos y sus piedrecitas",
+    "sub2Text": "Los pingüinos papúa y los pingüinos de Adelia hacen el nido con piedrecitas. Durante el cortejo, <strong>el macho le lleva algunas a la hembra</strong>. Se suele contar que busca la piedra más bonita de la playa. Es una exageración porque cualquier piedra sirve. En nuestro caso, la piedrecita puede ser un regalito o una palabra cariñosa. Cada uno tiene <a href=\"/es/test-lenguaje-amor-pareja/\">su forma de demostrar que quiere al otro</a>.",
+    "sub3Title": "Los cisnes y los castores",
+    "sub3Text": "Una pareja de cisnes puede seguir junta <strong>durante muchos años</strong>, a veces toda la vida. Los castores también viven en pareja. Construyen juntos su presa y su madriguera y luego crían allí a sus pequeños. Entre los mamíferos es poco habitual. Unos investigadores de la Universidad de Cambridge estudiaron 2.500 especies en 2013. Solo alrededor del 9 % vive en pareja.",
+    "sub4Title": "Los lobos y su manada",
+    "sub4Text": "Durante mucho tiempo se creyó que una manada la dirigía un macho que había peleado para ser el jefe. Hoy se sabe que una manada suele ser <strong>una familia</strong>. La forman una pareja y sus crías de los últimos años. Los padres guían a la manada como unos padres guían a sus hijos."
+  },
+  "section4": {
+    "title": "¿Y si no os salen los mismos animales?",
+    "p1": "Pasa a menudo. Por ejemplo, uno ve vuestra pareja como dos nutrias y el otro como dos gatos. Eso no quiere decir que vuestra relación vaya mal. El resultado de cada uno dice sobre todo <a href=\"/es/test-que-tipo-de-novios-somos/\">cómo se comporta en pareja</a> y lo que necesita.",
+    "p2": "Mirad mejor la lista de preguntas en las que vuestras respuestas son distintas. Si son sobre las fiestas o sobre las vacaciones, no es grave. Si son sobre el tiempo que pasáis juntos, <strong>habladlo con calma</strong>. Puede que uno necesite más ratos en pareja y el otro más aire."
+  },
+  "section5": {
+    "title": "Lo que hay que saber sobre este test",
+    "p1": "Este test es un juego. Juega con la imagen que tenemos de estos animales y <strong>no dice nada serio sobre vuestra relación</strong>. ¡Un resultado «perro y gato» no quiere decir que vayáis a romper! Sirve sobre todo para reír y comparar vuestras respuestas.",
+    "p2": "Vuestras respuestas no se guardan, se quedan en vuestro móvil. Solo contamos el resultado obtenido para saber cuáles salen más. Vuestro nombre tampoco se guarda. Las fotos se han creado para esta página."
+  },
+  "seo": {
+    "faqTitle": "Preguntas frecuentes",
+    "faq1Q": "¿Qué parejas de animales pueden salir?",
+    "faq1A": "El test puede dar 10 resultados: dos nutrias, dos pingüinos, dos lobos, dos cisnes, dos delfines, dos zorros, dos gatos, dos castores, dos búhos, o un perro y un gato.",
+    "faq2Q": "¿Cómo se calcula el resultado?",
+    "faq2A": "Cada respuesta da puntos a los animales que le corresponden. Por ejemplo, si respondéis «nos reímos de todo» en la pregunta sobre vuestro punto fuerte, los zorros y los delfines ganan puntos. Cuando hacéis el test en pareja, suma vuestras respuestas y los animales con más puntos pasan a ser los de vuestra pareja.",
+    "faq3Q": "¿Qué animal representa mejor a una pareja fiel?",
+    "faq3A": "Se suele hablar del cisne porque una pareja de cisnes puede seguir junta durante muchos años. El castor y el lobo también viven en pareja mucho tiempo. En el test, a las parejas fieles a sus costumbres les suelen salir los pingüinos.",
+    "faq4Q": "¿Qué significa el resultado «un perro y un gato»?",
+    "faq4A": "Se dice que dos personas «se llevan como el perro y el gato» cuando discuten todo el rato. En el test se dice con humor. Este resultado es para las parejas muy distintas que se pican a menudo y luego se ríen.",
+    "faq5Q": "¿Podemos ser dos animales distintos, por ejemplo una nutria y un gato?",
+    "faq5A": "El resultado de la pareja siempre es una de las 10 parejas del test. Eso sí, cuando jugáis en pareja el test también enseña los animales que le habrían salido a cada uno por separado. Ahí veréis si uno es más nutria y el otro más gato.",
+    "faq6Q": "¿Se puede hacer el test solo/a?",
+    "faq6A": "Sí. Basta con elegir «Solo/a, para nuestra pareja» y responder pensando en vuestra pareja. Tendrás un resultado pero no podrás comparar vuestras respuestas."
+  },
+  "jsonLd": {
+    "about": "la pareja de animales que se parece a vuestra relación"
+  }
+}

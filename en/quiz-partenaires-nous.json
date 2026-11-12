@@ -1,0 +1,117 @@
+{
+  "hero": {
+    "badge": "Fun quiz • Together, or on your own for your couple",
+    "title": "What kind of partners are we? The quiz in 12 questions",
+    "titleHighlight": "What kind of partners are we?",
+    "description": "Caring, hopelessly romantic or very independent? You each answer 12 questions about what you do in everyday life. Then the quiz shows you what kind of partners you are, with a photo.",
+    "subtitle": "12 questions • 3 minutes each • on one phone",
+    "jumpBtn": "Take the quiz"
+  },
+  "section1": {
+    "title": "How the quiz works",
+    "p1": "This quiz is a <strong>game to play as a couple</strong>. It finds out what kind of partners you are, for example partners who love cuddles or partners who love adventure. It asks 12 questions about everyday life. For example, it asks what you do when the other one is ill and how you celebrate their birthday.",
+    "p2": "Take the question about the other one's bad day. If you answer “a long hug without a word”, the quiz gives points to the result “cuddles first”. If your partner answers “take them out for some fresh air”, it gives points to “adventure first”. At the end, the quiz <strong>adds up your answers</strong> and keeps the kind with the most points.",
+    "p3": "The first person answers the 12 questions and then passes the phone. You each answer for yourself, <strong>without seeing what the other chose</strong>. Then the quiz shows you what kind of partners you are, with a photo. It also shows what each of you would have got alone and the list of questions where you gave different answers.",
+    "p4": "You can also take the quiz on your own. In that case, answer with what happens most often in your relationship in mind."
+  },
+  "section2": {
+    "title": "The 9 kinds of partners in the quiz",
+    "intro": "The quiz can give 9 results. None is better than another. Each one has its good sides and its little flaw!",
+    "galerie": [
+      {
+        "id": "soins",
+        "titre": "Tender loving care",
+        "texte": "Partners who think of the other before themselves.",
+        "alt": "A wooden tray on a sofa with a steaming bowl of soup, a spoon and a knitted hot-water bottle, next to a blanket"
+      },
+      {
+        "id": "clown",
+        "titre": "Always up for a laugh",
+        "texte": "Partners who make each other laugh even on bad days.",
+        "alt": "Two pairs of joke glasses with a fake nose and moustache, among confetti and paper streamers"
+      },
+      {
+        "id": "romantique",
+        "titre": "Hopelessly romantic",
+        "texte": "Partners who love sweet notes and surprises.",
+        "alt": "A table for two laid on a balcony in the evening, with candles and a red rose, in front of the city lights"
+      },
+      {
+        "id": "aventure",
+        "titre": "Adventure first",
+        "texte": "Partners who leave for the weekend without booking anything.",
+        "alt": "Two backpacks and two pairs of hiking boots in front of a door open onto a mountain path, with a map on the floor"
+      },
+      {
+        "id": "organise",
+        "titre": "Everything's planned",
+        "texte": "Partners who always have a plan and never forget a thing.",
+        "alt": "A cork board covered with neat rows of pink, yellow and blue sticky notes, above two sets of keys hanging on hooks"
+      },
+      {
+        "id": "calin",
+        "titre": "Cuddles first",
+        "texte": "Partners who need to be close to each other.",
+        "alt": "Two teddy bears hugging under a woollen blanket on a sofa"
+      },
+      {
+        "id": "zen",
+        "titre": "Cool, calm and collected",
+        "texte": "Calm partners who know how to listen.",
+        "alt": "Two wooden deckchairs side by side on the shore of a very calm mountain lake at sunset"
+      },
+      {
+        "id": "coach",
+        "titre": "Cheering from the front row",
+        "texte": "Partners who believe in each other and say so.",
+        "alt": "A golden cup between two blue, white and red pom-poms, on wooden bleachers covered in confetti"
+      },
+      {
+        "id": "independant",
+        "titre": "Room to breathe",
+        "texte": "Partners who keep their own hobbies and trust each other.",
+        "alt": "Two armchairs side by side in a living room, one blue and one beige, each with its own lamp and book"
+      }
+    ]
+  },
+  "section3": {
+    "title": "How to be a good partner day to day?",
+    "intro": "There isn't just one good kind of partner. But there are 4 habits that do almost every couple good.",
+    "sub1Title": "Answer the other's small requests",
+    "sub1Text": "The American psychologist John Gottman observed newlyweds and then saw them again 6 years later. The couples who were still together had responded <strong>86% of the time</strong> to the other's small bids for attention, for example “look at that bird”. Those who had divorced had responded only 33% of the time. Often, looking up from your phone is enough.",
+    "sub2Title": "Give what the other is hoping for",
+    "sub2Text": "We often give what we'd like to receive. For example, one of you buys presents when the other would mostly like to spend time together. Everyone has <a href=\"/en/love-language-test-couple/\">their own way of feeling loved</a> and it isn't always the same. The simplest thing is to <strong>ask</strong>.",
+    "sub3Title": "Say thank you",
+    "sub3Text": "We quickly get used to what the other does for us. In the end we stop seeing it. Over time, each of you can feel that <a href=\"/en/blog/boyfriend-doesnt-make-effort/\">the other makes no effort</a>. A simple thank you for the meal or the shopping changes a lot.",
+    "sub4Title": "Keep some time for yourself",
+    "sub4Text": "Being a good partner doesn't mean doing everything together. Keeping your friends and your hobbies <strong>is good for your relationship</strong>. You have more to tell each other in the evening!"
+  },
+  "section4": {
+    "title": "What if you're not the same kind of partner?",
+    "p1": "That's true of many couples and it isn't a problem. For example, one of you plans everything and the other prefers the unexpected. You complement each other more than you think. Plenty of very different couples <a href=\"/en/what-animal-couple-are-we-quiz/\">fight like cat and dog</a> and still get on very well.",
+    "p2": "The risk lies elsewhere. When one of you is very caring and the other very independent, it's easy to feel that <a href=\"/en/who-loves-more-quiz/\">one does more than the other</a>. Look at the list of questions where you gave different answers and <strong>tell each other what makes you happy</strong>. The other will do it more easily if they know."
+  },
+  "section5": {
+    "title": "What you should know about this quiz",
+    "p1": "This quiz is a game. It doesn't say whether you're a good or a bad partner and <strong>it doesn't replace a real conversation</strong>. Your answers can also change over time. You're not the same partner after 6 months and after 10 years!",
+    "p2": "Your answers aren't saved, they stay on your phone. We only count which result you get, to see which ones come up most. Your name isn't saved either. The photos were created for this page."
+  },
+  "seo": {
+    "faqTitle": "Frequently asked questions",
+    "faq1Q": "Which kinds of partners can you get?",
+    "faq1A": "The quiz can give 9 results: tender loving care, always up for a laugh, hopelessly romantic, adventure first, everything's planned, cuddles first, cool calm and collected, cheering from the front row and room to breathe.",
+    "faq2Q": "How is the result worked out?",
+    "faq2A": "Each answer gives points to one kind of partner. For example, if you answer “making their breakfast” to the question about little gestures, the result “tender loving care” gets points. When you take the quiz together, it adds up your answers and the kind with the most points becomes your result as a couple.",
+    "faq3Q": "What kind of boyfriend or girlfriend am I?",
+    "faq3A": "Take the quiz together. Under your result as a couple, the quiz shows what each of you would have got alone. That's where you'll see what kind of boyfriend or girlfriend you are.",
+    "faq4Q": "Is one kind of partner better than the others?",
+    "faq4A": "No. Each kind has its good sides and its little flaw. For example, very organised partners never forget anything but they leave little room for the unexpected. The quiz gives a little tip with each result.",
+    "faq5Q": "What should we do if we don't get the same result?",
+    "faq5A": "Nothing special, it's very common. A couple often works well when each person brings what the other doesn't have. Look at the questions where you gave different answers instead and talk about what each of you expects.",
+    "faq6Q": "Can you take the quiz on your own?",
+    "faq6A": "Yes. Just choose “On my own, for our couple” and answer with what happens most often in your relationship in mind. You'll get a result but you won't be able to compare your answers."
+  },
+  "jsonLd": {
+    "about": "the kind of partners you are in your relationship"
+  }
+}

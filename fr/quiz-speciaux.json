@@ -46,7 +46,11 @@
     "quizDuoNoelNom": "Quels personnages de Noël êtes-vous ?",
     "quizDuoNoelTagline": "Chacun répond à 12 questions sur votre façon de fêter Noël et le quiz vous donne le duo que vous formez, avec sa photo.",
     "quizPorteCulotteNom": "Qui porte la culotte ?",
-    "quizPorteCulotteTagline": "Vous répondez à 20 questions pour savoir qui décide dans votre couple. À deux, le test vous montre aussi les questions où vous n'êtes pas d'accord."
+    "quizPorteCulotteTagline": "Vous répondez à 20 questions pour savoir qui décide dans votre couple. À deux, le test vous montre aussi les questions où vous n'êtes pas d'accord.",
+    "quizAnimauxNousNom": "Quel couple d'animaux sommes-nous ?",
+    "quizAnimauxNousTagline": "Chacun répond à 12 questions sur votre vie à deux et le test vous montre votre couple d'animaux en photo.",
+    "quizPartenairesNousNom": "Quel genre de partenaires sommes-nous ?",
+    "quizPartenairesNousTagline": "Chacun répond à 12 questions sur la vie de tous les jours et le test vous montre votre genre de partenaires en photo."
   },
   "section1": {
     "title": "À quoi servent ces quiz",

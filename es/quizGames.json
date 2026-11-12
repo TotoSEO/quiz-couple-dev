@@ -419,7 +419,9 @@
     "quizMariageNous": "¿Qué tipo de boda queremos?",
     "quizListeNoel": "¿Os habéis portado bien?",
     "quizDuoNoel": "¿Qué personajes de Navidad sois?",
-    "quizPorteCulotte": "¿Quién lleva los pantalones?"
+    "quizPorteCulotte": "¿Quién lleva los pantalones?",
+    "quizAnimauxNous": "¿Qué pareja de animales somos?",
+    "quizPartenairesNous": "¿Qué tipo de novios somos?"
   },
   "truefalse": {
     "ready": "¿Listo para el verdadero o falso?",

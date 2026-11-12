@@ -634,6 +634,18 @@
     "metaDescription": "Wer hat in eurer Beziehung die Hosen an? Beantwortet 20 Fragen zu den Entscheidungen im Alltag, allein oder zu zweit, und seht, wer öfter entscheidet.",
     "description": "Beantwortet 20 Fragen zu den Entscheidungen im Alltag und seht, wer öfter das letzte Wort hat."
   },
+  "quizAnimauxNous": {
+    "title": "Welches Tierpaar seid ihr? Der Test für Paare",
+    "shortTitle": "Welches Tierpaar sind wir",
+    "metaDescription": "Zwei Otter, zwei Wölfe oder Hund und Katze? Jeder beantwortet 12 Fragen und der Test zeigt das Tierpaar, das eurer Beziehung am ähnlichsten ist.",
+    "description": "Jeder beantwortet 12 Fragen und der Test zeigt euch das Tierpaar, das euch am ähnlichsten ist, mit Foto."
+  },
+  "quizPartenairesNous": {
+    "title": "Was für Partner seid ihr? Der Test für Paare",
+    "shortTitle": "Was für Partner sind wir",
+    "metaDescription": "Fürsorglich, romantisch oder sehr unabhängig? Jeder beantwortet 12 Fragen und der Test zeigt, was für Partner ihr in eurer Beziehung seid.",
+    "description": "Jeder beantwortet 12 Fragen und der Test zeigt euch mit Foto, was für Partner ihr seid."
+  },
   "bilanCouple": {
     "title": "Beziehungscheck online | Ergebnis sofort, auch als PDF",
     "shortTitle": "Beziehungsanalyse",

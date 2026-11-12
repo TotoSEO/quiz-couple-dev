@@ -1,0 +1,117 @@
+{
+  "hero": {
+    "badge": "Quiz originale • In due, o da solo/a per la coppia",
+    "title": "Che tipo di fidanzati siamo? Il test in 12 domande",
+    "titleHighlight": "Che tipo di fidanzati siamo?",
+    "description": "Pieni di attenzioni, romantici o molto indipendenti? Ognuno risponde a 12 domande su quello che fa nella vita di tutti i giorni. Poi il test vi mostra che tipo di fidanzati siete, con la sua foto.",
+    "subtitle": "12 domande • 3 minuti a testa • su un solo telefono",
+    "jumpBtn": "Fai il test"
+  },
+  "section1": {
+    "title": "Come funziona il test",
+    "p1": "Questo test è un <strong>gioco da fare in coppia</strong>. Cerca che tipo di fidanzati siete, per esempio dei fidanzati molto coccoloni o dei fidanzati che amano l'avventura. Fa 12 domande sulla vita di tutti i giorni. Per esempio, vi chiede cosa fate quando l'altro è malato e come festeggiate il suo compleanno.",
+    "p2": "Prendiamo la domanda sulla brutta giornata dell'altro. Se rispondi «un lungo abbraccio senza parlare», il test dà punti al risultato «prima le coccole». Se la tua dolce metà risponde «uscire insieme a prendere aria», li dà a «l'avventura prima di tutto». Alla fine il test <strong>somma le vostre risposte</strong> e tiene il tipo che ha più punti.",
+    "p3": "Il primo risponde alle 12 domande e poi passa il telefono all'altro. Ognuno risponde per sé, <strong>senza vedere cosa ha scelto l'altro</strong>. Poi il test vi mostra che tipo di fidanzati siete, con la sua foto. Vi mostra anche quello che ognuno avrebbe avuto per conto suo e l'elenco delle domande a cui non avete risposto allo stesso modo.",
+    "p4": "Puoi fare il test anche da solo/a. In quel caso rispondi pensando a quello che succede più spesso nella vostra coppia."
+  },
+  "section2": {
+    "title": "I 9 tipi di fidanzati del test",
+    "intro": "Il test può dare 9 risultati. Nessuno è migliore di un altro. Ognuno ha i suoi lati belli e il suo piccolo difetto!",
+    "galerie": [
+      {
+        "id": "soins",
+        "titre": "Mille attenzioni",
+        "texte": "Fidanzati che pensano all'altro prima che a sé.",
+        "alt": "Un vassoio di legno su un divano con una ciotola di zuppa fumante, un cucchiaio e una borsa dell'acqua calda con la fodera di lana, accanto a una coperta"
+      },
+      {
+        "id": "clown",
+        "titre": "Sempre la battuta pronta",
+        "texte": "Fidanzati che si fanno ridere anche nelle giornate storte.",
+        "alt": "Due paia di occhiali da scherzo con naso finto e baffi, in mezzo a coriandoli e stelle filanti"
+      },
+      {
+        "id": "romantique",
+        "titre": "Romanticismo puro",
+        "texte": "Fidanzati che amano i bigliettini dolci e le sorprese.",
+        "alt": "Un tavolo per due apparecchiato su un balcone di sera, con candele e una rosa rossa, davanti alle luci della città"
+      },
+      {
+        "id": "aventure",
+        "titre": "L'avventura prima di tutto",
+        "texte": "Fidanzati che partono per il fine settimana senza prenotare niente.",
+        "alt": "Due zaini e due paia di scarponi da trekking davanti a una porta aperta su un sentiero di montagna, con una cartina sul pavimento"
+      },
+      {
+        "id": "organise",
+        "titre": "Tutto organizzato",
+        "texte": "Fidanzati che hanno sempre un programma e non dimenticano niente.",
+        "alt": "Una bacheca di sughero coperta di foglietti adesivi rosa, gialli e azzurri ben allineati, sopra due mazzi di chiavi appesi"
+      },
+      {
+        "id": "calin",
+        "titre": "Prima le coccole",
+        "texte": "Fidanzati che hanno bisogno di stare vicini.",
+        "alt": "Due orsacchiotti di peluche abbracciati sotto una coperta di lana su un divano"
+      },
+      {
+        "id": "zen",
+        "titre": "Sempre zen",
+        "texte": "Fidanzati calmi che sanno ascoltare.",
+        "alt": "Due sdraio di legno una accanto all'altra in riva a un lago di montagna molto calmo, al tramonto"
+      },
+      {
+        "id": "coach",
+        "titre": "Sempre a fare il tifo",
+        "texte": "Fidanzati che credono nell'altro e glielo dicono.",
+        "alt": "Una coppa dorata tra due pompon da cheerleader blu, bianchi e rossi, su una gradinata di legno coperta di coriandoli"
+      },
+      {
+        "id": "independant",
+        "titre": "A ognuno i suoi spazi",
+        "texte": "Fidanzati che conservano le loro attività e si fidano l'uno dell'altro.",
+        "alt": "Due poltrone una accanto all'altra in un soggiorno, una blu e una beige, ognuna con la sua lampada e il suo libro"
+      }
+    ]
+  },
+  "section3": {
+    "title": "Come essere un buon fidanzato o una buona fidanzata ogni giorno?",
+    "intro": "Non esiste un solo tipo di partner giusto. Ci sono però 4 abitudini che fanno bene a quasi tutte le coppie.",
+    "sub1Title": "Rispondere alle piccole richieste dell'altro",
+    "sub1Text": "Lo psicologo americano John Gottman ha osservato delle coppie appena sposate e le ha riviste 6 anni dopo. Le coppie ancora insieme avevano risposto <strong>l'86% delle volte</strong> alle piccole richieste di attenzione dell'altro, per esempio «guarda quell'uccello». Quelle che avevano divorziato avevano risposto solo il 33% delle volte. Spesso basta alzare gli occhi dal telefono.",
+    "sub2Title": "Dare quello che l'altro si aspetta",
+    "sub2Text": "Spesso diamo quello che ci piacerebbe ricevere. Per esempio, uno fa regali mentre l'altro vorrebbe soprattutto passare del tempo insieme. Ognuno ha <a href=\"/it/test-linguaggio-amore-coppia/\">il suo modo di sentirsi amato</a> e non è sempre lo stesso. La cosa più semplice è <strong>chiedere</strong>.",
+    "sub3Title": "Dire grazie",
+    "sub3Text": "Ci si abitua in fretta a quello che l'altro fa per noi. Alla fine non lo si vede più. Col tempo ognuno può avere l'impressione che <a href=\"/it/blog/ragazzo-non-si-impegna/\">l'altro non faccia nessuno sforzo</a>. Un semplice grazie per la cena o per la spesa cambia molte cose.",
+    "sub4Title": "Tenersi del tempo per sé",
+    "sub4Text": "Essere un buon partner non vuol dire fare tutto insieme. Tenersi gli amici e le proprie attività <strong>fa bene alla coppia</strong>. La sera ci sono più cose da raccontarsi!"
+  },
+  "section4": {
+    "title": "E se non siete lo stesso tipo di partner?",
+    "p1": "Succede a molte coppie e non è un problema. Per esempio, uno organizza tutto e l'altro preferisce l'imprevisto. Vi completate più di quanto pensiate. Molte coppie molto diverse <a href=\"/it/test-che-coppia-di-animali-siamo/\">sono come cane e gatto</a> e vanno d'accordo lo stesso.",
+    "p2": "Il rischio è un altro. Quando uno è pieno di attenzioni e l'altro molto indipendente, è facile pensare che <a href=\"/it/test-chi-ama-di-piu/\">uno faccia più dell'altro</a>. Guardate l'elenco delle domande a cui non avete risposto allo stesso modo e <strong>ditevi cosa vi fa piacere</strong>. L'altro lo farà più facilmente se lo sa."
+  },
+  "section5": {
+    "title": "Cosa sapere su questo test",
+    "p1": "Questo test è un gioco. Non dice se siete dei buoni o dei cattivi partner e <strong>non sostituisce una vera conversazione</strong>. Le vostre risposte possono anche cambiare col tempo. Non si è lo stesso partner dopo 6 mesi e dopo 10 anni!",
+    "p2": "Le vostre risposte non vengono salvate, restano sul vostro telefono. Contiamo solo il risultato ottenuto per sapere quali escono di più. Nemmeno il vostro nome viene salvato. Le foto sono state create per questa pagina."
+  },
+  "seo": {
+    "faqTitle": "Domande frequenti",
+    "faq1Q": "Quali tipi di fidanzati si possono ottenere?",
+    "faq1A": "Il test può dare 9 risultati: mille attenzioni, sempre la battuta pronta, romanticismo puro, l'avventura prima di tutto, tutto organizzato, prima le coccole, sempre zen, sempre a fare il tifo e a ognuno i suoi spazi.",
+    "faq2Q": "Come viene calcolato il risultato?",
+    "faq2A": "Ogni risposta dà punti a un tipo di partner. Per esempio, se alla domanda sui piccoli gesti rispondi «preparare la colazione», il risultato «mille attenzioni» prende punti. Quando fate il test in due, somma le vostre risposte e il tipo che ha più punti diventa quello della vostra coppia.",
+    "faq3Q": "Che tipo di fidanzato o di fidanzata sono?",
+    "faq3A": "Fate il test in due. Sotto il risultato della coppia, il test mostra quello che ognuno avrebbe avuto per conto suo. Lì vedrai che tipo di fidanzato o di fidanzata sei.",
+    "faq4Q": "C'è un tipo di partner migliore degli altri?",
+    "faq4A": "No. Ogni tipo ha i suoi lati belli e il suo piccolo difetto. Per esempio, dei fidanzati molto organizzati non dimenticano niente ma lasciano poco spazio all'imprevisto. Il test dà un piccolo consiglio con ogni risultato.",
+    "faq5Q": "Cosa fare se non abbiamo lo stesso risultato?",
+    "faq5A": "Niente di speciale, è molto comune. Una coppia funziona spesso bene quando ognuno porta quello che all'altro manca. Guardate piuttosto le domande a cui non avete risposto allo stesso modo e parlate di quello che ognuno si aspetta.",
+    "faq6Q": "Si può fare il test da soli?",
+    "faq6A": "Sì. Basta scegliere «Da solo/a, per la nostra coppia» e rispondere pensando a quello che succede più spesso nella vostra coppia. Avrai un risultato ma non potrai confrontare le vostre risposte."
+  },
+  "jsonLd": {
+    "about": "il tipo di fidanzati che siete nella vostra coppia"
+  }
+}

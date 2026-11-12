@@ -269,6 +269,8 @@
     quizListeNoel: 'Sages ou pas sages (liste du Père Noël)',
     quizDuoNoel: 'Personnages de Noël',
     quizPorteCulotte: 'Qui porte la culotte',
+    quizPartenairesNous: 'Quel genre de partenaires',
+    quizAnimauxNous: "Quel couple d'animaux",
     testAttachement: "Style d'attachement",
     testConfiance: 'Confiance',
     testInfidelite: 'Infidélité',
@@ -430,6 +432,8 @@
     'liste-noel': 'quizListeNoel',
     'duo-noel': 'quizDuoNoel',
     'porte-culotte': 'quizPorteCulotte',
+    'partenaires-nous': 'quizPartenairesNous',
+    'animaux-nous': 'quizAnimauxNous',
     'type-couple': 'quizTypeCouple',
     'amour-ou-attachement': 'testAmourAttachement',
     'je-l-aime-encore': 'testJeLaimeEncore',
@@ -473,7 +477,9 @@
            // les deux quiz de Noël (novembre 2026)
            'quizListeNoel', 'liste-noel', 'quizDuoNoel', 'duo-noel',
            // qui porte la culotte (11 novembre 2026)
-           'quizPorteCulotte', 'porte-culotte']
+           'quizPorteCulotte', 'porte-culotte',
+           'quizPartenairesNous', 'partenaires-nous',
+           'quizAnimauxNous', 'animaux-nous']
   };
   var LIBELLE_FAMILLE = { test: 'Tests', quiz: 'Quiz', jeu: 'Jeux' };
 

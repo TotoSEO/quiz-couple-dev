@@ -1,0 +1,123 @@
+{
+  "hero": {
+    "badge": "Themaquiz • Met z'n tweeën of alleen voor jullie als koppel",
+    "title": "Welk dierenkoppel zijn wij? De test in 12 vragen",
+    "titleHighlight": "Welk dierenkoppel zijn wij?",
+    "description": "Twee otters die elkaars poot niet loslaten, of een kat en een hond die de hele dag kibbelen? Ieder beantwoordt 12 vragen over jullie leven samen. Daarna laat de test het dierenkoppel zien waar jullie het meest op lijken, met foto.",
+    "subtitle": "12 vragen • 3 minuten per persoon • op één telefoon",
+    "jumpBtn": "Doe de test"
+  },
+  "section1": {
+    "title": "Zo werkt de test",
+    "p1": "Deze test is een <strong>spel om samen te doen</strong>. Hij zoekt het dierenkoppel waar jullie het meest op lijken, bijvoorbeeld twee otters of twee wolven. Hij stelt 12 vragen over jullie leven samen. Hij vraagt bijvoorbeeld hoe jullie zondagen eruitzien en hoe jullie ruzies aflopen.",
+    "p2": "Neem de vraag over de nacht. Antwoorden jullie ‘dicht tegen elkaar aan’, dan krijgen de otters punten. Antwoordt je partner ‘ieder aan zijn eigen kant van het bed’, dan krijgen de katten punten. Aan het eind <strong>telt de test jullie antwoorden bij elkaar op</strong> en houdt hij de dieren met de meeste punten over.",
+    "p3": "De eerste beantwoordt de 12 vragen en geeft dan de telefoon door. De tweede antwoordt <strong>zonder te zien wat de eerste heeft gekozen</strong>. Daarna laat de test jullie dierenkoppel zien, met foto. Hij laat ook de dieren zien die ieder voor zich had gekregen en de vragen waarop jullie verschillend hebben geantwoord.",
+    "p4": "Je kunt de test ook alleen doen en voor jullie als koppel antwoorden. Dan kunnen jullie de antwoorden alleen niet vergelijken. En dat is juist het leukste deel!"
+  },
+  "section2": {
+    "title": "De 10 dierenkoppels van de test",
+    "intro": "De test heeft 10 mogelijke uitslagen. Sommige dierenkoppels plakken aan elkaar, zoals de otters. Andere zijn onafhankelijker, zoals de katten. Hier zie je bij wie elk koppel het best past.",
+    "galerie": [
+      {
+        "id": "loutres",
+        "titre": "Twee otters",
+        "texte": "Voor heel aanhankelijke koppels die graag dicht bij elkaar zijn.",
+        "alt": "Twee zeeotters drijven naast elkaar op hun rug en houden elkaars poot vast"
+      },
+      {
+        "id": "manchots",
+        "titre": "Twee pinguïns",
+        "texte": "Voor koppels met vaste gewoontes die elkaar kleine cadeautjes geven.",
+        "alt": "Twee pinguïns staan tegenover elkaar op een kiezelstrand en buigen zich over een steentje dat tussen hen in ligt, met besneeuwde bergen op de achtergrond"
+      },
+      {
+        "id": "loups",
+        "titre": "Twee wolven",
+        "texte": "Voor hechte koppels bij wie familie en vrienden voor alles gaan.",
+        "alt": "Twee grijze wolven staan naast elkaar in een besneeuwd bos en kijken dezelfde kant op"
+      },
+      {
+        "id": "cygnes",
+        "titre": "Twee zwanen",
+        "texte": "Voor romantische koppels die van liefdesverklaringen en bijzondere data houden.",
+        "alt": "Twee witte zwanen zwemmen bij zonsopgang tegenover elkaar op een meer, hun halzen vormen een hart"
+      },
+      {
+        "id": "dauphins",
+        "titre": "Twee dolfijnen",
+        "texte": "Voor speelse koppels die altijd mensen om zich heen hebben.",
+        "alt": "Twee dolfijnen springen samen uit een turquoise zee"
+      },
+      {
+        "id": "renards",
+        "titre": "Twee vossen",
+        "texte": "Voor koppels die elkaar van 's ochtends tot 's avonds plagen.",
+        "alt": "Twee rode vossen spelen bij zonsondergang in het hoge gras"
+      },
+      {
+        "id": "chats",
+        "titre": "Twee katten",
+        "texte": "Voor onafhankelijke koppels die elkaar 's avonds weer opzoeken.",
+        "alt": "Twee katten zitten elk aan een kant van een vensterbank, een grijze en een rode, en kijken naar buiten"
+      },
+      {
+        "id": "castors",
+        "titre": "Twee bevers",
+        "texte": "Voor koppels bij wie altijd een project loopt.",
+        "alt": "Twee bevers zitten naast elkaar op hun dam van takken, aan het water in een bos"
+      },
+      {
+        "id": "chouettes",
+        "titre": "Twee uilen",
+        "texte": "Voor koppels die 's nachts opleven en uren praten.",
+        "alt": "Twee kleine uilen zitten 's nachts dicht tegen elkaar aan op een tak, onder de volle maan"
+      },
+      {
+        "id": "chienchat",
+        "titre": "Een kat en een hond",
+        "texte": "Voor heel verschillende koppels die kibbelen en er daarna om lachen.",
+        "alt": "Een golden retriever en een cyperse kat zitten tegenover elkaar in een woonkamer, neus aan neus"
+      }
+    ]
+  },
+  "section3": {
+    "title": "Wat we weten over dieren die als koppel leven",
+    "intro": "De dieren in de test staan er niet toevallig. Elk dier heeft <a href=\"/nl/wat-voor-koppel-zijn-jullie/\">een eigen manier van samenleven</a> die aan sommige koppels doet denken. Dit weten we over 4 van hen.",
+    "sub1Title": "Zeeotters en hun dutje",
+    "sub1Text": "Zeeotters slapen op hun rug aan het wateroppervlak. Om tijdens een dutje niet weg te drijven, wikkelen ze zich in lange slierten zeewier. Soms <strong>houden twee otters ook elkaars poot vast</strong>. Dat gebeurt minder vaak dan de filmpjes doen denken, maar het bestaat echt!",
+    "sub2Title": "Pinguïns en hun steentjes",
+    "sub2Text": "Ezelspinguïns en adeliepinguïns bouwen hun nest van kleine steentjes. Tijdens de balts <strong>brengt het mannetje er een paar naar het vrouwtje</strong>. Vaak wordt verteld dat hij het mooiste steentje van het strand zoekt. Dat is overdreven, want elk steentje is goed. Bij ons kan dat steentje een cadeautje of een lief woord zijn. Iedereen heeft <a href=\"/nl/liefdestaal-test/\">zijn eigen manier om liefde te tonen</a>.",
+    "sub3Title": "Zwanen en bevers",
+    "sub3Text": "Een zwanenpaar kan <strong>jarenlang</strong> bij elkaar blijven, soms een leven lang. Ook bevers leven als koppel. Ze bouwen samen hun dam en hun burcht en brengen daar hun jongen groot. Bij zoogdieren is dat zeldzaam. Onderzoekers van de universiteit van Cambridge bekeken in 2013 zo'n 2.500 soorten. Maar ongeveer 9% leeft als koppel.",
+    "sub4Title": "Wolven en hun roedel",
+    "sub4Text": "Lang dacht men dat een roedel werd geleid door een mannetje dat zich naar de top had gevochten. Nu weten we dat een roedel meestal <strong>een familie</strong> is. Hij bestaat uit een ouderpaar en hun jongen van de laatste jaren. De ouders leiden de roedel zoals ouders hun kinderen leiden."
+  },
+  "section4": {
+    "title": "En als jullie niet dezelfde dieren krijgen?",
+    "p1": "Dat gebeurt vaak. De een ziet jullie bijvoorbeeld als twee otters en de ander als twee katten. Het betekent niet dat het slecht gaat tussen jullie. De uitslag van ieder zegt vooral <a href=\"/nl/wat-voor-partners-zijn-wij-test/\">hoe je je in een relatie gedraagt</a> en wat je nodig hebt.",
+    "p2": "Kijk liever naar de vragen waarop jullie verschillend hebben geantwoord. Gaan ze over feestjes of over vakanties, dan is er weinig aan de hand. Gaan ze over de tijd die jullie samen doorbrengen, <strong>praat er dan rustig over</strong>. Misschien heeft de een meer tijd samen nodig en de ander meer lucht."
+  },
+  "section5": {
+    "title": "Wat je over deze test moet weten",
+    "p1": "Deze test is een spel. Hij speelt met het beeld dat we van deze dieren hebben en <strong>hij zegt niets serieus over jullie relatie</strong>. De uitslag ‘een kat en een hond’ betekent niet dat jullie uit elkaar gaan! Hij is er vooral om te lachen en om jullie antwoorden te vergelijken.",
+    "p2": "Jullie antwoorden worden niet opgeslagen, ze blijven op jullie telefoon. We tellen alleen welke uitslag eruit komt, om te zien welke het vaakst voorkomen. Jullie voornaam wordt ook niet opgeslagen. De foto's zijn voor deze pagina gemaakt."
+  },
+  "seo": {
+    "faqTitle": "Veelgestelde vragen",
+    "faq1Q": "Welke dierenkoppels kun je krijgen?",
+    "faq1A": "De test heeft 10 mogelijke uitslagen: twee otters, twee pinguïns, twee wolven, twee zwanen, twee dolfijnen, twee vossen, twee katten, twee bevers, twee uilen of een kat en een hond.",
+    "faq2Q": "Hoe wordt de uitslag berekend?",
+    "faq2A": "Elk antwoord geeft punten aan de dieren die erbij passen. Antwoorden jullie bijvoorbeeld ‘we lachen overal om’ bij de vraag over jullie sterkste punt, dan krijgen de vossen en de dolfijnen punten. Doen jullie de test met z'n tweeën, dan telt hij jullie antwoorden bij elkaar op. De dieren met de meeste punten worden jullie dierenkoppel.",
+    "faq3Q": "Welk dier staat het best voor een trouw koppel?",
+    "faq3A": "Vaak wordt de zwaan genoemd omdat een zwanenpaar jarenlang bij elkaar kan blijven. Ook bevers en wolven leven lang als koppel. In de test krijgen koppels met vaste gewoontes vaak de pinguïns.",
+    "faq4Q": "Wat betekent de uitslag ‘een kat en een hond’?",
+    "faq4A": "Van twee mensen die altijd ruzie hebben, zegt men dat ze ‘leven als kat en hond’. In de test is dat met een knipoog bedoeld. Deze uitslag is voor heel verschillende koppels die vaak kibbelen en er daarna om lachen.",
+    "faq5Q": "Kunnen we twee verschillende dieren zijn, bijvoorbeeld een otter en een kat?",
+    "faq5A": "De uitslag voor jullie als koppel is altijd een van de 10 dierenkoppels. Spelen jullie met z'n tweeën, dan laat de test ook de dieren zien die ieder voor zich had gekregen. Daar zien jullie of de een meer otter is en de ander meer kat.",
+    "faq6Q": "Kun je de test alleen doen?",
+    "faq6A": "Ja. Kies gewoon ‘Alleen, voor ons als koppel’ en antwoord met jullie als koppel in gedachten. Je krijgt een uitslag, maar je kunt jullie antwoorden niet vergelijken."
+  },
+  "jsonLd": {
+    "about": "het dierenkoppel dat bij jullie relatie past"
+  }
+}

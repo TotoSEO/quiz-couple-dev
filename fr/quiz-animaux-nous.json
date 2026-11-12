@@ -1,0 +1,123 @@
+{
+  "hero": {
+    "badge": "Quiz fun • À deux, ou seul(e) pour le couple",
+    "title": "Quel couple d'animaux sommes-nous ? Le test en 12 questions",
+    "titleHighlight": "Quel couple d'animaux sommes-nous ?",
+    "description": "Deux loutres qui ne se lâchent pas la patte ou un chien et un chat qui se chamaillent ? Chacun répond à 12 questions sur votre vie à deux. Le test vous montre ensuite le couple d'animaux qui vous ressemble le plus, avec sa photo.",
+    "subtitle": "12 questions • 3 minutes chacun • sur un seul téléphone",
+    "jumpBtn": "Faire le test"
+  },
+  "section1": {
+    "title": "Comment marche le test",
+    "p1": "Ce test est un <strong>jeu à faire en couple</strong>. Il cherche à quel couple d'animaux vous ressemblez, par exemple à deux loutres ou à deux loups. Il pose 12 questions sur votre vie à deux. Il vous demande par exemple à quoi ressemblent vos dimanches et <a href=\"/blog/disputes-couple/\">comment finissent vos disputes</a>.",
+    "p2": "Prenons la question sur la nuit. Si vous répondez « collés l'un contre l'autre », le test donne des points aux loutres. Si votre partenaire répond « chacun son côté du lit », il en donne aux chats. À la fin, le test <strong>additionne vos réponses</strong> et il garde les animaux qui ont le plus de points.",
+    "p3": "Le premier répond aux 12 questions puis il passe le téléphone à l'autre. Le second répond <strong>sans voir ce que le premier a choisi</strong>. Ensuite le test vous montre le couple d'animaux qui vous ressemble, avec sa photo. Il vous montre aussi les animaux que chacun aurait eus de son côté et la liste des questions où vous n'avez pas répondu pareil.",
+    "p4": "Vous pouvez aussi faire le test seul(e) en répondant pour votre couple. Par contre, vous ne pourrez pas comparer vos réponses et c'est justement la partie la plus drôle !"
+  },
+  "section2": {
+    "title": "Les 10 couples d'animaux du test",
+    "intro": "Le test peut donner 10 résultats. Certains couples d'animaux sont très collés, comme les loutres. D'autres sont plus indépendants, comme les chats. Voici à qui chacun ressemble le plus.",
+    "galerie": [
+      {
+        "id": "loutres",
+        "titre": "Deux loutres",
+        "texte": "Pour les couples très tendres qui aiment être collés l'un à l'autre.",
+        "alt": "Deux loutres de mer qui flottent sur le dos côte à côte et se tiennent par la patte"
+      },
+      {
+        "id": "manchots",
+        "titre": "Deux manchots",
+        "texte": "Pour les couples qui ont leurs habitudes et qui se font des petits cadeaux.",
+        "alt": "Deux manchots face à face sur une plage de galets, penchés sur un galet posé entre eux, devant des montagnes enneigées"
+      },
+      {
+        "id": "loups",
+        "titre": "Deux loups",
+        "texte": "Pour les couples soudés qui font passer leur famille et leurs amis avant tout.",
+        "alt": "Deux loups gris côte à côte dans une forêt enneigée, qui regardent dans la même direction"
+      },
+      {
+        "id": "cygnes",
+        "titre": "Deux cygnes",
+        "texte": "Pour les couples romantiques qui aiment les déclarations et les dates qui comptent.",
+        "alt": "Deux cygnes blancs face à face sur un lac au lever du soleil, leurs cous dessinent un cœur"
+      },
+      {
+        "id": "dauphins",
+        "titre": "Deux dauphins",
+        "texte": "Pour les couples joueurs qui ont toujours du monde autour d'eux.",
+        "alt": "Deux dauphins qui sautent ensemble hors d'une mer turquoise"
+      },
+      {
+        "id": "renards",
+        "titre": "Deux renards",
+        "texte": "Pour les couples complices qui se taquinent du matin au soir.",
+        "alt": "Deux renards roux qui jouent dans l'herbe haute au coucher du soleil"
+      },
+      {
+        "id": "chats",
+        "titre": "Deux chats",
+        "texte": "Pour les couples indépendants qui se retrouvent le soir.",
+        "alt": "Deux chats assis chacun à un bout d'un rebord de fenêtre, un gris et un roux, qui regardent dehors"
+      },
+      {
+        "id": "castors",
+        "titre": "Deux castors",
+        "texte": "Pour les couples qui ont toujours un projet en cours.",
+        "alt": "Deux castors côte à côte sur leur barrage de branches, au bord de l'eau dans une forêt"
+      },
+      {
+        "id": "chouettes",
+        "titre": "Deux chouettes",
+        "texte": "Pour les couples qui vivent la nuit et qui parlent pendant des heures.",
+        "alt": "Deux petites chouettes serrées l'une contre l'autre sur une branche, la nuit, sous la pleine lune"
+      },
+      {
+        "id": "chienchat",
+        "titre": "Un chien et un chat",
+        "texte": "Pour les couples très différents qui se chamaillent et qui en rient.",
+        "alt": "Un golden retriever et un chat tigré assis face à face dans un salon, museau contre museau"
+      }
+    ]
+  },
+  "section3": {
+    "title": "Ce qu'on sait des animaux qui vivent en couple",
+    "intro": "Les animaux du test ne sont pas là par hasard. Chacun a <a href=\"/quel-type-de-couple-etes-vous/\">une façon de vivre à deux</a> qui rappelle celle de certains couples. Voici ce qu'on sait de 4 d'entre eux.",
+    "sub1Title": "Les loutres de mer et leur sieste",
+    "sub1Text": "Les loutres de mer dorment sur le dos à la surface de l'eau. Pour ne pas dériver pendant leur sieste, elles s'enroulent dans de longues algues. Il arrive aussi que deux loutres <strong>se tiennent par la patte</strong>. C'est plus rare que ne le laissent croire les vidéos mais ça existe !",
+    "sub2Title": "Les manchots et leurs galets",
+    "sub2Text": "Chez les manchots papous et les manchots Adélie, le nid est fait de petits galets. Pendant la parade, <strong>le mâle en apporte à la femelle</strong>. On raconte souvent qu'il cherche le plus beau galet de la plage. C'est exagéré parce que n'importe quel galet fait l'affaire. Chez nous, le galet peut être un petit cadeau ou un mot gentil. Chacun a <a href=\"/test-langage-amour-couple/\">sa façon de montrer qu'il aime l'autre</a>.",
+    "sub3Title": "Les cygnes et les castors",
+    "sub3Text": "Un couple de cygnes peut rester ensemble <strong>pendant de nombreuses années</strong>, parfois toute la vie. Les castors vivent aussi en couple. Ils construisent ensemble leur barrage et leur hutte puis ils y élèvent leurs petits. Chez les mammifères, c'est rare. Des chercheurs de l'université de Cambridge ont étudié 2 500 espèces en 2013. Environ 9 % seulement vivent en couple.",
+    "sub4Title": "Les loups et leur meute",
+    "sub4Text": "On a longtemps cru qu'une meute était dirigée par un mâle qui s'était battu pour devenir le chef. On sait aujourd'hui qu'une meute est le plus souvent <strong>une famille</strong>. Elle réunit un couple et ses petits des dernières années. Les parents guident la meute comme des parents guident leurs enfants."
+  },
+  "section4": {
+    "title": "Et si vous n'avez pas les mêmes animaux ?",
+    "p1": "Ça arrive souvent. Par exemple, l'un voit votre couple comme deux loutres et l'autre comme deux chats. Ça ne veut pas dire que votre couple va mal. Le résultat de chacun dit surtout <a href=\"/test-quel-genre-de-partenaires-sommes-nous/\">comment il se comporte en couple</a> et ce dont il a besoin.",
+    "p2": "Regardez plutôt la liste des questions où vos réponses sont différentes. Si elles portent sur les soirées ou sur les vacances, ce n'est pas bien grave. Si elles portent sur le temps que vous passez ensemble, <strong>parlez-en tranquillement</strong>. L'un a peut-être besoin de plus de moments à deux et l'autre de plus d'air."
+  },
+  "section5": {
+    "title": "Ce qu'il faut savoir sur ce test",
+    "p1": "Ce test est un jeu. Il s'amuse avec l'image qu'on a de ces animaux et <strong>il ne dit rien de sérieux sur votre couple</strong>. Un résultat « chien et chat » ne veut pas dire que vous allez vous séparer ! Il sert surtout à rire et à comparer vos réponses.",
+    "p2": "Vos réponses ne sont pas enregistrées, elles restent sur votre téléphone. On compte seulement le résultat obtenu pour savoir lesquels sortent le plus. Votre prénom n'est pas enregistré non plus. Les photos ont été créées pour cette page."
+  },
+  "seo": {
+    "faqTitle": "Questions fréquentes",
+    "faq1Q": "Quels couples d'animaux peut-on obtenir ?",
+    "faq1A": "Le test peut donner 10 résultats : deux loutres, deux manchots, deux loups, deux cygnes, deux dauphins, deux renards, deux chats, deux castors, deux chouettes, ou un chien et un chat.",
+    "faq2Q": "Comment le résultat est-il calculé ?",
+    "faq2A": "Chaque réponse donne des points aux animaux qui lui correspondent. Par exemple, si vous répondez « on rit de tout » à la question sur votre force, les renards et les dauphins gagnent des points. Quand vous faites le test à deux, il additionne vos réponses et les animaux qui ont le plus de points deviennent ceux de votre couple.",
+    "faq3Q": "Quel animal représente le mieux un couple fidèle ?",
+    "faq3A": "On cite souvent le cygne parce qu'un couple de cygnes peut rester ensemble pendant de nombreuses années. Le castor et le loup vivent aussi en couple pendant longtemps. Dans le test, les couples fidèles à leurs habitudes obtiennent souvent les manchots.",
+    "faq4Q": "Que veut dire le résultat « un chien et un chat » ?",
+    "faq4A": "L'expression « s'entendre comme chien et chat » se dit de deux personnes qui se disputent tout le temps. Dans le test, c'est dit avec humour. Ce résultat va aux couples très différents qui se chamaillent souvent et qui en rient ensuite.",
+    "faq5Q": "Peut-on être deux animaux différents, par exemple une loutre et un chat ?",
+    "faq5A": "Le résultat du couple est toujours l'un des 10 duos du test. Par contre, quand vous jouez à deux, le test montre aussi les animaux que chacun aurait eus de son côté. C'est là que vous verrez si l'un est plutôt loutre et l'autre plutôt chat.",
+    "faq6Q": "Peut-on faire le test seul(e) ?",
+    "faq6A": "Oui. Il suffit de choisir « Seul(e), pour notre couple » et de répondre en pensant à votre couple. Vous aurez un résultat mais vous ne pourrez pas comparer vos réponses."
+  },
+  "jsonLd": {
+    "about": "le couple d'animaux qui ressemble à votre couple"
+  }
+}

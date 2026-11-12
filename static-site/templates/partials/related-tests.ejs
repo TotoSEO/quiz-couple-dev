@@ -74,7 +74,7 @@
     testChargeMentale:['testCoupleSain', 'quizPorteCulotte', 'testParentalite', 'testEmmenager', 'testCouple'],
     quizRencontre:    ['testAmourAmitie', 'questionsCouple', 'quizAmoureux', 'testSuisJeAmoureux'],
     testPersonnalite: ['testLangageAmour', 'testAttachement', 'testCouple', 'testCoupleSain'],
-    quizTypeCouple:   ['testPersonnalite', 'testLangageAmour', 'quizChienNous', 'testCouple', 'quizKnowledge'],
+    quizTypeCouple:   ['quizAnimauxNous', 'quizPartenairesNous', 'testPersonnalite', 'testLangageAmour', 'testCouple', 'quizKnowledge'],
     testPretRelation: ['testTrouverAmour', 'testEx', 'testAttachement', 'testOublierEx'],
     testDureeCelibat: ['testCelibataire', 'testTrouverAmour', 'testPretRelation', 'testCoupleOuCelibat'],
     testTrouverAmour: ['testCelibataire', 'testAttachement', 'testDependance', 'testDureeCelibat'],
@@ -82,8 +82,8 @@
     testCoupleOuCelibat: ['testCelibataire', 'testAttachement', 'testDependance', 'testPretRelation'],
     testEstCeLeBon:   ['testCoupleSain', 'testJeLaimeEncore', 'testFinCouple', 'testAmourHabitude'],
     testCompatSexuelle: ['quizCoquin', 'jeuActionVeriteHot', 'testCompatibilite', 'testPurete'],
-    testQuiAime:      ['testLangageAmour', 'quizPorteCulotte', 'testCommonPoints', 'testCoupleSain', 'testChargeMentale'],
-    testLangageAmour: ['testQuiAime', 'testPersonnalite', 'testAttachement', 'testCouple'],
+    testQuiAime:      ['testLangageAmour', 'quizPartenairesNous', 'quizPorteCulotte', 'testCommonPoints', 'testCoupleSain', 'testChargeMentale'],
+    testLangageAmour: ['testQuiAime', 'quizPartenairesNous', 'testPersonnalite', 'testAttachement', 'testCouple'],
     testAttachement:  ['testPersonnalite', 'testLangageAmour', 'testConfiance', 'testDependance'],
 
     // Lecture symbolique
@@ -94,7 +94,7 @@
     testAstroPrenoms: ['testDateNaissance', 'testKarmique', 'testCompatibilite', 'testCouple'],
 
     // Quiz légers
-    quizAmoureux:     ['jeuDilemmes', 'quizTuPreferes', 'quizKnowledge', 'quizMarrant'],
+    quizAmoureux:     ['quizAnimauxNous', 'jeuDilemmes', 'quizTuPreferes', 'quizKnowledge', 'quizMarrant'],
     quizMarrant:      ['quizGenant', 'quizMost', 'jeuActionVerite', 'quizChienNous', 'quizTuPreferes'],
     quizGenant:       ['quizMarrant', 'jeuActionVerite', 'quizMost', 'quizTuPreferes'],
     quizKnowledge:    ['jeuQuiDeNous', 'jeuQuestionsRapides', 'zamours', 'testCommonPoints', 'quizMost'],
@@ -138,7 +138,7 @@
     quizDuoVilains:      ['quizSuperVilain', 'quizPossession', 'quizMaisonNous', 'quizTuPreferes', 'quizMortFilmHorreur', 'jeuActionVerite'],
     // Les quiz fun « pour nous » (11 novembre 2026) : l'autre quiz du futur à
     // deux, le test qui va avec le projet, puis un quiz ou un jeu léger
-    quizChienNous:       ['quizMaisonNous', 'quizOuVivre', 'testEmmenager', 'quizTypeCouple', 'quizTuPreferes'],
+    quizChienNous:       ['quizMaisonNous', 'quizOuVivre', 'quizAnimauxNous', 'testEmmenager', 'quizTypeCouple', 'quizTuPreferes'],
     quizMaisonNous:      ['quizOuVivre', 'quizChienNous', 'testEmmenager', 'testMariage', 'quizTypeCouple'],
     // L'endroit où vivre et le style de mariage : l'autre projet à deux, le test
     // qui va avec, puis un quiz du futur à deux
@@ -150,7 +150,9 @@
     quizDuoNoel:         ['quizListeNoel', 'jeuNouvelAn', 'quizTypeCouple', 'quizMaisonNous'],
     // Qui porte la culotte (11 novembre 2026) : qui pense à tout, qui aime le
     // plus, puis un quiz et un jeu où l'on se désigne l'un l'autre
-    quizPorteCulotte:    ['testChargeMentale', 'testQuiAime', 'quizTypeCouple', 'jeuQuiDeNous'],
+    quizPorteCulotte:    ['quizPartenairesNous', 'quizAnimauxNous', 'testChargeMentale', 'testQuiAime', 'quizTypeCouple', 'jeuQuiDeNous'],
+    quizPartenairesNous: ['testLangageAmour', 'quizTypeCouple', 'quizAnimauxNous', 'testQuiAime'],
+    quizAnimauxNous: ['quizPartenairesNous', 'quizTypeCouple', 'quizChienNous', 'quizPorteCulotte'],
   };
 
   const _relatedIcons = {
@@ -165,7 +167,7 @@
     jeuActionVerite: '🎲', jeuActionVeriteHot: '🌶️', jeuGages: '🎡',
     jeuPlateau: '🎲', jeuQuiDeNous: '👀', jeuDilemmes: '⚖️', pourContre: '👍', jeuJamais: '🙊', jeuQuiPourrait: '🏆', jeuQuestionsRapides: '⚡', jeuMarguerite: '🌼', jeuNouvelAn: '🥂', jeuxParMessage: '📱', jeuOuiNon: '✅', jeuPhrases: '💬', jeuDixMais: '🔟', jeuSoireeCouples: '🎉',
     quizSerialKiller: '🔪', quizMortFilmHorreur: '🎬', quizPossession: '👻', quizSuperVilain: '🦹', quizDuoVilains: '🎭',
-    quizChienNous: '🐶', quizMaisonNous: '🏡', quizOuVivre: '🗺️', quizMariageNous: '💍', quizListeNoel: '🎅', quizDuoNoel: '🎄', quizPorteCulotte: '👖',
+    quizChienNous: '🐶', quizMaisonNous: '🏡', quizOuVivre: '🗺️', quizMariageNous: '💍', quizListeNoel: '🎅', quizDuoNoel: '🎄', quizPorteCulotte: '👖', quizPartenairesNous: '💑', quizAnimauxNous: '🐾',
     testRedFlag: '🚩', testLoveBombing: '💐', testDependance: '⚓', testPretRelation: '🌱', testPersonnalite: '💘', testTrouverAmour: '🧭', testCelibataire: '🔍',
     testCoupleOuCelibat: '🛋️', testJeLaimeEncore: '🕯️', testPurete: '🌡️', testAmourAttachement: '🌹', testDureeCelibat: '⏳', calculatriceAmour: '🧮', questionsCouple: '💬',
   };

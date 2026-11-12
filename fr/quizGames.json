@@ -420,7 +420,9 @@
     "quizMariageNous": "Quel mariage est fait pour nous ?",
     "quizListeNoel": "Sages ou pas sages ?",
     "quizDuoNoel": "Quels personnages de Noël êtes-vous ?",
-    "quizPorteCulotte": "Qui porte la culotte ?"
+    "quizPorteCulotte": "Qui porte la culotte ?",
+    "quizAnimauxNous": "Quel couple d'animaux sommes-nous ?",
+    "quizPartenairesNous": "Quel genre de partenaires sommes-nous ?"
   },
   "truefalse": {
     "ready": "Prêt pour le vrai ou faux ?",

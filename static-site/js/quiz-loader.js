@@ -492,6 +492,14 @@
                      commun: true, duoDabord: true, sansMelange: true, base: 'fun', images: 'mariage-nous', vignettes: true, icone: '💍',
                      axes: ['chateau', 'champetre', 'jardin', 'foret', 'plage', 'mairie', 'montagne', 'deux', 'vignes', 'fete'],
                      coefs: { vignes: 0.94, fete: 0.95, mairie: 0.95, chateau: 0.97 } },
+    'partenaires-nous': { prefix: 'partenairesNous', engine: 'portrait', totalQ: 12, pool: 12, quizType: 'partenaires-nous', needsGender: true,
+                     commun: true, duoDabord: true, sansMelange: true, base: 'fun', images: 'partenaires-nous', vignettes: true, icone: '💑',
+                     axes: ['soins', 'clown', 'romantique', 'aventure', 'organise', 'calin', 'zen', 'coach', 'independant'],
+                     coefs: { aventure: 0.95, soins: 0.95, organise: 0.96, clown: 0.98, coach: 0.96, zen: 0.98 } },
+    'animaux-nous': { prefix: 'animauxNous', engine: 'portrait', totalQ: 12, pool: 12, quizType: 'animaux-nous', needsGender: true,
+                     commun: true, duoDabord: true, sansMelange: true, base: 'fun', images: 'animaux-nous', vignettes: true, icone: '🐾',
+                     axes: ['loutres', 'manchots', 'loups', 'cygnes', 'dauphins', 'renards', 'chats', 'castors', 'chouettes', 'chienchat'],
+                     coefs: { chats: 0.96, loups: 0.97, castors: 0.98, chouettes: 0.98 } },
     // Les deux quiz de Noël « pour nous » (novembre 2026). Les personnages de
     // Noël : le moteur des portraits en mode commun, huit duos (le Père Noël
     // et la Mère Noël, deux lutins, deux rennes...), chacun avec sa photo ;

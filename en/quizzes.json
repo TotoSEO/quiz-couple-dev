@@ -634,6 +634,18 @@
     "metaDescription": "Who wears the pants in your relationship? Answer 20 questions about everyday decisions, on your own or together, to find out who decides more.",
     "description": "Answer 20 questions about everyday decisions to see who gets the last word more often."
   },
+  "quizAnimauxNous": {
+    "title": "What Animal Couple Are You? The Quiz to Take Together",
+    "shortTitle": "What Animal Couple Are We",
+    "metaDescription": "Two otters, two wolves or a cat and a dog? You each answer 12 questions and the quiz shows the animal couple that looks most like your relationship.",
+    "description": "You each answer 12 questions and the quiz shows you the animal couple you're most like, with its photo."
+  },
+  "quizPartenairesNous": {
+    "title": "What Kind of Partner Are You? The Quiz for Couples",
+    "shortTitle": "What Kind of Partners Are We",
+    "metaDescription": "Caring, hopelessly romantic or very independent? You each answer 12 questions and the quiz shows what kind of partners you are in your relationship.",
+    "description": "You each answer 12 questions and the quiz shows you what kind of partners you are, with a photo."
+  },
   "bilanCouple": {
     "title": "Relationship Assessment Online | Instant Results + PDF",
     "shortTitle": "Relationship assessment",

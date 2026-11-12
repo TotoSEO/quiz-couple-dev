@@ -195,6 +195,8 @@ export const ROUTE_SLUGS = {
   // « Qui porte la culotte dans notre couple ? » (11 novembre 2026, quiz fun) :
   // qui décide chez vous, seul(e) ou à deux, avec le moteur de « qui aime le plus ».
   quizPorteCulotte: { fr: 'test-qui-porte-la-culotte', en: 'who-wears-the-pants-quiz', es: 'test-quien-lleva-los-pantalones', de: 'wer-hat-die-hosen-an-test', it: 'test-chi-porta-i-pantaloni', nl: 'wie-heeft-de-broek-aan-test' },
+  quizPartenairesNous: { fr: 'test-quel-genre-de-partenaires-sommes-nous', en: 'what-kind-of-partners-are-we-quiz', es: 'test-que-tipo-de-novios-somos', de: 'was-fuer-partner-sind-wir-test', it: 'test-che-tipo-di-fidanzati-siamo', nl: 'wat-voor-partners-zijn-wij-test' },
+  quizAnimauxNous: { fr: 'test-quel-couple-d-animaux-sommes-nous', en: 'what-animal-couple-are-we-quiz', es: 'test-que-pareja-de-animales-somos', de: 'welches-tierpaar-sind-wir-test', it: 'test-che-coppia-di-animali-siamo', nl: 'welk-dierenkoppel-zijn-wij-test' },
   quizTentation: { fr: 'quiz-ile-de-la-tentation', en: 'temptation-island-quiz', es: 'quiz-la-isla-de-las-tentaciones', de: 'temptation-island-quiz', it: 'quiz-temptation-island', nl: 'temptation-island-quiz' },
   admin: { fr: 'admin', en: 'admin', es: 'admin', de: 'admin', it: 'admin', nl: 'admin' },
   contact: { fr: 'contact', en: 'contact', es: 'contacto', de: 'kontakt', it: 'contatto', nl: 'contact' },
@@ -340,6 +342,8 @@ export const QUIZ_FEATURED = {
   quizDuoNoel:       { file: 'noel-figurines-duos', old: null, alt: { fr: "Une étagère décorée d'une guirlande de sapin et de boules roses et violettes, où des figurines de Noël sont rangées deux par deux : le Père Noël et la Mère Noël, deux lutins, deux rennes, un casse-noisette et une danseuse, deux gnomes", en: 'A shelf decorated with a pine garland and pink and purple baubles, lined with Christmas figurines two by two: Santa and Mrs. Claus, two elves, two reindeer, a nutcracker and a ballerina, two gnomes', es: 'Una repisa decorada con una guirnalda de abeto y bolas rosas y moradas, con figuritas de Navidad de dos en dos: Papá Noel y Mamá Noel, dos elfos, dos renos, un cascanueces y una bailarina, dos gnomos', de: 'Ein Regal mit Tannengirlande und rosa und lila Kugeln, auf dem Weihnachtsfiguren paarweise stehen: der Weihnachtsmann und seine Frau, zwei Elfen, zwei Rentiere, ein Nussknacker und eine Ballerina, zwei Wichtel', it: "Una mensola decorata con una ghirlanda di abete e palline rosa e viola, con statuine di Natale a due a due: Babbo Natale e Mamma Natale, due elfi, due renne, uno schiaccianoci e una ballerina, due gnomi", nl: 'Een plank met een dennenslinger en roze en paarse kerstballen, met kerstfiguurtjes twee aan twee: de Kerstman en de Kerstvrouw, twee elfjes, twee rendieren, een notenkraker en een ballerina, twee kerstkabouters' } },
   // Qui porte la culotte : une scène dessinée avec les deux mascottes (pas de photo)
   quizPorteCulotte:  { file: 'culotte-jean-tire', old: null, alt: { fr: "Les deux mascottes de Quiz Couple, la rose et le violet, tirent chacune sur une jambe d'un même jean, sous une petite couronne dorée", en: 'The two Quiz Couple mascots, the pink one and the purple one, each pulling on one leg of the same pair of jeans, under a small golden crown', es: 'Las dos mascotas de Quiz Couple, la rosa y la violeta, tiran cada una de una pernera del mismo pantalón vaquero, bajo una pequeña corona dorada', de: 'Die beiden Maskottchen von Quiz Couple, das rosa und das violette, ziehen jeweils an einem Bein derselben Jeans, darüber eine kleine goldene Krone', it: 'Le due mascotte di Quiz Couple, la rosa e il viola, tirano ognuna una gamba dello stesso paio di jeans, sotto una piccola corona dorata', nl: 'De twee mascottes van Quiz Couple, de roze en de paarse, trekken elk aan een pijp van dezelfde spijkerbroek, onder een klein gouden kroontje' } },
+  quizAnimauxNous:    { file: 'animaux-nous-jumelles-photos', old: null, alt: { fr: "Des jumelles anciennes, un carnet en cuir et trois photos instantanées de deux loutres, de deux cygnes et de deux renardeaux, sur une table en bois au milieu de feuilles d'automne", en: "Old binoculars, a leather notebook and three instant photos of two otters, two swans and two fox cubs, on a wooden table among autumn leaves", es: "Unos prismáticos antiguos, un cuaderno de cuero y tres fotos instantáneas de dos nutrias, dos cisnes y dos crías de zorro, sobre una mesa de madera entre hojas de otoño", de: "Ein altes Fernglas, ein Notizbuch aus Leder und drei Sofortbilder von zwei Ottern, zwei Schwänen und zwei Fuchswelpen auf einem Holztisch zwischen Herbstblättern", it: "Un vecchio binocolo, un taccuino di pelle e tre foto istantanee di due lontre, due cigni e due cuccioli di volpe, su un tavolo di legno tra le foglie d'autunno", nl: "Een oude verrekijker, een leren notitieboekje en drie polaroidfoto's van twee otters, twee zwanen en twee vossenwelpen, op een houten tafel tussen herfstbladeren" } },
+  quizPartenairesNous: { file: 'partenaires-nous-cles-photos', old: null, alt: { fr: "Deux clés aux anneaux rose et violet, un cœur en papier rouge, un bouquet de fleurs des champs et trois photos instantanées d'un dîner aux chandelles, de deux sacs à dos et de deux ours en peluche, sur une table en bois", en: "Two keys with a pink and a purple ring, a red paper heart, a bunch of wild flowers and three instant photos of a candlelit dinner, two backpacks and two teddy bears, on a wooden table", es: "Dos llaves con anillas rosa y morada, un corazón de papel rojo, un ramo de flores silvestres y tres fotos instantáneas de una cena con velas, dos mochilas y dos osos de peluche, sobre una mesa de madera", de: "Zwei Schlüssel mit einem rosa und einem lila Ring, ein rotes Papierherz, ein Strauß Wiesenblumen und drei Sofortbilder von einem Abendessen bei Kerzenlicht, zwei Rucksäcken und zwei Teddybären auf einem Holztisch", it: "Due chiavi con un anello rosa e uno viola, un cuore di carta rosso, un mazzo di fiori di campo e tre foto istantanee di una cena a lume di candela, di due zaini e di due orsacchiotti, su un tavolo di legno", nl: "Twee sleutels met een roze en een paarse ring, een rood papieren hart, een bos veldbloemen en drie polaroidfoto's van een etentje bij kaarslicht, twee rugzakken en twee teddyberen, op een houten tafel" } },
   quizTentation:     { file: 'island-bonfire',            old: null,                  alt: { fr: 'Feu de camp sur une plage tropicale la nuit, avec palmiers et pleine lune', en: 'Bonfire on a tropical beach at night, with palm trees and a full moon', es: 'Hoguera en una playa tropical de noche, con palmeras y luna llena', de: 'Lagerfeuer an einem tropischen Strand bei Nacht, mit Palmen und Vollmond', it: 'Falò su una spiaggia tropicale di notte, con palme e luna piena', nl: 'Kampvuur op een tropisch strand bij nacht, met palmbomen en een volle maan' } },
 };
 
@@ -455,6 +459,8 @@ export const ROUTE_CONFIG = {
   quizListeNoel: { template: 'quiz-liste-noel', namespaces: ['quiz-liste-noel', 'quizzes', 'quizGames', 'gd', 'common'] },
   quizDuoNoel: { template: 'quiz-duo-noel', namespaces: ['quiz-duo-noel', 'quizzes', 'quizGames', 'gd', 'common'] },
   quizPorteCulotte: { template: 'quiz-porte-culotte', namespaces: ['quiz-porte-culotte', 'quizzes', 'quizGames', 'gd', 'common'] },
+  quizPartenairesNous: { template: 'quiz-partenaires-nous', namespaces: ['quiz-partenaires-nous', 'quizzes', 'quizGames', 'gd', 'common'] },
+  quizAnimauxNous: { template: 'quiz-animaux-nous', namespaces: ['quiz-animaux-nous', 'quizzes', 'quizGames', 'gd', 'common'] },
   quizTentation: { template: 'quiz-tentation', namespaces: ['quiz-tentation', 'quizzes', 'quizGames', 'gd', 'common'] },
   testPurete: { template: 'test-purete', namespaces: ['test-purete', 'quizzes', 'common'] },
   admin: { template: 'admin', namespaces: ['common'] },
@@ -592,6 +598,8 @@ export const BILAN_ENTREES = {
   quizDuoNoel: { groupe: 'jeu', id: 'duo-noel' },
   // Qui porte la culotte (11 novembre 2026), un quiz fun comme les autres.
   quizPorteCulotte: { groupe: 'jeu', id: 'porte-culotte' },
+  quizPartenairesNous: { groupe: 'jeu', id: 'partenaires-nous' },
+  quizAnimauxNous: { groupe: 'jeu', id: 'animaux-nous' },
   questionsCouple: { groupe: 'questions', id: 'questions-couple' },
 };
 // Les mentions obligatoires d'un vendeur (mentions légales et conditions de
@@ -772,7 +780,7 @@ export const SECTIONS_NAV = {
   // menu (SAISONS_QUIZ, saisonEnTete).
   speciaux: saisonEnTete([
     { cle: 'futur', routes: ['quizChienNous', 'quizMaisonNous', 'quizOuVivre', 'quizMariageNous'] },
-    { cle: 'vous', routes: ['quizPorteCulotte'] },
+    { cle: 'vous', routes: ['quizPorteCulotte', 'quizAnimauxNous', 'quizPartenairesNous'] },
     { cle: 'halloween', routes: ['quizSerialKiller', 'quizMortFilmHorreur', 'quizPossession', 'quizSuperVilain', 'quizDuoVilains'] },
     { cle: 'noel', routes: ['quizListeNoel', 'quizDuoNoel'] },
   ]),
@@ -2308,6 +2316,8 @@ export const QUIZ_RELATED_ARTICLES = {
   quizTypeCouple: ['disputes-couple', 'manque-communication-couple', 'charge-mentale-couple', 'activites-couple-ete'],
   // Qui porte la culotte : les disputes, se parler, qui pense à tout, et l'argent
   quizPorteCulotte: ['disputes-couple', 'manque-communication-couple', 'charge-mentale-couple', 'choses-pas-accepter-couple', 'compte-commun-ou-compte-separe'],
+  quizPartenairesNous: ['copain-ne-fait-pas-effort', 'questions-a-poser-a-son-copain', 'questions-a-poser-a-sa-copine', '5-langages-de-l-amour', 'surprise-pour-son-copain-ou-sa-copine', 'choses-pas-accepter-couple'],
+  quizAnimauxNous: ['questions-pour-mieux-se-connaitre-en-couple', '36-questions-pour-tomber-amoureux', 'rituels-de-couple', 'styles-attachement-couple', 'activites-couple-hiver'],
   // Où vivre dans 10 ans : les questions sur l'avenir. Le mariage : le cocon de la demande en mariage
   // (du 13 au 28 janvier 2027) et, d'ici là, le cadeau de mariage et les questions sur l'avenir.
   quizOuVivre: ['questions-avenir-couple'],
