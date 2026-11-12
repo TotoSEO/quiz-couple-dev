@@ -80,7 +80,11 @@ try {
   if (p.statut !== 200) throw new Error('payer : ' + p.statut + ' ' + JSON.stringify(p.json));
   const lien = String(p.json.url || '');
   if (!/^https:\/\/checkout\.stripe\.com\//.test(lien)) throw new Error('payer : pas d\'adresse Stripe dans la réponse ' + JSON.stringify(p.json).slice(0, 300));
-  console.log('page Stripe ouverte : ' + lien.replace(/(checkout\.stripe\.com\/c\/pay\/)[^#?]{12}.*/, '$1…'));
+  // Seul l'hôte part au journal, public comme le dépôt, jamais l'adresse
+  // d'une vraie page de paiement. Jusqu'au 12 novembre 2026, seule la forme
+  // /c/pay/ était coupée, et Stripe écrit aussi /g/pay/ : l'adresse entière
+  // de la page de la sonde sortait alors dans le journal.
+  console.log('page Stripe ouverte : ' + lien.replace(/^(https:\/\/checkout\.stripe\.com\/).*$/, '$1…'));
   if (C.promoEnCours(new Date(), 12)) {
     if (p.json.promo !== true) throw new Error('réduction ' + C.PROMO_CODE + ' (' + C.PROMO_STRIPE + ') refusée par Stripe : la page de paiement s\'ouvre au prix plein alors que le site affiche -' + C.PROMO_POURCENT + ' %. Vérifier le code dans Stripe (actif, date d\'expiration, plafond, produits) ; le détail est dans les journaux de la fonction bilan.');
     // Le montant que Stripe a calculé pour la page (une fonction d'avant le
