@@ -11,7 +11,8 @@
   "exemples": {
     "amorce": "Wer würde eher",
     "avant": "",
-    "apres": "?"
+    "apres": "?",
+    "liste": "toutes"
   },
   "section1": {
     "title": "Die Regeln von Wer würde eher",
@@ -33,9 +34,10 @@
     "p4": "Und wenn euch das Spiel gefällt, haben wir <a href=\"/de/paarspiele/\">weitere Spiele für zu zweit</a> nach derselben Idee: ein Handy, nichts zu installieren, und Fragen, die ins Reden bringen. <a href=\"/de/ich-hab-noch-nie-paar-spiel/\">Ich hab noch nie</a> ist wahrscheinlich das bekannteste, und viele Paare starten es direkt nach einer Runde Wer würde eher."
   },
   "section3": {
-    "title": "Beispiele für Fragen aus dem Spiel",
-    "intro": "Hier sind zwanzig der hundertacht Fragen, genau so, wie das Spiel sie stellt. Es gibt leichte, weniger leichte, und ein paar, über die man sich streiten kann:",
-    "apres": "Die anderen 88 stecken im Spiel, und jede Runde zieht sie zufällig. Wenn ihr eure 20 Fragen durch habt und weitermachen wollt, bietet das Spiel 20 weitere an. Und der Knopf „Nochmal mit anderen Fragen spielen“ zieht zuerst aus denen, die noch nicht dran waren."
+    "title": "Alle 108 Wer würde eher Fragen für Paare",
+    "intro": "Hier sind alle 108 Fragen, genau so, wie das Spiel sie stellt. Es gibt leichte, weniger leichte, und ein paar, über die man sich streiten kann:",
+    "suite": "Die anderen 78 Fragen ansehen",
+    "apres": "Jede Runde zieht 20, 40 oder 60 davon zufällig. Wenn ihr eure 20 Fragen durch habt und weitermachen wollt, bietet das Spiel 20 weitere an. Und der Knopf „Nochmal mit anderen Fragen spielen“ zieht zuerst aus denen, die noch nicht dran waren."
   },
   "section4": {
     "title": "Ein paar Tipps zum Spielen",

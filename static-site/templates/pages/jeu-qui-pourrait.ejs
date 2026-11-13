@@ -12,7 +12,16 @@
   // français, "...?" ailleurs, et l'espagnol ouvre avec « ¿ ».
   const exAvant = t(ns + ':exemples.avant', '');
   const exApres = t(ns + ':exemples.apres', ' ?');
-  const exemplesIds = [1, 5, 13, 17, 25, 30, 32, 38, 44, 50, 55, 58, 62, 66, 73, 76, 82, 86, 97, 106];
+  // Une langue qui vise les recherches de « questions » (who's more likely to
+  // questions, Wer würde eher Fragen) écrit exemples.liste = "toutes" : la
+  // page liste alors les cent-huit questions du jeu, pas seulement vingt.
+  // Les trente premières restent à l'écran, les autres se déplient
+  // (section3.suite), pour que la page ne fasse pas six écrans de liste.
+  const listeEntiere = t(ns + ':exemples.liste', '') === 'toutes';
+  const exemplesIds = listeEntiere
+    ? Array.from({ length: 108 }, function(_, i) { return i + 1; })
+    : [1, 5, 13, 17, 25, 30, 32, 38, 44, 50, 55, 58, 62, 66, 73, 76, 82, 86, 97, 106];
+  const exemplesVisibles = listeEntiere ? 30 : exemplesIds.length;
   const exemples = exemplesIds
     .map(function(i) { const v = tgd('quiPourrait.q' + i, ''); return v && v !== 'quiPourrait.q' + i ? v : null; })
     .filter(Boolean);
@@ -127,12 +136,26 @@
       <h2 class="text-2xl md:text-3xl font-bold mb-6"><%= t(ns + ':section3.title', '') %></h2>
       <p class="text-muted-foreground leading-relaxed mb-8"><%- t(ns + ':section3.intro', '') %></p>
       <ol class="quiz-static-list">
-        <% exemples.forEach(function(q) { %>
+        <% exemples.slice(0, exemplesVisibles).forEach(function(q) { %>
         <li class="quiz-static-item">
-          <h3 class="quiz-static-q"><%= exAvant %><%= amorce %> <%= q %><%= exApres %></h3>
+          <% if (listeEntiere) { %><p class="quiz-static-q"><%= exAvant %><%= amorce %> <%= q %><%= exApres %></p><% } else { %><h3 class="quiz-static-q"><%= exAvant %><%= amorce %> <%= q %><%= exApres %></h3><% } %>
         </li>
         <% }) %>
       </ol>
+      <% if (exemples.length > exemplesVisibles) { %>
+      <details class="quiz-static-suite border border-border rounded-lg mt-4">
+        <summary><%= t(ns + ':section3.suite', '') %></summary>
+        <div class="p-4">
+          <ol class="quiz-static-list" start="<%= exemplesVisibles + 1 %>" style="counter-reset: exq <%= exemplesVisibles %>;">
+            <% exemples.slice(exemplesVisibles).forEach(function(q) { %>
+            <li class="quiz-static-item">
+              <p class="quiz-static-q"><%= exAvant %><%= amorce %> <%= q %><%= exApres %></p>
+            </li>
+            <% }) %>
+          </ol>
+        </div>
+      </details>
+      <% } %>
       <p class="text-muted-foreground leading-relaxed mt-8"><%- t(ns + ':section3.apres', '') %></p>
     </section>
     <% } %>

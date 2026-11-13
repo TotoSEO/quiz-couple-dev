@@ -84,10 +84,10 @@
     "metaDescription": "Interactive couples quiz: who knows their partner best? 100 questions to guess in turns. Free, fun and perfect for date night!"
   },
   "quizMost": {
-    "title": "Who Is Most Likely To? Couple Quiz with 240 Questions",
-    "shortTitle": "Who Is Most Likely?",
+    "title": "Who's the Most...? 240 Questions to Vote On, 2 to 8 Players",
+    "shortTitle": "Who's the Most...?",
     "description": "2 to 8 players, vote together to discover who is the funniest, most talkative, most romantic... 240+ fun questions!",
-    "metaDescription": "Who Is Most Likely To? quiz with 240+ questions for 2-8 players. Vote, laugh and discover who's the funniest, most romantic... Free!"
+    "metaDescription": "Who's the funniest, the most romantic, the most stubborn? 240 questions to vote on, as a couple or with friends, from 2 to 8 players. Free, no sign-up."
   },
   "questionsCouple": {
     "title": "100+ Questions for Couples to Ask Each Other",
@@ -203,10 +203,10 @@
     "metaDescription": "Free online Temptation Island quiz: 12 days on the island, a temptation every day and a final bonfire. Would your relationship survive the test?"
   },
   "testAttachement": {
-    "title": "Attachment style test: what is yours?",
-    "shortTitle": "Attachment Test",
+    "title": "Attachment Style Quiz: Which of the 4 Styles Are You?",
+    "shortTitle": "Attachment Style Quiz",
     "description": "20 questions to discover your romantic attachment style: secure, anxious, avoidant or disorganised. Instant result.",
-    "metaDescription": "Secure, anxious, avoidant or disorganised? Discover your romantic attachment style in 20 questions. Based on Bowlby's theory."
+    "metaDescription": "Free attachment style quiz: 20 questions to find out if you are secure, anxious, avoidant or disorganised in love. Instant result, based on Bowlby's theory."
   },
   "testConfiance": {
     "title": "Trust test for couples: do you trust each other?",
@@ -259,7 +259,7 @@
   "jeuxCouple": {
     "title": "Online games for couples: 15 free games to play together",
     "shortTitle": "Couple games",
-    "description": "Fifteen games to play together: the year in review, rapid-fire questions, he's a 10 but, finish the sentence, yes or no, for or against, who could, never have I ever, which one of us, would you rather, dilemmas, truth or dare, its naughty version, the forfeit wheel and the board game.",
+    "description": "Fifteen games to play together: the year in review, rapid-fire questions, he's a 10 but, finish the sentence, yes or no, for or against, who's more likely to, never have I ever, which one of us, would you rather, dilemmas, truth or dare, its naughty version, the forfeit wheel and the board game.",
     "metaDescription": "15 free couple games on a single phone: yes or no, for or against, which one of us, would you rather, dilemmas, truth or dare and the forfeit wheel. No sign-up."
   },
   "jeuGages": {
@@ -390,11 +390,11 @@
     "description": "Answer about what you feel, the score sorts attraction, crush and real feelings."
   },
   "jeuQuiPourrait": {
-    "title": "Who Could? Online Couples Game with 100+ Questions",
-    "shortTitle": "Who could?",
-    "metaTitle": "Who Could? Online Couples Game with 100+ Questions",
-    "metaDescription": "One question, your two names, and you point at who could do it. 108 questions, rounds of 20, 40 or 60, free and no sign-up.",
-    "description": "A question appears, you point at who could do it: one of you two, or nobody."
+    "title": "Who's More Likely To? 108 Questions for Couples (Free Game)",
+    "shortTitle": "Who's more likely to?",
+    "metaTitle": "Who's More Likely To? 108 Questions for Couples (Free Game)",
+    "metaDescription": "Who's more likely to buy a luxury watch on a whim? 108 most likely to questions for couples: tap a name and see who gets picked the most. Free, no sign-up.",
+    "description": "A question appears and you point at who's more likely to do it: one of you two, or nobody."
   },
   "jeuQuestionsRapides": {
     "title": "Rapid-Fire Questions for Couples: The 3, 2, 1, Go! Game",
