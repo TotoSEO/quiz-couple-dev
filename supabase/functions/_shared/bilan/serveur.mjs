@@ -190,10 +190,15 @@ export const JETONS_MAIL_MAX = ENVOIS_MAX + 5;
 // (js/celib-bientot.js), la clé est l'identifiant de la page.
 // `un_telephone` (10 novembre 2026) : à deux, le choix « chacun son tour sur
 // ce téléphone » de l'écran d'invitation.
-export const ETAPES_PAGE = ['depart', 'depart_erreur', 'invitation_vue', 'situation_vue', 'email_vue', 'offre_vue', 'attente_vue', 'case_manquante', 'statut_solo', 'celib_carte_vue', 'celib_carte_clic', 'un_telephone'];
+// `achat_vu`, `colle_clic` et `case_cochee` (13 novembre 2026) : ce que font
+// les gens sur l'offre, sans rien changer à l'écran. Le bouton de paiement
+// arrivé à l'écran, l'appui sur la barre collée qui y descend, la case de la
+// renonciation cochée. La clé `attente` : l'offre repliée de l'écran
+// d'attente, quand l'autre n'a pas fini ; sans clé, l'écran « rapport prêt ».
+export const ETAPES_PAGE = ['depart', 'depart_erreur', 'invitation_vue', 'situation_vue', 'email_vue', 'offre_vue', 'attente_vue', 'case_manquante', 'statut_solo', 'celib_carte_vue', 'celib_carte_clic', 'un_telephone', 'achat_vu', 'colle_clic', 'case_cochee'];
 // Les écrans comptés une seconde fois avec `_point` pour le point sur ma
 // relation (la page envoie `formule: 'point'`).
-const ETAPES_POINT = ['depart', 'depart_erreur', 'email_vue', 'offre_vue', 'case_manquante'];
+const ETAPES_POINT = ['depart', 'depart_erreur', 'email_vue', 'offre_vue', 'case_manquante', 'achat_vu', 'colle_clic', 'case_cochee'];
 // L'identifiant d'une page du site (routeKey), pour la carte des célibataires.
 const PAGE_SITE = /^[A-Za-z0-9-]{1,40}$/;
 // Les réponses des célibataires (action `celib`) : par adresse IP et par
@@ -481,6 +486,7 @@ export function creerServeur({ stockage, stripe = null, stripeTest = false, cour
     // créateur, chacun son tour.
     else if (quoi === 'invitation_vue') cle = corps.cle === 'qr' || corps.cle === 'tel' ? corps.cle : '';
     else if (quoi === 'offre_vue') cle = C.zoneValide(corps.cle);
+    else if (quoi === 'achat_vu' || quoi === 'case_cochee') cle = corps.cle === 'attente' ? 'attente' : '';
     else if (quoi === 'celib_carte_vue' || quoi === 'celib_carte_clic') cle = typeof corps.cle === 'string' && PAGE_SITE.test(corps.cle) ? corps.cle : 'autre';
     // Le départ du point : la page a déjà compté le départ (et le départ
     // seul(e)) au premier écran de création ; le formulaire du point, qui

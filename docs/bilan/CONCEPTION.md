@@ -2494,3 +2494,98 @@ sans date de fin, et le fichier du prix le déclarait encore.
 Une prochaine réduction prend un nouveau code, créé dans Stripe, avec une date
 de fin, et se calcule depuis 7,90 € (section du 10 novembre). Le Black Friday
 attend toujours la réponse de Thomas.
+
+## 13 novembre 2026 : trois jours après, et trois compteurs sur l'offre
+
+Le suivi programmé des changements du 10 novembre, lu par
+`bilan-chiffres.yml` (7 jours) le 13 à 11 h (heure de Paris). Les changements
+étaient en ligne le 10 vers 17 h.
+
+### Ce qui a bougé
+
+| | 7 au 9 novembre | 11 et 12 novembre |
+|---|---|---|
+| Visites de la page par jour | 357, 444, 368 | 338, 281 |
+| Clics sur « Commencer » (part des visites) | 8 %, 9 %, 10 % | 51 %, 53 % |
+| Évaluations à deux créées par jour | 11, 12, 13 | 74, 68 |
+| Partenaires arrivés par jour | 4, 5, 4 | 19, 17 |
+| Couples allés au bout par jour | 2, 4, 1 | 6, 5 |
+| Points (seul) créés et finis par jour | 1 à 9 créés, 0 ou 1 fini | 25 et 23 créés, 10 et 8 finis |
+| Arrivées par le QR code par jour | 0 ou 1 | 13, 13 |
+
+Avant le 4 novembre, 23 % des visites cliquaient, 22 évaluations à deux
+étaient créées par jour et 4 couples allaient au bout. Les visites de la page
+ont un peu baissé avec la fin de la barre de la réduction, qui en amenait une
+quarantaine par jour.
+
+- **La carte sous le score** : 63 visites de la page en moins de trois jours
+  (une vingtaine par jour, contre 3 pour l'ancien encart), 21 évaluations,
+  4 couples et une personne seule au bout, aucune vente.
+- **Un seul téléphone** : choisi 22 fois du 10 au 12 (6, 9, 7), et 9
+  partenaires ont accepté sur place. Aucun choix compté le 13 au matin pour
+  28 évaluations à deux, alors que 3 acceptations sur place l'étaient : à
+  relire au prochain relevé (le code n'a pas changé depuis le 10).
+- Les arrêts n'ont pas changé de place : sur 326 évaluations créées en sept
+  jours, 164 s'arrêtent dans la première partie.
+
+### Ce qui n'a pas bougé
+
+- **Les ventes** : 2 du 10 au soir au 13 au matin (7,90 € chacune), contre une
+  tous les deux jours avant. L'une a été payée le 10 au soir par un couple
+  allé au bout ; l'autre le 13 par quelqu'un dont le partenaire n'avait pas
+  encore accepté l'invitation (l'offre repliée de l'écran d'attente).
+  11 ventes et 75,26 € depuis l'ouverture.
+- **L'écran « rapport prêt »** : sur les 19 couples allés au bout depuis le
+  10 au soir, un seul a ouvert la page de paiement (30 % du 27 octobre au
+  10 novembre). Par vue de l'offre, l'écart est plus faible : 4 pages de
+  paiement ouvertes pour 42 offres vues à deux (9,5 %), contre 14 pour 110 du
+  23 octobre au 9 novembre (12,7 %), parce que des ouvertures viennent
+  d'évaluations plus anciennes.
+- **Par langue, en sept jours** : aucun des 9 couples français allés au bout
+  n'a ouvert la page de paiement ; en espagnol, 3 des 13 couples au bout l'ont
+  ouverte et 2 ont payé ; en anglais, 5 couples au bout, 2 pages ouvertes et
+  2 ventes, dont celle payée avant que le partenaire réponde.
+- **Le point** : 28 finis du 10 au 13 novembre, la page de paiement ouverte
+  pour la première fois (3 ouvertures le 12, une seule évaluation dans la
+  liste), aucune vente.
+
+### Ce qu'on en retient
+
+« Les questions sont gratuites » et le bouton unique font commencer cinq fois
+plus de monde qu'avec les deux cartes de prix, et trois fois plus qu'en
+octobre. Ces personnes vont au bout un peu moins souvent (8 % des
+évaluations à deux créées, 18 % avant) et, pour l'instant, n'achètent pas
+plus. Dix-neuf couples ne suffisent pas pour dire si la question offerte, le
+prix sans réduction ou simplement ce public plus large font baisser la part
+qui ouvre la page de paiement. Ce n'est pas une panne : l'écran « rapport
+prêt » et le paiement ont été rejoués le 13 sur le site construit (français,
+espagnol, anglais), la barre collée, le bloc d'achat, la case et la
+redirection vers Stripe marchent.
+
+Le haut de la page de vente ne change pas.
+
+### Trois compteurs de plus
+
+Thomas : « ok pour les compteurs ». On savait qu'une offre était vue
+(`offre_vue`), qu'on avait appuyé sans la case (`case_manquante`) et qu'une
+page de paiement était ouverte, rien entre les deux. Trois comptes, une fois
+par visite, sans rien changer à l'écran :
+
+- `achat_vu` : le bouton de paiement est arrivé à l'écran (aux six dixièmes
+  au moins). Sur un téléphone, il est sous le radar, les tuiles, la question
+  offerte et ce que contient le rapport.
+- `colle_clic` : l'appui sur la barre collée, qui descend au bloc d'achat.
+- `case_cochee` : la case de la renonciation cochée.
+
+Avec `_solo` pour le seul(e) et `_point` pour le point, comme les autres
+étapes ; la clé `attente` pour l'offre repliée de l'écran d'attente (celle de
+la vente du 13). `bilan-chiffres.yml` écrit « L'offre, jour par jour » : les
+offres vues, le bouton vu, la barre, la case cochée, l'appui sans la case, la
+page de paiement, à deux puis seul(e).
+
+À lire le 20 novembre (suivi programmé) : sur cent offres vues, combien voient
+le bouton, combien cochent la case, combien ouvrent la page de paiement. Si
+peu de gens voient le bouton, l'écran est trop long avant le prix ; s'ils le
+voient sans cocher, c'est le prix ou l'envie ; s'ils cochent sans ouvrir,
+c'est le bouton ou la case. Une réduction datée du Black Friday, calculée
+depuis 7,90 €, attend la réponse de Thomas.

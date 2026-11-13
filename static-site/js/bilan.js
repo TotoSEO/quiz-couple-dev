@@ -2177,6 +2177,35 @@
     try { achat.scrollIntoView({ behavior: 'smooth', block: 'start' }); } catch (e) { achat.scrollIntoView(true); }
   }
 
+  // Ce que font les gens sur l'offre (13 novembre 2026 : depuis le 10, sur
+  // dix-neuf couples allés au bout, un seul avait ouvert la page de paiement,
+  // et rien ne disait où les autres s'arrêtaient sur l'écran). Compté une
+  // fois par visite, sans rien changer à l'écran : le bouton de paiement
+  // arrivé à l'écran (achat_vu), la case de la renonciation cochée
+  // (case_cochee), et l'appui sur la barre collée (colle_clic, compté dans
+  // actionsOffre). attente : l'offre repliée de l'écran d'attente, quand
+  // l'autre n'a pas fini ; le bouton n'y compte qu'une fois l'offre dépliée.
+  var obsAchat = null;
+  function surveillerAchat(entree, mode, attente) {
+    if (obsAchat) { obsAchat.disconnect(); obsAchat = null; }
+    var achat = document.getElementById('bilan-achat');
+    if (!achat) return;
+    var o = { mode: mode, id: entree.id, formule: FORMULE };
+    if (attente) o.cle = 'attente';
+    var payer = achat.querySelector('[data-action="payer"]');
+    if (payer && 'IntersectionObserver' in window) {
+      var obs = obsAchat = new IntersectionObserver(function (entrees) {
+        if (!entrees[entrees.length - 1].isIntersecting) return;
+        compterVue('achat_vu', o);
+        obs.disconnect();
+        if (obsAchat === obs) obsAchat = null;
+      }, { threshold: 0.6 });
+      obs.observe(payer);
+    }
+    var caseR = document.getElementById('bilan-renonce');
+    if (caseR) caseR.addEventListener('change', function () { if (caseR.checked) compterVue('case_cochee', o); });
+  }
+
   // Le sommaire du rapport et sa couverture à leurs prénoms : les chapitres
   // de rapport.mjs (chapitresListe), dans le même ordre.
   function sommaire(etat) {
@@ -2228,7 +2257,10 @@
 
   function actionsOffre(entree, mode) {
     return {
-      versAchat: versAchat,
+      versAchat: function () {
+        compterVue('colle_clic', { mode: mode, id: entree.id, formule: FORMULE });
+        versAchat();
+      },
       payer: function (b) {
         var err = document.getElementById('bilan-erreur');
         var montre = function (cle) { err.textContent = ins(remplir(tr(cle, ''), {})); err.hidden = false; };
@@ -2311,6 +2343,7 @@
         '<p class="bilan-note">' + x('attente.revoirAide', { autre: autre }) + '</p>', 'bilan-carte--discrete');
     afficher(html);
     if (!paye) compterVue('attente_vue', { mode: etat.mode, id: entree.id });
+    if (!paye) surveillerAchat(entree, etat.mode, true);
     var actions = actionsOffre(entree, etat.mode);
     actions.renvoyer = function (b) {
       if (entree.invitation) return invitation(entree, etat);
@@ -2412,6 +2445,7 @@
     compterVue('offre_vue', { mode: MODE, id: entree.id, cle: res.region || '' });
     ACTIONS = actionsOffre(entree, MODE);
     surveillerColle();
+    surveillerAchat(entree, MODE);
   }
 
   // ── Le point : l'écran « votre point est prêt » ─────────────────────────
@@ -2496,6 +2530,7 @@
       compterVue('offre_vue', { mode: 'solo', id: entree.id, cle: res.region || '', formule: 'point' });
       ACTIONS = actionsOffre(entree, 'solo');
       surveillerColle();
+      surveillerAchat(entree, 'solo');
     }).catch(function () { messageErreur('reseau', function () { aDebloquerPoint(entree, res, message); }); });
   }
 

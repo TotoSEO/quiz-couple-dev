@@ -270,6 +270,37 @@ async function analyse(base, jours) {
   } catch (e) {
     console.log(`\nComptes du 27 octobre : ${e.message}`);
   }
+  try {
+    // Depuis le 13 novembre 2026 : ce que font les gens sur l'offre (le
+    // 13, sur dix-neuf couples allés au bout depuis le 10, un seul avait
+    // ouvert la page de paiement). Dans l'ordre de l'écran : l'offre vue, le
+    // bouton de paiement arrivé à l'écran (achat_vu), l'appui sur la barre
+    // collée (colle_clic), la case cochée (case_cochee), le bouton appuyé
+    // sans la case (case_manquante), la page de paiement ouverte. À deux =
+    // le total moins le seul(e) ; « attente » : l'offre repliée de l'écran
+    // d'attente, quand l'autre n'a pas fini.
+    const noms = ['offre_vue', 'achat_vu', 'colle_clic', 'case_cochee', 'case_manquante', 'paiement_ouvert'];
+    const tous = noms.flatMap((n) => [n, n + '_solo', n + '_point']);
+    const lignes = await base.select('bilan_compteurs', `select=jour,evenement,cle,n&evenement=in.(${tous.join(',')})&jour=gte.2026-11-10&order=jour.asc`);
+    const jours = new Map();
+    for (const l of lignes) {
+      if (!jours.has(l.jour)) jours.set(l.jour, {});
+      const j = jours.get(l.jour);
+      j[l.evenement] = (j[l.evenement] || 0) + l.n;
+      if (l.cle === 'attente') j[l.evenement + ':attente'] = (j[l.evenement + ':attente'] || 0) + l.n;
+    }
+    console.log('\nL\'offre, jour par jour (le bouton vu, la barre et la case sont comptés depuis le 13 novembre 2026) :');
+    const v = (j, n) => j[n] || 0;
+    for (const [jour, j] of jours) {
+      const duo = (n) => v(j, n) - v(j, n + '_solo');
+      const att = (n) => (v(j, n + ':attente') ? ` (dont attente ${v(j, n + ':attente')})` : '');
+      console.log(`  ${jour} · à deux : offres ${duo('offre_vue')} · bouton vu ${duo('achat_vu')}${att('achat_vu')} · barre ${duo('colle_clic')} · case cochée ${duo('case_cochee')}${att('case_cochee')} · sans la case ${duo('case_manquante')} · Stripe ${duo('paiement_ouvert')}` +
+        ` | seul(e) : offres ${v(j, 'offre_vue_solo')} · bouton vu ${v(j, 'achat_vu_solo')} · barre ${v(j, 'colle_clic_solo')} · case cochée ${v(j, 'case_cochee_solo')} · sans la case ${v(j, 'case_manquante_solo')} · Stripe ${v(j, 'paiement_ouvert_solo')}` +
+        ` (dont point : offres ${v(j, 'offre_vue_point')} · bouton vu ${v(j, 'achat_vu_point')} · case cochée ${v(j, 'case_cochee_point')})`);
+    }
+  } catch (e) {
+    console.log(`\nL'offre, jour par jour : ${e.message}`);
+  }
 }
 
 if (import.meta.url === `file://${process.argv[1]}`) {
