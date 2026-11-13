@@ -1,12 +1,12 @@
 {
-  "genere_le": "2026-11-12T11:04:13.819Z",
+  "genere_le": "2026-11-13T03:15:34.027Z",
   "langue": "fr",
   "compte": {
     "nom": "mipaps_stories",
     "actif": true
   },
   "fuseau": "Europe/Paris",
-  "aujourdhui": "2026-11-12",
+  "aujourdhui": "2026-11-13",
   "melange": {
     "midi": {
       "1": null,
@@ -28,39 +28,12 @@
     },
     "matin": "mipaps-anime"
   },
-  "reserve_jours": 140,
+  "reserve_jours": 139,
   "a_remplir": [],
   "a_corriger": [],
   "hors_grille": [],
   "refuses": [],
   "recents_et_prevus": [
-    {
-      "jour": "2026-10-13",
-      "creneau": "matin",
-      "gabarit": "mipaps-reel",
-      "categorie": "mipaps-anime",
-      "statut": "publie",
-      "texte": null,
-      "erreur": null
-    },
-    {
-      "jour": "2026-10-13",
-      "creneau": "midi",
-      "gabarit": "mipaps-post",
-      "categorie": "mipaps-post",
-      "statut": "publie",
-      "texte": "je gère.",
-      "erreur": null
-    },
-    {
-      "jour": "2026-10-13",
-      "creneau": "soir",
-      "gabarit": "mipaps-statique",
-      "categorie": "mipaps-statique",
-      "statut": "publie",
-      "texte": "je te choisis encore. même avec ta vaisselle.",
-      "erreur": null
-    },
     {
       "jour": "2026-10-14",
       "creneau": "matin",
@@ -921,7 +894,7 @@
       "creneau": "soir",
       "gabarit": "mipaps-reel",
       "categorie": "mipaps-anime",
-      "statut": "a_rendre",
+      "statut": "rendu",
       "texte": null,
       "erreur": null
     },
@@ -2783,7 +2756,7 @@
   "idees": [],
   "prochain_creneau": {
     "mipaps-anime": {
-      "jour": "2026-11-13",
+      "jour": "2026-11-14",
       "creneau": "matin"
     },
     "mipaps-statique": null,
