@@ -37,15 +37,13 @@ import fs from 'fs';
 import os from 'os';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import { BASE_URL, LANGUES_PUBLIQUES } from './config.js';
+import { BASE_URL, INDEXNOW_KEY, LANGUES_PUBLIQUES } from './config.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// La clé est publique par nature : le site la sert en /<clé>.txt (fichier de
-// public/, à la racine du dépôt). Pour en changer : un nouveau fichier, cette
-// constante, et l'ancien fichier supprimé.
-const INDEXNOW_KEY = '53796f93e27d08fe9deeaef1d78a393a';
+// La clé (INDEXNOW_KEY, dans config.js) est publique par nature : le
+// générateur l'écrit dans dist/<clé>.txt, et le site la sert à cette adresse.
 const DIST_DIR = path.resolve(__dirname, '../dist');
 // Les sitemaps d'avant la mise en ligne, gardés d'une étape à l'autre du job.
 const AVANT_DIR = path.join(process.env.RUNNER_TEMP || os.tmpdir(), 'indexnow-avant');

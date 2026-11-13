@@ -3,6 +3,10 @@
  */
 
 export const BASE_URL = 'https://quiz-couple.com';
+// La clé IndexNow du site (build/indexnow.js). Elle est publique par nature :
+// le générateur l'écrit dans dist/<clé>.txt, que les moteurs lisent avant
+// d'accepter un envoi. Pour en changer, on change cette seule ligne.
+export const INDEXNOW_KEY = '53796f93e27d08fe9deeaef1d78a393a';
 // Le compte Instagram du site : menu, pied de page, JSON-LD (sameAs), merci après un avis.
 export const INSTAGRAM_URL = 'https://www.instagram.com/quiz_couple_official/';
 export const LANGUAGES = ['fr', 'en', 'es', 'de', 'it', 'nl'];

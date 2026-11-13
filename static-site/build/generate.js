@@ -14,7 +14,7 @@ import { minify as minifyJs } from 'terser';
 import CleanCSS from 'clean-css';
 import { analyseMoteur, litQuizConfig, ensemblesPossibles, moteursDeLaPage, nomDuPaquet, ecrisPaquets, TABLE_MOTEURS } from './moteurs.js';
 import {
-  BASE_URL, INSTAGRAM_URL, LANGUAGES, LANGUES_PUBLIQUES, langueCachee, langueEnCours, PAGES_EN_ATTENTE, ROUTES_EN_PREPARATION, pageEnAttente, cheminDeclare, LOCALES, ROUTE_SLUGS, ROUTE_CONFIG, GA_ID,
+  BASE_URL, INDEXNOW_KEY, INSTAGRAM_URL, LANGUAGES, LANGUES_PUBLIQUES, langueCachee, langueEnCours, PAGES_EN_ATTENTE, ROUTES_EN_PREPARATION, pageEnAttente, cheminDeclare, LOCALES, ROUTE_SLUGS, ROUTE_CONFIG, GA_ID,
   SUPABASE_URL, SUPABASE_ANON_KEY, BLOG_ARTICLES, BLOG_CATEGORIES, AUTHORS,
   QUIZ_RELATED_ARTICLES, ARTICLES_QUESTIONS, QUIZ_FEATURED, IMAGE_PARTAGE, FAMILLES_NAV, SECTIONS_NAV, SAISON_DES_QUIZ, getLocalizedPath, getLocalizedUrl, getRouteAlternates, escapeHtml,
   getArticlePath, getArticleUrl, getArticleAlternates,
@@ -2160,13 +2160,19 @@ function copyStaticAssets() {
   // Les fichiers de verification de propriete des plateformes de netlinking
   // sont copies tels quels a la racine : leur nom et leur contenu sont
   // imposes par la plateforme, qui va les lire a l'adresse exacte.
-  const publicFiles = ['favicon.ico', 'favicon.png', 'apple-touch-icon.png', 'og-image.webp', 'robots.txt', 'site.webmanifest', 'placeholder.svg', 'f4b78b7e6bfeaefe7290b5ce249449a8.txt', '389f91dd4161e549.html', 'soumettre-aLDZNbLFYuQUSvDMbhdyr5GyF4KNdZ4a.txt', 'llms.txt', 'ads.txt'];
+  const publicFiles = ['favicon.ico', 'favicon.png', 'apple-touch-icon.png', 'og-image.webp', 'robots.txt', 'site.webmanifest', 'placeholder.svg', '389f91dd4161e549.html', 'soumettre-aLDZNbLFYuQUSvDMbhdyr5GyF4KNdZ4a.txt', 'llms.txt', 'ads.txt'];
   for (const file of publicFiles) {
     const src = path.join(publicDir, file);
     if (fs.existsSync(src)) {
       fs.copyFileSync(src, path.join(DIST_DIR, file));
     }
   }
+
+  // Le fichier de la clé IndexNow, écrit d'après la constante : le script
+  // d'envoi et le site ne peuvent plus diverger. Le 13 novembre 2026, une
+  // nouvelle clé est partie sans son fichier, parce que cette liste nommait
+  // l'ancien en toutes lettres ; le script a refusé d'envoyer (clé non servie).
+  fs.writeFileSync(path.join(DIST_DIR, `${INDEXNOW_KEY}.txt`), INDEXNOW_KEY);
 
   // Copy public/blog/, public/authors/ and public/quiz/. Le dossier vacances
   // (les photos de destinations du test « où partir en vacances ? ») est parti
