@@ -54,9 +54,23 @@ jobs:
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
           SUPABASE_ANON_KEY: ${{ secrets.SUPABASE_ANON_KEY }}
 
+      - name: IndexNow · garder les sitemaps publiés
+        # Avant la mise en ligne : les sitemaps que le site sert encore, pour
+        # n'annoncer ensuite que ce qui a changé, et le témoin de cette mise en
+        # ligne dans dist (build/indexnow.js).
+        run: cd static-site && node build/indexnow.js --avant
+        continue-on-error: true
+
       - name: Deploy to gh-pages branch (quiz-couple.com)
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./static-site/dist
           cname: quiz-couple.com
+
+      - name: IndexNow · annoncer ce qui a changé
+        # C'est cette reconstruction qui publie les articles programmés : sans
+        # cette étape (absente jusqu'au 13 novembre 2026), ils n'étaient
+        # annoncés à aucun moteur. Quand rien n'a changé, rien ne part.
+        run: cd static-site && node build/indexnow.js
+        continue-on-error: true
