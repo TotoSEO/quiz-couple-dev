@@ -2643,6 +2643,8 @@ const SUITE_PAR_CATEGORIE = {
   psychologie: ['testAttachement', 'testToxic', 'testConfiance', 'testLangageAmour'],
   ex: ['testEx', 'testEncoreAmoureuxEx', 'testOublierEx', 'testExRevenir'],
   histoires: ['testCompatibilite', 'testAmeSoeur', 'calculatriceAmour', 'testCouple'],
+  // Les chiffres du site : les trois jeux où l'on vote, puis le test de couple.
+  chiffres: ['pourContre', 'jeuOuiNon', 'jeuDilemmes', 'testCouple'],
 };
 const SUITE_PAR_DEFAUT = ['testCouple', 'testCompatibilite', 'testLangageAmour', 'quizKnowledge'];
 const pagesParChemin = new Map();

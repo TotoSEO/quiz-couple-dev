@@ -12930,6 +12930,29 @@ img[src^="/bilan/apercu-"] { pointer-events: none; user-select: none; -webkit-us
 @media (min-width: 640px) { .blog-article ul.blog-chiffres-grille { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
 .blog-article .blog-chiffres-grille li { display: flex; flex-direction: column; gap: .3rem; margin: 0; padding: .8rem .85rem; border-radius: .9rem; background: hsl(var(--card)); font-size: .86rem; line-height: 1.35; color: hsl(var(--foreground) / .82); }
 .blog-chiffres-nombre { font-family: var(--font-display); font-weight: 800; font-size: 1.85rem; line-height: 1; letter-spacing: -.01em; color: hsl(var(--primary-texte)); }
+/* Les votes du site dans un article (série « En chiffres », 13 novembre 2026) :
+   la question, la barre des deux camps comme dans le jeu (rose pour le premier
+   camp, violet pour le second, 2 px de fond entre les deux), les deux
+   pourcentages écrits dessous et le nombre de votes. Les libellés restent à
+   l'encre du texte : la couleur ne porte que la barre et la pastille, et la
+   place (gauche, droite) dit aussi quel camp est lequel. Paire contrôlée en
+   vision normale et daltonienne (écart OKLab de 18,6 en clair et 17,4 en
+   sombre, 12,9 et 12,4 en protanopie). */
+.blog-sondage { --sondage-a: 338 72% 60%; --sondage-b: 265 55% 60%; margin: 1.75rem 0; padding: 1.15rem 1.1rem 1.2rem; border-radius: 1.25rem; background: hsl(var(--card)); border: 1px solid hsl(var(--border)); }
+.dark .blog-sondage { --sondage-a: 338 80% 68%; --sondage-b: 265 65% 66%; }
+.blog-article p.blog-sondage-titre { font-family: var(--font-display); font-weight: 800; font-size: .78rem; line-height: 1.3; letter-spacing: .08em; text-transform: uppercase; color: hsl(var(--primary-texte)); margin: 0 0 .9rem; }
+.blog-sondage-item + .blog-sondage-item { margin-top: 1.1rem; padding-top: 1.05rem; border-top: 1px solid hsl(var(--border)); }
+.blog-article p.blog-sondage-question { margin: 0 0 .6rem; font-size: 1rem; line-height: 1.4; font-weight: 700; color: hsl(var(--foreground)); }
+.blog-sondage-barre { display: flex; gap: 2px; height: .85rem; }
+.blog-sondage-barre span { display: block; min-width: .5rem; height: 100%; }
+.blog-sondage-barre span:first-child { background: hsl(var(--sondage-a)); border-radius: 999px 4px 4px 999px; }
+.blog-sondage-barre span:last-child { background: hsl(var(--sondage-b)); border-radius: 4px 999px 999px 4px; }
+.blog-article p.blog-sondage-camps { display: flex; justify-content: space-between; gap: 1rem; margin: .55rem 0 0; font-size: .9rem; line-height: 1.3; color: hsl(var(--foreground) / .82); }
+.blog-sondage-camps span { display: inline-flex; align-items: baseline; gap: .35rem; }
+.blog-sondage-camps span::before { content: ""; align-self: center; flex: none; width: .6rem; height: .6rem; border-radius: 50%; background: hsl(var(--sondage-a)); }
+.blog-sondage-camps span:last-child::before { background: hsl(var(--sondage-b)); }
+.blog-sondage-camps strong { font-family: var(--font-display); font-weight: 800; font-size: 1.2rem; line-height: 1; color: hsl(var(--foreground)); }
+.blog-article p.blog-sondage-votes { margin: .35rem 0 0; font-size: .8rem; line-height: 1.4; color: hsl(var(--muted-foreground)); }
 /* La signature d'une citation (<small> après un <br>), sous la phrase. */
 .blog-article blockquote small { display: block; margin-top: .65rem; font-family: var(--font-sans); font-size: .85rem; font-weight: 600; line-height: 1.4; color: hsl(var(--foreground) / .62); }
 .blog-article blockquote small:empty, .blog-article blockquote br:has(+ small) { display: none; }
