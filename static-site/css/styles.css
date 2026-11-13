@@ -2589,6 +2589,18 @@ article a:not(.no-underline):hover, .seo-content a:hover { text-decoration-color
   .kq-role-nom { font-size: .95rem; }
   .kq-role--devine .kq-role-nom { font-size: 1.05rem; }
 }
+/* Les rôles s'échangent à chaque question, sans écran entre les deux : le
+   bloc arrive comme le bandeau du tour (qcTourArrive), et le score du moment
+   s'écrit sous la consigne. */
+.kq-roles--arrive { animation: qcTourArrive 300ms cubic-bezier(.34, 1.4, .64, 1) both; }
+.kq-score {
+  margin: -0.6rem auto 1.25rem; max-width: 30rem; text-align: center;
+  font-size: .78rem; font-weight: 700; font-variant-numeric: tabular-nums;
+  color: hsl(var(--muted-foreground));
+}
+@media (prefers-reduced-motion: reduce) {
+  .kq-roles--arrive { animation: none; }
+}
 
 /* ── Dilemmes de couple ────────────────────────────────────
    Le marché tient en trois temps qui doivent se lire dans cet ordre sans
@@ -9248,105 +9260,71 @@ body { padding-bottom: var(--pub-footer, 0px); }
   .qc-portail-btn { transition: none; }
 }
 
-/* ── Relais entre les deux joueurs ─────────────────────────────────────────
-   Remplace l'ancien écran « passe le téléphone » et son bouton « Répondre »,
-   qui coûtait quarante clics sur un quiz de vingt questions joué à deux et
-   cassait la lancée à chaque réponse. Le bandeau annonce qui répond, laisse
-   le temps de tendre le téléphone, puis s'efface tout seul. La jauge du bas
-   est ce qui rend l'attente lisible : sans elle on croit l'écran figé et on
-   tape dessus. Même grammaire que le reste de la charte, bordure épaisse,
-   ombre dure sans flou et carte légèrement de travers. */
-.qc-relais {
-  --ink: 268 45% 27%;
-  position: relative;
-  max-width: 25rem;
-  margin: 0 auto;
-  padding: 2.3rem 1.4rem 1.5rem;
-  border-radius: 1.9rem;
-  border: 3px solid hsl(var(--ink));
-  background: hsl(var(--card));
-  box-shadow: 8px 9px 0 hsl(var(--ink));
-  text-align: center;
-  cursor: pointer;
-  transform: rotate(-1.2deg);
-  animation: qcRelaisEntree 300ms cubic-bezier(.34, 1.42, .64, 1) both;
-}
-.dark .qc-relais { --ink: 270 30% 62%; }
-
-@keyframes qcRelaisEntree {
-  from { transform: rotate(-1.2deg) translateY(16px) scale(0.94); opacity: 0; }
-  to   { transform: rotate(-1.2deg); opacity: 1; }
-}
-
-/* Le macaron déborde du cadre : c'est lui qui casse le rectangle et fait
-   lire le bandeau comme un objet posé sur la page. */
-.qc-relais-macaron {
-  position: absolute; top: -1.4rem; left: -0.9rem;
-  width: 3.6rem; height: 3.6rem;
-  display: grid; place-items: center;
-  font-size: 1.7rem; line-height: 1;
-  border-radius: 999px;
-  border: 3px solid hsl(var(--ink));
-  background: linear-gradient(150deg, hsl(338 84% 64%), hsl(16 92% 60%));
-  box-shadow: 4px 4px 0 hsl(var(--ink));
-  transform: rotate(-12deg);
-}
-.qc-relais-macaron > span { display: block; transform: rotate(12deg); }
-
-/* Un paragraphe et non un titre : la page a déjà sa hiérarchie, et ce
-   bandeau vit moins de deux secondes. */
-.qc-relais-annonce {
-  font-family: 'Poppins', 'Inter', sans-serif;
-  font-size: 1.3rem; font-weight: 800; line-height: 1.3;
+/* ── Le tour de chacun, sur un seul téléphone ──────────────────────────────
+   Le bandeau en tête de la question (bandeauTour, quiz-engine-core.js) a
+   remplacé l'écran de relais du 13 novembre 2026 (« À Léa de répondre !
+   Passez le téléphone ou détournez le regard », 1,3 s entre deux réponses,
+   trop lent pour les joueurs) : le personnage du joueur, et son prénom à sa
+   couleur. Rose ou violet comme le personnage (mascotteDe) ; quand les deux
+   joueurs ont le même, le second prend la teinte foncée. À plat, sans trait
+   d'encre : dans la carte du moteur, l'encre reste au cadre. */
+.qc-tour {
+  --tour: var(--primary);
+  --tour-texte: var(--primary-texte);
+  display: flex; align-items: center; gap: 0.7rem;
+  width: fit-content; max-width: 100%;
+  margin: 0 auto 1.1rem;
+  padding: 0.4rem 1.15rem 0.4rem 0.6rem;
+  border-radius: 1.6rem;
+  background: hsl(var(--tour) / 0.14);
   color: hsl(var(--foreground));
-  margin: 0 0 0.5rem;
+  text-align: left;
+}
+.qc-tour--violet { --tour: var(--secondary); --tour-texte: var(--secondary-texte); }
+.qc-tour--rose.qc-tour--fonce { --tour: 332 62% 42%; --tour-texte: 332 62% 38%; }
+.qc-tour--violet.qc-tour--fonce { --tour: 262 48% 34%; --tour-texte: 262 48% 34%; }
+.dark .qc-tour--rose.qc-tour--fonce { --tour: 332 70% 58%; --tour-texte: 332 80% 74%; }
+.dark .qc-tour--violet.qc-tour--fonce { --tour: 262 55% 60%; --tour-texte: 262 65% 78%; }
+.qc-tour-perso { flex: 0 0 auto; line-height: 0; }
+.qc-tour-pion {
+  flex: 0 0 auto; display: grid; place-items: center;
+  width: 2.5rem; height: 2.5rem; border-radius: 50%;
+  font-weight: 800; font-size: 1.05rem; color: #fff;
+  background: hsl(var(--tour));
+}
+.qc-tour-corps { display: grid; gap: 0.1rem; min-width: 0; }
+.qc-tour-phrase {
+  font-family: 'Poppins', 'Inter', sans-serif;
+  font-size: 1.1rem; font-weight: 700; line-height: 1.25;
   text-wrap: balance;
 }
-.qc-relais-nom {
-  display: inline-block;
-  color: hsl(var(--primary));
-  transform: rotate(1.5deg);
-}
-
-.qc-relais-note {
-  font-size: 0.85rem; line-height: 1.5;
+.qc-tour-nom { color: hsl(var(--tour-texte)); font-weight: 800; overflow-wrap: anywhere; }
+.qc-tour-note {
+  font-size: 0.82rem; line-height: 1.4;
   color: hsl(var(--muted-foreground));
-  margin: 0 0 0.35rem;
   text-wrap: pretty;
 }
-
-.qc-relais-etape {
-  font-size: 0.75rem; font-weight: 700;
-  letter-spacing: 0.04em; text-transform: uppercase;
-  color: hsl(var(--muted-foreground) / 0.8);
-  margin: 0 0 1.1rem;
+@media (min-width: 640px) {
+  .qc-tour-phrase { font-size: 1.25rem; }
 }
-
-.qc-relais-piste {
-  height: 0.55rem;
-  border-radius: 999px;
-  border: 2px solid hsl(var(--ink));
-  background: hsl(var(--muted));
-  overflow: hidden;
+/* La main vient de changer : le bandeau arrive et le personnage saute deux
+   fois, pour qu'on voie le changement même quand la question reste la
+   même. Transform et opacity seulement. */
+.qc-tour--arrive { animation: qcTourArrive 300ms cubic-bezier(.34, 1.4, .64, 1) both; }
+.qc-tour--arrive .qc-tour-perso,
+.qc-tour--arrive .qc-tour-pion { animation: qcTourSaut 420ms ease-out 160ms 2; }
+@keyframes qcTourArrive {
+  from { opacity: 0; transform: translateY(-8px) scale(0.94); }
+  to { opacity: 1; transform: none; }
 }
-.qc-relais-jauge {
-  height: 100%; width: 0;
-  border-radius: 999px;
-  background: linear-gradient(90deg, hsl(338 84% 64%), hsl(266 62% 60%));
-  animation: qcRelaisJauge linear both;
+@keyframes qcTourSaut {
+  0%, 100% { transform: translateY(0); }
+  40% { transform: translateY(-7px); }
 }
-@keyframes qcRelaisJauge { from { width: 0; } to { width: 100%; } }
-
-@media (min-width: 480px) {
-  .qc-relais { max-width: 27rem; padding: 2.7rem 2rem 1.7rem; }
-  .qc-relais-annonce { font-size: 1.5rem; }
-  .qc-relais-macaron { width: 4.2rem; height: 4.2rem; font-size: 2rem; top: -1.7rem; left: -1.2rem; }
-}
-
-/* La jauge reste : elle ne bouge pas l'écran, et c'est la seule chose qui
-   dit combien de temps il reste avant que la question arrive. */
 @media (prefers-reduced-motion: reduce) {
-  .qc-relais { animation: none; transform: rotate(-1.2deg); }
+  .qc-tour--arrive,
+  .qc-tour--arrive .qc-tour-perso,
+  .qc-tour--arrive .qc-tour-pion { animation: none; }
 }
 
 /* ── Test des 5 langages de l'amour : définition et statistiques ────────
@@ -10736,14 +10714,6 @@ body { padding-bottom: var(--pub-footer, 0px); }
 .ado-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: .75rem; margin-top: 1.2rem; }
 .ado-retour { margin-top: 1rem; font-size: .9rem; display: inline-flex; align-items: center; gap: .3rem; }
 .ado-retour svg { width: 1rem; height: 1rem; }
-/* Le relais entre les deux joueurs : le bandeau commun, avec un vrai bouton
-   pour partir, car le second joueur ne doit pas voir les reponses du premier. */
-.ado-relais { cursor: default; padding-bottom: 1.7rem; }
-.ado-relais .btn { margin-top: .9rem; }
-.ado-relais .qc-relais-etape { margin-bottom: .2rem; text-transform: none; letter-spacing: 0; font-style: italic; }
-/* Le badge de tour prend la place du pourcentage dans la barre commune. */
-.ado-tour { display: inline-block; }
-.quiz-progress-pct:has(.ado-tour--2) { background: hsl(var(--secondary) / .16); color: hsl(var(--secondary)); }
 /* A distance : une barre par joueur, la sienne en rose, celle du partenaire
    en violet. */
 .ado-duo-progression { display: grid; gap: .55rem; margin-bottom: .6rem; }
@@ -11771,25 +11741,11 @@ body { padding-bottom: var(--pub-footer, 0px); }
   55% { transform: translateY(0) scale(1.03, 0.95); }
 }
 
-/* Le relais « À X de répondre ! » : le perso du joueur surgit au coin bas
-   droit de la carte, en pendant du macaron. Le texte garde la place des
-   deux côtés pour rester centré, et la jauge s'arrête avant lui. */
-.qc-relais--perso .qc-relais-note,
-.qc-relais--perso .qc-relais-etape { padding: 0 3rem; }
-.qc-relais--perso .qc-relais-piste { margin-right: 3.6rem; }
-.qc-relais-perso {
-  position: absolute; right: -0.5rem; bottom: -0.35rem; line-height: 0;
-  transform-origin: 50% 100%;
-  animation: qcMascSurgit 0.42s cubic-bezier(0.34, 1.4, 0.64, 1) 0.1s both;
-}
-@keyframes qcMascSurgit { from { opacity: 0; transform: translateY(18px) scale(0.6); } to { opacity: 1; transform: none; } }
-
 @media (prefers-reduced-motion: reduce) {
   .qc-masc-marcheur { transition: none; }
   .qc-masc-marcheur--bouge .qc-masc-pas--a,
   .qc-masc-marcheur--bouge .qc-masc-pas--b,
-  .qc-masc-fete .qc-masc,
-  .qc-relais-perso { animation: none; }
+  .qc-masc-fete .qc-masc { animation: none; }
   .quiz-setup-icon--mascottes,
   .quiz-setup-screen .quiz-setup-icon--mascottes { animation: none !important; }
 }
@@ -11849,7 +11805,6 @@ body { padding-bottom: var(--pub-footer, 0px); }
   font-size: clamp(1.2rem, 3.6vw, 1.5rem); font-weight: 700; line-height: 1.35;
   color: hsl(var(--foreground));
 }
-.dixm-bandeau { display: flex; justify-content: center; margin-bottom: 1rem; }
 .dixm-rangee {
   max-width: 34rem; margin: 0 auto 0.875rem; padding: 0.875rem 0.75rem 1rem;
   border-radius: var(--radius); border: 1px solid hsl(var(--border));
