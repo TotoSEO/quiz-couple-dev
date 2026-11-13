@@ -2042,18 +2042,17 @@ var QuizEngine = (function() {
     return true;
   }
 
-  // ─── Relais entre les deux joueurs ────────────────────────────────────────
-  // L'écran « passe le téléphone » demandait un clic sur « Répondre » avant
-  // chaque question : quarante clics sur un quiz de vingt questions joué à
-  // deux, pour une information que l'écran suivant redonne de toute façon
-  // dans son bandeau de joueur. On garde l'annonce, on retire le clic : le
-  // bandeau s'affiche, laisse le temps de tendre le téléphone, puis s'efface
-  // seul. Un appui sur le bandeau coupe l'attente pour qui va plus vite.
-  var RELAIS_DUREE = 1300;
-  // Après le passage automatique, les options restent sourdes un court
-  // instant : sans ce délai, un doigt déjà en route vers le bandeau retombe
-  // sur une réponse et la valide à la place du joueur.
-  var RELAIS_GARDE = 280;
+  // ─── Le tour de chacun, sur un seul téléphone ─────────────────────────────
+  // Jusqu'au 13 novembre 2026, un écran de relais s'intercalait entre deux
+  // réponses (« À Léa de répondre ! Passez le téléphone ou détournez le
+  // regard », 1,3 s à chaque fois, soit quarante relais sur un test de vingt
+  // questions joué chacun son tour). Des joueurs le trouvaient trop lent, et
+  // Thomas aussi : « ça ralentit la dynamique des tests ». La question
+  // suivante arrive désormais tout de suite, et son bandeau dit à qui c'est
+  // le tour (bandeauTour, plus bas). Quand la main change, les réponses
+  // restent sourdes un court instant : sans ce délai, le doigt du joueur
+  // précédent qui retombe sur l'écran répondrait à la place de l'autre.
+  var TOUR_GARDE = 450;
 
   // ─── Les mascottes ────────────────────────────────────────
   // Les deux personnages de la charte (reseaux/charte/mascottes.js, copie en
@@ -2184,78 +2183,50 @@ var QuizEngine = (function() {
     }
   }
 
-  function relaisJoueur(moteur, options) {
-    var opts = options || {};
-    var suite = opts.suite || function () {};
-
-    // Un relais chasse le précédent : sans cela, un retour arrière ou un
-    // « rejouer » lancé pendant l'attente laisserait deux minuteries vivantes
-    // et ferait sauter une question.
-    if (moteur.__relaisTimer) { clearTimeout(moteur.__relaisTimer); moteur.__relaisTimer = null; }
-
-    var carte = el('div', 'qc-relais');
-    carte.setAttribute('role', 'status');
-    carte.setAttribute('aria-live', 'polite');
-
-    var macaron = el('div', 'qc-relais-macaron');
-    macaron.innerHTML = '<span>' + (opts.emoji || '📱') + '</span>';
-    macaron.setAttribute('aria-hidden', 'true');
-    carte.appendChild(macaron);
-
-    // Volontairement un paragraphe : la page a déjà sa hiérarchie de titres,
-    // et ce bandeau vit moins de deux secondes.
-    var annonce = el('p', 'qc-relais-annonce');
-    annonce.innerHTML = tg('question.turnToAnswer', 'À {{name}} de répondre !')
-      .replace('{{name}}', '<span class="qc-relais-nom">' + esc(opts.nom || '') + '</span>');
-    carte.appendChild(annonce);
-
-    carte.appendChild(el('p', 'qc-relais-note',
-      esc(opts.note || tg('question.passPhoneOrLookAway', 'Passez le téléphone ou détournez le regard'))));
-
-    if (opts.etape) carte.appendChild(el('p', 'qc-relais-etape', esc(opts.etape)));
-
-    var piste = el('div', 'qc-relais-piste');
-    var jauge = el('div', 'qc-relais-jauge');
-    jauge.style.animationDuration = RELAIS_DUREE + 'ms';
-    piste.appendChild(jauge);
-    carte.appendChild(piste);
-
-    // Le personnage de celui qui va repondre surgit au coin bas droit, en
-    // pendant du macaron. Les moteurs a genre passent le sien (mascotteDe).
-    if (opts.perso && mascottesDispo()) {
-      var perso = el('span', 'qc-relais-perso');
-      perso.setAttribute('aria-hidden', 'true');
-      perso.innerHTML = mascotteSvg(opts.perso, 'salut', 84);
-      carte.appendChild(perso);
-      carte.classList.add('qc-relais--perso');
+  // Le bandeau du tour, en tête de l'écran de question : le personnage du
+  // joueur, puis « À Léa de répondre ! » avec le prénom à sa couleur.
+  //   o.nom     : le prénom (texte brut, échappé ici)
+  //   o.rang    : 0 ou 1, le rang du joueur dans la partie
+  //   o.joueurs : les deux joueurs ({ gender }), pour le personnage et la
+  //               couleur (mascotteDe) ; sans eux, rose puis violet
+  //   o.phrase  : le modèle, avec {{name}} ou {{nom}} (par défaut
+  //               question.turnToAnswer)
+  //   o.note    : une ligne de plus, sous la phrase (texte brut)
+  // Quand le joueur change d'un écran à l'autre (moteur.__tour), le bandeau
+  // arrive en sautant et les réponses restent sourdes TOUR_GARDE ms. Deux
+  // joueurs qui ont le même personnage gardent chacun leur teinte : le
+  // second prend la teinte foncée.
+  function bandeauTour(moteur, o) {
+    o = o || {};
+    var rang = o.rang === 1 ? 1 : 0;
+    var persos = persosDe(o.joueurs);
+    var perso = persos[rang];
+    var cle = rang + '|' + (o.nom || '');
+    var precedent = moteur ? moteur.__tour : null;
+    var change = precedent !== cle;
+    if (moteur) {
+      if (change && precedent != null) {
+        moteur.__answerLockUntil = Math.max(moteur.__answerLockUntil || 0, Date.now() + TOUR_GARDE);
+      }
+      moteur.__tour = cle;
     }
-
-    // La couleur du joueur teinte le prénom et la jauge, pas le macaron : ce
-    // dégradé est celui de la charte, et l'écran de question qui suit reprend
-    // la même couleur sur son badge, donc l'association reste lisible.
-    if (opts.couleur) {
-      var nom = annonce.querySelector('.qc-relais-nom');
-      if (nom) nom.style.color = opts.couleur;
-      jauge.style.background = opts.couleur;
-    }
-
-    var parti = false;
-    function partir() {
-      if (parti) return;
-      parti = true;
-      if (moteur.__relaisTimer) { clearTimeout(moteur.__relaisTimer); moteur.__relaisTimer = null; }
-      moteur.__answerLockUntil = Date.now() + RELAIS_GARDE;
-      suite();
-    }
-
-    carte.addEventListener('click', partir);
-    // Si un autre écran a pris la place entre-temps (résultats, rejouer), le
-    // bandeau n'est plus dans la page et n'a plus rien à enchaîner.
-    moteur.__relaisTimer = setTimeout(function() {
-      if (carte.isConnected) partir();
-    }, RELAIS_DUREE);
-
-    return carte;
+    var b = el('div', 'qc-tour qc-tour--' + perso +
+      (rang === 1 && persos[0] === persos[1] ? ' qc-tour--fonce' : '') +
+      (change ? ' qc-tour--arrive' : ''));
+    b.setAttribute('role', 'status');
+    var dessin = mascottesDispo() ? mascotteSvg(perso, 'salut', 46) : '';
+    var nom = esc(o.nom || '');
+    var modele = esc(insecables(o.phrase || tg('question.turnToAnswer', 'À {{name}} de répondre !')));
+    b.innerHTML = (dessin
+        ? '<span class="qc-tour-perso" aria-hidden="true">' + dessin + '</span>'
+        : '<span class="qc-tour-pion" aria-hidden="true">' + esc(String(o.nom || '?').charAt(0).toUpperCase()) + '</span>') +
+      '<span class="qc-tour-corps"><span class="qc-tour-phrase">' +
+        // Une fonction plutôt qu'une chaîne : un « $ » dans un prénom serait
+        // lu comme un motif de remplacement.
+        modele.replace(/\{\{(?:name|nom)\}\}/g, function () { return '<strong class="qc-tour-nom">' + nom + '</strong>'; }) + '</span>' +
+        (o.note ? '<span class="qc-tour-note">' + esc(insecables(o.note)) + '</span>' : '') +
+      '</span>';
+    return b;
   }
 
   // persos : { marche, attend }, les mascottes de celui qui joue et de
@@ -2325,14 +2296,6 @@ var QuizEngine = (function() {
       '<span class="score-ring-value" id="' + valId + '">' + startVal + '%</span>' +
     '</div>';
     return size === 'sm' ? anneau : feteAutour(anneau, persos);
-  }
-
-  function renderPlayerBadge(wrap, name, color) {
-    var badge = el('div', 'text-center mb-4');
-    var colorClass = color || 'badge-primary';
-    badge.innerHTML = '<span class="badge ' + colorClass + '">' + esc(name) + '</span>';
-    wrap.appendChild(badge);
-    return badge;
   }
 
   // ─── Related quizzes data ────────────────────────────────
@@ -3245,11 +3208,9 @@ var QuizEngine = (function() {
     return null;
   }
   function saisonRender() {
-    if (this.__relaisTimer) { clearTimeout(this.__relaisTimer); this.__relaisTimer = null; }
     this.container.innerHTML = '';
     if (this.phase === 'modes') this.renderModes();
     else if (this.phase === 'setup') this.renderSetup();
-    else if (this.phase === 'relais') this.renderRelais();
     else if (this.phase === 'results') this.renderResults();
     else this.renderQuestion();
   }
@@ -3278,19 +3239,25 @@ var QuizEngine = (function() {
     b.addEventListener('click', function() { self.mode = null; self.phase = 'modes'; self.render(); smoothScroll(self.container, 'start'); });
     return b;
   }
-  function saisonRenderRelais() {
-    var self = this;
-    var j = this.joueurCourant;
-    var joueur = this.players[j];
-    this.container.appendChild(relaisJoueur(this, {
-      nom: joueur.name,
-      emoji: this.icone,
-      perso: mascotteDe(joueur, j),
-      couleur: this.couleur(j).bg,
-      note: j === 0 ? this.etg('relaisDebut', '') : this.etg('relaisSuite', '').replace('{{nom}}', this.players[0].name),
-      etape: this.etg('relaisEtape', '{{n}} questions').replace('{{n}}', this.questions.length),
-      suite: function() { self.phase = 'playing'; self.render(); }
-    }));
+  // Le bandeau du tour, a deux : chacun repond a toute la serie, puis passe
+  // le telephone. A la premiere question de chacun, la consigne de la serie
+  // (relaisDebut) ou le passage de main (relaisSuite) s'ecrit dessous.
+  function saisonBandeau(moteur) {
+    var j = moteur.joueurCourant === 1 ? 1 : 0;
+    return bandeauTour(moteur, {
+      nom: moteur.players[j].name, rang: j, joueurs: moteur.players,
+      note: noteDeSerie(moteur.currentQ, j, moteur.players[0].name,
+        moteur.etg('relaisDebut', ''), moteur.etg('relaisSuite', ''))
+    });
+  }
+  // La ligne sous le bandeau d'un test ou chacun repond a toute sa serie :
+  // rien en cours de serie, la consigne a la premiere question du premier,
+  // « Lea a fini » a la premiere question du second. Sans texte propre au
+  // test, les deux phrases communes (question.tourDebut, question.tourFini).
+  function noteDeSerie(rangQuestion, j, nomPremier, debut, suite) {
+    if (rangQuestion !== 0) return '';
+    if (j === 0) return debut || tg('question.tourDebut', '');
+    return (suite || tg('question.tourFini', '')).replace(/\{\{(?:nom|name)\}\}/g, function () { return nomPremier; });
   }
   // Le profil obtenu part dans profil_resultats, une fois par test et par
   // navigateur ; ProfileQuiz et les quiz de saison passent tous par ici.
@@ -3780,7 +3747,7 @@ var QuizEngine = (function() {
     this.needsGender = config.needsGender || false;
     this.useScoring = config.useScoring || false;
     // En solo le couple repond ensemble : une seule serie de reponses, pas de
-    // prenoms, pas de relais, et une note unique a l'arrivee.
+    // prenoms, pas de tour de role, et une note unique a l'arrivee.
     this.modeSolo = config.modeSolo || false;
     this.setupTitle = config.setupTitle || '';
     this.setupDesc = config.setupDesc || '';
@@ -3808,7 +3775,6 @@ var QuizEngine = (function() {
   DuoMatchQuiz.prototype.render = function() {
     this.container.innerHTML = '';
     if (this.phase === 'setup') this.renderSetup();
-    else if (this.phase === 'handoff') this.renderHandoff();
     else if (this.phase === 'playing') this.renderQuestion();
     else if (this.phase === 'results') this.renderResults();
   };
@@ -3869,7 +3835,7 @@ var QuizEngine = (function() {
         { name: n2, gender: genders[1] || null }
       ];
       self._moiDistance = null;
-      self.phase = 'handoff';
+      self.phase = 'playing';
       self.currentQ = 0;
       self.currentPlayer = 0;
       var total = self.questions.length;
@@ -3922,20 +3888,6 @@ var QuizEngine = (function() {
     });
   };
 
-  DuoMatchQuiz.prototype.renderHandoff = function() {
-    var self = this;
-    var player = this.players[this.currentPlayer];
-    var color = this.needsGender ? getPlayerColor(player, this.players[this.currentPlayer === 0 ? 1 : 0], this.currentPlayer) : null;
-
-    this.container.appendChild(relaisJoueur(this, {
-      nom: player.name,
-      perso: mascotteDe(player, this.currentPlayer),
-      couleur: color ? color.bg : null,
-      etape: tg('question.question', 'Question') + ' ' + (this.currentQ + 1) + '/' + this.questions.length,
-      suite: function() { self.phase = 'playing'; self.render(); }
-    }));
-  };
-
   DuoMatchQuiz.prototype.renderQuestion = function() {
     var self = this;
     var q = this.questions[this.currentQ];
@@ -3946,22 +3898,16 @@ var QuizEngine = (function() {
       ? this.answers.p1.filter(function(a) { return a !== null; }).length
       : this.answers.p1.filter(function(a) { return a !== null; }).length + this.answers.p2.filter(function(a) { return a !== null; }).length;
     var player = this.players[this.currentPlayer];
-    var color = (this.needsGender && !this.modeSolo) ? getPlayerColor(player, this.players[this.currentPlayer === 0 ? 1 : 0], this.currentPlayer) : null;
 
     var wrap = el('div', 'quiz-engine quiz-question-enter');
 
     renderProgressBar(wrap, answered, totalNeeded, tg('question.question', 'Question') + ' ' + (this.currentQ + 1) + '/' + total,
       persosBarre(this.players, this.modeSolo ? 0 : this.currentPlayer));
 
-    // Player indicator with color. En solo personne n'a de tour : pas de badge.
+    // Chacun son tour, a chaque question : le bandeau dit a qui c'est. En solo
+    // personne n'a de tour, pas de bandeau.
     if (!this.modeSolo) {
-      var badge = el('div', 'text-center mb-4');
-      if (color) {
-        badge.innerHTML = '<span class="badge" style="background:' + color.bg + ';color:' + color.text + '">' + esc(player.name) + '</span>';
-      } else {
-        badge.innerHTML = '<span class="badge badge-primary">' + esc(player.name) + '</span>';
-      }
-      wrap.appendChild(badge);
+      wrap.appendChild(bandeauTour(this, { nom: player.name, rang: this.currentPlayer, joueurs: this.players }));
     }
 
     // Question
@@ -3997,13 +3943,13 @@ var QuizEngine = (function() {
           } else if (self.currentPlayer === 0) {
             self.answers.p1[self.currentQ] = opt.id;
             self.currentPlayer = 1;
-            self.phase = 'handoff';
+            self.phase = 'playing';
           } else {
             self.answers.p2[self.currentQ] = opt.id;
             if (self.currentQ < total - 1) {
               self.currentQ++;
               self.currentPlayer = 0;
-              self.phase = 'handoff';
+              self.phase = 'playing';
             } else {
               self.phase = 'results';
             }
@@ -4377,8 +4323,11 @@ var QuizEngine = (function() {
     renderProgressBar(wrap, this.currentRound, this.limite, tg('question.roundXofY', 'Manche {{current}} sur {{total}}').replace('{{current}}', this.currentRound + 1).replace('{{total}}', this.limite),
       persosBarre(this.players, round.guesser));
 
-    wrap.appendChild(el('div', 'text-center mb-2 text-sm text-muted-foreground', esc(guesser.name) + ' ' + tg('coquin.guessFor', 'devine pour') + ' ' + esc(target.name)));
-    renderPlayerBadge(wrap, guesser.name + ' ' + tg('question.itsYourTurnToGuess', 'c\'est à toi de deviner !'));
+    wrap.appendChild(bandeauTour(this, {
+      nom: guesser.name, rang: round.guesser,
+      phrase: tg('coquin.tourDevine', '{{name}}, c\'est à toi de deviner !'),
+      note: guesser.name + ' ' + tg('coquin.guessFor', 'devine pour') + ' ' + target.name
+    }));
 
     var qText = tgd(this.prefix + '.q' + q.id, q.text);
     // Replace NAME/{{name}} with target player's name
@@ -4424,8 +4373,11 @@ var QuizEngine = (function() {
     renderProgressBar(wrap, this.currentRound, this.limite, tg('question.roundXofY', 'Manche {{current}} sur {{total}}').replace('{{current}}', this.currentRound + 1).replace('{{total}}', this.limite),
       persosBarre(this.players, round.guesser));
 
-    wrap.appendChild(el('div', 'text-center mb-2', '📱 ' + tg('coquin.passPhone', 'Passez le téléphone à') + ' ' + esc(target.name)));
-    renderPlayerBadge(wrap, target.name + ', ' + tg('coquin.revealAnswer', 'révèle ta vraie réponse !'));
+    wrap.appendChild(bandeauTour(this, {
+      nom: target.name, rang: round.target,
+      phrase: tg('coquin.tourRevele', '{{name}}, révèle ta vraie réponse !'),
+      note: '📱 ' + tg('coquin.passPhone', 'Passez le téléphone à') + ' ' + target.name
+    }));
 
     var qText = tgd(this.prefix + '.q' + q.id, q.text);
     qText = injecterPrenom(qText, target.name);
@@ -4618,7 +4570,6 @@ var QuizEngine = (function() {
     this.container.innerHTML = '';
     if (this.phase === 'setup') this.renderSetup();
     else if (this.phase === 'question') this.renderQuestion();
-    else if (this.phase === 'transition') this.renderTransition();
     else if (this.phase === 'results') this.renderResults();
   };
 
@@ -4682,6 +4633,9 @@ var QuizEngine = (function() {
     roles.appendChild(carteRole('devine', tg('question.roleGuess', 'Doit deviner'), guesser.name));
     roles.appendChild(el('span', 'kq-roles-sep', '→'));
     roles.appendChild(carteRole('valide', tg('question.roleValidate', 'Valide'), target.name));
+    // Les roles s'echangent a chaque question, sans ecran entre les deux :
+    // le bloc arrive en sautant pour qu'on voie que la main a change.
+    if (this.currentQ > 0) roles.classList.add('kq-roles--arrive');
     wrap.appendChild(roles);
 
     // La consigne est une phrase entiere a jetons plutot que des morceaux
@@ -4691,6 +4645,12 @@ var QuizEngine = (function() {
       tg('question.roleInstruction', '{{guesser}}, dis ta réponse à voix haute, {{target}} valide !')
         .replace('{{guesser}}', esc(guesser.name))
         .replace('{{target}}', esc(target.name))));
+    // Le score du moment, que montrait l'ecran de transition entre deux
+    // questions.
+    if (this.currentQ > 0) {
+      wrap.appendChild(el('p', 'kq-score', esc(tg('coquin.currentScore', 'Score') + avantPonct() + ': ' +
+        this.players[0].name + ' ' + this.scores[0] + ' – ' + this.scores[1] + ' ' + this.players[1].name)));
+    }
 
     var qText = tgd(this.prefix + '.q' + q.id, q.text);
     // Le prenom de la personne visee est injecte dans le texte : sans lui, une
@@ -4721,7 +4681,10 @@ var QuizEngine = (function() {
     var correctBtn = el('button', 'quiz-validate-btn quiz-validate-correct');
     correctBtn.innerHTML = ICONS.check + ' <span>' +
       tg('question.guesserFound', '{{name}} a trouvé !').replace('{{name}}', esc(guesser.name)) + '</span>';
+    // La question suivante arrive tout de suite : sans verrou, un double
+    // appui validait aussi la question d'apres.
     correctBtn.addEventListener('click', function() {
+      if (!answerLock(self)) return;
       self.scores[guesserIdx]++;
       self.advance();
     });
@@ -4730,6 +4693,7 @@ var QuizEngine = (function() {
     wrongBtn.innerHTML = ICONS.cross + ' <span>' +
       tg('question.guesserMissed', '{{name}} s\'est trompé(e) !').replace('{{name}}', esc(guesser.name)) + '</span>';
     wrongBtn.addEventListener('click', function() {
+      if (!answerLock(self)) return;
       self.advance();
     });
 
@@ -4743,40 +4707,11 @@ var QuizEngine = (function() {
   KnowledgeQuiz.prototype.advance = function() {
     if (this.currentQ >= this.questions.length - 1) {
       this.phase = 'results';
-      this.render();
     } else {
-      this.phase = 'transition';
-      this.render();
+      this.currentQ++;
+      this.phase = 'question';
     }
-  };
-
-  KnowledgeQuiz.prototype.renderTransition = function() {
-    var self = this;
-    var nextGuesserIdx = (this.currentQ + 1) % 2;
-    var nextGuesser = this.players[nextGuesserIdx];
-
-    var wrap = el('div', 'quiz-engine animate-fade-in text-center');
-    wrap.appendChild(el('div', 'text-5xl mb-4', '🎯'));
-    wrap.appendChild(el('h2', 'text-xl font-bold mb-3', tg('question.itsTurnOf', 'C\'est au tour de') + ' ' + esc(nextGuesser.name) + avantPonct() + '!'));
-    wrap.appendChild(el('p', 'text-muted-foreground mb-2', tg('question.getReadyToGuess', 'Préparez-vous à deviner !')));
-    wrap.appendChild(el('p', 'text-sm text-muted-foreground mb-6', tg('coquin.currentScore', 'Score') + avantPonct() + ': ' + esc(this.players[0].name) + ' ' + this.scores[0] + ' - ' + this.scores[1] + ' ' + esc(this.players[1].name)));
-
-    // Auto-advance after 2.5s or click (but never both)
-    var advanced = false;
-    function advance() {
-      if (advanced) return;
-      advanced = true;
-      clearTimeout(timer);
-      self.currentQ++;
-      self.phase = 'question';
-      self.render();
-    }
-    var btn = el('button', 'btn btn-cta', tg('question.nextQuestionBtn', 'Question suivante !'));
-    btn.addEventListener('click', advance);
-    wrap.appendChild(btn);
-    var timer = setTimeout(advance, 2500);
-
-    this.container.appendChild(wrap);
+    this.render();
   };
 
   KnowledgeQuiz.prototype.renderResults = function() {
@@ -5043,7 +4978,6 @@ var QuizEngine = (function() {
     this.container.innerHTML = '';
     if (this.phase === 'setup') this.renderSetup();
     else if (this.phase === 'question') this.renderQuestion();
-    else if (this.phase === 'transition') this.renderTransition();
     else if (this.phase === 'results') this.renderResults();
   };
 
@@ -5193,31 +5127,18 @@ var QuizEngine = (function() {
     this.container.appendChild(wrap);
   };
 
+  // La question suivante arrive tout de suite, sans l'ecran « Préparez-vous
+  // à voter ! » de deux secondes : un appui tardif sur le meme bouton ne doit
+  // pas voter aussi pour elle.
   MostQuiz.prototype.advanceQuestion = function() {
     if (this.currentQ >= this.questions.length - 1) {
-      this.phase = 'results'; this.render();
+      this.phase = 'results';
     } else {
-      this.phase = 'transition'; this.render();
+      this.currentQ++;
+      this.phase = 'question';
+      this.__answerLockUntil = Math.max(this.__answerLockUntil || 0, Date.now() + 350);
     }
-  };
-
-  MostQuiz.prototype.renderTransition = function() {
-    var self = this;
-    var wrap = el('div', 'quiz-engine animate-fade-in text-center');
-    wrap.appendChild(el('div', 'text-5xl mb-4', '🎯'));
-    wrap.appendChild(el('h2', 'text-xl font-bold mb-6', tg('question.getReadyToVote', 'Préparez-vous à voter ! 🎯')));
-
-    var timer = setTimeout(function() {
-      self.currentQ++; self.phase = 'question'; self.render();
-    }, 2000);
-
-    var skipBtn = el('button', 'btn btn-ghost text-sm', tg('question.nextQuestionTransition', 'Question suivante !'));
-    skipBtn.addEventListener('click', function() {
-      clearTimeout(timer);
-      self.currentQ++; self.phase = 'question'; self.render();
-    });
-    wrap.appendChild(skipBtn);
-    this.container.appendChild(wrap);
+    this.render();
   };
 
   MostQuiz.prototype.renderResults = function() {
@@ -5572,7 +5493,6 @@ var QuizEngine = (function() {
     this.container.innerHTML = '';
     if (this.phase === 'mode') this.renderMode();
     else if (this.phase === 'setup') this.renderSetup();
-    else if (this.phase === 'handoff') this.renderHandoff();
     else if (this.phase === 'playing') this.renderQuestion();
     else if (this.phase === 'results') this.renderResults();
   };
@@ -5663,7 +5583,7 @@ var QuizEngine = (function() {
         { name: n2, gender: genders[1] || 'femme' }
       ];
       self.currentQ = 0; self.currentPlayer = 0; self.reponses = [[], []];
-      self.phase = 'handoff'; self.render();
+      self.phase = 'playing'; self.render();
     });
 
     wrap.appendChild(form);
@@ -5677,20 +5597,6 @@ var QuizEngine = (function() {
     wrap.appendChild(retour);
 
     this.container.appendChild(wrap);
-  };
-
-  HealthyQuiz.prototype.renderHandoff = function() {
-    var self = this;
-    var player = this.players[this.currentPlayer];
-    var color = getPlayerColor(player, this.players[this.currentPlayer === 0 ? 1 : 0], this.currentPlayer);
-
-    this.container.appendChild(relaisJoueur(this, {
-      nom: player.name,
-      perso: mascotteDe(player, this.currentPlayer),
-      couleur: color.bg,
-      etape: tg('question.question', 'Question') + ' ' + (this.currentQ + 1) + '/' + this.questions.length,
-      suite: function() { self.phase = 'playing'; self.render(); }
-    }));
   };
 
   HealthyQuiz.prototype.renderQuestion = function() {
@@ -5710,11 +5616,7 @@ var QuizEngine = (function() {
       badgeSolo.innerHTML = '<span class="badge sain-badge-solo">' + esc(tg('sainMode.soloBadge', 'Votre réponse commune')) + '</span>';
       wrap.appendChild(badgeSolo);
     } else {
-      var player = this.players[this.currentPlayer];
-      var color = getPlayerColor(player, this.players[this.currentPlayer === 0 ? 1 : 0], this.currentPlayer);
-      var badge = el('div', 'text-center mb-4');
-      badge.innerHTML = '<span class="badge" style="background:' + color.bg + ';color:' + color.text + '">' + esc(player.name) + '</span>';
-      wrap.appendChild(badge);
+      wrap.appendChild(bandeauTour(this, { nom: this.players[this.currentPlayer].name, rang: this.currentPlayer, joueurs: this.players }));
     }
 
     var qText = tgd(this.prefix + '.q' + q.id, q.text);
@@ -5752,11 +5654,11 @@ var QuizEngine = (function() {
             else { self.phase = 'results'; }
           } else if (self.currentPlayer === 0) {
             self.currentPlayer = 1;
-            self.phase = 'handoff';
+            self.phase = 'playing';
           } else if (self.currentQ < total - 1) {
             self.currentQ++;
             self.currentPlayer = 0;
-            self.phase = 'handoff';
+            self.phase = 'playing';
           } else {
             self.phase = 'results';
           }
@@ -5920,7 +5822,6 @@ var QuizEngine = (function() {
   ParentaliteQuiz.prototype.render = function() {
     this.container.innerHTML = '';
     if (this.phase === 'setup') this.renderSetup();
-    else if (this.phase === 'handoff') this.renderHandoff();
     else if (this.phase === 'playing') this.renderQuestion();
     else if (this.phase === 'palier') this.renderPalier();
     else if (this.phase === 'results') this.renderResults();
@@ -5954,7 +5855,7 @@ var QuizEngine = (function() {
       var n2 = document.getElementById('parentalite-player-1').value.trim() || tg('playerSetup.player2', 'Joueur 2');
       self.players = [{ name: n1 }, { name: n2 }];
       self.currentQ = 0; self.currentPlayer = 0; self.scores = [[], []];
-      self.phase = 'handoff'; self.render();
+      self.phase = 'playing'; self.render();
     });
 
     wrap.appendChild(form);
@@ -6006,20 +5907,6 @@ var QuizEngine = (function() {
     });
   };
 
-  ParentaliteQuiz.prototype.renderHandoff = function() {
-    var self = this;
-    var player = this.players[this.currentPlayer];
-    var colors = ['#ec4899', '#3b82f6'];
-
-    this.container.appendChild(relaisJoueur(this, {
-      nom: player.name,
-      perso: mascotteDe(player, this.currentPlayer),
-      couleur: colors[this.currentPlayer],
-      etape: tg('question.question', 'Question') + ' ' + (this.currentQ + 1) + '/' + this.questions.length,
-      suite: function() { self.phase = 'playing'; self.render(); }
-    }));
-  };
-
   ParentaliteQuiz.prototype.renderQuestion = function() {
     var self = this;
     var q = this.questions[this.currentQ];
@@ -6027,16 +5914,12 @@ var QuizEngine = (function() {
     var totalAnswers = total * 2;
     var answeredCount = this.scores[0].length + this.scores[1].length;
     var player = this.players[this.currentPlayer];
-    var colors = [{ bg: '#ec4899', text: '#fff' }, { bg: '#3b82f6', text: '#fff' }];
-    var color = colors[this.currentPlayer];
 
     var wrap = el('div', 'quiz-engine quiz-question-enter');
     renderProgressBar(wrap, answeredCount, totalAnswers, tg('question.question', 'Question') + ' ' + (this.currentQ + 1) + '/' + total,
       persosBarre(this.players, this.currentPlayer));
 
-    var badge = el('div', 'text-center mb-4');
-    badge.innerHTML = '<span class="badge" style="background:' + color.bg + ';color:' + color.text + '">' + esc(player.name) + '</span>';
-    wrap.appendChild(badge);
+    wrap.appendChild(bandeauTour(this, { nom: player.name, rang: this.currentPlayer, joueurs: this.players }));
 
     var qText = tgd(this.prefix + '.q' + q.id, q.text);
     wrap.appendChild(el('h3', 'text-xl font-semibold mb-6 text-center', esc(qText)));
@@ -6066,11 +5949,11 @@ var QuizEngine = (function() {
         setTimeout(function() {
           if (self.currentPlayer === 0) {
             self.currentPlayer = 1;
-            self.phase = 'handoff';
+            self.phase = 'playing';
           } else if (self.currentQ < total - 1) {
             self.currentQ++;
             self.currentPlayer = 0;
-            self.phase = 'handoff';
+            self.phase = 'playing';
           } else if (self.limite < self.questions.length) {
             // Fin de la version courte : le resultat est pret, on laisse le
             // choix entre s'arreter la et enchainer sur le reste du lot.
@@ -6117,7 +6000,7 @@ var QuizEngine = (function() {
       self.limite = self.questions.length;
       self.currentQ = self.currentQ + 1;
       self.currentPlayer = 0;
-      self.phase = 'handoff';
+      self.phase = 'playing';
       self.render();
     });
     choix.appendChild(voir);
@@ -7760,7 +7643,6 @@ var QuizEngine = (function() {
   PiliersQuiz.prototype.render = function() {
     this.container.innerHTML = '';
     if (this.phase === 'setup') this.renderSetup();
-    else if (this.phase === 'relais') this.renderRelais();
     else if (this.phase === 'playing') this.renderQuestion();
     else if (this.phase === 'results') this.renderResults();
   };
@@ -7807,7 +7689,7 @@ var QuizEngine = (function() {
         self.currentQ = 0;
         self.courant = 0;
         self.reponses = [[], []];
-        self.phase = self.duo ? 'relais' : 'playing';
+        self.phase = 'playing';
         self.render();
       }
     });
@@ -7818,7 +7700,7 @@ var QuizEngine = (function() {
   };
 
   // A distance, chacun repond sur son partenaire depuis son telephone : les
-  // enonces portent le prenom de l'autre, comme au relais.
+  // enonces portent le prenom de l'autre, comme sur un seul telephone.
   PiliersQuiz.prototype.demarrerADistance = function (salon, moi, moiInfo, partenaireInfo) {
     var self = this;
     var joueurs = joueursDuSalon(moi, moiInfo, partenaireInfo);
@@ -7850,17 +7732,6 @@ var QuizEngine = (function() {
     });
   };
 
-  PiliersQuiz.prototype.renderRelais = function() {
-    var self = this;
-    this.container.appendChild(relaisJoueur(this, {
-      nom: this.joueurs[this.courant],
-      perso: mascotteDe(null, this.courant),
-      emoji: '💫',
-      note: tg('question.passPhoneOrLookAway', 'Passez le téléphone ou détournez le regard'),
-      suite: function() { self.phase = 'playing'; self.render(); }
-    }));
-  };
-
   PiliersQuiz.prototype.renderQuestion = function() {
     var self = this;
     var q = this.questions[this.currentQ];
@@ -7868,7 +7739,13 @@ var QuizEngine = (function() {
     var wrap = el('div', 'quiz-engine quiz-question-enter');
 
     renderProgressBar(wrap, this.currentQ, total, null, persosBarre(null, this.duo ? this.courant : 0));
-    if (this.duo) renderPlayerBadge(wrap, this.joueurs[this.courant], this.courant === 0 ? 'badge-pink' : 'badge-blue');
+    // A deux, chacun repond a toute la serie puis passe le telephone.
+    if (this.duo) {
+      wrap.appendChild(bandeauTour(this, {
+        nom: this.joueurs[this.courant], rang: this.courant,
+        note: noteDeSerie(this.currentQ, this.courant, this.joueurs[0])
+      }));
+    }
 
     var texte = this.prenom(tgd(this.prefix + '.q' + q.id, q.text));
     wrap.appendChild(el('h3', 'text-xl font-semibold mb-6 text-center', esc(texte)));
@@ -7906,7 +7783,6 @@ var QuizEngine = (function() {
     if (this.duo && this.courant === 0) {
       this.courant = 1;
       this.currentQ = 0;
-      this.phase = 'relais';
       this.render();
       return;
     }
@@ -8119,7 +7995,6 @@ var QuizEngine = (function() {
   ChargeMentaleQuiz.prototype.render = function() {
     this.container.innerHTML = '';
     if (this.phase === 'setup') this.renderSetup();
-    else if (this.phase === 'relais') this.renderRelais();
     else if (this.phase === 'playing') this.renderQuestion();
     else if (this.phase === 'results') this.renderResults();
   };
@@ -8168,7 +8043,7 @@ var QuizEngine = (function() {
         self.currentQ = 0;
         self.courant = 0;
         self.reponses = [[], []];
-        self.phase = self.duo ? 'relais' : 'playing';
+        self.phase = 'playing';
         self.render();
       }
     });
@@ -8209,17 +8084,6 @@ var QuizEngine = (function() {
     });
   };
 
-  ChargeMentaleQuiz.prototype.renderRelais = function() {
-    var self = this;
-    this.container.appendChild(relaisJoueur(this, {
-      nom: this.joueurs[this.courant],
-      perso: mascotteDe(null, this.courant),
-      emoji: '🧠',
-      note: tg('question.passPhoneOrLookAway', 'Passez le téléphone ou détournez le regard'),
-      suite: function() { self.phase = 'playing'; self.render(); }
-    }));
-  };
-
   ChargeMentaleQuiz.prototype.renderQuestion = function() {
     var self = this;
     var q = this.questions[this.currentQ];
@@ -8231,7 +8095,13 @@ var QuizEngine = (function() {
     renderProgressBar(wrap, faits, this.duo ? total * 2 : total,
       tg('question.question', 'Question') + ' ' + (this.currentQ + 1) + '/' + total,
       persosBarre(null, this.duo ? this.courant : 0));
-    if (this.duo) renderPlayerBadge(wrap, this.joueurs[this.courant], this.courant === 0 ? 'badge-pink' : 'badge-blue');
+    // A deux, chacun repond aux vingt taches puis passe le telephone.
+    if (this.duo) {
+      wrap.appendChild(bandeauTour(this, {
+        nom: this.joueurs[this.courant], rang: this.courant,
+        note: noteDeSerie(this.currentQ, this.courant, this.joueurs[0])
+      }));
+    }
 
     wrap.appendChild(el('h3', 'text-xl font-semibold mb-6 text-center',
       esc(this.txt('q' + q.id, ''))));
@@ -8243,6 +8113,9 @@ var QuizEngine = (function() {
       bouton.innerHTML = '<span class="quiz-option-letter">' + lettres[idx] + '</span><span>' + esc(libelle) + '</span>';
       bouton.style.animationDelay = (idx * 60) + 'ms';
       bouton.addEventListener('click', function() {
+        // Un double appui repondait aussi a la question suivante, et au
+        // changement de main, a la place de l'autre.
+        if (!answerLock(self)) return;
         self.reponses[self.courant][self.currentQ] = ChargeMentaleQuiz.CRANS[idx];
         self.avance();
       });
@@ -8256,7 +8129,7 @@ var QuizEngine = (function() {
   ChargeMentaleQuiz.prototype.avance = function() {
     if (this.currentQ < this.questions.length - 1) { this.currentQ++; this.render(); return; }
     if (this.duo && this.courant === 0) {
-      this.courant = 1; this.currentQ = 0; this.phase = 'relais'; this.render(); return;
+      this.courant = 1; this.currentQ = 0; this.render(); return;
     }
     this.phase = 'results';
     this.render();
@@ -10177,7 +10050,6 @@ var QuizEngine = (function() {
     this.container.innerHTML = '';
     if (this.phase === 'setup') this.renderSetup();
     else if (this.phase === 'mode') this.renderMode();
-    else if (this.phase === 'passe') this.renderPasse();
     else if (this.phase === 'decompte') this.renderDecompte();
     else if (this.phase === 'reveal') this.renderReveal();
     else if (this.phase === 'debat') this.renderDebat();
@@ -10344,18 +10216,25 @@ var QuizEngine = (function() {
     wrap.appendChild(carte);
 
     var ensemble = this.mode === 'ensemble';
-    var consigne = el('p', 'qdn-secret');
-    consigne.innerHTML = ensemble
-      ? '🗣️ ' + esc(tg('quiDeNous.voteEnsemble', 'Décidez ensemble, à voix haute.'))
-      : '🤫 ' + esc(tg('quiDeNous.voteSecret', '{{nom}} vote en secret').replace('{{nom}}', this.joueur(j)));
-    wrap.appendChild(consigne);
+    if (ensemble) {
+      wrap.appendChild(el('p', 'qdn-secret', '🗣️ ' + esc(tg('quiDeNous.voteEnsemble', 'Décidez ensemble, à voix haute.'))));
+    } else {
+      // En secret, chacun vote a son tour sur le meme ecran : le bandeau dit
+      // qui tient le telephone. A la premiere manche, le second lit aussi que
+      // le premier vote reste cache.
+      wrap.appendChild(bandeauTour(this, {
+        nom: this.joueur(j), rang: j,
+        phrase: tg('quiDeNous.voteSecret', '{{nom}} vote en secret'),
+        note: (j === 1 && this.idx === 0) ? tg('quiDeNous.passeDesc', '') : ''
+      }));
+    }
 
     var choix = el('div', 'qdn-choix');
     // Un vote enregistre puis, selon le mode, on passe le telephone ou on
     // enchaine directement sur la revelation.
     function poser(valeur, bouton) {
-      // Le relais vient de s'effacer seul : sans ce délai, un doigt déjà parti
-      // vers le bandeau retombe sur un nom et vote à la place du joueur.
+      // La main vient de changer (bandeauTour) : sans ce délai, le doigt du
+      // premier qui retombe sur un nom voterait à la place du second.
       if (self.__answerLockUntil && Date.now() < self.__answerLockUntil) return;
       if (self.votes[j] !== null) return;
       self.votes[j] = valeur;
@@ -10363,7 +10242,7 @@ var QuizEngine = (function() {
       choix.classList.add('qdn-choix--verrouille');
       self.attendre(420, function() {
         if (ensemble) { self.votes[1] = valeur; self.phase = 'reveal'; }
-        else if (j === 0) { self.tour = 1; self.phase = 'passe'; }
+        else if (j === 0) { self.tour = 1; self.phase = 'vote'; }
         else { self.phase = 'decompte'; }
         self.render();
       });
@@ -10386,26 +10265,6 @@ var QuizEngine = (function() {
     nsp.addEventListener('click', function() { poser(QDN_NSP, null); });
     wrap.appendChild(nsp);
 
-    wrap.appendChild(this.boutonArret());
-    this.container.appendChild(wrap);
-  };
-
-  // Même relais que les tests à deux : l'écran s'annonçait puis attendait un
-  // clic sur « C'est à moi ! » à chaque manche, soit une trentaine de clics
-  // par partie en mode secret. Le bouton « arrêter » reste sous le bandeau,
-  // et il est de toute façon présent sur l'écran de vote qui suit.
-  DuoVoteGame.prototype.renderPasse = function() {
-    var self = this;
-    var wrap = el('div', 'quiz-engine qdn-jeu text-center');
-    wrap.appendChild(this.barre());
-    wrap.appendChild(relaisJoueur(this, {
-      nom: this.joueur(1),
-      perso: mascotteDe(null, 1),
-      // Pas d'étape ici : le bandeau du jeu, juste au-dessus, affiche déjà le
-      // numéro de manche.
-      note: tg('quiDeNous.passeDesc', 'Pas de triche : le vote reste caché jusqu\'à la révélation.'),
-      suite: function() { self.phase = 'vote'; self.render(); }
-    }));
     wrap.appendChild(this.boutonArret());
     this.container.appendChild(wrap);
   };
@@ -13776,10 +13635,8 @@ var QuizEngine = (function() {
   };
 
   DixMaisGame.prototype.render = function() {
-    if (this.__relaisTimer) { clearTimeout(this.__relaisTimer); this.__relaisTimer = null; }
     this.container.innerHTML = '';
     if (this.phase === 'setup') this.renderSetup();
-    else if (this.phase === 'relais') this.renderRelais();
     else if (this.phase === 'resultats') this.renderResultats();
     else this.renderJeu();
   };
@@ -13867,7 +13724,7 @@ var QuizEngine = (function() {
     this.tour = 0;
     this.notes = [[], []];
     this.carteRendue = -1;
-    this.phase = this.mode === 'secret' ? 'relais' : 'jeu';
+    this.phase = 'jeu';
     this.render();
     smoothScroll(this.container, 'start');
   };
@@ -13882,21 +13739,6 @@ var QuizEngine = (function() {
   DixMaisGame.prototype.libelleCarte = function() {
     return this.dtg('carteSur', 'Carte {{n}} / {{total}}')
       .replace('{{n}}', this.idx + 1).replace('{{total}}', this.total());
-  };
-
-  // « A Lea de noter » : le telephone change de main, l'autre detourne le
-  // regard. Le bandeau s'efface seul, comme dans les tests a deux.
-  DixMaisGame.prototype.renderRelais = function() {
-    var self = this;
-    var j = this.repondant();
-    this.container.appendChild(relaisJoueur(this, {
-      nom: this.joueur(j),
-      emoji: '🤫',
-      perso: mascotteDe(null, j),
-      note: this.dtg('relaisNote', 'Passez le téléphone, et l\'autre ne regarde pas la note !'),
-      etape: this.libelleCarte(),
-      suite: function() { self.phase = 'jeu'; self.render(); }
-    }));
   };
 
   DixMaisGame.prototype.carteEl = function(q) {
@@ -13945,9 +13787,14 @@ var QuizEngine = (function() {
 
     if (enSecret) {
       if (this.tour < 2) {
-        var bandeau = el('div', 'dixm-bandeau');
-        bandeau.innerHTML = badgeDeTour(this.joueur(j), this.dtg('taNote', '{{nom}}, ta note ?').replace('{{nom}}', this.joueur(j)), j);
-        wrap.appendChild(bandeau);
+        // Les deux notent la meme carte l'un apres l'autre : seul le bandeau
+        // change de main. Sur la premiere carte, il rappelle de se passer le
+        // telephone sans montrer sa note.
+        wrap.appendChild(bandeauTour(this, {
+          nom: this.joueur(j), rang: j,
+          phrase: this.dtg('taNote', '{{nom}}, ta note ?'),
+          note: this.idx === 0 ? this.dtg('relaisNote', '') : ''
+        }));
         wrap.appendChild(this.grilleNotes({
           titre: this.dtg('taNote', '{{nom}}, ta note ?').replace('{{nom}}', this.joueur(j)),
           classe: 'notes-grille--j' + (j + 1),
@@ -13960,7 +13807,7 @@ var QuizEngine = (function() {
               self.tour++;
               // Apres la premiere note, le telephone change de main ; apres
               // la seconde, les deux regardent la revelation ensemble.
-              self.phase = self.tour === 1 ? 'relais' : 'jeu';
+              self.phase = 'jeu';
               self.render();
             }, 380);
           }
@@ -14037,7 +13884,7 @@ var QuizEngine = (function() {
       if (dernier) { self.phase = 'resultats'; self.render(); return; }
       self.idx++;
       self.tour = 0;
-      self.phase = self.mode === 'secret' ? 'relais' : 'jeu';
+      self.phase = 'jeu';
       self.render();
     });
     bloc.appendChild(suivant);
@@ -14201,10 +14048,8 @@ var QuizEngine = (function() {
   };
 
   EchelleQuiz.prototype.render = function() {
-    if (this.__relaisTimer) { clearTimeout(this.__relaisTimer); this.__relaisTimer = null; }
     this.container.innerHTML = '';
     if (this.phase === 'setup') this.renderSetup();
-    else if (this.phase === 'relais') this.renderRelais();
     else if (this.phase === 'results') this.renderResults();
     else this.renderQuestion();
   };
@@ -14233,30 +14078,13 @@ var QuizEngine = (function() {
         self.answers = { p1: new Array(total).fill(null), p2: new Array(total).fill(null) };
         self.joueurCourant = 0;
         self.currentQ = 0;
-        self.phase = 'relais';
+        self.phase = 'playing';
         self.render();
         smoothScroll(self.container, 'start');
       }
     });
     if (this.distance) ecran.wrap.insertBefore(zoneDistancePour(this, { formulaire: grille, bouton: ecran.bouton, meta: ecran.meta, needsGender: true }), ecran.bouton);
     this.container.appendChild(ecran.wrap);
-  };
-
-  // Le relais : au depart pour le premier, puis une seule fois, quand le
-  // premier a fini toute sa serie.
-  EchelleQuiz.prototype.renderRelais = function() {
-    var self = this;
-    var j = this.joueurCourant;
-    var joueur = this.players[j];
-    this.container.appendChild(relaisJoueur(this, {
-      nom: joueur.name,
-      emoji: '🤫',
-      perso: mascotteDe(joueur, j),
-      couleur: this.couleur(j).bg,
-      note: j === 0 ? this.etg('relaisDebut', '') : this.etg('relaisSuite', '').replace('{{nom}}', this.players[0].name),
-      etape: this.etg('relaisEtape', '{{n}} questions').replace('{{n}}', this.questions.length),
-      suite: function() { self.phase = 'playing'; self.render(); }
-    }));
   };
 
   EchelleQuiz.prototype.renderQuestion = function() {
@@ -14270,10 +14098,12 @@ var QuizEngine = (function() {
       tg('question.question', 'Question') + ' ' + (this.currentQ + 1) + '/' + total,
       persosBarre(this.players, j));
 
-    var c = this.couleur(j);
-    var badge = el('div', 'text-center mb-4');
-    badge.innerHTML = '<span class="badge" style="background:' + c.bg + ';color:' + c.text + '">' + esc(this.players[j].name) + '</span>';
-    wrap.appendChild(badge);
+    // Chacun repond a toute sa serie, le telephone ne change de main qu'une
+    // fois : la consigne, puis « Lea a fini », sous le bandeau du tour.
+    wrap.appendChild(bandeauTour(this, {
+      nom: this.players[j].name, rang: j, joueurs: this.players,
+      note: noteDeSerie(this.currentQ, j, this.players[0].name, this.etg('relaisDebut', ''), this.etg('relaisSuite', ''))
+    }));
     wrap.appendChild(el('h3', 'text-xl font-semibold mb-6 text-center', esc(this.texteQuestion(q))));
 
     var liste = el('div', 'space-y-2');
@@ -14293,7 +14123,7 @@ var QuizEngine = (function() {
         setTimeout(function() {
           self.answers[cle][self.currentQ] = opt.id;
           if (self.currentQ < total - 1) { self.currentQ++; self.phase = 'playing'; }
-          else if (j === 0) { self.joueurCourant = 1; self.currentQ = 0; self.phase = 'relais'; }
+          else if (j === 0) { self.joueurCourant = 1; self.currentQ = 0; self.phase = 'playing'; }
           else { self.phase = 'results'; }
           self.render();
         }, DELAI_REPONSE);
@@ -14503,7 +14333,6 @@ var QuizEngine = (function() {
   QuiAimeQuiz.prototype.render = saisonRender;
   QuiAimeQuiz.prototype.renderModes = saisonRenderModes;
   QuiAimeQuiz.prototype.boutonRetourModes = saisonBoutonRetourModes;
-  QuiAimeQuiz.prototype.renderRelais = saisonRenderRelais;
 
   // Un texte du moteur, prenoms remplaces : {{nom}} est celui vers qui la
   // balance penche, {{autre}} l'autre.
@@ -14549,7 +14378,7 @@ var QuizEngine = (function() {
             : self.etg(i === 0 ? 'moiDefaut' : 'autreDefaut', i === 0 ? 'Vous' : "L'autre");
           return { name: v || repli, gender: genres[i] || null, saisi: !!v };
         });
-        self.phase = duo ? 'relais' : 'playing';
+        self.phase = 'playing';
         self.render();
         smoothScroll(self.container, 'start');
       }
@@ -14580,12 +14409,7 @@ var QuizEngine = (function() {
     renderProgressBar(wrap, this.currentQ, total,
       tg('question.question', 'Question') + ' ' + (this.currentQ + 1) + '/' + total,
       persosBarre(this.players, j));
-    if (duo) {
-      var c = this.couleur(j);
-      var badge = el('div', 'text-center mb-4');
-      badge.innerHTML = '<span class="badge" style="background:' + c.bg + ';color:' + c.text + '">' + esc(this.players[j].name) + '</span>';
-      wrap.appendChild(badge);
-    }
+    if (duo) wrap.appendChild(saisonBandeau(this));
     wrap.appendChild(el('h3', 'text-xl font-semibold mb-6 text-center', esc(this.texteQuestion(q))));
 
     var liste = el('div', 'space-y-2');
@@ -14605,7 +14429,7 @@ var QuizEngine = (function() {
         setTimeout(function() {
           self.answers[cle][self.currentQ] = opt.id;
           if (self.currentQ < total - 1) { self.currentQ++; self.phase = 'playing'; }
-          else if (duo && j === 0) { self.joueurCourant = 1; self.currentQ = 0; self.phase = 'relais'; }
+          else if (duo && j === 0) { self.joueurCourant = 1; self.currentQ = 0; self.phase = 'playing'; }
           else { self.phase = 'results'; }
           self.render();
         }, DELAI_REPONSE);
@@ -14940,7 +14764,7 @@ var QuizEngine = (function() {
               gender: genres[i] || null
             };
           });
-          self.phase = 'relais';
+          self.phase = 'playing';
         } else {
           self.players = [{ name: '', gender: null }, { name: '', gender: null }];
           self.phase = 'playing';
@@ -14955,7 +14779,6 @@ var QuizEngine = (function() {
     this.container.appendChild(ecran.wrap);
   };
 
-  PortraitQuiz.prototype.renderRelais = saisonRenderRelais;
 
   PortraitQuiz.prototype.renderQuestion = function() {
     var self = this;
@@ -14969,12 +14792,7 @@ var QuizEngine = (function() {
       tg('question.question', 'Question') + ' ' + (this.currentQ + 1) + '/' + total,
       duo ? persosBarre(this.players, j) : { marche: 'rose', attend: null });
 
-    if (duo) {
-      var c = this.couleur(j);
-      var badge = el('div', 'text-center mb-4');
-      badge.innerHTML = '<span class="badge" style="background:' + c.bg + ';color:' + c.text + '">' + esc(this.players[j].name) + '</span>';
-      wrap.appendChild(badge);
-    }
+    if (duo) wrap.appendChild(saisonBandeau(this));
     var sur = this.etg('q' + q.id + '_sur', '');
     if (sur) wrap.appendChild(el('p', 'port-question-sur', esc(sur)));
     wrap.appendChild(el('h3', 'text-xl font-semibold mb-6 text-center', esc(this.texteQuestion(q))));
@@ -14998,7 +14816,7 @@ var QuizEngine = (function() {
         setTimeout(function() {
           self.answers[cle][self.currentQ] = opt.id;
           if (self.currentQ < total - 1) { self.currentQ++; self.phase = 'playing'; }
-          else if (duo && j === 0) { self.joueurCourant = 1; self.currentQ = 0; self.phase = 'relais'; }
+          else if (duo && j === 0) { self.joueurCourant = 1; self.currentQ = 0; self.phase = 'playing'; }
           else { self.phase = 'results'; }
           self.render();
         }, DELAI_REPONSE);
@@ -15377,7 +15195,6 @@ var QuizEngine = (function() {
   SurvieQuiz.prototype.render = saisonRender;
   SurvieQuiz.prototype.renderModes = saisonRenderModes;
   SurvieQuiz.prototype.boutonRetourModes = saisonBoutonRetourModes;
-  SurvieQuiz.prototype.renderRelais = saisonRenderRelais;
 
   SurvieQuiz.prototype.renderSetup = function() {
     var self = this;
@@ -15408,7 +15225,7 @@ var QuizEngine = (function() {
               gender: genres[i] || null
             };
           });
-          self.phase = 'relais';
+          self.phase = 'playing';
         } else {
           self.players = [{ name: '', gender: null }, { name: '', gender: null }];
           self.phase = 'playing';
@@ -15434,12 +15251,7 @@ var QuizEngine = (function() {
     renderProgressBar(wrap, this.currentQ, total,
       tg('question.question', 'Question') + ' ' + (this.currentQ + 1) + '/' + total,
       duo ? persosBarre(this.players, j) : { marche: 'rose', attend: null });
-    if (duo) {
-      var c = this.couleur(j);
-      var badge = el('div', 'text-center mb-4');
-      badge.innerHTML = '<span class="badge" style="background:' + c.bg + ';color:' + c.text + '">' + esc(this.players[j].name) + '</span>';
-      wrap.appendChild(badge);
-    }
+    if (duo) wrap.appendChild(saisonBandeau(this));
     // La situation : une ligne au-dessus de la question (« Il est 23 h, la
     // maison craque. »), quand la page en ecrit une.
     var sur = this.etg('q' + q.id + '_sur', '');
@@ -15462,7 +15274,7 @@ var QuizEngine = (function() {
         setTimeout(function() {
           self.answers[cle][self.currentQ] = opt.id;
           if (self.currentQ < total - 1) { self.currentQ++; self.phase = 'playing'; }
-          else if (duo && j === 0) { self.joueurCourant = 1; self.currentQ = 0; self.phase = 'relais'; }
+          else if (duo && j === 0) { self.joueurCourant = 1; self.currentQ = 0; self.phase = 'playing'; }
           else { self.phase = 'results'; }
           self.render();
         }, DELAI_REPONSE);
@@ -15958,8 +15770,8 @@ var QuizEngine = (function() {
     chargerSalon: chargerSalon,
     carteMoi: carteMoi,
     // Exposé pour les moteurs écrits dans un gabarit de page, qui doivent
-    // annoncer le changement de joueur exactement comme les autres.
-    relaisJoueur: relaisJoueur,
+    // dire à qui c'est le tour exactement comme les autres.
+    bandeauTour: bandeauTour,
     SUPABASE_URL: SUPABASE_URL,
     SUPABASE_KEY: SUPABASE_KEY,
   };

@@ -929,10 +929,10 @@ async function sansNom(page) {
 // s'arrête à l'écran de résultat (.quiz-result-card ou [data-quiz-done], les
 // mêmes marques que le compteur des parties finies de quiz-extras.js). Il ne
 // touche ni au mode à distance, ni aux boutons qui quittent, partagent ou
-// changent de mode. Quand rien n'est cliquable (un relais entre joueurs qui
-// s'efface seul), il attend.
+// changent de mode. Quand rien n'est cliquable (un compte à rebours, un écran
+// qui s'enchaîne seul), il attend.
 const CLASSES_EVITEES = /quit|abandon|retour|changer|partag|share|copi|distance|salon|regle|arret|fermer|close|theme|menu|pqx|signal|lien|invite|recommenc|rejouer|replay|aide/i;
-const CLASSES_REPONSES = /option|choix|reponse|answer|carte|pastille|note|vote|btn-nom|oui|non|swipe|chip|item|relais/i;
+const CLASSES_REPONSES = /option|choix|reponse|answer|carte|pastille|note|vote|btn-nom|oui|non|swipe|chip|item/i;
 const CLASSES_SUITE = /cta|start|suivant|next|continu|valider|go\b|demarr|commenc|lancer|jouer|revel|voir|primary|principal|lancer|de-btn|des\b/i;
 const FIN_DE_PARTIE = '.quiz-result-card, [data-quiz-done]';
 async function joue(page, mode) {
@@ -968,8 +968,8 @@ async function joue(page, mode) {
         sel.dispatchEvent(new Event('change', { bubbles: true })); rempli = true;
       }
       // Ce qui se clique : les boutons, et ce qui porte un curseur de main
-      // sans être dans un bouton (un relais, une carte).
-      const boutons = [...racine.querySelectorAll('button, [role="button"], [role="radio"], a.btn, .quiz-option, .qc-relais')];
+      // sans être dans un bouton (une carte).
+      const boutons = [...racine.querySelectorAll('button, [role="button"], [role="radio"], a.btn, .quiz-option')];
       for (const el of racine.querySelectorAll('div, li, span, label')) {
         if (getComputedStyle(el).cursor === 'pointer' && !el.closest('button, a, [role="button"], label') && !el.querySelector('button, a, input')) boutons.push(el);
       }

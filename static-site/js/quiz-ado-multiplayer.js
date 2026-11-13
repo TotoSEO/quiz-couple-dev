@@ -55,10 +55,8 @@
       waitingDesc: 'Envoie ce code à ton/ta partenaire :',
       copyCode: 'Copier le code',
       copied: 'Copié !',
-      passPhone: 'Passe le téléphone à {{name}} !',
       passPhoneDesc: '{{name}} a terminé. C\'est au tour de {{name2}} de répondre aux mêmes questions.',
-      tapToContinue: 'C\'est parti !',
-      dontLook: '({{name}}, ne regarde pas les réponses !)',
+      serieDebut: 'Réponds aux {{n}} questions, puis passe le téléphone à {{name}}.',
       questionOf: 'sur',
       turnOf: 'Tour de {{name}}',
       waitingAnswer: 'En attente de {{name}}…',
@@ -105,10 +103,8 @@
       waitingDesc: 'Send this code to your partner:',
       copyCode: 'Copy code',
       copied: 'Copied!',
-      passPhone: 'Pass the phone to {{name}}!',
       passPhoneDesc: '{{name}} is done. Now it\'s {{name2}}\'s turn to answer the same questions.',
-      tapToContinue: 'Let\'s go!',
-      dontLook: '({{name}}, don\'t peek at the answers!)',
+      serieDebut: 'Answer the {{n}} questions, then pass the phone to {{name}}.',
       questionOf: 'of',
       turnOf: '{{name}}\'s turn',
       waitingAnswer: 'Waiting for {{name}}…',
@@ -155,10 +151,8 @@
       waitingDesc: 'Envía este código a tu pareja:',
       copyCode: 'Copiar',
       copied: '¡Copiado!',
-      passPhone: '¡Pasa el teléfono a {{name}}!',
       passPhoneDesc: '{{name}} ha terminado. Ahora le toca a {{name2}}.',
-      tapToContinue: '¡Vamos!',
-      dontLook: '({{name}}, ¡no mires las respuestas!)',
+      serieDebut: 'Responde a las {{n}} preguntas y luego pasa el teléfono a {{name}}.',
       questionOf: 'de',
       turnOf: 'Turno de {{name}}',
       waitingAnswer: 'Esperando a {{name}}…',
@@ -205,10 +199,8 @@
       waitingDesc: 'Sende diesen Code:',
       copyCode: 'Kopieren',
       copied: 'Kopiert!',
-      passPhone: 'Gib das Handy an {{name}}!',
       passPhoneDesc: '{{name}} ist fertig. Jetzt ist {{name2}} dran.',
-      tapToContinue: 'Los geht\'s!',
-      dontLook: '({{name}}, nicht spicken!)',
+      serieDebut: 'Beantworte die {{n}} Fragen und gib dann das Handy an {{name}}.',
       questionOf: 'von',
       turnOf: '{{name}} ist dran',
       waitingAnswer: 'Warte auf {{name}}…',
@@ -255,10 +247,8 @@
       waitingDesc: 'Invia questo codice:',
       copyCode: 'Copia',
       copied: 'Copiato!',
-      passPhone: 'Passa il telefono a {{name}}!',
       passPhoneDesc: '{{name}} ha finito. Ora tocca a {{name2}}.',
-      tapToContinue: 'Andiamo!',
-      dontLook: '({{name}}, non sbirciare!)',
+      serieDebut: 'Rispondi alle {{n}} domande, poi passa il telefono a {{name}}.',
       questionOf: 'di',
       turnOf: 'Turno di {{name}}',
       waitingAnswer: 'In attesa di {{name}}…',
@@ -305,10 +295,8 @@
       waitingDesc: 'Stuur deze code naar je vriend(in):',
       copyCode: 'Code kopiëren',
       copied: 'Gekopieerd!',
-      passPhone: 'Geef de telefoon aan {{name}}!',
       passPhoneDesc: '{{name}} is klaar. Nu is {{name2}} aan de beurt, met dezelfde vragen.',
-      tapToContinue: 'Daar gaan we!',
-      dontLook: '({{name}}, niet naar de antwoorden kijken!)',
+      serieDebut: 'Beantwoord de {{n}} vragen en geef dan de telefoon aan {{name}}.',
       questionOf: 'van',
       turnOf: '{{name}} is aan de beurt',
       waitingAnswer: 'Wachten op {{name}}…',
@@ -343,7 +331,7 @@
   // Ce moteur est a part, mais ses ecrans reprennent les memes classes que
   // les autres tests : c'est la feuille de style du moteur commun qui les
   // habille (cadre a l'encre, cartes joueurs, barre de progression, reponses,
-  // relais, ecran de resultat). Aucune regle n'est a ecrire deux fois.
+  // bandeau du tour, ecran de resultat). Aucune regle n'est a ecrire deux fois.
   var ICONE_DEUX = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>';
   var ICONE_TEL = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"/><path d="M12 18h.01"/></svg>';
   var LETTRES = ['A', 'B', 'C', 'D', 'E'];
@@ -378,6 +366,27 @@
         '<div class="quiz-progress-fill" style="width:' + pct + '%"></div>' +
       '</div>' +
     '</div>';
+  }
+  // Le bandeau du tour sur le meme telephone : les classes du bandeau commun
+  // des moteurs (bandeauTour, quiz-engine-core.js), que cette page ne charge
+  // pas ; l'initiale tient lieu de personnage. arrive : la main vient de
+  // changer, le bandeau arrive en sautant.
+  function bandeauTour(nom, joueur, arrive, note) {
+    var nomHtml = '<strong class="qc-tour-nom">' + esc(nom) + '</strong>';
+    return '<div class="qc-tour qc-tour--' + (joueur === 2 ? 'violet' : 'rose') + (arrive ? ' qc-tour--arrive' : '') + '" role="status">' +
+      '<span class="qc-tour-pion" aria-hidden="true">' + esc(String(nom || '?').charAt(0).toUpperCase()) + '</span>' +
+      '<span class="qc-tour-corps"><span class="qc-tour-phrase">' +
+        esc(t('turnOf')).replace('{{name}}', function () { return nomHtml; }) + '</span>' +
+        (note ? '<span class="qc-tour-note">' + esc(note) + '</span>' : '') +
+      '</span></div>';
+  }
+  // La ligne sous le bandeau, a la premiere question de chacun : la consigne
+  // de la serie pour le premier, « Lea a termine » pour le second.
+  function noteDeSerie(qi) {
+    if (qi !== 0) return '';
+    var avec = function (texte, cle, valeur) { return texte.split(cle).join(valeur); };
+    if (state.currentPlayer === 1) return avec(avec(t('serieDebut'), '{{n}}', String(totalQ)), '{{name}}', state.name2);
+    return avec(avec(t('passPhoneDesc'), '{{name2}}', state.name2), '{{name}}', state.name1);
   }
   // A distance, chacun avance a son rythme : deux barres, une par joueur,
   // avec la meme piste que la barre commune.
@@ -522,7 +531,6 @@
       case 'name-input-local': renderNameInputLocal(); break;
       case 'name-input-online': renderNameInputOnline(); break;
       case 'waiting': renderWaiting(); break;
-      case 'pass-phone': renderPassPhone(); break;
       case 'questions': renderQuestions(); break;
       case 'results': renderResults(); break;
     }
@@ -703,27 +711,6 @@
     });
   }
 
-  // ── Screen: Pass Phone (local mode) ──
-  function renderPassPhone() {
-    var doneName = state.name1;
-    var nextName = state.name2;
-    container.innerHTML =
-      '<div class="qc-relais ado-relais" role="status" aria-live="polite">' +
-        '<div class="qc-relais-macaron" aria-hidden="true"><span>📱</span></div>' +
-        '<p class="qc-relais-annonce">' + esc(t('passPhone')).replace('{{name}}', '<span class="qc-relais-nom">' + esc(nextName) + '</span>') + '</p>' +
-        '<p class="qc-relais-note">' + esc(t('passPhoneDesc').replace('{{name}}', doneName).replace('{{name2}}', nextName)) + '</p>' +
-        '<p class="qc-relais-etape">' + esc(t('dontLook').replace('{{name}}', doneName)) + '</p>' +
-        '<button id="btn-continue" type="button" class="btn btn-cta btn-lg">' + esc(t('tapToContinue')) + '</button>' +
-      '</div>';
-
-    document.getElementById('btn-continue').addEventListener('click', function () {
-      state.currentPlayer = 2;
-      state.currentQ = 0;
-      state.screen = 'questions';
-      render();
-    });
-  }
-
   // ── Screen: Questions ──
   function renderQuestions() {
     if (!state.questionsReady || questions.length === 0) {
@@ -733,12 +720,17 @@
 
     var qi = state.currentQ;
 
-    // Local mode: check if current player is done
+    // Sur le meme telephone : le premier a fini sa serie, la premiere
+    // question du second arrive tout de suite, sans ecran de relais (son
+    // bandeau dit que la main change) ; le second a fini, le resultat.
     if (state.gameMode === 'local' && qi >= totalQ) {
       if (state.currentPlayer === 1) {
-        state.screen = 'pass-phone';
-        render();
-        return;
+        state.currentPlayer = 2;
+        state.currentQ = 0;
+        qi = 0;
+        // Le doigt du premier qui retombe sur l'ecran ne doit pas repondre
+        // a la place du second.
+        state.gardeJusqua = Date.now() + 450;
       } else {
         state.screen = 'results';
         render();
@@ -781,12 +773,14 @@
       { key: 'd', text: q.d.replace(/\{\{name\}\}/g, partnerName) }
     ];
 
-    // Sur le meme telephone, la barre dit a qui c'est le tour, a la place du
-    // pourcentage. A distance, chaque joueur a sa barre.
+    // Sur le meme telephone, le bandeau du tour (les classes du bandeau
+    // commun des moteurs, bandeauTour) dit qui repond ; a la premiere
+    // question du second, il dit aussi que le premier a fini. A distance,
+    // chaque joueur a sa barre.
     var barre = (state.gameMode === 'online')
       ? progressionDuo(getMyName(), partnerName, state.answers1.length, state.partnerAnswers.length) +
         '<p class="quiz-progress-label ado-question-numero">' + esc(t('questionLabel') + ' ' + (qi + 1) + '/' + totalQ) + '</p>'
-      : progression(qi, totalQ, '<span class="ado-tour ado-tour--' + state.currentPlayer + '">' + esc(t('turnOf').replace('{{name}}', currentName)) + '</span>');
+      : progression(qi, totalQ) + bandeauTour(currentName, state.currentPlayer, qi === 0, noteDeSerie(qi));
 
     container.innerHTML =
       '<div class="quiz-engine quiz-question-enter">' +
@@ -807,7 +801,7 @@
         // Un seul choix par question : la reponse se marque, les autres
         // s'eteignent, et l'ecran suivant vient apres un court temps, comme
         // dans les autres tests.
-        if (verrou) return;
+        if (verrou || Date.now() < (state.gardeJusqua || 0)) return;
         verrou = true;
         btn.classList.add('selected');
         options.forEach(function (o) { if (o !== btn) o.style.opacity = '0.5'; o.style.pointerEvents = 'none'; });
