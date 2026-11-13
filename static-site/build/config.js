@@ -931,6 +931,20 @@ export const BLOG_CATEGORIES = {
     it: "Storie d'amore",
     nl: 'Liefdesverhalen',
   },
+  // Les chiffres du site (13 novembre 2026, Thomas : « quiz couple est un
+  // institut de sondage énorme ! On pourrait créer plein d'articles de blog
+  // visant Google Discover avec des chiffres basés sur nos propres études ») :
+  // un sujet par article, bâti sur les votes des jeux « Pour ou contre »,
+  // « Oui ou non » et « Dilemmes de couple », avec le nombre de votes, la
+  // période et la phrase qui dit que ce n'est pas un sondage représentatif.
+  chiffres: {
+    fr: 'En chiffres',
+    en: 'By the numbers',
+    es: 'En cifras',
+    de: 'In Zahlen',
+    it: 'In cifre',
+    nl: 'In cijfers',
+  },
 };
 
 // Blog article metadata
@@ -1672,6 +1686,91 @@ export const BLOG_ARTICLES = [
     },
     publishedAt: '2026-10-24T08:20:00+02:00',
   },
+  // Série « En chiffres » : les votes du site, un sujet par article (relevé du
+  // 13 novembre 2026). Thomas, le 13 novembre : « ne publie pas tous les
+  // articles d'un coup » : le premier le jour même, puis un tous les trois
+  // jours à 8 h 30. Français d'abord ; les autres langues prendront leurs
+  // propres votes quand elles en ont assez.
+  {
+    internalSlug: 'lire-les-messages-de-son-partenaire',
+    category: 'chiffres',
+    frOnly: true,
+    featuredImage: '/blog/lire-les-messages-de-son-partenaire.webp',
+    slugs: {
+      fr: 'lire-les-messages-de-son-partenaire',
+    },
+    publishedAt: '2026-11-13T18:45:00+01:00',
+  },
+  {
+    internalSlug: 'supprimer-les-photos-de-son-ex',
+    category: 'chiffres',
+    frOnly: true,
+    featuredImage: '/blog/supprimer-les-photos-de-son-ex.webp',
+    slugs: {
+      fr: 'supprimer-les-photos-de-son-ex',
+    },
+    publishedAt: '2026-11-16T08:30:00+01:00',
+  },
+  {
+    internalSlug: 'meilleur-ami-du-sexe-oppose-en-couple',
+    category: 'chiffres',
+    frOnly: true,
+    featuredImage: '/blog/meilleur-ami-du-sexe-oppose-en-couple.webp',
+    slugs: {
+      fr: 'meilleur-ami-du-sexe-oppose-en-couple',
+    },
+    publishedAt: '2026-11-19T08:30:00+01:00',
+  },
+  {
+    internalSlug: 'faire-chambre-a-part-en-couple',
+    category: 'chiffres',
+    frOnly: true,
+    featuredImage: '/blog/faire-chambre-a-part-en-couple.webp',
+    slugs: {
+      fr: 'faire-chambre-a-part-en-couple',
+    },
+    publishedAt: '2026-11-22T08:30:00+01:00',
+  },
+  {
+    internalSlug: 'compte-commun-couple-votes',
+    category: 'chiffres',
+    frOnly: true,
+    featuredImage: '/blog/compte-commun-couple-votes.webp',
+    slugs: {
+      fr: 'compte-commun-couple-votes',
+    },
+    publishedAt: '2026-11-25T08:30:00+01:00',
+  },
+  {
+    internalSlug: 'chien-dans-le-lit-couple',
+    category: 'chiffres',
+    frOnly: true,
+    featuredImage: '/blog/chien-dans-le-lit-couple.webp',
+    slugs: {
+      fr: 'chien-dans-le-lit-couple',
+    },
+    publishedAt: '2026-11-28T08:30:00+01:00',
+  },
+  {
+    internalSlug: 'noel-a-deux-ou-en-famille',
+    category: 'chiffres',
+    frOnly: true,
+    featuredImage: '/blog/noel-a-deux-ou-en-famille.webp',
+    slugs: {
+      fr: 'noel-a-deux-ou-en-famille',
+    },
+    publishedAt: '2026-12-01T08:30:00+01:00',
+  },
+  {
+    internalSlug: 'se-coucher-faches',
+    category: 'chiffres',
+    frOnly: true,
+    featuredImage: '/blog/se-coucher-faches.webp',
+    slugs: {
+      fr: 'se-coucher-faches',
+    },
+    publishedAt: '2026-12-04T08:30:00+01:00',
+  },
   {
     internalSlug: 'homme-toxique-en-amour',
     category: 'psychologie',
@@ -2401,6 +2500,7 @@ export const QUIZ_RELATED_ARTICLES = {
   jeuMarguerite:  ['homme-nerveux-devant-une-femme', 'questions-a-poser-a-son-crush', '36-questions-pour-tomber-amoureux', 'homme-qu-on-ignore'],
   jeuNouvelAn:    ['rituels-de-couple', 'soiree-en-amoureux-a-la-maison', 'questions-avenir-couple', 'questions-pour-mieux-se-connaitre-en-couple', 'questions-a-poser-a-son-copain'],
   jeuOuiNon:        ['choses-pas-accepter-couple', 'questions-pour-mieux-se-connaitre-en-couple'],
+  pourContre:       ['choses-pas-accepter-couple', 'disputes-couple'],
   jeuGages:         ['activites-couple-ete', 'comment-savoir-si-cest-le-bon'],
   jeuPhrases:       ['questions-pour-mieux-se-connaitre-en-couple', 'questions-intimes-couple'],
   // C'est un 10 mais : les défauts qu'on pardonne et ceux qu'on ne pardonne
@@ -2495,4 +2595,22 @@ QUIZ_RELATED_ARTICLES.testEmprise.push('signe-astrologique-le-plus-possessif');
 QUIZ_RELATED_ARTICLES.testLangageAmour.push('signe-astrologique-le-plus-romantique');
 QUIZ_RELATED_ARTICLES.testCompatSexuelle.push('signe-astrologique-le-plus-passionne');
 QUIZ_RELATED_ARTICLES.quizCoquin.push('signe-astrologique-le-plus-passionne');
+// La série « En chiffres » (13 novembre 2026) : chaque article en tête des cartes des jeux dont il lit les votes
+// et des pages dont il parle. Un article programmé n'a sa carte qu'à la reconstruction qui suit sa date.
+const enTete = (cle, ...articles) => { (QUIZ_RELATED_ARTICLES[cle] = QUIZ_RELATED_ARTICLES[cle] || []).unshift(...articles); };
+enTete('jeuOuiNon', 'lire-les-messages-de-son-partenaire', 'supprimer-les-photos-de-son-ex', 'chien-dans-le-lit-couple', 'se-coucher-faches');
+enTete('pourContre', 'lire-les-messages-de-son-partenaire', 'meilleur-ami-du-sexe-oppose-en-couple', 'faire-chambre-a-part-en-couple', 'compte-commun-couple-votes', 'noel-a-deux-ou-en-famille');
+enTete('jeuDilemmes', 'chien-dans-le-lit-couple');
+enTete('testJalousie', 'lire-les-messages-de-son-partenaire', 'meilleur-ami-du-sexe-oppose-en-couple');
+enTete('testConfiance', 'lire-les-messages-de-son-partenaire', 'meilleur-ami-du-sexe-oppose-en-couple');
+enTete('testOublieSonEx', 'supprimer-les-photos-de-son-ex');
+enTete('testAmourAmitie', 'meilleur-ami-du-sexe-oppose-en-couple');
+enTete('testEmmenager', 'faire-chambre-a-part-en-couple', 'compte-commun-couple-votes');
+enTete('quizTypeCouple', 'faire-chambre-a-part-en-couple');
+enTete('quizPorteCulotte', 'compte-commun-couple-votes');
+enTete('quizChienNous', 'chien-dans-le-lit-couple');
+enTete('quizListeNoel', 'noel-a-deux-ou-en-famille');
+enTete('quizDuoNoel', 'noel-a-deux-ou-en-famille');
+enTete('jeuNouvelAn', 'noel-a-deux-ou-en-famille');
+enTete('testCoupleSain', 'se-coucher-faches');
 

@@ -67,7 +67,7 @@ const article: BlogArticleData = {
 <p>Le mieux, c'est de poser quelques règles quand tout va bien, pas en pleine dispute. Celles qui servent dans beaucoup de couples :</p>
 <ul>
 <li><strong>Pas d'insultes, jamais :</strong> c'est la seule règle qui ne se discute pas.</li>
-<li><strong>Le droit au temps mort :</strong> chacun peut demander une pause de vingt minutes, et l'autre la respecte sans discuter.</li>
+<li><strong>Le droit au temps mort :</strong> chacun peut demander <a href="/blog/se-coucher-faches/">une pause de vingt minutes</a>, et l'autre la respecte sans discuter.</li>
 <li><strong>Pas devant les enfants :</strong> si vous en avez.</li>
 <li><strong>On ne se couche pas sans avoir désamorcé :</strong> pas forcément tout réglé, mais au moins « on s'aime, on en reparle demain ».</li>
 <li><strong>Une dispute, un sujet :</strong> si un autre sujet surgit, on le note pour plus tard.</li>
