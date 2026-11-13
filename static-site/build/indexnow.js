@@ -24,7 +24,14 @@ const __dirname = path.dirname(__filename);
 
 const INDEXNOW_KEY = 'f4b78b7e6bfeaefe7290b5ce249449a8';
 const DIST_DIR = path.resolve(__dirname, '../dist');
-const INDEXNOW_ENDPOINT = 'https://api.indexnow.org/IndexNow';
+// Les points d'entrée d'IndexNow, dans l'ordre où on les essaie : celui du
+// protocole, puis ceux de deux moteurs qui y participent (chacun transmet aux
+// autres ce qu'il reçoit). On ne passe au suivant que si la clé est refusée.
+const INDEXNOW_ENDPOINTS = [
+  'https://api.indexnow.org/IndexNow',
+  'https://www.bing.com/indexnow',
+  'https://yandex.com/indexnow',
+];
 const BATCH_SIZE = 100; // IndexNow max 10,000 per request, use 100 per batch
 
 const dryRun = process.argv.includes('--dry-run');
@@ -59,7 +66,7 @@ function estRecent(lastmod) {
   return lastmod >= limite.toISOString().split('T')[0];
 }
 
-async function submitBatch(urls, host) {
+async function submitBatch(urls, host, endpoint) {
   const body = JSON.stringify({
     host,
     key: INDEXNOW_KEY,
@@ -67,14 +74,29 @@ async function submitBatch(urls, host) {
     urlList: urls,
   });
 
-  const response = await fetch(INDEXNOW_ENDPOINT, {
+  const response = await fetch(endpoint, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json; charset=utf-8' },
     body,
   });
 
-  return { status: response.status, statusText: response.statusText };
+  // Le corps de la réponse dit pourquoi un envoi est refusé. Du 8 septembre au
+  // 13 novembre 2026 au moins, chaque lot a reçu « 403 Forbidden » sans que
+  // personne le voie : le script n'écrivait que le code, et l'étape restait verte.
+  let texte = '';
+  try {
+    texte = (await response.text())
+      .replace(/<[^>]*>/g, ' ')
+      .replace(/\s+/g, ' ')
+      .trim()
+      .slice(0, 300);
+  } catch { /* corps illisible : le code suffit */ }
+
+  return { status: response.status, statusText: response.statusText, texte };
 }
+
+const nomDe = (endpoint) => new URL(endpoint).hostname;
+const detail = (result) => `${result.status} ${result.statusText}` + (result.texte ? ` · ${result.texte}` : '');
 
 async function main() {
   // Collect URLs from all language sitemaps
@@ -127,20 +149,40 @@ async function main() {
   }
 
   // Submit in batches per host
+  let envoyees = 0;
+  let refus = null;
   for (const [host, urls] of Object.entries(urlsByHost)) {
     console.log(`[indexnow] Submitting ${urls.length} URLs for ${host}...`);
+    const aEssayer = INDEXNOW_ENDPOINTS.slice();
+    let endpoint = aEssayer.shift();
     for (let i = 0; i < urls.length; i += BATCH_SIZE) {
       const batch = urls.slice(i, i + BATCH_SIZE);
       console.log(`[indexnow] [${host}] Batch ${Math.floor(i / BATCH_SIZE) + 1} (${batch.length} URLs)...`);
 
       try {
-        const result = await submitBatch(batch, host);
+        let result = await submitBatch(batch, host, endpoint);
+        // Clé refusée : le même lot repart par le point d'entrée suivant, et
+        // celui qui l'accepte sert pour les lots qui restent.
+        while (result.status === 403 && aEssayer.length) {
+          console.warn(`[indexnow] ${nomDe(endpoint)} refuse la clé : ${detail(result)}`);
+          endpoint = aEssayer.shift();
+          console.log(`[indexnow] Nouvel essai par ${nomDe(endpoint)}...`);
+          result = await submitBatch(batch, host, endpoint);
+        }
         if (result.status === 200) {
-          console.log(`[indexnow] Batch submitted successfully (200 OK)`);
+          envoyees += batch.length;
+          console.log(`[indexnow] Batch submitted successfully (200 OK, ${nomDe(endpoint)})`);
         } else if (result.status === 202) {
-          console.log(`[indexnow] Batch accepted (202 Accepted)`);
+          envoyees += batch.length;
+          console.log(`[indexnow] Batch accepted (202 Accepted, ${nomDe(endpoint)})`);
         } else {
-          console.warn(`[indexnow] Unexpected response: ${result.status} ${result.statusText}`);
+          console.warn(`[indexnow] Unexpected response from ${nomDe(endpoint)}: ${detail(result)}`);
+          // Une clé refusée partout ou trop d'envois : les lots suivants
+          // recevraient la même réponse, on s'arrête là pour ce domaine.
+          if (result.status === 403 || result.status === 429) {
+            refus = `${nomDe(endpoint)} a répondu ${detail(result)}`;
+            break;
+          }
         }
       } catch (err) {
         console.error(`[indexnow] Error submitting batch: ${err.message}`);
@@ -153,6 +195,13 @@ async function main() {
     }
   }
 
+  console.log(`[indexnow] ${envoyees} URL(s) acceptée(s) sur ${totalUrls}.`);
+  if (refus) {
+    // L'étape ne fait jamais échouer le déploiement (continue-on-error) : une
+    // annotation sur la page du workflow est la seule façon de voir un refus.
+    const message = `IndexNow a refusé l'envoi : ${refus}`;
+    console.log(process.env.GITHUB_ACTIONS ? `::warning title=IndexNow::${message}` : `[indexnow] ${message}`);
+  }
   console.log('[indexnow] Done.');
 }
 
