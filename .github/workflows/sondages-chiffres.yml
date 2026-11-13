@@ -1,0 +1,35 @@
+name: Sondages · chiffres des votes
+
+# Les chiffres des votes du site (oui ou non, pour ou contre, dilemmes), des
+# profils obtenus aux tests, du test de pureté et des parties finies, écrits
+# au journal pour préparer les articles « nos chiffres » du blog
+# (sondages/chiffres.mjs ; 13 novembre 2026). À lancer à la main. Lecture
+# seule : rien n'est écrit en base. Le journal est public : il ne sort que
+# des comptes par question et par langue, ceux que le site montre déjà après
+# chaque vote, jamais un identifiant de votant.
+
+on:
+  workflow_dispatch:
+
+concurrency:
+  group: sondages-chiffres
+  cancel-in-progress: false
+
+jobs:
+  chiffres:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    env:
+      SUPABASE_ACCESS_TOKEN: ${{ secrets.SUPABASE_ACCESS_TOKEN }}
+      SUPABASE_PROJECT_REF: ${{ secrets.SUPABASE_PROJECT_REF }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            sondages/chiffres.mjs
+          sparse-checkout-cone-mode: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Chiffres
+        run: node sondages/chiffres.mjs
