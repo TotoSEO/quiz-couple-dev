@@ -6,12 +6,21 @@
     <atom:link href="https://quiz-couple.com/blog/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Les articles de Quiz Couple sur la vie de couple, la psychologie et les histoires d&#39;amour.</description>
     <language>fr</language>
-    <lastBuildDate>Tue, 10 Nov 2026 09:20:00 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 13 Nov 2026 17:45:00 GMT</lastBuildDate>
     <image>
       <url>https://quiz-couple.com/apple-touch-icon.png</url>
       <title>Quiz Couple · Le blog</title>
       <link>https://quiz-couple.com/blog/</link>
     </image>
+    <item>
+      <title>Lire les messages de son partenaire : sur Quiz Couple, 54 % votent pour</title>
+      <link>https://quiz-couple.com/blog/lire-les-messages-de-son-partenaire/</link>
+      <guid isPermaLink="true">https://quiz-couple.com/blog/lire-les-messages-de-son-partenaire/</guid>
+      <pubDate>Fri, 13 Nov 2026 17:45:00 GMT</pubDate>
+      <category>En chiffres</category>
+      <description>Sur Quiz Couple, 741 votes ont tranché : 54 % sont pour lire les messages de son partenaire. 90 % donnent le code de leur téléphone, 75 % leur localisation.</description>
+      <media:content url="https://quiz-couple.com/blog/lire-les-messages-de-son-partenaire.webp" medium="image" type="image/webp" width="1536" height="864"/>
+    </item>
     <item>
       <title>Sortir de l&#39;emprise d&#39;un pervers narcissique : les 4 étapes de la libération</title>
       <link>https://quiz-couple.com/blog/sortir-emprise-pervers-narcissique/</link>
@@ -272,15 +281,6 @@
       <category>Psychologie</category>
       <description>Irréprochable en société, écrasant en privé. Les 12 comportements de l&#39;homme pervers narcissique, dans l&#39;ordre où ils apparaissent, et quoi faire ensuite.</description>
       <media:content url="https://quiz-couple.com/blog/homme-pervers-narcissique-signes.webp" medium="image" type="image/webp" width="1536" height="1024"/>
-    </item>
-    <item>
-      <title>Il annule au dernier moment : ce que ça veut dire et quoi répondre</title>
-      <link>https://quiz-couple.com/blog/il-annule-au-dernier-moment/</link>
-      <guid isPermaLink="true">https://quiz-couple.com/blog/il-annule-au-dernier-moment/</guid>
-      <pubDate>Fri, 28 Aug 2026 12:41:00 GMT</pubDate>
-      <category>Psychologie</category>
-      <description>Il vient d&#39;annuler votre rendez-vous une heure avant. Ce que ça veut dire la plupart du temps, le seul signal à regarder, et les messages à lui envoyer.</description>
-      <media:content url="https://quiz-couple.com/blog/il-annule-au-dernier-moment.webp" medium="image" type="image/webp" width="1200" height="630"/>
     </item>
   </channel>
 </rss>

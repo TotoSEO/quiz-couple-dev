@@ -362,7 +362,7 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/test-andare-a-vivere-insieme/"/>
     <xhtml:link rel="alternate" hreflang="nl" href="https://quiz-couple.com/nl/samenwonen-test/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/test-habiter-vivre-ensemble/"/>
-    <lastmod>2026-11-06</lastmod>
+    <lastmod>2026-11-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -479,7 +479,7 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/test-gelosia-coppia/"/>
     <xhtml:link rel="alternate" hreflang="nl" href="https://quiz-couple.com/nl/jaloezie-test/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/test-jalousie-couple/"/>
-    <lastmod>2026-11-06</lastmod>
+    <lastmod>2026-11-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -700,7 +700,7 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/test-fiducia-coppia/"/>
     <xhtml:link rel="alternate" hreflang="nl" href="https://quiz-couple.com/nl/vertrouwen-relatie-test/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/test-confiance-couple/"/>
-    <lastmod>2026-10-30</lastmod>
+    <lastmod>2026-11-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -830,7 +830,7 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/test-ha-dimenticato-la-sua-ex/"/>
     <xhtml:link rel="alternate" hreflang="nl" href="https://quiz-couple.com/nl/is-hij-over-zijn-ex-heen/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/test-a-t-il-oublie-son-ex/"/>
-    <lastmod>2026-11-02</lastmod>
+    <lastmod>2026-11-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -1085,7 +1085,7 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/gioco-pro-o-contro-coppia/"/>
     <xhtml:link rel="alternate" hreflang="nl" href="https://quiz-couple.com/nl/voor-of-tegen-stellingen/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/quiz-pour-contre-couple/"/>
-    <lastmod>2026-11-11</lastmod>
+    <lastmod>2026-11-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -1306,7 +1306,7 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/test-che-cane-fa-per-noi/"/>
     <xhtml:link rel="alternate" hreflang="nl" href="https://quiz-couple.com/nl/welke-hond-past-bij-ons-test/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/test-quel-chien-est-fait-pour-nous/"/>
-    <lastmod>2026-11-12</lastmod>
+    <lastmod>2026-11-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -1371,7 +1371,7 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/test-che-personaggi-di-natale-siete/"/>
     <xhtml:link rel="alternate" hreflang="nl" href="https://quiz-couple.com/nl/welke-kerstfiguren-zijn-jullie-quiz/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/quiz-quels-personnages-de-noel-etes-vous/"/>
-    <lastmod>2026-11-12</lastmod>
+    <lastmod>2026-11-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -2177,6 +2177,14 @@
     <xhtml:link rel="alternate" hreflang="nl" href="https://quiz-couple.com/nl/blog/juliette-drouet-victor-hugo-brieven/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/blog/juliette-drouet-victor-hugo-lettres/"/>
     <lastmod>2026-10-24T08:20:00+02:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://quiz-couple.com/blog/lire-les-messages-de-son-partenaire/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/blog/lire-les-messages-de-son-partenaire/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/blog/lire-les-messages-de-son-partenaire/"/>
+    <lastmod>2026-11-13T18:45:00+01:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
