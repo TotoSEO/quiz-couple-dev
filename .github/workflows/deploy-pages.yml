@@ -5,6 +5,14 @@ on:
     branches:
       - main
   workflow_dispatch:
+    inputs:
+      indexnow:
+        description: "IndexNow : annoncer ce qui a changé, ou toutes les pages (remise à plat de l'index d'un moteur)"
+        type: choice
+        options:
+          - changements
+          - tout
+        default: changements
 
 permissions:
   contents: write
@@ -45,6 +53,13 @@ jobs:
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
           SUPABASE_ANON_KEY: ${{ secrets.SUPABASE_ANON_KEY }}
 
+      - name: IndexNow · garder les sitemaps publiés
+        # Avant la mise en ligne : les sitemaps que le site sert encore, pour
+        # n'annoncer ensuite que ce qui a changé, et le témoin de cette mise en
+        # ligne dans dist (build/indexnow.js).
+        run: cd static-site && node build/indexnow.js --avant
+        continue-on-error: true
+
       - name: Deploy to gh-pages branch (quiz-couple.com)
         uses: peaceiris/actions-gh-pages@v4
         with:
@@ -52,6 +67,9 @@ jobs:
           publish_dir: ./static-site/dist
           cname: quiz-couple.com
 
-      - name: Submit URLs to IndexNow
-        run: cd static-site && npm run indexnow
+      - name: IndexNow · annoncer ce qui a changé
+        # Attend que le site serve le témoin, puis envoie les pages nouvelles,
+        # modifiées ou retirées. Un refus s'écrit en annotation sur cette page,
+        # il ne fait jamais échouer la mise en ligne.
+        run: cd static-site && node build/indexnow.js ${{ inputs.indexnow == 'tout' && '--all' || '' }}
         continue-on-error: true
