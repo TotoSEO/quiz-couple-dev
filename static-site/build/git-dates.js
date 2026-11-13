@@ -50,14 +50,19 @@ export function buildGitDateIndex(repoRoot) {
     return {
       dates,
       ok: false,
-      raison: 'clone superficiel (ajouter fetch-depth: 0 au checkout CI)',
+      raison: 'clone superficiel (il manque l\'étape « Historique de la branche » du workflow)',
     };
   }
 
   let sortie;
   try {
+    // --no-renames : la détection des renommages compare le contenu des
+    // fichiers, que le serveur de publication n'a pas (il récupère les commits
+    // de la branche sans leurs fichiers, voir deploy-pages.yml). Sans elle, la
+    // sortie est la même à l'octet près sur les 1 856 commits de main (vérifié
+    // le 13 novembre 2026), et git n'a rien à télécharger.
     sortie = git(
-      ['log', '--no-merges', '--date=short', '--pretty=format:%x01%cd', '--name-only'],
+      ['log', '--no-merges', '--no-renames', '--date=short', '--pretty=format:%x01%cd', '--name-only'],
       repoRoot
     );
   } catch {
