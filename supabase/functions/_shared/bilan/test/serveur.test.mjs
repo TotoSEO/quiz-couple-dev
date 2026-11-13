@@ -1370,6 +1370,31 @@ test('un seul téléphone : le choix compté, et le partenaire qui accepte sur p
   assert.deepEqual(c, ['un_telephone:', 'invitation_vue:tel']);
 });
 
+test('l\'offre : le bouton de paiement vu, la barre collée touchée, la case cochée', async () => {
+  const m = monter();
+  // L'écran « rapport prêt », à deux.
+  for (const quoi of ['achat_vu', 'colle_clic', 'case_cochee']) {
+    const r = await m.appel({ action: 'vue', quoi, mode: 'duo' });
+    assert.equal(r.statut, 200, quoi + ' ' + JSON.stringify(r.json));
+  }
+  // L'offre repliée de l'écran d'attente ; une clé inconnue ne passe pas, et
+  // la barre collée n'a pas de clé.
+  await m.appel({ action: 'vue', quoi: 'achat_vu', mode: 'duo', cle: 'attente' });
+  await m.appel({ action: 'vue', quoi: 'case_cochee', mode: 'duo', cle: '<script>' });
+  await m.appel({ action: 'vue', quoi: 'colle_clic', mode: 'duo', cle: 'attente' });
+  assert.deepEqual(m.stockage.compteurs.map((x) => `${x.evenement}:${x.cle}`),
+    ['achat_vu:', 'colle_clic:', 'case_cochee:', 'achat_vu:attente', 'case_cochee:', 'colle_clic:']);
+  // Seul(e) : compté aussi avec _solo ; le point, avec _point en plus.
+  const s = monter();
+  await s.appel({ action: 'vue', quoi: 'achat_vu', mode: 'solo' });
+  await s.appel({ action: 'vue', quoi: 'case_cochee', mode: 'solo', formule: 'point' });
+  await s.appel({ action: 'vue', quoi: 'colle_clic', mode: 'solo', formule: 'point' });
+  assert.deepEqual(s.stockage.compteurs.map((x) => `${x.evenement}:${x.cle}`),
+    ['achat_vu:', 'achat_vu_solo:', 'case_cochee:', 'case_cochee_solo:', 'case_cochee_point:', 'colle_clic:', 'colle_clic_solo:', 'colle_clic_point:']);
+  // Un nom inconnu reste refusé.
+  assert.equal((await s.appel({ action: 'vue', quoi: 'achat_clic', mode: 'duo' })).statut, 400);
+});
+
 test('l\'aperçu de l\'admin au prix de l\'Amérique latine', async () => {
   const m = monter();
   const r = await m.traiter({ action: 'apercu_paiement', lang: 'es', zone: 'latam' }, { ip: '1.2.3.4', admin: true });
