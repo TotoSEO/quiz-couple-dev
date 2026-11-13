@@ -3,7 +3,7 @@
     "badge": "Astrologie & Numerologie",
     "title": "Liebestest mit Namen und Sternzeichen",
     "highlight": "Liebeskompatibilität",
-    "description": "Gebt eure beiden Vornamen ein und wählt eure beiden Sternzeichen: Der Test berechnet eure Liebeskompatibilität in Prozent. Die Sternzeichen werden mit der Astrologie verglichen, die Vornamen mit der Numerologie, und ihr seht beide Werte einzeln.",
+    "description": "Gebt eure beiden Vornamen ein und wählt eure beiden Sternzeichen: Der Liebestest berechnet eure Kompatibilität in Prozent. Die Sternzeichen werden mit der Astrologie verglichen, die Vornamen mit der Numerologie, und ihr seht beide Werte einzeln.",
     "subtitle": "Kostenlos, ohne Anmeldung, und das Ergebnis erscheint sofort."
   },
   "form": {
@@ -40,8 +40,8 @@
     "tryAgain": "Ein anderes Paar testen"
   },
   "section1": {
-    "title": "So berechnet der Test eure Kompatibilität",
-    "p1": "Diesen Test macht man zu zweit, oder allein mit jemandem im Kopf. Er fragt nach vier Dingen: euren beiden Vornamen und euren beiden Sternzeichen. Die Sternzeichen werden paarweise mit der Astrologie verglichen (zum Beispiel ein Widder mit einer Waage), die Vornamen mit der Numerologie, die jedem Buchstaben eine Zahl gibt.",
+    "title": "So funktioniert der Liebestest mit Namen und Sternzeichen",
+    "p1": "Diesen Liebestest macht man zu zweit, oder allein mit jemandem im Kopf. Er fragt nach vier Dingen: euren beiden Vornamen und euren beiden Sternzeichen. Viele kennen so etwas als Love Tester oder Namenstest, hier kommen die Sternzeichen dazu. Die Sternzeichen werden paarweise mit der Astrologie verglichen (zum Beispiel ein Widder mit einer Waage), die Vornamen mit der Numerologie, die jedem Buchstaben eine Zahl gibt.",
     "p2": "Das Endergebnis mischt beides: <strong>60 % für die Sternzeichen und 40 % für die Vornamen</strong>. Daneben seht ihr den Wert der Sternzeichen und den der Vornamen, jeweils mit einem kurzen Text. So wisst ihr sofort, woher das Ergebnis kommt."
   },
   "section2": {

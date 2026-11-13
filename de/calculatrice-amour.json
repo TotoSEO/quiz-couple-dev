@@ -4,9 +4,9 @@
   },
   "hero": {
     "badge": "Kostenlos · Ergebnis sofort",
-    "title": "Liebesrechner: euer Prozentwert aus zwei Namen",
+    "title": "Liebesrechner: Wie gut passen eure Namen zusammen?",
     "titleHighlight": "Liebesrechner",
-    "description": "Schreib zwei Namen hin, der Rechner gibt dir einen Kompatibilitätswert in Prozent und zeigt dir, woher er kommt. Es ist ein Spiel, und wir erklären dir die ganze Rechnung."
+    "description": "Schreib zwei Namen hin, und der Rechner sagt dir in Prozent, wie gut sie zusammenpassen. Er zeigt dir auch, woher der Wert kommt. Es ist ein Spiel, und wir erklären dir die ganze Rechnung."
   },
   "form": {
     "label1": "Dein Name",

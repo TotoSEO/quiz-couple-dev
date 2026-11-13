@@ -1,21 +1,22 @@
 {
   "hero": {
     "badge": "108 questions • 2 players • Free",
-    "title": "The who could game for couples | 100+ questions",
-    "titleHighlight": "who could",
-    "description": "A question appears, your two names underneath, and you point at the one who could do it."
+    "title": "Who's more likely to? The couples edition | 108 questions",
+    "titleHighlight": "Who's more likely to?",
+    "description": "A question appears, your two names underneath, and you point at the one who's more likely to do it."
   },
   "jsonLd": {
-    "name": "Who could, couples edition"
+    "name": "Who's more likely to, couples edition"
   },
   "exemples": {
-    "amorce": "Who could",
+    "amorce": "Who's more likely to",
     "avant": "",
-    "apres": "?"
+    "apres": "?",
+    "liste": "toutes"
   },
   "section1": {
-    "title": "The rules of the who could game",
-    "intro": "Who could is a game you can play as a couple, on a single phone. It is a very simple game: a question appears, something like \"Who could buy a luxury watch on a whim?\", and you answer by tapping a name. If you think it is them, you tap their name, if you think it is you, you tap yours. And if neither of you could do it, there is a \"Nobody\" button just below.",
+    "title": "The rules of who's more likely to",
+    "intro": "Who's more likely to is a game you can play as a couple, on a single phone. Some people call it most likely to. It is a very simple game: a question appears, something like \"Who's more likely to buy a luxury watch on a whim?\", and you answer by tapping a name. If you think it is them, you tap their name, if you think it is you, you tap yours. And if neither of you would do it, there is a \"Nobody\" button just below.",
     "intro2": "There is no right answer and there are no points to count. The game simply remembers who got pointed at on each question, and shows you the total at the end. Here is how a round goes:",
     "etape1Titre": "Enter your names and pick the length",
     "etape1Texte": "You can play 20, 40 or 60 questions, drawn at random from the 108 in the game. A 20-question round takes about five minutes.",
@@ -28,14 +29,15 @@
   "section2": {
     "title": "How it differs from which one of us",
     "p1": "There is also a game on the site where <a href=\"/en/which-one-of-us-couple-game/\">each of you votes in secret</a> to point at one of you two, and the two games look a lot alike. The difference is in the questions. In which one of us, you answer about what you already are: who is the most stubborn, who talks the most, who cooks best, and so on. You already know the answers, since you live them every day.",
-    "p2": "In who could, you answer about what you would be capable of doing. Who could skydive, who could drop everything to open a countryside B&amp;B, or who could blow the holiday budget in one evening... Nobody knows the answer, so each of you gives their opinion, and you discover the image the other one has of you. It does not always match the one you have of yourself, by the way.",
-    "p3": "Getting pointed at on \"who could cry at an animal video\" when you thought you were beyond suspicion gets a reaction. Most of the time, the next question is \"wait, is that how you see me??\", and it starts conversations you would never have had otherwise!",
-    "p4": "And if you like the game, we have <a href=\"/en/couple-games/\">other games to play as a pair</a> built on the same idea: one phone, nothing to install, and questions that get you talking. <a href=\"/en/never-have-i-ever-couples-game/\">Never have I ever</a> is probably the best known, and a lot of couples start it right after a who could."
+    "p2": "In who's more likely to, you answer about what you would be capable of doing. Who's more likely to skydive, to drop everything and open a countryside B&amp;B, or to blow the holiday budget in one evening... Nobody knows the answer, so each of you gives their opinion, and you discover the image the other one has of you. It does not always match the one you have of yourself, by the way.",
+    "p3": "Getting pointed at on \"who's more likely to cry at an animal video\" when you thought you were beyond suspicion gets a reaction. Most of the time, the next question is \"wait, is that how you see me??\", and it starts conversations you would never have had otherwise!",
+    "p4": "And if you like the game, we have <a href=\"/en/couple-games/\">other games to play as a pair</a> built on the same idea: one phone, nothing to install, and questions that get you talking. <a href=\"/en/never-have-i-ever-couples-game/\">Never have I ever</a> is probably the best known, and a lot of couples start it right after a round of who's more likely to."
   },
   "section3": {
-    "title": "Examples of questions from the game",
-    "intro": "Here are twenty questions out of the hundred and eight, exactly as the game asks them. Some are light, some less so, and a few spark a debate:",
-    "apres": "The other 88 are in the game, and each round draws them at random. If you finish your 20 questions and want to keep going, the game offers 20 more. And the \"Play again with different questions\" button draws first from the ones that have not come up yet."
+    "title": "The 108 who's more likely to questions for couples",
+    "intro": "Here are all 108 questions, exactly as the game asks them. Some are light, some less so, and a few spark a debate:",
+    "suite": "See the other 78 questions",
+    "apres": "Each round draws 20, 40 or 60 of them at random. If you finish your 20 questions and want to keep going, the game offers 20 more. And the \"Play again with different questions\" button draws first from the ones that have not come up yet."
   },
   "section4": {
     "title": "A few tips for playing",
@@ -48,8 +50,8 @@
   },
   "faq": {
     "title": "Frequently asked questions",
-    "q1": "How do you play who could as a couple?",
-    "a1": "You enter your two names, pick 20, 40 or 60 questions, and on each question you tap the name of the one who could do it, or \"Nobody\". At the end, the game tells you who got pointed at the most.",
+    "q1": "How do you play who's more likely to as a couple?",
+    "a1": "You enter your two names, pick 20, 40 or 60 questions, and on each question you tap the name of the one who's more likely to do it, or \"Nobody\". At the end, the game tells you who got pointed at the most.",
     "q2": "Do you both need to agree to answer?",
     "a2": "That is the idea, and it is exactly what gets you talking. If you cannot agree, the one who argues their case best wins. The game checks nothing anyway, so you decide.",
     "q3": "Can you play long distance?",

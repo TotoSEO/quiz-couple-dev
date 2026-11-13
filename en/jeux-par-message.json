@@ -39,8 +39,8 @@
       "aide": "Your partner answers with a name, theirs or yours."
     },
     "quiPourrait": {
-      "nom": "Who could?",
-      "modele": "Which of us could {{q}}?",
+      "nom": "Who's more likely to?",
+      "modele": "Which of us is more likely to {{q}}?",
       "aide": "Your partner answers with a name, and a good reason."
     },
     "phrase": {
@@ -90,8 +90,8 @@
         "texte": "The question points at one of you, and your partner answers with a name. For example: “Which of us says ‘I love you’ more often?” or “Which of us sings the most out of tune?” It usually gets funny when you don't agree. On the same sofa, <a href=\"/en/which-one-of-us-couple-game/\">you each vote in secret</a>, then reveal both answers at the same time."
       },
       {
-        "titre": "Who could?",
-        "texte": "Same idea, with slightly crazy situations: “Which of us could buy a luxury watch on a whim?”, “Which of us could blow the entire holiday budget in one evening?”... You answer with a name, and give a good reason. The full game has over a hundred of them, enough to <a href=\"/en/who-could-couples-game/\">point at each other</a> all evening."
+        "titre": "Who's more likely to?",
+        "texte": "Same idea, with slightly crazy situations: “Which of us is more likely to buy a luxury watch on a whim?”, “Which of us is more likely to blow the entire holiday budget in one evening?”... You answer with a name, and give a good reason. The full game has over a hundred of them, enough to <a href=\"/en/who-could-couples-game/\">point at each other</a> all evening."
       },
       {
         "titre": "Finish the sentence",

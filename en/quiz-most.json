@@ -68,7 +68,7 @@
       "Who forgets important dates the most?",
       "Who picks the film at night?"
     ],
-    "coupleNote": "Just the two of you, with no friends around? There's a game where <a href=\"/en/which-one-of-us-couple-game/\">you each secretly point at one of you</a>, made exactly for that."
+    "coupleNote": "Just the two of you, with no friends around? There's a game where <a href=\"/en/which-one-of-us-couple-game/\">you each secretly point at one of you</a>, and another where you say <a href=\"/en/who-could-couples-game/\">who's more likely to do what</a>. Both are made exactly for that."
   },
   "tips": {
     "title": "Our Tips for a Successful \"Who Is the Most\" Quiz",
@@ -100,6 +100,6 @@
     "button": "Start the quiz now"
   },
   "jsonLd": {
-    "about": "who is most likely quiz"
+    "about": "who is the most quiz"
   }
 }
