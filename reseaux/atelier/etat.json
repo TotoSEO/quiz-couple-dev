@@ -1,12 +1,12 @@
 {
-  "genere_le": "2026-11-12T11:04:06.843Z",
+  "genere_le": "2026-11-13T03:15:29.256Z",
   "langue": "en",
   "compte": {
     "nom": "quiz_couple_official",
     "actif": true
   },
   "fuseau": "Europe/Paris",
-  "aujourdhui": "2026-11-12",
+  "aujourdhui": "2026-11-13",
   "melange": {
     "midi": {
       "1": null,
@@ -28,39 +28,12 @@
     },
     "matin": null
   },
-  "reserve_jours": 140,
+  "reserve_jours": 139,
   "a_remplir": [],
   "a_corriger": [],
   "hors_grille": [],
   "refuses": [],
   "recents_et_prevus": [
-    {
-      "jour": "2026-10-13",
-      "creneau": "matin",
-      "gabarit": "pov",
-      "categorie": "pov",
-      "statut": "publie",
-      "texte": null,
-      "erreur": null
-    },
-    {
-      "jour": "2026-10-13",
-      "creneau": "midi",
-      "gabarit": "tu-preferes",
-      "categorie": "tu-preferes",
-      "statut": "publie",
-      "texte": "Would you rather: date night?",
-      "erreur": null
-    },
-    {
-      "jour": "2026-10-13",
-      "creneau": "soir",
-      "gabarit": "bd",
-      "categorie": "bd",
-      "statut": "publie",
-      "texte": null,
-      "erreur": null
-    },
     {
       "jour": "2026-10-14",
       "creneau": "matin",
@@ -867,7 +840,7 @@
       "creneau": "soir",
       "gabarit": "tu-preferes",
       "categorie": "tu-preferes",
-      "statut": "rendu",
+      "statut": "publie",
       "texte": "Would you rather: this or that?",
       "erreur": null
     },
@@ -921,7 +894,7 @@
       "creneau": "soir",
       "gabarit": "baton",
       "categorie": "baton",
-      "statut": "a_rendre",
+      "statut": "rendu",
       "texte": null,
       "erreur": null
     },
@@ -3471,8 +3444,8 @@
       "creneau": "soir"
     },
     "tu-preferes": {
-      "jour": "2026-11-12",
-      "creneau": "soir"
+      "jour": "2026-11-14",
+      "creneau": "midi"
     },
     "phrase": null,
     "carrousel": null,
@@ -4707,18 +4680,36 @@
       "jour": "2026-11-04",
       "creneau": "soir",
       "theme": null
+    },
+    {
+      "variante_id": "4ca20939-eff2-4584-a79b-da822226eb31",
+      "releve": "j7",
+      "vues": 801,
+      "portee": 564,
+      "likes": 7,
+      "commentaires": 0,
+      "partages": 23,
+      "enregistrements": 3,
+      "releve_le": "2026-11-13T03:15:24.640414+00:00",
+      "publie_le": "2026-11-05T16:20:12.374+00:00",
+      "categorie": "tu-preferes",
+      "format": "reel",
+      "gabarit": "tu-preferes",
+      "jour": "2026-11-05",
+      "creneau": "soir",
+      "theme": null
     }
   ],
   "statistiques_par_categorie": [
     {
       "categorie": "tu-preferes",
-      "posts": 18,
-      "vues_mediane": 2557,
-      "vues_moyenne": 15548,
+      "posts": 19,
+      "vues_mediane": 2502,
+      "vues_moyenne": 14772,
       "vues_max": 107713,
-      "partages": 9913,
-      "enregistrements": 3702,
-      "likes": 3725,
+      "partages": 9936,
+      "enregistrements": 3705,
+      "likes": 3732,
       "commentaires": 7
     },
     {
