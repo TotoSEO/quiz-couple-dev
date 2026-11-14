@@ -1541,6 +1541,9 @@
     menu: 'Menu (ordinateur)',
     'menu-mobile': 'Menu (téléphone)',
     pied: 'Pied de page',
+    // Les encarts de l'évaluation coupés en deux avec le livre (14 novembre 2026).
+    'encart-bas': 'Encart · bas des tests', 'encart-article': 'Encart · bas des articles', 'encart-questions': 'Encart · questions de couple',
+    'encart-moteur': 'Encart · sous le test', 'encart-resultat': 'Encart · sous le résultat', 'encart-score': 'Encart · sous le score', 'encart-accueil': 'Encart · accueil',
     google: 'Google', bing: 'Bing', instagram: 'Instagram', facebook: 'Facebook', pinterest: 'Pinterest', amazon: 'Amazon',
     direct: 'Direct'
   };

@@ -82,9 +82,18 @@
   // La réduction en cours (bilanPromo, generate.js) : pastille et prix barré.
   const _bbPromo = (typeof bilanPromo !== 'undefined' && bilanPromo) ? bilanPromo : null;
   const _bbPrix = escapeHtml(_bb.prix.replace('{{prix}}', bilanPrix));
+  // La moitié « livre » (14 novembre 2026, livre-encart.ejs) : à côté de
+  // l'évaluation à deux, dans les langues où le livre est en vente
+  // (livreEncartPour, generate.js), jamais à côté du point.
+  const _livre = (_bilan && !_point && typeof livreEncartPour === 'function') ? livreEncartPour(lang, _bilan) : null;
+  const _livreSrc = _bilan && _bilan.id === 'article' ? 'encart-article' : _bilan && _bilan.groupe === 'questions' ? 'encart-questions' : 'encart-bas';
 %>
+<%# Un <aside> et non une <section> (14 novembre 2026) : sur la page des
+    questions, la bannière est dans <article class="seo-content">, dont les
+    règles .seo-content section (bandes de fond, fond transparent, marges
+    intérieures à zéro) en faisaient un texte blanc sur fond pêche. %>
 <% if (_bilan && _point) { %>
-<section class="qr-bilan qr-bilan--bas qr-bilan--point" aria-label="<%= _bp.sur %>">
+<aside class="qr-bilan qr-bilan--bas qr-bilan--point" aria-label="<%= _bp.sur %>">
   <div class="qr-bilan-visuel" aria-hidden="true"><img src="/bilan/apercu-point-<%= _POINT_BAS[lang] ? lang : 'fr' %>.webp" alt="" width="240" height="340" loading="lazy" decoding="async" draggable="false"></div>
   <div class="qr-bilan-corps">
     <p class="qr-bilan-sur"><%= _bp.sur %></p>
@@ -99,9 +108,10 @@
     <p class="qr-bilan-prix"><%= _bp.prix.replace('{{prix}}', bilanPrixPoint) %></p>
     <p class="qr-bilan-autre"><%= _bp.duoAvant %> <a href="<%= bilanChemin %>" data-bilan-src="bas-<%= _bilan.id %>"><%= _bp.duoLien %></a></p>
   </div>
-</section>
+</aside>
 <% } else if (_bilan) { %>
-<section class="qr-bilan qr-bilan--bas" aria-label="<%= _bb.sur %>">
+<% if (_livre) { %><div class="qr-duo qr-duo--bas"><div class="qr-duo-corps"><% } %>
+<aside class="qr-bilan qr-bilan--bas" aria-label="<%= _bb.sur %>">
   <div class="qr-bilan-visuel" aria-hidden="true"><img src="/bilan/apercu-synthese-<%= _BILAN_BAS[lang] ? lang : 'fr' %>.webp" alt="" width="240" height="340" loading="lazy" decoding="async" draggable="false"></div>
   <div class="qr-bilan-corps">
     <p class="qr-bilan-sur"><%= _bb.sur %><% if (_bbPromo) { %> <span class="promo-pastille"><%= _bbPromo.badge %></span><% } %></p>
@@ -115,5 +125,6 @@
     </div>
     <p class="qr-bilan-prix"><%- _bbPromo ? _bbPromo.marque(_bbPrix) : _bbPrix %></p>
   </div>
-</section>
+</aside>
+<% if (_livre) { %><%- include('livre-encart', { livreEncart: _livre, livreSource: _livreSrc, livreNiveau: 'h3' }) %></div></div><% } %>
 <% } %>

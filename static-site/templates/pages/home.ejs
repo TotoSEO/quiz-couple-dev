@@ -448,8 +448,10 @@
      seul(e) (le point sur ma relation, un autre produit), deux boutons, et
      les deux rapports en aperçu. Le bouton seul(e) mène à #point, qui ouvre
      tout de suite son départ (bilan.js), source accueil-point. -->
+<% const _livreAccueil = (typeof livreEncartPour === 'function') ? livreEncartPour(lang, { groupe: 'accueil', id: 'accueil' }) : null; %>
 <section class="home-eval" aria-labelledby="home-eval-titre">
   <div class="container mx-auto px-4">
+    <% if (_livreAccueil) { %><div class="qr-duo qr-duo--accueil"><div class="qr-duo-corps"><% } %>
     <div class="qr-bilan qr-bilan--bas qr-bilan--accueil">
       <div class="qr-bilan-visuel qr-bilan-visuel--deux">
         <img src="/bilan/apercu-point-<%= lang %>.webp" alt="" width="240" height="340" loading="lazy" decoding="async" draggable="false">
@@ -477,6 +479,7 @@
         <% if (evaluation.gratuit) { %><p class="qr-bilan-prix"><%= insEval(evaluation.gratuit) %></p><% } %>
       </div>
     </div>
+    <% if (_livreAccueil) { %><%- include('../partials/livre-encart', { livreEncart: _livreAccueil, livreSource: 'encart-accueil', livreNiveau: 'h2' }) %></div></div><% } %>
   </div>
 </section>
 <% } %>

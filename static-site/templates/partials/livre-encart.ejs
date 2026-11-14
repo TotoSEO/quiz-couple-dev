@@ -1,0 +1,30 @@
+<%
+  // La moitié « livre » d'un encart de l'évaluation de couple (14 novembre
+  // 2026, Thomas : « scinde aussi en deux du coup les endroits qui mettent en
+  // avant l'évaluation de couple : Met aussi de la promo vers le livre et un
+  // badge en dessous "Cadeau de Noël idéal !" »). Incluse, à côté de la carte
+  // de l'évaluation et dans le même bloc (.qr-duo, styles.css), par la
+  // bannière du bas (bilan-banniere.ejs), la carte sous le moteur
+  // (bilan-sous-moteur.ejs) et l'accueil ; l'écran de résultat écrit la même
+  // carte en JavaScript (avecLivre, quiz-engine-core.js).
+  // Reçoit livreEncart (livreEncartPour, generate.js : l'adresse de la page du
+  // livre et la période de Noël), livreSource (encart-bas, encart-article,
+  // encart-questions, encart-moteur, encart-accueil : la mesure de la page du
+  // livre dit d'où vient la visite, audience.js et livre.js) et, au besoin,
+  // livreNiveau (le niveau du titre, celui du titre de l'évaluation à côté).
+  // Le badge dit « Cadeau de Noël idéal ! » du 1er novembre au 24 décembre
+  // (livreNoelActif), « Idée cadeau pour votre moitié » le reste de l'année.
+  const _le = livreEncart;
+  const _leSrc = (typeof livreSource !== 'undefined' && livreSource) ? livreSource : 'encart';
+  const _leH = (typeof livreNiveau !== 'undefined' && /^h[2-4]$/.test(livreNiveau)) ? livreNiveau : 'h3';
+%>
+<div class="qr-livre">
+  <a class="qr-livre-visuel" href="<%= _le.url %>" data-livre-lien="<%= _leSrc %>" tabindex="-1" aria-hidden="true"><img src="/livre/livre-3d-480.webp" srcset="/livre/livre-3d-240.webp 240w, /livre/livre-3d-480.webp 480w" sizes="(min-width: 960px) 13rem, 7.5rem" alt="" width="480" height="518" loading="lazy" decoding="async" draggable="false"></a>
+  <div class="qr-livre-corps">
+    <p class="qr-livre-sur"><%= t('livre:encart.sur', '') %></p>
+    <<%= _leH %> class="qr-livre-titre"><%= t('livre:encart.titre', '') %></<%= _leH %>>
+    <p class="qr-livre-texte"><%= t('livre:encart.texte', '') %></p>
+    <a class="qr-livre-bouton" href="<%= _le.url %>" data-livre-lien="<%= _leSrc %>"><%= t('livre:encart.bouton', '') %><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    <p class="qr-livre-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 12v9H4v-9M2 7h20v5H2zM12 21V7M12 7H7.5a2.5 2.5 0 1 1 0-5C11 2 12 7 12 7zM12 7h4.5a2.5 2.5 0 1 0 0-5C13 2 12 7 12 7z"/></svg><span><%= _le.noel ? t('livre:encart.badgeNoel', '') : t('livre:encart.badge', '') %></span></p>
+  </div>
+</div>

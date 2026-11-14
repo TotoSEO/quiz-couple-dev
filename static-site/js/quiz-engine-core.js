@@ -3026,6 +3026,38 @@ var QuizEngine = (function() {
           bouton: 'Doe de relatiecheck samen', et: 'en' },
   };
   var CLE_PRENOMS_BILAN = 'qc-bilan-prenoms';
+  // La moitié « livre » de l'encart (14 novembre 2026, Thomas : « scinde
+  // aussi en deux du coup les endroits qui mettent en avant l'évaluation de
+  // couple : Met aussi de la promo vers le livre et un badge en dessous
+  // "Cadeau de Noël idéal !" ») : la même carte que partials/livre-encart.ejs,
+  // écrite d'après data-livre-encart (base.ejs, livreEncartPour dans
+  // generate.js : en français, à côté de l'évaluation à deux seulement), et
+  // posée avec la carte de l'évaluation dans un même bloc (.qr-duo,
+  // styles.css). Sans l'attribut, la carte de l'évaluation reste seule. Le
+  // lien dit d'où part la visite (data-livre-lien, audience.js).
+  var CADEAU_LIVRE = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 12v9H4v-9M2 7h20v5H2zM12 21V7M12 7H7.5a2.5 2.5 0 1 1 0-5C11 2 12 7 12 7zM12 7h4.5a2.5 2.5 0 1 0 0-5C13 2 12 7 12 7z"/></svg>';
+  function avecLivre(carte, source, classe) {
+    var corps = document.body;
+    var d = null;
+    try { d = JSON.parse((corps && corps.getAttribute('data-livre-encart')) || 'null'); } catch (e) { d = null; }
+    if (!d || typeof d.url !== 'string' || !/^(https:\/\/|\/)/.test(d.url) || !d.titre) return carte;
+    var lien = ' href="' + esc(d.url) + '" data-livre-lien="' + esc(source) + '"';
+    var livre = el('div', 'qr-livre');
+    livre.innerHTML = '<a class="qr-livre-visuel"' + lien + ' tabindex="-1" aria-hidden="true"><img src="/livre/livre-3d-480.webp" srcset="/livre/livre-3d-240.webp 240w, /livre/livre-3d-480.webp 480w" sizes="7.5rem" alt="" width="480" height="518" loading="lazy" decoding="async" draggable="false"></a>' +
+      '<div class="qr-livre-corps"><p class="qr-livre-sur">' + esc(d.sur || '') + '</p>' +
+      '<h3 class="qr-livre-titre">' + esc(d.titre) + '</h3>' +
+      (d.texte ? '<p class="qr-livre-texte">' + esc(d.texte) + '</p>' : '') +
+      '<a class="qr-livre-bouton"' + lien + '>' + esc(d.bouton || '') +
+      '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>' +
+      (d.badge ? '<p class="qr-livre-badge">' + CADEAU_LIVRE + '<span>' + esc(d.badge) + '</span></p>' : '') +
+      '</div>';
+    var duo = el('div', 'qr-duo' + (classe ? ' ' + classe : ''));
+    var dedans = el('div', 'qr-duo-corps');
+    dedans.appendChild(carte);
+    dedans.appendChild(livre);
+    duo.appendChild(dedans);
+    return duo;
+  }
   function carteBilanScore(cle, lang, ctx) {
     var corps = document.body;
     var chemin = corps && corps.getAttribute('data-bilan');
@@ -3067,7 +3099,7 @@ var QuizEngine = (function() {
         try { localStorage.setItem(CLE_PRENOMS_BILAN, JSON.stringify({ t: Date.now(), a: joueurs[0], b: joueurs[1] })); } catch (e) { /* rien */ }
       });
     }
-    return zone;
+    return avecLivre(zone, 'encart-score', 'qr-duo--score');
   }
   function encartBilan(cle, lang) {
     var corps = document.body;
@@ -3107,7 +3139,7 @@ var QuizEngine = (function() {
       '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>' +
       (prix ? '<p class="qr-bilan-prix">' + lignePrix + '</p>' : '') +
       '</div>';
-    return zone;
+    return avecLivre(zone, 'encart-resultat', 'qr-duo--resultat');
   }
 
   // L'encart du point : même carte que l'évaluation à deux (.qr-bilan), une

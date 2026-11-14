@@ -231,9 +231,12 @@ function entreeArticle(articleMeta, lang) {
   if (!bilanOuvertPour(lang) || !articleMeta) return null;
   const cles = [articleMeta.internalSlug, ...Object.values(articleMeta.slugs || {})].join(' ');
   if (ARTICLE_SANS_BILAN.test(cles)) return null;
+  // Sous un article qui parle d'un ex, pas de livre à offrir à deux à côté
+  // de l'évaluation (livreEncartPour).
+  const sansLivre = articleMeta.category === 'ex';
   return ARTICLES_POINT.has(articleMeta.internalSlug)
     ? { groupe: 'article', id: 'article', formule: 'point' }
-    : { groupe: 'article', id: 'article' };
+    : { groupe: 'article', id: 'article', ...(sansLivre ? { sansLivre: true } : {}) };
 }
 function formatPrix(centimes, lang) {
   try {
@@ -579,6 +582,22 @@ function livreMenuPour(lang) {
   const url = getLocalizedUrl('livreQuizCouple', lang);
   if (!url) return null;
   return { url, chemin: getLocalizedPath('livreQuizCouple', lang) };
+}
+// La moitié « livre » des encarts de l'évaluation de couple (14 novembre
+// 2026, Thomas : « scinde aussi en deux du coup les endroits qui mettent en
+// avant l'évaluation de couple : Met aussi de la promo vers le livre et un
+// badge en dessous "Cadeau de Noël idéal !" ») : dans les langues où le livre
+// est en vente, à côté de l'évaluation à deux seulement. Jamais à côté du
+// point sur ma relation (on y doute seul(e) de sa relation), ni sur les tests
+// du groupe doute, ni sous les articles qui parlent d'un ex (sansLivre,
+// entreeArticle). Connu de tous les gabarits par renderTemplate, comme
+// livreMenuPour : les partiels (livre-encart.ejs) et base.ejs, qui le pose
+// sur le body pour l'écran de résultat (data-livre-encart).
+function livreEncartPour(lang, entree) {
+  if (!entree || entree.formule === 'point' || entree.groupe === 'doute' || entree.sansLivre) return null;
+  const menu = livreMenuPour(lang);
+  if (!menu) return null;
+  return { url: menu.url, noel: livreNoelActif() };
 }
 // Ce que la page du livre reçoit en plus : l'édition (lien, prix, ISBN), la
 // période de Noël et le « 100 » dessiné de la couverture, sans sa taille
@@ -1385,7 +1404,7 @@ function renderTemplate(templateName, data) {
   }
   // La saison du site est connue de tous les gabarits (base.ejs la pose
   // sur le body et ecrit sa feuille), sans que chaque page la passe.
-  data = Object.assign({ saison: SAISON_ACTIVE, saisonQuiz: SAISON_QUIZ_ACTIVE, cssSaison: CSS_SAISON, livreMenuPour }, data || {});
+  data = Object.assign({ saison: SAISON_ACTIVE, saisonQuiz: SAISON_QUIZ_ACTIVE, cssSaison: CSS_SAISON, livreMenuPour, livreEncartPour }, data || {});
   return ejs.renderFile(templatePath, data, {
     views: [TEMPLATES_DIR],
     async: false,

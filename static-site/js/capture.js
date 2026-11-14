@@ -72,8 +72,9 @@
   // toute la zone même les produits liés, les autres tests » ; les produits
   // affiliés sont partis le 9 novembre 2026). La carte de l'évaluation posée
   // sous le score des tests à deux (.qr-bilan--score, 10 novembre 2026) reste
-  // nette elle aussi : elle prend la place de l'encart du bas.
-  var HORS_PORTE = '.qr-zone--avis, .qr-zone--produits, .qr-zone--actions, .qr-zone--suite, .qr-zone--pub, .story-share, .related-tests-section, .qc-porte, .qr-bilan--score';
+  // nette elle aussi : elle prend la place de l'encart du bas. Depuis le
+  // 14 novembre 2026, elle partage son bloc avec le livre (.qr-duo--score).
+  var HORS_PORTE = '.qr-zone--avis, .qr-zone--produits, .qr-zone--actions, .qr-zone--suite, .qr-zone--pub, .story-share, .related-tests-section, .qc-porte, .qr-bilan--score, .qr-duo--score';
   function trouveTete(carte) {
     var cands = carte.querySelectorAll('h2, h3');
     for (var i = 0; i < cands.length; i++) {
