@@ -16,6 +16,14 @@ name: Trafic · pages par visite
 # l'écran de résultat d'un test compris (/<page>/resultat/, resultat-url.js) ;
 # une « page » ne compte pas ces écrans. Une revanche (rejouer sur place) ne
 # fait pas de vue, sauf l'écran de résultat suivant.
+#
+# 14 novembre 2026 (Thomas : « des idées pour augmenter le nombre de pages
+# vues ? ») : le jour par jour sépare les visites entrées sur une page à
+# porte e-mail (CAPTURE_PAGES de static-site/build/config.js, lu par une
+# copie partielle du dépôt) des autres pages jouables, et l'entrée
+# « coupure » (une date AAAA-MM-JJ) compare l'avant et l'après de ce
+# jour-là, jour exclu : par type d'entrée, page d'entrée par page d'entrée
+# (les 40 premières), et ce qui suit un écran de résultat selon la porte.
 
 on:
   workflow_dispatch:
@@ -24,6 +32,10 @@ on:
         description: 'Nombre de jours lus, jusqu à hier (14 par défaut, 34 au plus)'
         required: false
         default: '14'
+      coupure:
+        description: 'Facultatif : une date AAAA-MM-JJ, pour comparer avant et après ce jour-là (jour exclu)'
+        required: false
+        default: ''
 
 concurrency:
   group: trafic-chiffres
@@ -37,10 +49,22 @@ jobs:
       SUPABASE_ACCESS_TOKEN: ${{ secrets.SUPABASE_ACCESS_TOKEN }}
       SUPABASE_PROJECT_REF: ${{ secrets.SUPABASE_PROJECT_REF }}
       JOURS: ${{ inputs.jours }}
+      COUPURE: ${{ inputs.coupure }}
     steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: static-site/build/config.js
+          sparse-checkout-cone-mode: false
       - name: Pages par visite
         run: |
           N=$(printf '%s' "${JOURS:-14}" | tr -cd '0-9'); N=${N:-14}
+          # Les pages à porte e-mail, en clés de route (la colonne route_key
+          # de page_views) ; des lettres et des chiffres seulement, puisque la
+          # liste est écrite telle quelle dans le SQL.
+          PORTE=$(node -e 'const c = require("./static-site/build/config.js"); const q = String.fromCharCode(39); console.log(Object.keys(c.CAPTURE_PAGES || {}).filter((k) => /^[A-Za-z0-9]+$/.test(k)).map((k) => q + k + q).join(","))' 2>/dev/null || true)
+          if [ -z "$PORTE" ]; then PORTE="''"; fi
+          echo "Pages à porte e-mail : $(printf '%s' "$PORTE" | tr ',' '\n' | grep -c .)"
+          COUPURE=$(printf '%s' "${COUPURE:-}" | grep -E '^[0-9]{4}-[0-9]{2}-[0-9]{2}$' || true)
           if [ "$N" -lt 1 ]; then N=1; fi
           if [ "$N" -gt 34 ]; then N=34; fi
           echo "Fenêtre : les $N derniers jours complets, heure de Paris."
@@ -177,3 +201,47 @@ jobs:
               round(avg(pages), 2) as pages_par_visite
             from v left join d using (visite_id) left join f using (visite_id)
             where entree_cle is not null"
+
+          sql "Jour par jour, selon la page d'entrée (porte : une page à porte e-mail)" "$BASE, j as (
+              select visite_id, (min(created_at) at time zone 'Europe/Paris')::date as jour from pv group by visite_id)
+            select j.jour,
+              case when entree_cle in ($PORTE) then 'porte' when entree_cle is not null then 'jouable' else 'autre' end as entree,
+              $MESURES
+            from v join j using (visite_id) group by 1, 2 order by 1, 2"
+
+          if [ -n "$COUPURE" ]; then
+            C="c as (select ('$COUPURE'::date)::timestamp at time zone 'Europe/Paris' as d0,
+                            (('$COUPURE'::date) + 1)::timestamp at time zone 'Europe/Paris' as d1)"
+
+            sql "Avant et après le $COUPURE (ce jour exclu), selon la page d'entrée" "$BASE, j as (
+                select visite_id, min(created_at) as t0 from pv group by visite_id), $C
+              select case when entree_cle in ($PORTE) then 'porte' when entree_cle is not null then 'jouable' else $(type_de entree entree_cle) end as entree,
+                case when j.t0 < c.d0 then '1 avant' else '2 après' end as periode,
+                $MESURES
+              from v join j using (visite_id), c where j.t0 < c.d0 or j.t0 >= c.d1
+              group by 1, 2 order by 1, 2"
+
+            sql "Les 40 premières pages d'entrée, avant et après le $COUPURE" "$BASE, j as (
+                select visite_id, min(created_at) as t0 from pv group by visite_id), $C
+              select entree,
+                case when max(entree_cle) in ($PORTE) then 'porte' else '' end as porte,
+                count(*) filter (where j.t0 < c.d0) as visites_avant,
+                round(avg(pages) filter (where j.t0 < c.d0), 2) as pages_avant,
+                round(100.0 * avg((pages <= 1)::int) filter (where j.t0 < c.d0), 1) as une_page_avant,
+                count(*) filter (where j.t0 >= c.d1) as visites_apres,
+                round(avg(pages) filter (where j.t0 >= c.d1), 2) as pages_apres,
+                round(100.0 * avg((pages <= 1)::int) filter (where j.t0 >= c.d1), 1) as une_page_apres
+              from v join j using (visite_id), c
+              group by entree order by count(*) desc limit 40"
+
+            sql "Après un écran de résultat, avant et après le $COUPURE : tests à porte et autres" "$SUITE, $C, t as (
+                select case when s.created_at < c.d0 then '1 avant' when s.created_at >= c.d1 then '2 après' end as periode,
+                  case when s.route_key in ($PORTE) then 'porte' else 'sans porte' end as tests,
+                  (s.p2 is null) as sortie,
+                  (s.p2 is not null and s.p2 <> s.path and s.p2 <> regexp_replace(s.path, 'resultat/\$', '') and s.p2 !~ '/resultat/\$') as autre_page
+                from s, c where s.res)
+              select tests, periode, count(*) as resultats,
+                round(100.0 * avg(sortie::int), 1) as pct_sortie,
+                round(100.0 * avg(autre_page::int), 1) as pct_autre_page
+              from t where periode is not null group by 1, 2 order by 1, 2"
+          fi
