@@ -504,10 +504,45 @@
   // ═══════════════════════════════════════════════════════
   // UI LOGIC
   // ═══════════════════════════════════════════════════════
+  // Les prenoms gardes d'un test a l'autre : meme cle et meme forme que
+  // prenomsGardes et garderPrenom de quiz-engine-core.js, que cette page ne
+  // charge pas. Ceux du test d'avant reviennent ici, ceux tapes ici servent au
+  // suivant, pendant 24 heures, dans ce navigateur seulement.
+  var PRENOMS = {
+    lire: function () {
+      try {
+        var d = JSON.parse(localStorage.getItem('qc-joueurs') || 'null');
+        if (!d || !Array.isArray(d.j) || !(Date.now() - (+d.t || 0) < 864e5)) return [];
+        return d.j;
+      } catch (e) { return []; }
+    },
+    remplir: function (champs) {
+      var j = PRENOMS.lire();
+      champs.forEach(function (champ, i) {
+        var p = j[i];
+        if (champ && !champ.value && p && typeof p.n === 'string' && p.n) {
+          champ.value = p.n.slice(0, champ.maxLength > 0 ? champ.maxLength : 30);
+        }
+      });
+    },
+    garder: function (noms) {
+      try {
+        var j = PRENOMS.lire();
+        localStorage.setItem('qc-joueurs', JSON.stringify({ t: Date.now(), j: [0, 1].map(function (i) {
+          var p = j[i] || {};
+          var n = String(noms[i] || '').trim().slice(0, 30);
+          var meme = n.toLowerCase() === String(p.n || '').toLowerCase();
+          return { n: n, g: meme && (p.g === 'homme' || p.g === 'femme') ? p.g : null };
+        }) }));
+      } catch (e) {}
+    }
+  };
+
   var form = document.getElementById('astro-form');
   var results = document.getElementById('astro-results');
   var submitBtn = document.getElementById('astro-submit');
   var retryBtn = document.getElementById('astro-retry');
+  PRENOMS.remplir([document.getElementById('name1'), document.getElementById('name2')]);
 
   submitBtn.addEventListener('click', function() {
     var name1 = document.getElementById('name1').value.trim();
@@ -521,6 +556,8 @@
       setTimeout(function(){ submitBtn.classList.remove('animate-shake'); }, 500);
       return;
     }
+
+    PRENOMS.garder([name1, name2]);
 
     // Calculate astro score
     var astroKey = sign1 + '_' + sign2;

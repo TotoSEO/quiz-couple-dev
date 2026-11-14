@@ -714,6 +714,21 @@
   // quiz-engine-core.js) : gardés une demi-heure sur l'appareil au clic,
   // repris une seule fois au départ, puis effacés. Celui qui tenait le
   // téléphone (le joueur 1, ou soi à distance) est « vous ».
+  // Sans clic sur la carte sous le score, les prenoms gardes d'un test a
+  // l'autre (qc-joueurs, prenomsGardes de quiz-engine-core.js, 24 heures) :
+  // le couple qui vient de faire un test a deux retrouve ses prenoms au
+  // depart, quelle que soit la porte par laquelle il arrive ici.
+  function prenomsGardes() {
+    try {
+      var d = JSON.parse(localStorage.getItem('qc-joueurs') || 'null');
+      if (!d || !Array.isArray(d.j) || !(Date.now() - (+d.t || 0) < 864e5)) return null;
+      var vers = function (x) {
+        x = x || {};
+        return { prenom: typeof x.n === 'string' ? x.n : '', genre: x.g === 'femme' ? 'f' : x.g === 'homme' ? 'h' : null };
+      };
+      return { a: vers(d.j[0]), b: vers(d.j[1]) };
+    } catch (e) { return null; }
+  }
   function prenomsDuTest(b) {
     var p = null;
     try {
@@ -721,7 +736,8 @@
       localStorage.removeItem('qc-bilan-prenoms');
     } catch (e) { p = null; }
     var age = p && typeof p.t === 'number' ? Date.now() - p.t : -1;
-    if (age < 0 || age > 30 * 60 * 1000) return;
+    if (age < 0 || age > 30 * 60 * 1000) p = prenomsGardes();
+    if (!p) return;
     var prenom = function (o) { return o && typeof o.prenom === 'string' ? o.prenom.trim().slice(0, 30) : ''; };
     var genre = function (o) { return o && (o.genre === 'f' || o.genre === 'h') ? o.genre : null; };
     b.moi = prenom(p.a);
