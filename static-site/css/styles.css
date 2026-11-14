@@ -1851,7 +1851,9 @@ article a:not(.no-underline):hover, .seo-content a:hover { text-decoration-color
 .mnav-accueil[hidden],
 .mnav-panneau[hidden] { display: none; }
 
-/* La liste des familles : une carte par famille, ses sections en sous-titre. */
+/* La liste des familles : une carte par famille, son nom et son nombre de
+   pages. Les sections en sous-titre (.mnav-famille-sous) sont parties le
+   14 novembre 2026, à la demande de Thomas. */
 .mnav-familles { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0.5rem; }
 .mnav-famille {
   display: grid; grid-template-columns: 2.75rem minmax(0, 1fr) 1.15rem; align-items: center; gap: 0.85rem;
@@ -1872,11 +1874,6 @@ article a:not(.no-underline):hover, .seo-content a:hover { text-decoration-color
 .mnav-famille-ic svg { width: 1.3rem; height: 1.3rem; }
 .mnav-famille-texte { display: flex; flex-direction: column; gap: 0.2rem; min-width: 0; }
 .mnav-famille-nom { display: flex; align-items: center; flex-wrap: wrap; gap: 0.2rem 0.45rem; font-size: 1rem; font-weight: 700; line-height: 1.25; }
-/* Sans rembourrage vertical : la troncature passe au bord du rembourrage. */
-.mnav-famille-sous {
-  display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden;
-  font-size: 0.78rem; font-weight: 500; line-height: 1.35; color: hsl(var(--muted-foreground));
-}
 .mnav-famille-chevron { width: 1.15rem; height: 1.15rem; color: hsl(var(--muted-foreground)); transition: transform 0.2s ease, color 0.2s ease; }
 .mnav-nb {
   display: inline-flex; align-items: center; justify-content: center;
