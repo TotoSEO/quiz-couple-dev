@@ -829,5 +829,15 @@
     "introQuestion": "Voordat je begint:",
     "introQuote": "Antwoord op basis van wat deze persoon doet, niet van wat er wordt beloofd.",
     "disclaimer": "De test heeft het over ‘deze persoon’, man of vrouw: love bombing komt in beide richtingen voor. Hij plakt op niemand een etiket, hij kijkt naar gedrag en laat zwaarder wegen wat het meest telt: een nee dat niet wordt gehoord, afstand tot je vrienden en familie, angst. Je antwoorden worden niet bewaard."
+  },
+  "pause": {
+    "titre": "Al {{n}} {{quoi}}!",
+    "texte": "Zin in iets anders? Probeer een van deze twee. Anders spelen we gewoon verder!",
+    "continuer": "Verder spelen",
+    "quoi_cartes": "kaarten",
+    "quoi_situations": "situaties",
+    "quoi_dilemmes": "dilemma's",
+    "quoi_propositions": "stellingen",
+    "quoi_gages": "opdrachten"
   }
 }
