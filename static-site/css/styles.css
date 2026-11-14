@@ -1837,9 +1837,14 @@ article a:not(.no-underline):hover, .seo-content a:hover { text-decoration-color
   #mobile-menu { height: calc(100dvh - 3.75rem); }
 }
 @media (min-width: 1024px) { #mobile-menu { display: none; } }
+/* La page se fige par html seul, jamais par body : un body en « overflow:
+   hidden » devient lui-même un conteneur de défilement, l'en-tête collé s'y
+   accroche au lieu de l'écran et, quand on avait fait défiler la page, il
+   remontait avec le menu tout en haut du document, hors de l'écran, la page
+   restant figée et inerte (du 9 au 14 novembre 2026 ; vu sur l'iPhone d'un
+   ami de Thomas). */
 @media (max-width: 1023.98px) {
-  html.menu-mobile-ouvert,
-  html.menu-mobile-ouvert body { overflow: hidden; }
+  html.menu-mobile-ouvert { overflow: hidden; }
 }
 .mnav { padding: 0.85rem 0 2rem; }
 .mnav-accueil { display: flex; flex-direction: column; gap: 0.6rem; }
