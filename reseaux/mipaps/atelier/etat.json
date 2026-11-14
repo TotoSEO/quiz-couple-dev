@@ -1,12 +1,12 @@
 {
-  "genere_le": "2026-11-13T10:58:03.151Z",
+  "genere_le": "2026-11-14T03:14:52.188Z",
   "langue": "fr",
   "compte": {
     "nom": "mipaps_stories",
     "actif": true
   },
   "fuseau": "Europe/Paris",
-  "aujourdhui": "2026-11-13",
+  "aujourdhui": "2026-11-14",
   "melange": {
     "midi": {
       "1": null,
@@ -28,39 +28,12 @@
     },
     "matin": "mipaps-anime"
   },
-  "reserve_jours": 139,
+  "reserve_jours": 138,
   "a_remplir": [],
   "a_corriger": [],
   "hors_grille": [],
   "refuses": [],
   "recents_et_prevus": [
-    {
-      "jour": "2026-10-14",
-      "creneau": "matin",
-      "gabarit": "mipaps-reel",
-      "categorie": "mipaps-anime",
-      "statut": "publie",
-      "texte": null,
-      "erreur": null
-    },
-    {
-      "jour": "2026-10-14",
-      "creneau": "midi",
-      "gabarit": "mipaps-post",
-      "categorie": "mipaps-post",
-      "statut": "publie",
-      "texte": "mon humeur, un jour normal",
-      "erreur": null
-    },
-    {
-      "jour": "2026-10-14",
-      "creneau": "soir",
-      "gabarit": "mipaps-carrousel",
-      "categorie": "mipaps-histoire",
-      "statut": "publie",
-      "texte": null,
-      "erreur": null
-    },
     {
       "jour": "2026-10-15",
       "creneau": "matin",
@@ -2757,7 +2730,7 @@
   "prochain_creneau": {
     "mipaps-anime": {
       "jour": "2026-11-14",
-      "creneau": "matin"
+      "creneau": "soir"
     },
     "mipaps-statique": null,
     "mipaps-histoire": null,
