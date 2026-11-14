@@ -6,12 +6,21 @@
     <atom:link href="https://quiz-couple.com/es/blog/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Los artículos de Quiz Couple sobre la vida en pareja, la psicología y las historias de amor.</description>
     <language>es</language>
-    <lastBuildDate>Tue, 10 Nov 2026 09:20:00 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 14 Nov 2026 15:55:00 GMT</lastBuildDate>
     <image>
       <url>https://quiz-couple.com/apple-touch-icon.png</url>
       <title>Quiz Couple · Blog</title>
       <link>https://quiz-couple.com/es/blog/</link>
     </image>
+    <item>
+      <title>Dependencia emocional en la amistad: cuando una amiga se vuelve una necesidad</title>
+      <link>https://quiz-couple.com/es/blog/dependencia-emocional-en-la-amistad/</link>
+      <guid isPermaLink="true">https://quiz-couple.com/es/blog/dependencia-emocional-en-la-amistad/</guid>
+      <pubDate>Sat, 14 Nov 2026 15:55:00 GMT</pubDate>
+      <category>Psicología</category>
+      <description>La dependencia emocional no vive solo en la pareja. La amistad fusional que se vuelve necesidad, los celos entre amigas, la exclusividad... las señales y cómo reequilibrar.</description>
+      <media:content url="https://quiz-couple.com/blog/dependance-affective-amitie.webp" medium="image" type="image/webp" width="1536" height="1024"/>
+    </item>
     <item>
       <title>Salir del dominio de un narcisista: las 4 etapas de la liberación</title>
       <link>https://quiz-couple.com/es/blog/salir-del-control-de-un-narcisista/</link>
@@ -272,15 +281,6 @@
       <category>Psicología</category>
       <description>Impecable en público, demoledor en privado. Las 12 conductas del hombre narcisista, en el orden en que aparecen, y qué hacer después.</description>
       <media:content url="https://quiz-couple.com/blog/homme-pervers-narcissique-signes.webp" medium="image" type="image/webp" width="1536" height="1024"/>
-    </item>
-    <item>
-      <title>Cancela en el último momento: qué significa y qué contestarle</title>
-      <link>https://quiz-couple.com/es/blog/cancela-en-el-ultimo-momento/</link>
-      <guid isPermaLink="true">https://quiz-couple.com/es/blog/cancela-en-el-ultimo-momento/</guid>
-      <pubDate>Fri, 28 Aug 2026 12:41:00 GMT</pubDate>
-      <category>Psicología</category>
-      <description>Acaba de cancelar la cita una hora antes. Qué significa la mayoría de las veces, la única señal que hay que mirar, y los mensajes que puedes enviarle.</description>
-      <media:content url="https://quiz-couple.com/blog/il-annule-au-dernier-moment.webp" medium="image" type="image/webp" width="1200" height="630"/>
     </item>
   </channel>
 </rss>

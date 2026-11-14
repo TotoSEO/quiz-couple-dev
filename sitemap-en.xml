@@ -2187,6 +2187,19 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://quiz-couple.com/en/blog/emotional-dependency-in-friendship/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/blog/dependance-affective-amitie/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://quiz-couple.com/en/blog/emotional-dependency-in-friendship/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://quiz-couple.com/es/blog/dependencia-emocional-en-la-amistad/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://quiz-couple.com/de/blog/emotionale-abhaengigkeit-in-freundschaften/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/blog/dipendenza-affettiva-in-amicizia/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://quiz-couple.com/nl/blog/emotionele-afhankelijkheid-in-vriendschap/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/blog/dependance-affective-amitie/"/>
+    <lastmod>2026-11-14T16:55:00+01:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://quiz-couple.com/en/blog/can-you-be-friends-with-your-ex/</loc>
     <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/blog/rester-ami-avec-son-ex/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://quiz-couple.com/en/blog/can-you-be-friends-with-your-ex/"/>

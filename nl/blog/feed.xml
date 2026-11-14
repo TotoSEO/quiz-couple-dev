@@ -6,12 +6,21 @@
     <atom:link href="https://quiz-couple.com/nl/blog/feed.xml" rel="self" type="application/rss+xml"/>
     <description>De artikelen van Quiz Couple over relaties, psychologie en liefdesverhalen.</description>
     <language>nl</language>
-    <lastBuildDate>Tue, 10 Nov 2026 09:20:00 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 14 Nov 2026 15:55:00 GMT</lastBuildDate>
     <image>
       <url>https://quiz-couple.com/apple-touch-icon.png</url>
       <title>Quiz Couple · Blog</title>
       <link>https://quiz-couple.com/nl/blog/</link>
     </image>
+    <item>
+      <title>Emotionele afhankelijkheid in een vriendschap: als een vriendin een behoefte wordt</title>
+      <link>https://quiz-couple.com/nl/blog/emotionele-afhankelijkheid-in-vriendschap/</link>
+      <guid isPermaLink="true">https://quiz-couple.com/nl/blog/emotionele-afhankelijkheid-in-vriendschap/</guid>
+      <pubDate>Sat, 14 Nov 2026 15:55:00 GMT</pubDate>
+      <category>Psychologie</category>
+      <description>Emotionele afhankelijkheid zit niet alleen in relaties. Een vriendschap die een behoefte wordt, jaloezie, exclusiviteit... de signalen en de oplossing.</description>
+      <media:content url="https://quiz-couple.com/blog/dependance-affective-amitie.webp" medium="image" type="image/webp" width="1536" height="1024"/>
+    </item>
     <item>
       <title>Uit de greep van een narcist komen: de 4 stappen naar vrijheid</title>
       <link>https://quiz-couple.com/nl/blog/loskomen-van-een-narcist/</link>
@@ -272,15 +281,6 @@
       <category>Psychologie</category>
       <description>Onberispelijk in gezelschap, vernietigend thuis. De 12 kenmerken van een narcistische man, in de volgorde waarin ze opduiken, en wat je daarna doet.</description>
       <media:content url="https://quiz-couple.com/blog/homme-pervers-narcissique-signes.webp" medium="image" type="image/webp" width="1536" height="1024"/>
-    </item>
-    <item>
-      <title>Hij zegt op het laatste moment af: wat het betekent en wat je antwoordt</title>
-      <link>https://quiz-couple.com/nl/blog/hij-zegt-op-het-laatste-moment-af/</link>
-      <guid isPermaLink="true">https://quiz-couple.com/nl/blog/hij-zegt-op-het-laatste-moment-af/</guid>
-      <pubDate>Fri, 28 Aug 2026 12:41:00 GMT</pubDate>
-      <category>Psychologie</category>
-      <description>Hij zegt op het laatste moment af, een uur voor jullie date. Wat het meestal betekent, het enige signaal dat telt, en de berichten om terug te sturen.</description>
-      <media:content url="https://quiz-couple.com/blog/il-annule-au-dernier-moment.webp" medium="image" type="image/webp" width="1200" height="630"/>
     </item>
   </channel>
 </rss>

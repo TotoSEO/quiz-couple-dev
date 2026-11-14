@@ -6,12 +6,21 @@
     <atom:link href="https://quiz-couple.com/it/blog/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Gli articoli di Quiz Couple sulla vita di coppia, la psicologia e le storie d&#39;amore.</description>
     <language>it</language>
-    <lastBuildDate>Tue, 10 Nov 2026 09:20:00 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 14 Nov 2026 15:55:00 GMT</lastBuildDate>
     <image>
       <url>https://quiz-couple.com/apple-touch-icon.png</url>
       <title>Quiz Couple · Blog</title>
       <link>https://quiz-couple.com/it/blog/</link>
     </image>
+    <item>
+      <title>Dipendenza affettiva in amicizia: quando un&#39;amica diventa un bisogno</title>
+      <link>https://quiz-couple.com/it/blog/dipendenza-affettiva-in-amicizia/</link>
+      <guid isPermaLink="true">https://quiz-couple.com/it/blog/dipendenza-affettiva-in-amicizia/</guid>
+      <pubDate>Sat, 14 Nov 2026 15:55:00 GMT</pubDate>
+      <category>Psicologia</category>
+      <description>La dipendenza affettiva non vive solo nella coppia. L&#39;amicizia fusionale che diventa bisogno, la gelosia tra amiche, l&#39;esclusività... i segnali e come riequilibrare.</description>
+      <media:content url="https://quiz-couple.com/blog/dependance-affective-amitie.webp" medium="image" type="image/webp" width="1536" height="1024"/>
+    </item>
     <item>
       <title>Uscire dal controllo di un narcisista: le 4 tappe della liberazione</title>
       <link>https://quiz-couple.com/it/blog/uscire-dal-controllo-di-un-narcisista/</link>
@@ -272,15 +281,6 @@
       <category>Psicologia</category>
       <description>Irreprensibile in pubblico, demolitore in privato. I 12 comportamenti dell&#39;uomo narcisista, nell&#39;ordine in cui compaiono, e cosa fare dopo.</description>
       <media:content url="https://quiz-couple.com/blog/homme-pervers-narcissique-signes.webp" medium="image" type="image/webp" width="1536" height="1024"/>
-    </item>
-    <item>
-      <title>Annulla all&#39;ultimo momento: cosa significa e cosa rispondere</title>
-      <link>https://quiz-couple.com/it/blog/annulla-all-ultimo-momento/</link>
-      <guid isPermaLink="true">https://quiz-couple.com/it/blog/annulla-all-ultimo-momento/</guid>
-      <pubDate>Fri, 28 Aug 2026 12:41:00 GMT</pubDate>
-      <category>Psicologia</category>
-      <description>Ha appena disdetto l&#39;appuntamento un&#39;ora prima. Cosa significa nella maggior parte dei casi, l&#39;unico segnale da guardare, e i messaggi da mandargli.</description>
-      <media:content url="https://quiz-couple.com/blog/il-annule-au-dernier-moment.webp" medium="image" type="image/webp" width="1200" height="630"/>
     </item>
   </channel>
 </rss>

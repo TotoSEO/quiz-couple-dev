@@ -6,12 +6,21 @@
     <atom:link href="https://quiz-couple.com/en/blog/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Quiz Couple articles on relationships, psychology and love stories.</description>
     <language>en</language>
-    <lastBuildDate>Tue, 10 Nov 2026 09:20:00 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 14 Nov 2026 15:55:00 GMT</lastBuildDate>
     <image>
       <url>https://quiz-couple.com/apple-touch-icon.png</url>
       <title>Quiz Couple · Blog</title>
       <link>https://quiz-couple.com/en/blog/</link>
     </image>
+    <item>
+      <title>Emotional dependency in friendship: when a friend becomes a need</title>
+      <link>https://quiz-couple.com/en/blog/emotional-dependency-in-friendship/</link>
+      <guid isPermaLink="true">https://quiz-couple.com/en/blog/emotional-dependency-in-friendship/</guid>
+      <pubDate>Sat, 14 Nov 2026 15:55:00 GMT</pubDate>
+      <category>Psychology</category>
+      <description>Emotional dependency doesn&#39;t only live in relationships. The fusional friendship that turns into a need, friendly jealousy, exclusivity... the signs, and how to rebalance.</description>
+      <media:content url="https://quiz-couple.com/blog/dependance-affective-amitie.webp" medium="image" type="image/webp" width="1536" height="1024"/>
+    </item>
     <item>
       <title>Escaping a narcissist&#39;s hold: the 4 stages of liberation</title>
       <link>https://quiz-couple.com/en/blog/escape-narcissistic-abuse/</link>
@@ -272,15 +281,6 @@
       <category>Psychology</category>
       <description>Flawless in public, crushing in private. The 12 behaviours of a narcissistic man, in the order they appear, and what to do next.</description>
       <media:content url="https://quiz-couple.com/blog/homme-pervers-narcissique-signes.webp" medium="image" type="image/webp" width="1536" height="1024"/>
-    </item>
-    <item>
-      <title>He cancelled last minute: what it means and what to reply</title>
-      <link>https://quiz-couple.com/en/blog/he-cancelled-last-minute/</link>
-      <guid isPermaLink="true">https://quiz-couple.com/en/blog/he-cancelled-last-minute/</guid>
-      <pubDate>Fri, 28 Aug 2026 12:41:00 GMT</pubDate>
-      <category>Psychology</category>
-      <description>He has just called off your date an hour before. What that means most of the time, the one signal worth watching, and the messages to send him.</description>
-      <media:content url="https://quiz-couple.com/blog/il-annule-au-dernier-moment.webp" medium="image" type="image/webp" width="1200" height="630"/>
     </item>
   </channel>
 </rss>

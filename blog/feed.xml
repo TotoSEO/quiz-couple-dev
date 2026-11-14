@@ -6,12 +6,21 @@
     <atom:link href="https://quiz-couple.com/blog/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Les articles de Quiz Couple sur la vie de couple, la psychologie et les histoires d&#39;amour.</description>
     <language>fr</language>
-    <lastBuildDate>Fri, 13 Nov 2026 17:45:00 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 14 Nov 2026 15:55:00 GMT</lastBuildDate>
     <image>
       <url>https://quiz-couple.com/apple-touch-icon.png</url>
       <title>Quiz Couple · Le blog</title>
       <link>https://quiz-couple.com/blog/</link>
     </image>
+    <item>
+      <title>Dépendance affective en amitié : quand une amie devient un besoin</title>
+      <link>https://quiz-couple.com/blog/dependance-affective-amitie/</link>
+      <guid isPermaLink="true">https://quiz-couple.com/blog/dependance-affective-amitie/</guid>
+      <pubDate>Sat, 14 Nov 2026 15:55:00 GMT</pubDate>
+      <category>Psychologie</category>
+      <description>La dépendance affective ne vit pas que dans le couple. L&#39;amitié fusionnelle qui vire au besoin, la jalousie amicale, l&#39;exclusivité... les signes, et comment rééquilibrer.</description>
+      <media:content url="https://quiz-couple.com/blog/dependance-affective-amitie.webp" medium="image" type="image/webp" width="1536" height="1024"/>
+    </item>
     <item>
       <title>Lire les messages de son partenaire : sur Quiz Couple, 54 % votent pour</title>
       <link>https://quiz-couple.com/blog/lire-les-messages-de-son-partenaire/</link>
@@ -272,15 +281,6 @@
       <category>Vie de couple</category>
       <description>Marre des conversations qui retombent ? 100 questions à poser à ton crush, classées par situation : par message, pour rire, pour flirter, pour savoir si ça matche.</description>
       <media:content url="https://quiz-couple.com/blog/questions-a-poser-a-son-crush.webp" medium="image" type="image/webp" width="1536" height="1024"/>
-    </item>
-    <item>
-      <title>Homme pervers narcissique : 12 signes, du charme public au contrôle privé</title>
-      <link>https://quiz-couple.com/blog/homme-pervers-narcissique-signes/</link>
-      <guid isPermaLink="true">https://quiz-couple.com/blog/homme-pervers-narcissique-signes/</guid>
-      <pubDate>Sat, 29 Aug 2026 13:25:00 GMT</pubDate>
-      <category>Psychologie</category>
-      <description>Irréprochable en société, écrasant en privé. Les 12 comportements de l&#39;homme pervers narcissique, dans l&#39;ordre où ils apparaissent, et quoi faire ensuite.</description>
-      <media:content url="https://quiz-couple.com/blog/homme-pervers-narcissique-signes.webp" medium="image" type="image/webp" width="1536" height="1024"/>
     </item>
   </channel>
 </rss>
