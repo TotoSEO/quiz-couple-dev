@@ -81,6 +81,8 @@ const jeuxLinks = _versLiens(['jeuxCouple'].concat(famillesNav.jeux));
 const speciauxLinks = _versLiens(['speciauxCouple'].concat(famillesNav.speciaux || []));
 const toolLinks = [
   { routeKey: 'questionsCouple', labelKey: 'nav.questionsCouple' },
+  // Le livre « 100 aventures à deux », là où il est en vente (filtré par _dispo).
+  { routeKey: 'livreQuizCouple', label: t('livre:menu.lien', '') },
 ];
 const infoLinks = [
   { routeKey: 'about', labelKey: 'footer.about' },
@@ -206,7 +208,7 @@ function listePlan(cle, liensSimples, tete) {
             </h3>
             <ul class="space-y-2">
               <% for (const link of toolLinksDispo) { %>
-              <li><a href="<%= getLocalizedUrl(link.routeKey, lang) %>" class="text-sm text-muted-foreground hover:text-primary transition-colors no-underline"><%= t('common:' + link.labelKey, link.labelKey) %></a></li>
+              <li><a href="<%= getLocalizedUrl(link.routeKey, lang) %>" class="text-sm text-muted-foreground hover:text-primary transition-colors no-underline"><%= link.label || t('common:' + link.labelKey, link.labelKey) %></a></li>
               <% } %>
             </ul>
           </div>

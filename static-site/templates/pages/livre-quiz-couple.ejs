@@ -1,0 +1,281 @@
+<%
+  // La page du livre « 100 aventures à deux » (14 novembre 2026). Thomas :
+  // « Designer une page PARFAITE qui met bien en avant le livre [...] Il faut
+  // peu de contenu texte, on ne va pas bombarder les explications inutiles
+  // [...] ce n'est pas un livre à lire c'est un livre UTILE », avec deux axes :
+  // le cadeau de Noël pour son ou sa partenaire, et surtout l'album souvenir
+  // qu'on remplit tout au long de la relation et qu'on relira dans dix ans.
+  // Tout ce que la page montre vient du vrai livre (livre/fabrique.mjs) :
+  // la couverture et sa maquette 3D, les pages, et deux pages remplies à la
+  // main pour l'exemple (Léa en rose, Tom en violet, comme le livre le
+  // demande). Les textes sont dans {lang}/livre.json, l'édition (lien de
+  // Partenaire Amazon, prix, ISBN) dans LIVRE (config.js), les styles dans
+  // css/pages/livreQuizCouple.css, le comportement dans js/livre.js. Les
+  // liens vers Amazon portent rel="sponsored" et la mention de Partenaire
+  // Amazon est en bas de page, comme le programme le demande.
+  const L = (k, d) => t('livre:' + k, d === undefined ? '' : d);
+  const esc = (s) => String(s == null ? '' : s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+  // Les espaces insécables du français : avant « : ; ! ? » et dans les guillemets.
+  const nb = (s) => lang !== 'fr' ? String(s) : String(s)
+    .replace(/ ([:;!?»])/g, ' $1').replace(/« /g, '« ').replace(/(\d) €/g, '$1 €').replace(/(\d) (aventures|pages)/g, '$1 $2');
+  const x = (s) => esc(nb(s));
+  const noel = !!livre.noel;
+  const lien = livre.lien;
+  const fleche = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"/><path d="M8 7h9v9"/></svg>';
+  // Le bouton « Voir sur Amazon », aux couleurs du bouton d'achat d'Amazon.
+  const amazon = (src, classe = '') => '<a class="lv-amazon' + (classe ? ' ' + classe : '') + '" href="' + esc(lien) + '" target="_blank" rel="sponsored noopener" data-livre-src="' + src + '">'
+    + '<span>' + x(L('hero.bouton', 'Voir sur Amazon')) + '</span>' + fleche + '</a>';
+  // Les images des pages : 400, 720 et 1200 px (public/livre/pages/).
+  const page = (nom) => '/livre/pages/' + nom;
+  const srcsetPage = (nom) => page(nom) + '-400.webp 400w, ' + page(nom) + '-720.webp 720w, ' + page(nom) + '-1200.webp 1200w';
+  const livre3d = '/livre/livre-3d-480.webp 480w, /livre/livre-3d-720.webp 720w, /livre/livre-3d-1000.webp 1000w';
+  const pagesVue = L('feuilleter.pages', []);
+  const vues = {
+    pages: pagesVue.map((p) => ({ src: page(p.img) + '-1200.webp', alt: nb(p.alt), leg: nb(p.legende) })),
+    liste: [
+      { src: page('liste-1') + '-1200.webp', alt: nb(pagesVue[0] ? pagesVue[0].alt : ''), leg: nb(L('budget.liste')) + ' (1-50)' },
+      { src: page('liste-2') + '-1200.webp', alt: nb(L('budget.liste')) + ' (51-100)', leg: nb(L('budget.liste')) + ' (51-100)' },
+    ],
+  };
+  const ic = {
+    liste: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6h11M9 12h11M9 18h11"/><path d="M3.5 6l1.2 1.2L7 5M3.5 12l1.2 1.2L7 11"/><circle cx="5" cy="18" r="1.3"/></svg>',
+    deux: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.5C5.5 15.6 1.8 12 1.8 7.4 1.8 4.2 4.3 1.8 7.3 1.8c2 0 3.6 1 4.7 2.6 1.1-1.6 2.7-2.6 4.7-2.6 3 0 5.5 2.4 5.5 5.6 0 4.6-3.7 8.2-10.2 13.1z"/></svg>',
+    photo: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16v16H4z"/><path d="M4 16l5-5 4 4 2-2 5 5"/><circle cx="15.5" cy="8.5" r="1.6"/></svg>',
+    cadeau: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="8" width="18" height="13" rx="1.5"/><path d="M12 8v13M3 12h18"/><path d="M12 8C10.5 5 7 4 6.3 6s2 2 5.7 2zM12 8c1.5-3 5-4 5.7-2s-2 2-5.7 2z"/></svg>',
+    stylo: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20l1-4.5L15.5 5a2 2 0 0 1 2.8 0l.7.7a2 2 0 0 1 0 2.8L8.5 19z"/><path d="M13.5 7l3.5 3.5"/></svg>',
+    sapin: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.5l-5 7h3l-4 6h4l-3 4.5h10l-3-4.5h4l-4-6h3z"/><path d="M12 20v1.5"/></svg>',
+    euro: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17.5 6.5A7 7 0 1 0 17.5 17.5"/><path d="M4 10h9M4 14h9"/></svg>',
+    livre: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v15H6.5A2.5 2.5 0 0 0 4 20.5z"/><path d="M4 20.5A2.5 2.5 0 0 0 6.5 23H20v-5"/></svg>',
+    coche: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 12.5l4.5 4.5L19.5 6.5"/></svg>',
+  };
+  // Les pièces du coût, comme sur les pages du livre (0 à 3 pleines).
+  const pieces = (n) => '<span class="lv-pieces" aria-hidden="true">' + [0, 1, 2].map((i) => '<i class="' + (i < n ? 'pleine' : '') + '"></i>').join('') + '</span>';
+  const etapesDix = L('dixAns.etapes', []);
+  const icDix = [ic.cadeau, ic.photo, ic.livre];
+  const faq = L('faq.items', []).filter((q) => !(q.seulementNoel && !noel) && !(q.horsNoel && noel));
+  const points = L('cadeau.points', []);
+%>
+<div class="lv<%= noel ? ' lv--noel' : '' %>" data-livre>
+
+  <%# ── Le premier écran : le livre, son prix et le bouton ── %>
+  <section class="lv-hero">
+    <div class="lv-wrap lv-hero-grille">
+      <p class="lv-pastille"><span class="lv-pastille-ic"><%- noel ? ic.sapin : ic.cadeau %></span><%= nb(noel ? L('hero.pastilleNoel') : L('hero.pastille')) %></p>
+      <h1 class="lv-titre">
+        <span class="lv-titre-haut">
+          <span class="lv-cent-bloc"><span class="lv-sr">100 </span><%- livre.cent %></span>
+          <span class="lv-titre-mots"><span><%= L('hero.mot1') %></span> <span class="lv-titre-deux"><%= nb(L('hero.mot2')) %></span></span>
+        </span>
+        <span class="lv-titre-sous"><%= nb(L('livre.sousTitre')) %></span>
+      </h1>
+      <div class="lv-hero-visuel">
+        <span class="lv-disque" aria-hidden="true"></span>
+        <img class="lv-hero-page lv-hero-page--a" src="<%= page('pique-nique-remplie') %>-400.webp" alt="" width="400" height="400" loading="lazy" decoding="async">
+        <img class="lv-hero-page lv-hero-page--b" src="<%= page('a-nous-remplie') %>-400.webp" alt="" width="400" height="400" loading="lazy" decoding="async">
+        <img class="lv-hero-livre" src="/livre/livre-3d-720.webp" srcset="<%= livre3d %>" sizes="(min-width: 900px) 410px, (min-width: 640px) 295px, 245px" alt="<%= nb(L('hero.altLivre')) %>" width="1000" height="1079" fetchpriority="high" decoding="async">
+        <% if (noel) { %><span class="lv-etiquette" aria-hidden="true"><span>Pour toi</span> ♥</span><% } %>
+      </div>
+      <p class="lv-hero-lead"><%= nb(L('hero.texte')) %></p>
+      <div class="lv-achat">
+        <div class="lv-prix"><span class="lv-prix-montant"><%= nb(livre.prix) %></span><span class="lv-prix-format"><%= nb(L('hero.format')) %></span></div>
+        <%- amazon('hero', 'lv-amazon--grand') %>
+        <p class="lv-vendu"><%- ic.coche %><%= nb(L('hero.vendu')) %></p>
+      </div>
+      <a class="lv-feuilleter-lien" href="#feuilleter"><%= nb(L('hero.feuilleter')) %><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6"/></svg></a>
+    </div>
+  </section>
+
+  <%# ── Le livre en quatre chiffres ── %>
+  <section class="lv-chiffres" aria-label="<%= nb(L('livre.titre')) %>">
+    <ul class="lv-wrap lv-chiffres-liste">
+      <% for (const c of L('chiffres', [])) { %>
+      <li><strong><%= c.n %></strong><span><%= nb(c.t) %></span></li>
+      <% } %>
+    </ul>
+  </section>
+
+  <%# ── Le principe, et une page avant et après l'aventure ── %>
+  <section class="lv-section lv-principe">
+    <div class="lv-wrap lv-principe-grille">
+      <div class="lv-principe-texte">
+        <h2 class="lv-h2"><%= nb(L('principe.titre')) %></h2>
+        <p class="lv-chapo"><%= nb(L('principe.texte')) %></p>
+        <ol class="lv-etapes">
+          <% L('principe.etapes', []).forEach((e, i) => { %>
+          <li><span class="lv-etape-n" aria-hidden="true"><%= i + 1 %></span><div><h3><%= nb(e.titre) %></h3><p><%= nb(e.texte) %></p></div></li>
+          <% }) %>
+        </ol>
+      </div>
+      <figure class="lv-avap" data-avap>
+        <div class="lv-avap-cadre" style="--pos:50%">
+          <img class="lv-avap-img" src="<%= page('pique-nique-remplie') %>-720.webp" srcset="<%= srcsetPage('pique-nique-remplie') %>" sizes="(min-width: 1024px) 520px, (min-width: 640px) 560px, calc(100vw - 2rem)" alt="<%= nb(L('principe.altRemplie')) %>" width="1200" height="1200" loading="lazy" decoding="async">
+          <div class="lv-avap-avant"><img class="lv-avap-img" src="<%= page('pique-nique-vide') %>-720.webp" srcset="<%= srcsetPage('pique-nique-vide') %>" sizes="(min-width: 1024px) 520px, (min-width: 640px) 560px, calc(100vw - 2rem)" alt="<%= nb(L('principe.altVide')) %>" width="1200" height="1200" loading="lazy" decoding="async"></div>
+          <span class="lv-avap-ligne" aria-hidden="true"><span class="lv-avap-poignee"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l-6 6 6 6M15 6l6 6-6 6"/></svg></span></span>
+          <span class="lv-avap-etiq lv-avap-etiq--avant" aria-hidden="true"><%= L('principe.avant') %></span>
+          <span class="lv-avap-etiq lv-avap-etiq--apres" aria-hidden="true"><%= L('principe.apres') %></span>
+          <input class="lv-avap-curseur" type="range" min="0" max="100" value="50" aria-label="<%= nb(L('principe.curseur')) %>">
+        </div>
+        <figcaption><span class="lv-avap-aide"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l-6 6 6 6M15 6l6 6-6 6"/></svg><%= nb(L('principe.aide')) %></span><span class="lv-avap-leg"><%= nb(L('principe.legende')) %></span></figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <%# ── L'axe principal : l'album qu'on relira dans dix ans ── %>
+  <section class="lv-section lv-dixans">
+    <div class="lv-wrap lv-dixans-grille">
+      <div class="lv-dixans-texte">
+        <h2 class="lv-h2"><%= nb(L('dixAns.titre')) %></h2>
+        <p class="lv-chapo"><%= nb(L('dixAns.texte')) %></p>
+        <ol class="lv-frise">
+          <% etapesDix.forEach((e, i) => { %>
+          <li><span class="lv-frise-ic" aria-hidden="true"><%- icDix[i] || ic.livre %></span><span class="lv-frise-quand"><%= nb(noel && e.quandNoel ? e.quandNoel : e.quand) %></span><span class="lv-frise-quoi"><%= nb(e.quoi) %></span></li>
+          <% }) %>
+        </ol>
+      </div>
+      <figure class="lv-citation">
+        <img class="lv-polaroid" src="<%= page('cent-plus-tard') %>-720.webp" srcset="<%= srcsetPage('cent-plus-tard') %>" sizes="(min-width: 1024px) 380px, 70vw" alt="<%= nb(L('dixAns.altFin')) %>" width="1200" height="1200" loading="lazy" decoding="async">
+        <blockquote><p><%= nb('« ' + L('dixAns.citation') + ' »') %></p></blockquote>
+        <figcaption class="lv-citation-source"><%= nb(L('dixAns.source')) %></figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <%# ── Feuilleter : les pages, puis ce qu'il y a dans le livre ── %>
+  <section class="lv-section lv-feuilleter" id="feuilleter">
+    <div class="lv-wrap">
+      <div class="lv-entete">
+        <h2 class="lv-h2"><%= nb(L('feuilleter.titre')) %></h2>
+        <p><%= nb(L('feuilleter.texte')) %></p>
+      </div>
+      <div class="lv-carrousel">
+        <button type="button" class="lv-car-btn lv-car-btn--prec" aria-label="<%= nb(L('feuilleter.precedent')) %>" data-car="-1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg></button>
+        <ul class="lv-car-piste" data-car-piste>
+          <% pagesVue.forEach((p, i) => { %>
+          <li class="lv-car-item">
+            <button type="button" class="lv-page" data-vue="pages" data-vue-i="<%= i %>" aria-label="<%= nb(p.legende) %>">
+              <img src="<%= page(p.img) %>-400.webp" srcset="<%= srcsetPage(p.img) %>" sizes="(min-width: 1024px) 275px, (min-width: 640px) 42vw, 74vw" alt="<%= nb(p.alt) %>" width="1200" height="1200" loading="lazy" decoding="async">
+            </button>
+            <p class="lv-page-leg"><%= nb(p.legende) %></p>
+          </li>
+          <% }) %>
+        </ul>
+        <button type="button" class="lv-car-btn lv-car-btn--suiv" aria-label="<%= nb(L('feuilleter.suivant')) %>" data-car="1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg></button>
+      </div>
+      <div class="lv-contenu">
+        <div>
+          <h3 class="lv-h3"><%= nb(L('feuilleter.contenuTitre')) %></h3>
+          <ul class="lv-coches">
+            <% for (const c of L('feuilleter.contenu', [])) { %>
+            <li><%- ic.coche %><span><%= nb(c) %></span></li>
+            <% } %>
+          </ul>
+        </div>
+        <dl class="lv-fiche">
+          <% for (const [k, v] of L('feuilleter.fiche', [])) { %>
+          <div><dt><%= nb(k) %></dt><dd><%= nb(v) %></dd></div>
+          <% } %>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <%# ── Ce que coûtent les aventures ── %>
+  <section class="lv-section lv-budget">
+    <div class="lv-wrap">
+      <div class="lv-entete">
+        <h2 class="lv-h2"><%= nb(L('budget.titre')) %></h2>
+        <p><%= nb(L('budget.texte')) %></p>
+      </div>
+      <ul class="lv-niveaux">
+        <% L('budget.niveaux', []).forEach((n, i) => { %>
+        <li class="lv-niveau lv-niveau--<%= i %>">
+          <div class="lv-niveau-tete">
+            <%- pieces(i) %>
+            <h3><%= nb(n.nom) %></h3>
+            <% if (n.aide) { %><p class="lv-niveau-aide"><%= nb(n.aide) %></p><% } %>
+          </div>
+          <p class="lv-niveau-nb"><strong><%= n.nb %></strong> <%= L('budget.aventures') %></p>
+          <ul class="lv-niveau-ex">
+            <% for (const e of n.exemples) { %><li><%= nb(e) %></li><% } %>
+          </ul>
+        </li>
+        <% }) %>
+      </ul>
+      <p class="lv-centre"><button type="button" class="lv-bouton-liste" data-vue="liste" data-vue-i="0"><%- ic.liste %><%= nb(L('budget.liste')) %></button></p>
+    </div>
+  </section>
+
+  <%# ── Le cadeau ── %>
+  <section class="lv-section lv-cadeau">
+    <div class="lv-wrap lv-cadeau-grille">
+      <figure class="lv-cadeau-visuel">
+        <img class="lv-polaroid" src="<%= page('a-nous-remplie') %>-720.webp" srcset="<%= srcsetPage('a-nous-remplie') %>" sizes="(min-width: 1024px) 460px, 86vw" alt="<%= nb(L('cadeau.alt')) %>" width="1200" height="1200" loading="lazy" decoding="async">
+      </figure>
+      <div class="lv-cadeau-texte">
+        <h2 class="lv-h2"><%= nb(noel ? L('cadeau.titreNoel') : L('cadeau.titre')) %></h2>
+        <ul class="lv-points">
+          <% points.forEach((p, i) => { %>
+          <li><span class="lv-point-ic" aria-hidden="true"><%- [ic.stylo, noel ? ic.sapin : ic.cadeau, ic.euro][i] || ic.coche %></span><div><h3><%= nb(noel && p.titreNoel ? p.titreNoel : p.titre) %></h3><p><%= nb(noel && p.texteNoel ? p.texteNoel : p.texte) %></p></div></li>
+          <% }) %>
+        </ul>
+        <div class="lv-achat lv-achat--ligne">
+          <div class="lv-prix"><span class="lv-prix-montant"><%= nb(livre.prix) %></span><span class="lv-prix-format"><%= nb(L('hero.vendu')) %></span></div>
+          <%- amazon('cadeau') %>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <%# ── Les questions ── %>
+  <section class="lv-section lv-faq">
+    <div class="lv-wrap lv-wrap--etroit">
+      <h2 class="lv-h2 lv-centre"><%= nb(L('faq.titre')) %></h2>
+      <div class="lv-faq-liste">
+        <% faq.forEach((q, i) => { %>
+        <details<%= i === 0 ? ' open' : '' %>><summary><%= nb(q.q) %></summary><p><%= nb(q.r) %></p></details>
+        <% }) %>
+      </div>
+    </div>
+  </section>
+
+  <%# ── Le dernier appel ── %>
+  <section class="lv-section lv-fin" data-lv-fin>
+    <div class="lv-wrap">
+    <div class="lv-fin-boite">
+      <img class="lv-fin-livre" src="/livre/livre-3d-480.webp" srcset="<%= livre3d %>" sizes="(min-width: 768px) 260px, 200px" alt="" width="1000" height="1079" loading="lazy" decoding="async">
+      <div class="lv-fin-texte">
+        <h2 class="lv-h2"><%= nb(L('fin.titre')) %></h2>
+        <p class="lv-fin-livre-titre"><strong><%= nb(L('livre.titre')) %></strong><span><%= nb(L('livre.sousTitre')) %></span></p>
+        <div class="lv-achat lv-achat--ligne">
+          <div class="lv-prix"><span class="lv-prix-montant"><%= nb(livre.prix) %></span><span class="lv-prix-format"><%= nb(L('hero.format')) %></span></div>
+          <%- amazon('fin', 'lv-amazon--grand lv-amazon--orange') %>
+        </div>
+        <p class="lv-vendu"><%- ic.coche %><%= nb(L('hero.vendu')) %></p>
+      </div>
+    </div>
+    <p class="lv-affiliation"><%= nb(L('fin.affiliation')) %></p>
+    </div>
+  </section>
+
+  <%# ── La barre collée du téléphone ── %>
+  <div class="lv-barre" data-lv-barre>
+    <img src="/livre/livre-mini-160.webp" alt="" width="160" height="173" loading="lazy" decoding="async">
+    <div class="lv-barre-texte"><strong><%= nb(L('livre.titre')).replace(/ à deux$/, '\u00a0à\u00a0deux') %></strong><span><%= nb(livre.prix) %></span></div>
+    <a class="lv-amazon lv-amazon--petit" href="<%= lien %>" target="_blank" rel="sponsored noopener" data-livre-src="barre"><span><%= nb(L('hero.bouton')) %></span><%- fleche %></a>
+  </div>
+
+  <%# ── La visionneuse des pages ── %>
+  <dialog class="lv-vue" data-lv-vue aria-label="<%= nb(L('feuilleter.titre')) %>">
+    <div class="lv-vue-boite">
+      <button type="button" class="lv-vue-fermer" data-vue-fermer aria-label="<%= nb(L('visionneuse.fermer')) %>"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+      <figure class="lv-vue-figure"><img class="lv-vue-img" data-vue-img alt="" width="1200" height="1200"><figcaption class="lv-vue-leg" data-vue-leg></figcaption></figure>
+      <div class="lv-vue-nav">
+        <button type="button" class="lv-vue-btn" data-vue-pas="-1" aria-label="<%= nb(L('visionneuse.precedent')) %>"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg></button>
+        <span class="lv-vue-compte" data-vue-compte data-sur="<%= nb(L('visionneuse.sur')) %>"></span>
+        <button type="button" class="lv-vue-btn" data-vue-pas="1" aria-label="<%= nb(L('visionneuse.suivant')) %>"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg></button>
+      </div>
+    </div>
+  </dialog>
+  <script type="application/json" id="lv-vues"><%- JSON.stringify(vues).replace(/</g, '\\u003c') %></script>
+</div>
+<script src="/js/livre.js" defer></script>

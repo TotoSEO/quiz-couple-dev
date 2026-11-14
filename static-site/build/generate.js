@@ -20,8 +20,11 @@ import {
   getArticlePath, getArticleUrl, getArticleAlternates,
   estPageJouable, genrePageJouable, pagePublicitaire, BILAN_OUVERT, bilanOuvertPour, BILAN_ENTREES, CAPTURE_PAGES, VENDEUR, MOYENS_PAIEMENT, ROUTES_JEUX,
 } from './config.js';
-import { saisonActive, saisonQuizActive } from './config.js';
+import { saisonActive, saisonQuizActive, LIVRE, livreNoelActif } from './config.js';
 import { createT, createTgd, loadTranslations } from './i18n.js';
+// Le « 100 » dessiné du livre (tracés tirés de Fredoka Bold), le même que sur
+// sa couverture : la page du livre le reprend dans son titre.
+import { cent as centDuLivre } from '../../livre/commun/cent.mjs';
 import { buildGitDateIndex, dateLaPlusRecente } from './git-dates.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -293,7 +296,7 @@ function promoBilanPour(lang) {
 // (l'évaluation est réservée aux majeurs) et les pages où l'on ne vend pas
 // l'évaluation : emprise, manipulation, infidélité, et pour les articles la
 // même règle que la bannière du bas (entreeArticle).
-const PAGES_SANS_BANDEAU = new Set(['bilanCouple', 'admin', 'quizAdo', 'testEmprise', 'testPervers', 'testInfidelite', 'testLoveBombing']);
+const PAGES_SANS_BANDEAU = new Set(['bilanCouple', 'admin', 'quizAdo', 'testEmprise', 'testPervers', 'testInfidelite', 'testLoveBombing', 'livreQuizCouple']);
 function bandeauPromoPour(routeKey, articleMeta, lang) {
   if (!bilanOuvertPour(lang) || !BILAN_PROMO) return false;
   if (articleMeta) return !!entreeArticle(articleMeta, lang);
@@ -565,6 +568,27 @@ function imagePartage(lang) {
   const rel = `/og/${IMAGE_PARTAGE.fichier}-${lang}.jpg`;
   if (!fs.existsSync(path.join(PUBLIC_DIR, rel))) return { url: `${BASE_URL}/og-image.webp`, alt: '' };
   return { url: `${BASE_URL}${rel}`, alt: IMAGE_PARTAGE.alt[lang] || IMAGE_PARTAGE.alt.fr };
+}
+
+// ── Le livre « 100 aventures à deux » (14 novembre 2026) ─────────────────
+// Le bouton du menu (header.ejs) et le lien du pied de page : seulement dans
+// les langues où le livre est en vente (LIVRE) et où sa page existe. Connu de
+// tous les gabarits par renderTemplate, comme la saison.
+function livreMenuPour(lang) {
+  if (!LIVRE[lang]) return null;
+  const url = getLocalizedUrl('livreQuizCouple', lang);
+  if (!url) return null;
+  return { url, chemin: getLocalizedPath('livreQuizCouple', lang), noel: livreNoelActif() };
+}
+// Ce que la page du livre reçoit en plus : l'édition (lien, prix, ISBN), la
+// période de Noël et le « 100 » dessiné de la couverture, sans sa taille
+// écrite (la feuille de la page le dimensionne en em).
+function livrePagePour(lang) {
+  const edition = LIVRE[lang];
+  if (!edition) return null;
+  const cent = centDuLivre({ taille: 100, epaisseur: 5.5, ombre: 5, classe: 'lv-cent' })
+    .replace(/\sstyle="[^"]*"/, '');
+  return { ...edition, noel: livreNoelActif(), cent };
 }
 
 // L'illustration de la section « Qu'est-ce qu'un quiz pour couples ? » de
@@ -1361,7 +1385,7 @@ function renderTemplate(templateName, data) {
   }
   // La saison du site est connue de tous les gabarits (base.ejs la pose
   // sur le body et ecrit sa feuille), sans que chaque page la passe.
-  data = Object.assign({ saison: SAISON_ACTIVE, saisonQuiz: SAISON_QUIZ_ACTIVE, cssSaison: CSS_SAISON }, data || {});
+  data = Object.assign({ saison: SAISON_ACTIVE, saisonQuiz: SAISON_QUIZ_ACTIVE, cssSaison: CSS_SAISON, livreMenuPour }, data || {});
   return ejs.renderFile(templatePath, data, {
     views: [TEMPLATES_DIR],
     async: false,
@@ -1491,6 +1515,11 @@ async function generatePage(routeKey, lang) {
   } else if (routeKey === 'admin') {
     title = 'Administration - Quiz Couple';
     description = 'Panel d\'administration Quiz Couple';
+  } else if (routeKey === 'livreQuizCouple') {
+    // La page du livre : ses textes sont dans {lang}/livre.json, et la
+    // description parle de Noël pendant les fêtes (livreNoelActif).
+    title = t('livre:seo.title', '100 aventures à deux');
+    description = livreNoelActif() ? t('livre:seo.descriptionNoel', '') : t('livre:seo.description', '');
   } else {
     // Quiz/test pages - get from quizzes.json
     title = t(`quizzes:${routeKey}.title`, 'Quiz Couple');
@@ -1534,9 +1563,56 @@ async function generatePage(routeKey, lang) {
       });
       breadcrumbList.itemListElement.push({ '@type': 'ListItem', position: 3, name: title, item: canonical });
     } else {
-      breadcrumbList.itemListElement.push({ '@type': 'ListItem', position: 2, name: title, item: canonical });
+      const nomFil = routeKey === 'livreQuizCouple' ? t('livre:fil', title) : title;
+      breadcrumbList.itemListElement.push({ '@type': 'ListItem', position: 2, name: nomFil, item: canonical });
     }
     jsonLdItems.push(breadcrumbList);
+  }
+
+  // La page du livre : le livre lui-même (Book et Product, avec son offre
+  // chez Amazon, l'adresse de la fiche sans suivi) et ses questions.
+  const livrePage = routeKey === 'livreQuizCouple' ? livrePagePour(lang) : null;
+  if (livrePage) {
+    jsonLdItems.push({
+      '@context': 'https://schema.org',
+      '@type': ['Book', 'Product'],
+      '@id': `${canonical}#livre`,
+      name: t('livre:livre.titre', '100 aventures à deux'),
+      alternativeHeadline: t('livre:livre.sousTitre', ''),
+      description,
+      url: canonical,
+      image: [`${BASE_URL}/livre/couverture-1200.webp`, `${BASE_URL}/livre/livre-3d-1000.webp`],
+      inLanguage: lang,
+      isbn: livrePage.isbn,
+      gtin13: livrePage.isbn,
+      bookFormat: 'https://schema.org/Paperback',
+      numberOfPages: 136,
+      author: { '@type': 'Organization', '@id': `${BASE_URL}/#organization`, name: 'Quiz Couple', url: BASE_URL },
+      brand: { '@type': 'Brand', name: 'Quiz Couple' },
+      offers: {
+        '@type': 'Offer',
+        url: livrePage.fiche,
+        price: livrePage.prixNombre,
+        priceCurrency: livrePage.devise,
+        availability: 'https://schema.org/InStock',
+        itemCondition: 'https://schema.org/NewCondition',
+        seller: { '@type': 'Organization', name: 'Amazon' },
+      },
+    });
+    const faq = t('livre:faq.items', []);
+    if (Array.isArray(faq) && faq.length) {
+      const noel = livrePage.noel;
+      const lisible = (s) => String(s || '').replace(/<[^>]+>/g, '');
+      jsonLdItems.push({
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: faq.filter((q) => !(q.seulementNoel && !noel) && !(q.horsNoel && noel)).map((q) => ({
+          '@type': 'Question',
+          name: lisible(q.q),
+          acceptedAnswer: { '@type': 'Answer', text: lisible(q.r) },
+        })),
+      });
+    }
   }
 
   // Balisage WebApplication de chaque page jouable.
@@ -1718,8 +1794,13 @@ async function generatePage(routeKey, lang) {
     // vers une version perimee des scripts.
     sansCache: routeKey === 'admin',
     // Per-page featured image (hero + OG share + home card). Falls back to the generic OG image.
-    ogImage: featured ? `${BASE_URL}/quiz/featured/${featured.file}.webp` : imagePartage(lang).url,
-    ogImageAlt: featured ? (featured.alt[lang] || featured.alt.fr) : imagePartage(lang).alt,
+    // La page du livre a sa propre image de partage (public/og/livre-100-aventures.jpg).
+    ogImage: livrePage ? `${BASE_URL}/og/livre-100-aventures.jpg`
+      : featured ? `${BASE_URL}/quiz/featured/${featured.file}.webp` : imagePartage(lang).url,
+    ogImageAlt: livrePage ? t('livre:ogAlt', '')
+      : featured ? (featured.alt[lang] || featured.alt.fr) : imagePartage(lang).alt,
+    // Le livre : son édition (lien de Partenaire, prix, ISBN), Noël ou non, le « 100 » dessiné.
+    livre: livrePage,
     featuredImage: featured ? `/quiz/featured/${featured.file}.webp` : null,
     illustrationAccueil: routeKey === 'home' ? illustrationAccueil(lang) : null,
     // La liste des questions que la page montre, et la lecture de leurs
@@ -2182,7 +2263,7 @@ function copyStaticAssets() {
   // des e-mails du parcours (emails/gabarit.html les appelle par leur adresse
   // sur le site). Les dossiers « partenaires » et « produits » (visuels des
   // encarts d'affiliation) sont partis avec l'affiliation, le 9 novembre 2026.
-  for (const dir of ['blog', 'authors', 'quiz', 'fonts', 'bilan', 'email', 'og']) {
+  for (const dir of ['blog', 'authors', 'quiz', 'fonts', 'bilan', 'email', 'og', 'livre']) {
     const srcDir = path.join(publicDir, dir);
     const destDir = path.join(DIST_DIR, dir);
     if (fs.existsSync(srcDir)) {

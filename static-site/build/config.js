@@ -210,6 +210,9 @@ export const ROUTE_SLUGS = {
   customQuiz: { fr: 'creation-quiz-personnalise', en: 'create-your-own-quiz', es: 'crear-tu-propio-quiz', de: 'eigenes-quiz-erstellen', it: 'crea-il-tuo-quiz', nl: 'maak-je-eigen-quiz' },
   sitemap: { fr: 'plan-du-site', en: 'sitemap', es: 'mapa-del-sitio', de: 'seitenverzeichnis', it: 'mappa-del-sito', nl: 'sitemap' },
   ebookConfirm: { fr: 'confirmation-ebook' },
+  // La page du livre « 100 aventures à deux » (14 novembre 2026), en français
+  // seulement tant que les autres éditions ne sont pas en vente (voir LIVRE).
+  livreQuizCouple: { fr: 'livre-quiz-couple' },
 };
 
 // L'image de partage du site (27 octobre 2026) : og:image de l'accueil et de
@@ -479,6 +482,7 @@ export const ROUTE_CONFIG = {
   customQuiz: { template: 'custom-quiz', namespaces: ['custom-quiz', 'common'] },
   sitemap: { template: 'sitemap', namespaces: ['common'] },
   ebookConfirm: { template: 'ebook-confirm', namespaces: ['common'], frOnly: true },
+  livreQuizCouple: { template: 'livre-quiz-couple', namespaces: ['livre', 'common'], frOnly: true },
 };
 
 // Supabase config — piloté par les secrets GitHub (SUPABASE_URL / SUPABASE_ANON_KEY)
@@ -713,6 +717,41 @@ function saisonEnTete(sections) {
   const s = saisonQuizActive();
   return s ? [...sections.filter((x) => x.cle === s), ...sections.filter((x) => x.cle !== s)] : sections;
 }
+
+// ── Le livre « 100 aventures à deux » (14 novembre 2026) ─────────────────
+// Le livre de Quiz Couple, imprimé et vendu par Amazon (KDP, voir
+// docs/livre/KDP.md). Thomas, le 14 novembre 2026 : « Il faut maintenant le
+// mettre en avant sur Quiz Couple, uniquement en FR pour le moment », par son
+// lien de Partenaire Amazon (il touche une commission sur ses propres ventes,
+// ce qu'il a vérifié comme autorisé). Une édition se déclare ici le jour où
+// elle est en vente : son lien, sa fiche, son prix, son ISBN. La page
+// (livreQuizCouple) n'existe que dans les langues qui ont une adresse dans
+// ROUTE_SLUGS et leurs textes dans {lang}/livre.json ; le bouton du menu suit.
+export const LIVRE = {
+  fr: {
+    // Le lien de Partenaire de Thomas : link.amazon puis amzlinks.in mènent à
+    // la fiche avec son identifiant (tag=…-21), vérifié le 14 novembre 2026.
+    lien: 'https://link.amazon/B00Ral9bE',
+    // La fiche sans suivi, pour les données structurées.
+    fiche: 'https://www.amazon.fr/dp/B0HRPDXPRJ',
+    asin: 'B0HRPDXPRJ',
+    isbn: '9798141209154',
+    prix: '19,99 €',
+    prixNombre: '19.99',
+    devise: 'EUR',
+  },
+};
+// Pendant les fêtes, la page et le bouton du menu parlent du cadeau de Noël ;
+// le reste de l'année, d'un cadeau tout court. Du 1er novembre au 24 décembre
+// inclus, heure de Paris : après le 24, un livre commandé n'arrive plus pour
+// Noël. La reconstruction programmée fait le changement ; QC_LIVRE_NOEL=oui ou
+// non force le choix pour une construction.
+export function livreNoelActif(maintenant = new Date()) {
+  const force = process.env.QC_LIVRE_NOEL;
+  if (force) return ['oui', '1', 'true'].includes(force);
+  const [, mois, jour] = new Intl.DateTimeFormat('en-CA', { timeZone: 'Europe/Paris', year: 'numeric', month: '2-digit', day: '2-digit' }).format(maintenant).split('-');
+  return mois === '11' || (mois === '12' && jour <= '24');
+}
 // La régie du site est The Moneytizer. Le fichier ads.txt qu'elle fournit est
 // écrit tel quel dans public/, il déclare quiz-couple.com comme propriétaire
 // et themoneytizer.com comme gestionnaire. Il n'y a plus d'identifiant
@@ -839,6 +878,9 @@ const ROUTES_SANS_PUB = [
   // Le bilan est un produit payant : une page de publicité à côté le
   // dévaloriserait, et ses écrans se succèdent sans fin de page.
   'bilanCouple', 'cgv',
+  // La page du livre vend notre propre livre : une publicité d'un autre
+  // annonceur à côté de son bouton d'achat ferait fuir l'acheteur.
+  'livreQuizCouple',
 ];
 
 export function pagePublicitaire(routeKey) {

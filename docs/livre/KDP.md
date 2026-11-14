@@ -7,6 +7,13 @@ le livre. Le livre complet est fabriqué par
 règles de KDP et le droit français ci-dessous ont été relus sur les pages
 officielles le 7 novembre 2026 (sources en bas de page).
 
+**En vente depuis le 14 novembre 2026** : l'édition française est sur
+amazon.fr (ASIN B0HRPDXPRJ, ISBN 9798141209154, 19,99 €). Sa page sur le
+site est `/livre-quiz-couple/`, avec le lien de Partenaire Amazon de Thomas
+(`LIVRE` dans `static-site/build/config.js`, voir « La page du livre » dans
+CLAUDE.md). L'espagnol puis l'anglais suivront, quand Thomas enverra leurs
+liens.
+
 ## Les fichiers à envoyer
 
 Pour chaque langue (`fr`, `en`, `es`, `de`, `it`, `nl`), dans
