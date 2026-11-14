@@ -203,6 +203,31 @@ fois les ventes connues, pour la langue qui vend le plus sur le site.
 - **La tranche.** Le calculateur de couverture de KDP doit donner 0,306 in pour
   136 pages en couleur standard ; sinon, refaire la couverture.
 
+## Le livre dans Google (14 novembre 2026)
+
+Thomas voulait voir le livre dans le carrousel de produits de Google. Ce que
+dit la documentation de Google (Search Central, données structurées
+`Product`) :
+
+- **Le carrousel « Produits populaires »** et le panneau shopping sont des
+  « fiches marchands » : seules les pages où l'on achète chez le vendeur
+  lui-même y ont droit, par leur balisage `Product` ou par Merchant Center
+  (qui refuse aussi les liens d'affiliation). C'est donc la fiche Amazon qui
+  peut y entrer, pas la page du site.
+- **La page du site** (`/livre-quiz-couple/`, qui envoie acheter sur Amazon) a
+  droit à l'« extrait produit » : le prix et « En stock » sous le résultat, et
+  des étoiles seulement avec de vrais avis déposés sur le site. Son balisage
+  (`Book` et `Product`, ISBN, offre d'Amazon) est en place.
+- **Le carrousel en bêta** des données structurées (Espace économique
+  européen) demande une page de liste d'au moins trois produits du site, chacun
+  avec sa page : il ne sert pas pour un seul livre.
+- **Google Livres** : le Play Books Partner Center (gratuit) permet d'ajouter
+  un livre avec un aperçu seulement, sans le vendre, et une page d'aperçu peut
+  donner des liens d'achat. Ce serait la voie vers les résultats « livres » de
+  Google ; à essayer par Thomas, rien n'y est garanti.
+- **Amazon** : les mots-clés de la fiche (`livre couple à remplir`, etc.)
+  couvrent déjà « livre pour couple » dans la recherche d'Amazon.
+
 ## Les fiches Amazon
 
 Titre, sous-titre, description, mots-clés et catégories de chaque édition

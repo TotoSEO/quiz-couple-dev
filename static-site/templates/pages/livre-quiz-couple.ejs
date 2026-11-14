@@ -66,7 +66,7 @@
           <span class="lv-cent-bloc"><span class="lv-sr">100 </span><%- livre.cent %></span>
           <span class="lv-titre-mots"><span><%= L('hero.mot1') %></span> <span class="lv-titre-deux"><%= nb(L('hero.mot2')) %></span></span>
         </span>
-        <span class="lv-titre-sous"><%= nb(L('livre.sousTitre')) %></span>
+        <span class="lv-titre-sous"><%= nb(L('hero.sousTitre', L('livre.sousTitre'))) %></span>
       </h1>
       <div class="lv-hero-visuel">
         <span class="lv-disque" aria-hidden="true"></span>
@@ -99,7 +99,7 @@
     <div class="lv-wrap lv-principe-grille">
       <div class="lv-principe-texte">
         <h2 class="lv-h2"><%= nb(L('principe.titre')) %></h2>
-        <p class="lv-chapo"><%= nb(L('principe.texte')) %></p>
+        <% if (L('principe.texte')) { %><p class="lv-chapo"><%= nb(L('principe.texte')) %></p><% } %>
         <ol class="lv-etapes">
           <% L('principe.etapes', []).forEach((e, i) => { %>
           <li><span class="lv-etape-n" aria-hidden="true"><%= i + 1 %></span><div><h3><%= nb(e.titre) %></h3><p><%= nb(e.texte) %></p></div></li>
@@ -140,7 +140,7 @@
     </div>
   </section>
 
-  <%# ── Feuilleter : les pages, puis ce qu'il y a dans le livre ── %>
+  <%# ── Feuilleter : les pages du livre, une légende chacune ── %>
   <section class="lv-section lv-feuilleter" id="feuilleter">
     <div class="lv-wrap">
       <div class="lv-entete">
@@ -160,21 +160,6 @@
           <% }) %>
         </ul>
         <button type="button" class="lv-car-btn lv-car-btn--suiv" aria-label="<%= nb(L('feuilleter.suivant')) %>" data-car="1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg></button>
-      </div>
-      <div class="lv-contenu">
-        <div>
-          <h3 class="lv-h3"><%= nb(L('feuilleter.contenuTitre')) %></h3>
-          <ul class="lv-coches">
-            <% for (const c of L('feuilleter.contenu', [])) { %>
-            <li><%- ic.coche %><span><%= nb(c) %></span></li>
-            <% } %>
-          </ul>
-        </div>
-        <dl class="lv-fiche">
-          <% for (const [k, v] of L('feuilleter.fiche', [])) { %>
-          <div><dt><%= nb(k) %></dt><dd><%= nb(v) %></dd></div>
-          <% } %>
-        </dl>
       </div>
     </div>
   </section>
@@ -218,10 +203,8 @@
           <li><span class="lv-point-ic" aria-hidden="true"><%- [ic.stylo, noel ? ic.sapin : ic.cadeau, ic.euro][i] || ic.coche %></span><div><h3><%= nb(noel && p.titreNoel ? p.titreNoel : p.titre) %></h3><p><%= nb(noel && p.texteNoel ? p.texteNoel : p.texte) %></p></div></li>
           <% }) %>
         </ul>
-        <div class="lv-achat lv-achat--ligne">
-          <div class="lv-prix"><span class="lv-prix-montant"><%= nb(livre.prix) %></span><span class="lv-prix-format"><%= nb(L('hero.vendu')) %></span></div>
-          <%- amazon('cadeau') %>
-        </div>
+        <%# Le prix est dit juste au-dessus (« 19,99 €, une seule fois ») : ici, le bouton seul. %>
+        <p class="lv-cadeau-cta"><%- amazon('cadeau') %></p>
       </div>
     </div>
   </section>
@@ -245,12 +228,10 @@
       <img class="lv-fin-livre" src="/livre/livre-3d-480.webp" srcset="<%= livre3d %>" sizes="(min-width: 768px) 260px, 200px" alt="" width="1000" height="1079" loading="lazy" decoding="async">
       <div class="lv-fin-texte">
         <h2 class="lv-h2"><%= nb(L('fin.titre')) %></h2>
-        <p class="lv-fin-livre-titre"><strong><%= nb(L('livre.titre')) %></strong><span><%= nb(L('livre.sousTitre')) %></span></p>
         <div class="lv-achat lv-achat--ligne">
-          <div class="lv-prix"><span class="lv-prix-montant"><%= nb(livre.prix) %></span><span class="lv-prix-format"><%= nb(L('hero.format')) %></span></div>
+          <div class="lv-prix"><span class="lv-prix-montant"><%= nb(livre.prix) %></span></div>
           <%- amazon('fin', 'lv-amazon--grand lv-amazon--orange') %>
         </div>
-        <p class="lv-vendu"><%- ic.coche %><%= nb(L('hero.vendu')) %></p>
       </div>
     </div>
     <p class="lv-affiliation"><%= nb(L('fin.affiliation')) %></p>

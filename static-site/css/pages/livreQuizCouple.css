@@ -64,7 +64,6 @@
   font-family: var(--font-display); font-weight: 700; letter-spacing: -.01em;
   font-size: clamp(1.75rem, 1.15rem + 2.5vw, 2.75rem); line-height: 1.08; text-wrap: balance;
 }
-.lv-h3 { margin: 0 0 1rem; font-family: var(--font-display); font-weight: 700; font-size: 1.3rem; color: var(--lv-texte); }
 .lv-chapo { margin: 0 0 1.75rem; max-width: 36rem; color: var(--lv-texte-doux); font-size: 1.075rem; line-height: 1.65; }
 .lv-entete { max-width: 40rem; margin: 0 auto 2.25rem; text-align: center; }
 .lv-entete p { margin: 0; color: var(--lv-texte-doux); font-size: 1.05rem; line-height: 1.6; }
@@ -267,16 +266,6 @@
   .lv-car-btn[disabled] { opacity: 0; pointer-events: none; }
   .lv-car-btn svg { width: 1.3rem; height: 1.3rem; }
 }
-.lv-contenu { display: grid; gap: 2rem; margin-top: 2.25rem; padding: 1.6rem 1.35rem; border-radius: 16px; background: var(--lv-carte); box-shadow: 0 0 0 1.5px var(--lv-contour), var(--lv-ombre); }
-@media (min-width: 900px) { .lv-contenu { grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr); gap: 3rem; padding: 2.25rem 2.5rem; } }
-.lv-coches { list-style: none; margin: 0; padding: 0; display: grid; gap: .7rem; }
-.lv-coches li { display: flex; align-items: flex-start; gap: .6rem; line-height: 1.45; }
-.lv-coches svg { flex: none; width: 1.15rem; height: 1.15rem; margin-top: .15rem; color: var(--lv-rose); }
-.lv-fiche { margin: 0; display: grid; gap: .75rem; align-content: start; }
-.lv-fiche div { display: flex; justify-content: space-between; gap: 1rem; padding-bottom: .75rem; border-bottom: 1px dashed var(--lv-trait); }
-.lv-fiche div:last-child { padding-bottom: 0; border-bottom: 0; }
-.lv-fiche dt { font-weight: 600; color: var(--lv-texte-doux); }
-.lv-fiche dd { margin: 0; text-align: right; font-weight: 600; color: var(--lv-texte); }
 
 /* ── Ce que coûtent les aventures ── */
 .lv-niveaux { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .85rem; }
@@ -311,6 +300,8 @@
 .lv-point-ic svg { width: 1.3rem; height: 1.3rem; }
 .lv-points h3 { margin: .1rem 0 .25rem; font-family: var(--font-display); font-weight: 700; font-size: 1.15rem; color: var(--lv-texte); }
 .lv-points p { margin: 0; color: var(--lv-texte-doux); line-height: 1.55; }
+.lv-cadeau-cta { margin: 0; display: flex; justify-content: center; }
+@media (min-width: 1024px) { .lv-cadeau-cta { justify-content: flex-start; } }
 
 /* ── Les questions ── */
 .lv-faq-liste { display: grid; gap: .75rem; margin-top: 2rem; }
@@ -329,17 +320,12 @@
 @media (min-width: 768px) { .lv-fin-boite { grid-template-columns: auto minmax(0, 1fr); justify-items: start; align-items: center; gap: 2.75rem; padding: 2.75rem 3.25rem; text-align: left; } }
 .lv-fin-livre { width: 11.5rem; height: auto; filter: drop-shadow(0 14px 16px rgba(43, 23, 34, .25)); }
 @media (min-width: 768px) { .lv-fin-livre { width: 15rem; } }
-.lv-fin .lv-h2 { margin-bottom: .6rem; color: #2b1722; }
-.lv-fin-livre-titre { margin: 0 0 1.4rem; display: flex; flex-direction: column; gap: .2rem; }
-.lv-fin-livre-titre strong { font-family: var(--font-display); font-size: 1.2rem; }
-.lv-fin-livre-titre span { font-size: .98rem; }
+.lv-fin .lv-h2 { margin-bottom: 1.25rem; color: #2b1722; }
 .lv-fin .lv-achat--ligne { justify-content: center; }
 .lv-fin .lv-achat--ligne .lv-prix { align-items: center; }
 @media (min-width: 768px) { .lv-fin .lv-achat--ligne .lv-prix { align-items: flex-start; } }
 @media (min-width: 768px) { .lv-fin .lv-achat--ligne { justify-content: flex-start; } }
-.lv-fin .lv-prix-montant, .lv-fin .lv-prix-format, .lv-fin .lv-vendu { color: #2b1722; }
-.lv-fin .lv-vendu { margin-top: .9rem; }
-.lv-fin .lv-vendu svg { color: #1e6b42; }
+.lv-fin .lv-prix-montant { color: #2b1722; }
 .lv-affiliation { margin: 1.5rem auto 0; max-width: 40rem; text-align: center; font-size: .8rem; line-height: 1.5; color: var(--lv-texte-doux); }
 
 /* ── La barre collée du téléphone ── */

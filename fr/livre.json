@@ -1,12 +1,12 @@
 {
   "seo": {
-    "title": "100 aventures à deux : le livre souvenir à remplir en couple",
-    "descriptionNoel": "Un livre à remplir à deux : 100 aventures à vivre ensemble et une page pour garder chaque souvenir, avec votre photo. L'idée cadeau de Noël pour votre moitié.",
-    "description": "Un livre à remplir à deux : 100 aventures à vivre ensemble et une page pour garder chaque souvenir, avec votre photo. Une idée cadeau pour votre moitié."
+    "title": "Livre pour couple à remplir : 100 aventures à deux",
+    "descriptionNoel": "Un livre pour couple à remplir : 100 aventures à vivre à deux, et une page pour garder le souvenir de chacune. L'idée cadeau de Noël pour votre moitié.",
+    "description": "Un livre pour couple à remplir : 100 aventures à vivre à deux, et une page pour garder le souvenir de chacune. Une idée cadeau pour votre moitié."
   },
-  "fil": "Le livre 100 aventures à deux",
+  "fil": "Livre pour couple",
   "menu": {
-    "lien": "Le livre 100 aventures à deux",
+    "lien": "Notre livre pour couple",
     "boutonNoel": "Découvrir le cadeau de Noël parfait",
     "bouton": "Découvrir notre livre souvenir",
     "courtNoel": "Cadeau de Noël",
@@ -23,12 +23,13 @@
     "pastille": "Idée cadeau pour votre moitié",
     "mot1": "aventures",
     "mot2": "à deux",
-    "texte": "100 idées de moments à vivre ensemble. Après chaque aventure, vous remplissez sa page avec la date, votre photo et ce que vous en retiendrez.",
-    "format": "Livre broché, 136 pages en couleur",
+    "sousTitre": "Le livre souvenir pour couple, à remplir avec vos photos",
+    "texte": "Chaque page vous propose une aventure à vivre ensemble. Une fois vécue, vous y racontez comment ça s'est passé.",
+    "format": "Livre broché, carré de 21,6 cm",
     "bouton": "Voir sur Amazon",
     "vendu": "Vendu et livré par Amazon",
     "feuilleter": "Feuilleter le livre",
-    "altLivre": "Le livre 100 aventures à deux, couverture jaune avec trois photos instantanées et les deux personnages de Quiz Couple"
+    "altLivre": "Le livre pour couple 100 aventures à deux, couverture jaune avec trois photos instantanées et les deux personnages de Quiz Couple"
   },
   "chiffres": [
     { "n": "100", "t": "aventures à vivre à deux" },
@@ -38,7 +39,6 @@
   ],
   "principe": {
     "titre": "Et si on arrêtait de dire « un jour, on fera ça » ?",
-    "texte": "Ce livre vous donne 100 idées de choses à faire ensemble, avec une page pour chacune. Une fois l'aventure vécue, vous collez votre photo et vous racontez ce qui s'est passé. Page après page, il devient l'album de votre histoire.",
     "etapes": [
       { "titre": "Choisissez une aventure", "texte": "Dans la liste ou au hasard, selon votre budget et la saison." },
       { "titre": "Vivez-la à deux", "texte": "Un soir de semaine, un dimanche ou pendant les vacances." },
@@ -54,7 +54,7 @@
   },
   "dixAns": {
     "titre": "Le livre que vous relirez dans dix ans",
-    "texte": "Un jour, toutes les pages seront remplies. Vous le montrerez à vos amis, à votre famille et peut-être à vos enfants. Chaque photo sera là, avec ce que vous aviez écrit le jour même.",
+    "texte": "Un jour, toutes les pages seront remplies. Vous le montrerez à vos amis, à votre famille et peut-être à vos enfants.",
     "etapes": [
       { "quandNoel": "Ce Noël", "quand": "Aujourd'hui", "quoi": "Un livre neuf et 100 aventures à cocher" },
       { "quand": "Dans un an", "quoi": "Vos premières pages, pleines de photos" },
@@ -77,21 +77,6 @@
       { "img": "tests-quiz-couple", "legende": "Vos tests Quiz Couple, et le résultat un an après", "alt": "La page de l'historique des tests Quiz Couple, pour noter un résultat puis celui d'un an après" },
       { "img": "trophees", "legende": "Les trophées de vos aventures", "alt": "La page des trophées : la plus drôle, la plus romantique, la plus ratée, la meilleure surprise..." },
       { "img": "nous-deux-fin", "legende": "Nous deux, à la fin du livre", "alt": "La page Nous deux, à la fin de ce livre, pour comparer avec celle du début" }
-    ],
-    "contenuTitre": "Ce qu'il y a dans le livre",
-    "contenu": [
-      "100 aventures, une page chacune : la date, le lieu, votre photo, vos notes et « Pour la petite histoire »",
-      "La liste des 100 aventures, à cocher au fil du temps",
-      "10 pages pour les aventures que vous inventerez",
-      "10 pages pour vos voyages, avec la liste de vos envies",
-      "2 pages pour noter vos résultats aux tests Quiz Couple",
-      "Le palmarès, les trophées et « Nous deux » au début et à la fin du livre"
-    ],
-    "fiche": [
-      ["Format", "carré, 21,6 × 21,6 cm"],
-      ["Pages", "136, intérieur en couleur"],
-      ["Reliure", "broché, papier blanc"],
-      ["Prix", "19,99 €"]
     ]
   },
   "budget": {
