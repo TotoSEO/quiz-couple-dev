@@ -58,9 +58,20 @@ refaire les fichiers : la page des mentions l'imprime.
 
 | Édition | ISBN (KDP, marque « Independently published ») |
 |---|---|
-| Français | 9798141209154 (9 novembre 2026) | Commander ensuite une
-épreuve imprimée (« exemplaire d'épreuve ») au moins pour la première édition,
-pour voir les couleurs, la reliure et la tranche avant de publier.
+| Français | 9798141209154 (9 novembre 2026) |
+
+L'édition française a été validée par KDP en novembre 2026, sans cocher
+« contenu intérieur restreint » et avec l'ISBN gratuit : KDP l'a acceptée comme
+un livre d'activités. Ses rubriques : Livres › Famille et bien-être ›
+Relations interpersonnelles › Couple. Prix saisi pour 19,99 € affichés sur
+Amazon.fr (voir « Les prix à saisir dans KDP »). Pas d'épreuve commandée.
+L'anglais passe ensuite, avant l'espagnol : Amazon.com et Amazon.co.uk sont
+les plus gros marchés de KDP, et sept visiteurs hispanophones du site sur dix
+sont en Amérique latine, où KDP n'imprime pas.
+
+Une épreuve imprimée (« exemplaire d'épreuve ») se commande à l'étape
+« Contenu », avant de publier, pour voir les couleurs, la reliure et la
+tranche : Thomas s'en est passé pour le français.
 
 ## Le prix et ce qu'il rapporte
 
@@ -241,7 +252,7 @@ plus par édition.
 - **Auteur** : Quiz Couple
 - **Langue** : Anglais
 - **Mots-clés** (un par case) : « couples bucket list book », « date night ideas for couples », « things to do together for couples », « couples memory book with photos », « couples journal gift », « adventure book for couples », « valentines anniversary gift for him or her »
-- **Catégories** : Books > Self-Help > Journal Writing ; Books > Parenting & Relationships > Family Activities ; Books > Self-Help > Relationships > Love & Romance
+- **Catégories** : Books > Parenting & Relationships > Marriage & Adult Relationships ; Books > Self-Help > Relationships > Love & Romance ; Books > Self-Help > Journal Writing
 - **Fichiers** : `livre/sortie/aventures-en/interieur.pdf` (136 pages) et `livre/sortie/aventures-en/couverture.pdf`
 
 **Description** (à coller dans l'éditeur de description de KDP, en mode HTML) :
@@ -250,7 +261,7 @@ plus par édition.
 <p><b>What if we stopped saying “we should do that someday”?</b></p>
 <p>This book gives you 100 ideas for things to do together: a picnic in the park, a raclette or fondue night, bowling, a night in a tent, a day at a theme park, a canoe trip, a candlelit dinner on a Tuesday... After each adventure, you fill in its page together: the date, the place, the little details that make a memory (the dog’s name, the best ride, who won), a rating from each of you, what you each want to remember, and a frame for your photo.</p>
 <p><b>Inside this book:</b></p>
-<ul><li>100 adventures for every budget, 38 of them free, each tagged with its cost, how long it takes and, when it matters, the best season</li><li>A memory page for every adventure, with a photo frame sized for a mini instant photo</li><li>Ten blank pages for your own adventures and ten pages for your trips</li><li>A two-page log for the Quiz Couple tests and games you play together, so you can take them again a year later and compare</li><li>“The two of us” pages at the start and at the end, your top 5, your awards and four extra photo frames</li></ul>
+<ul><li>100 adventures for every budget, 38 of them free, each tagged with its cost, how long it takes and, when it matters, the best season</li><li>A memory page for every adventure, with a photo frame sized for a mini instant photo</li><li>Ten pages for adventures of your own and ten pages for your trips</li><li>A two-page log for the Quiz Couple tests and games you play together, so you can take them again a year later and compare</li><li>“The two of us” pages at the start and at the end, your top 5, your awards and four extra photo frames</li></ul>
 <p>Made for every kind of couple: instead of “his” and “hers,” the two of you are Pink and Purple, and you decide who’s who. A gift for Valentine’s Day, an anniversary or Christmas, and a book to keep: in a few years, it will be the album of everything you did together.</p>
 <p>Square 8.5 x 8.5 in paperback, 136 pages, color interior on white paper.</p>
 ```
@@ -293,7 +304,7 @@ plus par édition.
 <p><b>Wie wär’s, wenn ihr aufhört, „irgendwann mal“ zu sagen?</b></p>
 <p>In diesem Buch stecken hundert Ideen für Dinge, die ihr zu zweit erleben könnt: ein Picknick im Park, Raclette zu zweit, Bowling, eine Nacht im Zelt, ein Tag im Freizeitpark, eine Kanutour, ein Candle-Light-Dinner an einem ganz normalen Dienstag... Nach jedem Abenteuer füllt ihr zusammen seine Seite aus: Datum, Ort, die kleinen Details, an die man sich später gern erinnert (der Name des Hundes, die beste Achterbahn, wer gewonnen hat), eure Bewertung und das, was ihr beide nicht vergessen wollt. Dazu kommt ein Rahmen für euer Foto.</p>
 <p><b>Das steckt im Buch:</b></p>
-<ul><li>100 Abenteuer für jedes Budget, 38 davon kostenlos, jedes mit Kosten, Dauer und, wo es passt, der besten Jahreszeit</li><li>Eine Erinnerungsseite pro Abenteuer, mit einem Fotorahmen in der Größe eines Sofortbilds (Mini-Format)</li><li>Zehn leere Seiten für eure eigenen Abenteuer und zehn Seiten für eure Reisen</li><li>Zwei Seiten für die Tests und Spiele von Quiz Couple, die ihr zusammen macht: Ergebnis eintragen, ein Jahr später wiederholen, vergleichen</li><li>„Wir zwei“-Seiten am Anfang und am Ende, eure Top 5, die Trophäen eurer Abenteuer und vier zusätzliche Fotorahmen</li></ul>
+<ul><li>100 Abenteuer für jedes Budget, 38 davon kostenlos, jedes mit Kosten, Dauer und, wo es passt, der besten Jahreszeit</li><li>Eine Erinnerungsseite pro Abenteuer, mit einem Fotorahmen in der Größe eines Sofortbilds (Mini-Format)</li><li>Zehn Seiten für eure eigenen Abenteuer und zehn Seiten für eure Reisen</li><li>Zwei Seiten für die Tests und Spiele von Quiz Couple, die ihr zusammen macht: Ergebnis eintragen, ein Jahr später wiederholen, vergleichen</li><li>„Wir zwei“-Seiten am Anfang und am Ende, eure Top 5, die Trophäen eurer Abenteuer und vier zusätzliche Fotorahmen</li></ul>
 <p>Für jedes Paar gemacht: Statt „er“ und „sie“ gibt es zwei Figuren, Rosa und Lila, und ihr entscheidet, wer wer ist. Ein Geschenk zum Valentinstag, zum Jahrestag oder zu Weihnachten, und ein Buch, das bleibt: In ein paar Jahren ist es das Album von allem, was ihr zusammen erlebt habt.</p>
 <p>Quadratisches Format 21,6 x 21,6 cm, 136 Seiten, Innenteil in Farbe auf weißem Papier.</p>
 ```
@@ -336,7 +347,7 @@ plus par édition.
 <p><b>Klaar met “dat moeten we ooit eens doen”?</b></p>
 <p>Dit boek staat vol met honderd ideeën om met z'n tweeën te beleven: een picknick in het park, raclette, een potje bowlen, een nacht in de tent, een dagje pretpark, kanoën, een kaarslichtdiner op een dinsdagavond... Na elk avontuur vullen jullie samen een bladzijde in: de datum, de plek, de kleine details die er een herinnering van maken (de naam van de hond, de beste attractie, wie er won), ieders oordeel in hartjes, wat ieder wil onthouden, en een kader voor jullie foto.</p>
 <p><b>In dit boek:</b></p>
-<ul><li>100 avonturen voor elk budget, waarvan 38 gratis, met bij elk avontuur de kosten, de duur en zo nodig het beste seizoen</li><li>Een herinneringenbladzijde per avontuur, met een fotokader op het formaat van een instantfoto</li><li>Tien lege bladzijden voor jullie eigen avonturen en tien bladzijden voor jullie reizen</li><li>Een overzicht van jullie Quiz Couple-tests op twee bladzijden, om een jaar later te vergelijken</li><li>Jullie top 5 en de trofeeën van jullie avonturen</li><li>De bladzijden ‘Wij tweeën’ aan het begin en aan het eind, en vier extra fotokaders</li></ul>
+<ul><li>100 avonturen voor elk budget, waarvan 38 gratis, met bij elk avontuur de kosten, de duur en zo nodig het beste seizoen</li><li>Een herinneringenbladzijde per avontuur, met een fotokader op het formaat van een instantfoto</li><li>Tien bladzijden voor jullie eigen avonturen en tien bladzijden voor jullie reizen</li><li>Een overzicht van jullie Quiz Couple-tests op twee bladzijden, om een jaar later te vergelijken</li><li>Jullie top 5 en de trofeeën van jullie avonturen</li><li>De bladzijden ‘Wij tweeën’ aan het begin en aan het eind, en vier extra fotokaders</li></ul>
 <p>Een cadeau voor koppels om te geven met Valentijn, op jullie jubileum, met Sinterklaas of met Kerst, en een boek om lang te bewaren: over een paar jaar is het jullie album vol herinneringen.</p>
 <p>Vierkant formaat van 21,6 x 21,6 cm, binnenwerk in kleur op wit papier, 136 bladzijden.</p>
 ```

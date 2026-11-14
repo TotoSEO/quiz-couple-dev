@@ -565,11 +565,11 @@ export default {
       '<b>What if we stopped saying “we should do that someday”?</b>',
       'This book gives you 100 ideas for things to do together: a picnic in the park, a raclette or fondue night, bowling, a night in a tent, a day at a theme park, a canoe trip, a candlelit dinner on a Tuesday... After each adventure, you fill in its page together: the date, the place, the little details that make a memory (the dog’s name, the best ride, who won), a rating from each of you, what you each want to remember, and a frame for your photo.',
       '<b>Inside this book:</b>',
-      '<ul><li>100 adventures for every budget, 38 of them free, each tagged with its cost, how long it takes and, when it matters, the best season</li><li>A memory page for every adventure, with a photo frame sized for a mini instant photo</li><li>Ten blank pages for your own adventures and ten pages for your trips</li><li>A two-page log for the Quiz Couple tests and games you play together, so you can take them again a year later and compare</li><li>“The two of us” pages at the start and at the end, your top 5, your awards and four extra photo frames</li></ul>',
+      '<ul><li>100 adventures for every budget, 38 of them free, each tagged with its cost, how long it takes and, when it matters, the best season</li><li>A memory page for every adventure, with a photo frame sized for a mini instant photo</li><li>Ten pages for adventures of your own and ten pages for your trips</li><li>A two-page log for the Quiz Couple tests and games you play together, so you can take them again a year later and compare</li><li>“The two of us” pages at the start and at the end, your top 5, your awards and four extra photo frames</li></ul>',
       'Made for every kind of couple: instead of “his” and “hers,” the two of you are Pink and Purple, and you decide who’s who. A gift for Valentine’s Day, an anniversary or Christmas, and a book to keep: in a few years, it will be the album of everything you did together.',
       'Square 8.5 x 8.5 in paperback, 136 pages, color interior on white paper.',
     ],
     motsCles: ['couples bucket list book', 'date night ideas for couples', 'things to do together for couples', 'couples memory book with photos', 'couples journal gift', 'adventure book for couples', 'valentines anniversary gift for him or her'],
-    categories: ['Books > Self-Help > Journal Writing', 'Books > Parenting & Relationships > Family Activities', 'Books > Self-Help > Relationships > Love & Romance'],
+    categories: ['Books > Parenting & Relationships > Marriage & Adult Relationships', 'Books > Self-Help > Relationships > Love & Romance', 'Books > Self-Help > Journal Writing'],
   },
 };
