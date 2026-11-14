@@ -104,7 +104,7 @@ const article: BlogArticleData = {
 <li>Interdiction de compter combien il en reste après la dixième</li>
 <li>Les deux dernières photos sont réservées à la fin de journée, quoi qu'il arrive</li>
 </ul>
-<p>Ensuite vient la partie qu'on adore : <strong>les dix jours d'attente avant le développement.</strong> Vous avez oublié la moitié des clichés, vous ne savez pas ce qui est réussi, et le jour où vous récupérez les tirages, vous revivez la journée une deuxième fois. Sur 27, il y en aura 8 de floues, 5 de ratées, et 3 que vous encadrerez.</p>
+<p>Ensuite vient la partie qu'on adore : <strong>les dix jours d'attente avant le développement.</strong> Vous avez oublié la moitié des clichés, vous ne savez pas ce qui est réussi, et le jour où vous récupérez les tirages, vous revivez la journée une deuxième fois. Sur 27, il y en aura 8 de floues, 5 de ratées, et 3 que vous encadrerez ou que vous collerez dans <a href="/livre-quiz-couple/">un livre souvenir à remplir à deux</a>.</p>
 <p>Comparez ça aux 400 photos de votre pellicule que vous ne rouvrirez jamais.</p>`,
         },
         {
