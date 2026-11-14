@@ -3847,6 +3847,113 @@
       .then(function () { bouton.disabled = false; bouton.textContent = libelle; });
   }
 
+  // ── Retirer une adresse (14 novembre 2026) ──
+  // Pour une personne qui écrit « retirez-moi de vos listes » : où son adresse
+  // apparaît, puis le retrait de tous les envois (actions « adresse » et
+  // « desinscrire » d'admin-leads, jeton admin). Le retrait se confirme par un
+  // second clic sur le même bouton, jamais par confirm() (voir
+  // suppressionConfirmee). Le résultat ne répète pas l'adresse.
+  var adresseCherchee = '';
+  var NOMS_ENVOIS = { e1: 'E-mail 1', e2: 'E-mail 2' };
+  function appelAdresse(action, email) {
+    return fetch(SUPABASE_URL + '/functions/v1/admin-leads', {
+      method: 'POST',
+      headers: { 'Authorization': 'Bearer ' + SUPABASE_KEY, 'x-admin-token': adminToken, 'Content-Type': 'application/json' },
+      body: JSON.stringify({ action: action, email: email })
+    }).then(function (r) {
+      return r.json().catch(function () { return {}; }).then(function (d) {
+        if (!r.ok || !d || !d.adresse) throw new Error((d && d.error) || ('HTTP ' + r.status));
+        return d;
+      });
+    });
+  }
+  function texteEnvoisAdresse(envois) {
+    if (envois === null) return 'illisible';
+    if (!envois || !envois.length) return 'aucun';
+    return envois.map(function (e) {
+      var quand = e.envoye_le ? 'parti le ' + dateBilan(e.envoye_le) : 'en préparation';
+      var suite = e.desinscrit_le ? ', désinscription reçue de Brevo' : (e.remis_le ? ', remis' : '');
+      return esc(NOMS_ENVOIS[e.type] || e.type) + ' : ' + esc(quand + suite);
+    }).join('<br>');
+  }
+  function renderAdresse(d, note, estErreur) {
+    var a = d.adresse || {};
+    var ab = a.abonne, ev = a.evaluations;
+    var lignes = [];
+    lignes.push(['Abonnés', ab === 'illisible' ? 'illisible' : (ab
+      ? statutAbonne(ab.statut) + ' · ' + esc(String(ab.lang || '').toUpperCase()) + ' · ' + esc(libelleSourceAbonnes(ab.source)) +
+        ' · depuis le ' + esc(dateBilan(ab.cree_le)) + (ab.desinscrit_le ? ' · désinscrite le ' + esc(dateBilan(ab.desinscrit_le)) : '')
+      : 'pas dans les abonnés')]);
+    if (ab && ab !== 'illisible') lignes.push(['E-mails du parcours', texteEnvoisAdresse(a.envois)]);
+    lignes.push(['Évaluations', ev === 'illisible' ? 'illisible' : (!ev || !ev.total ? 'aucune'
+      : esc(ev.total + (ev.payees ? ', dont ' + ev.payees + ' payée' + (ev.payees > 1 ? 's' : '') : '') + ' · ' +
+        (ev.rappels_actifs ? ev.rappels_actifs + ' avec rappels actifs' : 'aucun rappel actif')))]);
+    lignes.push(["Liste d'attente célibataires", a.celib === 'illisible' ? 'illisible' : (a.celib ? 'oui' : 'non')]);
+    lignes.push(['E-book', a.ebook === 'illisible' ? 'illisible' : (a.ebook ? 'oui (aucun envoi après la confirmation)' : 'non')]);
+    var reste = (ab && ab !== 'illisible' && ab.statut !== 'desinscrit') ||
+      (ev && ev !== 'illisible' && ev.rappels_actifs > 0) || a.celib === true;
+    var html = '<dl>' + lignes.map(function (l) { return '<dt>' + esc(l[0]) + '</dt><dd>' + l[1] + '</dd>'; }).join('') + '</dl>';
+    if (reste) {
+      html += '<div class="adm-adresse-actions"><button type="button" class="btn btn-sm adm-btn--danger adm-adresse-retirer" id="abonne-retirer">Retirer de tous les envois</button></div>';
+    }
+    var texteNote = note || (reste ? '' : 'Plus rien ne part vers cette adresse.');
+    if (texteNote) html += '<p class="adm-adresse-note' + (estErreur ? ' est-erreur' : '') + '">' + esc(texteNote) + '</p>';
+    placeAbonnes('abonne-resultat', html);
+    var btn = document.getElementById('abonne-retirer');
+    if (btn) btn.addEventListener('click', function () { retirerAdresseAdmin(btn); });
+  }
+  function chercherAdresse(evt) {
+    if (evt) evt.preventDefault();
+    var champ = document.getElementById('abonne-email');
+    var bouton = document.getElementById('abonne-cherche-btn');
+    var email = String(champ && champ.value || '').trim().toLowerCase();
+    if (!/^[^\s@]+@[^\s@]+$/.test(email)) {
+      placeAbonnes('abonne-resultat', '<p class="adm-adresse-note est-erreur">Cette adresse n’est pas bien écrite.</p>');
+      if (champ) champ.focus();
+      return;
+    }
+    adresseCherchee = email;
+    bouton.disabled = true;
+    placeAbonnes('abonne-resultat', '<p class="adm-adresse-note">Recherche...</p>');
+    appelAdresse('adresse', email)
+      .then(function (d) { if (adresseCherchee === email) renderAdresse(d); })
+      .catch(function (e) {
+        placeAbonnes('abonne-resultat', '<p class="adm-adresse-note est-erreur">Recherche impossible : ' + esc(e && e.message ? e.message : e) + '. La fonction admin-leads est-elle déployée ?</p>');
+      })
+      .then(function () { bouton.disabled = false; });
+  }
+  function retirerAdresseAdmin(btn) {
+    var arme = Number(btn.getAttribute('data-arme') || 0);
+    if (!arme || Date.now() - arme < 400) {
+      if (!arme) {
+        btn.setAttribute('data-arme', String(Date.now()));
+        btn.classList.add('est-arme');
+        btn.textContent = 'Confirmer le retrait';
+        clearTimeout(btn._desarme);
+        btn._desarme = setTimeout(function () {
+          btn.removeAttribute('data-arme'); btn.classList.remove('est-arme'); btn.textContent = 'Retirer de tous les envois';
+        }, 5000);
+      }
+      return;
+    }
+    clearTimeout(btn._desarme);
+    btn.disabled = true;
+    btn.textContent = 'Retrait...';
+    var email = adresseCherchee;
+    appelAdresse('desinscrire', email).then(function (d) {
+      if (adresseCherchee !== email) return;
+      var erreurs = Array.isArray(d.erreurs) ? d.erreurs : [];
+      renderAdresse(d, erreurs.length
+        ? 'Une partie n’a pas pu se faire (' + erreurs.join(', ') + ') : réessayez dans un moment.'
+        : 'C’est fait : plus rien ne part vers cette adresse.', erreurs.length > 0);
+    }).catch(function (e) {
+      btn.disabled = false;
+      btn.removeAttribute('data-arme'); btn.classList.remove('est-arme'); btn.textContent = 'Retirer de tous les envois';
+      var res = document.getElementById('abonne-resultat');
+      if (res) res.insertAdjacentHTML('beforeend', '<p class="adm-adresse-note est-erreur">Retrait impossible : ' + esc(e && e.message ? e.message : e) + '.</p>');
+    });
+  }
+
   // ── Le parcours e-mail (24 octobre 2026) ──
   // Une lecture, get_emails_tableau (par admin-stats) : les comptes de la
   // période (envoyés, remis, rebonds, plaintes, désinscriptions), les envois
@@ -4214,6 +4321,15 @@
     // Abonnés : export CSV
     var abonnesExport = document.getElementById('abonnes-export');
     if (abonnesExport) abonnesExport.addEventListener('click', function () { exporterAbonnes(abonnesExport); });
+    // Abonnés : retirer une adresse. Taper une autre adresse efface le résultat
+    // d'avant, pour que le bouton de retrait ne vise jamais une adresse que
+    // l'écran ne montre plus.
+    var abonneCherche = document.getElementById('abonne-cherche');
+    if (abonneCherche) abonneCherche.addEventListener('submit', chercherAdresse);
+    var abonneEmail = document.getElementById('abonne-email');
+    if (abonneEmail) abonneEmail.addEventListener('input', function () {
+      if (adresseCherchee && abonneEmail.value.trim().toLowerCase() !== adresseCherchee) { adresseCherchee = ''; placeAbonnes('abonne-resultat', ''); }
+    });
 
     // Leads refresh
     var leadsRefresh = document.getElementById('leads-refresh');

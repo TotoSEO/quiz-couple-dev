@@ -46,13 +46,16 @@ test('l\'empreinte d\'une adresse IP est stable et ne la contient pas', async ()
   assert.ok(!a.includes('203'));
 });
 
-test('la page de désinscription est dans la langue et sans injection', () => {
-  const html = R.pageDesinscription('de', true);
-  assert.ok(html.includes('<html lang="de">') && html.includes('abgemeldet'));
-  assert.ok(R.pageDesinscription('xx', false).includes('<html lang="fr">'));
-  assert.ok(R.pageDesinscription('fr', false).includes('déjà désinscrite'));
-  const nl = R.pageDesinscription('nl', true);
-  assert.ok(nl.includes('<html lang="nl">') && nl.includes('afgemeld') && nl.includes('https://quiz-couple.com/nl/'));
+test('la désinscription renvoie vers la page du site, langue et résultat dans le fragment', () => {
+  assert.equal(R.adresseDesinscription('en', 'ok'), 'https://quiz-couple.com/desinscription/#en-ok');
+  assert.equal(R.adresseDesinscription('nl', 'deja'), 'https://quiz-couple.com/desinscription/#nl-deja');
+  assert.equal(R.adresseDesinscription('de', 'erreur'), 'https://quiz-couple.com/desinscription/#de-erreur');
+  // Une langue inconnue n'est pas écrite : la page prend celle du navigateur.
+  assert.equal(R.adresseDesinscription('xx', 'invalide'), 'https://quiz-couple.com/desinscription/#invalide');
+  assert.equal(R.adresseDesinscription(null, 'ok'), 'https://quiz-couple.com/desinscription/#ok');
+  // Un résultat inconnu ne promet rien.
+  assert.equal(R.adresseDesinscription('fr', '<script>'), 'https://quiz-couple.com/desinscription/#fr-invalide');
+  for (const l of R.LANGUES) assert.ok(R.adresseDesinscription(l, 'ok').endsWith('#' + l + '-ok'));
 });
 
 test('le prénom : des lettres seulement, mis en forme quand il est tout en minuscules ou en capitales', () => {
