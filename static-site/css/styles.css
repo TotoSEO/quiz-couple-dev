@@ -12624,7 +12624,7 @@ img[src^="/bilan/apercu-"] { pointer-events: none; user-select: none; -webkit-us
 .dark .qr-bilan { box-shadow: inset 0 0 0 1px hsl(0 0% 100% / .09); }
 .qr-bilan-visuel { order: 2; align-self: stretch; position: relative; min-height: 13.5rem; }
 .qr-bilan-visuel img {
-  position: absolute; top: .2rem; left: 50%; width: 10.5rem; height: auto; max-width: none;
+  position: absolute; top: .2rem; left: 50%; width: 10.5rem; height: auto; max-width: none; margin: 0;
   transform: translateX(-50%) rotate(4deg); border-radius: .35rem;
   box-shadow: 0 18px 36px -14px rgb(0 0 0 / .6);
 }
@@ -12680,6 +12680,102 @@ img[src^="/bilan/apercu-"] { pointer-events: none; user-select: none; -webkit-us
   .qr-bilan--moteur .qr-bilan-visuel img { width: 12.5rem; }
 }
 .quiz-engine-section:has(.quiz-result-card) .qr-bilan--moteur { display: none; }
+
+/* L'évaluation et le livre dans un seul bloc coupé en deux (14 novembre 2026,
+   Thomas : « scinde aussi en deux du coup les endroits qui mettent en avant
+   l'évaluation de couple : Met aussi de la promo vers le livre et un badge en
+   dessous "Cadeau de Noël idéal !" »). La carte de l'évaluation (.qr-bilan)
+   et la moitié du livre (.qr-livre, partials/livre-encart.ejs et
+   avecLivre dans quiz-engine-core.js) partagent un même cadre
+   arrondi : côte à côte quand le bloc fait au moins 64 rem (la bannière du
+   bas sur ordinateur, l'accueil), l'une sous l'autre en dessous (la carte
+   sous le moteur, l'écran de résultat, les articles, le téléphone). Le
+   livre n'existe qu'en français : ailleurs, la carte de l'évaluation reste
+   seule, sans ce cadre. */
+.qr-duo { container-type: inline-size; }
+.qr-duo-corps {
+  display: grid; grid-template-columns: minmax(0, 1fr);
+  border-radius: 1.5rem; overflow: hidden; isolation: isolate;
+  box-shadow: 0 20px 44px -24px hsl(286 38% 14% / .9);
+}
+.dark .qr-duo-corps { box-shadow: inset 0 0 0 1px hsl(0 0% 100% / .09); }
+.qr-duo .qr-bilan { max-width: none; margin: 0; border-radius: 0; box-shadow: none; }
+.qr-duo--bas { max-width: 72rem; margin: 0 auto 2.25rem; }
+.qr-duo--moteur { max-width: 48rem; margin: 1.25rem auto 0; }
+.qr-duo--accueil { max-width: 78rem; margin: 0 auto; }
+.quiz-engine-section:has(.quiz-result-card) .qr-duo--moteur { display: none; }
+/* La moitié du livre, aux couleurs de sa couverture (jaune ; en sombre, le
+   fond brun et l'encre jaune du bouton du menu). */
+.qr-livre {
+  --qrl-fond: #ffd45c; --qrl-encre: #2b1722; --qrl-doux: rgb(43 23 34 / .78);
+  --qrl-bouton: hsl(286 38% 14%); --qrl-bouton-encre: #fff;
+  display: grid; grid-template-columns: 7.5rem minmax(0, 1fr); gap: 1.15rem; align-items: center;
+  padding: 1.35rem 1.5rem 1.5rem; text-align: left;
+  background: var(--qrl-fond); color: var(--qrl-encre);
+}
+.dark .qr-livre {
+  --qrl-fond: #2b2314; --qrl-encre: #ffe7a3; --qrl-doux: rgb(255 231 163 / .8);
+  --qrl-bouton: #ffd45c; --qrl-bouton-encre: #2b1722;
+  box-shadow: inset 0 1px 0 rgb(255 212 92 / .4);
+}
+.qr-livre .qr-livre-visuel { display: block; }
+.qr-livre .qr-livre-visuel img { display: block; width: 100%; height: auto; margin: 0; border-radius: 0; transform: rotate(-4deg); filter: drop-shadow(0 12px 14px rgb(43 23 34 / .3)); }
+.qr-livre .qr-livre-corps { min-width: 0; }
+/* Toutes les règles du livre passent par .qr-livre (deux classes) : dans un
+   article de blog et dans le texte de la page des questions, .blog-article p,
+   .blog-article h3, .seo-content p et article a:not(.no-underline) lui
+   imposaient sinon la taille, les marges et la couleur du texte de l'article
+   (bouton rose souligné, badge à l'encre sombre). */
+.qr-livre .qr-livre-sur { margin: 0 0 .3rem; font-size: .72rem; font-weight: 800; line-height: 1.4; letter-spacing: .14em; text-transform: uppercase; color: var(--qrl-doux); }
+.qr-livre .qr-livre-titre { margin: 0 0 .35rem; font-family: var(--font-display); font-weight: 800; font-size: 1.3rem; line-height: 1.2; color: var(--qrl-encre); -webkit-hyphens: manual; hyphens: manual; }
+.qr-livre .qr-livre-texte { margin: 0 0 .9rem; font-size: .92rem; line-height: 1.45; color: var(--qrl-doux); overflow-wrap: break-word; }
+.qr-livre .qr-livre-bouton {
+  display: inline-flex; align-items: center; justify-content: center; gap: .5rem;
+  min-height: 2.75rem; padding: .65rem 1.25rem; border-radius: 999px;
+  font: 700 .95rem/1.2 var(--font-display, inherit); color: var(--qrl-bouton-encre); text-decoration: none;
+  background: var(--qrl-bouton); transition: transform .2s ease;
+}
+.qr-livre .qr-livre-bouton:hover { color: var(--qrl-bouton-encre); text-decoration: none; transform: translateY(-1px); }
+.qr-livre .qr-livre-bouton:focus-visible { outline: 3px solid var(--qrl-encre); outline-offset: 3px; }
+.qr-livre .qr-livre-bouton svg { width: 1.05rem; height: 1.05rem; flex: none; transition: transform .2s ease; }
+.qr-livre .qr-livre-bouton:hover svg { transform: translateX(3px); }
+/* Le badge sous le bouton : rouge de Noël, texte blanc (5,6:1). */
+.qr-livre .qr-livre-badge {
+  display: flex; width: fit-content; max-width: 100%; align-items: center; gap: .4rem;
+  margin: .75rem 0 0; padding: .32rem .8rem .32rem .55rem; border-radius: 999px;
+  background: #c8233f; color: #fff; font: 800 .82rem/1.25 var(--font-display, inherit);
+}
+.qr-livre .qr-livre-badge svg { width: 1rem; height: 1rem; flex: none; }
+@media (prefers-reduced-motion: reduce) { .qr-livre .qr-livre-bouton, .qr-livre .qr-livre-bouton svg { transition: none; } .qr-livre .qr-livre-bouton:hover, .qr-livre .qr-livre-bouton:hover svg { transform: none; } }
+@media (max-width: 559.98px) {
+  .qr-livre { grid-template-columns: 5.25rem minmax(0, 1fr); gap: .95rem; padding: 1.15rem 1.25rem 1.3rem; }
+  .qr-livre .qr-livre-titre { font-size: 1.15rem; }
+  .qr-livre .qr-livre-texte { font-size: .88rem; margin-bottom: .8rem; }
+}
+/* Jusqu'à 22,5 rem de large (téléphones, carte sous le score) : le livre
+   et les textes en haut, puis le bouton sur toute la largeur et le badge
+   dessous. À côté du livre, la colonne était trop étroite : le bouton
+   (« Découvrir le / livre ») et le badge passaient sur deux lignes. */
+@container (max-width: 22.49rem) {
+  .qr-livre { grid-template-columns: 4.5rem minmax(0, 1fr); column-gap: .9rem; row-gap: 0; align-items: start; padding: 1.15rem 1.15rem 1.3rem; }
+  .qr-livre .qr-livre-corps { display: contents; }
+  .qr-livre .qr-livre-visuel { grid-row: 1 / span 3; align-self: center; }
+  .qr-livre .qr-livre-sur, .qr-livre .qr-livre-titre, .qr-livre .qr-livre-texte { grid-column: 2; }
+  .qr-livre .qr-livre-bouton { grid-column: 1 / -1; margin-top: .2rem; white-space: nowrap; }
+  .qr-livre .qr-livre-badge { grid-column: 1 / -1; justify-self: center; }
+}
+/* Côte à côte : l'évaluation à gauche, avec une page du rapport plus
+   petite, le livre à droite, en colonne et centré. */
+@container (min-width: 64rem) {
+  .qr-duo-corps { grid-template-columns: minmax(0, 1.75fr) minmax(0, 1fr); }
+  .qr-duo .qr-bilan { grid-template-columns: minmax(0, 1fr) 12rem; gap: 1.5rem; }
+  .qr-duo .qr-bilan .qr-bilan-visuel img { width: 11rem; }
+  .qr-duo .qr-bilan-formules { grid-template-columns: minmax(0, 1fr); }
+  .qr-livre { grid-template-columns: minmax(0, 1fr); justify-items: center; align-content: center; text-align: center; gap: 1rem; padding: 2rem 1.75rem; }
+  .qr-livre .qr-livre-visuel { width: min(12.5rem, 72%); }
+  .qr-livre .qr-livre-titre { font-size: 1.55rem; }
+  .qr-livre .qr-livre-badge { margin-inline: auto; }
+}
 /* Deux boutons depuis le 19 octobre 2026 : à deux, et seul(e) (le second
    ouvre la page sur ses deux façons de faire, ?mode=solo#facons). */
 .qr-bilan-boutons { display: flex; flex-wrap: wrap; gap: .6rem; align-items: center; }
@@ -12753,13 +12849,15 @@ img[src^="/bilan/apercu-"] { pointer-events: none; user-select: none; -webkit-us
    imposaient la couleur, la taille et les marges du texte de l'article :
    texte sombre sur le fond violet, rose sur le bouton rose. Les mêmes
    valeurs, un cran plus précises, dans les articles seulement : l'accueil
-   et le bloc sous le moteur ont leurs propres tailles. */
-.blog-article .qr-bilan p.qr-bilan-sur { font-size: .74rem; line-height: 1.4; margin: 0 0 .5rem; color: hsl(var(--qrb-clair)); }
-.blog-article .qr-bilan h3.qr-bilan-titre { font-size: clamp(1.2rem, 2.6vw, 1.45rem); line-height: 1.22; margin: 0 0 .6rem; color: #fff; }
-.blog-article .qr-bilan p.qr-bilan-texte { font-size: .95rem; line-height: 1.55; margin: 0; color: hsl(0 0% 100% / .8); }
-.blog-article .qr-bilan ul.qr-bilan-points { margin: 1rem 0 1.25rem; }
-.blog-article .qr-bilan .qr-bilan-points li { font-size: .9rem; line-height: 1.4; color: hsl(0 0% 100% / .9); }
-.blog-article .qr-bilan p.qr-bilan-prix { font-size: .82rem; line-height: 1.45; margin: .75rem 0 0; color: hsl(0 0% 100% / .66); }
+   et le bloc sous le moteur ont leurs propres tailles. Depuis le 14 novembre
+   2026, aussi dans le texte de la page des questions (.seo-content), où
+   .seo-content p et li grossissaient le texte de la carte. */
+.blog-article .qr-bilan p.qr-bilan-sur, .seo-content .qr-bilan p.qr-bilan-sur { font-size: .74rem; line-height: 1.4; margin: 0 0 .5rem; color: hsl(var(--qrb-clair)); }
+.blog-article .qr-bilan h3.qr-bilan-titre, .seo-content .qr-bilan h3.qr-bilan-titre { font-size: clamp(1.2rem, 2.6vw, 1.45rem); line-height: 1.22; margin: 0 0 .6rem; color: #fff; }
+.blog-article .qr-bilan p.qr-bilan-texte, .seo-content .qr-bilan p.qr-bilan-texte { font-size: .95rem; line-height: 1.55; margin: 0; color: hsl(0 0% 100% / .8); }
+.blog-article .qr-bilan ul.qr-bilan-points, .seo-content .qr-bilan ul.qr-bilan-points { margin: 1rem 0 1.25rem; }
+.blog-article .qr-bilan .qr-bilan-points li, .seo-content .qr-bilan .qr-bilan-points li { font-size: .9rem; line-height: 1.4; color: hsl(0 0% 100% / .9); }
+.blog-article .qr-bilan p.qr-bilan-prix, .seo-content .qr-bilan p.qr-bilan-prix { font-size: .82rem; line-height: 1.45; margin: .75rem 0 0; color: hsl(0 0% 100% / .66); }
 /* Le bouton, partout : article a:not(.no-underline) et .seo-content a le
    passaient en rose souligné sur son fond rose. */
 .qr-bilan a.qr-bilan-bouton, .qr-bilan a.qr-bilan-bouton:hover { color: #fff; text-decoration: none; }
@@ -12767,7 +12865,7 @@ img[src^="/bilan/apercu-"] { pointer-events: none; user-select: none; -webkit-us
    quiz-engine-core.js et bilan-banniere.ejs) : la même carte, et sous le prix
    un lien discret vers l'évaluation à deux. */
 .qr-bilan-autre { font-size: .84rem; line-height: 1.45; color: hsl(0 0% 100% / .72); margin: .55rem 0 0; overflow-wrap: break-word; }
-.blog-article .qr-bilan p.qr-bilan-autre { font-size: .84rem; line-height: 1.45; margin: .55rem 0 0; color: hsl(0 0% 100% / .72); }
+.blog-article .qr-bilan p.qr-bilan-autre, .seo-content .qr-bilan p.qr-bilan-autre { font-size: .84rem; line-height: 1.45; margin: .55rem 0 0; color: hsl(0 0% 100% / .72); }
 .qr-bilan .qr-bilan-autre a, .qr-bilan .qr-bilan-autre a:hover { color: hsl(var(--qrb-clair)); font-weight: 700; text-decoration: underline; text-underline-offset: .18em; }
 .qr-bilan .qr-bilan-autre a:focus-visible { outline: 2px solid hsl(45 90% 65%); outline-offset: 2px; border-radius: .2rem; }
 /* La carte sous le score des tests à deux (carteBilanScore,

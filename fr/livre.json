@@ -13,6 +13,14 @@
     "sous": "Des idées à vivre ensemble",
     "evaluerSous": "À deux ou seul(e)"
   },
+  "encart": {
+    "sur": "Le livre Quiz Couple",
+    "titre": "100 aventures à deux",
+    "texte": "Le livre à remplir ensemble : une aventure à vivre par page, et vos souvenirs dedans.",
+    "bouton": "Découvrir le livre",
+    "badgeNoel": "Cadeau de Noël idéal !",
+    "badge": "Idée cadeau pour votre moitié"
+  },
   "ogAlt": "Le livre 100 aventures à deux de Quiz Couple, couverture jaune avec ses deux personnages",
   "livre": {
     "titre": "100 aventures à deux",

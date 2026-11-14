@@ -83,8 +83,12 @@
   const _smPrix = escapeHtml(_smT.prix.replace('{{prix}}', bilanPrix));
   // En français, « ? » reste collé à son mot (espace insécable).
   const _smInsec = (txt) => _smLang === 'fr' ? String(txt).replace(/ ([?!:;])/g, ' $1') : txt;
+  // La moitié « livre » (14 novembre 2026, livre-encart.ejs), à côté de la
+  // carte, dans les langues où le livre est en vente.
+  const _smLivre = (_sm && typeof livreEncartPour === 'function') ? livreEncartPour(lang, _sm) : null;
 %>
 <% if (_sm) { %>
+<% if (_smLivre) { %><div class="qr-duo qr-duo--moteur"><div class="qr-duo-corps"><% } %>
 <section class="qr-bilan qr-bilan--moteur" aria-label="<%= _smT.sur %>">
   <div class="qr-bilan-visuel" aria-hidden="true"><img src="/bilan/apercu-synthese-<%= _smLang %>.webp" alt="" width="240" height="340" loading="lazy" decoding="async" draggable="false"></div>
   <div class="qr-bilan-corps">
@@ -100,4 +104,5 @@
     <p class="qr-bilan-prix"><%- _smPromo ? _smPromo.marque(_smPrix) : _smPrix %></p>
   </div>
 </section>
+<% if (_smLivre) { %><%- include('livre-encart', { livreEncart: _smLivre, livreSource: 'encart-moteur', livreNiveau: 'h2' }) %></div></div><% } %>
 <% } %>

@@ -417,7 +417,20 @@
     apres le premier affichage : la pastille disparaissait sous les yeux du
     visiteur et tout le hero remontait de 59 px, un decalage que PageSpeed
     comptait (CLS 0,05). Posee ici, elle est la des le premier rendu. %>
-<body class="bg-background text-foreground font-sans antialiased<%= routeKey === 'admin' ? ' page-admin' : '' %><%= (typeof pageJouable !== 'undefined' && pageJouable) ? ' quiz-page' : '' %><%= saisonPage ? ' saison-' + saisonPage : '' %>"<%- saisonPage ? ' data-saison="' + saisonPage + '"' : '' %><%- (typeof bilanChemin !== 'undefined' && bilanChemin) ? ' data-bilan="' + bilanChemin + '" data-bilan-prix="' + bilanPrix + '"' + ((typeof bilanPromo !== 'undefined' && bilanPromo) ? ' data-bilan-promo="' + bilanPromo.donnees + '"' : '') : '' %><%- (typeof bilanEntree !== 'undefined' && bilanEntree) ? ' data-bilan-groupe="' + bilanEntree.groupe + '" data-bilan-id="' + bilanEntree.id + '"' + (bilanEntree.formule === 'point' ? ' data-bilan-formule="point" data-bilan-prix-point="' + bilanPrixPoint + '"' : '') : '' %><%- (typeof captureId !== 'undefined' && captureId) ? ' data-capture="' + captureId + '"' : '' %>>
+<%
+  // La moitié « livre » de l'encart sous le verdict (14 novembre 2026,
+  // avecLivre dans quiz-engine-core.js) : l'adresse de la page du
+  // livre et ses textes, sur les pages jouables dont l'entrée de l'évaluation
+  // s'y prête (livreEncartPour, generate.js). Rien ailleurs.
+  const _leEntree = (typeof bilanEntree !== 'undefined' && bilanEntree && bilanEntree.groupe !== 'article') ? bilanEntree : null;
+  const _leBody = (_leEntree && typeof livreEncartPour === 'function' && typeof bilanChemin !== 'undefined' && bilanChemin) ? livreEncartPour(lang, _leEntree) : null;
+  const _leEsc = (x) => String(x).replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+  const livreEncartBody = _leBody ? ' data-livre-encart="' + _leEsc(JSON.stringify({
+    url: _leBody.url, sur: t('livre:encart.sur', ''), titre: t('livre:encart.titre', ''), texte: t('livre:encart.texte', ''),
+    bouton: t('livre:encart.bouton', ''), badge: _leBody.noel ? t('livre:encart.badgeNoel', '') : t('livre:encart.badge', '')
+  })) + '"' : '';
+%>
+<body class="bg-background text-foreground font-sans antialiased<%= routeKey === 'admin' ? ' page-admin' : '' %><%= (typeof pageJouable !== 'undefined' && pageJouable) ? ' quiz-page' : '' %><%= saisonPage ? ' saison-' + saisonPage : '' %>"<%- saisonPage ? ' data-saison="' + saisonPage + '"' : '' %><%- (typeof bilanChemin !== 'undefined' && bilanChemin) ? ' data-bilan="' + bilanChemin + '" data-bilan-prix="' + bilanPrix + '"' + ((typeof bilanPromo !== 'undefined' && bilanPromo) ? ' data-bilan-promo="' + bilanPromo.donnees + '"' : '') : '' %><%- (typeof bilanEntree !== 'undefined' && bilanEntree) ? ' data-bilan-groupe="' + bilanEntree.groupe + '" data-bilan-id="' + bilanEntree.id + '"' + (bilanEntree.formule === 'point' ? ' data-bilan-formule="point" data-bilan-prix-point="' + bilanPrixPoint + '"' : '') : '' %><%- (typeof captureId !== 'undefined' && captureId) ? ' data-capture="' + captureId + '"' : '' %><%- livreEncartBody %>>
   <%# Le tableau de bord d'administration est une application plein ecran :
       il porte sa propre barre laterale et n'a que faire de l'en-tete du site. %>
   <% if (routeKey !== 'admin') { %>
