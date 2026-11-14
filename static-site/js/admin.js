@@ -765,7 +765,7 @@
         exporte_le: new Date().toISOString(),
         periode_jours: n,
         fuseau: tz,
-        lecture: 'Export de l\'admin de quiz-couple.com. parties_* : parties terminées (depuis toujours par test, par jour sur la période) ; lancements_* : parties commencées, depuis le 21 août 2026 ; le taux de finition d\'un test = finies / lancées. trafic_* : visites et pages vues par jour, sources des visites, sur la période. distance_par_test : parties à distance arrivées au résultat, par test, depuis le 7 septembre 2026 (fins = téléphones arrivés au résultat, deux par partie ; departs n\'est plus alimenté depuis le 20 octobre 2026). instagram_clics : clics vers Instagram depuis le site. bilan : l\'évaluation de couple payante (visites de sa page, entonnoir, ventes en centimes, sources, domaines). bilan_celibataires : au départ seul(e), les réponses à « Où en êtes-vous ? » (statuts, comptées une fois par visite) et ce que les célibataires voudraient dans une évaluation pour eux (interets, autres, et depuis le 4 novembre 2026 sources et situations : d\'où vient la réponse, l\'évaluation ou la carte d\'un test célibataire), depuis le 25 octobre 2026, sans aucune adresse. bilan_point : « Le point sur ma relation », le seul(e) depuis le 4 novembre 2026 (serie : formulaires ouverts, créés, commencés, écrans de l\'adresse, finis, écrans « prêt », clics sans la case, pages Stripe ouvertes, payés, revenu en centimes ; cles : les réponses du départ (point_motif, point_priorite, point_duree), ce que dit le rapport (point_etat, point_attachement, point_engagement, point_securite), les parties entrées et finies, les erreurs du départ, et les vues et clics de la carte des tests célibataires ; carte_celib : la carte page par page, avec les réponses et les adresses venues d\'elle). livre : la page du livre « 100 aventures à deux », depuis le 14 novembre 2026 (totaux : visites, pages vues, clics vers Amazon et visites qui ont cliqué ; serie : par jour ; emplacements : les clics par bouton, hero, cadeau, fin, barre ; sources : d\'où arrive chaque visite, menu, menu-mobile, pied, page:<chemin> pour une autre page du site, un moteur, un réseau ou direct ; gestes : les parties de la page vues (section), les pages du livre ouvertes en grand (page), les questions ouvertes (faq), la page avant/après glissée (avap), le carrousel, la liste des 100 aventures, le lien « Feuilleter » et la barre collée apparue, avec fois et visites). Une entrée { erreur } ou { code, message } = fonction absente ou refusée.',
+        lecture: 'Export de l\'admin de quiz-couple.com. parties_* : parties terminées (depuis toujours par test, par jour sur la période) ; lancements_* : parties commencées, depuis le 21 août 2026 ; le taux de finition d\'un test = finies / lancées. trafic_* : visites et pages vues par jour, sources des visites, sur la période. distance_par_test : parties à distance arrivées au résultat, par test, depuis le 7 septembre 2026 (fins = téléphones arrivés au résultat, deux par partie ; departs n\'est plus alimenté depuis le 20 octobre 2026). instagram_clics : clics vers Instagram depuis le site. bilan : l\'évaluation de couple payante (visites de sa page, entonnoir, ventes en centimes, sources, domaines). bilan_celibataires : au départ seul(e), les réponses à « Où en êtes-vous ? » (statuts, comptées une fois par visite) et ce que les célibataires voudraient dans une évaluation pour eux (interets, autres, et depuis le 4 novembre 2026 sources et situations : d\'où vient la réponse, l\'évaluation ou la carte d\'un test célibataire), depuis le 25 octobre 2026, sans aucune adresse. bilan_point : « Le point sur ma relation », le seul(e) depuis le 4 novembre 2026 (serie : formulaires ouverts, créés, commencés, écrans de l\'adresse, finis, écrans « prêt », clics sans la case, pages Stripe ouvertes, payés, revenu en centimes ; cles : les réponses du départ (point_motif, point_priorite, point_duree), ce que dit le rapport (point_etat, point_attachement, point_engagement, point_securite), les parties entrées et finies, les erreurs du départ, et les vues et clics de la carte des tests célibataires ; carte_celib : la carte page par page, avec les réponses et les adresses venues d\'elle). livre : la page du livre « 100 aventures à deux », depuis le 14 novembre 2026 (totaux : visites, pages vues, clics vers Amazon et visites qui ont cliqué ; serie : par jour ; emplacements : les clics par bouton, hero, cadeau, fin, barre ; sources : d\'où arrive chaque visite, menu, menu-mobile, pied, page:<chemin> pour une autre page du site, un moteur, un réseau ou direct ; gestes : les parties de la page vues (section), les pages du livre ouvertes en grand (page), les questions ouvertes (faq), la page avant/après glissée (avap), le livre qui se tourne (carrousel : sans détail, feuilleté à la main ; fin, jusqu\'au dos à la main ; auto, la lecture automatique allée jusqu\'au bout ; avant le 14 novembre 2026 au soir, l\'ancien carrousel d\'images), la liste des 100 aventures, le lien « Feuilleter » et la barre collée apparue, avec fois et visites). Une entrée { erreur } ou { code, message } = fonction absente ou refusée.',
         donnees: donnees
       };
       var blob = new Blob([JSON.stringify(fichier, null, 2)], { type: 'application/json' });
@@ -1490,26 +1490,50 @@
   var LIVRE_SECTIONS = [
     ['principe', 'Le principe', 'la page avant et après'],
     ['dix-ans', 'Le livre dans dix ans', ''],
-    ['feuilleter', 'Feuilletez le livre', 'les pages en carrousel'],
+    ['feuilleter', 'Feuilletez le livre', 'le livre qui se tourne tout seul'],
     ['budget', 'Les prix des aventures', 'et la liste des 100'],
     ['cadeau', 'Le cadeau', ''],
     ['questions', 'Les questions', ''],
     ['fin', 'Le dernier appel', 'le bas de la page']
   ];
+  // Le quatrième élément, quand il y est, ne compte que ce détail-là :
+  // « carrousel » est, depuis le 14 novembre 2026 au soir, le livre qui se
+  // tourne (sans détail : feuilleté à la main ; fin : jusqu'au dos à la
+  // main ; auto : la lecture automatique allée jusqu'au bout).
   var LIVRE_GESTES = [
+    ['carrousel', 'Livre feuilleté à la main', 'au doigt, à la souris, par les flèches ou le clavier', ''],
+    ['carrousel', 'Feuilleté jusqu\'au dos', 'la quatrième de couverture atteinte à la main', 'fin'],
+    ['carrousel', 'Lecture automatique vue jusqu\'au bout', 'le livre a tourné tout seul jusqu\'à la dernière page', 'auto'],
     ['avap', 'Page avant / après glissée', 'la ligne déplacée au doigt, à la souris ou au clavier'],
-    ['carrousel', 'Pages feuilletées de côté', 'par les flèches ou en glissant'],
     ['feuilleter', '« Feuilleter le livre » touché', 'le lien du haut de la page'],
     ['liste', 'Liste des 100 aventures ouverte', '']
   ];
+  // Les pages ouvertes en grand (« Voir en grand » sous le livre), par le
+  // nom de leur image ; escape-game vient de l'ancien carrousel.
   var LIVRE_PAGES = {
-    'liste-1': 'Les 100 aventures à cocher',
+    couverture: 'La couverture',
+    'a-nous-remplie': '« Ce livre est à nous », rempli',
+    'comment-ca-marche': 'Comment ça marche',
+    'six-familles': 'Les six familles d\'aventures',
+    'liste-1': 'Les aventures 1 à 50',
+    'liste-2': 'Les aventures 51 à 100',
+    'nous-deux-debut': 'Nous deux, au début du livre',
+    'pique-nique-remplie': 'L\'aventure 01, remplie',
+    raclette: 'L\'aventure 02 (raclette)',
+    bowling: 'L\'aventure 03 (bowling)',
+    'aventure-100': 'L\'aventure 100',
     'escape-game': 'Une page d\'aventure (l\'escape game)',
     'aventure-libre': 'Une aventure à inventer',
-    'voyage': 'Une page de voyage',
+    voyage: 'Le voyage 01',
+    'voyage-2': 'Le voyage 02',
     'tests-quiz-couple': 'Les tests Quiz Couple',
-    'trophees': 'Les trophées',
-    'nous-deux-fin': 'Nous deux, à la fin du livre'
+    'tests-quiz-couple-2': 'Les tests Quiz Couple, la suite',
+    palmares: 'Le palmarès',
+    trophees: 'Les trophées',
+    'nous-deux-fin': 'Nous deux, à la fin du livre',
+    'cent-plus-tard': '« Cent aventures plus tard... »',
+    'photos-en-plus': 'Les photos en plus',
+    dos: 'La quatrième de couverture'
   };
   // Des libellés courts : le tableau tient dans une demi-largeur, et la
   // bulle d'aide du panneau dit ce que chacun recouvre.
@@ -1654,7 +1678,7 @@
       var pages = gestes.filter(function (g) { return g.evenement === 'page'; }).sort(parVisites);
       var questions = gestes.filter(function (g) { return g.evenement === 'faq'; }).sort(parVisites);
       var htmlGestes = '<div class="bil-colonne">' + LIVRE_GESTES.map(function (g) {
-        return ligneEtapeBilan(g[1], g[2], visitesDe(g[0]), visites, visites, 'var(--adm-s-lances)');
+        return ligneEtapeBilan(g[1], g[2], visitesDe(g[0], g[3]), visites, visites, 'var(--adm-s-lances)');
       }).join('') + '</div>';
       if (pages.length) {
         htmlGestes += '<div class="bil-colonne bil-colonne--suite"><p class="bil-colonne-titre">Pages du livre ouvertes en grand</p>' + pages.map(function (g) {

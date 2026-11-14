@@ -225,42 +225,422 @@
     }
   }
 
-  // ── Les pages à feuilleter ──
-  var piste = racine.querySelector('[data-car-piste]');
-  if (piste) {
-    var fleches = Array.prototype.slice.call(racine.querySelectorAll('[data-car]'));
-    var majFleches = function () {
-      var max = piste.scrollWidth - piste.clientWidth;
-      var x = piste.scrollLeft;
-      fleches.forEach(function (b) {
-        b.disabled = +b.getAttribute('data-car') < 0 ? x <= 2 : x >= max - 2;
-      });
+  // ── Le livre à feuilleter (14 novembre 2026, Thomas : « que le livre on
+  // puisse le feuilleter, avec une animation ultra bien faite avec les pages
+  // qui se tournent [...] Avec le livre qui se feuillette tout seul à
+  // intervalle régulier jusqu'à ce que la personne appuie dessus ») ──
+  // page-flip (js/vendor/page-flip.js : StPageFlip, licence MIT, retouché,
+  // voir docs/livre/page-flip.md) dessine les pages qui tournent. Il est
+  // chargé quand la partie approche de l'écran ; d'ici là, et sans lui, on
+  // voit la couverture. Ses gestes à lui sont coupés (useMouseEvents: false) :
+  // on les lui passe d'ici, pour qu'un geste vertical fasse toujours défiler
+  // la page et que la lecture automatique s'arrête au premier appui, au
+  // premier glissé de côté, aux flèches ou au clavier, jamais quand on fait
+  // seulement défiler la page par-dessus le livre.
+  // Une fonction à part : ses variables ne se mêlent pas à celles de la
+  // visionneuse, plus bas (les var d'un bloc appartiennent à toute la fonction).
+  var flip = racine.querySelector('[data-flip]');
+  var livreFlip = flip ? flip.querySelector('[data-flip-livre]') : null;
+  if (flip && livreFlip) (function () {
+    var feuilles = Array.prototype.slice.call(livreFlip.querySelectorAll('.lv-feuille'));
+    var sansBlanc = feuilles.filter(function (f) { return !f.hasAttribute('data-blanc'); });
+    var legende = flip.querySelector('[data-flip-leg]');
+    var btnPrec = flip.querySelector('[data-flip-pas="-1"]');
+    var btnSuiv = flip.querySelector('[data-flip-pas="1"]');
+    var btnAuto = flip.querySelector('[data-flip-auto]');
+    var btnGrand = flip.querySelector('[data-flip-grand]');
+    var texteFlip = racine.querySelector('[data-flip-texte]');
+    // Le livre passe en portrait (une page) sous deux fois MIN_PAGE de large :
+    // la même borne que la requête de conteneur de livreQuizCouple.css.
+    var MIN_PAGE = 290;
+    var DELAI_OUVERTURE = 1300; // la couverture, avant la première page
+    var DELAI_PAGE = 2700;      // le temps de regarder chaque double page
+    var DELAI_FIN = 3000;       // la quatrième de couverture, avant de revenir au début
+    var pf = null;              // le livre de page-flip
+    var jeu = feuilles;         // les pages données au livre (sans les blanches en portrait)
+    var portrait = false;
+    var auto = !reduit;         // la lecture automatique
+    var aLaMain = false;        // la personne a pris la main au moins une fois
+    var minuterie = 0;
+    var visible = false;        // le livre est à l'écran (plus de la moitié)
+    var premiereFois = true;
+    var origine = null;         // 'auto' ou 'main' : qui a tourné la page qui se termine
+    var geste = null;
+    var charge = false;
+    var AVANT = 0;              // FlipDirection.FORWARD de page-flip
+    var pageAffichee = null;    // la page qu'on regarde, gardée quand l'écran change de largeur
+
+    if (reduit && texteFlip && texteFlip.getAttribute('data-fixe')) texteFlip.textContent = texteFlip.getAttribute('data-fixe');
+
+    var index = function () { return pf ? pf.getCurrentPageIndex() : 0; };
+    var dernier = function () { return jeu.length - 1; };
+    // Ce que le livre montre : la double page, ou la page seule (couverture,
+    // dos, portrait).
+    var pagesVues = function () {
+      var i = index();
+      if (portrait || i === 0 || i === dernier()) return [jeu[i]].filter(Boolean);
+      return [jeu[i], jeu[i + 1]].filter(Boolean);
     };
-    // Feuilleté de côté : par les flèches, ou au doigt, à la souris, au
-    // clavier (un défilement qui ne vient pas de la personne, comme celui que
-    // le navigateur rétablit au rechargement, ne compte pas).
-    var pisteTouchee = false;
-    ['pointerdown', 'touchstart', 'wheel', 'keydown'].forEach(function (type) {
-      piste.addEventListener(type, function () { pisteTouchee = true; }, { passive: true });
+    var texteLegende = function () {
+      var vues = pagesVues();
+      if (!vues.length) return '';
+      // Une double page dit ce qu'elle montre ; à côté d'une page blanche, la page seule.
+      if (vues.length === 2) return vues[0].getAttribute('data-double') || vues[1].getAttribute('data-leg') || vues[0].getAttribute('data-leg') || '';
+      return vues[0].getAttribute('data-leg') || '';
+    };
+    // Les images arrivent à mesure : la double page affichée et les deux
+    // suivantes (lazy jusque-là, puis eager), décodées avant d'être tournées.
+    var charger = function (f) {
+      var img = f ? f.querySelector('img') : null;
+      if (!img || img.getAttribute('data-pret')) return;
+      img.setAttribute('data-pret', '1');
+      img.loading = 'eager';
+      if (img.decode) img.decode().catch(function () { /* l'image arrivera quand même */ });
+    };
+    var prechargerAutour = function () {
+      var i = index();
+      for (var k = Math.max(0, i - 2); k <= Math.min(dernier(), i + (portrait ? 3 : 5)); k++) charger(jeu[k]);
+    };
+    var majBoutonAuto = function () {
+      if (!btnAuto) return;
+      btnAuto.setAttribute('data-etat', auto ? 'lecture' : 'pause');
+      var lab = btnAuto.querySelector('span');
+      if (lab) lab.textContent = btnAuto.getAttribute(auto ? 'data-pause' : 'data-lire') || '';
+    };
+    var majEtat = function () {
+      var i = index();
+      flip.classList.toggle('est-ferme', !portrait && i === 0);
+      flip.classList.toggle('est-fin', !portrait && i === dernier() && i > 0);
+      btnPrec.disabled = i <= 0;
+      btnSuiv.disabled = i >= dernier();
+      var t = texteLegende();
+      if (legende.textContent !== t) {
+        legende.textContent = t;
+        if (!reduit && legende.animate) legende.animate([{ opacity: 0, transform: 'translate3d(0, 5px, 0)' }, { opacity: 1, transform: 'none' }], { duration: 320, easing: 'ease-out' });
+      }
+      // « Voir en grand » ouvre la page affichée (la première qui n'est pas blanche).
+      var vue = pagesVues().filter(function (f) { return f.hasAttribute('data-vue-i'); })[0];
+      if (vue && btnGrand) btnGrand.setAttribute('data-vue-i', vue.getAttribute('data-vue-i'));
+      prechargerAutour();
+    };
+
+    // ── La lecture automatique ──
+    var arreterMinuterie = function () { clearTimeout(minuterie); minuterie = 0; };
+    var planifier = function (delai) {
+      arreterMinuterie();
+      if (!auto || !visible || !pf || document.visibilityState === 'hidden') return;
+      minuterie = setTimeout(pasAuto, delai);
+    };
+    var tourner = function (sens) {
+      if (!pf) return;
+      var i = index();
+      if ((sens > 0 && i >= dernier()) || (sens < 0 && i <= 0)) return;
+      if (reduit) {
+        // Sans mouvement : la page change d'un coup.
+        if (sens > 0) pf.turnToNextPage(); else pf.turnToPrevPage();
+        if (auto) planifier(DELAI_PAGE);
+        return;
+      }
+      if (sens > 0) pf.flipNext('bottom'); else pf.flipPrev('bottom');
+    };
+    // À la fin, le livre disparaît en fondu, revient à la couverture et repart.
+    var rembobiner = function () {
+      mesure('carrousel', 'auto');
+      flip.classList.add('est-retour');
+      setTimeout(function () {
+        origine = null;
+        pf.turnToPage(0);
+        majEtat();
+        requestAnimationFrame(function () {
+          requestAnimationFrame(function () {
+            flip.classList.remove('est-retour');
+            planifier(DELAI_OUVERTURE);
+          });
+        });
+      }, 380);
+    };
+    var pasAuto = function () {
+      minuterie = 0;
+      if (!auto || !visible || !pf) return;
+      if (pf.getState() !== 'read' || geste) { planifier(500); return; }
+      if (index() >= dernier()) { rembobiner(); return; }
+      origine = 'auto';
+      tourner(1);
+    };
+    // La personne prend la main : plus de lecture automatique (le bouton la relance).
+    var prendreLaMain = function () {
+      if (auto) { auto = false; arreterMinuterie(); majBoutonAuto(); }
+      if (!aLaMain) { aLaMain = true; legende.setAttribute('aria-live', 'polite'); }
+    };
+
+    // Fermé, le livre est décalé pour que la couverture soit au centre : il
+    // glisse en même temps que la couverture s'ouvre ou se referme.
+    var glisserPendantLeTour = function () {
+      if (portrait) return;
+      var i = index();
+      var avant = pf.getRender().getDirection() === AVANT;
+      if (avant && i === 0) flip.classList.remove('est-ferme');
+      if (!avant && i <= 2) flip.classList.toggle('est-ferme', true);
+      if (avant && i + 2 >= dernier()) flip.classList.add('est-fin');
+      if (!avant && i === dernier()) flip.classList.remove('est-fin');
+    };
+
+    // La page qu'on regarde : la première page non blanche affichée. Elle ne
+    // se note qu'une fois la page tournée : quand l'écran change de largeur,
+    // page-flip réaffiche d'abord la double page qui contient l'index courant
+    // (ce qui ferait reculer d'une page).
+    var noterPage = function () {
+      var v = pagesVues().filter(function (f) { return !f.hasAttribute('data-blanc'); })[0];
+      if (v) pageAffichee = v;
+    };
+    var orientationEnCours = function () { return (pf.getOrientation() === 'portrait') !== portrait; };
+    // En portrait, les deux pages blanches n'ont rien à faire seules : le
+    // livre les saute, et les reprend en paysage.
+    var majJeu = function () {
+      if (!pf) return;
+      var voulu = portrait ? sansBlanc : feuilles;
+      if (voulu === jeu) return;
+      var courante = pageAffichee && jeu.indexOf(pageAffichee) >= 0 ? pageAffichee : jeu[index()];
+      if (courante && courante.hasAttribute('data-blanc')) {
+        var k = jeu.indexOf(courante);
+        courante = jeu[k + 1] && !jeu[k + 1].hasAttribute('data-blanc') ? jeu[k + 1] : jeu[k - 1];
+      }
+      origine = null;
+      jeu = voulu;
+      pf.updateFromHtml(jeu);
+      var n = Math.max(0, jeu.indexOf(courante));
+      pf.turnToPage(n);
+      majEtat();
+    };
+    var orienter = function (o) {
+      portrait = o === 'portrait';
+      flip.classList.toggle('est-portrait', portrait);
+      flip.classList.toggle('est-paysage', !portrait);
+    };
+
+    var echec = function () {
+      flip.classList.add('est-echec');
+      btnPrec.hidden = true;
+      btnSuiv.hidden = true;
+      if (btnAuto) btnAuto.hidden = true;
+    };
+    var lancer = function () {
+      var St = window.St;
+      if (!St || typeof St.PageFlip !== 'function') { echec(); return; }
+      // Le premier jeu de pages selon la largeur, comme page-flip la mesurera.
+      portrait = livreFlip.offsetWidth < MIN_PAGE * 2;
+      jeu = portrait ? sansBlanc : feuilles;
+      try {
+        pf = new St.PageFlip(livreFlip, {
+          width: 500, height: 500, size: 'stretch',
+          minWidth: MIN_PAGE, maxWidth: 600, minHeight: MIN_PAGE, maxHeight: 1200,
+          showCover: true, usePortrait: true, autoSize: true,
+          drawShadow: true, maxShadowOpacity: 0.55, flippingTime: 1150,
+          useMouseEvents: false, showPageCorners: true, startPage: 0
+        });
+        pf.on('changeOrientation', function (ev) {
+          var avant = portrait;
+          orienter(ev.data);
+          if (avant !== portrait) setTimeout(majJeu, 0);
+          majEtat();
+        });
+        pf.on('flip', function () {
+          // L'écran change de largeur : changeOrientation suit, et majJeu replace la page.
+          if (orientationEnCours()) return;
+          majEtat();
+          noterPage();
+          if (origine === 'main') {
+            mesure('carrousel');
+            if (index() >= dernier()) mesure('carrousel', 'fin');
+          }
+        });
+        pf.on('changeState', function (ev) {
+          if (ev.data === 'flipping') glisserPendantLeTour();
+          if (ev.data === 'read') {
+            majEtat();
+            if (auto) planifier(index() >= dernier() ? DELAI_FIN : DELAI_PAGE);
+          }
+        });
+        orienter(portrait ? 'portrait' : 'landscape');
+        pf.loadFromHTML(jeu);
+      } catch (err) {
+        pf = null;
+        echec();
+        return;
+      }
+      flip.classList.add('est-pret');
+      if (btnAuto) { btnAuto.hidden = false; majBoutonAuto(); }
+      majEtat();
+      noterPage();
+      if (visible) planifier(DELAI_OUVERTURE);
+    };
+    var chargerEtLancer = function () {
+      if (charge) return;
+      charge = true;
+      charger(feuilles[0]);
+      var sc = document.createElement('script');
+      sc.src = '/js/vendor/page-flip.js' + (window.__QCV ? '?v=' + window.__QCV : '');
+      sc.async = true;
+      sc.onload = lancer;
+      sc.onerror = echec;
+      document.head.appendChild(sc);
+    };
+
+    // Chargé à l'approche ; la lecture ne tourne que livre à l'écran et onglet affiché.
+    if ('IntersectionObserver' in window) {
+      var proche = new IntersectionObserver(function (entrees) {
+        if (!entrees.some(function (en) { return en.isIntersecting; })) return;
+        proche.disconnect();
+        chargerEtLancer();
+      }, { rootMargin: '900px 0px' });
+      proche.observe(flip);
+      new IntersectionObserver(function (entrees) {
+        entrees.forEach(function (en) { visible = en.isIntersecting; });
+        if (!visible) { arreterMinuterie(); return; }
+        if (pf && auto && !minuterie && pf.getState() === 'read') planifier(premiereFois ? DELAI_OUVERTURE : 900);
+        premiereFois = false;
+      }, { threshold: 0.55 }).observe(livreFlip);
+    } else {
+      visible = true;
+      chargerEtLancer();
+    }
+    document.addEventListener('visibilitychange', function () {
+      if (document.visibilityState === 'hidden') arreterMinuterie();
+      else if (pf && auto && !minuterie && pf.getState() === 'read') planifier(900);
     });
-    var attente = 0;
-    piste.addEventListener('scroll', function () {
-      if (pisteTouchee && piste.scrollLeft > 40) mesure('carrousel');
-      if (!attente) attente = requestAnimationFrame(function () { attente = 0; majFleches(); });
-    }, { passive: true });
-    fleches.forEach(function (b) {
+
+    // ── Les gestes : on les donne à page-flip ──
+    var bloc = function () { return pf.getUI().getDistElement(); };
+    var posDans = function (e, r) {
+      r = r || bloc().getBoundingClientRect();
+      return { x: e.clientX - r.left, y: e.clientY - r.top };
+    };
+    livreFlip.addEventListener('pointerdown', function (e) {
+      if (e.pointerType === 'mouse' && e.button !== 0) return;
+      if (!pf) {
+        // Avant le livre : on le charge tout de suite, et l'appui compte.
+        if (flip.classList.contains('est-echec')) { if (btnGrand) btnGrand.click(); return; }
+        auto = false;
+        chargerEtLancer();
+        return;
+      }
+      var etaitAuto = auto;
+      arreterMinuterie();
+      if (pf.getState() === 'flipping') { if (e.pointerType === 'mouse') prendreLaMain(); return; }
+      geste = { id: e.pointerId, souris: e.pointerType === 'mouse', x0: e.clientX, y0: e.clientY, rect: bloc().getBoundingClientRect(), pris: false, bouge: false, premier: etaitAuto, pts: [{ x: e.clientX, t: e.timeStamp }] };
+      geste.p0 = posDans(e, geste.rect);
+      if (geste.souris) {
+        // La souris attrape la page tout de suite.
+        prendreLaMain();
+        geste.pris = true;
+        pf.startUserTouch(geste.p0);
+        try { livreFlip.setPointerCapture(e.pointerId); } catch (err) { /* rien */ }
+        // preventDefault retient aussi le focus : on le donne, pour les flèches du clavier.
+        e.preventDefault();
+        try { livreFlip.focus({ preventScroll: true }); } catch (err) { /* rien */ }
+      }
+    });
+    livreFlip.addEventListener('pointermove', function (e) {
+      if (!pf) return;
+      if (!geste) {
+        // Survolé à la souris, une fois la main prise : le coin se replie.
+        if (e.pointerType === 'mouse' && e.buttons === 0 && !auto && pf.getState() !== 'flipping') pf.userMove(posDans(e), false);
+        return;
+      }
+      if (e.pointerId !== geste.id) return;
+      geste.pts.push({ x: e.clientX, t: e.timeStamp });
+      if (geste.pts.length > 6) geste.pts.shift();
+      if (!geste.pris) {
+        var dx = Math.abs(e.clientX - geste.x0);
+        var dy = Math.abs(e.clientY - geste.y0);
+        if (dx < 8 && dy < 8) return;
+        // Vers le haut ou le bas, c'est la page qui défile.
+        if (dy > dx) { geste = null; if (auto) planifier(DELAI_PAGE); return; }
+        prendreLaMain();
+        geste.pris = true;
+        pf.startUserTouch(geste.p0);
+        try { livreFlip.setPointerCapture(e.pointerId); } catch (err) { /* rien */ }
+      }
+      if (!geste.bouge) { geste.bouge = true; origine = 'main'; flip.classList.add('est-glisse'); }
+      pf.userMove(posDans(e, geste.rect), true);
+    });
+    var finGeste = function (e, annule) {
+      if (!geste || e.pointerId !== geste.id) return;
+      var g = geste;
+      geste = null;
+      flip.classList.remove('est-glisse');
+      try { livreFlip.releasePointerCapture(g.id); } catch (err) { /* rien */ }
+      var p = posDans(e, g.rect);
+      if (annule) {
+        // Sans glissé, isSwipe à vrai : le geste se termine sans tourner la page.
+        if (g.pris) pf.userStop(p, !g.bouge, false);
+        if (auto) planifier(DELAI_PAGE);
+        return;
+      }
+      if (!g.bouge) {
+        // Un appui sans glisser. Le premier, pendant la lecture automatique,
+        // ne fait que l'arrêter : on regarde la double page affichée.
+        prendreLaMain();
+        if (g.premier) { if (g.pris) pf.userStop(p, true); return; }
+        origine = 'main';
+        if (reduit) {
+          if (g.pris) pf.userStop(p, true);
+          var r = pf.getBoundsRect();
+          var milieu = portrait ? r.left + r.pageWidth * 1.4 : r.left + r.width / 2;
+          tourner(p.x < milieu ? -1 : 1);
+          return;
+        }
+        if (!g.pris) pf.startUserTouch(p);
+        pf.userStop(p);
+        return;
+      }
+      // Un glissé : la page finit de tourner dès que le doigt a parcouru le
+      // tiers d'une page dans le bon sens, ou qu'il part vite dans ce sens ;
+      // elle revient s'il repart vite en arrière. Sinon, page-flip décide
+      // (le coin a-t-il passé la reliure ?).
+      var sens = pf.getRender().getDirection() === AVANT ? -1 : 1;
+      var a = g.pts[0];
+      var b = g.pts[g.pts.length - 1];
+      var vitesse = b.t > a.t ? sens * (b.x - a.x) / (b.t - a.t) : 0;
+      var trajet = sens * (p.x - g.p0.x);
+      var tournerVers;
+      if (vitesse < -0.3) tournerVers = false;
+      else if (vitesse > 0.3 || trajet > pf.getBoundsRect().pageWidth * 0.3) tournerVers = true;
+      pf.userStop(p, false, tournerVers);
+    };
+    livreFlip.addEventListener('pointerup', function (e) { finGeste(e, false); });
+    livreFlip.addEventListener('pointercancel', function (e) { finGeste(e, true); });
+    livreFlip.addEventListener('pointerleave', function (e) {
+      // La souris sort : le coin replié se remet en place.
+      if (pf && !geste && e.pointerType === 'mouse' && !auto) pf.userMove({ x: -9999, y: -9999 }, false);
+    });
+    livreFlip.addEventListener('keydown', function (e) {
+      if (!pf || (e.key !== 'ArrowRight' && e.key !== 'ArrowLeft')) return;
+      e.preventDefault();
+      prendreLaMain();
+      origine = 'main';
+      tourner(e.key === 'ArrowRight' ? 1 : -1);
+    });
+    [btnPrec, btnSuiv].forEach(function (b) {
       b.addEventListener('click', function () {
-        mesure('carrousel');
-        var item = piste.querySelector('.lv-car-item');
-        var ecart = parseFloat(getComputedStyle(piste).columnGap) || 0;
-        var pas = item ? item.getBoundingClientRect().width + ecart : piste.clientWidth * 0.8;
-        var visibles = Math.max(1, Math.floor((piste.clientWidth + ecart + 1) / pas));
-        piste.scrollBy({ left: +b.getAttribute('data-car') * pas * visibles, behavior: reduit ? 'auto' : 'smooth' });
+        if (!pf) return;
+        prendreLaMain();
+        origine = 'main';
+        tourner(+b.getAttribute('data-flip-pas'));
       });
     });
-    majFleches();
-    window.addEventListener('resize', majFleches);
-  }
+    if (btnAuto) {
+      btnAuto.addEventListener('click', function () {
+        auto = !auto;
+        majBoutonAuto();
+        if (auto) planifier(index() >= dernier() ? 600 : 700);
+        else arreterMinuterie();
+      });
+    }
+    // « Voir en grand » ouvre la visionneuse plus bas (data-vue="livre") :
+    // la lecture automatique s'arrête.
+    if (btnGrand) btnGrand.addEventListener('click', prendreLaMain);
+  })();
 
   // ── La visionneuse ──
   var dlg = racine.querySelector('[data-lv-vue]');
@@ -288,7 +668,7 @@
       prec.disabled = rang <= 0;
       suiv.disabled = rang >= g.length - 1;
       // Chaque page du livre ouverte en grand, par son nom d'image.
-      if (groupe === 'pages') mesure('page', (String(p.src).match(/\/([^\/]+?)-\d+\.webp$/) || [])[1] || String(rang + 1));
+      if (groupe === 'livre') mesure('page', (String(p.src).match(/\/([^\/]+?)-\d+\.webp$/) || [])[1] || String(rang + 1));
       [rang - 1, rang + 1].forEach(function (k) { if (g[k]) { var im = new Image(); im.src = g[k].src; } });
     };
     var avancer = function (sens) {
