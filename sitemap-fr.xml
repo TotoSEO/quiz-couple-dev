@@ -1493,6 +1493,14 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://quiz-couple.com/livre-quiz-couple/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/livre-quiz-couple/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/livre-quiz-couple/"/>
+    <lastmod>2026-11-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://quiz-couple.com/blog/homme-nerveux-devant-une-femme/</loc>
     <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/blog/homme-nerveux-devant-une-femme/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://quiz-couple.com/en/blog/signs-a-man-is-nervous-around-you/"/>
