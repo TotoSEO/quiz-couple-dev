@@ -389,7 +389,42 @@
   }
 
   // ── L'affichage ────────────────────────────────────────────────────
+  // Les prenoms gardes d'un test a l'autre : meme cle et meme forme que
+  // prenomsGardes et garderPrenom de quiz-engine-core.js, que cette page ne
+  // charge pas. Ceux du test d'avant reviennent ici, ceux tapes ici servent au
+  // suivant, pendant 24 heures, dans ce navigateur seulement.
+  var PRENOMS = {
+    lire: function () {
+      try {
+        var d = JSON.parse(localStorage.getItem('qc-joueurs') || 'null');
+        if (!d || !Array.isArray(d.j) || !(Date.now() - (+d.t || 0) < 864e5)) return [];
+        return d.j;
+      } catch (e) { return []; }
+    },
+    remplir: function (champs) {
+      var j = PRENOMS.lire();
+      champs.forEach(function (champ, i) {
+        var p = j[i];
+        if (champ && !champ.value && p && typeof p.n === 'string' && p.n) {
+          champ.value = p.n.slice(0, champ.maxLength > 0 ? champ.maxLength : 30);
+        }
+      });
+    },
+    garder: function (noms) {
+      try {
+        var j = PRENOMS.lire();
+        localStorage.setItem('qc-joueurs', JSON.stringify({ t: Date.now(), j: [0, 1].map(function (i) {
+          var p = j[i] || {};
+          var n = String(noms[i] || '').trim().slice(0, 30);
+          var meme = n.toLowerCase() === String(p.n || '').toLowerCase();
+          return { n: n, g: meme && (p.g === 'homme' || p.g === 'femme') ? p.g : null };
+        }) }));
+      } catch (e) {}
+    }
+  };
+
   var elA = document.getElementById('calc-a'), elB = document.getElementById('calc-b');
+  PRENOMS.remplir([elA, elB]);
   var bloc = document.getElementById('calc-resultat'), erreur = document.getElementById('calc-erreur');
   var elPct = document.getElementById('calc-pct'), trait = document.getElementById('calc-anneau-trait');
   var RAYON = 2 * Math.PI * 52;
@@ -399,18 +434,61 @@
   // Sous le résultat, les cartes à image du bas de page (related-tests.ejs)
   // à la place des deux tuiles des calculatrices voisines : quatre pages, dont
   // le vrai test de compatibilité (9 novembre 2026, pages vues par visite).
-  function cartesDeLaSuite() {
+  // Le conseil selon le score (copie de conseilSelonResultat de
+  // quiz-engine-core.js, que cette page ne charge pas) : la carte que
+  // related-tests.ejs prépare dans <template id="qc-conseils"> pour ce score,
+  // sous « Et maintenant ? » et sa phrase, avant les autres cartes.
+  function conseilDuScore(score) {
+    var tpl = document.getElementById('qc-conseils');
+    if (!tpl || !tpl.content) return null;
+    var items = tpl.content.querySelectorAll('[data-raison]');
+    var choix = null;
+    for (var i = 0; i < items.length; i++) {
+      var j = items[i].getAttribute('data-jusqua');
+      if (j === null || score <= +j) { choix = items[i]; break; }
+    }
+    var carte = choix ? choix.querySelector('a.suite-carte') : null;
+    if (!carte) return null;
+    var bloc = document.createElement('div');
+    bloc.className = 'qc-conseil mb-8';
+    var titre = document.createElement('p');
+    titre.className = 'text-lg font-bold text-center mb-2';
+    titre.textContent = tpl.getAttribute('data-titre') || '';
+    var raison = document.createElement('p');
+    raison.className = 'text-muted-foreground text-center mb-4';
+    raison.textContent = choix.getAttribute('data-raison') || '';
+    var grille = document.createElement('div');
+    grille.className = 'suite-grille suite-grille--resultat';
+    var copie = document.importNode(carte, true);
+    var route = choix.getAttribute('data-route') || '';
+    copie.addEventListener('click', function () {
+      try { if (window.gtag) window.gtag('event', 'suite_resultat_clic', { page: route, score: score }); } catch (e) {}
+    });
+    grille.appendChild(copie);
+    bloc.appendChild(titre);
+    bloc.appendChild(raison);
+    bloc.appendChild(grille);
+    return { el: bloc, href: carte.getAttribute('href') };
+  }
+
+  function cartesDeLaSuite(score) {
     var place = document.getElementById('calc-suite-cartes');
     if (!place || place.getAttribute('data-cartes')) return;
     var grille = document.querySelector('.related-tests-section .suite-grille');
     var cartes = grille ? grille.querySelectorAll('a.suite-carte') : [];
     if (cartes.length < 2) return;
+    var conseil = conseilDuScore(score);
+    if (conseil) place.insertBefore(conseil.el, place.firstChild);
     var nouvelle = document.createElement('div');
     nouvelle.className = 'suite-grille suite-grille--resultat';
-    for (var i = 0; i < cartes.length && i < 4; i++) nouvelle.appendChild(cartes[i].cloneNode(true));
+    for (var i = 0, mises = 0; i < cartes.length && mises < 4; i++) {
+      if (conseil && cartes[i].getAttribute('href') === conseil.href) continue;
+      nouvelle.appendChild(cartes[i].cloneNode(true));
+      mises++;
+    }
     var ancienne = place.querySelector('.result-related-grid');
     if (ancienne) place.replaceChild(nouvelle, ancienne); else place.appendChild(nouvelle);
-    var titre = place.querySelector('p');
+    var titre = place.querySelector(':scope > p');
     if (titre && place.getAttribute('data-titre-cartes')) titre.textContent = place.getAttribute('data-titre-cartes');
     place.setAttribute('data-cartes', '1');
   }
@@ -465,7 +543,7 @@
 
     bloc.hidden = false;
     document.getElementById('calc-carte').classList.add('calc-carte--resultat');
-    cartesDeLaSuite();
+    cartesDeLaSuite(r.score);
 
     // L'anneau et le compteur montent ensemble, puis on s'arrete net sur la valeur.
     var debut = null, duree = 900;
@@ -513,6 +591,7 @@
       return;
     }
     erreur.hidden = true;
+    PRENOMS.garder([n1, n2]);
     affiche(n1, n2, r);
     try {
       if (window.gtag) window.gtag('event', 'calculatrice_amour', { value: r.score });

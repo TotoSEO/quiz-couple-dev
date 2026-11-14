@@ -299,5 +299,15 @@
     "code": "Code {{code}} wird beim Bezahlen automatisch abgezogen",
     "bandeau": "Gerade jetzt {{remise}} auf die Analyse eurer Beziehung!",
     "bandeauRemise": "-{{pourcent}} %"
+  },
+  "suiteResultat": {
+    "titre": "Und jetzt?",
+    "testToxic": "Euer Ergebnis ist eher niedrig. Dieser Test zeigt euch, ob es nur eine schwierige Phase ist oder ob eure Beziehung toxische Seiten hat.",
+    "testLangageAmour": "Vielleicht liebt ihr euch nicht auf die gleiche Art. Dieser Test zeigt, wie sich jeder von euch geliebt fühlt.",
+    "quizCoquin": "Eure Beziehung läuft gut! Zeit für ein etwas pikanteres Quiz, um den Abend aufzupeppen.",
+    "quizKnowledge": "Ihr habt ziemlich viel gemeinsam. Jetzt schauen wir, wer von euch den anderen besser kennt!",
+    "testMariage": "Bei so einem Ergebnis liegt die nächste Frage auf der Hand: Seid ihr bereit zu heiraten?",
+    "testCompatibilite": "Ihr habt viel gemeinsam. Dieser Test prüft, ob eure Werte und Pläne in die gleiche Richtung gehen.",
+    "testCouple": "Namen sind nur zum Spaß. Für ein echtes Ergebnis macht den Partnertest mit euren eigenen Antworten."
   }
 }

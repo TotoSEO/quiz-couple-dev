@@ -300,5 +300,15 @@
     "code": "Code {{code}} appliqué automatiquement au paiement",
     "bandeau": "En ce moment {{remise}} sur l'évaluation de votre couple !",
     "bandeauRemise": "-{{pourcent}} %"
+  },
+  "suiteResultat": {
+    "titre": "Et maintenant ?",
+    "testToxic": "Votre score est plutôt bas. Ce test vous aide à voir si c'est juste une mauvaise passe, ou si votre relation a des côtés toxiques.",
+    "testLangageAmour": "Vous ne vous aimez peut-être pas de la même façon. Ce test vous montre comment chacun se sent aimé.",
+    "quizCoquin": "Votre couple tient la route ! Place à un quiz un peu plus coquin, pour pimenter la soirée.",
+    "quizKnowledge": "Vous vous ressemblez sur pas mal de choses. Voyons maintenant qui de vous deux connaît le mieux l'autre !",
+    "testMariage": "Avec un score pareil, la question suivante est toute trouvée : êtes-vous prêts à vous marier ?",
+    "testCompatibilite": "Vous avez beaucoup en commun. Ce test regarde si vos valeurs et vos projets vont dans le même sens.",
+    "testCouple": "Les prénoms, c'est pour rire. Pour un vrai résultat, faites le test de couple avec vos propres réponses."
   }
 }

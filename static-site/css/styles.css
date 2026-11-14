@@ -9675,6 +9675,12 @@ body { padding-bottom: var(--pub-footer, 0px); }
 .jnj-palier-texte { color: hsl(var(--muted-foreground)); max-width: 26rem; margin: 0 auto 1.5rem; }
 .jnj-palier-choix { display: flex; flex-direction: column; align-items: center; gap: 0.75rem; }
 
+/* La pause toutes les dix cartes des jeux sans fin (ecranPause,
+   quiz-engine-core.js) : le palier des jeux à paliers, avec deux cartes
+   « À faire ensuite » de la page entre le texte et le bouton pour continuer. */
+.qc-pause-cartes { max-width: 30rem; margin: 0 auto 1.5rem; }
+.qc-pause-continuer { min-width: 14rem; }
+
 /* Deux camemberts côte à côte, un par joueur. Tout ce qui peut s'allonger
    (prénom, libellés) vit hors du disque et se tronque proprement : rien ne
    passe à la ligne dans le dessin. */

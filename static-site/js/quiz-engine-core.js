@@ -363,6 +363,52 @@ var QuizEngine = (function() {
     return wrap;
   }
 
+  // Les prenoms gardes d'un test a l'autre (14 novembre 2026, pour les pages
+  // vues par visite) : les deux prenoms et les genres tapes sur un ecran de
+  // depart reviennent tout seuls sur le suivant, pendant 24 heures, dans le
+  // navigateur du visiteur seulement (rien ne part au serveur). Le rang 0 est
+  // celui qui tient le telephone (« Votre prenom », joueur 1), le rang 1 son
+  // ou sa partenaire. 24 heures et pas un mois : sur une tablette de famille,
+  // un prenom tape la veille ne doit pas attendre le suivant. Le tu preferes
+  // passe par QuizEngine.prenomsGardes ; la calculatrice et les prenoms et
+  // signes, qui ne chargent pas le moteur, recopient ces quelques lignes dans
+  // leur gabarit (meme cle, meme forme : { t, j: [{ n, g }, { n, g }] }).
+  var CLE_PRENOMS = 'qc-joueurs';
+  var DUREE_PRENOMS = 24 * 3600 * 1000;
+  function prenomsGardes() {
+    try {
+      var d = JSON.parse(localStorage.getItem(CLE_PRENOMS) || 'null');
+      if (!d || !Array.isArray(d.j) || !(Date.now() - (+d.t || 0) < DUREE_PRENOMS)) return [{}, {}];
+      return [0, 1].map(function (i) {
+        var p = d.j[i] || {};
+        return {
+          nom: typeof p.n === 'string' ? p.n.slice(0, 30) : '',
+          genre: p.g === 'homme' || p.g === 'femme' ? p.g : null
+        };
+      });
+    } catch (e) { return [{}, {}]; }
+  }
+  function garderPrenom(rang, champs) {
+    if (rang !== 0 && rang !== 1) return;
+    try {
+      var j = prenomsGardes();
+      var p = j[rang] || {};
+      if ('nom' in champs) {
+        var nom = String(champs.nom || '').trim().slice(0, 30);
+        // Un autre prenom tape la ou aucun genre ne se choisit : le genre
+        // garde etait celui de l'ancien prenom.
+        if (!('genre' in champs) && nom.toLowerCase() !== String(p.nom || '').toLowerCase()) p.genre = null;
+        p.nom = nom;
+      }
+      if ('genre' in champs) p.genre = champs.genre === 'homme' || champs.genre === 'femme' ? champs.genre : null;
+      j[rang] = p;
+      localStorage.setItem(CLE_PRENOMS, JSON.stringify({
+        t: Date.now(),
+        j: j.map(function (x) { return { n: x.nom || '', g: x.genre || null }; })
+      }));
+    } catch (e) {}
+  }
+
   // Une carte de prenom, la meme pour tous les ecrans de depart a deux. En
   // tete, la pastille du numero (rose pour le premier joueur, violet pour le
   // second, comme les deux personnages) et le libelle ; dessous, le champ,
@@ -376,10 +422,18 @@ var QuizEngine = (function() {
   //   o.maxLength   : 20 par defaut ; o.valeur : texte de depart
   //   o.genre       : les deux boutons de genre, aucun choisi d'avance
   //   o.genreChoisi : 'homme' ou 'femme' deja retenu
-  //   o.surGenre    : recoit 'homme' ou 'femme' au clic
+  //   o.surGenre    : recoit 'homme' ou 'femme' au clic, et le genre garde
+  //                   quand la carte le reprend des prenoms gardes
   //   o.classe      : une classe de plus sur la carte
+  //   o.memoire     : 0 ou 1, la place dans les prenoms gardes (le rang par
+  //                   defaut) ; null : la carte ne lit ni n'ecrit rien
   function cartePrenom(o) {
     var numero = o.rang === 0 || o.rang === 1;
+    var memoire = o.memoire !== undefined ? o.memoire : (numero ? o.rang : null);
+    if (memoire !== 0 && memoire !== 1) memoire = null;
+    // Une valeur donnee par le moteur (un retour en arriere, la carte « moi »
+    // deja remplie) l'emporte sur les prenoms gardes.
+    var garde = memoire !== null && !o.valeur ? prenomsGardes()[memoire] : null;
     var carte = el('div', 'quiz-player-card' +
       (numero ? ' quiz-player-card--j' + (o.rang + 1) : '') +
       (o.genre ? ' quiz-player-card--genre' : '') +
@@ -404,6 +458,15 @@ var QuizEngine = (function() {
     champ.autocomplete = o.autocomplete || 'off';
     champ.placeholder = o.placeholder || tg('playerSetup.firstName', 'Prénom');
     if (o.valeur) champ.value = o.valeur;
+    else if (garde && garde.nom) champ.value = garde.nom.slice(0, champ.maxLength);
+    // Le genre affiche sur la carte part avec le prenom (sans boutons de
+    // genre, le prenom part seul).
+    var genreActuel = null;
+    if (memoire !== null) {
+      champ.addEventListener('input', function () {
+        garderPrenom(memoire, o.genre ? { nom: champ.value, genre: genreActuel } : { nom: champ.value });
+      });
+    }
     ligne.appendChild(champ);
 
     if (o.genre) {
@@ -412,6 +475,7 @@ var QuizEngine = (function() {
       groupe.setAttribute('aria-label', tg('playerSetup.gender', 'Genre'));
       var boutons = {};
       var choisir = function (genre) {
+        genreActuel = genre || null;
         ['homme', 'femme'].forEach(function (k) {
           var oui = k === genre;
           boutons[k].className = 'gender-btn' + (oui ? ' gender-btn-selected gender-btn-' + (k === 'homme' ? 'male' : 'female') : '');
@@ -427,11 +491,16 @@ var QuizEngine = (function() {
         b.addEventListener('click', function () {
           choisir(g[0]);
           if (o.surGenre) o.surGenre(g[0]);
+          if (memoire !== null) garderPrenom(memoire, { genre: g[0] });
         });
         boutons[g[0]] = b;
         groupe.appendChild(b);
       });
-      choisir(o.genreChoisi || null);
+      // Le genre garde ne revient qu'avec son prenom : seul, il ne dirait pas
+      // a qui il appartient.
+      var genreGarde = !o.genreChoisi && garde && garde.nom ? garde.genre : null;
+      choisir(o.genreChoisi || genreGarde || null);
+      if (genreGarde && o.surGenre) o.surGenre(genreGarde);
       ligne.appendChild(groupe);
     }
     carte.appendChild(ligne);
@@ -492,7 +561,7 @@ var QuizEngine = (function() {
   function carteMoi(needsGender, valeurs) {
     var genre = (valeurs && valeurs.genre) || null;
     var c = cartePrenom({
-      rang: null, id: 'salon-prenom', classe: 'salon-moi',
+      rang: null, memoire: 0, id: 'salon-prenom', classe: 'salon-moi',
       libelle: tg('salon.votrePrenom', 'Votre prénom'),
       autocomplete: 'given-name',
       valeur: valeurs && valeurs.nom,
@@ -2597,7 +2666,38 @@ var QuizEngine = (function() {
     return '/';
   }
 
-  function renderRelatedQuizzes(wrap, currentQuizKey, lang) {
+  // La suite selon le resultat (14 novembre 2026, pages vues par visite) :
+  // related-tests.ejs (_SELON_RESULTAT) prepare dans <template
+  // id="qc-conseils"> une carte par tranche de score, avec sa phrase ; le
+  // resultat montre celle de son score en premier, sous « Et maintenant ? ».
+  // Rend null sans template ou sans score. La calculatrice, qui ne charge pas
+  // le moteur, en a une copie dans son gabarit.
+  function conseilSelonResultat(score) {
+    var tpl = document.getElementById('qc-conseils');
+    if (!tpl || !tpl.content || typeof score !== 'number' || isNaN(score)) return null;
+    var items = tpl.content.querySelectorAll('[data-raison]');
+    var choix = null;
+    for (var i = 0; i < items.length; i++) {
+      var j = items[i].getAttribute('data-jusqua');
+      if (j === null || score <= +j) { choix = items[i]; break; }
+    }
+    var carte = choix ? choix.querySelector('a.suite-carte') : null;
+    if (!carte) return null;
+    var bloc = el('div', 'result-related-section result-related-section--cartes qc-conseil');
+    bloc.appendChild(el('p', 'text-lg font-bold text-center mb-2', esc(tpl.getAttribute('data-titre') || '')));
+    bloc.appendChild(el('p', 'text-muted-foreground text-center mb-4', esc(choix.getAttribute('data-raison') || '')));
+    var grille = el('div', 'suite-grille suite-grille--resultat');
+    var copie = document.importNode(carte, true);
+    var route = choix.getAttribute('data-route') || '';
+    copie.addEventListener('click', function () {
+      try { if (window.gtag) window.gtag('event', 'suite_resultat_clic', { page: route, score: score }); } catch (e) {}
+    });
+    grille.appendChild(copie);
+    bloc.appendChild(grille);
+    return { el: bloc, href: carte.getAttribute('href') };
+  }
+
+  function renderRelatedQuizzes(wrap, currentQuizKey, lang, score) {
     // Les cartes « À faire ensuite » du bas de la page (related-tests.ejs,
     // masquées pendant le résultat) ont l'image, la famille, le nom et le
     // verbe de chaque page, dans la langue : on les reprend ici plutôt que les
@@ -2606,11 +2706,18 @@ var QuizEngine = (function() {
     // qui ne servent plus que de repli, pour une page sans ces cartes.
     var grille = document.querySelector('.related-tests-section .suite-grille');
     var cartes = grille ? grille.querySelectorAll('a.suite-carte') : [];
+    var conseil = conseilSelonResultat(score);
+    if (conseil) wrap.appendChild(conseil.el);
     if (cartes.length >= 2) {
       var bloc = el('div', 'result-related-section result-related-section--cartes');
       bloc.appendChild(el('p', 'text-lg font-bold text-center mb-6', tg('result.relatedTitle', 'Poursuivez avec d\'autres tests / quiz !')));
       var copie = el('div', 'suite-grille suite-grille--resultat');
-      for (var ci = 0; ci < cartes.length && ci < 4; ci++) copie.appendChild(cartes[ci].cloneNode(true));
+      for (var ci = 0, mises = 0; ci < cartes.length && mises < 4; ci++) {
+        // La carte du conseil n'est pas montree deux fois.
+        if (conseil && cartes[ci].getAttribute('href') === conseil.href) continue;
+        copie.appendChild(cartes[ci].cloneNode(true));
+        mises++;
+      }
       bloc.appendChild(copie);
       wrap.appendChild(bloc);
       return;
@@ -2679,6 +2786,60 @@ var QuizEngine = (function() {
     }
     section.appendChild(grid);
     wrap.appendChild(section);
+  }
+
+  // La pause toutes les dix cartes des jeux sans fin (14 novembre 2026, pour
+  // les pages vues par visite : sur l'action ou verite, le oui ou non, les
+  // dilemmes, le pour ou contre et la roue, trois visites sur quatre
+  // n'allaient sur aucune autre page, puisque le jeu ne finit jamais et
+  // qu'aucun ecran de resultat ne montre les cartes « À faire ensuite »).
+  // Entre la dixieme carte et la onzieme (puis la vingtieme et la vingt et
+  // unieme...), un ecran : « Déjà 10 dilemmes ! », les deux premieres cartes
+  // « À faire ensuite » de la page (related-tests.ejs, rangees par
+  // _relatedMap, donc les plus proches du jeu) et « Continuer à jouer », qui
+  // reprend exactement la ou on en etait. Une page sans ces cartes n'a pas
+  // de pause. n est le numero de la carte qu'on vient de finir, celui que le
+  // jeu affiche ; une pause n'est jamais montree deux fois pour le meme n.
+  var PAUSE_TOUTES = 10;
+  function cartesDePause() {
+    var grille = document.querySelector('.related-tests-section .suite-grille');
+    var cartes = grille ? grille.querySelectorAll('a.suite-carte') : [];
+    return Array.prototype.slice.call(cartes, 0, 2);
+  }
+  function pauseDue(moteur, n) {
+    if (!(n > 0) || n % PAUSE_TOUTES !== 0 || moteur.__pauseVue === n) return false;
+    return cartesDePause().length >= 2;
+  }
+  //   quoi : ce qu'on compte, cle de pause.quoi_<quoi> (cartes, situations,
+  //   dilemmes, propositions, gages)
+  //   continuer : reprend le jeu a la carte suivante
+  function ecranPause(moteur, n, quoi, continuer) {
+    moteur.__pauseVue = n;
+    var wrap = el('div', 'quiz-engine jnj-palier qc-pause animate-fade-in text-center');
+    wrap.appendChild(badgeDepart(null, '🔥', 'mb-3', ['salut', 'mignon']));
+    wrap.appendChild(el('h2', 'jnj-palier-titre', esc(tg('pause.titre', 'Déjà {{n}} {{quoi}} !')
+      .replace('{{n}}', n).replace('{{quoi}}', tg('pause.quoi_' + quoi, quoi)))));
+    wrap.appendChild(el('p', 'jnj-palier-texte', esc(tg('pause.texte', 'Envie de changer un peu ? Essayez l\'un de ces deux‑là. Sinon, on continue !'))));
+    var grille = el('div', 'suite-grille suite-grille--resultat qc-pause-cartes');
+    cartesDePause().forEach(function (c) { grille.appendChild(c.cloneNode(true)); });
+    grille.addEventListener('click', function (e) {
+      var lien = e.target && e.target.closest ? e.target.closest('a.suite-carte') : null;
+      if (!lien) return;
+      try { if (window.gtag) window.gtag('event', 'pause_jeu_clic', { cartes: n, page: lien.getAttribute('href') || '' }); } catch (err) {}
+    });
+    wrap.appendChild(grille);
+    var bouton = el('button', 'btn btn-cta btn-lg qc-pause-continuer', esc(tg('pause.continuer', 'Continuer à jouer')));
+    bouton.type = 'button';
+    bouton.addEventListener('click', function () {
+      try { if (window.gtag) window.gtag('event', 'pause_jeu_continuer', { cartes: n }); } catch (err) {}
+      continuer();
+      smoothScroll(moteur.container, 'start');
+    });
+    wrap.appendChild(bouton);
+    moteur.container.innerHTML = '';
+    moteur.container.appendChild(wrap);
+    smoothScroll(wrap, 'center');
+    try { if (window.gtag) window.gtag('event', 'pause_jeu', { cartes: n }); } catch (err) {}
   }
 
   // Finisseur d'ecran de resultat, commun a tous les types (sauf SoloTest qui
@@ -3181,7 +3342,11 @@ var QuizEngine = (function() {
     var avis = zoneAvis(currentLang);
 
     var suite = el('div', 'qr-right quiz-reveal-enter');
-    renderRelatedQuizzes(suite, currentKey, currentLang);
+    // Le score du resultat choisit la carte du conseil (conseilSelonResultat).
+    var score = typeof opts.score === 'number' ? opts.score
+      : (opts.bilan && typeof opts.bilan.pct === 'number') ? opts.bilan.pct
+      : (opts.share && typeof opts.share.pct === 'number') ? opts.share.pct : null;
+    renderRelatedQuizzes(suite, currentKey, currentLang, score);
 
     dispositionResultat(wrap, {
       resultat: resultat, actions: zoneActions(opts), avis: avis, suite: suite, bilan: opts.bilan || null
@@ -9154,8 +9319,14 @@ var QuizEngine = (function() {
   };
 
   PartyGame.prototype.tourSuivant = function() {
+    var self = this;
     this.tour++;
     this.phase = 'choix';
+    // Toutes les dix cartes, la pause (ecranPause, dans le socle).
+    if (pauseDue(this, this.tour)) {
+      ecranPause(this, this.tour, 'cartes', function() { self.render(); });
+      return;
+    }
     this.render();
   };
 
@@ -9348,6 +9519,16 @@ var QuizEngine = (function() {
   WheelGame.prototype.lancer = function(plateau, bouton, zone) {
     if (this.enCours) return;
     var self = this;
+    // Tous les dix gages, la pause (ecranPause, dans le socle), au moment de
+    // relancer ; « Continuer à jouer » remet la roue et la lance.
+    if (pauseDue(this, this.tours)) {
+      ecranPause(this, this.tours, 'gages', function() {
+        self.render();
+        var c = self.container;
+        self.lancer(c.querySelector('.roue-plateau'), c.querySelector('.roue-bouton'), c.querySelector('.roue-resultat'));
+      });
+      return;
+    }
     var n = this.secteurs.length, pas = 360 / n;
 
     // on evite de retomber deux fois de suite sur le meme secteur
@@ -10990,6 +11171,12 @@ var QuizEngine = (function() {
 
   DilemmeGame.prototype.suivant = function () {
     if (this.idx + 1 >= this.dilemmes.length) { this.phase = 'fin'; this.render(); return; }
+    // Tous les dix dilemmes, la pause (ecranPause, dans le socle).
+    var self = this;
+    if (pauseDue(this, this.idx + 1)) {
+      ecranPause(this, this.idx + 1, 'dilemmes', function () { self.suivant(); });
+      return;
+    }
     this.idx++;
     this.choix = null;
     this.phase = 'vote';
@@ -11293,6 +11480,12 @@ var QuizEngine = (function() {
 
   PourContreGame.prototype.suivant = function () {
     if (this.idx + 1 >= this.questions.length) { this.phase = 'fin'; this.render(); return; }
+    // Toutes les dix propositions, la pause (ecranPause, dans le socle).
+    var self = this;
+    if (pauseDue(this, this.idx + 1)) {
+      ecranPause(this, this.idx + 1, 'propositions', function () { self.suivant(); });
+      return;
+    }
     this.idx++;
     this.choix = null;
     this.phase = 'vote';
@@ -13235,6 +13428,13 @@ var QuizEngine = (function() {
 
   OuiNonGame.prototype.suivant = function () {
     if (this.idx + 1 >= this.questions.length) { this.phase = 'fin'; this.render(); return; }
+    // Toutes les dix situations, la pause (ecranPause, dans le socle) ; elle
+    // remplace l'ecran de jeu, que la reprise reconstruit.
+    var self = this;
+    if (pauseDue(this, this.idx + 1)) {
+      ecranPause(this, this.idx + 1, 'situations', function () { self.idx++; self.render(); });
+      return;
+    }
     this.idx++;
     this.majSituation(true);
   };
@@ -15804,6 +16004,10 @@ var QuizEngine = (function() {
     // Exposé pour les moteurs écrits dans un gabarit de page, qui doivent
     // dire à qui c'est le tour exactement comme les autres.
     bandeauTour: bandeauTour,
+    // Les prenoms gardes d'un test a l'autre, pour les ecrans de depart
+    // ecrits dans un gabarit (le tu preferes).
+    prenomsGardes: prenomsGardes,
+    garderPrenom: garderPrenom,
     SUPABASE_URL: SUPABASE_URL,
     SUPABASE_KEY: SUPABASE_KEY,
   };

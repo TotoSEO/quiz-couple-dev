@@ -299,5 +299,15 @@
     "code": "Code {{code}} applied automatically at checkout",
     "bandeau": "Right now: {{remise}} your relationship assessment!",
     "bandeauRemise": "{{pourcent}}% off"
+  },
+  "suiteResultat": {
+    "titre": "What's next?",
+    "testToxic": "Your score is on the low side. This test helps you see whether it's just a rough patch, or whether your relationship has some toxic sides.",
+    "testLangageAmour": "Maybe you don't love each other in the same way. This test shows how each of you feels loved.",
+    "quizCoquin": "Your relationship is solid! Time for a slightly spicier quiz to liven up the evening.",
+    "quizKnowledge": "You have quite a lot in common. Now let's see which of you knows the other one best!",
+    "testMariage": "With a score like that, the next question is obvious: are you ready to get married?",
+    "testCompatibilite": "You have a lot in common. This test checks whether your values and plans point the same way.",
+    "testCouple": "Names are just for fun. For a real result, take the compatibility test with your own answers."
   }
 }

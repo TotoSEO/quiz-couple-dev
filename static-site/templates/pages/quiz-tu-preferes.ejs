@@ -396,6 +396,18 @@
       choisi = parseInt(chip.getAttribute('data-taille'), 10) || court;
     });
 
+    // Les prenoms gardes d'un test a l'autre (quiz-engine-core.js) : ceux du
+    // test d'avant reviennent ici, et ceux tapes ici servent au suivant.
+    if (QuizEngine.prenomsGardes) {
+      var gardes = QuizEngine.prenomsGardes();
+      [0, 1].forEach(function(i) {
+        var champ = document.getElementById('wyr-p' + (i + 1));
+        if (!champ) return;
+        if (!champ.value && gardes[i] && gardes[i].nom) champ.value = gardes[i].nom.slice(0, 20);
+        champ.addEventListener('input', function() { QuizEngine.garderPrenom(i, { nom: champ.value }); });
+      });
+    }
+
     document.getElementById('wyr-start').addEventListener('click', function() {
       self.p1Name = (document.getElementById('wyr-p1').value || '').trim() || UI.name1;
       self.p2Name = (document.getElementById('wyr-p2').value || '').trim() || UI.name2;

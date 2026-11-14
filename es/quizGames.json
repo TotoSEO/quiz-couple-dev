@@ -829,5 +829,15 @@
     "introQuestion": "Antes de empezar:",
     "introQuote": "Responde sobre lo que esa persona hace, no sobre lo que promete.",
     "disclaimer": "El test habla de «esa persona», sea un hombre o una mujer: el love bombing se da en los dos sentidos. No le pone una etiqueta a nadie, mira comportamientos y da más peso a los que más importan: un no que no se escucha, alejarte de tu gente, el miedo. Tus respuestas no se guardan."
+  },
+  "pause": {
+    "titre": "¡Ya van {{n}} {{quoi}}!",
+    "texte": "¿Os apetece cambiar un poco? Probad uno de estos dos. Si no, ¡seguimos!",
+    "continuer": "Seguir jugando",
+    "quoi_cartes": "cartas",
+    "quoi_situations": "situaciones",
+    "quoi_dilemmes": "dilemas",
+    "quoi_propositions": "propuestas",
+    "quoi_gages": "prendas"
   }
 }

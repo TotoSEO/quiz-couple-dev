@@ -830,5 +830,15 @@
     "introQuestion": "Avant de commencer :",
     "introQuote": "Répondez sur ce que cette personne fait, pas sur ce qu'elle promet.",
     "disclaimer": "Le test parle de « cette personne », qu'il s'agisse d'un homme ou d'une femme : le love bombing se fait dans les deux sens. Il ne colle d'étiquette sur personne, il regarde des comportements, et il donne plus de poids à ceux qui pèsent le plus : un non qui n'est pas entendu, l'éloignement de vos proches, la peur. Vos réponses ne sont pas enregistrées."
+  },
+  "pause": {
+    "titre": "Déjà {{n}} {{quoi}} !",
+    "texte": "Envie de changer un peu ? Essayez l'un de ces deux‑là. Sinon, on continue !",
+    "continuer": "Continuer à jouer",
+    "quoi_cartes": "cartes",
+    "quoi_situations": "situations",
+    "quoi_dilemmes": "dilemmes",
+    "quoi_propositions": "propositions",
+    "quoi_gages": "gages"
   }
 }
