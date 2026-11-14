@@ -299,5 +299,15 @@
     "code": "Código {{code}} aplicado automáticamente al pagar",
     "bandeau": "¡Ahora mismo, {{remise}} en la evaluación de vuestra pareja!",
     "bandeauRemise": "-{{pourcent}} %"
+  },
+  "suiteResultat": {
+    "titre": "¿Y ahora qué?",
+    "testToxic": "Vuestra puntuación es más bien baja. Este test os ayuda a ver si es solo una mala racha o si vuestra relación tiene algo de tóxica.",
+    "testLangageAmour": "Quizá no os queréis de la misma manera. Este test os muestra cómo se siente querido cada uno.",
+    "quizCoquin": "¡Vuestra pareja va bien! Toca un quiz un poco más picante para animar la noche.",
+    "quizKnowledge": "Os parecéis en bastantes cosas. Ahora, ¡a ver quién de los dos conoce mejor al otro!",
+    "testMariage": "Con una puntuación así, la siguiente pregunta está clara: ¿estáis listos para casaros?",
+    "testCompatibilite": "Tenéis mucho en común. Este test mira si vuestros valores y vuestros planes van en la misma dirección.",
+    "testCouple": "Los nombres son para reírse. Para un resultado de verdad, haced el test de pareja con vuestras propias respuestas."
   }
 }

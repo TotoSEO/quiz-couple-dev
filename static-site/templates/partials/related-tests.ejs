@@ -273,6 +273,64 @@
 
   const _relatedArticles = (typeof relatedArticles !== 'undefined' && Array.isArray(relatedArticles)) ? relatedArticles : [];
   const _seuilLu = typeof seuilLectures === 'number' ? seuilLectures : 10;
+
+  // Une carte de page, la même dans la grille et dans les conseils ci-dessous.
+  const _e = function (s) {
+    return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&#34;', "'": '&#39;' }[c];
+    });
+  };
+  const _carteHtml = function (rk, fam) {
+    const rUrl = getLocalizedUrl(rk, lang);
+    if (!rUrl) return '';
+    const rTitle = t('common:nav.' + rk, t('quizzes:' + rk + '.shortTitle', t('quizzes:' + rk + '.title', rk)));
+    const rDesc = t('home:quizGrid.cards.' + rk, t('quizzes:' + rk + '.description', ''));
+    const rIcon = _relatedIcons[rk] || '💞';
+    const _f = quizFeatured && quizFeatured[rk];
+    const rImg = _f ? '/quiz/featured/' + _f.file + '.webp' : null;
+    const rSrcset = rImg ? srcsetImage(rImg) : null;
+    const rCta = fam === 'outil' ? _tx.essayer
+      : fam === 'jeux' ? t('common:buttons.startGame', 'Jouer')
+      : fam === 'quiz' ? t('common:buttons.startQuiz', 'Faire le quiz')
+      : t('common:buttons.startTest', 'Faire le test');
+    // Un retour à la ligne entre les éléments, comme dans l'ancien gabarit :
+    // sans lui, le texte du lien (lecteurs d'écran, moteurs) collait la
+    // famille au nom (« Jeu de couplePour ou contre »).
+    return ['<a href="' + _e(rUrl) + '" class="suite-carte suite-carte--' + (fam === 'outil' ? 'tests' : fam) + '">',
+      '<span class="suite-media">',
+      rImg ? '<img src="' + _e(rImg) + '"' + (rSrcset ? ' srcset="' + _e(rSrcset) + '" sizes="' + _e(_taillesTest) + '"' : '') +
+        ' alt="" loading="lazy" decoding="async" width="1200" height="630">' : '',
+      '<span class="suite-emoji" aria-hidden="true">' + _e(rIcon) + '</span>',
+      '</span>',
+      '<span class="suite-corps">',
+      '<span class="suite-famille">' + _e(_tx.famille[fam] || _tx.famille.tests) + '</span>',
+      '<h3 class="suite-nom">' + _e(rTitle) + '</h3>',
+      rDesc ? '<span class="suite-desc">' + _e(rDesc) + '</span>' : '',
+      '<span class="suite-cta">' + _e(rCta) + '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></span>',
+      '</span>',
+      '</a>'].filter(Boolean).join('\n');
+  };
+
+  // La suite selon le résultat (14 novembre 2026, pages vues par visite) :
+  // sur les pages les plus jouées, le score du résultat choisit une page, que
+  // l'écran de résultat montre en premier avec une phrase qui dit pourquoi
+  // (« Et maintenant ? », renderRelatedQuizzes de quiz-engine-core.js et
+  // cartesDeLaSuite de la calculatrice). jusqua : le plus haut score (en %)
+  // de la tranche, la dernière n'a pas de borne. La phrase est celle de la
+  // page visée (suiteResultat.<route> de common.json), écrite pour les
+  // tranches où elle est proposée. La page se prépare ici, une fois, dans un
+  // <template> que le navigateur n'affiche pas.
+  const _SELON_RESULTAT = {
+    testCouple:        [{ jusqua: 49, route: 'testToxic' }, { jusqua: 74, route: 'testLangageAmour' }, { route: 'quizCoquin' }],
+    testCompatibilite: [{ jusqua: 49, route: 'testLangageAmour' }, { jusqua: 74, route: 'quizKnowledge' }, { route: 'testMariage' }],
+    testCommonPoints:  [{ jusqua: 49, route: 'testLangageAmour' }, { jusqua: 74, route: 'quizKnowledge' }, { route: 'testCompatibilite' }],
+    calculatriceAmour: [{ route: 'testCouple' }],
+  };
+  const _conseils = (typeof suiteRoutes === 'undefined' || !Array.isArray(suiteRoutes)) && _SELON_RESULTAT[routeKey]
+    ? _SELON_RESULTAT[routeKey].filter(function (c) {
+        return c.route !== routeKey && getLocalizedUrl(c.route, lang) && t('common:suiteResultat.' + c.route, '');
+      })
+    : [];
 %>
 <% if (_relatedKeys.length > 0 || _bilan) { %>
 <section class="related-tests-section suite-section" aria-labelledby="suite-titre">
@@ -286,37 +344,17 @@
     <% if (_bilan) { %><%- include('bilan-banniere') %><% } %>
     <% if (_relatedKeys.length > 0) { %>
     <div class="suite-grille">
-      <% _relatedKeys.forEach(function (rk, i) {
-        const rUrl = getLocalizedUrl(rk, lang);
-        if (!rUrl) return;
-        const fam = _familles[i];
-        const rTitle = t('common:nav.' + rk, t('quizzes:' + rk + '.shortTitle', t('quizzes:' + rk + '.title', rk)));
-        const rDesc = t('home:quizGrid.cards.' + rk, t('quizzes:' + rk + '.description', ''));
-        const rIcon = _relatedIcons[rk] || '💞';
-        const _f = quizFeatured && quizFeatured[rk];
-        const rImg = _f ? '/quiz/featured/' + _f.file + '.webp' : null;
-        const rSrcset = rImg ? srcsetImage(rImg) : null;
-        const rCta = fam === 'outil' ? _tx.essayer
-          : fam === 'jeux' ? t('common:buttons.startGame', 'Jouer')
-          : fam === 'quiz' ? t('common:buttons.startQuiz', 'Faire le quiz')
-          : t('common:buttons.startTest', 'Faire le test');
-      %>
-      <a href="<%= rUrl %>" class="suite-carte suite-carte--<%= fam === 'outil' ? 'tests' : fam %>">
-        <span class="suite-media">
-          <% if (rImg) { %>
-          <img src="<%= rImg %>"<% if (rSrcset) { %> srcset="<%= rSrcset %>" sizes="<%= _taillesTest %>"<% } %> alt="" loading="lazy" decoding="async" width="1200" height="630">
-          <% } %>
-          <span class="suite-emoji" aria-hidden="true"><%= rIcon %></span>
-        </span>
-        <span class="suite-corps">
-          <span class="suite-famille"><%= _tx.famille[fam] || _tx.famille.tests %></span>
-          <h3 class="suite-nom"><%= rTitle %></h3>
-          <% if (rDesc) { %><span class="suite-desc"><%= rDesc %></span><% } %>
-          <span class="suite-cta"><%= rCta %><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></span>
-        </span>
-      </a>
+      <% _relatedKeys.forEach(function (rk, i) { %>
+      <%- _carteHtml(rk, _familles[i]) %>
       <% }); %>
     </div>
+    <% } %>
+    <% if (_conseils.length) { %>
+    <template id="qc-conseils" data-titre="<%= t('common:suiteResultat.titre', 'Et maintenant ?') %>">
+      <% _conseils.forEach(function (c) { %>
+      <div<% if (c.jusqua != null) { %> data-jusqua="<%= c.jusqua %>"<% } %> data-route="<%= c.route %>" data-raison="<%= t('common:suiteResultat.' + c.route, '') %>"><%- _carteHtml(c.route, _familleDe(c.route)) %></div>
+      <% }); %>
+    </template>
     <% } %>
   </div>
 </section>

@@ -2666,7 +2666,38 @@ var QuizEngine = (function() {
     return '/';
   }
 
-  function renderRelatedQuizzes(wrap, currentQuizKey, lang) {
+  // La suite selon le resultat (14 novembre 2026, pages vues par visite) :
+  // related-tests.ejs (_SELON_RESULTAT) prepare dans <template
+  // id="qc-conseils"> une carte par tranche de score, avec sa phrase ; le
+  // resultat montre celle de son score en premier, sous « Et maintenant ? ».
+  // Rend null sans template ou sans score. La calculatrice, qui ne charge pas
+  // le moteur, en a une copie dans son gabarit.
+  function conseilSelonResultat(score) {
+    var tpl = document.getElementById('qc-conseils');
+    if (!tpl || !tpl.content || typeof score !== 'number' || isNaN(score)) return null;
+    var items = tpl.content.querySelectorAll('[data-raison]');
+    var choix = null;
+    for (var i = 0; i < items.length; i++) {
+      var j = items[i].getAttribute('data-jusqua');
+      if (j === null || score <= +j) { choix = items[i]; break; }
+    }
+    var carte = choix ? choix.querySelector('a.suite-carte') : null;
+    if (!carte) return null;
+    var bloc = el('div', 'result-related-section result-related-section--cartes qc-conseil');
+    bloc.appendChild(el('p', 'text-lg font-bold text-center mb-2', esc(tpl.getAttribute('data-titre') || '')));
+    bloc.appendChild(el('p', 'text-muted-foreground text-center mb-4', esc(choix.getAttribute('data-raison') || '')));
+    var grille = el('div', 'suite-grille suite-grille--resultat');
+    var copie = document.importNode(carte, true);
+    var route = choix.getAttribute('data-route') || '';
+    copie.addEventListener('click', function () {
+      try { if (window.gtag) window.gtag('event', 'suite_resultat_clic', { page: route, score: score }); } catch (e) {}
+    });
+    grille.appendChild(copie);
+    bloc.appendChild(grille);
+    return { el: bloc, href: carte.getAttribute('href') };
+  }
+
+  function renderRelatedQuizzes(wrap, currentQuizKey, lang, score) {
     // Les cartes « À faire ensuite » du bas de la page (related-tests.ejs,
     // masquées pendant le résultat) ont l'image, la famille, le nom et le
     // verbe de chaque page, dans la langue : on les reprend ici plutôt que les
@@ -2675,11 +2706,18 @@ var QuizEngine = (function() {
     // qui ne servent plus que de repli, pour une page sans ces cartes.
     var grille = document.querySelector('.related-tests-section .suite-grille');
     var cartes = grille ? grille.querySelectorAll('a.suite-carte') : [];
+    var conseil = conseilSelonResultat(score);
+    if (conseil) wrap.appendChild(conseil.el);
     if (cartes.length >= 2) {
       var bloc = el('div', 'result-related-section result-related-section--cartes');
       bloc.appendChild(el('p', 'text-lg font-bold text-center mb-6', tg('result.relatedTitle', 'Poursuivez avec d\'autres tests / quiz !')));
       var copie = el('div', 'suite-grille suite-grille--resultat');
-      for (var ci = 0; ci < cartes.length && ci < 4; ci++) copie.appendChild(cartes[ci].cloneNode(true));
+      for (var ci = 0, mises = 0; ci < cartes.length && mises < 4; ci++) {
+        // La carte du conseil n'est pas montree deux fois.
+        if (conseil && cartes[ci].getAttribute('href') === conseil.href) continue;
+        copie.appendChild(cartes[ci].cloneNode(true));
+        mises++;
+      }
       bloc.appendChild(copie);
       wrap.appendChild(bloc);
       return;
@@ -3304,7 +3342,11 @@ var QuizEngine = (function() {
     var avis = zoneAvis(currentLang);
 
     var suite = el('div', 'qr-right quiz-reveal-enter');
-    renderRelatedQuizzes(suite, currentKey, currentLang);
+    // Le score du resultat choisit la carte du conseil (conseilSelonResultat).
+    var score = typeof opts.score === 'number' ? opts.score
+      : (opts.bilan && typeof opts.bilan.pct === 'number') ? opts.bilan.pct
+      : (opts.share && typeof opts.share.pct === 'number') ? opts.share.pct : null;
+    renderRelatedQuizzes(suite, currentKey, currentLang, score);
 
     dispositionResultat(wrap, {
       resultat: resultat, actions: zoneActions(opts), avis: avis, suite: suite, bilan: opts.bilan || null

@@ -299,5 +299,15 @@
     "code": "Code {{code}} wordt automatisch toegepast bij het betalen",
     "bandeau": "Nu {{remise}} op de relatiecheck!",
     "bandeauRemise": "-{{pourcent}}%"
+  },
+  "suiteResultat": {
+    "titre": "En nu?",
+    "testToxic": "Jullie score is vrij laag. Deze test laat zien of het gewoon een moeilijke periode is, of dat jullie relatie toxische kanten heeft.",
+    "testLangageAmour": "Misschien houden jullie niet op dezelfde manier van elkaar. Deze test laat zien hoe ieder van jullie zich geliefd voelt.",
+    "quizCoquin": "Jullie relatie zit goed! Tijd voor een wat pittigere quiz om de avond op te vrolijken.",
+    "quizKnowledge": "Jullie lijken op best veel punten op elkaar. Nu eens kijken wie de ander het beste kent!",
+    "testMariage": "Met zo'n score ligt de volgende vraag voor de hand: zijn jullie klaar om te trouwen?",
+    "testCompatibilite": "Jullie hebben veel gemeen. Deze test kijkt of jullie waarden en plannen dezelfde kant op gaan.",
+    "testCouple": "Namen zijn voor de lol. Voor een echt resultaat doen jullie de relatietest, met jullie eigen antwoorden."
   }
 }

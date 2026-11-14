@@ -299,5 +299,15 @@
     "code": "Codice {{code}} applicato automaticamente al pagamento",
     "bandeau": "In questo momento {{remise}} sulla valutazione della vostra coppia!",
     "bandeauRemise": "-{{pourcent}}%"
+  },
+  "suiteResultat": {
+    "titre": "E adesso?",
+    "testToxic": "Il vostro punteggio è piuttosto basso. Questo test vi aiuta a capire se è solo un periodo difficile o se la vostra relazione ha dei lati tossici.",
+    "testLangageAmour": "Forse non vi amate nello stesso modo. Questo test vi mostra come ognuno di voi si sente amato.",
+    "quizCoquin": "La vostra coppia funziona! È il momento di un quiz un po' più piccante per movimentare la serata.",
+    "quizKnowledge": "Vi somigliate in parecchie cose. Ora vediamo chi di voi due conosce meglio l'altro!",
+    "testMariage": "Con un punteggio così, la prossima domanda viene da sé: siete pronti a sposarvi?",
+    "testCompatibilite": "Avete molto in comune. Questo test guarda se i vostri valori e i vostri progetti vanno nella stessa direzione.",
+    "testCouple": "I nomi sono solo per gioco. Per un risultato vero, fate il test di coppia con le vostre risposte."
   }
 }
