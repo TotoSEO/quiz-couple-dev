@@ -29,13 +29,30 @@
   const page = (nom) => '/livre/pages/' + nom;
   const srcsetPage = (nom) => page(nom) + '-400.webp 400w, ' + page(nom) + '-720.webp 720w, ' + page(nom) + '-1200.webp 1200w';
   const livre3d = '/livre/livre-3d-480.webp 480w, /livre/livre-3d-720.webp 720w, /livre/livre-3d-1000.webp 1000w';
-  const pagesVue = L('feuilleter.pages', []);
+  // Le livre à feuilleter (feuilleter.pages de livre.json) : la couverture,
+  // les pages dans l'ordre du vrai livre (les paires à gauche), deux pages
+  // blanches que le téléphone saute, et la quatrième de couverture. La
+  // couverture et le dos sont dans /livre/, les pages dans /livre/pages/.
+  const feuilles = L('feuilleter.pages', []);
+  const imgFeuille = (p) => (p.dossier === 'livre' ? '/livre/' : '/livre/pages/') + p.img;
+  const srcsetFeuille = (p) => (p.img === 'couverture' ? [480, 720, 1200] : [400, 720, 1200])
+    .map((w) => imgFeuille(p) + '-' + w + '.webp ' + w + 'w').join(', ');
+  const altDe = (nom) => ((feuilles.find((p) => p.img === nom) || {}).alt) || '';
+  let rangVue = 0;
   const vues = {
-    pages: pagesVue.map((p) => ({ src: page(p.img) + '-1200.webp', alt: nb(p.alt), leg: nb(p.legende) })),
+    // La visionneuse « Voir en grand » : les pages du livre, sans les blanches.
+    livre: feuilles.filter((p) => !p.blanc).map((p) => ({ src: imgFeuille(p) + '-1200.webp', alt: nb(p.alt), leg: nb(p.legende) })),
     liste: [
-      { src: page('liste-1') + '-1200.webp', alt: nb(pagesVue[0] ? pagesVue[0].alt : ''), leg: nb(L('budget.liste')) + ' (1-50)' },
-      { src: page('liste-2') + '-1200.webp', alt: nb(L('budget.liste')) + ' (51-100)', leg: nb(L('budget.liste')) + ' (51-100)' },
+      { src: page('liste-1') + '-1200.webp', alt: nb(altDe('liste-1')), leg: nb(L('budget.liste')) + ' (1-50)' },
+      { src: page('liste-2') + '-1200.webp', alt: nb(altDe('liste-2')), leg: nb(L('budget.liste')) + ' (51-100)' },
     ],
+  };
+  const icFlip = {
+    prec: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>',
+    suiv: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>',
+    pause: '<svg class="lv-flip-ic-pause" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="6" y="5" width="4" height="14" rx="1.2"/><rect x="14" y="5" width="4" height="14" rx="1.2"/></svg>',
+    lire: '<svg class="lv-flip-ic-lire" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5.6v12.8a1 1 0 0 0 1.5.86l10.2-6.4a1 1 0 0 0 0-1.72L9.5 4.74A1 1 0 0 0 8 5.6z"/></svg>',
+    grand: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6M10 20H4v-6M20 4l-7 7M4 20l7-7"/></svg>',
   };
   const ic = {
     liste: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6h11M9 12h11M9 18h11"/><path d="M3.5 6l1.2 1.2L7 5M3.5 12l1.2 1.2L7 11"/><circle cx="5" cy="18" r="1.3"/></svg>',
@@ -140,26 +157,35 @@
     </div>
   </section>
 
-  <%# ── Feuilleter : les pages du livre, une légende chacune ── %>
+  <%# ── Feuilleter : le vrai livre, qui se tourne page par page (js/livre.js et
+       js/vendor/page-flip.js, chargé quand la partie approche de l'écran). Il
+       se feuillette tout seul jusqu'au premier appui ; avant le script, et sans
+       lui, on voit la couverture, fermée. ── %>
   <section class="lv-section lv-feuilleter" id="feuilleter">
     <div class="lv-wrap">
       <div class="lv-entete">
         <h2 class="lv-h2"><%= nb(L('feuilleter.titre')) %></h2>
-        <p><%= nb(L('feuilleter.texte')) %></p>
+        <p data-flip-texte data-fixe="<%= nb(L('feuilleter.texteFixe')) %>"><%= nb(L('feuilleter.texte')) %></p>
       </div>
-      <div class="lv-carrousel">
-        <button type="button" class="lv-car-btn lv-car-btn--prec" aria-label="<%= nb(L('feuilleter.precedent')) %>" data-car="-1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg></button>
-        <ul class="lv-car-piste" data-car-piste>
-          <% pagesVue.forEach((p, i) => { %>
-          <li class="lv-car-item">
-            <button type="button" class="lv-page" data-vue="pages" data-vue-i="<%= i %>" aria-label="<%= nb(p.legende) %>">
-              <img src="<%= page(p.img) %>-400.webp" srcset="<%= srcsetPage(p.img) %>" sizes="(min-width: 1024px) 275px, (min-width: 640px) 42vw, 74vw" alt="<%= nb(p.alt) %>" width="1200" height="1200" loading="lazy" decoding="async">
-            </button>
-            <p class="lv-page-leg"><%= nb(p.legende) %></p>
-          </li>
-          <% }) %>
-        </ul>
-        <button type="button" class="lv-car-btn lv-car-btn--suiv" aria-label="<%= nb(L('feuilleter.suivant')) %>" data-car="1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg></button>
+      <div class="lv-flip" data-flip>
+        <div class="lv-flip-scene">
+          <div class="lv-flip-livre" data-flip-livre tabindex="0" role="group" aria-roledescription="livre" aria-label="<%= nb(L('feuilleter.livre')) %>">
+            <% feuilles.forEach((p, i) => { %>
+            <div class="lv-feuille<%= p.blanc ? ' lv-feuille--blanc' : '' %><%= (p.img === 'couverture' || p.img === 'dos') ? ' lv-feuille--couv' : '' %>"<%- (p.img === 'couverture' || p.img === 'dos') ? ' data-density="hard"' : '' %><%- p.blanc ? ' data-blanc' : ' data-vue-i="' + (rangVue++) + '"' %><% if (!p.blanc) { %> data-leg="<%= nb(p.legende) %>"<% } %><% if (p.double) { %> data-double="<%= nb(p.double) %>"<% } %>>
+              <% if (!p.blanc) { %><img src="<%= imgFeuille(p) %>-720.webp" srcset="<%= srcsetFeuille(p) %>" sizes="(min-width: 1100px) 480px, (min-width: 640px) 45vw, 60vw" alt="<%= nb(p.alt) %>" width="1200" height="1200" loading="lazy" decoding="async" draggable="false"><% } %>
+            </div>
+            <% }) %>
+          </div>
+        </div>
+        <div class="lv-flip-nav">
+          <button type="button" class="lv-flip-btn" data-flip-pas="-1" aria-label="<%= nb(L('feuilleter.precedent')) %>" disabled><%- icFlip.prec %></button>
+          <p class="lv-flip-leg" data-flip-leg><%= nb((feuilles[0] || {}).legende || '') %></p>
+          <button type="button" class="lv-flip-btn" data-flip-pas="1" aria-label="<%= nb(L('feuilleter.suivant')) %>"><%- icFlip.suiv %></button>
+        </div>
+        <div class="lv-flip-outils">
+          <button type="button" class="lv-flip-outil" data-flip-auto data-pause="<%= nb(L('feuilleter.pause')) %>" data-lire="<%= nb(L('feuilleter.lire')) %>" hidden><%- icFlip.pause %><%- icFlip.lire %><span><%= nb(L('feuilleter.pause')) %></span></button>
+          <button type="button" class="lv-flip-outil" data-flip-grand data-vue="livre" data-vue-i="0"><%- icFlip.grand %><span><%= nb(L('feuilleter.agrandir')) %></span></button>
+        </div>
       </div>
     </div>
   </section>

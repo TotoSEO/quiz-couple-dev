@@ -15,7 +15,10 @@
 --   avap       la page avant/après touchée ;
 --   faq        une question ouverte ; detail = la question ;
 --   feuilleter le lien « Feuilleter le livre » du haut ;
---   carrousel  les pages feuilletées de côté ;
+--   carrousel  le livre qui se tourne (depuis le soir du 14 novembre 2026) :
+--              sans détail, feuilleté à la main ; fin, jusqu'à la
+--              quatrième de couverture à la main ; auto, la lecture
+--              automatique allée jusqu'au bout ;
 --   barre      la barre collée du téléphone apparue.
 -- Rien de personnel : le numéro de visite de page_views (tiré au hasard, mort
 -- après trente minutes), la langue de la page. Ni adresse IP ni chemin

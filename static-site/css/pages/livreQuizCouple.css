@@ -240,32 +240,98 @@
 .lv-citation blockquote p { margin: 0 0 .55rem; font-family: 'Plume Livre', Georgia, serif; font-style: italic; font-weight: 500; font-size: 1.5rem; line-height: 1.35; color: #ffdf86; }
 .lv-citation-source { margin-top: -.9rem; font-size: .85rem; color: #bda8b5; text-align: center; }
 
-/* ── Feuilleter ── */
-.lv-feuilleter { background: var(--lv-rose-pale); }
-.lv-carrousel { position: relative; }
-.lv-car-piste {
-  list-style: none; margin: 0 -1rem; padding: .4rem 1rem 1.4rem;
-  display: grid; grid-auto-flow: column; grid-auto-columns: 74%; gap: 1rem;
-  overflow-x: auto; scroll-snap-type: x mandatory; scroll-padding: 0 1rem;
-  overscroll-behavior-x: contain; scrollbar-width: none;
+/* ── Feuilleter : le vrai livre, qui se tourne page par page ──
+   page-flip (js/vendor/page-flip.js) dessine les pages : il les range dans
+   .stf__wrapper > .stf__block et écrit leur style à chaque image d'un tour
+   de page. Ses règles de base (Style/stPageFlip.css, licence MIT) sont
+   ici, le paquet ne les embarque plus. Le livre se range en paysage (deux
+   pages) dès 580 px de large, en portrait (une page) en dessous : 580 est le
+   double de minWidth dans js/livre.js, et la même borne sert la requête de
+   conteneur d'avant le script. Fermé, le livre est décalé d'un quart pour
+   que la couverture soit au milieu (est-ferme), comme la quatrième de
+   couverture à la fin (est-fin) ; il glisse au centre en s'ouvrant. */
+.lv-feuilleter { background: var(--lv-rose-pale); overflow-x: clip; }
+.lv-flip { container: lvflip / inline-size; display: flex; flex-direction: column; align-items: center; gap: 1.1rem; }
+.lv-flip-scene { width: 100%; padding-bottom: .9rem; }
+
+.stf__parent { position: relative; display: block; box-sizing: border-box; touch-action: pan-y; }
+.stf__wrapper { position: relative; width: 100%; box-sizing: border-box; }
+.stf__block { position: absolute; width: 100%; height: 100%; box-sizing: border-box; perspective: 2000px; }
+.stf__item { display: none; position: absolute; transform-style: preserve-3d; }
+.stf__outerShadow, .stf__innerShadow, .stf__hardShadow, .stf__hardInnerShadow { position: absolute; left: 0; top: 0; pointer-events: none; }
+/* L'ombre de la couverture qui tourne tombe sur le fond de la page : plus légère. */
+.lv-flip .stf__hardShadow { opacity: .55; }
+
+.lv-flip-livre {
+  position: relative; width: 100%; margin: 0 auto;
+  max-width: min(960px, calc((100dvh - 13rem) * 2)) !important;
+  /* page-flip pose min-width et min-height en ligne (minWidth, minHeight) :
+     sur un écran de moins de 290 px de large, le livre déborderait. Il suit
+     la largeur, toujours. */
+  min-width: 0 !important; min-height: 0 !important;
+  transform: translate3d(0, 0, 0);
+  transition: transform .95s cubic-bezier(.45, .05, .25, 1);
+  -webkit-user-select: none; user-select: none; -webkit-touch-callout: none; -webkit-tap-highlight-color: transparent;
 }
-.lv-car-piste::-webkit-scrollbar { display: none; }
-@media (min-width: 640px) { .lv-car-piste { grid-auto-columns: 42%; margin: 0 -2rem; padding: .4rem 2rem 1.4rem; scroll-padding: 0 2rem; } }
-@media (min-width: 1024px) { .lv-car-piste { grid-auto-columns: calc((100% - 3.75rem) / 4); gap: 1.25rem; margin: 0; padding: .4rem 0 1.4rem; scroll-padding: 0; } }
-.lv-car-item { scroll-snap-align: start; display: flex; flex-direction: column; gap: .75rem; }
-.lv-page { display: block; width: 100%; padding: 0; border: 0; border-radius: 8px; overflow: hidden; background: #fff; cursor: zoom-in; box-shadow: 0 0 0 1.5px var(--lv-contour), var(--lv-ombre); transition: transform .2s ease; }
-.lv-page img { display: block; width: 100%; height: auto; aspect-ratio: 1; }
-.lv-page:hover { transform: translateY(-3px) rotate(-.6deg); }
-.lv-page:focus-visible { outline: 3px solid var(--lv-violet); outline-offset: 3px; }
-.lv-page-leg { margin: 0; text-align: center; font-family: var(--font-display); font-weight: 600; font-size: 1rem; line-height: 1.3; color: var(--lv-texte); }
-.lv-car-btn { display: none; }
-@media (min-width: 1024px) {
-  .lv-car-btn { position: absolute; top: calc(50% - 2.6rem); z-index: 2; display: flex; align-items: center; justify-content: center; width: 3rem; height: 3rem; border: 0; border-radius: 50%; background: var(--lv-carte); color: var(--lv-texte); cursor: pointer; box-shadow: 0 0 0 1.5px var(--lv-contour), 0 6px 16px rgba(43, 23, 34, .18); transition: opacity .2s ease; }
-  .lv-car-btn--prec { left: -1.5rem; }
-  .lv-car-btn--suiv { right: -1.5rem; }
-  .lv-car-btn[disabled] { opacity: 0; pointer-events: none; }
-  .lv-car-btn svg { width: 1.3rem; height: 1.3rem; }
+.lv-flip-livre:focus-visible { outline: 3px solid var(--lv-violet); outline-offset: 8px; border-radius: 6px; }
+.lv-flip.est-pret .lv-flip-livre { cursor: pointer; }
+.lv-flip.est-glisse .lv-flip-livre { cursor: grabbing; }
+
+/* Avant le script (et sans lui) : la couverture seule, à sa place. */
+.lv-flip-livre:not(.stf__parent) { aspect-ratio: 1; }
+.lv-flip-livre:not(.stf__parent) > .lv-feuille { display: none; }
+.lv-flip-livre:not(.stf__parent) > .lv-feuille:first-of-type { display: block; position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+/* Les pages que le livre n'a pas prises (les blanches, en portrait) restent cachées. */
+.lv-flip-livre.stf__parent > .lv-feuille { display: none; }
+@container lvflip (min-width: 580px) {
+  .lv-flip-livre:not(.stf__parent) { aspect-ratio: 2; transform: translate3d(-25%, 0, 0); }
+  .lv-flip-livre:not(.stf__parent) > .lv-feuille:first-of-type { left: 50%; width: 50%; }
+  .lv-flip:not(.est-pret) .lv-flip-livre::before { transform: translate3d(25%, 0, 0) scaleX(.5); }
 }
+.lv-flip.est-paysage.est-ferme .lv-flip-livre { transform: translate3d(-25%, 0, 0); }
+.lv-flip.est-paysage.est-fin .lv-flip-livre { transform: translate3d(25%, 0, 0); }
+
+/* L'ombre du livre sur la table : sous la page seule quand il est fermé. */
+.lv-flip-livre::before {
+  content: ''; position: absolute; z-index: -1; left: 2%; right: 2%; bottom: -4.5%; height: 9%;
+  border-radius: 50%; background: radial-gradient(closest-side, rgba(43, 23, 34, .3), rgba(43, 23, 34, 0));
+  transition: transform .95s cubic-bezier(.45, .05, .25, 1); pointer-events: none;
+}
+.dark .lv-flip-livre::before { background: radial-gradient(closest-side, rgba(0, 0, 0, .6), rgba(0, 0, 0, 0)); }
+.lv-flip.est-paysage.est-ferme .lv-flip-livre::before { transform: translate3d(25%, 0, 0) scaleX(.5); }
+.lv-flip.est-paysage.est-fin .lv-flip-livre::before { transform: translate3d(-25%, 0, 0) scaleX(.5); }
+
+/* Les pages : du papier blanc, l'ombre de la reliure, et l'épaisseur des
+   pages d'en dessous sur le bord extérieur des pages posées. */
+.lv-feuille { overflow: hidden; background: #fff; }
+.lv-feuille img { display: block; width: 100%; height: 100%; object-fit: cover; pointer-events: none; -webkit-user-drag: none; }
+.lv-feuille::after { content: ''; position: absolute; inset: 0; pointer-events: none; }
+.lv-feuille.--left::after { background: linear-gradient(to left, rgba(43, 23, 34, .2), rgba(43, 23, 34, .06) 4%, rgba(43, 23, 34, 0) 11%); }
+.lv-feuille.--right::after { background: linear-gradient(to right, rgba(43, 23, 34, .2), rgba(43, 23, 34, .06) 4%, rgba(43, 23, 34, 0) 11%); }
+.lv-feuille--couv { background: #fed45c; }
+.lv-feuille--couv.--right::after { background: linear-gradient(to right, rgba(60, 40, 0, .22), rgba(60, 40, 0, 0) 2.4%, rgba(255, 255, 255, .28) 2.9%, rgba(60, 40, 0, .1) 3.6%, rgba(60, 40, 0, 0) 5%); }
+.lv-feuille--couv.--left::after { background: linear-gradient(to left, rgba(60, 40, 0, .22), rgba(60, 40, 0, 0) 2.4%, rgba(255, 255, 255, .28) 2.9%, rgba(60, 40, 0, .1) 3.6%, rgba(60, 40, 0, 0) 5%); }
+.lv-feuille.--simple.--right { box-shadow: 1px 1px 0 #e7dfd3, 2px 2px 0 #fff, 3px 3px 0 #ded4c6, 4px 4px 0 #fff, 5px 5px 0 #d4c9b9; }
+.lv-feuille.--simple.--left { box-shadow: -1px 1px 0 #e7dfd3, -2px 2px 0 #fff, -3px 3px 0 #ded4c6, -4px 4px 0 #fff, -5px 5px 0 #d4c9b9; }
+
+/* Sous le livre : les flèches, la légende de la double page, et les outils. */
+.lv-flip-nav { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: center; gap: .9rem; width: 100%; max-width: 40rem; }
+.lv-flip-btn { display: flex; align-items: center; justify-content: center; width: 3rem; height: 3rem; padding: 0; border: 0; border-radius: 50%; background: var(--lv-carte); color: var(--lv-texte); cursor: pointer; box-shadow: 0 0 0 1.5px var(--lv-contour), var(--lv-ombre); transition: transform .15s ease, opacity .2s ease; }
+.lv-flip-btn svg { width: 1.3rem; height: 1.3rem; }
+.lv-flip-btn:not(:disabled):hover { transform: translateY(-2px); }
+.lv-flip-btn:disabled { opacity: .35; cursor: default; box-shadow: 0 0 0 1.5px var(--lv-contour); }
+.lv-flip-btn:focus-visible, .lv-flip-outil:focus-visible { outline: 3px solid var(--lv-violet); outline-offset: 3px; }
+.lv-flip-leg { display: flex; align-items: center; justify-content: center; min-height: 2.7em; margin: 0; text-align: center; text-wrap: balance; font-family: var(--font-display); font-weight: 600; font-size: 1.02rem; line-height: 1.3; color: var(--lv-texte); }
+.lv-flip-outils { display: flex; flex-wrap: wrap; justify-content: center; gap: .35rem 1rem; margin-top: -.35rem; }
+.lv-flip-outil { display: inline-flex; align-items: center; gap: .45rem; min-height: 2.5rem; padding: .45rem .9rem; border: 0; border-radius: 999px; background: transparent; color: var(--lv-texte-doux); font: 600 .95rem/1.2 var(--font-display); cursor: pointer; transition: background-color .15s ease, color .15s ease; }
+.lv-flip-outil:hover { background: var(--lv-carte); color: var(--lv-texte); }
+.lv-flip-outil svg { width: 1.05rem; height: 1.05rem; flex: none; }
+.lv-flip-outil[data-etat="lecture"] .lv-flip-ic-lire, .lv-flip-outil[data-etat="pause"] .lv-flip-ic-pause { display: none; }
+.lv-flip-outil[hidden], .lv-flip-btn[hidden] { display: none; }
+/* Le livre en fondu pendant qu'il revient à la couverture, à la fin de la lecture automatique. */
+.lv-flip-scene { transition: opacity .35s ease; }
+.lv-flip.est-retour .lv-flip-scene { opacity: 0; }
+.lv-flip.est-retour .lv-flip-livre, .lv-flip.est-retour .lv-flip-livre::before { transition: none; }
 
 /* ── Ce que coûtent les aventures ── */
 .lv-niveaux { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .85rem; }
@@ -370,5 +436,5 @@
 
 @media (prefers-reduced-motion: reduce) {
   .lv-hero-livre { animation: none; }
-  .lv-page, .lv-bouton-liste, .lv a.lv-amazon, .lv-barre, .lv-faq summary::after { transition: none; }
+  .lv-bouton-liste, .lv a.lv-amazon, .lv-barre, .lv-faq summary::after, .lv-flip-btn, .lv-flip-scene, .lv-flip-livre, .lv-flip-livre::before { transition: none; }
 }
