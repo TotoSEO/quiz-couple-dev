@@ -27,7 +27,7 @@ const corsHeaders = {
 const TOKEN_MAX_AGE = 86400; // 24 heures, comme les autres fonctions admin-*
 
 // Les seules fonctions qu'on peut lire par ici : celles de l'admin (onglets
-// Trafic, Parties, À distance, Réseaux, Bilan, et l'export).
+// Trafic, Parties, À distance, Réseaux, Bilan, Livre, et l'export).
 const FONCTIONS = new Set([
   'get_abonnes_tableau',
   'get_emails_tableau',
@@ -35,6 +35,7 @@ const FONCTIONS = new Set([
   'get_bilan_celib',
   'get_bilan_point',
   'get_instagram_clics',
+  'get_livre_stats',
   'get_quiz_counts',
   'get_quiz_daily',
   'get_quiz_daily_par_quiz',
