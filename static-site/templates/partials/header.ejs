@@ -60,8 +60,11 @@
   // dit aussi si l'on est dans la période de Noël (jusqu'au 24 décembre),
   // qui change le libellé.
   const livreMenu = (typeof livreMenuPour === 'function') ? livreMenuPour(lang) : null;
-  const livreLibelle = livreMenu ? t(livreMenu.noel ? 'livre:menu.boutonNoel' : 'livre:menu.bouton', '') : '';
-  const livreCourt = livreMenu ? t(livreMenu.noel ? 'livre:menu.courtNoel' : 'livre:menu.court', '') : '';
+  // Le bouton du livre dit ce qu'on y trouve, pas qu'il y a quelque chose à
+  // acheter (14 novembre 2026, Thomas : « remplace par un truc qui ferait +
+  // cliqué sans savoir que y'a une intention de vente derrière ») : les cent
+  // aventures, toute l'année, plus « Cadeau de Noël ».
+  const livreTitre = livreMenu ? t('livre:menu.titre', '') : '';
   const icAller = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';
 
   // Filter out links that don't have a URL for the current language (frOnly pages in non-FR)
@@ -345,6 +348,19 @@
     .n2-livre:hover, .n2-livre:focus-visible { color: #2b1722; background: #ffca33; transform: translateY(-1px); }
     .n2-livre:focus-visible { outline: 2px solid #b98a00; outline-offset: 2px; }
     .n2-livre img { width: 1.75rem; height: auto; transform: rotate(-7deg); filter: drop-shadow(0 2px 2px rgb(43 23 34 / .22)); }
+    /* Deux lignes serrées, « 100 aventures » puis « à deux » : la barre des
+       onglets est pleine au-dessus de 1 440 px (compteurs des familles
+       affichés). Et la pastille ne rétrécit jamais : jusqu'au 14 novembre
+       2026, elle passait de 165 à 143 px au-dessus de 1 440 px, et le texte
+       (« Cadeau de Noël ») dépassait de son fond. */
+    .n2-livre { flex-shrink: 0; }
+    .n2-livre-texte { display: flex; flex-direction: column; line-height: 1.05; }
+    .n2-livre-haut { font-size: .8125rem; font-weight: 800; }
+    .n2-livre-bas { font-size: .75rem; font-weight: 600; opacity: .8; }
+    /* Au-dessus de 1 440 px, les compteurs des familles reviennent et la
+       rangée, bornée à 1 368 px, déborderait de 4 px : l'écart entre les
+       onglets passe de 0,3 à 0,15 rem quand le bouton du livre est là. */
+    @media (min-width: 1440px) { .entete-onglets { gap: .15rem; } }
     .dark .n2-livre { color: #ffe7a3; background: #2b2314; box-shadow: inset 0 0 0 1px rgb(255 212 92 / .5); }
     .dark .n2-livre:hover, .dark .n2-livre:focus-visible { color: #fff3cf; background: #372d1a; box-shadow: inset 0 0 0 1px rgb(255 212 92 / .8); }
     @media (min-width: 1024px) and (max-width: 1179.98px) {
@@ -364,12 +380,14 @@
     .mnav-tuile--eval:hover, .mnav-tuile--eval:focus-visible { color: #fff; background: hsl(340 65% 58%); }
     .mnav-tuile--eval .mnav-tuile-sous { color: hsl(0 0% 100% / .9); }
     .mnav-tuile--livre { color: #2b1722; background: #ffd45c; box-shadow: inset 0 0 0 1px #e9b93a; }
+    .mnav-tuile--livre .mnav-tuile-sous { color: rgb(43 23 34 / .78); }
     .mnav-tuile--livre:hover, .mnav-tuile--livre:focus-visible { color: #2b1722; background: #ffca33; }
     .dark .mnav-tuile--eval { color: hsl(330 25% 96%); background: hsl(338 42% 17%); box-shadow: inset 0 0 0 1px hsl(338 90% 72% / .45); }
     .dark .mnav-tuile--eval:hover, .dark .mnav-tuile--eval:focus-visible { color: #fff; background: hsl(338 42% 22%); }
     .dark .mnav-tuile--eval .mnav-tuile-ic { color: hsl(300 30% 10%); background: hsl(var(--primary)); }
     .dark .mnav-tuile--eval .mnav-tuile-sous { color: hsl(338 50% 86%); }
     .dark .mnav-tuile--livre { color: #ffe7a3; background: #2b2314; box-shadow: inset 0 0 0 1px rgb(255 212 92 / .5); }
+    .dark .mnav-tuile--livre .mnav-tuile-sous { color: rgb(255 231 163 / .8); }
     .dark .mnav-tuile--livre:hover, .dark .mnav-tuile--livre:focus-visible { color: #fff3cf; background: #372d1a; }
     @media (prefers-reduced-motion: reduce) { .n2-livre { transition: none; } }
     <% } %>
@@ -485,9 +503,9 @@
             </a>
             <% } %>
             <% if (livreMenu) { %>
-            <a href="<%= livreMenu.url %>" class="n2-livre" title="<%= livreLibelle %>" data-livre-lien="menu"<%- courant('livreQuizCouple') %>>
+            <a href="<%= livreMenu.url %>" class="n2-livre" title="<%= livreTitre %>" data-livre-lien="menu"<%- courant('livreQuizCouple') %>>
               <img src="/livre/livre-mini-160.webp" alt="" width="160" height="173" decoding="async">
-              <span class="n2-livre-texte"><%= livreCourt %></span>
+              <span class="n2-livre-texte"><span class="n2-livre-haut"><%= t('livre:menu.haut', '') %></span> <span class="n2-livre-bas"><%= t('livre:menu.bas', '') %></span></span>
             </a>
             <% } %>
             <!-- Tests -->
@@ -616,7 +634,8 @@
             <% } %>
             <a href="<%= livreMenu.url %>" class="mnav-tuile mnav-tuile--livre" data-livre-lien="menu-mobile"<%- courant('livreQuizCouple') %>>
               <img class="mnav-tuile-livre" src="/livre/livre-mini-160.webp" alt="" width="160" height="173" loading="lazy" decoding="async">
-              <span class="mnav-tuile-titre"><%= livreLibelle %></span>
+              <span class="mnav-tuile-titre"><%= livreTitre %></span>
+              <span class="mnav-tuile-sous"><%= t('livre:menu.sous', '') %></span>
               <%- icAller %>
             </a>
           </div>
