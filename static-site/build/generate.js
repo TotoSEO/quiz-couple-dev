@@ -578,7 +578,7 @@ function livreMenuPour(lang) {
   if (!LIVRE[lang]) return null;
   const url = getLocalizedUrl('livreQuizCouple', lang);
   if (!url) return null;
-  return { url, chemin: getLocalizedPath('livreQuizCouple', lang), noel: livreNoelActif() };
+  return { url, chemin: getLocalizedPath('livreQuizCouple', lang) };
 }
 // Ce que la page du livre reçoit en plus : l'édition (lien, prix, ISBN), la
 // période de Noël et le « 100 » dessiné de la couverture, sans sa taille

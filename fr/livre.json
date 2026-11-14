@@ -7,10 +7,10 @@
   "fil": "Livre pour couple",
   "menu": {
     "lien": "Notre livre pour couple",
-    "boutonNoel": "Découvrir le cadeau de Noël parfait",
-    "bouton": "Découvrir notre livre souvenir",
-    "courtNoel": "Cadeau de Noël",
-    "court": "Notre livre",
+    "titre": "100 aventures à deux",
+    "haut": "100 aventures",
+    "bas": "à deux",
+    "sous": "Des idées à vivre ensemble",
     "evaluerSous": "À deux ou seul(e)"
   },
   "ogAlt": "Le livre 100 aventures à deux de Quiz Couple, couverture jaune avec ses deux personnages",
