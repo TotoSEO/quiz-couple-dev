@@ -1,5 +1,5 @@
 {
-  "genere_le": "2026-11-14T03:14:48.312Z",
+  "genere_le": "2026-11-14T10:20:22.852Z",
   "langue": "en",
   "compte": {
     "nom": "quiz_couple_official",
@@ -858,7 +858,7 @@
       "creneau": "midi",
       "gabarit": "tu-preferes",
       "categorie": "tu-preferes",
-      "statut": "rendu",
+      "statut": "publie",
       "texte": "Would you rather: couple edition",
       "erreur": null
     },
@@ -3417,8 +3417,8 @@
       "creneau": "soir"
     },
     "tu-preferes": {
-      "jour": "2026-11-14",
-      "creneau": "midi"
+      "jour": "2026-11-15",
+      "creneau": "soir"
     },
     "phrase": null,
     "carrousel": null,
