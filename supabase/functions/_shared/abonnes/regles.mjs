@@ -108,23 +108,17 @@ export async function hacheIp(ip, sel) {
   return Array.from(new Uint8Array(h)).map((b) => b.toString(16).padStart(2, '0')).join('');
 }
 
-// La page de désinscription, servie telle quelle par la fonction (un clic
-// dans un e-mail doit aboutir à une page lisible, pas à du JSON).
-const DESINSCRIPTION = {
-  fr: { titre: 'Vous êtes désinscrit(e)', texte: 'Vous ne recevrez plus d\'e-mails de Quiz Couple. Vos résultats et tout le site restent accessibles, gratuitement.', lien: 'Retour sur Quiz Couple', deja: 'Cette adresse était déjà désinscrite, ou le lien n\'est plus valable. Dans les deux cas, vous ne recevrez plus rien de notre part.' },
-  en: { titre: 'You\'re unsubscribed', texte: 'You won\'t receive any more emails from Quiz Couple. Your results and the whole site stay available, for free.', lien: 'Back to Quiz Couple', deja: 'This address was already unsubscribed, or the link is no longer valid. Either way, you won\'t hear from us again.' },
-  es: { titre: 'Te has dado de baja', texte: 'Ya no recibirás e-mails de Quiz Couple. Tus resultados y todo el sitio siguen disponibles, gratis.', lien: 'Volver a Quiz Couple', deja: 'Esta dirección ya estaba dada de baja, o el enlace ya no es válido. En ambos casos, no volverás a recibir nada de nuestra parte.' },
-  de: { titre: 'Du bist abgemeldet', texte: 'Du bekommst keine E-Mails mehr von Quiz Couple. Deine Ergebnisse und die ganze Website bleiben kostenlos zugänglich.', lien: 'Zurück zu Quiz Couple', deja: 'Diese Adresse war bereits abgemeldet, oder der Link ist nicht mehr gültig. In beiden Fällen hörst du nichts mehr von uns.' },
-  it: { titre: 'Sei disiscritto/a', texte: 'Non riceverai più e-mail da Quiz Couple. I tuoi risultati e tutto il sito restano accessibili, gratis.', lien: 'Torna su Quiz Couple', deja: 'Questo indirizzo era già disiscritto, o il link non è più valido. In entrambi i casi, non riceverai più niente da parte nostra.' },
-  nl: { titre: 'Je bent afgemeld', texte: 'Je krijgt geen e-mails meer van Quiz Couple. Je uitslagen en de hele site blijven gratis toegankelijk.', lien: 'Terug naar Quiz Couple', deja: 'Dit adres was al afgemeld, of de link is niet meer geldig. Hoe dan ook: je hoort niets meer van ons.' },
-};
-const ACCUEIL = { fr: 'https://quiz-couple.com/', en: 'https://quiz-couple.com/en/', es: 'https://quiz-couple.com/es/', de: 'https://quiz-couple.com/de/', it: 'https://quiz-couple.com/it/', nl: 'https://quiz-couple.com/nl/' };
-
-export function pageDesinscription(lang, trouve) {
-  const l = langueValide(lang) || 'fr';
-  const t = DESINSCRIPTION[l];
-  const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
-  return '<!doctype html><html lang="' + l + '"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex"><title>' + esc(t.titre) + ' · Quiz Couple</title>' +
-    '<style>body{margin:0;font-family:Inter,system-ui,sans-serif;background:#fff6fa;color:#2a1f2b;display:flex;min-height:100vh;align-items:center;justify-content:center;padding:24px}main{max-width:460px;background:#fff;border-radius:20px;padding:32px 28px;box-shadow:0 20px 50px -30px rgba(90,20,60,.5);text-align:center}h1{font-size:1.5rem;margin:0 0 .6rem;color:#b5345f}p{line-height:1.55;margin:0 0 1.2rem}a{display:inline-block;background:#d9608a;color:#fff;text-decoration:none;font-weight:700;padding:.75rem 1.3rem;border-radius:999px}@media(prefers-color-scheme:dark){body{background:#1b1420;color:#f3e9ee}main{background:#26202b}h1{color:#f08ab0}}</style></head>' +
-    '<body><main><h1>' + esc(t.titre) + '</h1><p>' + esc(trouve ? t.texte : t.deja) + '</p><a href="' + ACCUEIL[l] + '">' + esc(t.lien) + '</a></main></body></html>';
+// Après la désinscription, la fonction renvoie vers une page du site
+// (public/desinscription/index.html), la langue et le résultat dans le
+// fragment : #en-ok, #fr-deja, #de-invalide, #nl-erreur. Jusqu'au 14 novembre
+// 2026, la fonction répondait elle-même une page HTML, que Supabase réécrit en
+// texte brut sur son domaine (« HTML content is not supported ») : la personne
+// voyait du code, et a cru que le lien ne marchait pas. Le fragment ne quitte
+// jamais le navigateur, et il ne porte ni adresse ni jeton.
+export const SITE = 'https://quiz-couple.com';
+export const ETATS_DESINSCRIPTION = ['ok', 'deja', 'invalide', 'erreur'];
+export function adresseDesinscription(lang, etat) {
+  const l = langueValide(lang);
+  const e = ETATS_DESINSCRIPTION.includes(etat) ? etat : 'invalide';
+  return SITE + '/desinscription/#' + (l ? l + '-' : '') + e;
 }

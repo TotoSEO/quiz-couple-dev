@@ -23,6 +23,95 @@ async function verifyAdminToken(token: string): Promise<boolean> {
   return expectedHex === signatureHex;
 }
 
+// ── Une adresse : où elle est, et la retirer de tous les envois ──
+// (14 novembre 2026 : une personne a écrit par la page de contact « Please
+// remove me from your email listings », le lien de désinscription de l'e-mail
+// lui ayant affiché du code.) POST { action: 'adresse', email } dit où
+// l'adresse apparaît ; POST { action: 'desinscrire', email } la retire de tout
+// ce qui peut lui écrire sans qu'elle le demande : le parcours e-mail
+// (abonnes.statut = desinscrit, et la synchro du soir l'efface chez Brevo),
+// les rappels et reprises de ses évaluations (bilans.rappels_off, jamais le
+// lien d'un rapport payé), la liste d'attente des célibataires (adresse
+// effacée). L'adresse ne sort pas de cette fonction : le journal ne la garde
+// pas, et la réponse ne porte que des états et des dates.
+const EMAIL_ADMIN_RE = /^[^\s@]{1,64}@[^\s@]{1,253}$/;
+function emailAdmin(brut: unknown): string | null {
+  const e = String(brut == null ? '' : brut).replace(/[\u0000-\u001f\u007f]/g, '').trim().toLowerCase();
+  return e.length <= 254 && EMAIL_ADMIN_RE.test(e) ? e : null;
+}
+// Une lecture qui échoue (table absente, colonne renommée) ne fait pas tomber
+// les autres : sa partie de la réponse dit « illisible ».
+async function lire<T>(q: PromiseLike<{ data: T | null, error: { message: string } | null }>): Promise<{ ok: boolean, data: T | null }> {
+  try {
+    const { data, error } = await q;
+    if (error) { console.error('[admin-leads] adresse :', error.message); return { ok: false, data: null }; }
+    return { ok: true, data };
+  } catch (e) {
+    console.error('[admin-leads] adresse :', e instanceof Error ? e.message : String(e));
+    return { ok: false, data: null };
+  }
+}
+// deno-lint-ignore no-explicit-any
+async function situationAdresse(supabase: any, email: string) {
+  const [ab, evA, evB, evP, celib, ebook] = await Promise.all([
+    lire(supabase.from('abonnes').select('id, statut, lang, source, captures, created_at, desinscrit_le').eq('email', email).maybeSingle()),
+    lire(supabase.from('bilans').select('id, rappels_off, paye_le').eq('a_email', email).limit(50)),
+    lire(supabase.from('bilans').select('id, rappels_off, paye_le').eq('b_email', email).limit(50)),
+    lire(supabase.from('bilans').select('id, rappels_off, paye_le').eq('paiement_email', email).limit(50)),
+    lire(supabase.from('bilan_celib').select('id, notifie_le').eq('email', email).limit(1)),
+    lire(supabase.from('leads').select('id, created_at').eq('email', email).limit(5)),
+  ]);
+  // deno-lint-ignore no-explicit-any
+  const abonne = ab.data as any;
+  // deno-lint-ignore no-explicit-any
+  let envois: any[] | null = [];
+  if (abonne && abonne.id) {
+    const e = await lire(supabase.from('emails_envois').select('type, statut, envoye_le, remis_le, desinscrit_le').eq('abonne_id', abonne.id));
+    envois = e.ok ? (e.data as unknown[] || []) : null;
+  }
+  // deno-lint-ignore no-explicit-any
+  const evaluations = new Map<string, any>();
+  // deno-lint-ignore no-explicit-any
+  for (const r of [evA, evB, evP]) for (const b of ((r.data as any[]) || [])) evaluations.set(b.id, b);
+  const liste = [...evaluations.values()];
+  return {
+    abonne: ab.ok ? (abonne ? {
+      statut: abonne.statut, lang: abonne.lang, source: abonne.source, captures: abonne.captures,
+      cree_le: abonne.created_at, desinscrit_le: abonne.desinscrit_le,
+    } : null) : 'illisible',
+    envois,
+    evaluations: (evA.ok && evB.ok && evP.ok) ? {
+      total: liste.length,
+      payees: liste.filter((b) => b.paye_le).length,
+      rappels_actifs: liste.filter((b) => !b.rappels_off && !b.paye_le).length,
+    } : 'illisible',
+    // deno-lint-ignore no-explicit-any
+    celib: celib.ok ? ((celib.data as any[]) || []).length > 0 : 'illisible',
+    // deno-lint-ignore no-explicit-any
+    ebook: ebook.ok ? ((ebook.data as any[]) || []).length > 0 : 'illisible',
+  };
+}
+// deno-lint-ignore no-explicit-any
+async function retirerAdresse(supabase: any, email: string): Promise<string[]> {
+  const erreurs: string[] = [];
+  const maintenant = new Date().toISOString();
+  const etape = async (nom: string, q: PromiseLike<{ error: { message: string } | null }>) => {
+    try {
+      const { error } = await q;
+      if (error) { console.error('[admin-leads] retrait, ' + nom + ' :', error.message); erreurs.push(nom); }
+    } catch (e) {
+      console.error('[admin-leads] retrait, ' + nom + ' :', e instanceof Error ? e.message : String(e)); erreurs.push(nom);
+    }
+  };
+  await etape('abonnes', supabase.from('abonnes')
+    .update({ statut: 'desinscrit', desinscrit_le: maintenant, maj_le: maintenant })
+    .eq('email', email).neq('statut', 'desinscrit'));
+  await etape('evaluations', supabase.from('bilans').update({ rappels_off: true }).eq('a_email', email).eq('rappels_off', false));
+  await etape('evaluations', supabase.from('bilans').update({ rappels_off: true }).eq('b_email', email).eq('rappels_off', false));
+  await etape('celibataires', supabase.from('bilan_celib').update({ email: null, consent_at: null, maj_le: maintenant }).eq('email', email));
+  return [...new Set(erreurs)];
+}
+
 serve(async (req) => {
   if (req.method === 'OPTIONS') {
     return new Response(null, { headers: corsHeaders });
@@ -94,9 +183,24 @@ serve(async (req) => {
       );
     }
 
-    // POST: update a lead (toggle is_closed)
     if (req.method === 'POST') {
-      const { id, is_closed } = await req.json();
+      const corps = await req.json().catch(() => ({}));
+
+      // Une adresse : où elle est, et la retirer de tous les envois.
+      if (corps && (corps.action === 'adresse' || corps.action === 'desinscrire')) {
+        const email = emailAdmin(corps.email);
+        if (!email) {
+          return new Response(JSON.stringify({ success: false, error: 'Adresse e-mail illisible' }),
+            { status: 400, headers: { ...corsHeaders, 'Content-Type': 'application/json' } });
+        }
+        const erreurs = corps.action === 'desinscrire' ? await retirerAdresse(supabase, email) : [];
+        const adresse = await situationAdresse(supabase, email);
+        return new Response(JSON.stringify({ success: erreurs.length === 0, adresse, erreurs }),
+          { headers: { ...corsHeaders, 'Content-Type': 'application/json' } });
+      }
+
+      // Un lead de l'e-book : le marquer traité (is_closed).
+      const { id, is_closed } = corps || {};
 
       if (!id) {
         return new Response(

@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Désinscription · Quiz Couple</title>
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon.png" type="image/png">
+<!--
+  La page de désinscription des e-mails (14 novembre 2026). Le lien de chaque
+  e-mail du parcours mène à la fonction lead-capture (?d=<jeton>), qui
+  désinscrit l'adresse puis renvoie ici avec la langue et le résultat dans
+  le fragment : #en-ok, #fr-deja, #de-invalide, #nl-erreur. Jusque-là, la
+  fonction répondait elle-même une page HTML, que Supabase réécrit en texte
+  brut sur son domaine : la personne voyait du code. Le fragment ne quitte
+  jamais le navigateur, et il ne porte ni adresse ni jeton.
+-->
+<script>
+  (function () {
+    try {
+      var t = localStorage.getItem('theme');
+      if (t === 'dark') document.documentElement.classList.add('dark');
+      else if (t !== 'light' && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) document.documentElement.classList.add('dark');
+    } catch (e) {
+      if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) document.documentElement.classList.add('dark');
+    }
+  })();
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600&family=Inter:wght@400;600&display=swap">
+<style>
+  :root {
+    --fond: #fff6fa;
+    --carte: #ffffff;
+    --texte: #2a1f2b;
+    --doux: #6b5a66;
+    --titre: #b5345f;
+    --rose: #d9608a;
+    --rose-texte: #ffffff;
+    --bord: #f1dbe5;
+    --ombre: 0 24px 60px -36px rgba(90, 20, 60, .45);
+  }
+  .dark {
+    --fond: #1b1420;
+    --carte: #26202b;
+    --texte: #f3e9ee;
+    --doux: #c9b8c3;
+    --titre: #f08ab0;
+    --rose: #e17398;
+    --rose-texte: #1b1420;
+    --bord: #3a3040;
+    --ombre: 0 24px 60px -36px rgba(0, 0, 0, .8);
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    min-height: 100vh;
+    min-height: 100svh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px 16px;
+    background: var(--fond);
+    color: var(--texte);
+    font-family: Inter, system-ui, -apple-system, "Segoe UI", sans-serif;
+    font-size: 16px;
+    line-height: 1.55;
+  }
+  main {
+    width: 100%;
+    max-width: 30rem;
+    background: var(--carte);
+    border: 1px solid var(--bord);
+    border-radius: 24px;
+    padding: 28px 24px 30px;
+    box-shadow: var(--ombre);
+    text-align: center;
+  }
+  .logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--texte);
+    text-decoration: none;
+    font-family: Fredoka, Inter, system-ui, sans-serif;
+    font-weight: 600;
+    font-size: 1.15rem;
+  }
+  .logo img { width: 34px; height: 36px; }
+  .duo {
+    height: 104px;
+    margin: 18px 0 8px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 6px;
+  }
+  .duo svg { display: block; }
+  h1 {
+    margin: 0 0 10px;
+    font-family: Fredoka, Inter, system-ui, sans-serif;
+    font-weight: 600;
+    font-size: 1.6rem;
+    line-height: 1.2;
+    color: var(--titre);
+  }
+  p { margin: 0 0 22px; color: var(--doux); }
+  .actions { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 46px;
+    padding: 10px 20px;
+    border-radius: 999px;
+    font-weight: 600;
+    text-decoration: none;
+    background: var(--rose);
+    color: var(--rose-texte);
+    border: 2px solid var(--rose);
+    transition: transform .15s ease, filter .15s ease;
+  }
+  .btn:hover { filter: brightness(1.05); transform: translateY(-1px); }
+  .btn--sec { background: transparent; color: var(--titre); }
+  .btn:focus-visible, .logo:focus-visible { outline: 3px solid var(--titre); outline-offset: 3px; }
+  [hidden] { display: none !important; }
+  @media (prefers-reduced-motion: reduce) { .btn { transition: none; } .btn:hover { transform: none; } }
+</style>
+</head>
+<body>
+<main>
+  <a class="logo" id="logo" href="/"><img src="/assets/logo-quiz-couple.webp" alt="" width="34" height="36"><span>Quiz Couple</span></a>
+  <div class="duo" id="duo" aria-hidden="true"></div>
+  <h1 id="titre">Désinscription</h1>
+  <p id="texte">Pour ne plus recevoir nos e&#8209;mails, utilisez le lien en bas de l'un d'eux. En cas de souci, écrivez-nous&nbsp;: on vous retire de la liste à la main.</p>
+  <div class="actions">
+    <a class="btn" id="accueil" href="/">Retour sur Quiz Couple</a>
+    <a class="btn btn--sec" id="contact" href="/contact/">Nous écrire</a>
+  </div>
+</main>
+<script>
+  (function () {
+    // Les textes des six langues, et les quatre résultats que la fonction
+    // lead-capture peut renvoyer : ok (désinscrit à l'instant), deja (l'adresse
+    // l'était déjà), invalide (lien mal formé ou inconnu), erreur (la base n'a
+    // pas répondu). « invalide » et « erreur » ne promettent rien : ils disent
+    // comment se faire retirer à la main. Le trait d'union de « e-mail » est
+    // insécable (\u2011) : « E- / Mails » se coupait en fin de ligne.
+    var T = {
+      fr: {
+        ok: ['C’est fait, vous êtes désinscrit(e)', 'Vous ne recevrez plus d’e\u2011mails de Quiz Couple à cette adresse. Vos résultats et tout le site restent accessibles, gratuitement.'],
+        deja: ['Vous étiez déjà désinscrit(e)', 'Cette adresse ne reçoit plus d’e\u2011mails de Quiz Couple. Vous n’avez rien d’autre à faire.'],
+        invalide: ['Ce lien ne fonctionne pas', 'On n’a pas reconnu ce lien de désinscription. S’il vient d’un e\u2011mail de Quiz Couple et que vous recevez encore nos e\u2011mails, écrivez-nous avec votre adresse e\u2011mail : on vous retire de la liste à la main.'],
+        erreur: ['Petit souci de notre côté', 'La désinscription n’a pas pu se faire. Cliquez de nouveau sur le lien de l’e\u2011mail dans quelques minutes, ou écrivez-nous avec votre adresse e\u2011mail : on vous retire de la liste à la main.'],
+        page: 'Désinscription', accueil: 'Retour sur Quiz Couple', contact: 'Nous écrire'
+      },
+      en: {
+        ok: ['Done, you’re unsubscribed', 'You won’t get any more emails from Quiz Couple at this address. Your results and the whole site are still there for you, free.'],
+        deja: ['You were already unsubscribed', 'This address doesn’t get emails from Quiz Couple anymore. There’s nothing else to do.'],
+        invalide: ['This link doesn’t work', 'We didn’t recognise this unsubscribe link. If it came from a Quiz Couple email and you still get our emails, write to us with your email address and we’ll take you off the list by hand.'],
+        erreur: ['Something went wrong on our side', 'We couldn’t unsubscribe you just now. Click the link in the email again in a few minutes, or write to us with your email address and we’ll take you off the list by hand.'],
+        page: 'Unsubscribe', accueil: 'Back to Quiz Couple', contact: 'Contact us'
+      },
+      es: {
+        ok: ['Listo, te has dado de baja', 'Ya no recibirás e\u2011mails de Quiz Couple en esta dirección. Tus resultados y todo el sitio siguen disponibles, gratis.'],
+        deja: ['Ya estabas dado/a de baja', 'Esta dirección ya no recibe e\u2011mails de Quiz Couple. No tienes que hacer nada más.'],
+        invalide: ['Este enlace no funciona', 'No hemos reconocido este enlace de baja. Si viene de un e\u2011mail de Quiz Couple y todavía recibes nuestros e\u2011mails, escríbenos con tu dirección de e\u2011mail y te quitaremos de la lista a mano.'],
+        erreur: ['Algo ha fallado por nuestra parte', 'No hemos podido darte de baja. Vuelve a pulsar el enlace del e\u2011mail dentro de unos minutos, o escríbenos con tu dirección de e\u2011mail y te quitaremos de la lista a mano.'],
+        page: 'Darse de baja', accueil: 'Volver a Quiz Couple', contact: 'Escríbenos'
+      },
+      de: {
+        ok: ['Erledigt, du bist abgemeldet', 'Du bekommst an diese Adresse keine E\u2011Mails mehr von Quiz Couple. Deine Ergebnisse und die ganze Website bleiben kostenlos für dich da.'],
+        deja: ['Du warst schon abgemeldet', 'An diese Adresse schickt Quiz Couple keine E\u2011Mails mehr. Du musst nichts weiter tun.'],
+        invalide: ['Dieser Link funktioniert nicht', 'Wir haben diesen Abmeldelink nicht erkannt. Wenn er aus einer E\u2011Mail von Quiz Couple kommt und du noch E\u2011Mails von uns bekommst, schreib uns mit deiner E\u2011Mail\u2011Adresse. Dann nehmen wir dich von Hand aus der Liste.'],
+        erreur: ['Da ist bei uns etwas schiefgelaufen', 'Die Abmeldung hat gerade nicht geklappt. Klick in ein paar Minuten noch einmal auf den Link in der E\u2011Mail, oder schreib uns mit deiner E\u2011Mail\u2011Adresse. Dann nehmen wir dich von Hand aus der Liste.'],
+        page: 'Abmeldung', accueil: 'Zurück zu Quiz Couple', contact: 'Schreib uns'
+      },
+      it: {
+        ok: ['Fatto, sei disiscritto/a', 'Non riceverai più e\u2011mail da Quiz Couple a questo indirizzo. I tuoi risultati e tutto il sito restano disponibili, gratis.'],
+        deja: ['Eri già disiscritto/a', 'Questo indirizzo non riceve più e\u2011mail da Quiz Couple. Non devi fare nient’altro.'],
+        invalide: ['Questo link non funziona', 'Non abbiamo riconosciuto questo link di disiscrizione. Se viene da un’e\u2011mail di Quiz Couple e ricevi ancora le nostre e\u2011mail, scrivici con il tuo indirizzo e\u2011mail e ti toglieremo dalla lista a mano.'],
+        erreur: ['Qualcosa è andato storto da parte nostra', 'Non siamo riusciti a disiscriverti. Clicca di nuovo sul link dell’e\u2011mail tra qualche minuto, oppure scrivici con il tuo indirizzo e\u2011mail e ti toglieremo dalla lista a mano.'],
+        page: 'Disiscrizione', accueil: 'Torna su Quiz Couple', contact: 'Scrivici'
+      },
+      nl: {
+        ok: ['Gelukt, je bent afgemeld', 'Je krijgt op dit adres geen e\u2011mails meer van Quiz Couple. Je uitslagen en de hele site blijven gratis voor je beschikbaar.'],
+        deja: ['Je was al afgemeld', 'Dit adres krijgt geen e\u2011mails meer van Quiz Couple. Je hoeft verder niets te doen.'],
+        invalide: ['Deze link werkt niet', 'We herkennen deze afmeldlink niet. Komt hij uit een e\u2011mail van Quiz Couple en krijg je nog steeds e\u2011mails van ons? Stuur ons dan een bericht met je e\u2011mailadres, dan halen we je met de hand van de lijst.'],
+        erreur: ['Er ging iets mis bij ons', 'Afmelden lukte net niet. Klik over een paar minuten nog eens op de link in de e\u2011mail, of stuur ons een bericht met je e\u2011mailadres, dan halen we je met de hand van de lijst.'],
+        page: 'Afmelden', accueil: 'Terug naar Quiz Couple', contact: 'Stuur ons een bericht'
+      }
+    };
+    var ACCUEIL = { fr: '/', en: '/en/', es: '/es/', de: '/de/', it: '/it/', nl: '/nl/' };
+    var CONTACT = { fr: '/contact/', en: '/en/contact/', es: '/es/contacto/', de: '/de/kontakt/', it: '/it/contatto/', nl: '/nl/contact/' };
+
+    var m = /^#?(?:(fr|en|es|de|it|nl)-)?(ok|deja|invalide|erreur)$/.exec(location.hash || '');
+    var lang = m && m[1];
+    if (!lang) {
+      var prefs = (navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language || '']);
+      for (var i = 0; i < prefs.length && !lang; i++) {
+        var court = String(prefs[i] || '').slice(0, 2).toLowerCase();
+        if (T[court]) lang = court;
+      }
+    }
+    lang = lang || 'fr';
+    var etat = m ? m[2] : null;
+    var t = T[lang];
+
+    document.documentElement.lang = lang;
+    document.getElementById('logo').href = ACCUEIL[lang];
+    var accueil = document.getElementById('accueil');
+    accueil.href = ACCUEIL[lang];
+    accueil.textContent = t.accueil;
+    var contact = document.getElementById('contact');
+    contact.href = CONTACT[lang];
+    contact.textContent = t.contact;
+    // Le contact n'est utile que quand rien ne s'est fait.
+    contact.hidden = etat === 'ok' || etat === 'deja';
+
+    var bloc = etat ? t[etat] : t.invalide;
+    document.getElementById('titre').textContent = etat ? bloc[0] : t.page;
+    document.getElementById('texte').textContent = bloc[1];
+    document.title = (etat ? bloc[0] : t.page) + ' · Quiz Couple';
+
+    // Les deux personnages, dessinés par le même fichier que sur les tests
+    // (/js/mascottes.js, chargé en différé) : ils font au revoir quand tout
+    // s'est bien passé. Sans le fichier, la place reste vide, à sa hauteur.
+    function dessine(nom, poseNom, hauteur, boite) {
+      var base = (window.POSES_MASCOTTES || {})[poseNom] || {};
+      var o = { couleurs: 'hex' };
+      for (var k in base) o[k] = base[k];
+      try {
+        return window.mascotte(nom, o).replace(/ width="\d+" height="\d+"/, ' width="' + Math.round(hauteur * boite[0] / boite[1]) + '" height="' + hauteur + '"');
+      } catch (e) { return ''; }
+    }
+    document.addEventListener('DOMContentLoaded', function () {
+      if (typeof window.mascotte !== 'function') return;
+      var content = etat === 'ok' || etat === 'deja';
+      document.getElementById('duo').innerHTML =
+        dessine('rose', content ? 'salut' : 'repos', 92, [260, 280]) +
+        dessine('violet', content ? 'salut' : 'repos', 100, [220, 300]);
+    });
+  })();
+</script>
+<script src="/js/mascottes.js" defer></script>
+</body>
+</html>

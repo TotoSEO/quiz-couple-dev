@@ -964,3 +964,39 @@ et le rendu des quatre e-mails espagnols à 390 px. L'action « verif » de
 brevo-reglages.yml donne les chiffres de l'e2 transactionnel par version
 (« Les e-mails transactionnels, en chiffres ») : on les relit après trois
 soirs, contre les 1,4 % d'ouvertures de l'e2 en campagne.
+
+## 14 novembre 2026 : le lien de désinscription montrait du code
+
+Une personne a écrit par la page de contact : « Please remove me from your
+email listings. The link in the mail is not working. » Le lien en cause est
+celui de la désinscription, pas les liens vers le site : tous ceux des e-mails
+du parcours (192 aperçus, six langues, deux versions, `e1` et `e2`) mènent à
+des pages qui existent.
+
+**Ce qui se passait.** Les e-mails envoyés par l'API transactionnelle (l'`e1`
+dans la minute depuis le 29 octobre, l'`e2` depuis le 3 novembre) portent le
+lien `…/functions/v1/lead-capture?d=<jeton>&lang=<langue>`. La fonction
+désinscrivait bien l'adresse, puis répondait une page HTML. Mais Supabase ne
+sert pas de HTML sur son domaine : « GET requests that return text/html will
+be rewritten to text/plain » (documentation des Edge Functions, pages Limits
+et HTTP methods). La personne voyait le code de la page, et a cru que rien ne
+s'était passé. Le désabonnement en un clic des messageries (POST, RFC 8058)
+marchait, lui, puisqu'il n'affiche rien. Les campagnes du soir ont le lien de
+Brevo, qui n'était pas touché.
+
+**Ce qui change.** La fonction désinscrit, puis renvoie (303) vers
+`https://quiz-couple.com/desinscription/#<langue>-<résultat>`, une page
+statique du site (`public/desinscription/index.html`, en noindex) : « ok »,
+« deja », « invalide » (lien mal formé, tronqué, ou adresse déjà effacée) et
+« erreur » (la base n'a pas répondu), dans les six langues. Les deux derniers
+ne promettent rien : ils donnent la page de contact pour se faire retirer à
+la main. Les liens déjà envoyés passent par la même fonction : ils marchent
+aussi. « Évaluation de couple · santé » vérifie la redirection et la page.
+
+**Retirer une adresse à la main.** L'onglet Leads de l'admin cherche une
+adresse (abonnés et e-mails du parcours partis, évaluations, liste d'attente
+des célibataires, e-book) et la retire de tout ce qui peut lui écrire sans
+qu'elle le demande : désinscrite du parcours (la synchro du soir l'efface chez
+Brevo), rappels et reprises de ses évaluations coupés (jamais le lien d'un
+rapport payé), adresse effacée de la liste d'attente. Une adresse désinscrite
+est effacée trois mois après, comme le dit la politique de confidentialité.

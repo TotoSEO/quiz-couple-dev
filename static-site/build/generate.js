@@ -2263,7 +2263,11 @@ function copyStaticAssets() {
   // des e-mails du parcours (emails/gabarit.html les appelle par leur adresse
   // sur le site). Les dossiers « partenaires » et « produits » (visuels des
   // encarts d'affiliation) sont partis avec l'affiliation, le 9 novembre 2026.
-  for (const dir of ['blog', 'authors', 'quiz', 'fonts', 'bilan', 'email', 'og', 'livre']) {
+  // « desinscription » est la page où arrive le lien de désinscription des
+  // e-mails, après la fonction lead-capture (14 novembre 2026) : une page
+  // seule, sans menu, en noindex, qui lit la langue et le résultat dans le
+  // fragment de l'adresse.
+  for (const dir of ['blog', 'authors', 'quiz', 'fonts', 'bilan', 'email', 'og', 'livre', 'desinscription']) {
     const srcDir = path.join(publicDir, dir);
     const destDir = path.join(DIST_DIR, dir);
     if (fs.existsSync(srcDir)) {

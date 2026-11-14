@@ -464,6 +464,23 @@ button.adm-retour-site:disabled{opacity:.6;cursor:progress;}
 
 /* ── Listes : une ligne par page, trois chiffres à droite ──────────── */
 .stats-list{display:flex;flex-direction:column;}
+/* Retirer une adresse (onglet Leads) : le champ et le bouton sur une ligne,
+   puis ce que la base sait de l'adresse, en lignes libellé / valeur. */
+.adm-adresse{display:flex;flex-direction:column;gap:.35rem;margin-top:.75rem;max-width:34rem;}
+.adm-adresse-label{font-size:.78rem;font-weight:500;color:var(--adm-ink-2);}
+.adm-adresse-ligne{display:flex;gap:.5rem;align-items:center;}
+.adm-adresse-ligne .input{flex:1 1 auto;min-width:0;}
+.adm-adresse-ligne .btn{height:2.5rem;flex:0 0 auto;}
+.adm-adresse-res:empty{display:none;}
+.adm-adresse-res{margin-top:.9rem;max-width:34rem;}
+.adm-adresse-res dl{display:grid;grid-template-columns:minmax(0,12rem) minmax(0,1fr);gap:.45rem 1rem;margin:0;font-size:.8375rem;}
+.adm-adresse-res dt{color:var(--adm-ink-3);}
+.adm-adresse-res dd{margin:0;color:var(--adm-ink);overflow-wrap:anywhere;}
+.adm-adresse-actions{display:flex;flex-wrap:wrap;align-items:center;gap:.6rem;margin-top:1rem;}
+.adm-adresse-note{font-size:.8125rem;color:var(--adm-ink-2);margin:.75rem 0 0;}
+.adm-adresse-note.est-erreur{color:var(--adm-bad);}
+.adm .btn.adm-adresse-retirer.est-arme{background:var(--adm-danger);border-color:var(--adm-danger);color:#fff;}
+@media (max-width:480px){.adm-adresse-res dl{grid-template-columns:minmax(0,1fr);gap:.1rem;}.adm-adresse-res dd{margin-bottom:.5rem;}}
 .stats-avis{font-size:.78rem;line-height:1.5;color:var(--adm-warn);background:var(--adm-warn-bg);border:1px solid var(--adm-warn-line);border-radius:var(--adm-r-sm);padding:.55rem .75rem;margin-bottom:.6rem;}
 .stats-entetes{display:flex;align-items:center;gap:.5rem;padding:.3rem .6rem .45rem;border-bottom:1px solid var(--adm-line);}
 .stats-entete-nom{flex:1;min-width:0;font-size:.72rem;font-weight:500;color:var(--adm-ink-3);}

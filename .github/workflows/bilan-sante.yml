@@ -91,6 +91,24 @@ jobs:
           echo "lead-capture (corps vide) : $code $(head -c 200 reponse.json)"
           if [ "$code" != "400" ]; then echo "::error::lead-capture répond $code au lieu de 400"; exit 1; fi
 
+      - name: Le lien de désinscription mène à la page du site
+        run: |
+          # Un jeton bien formé qu'aucune adresse ne porte : la fonction ne
+          # désinscrit personne et renvoie vers la page du site (« invalide »).
+          # Jusqu'au 14 novembre 2026, elle répondait une page HTML, que
+          # Supabase réécrit en texte brut sur son domaine : la personne qui
+          # cliquait sur « se désinscrire » voyait du code.
+          url="https://$SUPABASE_PROJECT_REF.supabase.co/functions/v1/lead-capture?d=0000000000000000&lang=en"
+          code=$(curl -sS -o /dev/null -D entetes.txt -w '%{http_code}' "$url")
+          vers=$(grep -i '^location:' entetes.txt | head -1 | cut -d' ' -f2- | tr -d '\r')
+          echo "lead-capture (lien de désinscription) : $code vers $vers"
+          if [ "$code" != "303" ] || [ "$vers" != "https://quiz-couple.com/desinscription/#en-invalide" ]; then
+            echo "::error::le lien de désinscription ne renvoie pas vers la page du site"; exit 1
+          fi
+          code=$(curl -sS -o page.html -w '%{http_code}' https://quiz-couple.com/desinscription/)
+          if [ "$code" != "200" ] || ! grep -q 'id="titre"' page.html; then echo "::error::la page /desinscription/ répond $code"; exit 1; fi
+          echo "La page /desinscription/ du site répond 200."
+
       - name: La page de vente publiée
         run: |
           page=$(curl -sS -L https://quiz-couple.com/evaluation-de-couple/)

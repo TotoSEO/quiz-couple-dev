@@ -11,7 +11,10 @@
 //   → 400 { ok: false, code: 'prenom' } / 403 { ok: false, code: 'cle' }
 //   → 400 { ok: false, code }     format, jetable, domaine, consentement, langue, source
 //   → 429 { ok: false, code: 'trop' }
-// GET  ?d=<jeton>[&lang=fr]      → la page de désinscription (HTML)
+// GET  ?d=<jeton>[&lang=fr]      → désinscrit, puis 303 vers la page du site
+//                                  https://quiz-couple.com/desinscription/#<langue>-<résultat>
+//                                  (ok, deja, invalide, erreur) : Supabase réécrit en
+//                                  texte brut toute page HTML servie sur son domaine
 // POST ?d=<jeton>                → 200, le désabonnement en un clic des
 //                                  messageries (RFC 8058, en-tête
 //                                  List-Unsubscribe-Post de l'e1 immédiat)
@@ -42,7 +45,7 @@
 import { serve } from 'https://deno.land/std@0.168.0/http/server.ts';
 import { createClient, SupabaseClient } from 'https://esm.sh/@supabase/supabase-js@2';
 import {
-  controleEmail, langueValide, sourceValide, pagePropre, hacheIp, pageDesinscription, prenomPropre, empreinte,
+  controleEmail, langueValide, sourceValide, pagePropre, hacheIp, adresseDesinscription, prenomPropre, empreinte,
 } from '../_shared/abonnes/regles.mjs';
 import { corpsBrevo, BREVO_ENVOI } from '../_shared/emails/immediat.mjs';
 import { messageIdPropre } from '../_shared/emails/evenements.mjs';
@@ -144,18 +147,23 @@ function planifierImmediat(supabase: SupabaseClient, email: string, attenteMs: n
   if (rt && typeof rt.waitUntil === 'function') rt.waitUntil(tache);
 }
 
-// La désinscription par le jeton de la personne : vrai si elle vient de se
-// faire, faux si l'adresse était déjà désinscrite ; null pour un jeton inconnu.
-async function desinscrire(supabase: SupabaseClient, jeton: string): Promise<{ trouve: boolean, lang: string | null } | null> {
-  if (!/^[a-f0-9]{16,64}$/.test(jeton)) return null;
-  const { data } = await supabase.from('abonnes').select('id, statut, lang').eq('jeton', jeton).maybeSingle();
-  if (!data) return null;
-  const trouve = data.statut !== 'desinscrit';
-  if (trouve) {
-    const maintenant = new Date().toISOString();
-    await supabase.from('abonnes').update({ statut: 'desinscrit', desinscrit_le: maintenant, maj_le: maintenant }).eq('id', data.id);
-  }
-  return { trouve, lang: data.lang || null };
+// La désinscription par le jeton de la personne. Le résultat lui dit ce qui
+// s'est passé, sans rien promettre de faux : « ok » (désinscrite à l'instant),
+// « deja » (elle l'était), « invalide » (lien mal formé, tronqué par la
+// messagerie, ou adresse déjà effacée), « erreur » (la base n'a pas répondu :
+// elle peut réessayer ou nous écrire).
+type EtatDesinscription = 'ok' | 'deja' | 'invalide' | 'erreur';
+async function desinscrire(supabase: SupabaseClient, jeton: string): Promise<{ etat: EtatDesinscription, lang: string | null }> {
+  if (!/^[a-f0-9]{16,64}$/.test(jeton)) return { etat: 'invalide', lang: null };
+  const { data, error } = await supabase.from('abonnes').select('id, statut, lang').eq('jeton', jeton).maybeSingle();
+  if (error) { console.error('[lead-capture] désinscription, lecture :', error.message); return { etat: 'erreur', lang: null }; }
+  if (!data) return { etat: 'invalide', lang: null };
+  if (data.statut === 'desinscrit') return { etat: 'deja', lang: data.lang || null };
+  const maintenant = new Date().toISOString();
+  const { error: e2 } = await supabase.from('abonnes')
+    .update({ statut: 'desinscrit', desinscrit_le: maintenant, maj_le: maintenant }).eq('id', data.id);
+  if (e2) { console.error('[lead-capture] désinscription, écriture :', e2.message); return { etat: 'erreur', lang: data.lang || null }; }
+  return { etat: 'ok', lang: data.lang || null };
 }
 
 function json(code: number, corps: unknown): Response {
@@ -187,11 +195,14 @@ serve(async (req: Request) => {
   const url = new URL(req.url);
 
   // ── La désinscription ──
+  // Supabase ne sert pas de page HTML sur son domaine (il la réécrit en texte
+  // brut) : on désinscrit ici, puis on renvoie vers la page du site, qui dit
+  // le résultat dans la langue de l'e-mail.
   if (req.method === 'GET') {
-    const lang = langueValide(url.searchParams.get('lang') || '') || 'fr';
     const fait = await desinscrire(supabase, (url.searchParams.get('d') || '').trim());
-    return new Response(pageDesinscription((fait && fait.lang) || lang, !!(fait && fait.trouve)), {
-      status: 200, headers: { 'Content-Type': 'text/html; charset=utf-8', 'Cache-Control': 'no-store' },
+    const lang = fait.lang || langueValide(url.searchParams.get('lang') || '');
+    return new Response(null, {
+      status: 303, headers: { Location: adresseDesinscription(lang, fait.etat), 'Cache-Control': 'no-store' },
     });
   }
 
@@ -200,8 +211,8 @@ serve(async (req: Request) => {
   // Le désabonnement en un clic : la messagerie envoie
   // « List-Unsubscribe=One-Click » à l'adresse du lien, sans autre en-tête.
   if (url.searchParams.has('d')) {
-    await desinscrire(supabase, (url.searchParams.get('d') || '').trim());
-    return new Response(null, { status: 200 });
+    const fait = await desinscrire(supabase, (url.searchParams.get('d') || '').trim());
+    return new Response(null, { status: fait.etat === 'erreur' ? 500 : 200 });
   }
   const ip = (req.headers.get('x-forwarded-for') || '').split(',')[0].trim() || req.headers.get('cf-connecting-ip') || 'inconnue';
   const texte = await req.text();

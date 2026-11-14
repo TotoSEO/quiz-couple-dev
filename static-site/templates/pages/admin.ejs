@@ -702,6 +702,27 @@
               <p class="stats-tete-sub" id="abonnes-taux-sub">&nbsp;</p>
             </div>
           </div>
+          <%# Une adresse (14 novembre 2026) : où elle est, et la retirer de tous
+              les envois, pour une personne qui écrit « retirez-moi de vos
+              listes ». Contrat de chercherAdresse (admin.js) et des actions
+              « adresse » et « desinscrire » d'admin-leads. %>
+          <div class="stats-panel">
+            <div class="stats-panel-head">
+              <div class="stats-panel-titre">
+                <h2 class="stats-panel-title">Retirer une adresse</h2>
+                <%- aide(`Pour une personne qui demande à ne plus rien recevoir. Cherchez son adresse : la page dit où elle est (abonnés et e-mails du parcours déjà partis, évaluations, liste d'attente des célibataires, e-book). « Retirer de tous les envois » la désinscrit du parcours (la synchro du soir l'efface aussi chez Brevo), coupe les rappels et les reprises de ses évaluations, sans toucher au lien d'un rapport déjà payé, et efface l'adresse de la liste d'attente. L'adresse désinscrite est effacée trois mois après, comme le dit la politique de confidentialité.`) %>
+              </div>
+            </div>
+            <form id="abonne-cherche" class="adm-adresse" autocomplete="off" novalidate>
+              <label for="abonne-email" class="adm-adresse-label">Adresse e-mail</label>
+              <div class="adm-adresse-ligne">
+                <input type="email" id="abonne-email" class="input" placeholder="adresse@exemple.com" spellcheck="false" autocapitalize="off" inputmode="email">
+                <button type="submit" class="btn btn-primary btn-sm" id="abonne-cherche-btn">Chercher</button>
+              </div>
+            </form>
+            <div id="abonne-resultat" class="adm-adresse-res" role="status" aria-live="polite"></div>
+          </div>
+
           <%# Les tableaux des abonnés et des e-mails ont jusqu'à treize colonnes :
               en pleine largeur, jamais côte à côte. %>
           <div>
