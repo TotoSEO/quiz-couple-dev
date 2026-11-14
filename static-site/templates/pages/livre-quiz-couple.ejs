@@ -241,7 +241,8 @@
   <%# ── La barre collée du téléphone ── %>
   <div class="lv-barre" data-lv-barre>
     <img src="/livre/livre-mini-160.webp" alt="" width="160" height="173" loading="lazy" decoding="async">
-    <div class="lv-barre-texte"><strong><%= nb(L('livre.titre')).replace(/ à deux$/, '\u00a0à\u00a0deux') %></strong><span><%= nb(livre.prix) %></span></div>
+    <%# « 100 aventures » sur une ligne, « à deux » sur la suivante : seule l'espace avant « à » reste sécable. %>
+    <div class="lv-barre-texte"><strong><%= nb(L('livre.titre')).replace(/ à deux$/, ' à\u00a0deux') %></strong><span><%= nb(livre.prix) %></span></div>
     <a class="lv-amazon lv-amazon--petit" href="<%= lien %>" target="_blank" rel="sponsored noopener" data-livre-src="barre"><span><%= nb(L('hero.bouton')) %></span><%- fleche %></a>
   </div>
 
