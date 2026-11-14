@@ -51,6 +51,18 @@
   const bandeauPromoVisible = !!(urlEval && typeof bandeauPromo !== 'undefined' && bandeauPromo
     && typeof bilanPromo !== 'undefined' && bilanPromo && bilanPromo.bandeau);
   const icEval = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/><path d="M12 17s-3.4-2.1-3.4-4.5a1.7 1.7 0 0 1 3.4-.6 1.7 1.7 0 0 1 3.4.6C15.4 14.9 12 17 12 17z"/></svg>';
+  // Le livre « 100 aventures à deux » (14 novembre 2026, Thomas : « La page
+  // doit être accessible depuis le menu à droite du bouton "Evaluer son
+  // couple" [...] sur la même ligne sur mobile le bouton qui mène vers
+  // l'évaluation et à droite un bouton "Découvrir le cadeau de Noël
+  // parfait" ») : seulement dans les langues où le livre est en vente (LIVRE
+  // de config.js, le français pour commencer). livreMenuPour (generate.js)
+  // dit aussi si l'on est dans la période de Noël (jusqu'au 24 décembre),
+  // qui change le libellé.
+  const livreMenu = (typeof livreMenuPour === 'function') ? livreMenuPour(lang) : null;
+  const livreLibelle = livreMenu ? t(livreMenu.noel ? 'livre:menu.boutonNoel' : 'livre:menu.bouton', '') : '';
+  const livreCourt = livreMenu ? t(livreMenu.noel ? 'livre:menu.courtNoel' : 'livre:menu.court', '') : '';
+  const icAller = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';
 
   // Filter out links that don't have a URL for the current language (frOnly pages in non-FR)
   const filterAvailable = (links) => links.filter(link => getLocalizedUrl(link.routeKey, lang));
@@ -298,8 +310,9 @@
     niveau 2 ; le mobile replie la rangée de puces du niveau 2 et fait
     glisser le logo, centré en haut de page, vers la gauche. %>
 <header class="sticky top-0 z-50 w-full bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80" id="site-header">
-  <% if (urlEval) { %>
+  <% if (urlEval || livreMenu) { %>
   <style>
+    <% if (urlEval) { %>
     .n2-eval { display: inline-flex; align-items: center; gap: .5rem; height: 2.5rem; padding: 0 1rem 0 .4rem; margin-right: .45rem; border-radius: 999px; font-size: .875rem; font-weight: 700; white-space: nowrap; color: #fff; background: hsl(var(--primary)); text-decoration: none; box-shadow: 0 8px 18px -10px hsl(var(--primary) / .9); transition: background .2s ease, transform .2s ease; }
     .n2-eval:hover, .n2-eval:focus-visible { color: #fff; background: hsl(340 65% 58%); transform: translateY(-1px); }
     .n2-eval:focus-visible { outline: 2px solid hsl(var(--primary)); outline-offset: 2px; }
@@ -312,7 +325,54 @@
     .mobile-eval-titre { display: block; font-size: 1.02rem; font-weight: 800; line-height: 1.2; }
     .mobile-eval-sous { display: block; margin-top: .15rem; font-size: .8rem; line-height: 1.3; color: hsl(0 0% 100% / .88); }
     .mobile-eval > svg { width: 1.25rem; height: 1.25rem; }
+    /* En thème sombre, le rose clair du thème portait un texte blanc à peine
+       lisible et un halo (14 novembre 2026, Thomas : « en mode dark il est
+       moche dans le menu ») : un aplat rose foncé bordé de rose, comme les
+       cartes sombres du menu, et la pastille de l'icône en rose plein. */
+    .dark .n2-eval { color: hsl(330 25% 96%); background: hsl(338 42% 19%); box-shadow: inset 0 0 0 1px hsl(338 90% 72% / .55); }
+    .dark .n2-eval:hover, .dark .n2-eval:focus-visible { color: #fff; background: hsl(338 42% 24%); box-shadow: inset 0 0 0 1px hsl(338 90% 72% / .85); }
+    .dark .n2-eval-ic, .dark .mobile-eval-ic { color: hsl(300 30% 10%); background: hsl(var(--primary)); }
+    .dark .mobile-eval { color: hsl(330 25% 96%); background: hsl(338 42% 17%); box-shadow: inset 0 0 0 1px hsl(338 90% 72% / .45); }
+    .dark .mobile-eval:hover, .dark .mobile-eval:focus-visible { color: #fff; background: hsl(338 42% 22%); }
+    .dark .mobile-eval-sous { color: hsl(338 50% 86%); }
     @media (prefers-reduced-motion: reduce) { .n2-eval { transition: none; } }
+    <% } %>
+    <% if (livreMenu) { %>
+    /* Le bouton du livre, aux couleurs de sa couverture : à droite de
+       « Évaluer son couple » sur ordinateur, à côté de lui sur une même
+       rangée dans le menu du téléphone (.mnav-duo). */
+    .n2-livre { display: inline-flex; align-items: center; gap: .45rem; height: 2.5rem; padding: 0 1rem 0 .4rem; margin-right: .45rem; border-radius: 999px; font-size: .875rem; font-weight: 700; white-space: nowrap; color: #2b1722; background: #ffd45c; text-decoration: none; box-shadow: inset 0 0 0 1px #e9b93a; transition: background .2s ease, transform .2s ease; }
+    .n2-livre:hover, .n2-livre:focus-visible { color: #2b1722; background: #ffca33; transform: translateY(-1px); }
+    .n2-livre:focus-visible { outline: 2px solid #b98a00; outline-offset: 2px; }
+    .n2-livre img { width: 1.75rem; height: auto; transform: rotate(-7deg); filter: drop-shadow(0 2px 2px rgb(43 23 34 / .22)); }
+    .dark .n2-livre { color: #ffe7a3; background: #2b2314; box-shadow: inset 0 0 0 1px rgb(255 212 92 / .5); }
+    .dark .n2-livre:hover, .dark .n2-livre:focus-visible { color: #fff3cf; background: #372d1a; box-shadow: inset 0 0 0 1px rgb(255 212 92 / .8); }
+    @media (min-width: 1024px) and (max-width: 1179.98px) {
+      .n2-livre { padding: 0 .4rem; }
+      .n2-livre-texte { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+    }
+    .mnav-duo { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .6rem; }
+    .mnav-duo--seul { grid-template-columns: minmax(0, 1fr); }
+    .mnav-tuile { position: relative; display: flex; flex-direction: column; align-items: flex-start; gap: .55rem; min-height: 8.4rem; padding: .85rem .85rem 1rem; border-radius: 1rem; text-decoration: none; }
+    .mnav-tuile > svg { position: absolute; top: .85rem; right: .8rem; width: 1.2rem; height: 1.2rem; }
+    .mnav-tuile-ic { display: inline-flex; align-items: center; justify-content: center; width: 2.6rem; height: 2.6rem; border-radius: .85rem; background: hsl(0 0% 100% / .22); }
+    .mnav-tuile-ic svg { width: 1.35rem; height: 1.35rem; }
+    .mnav-tuile-livre { width: 2.4rem; height: auto; margin: -.1rem 0 .05rem .15rem; transform: rotate(-7deg); filter: drop-shadow(0 3px 3px rgb(43 23 34 / .25)); }
+    .mnav-tuile-titre { display: block; font-size: 1rem; font-weight: 800; line-height: 1.2; hyphens: manual; overflow-wrap: normal; }
+    .mnav-tuile-sous { display: block; margin-top: -.3rem; font-size: .8rem; line-height: 1.3; }
+    .mnav-tuile--eval { color: #fff; background: hsl(var(--primary)); }
+    .mnav-tuile--eval:hover, .mnav-tuile--eval:focus-visible { color: #fff; background: hsl(340 65% 58%); }
+    .mnav-tuile--eval .mnav-tuile-sous { color: hsl(0 0% 100% / .9); }
+    .mnav-tuile--livre { color: #2b1722; background: #ffd45c; box-shadow: inset 0 0 0 1px #e9b93a; }
+    .mnav-tuile--livre:hover, .mnav-tuile--livre:focus-visible { color: #2b1722; background: #ffca33; }
+    .dark .mnav-tuile--eval { color: hsl(330 25% 96%); background: hsl(338 42% 17%); box-shadow: inset 0 0 0 1px hsl(338 90% 72% / .45); }
+    .dark .mnav-tuile--eval:hover, .dark .mnav-tuile--eval:focus-visible { color: #fff; background: hsl(338 42% 22%); }
+    .dark .mnav-tuile--eval .mnav-tuile-ic { color: hsl(300 30% 10%); background: hsl(var(--primary)); }
+    .dark .mnav-tuile--eval .mnav-tuile-sous { color: hsl(338 50% 86%); }
+    .dark .mnav-tuile--livre { color: #ffe7a3; background: #2b2314; box-shadow: inset 0 0 0 1px rgb(255 212 92 / .5); }
+    .dark .mnav-tuile--livre:hover, .dark .mnav-tuile--livre:focus-visible { color: #fff3cf; background: #372d1a; }
+    @media (prefers-reduced-motion: reduce) { .n2-livre { transition: none; } }
+    <% } %>
     <% if (bandeauPromoVisible) { %>
     .bandeau-promo { display: flex; align-items: center; justify-content: center; gap: .55rem; padding: .62rem 1rem; color: #fff; background: hsl(286 38% 14%); font: 700 .9rem/1.4 var(--font-display, inherit); text-align: center; text-decoration: none; }
     .bandeau-promo:hover, .bandeau-promo:focus-visible { color: #fff; background: hsl(286 38% 19%); }
@@ -422,6 +482,12 @@
             <a href="<%= urlEval %>" data-bilan-src="menu" class="n2-eval">
               <span class="n2-eval-ic"><%- icEval %></span>
               <%= t('common:nav.evaluer', 'Évaluer son couple') %>
+            </a>
+            <% } %>
+            <% if (livreMenu) { %>
+            <a href="<%= livreMenu.url %>" class="n2-livre" title="<%= livreLibelle %>"<%- courant('livreQuizCouple') %>>
+              <img src="/livre/livre-mini-160.webp" alt="" width="160" height="173" decoding="async">
+              <span class="n2-livre-texte"><%= livreCourt %></span>
             </a>
             <% } %>
             <!-- Tests -->
@@ -538,7 +604,23 @@
       <div class="container mx-auto px-4">
         <div class="mnav">
           <div class="mnav-accueil">
-          <% if (urlEval) { %>
+          <% if (livreMenu) { %>
+          <div class="mnav-duo<%= urlEval ? '' : ' mnav-duo--seul' %>">
+            <% if (urlEval) { %>
+            <a href="<%= urlEval %>" data-bilan-src="menu-mobile" class="mnav-tuile mnav-tuile--eval">
+              <span class="mnav-tuile-ic"><%- icEval %></span>
+              <span class="mnav-tuile-titre"><%= t('common:nav.evaluer', 'Évaluer son couple') %></span>
+              <span class="mnav-tuile-sous"><%= t('livre:menu.evaluerSous', '') %></span>
+              <%- icAller %>
+            </a>
+            <% } %>
+            <a href="<%= livreMenu.url %>" class="mnav-tuile mnav-tuile--livre"<%- courant('livreQuizCouple') %>>
+              <img class="mnav-tuile-livre" src="/livre/livre-mini-160.webp" alt="" width="160" height="173" loading="lazy" decoding="async">
+              <span class="mnav-tuile-titre"><%= livreLibelle %></span>
+              <%- icAller %>
+            </a>
+          </div>
+          <% } else if (urlEval) { %>
           <a href="<%= urlEval %>" data-bilan-src="menu-mobile" class="mobile-eval">
             <span class="mobile-eval-ic"><%- icEval %></span>
             <span>

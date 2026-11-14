@@ -1,0 +1,381 @@
+/* La page du livre « 100 aventures à deux » (templates/pages/livre-quiz-couple.ejs),
+   mise en ligne dans le <head> de cette page seulement (cssPagePour).
+   Les couleurs sont celles de la couverture et des pages du livre
+   (livre/commun/base.css) : le jaune de la couverture, la rose, le violet,
+   l'encre. Le style est celui du livre : des aplats, un trait d'encre et une
+   ombre décalée, pas de dégradé. */
+
+@font-face {
+  font-family: 'Plume Livre';
+  src: url('/livre/polices/PlayfairDisplay-Italic-500.woff2') format('woff2');
+  font-weight: 500; font-style: italic; font-display: swap;
+}
+
+.lv {
+  --lv-jaune: #ffd45c;
+  --lv-jaune-pale: #fff4d3;
+  --lv-creme: #fff8ee;
+  --lv-disque: #fbd0de;
+  --lv-rose: #e17398;
+  --lv-rose-texte: #b12559;
+  --lv-rose-pale: #fdeef3;
+  --lv-violet: #7f4db3;
+  --lv-violet-texte: #6834b2;
+  --lv-vert: #2f8f5b;
+  --lv-texte: #2b1722;
+  --lv-texte-doux: #6b5562;
+  --lv-contour: #2b1722;
+  --lv-trait: #ecdce3;
+  --lv-carte: #ffffff;
+  --lv-fond: #fffdfa;
+  --lv-nuit: #1f142b;
+  --lv-ombre: 4px 5px 0 rgba(43, 23, 34, .16);
+  color: var(--lv-texte);
+  background: var(--lv-fond);
+  overflow-x: clip;
+}
+.dark .lv {
+  --lv-jaune-pale: #261f12;
+  --lv-creme: #170f1d;
+  --lv-disque: #3b2034;
+  --lv-rose-texte: #f6a3c1;
+  --lv-rose-pale: #22141d;
+  --lv-violet-texte: #c9a8f3;
+  --lv-vert: #5cc48c;
+  --lv-texte: #f7ecf2;
+  --lv-texte-doux: #cbb7c3;
+  --lv-contour: #4a3851;
+  --lv-trait: #34263b;
+  --lv-carte: #20162a;
+  --lv-fond: hsl(var(--background));
+  --lv-nuit: #241834;
+  --lv-ombre: 4px 5px 0 rgba(0, 0, 0, .5);
+}
+
+.lv-wrap { width: 100%; max-width: 72rem; margin: 0 auto; padding: 0 1rem; }
+@media (min-width: 640px) { .lv-wrap { padding: 0 2rem; } }
+.lv-wrap--etroit { max-width: 46rem; }
+.lv-sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.lv-centre { text-align: center; }
+.lv-section { padding: 4rem 0; }
+@media (min-width: 1024px) { .lv-section { padding: 6rem 0; } }
+.lv-h2 {
+  margin: 0 0 1rem; color: var(--lv-texte);
+  font-family: var(--font-display); font-weight: 700; letter-spacing: -.01em;
+  font-size: clamp(1.75rem, 1.15rem + 2.5vw, 2.75rem); line-height: 1.08; text-wrap: balance;
+}
+.lv-h3 { margin: 0 0 1rem; font-family: var(--font-display); font-weight: 700; font-size: 1.3rem; color: var(--lv-texte); }
+.lv-chapo { margin: 0 0 1.75rem; max-width: 36rem; color: var(--lv-texte-doux); font-size: 1.075rem; line-height: 1.65; }
+.lv-entete { max-width: 40rem; margin: 0 auto 2.25rem; text-align: center; }
+.lv-entete p { margin: 0; color: var(--lv-texte-doux); font-size: 1.05rem; line-height: 1.6; }
+
+/* ── Le bouton d'Amazon : les couleurs de son bouton d'achat ── */
+.lv a.lv-amazon {
+  display: inline-flex; align-items: center; justify-content: center; gap: .5rem;
+  min-height: 3rem; padding: .7rem 1.6rem; border-radius: 999px;
+  background: #ffd814; border: 1px solid #fcd200; color: #0f1111;
+  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-weight: 700; font-size: 1.02rem; line-height: 1.2;
+  text-decoration: none; white-space: nowrap;
+  box-shadow: 0 2px 5px 0 rgba(213, 217, 217, .5);
+  transition: background-color .15s ease, transform .15s ease;
+}
+.lv a.lv-amazon:hover { background: #f7ca00; border-color: #f2c200; color: #0f1111; }
+.lv a.lv-amazon:active { transform: translateY(1px); }
+.lv a.lv-amazon:focus-visible { outline: 3px solid #007185; outline-offset: 3px; }
+.lv a.lv-amazon svg { width: 1.05rem; height: 1.05rem; flex: none; }
+.lv a.lv-amazon--grand { min-height: 3.4rem; padding: .85rem 2.1rem; font-size: 1.1rem; min-width: 15.5rem; }
+.lv a.lv-amazon--petit { min-height: 2.6rem; padding: .5rem 1.05rem; font-size: .92rem; }
+/* Sur le jaune de la couverture, le bouton orange d'Amazon (« Acheter maintenant ») se détache. */
+.lv a.lv-amazon--orange { background: #ffa41c; border-color: #ff8f00; }
+.lv a.lv-amazon--orange:hover { background: #fa8900; border-color: #e3931e; }
+.dark .lv a.lv-amazon { box-shadow: none; }
+
+.lv-achat { display: flex; flex-direction: column; align-items: center; gap: .65rem; }
+.lv-prix { display: flex; align-items: baseline; justify-content: center; flex-wrap: wrap; gap: .35rem .65rem; }
+.lv-prix-montant { font-family: var(--font-display); font-weight: 700; font-size: 2.05rem; line-height: 1; color: var(--lv-texte); }
+.lv-prix-format { font-size: .9rem; color: var(--lv-texte-doux); }
+.lv-vendu { display: inline-flex; align-items: center; gap: .35rem; margin: 0; font-size: .85rem; color: var(--lv-texte-doux); }
+.lv-vendu svg { width: 1rem; height: 1rem; color: var(--lv-vert); flex: none; }
+.lv-achat--ligne { flex-direction: row; flex-wrap: wrap; justify-content: flex-start; align-items: center; gap: 1rem 1.5rem; }
+.lv-achat--ligne .lv-prix { flex-direction: column; align-items: flex-start; gap: .2rem; }
+
+/* ── Le premier écran ── */
+.lv-hero { position: relative; overflow: hidden; padding: 1.4rem 0 2.75rem; background: var(--lv-creme); }
+/* le chemin de pointillés de la couverture */
+.lv-hero::before {
+  content: none; position: absolute; left: -10%; right: -10%; bottom: .4rem; height: 3.6rem; pointer-events: none;
+  background: #efc24a; opacity: .75;
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 60' preserveAspectRatio='none'%3E%3Cpath d='M0 40 C150 12 270 54 430 40 S700 8 860 30 S1080 54 1200 20' fill='none' stroke='%23000' stroke-width='6' stroke-dasharray='1 18' stroke-linecap='round' vector-effect='non-scaling-stroke'/%3E%3C/svg%3E") center / 100% 100% no-repeat;
+          mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 60' preserveAspectRatio='none'%3E%3Cpath d='M0 40 C150 12 270 54 430 40 S700 8 860 30 S1080 54 1200 20' fill='none' stroke='%23000' stroke-width='6' stroke-dasharray='1 18' stroke-linecap='round' vector-effect='non-scaling-stroke'/%3E%3C/svg%3E") center / 100% 100% no-repeat;
+}
+.dark .lv-hero::before { background: #5c4a26; }
+@media (min-width: 900px) { .lv-hero::before { content: ''; } }
+.lv-hero-grille {
+  position: relative; display: grid; grid-template-columns: minmax(0, 1fr);
+  grid-template-areas: "pastille" "titre" "visuel" "achat" "lead" "lien";
+  justify-items: center; text-align: center; row-gap: .9rem;
+}
+.lv-pastille { grid-area: pastille; }
+.lv-titre { grid-area: titre; }
+.lv-hero-visuel { grid-area: visuel; }
+.lv-hero-grille > .lv-achat { grid-area: achat; }
+.lv-hero-lead { grid-area: lead; }
+.lv-feuilleter-lien { grid-area: lien; }
+@media (min-width: 900px) {
+  .lv-hero { padding: 3.5rem 0 4.5rem; }
+  .lv-hero-grille {
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, .95fr);
+    grid-template-areas: "pastille visuel" "titre visuel" "lead visuel" "achat visuel" "lien visuel";
+    grid-template-rows: auto auto auto auto 1fr;
+    justify-items: start; text-align: left; column-gap: 3rem; row-gap: 1.1rem;
+  }
+  .lv-hero-grille > .lv-achat { align-items: flex-start; margin-top: .4rem; }
+  .lv-hero-grille .lv-prix { justify-content: flex-start; }
+}
+
+.lv-pastille {
+  display: inline-flex; align-items: center; gap: .5rem; margin: 0;
+  padding: .35rem .9rem .35rem .4rem; border-radius: 999px;
+  background: var(--lv-carte); box-shadow: 0 0 0 1.5px var(--lv-contour);
+  font-family: var(--font-display); font-weight: 600; font-size: .92rem; color: var(--lv-texte);
+}
+.lv-pastille-ic { display: inline-flex; align-items: center; justify-content: center; width: 1.65rem; height: 1.65rem; border-radius: 999px; background: var(--lv-rose); color: #fff; }
+.lv--noel .lv-pastille-ic { background: #2f8f5b; }
+.lv-pastille-ic svg { width: 1rem; height: 1rem; }
+
+.lv-titre { margin: 0; color: var(--lv-texte); font-family: var(--font-display); font-weight: 700; font-size: clamp(2.05rem, 1.15rem + 4.3vw, 3.7rem); line-height: .95; }
+.lv-titre-haut { display: flex; align-items: center; justify-content: center; gap: .22em; }
+@media (min-width: 900px) { .lv-titre-haut { justify-content: flex-start; } }
+.lv-cent-bloc { display: inline-flex; flex: none; }
+.lv-cent { display: block; height: 2.05em; width: auto; overflow: visible; }
+.dark .lv-cent path { stroke: #120b17; }
+.dark .lv-cent path:first-child:not(:last-child) { fill: #120b17; }
+.lv-titre-mots { display: flex; flex-direction: column; text-align: left; letter-spacing: -.01em; }
+.lv-titre-deux { color: var(--lv-violet-texte); }
+.lv-titre-sous { display: block; margin-top: .75rem; font-size: clamp(1.05rem, .9rem + .75vw, 1.42rem); font-weight: 600; line-height: 1.28; letter-spacing: 0; text-wrap: balance; }
+
+.lv-hero-visuel { position: relative; width: min(18.5rem, 76vw); aspect-ratio: 1; display: grid; place-items: center; margin: .2rem 0 .4rem; }
+@media (min-width: 640px) { .lv-hero-visuel { width: 23rem; } }
+@media (min-width: 900px) { .lv-hero-visuel { width: 100%; max-width: 31rem; justify-self: center; align-self: center; margin: 0; } }
+.lv-disque { position: absolute; inset: 7% 5% 7% 5%; border-radius: 50%; background: var(--lv-disque); }
+.lv-hero-livre { position: relative; z-index: 2; width: 80%; height: auto; transform: rotate(-2deg); filter: drop-shadow(0 16px 18px rgba(43, 23, 34, .2)); animation: lv-flotte 7s ease-in-out infinite; }
+.lv-hero-page { position: absolute; z-index: 1; width: 42%; height: auto; border-radius: 6px; background: #fff; box-shadow: 0 0 0 1.5px var(--lv-contour), var(--lv-ombre); }
+.lv-hero-page--a { left: -4%; bottom: 3%; transform: rotate(-9deg); }
+.lv-hero-page--b { right: -5%; top: 1%; transform: rotate(8deg); }
+@keyframes lv-flotte { 0%, 100% { transform: rotate(-2deg) translateY(0); } 50% { transform: rotate(-1deg) translateY(-8px); } }
+/* L'étiquette de cadeau, pendant les fêtes */
+.lv-etiquette {
+  position: absolute; z-index: 3; right: 2%; bottom: 17%;
+  padding: .35rem .8rem .35rem 1.3rem; border-radius: 3px 9px 9px 3px;
+  background: #f0d6b3; color: #7a3a1c;
+  font-family: 'Plume Livre', Georgia, serif; font-style: italic; font-weight: 500; font-size: 1.05rem; white-space: nowrap;
+  clip-path: polygon(13px 0, 100% 0, 100% 100%, 13px 100%, 0 50%);
+  transform: rotate(-11deg);
+}
+.lv-etiquette::before { content: ''; position: absolute; left: 9px; top: 50%; width: 6px; height: 6px; margin-top: -3px; border-radius: 50%; background: var(--lv-creme); }
+
+.lv-hero-lead { margin: .2rem 0 0; max-width: 32rem; color: var(--lv-texte-doux); font-size: 1.05rem; line-height: 1.6; }
+.lv a.lv-feuilleter-lien { display: inline-flex; align-items: center; gap: .35rem; font-weight: 600; font-size: .95rem; color: var(--lv-violet-texte); text-decoration: none; }
+.lv a.lv-feuilleter-lien:hover { text-decoration: underline; text-underline-offset: 3px; }
+.lv-feuilleter-lien svg { width: 1rem; height: 1rem; }
+
+/* ── Les quatre chiffres ── */
+.lv-chiffres { background: var(--lv-jaune); color: #2b1722; }
+.dark .lv-chiffres { background: #2a2214; color: #f6e7c4; }
+.lv-chiffres-liste { list-style: none; margin: 0 auto; padding-top: 1.2rem; padding-bottom: 1.2rem; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem 1.25rem; }
+@media (min-width: 768px) { .lv-chiffres-liste { grid-template-columns: repeat(4, minmax(0, 1fr)); padding-top: 1.5rem; padding-bottom: 1.5rem; } }
+.lv-chiffres li { display: flex; align-items: center; gap: .65rem; }
+.lv-chiffres strong { font-family: var(--font-display); font-weight: 700; font-size: 2.15rem; line-height: 1; }
+.dark .lv-chiffres strong { color: var(--lv-jaune); }
+.lv-chiffres span { font-size: .9rem; font-weight: 600; line-height: 1.25; }
+
+/* ── Le principe et la page avant / après ── */
+.lv-principe-grille { display: grid; gap: 2.75rem; align-items: center; }
+@media (min-width: 1024px) { .lv-principe-grille { grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr); gap: 4.5rem; } }
+.lv-etapes { list-style: none; margin: 0; padding: 0; display: grid; gap: 1.1rem; }
+.lv-etapes li { display: flex; align-items: flex-start; gap: .95rem; }
+.lv-etape-n { flex: none; display: inline-flex; align-items: center; justify-content: center; width: 2.45rem; height: 2.45rem; border-radius: 50%; background: var(--lv-rose); color: #fff; font-family: var(--font-display); font-weight: 700; font-size: 1.15rem; box-shadow: 0 0 0 2px var(--lv-contour); }
+.lv-etapes li:nth-child(2) .lv-etape-n { background: var(--lv-violet); }
+.lv-etapes li:nth-child(3) .lv-etape-n { background: var(--lv-jaune); color: #2b1722; }
+.lv-etapes h3 { margin: .2rem 0 .2rem; font-family: var(--font-display); font-weight: 700; font-size: 1.15rem; color: var(--lv-texte); }
+.lv-etapes p { margin: 0; color: var(--lv-texte-doux); line-height: 1.5; }
+
+.lv-avap { margin: 0; width: 100%; max-width: 34rem; justify-self: center; }
+.lv-avap-cadre { position: relative; aspect-ratio: 1; border-radius: 14px; overflow: hidden; background: #fff; box-shadow: 0 0 0 2px var(--lv-contour), 7px 9px 0 rgba(43, 23, 34, .14); user-select: none; -webkit-user-select: none; cursor: ew-resize; touch-action: pan-y; }
+.dark .lv-avap-cadre { box-shadow: 0 0 0 2px var(--lv-contour), 7px 9px 0 rgba(0, 0, 0, .5); }
+.lv-avap-cadre:has(.lv-avap-curseur:focus-visible) { outline: 3px solid var(--lv-violet); outline-offset: 4px; }
+.lv-avap-img { position: absolute; inset: 0; display: block; width: 100%; height: 100%; }
+.lv-avap-avant { position: absolute; inset: 0; clip-path: inset(0 calc(100% - var(--pos, 50%)) 0 0); }
+.lv-avap-ligne { position: absolute; top: 0; bottom: 0; left: var(--pos, 50%); width: 3px; margin-left: -1.5px; background: var(--lv-rose); pointer-events: none; }
+.lv-avap-poignee { position: absolute; top: 50%; left: 50%; display: flex; align-items: center; justify-content: center; width: 2.9rem; height: 2.9rem; margin: -1.45rem 0 0 -1.45rem; border-radius: 50%; background: var(--lv-rose); color: #fff; box-shadow: 0 0 0 3px #fff, 0 6px 16px rgba(43, 23, 34, .3); }
+.lv-avap-poignee svg { width: 1.35rem; height: 1.35rem; }
+.lv-avap-etiq { position: absolute; top: .7rem; padding: .22rem .7rem; border-radius: 999px; background: rgba(43, 23, 34, .8); color: #fff; font-family: var(--font-display); font-weight: 600; font-size: .85rem; pointer-events: none; }
+.lv-avap-etiq--avant { left: .7rem; }
+.lv-avap-etiq--apres { right: .7rem; background: var(--lv-rose); }
+/* Le curseur ne sert qu'au clavier : la souris et le doigt passent par le cadre (js/livre.js). */
+.lv-avap-curseur { position: absolute; inset: 0; z-index: 3; width: 100%; height: 100%; margin: 0; opacity: 0; pointer-events: none; -webkit-appearance: none; appearance: none; }
+.lv-avap-img { -webkit-user-drag: none; pointer-events: none; }
+.lv-avap figcaption { display: flex; flex-direction: column; align-items: center; gap: .25rem; margin-top: 1rem; text-align: center; }
+.lv-avap-aide { display: inline-flex; align-items: center; gap: .4rem; font-weight: 600; font-size: .92rem; color: var(--lv-rose-texte); }
+.lv-avap-aide svg { width: 1.1rem; height: 1.1rem; }
+.lv-avap-leg { font-size: .85rem; color: var(--lv-texte-doux); }
+
+/* ── Dans dix ans : la bande de nuit ── */
+.lv-dixans { background: var(--lv-nuit); color: #f7ecf2; }
+.lv-dixans .lv-h2 { color: #fff; }
+.lv-dixans .lv-chapo { color: #dccbd5; }
+.lv-dixans-grille { display: grid; gap: 3rem; align-items: center; }
+@media (min-width: 1024px) { .lv-dixans-grille { grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); gap: 4.5rem; } }
+.lv-frise { position: relative; list-style: none; margin: 0; padding: 0; display: grid; gap: 1.35rem; }
+.lv-frise::before { content: ''; position: absolute; left: 1.5rem; top: 1.5rem; bottom: 1.5rem; border-left: 3px dotted rgba(255, 255, 255, .32); }
+.lv-frise li { position: relative; display: grid; grid-template-columns: 3rem minmax(0, 1fr); column-gap: 1rem; align-items: center; }
+.lv-frise-ic { position: relative; z-index: 1; grid-row: span 2; display: flex; align-items: center; justify-content: center; width: 3rem; height: 3rem; border-radius: 50%; background: #ffd45c; color: #2b1722; box-shadow: 0 0 0 4px var(--lv-nuit); }
+.lv-frise li:nth-child(2) .lv-frise-ic { background: #f39bbb; }
+.lv-frise li:nth-child(3) .lv-frise-ic { background: #b78cec; }
+.lv-frise-ic svg { width: 1.35rem; height: 1.35rem; }
+.lv-frise-quand { font-family: var(--font-display); font-weight: 700; font-size: 1.15rem; color: #fff; }
+.lv-frise-quoi { color: #dccbd5; font-size: .98rem; line-height: 1.4; }
+.lv-citation { margin: 0; display: flex; flex-direction: column; align-items: center; gap: 1.6rem; }
+.lv-polaroid { display: block; width: min(21rem, 76vw); height: auto; padding: .55rem .55rem 2.3rem; border-radius: 4px; background: #fff; box-shadow: 0 22px 44px -16px rgba(0, 0, 0, .55); transform: rotate(3deg); }
+.lv-citation blockquote { margin: 0; max-width: 25rem; text-align: center; }
+.lv-citation blockquote p { margin: 0 0 .55rem; font-family: 'Plume Livre', Georgia, serif; font-style: italic; font-weight: 500; font-size: 1.5rem; line-height: 1.35; color: #ffdf86; }
+.lv-citation-source { margin-top: -.9rem; font-size: .85rem; color: #bda8b5; text-align: center; }
+
+/* ── Feuilleter ── */
+.lv-feuilleter { background: var(--lv-rose-pale); }
+.lv-carrousel { position: relative; }
+.lv-car-piste {
+  list-style: none; margin: 0 -1rem; padding: .4rem 1rem 1.4rem;
+  display: grid; grid-auto-flow: column; grid-auto-columns: 74%; gap: 1rem;
+  overflow-x: auto; scroll-snap-type: x mandatory; scroll-padding: 0 1rem;
+  overscroll-behavior-x: contain; scrollbar-width: none;
+}
+.lv-car-piste::-webkit-scrollbar { display: none; }
+@media (min-width: 640px) { .lv-car-piste { grid-auto-columns: 42%; margin: 0 -2rem; padding: .4rem 2rem 1.4rem; scroll-padding: 0 2rem; } }
+@media (min-width: 1024px) { .lv-car-piste { grid-auto-columns: calc((100% - 3.75rem) / 4); gap: 1.25rem; margin: 0; padding: .4rem 0 1.4rem; scroll-padding: 0; } }
+.lv-car-item { scroll-snap-align: start; display: flex; flex-direction: column; gap: .75rem; }
+.lv-page { display: block; width: 100%; padding: 0; border: 0; border-radius: 8px; overflow: hidden; background: #fff; cursor: zoom-in; box-shadow: 0 0 0 1.5px var(--lv-contour), var(--lv-ombre); transition: transform .2s ease; }
+.lv-page img { display: block; width: 100%; height: auto; aspect-ratio: 1; }
+.lv-page:hover { transform: translateY(-3px) rotate(-.6deg); }
+.lv-page:focus-visible { outline: 3px solid var(--lv-violet); outline-offset: 3px; }
+.lv-page-leg { margin: 0; text-align: center; font-family: var(--font-display); font-weight: 600; font-size: 1rem; line-height: 1.3; color: var(--lv-texte); }
+.lv-car-btn { display: none; }
+@media (min-width: 1024px) {
+  .lv-car-btn { position: absolute; top: calc(50% - 2.6rem); z-index: 2; display: flex; align-items: center; justify-content: center; width: 3rem; height: 3rem; border: 0; border-radius: 50%; background: var(--lv-carte); color: var(--lv-texte); cursor: pointer; box-shadow: 0 0 0 1.5px var(--lv-contour), 0 6px 16px rgba(43, 23, 34, .18); transition: opacity .2s ease; }
+  .lv-car-btn--prec { left: -1.5rem; }
+  .lv-car-btn--suiv { right: -1.5rem; }
+  .lv-car-btn[disabled] { opacity: 0; pointer-events: none; }
+  .lv-car-btn svg { width: 1.3rem; height: 1.3rem; }
+}
+.lv-contenu { display: grid; gap: 2rem; margin-top: 2.25rem; padding: 1.6rem 1.35rem; border-radius: 16px; background: var(--lv-carte); box-shadow: 0 0 0 1.5px var(--lv-contour), var(--lv-ombre); }
+@media (min-width: 900px) { .lv-contenu { grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr); gap: 3rem; padding: 2.25rem 2.5rem; } }
+.lv-coches { list-style: none; margin: 0; padding: 0; display: grid; gap: .7rem; }
+.lv-coches li { display: flex; align-items: flex-start; gap: .6rem; line-height: 1.45; }
+.lv-coches svg { flex: none; width: 1.15rem; height: 1.15rem; margin-top: .15rem; color: var(--lv-rose); }
+.lv-fiche { margin: 0; display: grid; gap: .75rem; align-content: start; }
+.lv-fiche div { display: flex; justify-content: space-between; gap: 1rem; padding-bottom: .75rem; border-bottom: 1px dashed var(--lv-trait); }
+.lv-fiche div:last-child { padding-bottom: 0; border-bottom: 0; }
+.lv-fiche dt { font-weight: 600; color: var(--lv-texte-doux); }
+.lv-fiche dd { margin: 0; text-align: right; font-weight: 600; color: var(--lv-texte); }
+
+/* ── Ce que coûtent les aventures ── */
+.lv-niveaux { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .85rem; }
+@media (min-width: 1024px) { .lv-niveaux { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1.25rem; } }
+.lv-niveau { display: flex; flex-direction: column; gap: .65rem; padding: 1.1rem 1rem 1.15rem; border-radius: 16px; background: var(--lv-carte); box-shadow: 0 0 0 1.5px var(--lv-contour), var(--lv-ombre); }
+@media (min-width: 640px) { .lv-niveau { padding: 1.35rem 1.35rem 1.4rem; } }
+.lv-niveau-tete h3 { margin: .55rem 0 0; font-family: var(--font-display); font-weight: 700; font-size: 1.15rem; color: var(--lv-texte); }
+.lv-niveau-aide { margin: .1rem 0 0; font-size: .82rem; color: var(--lv-texte-doux); }
+.lv-niveau-nb { margin: 0; font-size: .92rem; color: var(--lv-texte-doux); }
+.lv-niveau-nb strong { margin-right: .1rem; font-family: var(--font-display); font-weight: 700; font-size: 1.9rem; color: var(--lv-texte); }
+.lv-niveau-ex { list-style: none; margin: 0; padding: .75rem 0 0; border-top: 1px dashed var(--lv-trait); display: grid; gap: .45rem; font-size: .92rem; line-height: 1.35; }
+.lv-niveau-ex li { padding-left: 1rem; position: relative; }
+.lv-niveau-ex li::before { content: ''; position: absolute; left: 0; top: .45em; width: .45rem; height: .45rem; border-radius: 50%; background: var(--lv-rose); }
+.lv-pieces { display: inline-flex; gap: .28rem; }
+.lv-pieces i { width: 1rem; height: 1rem; border-radius: 50%; border: 2px solid #b09ca6; background: #fff; }
+.lv-pieces i.pleine { border-color: #a8730a; background: radial-gradient(circle, #f7cf5b 0 26%, #a8730a 27% 40%, #f7cf5b 41%); }
+.lv-bouton-liste { display: inline-flex; align-items: center; gap: .5rem; margin-top: 1.75rem; padding: .75rem 1.3rem; border: 0; border-radius: 999px; background: var(--lv-carte); color: var(--lv-texte); font: 600 1rem/1.2 var(--font-display); cursor: pointer; box-shadow: 0 0 0 1.5px var(--lv-contour), var(--lv-ombre); transition: transform .15s ease; }
+.lv-bouton-liste:hover { transform: translateY(-2px); }
+.lv-bouton-liste:focus-visible { outline: 3px solid var(--lv-violet); outline-offset: 3px; }
+.lv-bouton-liste svg { width: 1.2rem; height: 1.2rem; color: var(--lv-rose); }
+
+/* ── Le cadeau ── */
+.lv-cadeau { background: var(--lv-jaune-pale); }
+.lv-cadeau-grille { display: grid; gap: 2.75rem; align-items: center; }
+@media (min-width: 1024px) { .lv-cadeau-grille { grid-template-columns: minmax(0, .95fr) minmax(0, 1.05fr); gap: 4.5rem; } }
+.lv-cadeau-visuel { margin: 0; display: flex; justify-content: center; }
+.lv-cadeau-visuel .lv-polaroid { width: min(27rem, 86vw); padding: 0; border-radius: 8px; box-shadow: 0 0 0 1.5px var(--lv-contour), 8px 10px 0 rgba(43, 23, 34, .14); transform: rotate(-2.5deg); }
+.dark .lv-cadeau-visuel .lv-polaroid { box-shadow: 0 0 0 1.5px var(--lv-contour), 8px 10px 0 rgba(0, 0, 0, .5); }
+.lv-points { list-style: none; margin: 0 0 2rem; padding: 0; display: grid; gap: 1.25rem; }
+.lv-points li { display: flex; align-items: flex-start; gap: .95rem; }
+.lv-point-ic { flex: none; display: flex; align-items: center; justify-content: center; width: 2.65rem; height: 2.65rem; border-radius: 12px; background: var(--lv-carte); color: var(--lv-rose-texte); box-shadow: 0 0 0 1.5px var(--lv-contour); }
+.lv-point-ic svg { width: 1.3rem; height: 1.3rem; }
+.lv-points h3 { margin: .1rem 0 .25rem; font-family: var(--font-display); font-weight: 700; font-size: 1.15rem; color: var(--lv-texte); }
+.lv-points p { margin: 0; color: var(--lv-texte-doux); line-height: 1.55; }
+
+/* ── Les questions ── */
+.lv-faq-liste { display: grid; gap: .75rem; margin-top: 2rem; }
+.lv-faq details { padding: 0 1.25rem; border-radius: 14px; background: var(--lv-carte); box-shadow: 0 0 0 1.5px var(--lv-trait); }
+.lv-faq summary { position: relative; padding: 1.1rem 2rem 1.1rem 0; list-style: none; cursor: pointer; font-family: var(--font-display); font-weight: 600; font-size: 1.07rem; color: var(--lv-texte); }
+.lv-faq summary::-webkit-details-marker { display: none; }
+.lv-faq summary::after { content: ''; position: absolute; right: .3rem; top: 50%; width: .6rem; height: .6rem; margin-top: -.45rem; border-right: 2.5px solid var(--lv-rose); border-bottom: 2.5px solid var(--lv-rose); transform: rotate(45deg); transition: transform .2s ease; }
+.lv-faq details[open] summary::after { margin-top: -.1rem; transform: rotate(225deg); }
+.lv-faq summary:focus-visible { outline: 3px solid var(--lv-violet); outline-offset: 2px; border-radius: 6px; }
+.lv-faq details p { margin: 0 0 1.15rem; color: var(--lv-texte-doux); line-height: 1.6; }
+
+/* ── Le dernier appel ── */
+.lv-fin { padding-top: 1rem; }
+.lv-fin-boite { display: grid; justify-items: center; gap: 1.5rem; padding: 2rem 1.25rem 2.25rem; border-radius: 24px; text-align: center; background: var(--lv-jaune); color: #2b1722; box-shadow: 0 0 0 2px #2b1722, 7px 9px 0 rgba(43, 23, 34, .18); }
+.dark .lv-fin-boite { box-shadow: 0 0 0 2px #120b17, 7px 9px 0 rgba(0, 0, 0, .5); }
+@media (min-width: 768px) { .lv-fin-boite { grid-template-columns: auto minmax(0, 1fr); justify-items: start; align-items: center; gap: 2.75rem; padding: 2.75rem 3.25rem; text-align: left; } }
+.lv-fin-livre { width: 11.5rem; height: auto; filter: drop-shadow(0 14px 16px rgba(43, 23, 34, .25)); }
+@media (min-width: 768px) { .lv-fin-livre { width: 15rem; } }
+.lv-fin .lv-h2 { margin-bottom: .6rem; color: #2b1722; }
+.lv-fin-livre-titre { margin: 0 0 1.4rem; display: flex; flex-direction: column; gap: .2rem; }
+.lv-fin-livre-titre strong { font-family: var(--font-display); font-size: 1.2rem; }
+.lv-fin-livre-titre span { font-size: .98rem; }
+.lv-fin .lv-achat--ligne { justify-content: center; }
+.lv-fin .lv-achat--ligne .lv-prix { align-items: center; }
+@media (min-width: 768px) { .lv-fin .lv-achat--ligne .lv-prix { align-items: flex-start; } }
+@media (min-width: 768px) { .lv-fin .lv-achat--ligne { justify-content: flex-start; } }
+.lv-fin .lv-prix-montant, .lv-fin .lv-prix-format, .lv-fin .lv-vendu { color: #2b1722; }
+.lv-fin .lv-vendu { margin-top: .9rem; }
+.lv-fin .lv-vendu svg { color: #1e6b42; }
+.lv-affiliation { margin: 1.5rem auto 0; max-width: 40rem; text-align: center; font-size: .8rem; line-height: 1.5; color: var(--lv-texte-doux); }
+
+/* ── La barre collée du téléphone ── */
+.lv-barre {
+  position: fixed; left: 0; right: 0; bottom: 0; z-index: 40;
+  display: flex; align-items: center; gap: .75rem;
+  padding: .55rem 1rem calc(.55rem + env(safe-area-inset-bottom));
+  background: var(--lv-carte); box-shadow: 0 -1px 0 var(--lv-trait), 0 -10px 26px rgba(43, 23, 34, .14);
+  transform: translateY(110%); visibility: hidden; transition: transform .25s ease, visibility 0s linear .25s;
+}
+.lv-barre.est-visible { transform: translateY(0); visibility: visible; transition: transform .25s ease; }
+.lv-barre img { flex: none; width: 2.5rem; height: auto; }
+.lv-barre-texte { flex: 1; min-width: 0; display: flex; flex-direction: column; line-height: 1.2; color: var(--lv-texte); }
+.lv-barre-texte strong { font-family: var(--font-display); font-size: .92rem; line-height: 1.15; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden; }
+.lv-barre-texte span { font-weight: 700; font-size: .95rem; }
+@media (min-width: 1024px) { .lv-barre { display: none; } }
+
+/* ── La visionneuse ── */
+/* margin: auto rend son centrage au dialogue modal, que la remise à zéro des marges du site lui retire. */
+.lv-vue { inset: 0; margin: auto; width: min(46rem, calc(100vw - 1rem)); max-width: calc(100vw - 1rem); max-height: calc(100dvh - 1rem); padding: 0; border: 0; border-radius: 18px; background: var(--lv-carte); color: var(--lv-texte); box-shadow: 0 30px 80px rgba(0, 0, 0, .45); overflow: auto; }
+.lv-vue::backdrop { background: rgba(20, 12, 24, .74); }
+.lv-vue-ouverte { overflow: hidden; scrollbar-gutter: stable; }
+.lv-vue-boite { position: relative; padding: 1rem 1rem .8rem; }
+.lv-vue-figure { margin: 0; }
+.lv-vue-img { display: block; width: 100%; height: auto; max-height: calc(100dvh - 10rem); object-fit: contain; border-radius: 8px; background: #fff; touch-action: pan-y; -webkit-user-drag: none; }
+.lv-vue-leg { margin-top: .7rem; text-align: center; font-family: var(--font-display); font-weight: 600; font-size: 1.02rem; }
+.lv-vue-fermer { position: absolute; top: .45rem; right: .45rem; z-index: 2; display: flex; align-items: center; justify-content: center; width: 2.6rem; height: 2.6rem; border: 0; border-radius: 50%; background: rgba(43, 23, 34, .85); color: #fff; cursor: pointer; }
+.lv-vue-fermer svg { width: 1.2rem; height: 1.2rem; }
+.lv-vue-nav { display: flex; align-items: center; justify-content: center; gap: 1rem; margin-top: .55rem; }
+.lv-vue-btn { display: flex; align-items: center; justify-content: center; width: 2.75rem; height: 2.75rem; border: 0; border-radius: 50%; background: var(--lv-rose-pale); color: var(--lv-texte); cursor: pointer; }
+.lv-vue-btn:disabled { opacity: .35; cursor: default; }
+.lv-vue-btn svg { width: 1.25rem; height: 1.25rem; }
+.lv-vue-compte { min-width: 4.5rem; text-align: center; font-size: .9rem; color: var(--lv-texte-doux); }
+.lv-vue-fermer:focus-visible, .lv-vue-btn:focus-visible { outline: 3px solid var(--lv-violet); outline-offset: 2px; }
+
+@media (prefers-reduced-motion: reduce) {
+  .lv-hero-livre { animation: none; }
+  .lv-page, .lv-bouton-liste, .lv a.lv-amazon, .lv-barre, .lv-faq summary::after { transition: none; }
+}
