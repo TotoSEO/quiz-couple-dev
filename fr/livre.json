@@ -1,0 +1,140 @@
+{
+  "seo": {
+    "title": "100 aventures à deux : le livre souvenir à remplir en couple",
+    "descriptionNoel": "Un livre à remplir à deux : 100 aventures à vivre ensemble et une page pour garder chaque souvenir, avec votre photo. L'idée cadeau de Noël pour votre moitié.",
+    "description": "Un livre à remplir à deux : 100 aventures à vivre ensemble et une page pour garder chaque souvenir, avec votre photo. Une idée cadeau pour votre moitié."
+  },
+  "fil": "Le livre 100 aventures à deux",
+  "menu": {
+    "lien": "Le livre 100 aventures à deux",
+    "boutonNoel": "Découvrir le cadeau de Noël parfait",
+    "bouton": "Découvrir notre livre souvenir",
+    "courtNoel": "Cadeau de Noël",
+    "court": "Notre livre",
+    "evaluerSous": "À deux ou seul(e)"
+  },
+  "ogAlt": "Le livre 100 aventures à deux de Quiz Couple, couverture jaune avec ses deux personnages",
+  "livre": {
+    "titre": "100 aventures à deux",
+    "sousTitre": "Le livre souvenir à remplir ensemble, avec vos photos"
+  },
+  "hero": {
+    "pastilleNoel": "Idée cadeau de Noël",
+    "pastille": "Idée cadeau pour votre moitié",
+    "mot1": "aventures",
+    "mot2": "à deux",
+    "texte": "100 idées de moments à vivre ensemble. Après chaque aventure, vous remplissez sa page avec la date, votre photo et ce que vous en retiendrez.",
+    "format": "Livre broché, 136 pages en couleur",
+    "bouton": "Voir sur Amazon",
+    "vendu": "Vendu et livré par Amazon",
+    "feuilleter": "Feuilleter le livre",
+    "altLivre": "Le livre 100 aventures à deux, couverture jaune avec trois photos instantanées et les deux personnages de Quiz Couple"
+  },
+  "chiffres": [
+    { "n": "100", "t": "aventures à vivre à deux" },
+    { "n": "10", "t": "pages pour vos propres idées" },
+    { "n": "10", "t": "pages pour vos voyages" },
+    { "n": "136", "t": "pages en couleur" }
+  ],
+  "principe": {
+    "titre": "Et si on arrêtait de dire « un jour, on fera ça » ?",
+    "texte": "Ce livre vous donne 100 idées de choses à faire ensemble, avec une page pour chacune. Une fois l'aventure vécue, vous collez votre photo et vous racontez ce qui s'est passé. Page après page, il devient l'album de votre histoire.",
+    "etapes": [
+      { "titre": "Choisissez une aventure", "texte": "Dans la liste ou au hasard, selon votre budget et la saison." },
+      { "titre": "Vivez-la à deux", "texte": "Un soir de semaine, un dimanche ou pendant les vacances." },
+      { "titre": "Remplissez sa page", "texte": "La date, le lieu, votre photo et ce que chacun en retient." }
+    ],
+    "avant": "Avant",
+    "apres": "Après",
+    "aide": "Faites glisser pour voir la page remplie",
+    "curseur": "Comparer la page vide et la page remplie",
+    "legende": "L'aventure 01, avant et après le pique-nique de Léa et Tom",
+    "altVide": "La page de l'aventure 01, Un vrai pique-nique au parc, encore vide",
+    "altRemplie": "La même page remplie à la main par Léa et Tom, avec la photo de leur pique-nique, leurs notes et une fleur séchée"
+  },
+  "dixAns": {
+    "titre": "Le livre que vous relirez dans dix ans",
+    "texte": "Un jour, toutes les pages seront remplies. Vous le montrerez à vos amis, à votre famille et peut-être à vos enfants. Chaque photo sera là, avec ce que vous aviez écrit le jour même.",
+    "etapes": [
+      { "quandNoel": "Ce Noël", "quand": "Aujourd'hui", "quoi": "Un livre neuf et 100 aventures à cocher" },
+      { "quand": "Dans un an", "quoi": "Vos premières pages, pleines de photos" },
+      { "quand": "Dans dix ans", "quoi": "L'album de votre histoire, à rouvrir ensemble" }
+    ],
+    "citation": "Rangez ce livre quelque part où vous le retrouverez dans dix ans.",
+    "source": "La dernière page du livre",
+    "altFin": "La dernière page du livre, « Cent aventures plus tard... », avec la place pour un mot de la rose et un mot du violet"
+  },
+  "feuilleter": {
+    "titre": "Feuilletez le livre",
+    "texte": "Touchez une page pour la voir en grand.",
+    "precedent": "Pages précédentes",
+    "suivant": "Pages suivantes",
+    "pages": [
+      { "img": "liste-1", "legende": "Les 100 aventures, à cocher au fil du temps", "alt": "La liste des aventures 1 à 50, avec une case à cocher, le prix et la page de chacune" },
+      { "img": "escape-game", "legende": "Une page par aventure, avec sa photo", "alt": "La page de l'aventure 16, Un escape game, avec son cadre photo et ses questions pour la petite histoire" },
+      { "img": "aventure-libre", "legende": "10 pages pour les aventures que vous inventerez", "alt": "Une page d'aventure à inventer, avec sa famille, son coût et sa durée à cocher" },
+      { "img": "voyage", "legende": "10 pages pour vos voyages", "alt": "Une page de voyage avec la destination, les dates, le moyen de transport et le billet à coller" },
+      { "img": "tests-quiz-couple", "legende": "Vos tests Quiz Couple, et le résultat un an après", "alt": "La page de l'historique des tests Quiz Couple, pour noter un résultat puis celui d'un an après" },
+      { "img": "trophees", "legende": "Les trophées de vos aventures", "alt": "La page des trophées : la plus drôle, la plus romantique, la plus ratée, la meilleure surprise..." },
+      { "img": "nous-deux-fin", "legende": "Nous deux, à la fin du livre", "alt": "La page Nous deux, à la fin de ce livre, pour comparer avec celle du début" }
+    ],
+    "contenuTitre": "Ce qu'il y a dans le livre",
+    "contenu": [
+      "100 aventures, une page chacune : la date, le lieu, votre photo, vos notes et « Pour la petite histoire »",
+      "La liste des 100 aventures, à cocher au fil du temps",
+      "10 pages pour les aventures que vous inventerez",
+      "10 pages pour vos voyages, avec la liste de vos envies",
+      "2 pages pour noter vos résultats aux tests Quiz Couple",
+      "Le palmarès, les trophées et « Nous deux » au début et à la fin du livre"
+    ],
+    "fiche": [
+      ["Format", "carré, 21,6 × 21,6 cm"],
+      ["Pages", "136, intérieur en couleur"],
+      ["Reliure", "broché, papier blanc"],
+      ["Prix", "19,99 €"]
+    ]
+  },
+  "budget": {
+    "titre": "Des petits moments aux grands voyages",
+    "texte": "Les trois quarts des aventures sont gratuites ou coûtent moins de 20 € à deux. Chaque page donne le prix, la durée et la meilleure saison.",
+    "aventures": "aventures",
+    "niveaux": [
+      { "nom": "Gratuit", "aide": "0 € à deux", "nb": 38, "exemples": ["Regarder le soleil se lever", "Un slow dans la cuisine", "Une cabane de couvertures", "Une soirée sans téléphone"] },
+      { "nom": "Petit prix", "aide": "moins de 20 € à deux", "nb": 36, "exemples": ["Un vrai pique-nique au parc", "Une partie de bowling", "Un marché de Noël", "Le petit-déjeuner au lit"] },
+      { "nom": "Prix moyen", "aide": "de 20 à 60 € à deux", "nb": 20, "exemples": ["Un escape game", "Une course de karting", "Une balade à cheval", "Refaire notre premier rendez-vous"] },
+      { "nom": "Une petite folie", "aide": "plus de 60 € à deux", "nb": 6, "exemples": ["Partir en voyage, rien que nous deux", "Un concert", "Une journée au parc d'attractions", "Une journée à la neige"] }
+    ],
+    "liste": "Voir les 100 aventures"
+  },
+  "cadeau": {
+    "titreNoel": "Le cadeau de Noël qui se garde des années",
+    "titre": "Un cadeau qui se garde des années",
+    "points": [
+      { "titre": "Un petit mot en première page", "texte": "La page « Ce livre est à nous » a une ligne « Offert par » et de la place pour votre mot. Écrivez-le avant d'emballer le livre." },
+      { "titreNoel": "La première aventure sous le sapin", "titre": "La première aventure le soir même", "texteNoel": "Choisissez-la ensemble en ouvrant le paquet. Il y a même un marché de Noël, une raclette et une sortie à la patinoire !", "texte": "Choisissez-la ensemble en ouvrant le paquet : il y a des idées pour chaque saison." },
+      { "titre": "19,99 €, une seule fois", "texte": "Moins cher qu'un resto à deux, et vous le remplirez pendant des années." }
+    ],
+    "alt": "La page « Ce livre est à nous » remplie à la main : Léa et Tom, offert par Léa le 25/12/2026, avec un petit mot de Noël"
+  },
+  "faq": {
+    "titre": "Vos questions",
+    "items": [
+      { "q": "Quelles photos coller dans le livre ?", "r": "Chaque page a un cadre à la taille d'une photo instantanée au format mini. Une photo imprimée puis découpée marche aussi. Un bâton de colle ou du ruban adhésif double face tient mieux que la colle liquide, qui fait gondoler le papier." },
+      { "q": "Faut-il faire les aventures dans l'ordre ?", "r": "Non. Ouvrez une page au hasard ou choisissez dans la liste, selon votre budget, votre temps et la saison." },
+      { "q": "Combien de temps faut-il pour le remplir ?", "r": "Il n'y a pas de date limite. Certains couples le rempliront en un an, d'autres en dix. Le livre vous suit." },
+      { "q": "Pourquoi « la rose » et « le violet » ?", "r": "Ce sont les deux personnages de Quiz Couple. Au début du livre, chacun choisit le sien et garde sa couleur jusqu'à la dernière page." },
+      { "q": "Le livre arrivera-t-il avant Noël ?", "r": "Il est imprimé et livré par Amazon. La date de livraison s'affiche sur sa page, avant de commander.", "seulementNoel": true },
+      { "q": "Comment le commander ?", "r": "Il est imprimé et livré par Amazon : le bouton « Voir sur Amazon » mène à sa page. La date de livraison s'affiche avant de commander.", "horsNoel": true }
+    ]
+  },
+  "fin": {
+    "titre": "Votre première aventure commence ici",
+    "affiliation": "En tant que Partenaire Amazon, Quiz Couple réalise un bénéfice sur les achats remplissant les conditions requises."
+  },
+  "visionneuse": {
+    "fermer": "Fermer",
+    "precedent": "Page précédente",
+    "suivant": "Page suivante",
+    "sur": "sur"
+  }
+}

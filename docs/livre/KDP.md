@@ -7,6 +7,13 @@ le livre. Le livre complet est fabriqué par
 règles de KDP et le droit français ci-dessous ont été relus sur les pages
 officielles le 7 novembre 2026 (sources en bas de page).
 
+**En vente depuis le 14 novembre 2026** : l'édition française est sur
+amazon.fr (ASIN B0HRPDXPRJ, ISBN 9798141209154, 19,99 €). Sa page sur le
+site est `/livre-quiz-couple/`, avec le lien de Partenaire Amazon de Thomas
+(`LIVRE` dans `static-site/build/config.js`, voir « La page du livre » dans
+CLAUDE.md). L'espagnol puis l'anglais suivront, quand Thomas enverra leurs
+liens.
+
 ## Les fichiers à envoyer
 
 Pour chaque langue (`fr`, `en`, `es`, `de`, `it`, `nl`), dans
@@ -60,9 +67,11 @@ Relations interpersonnelles › Couple. Prix saisi pour 19,99 € affichés sur
 Amazon.fr (voir « Les prix à saisir dans KDP »). Pas d'épreuve commandée.
 L'anglais passe ensuite, avant l'espagnol : Amazon.com et Amazon.co.uk sont
 les plus gros marchés de KDP, et sept visiteurs hispanophones du site sur dix
-sont en Amérique latine, où KDP n'imprime pas. Commander ensuite une
-épreuve imprimée (« exemplaire d'épreuve ») au moins pour la première édition,
-pour voir les couleurs, la reliure et la tranche avant de publier.
+sont en Amérique latine, où KDP n'imprime pas.
+
+Une épreuve imprimée (« exemplaire d'épreuve ») se commande à l'étape
+« Contenu », avant de publier, pour voir les couleurs, la reliure et la
+tranche : Thomas s'en est passé pour le français.
 
 ## Le prix et ce qu'il rapporte
 

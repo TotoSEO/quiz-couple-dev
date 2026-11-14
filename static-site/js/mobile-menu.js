@@ -103,7 +103,9 @@
     var els = [];
     if (!accueil) return els;
     Array.prototype.forEach.call(accueil.children, function(c) {
-      if (c.classList.contains('mnav-familles')) Array.prototype.push.apply(els, c.children);
+      // Les listes (les familles, et les deux boutons du haut quand le livre
+      // est à côté de l'évaluation) montent carte par carte.
+      if (c.classList.contains('mnav-familles') || c.classList.contains('mnav-duo')) Array.prototype.push.apply(els, c.children);
       else els.push(c);
     });
     return els;
