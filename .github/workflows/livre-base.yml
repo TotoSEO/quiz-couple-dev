@@ -6,6 +6,13 @@ name: Livre · mesure de la page
 # livre_evenements, que js/livre.js écrit avec la clé publique, et
 # get_livre_stats, que l'onglet Livre de l'admin lit par admin-stats.
 # Idempotente : la relancer (« Run workflow ») est sans risque.
+#
+# « Run workflow » avec remise_a_zero coché efface en plus tous les
+# événements déjà mesurés : l'onglet Livre de l'admin repart de zéro.
+# Le 14 novembre 2026, Thomas : « pour ne pas fausser les datas de la page
+# du livre, remet à 0 tous les compteurs car c'est moi et mes potes ».
+# Le journal ne dit que si la table est vide, jamais combien de lignes
+# sont parties : il est public.
 
 on:
   push:
@@ -14,6 +21,11 @@ on:
       - 'supabase/migrations/20261114150000_livre_evenements.sql'
       - '.github/workflows/livre-base.yml'
   workflow_dispatch:
+    inputs:
+      remise_a_zero:
+        description: "Effacer tous les événements déjà mesurés (visites et clics de la page du livre)"
+        type: boolean
+        default: false
 
 concurrency:
   group: livre-base
@@ -51,3 +63,19 @@ jobs:
             -H "Authorization: Bearer $SUPABASE_ACCESS_TOKEN" -H 'Content-Type: application/json' \
             --data @requete.json | tee reponse.json; echo
           jq -e '.[0].table_ok == true and .[0].anon_ecrit == true and .[0].anon_lit == false and .[0].anon_stats == false' reponse.json > /dev/null
+      - name: Remettre les compteurs à zéro
+        if: github.event_name == 'workflow_dispatch' && inputs.remise_a_zero
+        run: |
+          jq -n '{query: "delete from public.livre_evenements"}' > requete.json
+          code=$(curl -sS -o reponse.json -w '%{http_code}' -X POST \
+            "https://api.supabase.com/v1/projects/$SUPABASE_PROJECT_REF/database/query" \
+            -H "Authorization: Bearer $SUPABASE_ACCESS_TOKEN" -H 'Content-Type: application/json' \
+            --data @requete.json)
+          echo "Effacement : réponse $code"
+          if [ "$code" -ge 300 ]; then head -c 400 reponse.json; echo; exit 1; fi
+          jq -n '{query: "select not exists (select 1 from public.livre_evenements) as vide"}' > requete.json
+          curl -sS -X POST "https://api.supabase.com/v1/projects/$SUPABASE_PROJECT_REF/database/query" \
+            -H "Authorization: Bearer $SUPABASE_ACCESS_TOKEN" -H 'Content-Type: application/json' \
+            --data @requete.json > reponse.json
+          jq -e '.[0].vide == true' reponse.json > /dev/null
+          echo "La table est vide : les compteurs de la page du livre repartent de zéro."
