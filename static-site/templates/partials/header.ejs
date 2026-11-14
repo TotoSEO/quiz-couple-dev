@@ -485,7 +485,7 @@
             </a>
             <% } %>
             <% if (livreMenu) { %>
-            <a href="<%= livreMenu.url %>" class="n2-livre" title="<%= livreLibelle %>"<%- courant('livreQuizCouple') %>>
+            <a href="<%= livreMenu.url %>" class="n2-livre" title="<%= livreLibelle %>" data-livre-lien="menu"<%- courant('livreQuizCouple') %>>
               <img src="/livre/livre-mini-160.webp" alt="" width="160" height="173" decoding="async">
               <span class="n2-livre-texte"><%= livreCourt %></span>
             </a>
@@ -614,7 +614,7 @@
               <%- icAller %>
             </a>
             <% } %>
-            <a href="<%= livreMenu.url %>" class="mnav-tuile mnav-tuile--livre"<%- courant('livreQuizCouple') %>>
+            <a href="<%= livreMenu.url %>" class="mnav-tuile mnav-tuile--livre" data-livre-lien="menu-mobile"<%- courant('livreQuizCouple') %>>
               <img class="mnav-tuile-livre" src="/livre/livre-mini-160.webp" alt="" width="160" height="173" loading="lazy" decoding="async">
               <span class="mnav-tuile-titre"><%= livreLibelle %></span>
               <%- icAller %>

@@ -90,6 +90,7 @@
         <p class="adm-nav-titre">Publication</p>
         <button class="admin-tab" data-tab="reseaux" type="button"><svg class="adm-nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5h.01"/></svg><span>Réseaux</span><span class="admin-pastille hidden" data-notif="reseaux">!</span></button>
         <p class="adm-nav-titre">Revenus</p>
+        <button class="admin-tab" data-tab="livre" type="button"><svg class="adm-nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg><span>Livre</span></button>
       </nav>
 
       <div class="adm-side-pied">
@@ -524,6 +525,98 @@
         </div>
 
         <!-- ═══ Avis ═══ -->
+        <%# Le livre « 100 aventures à deux » (get_livre_stats, par admin-stats ; table livre_evenements, écrite par js/livre.js) : visites de sa page, clics vers Amazon, d'où viennent les visites, jusqu'où elles descendent, ce qu'elles regardent. Les identifiants sont le contrat de loadLivre (admin.js). %>
+        <div id="admin-livre-tab" class="hidden">
+          <div class="adm-toolbar">
+            <div class="adm-defile">
+              <div class="stats-comp stats-comp--periode" id="admin-livre-periode" role="group" aria-label="Période">
+                <button class="stats-comp-btn" data-livre-jours="7" type="button">7 j</button>
+                <button class="stats-comp-btn active" data-livre-jours="30" type="button">30 j</button>
+                <button class="stats-comp-btn" data-livre-jours="90" type="button">90 j</button>
+                <button class="stats-comp-btn" data-livre-jours="365" type="button">1 an</button>
+              </div>
+            </div>
+            <%- aide(`Mesuré par le site lui-même depuis le 14 novembre 2026, jour par jour (heure de Paris). Une visite est celle de la mesure d'audience du site : vos propres passages (drapeau posé à la connexion à l'admin) et les robots ne comptent pas. Un clic vers Amazon n'est pas une vente : les ventes et les commissions se lisent dans le tableau de bord du Partenariat Amazon.`) %>
+          </div>
+
+          <div class="stats-tetes">
+            <div class="stats-tete stats-tete--lances">
+              <p class="stats-tete-titre">Visites de la page</p>
+              <p class="stats-tete-jour" id="admin-livre-visites">-</p>
+              <p class="stats-tete-sub" id="admin-livre-visites-sub">&nbsp;</p>
+            </div>
+            <div class="stats-tete stats-tete--ventes">
+              <p class="stats-tete-titre">Clics vers Amazon</p>
+              <p class="stats-tete-jour" id="admin-livre-clics">-</p>
+              <p class="stats-tete-sub" id="admin-livre-clics-sub">&nbsp;</p>
+            </div>
+            <div class="stats-tete stats-tete--ratio">
+              <p class="stats-tete-titre">Taux de clic</p>
+              <p class="stats-tete-jour" id="admin-livre-taux">-</p>
+              <p class="stats-tete-sub">des visites cliquent au moins une fois vers Amazon</p>
+            </div>
+            <div class="stats-tete stats-tete--finis">
+              <p class="stats-tete-titre">Aujourd'hui</p>
+              <p class="stats-tete-jour" id="admin-livre-jour">-</p>
+              <p class="stats-tete-sub" id="admin-livre-jour-sub">&nbsp;</p>
+            </div>
+          </div>
+
+          <div class="stats-panel">
+            <div class="stats-panel-head">
+              <div class="stats-panel-titre">
+                <h2 class="stats-panel-title">Visites et clics par jour</h2>
+                <%- aide(`Les visites de la page du livre et les clics vers Amazon, jour par jour. Une courbe s'éteint ou se rallume d'un clic sur sa vignette.`) %>
+              </div>
+            </div>
+            <div class="stats-legende" id="admin-livre-legende" role="group" aria-label="Courbes affichées"></div>
+            <canvas id="admin-livre-chart" class="stats-canvas adm-canvas--hero"></canvas>
+          </div>
+
+          <div class="adm-duo">
+            <div class="stats-panel">
+              <div class="stats-panel-head">
+                <div class="stats-panel-titre">
+                  <h2 class="stats-panel-title">Les boutons « Voir sur Amazon »</h2>
+                  <%- aide(`Les clics sur la période, bouton par bouton. Le pourcentage est la part de tous les clics. La barre collée n'existe que sur téléphone (sous 1 024 px) : sous son nom, le nombre de visites où elle est apparue.`) %>
+                </div>
+              </div>
+              <div id="admin-livre-boutons" class="stats-list"><p class="text-center text-muted-foreground py-6">Chargement...</p></div>
+            </div>
+            <div class="stats-panel">
+              <div class="stats-panel-head">
+                <div class="stats-panel-titre">
+                  <h2 class="stats-panel-title">D'où viennent les visites</h2>
+                  <%- aide(`D'où arrive chaque visite, à sa première page vue du livre : « Menu » et « Pied de page », le bouton du livre dans le menu (ordinateur ou téléphone) ou le lien du pied de page ; une adresse qui commence par / : une autre page du site (« Accueil » pour la page d'accueil) ; puis les moteurs de recherche, les réseaux et les autres sites ; « Direct » : adresse tapée, favori, lien ouvert depuis une application ou un message. « Ont cliqué » : visites qui ont ensuite cliqué vers Amazon, et le taux qu'elles font.`) %>
+                </div>
+              </div>
+              <div id="admin-livre-sources" class="stats-list"><p class="text-center text-muted-foreground py-6">Chargement...</p></div>
+            </div>
+          </div>
+
+          <div class="adm-duo">
+            <div class="stats-panel">
+              <div class="stats-panel-head">
+                <div class="stats-panel-titre">
+                  <h2 class="stats-panel-title">Jusqu'où ils descendent</h2>
+                  <%- aide(`Les parties de la page, dans l'ordre, et la part des visites qui les ont vues arriver à l'écran (le haut de la partie aux deux tiers de l'écran). Le haut de la page, avec le premier bouton, est vu par toutes les visites.`) %>
+                </div>
+              </div>
+              <div id="admin-livre-sections" class="stats-list"><p class="text-center text-muted-foreground py-6">Chargement...</p></div>
+            </div>
+            <div class="stats-panel">
+              <div class="stats-panel-head">
+                <div class="stats-panel-titre">
+                  <h2 class="stats-panel-title">Ce qu'ils regardent</h2>
+                  <%- aide(`Les gestes sur la page, comptés une fois par visite : la page avant et après qu'on fait glisser, les pages feuilletées de côté, chaque page du livre ouverte en grand, la liste des 100 aventures et les questions ouvertes. La part se lit sur les visites de la période.`) %>
+                </div>
+              </div>
+              <div id="admin-livre-gestes" class="stats-list"><p class="text-center text-muted-foreground py-6">Chargement...</p></div>
+            </div>
+          </div>
+          <p class="adm-note" id="admin-livre-note"></p>
+        </div>
+
         <div id="admin-reviews-tab" class="hidden">
           <div class="stats-tetes">
             <div class="stats-tete stats-tete--ratio">

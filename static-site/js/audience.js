@@ -332,6 +332,26 @@
   document.addEventListener('click', clicEvaluation, true);
   document.addEventListener('auxclick', clicEvaluation, true);
 
+  // ── Passage vers la page du livre ───────────────────────────────────────
+  // Même mécanique que pour l'évaluation (14 novembre 2026) : le bouton du
+  // livre dans le menu, dans le menu du téléphone et dans le pied de page
+  // disent d'où ils partent (data-livre-lien : menu, menu-mobile, pied), et
+  // livre.js reprend la source à l'arrivée si le clic date de moins de dix
+  // minutes, puis l'efface. Sans elle, ces trois liens se confondraient avec
+  // la page d'où l'on vient.
+  function clicLivre(e) {
+    if (e.type === 'auxclick' && e.button !== 1) return;
+    var lien = e.target && e.target.closest ? e.target.closest('a[data-livre-lien]') : null;
+    if (!lien) return;
+    var src = lien.getAttribute('data-livre-lien') || '';
+    if (!/^[a-z-]{1,20}$/.test(src)) return;
+    try {
+      window.localStorage.setItem('qc-livre-clic', JSON.stringify({ s: src, t: Date.now() }));
+    } catch (er) {}
+  }
+  document.addEventListener('click', clicLivre, true);
+  document.addEventListener('auxclick', clicLivre, true);
+
   // ── Départ ──────────────────────────────────────────────────────────────
   // Chrome précharge les liens qu'il juge probables. Compter un préchargement
   // inventerait des visites qui n'ont jamais eu lieu : on attend que la page

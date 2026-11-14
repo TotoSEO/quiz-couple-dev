@@ -752,7 +752,8 @@
       instagram_clics: statsRpc('get_instagram_clics'),
       bilan: statsRpc('get_bilan_tableau', { p_jours: n }),
       bilan_celibataires: statsRpc('get_bilan_celib', { p_jours: n }),
-      bilan_point: statsRpc('get_bilan_point', { p_jours: n })
+      bilan_point: statsRpc('get_bilan_point', { p_jours: n }),
+      livre: statsRpc('get_livre_stats', { p_jours: n })
     };
     var cles = Object.keys(lots);
     Promise.all(cles.map(function (k) {
@@ -764,7 +765,7 @@
         exporte_le: new Date().toISOString(),
         periode_jours: n,
         fuseau: tz,
-        lecture: 'Export de l\'admin de quiz-couple.com. parties_* : parties terminées (depuis toujours par test, par jour sur la période) ; lancements_* : parties commencées, depuis le 21 août 2026 ; le taux de finition d\'un test = finies / lancées. trafic_* : visites et pages vues par jour, sources des visites, sur la période. distance_par_test : parties à distance arrivées au résultat, par test, depuis le 7 septembre 2026 (fins = téléphones arrivés au résultat, deux par partie ; departs n\'est plus alimenté depuis le 20 octobre 2026). instagram_clics : clics vers Instagram depuis le site. bilan : l\'évaluation de couple payante (visites de sa page, entonnoir, ventes en centimes, sources, domaines). bilan_celibataires : au départ seul(e), les réponses à « Où en êtes-vous ? » (statuts, comptées une fois par visite) et ce que les célibataires voudraient dans une évaluation pour eux (interets, autres, et depuis le 4 novembre 2026 sources et situations : d\'où vient la réponse, l\'évaluation ou la carte d\'un test célibataire), depuis le 25 octobre 2026, sans aucune adresse. bilan_point : « Le point sur ma relation », le seul(e) depuis le 4 novembre 2026 (serie : formulaires ouverts, créés, commencés, écrans de l\'adresse, finis, écrans « prêt », clics sans la case, pages Stripe ouvertes, payés, revenu en centimes ; cles : les réponses du départ (point_motif, point_priorite, point_duree), ce que dit le rapport (point_etat, point_attachement, point_engagement, point_securite), les parties entrées et finies, les erreurs du départ, et les vues et clics de la carte des tests célibataires ; carte_celib : la carte page par page, avec les réponses et les adresses venues d\'elle). Une entrée { erreur } ou { code, message } = fonction absente ou refusée.',
+        lecture: 'Export de l\'admin de quiz-couple.com. parties_* : parties terminées (depuis toujours par test, par jour sur la période) ; lancements_* : parties commencées, depuis le 21 août 2026 ; le taux de finition d\'un test = finies / lancées. trafic_* : visites et pages vues par jour, sources des visites, sur la période. distance_par_test : parties à distance arrivées au résultat, par test, depuis le 7 septembre 2026 (fins = téléphones arrivés au résultat, deux par partie ; departs n\'est plus alimenté depuis le 20 octobre 2026). instagram_clics : clics vers Instagram depuis le site. bilan : l\'évaluation de couple payante (visites de sa page, entonnoir, ventes en centimes, sources, domaines). bilan_celibataires : au départ seul(e), les réponses à « Où en êtes-vous ? » (statuts, comptées une fois par visite) et ce que les célibataires voudraient dans une évaluation pour eux (interets, autres, et depuis le 4 novembre 2026 sources et situations : d\'où vient la réponse, l\'évaluation ou la carte d\'un test célibataire), depuis le 25 octobre 2026, sans aucune adresse. bilan_point : « Le point sur ma relation », le seul(e) depuis le 4 novembre 2026 (serie : formulaires ouverts, créés, commencés, écrans de l\'adresse, finis, écrans « prêt », clics sans la case, pages Stripe ouvertes, payés, revenu en centimes ; cles : les réponses du départ (point_motif, point_priorite, point_duree), ce que dit le rapport (point_etat, point_attachement, point_engagement, point_securite), les parties entrées et finies, les erreurs du départ, et les vues et clics de la carte des tests célibataires ; carte_celib : la carte page par page, avec les réponses et les adresses venues d\'elle). livre : la page du livre « 100 aventures à deux », depuis le 14 novembre 2026 (totaux : visites, pages vues, clics vers Amazon et visites qui ont cliqué ; serie : par jour ; emplacements : les clics par bouton, hero, cadeau, fin, barre ; sources : d\'où arrive chaque visite, menu, menu-mobile, pied, page:<chemin> pour une autre page du site, un moteur, un réseau ou direct ; gestes : les parties de la page vues (section), les pages du livre ouvertes en grand (page), les questions ouvertes (faq), la page avant/après glissée (avap), le carrousel, la liste des 100 aventures, le lien « Feuilleter » et la barre collée apparue, avec fois et visites). Une entrée { erreur } ou { code, message } = fonction absente ou refusée.',
         donnees: donnees
       };
       var blob = new Blob([JSON.stringify(fichier, null, 2)], { type: 'application/json' });
@@ -1467,6 +1468,219 @@
       ids.forEach(function (id) { place(id, msg); });
       _bilanCouches = null;
       drawChart(document.getElementById('admin-bilan-chart'), [], {});
+    });
+  }
+
+  // ── Livre (14 novembre 2026) ─────────────────────────────────────────────
+  // La page du livre « 100 aventures à deux » (Thomas : « rajoute du tracking
+  // sur la page du livre. Nombre de clics sur la page, sur le bouton Amazon
+  // et d'autres trucs que tu trouves pertinents ») : get_livre_stats par
+  // admin-stats (migration 20261114150000, table livre_evenements écrite par
+  // js/livre.js). Les ventes ne sont pas ici : Amazon ne les dit qu'à son
+  // tableau de bord du Partenariat.
+  var livreJours = 30;
+  var livreCouchesVues = { visites: true, clics: true };
+  var _livreCouches = null;
+  var LIVRE_BOUTONS = [
+    ['hero', 'Bouton du haut', 'à côté du livre, dans le premier écran'],
+    ['cadeau', 'Bloc « cadeau »', 'sous « Un cadeau qui se garde des années »'],
+    ['fin', 'Dernier appel', 'en bas de la page'],
+    ['barre', 'Barre collée', 'en bas de l\'écran, sur téléphone']
+  ];
+  var LIVRE_SECTIONS = [
+    ['principe', 'Le principe', 'la page avant et après'],
+    ['dix-ans', 'Le livre dans dix ans', ''],
+    ['feuilleter', 'Feuilletez le livre', 'les pages en carrousel'],
+    ['budget', 'Les prix des aventures', 'et la liste des 100'],
+    ['cadeau', 'Le cadeau', ''],
+    ['questions', 'Les questions', ''],
+    ['fin', 'Le dernier appel', 'le bas de la page']
+  ];
+  var LIVRE_GESTES = [
+    ['avap', 'Page avant / après glissée', 'la ligne déplacée au doigt, à la souris ou au clavier'],
+    ['carrousel', 'Pages feuilletées de côté', 'par les flèches ou en glissant'],
+    ['feuilleter', '« Feuilleter le livre » touché', 'le lien du haut de la page'],
+    ['liste', 'Liste des 100 aventures ouverte', '']
+  ];
+  var LIVRE_PAGES = {
+    'liste-1': 'Les 100 aventures à cocher',
+    'escape-game': 'Une page d\'aventure (l\'escape game)',
+    'aventure-libre': 'Une aventure à inventer',
+    'voyage': 'Une page de voyage',
+    'tests-quiz-couple': 'Les tests Quiz Couple',
+    'trophees': 'Les trophées',
+    'nous-deux-fin': 'Nous deux, à la fin du livre'
+  };
+  // Des libellés courts : le tableau tient dans une demi-largeur, et la
+  // bulle d'aide du panneau dit ce que chacun recouvre.
+  var LIVRE_SOURCES = {
+    menu: 'Menu (ordinateur)',
+    'menu-mobile': 'Menu (téléphone)',
+    pied: 'Pied de page',
+    google: 'Google', bing: 'Bing', instagram: 'Instagram', facebook: 'Facebook', pinterest: 'Pinterest', amazon: 'Amazon',
+    direct: 'Direct'
+  };
+  function libelleSourceLivre(s) {
+    s = String(s || '');
+    if (LIVRE_SOURCES[s]) return LIVRE_SOURCES[s];
+    if (s.indexOf('page:') === 0) return s === 'page:/' ? 'Accueil' : s.slice(5);
+    return s || LIVRE_SOURCES.direct;
+  }
+  function renderLivreLegende(couches) {
+    var el = document.getElementById('admin-livre-legende');
+    if (!el) return;
+    el.innerHTML = couches.map(function (c) {
+      return '<button type="button" class="stats-leg' + (c.visible ? '' : ' est-eteinte') + '"'
+        + ' style="--leg:' + c.couleur + '" data-livre-courbe="' + c.cle + '"'
+        + ' aria-pressed="' + (c.visible ? 'true' : 'false') + '">'
+        + '<span class="stats-leg-nom"><span class="stats-leg-puce"></span>' + esc(c.nom) + '</span>'
+        + '<span class="stats-leg-val">' + esc(c.legende) + '</span>'
+        + '</button>';
+    }).join('');
+  }
+  function dessineLivre() {
+    if (!_livreCouches) return;
+    _livreCouches.forEach(function (c) {
+      c.visible = livreCouchesVues[c.cle];
+      c.couleur = teinte(c.teinte, c.couleur);
+    });
+    renderLivreLegende(_livreCouches);
+    drawChart(document.getElementById('admin-livre-chart'), _livreCouches, {});
+  }
+  function loadLivre() {
+    var ids = ['admin-livre-boutons', 'admin-livre-sources', 'admin-livre-sections', 'admin-livre-gestes'];
+    ids.forEach(function (id) { var e = document.getElementById(id); if (e) e.innerHTML = '<p class="text-center text-muted-foreground py-6">Chargement...</p>'; });
+    var ecrit = function (id, texte) { var e = document.getElementById(id); if (e) e.textContent = texte; };
+    var place = function (id, html) { var e = document.getElementById(id); if (e) e.innerHTML = html; };
+    document.querySelectorAll('#admin-livre-periode [data-livre-jours]').forEach(function (b) {
+      b.classList.toggle('active', Number(b.dataset.livreJours) === livreJours);
+    });
+    ecrit('admin-livre-note', '');
+    drawChart(document.getElementById('admin-livre-chart'), [], { loading: true });
+    statsRpc('get_livre_stats', { p_jours: livreJours }).then(function (d) {
+      if (!d || typeof d !== 'object' || !d.totaux || !Array.isArray(d.serie)) {
+        throw new Error((d && (d.message || d.erreur)) || 'réponse inattendue');
+      }
+      var t = d.totaux;
+      var visites = Number(t.visites) || 0;
+      var clics = Number(t.clics) || 0;
+      var visitesClic = Number(t.visites_clic) || 0;
+      var clicsJour = Number(t.clics_jour) || 0;
+      var periode = livreJours === 365 ? 'sur un an' : 'sur ' + livreJours + ' jours';
+
+      // Les quatre tuiles.
+      ecrit('admin-livre-visites', nombreBilan(visites));
+      ecrit('admin-livre-visites-sub', periode + ' · ' + nombreBilan(t.vues) + ' page' + (Number(t.vues) > 1 ? 's' : '') + ' vue' + (Number(t.vues) > 1 ? 's' : ''));
+      ecrit('admin-livre-clics', nombreBilan(clics));
+      ecrit('admin-livre-clics-sub', visitesClic === 0 ? 'aucune visite n\'a cliqué' : visitesClic === 1 ? '1 visite a cliqué' : nombreBilan(visitesClic) + ' visites ont cliqué');
+      ecrit('admin-livre-taux', partBilan(visitesClic, visites));
+      ecrit('admin-livre-jour', nombreBilan(t.visites_jour));
+      ecrit('admin-livre-jour-sub', 'visite' + (Number(t.visites_jour) > 1 ? 's' : '') + ' · ' + nombreBilan(clicsJour) + ' clic' + (clicsJour > 1 ? 's' : '') + ' vers Amazon');
+
+      // La courbe : visites et clics sur le même axe.
+      // La courbe commence au premier jour mesuré, sept jours au moins : des
+      // zéros avant la mise en ligne de la mesure se liraient comme des
+      // journées sans visite.
+      var serieL = d.serie;
+      if (d.premiere) {
+        var jour0 = new Date(d.premiere).toLocaleDateString('sv-SE', { timeZone: 'Europe/Paris' });
+        var debutCourbe = serieL.findIndex(function (j) { return String(j.jour) >= jour0; });
+        if (debutCourbe > 0) serieL = serieL.slice(Math.min(debutCourbe, Math.max(0, serieL.length - 7)));
+      }
+      var points = { visites: [], clics: [] };
+      serieL.forEach(function (j) {
+        var dt = new Date(String(j.jour) + 'T12:00:00');
+        var label = dt.getDate() + '/' + (dt.getMonth() + 1);
+        points.visites.push({ date: dt, label: label, total: Number(j.visites) || 0 });
+        points.clics.push({ date: dt, label: label, total: Number(j.clics) || 0 });
+      });
+      _livreCouches = [
+        { cle: 'visites', teinte: 'visites', nom: 'Visites de la page', couleur: '#2563EB', axe: 'gauche', unite: '', legende: nombreBilan(visites) },
+        { cle: 'clics', teinte: 'ventes', nom: 'Clics vers Amazon', couleur: '#18181B', axe: 'gauche', unite: '', legende: nombreBilan(clics) }
+      ].map(function (c) { c.points = points[c.cle]; c.total = null; return c; });
+      dessineLivre();
+
+      var vide = '<p class="bil-vide">Aucune visite sur la période.</p>';
+      var gestes = Array.isArray(d.gestes) ? d.gestes : [];
+      var visitesDe = function (evenement, detail) {
+        return gestes.reduce(function (a, g) {
+          return a + ((g.evenement === evenement && (detail === undefined || g.detail === detail)) ? (Number(g.visites) || 0) : 0);
+        }, 0);
+      };
+
+      // Les boutons « Voir sur Amazon », dans l'ordre de la page.
+      var parBouton = {};
+      (d.emplacements || []).forEach(function (x) { parBouton[x.emplacement || ''] = Number(x.clics) || 0; });
+      var maxBouton = Math.max.apply(null, [1].concat(Object.keys(parBouton).map(function (k) { return parBouton[k]; })));
+      var connus = LIVRE_BOUTONS.map(function (b) { return b[0]; });
+      var lignesBoutons = LIVRE_BOUTONS.map(function (b) {
+        var aideB = b[0] === 'barre' ? b[2] + ' · apparue dans ' + nombreBilan(visitesDe('barre')) + ' visite' + (visitesDe('barre') > 1 ? 's' : '') : b[2];
+        return ligneEtapeBilan(b[1], aideB, parBouton[b[0]] || 0, maxBouton, clics, 'var(--adm-s-ventes)');
+      }).concat(Object.keys(parBouton).filter(function (k) { return connus.indexOf(k) === -1; }).map(function (k) {
+        return ligneEtapeBilan(k || 'Autre', '', parBouton[k], maxBouton, clics, 'var(--adm-s-ventes)');
+      }));
+      place('admin-livre-boutons', clics ? '<div class="bil-colonne">' + lignesBoutons.join('') + '</div>' : '<p class="bil-vide">Aucun clic vers Amazon sur la période.</p>');
+
+      // D'où viennent les visites : les vingt premières sources, le reste
+      // en une ligne.
+      var sources = Array.isArray(d.sources) ? d.sources.slice() : [];
+      var autres = sources.slice(20);
+      sources = sources.slice(0, 20);
+      var ligneSource = function (nom, v, vc, classe) {
+        return '<tr' + (classe ? ' class="' + classe + '"' : '') + '><td class="bil-gauche adm-coupe">' + esc(nom) + '</td><td>' + nombreBilan(v) + '</td><td>' + nombreBilan(vc) + '</td><td>' + partBilan(vc, v) + '</td></tr>';
+      };
+      var lignesSources = sources.map(function (x) { return ligneSource(libelleSourceLivre(x.source), Number(x.visites) || 0, Number(x.visites_clic) || 0); });
+      if (autres.length) {
+        lignesSources.push(ligneSource('Autres (' + autres.length + ' sources)',
+          autres.reduce(function (a, x) { return a + (Number(x.visites) || 0); }, 0),
+          autres.reduce(function (a, x) { return a + (Number(x.visites_clic) || 0); }, 0)));
+      }
+      place('admin-livre-sources', sources.length
+        ? '<div class="adm-table-defile"><table class="adm-table"><thead><tr><th class="bil-gauche">Source</th><th>Visites</th><th>Ont cliqué</th><th>Taux</th></tr></thead><tbody>' + lignesSources.join('') + '</tbody></table></div>'
+        : vide);
+
+      // Jusqu'où ils descendent : la part des visites qui voient chaque
+      // partie arriver à l'écran, dans l'ordre de la page.
+      place('admin-livre-sections', visites
+        ? '<div class="bil-colonne">' + ligneEtapeBilan('Le haut de la page', 'le livre, son prix et le premier bouton', visites, visites, visites, 'var(--adm-s-visites)') +
+          LIVRE_SECTIONS.map(function (s) {
+            return ligneEtapeBilan(s[1], s[2], visitesDe('section', s[0]), visites, visites, 'var(--adm-s-visites)');
+          }).join('') + '</div>'
+        : vide);
+
+      // Ce qu'ils regardent : les gestes, puis les pages ouvertes en grand
+      // et les questions ouvertes, les plus vues d'abord.
+      var parVisites = function (a, b) { return (Number(b.visites) || 0) - (Number(a.visites) || 0); };
+      var pages = gestes.filter(function (g) { return g.evenement === 'page'; }).sort(parVisites);
+      var questions = gestes.filter(function (g) { return g.evenement === 'faq'; }).sort(parVisites);
+      var htmlGestes = '<div class="bil-colonne">' + LIVRE_GESTES.map(function (g) {
+        return ligneEtapeBilan(g[1], g[2], visitesDe(g[0]), visites, visites, 'var(--adm-s-lances)');
+      }).join('') + '</div>';
+      if (pages.length) {
+        htmlGestes += '<div class="bil-colonne bil-colonne--suite"><p class="bil-colonne-titre">Pages du livre ouvertes en grand</p>' + pages.map(function (g) {
+          return ligneEtapeBilan(LIVRE_PAGES[g.detail] || g.detail || '?', '', Number(g.visites) || 0, visites, visites, 'var(--adm-s-lances)');
+        }).join('') + '</div>';
+      }
+      if (questions.length) {
+        htmlGestes += '<div class="bil-colonne bil-colonne--suite"><p class="bil-colonne-titre">Questions ouvertes</p>' + questions.map(function (g) {
+          return ligneEtapeBilan(g.detail || '?', '', Number(g.visites) || 0, visites, visites, 'var(--adm-s-lances)');
+        }).join('') + '</div>';
+      }
+      place('admin-livre-gestes', visites ? htmlGestes : vide);
+
+      // Depuis quand la mesure tourne.
+      if (!d.premiere) {
+        ecrit('admin-livre-note', 'Rien d\'enregistré pour l\'instant : la mesure compte depuis sa mise en ligne, le 14 novembre 2026.');
+      } else {
+        var debut = new Date(d.premiere);
+        var debutPeriode = new Date(Date.now() - (livreJours - 1) * 864e5);
+        if (debut > debutPeriode) ecrit('admin-livre-note', 'La mesure compte depuis le ' + debut.toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' }) + ' : la période ne remonte pas plus loin.');
+      }
+    }).catch(function (e) {
+      var msg = '<p class="text-center text-muted-foreground py-6">Les chiffres du livre ne répondent pas (' + esc(String((e && e.message) || e)) + '). La migration 20261114150000 est-elle appliquée (workflow « Livre · mesure de la page »), et admin-stats déployée avec get_livre_stats ?</p>';
+      ids.forEach(function (id) { place(id, msg); });
+      _livreCouches = null;
+      drawChart(document.getElementById('admin-livre-chart'), [], {});
     });
   }
 
@@ -2988,6 +3202,7 @@
     trafic: ['Trafic', 'Visites et pages vues, mesurées par le site lui-même'],
     distance: ['À distance', 'Les parties jouées chacun sur son téléphone'],
     bilan: ['Évaluation', 'L\'évaluation de couple payante : de la visite de sa page au paiement'],
+    livre: ['Livre', 'La page du livre « 100 aventures à deux » : visites et clics vers Amazon'],
     reviews: ['Avis', 'Modération des avis laissés sur les pages'],
     leads: ['Leads', 'Les demandes reçues par le formulaire'],
     messages: ['Messagerie', 'Les messages du formulaire de contact'],
@@ -3005,6 +3220,7 @@
     else if (tab === 'trafic') loadTrafic();
     else if (tab === 'distance') loadDistance();
     else if (tab === 'bilan') loadBilan();
+    else if (tab === 'livre') loadLivre();
     else if (tab === 'reviews') { loadReviews(); chargeClassement(); }
     else if (tab === 'leads') { allLeads = []; loadLeads(); }
     else if (tab === 'messages') { allMessages = []; loadMessages(); }
@@ -3038,6 +3254,9 @@
     var biTab = document.getElementById('admin-bilan-tab');
     if (biTab) biTab.classList.toggle('hidden', tab !== 'bilan');
     if (tab === 'bilan') loadBilan();
+    var liTab = document.getElementById('admin-livre-tab');
+    if (liTab) liTab.classList.toggle('hidden', tab !== 'livre');
+    if (tab === 'livre') loadLivre();
     var rsTab = document.getElementById('admin-reseaux-tab');
     if (rsTab) rsTab.classList.toggle('hidden', tab !== 'reseaux');
     if (tab === 'reseaux') ouvrirReseaux();
@@ -4089,6 +4308,23 @@
       bilanJours = Number(b.dataset.bilanJours) || 30;
       loadBilan();
     });
+    var perLi = document.getElementById('admin-livre-periode');
+    if (perLi) perLi.addEventListener('click', function (e) {
+      var b = e.target.closest('[data-livre-jours]');
+      if (!b) return;
+      livreJours = Number(b.dataset.livreJours) || 30;
+      loadLivre();
+    });
+    var legLi = document.getElementById('admin-livre-legende');
+    if (legLi) legLi.addEventListener('click', function (e) {
+      var b = e.target.closest('[data-livre-courbe]');
+      if (!b) return;
+      var cle = b.dataset.livreCourbe;
+      var allumees = Object.keys(livreCouchesVues).filter(function (k) { return livreCouchesVues[k]; });
+      if (livreCouchesVues[cle] && allumees.length === 1) return;
+      livreCouchesVues[cle] = !livreCouchesVues[cle];
+      dessineLivre();
+    });
     // ── Légende de la courbe « source préférée » (onglet Trafic) ────────
     // Meme mecanique que la legende du trafic : on allume et on eteint une
     // courbe, sans jamais pouvoir eteindre la derniere.
@@ -4113,6 +4349,7 @@
         return;
       }
       if (currentTab === 'bilan') { dessineBilan(); return; }
+      if (currentTab === 'livre') { dessineLivre(); return; }
       if (currentTab !== 'stats') return;
       if (_lastTotalSeries) renderTotalDaily(_lastTotalSeries);
       if (_lastQuizSeries) drawLineChart(document.getElementById('admin-stats-chart'), _lastQuizSeries, _lastQuizOpts);

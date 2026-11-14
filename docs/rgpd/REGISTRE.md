@@ -144,6 +144,7 @@ du site. Pas de délégué à la protection des données (non obligatoire).
   - Aucune adresse IP, aucun identifiant durable.
 - **Base légale** : l'intérêt légitime. Mesure exemptée de consentement : premier parti, statistiques d'ensemble, rien de croisé.
 - **Durée** : lignes brutes 35 jours, agrégats treize mois.
+- **La page du livre** (depuis le 14 novembre 2026, table `livre_evenements`) : ce qu'on fait sur la page, une ligne par geste (page affichée, partie de la page vue, page du livre ouverte, question ouverte, clic vers Amazon), avec le même numéro de visite, la langue de la page et, pour la page affichée, d'où vient la visite (bouton du menu ou du pied de page, chemin d'une page du site, nom d'un autre site, jamais son adresse complète). Mêmes exclusions et même base légale. Lignes gardées 400 jours, effacées chaque nuit (pg_cron `livre-menage`).
 
 ### 10. Google Analytics et publicité
 

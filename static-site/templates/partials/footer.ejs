@@ -79,7 +79,7 @@
         <%# Le livre « 100 aventures à deux », là où il est en vente (LIVRE de config.js). %>
         <% const urlLivrePied = getLocalizedUrl('livreQuizCouple', lang); %>
         <% if (urlLivrePied) { %>
-        <a href="<%= urlLivrePied %>" class="flex items-center gap-2 text-sm font-semibold text-foreground transition-colors hover:text-primary no-underline"><img src="/livre/livre-mini-160.webp" alt="" width="160" height="173" class="h-6 w-auto" loading="lazy" decoding="async"><%= t('livre:menu.lien', '') %></a>
+        <a href="<%= urlLivrePied %>" data-livre-lien="pied" class="flex items-center gap-2 text-sm font-semibold text-foreground transition-colors hover:text-primary no-underline"><img src="/livre/livre-mini-160.webp" alt="" width="160" height="173" class="h-6 w-auto" loading="lazy" decoding="async"><%= t('livre:menu.lien', '') %></a>
         <% } %>
       </div>
 

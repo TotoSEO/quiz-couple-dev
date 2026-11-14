@@ -1,23 +1,151 @@
 /* La page du livre « 100 aventures à deux » (templates/pages/livre-quiz-couple.ejs) :
    la page avant et après l'aventure, les pages à feuilleter, la visionneuse,
-   la barre collée du téléphone et le compte des clics vers Amazon (Google
-   Analytics, événement « livre_amazon » avec l'emplacement du bouton). Les
-   ventes et les clics se lisent aussi dans le tableau de bord du Partenariat
-   Amazon. */
+   la barre collée du téléphone, et la mesure : les visites, d'où elles
+   viennent, les clics vers Amazon et ce que les gens regardent (table
+   livre_evenements, onglet Livre de l'admin), plus l'événement Google
+   Analytics « livre_amazon » avec l'emplacement du bouton. Les ventes se
+   lisent dans le tableau de bord du Partenariat Amazon. */
 (function () {
   'use strict';
   var racine = document.querySelector('[data-livre]');
   if (!racine) return;
   var reduit = !!(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches);
 
+  // ── La mesure (14 novembre 2026, Thomas : « rajoute du tracking sur la
+  // page du livre. Nombre de clics sur la page, sur le bouton Amazon et
+  // d'autres trucs que tu trouves pertinents ») ──
+  // Une ligne par geste dans livre_evenements (migration 20261114150000),
+  // écrite par audience.js (QCAudience.ecrit, requête simple) avec le numéro
+  // de visite de la page vue et les mêmes exclusions : robots, navigateurs
+  // pilotés, le propriétaire du site. Un clic vers Amazon compte à chaque
+  // fois ; les autres gestes une fois par page chargée. audience.js est
+  // chargé après ce fichier (les scripts différés suivent l'ordre du
+  // document, et celui-ci est dans la page) : on le lit au moment d'écrire.
+  var idVisite = null;
+  var deja = {};
+  function mesure(evenement, detail, chaqueFois) {
+    var A = window.QCAudience;
+    if (!A || typeof A.ecrit !== 'function') return;
+    try { if (A.ignorer()) return; } catch (err) { return; }
+    var cle = evenement + '|' + (detail || '');
+    if (!chaqueFois && deja[cle]) return;
+    if (!idVisite) idVisite = A.visite();
+    if (!idVisite) return;
+    deja[cle] = true;
+    try {
+      A.ecrit('livre_evenements', {
+        visite_id: idVisite,
+        evenement: evenement,
+        detail: detail ? String(detail).slice(0, 120) : null,
+        lang: document.documentElement.lang || 'fr'
+      }).catch(function () {});
+    } catch (err) { /* la mesure ne bloque jamais la page */ }
+  }
+
+  // D'où vient la visite : le bouton du livre dans le menu, dans le menu du
+  // téléphone ou dans le pied de page (audience.js garde le clic dans
+  // qc-livre-clic, lu ici une fois puis effacé), sinon la page du site d'où
+  // l'on vient, sinon le site (Google, Instagram...), sinon « direct ». Jamais
+  // l'adresse complète d'un autre site, seulement son nom.
+  function provenance() {
+    try {
+      var m = JSON.parse(window.localStorage.getItem('qc-livre-clic') || 'null');
+      window.localStorage.removeItem('qc-livre-clic');
+      if (m && typeof m.s === 'string' && /^[a-z-]{1,20}$/.test(m.s) && Date.now() - m.t < 10 * 60 * 1000) return m.s;
+    } catch (err) { /* stockage fermé : on lit le référent */ }
+    var r = document.referrer;
+    if (!r) return 'direct';
+    try {
+      var u = new URL(r);
+      var h = (u.hostname || '').replace(/^www\./, '');
+      if (h === (location.hostname || '').replace(/^www\./, '')) {
+        var p = (u.pathname || '/').toLowerCase();
+        if (p.charAt(p.length - 1) !== '/') p += '/';
+        return 'page:' + p.slice(0, 110);
+      }
+      if (/google\./.test(h)) return 'google';
+      if (/(^|\.)bing\.com$/.test(h)) return 'bing';
+      if (/(^|\.)instagram\.com$/.test(h)) return 'instagram';
+      if (/(^|\.)(facebook\.com|fb\.com|fb\.me|messenger\.com)$/.test(h)) return 'facebook';
+      if (/(^|\.)pinterest\./.test(h)) return 'pinterest';
+      if (/(^|\.)(amazon\.|amzn\.)/.test(h)) return 'amazon';
+      return h.slice(0, 100) || 'direct';
+    } catch (err) { return 'direct'; }
+  }
+  var source = provenance();
+
+  // Une page chargée sans être vue (onglet d'arrière-plan, préchargement)
+  // n'est pas une visite : comme audience.js, on attend qu'elle s'affiche.
+  function quandVisible(fn) {
+    var lancer = function () {
+      if (document.visibilityState !== 'hidden') { fn(); return; }
+      document.addEventListener('visibilitychange', function une() {
+        if (document.visibilityState === 'hidden') return;
+        document.removeEventListener('visibilitychange', une);
+        fn();
+      });
+    };
+    if (document.prerendering) document.addEventListener('prerenderingchange', lancer, { once: true });
+    else lancer();
+  }
+  // Après les scripts différés : audience.js a alors posé le numéro de visite.
+  function quandPret(fn) {
+    var fait = false;
+    var une = function () { if (!fait) { fait = true; fn(); } };
+    if (document.readyState === 'complete') { une(); return; }
+    document.addEventListener('DOMContentLoaded', une, { once: true });
+    window.addEventListener('load', une, { once: true });
+  }
+
+  // Les parties de la page arrivées à l'écran : le haut de la partie passe
+  // aux deux tiers de la hauteur de l'écran.
+  var SECTIONS = [
+    ['.lv-principe', 'principe'], ['.lv-dixans', 'dix-ans'], ['.lv-feuilleter', 'feuilleter'],
+    ['.lv-budget', 'budget'], ['.lv-cadeau', 'cadeau'], ['.lv-faq', 'questions'], ['.lv-fin', 'fin']
+  ];
+  function suivreSections() {
+    if (!('IntersectionObserver' in window)) return;
+    var obs = new IntersectionObserver(function (entrees) {
+      entrees.forEach(function (en) {
+        if (!en.isIntersecting) return;
+        obs.unobserve(en.target);
+        mesure('section', en.target.getAttribute('data-lv-mesure'));
+      });
+    }, { rootMargin: '0px 0px -35% 0px' });
+    SECTIONS.forEach(function (s) {
+      var el = racine.querySelector(s[0]);
+      if (!el) return;
+      el.setAttribute('data-lv-mesure', s[1]);
+      obs.observe(el);
+    });
+  }
+  quandPret(function () {
+    quandVisible(function () {
+      mesure('vue', source);
+      suivreSections();
+    });
+  });
+
+  // Le lien « Feuilleter le livre » du haut, et les questions ouvertes.
+  racine.addEventListener('click', function (e) {
+    if (!e.target.closest) return;
+    if (e.target.closest('.lv-feuilleter-lien')) { mesure('feuilleter'); return; }
+    var resume = e.target.closest('.lv-faq summary');
+    if (resume && resume.parentNode && !resume.parentNode.open) {
+      mesure('faq', (resume.textContent || '').replace(/[\u00a0\u202f]/g, ' ').replace(/\s+/g, ' ').trim());
+    }
+  });
+
   // ── Les clics vers Amazon ──
   function compterClic(e) {
     if (e.type === 'auxclick' && e.button !== 1) return;
     var a = e.target.closest ? e.target.closest('[data-livre-src]') : null;
     if (!a) return;
+    var ou = a.getAttribute('data-livre-src');
+    mesure('amazon', ou, true);
     try {
       if (typeof window.gtag === 'function') {
-        window.gtag('event', 'livre_amazon', { emplacement: a.getAttribute('data-livre-src') });
+        window.gtag('event', 'livre_amazon', { emplacement: ou });
       }
     } catch (err) { /* la mesure ne bloque jamais le lien */ }
   }
@@ -36,7 +164,7 @@
       curseur.value = String(Math.round(p));
     };
     // Le clavier passe par le curseur (invisible, mais il reçoit le focus).
-    curseur.addEventListener('input', function () { touche = true; poser(+curseur.value); });
+    curseur.addEventListener('input', function () { touche = true; mesure('avap'); poser(+curseur.value); });
 
     // La souris et le doigt passent par le cadre : un glissé de côté déplace
     // la ligne, un glissé vers le haut ou le bas fait défiler la page.
@@ -45,6 +173,7 @@
     cadre.addEventListener('pointerdown', function (e) {
       if (e.pointerType === 'mouse' && e.button !== 0) return;
       touche = true;
+      mesure('avap');
       var r = cadre.getBoundingClientRect();
       glisse = { id: e.pointerId, x0: e.clientX, y0: e.clientY, gauche: r.left, largeur: r.width || 1, actif: e.pointerType === 'mouse' };
       if (glisse.actif) {
@@ -107,12 +236,21 @@
         b.disabled = +b.getAttribute('data-car') < 0 ? x <= 2 : x >= max - 2;
       });
     };
+    // Feuilleté de côté : par les flèches, ou au doigt, à la souris, au
+    // clavier (un défilement qui ne vient pas de la personne, comme celui que
+    // le navigateur rétablit au rechargement, ne compte pas).
+    var pisteTouchee = false;
+    ['pointerdown', 'touchstart', 'wheel', 'keydown'].forEach(function (type) {
+      piste.addEventListener(type, function () { pisteTouchee = true; }, { passive: true });
+    });
     var attente = 0;
     piste.addEventListener('scroll', function () {
+      if (pisteTouchee && piste.scrollLeft > 40) mesure('carrousel');
       if (!attente) attente = requestAnimationFrame(function () { attente = 0; majFleches(); });
     }, { passive: true });
     fleches.forEach(function (b) {
       b.addEventListener('click', function () {
+        mesure('carrousel');
         var item = piste.querySelector('.lv-car-item');
         var ecart = parseFloat(getComputedStyle(piste).columnGap) || 0;
         var pas = item ? item.getBoundingClientRect().width + ecart : piste.clientWidth * 0.8;
@@ -149,6 +287,8 @@
       nav.hidden = g.length < 2;
       prec.disabled = rang <= 0;
       suiv.disabled = rang >= g.length - 1;
+      // Chaque page du livre ouverte en grand, par son nom d'image.
+      if (groupe === 'pages') mesure('page', (String(p.src).match(/\/([^\/]+?)-\d+\.webp$/) || [])[1] || String(rang + 1));
       [rang - 1, rang + 1].forEach(function (k) { if (g[k]) { var im = new Image(); im.src = g[k].src; } });
     };
     var avancer = function (sens) {
@@ -161,6 +301,7 @@
     var ouvrir = function (nom, k, bouton) {
       var g = vues[nom];
       if (!g || !g[k]) return;
+      if (nom === 'liste') mesure('liste');
       if (typeof dlg.showModal !== 'function') { window.open(g[k].src, '_blank', 'noopener'); return; }
       groupe = nom;
       rang = k;
@@ -220,7 +361,10 @@
     var finAtteinte = false;
     var boutonsVus = new Set();
     var majBarre = function () {
-      barre.classList.toggle('est-visible', hautPasse && !finAtteinte && boutonsVus.size === 0);
+      var visible = hautPasse && !finAtteinte && boutonsVus.size === 0;
+      barre.classList.toggle('est-visible', visible);
+      // La barre apparue, une fois par page (elle n'existe que sous 1 024 px).
+      if (visible && getComputedStyle(barre).display !== 'none') mesure('barre');
     };
     // Le bouton du haut est « passé » quand son bas est au-dessus de l'écran.
     new IntersectionObserver(function (entrees) {

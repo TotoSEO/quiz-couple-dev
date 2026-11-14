@@ -1,0 +1,53 @@
+name: Livre · mesure de la page
+
+# Applique 20261114150000_livre_evenements.sql par l'API de gestion de
+# Supabase, comme rgpd-base.yml, avec les secrets déjà là
+# (SUPABASE_ACCESS_TOKEN et SUPABASE_PROJECT_REF) : la table
+# livre_evenements, que js/livre.js écrit avec la clé publique, et
+# get_livre_stats, que l'onglet Livre de l'admin lit par admin-stats.
+# Idempotente : la relancer (« Run workflow ») est sans risque.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'supabase/migrations/20261114150000_livre_evenements.sql'
+      - '.github/workflows/livre-base.yml'
+  workflow_dispatch:
+
+concurrency:
+  group: livre-base
+  cancel-in-progress: false
+
+jobs:
+  migration:
+    name: Table et lecture de la mesure du livre
+    runs-on: ubuntu-latest
+    env:
+      SUPABASE_ACCESS_TOKEN: ${{ secrets.SUPABASE_ACCESS_TOKEN }}
+      SUPABASE_PROJECT_REF: ${{ secrets.SUPABASE_PROJECT_REF }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Appliquer la migration
+        run: |
+          f=supabase/migrations/20261114150000_livre_evenements.sql
+          jq -Rs '{query: .}' "$f" > requete.json
+          code=$(curl -sS -o reponse.json -w '%{http_code}' -X POST \
+            "https://api.supabase.com/v1/projects/$SUPABASE_PROJECT_REF/database/query" \
+            -H "Authorization: Bearer $SUPABASE_ACCESS_TOKEN" -H 'Content-Type: application/json' \
+            --data @requete.json)
+          echo "$f : réponse $code"
+          head -c 800 reponse.json; echo
+          if [ "$code" -ge 300 ]; then exit 1; fi
+      - name: Vérifier la table et les droits
+        run: |
+          q="select to_regclass('public.livre_evenements') is not null as table_ok,
+                    has_table_privilege('anon', 'public.livre_evenements', 'insert') as anon_ecrit,
+                    has_table_privilege('anon', 'public.livre_evenements', 'select') as anon_lit,
+                    has_function_privilege('anon', 'public.get_livre_stats(integer)', 'execute') as anon_stats,
+                    (select count(*) from pg_trigger where tgrelid = 'public.livre_evenements'::regclass and tgname = 'frein_anon') as frein"
+          jq -n --arg q "$q" '{query: $q}' > requete.json
+          curl -sS -X POST "https://api.supabase.com/v1/projects/$SUPABASE_PROJECT_REF/database/query" \
+            -H "Authorization: Bearer $SUPABASE_ACCESS_TOKEN" -H 'Content-Type: application/json' \
+            --data @requete.json | tee reponse.json; echo
+          jq -e '.[0].table_ok == true and .[0].anon_ecrit == true and .[0].anon_lit == false and .[0].anon_stats == false' reponse.json > /dev/null
