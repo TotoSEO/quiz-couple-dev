@@ -327,7 +327,18 @@ des pages tests, ça doit juste être un titre de section stylisé, et en
 dessous les pages ») : `#mobile-menu` prend toute la hauteur sous la rangée du
 logo (`100dvh - 3,75rem`), la page derrière ne défile plus
 (`html.menu-mobile-ouvert`) et sort de la tabulation (`inert` sur `main` et le
-pied de page). Il montre d'abord l'évaluation, la liste des familles
+pied de page). **La page se fige par `html` seul, jamais par `body`** : un
+`body` en `overflow: hidden` devient lui-même un conteneur de défilement,
+l'en-tête collé s'y accroche au lieu de l'écran, et du 9 au 14 novembre 2026,
+ouvrir le menu après avoir fait défiler la page renvoyait l'en-tête et le menu
+tout en haut du document, hors de l'écran, la page restant figée et inerte
+(Thomas, devant la capture de l'iPhone d'un ami : « chez lui le menu est
+complètement bug, ça lui bloque complètement son écran »). Les essais du menu
+l'ouvraient en haut de page, où rien ne se voyait. Une règle de cette sorte
+vit aussi dans les 122 feuilles critiques, recopiées dans chaque page : la
+corriger dans `styles.css` ne suffit pas. Vérification :
+`scratchpad/menu3/bug.mjs <chemin> <défilement> <clair|sombre>` et `cycle.mjs`
+de la session (menu ouvert après défilement, famille, retour, fermeture). Il montre d'abord l'évaluation, la liste des familles
 (`.mnav-famille`, leurs sections en sous-titre, ou leurs premières pages pour
 une famille sans titre) et les quatre tuiles ; une famille touchée ouvre son
 panneau (`.mnav-panneau`) en plein écran : une barre collée (flèche de retour,
