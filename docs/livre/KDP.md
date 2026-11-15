@@ -11,8 +11,9 @@ officielles le 7 novembre 2026 (sources en bas de page).
 amazon.fr (ASIN B0HRPDXPRJ, ISBN 9798141209154, 19,99 €). Sa page sur le
 site est `/livre-quiz-couple/`, avec le lien de Partenaire Amazon de Thomas
 (`LIVRE` dans `static-site/build/config.js`, voir « La page du livre » dans
-CLAUDE.md). L'espagnol puis l'anglais suivront, quand Thomas enverra leurs
-liens.
+CLAUDE.md). L'anglais suit (ISBN attribué par KDP le 15 novembre 2026),
+puis l'espagnol ; la page du site prend une langue quand Thomas envoie son
+lien.
 
 ## Les fichiers à envoyer
 
@@ -59,6 +60,7 @@ refaire les fichiers : la page des mentions l'imprime.
 | Édition | ISBN (KDP, marque « Independently published ») |
 |---|---|
 | Français | 9798141209154 (9 novembre 2026) |
+| Anglais | 9798143015807 (15 novembre 2026) |
 
 L'édition française a été validée par KDP en novembre 2026, sans cocher
 « contenu intérieur restreint » et avec l'ISBN gratuit : KDP l'a acceptée comme
