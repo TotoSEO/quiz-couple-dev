@@ -21,6 +21,11 @@
     "badgeNoel": "Cadeau de Noël idéal !",
     "badge": "Idée cadeau pour votre moitié"
   },
+  "bandeau": {
+    "ligne1": "Votre carnet d'activités",
+    "ligne2": "à compléter <em>à deux</em>",
+    "badge": "Vous allez adorer !"
+  },
   "ogAlt": "Le livre 100 aventures à deux de Quiz Couple, couverture jaune avec ses deux personnages",
   "livre": {
     "titre": "100 aventures à deux",

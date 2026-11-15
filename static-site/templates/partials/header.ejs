@@ -65,6 +65,18 @@
   // cliqué sans savoir que y'a une intention de vente derrière ») : les cent
   // aventures, toute l'année, plus « Cadeau de Noël ».
   const livreTitre = livreMenu ? t('livre:menu.titre', '') : '';
+  // La barre du livre sous le menu du téléphone (15 novembre 2026, Thomas :
+  // « on peut promouvoir le livre ! Fait une banderole ultra design qui donne
+  // envie de cliquer pour découvrir le livre quiz couple ») : à la place de
+  // la barre de la réduction, retirée avec elle, et avec sa mécanique (dans
+  // l'en-tête après le nav, cachée menu ouvert et sur ordinateur, sa hauteur
+  // ajoutée aux ancres et aux blocs collés du résultat). bandeauLivrePour
+  // (generate.js) dit sur quelles pages ; une réduction en cours passe devant.
+  const bandeauLivreVisible = !!(!bandeauPromoVisible && livreMenu && typeof bandeauLivre !== 'undefined' && bandeauLivre);
+  // Hauteur de la barre sur un téléphone, puis au-dessus du seuil où elle
+  // tient sur une ligne : elle règle --barre-promo plus bas.
+  const barreSousMenu = bandeauPromoVisible ? { haut: '3.9rem', large: '2.65rem', seuil: '520px' }
+    : bandeauLivreVisible ? { haut: '3.25rem', large: '2.75rem', seuil: '600px' } : null;
   const icAller = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';
 
   // Filter out links that don't have a URL for the current language (frOnly pages in non-FR)
@@ -399,14 +411,64 @@
     .bandeau-promo > svg { width: 1.05rem; height: 1.05rem; flex-shrink: 0; color: hsl(43 96% 58%); }
     .dark .bandeau-promo { background: hsl(266 42% 22%); }
     .dark .bandeau-promo:hover, .dark .bandeau-promo:focus-visible { background: hsl(266 42% 27%); }
+    <% } %>
+    <% if (bandeauLivreVisible) { %>
+    /* La barre du livre, aux couleurs de sa couverture : le jaune du fond, le
+       pointillé blanc qui serpente entre les photos, l'encre et le violet du
+       titre, et le rose du « 100 » pour l'étiquette « Vous allez adorer ! »,
+       posée comme un autocollant (bord et ombre à l'encre). Encre sur jaune
+       13:1, violet sur jaune 5,5:1, encre sur rose 5,6:1. En thème sombre, le
+       brun du bouton du livre et un texte crème, sans aplat jaune qui
+       éblouirait. Rien ne déborde de la barre, et elle ne coupe rien qui en
+       sort : l'araignée d'Halloween pend sous elle (css/saison/halloween.css). */
+    .bandeau-promo--livre { position: relative; isolation: isolate; box-sizing: border-box; display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: center; column-gap: .7rem; height: 3.25rem; padding: 0 .85rem 0 .8rem; color: #2e181f; background: #fed45c; box-shadow: inset 0 -1px 0 #e3b33c; font: 700 .875rem/1.15 var(--font-display, inherit); text-align: left; text-decoration: none; -webkit-tap-highlight-color: transparent; }
+    .bandeau-promo--livre:hover, .bandeau-promo--livre:focus-visible { color: #2e181f; background: #ffcb3a; }
+    .bandeau-promo--livre:focus-visible { outline: 3px solid #2e181f; outline-offset: -3px; }
+    .bandeau-livre-points { position: absolute; inset: 0; z-index: -1; width: 100%; height: 100%; color: #fff; opacity: .85; pointer-events: none; }
+    .bandeau-livre-couv { display: block; width: auto; height: 2.75rem; transform: rotate(-8deg); filter: drop-shadow(0 2px 2px rgb(46 24 31 / .3)); transition: transform .2s ease; }
+    .bandeau-promo--livre:hover .bandeau-livre-couv, .bandeau-promo--livre:focus-visible .bandeau-livre-couv { transform: rotate(-3deg) translateY(-1px) scale(1.05); }
+    .bandeau-livre-texte { min-width: 0; }
+    .bandeau-livre-texte > span { display: block; }
+    .bandeau-livre-texte em { font-style: normal; color: #6532b7; }
+    .bandeau-livre-badge { position: relative; justify-self: end; max-width: 6.2rem; padding: .28rem .6rem .3rem; border: 2px solid #2e181f; border-radius: .8rem; color: #2e181f; background: #de7497; box-shadow: 2px 2px 0 #2e181f; font: 800 .78rem/1.12 var(--font-display, inherit); text-align: center; text-wrap: balance; transform: rotate(-4deg); animation: bandeau-livre-badge 5s ease-in-out 1.2s 3; }
+    .bandeau-livre-coeur { position: absolute; top: -.32rem; right: -.4rem; width: .95rem; height: .95rem; transform: rotate(14deg); }
+    .bandeau-promo--livre:active .bandeau-livre-badge { translate: 1px 1px; box-shadow: 1px 1px 0 #2e181f; }
+    /* Un petit bonjour de l'étiquette, trois fois puis plus rien : 1,2 s
+       après l'arrivée, puis toutes les 5 s. Transform seulement. */
+    @keyframes bandeau-livre-badge { 0%, 16%, 100% { transform: rotate(-4deg); } 4% { transform: rotate(3deg) scale(1.08); } 8% { transform: rotate(-9deg) scale(1.08); } 12% { transform: rotate(0deg) scale(1.03); } }
+    .dark .bandeau-promo--livre { color: #ffe7a3; background: #2b2314; box-shadow: inset 0 -1px 0 rgb(255 212 92 / .35); }
+    .dark .bandeau-promo--livre:hover, .dark .bandeau-promo--livre:focus-visible { color: #fff3cf; background: #372d1a; }
+    .dark .bandeau-promo--livre:focus-visible { outline-color: #ffd45c; }
+    .dark .bandeau-livre-points { color: #ffd45c; opacity: .32; }
+    .dark .bandeau-livre-texte em { color: #c9a8ff; }
+    .dark .bandeau-livre-badge { box-shadow: 2px 2px 0 #ffd45c; }
+    .dark .bandeau-promo--livre:active .bandeau-livre-badge { box-shadow: 1px 1px 0 #ffd45c; }
+    @media (max-width: 359.98px) {
+      .bandeau-promo--livre { column-gap: .5rem; padding: 0 .6rem 0 .55rem; font-size: .8125rem; }
+      .bandeau-livre-couv { height: 2.45rem; }
+      .bandeau-livre-badge { max-width: 5.5rem; padding: .24rem .45rem .26rem; font-size: .72rem; }
+    }
+    @media (min-width: 440px) {
+      .bandeau-livre-badge { max-width: none; white-space: nowrap; border-radius: 999px; padding: .3rem .75rem .32rem; font-size: .8125rem; }
+    }
+    @media (min-width: 600px) {
+      .bandeau-promo--livre { grid-template-columns: auto auto auto; justify-content: center; column-gap: .9rem; height: 2.75rem; font-size: .95rem; }
+      .bandeau-livre-texte > span { display: inline; }
+      .bandeau-livre-couv { height: 2.3rem; }
+    }
+    @media (prefers-reduced-motion: reduce) { .bandeau-livre-badge { animation: none; } .bandeau-livre-couv { transition: none; } }
+    <% } %>
+    <% if (barreSousMenu) { %>
     #site-header:has(#mobile-menu:not(.hidden)) > .bandeau-promo { display: none; }
-    /* Collée, la barre allonge l'en-tête de sa hauteur (62 px sur deux lignes,
-       42 px sur une, à partir d'environ 520 px de large) : les ancres et les
-       scrollIntoView de la page s'arrêtent d'autant plus bas, et les blocs
-       collés du résultat (notation, renvoi, portrait), posés dans styles.css
-       sous l'en-tête seul, descendent d'autant. */
+    /* Collée, la barre allonge l'en-tête de sa hauteur (barreSousMenu : celle
+       de la réduction faisait 62 px sur deux lignes, 42 px sur une à partir
+       d'environ 520 px de large ; celle du livre 52 px, 44 px à partir de
+       600 px) : les ancres et les scrollIntoView de la page s'arrêtent
+       d'autant plus bas, et les blocs collés du résultat (notation, renvoi,
+       portrait), posés dans styles.css sous l'en-tête seul, descendent
+       d'autant. */
     @media (max-width: 1023.98px) {
-      html { --barre-promo: 3.9rem; scroll-padding-top: var(--barre-promo); }
+      html { --barre-promo: <%= barreSousMenu.haut %>; scroll-padding-top: var(--barre-promo); }
       html .qr-zone--avis, html .qr-rate--collant { top: calc(4.5rem + var(--barre-promo)); }
       html .qr-zone--avis { max-height: calc(100vh - 6rem - var(--barre-promo)); max-height: calc(100dvh - 6rem - var(--barre-promo)); }
       html .apr-profil-carte { top: calc(5.5rem + var(--barre-promo)); }
@@ -418,7 +480,7 @@
     @media (min-width: 900px) and (max-width: 1023.98px) {
       html .qr-zone--suite { top: calc(4.5rem + var(--barre-promo)); }
     }
-    @media (min-width: 520px) and (max-width: 1023.98px) { html { --barre-promo: 2.65rem; } }
+    @media (min-width: <%= barreSousMenu.seuil %>) and (max-width: 1023.98px) { html { --barre-promo: <%= barreSousMenu.large %>; } }
     @media (min-width: 1024px) { .bandeau-promo { display: none; } }
     <% } %>
   </style>
@@ -714,5 +776,18 @@
   </nav>
   <% if (bandeauPromoVisible) { %>
   <a href="<%= urlEval %>" data-bilan-src="bandeau-promo" class="bandeau-promo"><span><%- bilanPromo.bandeau %></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></a>
+  <% } else if (bandeauLivreVisible) { %>
+  <%# La barre du livre : le lien porte data-livre-lien, qu'audience.js garde
+      dix minutes et que la mesure de la page du livre reprend comme source
+      de la visite (« bandeau »). La miniature est en loading="lazy" : cachée
+      sur ordinateur, elle n'y est jamais téléchargée. Le pointillé est celui
+      de la couverture, en viewBox fixe tranchée (slice) pour que ses points
+      restent ronds à toutes les largeurs. %>
+  <a href="<%= livreMenu.url %>" class="bandeau-promo bandeau-promo--livre" data-livre-lien="bandeau">
+    <svg class="bandeau-livre-points" viewBox="0 0 1200 52" preserveAspectRatio="xMinYMid slice" aria-hidden="true" focusable="false"><path d="M-10 46c80-8 130 6 210 0s150-10 230 0 150 9 230 0 150-10 230 0 150 9 230 0 120-6 150-3" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-dasharray="0 9"/></svg>
+    <img class="bandeau-livre-couv" src="/livre/livre-mini-160.webp" alt="" width="160" height="173" loading="lazy" decoding="async">
+    <span class="bandeau-livre-texte"><span><%= t('livre:bandeau.ligne1', '') %></span> <span><%- t('livre:bandeau.ligne2', '') %></span></span>
+    <span class="bandeau-livre-badge"><svg class="bandeau-livre-coeur" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 20.6l-1.3-1.2C6 15.2 3 12.4 3 8.9 3 6.1 5.2 4 7.9 4c1.6 0 3.1.7 4.1 1.9C13 4.7 14.5 4 16.1 4 18.8 4 21 6.1 21 8.9c0 3.5-3 6.3-7.7 10.5L12 20.6z" fill="#fff" stroke="#2e181f" stroke-width="2" stroke-linejoin="round"/></svg><%= t('livre:bandeau.badge', '') %></span>
+  </a>
   <% } %>
 </header>

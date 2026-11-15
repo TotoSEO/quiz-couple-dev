@@ -305,6 +305,25 @@ function bandeauPromoPour(routeKey, articleMeta, lang) {
   if (articleMeta) return !!entreeArticle(articleMeta, lang);
   return !PAGES_SANS_BANDEAU.has(routeKey);
 }
+// La barre du livre, à la même place (15 novembre 2026, Thomas : « tu as
+// enlevé le code promo 20% en banderole sticky en dessous du menu mobile [...]
+// maintenant, on peut promouvoir le livre ! ») : dans les langues où le livre
+// est en vente, jamais pendant une réduction (sa barre passe devant), et pas
+// là où un carnet à remplir à deux tomberait mal : les pages sans barre (dont
+// la page du livre), les tests célibataires et ceux sur l'ex, les tests où
+// l'on doute de son couple (groupe doute, point sur ma relation : la règle de
+// l'encart du livre, livreEncartPour), et pour les articles ceux qui n'ont pas
+// la bannière de l'évaluation, ceux qui mènent au point et ceux sur l'ex.
+function bandeauLivrePour(routeKey, articleMeta, lang) {
+  if (!livreMenuPour(lang) || bandeauPromoPour(routeKey, articleMeta, lang)) return false;
+  if (articleMeta) {
+    const cles = [articleMeta.internalSlug, ...Object.values(articleMeta.slugs || {})].join(' ');
+    return !ARTICLE_SANS_BILAN.test(cles) && !ARTICLES_POINT.has(articleMeta.internalSlug) && articleMeta.category !== 'ex';
+  }
+  if (PAGES_SANS_BANDEAU.has(routeKey) || FAMILLES_NAV.celib.includes(routeKey)) return false;
+  const entree = BILAN_ENTREES[routeKey];
+  return !(entree && (entree.groupe === 'doute' || entree.formule === 'point'));
+}
 
 // La carte « le bilan célibataire arrive bientôt » (celib-bientot.js,
 // 4 novembre 2026) : à l'écran de résultat des tests célibataires
@@ -1897,6 +1916,7 @@ async function generatePage(routeKey, lang) {
     bilanPrixBase: prixBilanBase(lang),
     bilanPromo: promoBilanPour(lang),
     bandeauPromo: bandeauPromoPour(routeKey, null, lang),
+    bandeauLivre: bandeauLivrePour(routeKey, null, lang),
     moyensPaiement: MOYENS_PAIEMENT,
     bilanPrixCentimes: prixBilanCentimes(),
     bilanPrixPoint: prixBilanPoint(lang),
@@ -3056,6 +3076,7 @@ async function generateBlogArticle(articleMeta, lang) {
     bilanPrixBase: prixBilanBase(lang),
     bilanPromo: promoBilanPour(lang),
     bandeauPromo: bandeauPromoPour('article', articleMeta, lang),
+    bandeauLivre: bandeauLivrePour('article', articleMeta, lang),
     moyensPaiement: MOYENS_PAIEMENT,
     bilanPrixCentimes: prixBilanCentimes(),
     bilanPrixPoint: prixBilanPoint(lang),
@@ -3177,6 +3198,7 @@ async function generate404Pages() {
       bilanPrixBase: prixBilanBase(lang),
       bilanPromo: promoBilanPour(lang),
       bandeauPromo: bandeauPromoPour('404', null, lang),
+      bandeauLivre: bandeauLivrePour('404', null, lang),
       moyensPaiement: MOYENS_PAIEMENT,
       bilanPrixCentimes: prixBilanCentimes(),
       bilanPrixPoint: prixBilanPoint(lang),

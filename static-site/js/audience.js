@@ -335,7 +335,8 @@
   // ── Passage vers la page du livre ───────────────────────────────────────
   // Même mécanique que pour l'évaluation (14 novembre 2026) : le bouton du
   // livre dans le menu, dans le menu du téléphone et dans le pied de page
-  // disent d'où ils partent (data-livre-lien : menu, menu-mobile, pied), et
+  // disent d'où ils partent (data-livre-lien : menu, menu-mobile, pied, et
+  // depuis le 15 novembre 2026 bandeau, la barre sous le menu du téléphone), et
   // livre.js reprend la source à l'arrivée si le clic date de moins de dix
   // minutes, puis l'efface. Sans elle, ces trois liens se confondraient avec
   // la page d'où l'on vient.
