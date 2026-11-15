@@ -1,12 +1,12 @@
 {
-  "genere_le": "2026-11-14T10:20:22.852Z",
+  "genere_le": "2026-11-15T03:15:48.658Z",
   "langue": "en",
   "compte": {
     "nom": "quiz_couple_official",
     "actif": true
   },
   "fuseau": "Europe/Paris",
-  "aujourdhui": "2026-11-14",
+  "aujourdhui": "2026-11-15",
   "melange": {
     "midi": {
       "1": null,
@@ -28,39 +28,12 @@
     },
     "matin": null
   },
-  "reserve_jours": 138,
+  "reserve_jours": 137,
   "a_remplir": [],
   "a_corriger": [],
   "hors_grille": [],
   "refuses": [],
   "recents_et_prevus": [
-    {
-      "jour": "2026-10-15",
-      "creneau": "matin",
-      "gabarit": "pov",
-      "categorie": "pov",
-      "statut": "publie",
-      "texte": null,
-      "erreur": null
-    },
-    {
-      "jour": "2026-10-15",
-      "creneau": "midi",
-      "gabarit": "pov",
-      "categorie": "statique",
-      "statut": "publie",
-      "texte": null,
-      "erreur": null
-    },
-    {
-      "jour": "2026-10-15",
-      "creneau": "soir",
-      "gabarit": "carrousel",
-      "categorie": "carrousel",
-      "statut": "publie",
-      "texte": "8 questions you've never asked each other",
-      "erreur": null
-    },
     {
       "jour": "2026-10-16",
       "creneau": "matin",
@@ -867,7 +840,7 @@
       "creneau": "soir",
       "gabarit": "baton",
       "categorie": "baton",
-      "statut": "rendu",
+      "statut": "publie",
       "texte": null,
       "erreur": null
     },
@@ -921,7 +894,7 @@
       "creneau": "soir",
       "gabarit": "tu-preferes",
       "categorie": "tu-preferes",
-      "statut": "a_rendre",
+      "statut": "rendu",
       "texte": "Would you rather: tell the truth?",
       "erreur": null
     },
@@ -3425,7 +3398,7 @@
     "bd": null,
     "dix-mais": null,
     "baton": {
-      "jour": "2026-11-14",
+      "jour": "2026-11-21",
       "creneau": "soir"
     }
   },
@@ -4689,18 +4662,54 @@
       "jour": "2026-11-06",
       "creneau": "soir",
       "theme": null
+    },
+    {
+      "variante_id": "08407ac3-4204-4c04-bae4-f341dfb9611e",
+      "releve": "j7",
+      "vues": 618,
+      "portee": 463,
+      "likes": 7,
+      "commentaires": 0,
+      "partages": 15,
+      "enregistrements": 6,
+      "releve_le": "2026-11-15T03:15:45.830122+00:00",
+      "publie_le": "2026-11-07T11:20:09.775+00:00",
+      "categorie": "tu-preferes",
+      "format": "reel",
+      "gabarit": "tu-preferes",
+      "jour": "2026-11-07",
+      "creneau": "midi",
+      "theme": null
+    },
+    {
+      "variante_id": "3b906984-c28e-4ced-9232-b39141ced49b",
+      "releve": "j7",
+      "vues": 1465,
+      "portee": 1295,
+      "likes": 13,
+      "commentaires": 0,
+      "partages": 2,
+      "enregistrements": 2,
+      "releve_le": "2026-11-15T03:15:47.629604+00:00",
+      "publie_le": "2026-11-07T16:00:10.757+00:00",
+      "categorie": "baton",
+      "format": "reel",
+      "gabarit": "baton",
+      "jour": "2026-11-07",
+      "creneau": "soir",
+      "theme": null
     }
   ],
   "statistiques_par_categorie": [
     {
       "categorie": "tu-preferes",
-      "posts": 19,
-      "vues_mediane": 2502,
-      "vues_moyenne": 14772,
+      "posts": 20,
+      "vues_mediane": 2357,
+      "vues_moyenne": 14064,
       "vues_max": 107713,
-      "partages": 9936,
-      "enregistrements": 3705,
-      "likes": 3732,
+      "partages": 9951,
+      "enregistrements": 3711,
+      "likes": 3739,
       "commentaires": 7
     },
     {
@@ -4716,13 +4725,13 @@
     },
     {
       "categorie": "baton",
-      "posts": 10,
-      "vues_mediane": 1385,
-      "vues_moyenne": 1316,
+      "posts": 11,
+      "vues_mediane": 1427,
+      "vues_moyenne": 1329,
       "vues_max": 1647,
-      "partages": 35,
-      "enregistrements": 18,
-      "likes": 197,
+      "partages": 37,
+      "enregistrements": 20,
+      "likes": 210,
       "commentaires": 0
     },
     {
