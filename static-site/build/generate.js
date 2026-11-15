@@ -1588,8 +1588,19 @@ async function generatePage(routeKey, lang) {
     jsonLdItems.push(breadcrumbList);
   }
 
-  // La page du livre : le livre lui-même (Book et Product, avec son offre
-  // chez Amazon, l'adresse de la fiche sans suivi) et ses questions.
+  // La page du livre : le livre lui-même (Book et Product, avec son prix chez
+  // Amazon, l'adresse de la fiche sans suivi) et ses questions.
+  //
+  // Un extrait de produit, jamais une fiche marchand (15 novembre 2026) : la
+  // page ne vend rien, elle envoie acheter chez Amazon. Déclaré en « Offer »,
+  // le prix la faisait entrer dans le rapport « Fiches de marchand » de la
+  // Search Console, qui lui réclamait la livraison et les retours, et Google le
+  // dit : « Only pages where a shopper can purchase a product are eligible for
+  // merchant listing experiences, not pages with links to other sites that
+  // sell the product. » Les extraits de produits acceptent un « Offer » ou un
+  // « AggregateOffer », les fiches de marchand seulement un « Offer » (le
+  // vendeur doit être le site) : l'« AggregateOffer » garde le prix sous le
+  // résultat et sort la page des fiches de marchand.
   const livrePage = routeKey === 'livreQuizCouple' ? livrePagePour(lang) : null;
   if (livrePage) {
     jsonLdItems.push({
@@ -1609,13 +1620,13 @@ async function generatePage(routeKey, lang) {
       author: { '@type': 'Organization', '@id': `${BASE_URL}/#organization`, name: 'Quiz Couple', url: BASE_URL },
       brand: { '@type': 'Brand', name: 'Quiz Couple' },
       offers: {
-        '@type': 'Offer',
+        '@type': 'AggregateOffer',
         url: livrePage.fiche,
-        price: livrePage.prixNombre,
+        lowPrice: livrePage.prixNombre,
+        highPrice: livrePage.prixNombre,
+        offerCount: 1,
         priceCurrency: livrePage.devise,
         availability: 'https://schema.org/InStock',
-        itemCondition: 'https://schema.org/NewCondition',
-        seller: { '@type': 'Organization', name: 'Amazon' },
       },
     });
     const faq = t('livre:faq.items', []);
