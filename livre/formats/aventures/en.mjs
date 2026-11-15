@@ -16,7 +16,7 @@ export default {
   // Pas de prix imprimé : c'est une obligation française seulement.
   prix: '',
   // L'ISBN, une fois attribué par KDP (page des mentions).
-  isbn: '',
+  isbn: '9798143015807', // ISBN gratuit de KDP, attribué le 15 novembre 2026
   livre: {
     titre: '100 Adventures for Two',
     sousTitre: 'The memory book you fill in together',
