@@ -11,8 +11,9 @@ officielles le 7 novembre 2026 (sources en bas de page).
 amazon.fr (ASIN B0HRPDXPRJ, ISBN 9798141209154, 19,99 €). Sa page sur le
 site est `/livre-quiz-couple/`, avec le lien de Partenaire Amazon de Thomas
 (`LIVRE` dans `static-site/build/config.js`, voir « La page du livre » dans
-CLAUDE.md). L'édition anglaise, « 100 Adventures for Two », est sur
-amazon.com depuis le 16 novembre 2026 (ASIN B0HRSXQMPP, 19,99 $), page
+CLAUDE.md). L'édition anglaise, « 100 Adventures for Two » (ISBN attribué par
+KDP le 15 novembre 2026), est sur amazon.com depuis le 16 novembre 2026
+(ASIN B0HRSXQMPP, 19,99 $), page
 `/en/couples-bucket-list-book/` du site, avec le lien de la fiche sans
 identifiant de Partenaire (le programme d'amazon.com est un compte à part).
 L'espagnol suivra, quand Thomas enverra son lien.
@@ -62,7 +63,7 @@ refaire les fichiers : la page des mentions l'imprime.
 | Édition | ISBN (KDP, marque « Independently published ») |
 |---|---|
 | Français | 9798141209154 (9 novembre 2026) |
-| Anglais | attribué par KDP, pas encore reporté ici (en vente le 16 novembre 2026, ASIN B0HRSXQMPP) |
+| Anglais | 9798143015807 (15 novembre 2026) |
 
 L'édition française a été validée par KDP en novembre 2026, sans cocher
 « contenu intérieur restreint » et avec l'ISBN gratuit : KDP l'a acceptée comme
