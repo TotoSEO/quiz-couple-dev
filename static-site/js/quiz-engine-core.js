@@ -3192,7 +3192,7 @@ var QuizEngine = (function() {
   // couple : Met aussi de la promo vers le livre et un badge en dessous
   // "Cadeau de Noël idéal !" ») : la même carte que partials/livre-encart.ejs,
   // écrite d'après data-livre-encart (base.ejs, livreEncartPour dans
-  // generate.js : en français, à côté de l'évaluation à deux seulement), et
+  // generate.js : dans les langues où le livre est en vente, à côté de l'évaluation à deux seulement), et
   // posée avec la carte de l'évaluation dans un même bloc (.qr-duo,
   // styles.css). Sans l'attribut, la carte de l'évaluation reste seule. Le
   // lien dit d'où part la visite (data-livre-lien, audience.js).
@@ -3203,8 +3203,11 @@ var QuizEngine = (function() {
     try { d = JSON.parse((corps && corps.getAttribute('data-livre-encart')) || 'null'); } catch (e) { d = null; }
     if (!d || typeof d.url !== 'string' || !/^(https:\/\/|\/)/.test(d.url) || !d.titre) return carte;
     var lien = ' href="' + esc(d.url) + '" data-livre-lien="' + esc(source) + '"';
+    // Le dossier des images de l'édition de la page (/livre/ en français,
+    // /livre/en/ en anglais : LIVRE dans config.js).
+    var img = (typeof d.images === 'string' && /^\/livre\/([a-z]{2}\/)?$/.test(d.images)) ? d.images : '/livre/';
     var livre = el('div', 'qr-livre');
-    livre.innerHTML = '<a class="qr-livre-visuel"' + lien + ' tabindex="-1" aria-hidden="true"><img src="/livre/livre-3d-480.webp" srcset="/livre/livre-3d-240.webp 240w, /livre/livre-3d-480.webp 480w" sizes="7.5rem" alt="" width="480" height="518" loading="lazy" decoding="async" draggable="false"></a>' +
+    livre.innerHTML = '<a class="qr-livre-visuel"' + lien + ' tabindex="-1" aria-hidden="true"><img src="' + img + 'livre-3d-480.webp" srcset="' + img + 'livre-3d-240.webp 240w, ' + img + 'livre-3d-480.webp 480w" sizes="7.5rem" alt="" width="480" height="518" loading="lazy" decoding="async" draggable="false"></a>' +
       '<div class="qr-livre-corps"><p class="qr-livre-sur">' + esc(d.sur || '') + '</p>' +
       '<h3 class="qr-livre-titre">' + esc(d.titre) + '</h3>' +
       (d.texte ? '<p class="qr-livre-texte">' + esc(d.texte) + '</p>' : '') +

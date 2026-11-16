@@ -8,11 +8,15 @@
   // Tout ce que la page montre vient du vrai livre (livre/fabrique.mjs) :
   // la couverture et sa maquette 3D, les pages, et deux pages remplies à la
   // main pour l'exemple (Léa en rose, Tom en violet, comme le livre le
-  // demande). Les textes sont dans {lang}/livre.json, l'édition (lien de
-  // Partenaire Amazon, prix, ISBN) dans LIVRE (config.js), les styles dans
-  // css/pages/livreQuizCouple.css, le comportement dans js/livre.js. Les
-  // liens vers Amazon portent rel="sponsored" et la mention de Partenaire
-  // Amazon est en bas de page, comme le programme le demande.
+  // demande ; Emma et Jake dans l'édition anglaise). Les textes sont dans
+  // {lang}/livre.json, l'édition (lien, prix, ISBN, dossier des images) dans
+  // LIVRE (config.js), les images de chaque édition dans public/livre/ (le
+  // français) et public/livre/en/ (l'anglais), les styles dans
+  // css/pages/livreQuizCouple.css, le comportement dans js/livre.js. Avec un
+  // lien de Partenaire Amazon (LIVRE.affilie), les liens vers Amazon portent
+  // rel="sponsored" et la mention du programme est en bas de page, comme il
+  // le demande ; sans lui (l'édition anglaise, pour l'instant), ni l'un ni
+  // l'autre.
   const L = (k, d) => t('livre:' + k, d === undefined ? '' : d);
   const esc = (s) => String(s == null ? '' : s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
   // Les espaces insécables du français : avant « : ; ! ? » et dans les guillemets.
@@ -21,20 +25,27 @@
   const x = (s) => esc(nb(s));
   const noel = !!livre.noel;
   const lien = livre.lien;
+  // Le dossier des images de l'édition (/livre/ ou /livre/en/).
+  const img = livre.images || '/livre/';
+  const relAmazon = livre.affilie ? 'sponsored noopener' : 'noopener';
+  // Les guillemets de la langue, autour de la phrase du livre.
+  const [gOuvre, gFerme] = L('guillemets', ['« ', ' »']);
   const fleche = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"/><path d="M8 7h9v9"/></svg>';
   // Le bouton « Voir sur Amazon », aux couleurs du bouton d'achat d'Amazon.
-  const amazon = (src, classe = '') => '<a class="lv-amazon' + (classe ? ' ' + classe : '') + '" href="' + esc(lien) + '" target="_blank" rel="sponsored noopener" data-livre-src="' + src + '">'
+  const amazon = (src, classe = '') => '<a class="lv-amazon' + (classe ? ' ' + classe : '') + '" href="' + esc(lien) + '" target="_blank" rel="' + relAmazon + '" data-livre-src="' + src + '">'
     + '<span>' + x(L('hero.bouton', 'Voir sur Amazon')) + '</span>' + fleche + '</a>';
-  // Les images des pages : 400, 720 et 1200 px (public/livre/pages/).
-  const page = (nom) => '/livre/pages/' + nom;
+  // Les images des pages : 400, 720 et 1200 px (public/livre/pages/, ou
+  // public/livre/en/pages/ pour l'édition anglaise).
+  const page = (nom) => img + 'pages/' + nom;
   const srcsetPage = (nom) => page(nom) + '-400.webp 400w, ' + page(nom) + '-720.webp 720w, ' + page(nom) + '-1200.webp 1200w';
-  const livre3d = '/livre/livre-3d-480.webp 480w, /livre/livre-3d-720.webp 720w, /livre/livre-3d-1000.webp 1000w';
+  const livre3d = img + 'livre-3d-480.webp 480w, ' + img + 'livre-3d-720.webp 720w, ' + img + 'livre-3d-1000.webp 1000w';
   // Le livre à feuilleter (feuilleter.pages de livre.json) : la couverture,
   // les pages dans l'ordre du vrai livre (les paires à gauche), deux pages
   // blanches que le téléphone saute, et la quatrième de couverture. La
-  // couverture et le dos sont dans /livre/, les pages dans /livre/pages/.
+  // couverture et le dos sont dans le dossier de l'édition, les pages dans son
+  // sous-dossier pages/.
   const feuilles = L('feuilleter.pages', []);
-  const imgFeuille = (p) => (p.dossier === 'livre' ? '/livre/' : '/livre/pages/') + p.img;
+  const imgFeuille = (p) => (p.dossier === 'livre' ? img : img + 'pages/') + p.img;
   const srcsetFeuille = (p) => (p.img === 'couverture' ? [480, 720, 1200] : [400, 720, 1200])
     .map((w) => imgFeuille(p) + '-' + w + '.webp ' + w + 'w').join(', ');
   const altDe = (nom) => ((feuilles.find((p) => p.img === nom) || {}).alt) || '';
@@ -62,6 +73,7 @@
     stylo: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20l1-4.5L15.5 5a2 2 0 0 1 2.8 0l.7.7a2 2 0 0 1 0 2.8L8.5 19z"/><path d="M13.5 7l3.5 3.5"/></svg>',
     sapin: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.5l-5 7h3l-4 6h4l-3 4.5h10l-3-4.5h4l-4-6h3z"/><path d="M12 20v1.5"/></svg>',
     euro: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17.5 6.5A7 7 0 1 0 17.5 17.5"/><path d="M4 10h9M4 14h9"/></svg>',
+    dollar: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.5v19"/><path d="M17 6.5c-.9-1.4-2.7-2.2-5-2.2-2.9 0-4.8 1.4-4.8 3.6 0 5 9.8 2.6 9.8 8 0 2.2-2 3.8-5 3.8-2.5 0-4.3-.9-5.2-2.4"/></svg>',
     livre: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v15H6.5A2.5 2.5 0 0 0 4 20.5z"/><path d="M4 20.5A2.5 2.5 0 0 0 6.5 23H20v-5"/></svg>',
     coche: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 12.5l4.5 4.5L19.5 6.5"/></svg>',
   };
@@ -89,8 +101,8 @@
         <span class="lv-disque" aria-hidden="true"></span>
         <img class="lv-hero-page lv-hero-page--a" src="<%= page('pique-nique-remplie') %>-400.webp" alt="" width="400" height="400" loading="lazy" decoding="async">
         <img class="lv-hero-page lv-hero-page--b" src="<%= page('a-nous-remplie') %>-400.webp" alt="" width="400" height="400" loading="lazy" decoding="async">
-        <img class="lv-hero-livre" src="/livre/livre-3d-720.webp" srcset="<%= livre3d %>" sizes="(min-width: 900px) 410px, (min-width: 640px) 295px, 245px" alt="<%= nb(L('hero.altLivre')) %>" width="1000" height="1079" fetchpriority="high" decoding="async">
-        <% if (noel) { %><span class="lv-etiquette" aria-hidden="true"><span>Pour toi</span> ♥</span><% } %>
+        <img class="lv-hero-livre" src="<%= img %>livre-3d-720.webp" srcset="<%= livre3d %>" sizes="(min-width: 900px) 410px, (min-width: 640px) 295px, 245px" alt="<%= nb(L('hero.altLivre')) %>" width="1000" height="1079" fetchpriority="high" decoding="async">
+        <% if (noel) { %><span class="lv-etiquette" aria-hidden="true"><span><%= L('hero.etiquette', 'Pour toi') %></span> ♥</span><% } %>
       </div>
       <p class="lv-hero-lead"><%= nb(L('hero.texte')) %></p>
       <div class="lv-achat">
@@ -151,7 +163,7 @@
       </div>
       <figure class="lv-citation">
         <img class="lv-polaroid" src="<%= page('cent-plus-tard') %>-720.webp" srcset="<%= srcsetPage('cent-plus-tard') %>" sizes="(min-width: 1024px) 380px, 70vw" alt="<%= nb(L('dixAns.altFin')) %>" width="1200" height="1200" loading="lazy" decoding="async">
-        <blockquote><p><%= nb('« ' + L('dixAns.citation') + ' »') %></p></blockquote>
+        <blockquote><p><%= nb(gOuvre + L('dixAns.citation') + gFerme) %></p></blockquote>
         <figcaption class="lv-citation-source"><%= nb(L('dixAns.source')) %></figcaption>
       </figure>
     </div>
@@ -226,10 +238,10 @@
         <h2 class="lv-h2"><%= nb(noel ? L('cadeau.titreNoel') : L('cadeau.titre')) %></h2>
         <ul class="lv-points">
           <% points.forEach((p, i) => { %>
-          <li><span class="lv-point-ic" aria-hidden="true"><%- [ic.stylo, noel ? ic.sapin : ic.cadeau, ic.euro][i] || ic.coche %></span><div><h3><%= nb(noel && p.titreNoel ? p.titreNoel : p.titre) %></h3><p><%= nb(noel && p.texteNoel ? p.texteNoel : p.texte) %></p></div></li>
+          <li><span class="lv-point-ic" aria-hidden="true"><%- [ic.stylo, noel ? ic.sapin : ic.cadeau, livre.devise === 'USD' ? ic.dollar : ic.euro][i] || ic.coche %></span><div><h3><%= nb(noel && p.titreNoel ? p.titreNoel : p.titre) %></h3><p><%= nb(noel && p.texteNoel ? p.texteNoel : p.texte) %></p></div></li>
           <% }) %>
         </ul>
-        <%# Le prix est dit juste au-dessus (« 19,99 €, une seule fois ») : ici, le bouton seul. %>
+        <%# Le prix est dit juste au-dessus (« 19,99 €, une seule fois », « $19.99, just once ») : ici, le bouton seul. %>
         <p class="lv-cadeau-cta"><%- amazon('cadeau') %></p>
       </div>
     </div>
@@ -251,7 +263,7 @@
   <section class="lv-section lv-fin" data-lv-fin>
     <div class="lv-wrap">
     <div class="lv-fin-boite">
-      <img class="lv-fin-livre" src="/livre/livre-3d-480.webp" srcset="<%= livre3d %>" sizes="(min-width: 768px) 260px, 200px" alt="" width="1000" height="1079" loading="lazy" decoding="async">
+      <img class="lv-fin-livre" src="<%= img %>livre-3d-480.webp" srcset="<%= livre3d %>" sizes="(min-width: 768px) 260px, 200px" alt="" width="1000" height="1079" loading="lazy" decoding="async">
       <div class="lv-fin-texte">
         <h2 class="lv-h2"><%= nb(L('fin.titre')) %></h2>
         <div class="lv-achat lv-achat--ligne">
@@ -260,16 +272,17 @@
         </div>
       </div>
     </div>
-    <p class="lv-affiliation"><%= nb(L('fin.affiliation')) %></p>
+    <% if (livre.affilie && L('fin.affiliation')) { %><p class="lv-affiliation"><%= nb(L('fin.affiliation')) %></p><% } %>
     </div>
   </section>
 
   <%# ── La barre collée du téléphone ── %>
   <div class="lv-barre" data-lv-barre>
-    <img src="/livre/livre-mini-160.webp" alt="" width="160" height="173" loading="lazy" decoding="async">
-    <%# « 100 aventures » sur une ligne, « à deux » sur la suivante : seule l'espace avant « à » reste sécable. %>
-    <div class="lv-barre-texte"><strong><%= nb(L('livre.titre')).replace(/ à deux$/, ' à\u00a0deux') %></strong><span><%= nb(livre.prix) %></span></div>
-    <a class="lv-amazon lv-amazon--petit" href="<%= lien %>" target="_blank" rel="sponsored noopener" data-livre-src="barre"><span><%= nb(L('hero.bouton')) %></span><%- fleche %></a>
+    <img src="<%= img %>livre-mini-160.webp" alt="" width="160" height="173" loading="lazy" decoding="async">
+    <%# « 100 aventures » sur une ligne, « à deux » sur la suivante : seule l'espace avant « à » reste sécable
+        (« 100 Adventures » puis « for Two » en anglais : barreTitre de livre.json, écrit avec ses insécables). %>
+    <div class="lv-barre-texte"><strong><%= L('barreTitre') || nb(L('livre.titre')).replace(/ à deux$/, ' à\u00a0deux') %></strong><span><%= nb(livre.prix) %></span></div>
+    <a class="lv-amazon lv-amazon--petit" href="<%= lien %>" target="_blank" rel="<%= relAmazon %>" data-livre-src="barre"><span><%= nb(L('hero.bouton')) %></span><%- fleche %></a>
   </div>
 
   <%# ── La visionneuse des pages ── %>

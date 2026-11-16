@@ -1,0 +1,375 @@
+{
+  "seo": {
+    "title": "Couples Bucket List Book: 100 Adventures for Two",
+    "descriptionNoel": "A couples bucket list book to fill in together: 100 adventures for two, and a page for the memory of each one. A Christmas gift idea for your partner.",
+    "description": "A couples bucket list book to fill in together: 100 adventures for two, and a page for the memory of each one. A gift idea for your partner."
+  },
+  "fil": "Couples bucket list book",
+  "menu": {
+    "lien": "Our couples bucket list book",
+    "titre": "100 Adventures for Two",
+    "haut": "100 adventures",
+    "bas": "for two",
+    "sous": "The perfect couple gift!",
+    "evaluerSous": "Together or alone"
+  },
+  "encart": {
+    "sur": "The Quiz Couple book",
+    "titre": "100 Adventures for Two",
+    "texte": "The book you fill in together: one adventure per page, and your memories inside.",
+    "bouton": "See the book",
+    "badgeNoel": "The perfect Christmas gift!",
+    "badge": "A gift idea for your partner"
+  },
+  "bandeau": {
+    "ligne1": "Your couples activity book",
+    "ligne2": "to fill in <em>together</em>",
+    "badge": "You’ll love it!"
+  },
+  "ogAlt": "The Quiz Couple book 100 Adventures for Two, a yellow cover with its two characters",
+  "livre": {
+    "titre": "100 Adventures for Two",
+    "sousTitre": "A memory book to fill in together, with your photos"
+  },
+  "barreTitre": "100 Adventures for Two",
+  "guillemets": [
+    "“",
+    "”"
+  ],
+  "hero": {
+    "pastilleNoel": "Christmas gift idea",
+    "pastille": "A gift idea for your partner",
+    "mot1": "adventures",
+    "mot2": "for two",
+    "sousTitre": "The couples bucket list book you fill in with your photos",
+    "texte": "Each page gives you an adventure to do together. Once you’ve done it, you write down how it went.",
+    "format": "Square paperback, 8.5 × 8.5 in",
+    "bouton": "See it on Amazon",
+    "vendu": "Sold and shipped by Amazon",
+    "feuilleter": "Flip through the book",
+    "etiquette": "For you",
+    "altLivre": "The couples bucket list book 100 Adventures for Two, a yellow cover with three instant photos and the two Quiz Couple characters"
+  },
+  "chiffres": [
+    {
+      "n": "100",
+      "t": "adventures to do together"
+    },
+    {
+      "n": "10",
+      "t": "pages for your own ideas"
+    },
+    {
+      "n": "10",
+      "t": "pages for your trips"
+    },
+    {
+      "n": "136",
+      "t": "color pages"
+    }
+  ],
+  "principe": {
+    "titre": "What if we stopped saying “we should do that someday”?",
+    "etapes": [
+      {
+        "titre": "Pick an adventure",
+        "texte": "From the list or at random, depending on your budget and the season."
+      },
+      {
+        "titre": "Do it together",
+        "texte": "On a weeknight, a Sunday or on vacation."
+      },
+      {
+        "titre": "Fill in its page",
+        "texte": "The date, the place, your photo and what each of you wants to remember."
+      }
+    ],
+    "avant": "Before",
+    "apres": "After",
+    "aide": "Drag to see the filled-in page",
+    "curseur": "Compare the blank page and the filled-in page",
+    "legende": "Adventure 01, before and after Emma and Jake’s picnic",
+    "altVide": "The page for adventure 01, A real picnic in the park, still blank",
+    "altRemplie": "The same page filled in by hand by Emma and Jake, with a photo of their picnic, their notes and a pressed flower"
+  },
+  "dixAns": {
+    "titre": "The book you’ll reread in ten years",
+    "texte": "One day, every page will be filled in. You’ll show it to your friends, your family and maybe your kids.",
+    "etapes": [
+      {
+        "quandNoel": "This Christmas",
+        "quand": "Today",
+        "quoi": "A brand-new book and 100 adventures to check off"
+      },
+      {
+        "quand": "A year from now",
+        "quoi": "Your first pages, full of photos"
+      },
+      {
+        "quand": "Ten years from now",
+        "quoi": "The album of your story, to open together again"
+      }
+    ],
+    "citation": "Put this book somewhere you’ll find it again in ten years.",
+    "source": "The last page of the book",
+    "altFin": "The last page of the book, “A hundred adventures later...”, with room for a note from Pink and a note from Purple"
+  },
+  "feuilleter": {
+    "titre": "Flip through the book",
+    "texte": "It turns its own pages. Tap it to turn them yourself.",
+    "livre": "The book 100 Adventures for Two, to flip through",
+    "precedent": "Previous page",
+    "suivant": "Next page",
+    "agrandir": "View full size",
+    "pause": "Pause",
+    "lire": "Play",
+    "texteFixe": "Tap the book or drag the corner of a page to flip through it.",
+    "pages": [
+      {
+        "img": "couverture",
+        "dossier": "livre",
+        "legende": "The cover",
+        "alt": "The cover of 100 Adventures for Two, yellow, with three instant photos and the two characters"
+      },
+      {
+        "blanc": true
+      },
+      {
+        "img": "a-nous-remplie",
+        "legende": "“This book belongs to us,” filled in by Emma and Jake",
+        "alt": "The “This book belongs to us” page filled in by hand: Emma and Jake, a gift from Emma on 12/25/2026, with a little Christmas note"
+      },
+      {
+        "img": "comment-ca-marche",
+        "legende": "How it works",
+        "double": "How it works, and the six categories of adventures",
+        "alt": "The How it works page: decide who’s who, pick an adventure, do it, then fill in its page"
+      },
+      {
+        "img": "six-familles",
+        "legende": "The six categories of adventures",
+        "alt": "The page of the six categories of adventures: at home, outdoors, out and about, thrills, romantic, just for laughs"
+      },
+      {
+        "img": "liste-1",
+        "legende": "Adventures 1 to 50",
+        "double": "The 100 adventures, to check off over time",
+        "alt": "The list of adventures 1 to 50, with a box to check, the cost and the page of each one"
+      },
+      {
+        "img": "liste-2",
+        "legende": "Adventures 51 to 100",
+        "alt": "The list of adventures 51 to 100, with a box to check, the cost and the page of each one"
+      },
+      {
+        "img": "nous-deux-debut",
+        "legende": "“The two of us, at the start of this book”",
+        "double": "“The two of us, at the start” and the first adventure, filled in by Emma and Jake",
+        "alt": "The page The two of us, at the start of this book, with room for a photo, the date and your answers"
+      },
+      {
+        "img": "pique-nique-remplie",
+        "legende": "Adventure 01, filled in by Emma and Jake",
+        "alt": "The page for adventure 01, A real picnic in the park, filled in by hand by Emma and Jake with their photo and their notes"
+      },
+      {
+        "img": "raclette",
+        "legende": "Adventure 02, a raclette (or fondue) night",
+        "double": "One page per adventure, with its photo and your notes",
+        "alt": "The page for adventure 02, A raclette (or fondue) night, with its photo frame, its questions and your notes"
+      },
+      {
+        "img": "bowling",
+        "legende": "Adventure 03, a game of bowling",
+        "alt": "The page for adventure 03, A game of bowling, with each player’s score and the photo frame"
+      },
+      {
+        "img": "aventure-100",
+        "legende": "Adventure 100, ten things we love about each other",
+        "double": "The last adventure, then the pages for your own ideas",
+        "alt": "The page for adventure 100, Ten things we love about each other, with its photo frame and your notes"
+      },
+      {
+        "img": "aventure-libre",
+        "legende": "An adventure of your own",
+        "alt": "A page for an adventure of your own, with its category, cost and time to check"
+      },
+      {
+        "img": "voyage",
+        "legende": "Trip 01",
+        "double": "The pages for your trips",
+        "alt": "A trip page with the destination, the dates, how you got there and the ticket to stick in"
+      },
+      {
+        "img": "voyage-2",
+        "legende": "Trip 02",
+        "alt": "The page for trip 02, with the destination, the best meal, the best moment and the photo"
+      },
+      {
+        "img": "tests-quiz-couple",
+        "legende": "Your Quiz Couple test history",
+        "double": "Your Quiz Couple tests, and the result a year later",
+        "alt": "The Quiz Couple test history page, to write down a result and the one from a year later"
+      },
+      {
+        "img": "tests-quiz-couple-2",
+        "legende": "Your Quiz Couple tests, continued",
+        "alt": "The rest of the Quiz Couple test history: a result in words, a game with a winner, several results"
+      },
+      {
+        "img": "palmares",
+        "legende": "Our hall of fame",
+        "double": "Your hall of fame and the awards for your adventures",
+        "alt": "The hall of fame page: your top 5 adventures, the numbers and what you’ll remember from them all"
+      },
+      {
+        "img": "trophees",
+        "legende": "The awards",
+        "alt": "The awards page: the funniest, the most romantic, the biggest flop, the best surprise..."
+      },
+      {
+        "img": "nous-deux-fin",
+        "legende": "“The two of us, at the end of this book”",
+        "double": "“The two of us, at the end” and “A hundred adventures later...”",
+        "alt": "The page The two of us, at the end of this book, to compare with the one at the start"
+      },
+      {
+        "img": "cent-plus-tard",
+        "legende": "“A hundred adventures later...”",
+        "alt": "The last page of the book, “A hundred adventures later...”, with room for a note from Pink and a note from Purple"
+      },
+      {
+        "img": "photos-en-plus",
+        "legende": "Extra photos",
+        "alt": "The extra photos page, with four photo frames to fill"
+      },
+      {
+        "blanc": true
+      },
+      {
+        "img": "dos",
+        "dossier": "livre",
+        "legende": "The back cover",
+        "alt": "The back cover of the book, yellow, with the filled-in picnic page and the list of adventures to check off"
+      }
+    ]
+  },
+  "budget": {
+    "titre": "From little moments to big trips",
+    "texte": "Three quarters of the adventures are free or cost less than $20 for two. Each page gives the cost, the time it takes and the best season.",
+    "aventures": "adventures",
+    "niveaux": [
+      {
+        "nom": "Free",
+        "aide": "$0 for two",
+        "nb": 38,
+        "exemples": [
+          "Watch the sun come up",
+          "A slow dance in the kitchen",
+          "A blanket fort",
+          "An evening without phones"
+        ]
+      },
+      {
+        "nom": "Low cost",
+        "aide": "under $20 for two",
+        "nb": 36,
+        "exemples": [
+          "A real picnic in the park",
+          "A game of bowling",
+          "A Christmas market",
+          "Breakfast in bed"
+        ]
+      },
+      {
+        "nom": "Mid-range",
+        "aide": "$20 to $60 for two",
+        "nb": 20,
+        "exemples": [
+          "An escape room",
+          "A go-karting race",
+          "A ride on horseback",
+          "Recreate our first date"
+        ]
+      },
+      {
+        "nom": "A splurge",
+        "aide": "over $60 for two",
+        "nb": 6,
+        "exemples": [
+          "A trip, just the two of us",
+          "A concert",
+          "A day at a theme park",
+          "A day in the snow"
+        ]
+      }
+    ],
+    "liste": "See all 100 adventures"
+  },
+  "cadeau": {
+    "titreNoel": "The Christmas gift you’ll keep for years",
+    "titre": "A gift you’ll keep for years",
+    "points": [
+      {
+        "titre": "A little note on the first page",
+        "texte": "The “This book belongs to us” page has an “A gift from” line and room for your note. Write it before you wrap the book."
+      },
+      {
+        "titreNoel": "The first adventure under the tree",
+        "titre": "The first adventure that same night",
+        "texteNoel": "Pick it together as you open the gift. There’s even a Christmas market, a fondue night and a trip to the ice rink!",
+        "texte": "Pick it together as you open the gift: there are ideas for every season."
+      },
+      {
+        "titre": "$19.99, just once",
+        "texte": "Less than a dinner for two, and you’ll be filling it in for years."
+      }
+    ],
+    "alt": "The “This book belongs to us” page filled in by hand: Emma and Jake, a gift from Emma on 12/25/2026, with a little Christmas note"
+  },
+  "faq": {
+    "titre": "Your questions",
+    "items": [
+      {
+        "q": "What photos go in the book?",
+        "r": "Each page has a frame the size of a mini instant photo. A printed photo cut to size works too. A glue stick or double-sided tape holds better than liquid glue, which makes the paper wrinkle."
+      },
+      {
+        "q": "Do we have to do the adventures in order?",
+        "r": "No. Open a page at random or pick one from the list, depending on your budget, your time and the season."
+      },
+      {
+        "q": "How long does it take to fill?",
+        "r": "There’s no deadline. Some couples will fill it in a year, others in ten. The book stays with you."
+      },
+      {
+        "q": "Why “Pink” and “Purple”?",
+        "r": "They’re the two Quiz Couple characters. At the start of the book, you each pick yours and keep its color until the last page. No “his” and “hers”: it works for every couple."
+      },
+      {
+        "q": "Will it arrive before Christmas?",
+        "r": "It’s printed and shipped by Amazon. The delivery date shows on its page before you order.",
+        "seulementNoel": true
+      },
+      {
+        "q": "How do I order it?",
+        "r": "It’s printed and shipped by Amazon: the “See it on Amazon” button takes you to its page. The delivery date shows before you order.",
+        "horsNoel": true
+      },
+      {
+        "q": "Can I order it outside the US?",
+        "r": "The button opens Amazon.com. If you live in the UK, Canada or Australia, your local Amazon store may have it too: search for “100 Adventures for Two”."
+      }
+    ]
+  },
+  "fin": {
+    "titre": "Your first adventure starts here",
+    "affiliation": "As an Amazon Associate, Quiz Couple earns from qualifying purchases."
+  },
+  "visionneuse": {
+    "fermer": "Close",
+    "precedent": "Previous page",
+    "suivant": "Next page",
+    "sur": "of"
+  }
+}

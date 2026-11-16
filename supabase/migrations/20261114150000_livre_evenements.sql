@@ -88,7 +88,7 @@ AS $$
     FROM (SELECT greatest(1, least(coalesce(p_jours, 30), 400)) AS n) x
   ),
   e AS (
-    SELECT l.visite_id, l.evenement, l.detail, l.created_at,
+    SELECT l.visite_id, l.evenement, l.detail, l.created_at, l.lang,
            (l.created_at AT TIME ZONE 'Europe/Paris')::date AS jour
     FROM public.livre_evenements l, b
     WHERE l.created_at >= b.debut
@@ -134,6 +134,18 @@ AS $$
         SELECT a.source, count(*) AS visites,
                count(*) FILTER (WHERE EXISTS (SELECT 1 FROM clics c WHERE c.visite_id = a.visite_id)) AS visites_clic
         FROM arrivees a GROUP BY a.source
+      ) x
+    ),
+    -- Par langue de la page (16 novembre 2026, la page anglaise du livre) :
+    -- les visites, les clics vers Amazon et les visites qui ont cliqué.
+    'langues', (
+      SELECT coalesce(json_agg(json_build_object('lang', x.lang, 'visites', x.visites, 'clics', x.clics, 'visites_clic', x.visites_clic) ORDER BY x.visites DESC), '[]'::json)
+      FROM (
+        SELECT coalesce(nullif(lang, ''), '?') AS lang,
+               count(DISTINCT visite_id) FILTER (WHERE evenement = 'vue') AS visites,
+               count(*) FILTER (WHERE evenement = 'amazon') AS clics,
+               count(DISTINCT visite_id) FILTER (WHERE evenement = 'amazon') AS visites_clic
+        FROM e GROUP BY 1
       ) x
     ),
     'gestes', (

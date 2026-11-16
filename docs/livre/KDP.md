@@ -11,9 +11,12 @@ officielles le 7 novembre 2026 (sources en bas de page).
 amazon.fr (ASIN B0HRPDXPRJ, ISBN 9798141209154, 19,99 €). Sa page sur le
 site est `/livre-quiz-couple/`, avec le lien de Partenaire Amazon de Thomas
 (`LIVRE` dans `static-site/build/config.js`, voir « La page du livre » dans
-CLAUDE.md). L'anglais suit (ISBN attribué par KDP le 15 novembre 2026),
-puis l'espagnol ; la page du site prend une langue quand Thomas envoie son
-lien.
+CLAUDE.md). L'édition anglaise, « 100 Adventures for Two » (ISBN attribué par
+KDP le 15 novembre 2026), est sur amazon.com depuis le 16 novembre 2026
+(ASIN B0HRSXQMPP, 19,99 $), page
+`/en/couples-bucket-list-book/` du site, avec le lien de la fiche sans
+identifiant de Partenaire (le programme d'amazon.com est un compte à part).
+L'espagnol suivra, quand Thomas enverra son lien.
 
 ## Les fichiers à envoyer
 
@@ -67,9 +70,10 @@ L'édition française a été validée par KDP en novembre 2026, sans cocher
 un livre d'activités. Ses rubriques : Livres › Famille et bien-être ›
 Relations interpersonnelles › Couple. Prix saisi pour 19,99 € affichés sur
 Amazon.fr (voir « Les prix à saisir dans KDP »). Pas d'épreuve commandée.
-L'anglais passe ensuite, avant l'espagnol : Amazon.com et Amazon.co.uk sont
-les plus gros marchés de KDP, et sept visiteurs hispanophones du site sur dix
-sont en Amérique latine, où KDP n'imprime pas.
+L'anglais est passé ensuite (en vente sur amazon.com le 16 novembre 2026),
+avant l'espagnol : Amazon.com et Amazon.co.uk sont les plus gros marchés de
+KDP, et sept visiteurs hispanophones du site sur dix sont en Amérique latine,
+où KDP n'imprime pas.
 
 Une épreuve imprimée (« exemplaire d'épreuve ») se commande à l'étape
 « Contenu », avant de publier, pour voir les couleurs, la reliure et la

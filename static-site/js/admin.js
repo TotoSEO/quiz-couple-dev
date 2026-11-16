@@ -1537,6 +1537,8 @@
   };
   // Des libellés courts : le tableau tient dans une demi-largeur, et la
   // bulle d'aide du panneau dit ce que chacun recouvre.
+  // Les langues des pages du livre (la langue de la page vue).
+  var LIVRE_LANGUES = { fr: 'Français', en: 'Anglais', es: 'Espagnol', de: 'Allemand', it: 'Italien', nl: 'Néerlandais' };
   var LIVRE_SOURCES = {
     menu: 'Menu (ordinateur)',
     'menu-mobile': 'Menu (téléphone)',
@@ -1664,9 +1666,19 @@
           autres.reduce(function (a, x) { return a + (Number(x.visites) || 0); }, 0),
           autres.reduce(function (a, x) { return a + (Number(x.visites_clic) || 0); }, 0)));
       }
-      place('admin-livre-sources', sources.length
+      // Par langue (16 novembre 2026, la page anglaise du livre) : les visites
+      // et les clics de chaque édition, dès qu'il y en a plus d'une sur la
+      // période (get_livre_stats.langues, la langue de la page vue).
+      var langues = Array.isArray(d.langues) ? d.langues : [];
+      var htmlLangues = langues.length > 1
+        ? '<div class="bil-colonne--suite"><p class="bil-colonne-titre">Par langue de la page</p><div class="adm-table-defile"><table class="adm-table"><thead><tr><th class="bil-gauche">Langue</th><th>Visites</th><th>Ont cliqué</th><th>Taux</th></tr></thead><tbody>' +
+          langues.map(function (x) {
+            return ligneSource(LIVRE_LANGUES[x.lang] || x.lang || '?', Number(x.visites) || 0, Number(x.visites_clic) || 0);
+          }).join('') + '</tbody></table></div></div>'
+        : '';
+      place('admin-livre-sources', (sources.length
         ? '<div class="adm-table-defile"><table class="adm-table"><thead><tr><th class="bil-gauche">Source</th><th>Visites</th><th>Ont cliqué</th><th>Taux</th></tr></thead><tbody>' + lignesSources.join('') + '</tbody></table></div>'
-        : vide);
+        : vide) + htmlLangues);
 
       // Jusqu'où ils descendent : la part des visites qui voient chaque
       // partie arriver à l'écran, dans l'ordre de la page.
