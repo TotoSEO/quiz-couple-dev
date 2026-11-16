@@ -752,12 +752,12 @@ export const LIVRE = {
   },
   // L'édition anglaise (16 novembre 2026, Thomas : « Le livre a été publié en
   // anglais, 19,99 $ [...] Met en ligne la page anglaise »), sur amazon.com.
-  // Le lien est celui de la fiche, sans identifiant de Partenaire : le
-  // programme américain d'Amazon est un compte à part de celui d'amazon.fr.
-  // Quand Thomas donnera un lien de Partenaire amazon.com, il prendra la place
-  // de lien, avec affilie: true et la mention en anglais (fin.affiliation).
   en: {
-    lien: 'https://www.amazon.com/dp/B0HRSXQMPP',
+    // Le lien de Partenaire amazon.com de Thomas, donné le 16 novembre 2026
+    // (le programme américain est un compte à part de celui d'amazon.fr) :
+    // link.amazon puis amzlinks.in mènent à la fiche B0HRSXQMPP avec son
+    // identifiant, vérifié le jour même.
+    lien: 'https://link.amazon/B08J8aBoe',
     fiche: 'https://www.amazon.com/dp/B0HRSXQMPP',
     asin: 'B0HRSXQMPP',
     // Attribué par KDP le 15 novembre 2026 (livre/formats/aventures/en.mjs).
@@ -765,7 +765,11 @@ export const LIVRE = {
     prix: '$19.99',
     prixNombre: '19.99',
     devise: 'USD',
-    affilie: false,
+    // rel="sponsored" et la mention du programme américain en bas de la page
+    // (fin.affiliation de en/livre.json : « As an Amazon Associate, Quiz
+    // Couple earns from qualifying purchases. », la forme « [nom] earns »
+    // que l'accord des Partenaires d'amazon.com accepte).
+    affilie: true,
     // Les images tirées de l'édition anglaise (node livre/fabrique.mjs
     // aventures:en), aux mêmes noms que celles de la page française.
     images: '/livre/en/',
