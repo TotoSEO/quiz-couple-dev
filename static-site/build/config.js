@@ -756,12 +756,12 @@ export const LIVRE = {
   // programme américain d'Amazon est un compte à part de celui d'amazon.fr.
   // Quand Thomas donnera un lien de Partenaire amazon.com, il prendra la place
   // de lien, avec affilie: true et la mention en anglais (fin.affiliation).
-  // L'ISBN de l'édition anglaise n'est pas encore connu ici : sans lui, les
-  // données structurées n'en donnent pas.
   en: {
     lien: 'https://www.amazon.com/dp/B0HRSXQMPP',
     fiche: 'https://www.amazon.com/dp/B0HRSXQMPP',
     asin: 'B0HRSXQMPP',
+    // Attribué par KDP le 15 novembre 2026 (livre/formats/aventures/en.mjs).
+    isbn: '9798143015807',
     prix: '$19.99',
     prixNombre: '19.99',
     devise: 'USD',
