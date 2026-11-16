@@ -1495,8 +1495,9 @@
   <url>
     <loc>https://quiz-couple.com/livre-quiz-couple/</loc>
     <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/livre-quiz-couple/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://quiz-couple.com/en/couples-bucket-list-book/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/livre-quiz-couple/"/>
-    <lastmod>2026-11-15</lastmod>
+    <lastmod>2026-11-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -2193,6 +2194,14 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/blog/lire-les-messages-de-son-partenaire/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/blog/lire-les-messages-de-son-partenaire/"/>
     <lastmod>2026-11-13T18:45:00+01:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://quiz-couple.com/blog/supprimer-les-photos-de-son-ex/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/blog/supprimer-les-photos-de-son-ex/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/blog/supprimer-les-photos-de-son-ex/"/>
+    <lastmod>2026-11-16T08:30:00+01:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>

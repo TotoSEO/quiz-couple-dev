@@ -6,12 +6,21 @@
     <atom:link href="https://quiz-couple.com/blog/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Les articles de Quiz Couple sur la vie de couple, la psychologie et les histoires d&#39;amour.</description>
     <language>fr</language>
-    <lastBuildDate>Sat, 14 Nov 2026 15:55:00 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 16 Nov 2026 07:30:00 GMT</lastBuildDate>
     <image>
       <url>https://quiz-couple.com/apple-touch-icon.png</url>
       <title>Quiz Couple · Le blog</title>
       <link>https://quiz-couple.com/blog/</link>
     </image>
+    <item>
+      <title>Supprimer les photos de son ex : 75 % des votants disent oui</title>
+      <link>https://quiz-couple.com/blog/supprimer-les-photos-de-son-ex/</link>
+      <guid isPermaLink="true">https://quiz-couple.com/blog/supprimer-les-photos-de-son-ex/</guid>
+      <pubDate>Mon, 16 Nov 2026 07:30:00 GMT</pubDate>
+      <category>En chiffres</category>
+      <description>Sur Quiz Couple, 565 votes : 75 % trouvent normal de supprimer les photos de ses ex. Et 73 % sont contre garder un ex dans ses contacts.</description>
+      <media:content url="https://quiz-couple.com/blog/supprimer-les-photos-de-son-ex.webp" medium="image" type="image/webp" width="1536" height="864"/>
+    </item>
     <item>
       <title>Dépendance affective en amitié : quand une amie devient un besoin</title>
       <link>https://quiz-couple.com/blog/dependance-affective-amitie/</link>
@@ -272,15 +281,6 @@
       <category>Psychologie</category>
       <description>« Tu es trop sensible », « c&#39;est de ta faute », « je dis ça pour ton bien »... 35 phrases de manipulateur décodées, avec leur vraie traduction et comment riposter.</description>
       <media:content url="https://quiz-couple.com/blog/phrases-preferees-des-manipulateurs.webp" medium="image" type="image/webp" width="1536" height="1024"/>
-    </item>
-    <item>
-      <title>100 questions à poser à son crush, par message ou en vrai</title>
-      <link>https://quiz-couple.com/blog/questions-a-poser-a-son-crush/</link>
-      <guid isPermaLink="true">https://quiz-couple.com/blog/questions-a-poser-a-son-crush/</guid>
-      <pubDate>Tue, 01 Sep 2026 09:34:00 GMT</pubDate>
-      <category>Vie de couple</category>
-      <description>Marre des conversations qui retombent ? 100 questions à poser à ton crush, classées par situation : par message, pour rire, pour flirter, pour savoir si ça matche.</description>
-      <media:content url="https://quiz-couple.com/blog/questions-a-poser-a-son-crush.webp" medium="image" type="image/webp" width="1536" height="1024"/>
     </item>
   </channel>
 </rss>
