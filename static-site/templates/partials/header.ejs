@@ -371,6 +371,13 @@
        rangée, bornée à 1 368 px, déborderait de 4 px : l'écart entre les
        onglets passe de 0,3 à 0,15 rem quand le bouton du livre est là. */
     @media (min-width: 1440px) { .entete-onglets { gap: .15rem; } }
+    /* En anglais, « Assess your relationship » et « 100 adventures » sont plus
+       longs que leurs libellés français : la rangée débordait de 5 px à
+       1 180 px et de 8 px au-dessus de 1 440 px (16 novembre 2026, la page
+       anglaise du livre). Les deux boutons se serrent un peu (10 px de
+       gagnés), dans toutes les langues : la rangée française était pleine
+       au pixel près. */
+    @media (min-width: 1180px) { .n2-eval, .n2-livre { margin-right: .25rem; } .n2-livre { padding-right: .8rem; } }
     .dark .n2-livre { color: #ffe7a3; background: #2b2314; box-shadow: inset 0 0 0 1px rgb(255 212 92 / .5); }
     .dark .n2-livre:hover, .dark .n2-livre:focus-visible { color: #fff3cf; background: #372d1a; box-shadow: inset 0 0 0 1px rgb(255 212 92 / .8); }
     @media (min-width: 1024px) and (max-width: 1179.98px) {
@@ -566,7 +573,7 @@
             <% } %>
             <% if (livreMenu) { %>
             <a href="<%= livreMenu.url %>" class="n2-livre" title="<%= livreTitre %>" data-livre-lien="menu"<%- courant('livreQuizCouple') %>>
-              <img src="/livre/livre-mini-160.webp" alt="" width="160" height="173" decoding="async">
+              <img src="<%= livreMenu.images %>livre-mini-160.webp" alt="" width="160" height="173" decoding="async">
               <span class="n2-livre-texte"><span class="n2-livre-haut"><%= t('livre:menu.haut', '') %></span> <span class="n2-livre-bas"><%= t('livre:menu.bas', '') %></span></span>
             </a>
             <% } %>
@@ -696,7 +703,7 @@
             </a>
             <% } %>
             <a href="<%= livreMenu.url %>" class="mnav-tuile mnav-tuile--livre" data-livre-lien="menu-mobile"<%- courant('livreQuizCouple') %>>
-              <img class="mnav-tuile-livre" src="/livre/livre-mini-160.webp" alt="" width="160" height="173" loading="lazy" decoding="async">
+              <img class="mnav-tuile-livre" src="<%= livreMenu.images %>livre-mini-160.webp" alt="" width="160" height="173" loading="lazy" decoding="async">
               <span class="mnav-tuile-titre"><%= livreTitre %></span>
               <span class="mnav-tuile-sous"><%= t('livre:menu.sous', '') %></span>
               <%- icAller %>
@@ -785,7 +792,7 @@
       restent ronds à toutes les largeurs. %>
   <a href="<%= livreMenu.url %>" class="bandeau-promo bandeau-promo--livre" data-livre-lien="bandeau">
     <svg class="bandeau-livre-points" viewBox="0 0 1200 52" preserveAspectRatio="xMinYMid slice" aria-hidden="true" focusable="false"><path d="M-10 46c80-8 130 6 210 0s150-10 230 0 150 9 230 0 150-10 230 0 150 9 230 0 120-6 150-3" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-dasharray="0 9"/></svg>
-    <img class="bandeau-livre-couv" src="/livre/livre-mini-160.webp" alt="" width="160" height="173" loading="lazy" decoding="async">
+    <img class="bandeau-livre-couv" src="<%= livreMenu.images %>livre-mini-160.webp" alt="" width="160" height="173" loading="lazy" decoding="async">
     <span class="bandeau-livre-texte"><span><%= t('livre:bandeau.ligne1', '') %></span> <span><%- t('livre:bandeau.ligne2', '') %></span></span>
     <span class="bandeau-livre-badge"><svg class="bandeau-livre-coeur" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 20.6l-1.3-1.2C6 15.2 3 12.4 3 8.9 3 6.1 5.2 4 7.9 4c1.6 0 3.1.7 4.1 1.9C13 4.7 14.5 4 16.1 4 18.8 4 21 6.1 21 8.9c0 3.5-3 6.3-7.7 10.5L12 20.6z" fill="#fff" stroke="#2e181f" stroke-width="2" stroke-linejoin="round"/></svg><%= t('livre:bandeau.badge', '') %></span>
   </a>

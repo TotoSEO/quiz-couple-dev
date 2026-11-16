@@ -210,9 +210,12 @@ export const ROUTE_SLUGS = {
   customQuiz: { fr: 'creation-quiz-personnalise', en: 'create-your-own-quiz', es: 'crear-tu-propio-quiz', de: 'eigenes-quiz-erstellen', it: 'crea-il-tuo-quiz', nl: 'maak-je-eigen-quiz' },
   sitemap: { fr: 'plan-du-site', en: 'sitemap', es: 'mapa-del-sitio', de: 'seitenverzeichnis', it: 'mappa-del-sito', nl: 'sitemap' },
   ebookConfirm: { fr: 'confirmation-ebook' },
-  // La page du livre « 100 aventures à deux » (14 novembre 2026), en français
-  // seulement tant que les autres éditions ne sont pas en vente (voir LIVRE).
-  livreQuizCouple: { fr: 'livre-quiz-couple' },
+  // La page du livre « 100 aventures à deux » (14 novembre 2026), dans les
+  // langues dont l'édition est en vente (voir LIVRE) : le français, puis
+  // l'anglais le 16 novembre 2026 (« 100 Adventures for Two », amazon.com),
+  // sur les mots que l'édition anglaise vise chez Amazon (« couples bucket
+  // list book »).
+  livreQuizCouple: { fr: 'livre-quiz-couple', en: 'couples-bucket-list-book' },
 };
 
 // L'image de partage du site (27 octobre 2026) : og:image de l'accueil et de
@@ -739,6 +742,34 @@ export const LIVRE = {
     prix: '19,99 €',
     prixNombre: '19.99',
     devise: 'EUR',
+    // Un lien de Partenaire : rel="sponsored" et la mention du programme en
+    // bas de la page (fin.affiliation de livre.json).
+    affilie: true,
+    // Les images de la page, du menu et des encarts (public/livre/) et
+    // l'image de partage de la page.
+    images: '/livre/',
+    og: '/og/livre-100-aventures.jpg',
+  },
+  // L'édition anglaise (16 novembre 2026, Thomas : « Le livre a été publié en
+  // anglais, 19,99 $ [...] Met en ligne la page anglaise »), sur amazon.com.
+  // Le lien est celui de la fiche, sans identifiant de Partenaire : le
+  // programme américain d'Amazon est un compte à part de celui d'amazon.fr.
+  // Quand Thomas donnera un lien de Partenaire amazon.com, il prendra la place
+  // de lien, avec affilie: true et la mention en anglais (fin.affiliation).
+  // L'ISBN de l'édition anglaise n'est pas encore connu ici : sans lui, les
+  // données structurées n'en donnent pas.
+  en: {
+    lien: 'https://www.amazon.com/dp/B0HRSXQMPP',
+    fiche: 'https://www.amazon.com/dp/B0HRSXQMPP',
+    asin: 'B0HRSXQMPP',
+    prix: '$19.99',
+    prixNombre: '19.99',
+    devise: 'USD',
+    affilie: false,
+    // Les images tirées de l'édition anglaise (node livre/fabrique.mjs
+    // aventures:en), aux mêmes noms que celles de la page française.
+    images: '/livre/en/',
+    og: '/og/livre-100-adventures-en.jpg',
   },
 };
 // Pendant les fêtes, la page et le bouton du menu parlent du cadeau de Noël ;

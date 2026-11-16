@@ -600,7 +600,9 @@ function livreMenuPour(lang) {
   if (!LIVRE[lang]) return null;
   const url = getLocalizedUrl('livreQuizCouple', lang);
   if (!url) return null;
-  return { url, chemin: getLocalizedPath('livreQuizCouple', lang) };
+  // images : le dossier des images de l'édition de la langue (LIVRE, config.js),
+  // la vignette du menu, de la barre et du pied de page comprise.
+  return { url, chemin: getLocalizedPath('livreQuizCouple', lang), images: LIVRE[lang].images || '/livre/' };
 }
 // La moitié « livre » des encarts de l'évaluation de couple (14 novembre
 // 2026, Thomas : « scinde aussi en deux du coup les endroits qui mettent en
@@ -616,7 +618,7 @@ function livreEncartPour(lang, entree) {
   if (!entree || entree.formule === 'point' || entree.groupe === 'doute' || entree.sansLivre) return null;
   const menu = livreMenuPour(lang);
   if (!menu) return null;
-  return { url: menu.url, noel: livreNoelActif() };
+  return { url: menu.url, noel: livreNoelActif(), images: menu.images };
 }
 // Ce que la page du livre reçoit en plus : l'édition (lien, prix, ISBN), la
 // période de Noël et le « 100 » dessiné de la couverture, sans sa taille
@@ -626,7 +628,7 @@ function livrePagePour(lang) {
   if (!edition) return null;
   const cent = centDuLivre({ taille: 100, epaisseur: 5.5, ombre: 5, classe: 'lv-cent' })
     .replace(/\sstyle="[^"]*"/, '');
-  return { ...edition, noel: livreNoelActif(), cent };
+  return { images: '/livre/', og: '/og/livre-100-aventures.jpg', ...edition, noel: livreNoelActif(), cent };
 }
 
 // L'illustration de la section « Qu'est-ce qu'un quiz pour couples ? » de
@@ -1630,10 +1632,12 @@ async function generatePage(routeKey, lang) {
       alternativeHeadline: t('livre:livre.sousTitre', ''),
       description,
       url: canonical,
-      image: [`${BASE_URL}/livre/couverture-1200.webp`, `${BASE_URL}/livre/livre-3d-1000.webp`],
+      image: [`${BASE_URL}${livrePage.images}couverture-1200.webp`, `${BASE_URL}${livrePage.images}livre-3d-1000.webp`],
       inLanguage: lang,
-      isbn: livrePage.isbn,
-      gtin13: livrePage.isbn,
+      // L'ISBN seulement s'il est connu (celui de l'édition anglaise ne l'est
+      // pas encore) : JSON.stringify laisse de côté une valeur undefined.
+      isbn: livrePage.isbn || undefined,
+      gtin13: livrePage.isbn || undefined,
       bookFormat: 'https://schema.org/Paperback',
       numberOfPages: 136,
       author: { '@type': 'Organization', '@id': `${BASE_URL}/#organization`, name: 'Quiz Couple', url: BASE_URL },
@@ -1843,8 +1847,8 @@ async function generatePage(routeKey, lang) {
     // vers une version perimee des scripts.
     sansCache: routeKey === 'admin',
     // Per-page featured image (hero + OG share + home card). Falls back to the generic OG image.
-    // La page du livre a sa propre image de partage (public/og/livre-100-aventures.jpg).
-    ogImage: livrePage ? `${BASE_URL}/og/livre-100-aventures.jpg`
+    // La page du livre a sa propre image de partage, une par édition (LIVRE.og).
+    ogImage: livrePage ? `${BASE_URL}${livrePage.og}`
       : featured ? `${BASE_URL}/quiz/featured/${featured.file}.webp` : imagePartage(lang).url,
     ogImageAlt: livrePage ? t('livre:ogAlt', '')
       : featured ? (featured.alt[lang] || featured.alt.fr) : imagePartage(lang).alt,
