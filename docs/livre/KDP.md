@@ -14,9 +14,11 @@ site est `/livre-quiz-couple/`, avec le lien de Partenaire Amazon de Thomas
 CLAUDE.md). L'édition anglaise, « 100 Adventures for Two » (ISBN attribué par
 KDP le 15 novembre 2026), est sur amazon.com depuis le 16 novembre 2026
 (ASIN B0HRSXQMPP, 19,99 $), page
-`/en/couples-bucket-list-book/` du site, avec le lien de la fiche sans
-identifiant de Partenaire (le programme d'amazon.com est un compte à part).
-L'espagnol suivra, quand Thomas enverra son lien.
+`/en/couples-bucket-list-book/` du site, avec le lien de Partenaire
+amazon.com de Thomas (le programme d'amazon.com est un compte à part de celui
+d'amazon.fr ; la première version de la page, en ligne une heure plus tôt le
+même jour, menait à la fiche sans identifiant). L'espagnol suivra, quand
+Thomas enverra son lien.
 
 ## Les fichiers à envoyer
 
