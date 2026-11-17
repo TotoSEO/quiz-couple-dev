@@ -1,12 +1,12 @@
 {
-  "genere_le": "2026-11-16T11:09:19.110Z",
+  "genere_le": "2026-11-17T03:16:50.501Z",
   "langue": "fr",
   "compte": {
     "nom": "mipaps_stories",
     "actif": true
   },
   "fuseau": "Europe/Paris",
-  "aujourdhui": "2026-11-16",
+  "aujourdhui": "2026-11-17",
   "melange": {
     "midi": {
       "1": null,
@@ -28,39 +28,12 @@
     },
     "matin": "mipaps-anime"
   },
-  "reserve_jours": 136,
+  "reserve_jours": 135,
   "a_remplir": [],
   "a_corriger": [],
   "hors_grille": [],
   "refuses": [],
   "recents_et_prevus": [
-    {
-      "jour": "2026-10-17",
-      "creneau": "matin",
-      "gabarit": "mipaps-reel",
-      "categorie": "mipaps-anime",
-      "statut": "publie",
-      "texte": null,
-      "erreur": null
-    },
-    {
-      "jour": "2026-10-17",
-      "creneau": "midi",
-      "gabarit": "mipaps-post",
-      "categorie": "mipaps-post",
-      "statut": "publie",
-      "texte": "état des lieux",
-      "erreur": null
-    },
-    {
-      "jour": "2026-10-17",
-      "creneau": "soir",
-      "gabarit": "mipaps-statique",
-      "categorie": "mipaps-statique",
-      "statut": "publie",
-      "texte": "je t'aime en pyjama troué aussi",
-      "erreur": null
-    },
     {
       "jour": "2026-10-18",
       "creneau": "matin",
@@ -2675,7 +2648,7 @@
   "idees": [],
   "prochain_creneau": {
     "mipaps-anime": {
-      "jour": "2026-11-17",
+      "jour": "2026-11-18",
       "creneau": "matin"
     },
     "mipaps-statique": null,
