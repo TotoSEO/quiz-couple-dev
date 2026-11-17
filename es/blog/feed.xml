@@ -6,12 +6,21 @@
     <atom:link href="https://quiz-couple.com/es/blog/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Los artículos de Quiz Couple sobre la vida en pareja, la psicología y las historias de amor.</description>
     <language>es</language>
-    <lastBuildDate>Sat, 14 Nov 2026 15:55:00 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 17 Nov 2026 13:15:00 GMT</lastBuildDate>
     <image>
       <url>https://quiz-couple.com/apple-touch-icon.png</url>
       <title>Quiz Couple · Blog</title>
       <link>https://quiz-couple.com/es/blog/</link>
     </image>
+    <item>
+      <title>Dependencia emocional y ruptura: sobrevivir a la abstinencia y salir adelante</title>
+      <link>https://quiz-couple.com/es/blog/dependencia-emocional-tras-una-ruptura/</link>
+      <guid isPermaLink="true">https://quiz-couple.com/es/blog/dependencia-emocional-tras-una-ruptura/</guid>
+      <pubDate>Tue, 17 Nov 2026 13:15:00 GMT</pubDate>
+      <category>Psicología</category>
+      <description>Para un dependiente emocional, una ruptura no es un desamor: es una abstinencia. Por qué duele tanto, las trampas de las primeras semanas y cómo salir fortalecida.</description>
+      <media:content url="https://quiz-couple.com/blog/dependance-affective-rupture.webp" medium="image" type="image/webp" width="1536" height="1024"/>
+    </item>
     <item>
       <title>Dependencia emocional en la amistad: cuando una amiga se vuelve una necesidad</title>
       <link>https://quiz-couple.com/es/blog/dependencia-emocional-en-la-amistad/</link>
@@ -272,15 +281,6 @@
       <category>Vida en pareja</category>
       <description>¿Harta de conversaciones que se apagan? 100 preguntas para hacerle a tu crush, ordenadas por situación: por mensaje, para reír, para flirtear, para ver si encajáis.</description>
       <media:content url="https://quiz-couple.com/blog/questions-a-poser-a-son-crush.webp" medium="image" type="image/webp" width="1536" height="1024"/>
-    </item>
-    <item>
-      <title>Hombre narcisista: 12 señales, del encanto público al control privado</title>
-      <link>https://quiz-couple.com/es/blog/hombre-narcisista-senales/</link>
-      <guid isPermaLink="true">https://quiz-couple.com/es/blog/hombre-narcisista-senales/</guid>
-      <pubDate>Sat, 29 Aug 2026 13:25:00 GMT</pubDate>
-      <category>Psicología</category>
-      <description>Impecable en público, demoledor en privado. Las 12 conductas del hombre narcisista, en el orden en que aparecen, y qué hacer después.</description>
-      <media:content url="https://quiz-couple.com/blog/homme-pervers-narcissique-signes.webp" medium="image" type="image/webp" width="1536" height="1024"/>
     </item>
   </channel>
 </rss>

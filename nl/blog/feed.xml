@@ -6,12 +6,21 @@
     <atom:link href="https://quiz-couple.com/nl/blog/feed.xml" rel="self" type="application/rss+xml"/>
     <description>De artikelen van Quiz Couple over relaties, psychologie en liefdesverhalen.</description>
     <language>nl</language>
-    <lastBuildDate>Sat, 14 Nov 2026 15:55:00 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 17 Nov 2026 13:15:00 GMT</lastBuildDate>
     <image>
       <url>https://quiz-couple.com/apple-touch-icon.png</url>
       <title>Quiz Couple · Blog</title>
       <link>https://quiz-couple.com/nl/blog/</link>
     </image>
+    <item>
+      <title>Emotionele afhankelijkheid na een breuk: het afkicken overleven en weer opkrabbelen</title>
+      <link>https://quiz-couple.com/nl/blog/emotionele-afhankelijkheid-na-een-breuk/</link>
+      <guid isPermaLink="true">https://quiz-couple.com/nl/blog/emotionele-afhankelijkheid-na-een-breuk/</guid>
+      <pubDate>Tue, 17 Nov 2026 13:15:00 GMT</pubDate>
+      <category>Psychologie</category>
+      <description>Voor wie emotioneel afhankelijk is, is een breuk geen gewoon liefdesverdriet maar afkicken. Waarom het zo’n pijn doet, en hoe je erdoorheen komt.</description>
+      <media:content url="https://quiz-couple.com/blog/dependance-affective-rupture.webp" medium="image" type="image/webp" width="1536" height="1024"/>
+    </item>
     <item>
       <title>Emotionele afhankelijkheid in een vriendschap: als een vriendin een behoefte wordt</title>
       <link>https://quiz-couple.com/nl/blog/emotionele-afhankelijkheid-in-vriendschap/</link>
@@ -272,15 +281,6 @@
       <category>Relatie</category>
       <description>Gesprekken die doodbloeden? 100 vragen om aan je crush te stellen, per situatie: via berichtjes, om te lachen, om te flirten, om te zien of het klikt.</description>
       <media:content url="https://quiz-couple.com/blog/questions-a-poser-a-son-crush.webp" medium="image" type="image/webp" width="1536" height="1024"/>
-    </item>
-    <item>
-      <title>De narcistische man: 12 kenmerken, van charme in gezelschap tot controle thuis</title>
-      <link>https://quiz-couple.com/nl/blog/kenmerken-narcistische-man/</link>
-      <guid isPermaLink="true">https://quiz-couple.com/nl/blog/kenmerken-narcistische-man/</guid>
-      <pubDate>Sat, 29 Aug 2026 13:25:00 GMT</pubDate>
-      <category>Psychologie</category>
-      <description>Onberispelijk in gezelschap, vernietigend thuis. De 12 kenmerken van een narcistische man, in de volgorde waarin ze opduiken, en wat je daarna doet.</description>
-      <media:content url="https://quiz-couple.com/blog/homme-pervers-narcissique-signes.webp" medium="image" type="image/webp" width="1536" height="1024"/>
     </item>
   </channel>
 </rss>

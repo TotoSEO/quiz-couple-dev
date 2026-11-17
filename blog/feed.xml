@@ -6,12 +6,21 @@
     <atom:link href="https://quiz-couple.com/blog/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Les articles de Quiz Couple sur la vie de couple, la psychologie et les histoires d&#39;amour.</description>
     <language>fr</language>
-    <lastBuildDate>Mon, 16 Nov 2026 07:30:00 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 17 Nov 2026 13:15:00 GMT</lastBuildDate>
     <image>
       <url>https://quiz-couple.com/apple-touch-icon.png</url>
       <title>Quiz Couple · Le blog</title>
       <link>https://quiz-couple.com/blog/</link>
     </image>
+    <item>
+      <title>Dépendance affective et rupture : survivre au sevrage et rebondir</title>
+      <link>https://quiz-couple.com/blog/dependance-affective-rupture/</link>
+      <guid isPermaLink="true">https://quiz-couple.com/blog/dependance-affective-rupture/</guid>
+      <pubDate>Tue, 17 Nov 2026 13:15:00 GMT</pubDate>
+      <category>Psychologie</category>
+      <description>Pour un dépendant affectif, une rupture n&#39;est pas un chagrin : c&#39;est un sevrage. Pourquoi ça fait si mal, les pièges des premières semaines, et comment en sortir grandi.</description>
+      <media:content url="https://quiz-couple.com/blog/dependance-affective-rupture.webp" medium="image" type="image/webp" width="1536" height="1024"/>
+    </item>
     <item>
       <title>Supprimer les photos de son ex : 75 % des votants disent oui</title>
       <link>https://quiz-couple.com/blog/supprimer-les-photos-de-son-ex/</link>
@@ -272,15 +281,6 @@
       <category>Vie de couple</category>
       <description>Marre du « salut, ça va ? » qui ne mène nulle part ? 90 questions à poser à une fille, du premier message au vrai tête-à-tête, sans jamais tomber dans l&#39;interrogatoire.</description>
       <media:content url="https://quiz-couple.com/blog/questions-a-poser-a-une-fille.webp" medium="image" type="image/webp" width="1536" height="1024"/>
-    </item>
-    <item>
-      <title>Les 35 phrases préférées des manipulateurs</title>
-      <link>https://quiz-couple.com/blog/phrases-preferees-des-manipulateurs/</link>
-      <guid isPermaLink="true">https://quiz-couple.com/blog/phrases-preferees-des-manipulateurs/</guid>
-      <pubDate>Sat, 05 Sep 2026 07:15:00 GMT</pubDate>
-      <category>Psychologie</category>
-      <description>« Tu es trop sensible », « c&#39;est de ta faute », « je dis ça pour ton bien »... 35 phrases de manipulateur décodées, avec leur vraie traduction et comment riposter.</description>
-      <media:content url="https://quiz-couple.com/blog/phrases-preferees-des-manipulateurs.webp" medium="image" type="image/webp" width="1536" height="1024"/>
     </item>
   </channel>
 </rss>
