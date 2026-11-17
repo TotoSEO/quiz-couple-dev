@@ -2589,3 +2589,82 @@ peu de gens voient le bouton, l'écran est trop long avant le prix ; s'ils le
 voient sans cocher, c'est le prix ou l'envie ; s'ils cochent sans ouvrir,
 c'est le bouton ou la case. Une réduction datée du Black Friday, calculée
 depuis 7,90 €, attend la réponse de Thomas.
+
+## 17 novembre 2026 : une semaine après, d'où viennent les démarrages et les ventes
+
+Thomas : « Les démarrages de l'évaluation ont explosé depuis le 10 novembre et
+je fais presque 2 ventes par jour en continu ! » Lu par `bilan-chiffres.yml`
+(30 jours) le 17 novembre à 21 h 30, heure de Paris. Le 10, jour du
+changement, et le 17, en cours, sont laissés de côté dans le tableau.
+
+### Les démarrages : la même page, deux fois plus de clics
+
+| Par jour | 23 octobre au 4 novembre | 5 au 9 novembre (deux cartes de prix) | 11 au 16 novembre |
+|---|---|---|---|
+| Visites de la page | 389 | 366 | 347 |
+| Part des visites qui clique sur « Commencer » | 22 % | 8 % | 52 % |
+| Évaluations à deux créées | 23 | 9 | 75 |
+| Évaluations seul(e) créées | 13 | 4 | 25 |
+| Partenaires arrivés | 6,6 | 3,2 | 23 |
+| Couples allés au bout | 2,9 | 1,8 | 10 |
+| Évaluations seul(e) finies | 1,2 | 0,4 | 8,5 |
+| Ventes | 0,5 | 0,4 | 1 |
+
+- Le trafic de la page n'a pas bougé. C'est le haut de page du 10 novembre
+  qui fait la différence : un seul gros bouton et « Les questions sont
+  gratuites : vous ne payez qu'à la fin, si vous voulez le rapport (7,90 €
+  pour vous deux) ». Une visite sur deux clique. C'est deux fois plus qu'en
+  octobre, quand le haut de page montrait le prix barré et la réduction, et
+  six fois plus qu'avec les deux cartes de prix. Sur l'écran de départ, 55 %
+  créent ensuite leur évaluation, contre 43 % avant : les prénoms déjà
+  remplis y sont peut-être pour quelque chose.
+- Les sources n'ont pas changé. Sur les 68 couples allés au bout du 10 au
+  soir au 17, l'accueil en amène 36 (la section et le bouton du hero), le
+  menu 17 et la carte sous le score 6, sans vente.
+- Après le clic, les taux sont ceux d'avant. Un partenaire arrive pour 30 %
+  des évaluations à deux, et 13 % des évaluations à deux finissent avec les
+  deux séries de réponses. Le 13 novembre, la lecture à trois jours donnait
+  8 % parce que les fins arrivent après les créations.
+- Un seul téléphone : choisi 79 fois depuis le 10, et 28 partenaires ont
+  accepté sur place, 17 % des partenaires arrivés. Par le QR code : 77, soit
+  47 %.
+
+### Les ventes : le volume, le paiement avant l'autre et le point
+
+Neuf ventes du 10 novembre au soir au 17 à 21 h 30 (57,26 €). C'est autant
+que du 23 octobre au 10 novembre (59,46 €), en deux fois et demie moins de
+temps, et sept sont tombées du 14 au 17 :
+
+- 5 couples allés au bout : 2 en français, 1 en espagnol à 7,90 € et 2 en
+  espagnol au prix de l'Amérique latine (3,98 €) ;
+- 2 créateurs anglais qui ont payé avant que leur partenaire ouvre
+  l'invitation, sur l'offre repliée de l'écran d'attente, les 13 et
+  14 novembre : les deux premiers depuis l'ouverture ;
+- 2 « Le point sur ma relation », en anglais le 14 et en italien le 17 : les
+  deux premières ventes du point, pour 58 points finis depuis le 11.
+
+La part des couples au bout qui paient a baissé : 5 sur 68 (7 %), contre 9 sur
+48 (19 %) du 23 octobre au 10 novembre, et 12 % ouvrent la page de paiement
+(23 % avant). Comme les couples au bout sont presque quatre fois plus
+nombreux, les ventes montent quand même. Les trois compteurs du 13 novembre
+disent où l'on s'arrête. À deux, du 14 au 17 novembre : 102 offres vues, le
+bouton de paiement à l'écran 94 fois, la case cochée 12 fois, 7 appuis sans la
+case, 9 pages de paiement ouvertes et 5 ventes. On voit le prix et on repart,
+la longueur de l'écran n'y est pour rien. Un public venu parce que les
+questions sont gratuites paie moins souvent. La question offerte et la fin de
+la réduction ont pu jouer aussi, et ces chiffres ne permettent pas de les
+séparer.
+
+### À surveiller
+
+- Les deux ventes payées avant que le partenaire ouvre l'invitation n'ont pas
+  de rapport (`rapports` : 16 prêts, 2 sans rapport), puisqu'il demande les
+  réponses des deux. Tant qu'il n'est ni envoyé ni affiché, il n'est pas
+  fourni au sens des CGV et la rétractation reste possible : si le partenaire
+  ne vient jamais, une demande de remboursement est probable. L'e-mail de
+  reprise « autre » (le partenaire n'a pas fini ou n'a pas ouvert
+  l'invitation) est parti 45 fois en trente jours, et aucune de ces
+  évaluations n'est allée au bout ensuite.
+- Le prochain levier est en bas de l'entonnoir, un changement à la fois. La
+  réduction datée du Black Friday, calculée depuis 7,90 €, attend toujours la
+  réponse de Thomas : elle dirait si le prix bloque.
