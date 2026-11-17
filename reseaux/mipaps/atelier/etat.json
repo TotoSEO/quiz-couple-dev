@@ -1,5 +1,5 @@
 {
-  "genere_le": "2026-11-17T03:16:50.501Z",
+  "genere_le": "2026-11-17T11:50:12.400Z",
   "langue": "fr",
   "compte": {
     "nom": "mipaps_stories",
@@ -849,7 +849,7 @@
       "creneau": "matin",
       "gabarit": "mipaps-reel",
       "categorie": "mipaps-anime",
-      "statut": "rendu",
+      "statut": "publie",
       "texte": null,
       "erreur": null
     },
@@ -903,7 +903,7 @@
       "creneau": "matin",
       "gabarit": "mipaps-reel",
       "categorie": "mipaps-anime",
-      "statut": "a_rendre",
+      "statut": "rendu",
       "texte": null,
       "erreur": null
     },
@@ -3789,18 +3789,36 @@
       "jour": "2026-11-09",
       "creneau": "matin",
       "theme": null
+    },
+    {
+      "variante_id": "674f0eed-3f0a-480f-9f58-4ad08d2805fa",
+      "releve": "j7",
+      "vues": 347,
+      "portee": 298,
+      "likes": 5,
+      "commentaires": 0,
+      "partages": 1,
+      "enregistrements": 0,
+      "releve_le": "2026-11-17T11:50:05.683629+00:00",
+      "publie_le": "2026-11-10T05:20:11.74+00:00",
+      "categorie": "mipaps-anime",
+      "format": "reel",
+      "gabarit": "mipaps-reel",
+      "jour": "2026-11-10",
+      "creneau": "matin",
+      "theme": null
     }
   ],
   "statistiques_par_categorie": [
     {
       "categorie": "mipaps-anime",
-      "posts": 33,
-      "vues_mediane": 798,
-      "vues_moyenne": 1200,
+      "posts": 34,
+      "vues_mediane": 778,
+      "vues_moyenne": 1175,
       "vues_max": 3437,
-      "partages": 205,
+      "partages": 206,
       "enregistrements": 60,
-      "likes": 1417,
+      "likes": 1422,
       "commentaires": 0
     },
     {
