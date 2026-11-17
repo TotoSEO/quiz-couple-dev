@@ -1,12 +1,12 @@
 {
-  "genere_le": "2026-11-16T11:09:13.982Z",
+  "genere_le": "2026-11-17T03:16:41.781Z",
   "langue": "en",
   "compte": {
     "nom": "quiz_couple_official",
     "actif": true
   },
   "fuseau": "Europe/Paris",
-  "aujourdhui": "2026-11-16",
+  "aujourdhui": "2026-11-17",
   "melange": {
     "midi": {
       "1": null,
@@ -28,39 +28,12 @@
     },
     "matin": null
   },
-  "reserve_jours": 136,
+  "reserve_jours": 135,
   "a_remplir": [],
   "a_corriger": [],
   "hors_grille": [],
   "refuses": [],
   "recents_et_prevus": [
-    {
-      "jour": "2026-10-17",
-      "creneau": "matin",
-      "gabarit": "pov",
-      "categorie": "pov",
-      "statut": "publie",
-      "texte": null,
-      "erreur": null
-    },
-    {
-      "jour": "2026-10-17",
-      "creneau": "midi",
-      "gabarit": "tu-preferes",
-      "categorie": "tu-preferes",
-      "statut": "publie",
-      "texte": "Would you rather: travel?",
-      "erreur": null
-    },
-    {
-      "jour": "2026-10-17",
-      "creneau": "soir",
-      "gabarit": "carrousel",
-      "categorie": "dix-mais",
-      "statut": "publie",
-      "texte": "Texting edition. Is he still a 10?",
-      "erreur": null
-    },
     {
       "jour": "2026-10-18",
       "creneau": "matin",
@@ -867,7 +840,7 @@
       "creneau": "soir",
       "gabarit": "tu-preferes",
       "categorie": "tu-preferes",
-      "statut": "rendu",
+      "statut": "publie",
       "texte": "Would you rather: tell the truth?",
       "erreur": null
     },
@@ -921,7 +894,7 @@
       "creneau": "soir",
       "gabarit": "tu-preferes",
       "categorie": "tu-preferes",
-      "statut": "a_rendre",
+      "statut": "rendu",
       "texte": "Would you rather: couple edition",
       "erreur": null
     },
@@ -3363,7 +3336,7 @@
       "creneau": "soir"
     },
     "tu-preferes": {
-      "jour": "2026-11-16",
+      "jour": "2026-11-18",
       "creneau": "soir"
     },
     "phrase": null,
@@ -4689,19 +4662,37 @@
       "jour": "2026-11-08",
       "creneau": "soir",
       "theme": null
+    },
+    {
+      "variante_id": "c10f7de9-5c65-4542-bbdf-2f5db64ee43e",
+      "releve": "j7",
+      "vues": 2466,
+      "portee": 1865,
+      "likes": 62,
+      "commentaires": 1,
+      "partages": 89,
+      "enregistrements": 23,
+      "releve_le": "2026-11-17T03:16:40.749369+00:00",
+      "publie_le": "2026-11-09T15:20:10.822+00:00",
+      "categorie": "tu-preferes",
+      "format": "reel",
+      "gabarit": "tu-preferes",
+      "jour": "2026-11-09",
+      "creneau": "soir",
+      "theme": null
     }
   ],
   "statistiques_par_categorie": [
     {
       "categorie": "tu-preferes",
-      "posts": 21,
-      "vues_mediane": 2211,
-      "vues_moyenne": 13493,
+      "posts": 22,
+      "vues_mediane": 2339,
+      "vues_moyenne": 12992,
       "vues_max": 107713,
-      "partages": 9987,
-      "enregistrements": 3731,
-      "likes": 3775,
-      "commentaires": 7
+      "partages": 10076,
+      "enregistrements": 3754,
+      "likes": 3837,
+      "commentaires": 8
     },
     {
       "categorie": "connais-tu",
