@@ -1699,18 +1699,27 @@ article a:not(.no-underline):hover, .seo-content a:hover { text-decoration-color
   border-radius: 1.1rem; border: 1px solid hsl(var(--border) / 0.7);
   /* Opaque : avec des sections sur cinq colonnes, le titre de la page qui
      transparaissait derrière gênait la lecture (thème sombre surtout). */
-  background: hsl(var(--popover));
+  /* Quand le panneau défile, une ombre en haut ou en bas dit qu'il y a
+     autre chose plus haut ou plus bas : les deux caches (local) suivent le
+     contenu et recouvrent l'ombre (scroll) une fois arrivé au bout. */
+  --ombre-defile: rgb(0 0 0 / 0.13);
+  background:
+    linear-gradient(hsl(var(--popover)) 45%, hsl(var(--popover) / 0)) center top / 100% 1.75rem no-repeat local,
+    linear-gradient(hsl(var(--popover) / 0), hsl(var(--popover)) 55%) center bottom / 100% 1.75rem no-repeat local,
+    linear-gradient(var(--ombre-defile), rgb(0 0 0 / 0)) center top / 100% 0.75rem no-repeat scroll,
+    linear-gradient(rgb(0 0 0 / 0), var(--ombre-defile)) center bottom / 100% 0.75rem no-repeat scroll,
+    hsl(var(--popover));
   backdrop-filter: none;
   box-shadow:
     0 28px 80px -18px rgb(0 0 0 / 0.28),
     0 6px 20px -6px rgb(0 0 0 / 0.1),
     0 0 0 1px rgb(0 0 0 / 0.02);
-  max-height: calc(100vh - 9rem);
+  max-height: calc(100vh - 8.25rem);
   overflow-y: auto;
   animation: menuDeplie 0.22s cubic-bezier(0.22, 1, 0.36, 1);
 }
 .dark .nav-megamenu-inner {
-  background: hsl(var(--popover));
+  --ombre-defile: rgb(0 0 0 / 0.5);
   box-shadow:
     0 28px 80px -18px rgb(0 0 0 / 0.55),
     0 6px 20px -6px rgb(0 0 0 / 0.3),
@@ -1763,6 +1772,23 @@ article a:not(.no-underline):hover, .seo-content a:hover { text-decoration-color
 @media (min-width: 1280px) {
   .nav-megamenu.nav-megamenu--large { --n: 5; }
 }
+/* Les petits écrans d'ordinateur (18 novembre 2026, Thomas : « le sous menu
+   test de couple est énorme et ne s'affiche pas entièrement sur les petits
+   écrans d'ordinateur ») : les 45 tests de couple faisaient 593 px de haut à
+   1 024 px de large et 472 px au-dessus de 1 280 px, pour 456 px de place
+   sur un écran de 1 024 x 600 et 433 px sur 1 280 x 577 (un portable de
+   1 366 x 768 ou de 1 920 x 1 080 réglé à 125 ou 150 %, navigateur ouvert).
+   Les cinq colonnes viennent dès 1 080 px, la hauteur permise est celle qui
+   reste vraiment sous l'en-tête (collé, il ne fait plus que 56 px), et sur un
+   écran bas les lignes se resserrent. Ce qui dépasse encore défile, avec une
+   ombre en haut ou en bas pour le dire. */
+@media (min-width: 1080px) {
+  .nav-megamenu.nav-megamenu--large { --n: 5; }
+}
+@media (min-width: 1080px) and (max-width: 1279.98px) {
+  .nav-megamenu--large .nav-colonnes { column-gap: 0.7rem; padding-left: 0.7rem; padding-right: 0.7rem; }
+}
+#site-header.est-collee .nav-megamenu-inner { max-height: calc(100vh - 5rem); }
 .nav-colonnes {
   position: relative;
   column-count: var(--n); column-gap: 1.1rem;
@@ -1809,6 +1835,24 @@ article a:not(.no-underline):hover, .seo-content a:hover { text-decoration-color
 .nav-sec-ic svg { width: 1rem; height: 1rem; }
 .nav-sec-lien:hover .nav-sec-ic { background: hsl(var(--cat, var(--primary)) / 0.18); transform: scale(1.06); }
 .nav-sec-nom { min-width: 0; overflow-wrap: break-word; -webkit-hyphens: manual; hyphens: manual; }
+/* Écran bas (voir plus haut, « Les petits écrans d'ordinateur ») : des
+   lignes plus serrées, écrites après les règles qu'elles resserrent. */
+@media (max-height: 820px) {
+  .nav-colonnes { padding-top: 0.75rem; }
+  .nav-sec { padding-bottom: 0.6rem; }
+  .nav-sec-titre { margin-bottom: 0.2rem; }
+  .nav-sec-lien { padding-top: 0.2rem; padding-bottom: 0.2rem; gap: 0.5rem; }
+  .nav-sec-ic { width: 1.45rem; height: 1.45rem; border-radius: 0.45rem; }
+  .nav-sec-ic svg { width: 0.875rem; height: 0.875rem; }
+}
+@media (max-height: 640px) {
+  .nav-colonnes { padding-top: 0.6rem; }
+  .nav-sec { padding-bottom: 0.45rem; }
+  .nav-sec-titre { margin-bottom: 0.1rem; }
+  .nav-sec-lien { padding-top: 0.12rem; padding-bottom: 0.12rem; }
+  .nav-sec-ic { width: 1.3rem; height: 1.3rem; }
+  .nav-sec-ic svg { width: 0.8rem; height: 0.8rem; }
+}
 
 /* ── Menu mobile ──────────────────────────────────────────── */
 
@@ -7594,9 +7638,11 @@ h1, h2, h3, h4, .quiz-result-title, .duo-result-title {
    néerlandais, des composés le sont, sur téléphone (« Liebespersönlichkeits-
    test » 161 px pour 100 dans une demi-carte du menu à 360 px,
    « Vertrouwenstest » 105 pour 100) : seuls les mots de douze lettres et plus
-   s'y coupent, à la syllabe, plutôt qu'au milieu d'une lettre. */
-:lang(de) :is(.mnav-lien-nom, .suite-nom, .lire-titre, .nm-nom),
-:lang(nl) :is(.mnav-lien-nom, .suite-nom, .lire-titre, .nm-nom) {
+   s'y coupent, à la syllabe, plutôt qu'au milieu d'une lettre. Les panneaux
+   du menu d'ordinateur aussi (18 novembre 2026) : à cinq colonnes, de 1 080 à
+   1 150 px de large, « Liebespersönlichkeitstest » dépassait sa ligne. */
+:lang(de) :is(.mnav-lien-nom, .nav-sec-nom, .suite-nom, .lire-titre, .nm-nom),
+:lang(nl) :is(.mnav-lien-nom, .nav-sec-nom, .suite-nom, .lire-titre, .nm-nom) {
   -webkit-hyphens: auto; hyphens: auto; hyphenate-limit-chars: 12 5 4;
 }
 
