@@ -260,6 +260,13 @@
   for (const f of familles) familleDe[f.cle] = f;
   const flecheDroite = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';
 
+  // Aucun paragraphe (balise p) dans l'en-tête, ni ici ni dans les panneaux
+  // du menu mobile : le script de la régie glisse une publicité dans un
+  // paragraphe de la page, et du 9 au 18 novembre 2026 il en a posé une dans
+  // un titre de section du menu de bureau (Thomas, capture à l'appui : « une
+  // pub s'est immiscée dans le menu de navigation desktop ! »). Les titres
+  // sont des div, leur apparence ne vient que de leur classe.
+  //
   // Bureau : les sections en colonnes (CSS multi-colonnes, une section ne se
   // coupe jamais), dans l'ordre de lecture. Quatre colonnes au plus, cinq
   // pour les tests de couple au-dessus de 1 280 px (nav-megamenu--large),
@@ -276,7 +283,7 @@
     if (f.sections.length === 1) return '<ul class="nav-sec-liste nav-sec-liste--grille">' + f.sections[0].routes.map(lienBureau).join('') + '</ul>';
     return '<div class="nav-colonnes">' + f.sections.map((s) =>
       '<div class="nav-sec" role="group" aria-labelledby="nb-' + cle + '-' + s.cle + '">'
-      + '<p class="nav-sec-titre" id="nb-' + cle + '-' + s.cle + '">' + esc(titreSection(s.cle)) + '</p>'
+      + '<div class="nav-sec-titre" id="nb-' + cle + '-' + s.cle + '">' + esc(titreSection(s.cle)) + '</div>'
       + '<ul class="nav-sec-liste">' + s.routes.map(lienBureau).join('') + '</ul></div>').join('') + '</div>';
   }
   const classesBureau = (cle) => {
@@ -301,13 +308,13 @@
       + '<div class="mnav-barre">'
       + '<button type="button" class="mnav-retour" aria-label="' + esc(t('common:nav.retour', 'Retour')) + '">'
       + '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg></button>'
-      + '<p class="mnav-barre-titre" id="mnav-' + f.cle + '-titre"><span class="mnav-barre-ic" aria-hidden="true">' + f.ic + '</span>'
-      + '<span class="mnav-barre-nom">' + esc(f.nom) + '</span><span class="mnav-nb">' + f.total + '</span></p>'
+      + '<div class="mnav-barre-titre" id="mnav-' + f.cle + '-titre"><span class="mnav-barre-ic" aria-hidden="true">' + f.ic + '</span>'
+      + '<span class="mnav-barre-nom">' + esc(f.nom) + '</span><span class="mnav-nb">' + f.total + '</span></div>'
       + '</div>';
     for (const s of f.sections) {
       const id = 'nm-' + f.cle + '-' + s.cle;
       h += '<div class="mnav-section' + (seul ? ' mnav-section--seule"' : '" role="group" aria-labelledby="' + id + '"') + '>';
-      if (!seul) h += '<p class="mnav-section-titre" id="' + id + '"><span>' + esc(titreSection(s.cle)) + '</span></p>';
+      if (!seul) h += '<div class="mnav-section-titre" id="' + id + '"><span>' + esc(titreSection(s.cle)) + '</span></div>';
       h += '<ul class="mnav-grille">' + s.routes.map(lienMobile).join('') + '</ul></div>';
     }
     if (f.hub) h += '<a href="' + f.hub + '" class="mnav-hub">' + esc(f.hubLibelle) + flecheDroite + '</a>';
