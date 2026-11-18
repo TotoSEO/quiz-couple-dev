@@ -7,12 +7,13 @@
     "subtitle": "Gratis, zonder inschrijving, en de uitslag staat er meteen."
   },
   "form": {
-    "name1Placeholder": "Naam van persoon 1",
-    "name2Placeholder": "Naam van persoon 2",
+    "name1Placeholder": "Bijv. Sanne",
+    "name2Placeholder": "Bijv. Daan",
     "sign1Label": "Sterrenbeeld",
     "sign2Label": "Sterrenbeeld",
     "selectSign": "Kies een sterrenbeeld",
     "submitButton": "Bekijk onze match",
+    "erreurVide": "Typ beide namen en kies beide sterrenbeelden.",
     "signs": {
       "belier": "Ram ♈",
       "taureau": "Stier ♉",

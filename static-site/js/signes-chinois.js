@@ -124,12 +124,15 @@
     var anneeMax = new Date().getFullYear();
     ['1', '2'].forEach(function (n) {
       var sj = el('sc-jour' + n), sm = el('sc-mois' + n), sa = el('sc-annee' + n);
+      // Des listes vides au départ (18 novembre 2026) : la page proposait
+      // deux dates toutes faites, et l'aperçu montre maintenant ce que donne
+      // chaque date dès qu'elle est choisie.
+      sj.appendChild(new Option(tr('form.jour', 'Jour'), '', true, true));
+      sm.appendChild(new Option(tr('form.moisLabel', 'Mois'), '', true, true));
+      sa.appendChild(new Option(tr('form.annee', 'Année'), '', true, true));
       for (var j = 1; j <= 31; j++) sj.appendChild(new Option(j, j));
       for (var m = 1; m <= 12; m++) sm.appendChild(new Option(mois[m - 1] || m, m));
       for (var a = anneeMax; a >= 1924; a--) sa.appendChild(new Option(a, a));
-      sa.value = n === '1' ? anneeMax - 30 : anneeMax - 28;
-      sj.value = n === '1' ? 15 : 12;
-      sm.value = n === '1' ? 6 : 9;
     });
   }
 
@@ -157,8 +160,8 @@
     return '<svg class="dn-anneau" viewBox="0 0 120 120" role="img" aria-label="' + pct + '%">' +
       '<circle cx="60" cy="60" r="' + r + '" class="dn-anneau-fond"></circle>' +
       '<circle cx="60" cy="60" r="' + r + '" class="dn-anneau-trait" ' +
-      'stroke-dasharray="' + c.toFixed(1) + '" stroke-dashoffset="' + off.toFixed(1) + '"></circle>' +
-      '</svg><span class="dn-anneau-valeur">' + pct + '<small>%</small></span>';
+      'stroke-dasharray="' + c.toFixed(1) + '" stroke-dashoffset="' + off.toFixed(1) + '" style="--c:' + c.toFixed(1) + '"></circle>' +
+      '</svg><span class="dn-anneau-valeur"><span data-compte="' + pct + '">' + pct + '</span><small>%</small></span>';
   }
 
   function dateLisible(d) {
@@ -170,7 +173,8 @@
     var d1 = lire('1'), d2 = lire('2');
     var erreur = el('sc-erreur');
     if (!dateValide(d1.j, d1.m, d1.a) || !dateValide(d2.j, d2.m, d2.a)) {
-      erreur.textContent = tr('form.erreur', 'Vérifiez les deux dates de naissance.');
+      var vide = !(d1.j && d1.m && d1.a && d2.j && d2.m && d2.a);
+      erreur.textContent = vide ? tr('form.erreurVide', tr('form.erreur', '')) : tr('form.erreur', 'Vérifiez les deux dates de naissance.');
       erreur.classList.remove('hidden');
       return;
     }
@@ -239,10 +243,14 @@
       '</section>';
 
     var sortie = el('sc-resultat');
-    sortie.innerHTML = html;
+    // Tout le résultat dans un seul bloc (18 novembre 2026) : ses parties y
+    // arrivent l'une après l'autre, l'avis et les cartes « À faire ensuite »
+    // se posent après lui (.outil-fin de #sc-suite).
+    sortie.innerHTML = '<div class="outil-resultat">' + html + '</div>';
     sortie.classList.remove('hidden');
     el('sc-formulaire').classList.add('hidden');
     el('sc-suite').classList.remove('hidden');
+    if (window.QCOutil) window.QCOutil.resultat(sortie.firstChild, sortie.querySelector('.dn-verdict'));
 
     function versLeResultat() {
       var haut = racine.getBoundingClientRect().top + window.pageYOffset - 80;
@@ -264,7 +272,33 @@
     el('sc-formulaire').classList.remove('hidden');
   }
 
+  // ── L'aperçu en direct (18 novembre 2026) ─────────────────
+  // Sous chaque date complète, l'animal et l'élément de la personne : on
+  // voit tout de suite ce que la date donne, avant même le bouton.
+  var EMOJI_ANIMAL = { rat: '\uD83D\uDC00', buffle: '\uD83D\uDC02', tigre: '\uD83D\uDC05', lapin: '\uD83D\uDC07', dragon: '\uD83D\uDC09', serpent: '\uD83D\uDC0D', cheval: '\uD83D\uDC0E', chevre: '\uD83D\uDC10', singe: '\uD83D\uDC12', coq: '\uD83D\uDC13', chien: '\uD83D\uDC15', cochon: '\uD83D\uDC16' };
+  var EMOJI_ELEMENT = { bois: '\uD83C\uDF33', feu: '\uD83D\uDD25', terre: '\u26F0\uFE0F', metal: '\uD83E\uDE99', eau: '\uD83D\uDCA7' };
+  function apercu() {
+    if (!window.QCOutil) return;
+    var tout = true;
+    ['1', '2'].forEach(function (n) {
+      var d = lire(n), html = '';
+      if (dateValide(d.j, d.m, d.a)) {
+        var c = signeChinois(d.j, d.m, d.a);
+        html = '<span class="outil-puce">' + (EMOJI_ANIMAL[ANIMAUX[c.animal]] || '') + ' <b>' + echapper(nomAnimal(c.animal)) + '</b></span>' +
+          '<span class="outil-puce">' + (EMOJI_ELEMENT[ELEMENTS[c.element]] || '') + ' ' + echapper(nomElement(c.element)) + '</span>';
+      } else {
+        tout = false;
+      }
+      window.QCOutil.apercu(el('sc-apercu' + n), html);
+    });
+    window.QCOutil.pret(racine, tout);
+  }
+
   remplirSelects();
+  ['1', '2'].forEach(function (n) {
+    ['sc-jour', 'sc-mois', 'sc-annee'].forEach(function (id) { el(id + n).addEventListener('change', apercu); });
+  });
+  apercu();
   el('sc-lancer').addEventListener('click', calculer);
   el('sc-refaire').addEventListener('click', recommencer);
 

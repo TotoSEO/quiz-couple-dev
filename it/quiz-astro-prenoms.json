@@ -7,12 +7,13 @@
     "subtitle": "Gratis, senza registrazione, e il risultato compare subito."
   },
   "form": {
-    "name1Placeholder": "Nome della persona 1",
-    "name2Placeholder": "Nome della persona 2",
+    "name1Placeholder": "Es.: Giulia",
+    "name2Placeholder": "Es.: Luca",
     "sign1Label": "Segno zodiacale",
     "sign2Label": "Segno zodiacale",
     "selectSign": "Scegli un segno",
     "submitButton": "Verifica la compatibilità",
+    "erreurVide": "Scrivete i due nomi e scegliete i due segni.",
     "signs": {
       "belier": "Ariete ♈",
       "taureau": "Toro ♉",

@@ -60,7 +60,7 @@
 <script type="application/ld+json"><%- JSON.stringify(jsonLd) %></script>
 
 <!-- Hero + outil -->
-<section class="relative overflow-hidden hero-gradient py-12 md:py-16 calc-hero">
+<section class="relative overflow-hidden hero-gradient calc-hero outil-hero">
   <div class="container mx-auto px-4">
     <div class="mx-auto max-w-3xl text-center">
       <nav class="breadcrumb" aria-label="Breadcrumb">
@@ -70,49 +70,45 @@
           <li class="breadcrumb-current" aria-current="page"><%= t('quizzes:calculatriceAmour.shortTitle', pageTitle) %></li>
         </ol>
       </nav>
-      <span class="hero-badge mb-4">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-        <%= t(ns + ':hero.badge', '') %>
-      </span>
       <%
         const heroTitle = t(ns + ':hero.title', pageTitle);
         const heroHighlight = t(ns + ':hero.titleHighlight', '');
       %>
-      <h1 class="mb-5 text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-foreground">
+      <h1 class="outil-h1 font-bold tracking-tight text-foreground">
         <% if (heroHighlight && heroTitle.includes(heroHighlight)) { %>
           <%- heroTitle.replace(heroHighlight, '<span class="text-gradient">' + heroHighlight + '</span>') %>
         <% } else { %>
           <%= heroTitle %>
         <% } %>
       </h1>
-      <p class="text-lg text-muted-foreground md:text-xl"><%- t(ns + ':hero.description', '') %></p>
-    </div>
 
-    <%# L'outil est dans le premier ecran : c'est ce que la personne est venue chercher. %>
-    <div class="mx-auto max-w-2xl mt-8 md:mt-10">
-      <div id="calc-carte" class="calc-carte">
+    <%# L'outil est dans le premier ecran : c'est ce que la personne est venue
+        chercher. Il est dans le bloc du fil d'Ariane, comme la phrase qui le
+        suit : le bandeau des parties et des avis se pose sous elle. %>
+    <div class="mx-auto max-w-2xl">
+      <div id="calc-carte" class="calc-carte outil">
         <form id="calc-form" novalidate>
-          <div class="calc-champs">
-            <div class="calc-champ">
-              <label class="calc-label" for="calc-a"><%= t(ns + ':form.label1', '') %></label>
-              <input type="text" id="calc-a" class="calc-input" maxlength="24" autocomplete="off" spellcheck="false"
+          <div class="outil-duo">
+            <div class="dn-personne dn-personne--1">
+              <label class="dn-personne-titre" for="calc-a"><span class="outil-avatar" aria-hidden="true"><%- mascotteSvg('rose', 'salut', {}, '') %></span><%= t(ns + ':form.label1', '') %></label>
+              <input type="text" id="calc-a" class="calc-input astro-input" maxlength="24" autocomplete="off" spellcheck="false"
                      placeholder="<%= t(ns + ':form.placeholder1', '') %>">
             </div>
-            <div class="calc-coeur" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-            </div>
-            <div class="calc-champ">
-              <label class="calc-label" for="calc-b"><%= t(ns + ':form.label2', '') %></label>
-              <input type="text" id="calc-b" class="calc-input" maxlength="24" autocomplete="off" spellcheck="false"
+            <div class="dn-personne dn-personne--2">
+              <label class="dn-personne-titre" for="calc-b"><span class="outil-avatar" aria-hidden="true"><%- mascotteSvg('violet', 'mignon', {}, '') %></span><%= t(ns + ':form.label2', '') %></label>
+              <input type="text" id="calc-b" class="calc-input astro-input" maxlength="24" autocomplete="off" spellcheck="false"
                      placeholder="<%= t(ns + ':form.placeholder2', '') %>">
             </div>
           </div>
-          <p id="calc-erreur" class="calc-erreur" role="alert" hidden></p>
-          <button type="submit" id="calc-go" class="btn btn-cta btn-gradient calc-go"><%= t(ns + ':form.submit', '') %></button>
-          <p class="calc-aide"><%= t(ns + ':form.aide', '') %></p>
+          <p id="calc-erreur" class="calc-erreur dn-erreur" role="alert" hidden></p>
+          <div class="outil-action">
+            <button type="submit" id="calc-go" class="btn btn-cta btn-gradient calc-go astro-submit-btn"><%= t(ns + ':form.submit', '') %></button>
+            <p class="outil-aide outil-aide--bas"><%= t(ns + ':form.aide', '') %></p>
+          </div>
         </form>
 
         <div id="calc-resultat" class="calc-resultat" data-quiz-avis data-quiz-done hidden>
+          <div class="calc-verdict">
           <p id="calc-noms" class="calc-noms"></p>
           <div class="calc-anneau">
             <svg viewBox="0 0 120 120" aria-hidden="true">
@@ -126,6 +122,7 @@
           </div>
           <h2 id="calc-verdict-titre" class="calc-verdict-titre"></h2>
           <p id="calc-verdict-texte" class="calc-verdict-texte"></p>
+          </div>
 
           <div class="calc-detail">
             <h3 class="calc-detail-titre"><%= t(ns + ':resultat.detailTitre', '') %></h3>
@@ -138,6 +135,7 @@
             <button type="button" id="calc-rejouer" class="btn btn-outline calc-action"><%= t(ns + ':form.retry', '') %></button>
           </div>
           <p id="calc-copie" class="calc-copie" hidden><%= t(ns + ':resultat.copie', '') %></p>
+          <div class="outil-fin"></div>
 
           <%# Les deux calculatrices voisines, remplacées au résultat par les
               cartes à image du bas de page (related-tests.ejs) quand elles sont
@@ -161,8 +159,15 @@
       </div>
     </div>
 
+    <div class="outil-intro">
+      <p class="text-lg text-muted-foreground"><%- t(ns + ':hero.description', '') %></p>
+    </div>
+    </div>
+
     <% if (typeof pagePublicitaire !== 'undefined' && pagePublicitaire) { %><%- include('../partials/pub', { format: 31 }) %><% } %>
   </div>
+  <%# Les deux personnages qui fêtent le résultat, copiés par js/outils.js. %>
+  <template id="outil-fete"><%- mascotteSvg('rose', 'joie', {}, 'outil-fete-perso outil-fete-perso--a') %><%- mascotteSvg('violet', 'joie', {}, 'outil-fete-perso outil-fete-perso--b') %></template>
   <%# L'image de tete vient en dernier dans le code : sous le texte sur telephone, en absolu a droite sur grand ecran. %>
   <%- include('../partials/quiz-featured', { featuredImage: typeof featuredImage !== 'undefined' ? featuredImage : null, featuredImageAlt: typeof featuredImageAlt !== 'undefined' ? featuredImageAlt : '' }) %>
 </section>
@@ -288,6 +293,7 @@
 
 <%- include('../partials/related-tests', { routeKey, lang, t, getLocalizedUrl }) %>
 
+<script src="/js/outils.js" defer></script>
 <script>
 (function () {
   'use strict';
@@ -425,6 +431,16 @@
 
   var elA = document.getElementById('calc-a'), elB = document.getElementById('calc-b');
   PRENOMS.remplir([elA, elB]);
+  // Le bouton le dit quand les deux prénoms sont là (js/outils.js, différé :
+  // il est là au plus tard quand le document est prêt).
+  var carte = document.getElementById('calc-carte');
+  function pret() {
+    if (window.QCOutil) window.QCOutil.pret(carte, !!(elA.value.trim() && elB.value.trim()));
+  }
+  elA.addEventListener('input', pret);
+  elB.addEventListener('input', pret);
+  if (window.QCOutil) pret();
+  else document.addEventListener('DOMContentLoaded', pret);
   var bloc = document.getElementById('calc-resultat'), erreur = document.getElementById('calc-erreur');
   var elPct = document.getElementById('calc-pct'), trait = document.getElementById('calc-anneau-trait');
   var RAYON = 2 * Math.PI * 52;
@@ -543,6 +559,11 @@
 
     bloc.hidden = false;
     document.getElementById('calc-carte').classList.add('calc-carte--resultat');
+    // Les deux personnages autour du score, les blocs l'un après l'autre.
+    if (window.QCOutil) {
+      window.QCOutil.fete(bloc.querySelector('.calc-verdict'));
+      window.QCOutil.deroule(bloc);
+    }
     cartesDeLaSuite(r.score);
 
     // L'anneau et le compteur montent ensemble, puis on s'arrete net sur la valeur.
@@ -602,7 +623,11 @@
     if (window.QCResultat) window.QCResultat.retour();
     bloc.hidden = true;
     document.getElementById('calc-carte').classList.remove('calc-carte--resultat');
+    // Les personnages repartent avec le résultat : ils refont la fête au suivant.
+    var fete = bloc.querySelector('.outil-fete');
+    if (fete) { fete.parentNode.classList.remove('outil-fete-hote'); fete.parentNode.removeChild(fete); }
     elA.value = ''; elB.value = ''; elA.focus();
+    pret();
     if (form.scrollIntoView) form.scrollIntoView({ behavior: 'smooth', block: 'center' });
   });
 

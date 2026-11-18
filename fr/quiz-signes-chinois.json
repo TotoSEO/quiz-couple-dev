@@ -43,6 +43,7 @@
     ],
     "dateAffichee": "{{j}} {{mois}} {{a}}",
     "erreur": "Une des deux dates n'existe pas. Vérifiez le jour et le mois choisis.",
+    "erreurVide": "Choisissez le jour, le mois et l'année des deux dates de naissance.",
     "lancer": "Calculer notre compatibilité",
     "aide": "L'année donne l'animal et l'élément. Mais l'année chinoise commence fin janvier ou début février, c'est pour ça qu'on demande la date complète."
   },

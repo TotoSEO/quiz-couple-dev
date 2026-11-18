@@ -7,12 +7,13 @@
     "subtitle": "Gratuit, sans inscription, et le résultat s'affiche tout de suite."
   },
   "form": {
-    "name1Placeholder": "Prénom de la personne 1",
-    "name2Placeholder": "Prénom de la personne 2",
+    "name1Placeholder": "Ex : Léa",
+    "name2Placeholder": "Ex : Tom",
     "sign1Label": "Signe astrologique",
     "sign2Label": "Signe astrologique",
     "selectSign": "Choisir un signe",
     "submitButton": "Vérifier la compatibilité",
+    "erreurVide": "Écrivez les deux prénoms et choisissez les deux signes.",
     "signs": {
       "belier": "Bélier ♈",
       "taureau": "Taureau ♉",

@@ -43,6 +43,7 @@
     ],
     "dateAffichee": "{{j}}. {{mois}} {{a}}",
     "erreur": "Eines der beiden Daten gibt es nicht. Prüft den gewählten Tag und Monat.",
+    "erreurVide": "Wählt Tag, Monat und Jahr für beide Geburtsdaten.",
     "lancer": "Unsere Übereinstimmung berechnen",
     "aide": "Das Jahr ergibt das Tier und das Element. Aber das chinesische Jahr beginnt Ende Januar oder Anfang Februar, deshalb fragen wir nach dem vollständigen Datum."
   },

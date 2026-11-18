@@ -12,7 +12,7 @@
 <% if (faqAstro.length) { %><script type="application/ld+json"><%- JSON.stringify({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faqAstro }) %></script><% } %>
 
 <!-- Hero with celestial background -->
-<section class="quiz-page-hero relative overflow-hidden astro-hero-section">
+<section class="quiz-page-hero relative overflow-hidden astro-hero-section outil-hero">
   <!-- Animated stars background -->
   <div class="astro-stars" aria-hidden="true">
     <div class="astro-star astro-star-1"></div>
@@ -56,191 +56,101 @@
           <li class="breadcrumb-current" aria-current="page"><%= quizTitle %></li>
         </ol>
       </nav>
-      <span class="hero-badge mb-4">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4"><circle cx="12" cy="12" r="10"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-        <%= t(ns + ':hero.badge', 'Astrologie & Numérologie') %>
-      </span>
       <%
         const heroTitle = t(ns + ':hero.title', quizTitle);
         const heroHighlight = t(ns + ':hero.highlight', 'Compatibilité amoureuse');
+        const libPersonne = { fr: 'Personne', es: 'Persona', de: 'Person', it: 'Persona', nl: 'Persoon', en: 'Person' }[lang] || 'Person';
+        const libPrenom = { fr: 'Prénom', es: 'Nombre', de: 'Vorname', it: 'Nome', nl: 'Voornaam', en: 'First name' }[lang] || 'First name';
+        const apI18n = {
+          erreurVide: t(ns + ':form.erreurVide', ''),
+          titre: t(ns + ':results.title', ''),
+          astroLabel: t(ns + ':results.astroLabel', ''),
+          astroScore: t(ns + ':results.astroScore', ''),
+          numeroLabel: t(ns + ':results.numeroLabel', ''),
+          numeroScore: t(ns + ':results.numeroScore', ''),
+          detailTitle: t(ns + ':results.detailTitle', ''),
+          numeroTitle: t(ns + ':results.numeroTitle', '')
+        };
       %>
-      <h1 class="mb-6 text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-foreground">
+      <h1 class="outil-h1 font-bold tracking-tight text-foreground">
         <% if (heroHighlight && heroTitle.includes(heroHighlight)) { %>
           <%- heroTitle.replace(heroHighlight, '<span class="text-gradient">' + heroHighlight + '</span>') %>
         <% } else { %>
           <%= heroTitle %>
         <% } %>
       </h1>
-      <p class="text-lg text-muted-foreground md:text-xl"><%- t(ns + ':hero.description', '') %></p>
-      <p class="text-sm text-muted-foreground mt-4"><%= t(ns + ':hero.subtitle', '') %></p>
-    </div>
-  </div>
-  <%# L'image de tete vient en dernier dans le code, comme sur les autres pages de test : sous le texte sur telephone, en absolu a droite sur grand ecran, ou le texte passe a gauche. %>
-  <%- include('../partials/quiz-featured', { featuredImage: typeof featuredImage !== 'undefined' ? featuredImage : null, featuredImageAlt: typeof featuredImageAlt !== 'undefined' ? featuredImageAlt : '' }) %>
-</section>
 
-<!-- Compatibility Tool -->
-<section class="py-12 md:py-16">
-  <div class="container mx-auto px-4">
-    <div class="mx-auto max-w-2xl">
-      <div id="astro-tool" class="astro-form-card rounded-2xl p-6 md:p-10">
-        <!-- Form -->
+      <div id="astro-tool" class="outil" data-lang="<%= lang %>">
         <div id="astro-form">
-          <div class="astro-form-grid">
-            <!-- Person 1 -->
-            <div class="astro-person-block astro-person-1">
-              <div class="astro-person-header">
-                <span class="astro-person-number astro-person-number-1">1</span>
-                <span class="astro-person-label"><%= lang === 'fr' ? 'Personne 1' : lang === 'es' ? 'Persona 1' : lang === 'de' ? 'Person 1' : lang === 'it' ? 'Persona 1' : lang === 'nl' ? 'Persoon 1' : 'Person 1' %></span>
-              </div>
-              <div class="astro-field">
-                <label class="astro-field-label" for="name1"><%= lang === 'fr' ? 'Prénom' : lang === 'es' ? 'Nombre' : lang === 'de' ? 'Vorname' : lang === 'it' ? 'Nome' : lang === 'nl' ? 'Voornaam' : 'First name' %></label>
-                <input type="text" id="name1" class="astro-input" placeholder="<%= t(ns + ':form.name1Placeholder', 'Prénom') %>" autocomplete="off" maxlength="30">
-              </div>
-              <div class="astro-field">
-                <label class="astro-field-label" for="sign1"><%= t(ns + ':form.sign1Label', 'Signe astrologique') %></label>
-                <div class="astro-select-wrap">
-                  <select id="sign1" class="astro-input astro-select">
+          <div class="outil-duo">
+          <% [1, 2].forEach(function (n) { %>
+            <div class="dn-personne dn-personne--<%= n %>">
+              <p class="dn-personne-titre"><span class="outil-avatar" aria-hidden="true"><%- mascotteSvg(n === 1 ? 'rose' : 'violet', n === 1 ? 'salut' : 'mignon', {}, '') %></span><%= libPersonne %> <%= n %></p>
+              <div class="ap-champs">
+                <div class="astro-field">
+                  <label class="astro-field-label" for="name<%= n %>"><%= libPrenom %></label>
+                  <input type="text" id="name<%= n %>" class="astro-input" placeholder="<%= t(ns + ':form.name' + n + 'Placeholder', '') %>" autocomplete="off" maxlength="30">
+                </div>
+                <div class="astro-field">
+                  <label class="astro-field-label" for="sign<%= n %>"><%= t(ns + ':form.sign' + n + 'Label', 'Signe astrologique') %></label>
+                  <div class="astro-select-wrap">
+                  <select id="sign<%= n %>" class="astro-input astro-select">
                     <option value="" disabled selected><%= t(ns + ':form.selectSign', 'Choisir un signe') %></option>
-                    <option value="belier"><%= t(ns + ':form.signs.belier', 'Bélier ♈') %></option>
-                    <option value="taureau"><%= t(ns + ':form.signs.taureau', 'Taureau ♉') %></option>
-                    <option value="gemeaux"><%= t(ns + ':form.signs.gemeaux', 'Gémeaux ♊') %></option>
-                    <option value="cancer"><%= t(ns + ':form.signs.cancer', 'Cancer ♋') %></option>
-                    <option value="lion"><%= t(ns + ':form.signs.lion', 'Lion ♌') %></option>
-                    <option value="vierge"><%= t(ns + ':form.signs.vierge', 'Vierge ♍') %></option>
-                    <option value="balance"><%= t(ns + ':form.signs.balance', 'Balance ♎') %></option>
-                    <option value="scorpion"><%= t(ns + ':form.signs.scorpion', 'Scorpion ♏') %></option>
-                    <option value="sagittaire"><%= t(ns + ':form.signs.sagittaire', 'Sagittaire ♐') %></option>
-                    <option value="capricorne"><%= t(ns + ':form.signs.capricorne', 'Capricorne ♑') %></option>
-                    <option value="verseau"><%= t(ns + ':form.signs.verseau', 'Verseau ♒') %></option>
-                    <option value="poissons"><%= t(ns + ':form.signs.poissons', 'Poissons ♓') %></option>
+<% ['belier','taureau','gemeaux','cancer','lion','vierge','balance','scorpion','sagittaire','capricorne','verseau','poissons'].forEach(function (cle) { %>                    <option value="<%= cle %>"><%= t(ns + ':form.signs.' + cle, cle) %></option>
+<% }); %>
                   </select>
+                  </div>
                 </div>
               </div>
+              <p id="ap-apercu<%= n %>" class="outil-apercu" aria-live="polite"></p>
             </div>
-
-            <!-- Heart separator -->
-            <div class="astro-heart-divider">
-              <div class="astro-heart-line"></div>
-              <span class="astro-heart-icon">&#10084;&#65039;</span>
-              <div class="astro-heart-line"></div>
-            </div>
-
-            <!-- Person 2 -->
-            <div class="astro-person-block astro-person-2">
-              <div class="astro-person-header">
-                <span class="astro-person-number astro-person-number-2">2</span>
-                <span class="astro-person-label"><%= lang === 'fr' ? 'Personne 2' : lang === 'es' ? 'Persona 2' : lang === 'de' ? 'Person 2' : lang === 'it' ? 'Persona 2' : lang === 'nl' ? 'Persoon 2' : 'Person 2' %></span>
-              </div>
-              <div class="astro-field">
-                <label class="astro-field-label" for="name2"><%= lang === 'fr' ? 'Prénom' : lang === 'es' ? 'Nombre' : lang === 'de' ? 'Vorname' : lang === 'it' ? 'Nome' : lang === 'nl' ? 'Voornaam' : 'First name' %></label>
-                <input type="text" id="name2" class="astro-input" placeholder="<%= t(ns + ':form.name2Placeholder', 'Prénom') %>" autocomplete="off" maxlength="30">
-              </div>
-              <div class="astro-field">
-                <label class="astro-field-label" for="sign2"><%= t(ns + ':form.sign2Label', 'Signe astrologique') %></label>
-                <div class="astro-select-wrap">
-                  <select id="sign2" class="astro-input astro-select">
-                    <option value="" disabled selected><%= t(ns + ':form.selectSign', 'Choisir un signe') %></option>
-                    <option value="belier"><%= t(ns + ':form.signs.belier', 'Bélier ♈') %></option>
-                    <option value="taureau"><%= t(ns + ':form.signs.taureau', 'Taureau ♉') %></option>
-                    <option value="gemeaux"><%= t(ns + ':form.signs.gemeaux', 'Gémeaux ♊') %></option>
-                    <option value="cancer"><%= t(ns + ':form.signs.cancer', 'Cancer ♋') %></option>
-                    <option value="lion"><%= t(ns + ':form.signs.lion', 'Lion ♌') %></option>
-                    <option value="vierge"><%= t(ns + ':form.signs.vierge', 'Vierge ♍') %></option>
-                    <option value="balance"><%= t(ns + ':form.signs.balance', 'Balance ♎') %></option>
-                    <option value="scorpion"><%= t(ns + ':form.signs.scorpion', 'Scorpion ♏') %></option>
-                    <option value="sagittaire"><%= t(ns + ':form.signs.sagittaire', 'Sagittaire ♐') %></option>
-                    <option value="capricorne"><%= t(ns + ':form.signs.capricorne', 'Capricorne ♑') %></option>
-                    <option value="verseau"><%= t(ns + ':form.signs.verseau', 'Verseau ♒') %></option>
-                    <option value="poissons"><%= t(ns + ':form.signs.poissons', 'Poissons ♓') %></option>
-                  </select>
-                </div>
-              </div>
-            </div>
+          <% }); %>
           </div>
 
-          <!-- Submit -->
-          <div class="mt-8 text-center">
-            <button id="astro-submit" class="btn btn-cta btn-gradient astro-submit-btn">
+          <p id="astro-erreur" class="dn-erreur hidden" role="alert"></p>
+
+          <div class="outil-action">
+            <button id="astro-submit" type="button" class="btn btn-cta btn-gradient astro-submit-btn">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="h-5 w-5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
               <%= t(ns + ':form.submitButton', 'Vérifier la compatibilité') %>
             </button>
           </div>
         </div>
 
-        <!-- Results (hidden initially) -->
-        <div id="astro-results" class="hidden">
-          <!-- Overall Score -->
-          <div class="quiz-result-card rounded-2xl p-8 mb-8">
-            <h2 class="text-2xl font-bold mb-6 text-foreground"><%= t(ns + ':results.title', 'Votre compatibilité') %></h2>
-            <p id="result-names" class="text-lg text-muted-foreground mb-6"></p>
-            <div class="quiz-score-circle mx-auto mb-4">
-              <span id="result-overall"></span>
-            </div>
-            <p class="text-sm text-muted-foreground mt-2"><%= t(ns + ':results.overall', 'Score global') %></p>
-          </div>
+        <div id="astro-results" class="hidden"></div>
 
-          <!-- Breakdown -->
-          <div class="grid gap-6 md:grid-cols-2 mb-8">
-            <!-- Astro Score -->
-            <div class="glass-card rounded-xl p-6 text-center">
-              <div class="quiz-score-circle quiz-score-sm mx-auto mb-3">
-                <span id="result-astro-score"></span>
-              </div>
-              <h3 class="font-semibold text-foreground mb-1"><%= t(ns + ':results.astroLabel', 'Astrologie') %></h3>
-              <p class="text-sm text-muted-foreground"><%= t(ns + ':results.astroScore', 'Compatibilité astrale') %></p>
-            </div>
-            <!-- Numero Score -->
-            <div class="glass-card rounded-xl p-6 text-center">
-              <div class="quiz-score-circle quiz-score-sm mx-auto mb-3">
-                <span id="result-numero-score"></span>
-              </div>
-              <h3 class="font-semibold text-foreground mb-1"><%= t(ns + ':results.numeroLabel', 'Numérologie') %></h3>
-              <p class="text-sm text-muted-foreground"><%= t(ns + ':results.numeroScore', 'Compatibilité des prénoms') %></p>
-            </div>
-          </div>
-
-          <!-- Astro Explanation -->
-          <div class="glass-card rounded-xl p-6 md:p-8 mb-6">
-            <h3 class="text-xl font-bold text-foreground mb-4 flex items-center gap-2">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="h-5 w-5 text-primary"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-              <%= t(ns + ':results.detailTitle', 'Analyse détaillée de vos signes') %>
-            </h3>
-            <p id="result-astro-detail" class="text-muted-foreground leading-relaxed"></p>
-          </div>
-
-          <!-- Numero Explanation -->
-          <div class="glass-card rounded-xl p-6 md:p-8 mb-8">
-            <h3 class="text-xl font-bold text-foreground mb-4 flex items-center gap-2">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="h-5 w-5 text-primary"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
-              <%= t(ns + ':results.numeroTitle', 'Ce que vos prénoms révèlent') %>
-            </h3>
-            <p id="result-numero-detail" class="text-muted-foreground leading-relaxed"></p>
-          </div>
-
-          <!-- Try Again + CTAs -->
-          <div class="text-center space-y-3">
-            <button id="astro-retry" class="btn btn-outline px-8 py-3">
+        <div id="astro-suite" class="outil-suite hidden">
+          <div class="outil-fin"></div>
+          <div class="outil-bas">
+            <button id="astro-retry" type="button" class="btn btn-outline px-8 py-3">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="h-4 w-4"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg>
               <%= t(ns + ':results.tryAgain', 'Tester un autre couple') %>
             </button>
-            <div class="flex flex-col sm:flex-row items-center justify-center gap-3 pt-3">
-              <a href="#pq-reviews" class="btn btn-outline px-6 py-2.5 text-sm">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="h-4 w-4"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                <%= lang === 'fr' ? 'Laisser un avis' : lang === 'es' ? 'Dejar una opinión' : lang === 'de' ? 'Bewertung abgeben' : lang === 'it' ? 'Lascia una recensione' : lang === 'nl' ? 'Laat een review achter' : 'Leave a review' %>
-              </a>
-              <% if (lang === 'fr') { %>
-              <a href="#ebook-form-section" class="btn btn-primary px-6 py-2.5 text-sm">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="h-4 w-4"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
-                Apprendre l'astrologie gratuitement en 30 minutes
-              </a>
-              <% } %>
-            </div>
+            <a href="#pq-reviews" class="btn btn-outline px-6 py-2.5 text-sm">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="h-4 w-4"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <%= lang === 'fr' ? 'Laisser un avis' : lang === 'es' ? 'Dejar una opinión' : lang === 'de' ? 'Bewertung abgeben' : lang === 'it' ? 'Lascia una recensione' : lang === 'nl' ? 'Laat een review achter' : 'Leave a review' %>
+            </a>
+            <% if (lang === 'fr') { %>
+            <a href="#ebook-form-section" class="btn btn-primary px-6 py-2.5 text-sm">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="h-4 w-4"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+              Apprendre l'astrologie gratuitement en 30 minutes
+            </a>
+            <% } %>
           </div>
         </div>
       </div>
+
+      <div class="outil-intro">
+        <p class="text-lg text-muted-foreground"><%- t(ns + ':hero.description', '') %></p>
+        <p class="text-sm text-muted-foreground mt-3"><%= t(ns + ':hero.subtitle', '') %></p>
+      </div>
     </div>
   </div>
+  <script>window.__QC_AP = <%- JSON.stringify(apI18n).replace(/</g, '\\u003c') %>;</script>
+  <%# Les deux personnages qui fêtent le résultat, copiés par js/outils.js. %>
+  <template id="outil-fete"><%- mascotteSvg('rose', 'joie', {}, 'outil-fete-perso outil-fete-perso--a') %><%- mascotteSvg('violet', 'joie', {}, 'outil-fete-perso outil-fete-perso--b') %></template>
+  <%# L'image de tete vient en dernier dans le code, comme sur les autres pages de test : sous le texte sur telephone, en absolu a droite sur grand ecran, ou le texte passe a gauche. %>
+  <%- include('../partials/quiz-featured', { featuredImage: typeof featuredImage !== 'undefined' ? featuredImage : null, featuredImageAlt: typeof featuredImageAlt !== 'undefined' ? featuredImageAlt : '' }) %>
 </section>
 
 <%# Sous le moteur, jamais au-dessus : une publicite devant le repousserait
@@ -404,6 +314,7 @@
 
 <%- include('../partials/related-tests', { routeKey, lang, t, getLocalizedUrl }) %>
 
+<script src="/js/outils.js" defer></script>
 <!-- Zodiac Compatibility Data & Logic -->
 <script>
 (function() {
@@ -540,28 +451,94 @@
 
   var form = document.getElementById('astro-form');
   var results = document.getElementById('astro-results');
+  var suite = document.getElementById('astro-suite');
+  var outil = document.getElementById('astro-tool');
   var submitBtn = document.getElementById('astro-submit');
   var retryBtn = document.getElementById('astro-retry');
-  PRENOMS.remplir([document.getElementById('name1'), document.getElementById('name2')]);
+  var erreur = document.getElementById('astro-erreur');
+  var T = window.__QC_AP || {};
+  function champ(id) { return document.getElementById(id); }
+  function esc(s) {
+    return String(s).replace(/[&<>"']/g, function (c) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+    });
+  }
+  function lettres(nom) {
+    return String(nom || '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/[^a-z]/g, '');
+  }
+  function traits(n) { return NUMBER_TRAITS[n] ? (NUMBER_TRAITS[n][LANG] || NUMBER_TRAITS[n].fr) : ''; }
 
-  submitBtn.addEventListener('click', function() {
-    var name1 = document.getElementById('name1').value.trim();
-    var name2 = document.getElementById('name2').value.trim();
-    var sign1 = document.getElementById('sign1').value;
-    var sign2 = document.getElementById('sign2').value;
+  // L'anneau et les jauges, dessinés comme ceux des autres outils
+  // (date de naissance, signes chinois) : mêmes classes, même style.
+  function anneau(pct) {
+    var r = 52, c = 2 * Math.PI * r, off = c * (1 - pct / 100);
+    return '<svg class="dn-anneau" viewBox="0 0 120 120" role="img" aria-label="' + pct + '%">' +
+      '<circle cx="60" cy="60" r="' + r + '" class="dn-anneau-fond"></circle>' +
+      '<circle cx="60" cy="60" r="' + r + '" class="dn-anneau-trait" ' +
+      'stroke-dasharray="' + c.toFixed(1) + '" stroke-dashoffset="' + off.toFixed(1) + '" style="--c:' + c.toFixed(1) + '"></circle>' +
+      '</svg><span class="dn-anneau-valeur"><span data-compte="' + pct + '">' + pct + '</span><small>%</small></span>';
+  }
+  function barre(note, libelle, valeur) {
+    return '<div class="dn-axe">' +
+      '<div class="dn-axe-tete"><span class="dn-axe-nom">' + esc(libelle) + '</span>' +
+      '<span class="dn-axe-note">' + Math.round(note * 10) + '%</span></div>' +
+      '<div class="dn-axe-piste"><span class="dn-axe-jauge" style="width:' + Math.round(note * 10) + '%"></span></div>' +
+      '<p class="dn-axe-valeur">' + esc(valeur) + '</p></div>';
+  }
+
+  // L'aperçu en direct (18 novembre 2026) : dès qu'un prénom est écrit, son
+  // nombre et ce qu'il dit s'affichent sous lui ; le bouton le dit quand les
+  // deux prénoms et les deux signes sont là.
+  function apercu() {
+    if (!window.QCOutil) return;
+    var tout = true;
+    [1, 2].forEach(function (n) {
+      var nom = champ('name' + n).value.trim(), html = '';
+      if (lettres(nom)) {
+        var k = getNameNumber(nom);
+        html = '<span class="outil-puce">🔢 <b>' + k + '</b> ' + esc(traits(k)) + '</span>';
+      } else {
+        tout = false;
+      }
+      if (!champ('sign' + n).value) tout = false;
+      window.QCOutil.apercu(champ('ap-apercu' + n), html);
+    });
+    window.QCOutil.pret(outil, tout);
+  }
+  [1, 2].forEach(function (n) {
+    champ('name' + n).addEventListener('input', apercu);
+    champ('sign' + n).addEventListener('change', apercu);
+  });
+  PRENOMS.remplir([champ('name1'), champ('name2')]);
+  // Le petit script commun des outils (js/outils.js) est différé : il est là
+  // au plus tard quand le document est prêt.
+  if (window.QCOutil) apercu();
+  else document.addEventListener('DOMContentLoaded', apercu);
+
+  function versLOutil() {
+    var haut = outil.getBoundingClientRect().top + window.pageYOffset - 80;
+    window.scrollTo({ top: haut, behavior: 'smooth' });
+  }
+
+  function calculer() {
+    var name1 = champ('name1').value.trim();
+    var name2 = champ('name2').value.trim();
+    var sign1 = champ('sign1').value;
+    var sign2 = champ('sign2').value;
 
     if (!name1 || !name2 || !sign1 || !sign2) {
-      // Shake the button
+      erreur.textContent = T.erreurVide || '';
+      erreur.classList.remove('hidden');
       submitBtn.classList.add('animate-shake');
-      setTimeout(function(){ submitBtn.classList.remove('animate-shake'); }, 500);
+      setTimeout(function () { submitBtn.classList.remove('animate-shake'); }, 500);
       return;
     }
+    erreur.classList.add('hidden');
 
     PRENOMS.garder([name1, name2]);
 
     // Calculate astro score
-    var astroKey = sign1 + '_' + sign2;
-    var astroData = ZODIAC_DATA[astroKey] || { score: 5, text: '' };
+    var astroData = ZODIAC_DATA[sign1 + '_' + sign2] || { score: 5, text: '' };
     var astroScore = astroData.score;
 
     // Calculate numerology score
@@ -573,39 +550,42 @@
     var overall = Math.round((astroScore * 0.6 + numeroScore * 0.4) * 10) / 10;
     var overallPct = Math.round(overall * 10);
 
-    // Display results
-    document.getElementById('result-names').textContent = name1 + ' & ' + name2;
-    document.getElementById('result-overall').textContent = overallPct + '%';
-    document.getElementById('result-astro-score').textContent = (astroScore * 10) + '%';
-    document.getElementById('result-numero-score').textContent = (numeroScore * 10) + '%';
-    document.getElementById('result-astro-detail').textContent = astroData.text;
-    document.getElementById('result-numero-detail').textContent = getNumeroExplanation(name1, name2, n1, n2, numeroScore);
+    // La classe quiz-result-card n'est pas décorative : c'est elle que
+    // guettent le compteur de parties et le module de notation.
+    var html = '<div class="dn-verdict quiz-result-card ap-carte">' +
+      '<p class="ap-noms">' + esc(name1) + ' &amp; ' + esc(name2) + '</p>' +
+      '<div class="dn-anneau-boite">' + anneau(overallPct) + '</div>' +
+      '<h2 class="dn-verdict-titre">' + esc(T.titre || '') + '</h2>' +
+      '</div>' +
+      '<div class="dn-axes ap-axes">' +
+      barre(astroScore, T.astroLabel || '', T.astroScore || '') +
+      barre(numeroScore, T.numeroLabel || '', T.numeroScore || '') +
+      '</div>' +
+      '<section class="dn-bloc"><h3 class="dn-bloc-titre">⭐ ' + esc(T.detailTitle || '') + '</h3><p>' + esc(astroData.text) + '</p></section>' +
+      '<section class="dn-bloc"><h3 class="dn-bloc-titre">🔢 ' + esc(T.numeroTitle || '') + '</h3><p>' + esc(getNumeroExplanation(name1, name2, n1, n2, numeroScore)) + '</p></section>';
 
-    // Animate score circle color
-    var overallCircle = results.querySelector('.quiz-score-circle');
-    if (overallPct >= 70) overallCircle.style.borderColor = 'hsl(142 71% 45%)';
-    else if (overallPct >= 50) overallCircle.style.borderColor = 'hsl(45 93% 47%)';
-    else overallCircle.style.borderColor = 'hsl(0 84% 60%)';
-
-    // Show results, hide form
+    results.innerHTML = '<div class="outil-resultat">' + html + '</div>';
     form.classList.add('hidden');
     results.classList.remove('hidden');
+    suite.classList.remove('hidden');
+    if (window.QCOutil) window.QCOutil.resultat(results.firstChild, results.querySelector('.ap-carte'));
 
     // Ce test a son propre moteur et ne passe pas par le noyau : on signale
     // nous-mêmes que le résultat est là, pour qu'il prenne son adresse et
     // compte comme une page vue. Fichier absent ? On remonte simplement sur
     // le résultat, comme avant.
-    function versLeResultat() {
-      results.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
     if (window.QCResultat) {
       window.QCResultat.arrivee(results, {
         lang: document.documentElement.lang || 'fr',
-        apres: versLeResultat
+        apres: versLOutil
       });
     } else {
-      versLeResultat();
+      versLOutil();
     }
+  }
+  submitBtn.addEventListener('click', calculer);
+  form.addEventListener('keydown', function (e) {
+    if (e.key === 'Enter' && e.target && e.target.tagName === 'INPUT') { e.preventDefault(); calculer(); }
   });
 
   retryBtn.addEventListener('click', function() {
@@ -613,12 +593,14 @@
     // annoncerait sinon un résultat devant un formulaire vide.
     if (window.QCResultat) window.QCResultat.retour();
     results.classList.add('hidden');
+    suite.classList.add('hidden');
     form.classList.remove('hidden');
-    document.getElementById('name1').value = '';
-    document.getElementById('name2').value = '';
-    document.getElementById('sign1').selectedIndex = 0;
-    document.getElementById('sign2').selectedIndex = 0;
-    form.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    champ('name1').value = '';
+    champ('name2').value = '';
+    champ('sign1').selectedIndex = 0;
+    champ('sign2').selectedIndex = 0;
+    apercu();
+    versLOutil();
   });
 
   // ═══════════════════════════════════════════════════════

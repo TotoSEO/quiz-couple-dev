@@ -253,7 +253,7 @@
   // mais quatre moteurs autonomes ont leur propre racine. On les nomme ici
   // plutot que d'ecouter le document entier, sinon un clic sur le bandeau
   // cookies ou sur la FAQ passerait pour un lancement.
-  var RACINES_MOTEUR = '#quiz-engine, [data-quiz], #astro-form, #dn-outil, #sc-outil, #cc-outil, #nm-outil, #da-outil, #pm-outil, #mg-outil, #calc-carte, #soiree-app';
+  var RACINES_MOTEUR = '#quiz-engine, [data-quiz], #astro-tool, #dn-outil, #sc-outil, #cc-outil, #nm-outil, #da-outil, #pm-outil, #mg-outil, #calc-carte, #soiree-app';
 
   function watchStart(slug) {
     var cle = 'qc-start-' + slug;
@@ -524,6 +524,15 @@
     // l'attribut data-quiz-avis, sinon le raccourci reste en bas de la carte.
     function inject(card, collant) {
       if (card.querySelector('.qr-rate')) return;
+      // Les outils refaits le 18 novembre 2026 gardent une place après tout
+      // leur résultat (.outil-fin) : l'avis s'y pose, une seule fois, au
+      // lieu de s'intercaler sous le grand chiffre.
+      var outilFin = card.closest && card.closest('.outil') ? card.closest('.outil').querySelector('.outil-fin') : null;
+      if (outilFin) {
+        if (outilFin.querySelector('.qr-rate')) return;
+        card = outilFin;
+        collant = false;
+      }
       // Les ecrans de resultat portent deja un formulaire d'avis complet, avec
       // ses propres etoiles. Y ajouter le raccourci donnait deux blocs de
       // notation dans la meme carte, a quelques centimetres l'un de l'autre.
@@ -596,7 +605,7 @@
     try { history.scrollRestoration = 'auto'; } catch (e) {}
     var debut = Date.now();
     (function attends() {
-      var m = document.querySelector('#quiz-engine, [data-quiz], #astro-form, #dn-outil, #sc-outil, #cc-outil, #nm-outil, #da-outil, #pm-outil, #mg-outil');
+      var m = document.querySelector('#quiz-engine, [data-quiz], #astro-tool, #dn-outil, #sc-outil, #cc-outil, #nm-outil, #da-outil, #pm-outil, #mg-outil');
       if (m && (m.textContent || '').trim().length > 20) {
         m.scrollIntoView({ block: 'start' });
         return;
@@ -613,7 +622,7 @@
   // (related-tests.ejs), comme le bloc de renvoi du moteur commun et la
   // calculatrice (9 novembre 2026, pages vues par visite). Dans la carte, et
   // pas à côté : une carte de résultat masquée emporte ses cartes avec elle.
-  var OUTILS_A_SUITE = '#astro-form, #dn-outil, #sc-outil, #cc-outil, #nm-outil, #da-outil, #mg-outil';
+  var OUTILS_A_SUITE = '#astro-tool, #dn-outil, #sc-outil, #cc-outil, #nm-outil, #da-outil, #mg-outil';
   function cartesApresResultat() {
     var outil = document.querySelector(OUTILS_A_SUITE);
     var grille = document.querySelector('.related-tests-section .suite-grille');
@@ -623,8 +632,11 @@
     var titre = pastille ? pastille.textContent.trim() : '';
     function pose() {
       var resultats = outil.querySelectorAll('.quiz-result-card');
+      // La place réservée après le résultat (.outil-fin), quand l'outil en a
+      // une : les cartes y vont, une seule fois.
+      var fin = outil.querySelector('.outil-fin');
       for (var i = 0; i < resultats.length; i++) {
-        var carte = resultats[i];
+        var carte = fin || resultats[i];
         if (carte.querySelector('.suite-resultat')) continue;
         var bloc = document.createElement('div');
         bloc.className = 'suite-resultat';

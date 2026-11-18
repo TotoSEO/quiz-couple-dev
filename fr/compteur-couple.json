@@ -1,7 +1,7 @@
 {
   "hero": {
     "badge": "Outil gratuit",
-    "title": "Compteur de durée en couple : depuis combien de temps êtes-vous ensemble ?",
+    "title": "Compteur de durée en couple : combien de jours êtes-vous ensemble ?",
     "highlight": "Compteur de durée en couple",
     "description": "Entrez la date de votre premier jour à deux. Le compteur vous donne <strong>le nombre de jours ensemble</strong>, la durée en années, mois et jours, et les prochaines dates à fêter : anniversaire, mois ronds, cap des 1 000 jours... Avec un lien à garder pour revenir voir le chiffre monter.",
     "subtitle": "Aucune inscription. La date reste dans votre téléphone, rien n'est envoyé."
@@ -476,7 +476,7 @@
     "p3": "Et comme un chiffre tout seul ne fait pas grand-chose, le compteur vous dit aussi ce qui arrive : le prochain anniversaire avec le nom des noces qui va avec, le prochain mois rond, et les caps de jours qu'on ne voit jamais venir, les 500 jours, les 1 000 jours, les 10 000 heures. Ça donne des occasions de fêter quelque chose en dehors des dates habituelles, et c'est souvent celles-là qu'on retient !"
   },
   "section2": {
-    "title": "Comment fonctionne le compteur ci-dessus",
+    "title": "Comment le compteur calcule votre nombre de jours ensemble",
     "p1": "Voici ce que fait le compteur une fois que vous lui avez donné votre date :",
     "points": [
       "<strong>Il compte les jours :</strong> le nombre exact de jours écoulés entre votre date de début et aujourd'hui, années bissextiles comprises. C'est le grand chiffre en haut de la carte.",
