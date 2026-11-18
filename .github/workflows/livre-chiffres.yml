@@ -1,0 +1,35 @@
+name: Livre · chiffres de la page
+
+# Les chiffres de la page du livre (onglet Livre de l'admin, get_livre_stats),
+# comparés aux visites que la mesure de toutes les pages (page_views) a vues
+# sur la page du livre, à la page vue juste avant elle, et aux visites du site
+# par langue, pour les lire sans le mot de passe de l'admin
+# (livre/chiffres.mjs ; 18 novembre 2026, Thomas : « la page du livre n'a
+# reçu que 154 visites depuis sa mise en ligne [...] comment tu expliques
+# ça ? »). À lancer à la main. Lecture seule : rien n'est écrit en base, et
+# aucun numéro de visite ne sort au journal, qui est public.
+
+on:
+  workflow_dispatch:
+
+concurrency:
+  group: livre-chiffres
+  cancel-in-progress: false
+
+jobs:
+  chiffres:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      SUPABASE_ACCESS_TOKEN: ${{ secrets.SUPABASE_ACCESS_TOKEN }}
+      SUPABASE_PROJECT_REF: ${{ secrets.SUPABASE_PROJECT_REF }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: livre/chiffres.mjs
+          sparse-checkout-cone-mode: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Chiffres
+        run: node livre/chiffres.mjs
