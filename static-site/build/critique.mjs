@@ -182,9 +182,12 @@ const TOUJOURS = /^(@import|@charset|@namespace|@font-face|@property|:root\b|htm
 // a la main apres chaque releve ; oubliees le 8 octobre 2026, elles sont
 // gardees ici, a leur place dans la feuille.
 const GARDER_PAR_CLE = {
-  compteurCouple: /\.(cc-[a-z]|dn-verdict|dn-bloc)/,
-  nocesMariage: /\.(nm-[a-z]|cc-actions|cc-copie|dn-verdict|dn-bloc)/,
-  differenceAge: /\.(da-[a-z]|cc-actions|cc-copie|dn-verdict|dn-bloc)/,
+  // Ces trois outils peuvent rouvrir leur résultat au chargement (mémoire ou
+  // lien) : le cadre du résultat des outils (.outil-resultat, .outil-fete...,
+  // 18 novembre 2026) est gardé avec le reste.
+  compteurCouple: /\.(cc-[a-z]|dn-verdict|dn-bloc|outil-)/,
+  nocesMariage: /\.(nm-[a-z]|cc-actions|cc-copie|dn-verdict|dn-bloc|outil-)/,
+  differenceAge: /\.(da-[a-z]|cc-actions|cc-copie|dn-verdict|dn-bloc|outil-)/,
   jeuxParMessage: /\.(pm-[a-z]|cc-copie)/,
   jeuMarguerite: /\.(mg-[a-z]|cc-copie)/,
 };

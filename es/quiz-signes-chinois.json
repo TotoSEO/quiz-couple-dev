@@ -43,6 +43,7 @@
     ],
     "dateAffichee": "{{j}} de {{mois}} de {{a}}",
     "erreur": "Una de las dos fechas no existe. Comprobad el día y el mes elegidos.",
+    "erreurVide": "Elegid el día, el mes y el año de las dos fechas de nacimiento.",
     "lancer": "Calcular nuestra compatibilidad",
     "aide": "El año da el animal y el elemento. Pero el año chino empieza a finales de enero o principios de febrero, por eso pedimos la fecha completa."
   },

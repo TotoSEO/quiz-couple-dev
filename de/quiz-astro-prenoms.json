@@ -7,12 +7,13 @@
     "subtitle": "Kostenlos, ohne Anmeldung, und das Ergebnis erscheint sofort."
   },
   "form": {
-    "name1Placeholder": "Vorname von Person 1",
-    "name2Placeholder": "Vorname von Person 2",
+    "name1Placeholder": "z. B. Lena",
+    "name2Placeholder": "z. B. Jonas",
     "sign1Label": "Sternzeichen",
     "sign2Label": "Sternzeichen",
     "selectSign": "Sternzeichen wählen",
     "submitButton": "Kompatibilität prüfen",
+    "erreurVide": "Gebt beide Vornamen ein und wählt beide Sternzeichen.",
     "signs": {
       "belier": "Widder ♈",
       "taureau": "Stier ♉",

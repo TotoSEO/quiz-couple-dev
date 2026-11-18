@@ -304,11 +304,18 @@
     }
 
     var sortie = el('da-resultat');
-    sortie.innerHTML = html;
+    sortie.innerHTML = '<div class="outil-resultat">' + html + '</div>';
     sortie.classList.remove('hidden');
     el('da-formulaire').classList.add('hidden');
     el('da-suite').classList.remove('hidden');
     courant = r;
+    // Les deux personnages autour de l'écart ; les blocs arrivent l'un après
+    // l'autre, sauf pour un écart rouvert (rien ne bouge).
+    if (window.QCOutil && !(options && options.silencieux)) {
+      window.QCOutil.resultat(sortie.firstChild, sortie.querySelector('.da-carte'));
+    } else if (window.QCOutil) {
+      window.QCOutil.fete(sortie.querySelector('.da-carte'));
+    }
 
     function versLeResultat() {
       var haut = racine.getBoundingClientRect().top + window.pageYOffset - 80;
@@ -374,9 +381,35 @@
     document.body.removeChild(z);
   }
 
+  // ── L'aperçu en direct (18 novembre 2026) ─────────────────
+  // Dès qu'une date de naissance est complète, l'âge s'écrit sous elle ; le
+  // bouton le dit quand les deux le sont.
+  function datePossible(d) {
+    return !!(d.j && d.m && d.a) && dateValide(d) && utc(d) <= utc(aujourdhui());
+  }
+  function apercu() {
+    if (!window.QCOutil) return;
+    var pret = true;
+    ['1', '2'].forEach(function (s) {
+      var p = lirePersonne(s), html = '';
+      if (datePossible(p.d)) {
+        var n = age(p.d, aujourdhui());
+        html = '<span class="outil-puce">\uD83C\uDF82 <b>' + nombre(n) + '</b> ' + echapper(unite('an', n)) + '</span>';
+      } else {
+        pret = false;
+      }
+      window.QCOutil.apercu(el('da-apercu-' + s), html);
+    });
+    window.QCOutil.pret(racine, pret);
+  }
+
   // ── Au chargement ─────────────────────────────────────────
   remplirSelects('1');
   remplirSelects('2');
+  ['jour', 'mois', 'annee'].forEach(function (champ) {
+    el('da-' + champ + '-1').addEventListener('change', apercu);
+    el('da-' + champ + '-2').addEventListener('change', apercu);
+  });
   el('da-lancer').addEventListener('click', calculer);
   el('da-refaire').addEventListener('click', modifier);
   el('da-copier').addEventListener('click', copierLeLien);
@@ -388,6 +421,7 @@
     poserPersonne('2', connu.autre);
     memoriser(connu.moi, connu.autre);
     afficher(calcul(connu.moi, connu.autre), { silencieux: true });
+    apercu();
   }
 
   // Pour les essais : le calcul exposé, sans rien afficher.

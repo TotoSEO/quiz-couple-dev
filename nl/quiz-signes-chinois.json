@@ -43,6 +43,7 @@
     ],
     "dateAffichee": "{{j}} {{mois}} {{a}}",
     "erreur": "Een van de twee data bestaat niet. Controleer de dag en de maand die je hebt gekozen.",
+    "erreurVide": "Kies de dag, de maand en het jaar van beide geboortedata.",
     "lancer": "Bereken onze compatibiliteit",
     "aide": "Het jaar geeft het dier en het element. Maar het Chinese jaar begint eind januari of begin februari, en daarom vragen we de volledige datum."
   },

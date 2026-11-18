@@ -254,12 +254,19 @@
     }
 
     var sortie = el('nm-resultat');
-    sortie.innerHTML = html;
+    sortie.innerHTML = '<div class="outil-resultat">' + html + '</div>';
     sortie.classList.remove('hidden');
     el('nm-formulaire').classList.add('hidden');
     el('nm-suite').classList.remove('hidden');
     marquerLigne(r.actuelle ? r.actuelle.e : null);
     courant = r;
+    // Les deux personnages autour du nom des noces ; les blocs arrivent
+    // l'un après l'autre, sauf pour une date rouverte (rien ne bouge).
+    if (window.QCOutil && !(options && options.silencieux)) {
+      window.QCOutil.resultat(sortie.firstChild, sortie.querySelector('.nm-carte'));
+    } else if (window.QCOutil) {
+      window.QCOutil.fete(sortie.querySelector('.nm-carte'));
+    }
 
     function versLeResultat() {
       var haut = racine.getBoundingClientRect().top + window.pageYOffset - 80;
@@ -320,8 +327,33 @@
     document.body.removeChild(z);
   }
 
+  // ── L'aperçu en direct (18 novembre 2026) ─────────────────
+  // Dès que la date est complète, les dernières noces s'écrivent sous elle
+  // (ou les premières, ou le mariage à venir) : on voit que ça marche.
+  function apercu() {
+    if (!window.QCOutil) return;
+    var d = lireDate(), html = '';
+    var ok = !!(d.j && d.m && d.a) && dateValide(d);
+    if (ok) {
+      var r = calcul(d), texte = '';
+      if (r.avant > 0) {
+        texte = echapper(remplir(tr('resultat.avant', ''), { dans: quand(r.avant), date: dateLisible(r.debut) }));
+      } else if (r.actuelle) {
+        texte = '<b>' + echapper(nomNoces(r.actuelle.e)) + '</b> · ' + echapper(annees(r.actuelle.e));
+      } else if (r.duree && r.duree.totalMois === 0 && r.duree.jours === 0) {
+        texte = echapper(tr('resultat.jourJ', ''));
+      } else if (r.suivantes.length) {
+        texte = '<b>' + echapper(nomNoces(r.suivantes[0].e)) + '</b> · ' + echapper(quand(r.suivantes[0].dans));
+      }
+      if (texte) html = '<span class="outil-puce">\uD83D\uDC8D ' + texte + '</span>';
+    }
+    window.QCOutil.apercu(el('nm-apercu'), html);
+    window.QCOutil.pret(racine, ok);
+  }
+
   // ── Au chargement ─────────────────────────────────────────
   remplirSelects();
+  ['nm-jour', 'nm-mois', 'nm-annee'].forEach(function (id) { el(id).addEventListener('change', apercu); });
   el('nm-lancer').addEventListener('click', calculer);
   el('nm-refaire').addEventListener('click', modifier);
   el('nm-copier').addEventListener('click', copierLeLien);
@@ -332,6 +364,7 @@
     poserDate(connu);
     memoriser(connu);
     afficher(calcul(connu), { silencieux: true });
+    apercu();
   }
 
   // Pour les essais : le calcul exposé, sans rien afficher.

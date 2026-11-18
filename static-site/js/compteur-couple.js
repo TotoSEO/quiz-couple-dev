@@ -294,7 +294,7 @@
   var courant = null;
 
   function tuile(n, cle) {
-    return '<div class="cc-tuile"><span class="cc-tuile-nombre">' + nombre(n) + '</span>' +
+    return '<div class="cc-tuile"><span class="cc-tuile-nombre" data-compte="' + n + '">' + nombre(n) + '</span>' +
       '<span class="cc-tuile-libelle">' + echapper(unite(cle, n)) + '</span></div>';
   }
 
@@ -305,7 +305,7 @@
     html += '<div class="dn-verdict quiz-result-card cc-carte">' +
       '<p class="cc-noms">' + echapper(nomsLisibles(noms.a, noms.b)) + '</p>' +
       '<p class="cc-depuis">' + echapper(remplir(tr('resultat.depuis', 'ensemble depuis le {{date}}'), { date: dateAvecJour(r.debut) })) + '</p>' +
-      '<h2 class="cc-grand"><span class="cc-grand-nombre">' + nombre(r.jours) + '</span>' +
+      '<h2 class="cc-grand"><span class="cc-grand-nombre" data-compte="' + r.jours + '">' + nombre(r.jours) + '</span>' +
       '<span class="cc-grand-unite">' + echapper(remplir(tr('resultat.joursEnsemble', '{{jours}} ensemble'), { jours: unite('jour', r.jours) })) + '</span></h2>' +
       '<p class="cc-duree">' + echapper(remplir(tr('resultat.soit', 'soit {{duree}}'), { duree: dureeLisible(r.duree) })) + '</p>' +
       (r.fete ? '<p class="cc-fete">' + echapper(libelleFete(r.fete)) + '</p>' : '') +
@@ -342,11 +342,20 @@
       '<p>' + echapper(tr('resultat.garder', '')) + '</p></section>';
 
     var sortie = el('cc-resultat');
-    sortie.innerHTML = html;
+    // Tout le résultat dans un seul bloc (18 novembre 2026) : ses parties y
+    // arrivent l'une après l'autre, et l'avis et les cartes « À faire
+    // ensuite » se posent après elles (.outil-fin de #cc-suite), plus au
+    // milieu, sous le grand nombre.
+    sortie.innerHTML = '<div class="outil-resultat">' + html + '</div>';
     sortie.classList.remove('hidden');
     el('cc-formulaire').classList.add('hidden');
     el('cc-suite').classList.remove('hidden');
     courant = { r: r, noms: noms };
+    if (window.QCOutil && !(options && options.silencieux)) {
+      window.QCOutil.resultat(sortie.firstChild, sortie.querySelector('.cc-carte'));
+    } else if (window.QCOutil) {
+      window.QCOutil.fete(sortie.querySelector('.cc-carte'));
+    }
 
     function versLeResultat() {
       var haut = racine.getBoundingClientRect().top + window.pageYOffset - 80;
@@ -432,8 +441,25 @@
     copier(lienDuCompteur(courant.r.debut, courant.noms), tr('partage.copieLien', 'Lien copié !'));
   }
 
+  // ── L'aperçu en direct (18 novembre 2026) ─────────────────
+  // Dès que la date est complète, le nombre de jours s'écrit sous elle,
+  // avant même le bouton : on voit que ça marche.
+  function apercu() {
+    if (!window.QCOutil) return;
+    var d = lireDate(), html = '';
+    var ok = !!(d.j && d.m && d.a) && dateValide(d) && ecartJours(d, aujourdhui()) >= 0;
+    if (ok) {
+      var n = ecartJours(d, aujourdhui());
+      html = '<span class="outil-puce">\uD83D\uDC9E <b>' + nombre(n) + '</b> ' +
+        echapper(remplir(tr('resultat.joursEnsemble', '{{jours}} ensemble'), { jours: unite('jour', n) })) + '</span>';
+    }
+    window.QCOutil.apercu(el('cc-apercu'), html);
+    window.QCOutil.pret(racine, ok);
+  }
+
   // ── Au chargement ─────────────────────────────────────────
   remplirSelects();
+  ['cc-jour', 'cc-mois', 'cc-annee'].forEach(function (id) { el(id).addEventListener('change', apercu); });
   el('cc-lancer').addEventListener('click', calculer);
   el('cc-formulaire').addEventListener('keydown', function (e) {
     if (e.key === 'Enter' && e.target && e.target.tagName === 'INPUT') { e.preventDefault(); calculer(); }
@@ -450,6 +476,7 @@
     el('cc-prenom2').value = connu.b;
     memoriser(connu.d, { a: connu.a, b: connu.b });
     afficher(calcul(connu.d), { a: connu.a, b: connu.b }, { silencieux: true });
+    apercu();
   }
 
   // Pour les essais : le calcul exposé, sans rien afficher.

@@ -9995,7 +9995,7 @@ body { padding-bottom: var(--pub-footer, 0px); }
    ═══════════════════════════════════════════════════════════════════ */
 .quiz-engine-section,
 #quiz-engine, .quiz-engine,
-#astro-tool, #dn-outil,
+.outil,
 .jalousie-encart, .quiz-modes-retour {
   --ink: 268 45% 27%;
   --qe-trait: 4px;      /* la carte qui contient l'ecran */
@@ -10011,7 +10011,7 @@ body { padding-bottom: var(--pub-footer, 0px); }
    contours perdent tout contraste. On passe a un lavande clair. */
 .dark .quiz-engine-section,
 .dark #quiz-engine, .dark .quiz-engine,
-.dark #astro-tool, .dark #dn-outil,
+.dark .outil,
 .dark .jalousie-encart, .dark .quiz-modes-retour { --ink: 270 30% 62%; }
 
 /* Sur telephone, le meme trait parait deux fois plus lourd : on descend
@@ -10019,7 +10019,7 @@ body { padding-bottom: var(--pub-footer, 0px); }
 @media (max-width: 640px) {
   .quiz-engine-section,
   #quiz-engine, .quiz-engine,
-  #astro-tool, #dn-outil,
+  .outil,
   .jalousie-encart, .quiz-modes-retour {
     --qe-trait: 3px; --qe-trait-i: 2.5px; --qe-trait-p: 2px;
     --qe-ombre: 5px 5px 0; --qe-ombre-i: 3px 3px 0;
@@ -10476,119 +10476,9 @@ body { padding-bottom: var(--pub-footer, 0px); }
    cote JavaScript, la structure reste la meme : on ne fait que redessiner.
    ═══════════════════════════════════════════════════════════════════ */
 
-/* ── La carte de l'outil, comme celle du moteur ──────────────── */
-#astro-tool, #dn-outil {
-  border: var(--qe-trait) solid hsl(var(--ink));
-  border-radius: var(--qe-rayon);
-  box-shadow: var(--qe-ombre) hsl(var(--ink));
-  background: hsl(var(--card));
-  backdrop-filter: none;
-}
-
-/* ── Les blocs de saisie : une carte par personne ────────────── */
-#astro-tool .astro-person-block,
-#dn-outil .dn-personne {
-  border: var(--qe-trait-i) solid hsl(var(--ink));
-  border-radius: var(--qe-rayon-i);
-  box-shadow: var(--qe-ombre-i) hsl(var(--ink));
-  background: hsl(var(--card));
-  padding: 1.25rem;
-}
-/* Le bloc « date de naissance » n'avait ni cadre ni fond : il en prend un,
-   et l'espacement passe du bas du bloc a l'interieur de la carte. */
-#dn-outil .dn-personne { margin-bottom: 1.5rem; }
-#dn-outil .dn-personne-titre { margin-top: 0; }
-
-/* ── Les pastilles numerotees ────────────────────────────────── */
-#astro-tool .astro-person-number,
-#dn-outil .dn-personne-num {
-  border: 2px solid hsl(var(--ink));
-  box-shadow: var(--qe-ombre-p) hsl(var(--ink));
-}
-
-/* ── Les champs et les listes deroulantes ────────────────────── */
-#astro-tool .astro-input,
-#dn-outil .astro-input {
-  border: var(--qe-trait-p) solid hsl(var(--ink) / .8);
-  border-radius: .85rem;
-}
-/* On garde un halo en plus de l'ombre portee : sans lui, le champ actif ne
-   se distinguerait plus au clavier. */
-#astro-tool .astro-input:focus,
-#dn-outil .astro-input:focus {
-  border-color: hsl(var(--ink));
-  box-shadow: var(--qe-ombre-p) hsl(var(--ink)), 0 0 0 3px hsl(var(--primary) / .2);
-}
-
-/* ── Les boutons ─────────────────────────────────────────────── */
-#astro-tool .btn-cta,
-#astro-tool .btn-outline,
-#astro-tool .btn-primary,
-#dn-outil .btn-cta,
-#dn-outil .btn-outline,
-#dn-outil .btn-primary {
-  border: var(--qe-trait-i) solid hsl(var(--ink));
-  border-radius: 999px;
-  box-shadow: var(--qe-ombre-i) hsl(var(--ink));
-  font-weight: 800;
-}
-#astro-tool .btn-outline,
-#dn-outil .btn-outline { background: hsl(var(--card)); color: hsl(var(--ink)); }
-.dark #astro-tool .btn-outline,
-.dark #dn-outil .btn-outline { color: hsl(var(--foreground)); }
-
-/* ── Les cartes du resultat ──────────────────────────────────── */
-#astro-tool .quiz-result-card,
-#dn-outil .quiz-result-card,
-#astro-tool .glass-card,
-#dn-outil .dn-fiche,
-#dn-outil .dn-bloc,
-#dn-outil .dn-suite-carte {
-  border: var(--qe-trait-i) solid hsl(var(--ink));
-  border-radius: var(--qe-rayon-i);
-  box-shadow: var(--qe-ombre-i) hsl(var(--ink));
-  background: hsl(var(--card));
-  backdrop-filter: none;
-}
-/* La fiche portait un filet de couleur en haut pour distinguer les deux
-   personnes. Le trait a l'encre le remplacerait mal : on garde la couleur,
-   posee cette fois sur la pastille et sur la jauge. */
-#dn-outil .dn-fiche { border-top-color: hsl(var(--ink)); }
-#dn-outil .dn-fiche-2 { border-top-color: hsl(var(--ink)); }
-
-/* L'anneau du score et les jauges des axes prennent le meme trait. */
-#astro-tool .quiz-score-circle,
-#dn-outil .dn-anneau-boite {
-  border: var(--qe-trait-i) solid hsl(var(--ink));
-  box-shadow: var(--qe-ombre-p) hsl(var(--ink));
-  border-radius: 50%;
-}
-#dn-outil .dn-axe-piste {
-  border: 2px solid hsl(var(--ink));
-  border-radius: 999px;
-  overflow: hidden;
-}
-
-/* Le message d'erreur est une alerte : trait plein, fond de la carte, pour
-   qu'il ne se confonde pas avec un champ. */
-#dn-outil .dn-erreur {
-  border: var(--qe-trait-p) solid hsl(var(--ink));
-  border-radius: var(--qe-rayon-i);
-  box-shadow: var(--qe-ombre-p) hsl(var(--ink));
-  background: hsl(var(--card));
-  padding: .65rem .9rem;
-}
-
-/* Le coeur qui separe les deux personnes reprend la pastille du moteur. */
-#astro-tool .astro-heart-icon,
-#dn-outil .astro-heart-icon {
-  border: 2px solid hsl(var(--ink));
-  border-radius: 999px;
-  box-shadow: var(--qe-ombre-p) hsl(var(--ink));
-  background: hsl(var(--card));
-  padding: .3rem .5rem;
-  line-height: 1;
-}
+/* Les règles d'ici, écrites pour #astro-tool et #dn-outil, sont parties le
+   18 novembre 2026 : tous les outils à résultat immédiat portent la carte
+   .outil (bloc « Les outils à résultat immédiat », plus bas). */
 
 /* ═══════════════════════════════════════════════════════════════════
    LE SURVOL, RESERVE AUX APPAREILS QUI ONT VRAIMENT UN POINTEUR
@@ -10640,12 +10530,9 @@ body { padding-bottom: var(--pub-footer, 0px); }
   .quiz-engine .quiz-most-player-btn:hover,
   .quiz-engine .quiz-tf-btn:hover,
   .quiz-engine .quiz-validate-btn:hover,
-  #astro-tool .btn-cta:hover,
-  #astro-tool .btn-outline:hover,
-  #astro-tool .btn-primary:hover,
-  #dn-outil .btn-cta:hover,
-  #dn-outil .btn-outline:hover,
-  #dn-outil .btn-primary:hover {
+  .outil .btn-cta:hover,
+  .outil .btn-outline:hover,
+  .outil .btn-primary:hover {
     transform: translate(-2px, -2px);
     box-shadow: 6px 6px 0 hsl(var(--ink));
   }
@@ -10681,12 +10568,9 @@ body { padding-bottom: var(--pub-footer, 0px); }
     .quiz-engine .quiz-validate-btn:hover,
     .quiz-engine .result-related-card:hover,
     .quiz-engine .qr-orientation-lien:hover,
-    #astro-tool .btn-cta:hover,
-    #astro-tool .btn-outline:hover,
-    #astro-tool .btn-primary:hover,
-    #dn-outil .btn-cta:hover,
-    #dn-outil .btn-outline:hover,
-    #dn-outil .btn-primary:hover { transform: none; }
+    .outil .btn-cta:hover,
+    .outil .btn-outline:hover,
+    .outil .btn-primary:hover { transform: none; }
   }
 }
 
@@ -11598,13 +11482,13 @@ body { padding-bottom: var(--pub-footer, 0px); }
 .nm-detail { margin: 0; color: hsl(var(--muted-foreground)); }
 .nm-ook, .nm-anglo { margin: 0.6rem 0 0; font-size: 0.875rem; color: hsl(var(--muted-foreground)); }
 .nm-suivantes { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.85rem; }
-.nm-suivante { display: grid; grid-template-columns: auto 1fr; gap: 0.85rem; align-items: start; }
+.nm-suivante { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 0.85rem; align-items: start; }
 .nm-suivante-quand {
   display: inline-grid; place-items: center; min-width: 6rem; padding: 0.4rem 0.65rem; border-radius: 9999px;
   font-size: 0.8rem; font-weight: 700; text-align: center;
   color: hsl(var(--primary-texte, var(--primary))); background: hsl(var(--primary) / 0.1);
 }
-.nm-suivante-nom { display: block; font-weight: 700; color: hsl(var(--foreground)); }
+.nm-suivante-nom { display: block; font-weight: 700; color: hsl(var(--foreground)); overflow-wrap: anywhere; hyphens: auto; }
 .nm-suivante-ans, .nm-suivante-date { display: block; font-size: 0.85rem; color: hsl(var(--muted-foreground)); }
 .nm-table td { -webkit-hyphens: manual; hyphens: manual; }
 .nm-table td.nm-annees { white-space: nowrap; hyphens: manual; }
@@ -13538,6 +13422,330 @@ img[src^="/bilan/apercu-"] { pointer-events: none; user-select: none; -webkit-us
 .surv-qui { max-width: 34rem; margin: 1.5rem auto 0; }
 .surv-qui-phrase { margin: 0 0 0.25rem; font-size: 1.02rem; line-height: 1.5; }
 .surv-ligne--haut .surv-piste { background: linear-gradient(90deg, hsl(0 0% 32%), hsl(38 90% 55%) 50%, hsl(142 55% 42%)); }
+
+/* ═══════════════════════════════════════════════════════════════════
+   Les outils à résultat immédiat (18 novembre 2026)
+   ═══════════════════════════════════════════════════════════════════
+   Compteur de durée en couple, noces de mariage, différence d'âge,
+   compatibilité par date de naissance, signes chinois, prénoms et signes,
+   calculatrice. Thomas : « très très très moche, et les placeholder sont
+   rognés [...] ça doit être joli ! aéré ! agréable ! interactif ! ».
+
+   - L'outil vient juste sous le titre (.outil-hero), le texte de
+     présentation dessous : il était sous le texte et la photo, à plus de
+     1 000 px du haut sur un téléphone comme sur un ordinateur.
+   - Une seule carte au trait de la maison (.outil), plus de cartes
+     emboîtées : chaque personne est un aplat teinté, rose puis violet, avec
+     son personnage.
+   - Une date est un seul champ en trois parties (jour, mois, année), dont
+     les colonnes prennent la largeur de leur contenu : plus rien n'est
+     rogné, de 320 px au plus grand écran, dans les six langues.
+   - Interactif : une ligne d'aperçu sous chaque date complète (le signe,
+     l'âge, le nombre de jours...), le bouton qui le dit quand tout est
+     rempli, et au résultat les grands nombres qui montent et les deux
+     personnages qui sautent (js/outils.js). Transform et opacity
+     seulement, coupés par prefers-reduced-motion. */
+
+/* ── Le haut de page ─────────────────────────────────────────── */
+.outil-hero { padding: 1.5rem 0 2.5rem; }
+@media (min-width: 768px) { .outil-hero { padding: 2.25rem 0 3.5rem; } }
+@media (min-width: 1200px) { .outil-hero { padding: 2.5rem 0 4rem; } }
+.outil-hero .breadcrumb { margin-bottom: 0.75rem; }
+.outil-h1 {
+  margin: 0 0 1.25rem;
+  font-size: clamp(1.7rem, 4.6vw + 0.6rem, 2.75rem);
+  line-height: 1.12;
+  text-wrap: balance;
+}
+.outil-intro { margin-top: 1.75rem; }
+.outil-intro p { margin-left: auto; margin-right: auto; max-width: 40rem; }
+.outil-intro .text-lg { font-size: 1.0625rem; line-height: 1.6; }
+@media (min-width: 768px) { .outil-intro .text-lg { font-size: 1.125rem; } }
+/* Sur grand écran, la photo est à droite : la colonne de gauche tient
+   l'outil, le texte se cale à gauche comme le titre. */
+@media (min-width: 1200px) {
+  .outil-hero:has(.quiz-hero-media) .quiz-hero-media { top: 3rem; transform: none; }
+  .outil-hero:has(.quiz-hero-media) .outil-intro p { margin-left: 0; }
+}
+
+/* ── La carte ───────────────────────────────────────────────── */
+.outil {
+  position: relative;
+  text-align: left;
+  padding: 1.1rem;
+  border: var(--qe-trait) solid hsl(var(--ink));
+  border-radius: var(--qe-rayon);
+  box-shadow: var(--qe-ombre) hsl(var(--ink));
+  background: hsl(var(--card));
+  color: hsl(var(--foreground));
+}
+@media (min-width: 640px) { .outil { padding: 1.6rem 1.75rem 1.75rem; } }
+.astro-hero-section .outil,
+.astro-hero-section .outil .text-foreground { color: hsl(var(--foreground)); }
+.astro-hero-section .outil .text-muted-foreground { color: hsl(var(--muted-foreground)); }
+/* Sur le fond de nuit des pages d'astrologie, l'ombre à l'encre se perdait :
+   elle prend la couleur claire de l'encre du thème sombre. */
+.astro-hero-section .outil { box-shadow: var(--qe-ombre) hsl(270 45% 72% / 0.55); }
+
+.outil-tete { display: flex; align-items: center; gap: 0.75rem; margin: 0 0 1rem; }
+.outil-tete-persos { display: inline-flex; align-items: flex-end; flex: none; }
+.outil-tete-persos svg { width: auto; height: 2.75rem; }
+.outil-tete-persos svg + svg { margin-left: -0.5rem; }
+.outil-titre { margin: 0; font-size: 1.15rem; font-weight: 800; line-height: 1.25; text-wrap: balance; }
+@media (min-width: 640px) { .outil-titre { font-size: 1.3rem; } }
+
+/* ── Les personnes : un aplat teinté, rose puis violet ─────────── */
+.outil .dn-personne {
+  margin: 0 0 0.85rem;
+  padding: 0.9rem;
+  border: 0;
+  border-radius: 1.15rem;
+  box-shadow: none;
+  background: hsl(var(--primary) / 0.07);
+}
+.outil .dn-personne--2 { background: hsl(var(--secondary) / 0.08); }
+.dark .outil .dn-personne { background: hsl(var(--primary) / 0.1); }
+.dark .outil .dn-personne--2 { background: hsl(var(--secondary) / 0.14); }
+@media (min-width: 640px) { .outil .dn-personne { padding: 1.05rem 1.15rem; } }
+.outil .dn-personne-titre {
+  display: flex; align-items: center; gap: 0.6rem;
+  margin: 0 0 0.65rem;
+  font-size: 0.95rem; font-weight: 800; line-height: 1.3;
+}
+.outil-avatar { display: inline-flex; align-items: flex-end; justify-content: center; flex: none; width: 2.6rem; height: 2.6rem; }
+.outil-avatar svg { width: auto; height: 100%; }
+
+/* Les deux personnes côte à côte dès que la place le permet, avec un
+   cœur entre elles. */
+.outil-duo { position: relative; display: grid; gap: 0.85rem; margin-bottom: 0.85rem; }
+.outil-duo .dn-personne { margin: 0; }
+@media (min-width: 560px) { .outil-duo { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 1.1rem; } }
+.outil-duo::after {
+  content: '';
+  position: absolute; left: 50%; top: 50%; z-index: 1;
+  width: 2.1rem; height: 2.1rem; margin: -1.05rem 0 0 -1.05rem;
+  border: 2px solid hsl(var(--ink)); border-radius: 50%;
+  box-shadow: 2px 2px 0 hsl(var(--ink));
+  background: hsl(var(--card)) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23e05a8a' d='M12 21s-7.5-4.6-9.6-9.2C1 8.6 3 5 6.6 5c2.1 0 3.6 1.2 4.4 2.6.8-1.4 2.3-2.6 4.4-2.6C19 5 21 8.6 19.6 11.8 17.5 16.4 12 21 12 21z'/%3E%3C/svg%3E") center / 1.05rem no-repeat;
+  pointer-events: none;
+}
+@media (max-width: 559.98px) { .outil-duo::after { top: calc(50% + 0.05rem); } }
+
+/* ── Les champs ─────────────────────────────────────────────── */
+.outil .astro-field { margin: 0; min-width: 0; }
+.outil .astro-field-label {
+  display: block; margin: 0 0 0.3rem;
+  font-size: 0.8rem; font-weight: 600; color: hsl(var(--muted-foreground));
+}
+.outil .astro-input {
+  display: block; width: 100%; height: 3rem;
+  padding: 0 0.9rem;
+  border: 2px solid hsl(var(--ink) / 0.55);
+  border-radius: 0.9rem;
+  box-shadow: none;
+  background-color: hsl(var(--background));
+  font-size: 1rem; color: hsl(var(--foreground));
+  text-overflow: ellipsis;
+}
+.outil .astro-input::placeholder { color: hsl(var(--muted-foreground) / 0.7); }
+.outil .astro-input:focus {
+  outline: none;
+  border-color: hsl(var(--ink));
+  box-shadow: 0 0 0 3px hsl(var(--primary) / 0.22);
+}
+.outil .astro-select {
+  padding-right: 2rem;
+  background-position: right 0.7rem center;
+  background-size: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+.outil .astro-select:has(option:checked[value=""]) { color: hsl(var(--muted-foreground)); font-weight: 500; }
+
+/* La date : un seul champ en trois parties. Les colonnes du jour et de
+   l'année prennent la largeur de leur plus longue option (« Jour »,
+   « Giorno », « 2026 »), le mois le reste : « Septiembre » passe encore
+   à 320 px. */
+.outil .dn-champs {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  gap: 0;
+  border: 2px solid hsl(var(--ink) / 0.55);
+  border-radius: 0.95rem;
+  background: hsl(var(--background));
+  overflow: hidden;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+.outil .dn-champs:focus-within { border-color: hsl(var(--ink)); box-shadow: 0 0 0 3px hsl(var(--primary) / 0.22); }
+.outil .dn-champs .astro-field + .astro-field { border-left: 1.5px solid hsl(var(--ink) / 0.18); }
+.outil .dn-champs .astro-field-label {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+}
+.outil .dn-champs .astro-select {
+  height: 3.1rem;
+  padding: 0 1.55rem 0 0.75rem;
+  border: 0; border-radius: 0;
+  background-color: transparent;
+  background-position: right 0.55rem center;
+  box-shadow: none;
+}
+.outil .dn-champs .astro-select:focus { background-color: hsl(var(--primary) / 0.08); box-shadow: none; }
+/* La place se mesure sur la carte de la personne (container query) : sur un
+   petit téléphone, et dans les deux colonnes du duo entre 560 et 760 px de
+   large, les marges des listes se resserrent, puis l'année passe sur une
+   seconde ligne. Sans quoi « Septiembre » ou « Settembre » perdaient leurs
+   dernières lettres. */
+.outil .dn-personne { container-type: inline-size; }
+@container (max-width: 330px) {
+  .outil .dn-champs .astro-select { padding: 0 1.3rem 0 0.55rem; background-position: right 0.4rem center; }
+}
+@container (max-width: 265px) {
+  .outil .dn-champs { grid-template-columns: auto minmax(0, 1fr); }
+  .outil .dn-champs .astro-field:nth-child(3) {
+    grid-column: 1 / -1;
+    border-left: 0;
+    border-top: 1.5px solid hsl(var(--ink) / 0.18);
+  }
+}
+
+/* La ligne d'aperçu sous une date complète. */
+.outil-apercu { display: none; margin: 0.6rem 0 0; font-size: 0.9rem; font-weight: 600; line-height: 1.4; }
+.outil-apercu.est-plein { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+.outil-puce {
+  display: inline-flex; align-items: center; gap: 0.35rem;
+  padding: 0.3rem 0.65rem;
+  border-radius: 999px;
+  background: hsl(var(--card));
+  border: 1.5px solid hsl(var(--ink) / 0.14);
+  color: hsl(var(--foreground));
+}
+.outil-puce b { font-weight: 800; color: hsl(var(--primary-texte, var(--primary))); }
+.outil .dn-personne--2 .outil-puce b { color: hsl(var(--secondary-texte, var(--secondary))); }
+
+.outil-aide { margin: 0.55rem 0 0; font-size: 0.8125rem; line-height: 1.45; color: hsl(var(--muted-foreground)); }
+.outil-aide--bas { margin-top: 0.75rem; text-align: center; }
+
+/* Les prénoms côte à côte, sauf quand la carte est trop étroite pour
+   « Es.: Tommaso » ou « Bijv. Sanne ». */
+.outil .cc-prenoms { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 0.6rem; }
+@container (max-width: 280px) { .outil .cc-prenoms { grid-template-columns: minmax(0, 1fr); } }
+/* Prénoms et signes : le prénom puis le signe, l'un sous l'autre. */
+.ap-champs { display: grid; gap: 0.65rem; }
+
+/* ── Les boutons ────────────────────────────────────────────── */
+.outil .btn-cta,
+.outil .btn-outline,
+.outil .btn-primary {
+  border: var(--qe-trait-i) solid hsl(var(--ink));
+  border-radius: 999px;
+  box-shadow: var(--qe-ombre-i) hsl(var(--ink));
+  font-weight: 800;
+}
+.outil .btn-outline { background: hsl(var(--card)); color: hsl(var(--ink)); }
+/* Un libellé long (« Den Kompatibilitätstest machen ») passe à la ligne. */
+.outil .btn { white-space: normal; text-wrap: balance; overflow-wrap: anywhere; hyphens: auto; }
+.outil .dn-suite-carte .btn { max-width: 100%; padding-left: 1.1rem; padding-right: 1.1rem; }
+.dark .outil .btn-outline { color: hsl(var(--foreground)); }
+.outil-action { margin-top: 1rem; }
+.outil .astro-submit-btn {
+  display: flex; width: 100%; min-height: 3.4rem;
+  padding: 0.85rem 1.5rem !important;
+  border: var(--qe-trait-i) solid hsl(var(--ink));
+  border-radius: 999px !important;
+  box-shadow: var(--qe-ombre-i) hsl(var(--ink));
+  font-size: 1.0625rem !important; font-weight: 800;
+  white-space: normal; text-align: center; line-height: 1.25;
+}
+.outil .astro-submit-btn:active { transform: translate(2px, 2px); box-shadow: 1px 1px 0 hsl(var(--ink)); }
+.outil--pret .astro-submit-btn { box-shadow: var(--qe-ombre-i) hsl(var(--ink)), 0 0 0 5px hsl(var(--primary) / 0.18); }
+
+.outil .dn-erreur {
+  margin: 0.85rem 0 0;
+  padding: 0.65rem 0.9rem;
+  border: 2px solid hsl(var(--destructive) / 0.5);
+  border-radius: 0.9rem;
+  background: hsl(var(--destructive) / 0.08);
+  color: hsl(var(--destructive));
+  font-size: 0.9rem; font-weight: 600;
+}
+
+/* ── Le résultat ────────────────────────────────────────────── */
+.outil-resultat { display: flex; flex-direction: column; gap: 0.9rem; }
+.outil-resultat > * { margin: 0 !important; }
+.outil .dn-verdict.quiz-result-card,
+.outil .calc-verdict {
+  position: relative;
+  padding: 1.5rem 1rem 1.35rem;
+  border: 0;
+  border-radius: 1.3rem;
+  box-shadow: none;
+  background: linear-gradient(150deg, hsl(var(--primary) / 0.13), hsl(var(--secondary) / 0.13));
+  text-align: center;
+  animation: none;
+}
+@media (min-width: 640px) { .outil .dn-verdict.quiz-result-card, .outil .calc-verdict { padding: 1.75rem 1.5rem 1.5rem; } }
+/* La calculatrice : le résultat vient sous le formulaire, séparé d'un filet. */
+.outil .calc-resultat { margin-top: 1.5rem; padding-top: 1.5rem; border-top: 2px dashed hsl(var(--ink) / 0.18); }
+.outil .calc-resultat > * + * { margin-top: 1.25rem; }
+.outil .calc-detail { margin-top: 1.5rem; }
+.outil .calc-noms { margin-bottom: 0.75rem; font-weight: 800; color: hsl(var(--foreground)); }
+.outil .dn-bloc,
+.outil .dn-fiche {
+  margin: 0;
+  padding: 1rem 1.1rem;
+  border: 1.5px solid hsl(var(--ink) / 0.13);
+  border-radius: 1.15rem;
+  box-shadow: none;
+  background: hsl(var(--card));
+}
+.outil .dn-bloc-titre { display: flex; align-items: center; gap: 0.5rem; margin: 0 0 0.6rem; font-size: 1.02rem; font-weight: 800; }
+.outil .dn-bloc p:last-child { margin-bottom: 0; }
+.outil .dn-axes { margin: 0; }
+.ap-noms { margin: 0 0 0.75rem; font-size: 1.05rem; font-weight: 800; overflow-wrap: anywhere; }
+
+/* L'anneau se remplit à l'arrivée du résultat, pendant que le nombre monte. */
+.outil .dn-anneau-trait { animation: outilAnneau 1.2s cubic-bezier(0.22, 1, 0.36, 1) 0.15s both; }
+@keyframes outilAnneau { from { stroke-dashoffset: var(--c); } }
+
+/* Les deux personnages en bas de la carte du résultat : ils sautent trois
+   fois, puis restent là. Sur ordinateur, ils encadrent le texte ; sur
+   téléphone, ils ont leur bande sous le texte, qui garde toute la largeur
+   (encadré, il passait à 200 px et doublait de hauteur). */
+.outil-fete-hote { padding-bottom: 5.4rem !important; }
+@media (min-width: 640px) {
+  .outil-fete-hote { padding: 1.75rem 6rem 1.5rem !important; }
+}
+.outil-fete { position: absolute; inset: auto 0 0.9rem 0; height: 0; pointer-events: none; }
+.outil-fete svg {
+  position: absolute; bottom: 0;
+  width: auto; height: 4rem;
+  animation: outilSaut 0.55s cubic-bezier(0.3, 0, 0.4, 1) 0.25s 3 both;
+}
+@media (min-width: 640px) { .outil-fete svg { height: 5rem; } }
+.outil-fete svg:first-child { left: 1rem; }
+.outil-fete svg:last-child { right: 1rem; animation-delay: 0.4s; }
+@keyframes outilSaut {
+  0%, 100% { transform: translateY(0); }
+  45% { transform: translateY(-0.9rem) rotate(-3deg); }
+}
+
+/* Le texte de suite et les boutons du bas. */
+.outil-suite { margin-top: 1rem; }
+.outil .dn-suite-carte {
+  margin-top: 1rem;
+  border: 2px dashed hsl(var(--ink) / 0.22);
+  border-radius: 1.15rem;
+  box-shadow: none;
+}
+.outil-bas { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 0.6rem; margin-top: 1rem; }
+.outil-fin:empty { display: none; }
+.outil-fin { margin-top: 1rem; }
+
+@media (prefers-reduced-motion: reduce) {
+  .outil-fete svg,
+  .outil .dn-anneau-trait { animation: none; }
+}
 
 /* ═══════════════════════════════════════════════════════════════════
    Téléphone : les animations infinies qui repeignent à chaque image

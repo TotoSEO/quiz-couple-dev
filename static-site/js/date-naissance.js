@@ -202,6 +202,11 @@
       var n = personnes[p];
       var sj = el('dn-jour' + n), sm = el('dn-mois' + n), sa = el('dn-annee' + n);
       var noms = tr('form.mois', []);
+      // Une liste vide au départ (18 novembre 2026) : la page proposait le
+      // 1er janvier 2012 pour les deux, une date que personne n'a.
+      sj.appendChild(new Option(tr('form.jour', 'Jour'), '', true, true));
+      sm.appendChild(new Option(tr('form.moisLabel', 'Mois'), '', true, true));
+      sa.appendChild(new Option(tr('form.annee', 'Année'), '', true, true));
       for (i = 1; i <= 31; i++) sj.appendChild(new Option(i, i));
       for (i = 1; i <= 12; i++) sm.appendChild(new Option(noms[i - 1] || i, i));
       for (i = anneeMax; i >= 1930; i--) sa.appendChild(new Option(i, i));
@@ -232,8 +237,8 @@
     return '<svg class="dn-anneau" viewBox="0 0 120 120" role="img" aria-label="' + pct + '%">' +
       '<circle cx="60" cy="60" r="' + r + '" class="dn-anneau-fond"></circle>' +
       '<circle cx="60" cy="60" r="' + r + '" class="dn-anneau-trait" ' +
-      'stroke-dasharray="' + c.toFixed(1) + '" stroke-dashoffset="' + off.toFixed(1) + '"></circle>' +
-      '</svg><span class="dn-anneau-valeur">' + pct + '<small>%</small></span>';
+      'stroke-dasharray="' + c.toFixed(1) + '" stroke-dashoffset="' + off.toFixed(1) + '" style="--c:' + c.toFixed(1) + '"></circle>' +
+      '</svg><span class="dn-anneau-valeur"><span data-compte="' + pct + '">' + pct + '</span><small>%</small></span>';
   }
 
   function barre(note, libelle, valeur) {
@@ -352,10 +357,14 @@
       '</section>';
 
     var sortie = el('dn-resultat');
-    sortie.innerHTML = html;
+    // Tout le résultat dans un seul bloc (18 novembre 2026) : ses parties y
+    // arrivent l'une après l'autre, l'avis et les cartes « À faire ensuite »
+    // se posent après lui (.outil-fin de #dn-suite).
+    sortie.innerHTML = '<div class="outil-resultat">' + html + '</div>';
     sortie.classList.remove('hidden');
     el('dn-formulaire').classList.add('hidden');
     el('dn-suite').classList.remove('hidden');
+    if (window.QCOutil) window.QCOutil.resultat(sortie.firstChild, sortie.querySelector('.dn-verdict'));
 
     function versLeResultat() {
       var haut = racine.getBoundingClientRect().top + window.pageYOffset - 80;
@@ -385,7 +394,35 @@
     el('dn-formulaire').classList.remove('hidden');
   }
 
+  // ── L'aperçu en direct (18 novembre 2026) ─────────────────
+  // Le jour et le mois donnent déjà le signe ; l'année ajoute le signe
+  // chinois et le chemin de vie. Chaque personne voit les siens arriver
+  // sous sa date, avant même le bouton.
+  var EMOJI_ANIMAL = { rat: '\uD83D\uDC00', buffle: '\uD83D\uDC02', tigre: '\uD83D\uDC05', lapin: '\uD83D\uDC07', dragon: '\uD83D\uDC09', serpent: '\uD83D\uDC0D', cheval: '\uD83D\uDC0E', chevre: '\uD83D\uDC10', singe: '\uD83D\uDC12', coq: '\uD83D\uDC13', chien: '\uD83D\uDC15', cochon: '\uD83D\uDC16' };
+  function apercu() {
+    if (!window.QCOutil) return;
+    var tout = true;
+    ['1', '2'].forEach(function (n) {
+      var d = lire(n), html = '';
+      if (d.j && d.m && d.j <= MOIS_MAX[d.m - 1]) {
+        html += '<span class="outil-puce"><b>' + echapper(nomSigne(signeSolaire(d.j, d.m))) + '</b></span>';
+      }
+      if (dateValide(d.j, d.m, d.a)) {
+        var c = signeChinois(d.j, d.m, d.a);
+        html += '<span class="outil-puce">' + (EMOJI_ANIMAL[ANIMAUX[c.animal]] || '') + ' ' + echapper(nomAnimal(c.animal)) + '</span>' +
+          '<span class="outil-puce">\u2728 ' + echapper(tr('resultat.chemin', '')) + ' <b>' + cheminDeVie(d.j, d.m, d.a) + '</b></span>';
+      } else {
+        tout = false;
+      }
+      window.QCOutil.apercu(el('dn-apercu' + n), html);
+    });
+    window.QCOutil.pret(racine, tout);
+  }
+
   remplirSelects();
+  ['1', '2'].forEach(function (n) {
+    ['dn-jour', 'dn-mois', 'dn-annee'].forEach(function (id) { el(id + n).addEventListener('change', apercu); });
+  });
   el('dn-lancer').addEventListener('click', calculer);
   el('dn-refaire').addEventListener('click', recommencer);
 })();

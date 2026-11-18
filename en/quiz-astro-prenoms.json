@@ -7,12 +7,13 @@
     "subtitle": "Free, no sign-up, and the result shows up right away."
   },
   "form": {
-    "name1Placeholder": "First name of person 1",
-    "name2Placeholder": "First name of person 2",
+    "name1Placeholder": "E.g. Emma",
+    "name2Placeholder": "E.g. Jake",
     "sign1Label": "Zodiac sign",
     "sign2Label": "Zodiac sign",
     "selectSign": "Choose a sign",
     "submitButton": "Check compatibility",
+    "erreurVide": "Type both first names and pick both signs.",
     "signs": {
       "belier": "Aries ♈",
       "taureau": "Taurus ♉",

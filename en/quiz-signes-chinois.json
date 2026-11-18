@@ -43,6 +43,7 @@
     ],
     "dateAffichee": "{{mois}} {{j}}, {{a}}",
     "erreur": "One of the two dates does not exist. Check the day and month you picked.",
+    "erreurVide": "Pick the day, month and year for both birth dates.",
     "lancer": "Calculate our compatibility",
     "aide": "The year gives the animal and the element. But the Chinese year starts in late January or early February, which is why we ask for the full date."
   },
