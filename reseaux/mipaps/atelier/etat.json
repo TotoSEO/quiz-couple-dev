@@ -1,12 +1,12 @@
 {
-  "genere_le": "2026-11-17T11:50:12.400Z",
+  "genere_le": "2026-11-18T03:17:19.819Z",
   "langue": "fr",
   "compte": {
     "nom": "mipaps_stories",
     "actif": true
   },
   "fuseau": "Europe/Paris",
-  "aujourdhui": "2026-11-17",
+  "aujourdhui": "2026-11-18",
   "melange": {
     "midi": {
       "1": null,
@@ -28,39 +28,12 @@
     },
     "matin": "mipaps-anime"
   },
-  "reserve_jours": 135,
+  "reserve_jours": 134,
   "a_remplir": [],
   "a_corriger": [],
   "hors_grille": [],
   "refuses": [],
   "recents_et_prevus": [
-    {
-      "jour": "2026-10-18",
-      "creneau": "matin",
-      "gabarit": "mipaps-reel",
-      "categorie": "mipaps-anime",
-      "statut": "publie",
-      "texte": null,
-      "erreur": null
-    },
-    {
-      "jour": "2026-10-18",
-      "creneau": "midi",
-      "gabarit": "mipaps-post",
-      "categorie": "mipaps-post",
-      "statut": "publie",
-      "texte": "on s'engueule pour la vaisselle. on s'endort collés.",
-      "erreur": null
-    },
-    {
-      "jour": "2026-10-18",
-      "creneau": "soir",
-      "gabarit": "mipaps-carrousel",
-      "categorie": "mipaps-histoire",
-      "statut": "publie",
-      "texte": null,
-      "erreur": null
-    },
     {
       "jour": "2026-10-19",
       "creneau": "matin",
@@ -2648,7 +2621,7 @@
   "idees": [],
   "prochain_creneau": {
     "mipaps-anime": {
-      "jour": "2026-11-18",
+      "jour": "2026-11-19",
       "creneau": "matin"
     },
     "mipaps-statique": null,
