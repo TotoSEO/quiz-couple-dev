@@ -623,6 +623,22 @@
   // calculatrice (9 novembre 2026, pages vues par visite). Dans la carte, et
   // pas à côté : une carte de résultat masquée emporte ses cartes avec elle.
   var OUTILS_A_SUITE = '#astro-tool, #dn-outil, #sc-outil, #cc-outil, #nm-outil, #da-outil, #mg-outil';
+  // La carte du livre de « Et maintenant ? » (19 novembre 2026,
+  // LIVRE_APRES_RESULTAT dans config.js) : sous le résultat du compteur et
+  // des noces, avant les cartes « À faire ensuite ». Le bloc attend dans
+  // <template id="qc-livre"> (related-tests.ejs), seulement sur les pages où
+  // il a sa place ; le moteur commun a la même lecture (livreSelonResultat),
+  // les outils ne le chargent pas.
+  function blocLivre() {
+    var tpl = document.getElementById('qc-livre');
+    if (!tpl || !tpl.content || !tpl.content.firstElementChild || tpl.getAttribute('data-des') !== null) return null;
+    var bloc = document.importNode(tpl.content.firstElementChild, true);
+    var lien = bloc.querySelector('a.suite-livre');
+    if (lien) lien.addEventListener('click', function () {
+      try { if (window.gtag) window.gtag('event', 'livre_suite_clic', { source: lien.getAttribute('data-livre-lien') || '' }); } catch (e) {}
+    });
+    return bloc;
+  }
   function cartesApresResultat() {
     var outil = document.querySelector(OUTILS_A_SUITE);
     var grille = document.querySelector('.related-tests-section .suite-grille');
@@ -638,6 +654,8 @@
       for (var i = 0; i < resultats.length; i++) {
         var carte = fin || resultats[i];
         if (carte.querySelector('.suite-resultat')) continue;
+        var livre = fin ? blocLivre() : null;
+        if (livre) carte.appendChild(livre);
         var bloc = document.createElement('div');
         bloc.className = 'suite-resultat';
         if (titre) {

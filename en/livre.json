@@ -21,6 +21,14 @@
     "badgeNoel": "The perfect Christmas gift!",
     "badge": "A gift idea for your partner"
   },
+  "suite": {
+    "raison": {
+      "score": "Your relationship is in great shape! For what comes next, our book has 100 adventures for two, with a page to write about each one.",
+      "jeu": "Love doing things together? Our book has 100 adventures for two, with a page to write about each one.",
+      "compteur": "And for the rest of your story, our book has 100 adventures for two, with a page to write about each one.",
+      "noces": "Looking for an anniversary gift? Our book has 100 adventures for two, with a page to write about each one."
+    }
+  },
   "bandeau": {
     "ligne1": "Your couples activity book",
     "ligne2": "to fill in <em>together</em>",

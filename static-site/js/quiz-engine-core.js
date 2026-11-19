@@ -2694,7 +2694,28 @@ var QuizEngine = (function() {
     });
     grille.appendChild(copie);
     bloc.appendChild(grille);
-    return { el: bloc, href: carte.getAttribute('href') };
+    return { el: bloc, href: carte.getAttribute('href'), carte: copie };
+  }
+
+  // La carte du livre dans « Et maintenant ? » (19 novembre 2026, Thomas :
+  // « oui fais la carte du livre dans les pages qui sont propices à afficher
+  // ça » ; LIVRE_APRES_RESULTAT dans config.js). related-tests.ejs prépare le
+  // bloc entier dans <template id="qc-livre"> sur les pages où il a sa place ;
+  // un test qui note le couple ne le montre qu'à partir de data-des (en %).
+  // Rend une copie du bloc, ou null. Le tu préfères la reprend par
+  // QuizEngine.livreSelonResultat, les deux outils par quiz-extras.js.
+  function livreSelonResultat(score) {
+    var tpl = document.getElementById('qc-livre');
+    if (!tpl || !tpl.content || !tpl.content.firstElementChild) return null;
+    var des = tpl.getAttribute('data-des');
+    if (des !== null && !(typeof score === 'number' && !isNaN(score) && score >= +des)) return null;
+    var bloc = document.importNode(tpl.content.firstElementChild, true);
+    var lien = bloc.querySelector('a.suite-livre');
+    var source = tpl.getAttribute('data-source') || '';
+    if (lien) lien.addEventListener('click', function () {
+      try { if (window.gtag) window.gtag('event', 'livre_suite_clic', { source: lien.getAttribute('data-livre-lien') || source, score: typeof score === 'number' ? score : '' }); } catch (e) {}
+    });
+    return bloc;
   }
 
   function renderRelatedQuizzes(wrap, currentQuizKey, lang, score) {
@@ -2707,12 +2728,20 @@ var QuizEngine = (function() {
     var grille = document.querySelector('.related-tests-section .suite-grille');
     var cartes = grille ? grille.querySelectorAll('a.suite-carte') : [];
     var conseil = conseilSelonResultat(score);
-    if (conseil) wrap.appendChild(conseil.el);
+    // Le livre, là où il a sa place, prend « Et maintenant ? » ; la carte du
+    // conseil selon le score passe alors en tête des autres cartes. Sa
+    // présence dit aussi à dispositionResultat de ne pas le remettre dans
+    // l'encart sous le verdict.
+    var livre = livreSelonResultat(score);
+    if (livre) wrap.appendChild(livre);
+    else if (conseil) wrap.appendChild(conseil.el);
     if (cartes.length >= 2) {
       var bloc = el('div', 'result-related-section result-related-section--cartes');
       bloc.appendChild(el('p', 'text-lg font-bold text-center mb-6', tg('result.relatedTitle', 'Poursuivez avec d\'autres tests / quiz !')));
       var copie = el('div', 'suite-grille suite-grille--resultat');
-      for (var ci = 0, mises = 0; ci < cartes.length && mises < 4; ci++) {
+      var mises = 0;
+      if (livre && conseil) { copie.appendChild(conseil.carte); mises++; }
+      for (var ci = 0; ci < cartes.length && mises < 4; ci++) {
         // La carte du conseil n'est pas montree deux fois.
         if (conseil && cartes[ci].getAttribute('href') === conseil.href) continue;
         copie.appendChild(cartes[ci].cloneNode(true));
@@ -2828,6 +2857,18 @@ var QuizEngine = (function() {
       try { if (window.gtag) window.gtag('event', 'pause_jeu_clic', { cartes: n, page: lien.getAttribute('href') || '' }); } catch (err) {}
     });
     wrap.appendChild(grille);
+    // La carte du livre, seule, sous les deux cartes (19 novembre 2026) : les
+    // jeux sans fin n'arrivent presque jamais à un écran de résultat, la pause
+    // est leur « Et maintenant ? ». Sa source dit à la page du livre que la
+    // visite vient d'une pause (suite-pause).
+    var blocLivre = livreSelonResultat(null);
+    var carteLivre = blocLivre && blocLivre.querySelector('a.suite-livre');
+    if (carteLivre) {
+      carteLivre.setAttribute('data-livre-lien', 'suite-pause');
+      var placeLivre = el('div', 'qc-pause-livre');
+      placeLivre.appendChild(carteLivre);
+      wrap.appendChild(placeLivre);
+    }
     var bouton = el('button', 'btn btn-cta btn-lg qc-pause-continuer', esc(tg('pause.continuer', 'Continuer à jouer')));
     bouton.type = 'button';
     bouton.addEventListener('click', function () {
@@ -2891,16 +2932,20 @@ var QuizEngine = (function() {
       var quizEl = document.getElementById('quiz-engine') || document.querySelector('[data-quiz]');
       var cleQuiz = quizEl ? quizEl.dataset.quiz : '';
       var langQuiz = quizEl ? (quizEl.dataset.lang || 'fr') : 'fr';
+      // Le livre est déjà dans « Et maintenant ? » (livreSelonResultat) :
+      // l'encart montre alors l'évaluation seule, le livre n'est jamais deux
+      // fois sur le même écran.
+      var sansLivre = !!(zones.suite && zones.suite.querySelector('.qc-livre'));
       // Sous le score des tests à deux qui en donnent un (10 novembre 2026),
       // une carte courte qui reprend leurs prénoms et leur score, à la place
       // de l'encart sous le résultat : du 11 octobre au 9 novembre 2026,
       // environ 12 000 résultats du test de couple vus, et 94 visites de la
       // page de l'évaluation venues d'un encart posé loin sous le score.
-      var sousScore = zones.bilan ? carteBilanScore(cleQuiz, langQuiz, zones.bilan) : null;
+      var sousScore = zones.bilan ? carteBilanScore(cleQuiz, langQuiz, zones.bilan, sansLivre) : null;
       if (sousScore) {
         zones.bilan.apres.insertAdjacentElement('afterend', sousScore);
       } else {
-        var produits = encartBilan(cleQuiz, langQuiz);
+        var produits = encartBilan(cleQuiz, langQuiz, sansLivre);
         if (produits) zones.produits = produits;
       }
     }
@@ -3222,7 +3267,7 @@ var QuizEngine = (function() {
     duo.appendChild(dedans);
     return duo;
   }
-  function carteBilanScore(cle, lang, ctx) {
+  function carteBilanScore(cle, lang, ctx, sansLivre) {
     var corps = document.body;
     var chemin = corps && corps.getAttribute('data-bilan');
     if (!chemin || corps.getAttribute('data-bilan-groupe') !== 'score' || corps.getAttribute('data-bilan-formule') === 'point') return null;
@@ -3263,9 +3308,9 @@ var QuizEngine = (function() {
         try { localStorage.setItem(CLE_PRENOMS_BILAN, JSON.stringify({ t: Date.now(), a: joueurs[0], b: joueurs[1] })); } catch (e) { /* rien */ }
       });
     }
-    return avecLivre(zone, 'encart-score', 'qr-duo--score');
+    return sansLivre ? zone : avecLivre(zone, 'encart-score', 'qr-duo--score');
   }
-  function encartBilan(cle, lang) {
+  function encartBilan(cle, lang, sansLivre) {
     var corps = document.body;
     var chemin = corps && corps.getAttribute('data-bilan');
     var groupe = corps && corps.getAttribute('data-bilan-groupe');
@@ -3303,7 +3348,7 @@ var QuizEngine = (function() {
       '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>' +
       (prix ? '<p class="qr-bilan-prix">' + lignePrix + '</p>' : '') +
       '</div>';
-    return avecLivre(zone, 'encart-resultat', 'qr-duo--resultat');
+    return sansLivre ? zone : avecLivre(zone, 'encart-resultat', 'qr-duo--resultat');
   }
 
   // L'encart du point : même carte que l'évaluation à deux (.qr-bilan), une
@@ -3853,7 +3898,9 @@ var QuizEngine = (function() {
     var avis = zoneAvis(this.lang);
 
     var suite = el('div', 'qr-right quiz-reveal-enter');
-    renderRelatedQuizzes(suite, quizEl ? quizEl.dataset.quiz : '', quizEl ? (quizEl.dataset.lang || 'fr') : 'fr');
+    // Le pourcentage choisit la suite : le livre ne vient qu'avec le meilleur
+    // verdict du test « prêts à vous marier » (LIVRE_APRES_RESULTAT).
+    renderRelatedQuizzes(suite, quizEl ? quizEl.dataset.quiz : '', quizEl ? (quizEl.dataset.lang || 'fr') : 'fr', pct);
 
     dispositionResultat(wrap, {
       resultat: resultat,
@@ -16011,6 +16058,9 @@ var QuizEngine = (function() {
     // ecrits dans un gabarit (le tu preferes).
     prenomsGardes: prenomsGardes,
     garderPrenom: garderPrenom,
+    // La carte du livre de « Et maintenant ? », pour le résultat du tu
+    // préfères, écrit dans son gabarit.
+    livreSelonResultat: livreSelonResultat,
     SUPABASE_URL: SUPABASE_URL,
     SUPABASE_KEY: SUPABASE_KEY,
   };

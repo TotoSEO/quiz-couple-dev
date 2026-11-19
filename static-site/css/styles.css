@@ -6316,6 +6316,86 @@ h1, h2, h3, h4, h5, h6,
 .suite-grille--resultat .suite-emoji { top: .5rem; left: .5rem; width: 2rem; height: 2rem; border-radius: .65rem; font-size: 1rem; }
 .suite-grille--resultat .suite-cta { padding-top: .6rem; font-size: .8rem; }
 
+/* La carte du livre dans « Et maintenant ? » (19 novembre 2026,
+   LIVRE_APRES_RESULTAT dans config.js, bloc préparé par related-tests.ejs) :
+   une carte de la suite couchée, le livre sur le jaune de sa couverture à
+   gauche, son nom, l'étiquette du cadeau et le bouton à droite. Les couleurs
+   sont celles du livre, comme la barre sous le menu et l'encart (.qr-livre) :
+   jaune #ffd45c, encre #2b1722, violet #6532b7 (« à deux » de la couverture,
+   7,4:1 sur la carte), rouge #c8233f sous le texte blanc (5,6:1). Elle vit
+   sous un résultat, sous celui des outils (quiz-extras.js), dans le résultat
+   du tu préfères et sur la pause des jeux sans fin. */
+.qc-livre { margin: 0; }
+.suite-livre {
+  container-type: inline-size;
+  display: flex; align-items: stretch;
+  width: 100%; min-width: 0;
+  border-radius: 1rem; overflow: hidden;
+  background: hsl(var(--card));
+  border: 1px solid hsl(var(--border) / .7);
+  box-shadow: 0 1px 3px rgb(0 0 0 / .04);
+  color: hsl(var(--foreground)); text-decoration: none; text-align: left;
+  -webkit-tap-highlight-color: transparent;
+  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+}
+.suite-livre:hover { color: hsl(var(--foreground)); text-decoration: none; transform: translateY(-3px); border-color: rgb(227 179 60 / .7); box-shadow: 0 18px 36px -18px rgb(200 140 20 / .55); }
+.suite-livre:focus-visible { outline: 3px solid #6532b7; outline-offset: 3px; }
+.suite-livre-media {
+  flex: 0 0 6.75rem; display: grid; place-items: center;
+  padding: .75rem .55rem;
+  background: #ffd45c; box-shadow: inset -1px 0 0 #e3b33c;
+}
+.suite-livre-media img {
+  display: block; width: 100%; max-width: 5.75rem; height: auto; margin: 0;
+  transform: rotate(-4deg); filter: drop-shadow(0 8px 10px rgb(43 23 34 / .3));
+  transition: transform .4s cubic-bezier(.22, 1, .36, 1);
+}
+.suite-livre:hover .suite-livre-media img { transform: rotate(-1deg) scale(1.05); }
+.suite-livre-corps {
+  display: flex; flex-direction: column; align-items: flex-start; justify-content: center; gap: .35rem;
+  flex: 1; min-width: 0; padding: .85rem 1rem .9rem;
+}
+.suite-livre-sur { font-size: .66rem; font-weight: 800; line-height: 1.3; letter-spacing: .06em; text-transform: uppercase; color: hsl(var(--secondary-texte)); }
+.suite-livre-titre {
+  font-family: var(--font-display); font-weight: 800; font-size: 1.08rem; line-height: 1.2;
+  color: hsl(var(--foreground)); -webkit-hyphens: manual; hyphens: manual; overflow-wrap: break-word;
+}
+.suite-livre-badge {
+  display: inline-flex; align-items: center; gap: .3rem; max-width: 100%;
+  padding: .22rem .6rem .22rem .45rem; border-radius: 999px;
+  background: #c8233f; color: #fff; font: 800 .72rem/1.25 var(--font-display, inherit);
+}
+.suite-livre-badge svg { width: .85rem; height: .85rem; flex: none; }
+.suite-livre-cta {
+  display: inline-flex; align-items: center; gap: .35rem;
+  margin-top: .15rem; font-size: .85rem; font-weight: 700; color: #6532b7;
+}
+.suite-livre-cta svg { width: 1rem; height: 1rem; flex: none; transition: transform .25s ease; }
+.suite-livre:hover .suite-livre-cta svg { transform: translateX(3px); }
+.dark .suite-livre-media { background: #2b2314; box-shadow: inset -1px 0 0 rgb(255 212 92 / .35); }
+.dark .suite-livre-cta { color: #c9b0f5; }
+.dark .suite-livre:hover { border-color: rgb(255 212 92 / .45); box-shadow: 0 18px 36px -18px rgb(255 212 92 / .35); }
+/* Une carte étroite (téléphone de 320 px, colonne de droite du résultat) :
+   le livre plus petit, le texte un peu plus serré. */
+@container (max-width: 17.5rem) {
+  .suite-livre-media { flex-basis: 5.25rem; padding: .6rem .4rem; }
+  .suite-livre-corps { padding: .75rem .8rem .8rem; gap: .3rem; }
+  .suite-livre-titre { font-size: 1rem; }
+  .suite-livre-badge { font-size: .68rem; }
+}
+/* Sous le résultat d'un outil (compteur, noces), avant « À faire ensuite ». */
+.outil-fin .qc-livre { margin-top: 1.75rem; padding-top: 1.35rem; border-top: 1px solid hsl(var(--border)); }
+.outil-fin .qc-livre + .suite-resultat { margin-top: 1.5rem; }
+/* Dans le résultat du tu préfères, entre la prolongation et le détail. */
+.wyr-livre { margin: 1.5rem 0 .5rem; text-align: left; }
+/* Sur la pause des jeux sans fin, sous les deux cartes. */
+.qc-pause-livre { width: 100%; max-width: 30rem; margin: 0 auto 1.5rem; }
+@media (prefers-reduced-motion: reduce) {
+  .suite-livre, .suite-livre-media img, .suite-livre-cta svg { transition: none; }
+  .suite-livre:hover, .suite-livre:hover .suite-livre-cta svg { transform: none; }
+  .suite-livre:hover .suite-livre-media img { transform: rotate(-4deg); }
+}
+
 @media (min-width: 900px) {
   .qr-plan {
     flex-direction: row; flex-wrap: wrap;
