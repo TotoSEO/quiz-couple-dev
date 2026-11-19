@@ -921,7 +921,7 @@
     'cases_manquantes', 'cases_manquantes_solo', 'paiements_ouverts', 'paiements_ouverts_solo', 'payes', 'payes_solo'];
   // Les étapes d'une personne arrêtée qui ne sont pas des domaines.
   var ARRETS_HORS_DOMAINES = { situation: 'à la situation, avant la première question', email: 'à l\'écran de l\'adresse, tout répondu', invitation: 'invitation pas acceptée' };
-  var CAUSES_DEPART_BILAN = { prenoms: 'prénoms manquants', email: 'adresse e-mail vide', email_faux: 'adresse e-mail mal écrite', majeur: 'case des 18 ans pas cochée', consentement: 'case du consentement pas cochée', accord: 'case de l\'accord pas cochée', autre: 'autre' };
+  var CAUSES_DEPART_BILAN = { prenoms: 'prénoms manquants', email: 'adresse e-mail vide', email_faux: 'adresse e-mail mal écrite', majeur: 'case des 18 ans pas cochée', consentement: 'case du consentement pas cochée', accord: 'case de l\'accord pas cochée', tel: 'façon de répondre pas choisie (un ou deux téléphones)', autre: 'autre' };
   // Une colonne de l'entonnoir : chaque barre en part de la première étape,
   // le pourcentage de droite en part de l'étape d'avant, ou de celle que
   // l'étape nomme (e[3]) quand elle ouvre une autre suite (le partenaire).

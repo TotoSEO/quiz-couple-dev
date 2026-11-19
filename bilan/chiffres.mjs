@@ -263,7 +263,9 @@ async function analyse(base, jours) {
     // région (offre_vue, clé de la zone) et les pages de paiement ouvertes à
     // ce prix (paiement_region). Depuis le 10 novembre 2026, « chacun son
     // tour sur ce téléphone » (un_telephone, puis invitation_vue clé tel
-    // quand le partenaire accepte sur place).
+    // quand le partenaire accepte sur place). Depuis le 19 novembre 2026, la
+    // clé de un_telephone dit la façon choisie : question (la même question
+    // chacun son tour) ou suite (chacun ses 100 questions).
     const cpt = await base.select('bilan_compteurs', 'select=jour,evenement,cle,n&evenement=in.(invitation_vue,offre_vue,paiement_region,un_telephone)&jour=gte.2026-10-27&order=jour.asc');
     console.log('\nComptes du 27 octobre (QR code, prix d\'une région) et du 10 novembre (un seul téléphone), jour par jour :');
     for (const c of cpt) console.log(`  ${c.jour} · ${c.evenement}${c.cle ? ':' + c.cle : ''} · ${c.n}`);

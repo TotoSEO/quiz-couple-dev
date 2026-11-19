@@ -523,6 +523,45 @@ body.bilan-focus .related-tests-section, body.bilan-focus .pqx-section { display
 .bilan-reprise-mode { display: inline-block; font-size: .72rem; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; padding: .15rem .5rem; border-radius: 999px; background: hsl(var(--secondary) / .14); color: hsl(var(--secondary-texte)); vertical-align: .1em; }
 @media (prefers-reduced-motion: reduce) { .bilan-mode { transition: none; } }
 
+/* ── Le départ, en court (19 novembre 2026) ──────────────────────────── */
+/* Thomas : « ya un pavé de texte pareil sur une page transactionnelle + une
+   case 18+ qui peut freiner ». L'accord dans un encadré : la case, une ligne
+   sous elle, la durée de garde repliée ; le gros bouton, puis le prix en une
+   ligne, et le 3919 en petit. */
+.bilan-scene .bilan-accord { margin: 1.1rem 0 .5rem; padding: .85rem 1rem .55rem; border-radius: var(--qe-rayon-i, 1rem); background: hsl(var(--primary) / .07); }
+.bilan-scene .bilan-case--accord { margin: 0; font-weight: 500; font-size: .95rem; line-height: 1.45; color: hsl(var(--foreground)); }
+.bilan-scene .bilan-case--accord input { width: 1.35rem; height: 1.35rem; margin-top: .1rem; }
+.bilan-scene .bilan-accord-aide { margin: .35rem 0 0 2rem; font-size: .85rem; line-height: 1.45; color: hsl(var(--muted-foreground)); }
+.bilan-scene .bilan-accord-plus { margin: .3rem 0 0 2rem; font-size: .82rem; color: hsl(var(--muted-foreground)); }
+.bilan-scene .bilan-accord-plus summary { cursor: pointer; font-weight: 600; color: hsl(var(--secondary-texte)); padding: .2rem 0; }
+.bilan-scene .bilan-accord-plus summary::marker { color: hsl(var(--primary)); }
+.bilan-scene .bilan-accord-plus p { margin: .25rem 0 .3rem; line-height: 1.5; }
+.bilan-scene .bilan-actions--depart { margin-top: 1rem; }
+.bilan-scene .bilan-prix-court { margin: .6rem 0 0; text-align: center; font-size: .86rem; line-height: 1.45; color: hsl(var(--muted-foreground)); text-wrap: pretty; }
+.bilan-scene .bilan-note--violence { margin: 1.1rem 0 0; font-size: .78rem; text-align: center; text-wrap: pretty; }
+/* À deux : chacun sur son téléphone, ou ensemble sur celui-ci. */
+.bilan-scene .bilan-tels { margin-bottom: 0; }
+/* Ce qui manque au départ (le choix du téléphone, la case), entouré de rouge
+   jusqu'à ce qu'on y réponde. */
+.bilan-scene .bilan-manque { outline: 2px solid hsl(var(--destructive)); outline-offset: 4px; border-radius: var(--qe-rayon-i, 1rem); }
+.bilan-scene .bilan-tel-icone { grid-column: 2; line-height: 0; color: hsl(var(--muted-foreground)); }
+.bilan-scene .bilan-tel-icone svg { width: 3.25rem; height: auto; }
+.bilan-scene .bilan-tel.choisi .bilan-tel-icone { color: hsl(var(--primary-texte)); }
+/* Un seul téléphone : les deux façons, et la case de l'autre. */
+.bilan-scene .bilan-facons { margin-bottom: 1rem; }
+.bilan-scene .bilan-facon-duree { justify-self: start; margin-top: .35rem; padding: .18rem .6rem; border-radius: 999px; background: hsl(var(--secondary) / .12); color: hsl(var(--secondary-texte)); font-size: .78rem; font-weight: 700; }
+.bilan-scene .bilan-accord-autre { margin: 0 0 1rem; }
+.bilan-scene .bilan-accord-autre[hidden] { display: none; }
+.bilan-scene .bilan-accord-autre-titre { margin: 0 0 .45rem; font-weight: 700; }
+.bilan-scene .bilan-accord-autre .bilan-accord { margin-top: 0; background: hsl(var(--secondary) / .09); }
+/* Le bandeau de celui qui répond (les règles .qc-tour de styles.css) : en
+   grand quand la main change à chaque question, en petit quand chacun
+   répond à toutes ses questions. */
+.bilan-scene .bilan-question--paire .qc-tour { margin-bottom: 1rem; }
+.bilan-scene .bilan-tour--petit { padding: .25rem .95rem .25rem .45rem; gap: .5rem; margin-bottom: .9rem; }
+.bilan-scene .bilan-tour--petit .qc-tour-phrase { font-size: .95rem; }
+@media (min-width: 640px) { .bilan-scene .bilan-tour--petit .qc-tour-phrase { font-size: 1rem; } }
+
 /* ── La réduction en cours ───────────────────────────────────────────── */
 /* PROMO_* de coeur.mjs (20 octobre 2026, Thomas : « en ce moment -20% sur le
    test, puis le prix de base barré avec le nouveau prix à côté. Sur la LP,
@@ -672,9 +711,6 @@ body.bilan-focus .related-tests-section, body.bilan-focus .pqx-section { display
 .bilan-untel { margin: 1.25rem 0 .25rem; padding: 1rem 1rem 1.1rem; border-radius: var(--qe-rayon-i, 1rem); background: hsl(var(--secondary) / .09); text-align: center; }
 .bilan-untel-titre { margin: 0 0 .35rem; font-weight: 700; color: hsl(var(--foreground)); }
 .bilan-untel .bilan-note { margin: 0 auto .8rem; max-width: 30rem; text-wrap: pretty; }
-.bilan-relais .bilan-pastille-info, .bilan-untel-choix .bilan-pastille-info { margin-bottom: 1.1rem; text-align: center; }
-.bilan-relais .bilan-actions { justify-content: center; }
-.bilan-relais .bilan-envoi { display: block; min-height: 1.2em; margin: .5rem 0 0; text-align: center; }
 .bilan-autre-ligne { margin: .7rem 0 0; text-align: center; font-size: .9rem; color: hsl(var(--muted-foreground)); }
 .blp-citation--prix { margin-bottom: 1.5rem; }
 

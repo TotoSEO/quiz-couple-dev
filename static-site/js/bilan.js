@@ -46,6 +46,7 @@
   var minuteur = null;
   var verifAttente = null;  // la vérification de l'écran d'attente, s'il est affiché
   var S = null;   // la session de réponses en cours
+  var P = null;   // la paire : un seul téléphone, la même question chacun son tour (ouvrirPaire)
   var MODE = 'duo';  // 'duo' ou 'solo' : la façon de faire l'évaluation affichée
   var FORMULE = null;  // 'point' pour le point sur ma relation, sinon null
   var QP = null;  // les questions et les textes du rapport du point
@@ -344,8 +345,8 @@
       '<p class="bilan-suggestion" id="bilan-email-sugg" hidden><button type="button" class="bilan-suggestion-btn"></button></p>' +
       '<p class="bilan-note">' + aide + '</p></div>';
   }
-  function champEmailFin(valeur, autre) {
-    return champEmailMoi(valeur, x('creation.emailAide', { autre: autre || tr('creation.autreDefaut', '') }));
+  function champEmailFin(valeur, autre, aide) {
+    return champEmailMoi(valeur, aide || x('creation.emailAide', { autre: autre || tr('creation.autreDefaut', '') }));
   }
   // Un domaine mal tapé (gmial.com) : la page propose le bon, comme la porte
   // des résultats (capture.js). L'adresse sert au lien du rapport et aux
@@ -358,9 +359,9 @@
     'orang.fr': 'orange.fr', 'oranje.fr': 'orange.fr', 'orange.f': 'orange.fr', 'wanado.fr': 'wanadoo.fr', 'wanadoo.f': 'wanadoo.fr', 'laposte.ne': 'laposte.net', 'laposte.fr': 'laposte.net', 'lapost.net': 'laposte.net', 'free.f': 'free.fr', 'sfr.f': 'sfr.fr', 'icloud.co': 'icloud.com', 'iclou.com': 'icloud.com', 'live.f': 'live.fr', 'live.co': 'live.com',
     'gmx.d': 'gmx.de', 'web.d': 'web.de', 'libero.i': 'libero.it', 'alice.i': 'alice.it', 'virgilio.i': 'virgilio.it'
   };
-  function surveillerEmail() {
-    var champ = document.getElementById('bilan-email');
-    var zone = document.getElementById('bilan-email-sugg');
+  function surveillerEmail(idChamp) {
+    var champ = document.getElementById(idChamp || 'bilan-email');
+    var zone = document.getElementById((idChamp || 'bilan-email') + '-sugg');
     if (!champ || !zone) return;
     var btn = zone.querySelector('button');
     var proposition = null;
@@ -541,16 +542,18 @@
           '<div class="bilan-actions">' + bouton('accueil', x('attente.accueil'), 'btn-outline') + '</div>'));
         return;
       }
-      if (r.statut !== 200) return messageErreur(r.json.erreur, function () { ouvrirLien(id, jeton, arret, parQr); });
+      if (r.statut !== 200) return messageErreur(r.json.erreur, function () { ouvrirLien(id, jeton, arret, parQr, unTel); });
       var e = r.json;
       if (e.invite) return rejoindre(e, jeton, parQr, unTel);
       var entree = { id: id, jeton: jeton, role: e.role, mode: e.mode || 'duo', formule: e.formule || null, moi: e.moi.prenom, autre: e.autre.prenom };
-      var ancienne = lireListe().filter(function (x) { return x.id === id && x.role === e.role; })[0];
-      if (ancienne && ancienne.invitation) entree.invitation = ancienne.invitation;
+      // Ce que l'appareil savait déjà de cette évaluation : l'invitation, et
+      // la façon de se passer le téléphone (un seul téléphone).
+      var ancienne = entreeRole(id, e.role);
+      if (ancienne) ['invitation', 'invitationVue', 'unTel'].forEach(function (k) { if (ancienne[k] != null) entree[k] = ancienne[k]; });
       garder(entree);
       if (arret) return arreterRappels(entree, e);
       suiteEtat(entree, e);
-    }).catch(function () { messageErreur('reseau', function () { ouvrirLien(id, jeton, arret, parQr); }); });
+    }).catch(function () { messageErreur('reseau', function () { ouvrirLien(id, jeton, arret, parQr, unTel); }); });
   }
 
   // « Ne plus recevoir de message sur cette évaluation » (lien des e-mails
@@ -579,6 +582,9 @@
       statut: etat.verrouille ? (etat.paye ? 'resultat' : 'pret') : etat.moi.fini ? 'fini' : 'encours',
     });
     if (etat.verrouille) return ouvrirResultat(entree);
+    // Un seul téléphone, la même question chacun son tour : les deux
+    // évaluations avancent ensemble.
+    if (MODE === 'duo' && unTelDe(entree) === 'question' && entreeRole(entree.id, roleAutre(entree.role))) return ouvrirPaire(entree.id);
     if (FORMULE === 'point') {
       chargement();
       return preparerPoint().then(function () { commencerPoint(entree, etat); })
@@ -603,6 +609,7 @@
   // création s'il n'y en a pas.
   function accueil() {
     S = null;
+    P = null;
     MODE = 'duo';
     FORMULE = null;
     if (!C || !Q) {
@@ -611,7 +618,14 @@
     }
     var liste = lireListe();
     if (!liste.length) return creation();
+    // Les deux évaluations d'un couple qui répond sur ce téléphone : une
+    // seule carte, où en est chacun.
+    var vues = {};
     var cartes = liste.map(function (e) {
+      if (vues[e.id]) return '';
+      vues[e.id] = true;
+      var o = e.mode === 'solo' ? null : entreeRole(e.id, roleAutre(e.role));
+      if (o) return carteDeux(e.role === 'a' ? e : o, e.role === 'a' ? o : e);
       var statut = e.statut === 'resultat' ? x('accueil.resultat')
         : e.statut === 'pret' ? x('accueil.pret')
         : e.statut === 'fini' ? x('accueil.fini')
@@ -639,6 +653,25 @@
         });
       },
     };
+  }
+
+  function carteDeux(a, b) {
+    var fini = function (e) { return e.statut === 'fini' || e.statut === 'pret' || e.statut === 'resultat'; };
+    var rapport = a.statut === 'resultat' || b.statut === 'resultat';
+    var pret = a.statut === 'pret' || b.statut === 'pret';
+    var ligne = function (e) {
+      return fini(e) ? x('accueil.ligneFini', { nom: e.moi })
+        : e.total ? x('accueil.ligneProgression', { nom: e.moi, n: nombre(e.repondu || 0), total: nombre(e.total) })
+        : x('accueil.ligneAttente', { nom: e.moi });
+    };
+    var cible = entreeAOuvrir(a.id) || a;
+    return '<li class="bilan-reprise">' +
+      '<div><strong>' + x('accueil.deux', { moi: a.moi || '', autre: a.autre || '' }) + '</strong>' +
+      '<span class="bilan-reprise-statut">' + (rapport ? x('accueil.resultat') : pret ? x('accueil.pret') : ligne(a) + '<br>' + ligne(b)) + '</span></div>' +
+      '<div class="bilan-reprise-actions">' +
+      bouton('reprendre', rapport ? x('accueil.voir') : x('accueil.reprendre'), 'btn-cta btn-gradient btn-sm', ' data-id="' + esc(a.id) + '" data-role="' + esc(cible.role) + '"') +
+      bouton('oublier', x('accueil.oublier'), 'btn-outline btn-sm', ' data-id="' + esc(a.id) + '" data-role=""') +
+      '</div></li>';
   }
 
   // Une action irréversible se confirme d'un second clic sur le même bouton
@@ -690,11 +723,63 @@
     }).join('') + '</div>';
   }
 
+  // À deux : comment ils vont répondre, chacun sur son téléphone ou ensemble
+  // sur celui-ci (19 novembre 2026 ; voir reglerTelephone). Rien n'est choisi
+  // d'avance : le choix demandait jusque-là un petit bouton de l'écran
+  // d'invitation, que les couples côte à côte ne voyaient pas.
+  var ICONES_TEL = {
+    deux: '<svg viewBox="0 0 52 34" width="52" height="34" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="3" width="15" height="28" rx="3.5"/><path d="M12.5 26.5h4"/><rect x="30" y="3" width="15" height="28" rx="3.5"/><path d="M35.5 26.5h4"/></svg>',
+    un: '<svg viewBox="0 0 52 34" width="52" height="34" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="18.5" y="3" width="15" height="28" rx="3.5"/><path d="M24 26.5h4"/><path d="M4 15c1.5-5 5.5-8 10-7.5"/><path d="M11 4.8l3.4 2.8-2.9 3.3"/><path d="M48 19c-1.5 5-5.5 8-10 7.5"/><path d="M41 29.2l-3.4-2.8 2.9-3.3"/></svg>',
+  };
+  function champTelephone(valeur) {
+    return '<div class="bilan-modes bilan-tels" role="radiogroup" aria-label="' + x('creation.telTitre') + '">' + ['deux', 'un'].map(function (t) {
+      var oui = valeur === t;
+      var cle = t === 'deux' ? 'creation.telDeux' : 'creation.telUn';
+      return '<label class="bilan-mode bilan-tel' + (oui ? ' choisi' : '') + '"><input type="radio" name="tel" value="' + t + '"' + (oui ? ' checked' : '') + ' data-change="tel">' +
+        '<span class="bilan-mode-rond" aria-hidden="true"></span>' +
+        '<span class="bilan-mode-texte"><strong>' + x(cle) + '</strong><span>' + avecNomAutre(cle + 'Aide') + '</span></span>' +
+        '<span class="bilan-tel-icone" aria-hidden="true">' + ICONES_TEL[t] + '</span></label>';
+    }).join('') + '</div>';
+  }
+
+  // L'accord, en court (19 novembre 2026, Thomas : « ya un pavé de texte
+  // pareil sur une page transactionnelle + une case 18+ qui peut freiner
+  // l'utilisateur ») : la case (18 ans et l'accord, une seule depuis le
+  // 25 octobre 2026), une ligne sous elle qui dit qui verra les réponses, et
+  // la durée de garde repliée. `aide` est déjà écrite (HTML).
+  function blocAccord(id, coche, aide) {
+    return '<div class="bilan-accord">' +
+      '<label class="bilan-case bilan-case--accord"><input type="checkbox" id="' + id + '"' + (coche ? ' checked' : '') + '> <span>' + x('creation.consentement') + '</span></label>' +
+      (aide ? '<p class="bilan-accord-aide">' + aide + '</p>' : '') +
+      '<details class="bilan-accord-plus"><summary>' + x('creation.conservationTitre') + '</summary><p>' + x('creation.conservation') + '</p></details>' +
+      '</div>';
+  }
+
   // Un texte qui nomme le partenaire, le prénom dans un span que la saisie
-  // met à jour (« votre partenaire » tant qu'il n'est pas écrit).
+  // met à jour (« votre partenaire » tant qu'il n'est pas écrit). Le nom qui
+  // ouvre la phrase prend sa majuscule (data-debut) : « Votre partenaire
+  // reçoit un lien », pas « votre partenaire reçoit un lien ».
   function avecNomAutre(cle) {
     var nom = brouillon.autre || tr('creation.autreDefaut', '');
-    return x(cle, { autre: '\u0001' }).split('\u0001').join('<span class="bilan-nom-autre">' + esc(nom) + '</span>');
+    var morceaux = x(cle, { autre: '\u0001' }).split('\u0001');
+    return morceaux.map(function (m, i) {
+      if (!i) return m;
+      var debut = i === 1 && !morceaux[0];
+      return '<span class="bilan-nom-autre"' + (debut ? ' data-debut' : '') + '>' + esc(debut ? majuscule(nom) : nom) + '</span>' + m;
+    }).join('');
+  }
+  function majuscule(t) {
+    t = String(t || '');
+    return t.charAt(0).toUpperCase() + t.slice(1);
+  }
+  // Un prénom tapé tout en minuscules prend ses majuscules (« léa » → « Léa »,
+  // « jean-marc » → « Jean-Marc ») : il ouvre bien des phrases de l'écran,
+  // des e-mails et du rapport (« Léa a fini ses questions »). Un prénom qui a
+  // déjà une majuscule reste tel qu'il est écrit.
+  function prenomSaisi(v) {
+    var s = String(v || '').replace(/\s+/g, ' ').trim();
+    if (!s || s !== s.toLowerCase() || s === s.toUpperCase()) return s;
+    return s.replace(/(^|[\s-])(\S)/g, function (m, avant, l) { return avant + l.toUpperCase(); });
   }
 
   // Le départ tient en un écran depuis le 21 octobre 2026 (Thomas devant
@@ -747,7 +832,7 @@
   }
   function creation() {
     if (!brouillon) {
-      brouillon = { mode: modeDemande === 'solo' ? 'solo' : 'duo', statut: null, moi: '', autre: '', genreMoi: null, genreAutre: null, consent: false, celib: null };
+      brouillon = { mode: modeDemande === 'solo' ? 'solo' : 'duo', statut: null, moi: '', autre: '', genreMoi: null, genreAutre: null, tel: null, consent: false, celib: null };
       prenomsDuTest(brouillon);
     }
     MODE = brouillon.mode;
@@ -776,15 +861,13 @@
         '<div class="bilan-champ"><span class="bilan-label">' + x('creation.genreAutre') + '</span>' + champGenre('g-autre', brouillon.genreAutre) + '</div>' +
         '<p class="bilan-note">' + x('creation.genreAide') + '</p>' +
         '<hr class="bilan-sep">' +
-        (solo ? '<p class="bilan-info">' + avecNomAutre('creation.soloNote') + '</p>' : '') +
-        '<label class="bilan-case"><input type="checkbox" id="bilan-consent"' + (brouillon.consent ? ' checked' : '') + '> <span>' + x('creation.consentement') + '</span></label>' +
-        '<p class="bilan-note">' + avecNomAutre('creation.accordAide') + '</p>' +
-        '<p class="bilan-prix-rappel">' + avecPromo(x('creation.prixRappel')) + '</p>' +
-        '<p class="bilan-note">' + x('accueil.violence') + '</p>' +
+        (solo ? '' : '<h3 class="bilan-sous-titre">' + x('creation.telTitre') + '</h3>' + champTelephone(brouillon.tel)) +
+        blocAccord('bilan-consent', brouillon.consent, avecNomAutre('creation.accordAide')) +
         '<p class="bilan-alerte" id="bilan-erreur" hidden></p>' +
-        '<div class="bilan-actions bilan-actions--ecart">' +
-        bouton('retour', x('creation.retour'), 'btn-outline') +
-        bouton('valider', x('creation.creer')) + '</div>';
+        '<div class="bilan-actions bilan-actions--depart">' + bouton('valider', x('creation.creer'), 'btn-cta btn-gradient btn-lg') + '</div>' +
+        '<p class="bilan-prix-court">' + avecPromo(x('creation.prixRappel')) + '</p>' +
+        '<div class="bilan-q-bas">' + bouton('retour', x('creation.retour'), 'btn-link') + '</div>' +
+        '<p class="bilan-note bilan-note--violence">' + x('accueil.violence') + '</p>';
     } else {
       corps += '<div class="bilan-actions bilan-actions--ecart">' + bouton('retour', x('creation.retour'), 'btn-outline') + '</div>';
     }
@@ -800,7 +883,7 @@
     var champAutre = document.getElementById('bilan-autre');
     if (champAutre) champAutre.addEventListener('input', function () {
       var nom = this.value.trim() || tr('creation.autreDefaut', '');
-      racine.querySelectorAll('.bilan-nom-autre').forEach(function (n) { n.textContent = nom; });
+      racine.querySelectorAll('.bilan-nom-autre').forEach(function (n) { n.textContent = n.hasAttribute('data-debut') ? majuscule(nom) : nom; });
     });
 
     function erreur(cle, cause) {
@@ -808,7 +891,29 @@
       p.textContent = ins(remplir(tr(cle, ''), {}));
       p.hidden = false;
       if (cause) compterVue('depart_erreur', { mode: brouillon.mode, cle: cause, formule: FORMULE });
+      // Ce qui manque est entouré, et amené à l'écran s'il n'y est pas : sur
+      // un téléphone, le choix du téléphone est bien au-dessus du bouton.
+      if (cause === 'prenoms') {
+        var vide = ['bilan-moi', 'bilan-autre'].map(function (id) { return document.getElementById(id); })
+          .filter(function (c) { return c && !c.value.trim(); })[0];
+        if (vide) vide.focus();
+        return;
+      }
+      var cible = cause === 'tel' ? racine.querySelector('.bilan-tels') : cause === 'accord' ? racine.querySelector('.bilan-accord') : null;
+      if (!cible) return;
+      cible.classList.add('bilan-manque');
+      var r = cible.getBoundingClientRect();
+      if (r.top < 72 || r.bottom > window.innerHeight) {
+        var calme = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        cible.scrollIntoView({ behavior: calme ? 'auto' : 'smooth', block: 'center' });
+      }
     }
+    var caseAccord = document.getElementById('bilan-consent');
+    if (caseAccord) caseAccord.addEventListener('change', function () {
+      var b = racine.querySelector('.bilan-accord');
+      if (b) b.classList.remove('bilan-manque');
+      if (this.checked) { var p = document.getElementById('bilan-erreur'); if (p) p.hidden = true; }
+    });
     // Ce qui est à l'écran passe dans le brouillon : rien n'est perdu quand
     // on change de façon de faire ou de réponse à « Où en êtes-vous ? ».
     function lire() {
@@ -819,6 +924,8 @@
         brouillon.genreMoi = lireGenre('g-moi');
         brouillon.genreAutre = lireGenre('g-autre');
         brouillon.consent = document.getElementById('bilan-consent').checked;
+        var tel = racine.querySelector('input[name="tel"]:checked');
+        if (tel) brouillon.tel = tel.value;
       }
       if (document.getElementById('bilan-celib-email')) {
         brouillon.celib = {
@@ -838,6 +945,16 @@
         modeDemande = brouillon.mode;
         creation();
       },
+      // Chacun sur son téléphone, ou ensemble sur celui-ci : sans redessiner
+      // l'écran, qui remonterait en haut.
+      tel: function (input) {
+        brouillon.tel = input.value === 'un' ? 'un' : 'deux';
+        racine.querySelectorAll('.bilan-tel').forEach(function (l) { l.classList.toggle('choisi', l.contains(input)); });
+        var g = racine.querySelector('.bilan-tels');
+        if (g) g.classList.remove('bilan-manque');
+        var p = document.getElementById('bilan-erreur');
+        if (p) p.hidden = true;
+      },
       // « Où en êtes-vous ? », comptée une fois par visite et par réponse.
       statut: function (input) {
         lire();
@@ -852,7 +969,10 @@
       },
       valider: function (b) {
         lire();
+        brouillon.moi = prenomSaisi(brouillon.moi);
+        brouillon.autre = prenomSaisi(brouillon.autre);
         if (!brouillon.moi || !brouillon.autre) return erreur('creation.prenomManque', 'prenoms');
+        if (!solo && brouillon.tel !== 'deux' && brouillon.tel !== 'un') return erreur('creation.telManque', 'tel');
         // Plus d'adresse au départ depuis le 2 novembre 2026 : la fin de ses
         // propres questions la demande (ecranEmail), comme du 21 au
         // 25 octobre. Voir la note en tête de creation().
@@ -871,10 +991,13 @@
           b.disabled = false;
           if (r.statut !== 200) return erreur(r.json.erreur === 'trop' ? 'erreurs.trop' : 'erreurs.serveur');
           var entree = { id: r.json.id, jeton: r.json.jeton, mode: brouillon.mode, formule: formule || null, invitation: r.json.invitation || null, invitationVue: true, role: 'a', moi: brouillon.moi, autre: brouillon.autre, statut: 'encours' };
+          var tel = brouillon.tel;
           garder(entree);
           brouillon = null;
           // Seul(e) : personne à inviter, la situation puis les questions.
           if (entree.mode === 'solo') return ouvrir(entree);
+          // Ensemble sur ce téléphone : comment se le passer.
+          if (tel === 'un') return reglerTelephone(entree, r.json.etat);
           invitation(entree, r.json.etat);
         }).catch(function () { b.disabled = false; erreur('erreurs.reseau'); });
       },
@@ -988,8 +1111,8 @@
       // n'avaient jamais commencé).
       '<div class="bilan-invite-suite"><p>' + x('invitation.suite', { autre: autre }) + '</p>' +
       bouton('commencer', x('invitation.commencer'), 'btn-cta btn-gradient btn-lg') + '</div>' +
-      // Un seul téléphone pour deux (10 novembre 2026) : chacun son tour,
-      // une partie chacun (choixUnTel). Tant que l'autre n'a pas accepté.
+      // Un seul téléphone pour deux : les deux façons de se passer le
+      // téléphone (reglerTelephone). Tant que l'autre n'a pas accepté.
       (etat && etat.autre && etat.autre.rejoint ? '' :
         '<div class="bilan-untel"><p class="bilan-untel-titre">' + x('invitation.unTelTitre') + '</p>' +
         '<p class="bilan-note">' + x('invitation.unTelTexte', { autre: autre }) + '</p>' +
@@ -1017,7 +1140,7 @@
       copierMoi: function (b) { copier(lienPersonnel(entree.id, entree.jeton), b); },
       envoyerLien: function (b) { envoyerLien(b, entree.id, entree.jeton); },
       commencer: function () { ouvrir(entree); },
-      unTel: function () { choixUnTel(entree, etat); },
+      unTel: function () { reglerTelephone(entree, etat); },
     };
   }
 
@@ -1045,25 +1168,29 @@
   // L'écran de l'invitation : le prénom, le genre et la case. L'adresse se
   // demande à la fin de ses propres questions, comme pour le créateur
   // (2 novembre 2026, voir creation). La situation se confirme au fil des
-  // domaines (questionSituation).
+  // domaines (questionSituation). `unTel` : l'autre accepte sur le téléphone
+  // du créateur, qui a fini ses questions (chacun ses cent questions,
+  // passerTelephone ; ou l'écran d'attente).
   function rejoindre(etat, jetonInvitation, parQr, unTel) {
     var autre = etat.autre.prenom;
     var html = carte(
       duo('salut', 'mignon', 86, etat.autre.genre, etat.moi.genre) +
-      '<h2 class="bilan-titre">' + x('rejoindre.titre', { autre: autre }) + '</h2>' +
-      '<p class="bilan-texte">' + x('rejoindre.texte', { autre: autre }) + '</p>' +
-      '<p class="bilan-texte">' + x('rejoindre.duree') + '</p>' +
+      (unTel
+        ? '<h2 class="bilan-titre">' + x('rejoindre.telTitre', { moi: etat.moi.prenom }) + '</h2>' +
+          '<p class="bilan-texte">' + x('rejoindre.telTexte', { autre: autre }) + '</p>'
+        : '<h2 class="bilan-titre">' + x('rejoindre.titre', { autre: autre }) + '</h2>' +
+          '<p class="bilan-texte">' + x('rejoindre.texte', { autre: autre }) + '</p>' +
+          '<p class="bilan-texte">' + x('rejoindre.duree') + '</p>') +
       (etat.paye ? '<p class="bilan-alerte bilan-alerte--ok">' + x('rejoindre.paye', { autre: autre }) + '</p>' : '') +
       '<div class="bilan-champ"><label for="bilan-moi">' + x('rejoindre.prenom') + '</label>' +
       '<input id="bilan-moi" class="bilan-input" type="text" maxlength="30" value="' + esc(etat.moi.prenom) + '"></div>' +
       '<div class="bilan-champ"><span class="bilan-label">' + x('rejoindre.genre') + '</span>' + champGenre('g-moi', etat.moi.genre) + '</div>' +
       '<hr class="bilan-sep">' +
-      '<label class="bilan-case"><input type="checkbox" id="bilan-consent"> <span>' + x('creation.consentement') + '</span></label>' +
-      '<p class="bilan-note">' + x('creation.accordAide', { autre: autre }) + '</p>' +
-      '<p class="bilan-prix-rappel">' + avecPromo(x('creation.prixRappel')) + '</p>' +
-      '<p class="bilan-note">' + x('accueil.violence') + '</p>' +
+      blocAccord('bilan-consent', false, x('creation.accordAide', { autre: autre })) +
       '<p class="bilan-alerte" id="bilan-erreur" hidden></p>' +
-      '<div class="bilan-actions">' + bouton('accepter', x('rejoindre.commencer')) + '</div>', 'bilan-rejoindre');
+      '<div class="bilan-actions bilan-actions--depart">' + bouton('accepter', x('rejoindre.commencer'), 'btn-cta btn-gradient btn-lg') + '</div>' +
+      '<p class="bilan-prix-court">' + avecPromo(x('creation.prixRappel')) + '</p>' +
+      '<p class="bilan-note bilan-note--violence">' + x('accueil.violence') + '</p>', 'bilan-rejoindre');
     afficher(html);
     function erreur(cle) {
       var p = document.getElementById('bilan-erreur');
@@ -1073,15 +1200,21 @@
     compterVue('invitation_vue', { mode: 'duo', id: etat.id, cle: unTel ? 'tel' : parQr ? 'qr' : '' });
     ACTIONS = {
       accepter: function (b) {
-        var prenom = (document.getElementById('bilan-moi').value || '').trim();
+        var prenom = prenomSaisi(document.getElementById('bilan-moi').value);
         if (!prenom) return erreur('rejoindre.prenomManque');
         if (!document.getElementById('bilan-consent').checked) return erreur('creation.accordManque');
         b.disabled = true;
         appel('consentir', { id: etat.id, jeton: jetonInvitation, prenom: prenom, genre: lireGenre('g-moi'), consentement: true, majeur: true })
           .then(function (r) {
             if (r.statut !== 200) { b.disabled = false; return erreur(r.statut === 409 ? 'rejoindre.lienUtilise' : 'erreurs.serveur'); }
-            var entree = { id: etat.id, jeton: r.json.jeton, role: etat.role, moi: prenom, autre: autre, statut: 'encours' };
-            if (unTel) { entree.unTel = true; entree.pos = 0; }
+            var entree = { id: etat.id, jeton: r.json.jeton, role: etat.role, mode: 'duo', moi: prenom, autre: autre, statut: 'encours' };
+            if (unTel) {
+              // Les deux évaluations sont maintenant sur ce téléphone :
+              // chacun ses cent questions.
+              entree.unTel = 'suite';
+              var o = entreeRole(etat.id, roleAutre(etat.role));
+              if (o && !unTelDe(o)) majEntree(o.id, o.role, { unTel: 'suite' });
+            }
             garder(entree);
             ouvrir(entree);
           })
@@ -1090,40 +1223,110 @@
     };
   }
 
-  // ── Un seul téléphone, chacun son tour ──────────────────────────────────
-  // 10 novembre 2026 (Thomas : « Je suis d'accord avec tout » sur un mode à
-  // deux sur un seul téléphone ; sept évaluations à deux sur dix n'avaient
-  // jamais de partenaire). Le créateur répond à une partie et passe le
-  // téléphone ; l'autre accepte l'invitation sur place (son prénom, son
-  // genre, sa case) et répond à la même partie, et ainsi de suite jusqu'à la
-  // fin. Les deux évaluations restent sur l'appareil, une entrée par rôle
-  // (qc-bilans) qui porte `unTel` et `pos`, le rang dans C.ORDRE de la partie
-  // que la personne va commencer (C.ORDRE.length quand elle a tout répondu).
-  // Une partie revient à celui des deux qui en est au même point ou en
-  // retard (tourDeLAutre) ; la partie par laquelle une session commence ne
-  // repasse jamais le téléphone (sansRelais), sinon il ferait l'aller-retour.
-  function choixUnTel(entree, etat) {
-    var moi = entree.moi, autre = entree.autre;
-    afficher(carte(
-      duo('salut', 'mignon', 86, etat && etat.moi.genre, etat && etat.autre.genre) +
-      '<h2 class="bilan-titre">' + x('unTel.titre') + '</h2>' +
-      '<p class="bilan-texte">' + x('unTel.texte', { moi: moi, autre: autre }) + '</p>' +
-      '<p class="bilan-texte">' + x('unTel.prive', { moi: moi, autre: autre }) + '</p>' +
-      '<p class="bilan-pastille-info">' + x('unTel.duree') + '</p>' +
-      '<div class="bilan-actions">' + bouton('commencer', x('unTel.commencer', { moi: moi })) +
-      bouton('retour', x('unTel.retour'), 'btn-outline') + '</div>', 'bilan-untel-choix'));
-    ACTIONS = {
-      commencer: function () {
-        entree.unTel = true;
-        entree.pos = 0;
-        majEntree(entree.id, entree.role, { unTel: true, pos: 0 });
-        compterVue('un_telephone', { mode: 'duo', id: entree.id });
-        ouvrir(entree);
-      },
-      retour: function () { invitation(entree, etat); },
-    };
+  // ── Un seul téléphone ───────────────────────────────────────────────────
+  // 19 novembre 2026 (Thomas : « le truc à deux sur le même téléphone est
+  // complètement pas optimisé et bug, il n'a pas son propre système de
+  // fonctionnement », puis « propose leur de choisir le mode de formulaire :
+  // La même question chacun son tour, et quand les deux ont répondu ça passe
+  // à la suivante, ou y'en a un qui fait les 100 de son côté, et quand c'est
+  // fini c'est à l'autre »). Le départ demande comment ils vont répondre
+  // (champTelephone) ; ensemble sur ce téléphone, cet écran demande comment
+  // se passer le téléphone (entree.unTel) :
+  // - 'question' : la même question à l'un puis à l'autre, et les deux
+  //   évaluations avancent ensemble (la paire, ouvrirPaire) ; une seule
+  //   situation pour deux, les deux adresses à la fin, puis l'écran
+  //   « rapport prêt ». L'autre coche sa case ici, avant la première question.
+  // - 'suite' : le créateur répond à toutes ses questions, puis l'écran
+  //   « À X maintenant ! » (passerTelephone) passe le téléphone, ou envoie à
+  //   l'autre le lien qui ouvre sa partie sur son téléphone.
+  // Les deux évaluations restent sur l'appareil, une entrée par rôle
+  // (qc-bilans). Du 10 au 19 novembre 2026, une seule façon existait (une
+  // partie chacun, en alternance, `unTel: true`, caché sous « Commencer mes
+  // réponses ») : une entrée de cette époque se poursuit comme 'suite'.
+  function unTelDe(e) {
+    if (!e || !e.unTel) return null;
+    return e.unTel === 'question' ? 'question' : 'suite';
   }
   function roleAutre(role) { return role === 'a' ? 'b' : 'a'; }
+
+  function reglerTelephone(entree, etat, choix) {
+    var v = { moi: entree.moi, autre: entree.autre };
+    var facon = function (f) {
+      var oui = choix === f;
+      return '<label class="bilan-mode bilan-facon' + (oui ? ' choisi' : '') + '"><input type="radio" name="facon" value="' + f + '"' + (oui ? ' checked' : '') + ' data-change="facon">' +
+        '<span class="bilan-mode-rond" aria-hidden="true"></span>' +
+        '<span class="bilan-mode-texte"><strong>' + x('unTel.' + f + 'Titre') + '</strong><span>' + x('unTel.' + f + 'Texte', v) + '</span>' +
+        '<span class="bilan-facon-duree">' + x('unTel.' + f + 'Duree') + '</span></span></label>';
+    };
+    afficher(carte(
+      duo('salut', 'mignon', 76, etat && etat.moi.genre, etat && etat.autre.genre) +
+      '<h2 class="bilan-titre">' + x('unTel.titre') + '</h2>' +
+      '<div class="bilan-modes bilan-facons" role="radiogroup" aria-label="' + x('unTel.titre') + '">' + facon('question') + facon('suite') + '</div>' +
+      '<div class="bilan-accord-autre" id="bilan-accord-autre"' + (choix === 'question' ? '' : ' hidden') + '>' +
+        '<p class="bilan-accord-autre-titre">' + x('unTel.consentTitre', v) + '</p>' +
+        blocAccord('bilan-consent-autre', false, x('unTel.consentNote', v)) +
+      '</div>' +
+      '<p class="bilan-note bilan-centre">' + x('unTel.prive') + '</p>' +
+      '<p class="bilan-alerte" id="bilan-erreur" hidden></p>' +
+      '<div class="bilan-actions bilan-actions--depart">' + bouton('go', x('unTel.commencer'), 'btn-cta btn-gradient btn-lg') + '</div>' +
+      '<div class="bilan-q-bas">' + bouton('deuxTel', x('unTel.deuxTel'), 'btn-link') + '</div>', 'bilan-untel-choix'));
+    // Ce qui manque (la façon, la case de l'autre) est entouré de rouge,
+    // comme au départ.
+    function erreur(cle, manque) {
+      var p = document.getElementById('bilan-erreur');
+      p.textContent = ins(remplir(tr(cle, ''), v));
+      p.hidden = false;
+      var cible = manque && racine.querySelector(manque);
+      if (cible) cible.classList.add('bilan-manque');
+    }
+    var caseAutre = document.getElementById('bilan-consent-autre');
+    if (caseAutre) caseAutre.addEventListener('change', function () {
+      var bloc = racine.querySelector('.bilan-accord-autre .bilan-accord');
+      if (bloc) bloc.classList.remove('bilan-manque');
+      if (this.checked) { var p = document.getElementById('bilan-erreur'); if (p) p.hidden = true; }
+    });
+    ACTIONS = {
+      facon: function (input) {
+        choix = input.value === 'question' ? 'question' : 'suite';
+        racine.querySelectorAll('.bilan-facon').forEach(function (l) { l.classList.toggle('choisi', l.contains(input)); });
+        document.getElementById('bilan-accord-autre').hidden = choix !== 'question';
+        var g = racine.querySelector('.bilan-facons');
+        if (g) g.classList.remove('bilan-manque');
+        var p = document.getElementById('bilan-erreur');
+        if (p) p.hidden = true;
+      },
+      go: function (b) {
+        if (choix !== 'question' && choix !== 'suite') return erreur('unTel.choixManque', '.bilan-facons');
+        if (choix === 'suite') {
+          entree.unTel = 'suite';
+          majEntree(entree.id, entree.role, { unTel: 'suite' });
+          compterVue('un_telephone', { mode: 'duo', id: entree.id, cle: 'suite' });
+          return ouvrir(entree);
+        }
+        if (!document.getElementById('bilan-consent-autre').checked) return erreur('unTel.consentManque', '.bilan-accord-autre .bilan-accord');
+        // L'autre a déjà accepté sur ce téléphone (un second appui) : rien à
+        // redemander.
+        var deja = entreeRole(entree.id, roleAutre(entree.role));
+        var suite = function () {
+          entree.unTel = 'question';
+          majEntree(entree.id, entree.role, { unTel: 'question' });
+          compterVue('un_telephone', { mode: 'duo', id: entree.id, cle: 'question' });
+          ouvrirPaire(entree.id);
+        };
+        if (deja) { majEntree(deja.id, deja.role, { unTel: 'question' }); return suite(); }
+        b.disabled = true;
+        appel('consentir', { id: entree.id, jeton: entree.invitation, consentement: true, majeur: true }).then(function (r) {
+          b.disabled = false;
+          if (r.statut !== 200) return erreur(r.statut === 409 ? 'rejoindre.lienUtilise' : 'erreurs.serveur');
+          garder({ id: entree.id, jeton: r.json.jeton, role: roleAutre(entree.role), mode: 'duo', moi: entree.autre, autre: entree.moi, statut: 'encours', unTel: 'question' });
+          compterVue('invitation_vue', { mode: 'duo', id: entree.id, cle: 'tel' });
+          suite();
+        }).catch(function () { b.disabled = false; erreur('erreurs.reseau'); });
+      },
+      deuxTel: function () { invitation(entree, etat); },
+    };
+  }
+
   // L'autre peut-il répondre sur ce téléphone ? Son évaluation y est
   // (l'entrée), ou il n'a pas encore accepté et l'invitation du créateur est
   // là ('inviter') ; sinon null : il répond ailleurs.
@@ -1133,57 +1336,586 @@
     var a = (etat && etat.autre) || session.autre || {};
     return session.role === 'a' && !a.rejoint && session.entree && session.entree.invitation ? 'inviter' : null;
   }
-  function notePos(session, rang) {
-    session.entree.pos = rang;
-    majEntree(session.id, session.role, { pos: rang });
+  // Ouvrir les questions de l'autre sur ce téléphone : son évaluation, ou
+  // l'acceptation de l'invitation (rejoindre, `unTel`).
+  // Laquelle des deux évaluations d'un couple ouvrir depuis l'accueil ou la
+  // reprise : la paire (la même question chacun son tour) part du créateur ;
+  // chacun ses cent questions, celui qui n'a pas fini, le créateur d'abord.
+  function entreeAOuvrir(id) {
+    var a = entreeRole(id, 'a'), b = entreeRole(id, 'b');
+    if (!a || !b) return a || b || entreeDe(id);
+    if (unTelDe(a) === 'question' || unTelDe(b) === 'question') return a;
+    var fini = function (e) { return e.statut === 'fini' || e.statut === 'pret' || e.statut === 'resultat'; };
+    if (!fini(a)) return a;
+    if (!fini(b)) return b;
+    return a;
   }
-  function tourDeLAutre(session, rang) {
-    var o = autreIci(session);
-    if (!o) return false;
-    if (o === 'inviter') return true;
-    if ((session.autre && session.autre.fini) || o.statut === 'fini' || o.statut === 'pret' || o.statut === 'resultat') return false;
-    return (typeof o.pos === 'number' ? o.pos : 0) <= rang;
+  function ouvrirAutreIci(entree, etat) {
+    var o = autreIci({ id: entree.id, role: etat.role, entree: entree, autre: etat.autre }, etat);
+    if (o === 'inviter') return ouvrirLien(entree.id, entree.invitation, false, false, true);
+    if (!o) return attente(entree, etat);
+    if (!unTelDe(o)) { o.unTel = 'suite'; majEntree(o.id, o.role, { unTel: 'suite' }); }
+    ouvrir(o);
   }
-  // Passer le téléphone : ce qui vient d'être répondu part d'abord, et le
-  // bouton attend l'enregistrement (une réponse en retard repartirait sinon
-  // avec la session de l'autre) ; puis la session de l'autre s'ouvre, ou son
-  // acceptation de l'invitation. `dom` : la partie qui commence (null à la
-  // fin de ses propres réponses).
-  function relais(dom, dejaEnregistre) {
-    var session = S;
-    var o = autreIci(session);
-    var moi = session.moi.prenom, autre = session.autre.prenom;
-    var rang = dom ? C.ORDRE.indexOf(dom) : -1;
-    var etape = o === 'inviter' ? x('unTel.relaisPremier', { autre: autre })
-      : dom ? x('unTel.relaisPartie', { n: rang + 1, total: C.ORDRE.length, domaine: titreDomaine(dom) })
-      : x('unTel.relaisFin', { moi: moi, autre: autre });
+
+  // La fin des questions de l'un, chacun ses cent questions : passer le
+  // téléphone à l'autre, ou lui envoyer le lien qui ouvre sa partie sur son
+  // téléphone (Thomas : « si jamais ils ont commencé à deux, la personne 1 a
+  // fait les 100 questions mais pendant ce temps l'autre s'est barré »). Son
+  // lien personnel s'il a déjà accepté sur ce téléphone, sinon l'invitation :
+  // il accepte sur le sien, et ses questions suivent.
+  function passerTelephone(entree, etat) {
+    S = null;
+    var v = { moi: etat.moi.prenom, autre: etat.autre.prenom };
+    var o = autreIci({ id: entree.id, role: etat.role, entree: entree, autre: etat.autre }, etat);
+    var lien = o && o !== 'inviter' ? lienPersonnel(o.id, o.jeton) : entree.invitation ? lienPersonnel(entree.id, entree.invitation) : null;
     afficher(carte(
-      duo('mignon', 'joie', 86, session.moi.genre, session.autre.genre) +
-      '<h2 class="bilan-titre">' + x('unTel.relaisTitre', { autre: autre }) + '</h2>' +
-      '<p class="bilan-texte">' + x('unTel.relaisTexte', { moi: moi, autre: autre }) + '</p>' +
-      '<p class="bilan-pastille-info">' + etape + '</p>' +
-      '<div class="bilan-actions">' + bouton('passer', x('unTel.relaisBouton', { autre: autre }), 'btn-cta btn-gradient btn-lg', dejaEnregistre ? '' : ' disabled') + '</div>' +
-      '<p class="bilan-envoi" id="bilan-envoi" aria-live="polite"></p>' +
-      '<div class="bilan-q-bas">' + bouton('pause', x('question.pause'), 'btn-link') + '</div>', 'bilan-relais'));
-    var pret = !!dejaEnregistre;
-    if (!pret) {
-      sauver(false, function (r) {
-        if (r && r.statut === 409) return ouvrirResultat(session.entree);
-        pret = true;
-        var b = racine.querySelector('.bilan-relais [data-action="passer"]');
-        if (b) b.disabled = false;
+      duo('joie', 'salut', 80, etat.moi.genre, etat.autre.genre) +
+      '<h2 class="bilan-titre">' + x('unTel.passerTitre', v) + '</h2>' +
+      '<p class="bilan-texte bilan-centre">' + x('unTel.passerTexte', v) + '</p>' +
+      '<div class="bilan-actions">' + bouton('passer', x('unTel.passerBouton', v), 'btn-cta btn-gradient btn-lg') + '</div>' +
+      (lien ? '<hr class="bilan-sep">' +
+        '<h3 class="bilan-sous-titre bilan-centre">' + x('unTel.lienTitre', v) + '</h3>' +
+        '<p class="bilan-note bilan-centre">' + x('unTel.lienTexte', v) + '</p>' +
+        '<div class="bilan-qr bilan-qr--grand" id="bilan-qr" role="img" aria-label="' + x('unTel.lienQr', v) + '"></div>' +
+        '<div class="bilan-actions">' + (navigator.share ? bouton('partager', x('invitation.envoyer'), 'btn-outline') : '') +
+        bouton('copier', x('invitation.copier'), 'btn-outline') + '</div>' : '') +
+      '<div class="bilan-q-bas">' + bouton('plusTard', x('unTel.plusTard', v), 'btn-link') + '</div>', 'bilan-passer'));
+    // Le QR code d'une invitation porte q=1 (invitation_vue, clé qr).
+    if (lien) dessinerQr(document.getElementById('bilan-qr'), lien + (o === 'inviter' ? '&q=1' : ''));
+    var message = remplir(tr('unTel.message', ''), { lien: lien });
+    ACTIONS = {
+      passer: function () { ouvrirAutreIci(entree, etat); },
+      partager: function () { navigator.share({ title: remplir(tr('invitation.messageTitre', ''), {}), text: message }).catch(function () {}); },
+      copier: function (b) { copier(lien, b); },
+      plusTard: function () { attente(entree, etat); },
+    };
+  }
+
+  // Le bandeau de celui qui répond, sur un seul téléphone : son personnage
+  // et son prénom à sa couleur, comme le bandeau du tour des tests à deux
+  // (bandeauTour de quiz-engine-core.js, styles .qc-tour de styles.css).
+  // `rang` 0 pour le créateur, 1 pour l'autre ; deux personnages pareils,
+  // le second prend la teinte foncée. `arrive` : la main vient de changer.
+  function bandeau(cle, nom, genre, rang, autreGenre, o) {
+    o = o || {};
+    var p = perso(genre, rang);
+    var fonce = rang === 1 && perso(autreGenre, 0) === p;
+    var dessin = mascotte(p, 'salut', o.petit ? 32 : 44);
+    var phrase = x(cle, { nom: '\u0001' }).split('\u0001').join('<strong class="qc-tour-nom">' + esc(nom) + '</strong>');
+    return '<div class="qc-tour qc-tour--' + p + (fonce ? ' qc-tour--fonce' : '') + (o.arrive ? ' qc-tour--arrive' : '') + (o.petit ? ' bilan-tour--petit' : '') + '" role="status">' +
+      (dessin ? '<span class="qc-tour-perso" aria-hidden="true">' + dessin + '</span>'
+        : '<span class="qc-tour-pion" aria-hidden="true">' + esc(String(nom || '?').charAt(0).toUpperCase()) + '</span>') +
+      '<span class="qc-tour-corps"><span class="qc-tour-phrase">' + phrase + '</span>' +
+      (o.note ? '<span class="qc-tour-note">' + o.note + '</span>' : '') + '</span></div>';
+  }
+  // Chacun ses cent questions : à qui sont les réponses de l'écran.
+  function bandeauQui(session) {
+    if (!session || session.mode !== 'duo' || !unTelDe(session.entree)) return '';
+    return bandeau('unTel.qui', session.moi.prenom, session.moi.genre, session.role === 'a' ? 0 : 1, session.autre.genre, { petit: true });
+  }
+
+  // Sur un seul téléphone, « qui fait quoi » se répond avec les deux
+  // prénoms, dans le même ordre pour les deux (le créateur d'abord) :
+  // « Surtout Léa », « Un peu plus Léa », « Autant l'un que l'autre »,
+  // « Un peu plus Tom », « Surtout Tom » (Thomas : « ça propose que l'autre
+  // et pas les deux prénoms »). La valeur enregistrée reste dans le repère
+  // de celui qui répond (0 = surtout moi, Q.qui), comme à deux téléphones.
+  function optionsQuiDeux(role, moi, autre) {
+    var N = Q.quiNeutre || [];
+    var a = role === 'a' ? moi : autre, b = role === 'a' ? autre : moi;
+    return [C.remplir(N[0], { nom: a }), C.remplir(N[1], { nom: a }), N[2], C.remplir(N[1], { nom: b }), C.remplir(N[0], { nom: b })]
+      .map(function (t, i) { return { texte: t, v: role === 'a' ? i : 4 - i }; });
+  }
+
+  // ── La même question, chacun son tour (la paire) ────────────────────────
+  // Les deux évaluations avancent ensemble sur ce téléphone : chaque question
+  // est posée à l'un puis à l'autre, et celui qui vient de répondre ouvre la
+  // suivante, si bien que le téléphone change de main une fois par réponse
+  // (etapesPaire). Le bandeau du tour dit qui répond ; quand la main change,
+  // il arrive en sautant et les réponses restent sourdes 450 ms (le doigt de
+  // l'un ne répond pas pour l'autre). « Précédente » revient sur la réponse
+  // précédente de celui qui répond, jamais sur celle de l'autre. La
+  // situation est demandée une fois pour les deux, à l'entrée du domaine qui
+  // en a besoin ; les intros des domaines aussi. Chaque évaluation a sa
+  // session (S pour celle qui répond), ses envois et ses réponses, comme sur
+  // deux téléphones. À la fin, leurs deux adresses, puis « rapport prêt ».
+  var GARDE_TOUR = 450;
+
+  function nouvelleSession(entree, etat) {
+    return {
+      entree: entree,
+      id: entree.id, jeton: entree.jeton, role: etat.role,
+      mode: 'duo',
+      situation: etat.situation,
+      moi: etat.moi, autre: etat.autre,
+      reponses: JSON.parse(JSON.stringify(etat.moi.reponses || {})),
+      percu: null,
+      nn: (etat.moi.nn || []).slice(),
+      introsVues: {},
+      sitFaites: {},
+      revoir: false,
+      phase: 'moi',
+      envoi: { enCours: false, sale: false, fini: false, attente: [] },
+    };
+  }
+
+  function ouvrirPaire(id) {
+    var ea = entreeRole(id, 'a'), eb = entreeRole(id, 'b');
+    if (!ea || !eb) return ouvrir(ea || eb || entreeDe(id));
+    S = null;
+    chargement();
+    Promise.all([appel('etat', { id: id, jeton: ea.jeton }), appel('etat', { id: id, jeton: eb.jeton })]).then(function (rs) {
+      var ra = rs[0], rb = rs[1];
+      if (ra.statut === 404 || rb.statut === 404) {
+        // L'une des deux évaluations n'est plus là (supprimée, lien changé) :
+        // on garde celle qui répond encore.
+        if (ra.statut === 404) oublier(id, 'a');
+        if (rb.statut === 404) oublier(id, 'b');
+        var reste = entreeDe(id);
+        if (reste) { majEntree(id, reste.role, { unTel: 'suite' }); return ouvrir(entreeRole(id, reste.role)); }
+        return messageErreur('introuvable', accueil);
+      }
+      if (ra.statut !== 200 || rb.statut !== 200) return messageErreur((ra.statut !== 200 ? ra : rb).json.erreur, function () { ouvrirPaire(id); });
+      var ka = ra.json, kb = rb.json;
+      if (ka.verrouille) return ouvrirResultat(ea);
+      // Une entrée dont le jeton n'ouvre plus qu'une invitation : chacun ses
+      // cent questions, l'autre acceptera.
+      if (kb.invite || ka.invite) { majEntree(id, 'a', { unTel: 'suite' }); return ouvrir(ea); }
+      MODE = 'duo';
+      FORMULE = null;
+      P = {
+        id: id,
+        a: nouvelleSession(ea, ka),
+        b: nouvelleSession(eb, kb),
+        situation: ka.situation,
+        sit: null,
+        sitFaites: {},
+        introsVues: {},
+        tour: null,
+        garde: 0,
+      };
+      // Le second qui finit ne déclenche pas l'e-mail « rapport prêt » : ils
+      // sont devant (serveur, repondre).
+      P.a.ensemble = P.b.ensemble = true;
+      etapePaire();
+    }).catch(function () { messageErreur('reseau', function () { ouvrirPaire(id); }); });
+  }
+
+  // Le rang de chaque question dans l'ordre de passage (C.ORDRE, puis
+  // l'ordre du questionnaire).
+  var RANG_QUESTION = null;
+  function rangQuestion(id) {
+    if (!RANG_QUESTION) {
+      RANG_QUESTION = {};
+      var n = 0;
+      C.ORDRE.forEach(function (d) {
+        var dom = C.DOMAINES.filter(function (x) { return x.id === d; })[0];
+        (dom ? dom.questions : []).forEach(function (q) { RANG_QUESTION[q.id] = n++; });
       });
     }
+    return RANG_QUESTION[id];
+  }
+  function listePaire(session) {
+    return C.questionsPour(C.avecDefauts(P.situation), session.reponses, C.ORDRE);
+  }
+  // Les étapes, dans l'ordre : chaque question d'abord pour celui qui tient
+  // le téléphone (il vient de répondre), puis pour l'autre. Une question que
+  // la situation ou une réponse n'ouvre que pour l'un n'est posée qu'à lui.
+  function etapesPaire() {
+    var dans = { a: {}, b: {} };
+    var ids = [];
+    ['a', 'b'].forEach(function (r) {
+      listePaire(P[r]).forEach(function (q) {
+        dans[r][q.id] = q;
+        if (ids.indexOf(q.id) < 0) ids.push(q.id);
+      });
+    });
+    ids.sort(function (u, w) { return rangQuestion(u) - rangQuestion(w); });
+    var etapes = [], main = 'a';
+    ids.forEach(function (id) {
+      (main === 'a' ? ['a', 'b'] : ['b', 'a']).forEach(function (r) {
+        if (!dans[r][id]) return;
+        etapes.push({ id: id, domaine: dans[r][id].domaine, role: r });
+        main = r;
+      });
+    });
+    return etapes;
+  }
+  function repondue(e) { return Number.isInteger(P[e.role].reponses[e.id]); }
+
+  function etapePaire() {
+    if (!P) return;
+    // L'étape affichée (questionPaire) : un passage automatique en retard ne
+    // part que si elle l'est encore.
+    P.affiche = -1;
+    var etapes = P.etapes = etapesPaire();
+    var i = 0;
+    while (i < etapes.length && repondue(etapes[i])) i++;
+    if (i >= etapes.length) return finPaire();
+    var e = etapes[i];
+    var debut = i === 0 || etapes[i - 1].domaine !== e.domaine;
+    if (debut && !P.introsVues[e.domaine]) return introPaire(e.domaine);
+    var cles = clesPaire(e.domaine);
+    if (cles.length) return situationPaire(cles, 0);
+    questionPaire(i);
+  }
+
+  function connuePaire(cle) {
+    return C.SITUATION.some(function (it) { return it.id === cle && it.valeurs.indexOf(P.situation && P.situation[cle]) >= 0; });
+  }
+  // Les clés à poser en entrant dans un domaine, une fois pour les deux :
+  // aucune si l'un des deux y a déjà répondu, ni celles déjà données.
+  function clesPaire(dom) {
+    var deja = P.etapes.some(function (e) { return e.domaine === dom && repondue(e); });
+    if (deja) return [];
+    return C.clesAvant(dom, P.situation).filter(function (k) { return !P.sitFaites[k] && !connuePaire(k); });
+  }
+
+  function introPaire(dom) {
+    var ordre = C.ORDRE;
+    var n = ordre.indexOf(dom) + 1;
+    var nb = listePaire(P.a).filter(function (q) { return q.domaine === dom; }).length;
+    var min = Math.max(1, Math.round(nb * 2 * SECONDES_PAR_QUESTION / 60));
+    var D = Q.domaines[dom] || {};
+    var points = ordre.map(function (d, k) {
+      var cls = k < n - 1 ? ' fait' : k === n - 1 ? ' actuel' : '';
+      return '<span class="bilan-point' + cls + '" title="' + esc(titreDomaine(d)) + '"></span>';
+    }).join('');
+    afficher(carte(
+      '<p class="bilan-etape">' + x('domaine.partie', { n: n, total: ordre.length }) + '</p>' +
+      '<div class="bilan-points" aria-hidden="true">' + points + '</div>' +
+      '<h2 class="bilan-titre">' + esc(ins(D.titre || dom)) + '</h2>' +
+      // L'intro s'adresse aux deux : « {autre} » devient « votre partenaire ».
+      '<p class="bilan-texte">' + esc(ins(C.remplir(D.intro || '', { autre: tr('creation.autreDefaut', '') }))) + '</p>' +
+      '<p class="bilan-pastille-info">' + x('domaine.nb', { n: nb, min: min }) + '</p>' +
+      '<div class="bilan-actions">' + bouton('go', x('domaine.go')) + bouton('pause', x('domaine.pause'), 'btn-outline') + '</div>',
+      'bilan-domaine-intro'));
     ACTIONS = {
-      passer: function () {
-        if (!pret) return;
-        S = null;
-        var e = autreIci(session);
-        if (e === 'inviter') return ouvrirLien(session.id, session.entree.invitation, false, false, true);
-        if (e) { e.unTel = true; return ouvrir(e); }
-        ouvrir(session.entree);
+      go: function () { P.introsVues[dom] = true; etapePaire(); },
+      pause: function () { pausePaire(function () { introPaire(dom); }); },
+    };
+  }
+
+  function situationPaire(cles, k) {
+    var cle = cles[k];
+    var dom = C.DOMAINE_DE_CLE[cle] || C.ORDRE[0];
+    var item = C.SITUATION.filter(function (it) { return it.id === cle; })[0];
+    var t = Q.situation[cle];
+    if (!P.sit) P.sit = {};
+    var v = P.sit[cle] !== undefined ? P.sit[cle] : (connuePaire(cle) ? P.situation[cle] : undefined);
+    var rond = '<span class="bilan-option-rond" aria-hidden="true"></span>';
+    var options = item.valeurs.map(function (val, j) {
+      var choisie = v === val;
+      return '<button type="button" class="bilan-option' + (choisie ? ' choisie' : '') + '" role="radio" aria-checked="' + choisie + '" data-action="choisir" data-v="' + esc(val) + '">' +
+        rond + '<span>' + esc(ins(t.o[j])) + '</span></button>';
+    }).join('');
+    afficher(carte(
+      '<div class="bilan-q-tete"><span class="bilan-q-domaine">' + esc(ins(titreDomaine(dom))) + '</span>' +
+      '<span>' + x('situation.titre') + '</span></div>' +
+      '<h2 class="bilan-q-texte">' + esc(ins(t.q)) + '</h2>' +
+      '<p class="bilan-note bilan-q-aide">' + x('situation.aide') + '</p>' +
+      '<div class="bilan-options" role="radiogroup" data-cle="' + esc(cle) + '">' + options + '</div>' +
+      '<div class="bilan-q-pied">' +
+      (k > 0 ? bouton('precedente', '← ' + x('question.precedente'), 'btn-outline btn-sm') : '<span></span>') +
+      '<span></span>' +
+      (v ? bouton('suivanteQ', x('question.suivante') + ' →', 'btn-cta btn-gradient btn-sm') : '<span></span>') +
+      '</div>' +
+      '<div class="bilan-q-bas">' + bouton('pause', x('question.pause'), 'btn-link') + '</div>',
+      'bilan-question bilan-question--situation'), true);
+    garderEnVue();
+    if (!C.SITUATION.some(function (it) { return connuePaire(it.id); })) compterVue('situation_vue', { mode: 'duo', id: P.id });
+    var paire = P;
+    function apres() {
+      if (P !== paire) return;
+      if (P.sit[cle] === undefined) P.sit[cle] = v;
+      if (k + 1 < cles.length) situationPaire(cles, k + 1); else enregistrerSituationPaire(cles);
+    }
+    ACTIONS = {
+      choisir: function (b) {
+        P.sit[cle] = b.getAttribute('data-v');
+        racine.querySelectorAll('.bilan-option').forEach(function (o) {
+          var oui = o === b;
+          o.classList.toggle('choisie', oui);
+          o.setAttribute('aria-checked', String(oui));
+        });
+        setTimeout(function () {
+          if (P === paire && racine.querySelector('.bilan-question--situation .bilan-options[data-cle="' + cle + '"]') && P.sit[cle] === b.getAttribute('data-v')) apres();
+        }, 220);
       },
-      pause: function () { pause(function () { relais(dom, true); }); },
+      suivanteQ: function () { if (P.sit[cle] || v) apres(); },
+      precedente: function () { situationPaire(cles, k - 1); },
+      pause: function () { pausePaire(function () { situationPaire(cles, k); }); },
+    };
+  }
+  function enregistrerSituationPaire(cles) {
+    var paire = P;
+    var change = {};
+    cles.forEach(function (k) {
+      if (paire.sit && paire.sit[k] !== undefined && paire.sit[k] !== (paire.situation || {})[k]) change[k] = paire.sit[k];
+    });
+    function reprendre() {
+      if (P !== paire) return;
+      cles.forEach(function (k) { paire.sitFaites[k] = true; });
+      paire.sit = null;
+      etapePaire();
+    }
+    if (!Object.keys(change).length) return reprendre();
+    chargement();
+    appel('situation', { id: paire.id, jeton: paire.a.jeton, situation: change }).then(function (r) {
+      // L'un des deux a déjà fini : la situation est figée, on relit tout.
+      if (r.statut === 409) return ouvrirPaire(paire.id);
+      if (r.statut !== 200) return messageErreur(r.json.erreur, function () { enregistrerSituationPaire(cles); });
+      paire.situation = paire.a.situation = paire.b.situation = r.json.etat.situation;
+      reprendre();
+    }).catch(function () { messageErreur('reseau', function () { enregistrerSituationPaire(cles); }); });
+  }
+
+  function questionPaire(i) {
+    var e = P.etapes[i];
+    var s = P[e.role], o = P[roleAutre(e.role)];
+    S = s;
+    var id = e.id, r = C.INDEX[id];
+    var v = s.reponses[id];
+    var items = r.q.type === 'qui' ? optionsQuiDeux(e.role, s.moi.prenom, o.moi.prenom)
+      : libellesOptions(id, s.moi.genre, o.moi.prenom).map(function (t, k) { return { texte: t, v: k }; });
+    var liste = listePaire(s);
+    var n = 0;
+    while (n < liste.length && liste[n].id !== id) n++;
+    var total = liste.length;
+    var pct = Math.round(n / total * 100);
+    // La main change : le bandeau arrive en sautant, et les réponses restent
+    // sourdes un instant.
+    var change = P.tour !== e.role;
+    P.tour = e.role;
+    P.affiche = i;
+    if (change) P.garde = Date.now() + GARDE_TOUR;
+    var rond = '<span class="bilan-option-rond" aria-hidden="true"></span>';
+    var options = items.map(function (it) {
+      var choisie = v === it.v;
+      return '<button type="button" class="bilan-option' + (choisie ? ' choisie' : '') + '" role="radio" aria-checked="' + choisie + '" data-action="choisir" data-v="' + it.v + '">' +
+        rond + '<span>' + esc(ins(it.texte)) + '</span></button>';
+    }).join('');
+    var nn = '';
+    if (r.q.decisif) {
+      nn = '<label class="bilan-nn' + (Number.isInteger(v) ? '' : ' inactif') + '"><input type="checkbox" data-change="nn"' +
+        (s.nn.indexOf(id) >= 0 ? ' checked' : '') + (Number.isInteger(v) ? '' : ' disabled') + '> <span>' + x('question.nn') + '</span></label>' +
+        '<p class="bilan-note">' + x('question.nnAide') + '</p>';
+    }
+    // La réponse précédente de celui qui répond (jamais celle de l'autre).
+    var avant = -1;
+    for (var j = i - 1; j >= 0; j--) if (P.etapes[j].role === e.role) { avant = j; break; }
+    var avecSuivante = r.q.decisif || Number.isInteger(v);
+    afficher(carte(
+      bandeau('unTel.tour', s.moi.prenom, s.moi.genre, e.role === 'a' ? 0 : 1, o.moi.genre, { arrive: change, note: i < 2 ? x('unTel.tourNote') : '' }) +
+      '<div class="bilan-q-tete"><span class="bilan-q-domaine">' + esc(ins(titreDomaine(e.domaine))) + '</span>' +
+      '<span>' + x('question.progression', { n: n + 1, total: total }) + '</span></div>' +
+      '<div class="bilan-barre" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="' + pct + '"><span style="width:' + pct + '%"></span></div>' +
+      '<h2 class="bilan-q-texte">' + esc(ins(enonce(id, s.moi.genre, o.moi.prenom))) + '</h2>' +
+      '<div class="bilan-options" role="radiogroup">' + options + '</div>' + nn +
+      '<div class="bilan-q-pied">' +
+      (avant >= 0 ? bouton('precedente', '← ' + x('question.precedente'), 'btn-outline btn-sm') : '<span></span>') +
+      '<span class="bilan-envoi" id="bilan-envoi" aria-live="polite"></span>' +
+      (avecSuivante ? bouton('suivanteQ', x('question.suivante') + ' →', 'btn-cta btn-gradient btn-sm', Number.isInteger(v) ? '' : ' disabled') : '<span></span>') +
+      '</div>' +
+      '<div class="bilan-q-bas">' + bouton('pause', x('question.pause'), 'btn-link') + '</div>',
+      'bilan-question bilan-question--paire'), true);
+    garderEnVue();
+    etatEnvoi();
+    var paire = P;
+    ACTIONS = {
+      choisir: function (b) {
+        if (Date.now() < paire.garde) return;
+        var val = +b.getAttribute('data-v');
+        s.reponses[id] = val;
+        sauverS(s, false);
+        if (r.q.decisif) { questionPaire(i); return; }
+        racine.querySelectorAll('.bilan-option').forEach(function (btn) {
+          var oui = btn === b;
+          btn.classList.toggle('choisie', oui);
+          btn.setAttribute('aria-checked', String(oui));
+        });
+        // Le passage à la suite, sauf si l'écran a changé entre-temps
+        // (« Précédente », pause) ou si la réponse a changé.
+        setTimeout(function () {
+          if (P === paire && paire.affiche === i && P.etapes[i] === e && s.reponses[id] === val && racine.querySelector('.bilan-question--paire')) etapePaire();
+        }, 220);
+      },
+      nn: function (c) {
+        var k = s.nn.indexOf(id);
+        if (c.checked && k < 0) s.nn.push(id);
+        if (!c.checked && k >= 0) s.nn.splice(k, 1);
+        sauverS(s, false);
+      },
+      suivanteQ: function () { if (Number.isInteger(s.reponses[id])) etapePaire(); },
+      precedente: function () { if (avant >= 0) questionPaire(avant); },
+      pause: function () { pausePaire(function () { questionPaire(i); }); },
+    };
+  }
+
+  function pausePaire(reprise) {
+    var paire = P;
+    sauverS(paire.a, false);
+    sauverS(paire.b, false);
+    S = null;
+    var ligne = function (s) {
+      var p = C.progression(paire.situation, s.reponses);
+      return x('unTel.progression', { nom: s.moi.prenom, n: nombre(p.repondu), total: nombre(p.total) });
+    };
+    afficher(carte(
+      duo('dort', 'repos', 76, paire.a.moi.genre, paire.b.moi.genre) +
+      '<h2 class="bilan-titre">' + x('pause.titre') + '</h2>' +
+      '<p class="bilan-texte bilan-centre">' + ligne(paire.a) + '<br>' + ligne(paire.b) + '</p>' +
+      '<p class="bilan-texte">' + x('unTel.pauseTexte') + '</p>' +
+      '<div class="bilan-actions">' + bouton('reprendre', x('unTel.reprendre')) + '</div>' +
+      '<div class="bilan-q-bas">' + bouton('separer', x('unTel.separer'), 'btn-link') + '</div>', 'bilan-pause'));
+    ACTIONS = {
+      reprendre: function () { P = paire; if (reprise) reprise(); else etapePaire(); },
+      separer: function () { P = paire; separerPaire(); },
+    };
+  }
+
+  // Continuer chacun sur son téléphone : celui qui garde ce téléphone
+  // continue ici, l'autre reprend sur le sien avec son lien personnel (le
+  // code à scanner). Les deux évaluations passent à « chacun ses cent
+  // questions » ; celle de l'autre reste sur ce téléphone, pour lui passer
+  // le téléphone ou lui renvoyer le lien à la fin (passerTelephone).
+  function separerPaire(garde) {
+    var paire = P;
+    if (!garde) {
+      afficher(carte(
+        duo('salut', 'salut', 76, paire.a.moi.genre, paire.b.moi.genre) +
+        '<h2 class="bilan-titre">' + x('unTel.separerTitre') + '</h2>' +
+        '<p class="bilan-texte bilan-centre">' + x('unTel.separerTexte') + '</p>' +
+        '<div class="bilan-actions">' + bouton('gardeA', x('unTel.garde', { nom: paire.a.moi.prenom }), 'btn-outline') +
+        bouton('gardeB', x('unTel.garde', { nom: paire.b.moi.prenom }), 'btn-outline') + '</div>' +
+        '<div class="bilan-q-bas">' + bouton('reprendre', x('unTel.reprendre'), 'btn-link') + '</div>', 'bilan-separer'));
+      ACTIONS = {
+        gardeA: function () { separerPaire('a'); },
+        gardeB: function () { separerPaire('b'); },
+        reprendre: function () { P = paire; etapePaire(); },
+      };
+      return;
+    }
+    var reste = paire[garde], part = paire[roleAutre(garde)];
+    var v = { moi: reste.moi.prenom, autre: part.moi.prenom };
+    var lien = lienPersonnel(part.id, part.jeton);
+    afficher(carte(
+      '<h2 class="bilan-titre">' + x('unTel.lienAutreTitre', v) + '</h2>' +
+      '<p class="bilan-texte bilan-centre">' + x('unTel.lienAutreTexte', v) + '</p>' +
+      '<div class="bilan-qr bilan-qr--grand" id="bilan-qr" role="img" aria-label="' + x('unTel.lienQr', v) + '"></div>' +
+      '<div class="bilan-actions">' + (navigator.share ? bouton('partager', x('invitation.envoyer'), 'btn-outline') : '') +
+      bouton('copier', x('invitation.copier'), 'btn-outline') + '</div>' +
+      '<hr class="bilan-sep">' +
+      '<div class="bilan-actions">' + bouton('continuer', x('unTel.continuerIci', v), 'btn-cta btn-gradient btn-lg') + '</div>' +
+      '<div class="bilan-q-bas">' + bouton('retour', '← ' + x('creation.retour'), 'btn-link') + '</div>', 'bilan-separer'));
+    dessinerQr(document.getElementById('bilan-qr'), lien);
+    var message = remplir(tr('unTel.message', ''), { lien: lien });
+    ACTIONS = {
+      partager: function () { navigator.share({ title: remplir(tr('invitation.messageTitre', ''), {}), text: message }).catch(function () {}); },
+      copier: function (b) { copier(lien, b); },
+      continuer: function () {
+        majEntree(paire.id, 'a', { unTel: 'suite' });
+        majEntree(paire.id, 'b', { unTel: 'suite' });
+        compterVue('un_telephone', { mode: 'duo', id: paire.id, cle: 'suite' });
+        P = null;
+        ouvrir(entreeRole(paire.id, garde));
+      },
+      retour: function () { P = paire; separerPaire(); },
+    };
+  }
+
+  // Toutes les réponses sont là : leurs adresses (celle de l'autre est
+  // facultative, le rapport part alors à une seule), puis « fini » pour les
+  // deux, et l'écran « rapport prêt ».
+  function finPaire() {
+    var paire = P;
+    S = null;
+    if (!C.situationValide(paire.situation)) {
+      var manque = C.SITUATION.map(function (it) { return it.id; }).filter(function (k) { return !connuePaire(k); });
+      paire.sitFaites = {};
+      return situationPaire(manque, 0);
+    }
+    if (!paire.a.moi.email || !paire.b.moi.email) return emailPaire();
+    paire.essaisFin = (paire.essaisFin || 0) + 1;
+    if (paire.essaisFin > 3) return messageErreur('serveur', function () { ouvrirPaire(paire.id); });
+    afficher(carte('<p class="bilan-centre">' + x('chargement') + '</p>', 'bilan-chargement'), true);
+    var suite = function (s, r, apres) {
+      if (r.statut === 409 || (r.json.etat && r.json.etat.verrouille)) { P = null; return ouvrirResultat(paire.a.entree); }
+      if (r.json.fini) return apres();
+      if (P !== paire) return;
+      if (r.json.emailManque) { s.moi.email = null; return emailPaire(); }
+      etapePaire();
+    };
+    sauverS(paire.a, true, function (ra) {
+      suite(paire.a, ra, function () {
+        sauverS(paire.b, true, function (rb) {
+          suite(paire.b, rb, function () { P = null; ouvrirResultat(paire.a.entree); });
+        });
+      });
+    });
+  }
+
+  function emailPaire() {
+    var paire = P;
+    var a = paire.a, b = paire.b;
+    var v = { moi: a.moi.prenom, autre: b.moi.prenom };
+    var champ = function (id, label, valeur, requis) {
+      return '<div class="bilan-champ bilan-champ--email"><label for="' + id + '">' + label + '</label>' +
+        '<input id="' + id + '" class="bilan-input" type="email" maxlength="254" autocomplete="' + (requis ? 'email' : 'off') + '" inputmode="email" spellcheck="false"' + (requis ? ' required' : '') + ' value="' + esc(valeur || '') + '">' +
+        '<p class="bilan-suggestion" id="' + id + '-sugg" hidden><button type="button" class="bilan-suggestion-btn"></button></p></div>';
+    };
+    var ea = a.moi.email || '';
+    var eb = b.moi.email && (!ea || b.moi.email.toLowerCase() !== ea.toLowerCase()) ? b.moi.email : '';
+    afficher(carte(
+      duo('joie', 'joie', 76, a.moi.genre, b.moi.genre) +
+      '<h2 class="bilan-titre">' + x('fin.paireTitre') + '</h2>' +
+      '<p class="bilan-texte bilan-centre">' + x('fin.paireTexte') + '</p>' +
+      champ('bilan-email', x('fin.paireEmail', { nom: a.moi.prenom }), ea, true) +
+      champ('bilan-email-b', x('fin.paireEmailFacultatif', { nom: b.moi.prenom }), eb, false) +
+      '<p class="bilan-note">' + x('fin.paireAide') + ' ' + x('fin.paireAideAutre', v) + '</p>' +
+      '<p class="bilan-alerte" id="bilan-erreur" hidden></p>' +
+      '<div class="bilan-actions">' + bouton('valider', x('fin.bouton')) + '</div>' +
+      '<div class="bilan-q-bas">' + bouton('precedente', '← ' + x('fin.revenir'), 'btn-link') + '</div>', 'bilan-fin-email'));
+    compterVue('email_vue', { mode: 'duo', id: paire.id, cle: 'a' });
+    surveillerEmail('bilan-email');
+    surveillerEmail('bilan-email-b');
+    var champA = document.getElementById('bilan-email'), champB = document.getElementById('bilan-email-b');
+    function erreur(cle, c) {
+      var p = document.getElementById('bilan-erreur');
+      p.textContent = ins(remplir(tr(cle, ''), {}));
+      p.hidden = false;
+      (c || champA).focus();
+    }
+    [champA, champB].forEach(function (c) {
+      c.addEventListener('keydown', function (ev) {
+        if (ev.key === 'Enter') { ev.preventDefault(); ACTIONS.valider(racine.querySelector('[data-action="valider"]')); }
+      });
+    });
+    ACTIONS = {
+      valider: function (btn) {
+        var va = (champA.value || '').trim(), vb = (champB.value || '').trim();
+        if (!va) return erreur('creation.emailManque');
+        if (!emailValide(va)) return erreur('creation.emailFaux');
+        if (vb && !emailValide(vb)) return erreur('creation.emailFaux', champB);
+        // Sans adresse pour l'autre, le rapport part à la même : sans le
+        // rappel, qui partirait deux fois à la même boîte.
+        var meme = !vb || vb.toLowerCase() === va.toLowerCase();
+        btn.disabled = true;
+        appel('email', { id: paire.id, jeton: a.jeton, email: va, rappel: true, reprise: false }).then(function (r1) {
+          if (r1.statut !== 200) { btn.disabled = false; return erreur(r1.json.erreur === 'email' ? 'creation.emailFaux' : 'erreurs.serveur'); }
+          a.moi.email = r1.json.email || va;
+          a.moi.rappel = true;
+          return appel('email', { id: paire.id, jeton: b.jeton, email: meme ? va : vb, rappel: !meme, reprise: false }).then(function (r2) {
+            btn.disabled = false;
+            if (r2.statut !== 200) return erreur(r2.json.erreur === 'email' ? 'creation.emailFaux' : 'erreurs.serveur', champB);
+            b.moi.email = r2.json.email || (meme ? va : vb);
+            b.moi.rappel = !meme;
+            if (P === paire) finPaire();
+          });
+        }).catch(function () { btn.disabled = false; erreur('erreurs.reseau'); });
+      },
+      precedente: function () { P = paire; questionPaire(paire.etapes.length - 1); },
     };
   }
 
@@ -1214,10 +1946,6 @@
     S.liste = listeQuestions();
     S.index = revoir ? 0 : premierSansReponse();
     if (S.index > 0 && S.index < S.liste.length) S.introsVues[S.liste[S.index].domaine] = !!revoir;
-    // Un seul téléphone : la partie où la session commence, notée, ne repasse
-    // pas le téléphone (voir choixUnTel).
-    S.sansRelais = S.index < S.liste.length ? S.liste[S.index].domaine : null;
-    if (entree.unTel && !revoir && S.mode === 'duo') notePos(S, S.sansRelais ? C.ORDRE.indexOf(S.sansRelais) : C.ORDRE.length);
     // À deux, le créateur qui n'a encore rien répondu et dont l'invitation
     // n'est pas acceptée commence par l'invitation.
     if (!revoir && S.mode === 'duo' && etat.role === 'a' && !etat.autre.rejoint && S.index === 0 && entree.invitation && !entree.invitationVue) {
@@ -1299,7 +2027,7 @@
       '<span>' + x('situation.titre') + '</span></div>' +
       '<h2 class="bilan-q-texte">' + esc(ins(t.q)) + '</h2>' +
       '<p class="bilan-note bilan-q-aide">' + x(dejaDonnee ? 'situation.deja' : 'situation.aide', { autre: S.autre.prenom }) + '</p>' +
-      '<div class="bilan-options" role="radiogroup">' + options + '</div>' +
+      '<div class="bilan-options" role="radiogroup" data-cle="' + esc(cle) + '">' + options + '</div>' +
       '<div class="bilan-q-pied">' +
       (i > 0 ? bouton('precedente', '← ' + x('question.precedente'), 'btn-outline btn-sm') : '<span></span>') +
       '<span></span>' +
@@ -1328,7 +2056,7 @@
           o.setAttribute('aria-checked', String(oui));
         });
         setTimeout(function () {
-          if (racine.querySelector('.bilan-question--situation') && S === session && S.sit[cle] === b.getAttribute('data-v')) apres();
+          if (racine.querySelector('.bilan-question--situation .bilan-options[data-cle="' + cle + '"]') && S === session && S.sit[cle] === b.getAttribute('data-v')) apres();
         }, 220);
       },
       suivanteQ: function () { if (S.sit[cle] || v) apres(); },
@@ -1403,15 +2131,7 @@
     if (S.index >= S.liste.length) return terminer();
     var item = S.liste[S.index];
     var debutDomaine = S.index === 0 || S.liste[S.index - 1].domaine !== item.domaine;
-    if (debutDomaine && !S.introsVues[item.domaine]) {
-      // Un seul téléphone : la partie qui commence est peut-être à l'autre.
-      if (S.entree.unTel && S.mode === 'duo' && !S.revoir) {
-        var rang = C.ORDRE.indexOf(item.domaine);
-        notePos(S, rang);
-        if (item.domaine !== S.sansRelais && tourDeLAutre(S, rang)) return relais(item.domaine);
-      }
-      return introDomaine(item.domaine);
-    }
+    if (debutDomaine && !S.introsVues[item.domaine]) return introDomaine(item.domaine);
     var cles = clesAPoser(item.domaine);
     if (cles.length) return questionSituation(item.domaine, cles, 0);
     afficherQuestion();
@@ -1437,6 +2157,7 @@
       return '<span class="bilan-point' + cls + '" title="' + esc(titreDomaine(d)) + '"></span>';
     }).join('');
     afficher(carte(
+      bandeauQui(S) +
       '<p class="bilan-etape">' + x('domaine.partie', { n: n, total: ordre.length }) + '</p>' +
       '<div class="bilan-points" aria-hidden="true">' + points + '</div>' +
       '<h2 class="bilan-titre">' + esc(ins(D.titre || dom)) + '</h2>' +
@@ -1474,14 +2195,17 @@
     var solo = S.mode === 'solo';
     var percu = solo && S.phase === 'autre';
     var v = percu ? S.percu[id] : S.reponses[id];
-    var opts = percu ? libellesPercu(id) : libellesOptions(id, S.moi.genre, S.autre.prenom);
+    var parValeur = function (t, i) { return { texte: t, v: i }; };
+    var items = percu ? libellesPercu(id).map(parValeur)
+      : r.q.type === 'qui' && !solo && unTelDe(S.entree) ? optionsQuiDeux(S.role, S.moi.prenom, S.autre.prenom)
+      : libellesOptions(id, S.moi.genre, S.autre.prenom).map(parValeur);
     var total = S.liste.length;
     var pct = Math.round((S.index + (percu ? 0.5 : 0)) / total * 100);
     var rond = '<span class="bilan-option-rond" aria-hidden="true"></span>';
-    var options = opts.map(function (o, i) {
-      var choisie = v === i;
-      return '<button type="button" class="bilan-option' + (choisie ? ' choisie' : '') + '" role="radio" aria-checked="' + choisie + '" data-action="choisir" data-v="' + i + '">' +
-        rond + '<span>' + esc(ins(o)) + '</span></button>';
+    var options = items.map(function (it) {
+      var choisie = v === it.v;
+      return '<button type="button" class="bilan-option' + (choisie ? ' choisie' : '') + '" role="radio" aria-checked="' + choisie + '" data-action="choisir" data-v="' + it.v + '">' +
+        rond + '<span>' + esc(ins(it.texte)) + '</span></button>';
     }).join('');
     if (percu) {
       // « Je ne sais pas » : une réponse à part entière, comptée dans les
@@ -1508,6 +2232,7 @@
     }
     var texteQuestion = percu ? enonce(id, S.autre.genre, S.moi.prenom) : enonce(id, S.moi.genre, S.autre.prenom);
     afficher(carte(
+      bandeauQui(S) +
       '<div class="bilan-q-tete"><span class="bilan-q-domaine">' + esc(ins(titreDomaine(item.domaine))) + '</span>' +
       '<span>' + x('question.progression', { n: S.index + 1, total: total }) + '</span></div>' +
       '<div class="bilan-barre" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="' + pct + '"><span style="width:' + pct + '%"></span></div>' +
@@ -1786,22 +2511,26 @@
   // attend et part avec tout ce qui a changé entre-temps (la page envoie
   // toujours la série complète, le serveur la remplace).
 
-  function sauver(fini, apres) {
-    if (!S) return;
-    S.envoi.sale = true;
-    if (fini) S.envoi.fini = true;
-    if (apres) S.envoi.attente.push(apres);
-    pousser();
+  // Chaque session a ses envois : sur un seul téléphone, la même question
+  // chacun son tour, les deux évaluations envoient chacune les siennes, et
+  // une réponse en retard repart avec la bonne session (19 novembre 2026).
+  function sauver(fini, apres) { sauverS(S, fini, apres); }
+  function sauverS(session, fini, apres) {
+    if (!session) return;
+    session.envoi.sale = true;
+    if (fini) session.envoi.fini = true;
+    if (apres) session.envoi.attente.push(apres);
+    pousserS(session);
   }
-  function pousser() {
-    var e = S && S.envoi;
+  function pousserS(session) {
+    var e = session && session.envoi;
     if (!e || e.enCours || !e.sale) return;
-    var session = S;
     e.enCours = true;
     e.sale = false;
     var demandeFin = e.fini;
-    etatEnvoi('envoi');
-    appel('repondre', { id: session.id, jeton: session.jeton, reponses: session.reponses, nn: session.nn, percu: session.percu || undefined, fini: demandeFin })
+    var etat = function (quoi) { if (S === session) etatEnvoi(quoi); };
+    etat('envoi');
+    appel('repondre', { id: session.id, jeton: session.jeton, reponses: session.reponses, nn: session.nn, percu: session.percu || undefined, fini: demandeFin, ensemble: session.ensemble || undefined })
       .then(function (r) {
         e.enCours = false;
         if (r.statut === 200) {
@@ -1810,7 +2539,7 @@
           majEntree(session.id, session.role, { repondu: p.repondu, total: p.total, statut: r.json.etat && r.json.etat.verrouille ? 'resultat' : r.json.fini ? 'fini' : 'encours' });
           session.dernierEtat = r.json.etat;
           if (r.json.etat) majDepuisEtat(session, r.json.etat);
-          etatEnvoi(e.sale ? 'envoi' : 'ok');
+          etat(e.sale ? 'envoi' : 'ok');
           if (!e.sale) {
             var a = e.attente; e.attente = [];
             a.forEach(function (f) { try { f(r); } catch (err) { /* rien */ } });
@@ -1820,21 +2549,21 @@
           e.sale = false;
           var b = e.attente; e.attente = [];
           b.forEach(function (f) { try { f(r); } catch (err) { /* rien */ } });
-          if (!b.length && S === session) ouvrirResultat(session.entree);
+          if (!b.length && S === session) { P = null; ouvrirResultat(session.entree); }
           return;
         } else {
           e.sale = true;
-          etatEnvoi('erreur');
-          setTimeout(pousser, 4000);
+          etat('erreur');
+          setTimeout(function () { pousserS(session); }, 4000);
           return;
         }
-        pousser();
+        pousserS(session);
       })
       .catch(function () {
         e.enCours = false;
         e.sale = true;
-        etatEnvoi('horsLigne');
-        setTimeout(pousser, 5000);
+        etat('horsLigne');
+        setTimeout(function () { pousserS(session); }, 5000);
       });
   }
   function etatEnvoi(quoi) {
@@ -1848,11 +2577,17 @@
       : q === 'erreur' ? ins(remplir(tr('question.erreur', ''), {}))
       : '';
   }
-  // En quittant la page, ce qui n'est pas parti part quand même.
+  // En quittant la page, ce qui n'est pas parti part quand même (les deux
+  // sessions de la paire, sur un seul téléphone).
   document.addEventListener('visibilitychange', function () {
-    if (document.visibilityState !== 'hidden' || !S || !S.envoi.sale || S.envoi.enCours) return;
-    S.envoi.sale = false;
-    appel('repondre', { id: S.id, jeton: S.jeton, reponses: S.reponses, nn: S.nn, percu: S.percu || undefined, fini: S.envoi.fini }, true).catch(function () {});
+    if (document.visibilityState !== 'hidden') return;
+    var sessions = [S];
+    if (P) sessions.push(P.a, P.b);
+    sessions.forEach(function (s, k) {
+      if (!s || sessions.indexOf(s) !== k || !s.envoi.sale || s.envoi.enCours) return;
+      s.envoi.sale = false;
+      appel('repondre', { id: s.id, jeton: s.jeton, reponses: s.reponses, nn: s.nn, percu: s.percu || undefined, fini: s.envoi.fini, ensemble: s.ensemble || undefined }, true).catch(function () {});
+    });
   });
 
   function pause(reprise) {
@@ -1861,6 +2596,7 @@
     var p = session.formule === 'point' ? C.progressionPoint(session.reponses)
       : C.progression(session.situation, session.reponses, session.percu || undefined);
     afficher(carte(
+      bandeauQui(session) +
       duo('dort', 'repos', 76, session.moi.genre, session.autre.genre) +
       '<h2 class="bilan-titre">' + x('pause.titre') + '</h2>' +
       '<p class="bilan-texte">' + x('pause.progression', { n: p.repondu, total: p.total }) + '</p>' +
@@ -1892,10 +2628,9 @@
       var etat = r.json.etat;
       if (etat && etat.verrouille) return ouvrirResultat(session.entree);
       if (r.json.fini) {
-        if (session.entree.unTel && session.mode === 'duo') {
-          notePos(session, C.ORDRE.length);
-          if (etat && !etat.autre.fini && autreIci(session, etat)) { S = session; return relais(null, true); }
-        }
+        // Un seul téléphone, chacun ses cent questions : à l'autre, sur ce
+        // téléphone ou sur le sien.
+        if (unTelDe(session.entree) && session.mode === 'duo' && etat && !etat.autre.fini && autreIci(session, etat)) return passerTelephone(session.entree, etat);
         return attente(session.entree, etat);
       }
       if (r.json.emailManque) { S = session; session.moi.email = null; return ecranEmail(session); }
@@ -1937,11 +2672,17 @@
   // l'e-mail « rapport prêt » et le rappel (`rappel`).
   function ecranEmail(session) {
     S = session;
+    // Un seul téléphone (19 novembre 2026, Thomas : l'écran disait « une fois
+    // si X tarde à finir » à deux personnes assises côte à côte) : le
+    // bandeau dit à qui est l'adresse, la phrase n'annonce que le « prêt »
+    // et le rappel, et la reprise ne part pas.
+    var unTel = session.mode === 'duo' && !!unTelDe(session.entree);
     afficher(carte(
+      bandeauQui(session) +
       duo('joie', 'mignon', 76, session.moi.genre, session.autre.genre) +
       '<h2 class="bilan-titre">' + x('fin.titre') + '</h2>' +
       '<p class="bilan-texte">' + x('fin.texte', { autre: session.autre.prenom }) + '</p>' +
-      champEmailFin(session.moi.email || '', session.autre.prenom) +
+      champEmailFin(session.moi.email || '', session.autre.prenom, unTel ? x('fin.aideTel') : '') +
       '<p class="bilan-alerte" id="bilan-erreur" hidden></p>' +
       '<div class="bilan-actions">' + bouton('valider', x('fin.bouton')) + '</div>' +
       '<div class="bilan-q-bas">' + bouton('precedente', '← ' + x('fin.revenir'), 'btn-link') + '</div>', 'bilan-fin-email'));
@@ -1965,7 +2706,7 @@
         b.disabled = true;
         // La phrase sous le champ annonce le « prêt », le rappel et, à deux,
         // un mot si l'autre tarde à finir (`reprise`, 24 octobre 2026).
-        appel('email', { id: session.id, jeton: session.jeton, email: email, rappel: true, reprise: session.mode !== 'solo' }).then(function (r) {
+        appel('email', { id: session.id, jeton: session.jeton, email: email, rappel: true, reprise: session.mode !== 'solo' && !unTel }).then(function (r) {
           b.disabled = false;
           if (r.statut !== 200) return erreur(r.json.erreur === 'email' ? 'creation.emailFaux' : 'erreurs.serveur');
           session.moi.email = r.json.email || email;
@@ -1998,18 +2739,24 @@
     return !!(etat.paiementOuvert && (CFG.ouvert !== false || etat.paiementTest));
   }
 
-  function blocAutre(entree, etat) {
+  // `ici` : un seul téléphone, et l'autre peut répondre dessus. Ni « n'a pas
+  // encore ouvert l'invitation », ni « Renvoyer l'invitation », ni rappel par
+  // e-mail : il est à côté (19 novembre 2026, Thomas avait lu « hbrtgh n'a
+  // pas encore ouvert l'invitation » à côté de hbrtgh). Sa progression s'il a
+  // commencé, rien sinon.
+  function blocAutre(entree, etat, ici) {
     var autre = etat.autre.prenom;
+    if (ici && !etat.autre.rejoint) return '';
     var pct = etat.autre.total ? Math.round(etat.autre.repondu / etat.autre.total * 100) : 0;
     var ligne = etat.autre.rejoint
       ? x('attente.autreProgression', { autre: autre, n: nombre(etat.autre.repondu), total: etat.autre.total ? nombre(etat.autre.total) : '…' })
       : x('attente.autrePasRejoint', { autre: autre });
     return '<div class="bilan-autre"><p>' + ligne + '</p>' +
       (etat.autre.rejoint ? '<div class="bilan-barre bilan-barre--autre"><span style="width:' + pct + '%"></span></div>' : '') +
-      '<div class="bilan-actions bilan-actions--gauche">' +
+      (ici ? '' : '<div class="bilan-actions bilan-actions--gauche">' +
       (!etat.autre.rejoint && etat.role === 'a' ? bouton('renvoyer', x('attente.renvoyer'), 'btn-outline btn-sm')
         : etat.autre.rejoint ? bouton('relancer', x('attente.relance', { autre: autre }), 'btn-outline btn-sm') : '') +
-      '</div></div>';
+      '</div>') + '</div>';
   }
 
   // Le champ de l'adresse où recevoir le PDF.
@@ -2339,19 +3086,32 @@
 
   function attente(entree, etat) {
     S = null;
+    P = null;
     var autre = etat.autre.prenom;
     var paye = !!etat.paye;
-    // Un seul téléphone : l'autre n'a pas fini et peut répondre ici.
+    // L'autre n'a pas fini et peut répondre sur ce téléphone. Sur un seul
+    // téléphone, le bouton pour le lui passer, et le titre dit qui a fini ;
+    // chacun sur le sien, quand l'invitation est ici et qu'il ne l'a pas
+    // encore ouverte, la même chose en second, s'il est à côté
+    // (19 novembre 2026 : un couple côte à côte arrivait ici sans moyen de se
+    // passer le téléphone).
     var ici = { id: entree.id, role: etat.role, entree: entree, autre: etat.autre };
-    var tourIci = entree.unTel && !etat.autre.fini && autreIci(ici, etat);
+    var o = etat.autre.fini ? null : autreIci(ici, etat);
+    var tel = !!unTelDe(entree) || !!(o && o !== 'inviter');
     var html = carte(
       duo('joie', 'repos', 86, etat.moi.genre, etat.autre.genre) +
-      '<h2 class="bilan-titre">' + x(paye ? 'attente.payeTitre' : 'attente.titre') + '</h2>' +
+      '<h2 class="bilan-titre">' + (paye ? x('attente.payeTitre') : tel ? x('attente.titreNom', { moi: etat.moi.prenom }) : x('attente.titre')) + '</h2>' +
       '<p class="bilan-texte">' + x(paye ? 'attente.payeTexte' : 'attente.texte', { autre: autre }) + '</p>' +
-      (tourIci ? '<div class="bilan-actions">' + bouton('tourAutre', x('attente.tourAutre', { autre: autre }), 'btn-cta btn-gradient') + '</div>' : '') +
+      // Sur un seul téléphone, et s'il préfère le sien : l'écran du lien
+      // (passerTelephone, son code et son lien).
+      (o && tel ? '<div class="bilan-actions">' + bouton('tourAutre', x('attente.tourAutre', { autre: autre }), 'btn-cta btn-gradient') + '</div>' +
+        '<div class="bilan-q-bas">' + bouton('sonTel', x('unTel.lienTitre', { autre: autre }), 'btn-link') + '</div>' : '') +
       // L'e-mail « rapport prêt » partira dès que l'autre aura fini.
       (!paye && etat.moi.prevenu && etat.moi.email ? '<p class="bilan-prevenu">' + x('attente.prevenu', { email: etat.moi.email, autre: autre }) + '</p>' : '') +
-      blocAutre(entree, etat) +
+      blocAutre(entree, etat, !!(o && tel)) +
+      (o === 'inviter' && !tel ? '<div class="bilan-untel"><p class="bilan-untel-titre">' + x('attente.iciTitre', { autre: autre }) + '</p>' +
+        '<p class="bilan-note">' + x('attente.iciTexte', { autre: autre }) + '</p>' +
+        bouton('tourAutre', x('attente.iciBouton', { autre: autre }), 'btn-outline') + '</div>' : '') +
       (paye ? blocEmail(etat) : '') +
       '<p class="bilan-note">' + x('attente.maj') + '</p>', 'bilan-attente') +
       (paye ? '' : offre(etat, false)) +
@@ -2377,11 +3137,8 @@
     };
     actions.relancer = function (b) { relancer(b, autre); };
     actions.revoir = function () { commencerSession(entree, etat, true); };
-    actions.tourAutre = function () {
-      var e = autreIci(ici, etat);
-      if (e === 'inviter') return ouvrirLien(entree.id, entree.invitation, false, false, true);
-      if (e) { e.unTel = true; ouvrir(e); }
-    };
+    actions.tourAutre = function () { ouvrirAutreIci(entree, etat); };
+    actions.sonTel = function () { passerTelephone(entree, etat); };
     actions.email = actionEmail(entree);
     ACTIONS = actions;
     var verifier = function () {
@@ -2418,6 +3175,7 @@
 
   function ouvrirResultat(entree, message) {
     S = null;
+    P = null;
     chargement();
     appel('resultat', { id: entree.id, jeton: entree.jeton }).then(function (r) {
       if (r.statut === 404) { oublier(entree.id, entree.role); return messageErreur('introuvable', accueil); }
@@ -2686,6 +3444,7 @@
   window.addEventListener('popstate', function () {
     if (!enFocus) return;
     S = null;
+    P = null;
     arreterMinuteur();
     focus(false, true);
     repriseSurLaPage();
@@ -2760,8 +3519,14 @@
     var liste = lireListe();
     if (!liste.length) { zone.hidden = true; zone.innerHTML = ''; return; }
     var e = liste[0];
-    zone.innerHTML = '<p>' + x(e.statut === 'resultat' ? 'accueil.repriseRapport' : 'accueil.reprise', { autre: e.autre || '' }) + '</p>' +
-      '<button type="button" class="btn btn-cta btn-gradient btn-sm" data-bilan-reprendre>' + x(e.statut === 'resultat' ? 'accueil.voir' : 'accueil.reprendre') + '</button>';
+    // Un couple sur ce téléphone : leurs deux prénoms.
+    var o = e.mode === 'solo' ? null : entreeRole(e.id, roleAutre(e.role));
+    var a = o && e.role !== 'a' ? o : e;
+    var rapport = e.statut === 'resultat' || !!(o && o.statut === 'resultat');
+    var texte = o ? x(rapport ? 'accueil.repriseRapportDeux' : 'accueil.repriseDeux', { moi: a.moi || '', autre: a.autre || '' })
+      : x(rapport ? 'accueil.repriseRapport' : 'accueil.reprise', { autre: e.autre || '' });
+    zone.innerHTML = '<p>' + texte + '</p>' +
+      '<button type="button" class="btn btn-cta btn-gradient btn-sm" data-bilan-reprendre>' + x(rapport ? 'accueil.voir' : 'accueil.reprendre') + '</button>';
     zone.hidden = false;
   }
 
@@ -2795,8 +3560,10 @@
       focus(true);
       chargement();
       preparer().then(function () {
-        var l = lireListe();
-        if (l.length === 1) ouvrir(l[0]); else accueil();
+        // Une seule évaluation sur l'appareil (deux entrées pour un couple
+        // sur un seul téléphone) : elle s'ouvre tout de suite.
+        var ids = lireListe().map(function (e) { return e.id; }).filter(function (v, i, t) { return t.indexOf(v) === i; });
+        if (ids.length === 1) ouvrir(entreeAOuvrir(ids[0])); else accueil();
       }).catch(function () { messageErreur('reseau'); });
       return;
     }

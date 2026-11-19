@@ -23,13 +23,19 @@
       "pret": "Klaar: je hoeft het rapport alleen nog te ontgrendelen",
       "reprise": "Je bent een relatiecheck aan het invullen met {{autre}}.",
       "repriseRapport": "Je rapport met {{autre}} is beschikbaar.",
-      "quitter": "Terug"
+      "quitter": "Terug",
+      "deux": "{{moi}} en {{autre}}",
+      "repriseDeux": "De relatiecheck van {{moi}} en {{autre}} is bezig.",
+      "repriseRapportDeux": "Het rapport van {{moi}} en {{autre}} is beschikbaar.",
+      "ligneFini": "{{nom}} heeft alle vragen beantwoord",
+      "ligneProgression": "{{nom}}: {{n}} van de {{total}} vragen",
+      "ligneAttente": "{{nom}} is nog niet begonnen"
     },
     "creation": {
       "titre": "Je relatiecheck",
       "modeTitre": "Hoe vul je de relatiecheck in?",
       "modeDuo": "Samen",
-      "modeDuoAide": "Jullie antwoorden ieder apart, op de eigen telefoon, zonder de antwoorden van de ander te zien. Het rapport vergelijkt jullie twee reeksen antwoorden.",
+      "modeDuoAide": "Jullie antwoorden ieder apart, zonder de antwoorden van de ander te zien. Het rapport zet ze naast elkaar.",
       "modeSolo": "Alleen",
       "modeSoloAide": "Waar staat mijn relatie?: 50 vragen over wat je in je relatie beleeft, alleen voor jou. Je partner wordt niet op de hoogte gebracht en ziet niets.",
       "prenomsTitre": "Jullie twee voornamen",
@@ -41,9 +47,9 @@
       "homme": "Een man",
       "sansGenre": "Zeg ik liever niet",
       "genreAide": "Dat dient alleen om de vragen goed te formuleren (‘hij’ of ‘zij’) en om de figuurtjes te kiezen.",
-      "consentement": "Ik ben 18 jaar of ouder en ik geef toestemming om mijn antwoorden op te slaan, alleen om het rapport van de relatiecheck te kunnen leveren.",
-      "accordAide": "Je antwoorden, ook over intieme onderwerpen, dienen alleen voor dit rapport, waarin {{autre}} ze naast de eigen antwoorden ziet. De relatiecheck wordt bewaard tot 60 dagen na je laatste antwoord als er niet betaald is, en tot zes maanden na de betaling, en ieder van jullie kan hem op elk moment verwijderen. Je hoeft geen account aan te maken.",
-      "prixRappel": "De vragen zijn gratis. Het volledige rapport kost {{prix}} voor jullie samen: je ontgrendelt het als je klaar bent met je antwoorden.",
+      "consentement": "Ik ben 18 jaar of ouder en ik ga ermee akkoord dat mijn antwoorden, ook de intieme, alleen voor ons rapport worden gebruikt.",
+      "accordAide": "{{autre}} ziet ze in het rapport, naast de eigen antwoorden.",
+      "prixRappel": "De vragen zijn gratis. Het rapport kost {{prix}} voor jullie samen, en je betaalt pas aan het einde.",
       "retour": "Terug",
       "creer": "Onze relatiecheck aanmaken",
       "prenomManque": "Vul jullie twee voornamen in.",
@@ -59,7 +65,15 @@
         "couple": "In een relatie",
         "complique": "Het is ingewikkeld",
         "celib": "Single"
-      }
+      },
+      "telTitre": "Hoe gaan jullie antwoorden?",
+      "telDeux": "Ieder op de eigen telefoon",
+      "telDeuxAide": "{{autre}} krijgt een link, of scant een code.",
+      "telUn": "Samen, op deze telefoon",
+      "telUnAide": "Jullie geven de telefoon aan elkaar door.",
+      "telManque": "Kies hoe jullie antwoorden: ieder op de eigen telefoon, of samen op deze.",
+      "conservationTitre": "Hoe lang worden ze bewaard?",
+      "conservation": "Zonder betaling wordt de relatiecheck 60 dagen na je laatste antwoord verwijderd. Na betaling wordt hij zes maanden bewaard. Ieder van jullie kan op elk moment alles verwijderen. Je hoeft geen account aan te maken."
     },
     "invitation": {
       "ensembleTitre": "Is {{autre}} bij je?",
@@ -79,23 +93,46 @@
       "monLienAide": "Daarmee kun je op een ander apparaat verder met je antwoorden. Geef hem aan niemand, ook niet aan {{autre}}: het is de sleutel tot je antwoorden.",
       "copierMonLien": "Mijn link kopiëren",
       "dejaRejoint": "{{autre}} doet mee aan de relatiecheck.",
-      "unTelTitre": "Maar één telefoon voor jullie samen?",
-      "unTelTexte": "Antwoord om de beurt op deze: een deel voor jou, daarna hetzelfde deel voor {{autre}}, zonder de antwoorden van de ander te zien.",
-      "unTelBouton": "Om de beurt op deze telefoon"
+      "unTelTitre": "Zijn jullie samen, met maar één telefoon?",
+      "unTelTexte": "Antwoord op deze: dezelfde vraag om de beurt, of ieder zijn eigen 100 vragen.",
+      "unTelBouton": "Samen op deze telefoon antwoorden"
     },
     "unTel": {
-      "titre": "Om de beurt, op deze telefoon",
-      "texte": "{{moi}} beantwoordt een deel en geeft de telefoon dan aan {{autre}}, die hetzelfde deel beantwoordt. Zo gaan jullie door tot het einde, deel voor deel.",
-      "prive": "De antwoorden van de ander zie je nooit: elke beurt begint op een nieuw scherm. En niet over de schouder meekijken!",
-      "duree": "Een minuut of veertig samen, met een pauze wanneer jullie willen",
-      "commencer": "{{moi}} begint",
-      "retour": "Terug naar de uitnodiging",
-      "relaisTitre": "{{autre}} is aan de beurt!",
-      "relaisTexte": "Geef de telefoon aan {{autre}}. Je antwoorden zijn opgeslagen en worden niet getoond.",
-      "relaisPremier": "{{autre}} vult eerst de eigen voornaam in en vinkt het vakje aan, en beantwoordt dan hetzelfde deel als jij.",
-      "relaisPartie": "Deel {{n}} van {{total}}: {{domaine}}",
-      "relaisFin": "{{moi}} is klaar. {{autre}} heeft nog een paar antwoorden te gaan.",
-      "relaisBouton": "Ik ben {{autre}}, daar gaan we"
+      "titre": "Hoe geven jullie de telefoon door?",
+      "questionTitre": "Dezelfde vraag, om de beurt",
+      "questionTexte": "{{moi}} antwoordt, dan {{autre}}, en dan gaan jullie naar de volgende vraag. Jullie zijn samen klaar.",
+      "questionDuree": "Een minuut of veertig samen",
+      "suiteTitre": "Ieder zijn eigen 100 vragen",
+      "suiteTexte": "{{moi}} beantwoordt alle eigen vragen, daarna is {{autre}} aan de beurt. {{autre}} kan ook op de eigen telefoon antwoorden.",
+      "suiteDuree": "Een minuut of twintig per persoon",
+      "consentTitre": "Nu vinkt {{autre}} het eigen vakje aan:",
+      "consentNote": "{{moi}} ziet de antwoorden van {{autre}} in het rapport, naast de eigen antwoorden.",
+      "consentManque": "{{autre}} moet het eigen vakje aanvinken om te beginnen.",
+      "choixManque": "Kies hoe jullie de telefoon doorgeven.",
+      "prive": "Niet valsspelen: wie niet aan de beurt is, kijkt niet naar het scherm!",
+      "commencer": "Daar gaan we!",
+      "deuxTel": "Toch liever ieder op de eigen telefoon",
+      "tour": "{{nom}} is aan de beurt!",
+      "tourNote": "Na elk antwoord gaat de telefoon naar de ander.",
+      "qui": "De antwoorden van {{nom}}",
+      "passerTitre": "Nu is {{autre}} aan de beurt!",
+      "passerTexte": "{{moi}} heeft alle vragen beantwoord. Geef de telefoon aan {{autre}}: ieders antwoorden blijven verborgen tot het rapport.",
+      "passerBouton": "Ik ben {{autre}}, ik begin",
+      "lienTitre": "Wil {{autre}} liever op de eigen telefoon antwoorden?",
+      "lienTexte": "Stuur deze link naar {{autre}}, of laat deze code scannen: het deel van {{autre}} begint dan op de eigen telefoon.",
+      "lienQr": "QR-code van de link voor {{autre}}",
+      "message": "Hier is de link om jouw vragen van onze relatiecheck te beantwoorden: {{lien}}",
+      "plusTard": "{{autre}} antwoordt later",
+      "reprendre": "Samen verder",
+      "separer": "Ieder op de eigen telefoon verder",
+      "separerTitre": "Wie houdt deze telefoon?",
+      "separerTexte": "De ander gaat verder op de eigen telefoon, zonder antwoorden kwijt te raken.",
+      "garde": "{{nom}} houdt deze telefoon",
+      "lienAutreTitre": "{{autre}} gaat verder op de eigen telefoon",
+      "lienAutreTexte": "{{autre}} scant deze code, of krijgt deze link: de vragen gaan verder waar ze gebleven waren. Deze link opent de antwoorden van {{autre}}, stuur hem dus alleen naar {{autre}}.",
+      "continuerIci": "{{moi}} gaat hier verder",
+      "pauseTexte": "Jullie kunnen de pagina sluiten: jullie antwoorden zijn bewaard. Om verder te gaan, kom je op deze telefoon terug naar deze pagina.",
+      "progression": "{{nom}}: {{n}} van de {{total}} antwoorden"
     },
     "rejoindre": {
       "titre": "{{autre}} nodigt je uit voor jullie relatiecheck",
@@ -106,7 +143,9 @@
       "commencer": "Ik ga akkoord en begin",
       "lienUtilise": "Deze uitnodigingslink is al gebruikt. Was jij dat, open dan je persoonlijke link, of ga terug naar deze pagina op de telefoon waarop je begonnen bent.",
       "paye": "Goed nieuws: {{autre}} heeft het rapport al betaald voor jullie samen. Het opent zodra je klaar bent met je antwoorden.",
-      "prenomManque": "Vul je voornaam in."
+      "prenomManque": "Vul je voornaam in.",
+      "telTitre": "Jij bent aan de beurt, {{moi}}!",
+      "telTexte": "{{autre}} heeft alle vragen beantwoord. Vink je vakje aan en jouw vragen beginnen: {{autre}} ziet je antwoorden pas in het rapport."
     },
     "domaine": {
       "partie": "Deel {{n}} van {{total}}",
@@ -138,7 +177,14 @@
       "titre": "Waar mogen we het rapport naartoe sturen?",
       "texte": "Je antwoorden zijn opgeslagen! We hoeven alleen nog te weten waar we het rapport naartoe sturen.",
       "bouton": "Verder",
-      "revenir": "Terug naar de laatste vraag"
+      "revenir": "Terug naar de laatste vraag",
+      "aideTel": "De link naar je rapport als pdf wordt naar dit adres gestuurd. Je kunt er ook de relatiecheck mee terugvinden als je de pagina sluit. We mailen je als het rapport klaar is, en daarna nog één keer als het de volgende dag nog niet ontgrendeld is.",
+      "paireTitre": "Waar mogen we jullie rapport naartoe sturen?",
+      "paireTexte": "Jullie antwoorden zijn opgeslagen! We hoeven alleen nog te weten waar we de link naar het rapport naartoe sturen.",
+      "paireEmail": "E-mailadres van {{nom}}",
+      "paireEmailFacultatif": "E-mailadres van {{nom}} (optioneel)",
+      "paireAide": "De link naar het rapport als pdf wordt naar deze adressen gestuurd. Jullie kunnen er ook de relatiecheck mee terugvinden als je de pagina sluit. We mailen één keer als het rapport de volgende dag nog niet ontgrendeld is.",
+      "paireAideAutre": "Zonder adres voor {{autre}} gaat de link alleen naar het adres van {{moi}}."
     },
     "pause": {
       "titre": "Het is opgeslagen",
@@ -161,7 +207,11 @@
       "relance": "Stuur {{autre}} een kleine herinnering",
       "relanceMessage": "Ik ben klaar met mijn antwoorden voor onze relatiecheck, ik wacht op jou! Je gaat verder waar je gebleven was, op je telefoon.",
       "prevenu": "We mailen je op {{email}} zodra {{autre}} klaar is: je kunt deze pagina sluiten.",
-      "tourAutre": "Geef de telefoon aan {{autre}}"
+      "tourAutre": "Geef de telefoon aan {{autre}}",
+      "titreNom": "{{moi}} is klaar!",
+      "iciTitre": "Is {{autre}} bij je?",
+      "iciTexte": "{{autre}} kan meteen op deze telefoon antwoorden.",
+      "iciBouton": "{{autre}} antwoordt op deze telefoon"
     },
     "paywall": {
       "titre": "Jullie volledige rapport",
@@ -255,10 +305,9 @@
       },
       "creation": {
         "autreAide": "Die dient alleen om de vragen te formuleren. Je partner krijgt niets toegestuurd.",
-        "soloNote": "Je vult de relatiecheck alleen in: {{autre}} krijgt niets te horen, er wordt niets naartoe gestuurd, en alleen jij ziet het rapport.",
-        "consentement": "Ik ben 18 jaar of ouder en ik geef toestemming om mijn antwoorden op te slaan, alleen om het rapport van de relatiecheck te kunnen leveren.",
-        "accordAide": "Je antwoorden, ook over intieme onderwerpen, en wat je denkt dat {{autre}} zou antwoorden, dienen alleen voor dit rapport, dat alleen jij ziet. De relatiecheck wordt bewaard tot 60 dagen na je laatste antwoord als er niet betaald is, en tot zes maanden na de betaling, en je kunt hem op elk moment verwijderen. Je hoeft geen account aan te maken.",
-        "prixRappel": "De vragen zijn gratis. Het volledige rapport kost {{prix}}: je ontgrendelt het als je klaar bent met je antwoorden.",
+        "consentement": "Ik ben 18 jaar of ouder en ik ga ermee akkoord dat mijn antwoorden, ook de intieme, alleen voor mijn rapport worden gebruikt.",
+        "accordAide": "Alleen jij ziet het rapport: {{autre}} wordt niet op de hoogte gebracht en krijgt niets toegestuurd.",
+        "prixRappel": "De vragen zijn gratis. Het rapport kost {{prix}}, en je betaalt pas aan het einde.",
         "creer": "Mijn relatiecheck beginnen",
         "emailAide": "De link naar je rapport als pdf wordt naar dit adres gestuurd. Je kunt er ook je relatiecheck mee terugvinden als je de pagina sluit, en we sturen je één herinnering als je rapport de volgende dag nog wacht.",
         "apportTitre": "Wat de relatiecheck alleen je oplevert",
@@ -267,7 +316,8 @@
           "Bij de onderwerpen die het zwaarst wegen: waar je denkt dat je het eens bent met {{autre}}, en waar niet",
           "De onderwerpen waarbij je niet weet wat {{autre}} ervan vindt: dat zijn vaak de gesprekken die je moet voeren"
         ],
-        "apportNote": "100 vragen, ongeveer 25 minuten. Je kunt pauzeren en later verdergaan."
+        "apportNote": "100 vragen, ongeveer 25 minuten. Je kunt pauzeren en later verdergaan.",
+        "conservation": "Zonder betaling wordt de relatiecheck 60 dagen na je laatste antwoord verwijderd. Na betaling wordt hij zes maanden bewaard. Je kunt alles op elk moment verwijderen. Je hoeft geen account aan te maken."
       },
       "domaine": {
         "nb": "{{n}} vragen, telkens twee antwoorden, ongeveer {{min}} min"
@@ -746,10 +796,10 @@
           "Hoe je liefhebt, wat je vasthoudt, en drie gesprekken om verder te komen"
         ],
         "apportNote": "50 vragen over wat je beleeft, ongeveer 12 minuten. Je kunt een pauze nemen en later verdergaan.",
-        "accordAide": "Je antwoorden, ook over je intimiteit en je veiligheid, dienen alleen voor dit rapport, dat alleen jij te zien krijgt. De check wordt zonder betaling 60 dagen na je laatste antwoord bewaard, na betaling zes maanden, en je kunt hem altijd verwijderen. Geen account nodig.",
-        "prixRappel": "De vragen zijn gratis. Het rapport kost {{prixPoint}}: je ontgrendelt het als je klaar bent.",
+        "accordAide": "Alleen jij ziet het rapport: {{autre}} wordt niet op de hoogte gebracht en krijgt niets toegestuurd.",
+        "prixRappel": "De vragen zijn gratis. Het rapport kost {{prixPoint}}, en je betaalt pas aan het einde.",
         "creer": "Mijn check starten",
-        "soloNote": "Je doet de check alleen: {{autre}} wordt niet op de hoogte gebracht, krijgt niets toegestuurd, en alleen jij ziet het rapport."
+        "conservation": "Zonder betaling wordt de check 60 dagen na je laatste antwoord verwijderd. Na betaling wordt hij zes maanden bewaard. Je kunt alles op elk moment verwijderen. Geen account nodig."
       },
       "domaine": {
         "nb": "{{n}} vragen, ongeveer {{min}} min",

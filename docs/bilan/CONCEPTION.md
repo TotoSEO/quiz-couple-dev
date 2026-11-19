@@ -2668,3 +2668,70 @@ séparer.
 - Le prochain levier est en bas de l'entonnoir, un changement à la fois. La
   réduction datée du Black Friday, calculée depuis 7,90 €, attend toujours la
   réponse de Thomas : elle dirait si le prix bloque.
+
+## 19 novembre 2026 : un seul téléphone refait, et le départ allégé
+
+Thomas a fait l'évaluation à deux sur son téléphone, puis : « le truc à deux
+sur le même téléphone est complètement pas optimisé et bug, il n'a pas son
+propre système de fonctionnement [...] Refait donc tout ça !!! », et
+« propose leur de choisir le mode de formulaire : La même question chacun son
+tour, et quand les deux ont répondu ça passe à la suivante, ou y'en a un qui
+fait les 100 de son côté, et quand c'est fini c'est à l'autre », avec, à la
+fin, « Envoyez ce lien si X veut le faire sur son téléphone directement ».
+
+### Ce qui n'allait pas
+
+- Le mode d'un seul téléphone était caché sous « Commencer mes réponses », sur
+  l'écran d'invitation : un couple assis côte à côte qui ne le voyait pas
+  répondait « chacun sur son téléphone » sur un seul.
+- « Qui fait quoi » proposait « Surtout moi » et le prénom de l'autre : sur un
+  téléphone qu'on se passe, « moi » ne dit pas qui.
+- L'écran de l'adresse disait « une fois si X tarde à finir » à deux personnes
+  assises ensemble, puis l'attente disait « X n'a pas encore ouvert
+  l'invitation » sans moyen de lui passer le téléphone.
+- Le départ : une case « 18 ans ou plus » et trois paragraphes de texte légal
+  sur une page transactionnelle (Thomas : « ya un pavé de texte pareil »).
+
+### Ce qui a changé
+
+- **Le départ à deux demande comment ils vont répondre** : chacun sur son
+  téléphone (l'invitation, comme avant) ou ensemble sur celui-ci. Rien n'est
+  choisi d'avance. L'accord tient en une case et une ligne, la durée de garde
+  est repliée, le prix tient en une ligne sous le bouton.
+- **Ensemble sur un téléphone, deux façons** :
+  - *La même question, chacun son tour* : les deux évaluations avancent
+    ensemble, chaque question à l'un puis à l'autre, le bandeau « À Julien de
+    répondre ! » quand la main change (450 ms où les réponses restent sourdes,
+    comme les tests du site). La situation est demandée une fois pour les
+    deux. À la fin, les deux adresses sur un écran, puis « rapport prêt ».
+    Aucun e-mail « rapport prêt » ne part à des gens qui sont devant
+    (`ensemble: true` envoyé à `repondre`) ; le rappel du lendemain part une
+    fois par boîte, jamais la reprise. En pause, ils peuvent continuer chacun
+    sur son téléphone : celui qui part scanne son lien personnel.
+  - *Chacun ses 100 questions* : l'un répond à tout, puis « À Julien
+    maintenant ! » : il prend le téléphone, ou scanne le code qui ouvre sa
+    partie sur son téléphone.
+- « Qui fait quoi » se répond aux deux prénoms, dans le même ordre pour les
+  deux (« Surtout Camille » ... « Surtout Julien ») ; la valeur enregistrée ne
+  change pas.
+- L'écran d'attente propose de passer le téléphone à l'autre dès qu'il peut
+  répondre ici, y compris quand « chacun sur son téléphone » avait été choisi.
+
+### Pourquoi 18 ans, et pas moins
+
+Thomas a demandé pourquoi la case dit 18 ans. Les questions vont jusqu'à
+l'intimité, les réponses sont des données sensibles qui demandent un
+consentement explicite (article 9 du RGPD), le rapport est un contrat payant
+que les CGV réservent aux majeurs, et l'analyse d'impact a été écrite pour des
+adultes. Descendre à 15 ou 16 ans demanderait de réécrire les CGV, la
+politique de confidentialité et l'analyse d'impact, et de retirer les
+questions sur l'intimité. Ce qui freinait, c'était plutôt la longueur et
+l'allure de la case : elle tient maintenant en une phrase.
+
+### À regarder
+
+- `depart_erreur` clé `tel` (le choix oublié) ;
+- `un_telephone` clés `question` et `suite`, et `invitation_vue` clé `tel`,
+  jour par jour (`bilan-chiffres.yml`) ;
+- la part des évaluations à deux qui vont au bout, et la part de ces couples
+  qui paient.

@@ -23,13 +23,19 @@
       "pret": "Pronto: resta solo da sbloccare il report",
       "reprise": "Hai una valutazione in corso con {{autre}}.",
       "repriseRapport": "Il tuo report con {{autre}} è disponibile.",
-      "quitter": "Indietro"
+      "quitter": "Indietro",
+      "deux": "{{moi}} e {{autre}}",
+      "repriseDeux": "La valutazione di {{moi}} e {{autre}} è in corso.",
+      "repriseRapportDeux": "Il report di {{moi}} e {{autre}} è disponibile.",
+      "ligneFini": "{{nom}} ha finito le sue risposte",
+      "ligneProgression": "{{nom}}: {{n}} domande su {{total}}",
+      "ligneAttente": "{{nom}} non ha ancora iniziato"
     },
     "creation": {
       "titre": "La vostra valutazione",
       "modeTitre": "Come fate la valutazione?",
       "modeDuo": "In due",
-      "modeDuoAide": "Ciascuno risponde per conto suo, sul proprio telefono, senza vedere le risposte dell'altro. Il report confronta le vostre due serie di risposte.",
+      "modeDuoAide": "Ciascuno risponde per conto suo, senza vedere le risposte dell'altro. Il report le mette a confronto.",
       "modeSolo": "Da solo/a",
       "modeSoloAide": "Il punto sulla mia relazione: 50 domande su quello che vivi nella tua coppia, solo per te. Il tuo partner non viene avvisato e non vede niente.",
       "prenomsTitre": "I vostri due nomi",
@@ -41,9 +47,9 @@
       "homme": "Un uomo",
       "sansGenre": "Preferisco non dirlo",
       "genreAide": "Serve solo ad accordare le domande («ascoltato» o «ascoltata») e a scegliere i personaggi.",
-      "consentement": "Ho 18 anni o più e acconsento a che le mie risposte vengano registrate, unicamente per produrre il report di valutazione.",
-      "accordAide": "Le tue risposte, anche su argomenti intimi, servono solo a questo report, dove {{autre}} le vedrà accanto alle sue. La valutazione è conservata 60 giorni dopo la tua ultima risposta se non viene pagata, sei mesi dopo il pagamento, e ciascuno di voi può cancellarla in qualsiasi momento. Nessun account da creare.",
-      "prixRappel": "Le domande sono gratuite. Il report completo costa {{prix}} per tutti e due: lo sblocchi quando hai finito le tue risposte.",
+      "consentement": "Ho 18 anni o più e accetto che le mie risposte, anche quelle intime, servano solo per il nostro report.",
+      "accordAide": "{{autre}} le vedrà nel report, accanto alle sue.",
+      "prixRappel": "Le domande sono gratuite. Il report costa {{prix}} per tutti e due, e si paga alla fine.",
       "retour": "Indietro",
       "creer": "Crea la nostra valutazione",
       "prenomManque": "Scrivi i vostri due nomi.",
@@ -59,7 +65,15 @@
         "couple": "In coppia",
         "complique": "È complicato",
         "celib": "Single"
-      }
+      },
+      "telTitre": "Come volete rispondere?",
+      "telDeux": "Ciascuno sul proprio telefono",
+      "telDeuxAide": "{{autre}} riceve un link, o scansiona un codice.",
+      "telUn": "Insieme, su questo telefono",
+      "telUnAide": "Vi passate il telefono.",
+      "telManque": "Dicci come volete rispondere: ciascuno sul proprio telefono, o insieme su questo.",
+      "conservationTitre": "Per quanto tempo vengono conservate?",
+      "conservation": "Senza pagamento, la valutazione viene cancellata 60 giorni dopo la tua ultima risposta. Dopo il pagamento, viene conservata sei mesi. Ciascuno di voi può cancellare tutto quando vuole. Nessun account da creare."
     },
     "invitation": {
       "ensembleTitre": "{{autre}} è con te adesso?",
@@ -79,23 +93,46 @@
       "monLienAide": "Ti permette di riprendere le tue risposte su un altro dispositivo. Non darlo a nessuno, nemmeno a {{autre}}: è la chiave delle tue risposte.",
       "copierMonLien": "Copia il mio link",
       "dejaRejoint": "{{autre}} ha accettato l'invito.",
-      "unTelTitre": "Avete un solo telefono?",
-      "unTelTexte": "Rispondete a turno su questo: una parte per te, poi la stessa parte per {{autre}}, senza vedere le risposte dell'altro.",
-      "unTelBouton": "A turno su questo telefono"
+      "unTelTitre": "Siete insieme, con un solo telefono?",
+      "unTelTexte": "Rispondete su questo: la stessa domanda a turno, o ciascuno le sue 100 domande.",
+      "unTelBouton": "Rispondere insieme su questo telefono"
     },
     "unTel": {
-      "titre": "A turno, su questo telefono",
-      "texte": "{{moi}} risponde a una parte, poi passa il telefono a {{autre}}, che risponde alla stessa. Andate avanti così fino alla fine, una parte dopo l'altra.",
-      "prive": "Le risposte dell'altro non si vedono mai: ogni turno comincia su una schermata nuova. E niente sbirciate da sopra la spalla!",
-      "duree": "Una quarantina di minuti in due, con una pausa quando volete",
-      "commencer": "Inizia {{moi}}",
-      "retour": "Torna all'invito",
-      "relaisTitre": "Tocca a {{autre}}!",
-      "relaisTexte": "Passa il telefono a {{autre}}. Le tue risposte sono salvate e non verranno mostrate.",
-      "relaisPremier": "{{autre}} scrive prima il proprio nome e spunta la casella, poi risponde alla stessa parte che hai fatto tu.",
-      "relaisPartie": "Parte {{n}} di {{total}}: {{domaine}}",
-      "relaisFin": "{{moi}} ha finito. A {{autre}} mancano ancora un po' di risposte.",
-      "relaisBouton": "Sono {{autre}}, iniziamo"
+      "titre": "Come vi passate il telefono?",
+      "questionTitre": "La stessa domanda, a turno",
+      "questionTexte": "Risponde {{moi}}, poi {{autre}}, e passate alla domanda successiva. Finite insieme.",
+      "questionDuree": "Una quarantina di minuti in due",
+      "suiteTitre": "Ciascuno le sue 100 domande",
+      "suiteTexte": "{{moi}} risponde a tutte le sue domande, poi tocca a {{autre}}. {{autre}} potrà anche rispondere sul proprio telefono.",
+      "suiteDuree": "Una ventina di minuti a testa",
+      "consentTitre": "Ora {{autre}} spunta la sua casella:",
+      "consentNote": "{{moi}} vedrà le risposte di {{autre}} nel report, accanto alle sue.",
+      "consentManque": "{{autre}} deve spuntare la sua casella per iniziare.",
+      "choixManque": "Scegliete come passarvi il telefono.",
+      "prive": "Niente trucchi: chi non è di turno non guarda lo schermo!",
+      "commencer": "Si comincia!",
+      "deuxTel": "Meglio ciascuno sul proprio telefono",
+      "tour": "Tocca a {{nom}} rispondere!",
+      "tourNote": "Il telefono passa all'altro dopo ogni risposta.",
+      "qui": "Le risposte di {{nom}}",
+      "passerTitre": "Ora tocca a {{autre}}!",
+      "passerTexte": "{{moi}} ha finito le sue domande. Passa il telefono a {{autre}}: le risposte di ciascuno restano nascoste fino al report.",
+      "passerBouton": "Sono {{autre}}, comincio",
+      "lienTitre": "{{autre}} preferisce rispondere sul proprio telefono?",
+      "lienTexte": "Manda questo link a {{autre}}, oppure fai scansionare questo codice: la sua parte della valutazione parte sul suo telefono.",
+      "lienQr": "QR code del link per {{autre}}",
+      "message": "Ecco il link per rispondere alle tue domande della nostra valutazione di coppia: {{lien}}",
+      "plusTard": "{{autre}} risponderà più tardi",
+      "reprendre": "Riprendi insieme",
+      "separer": "Continuare ciascuno sul proprio telefono",
+      "separerTitre": "Chi tiene questo telefono?",
+      "separerTexte": "L'altro continua sul proprio telefono, senza perdere nessuna risposta.",
+      "garde": "{{nom}} tiene questo telefono",
+      "lienAutreTitre": "{{autre}} continua sul proprio telefono",
+      "lienAutreTexte": "{{autre}} scansiona questo codice, o riceve questo link: le sue domande riprendono da dove si erano fermate. Questo link apre le sue risposte, mandalo solo a {{autre}}.",
+      "continuerIci": "{{moi}} continua qui",
+      "pauseTexte": "Potete chiudere la pagina: le vostre risposte sono salvate. Per riprendere, tornate su questa pagina da questo telefono.",
+      "progression": "{{nom}}: {{n}} risposte su {{total}}"
     },
     "rejoindre": {
       "titre": "{{autre}} ti propone di fare la vostra valutazione di coppia",
@@ -106,7 +143,9 @@
       "commencer": "Accetto e inizio",
       "lienUtilise": "Questo link d'invito è già stato usato. Se eri tu, apri il tuo link personale, o torna su questa pagina dal telefono su cui hai iniziato.",
       "paye": "Buona notizia: {{autre}} ha già pagato il report per tutti e due. Si aprirà appena avrai finito le tue risposte.",
-      "prenomManque": "Scrivi il tuo nome."
+      "prenomManque": "Scrivi il tuo nome.",
+      "telTitre": "Tocca a te, {{moi}}!",
+      "telTexte": "{{autre}} ha finito le sue domande. Spunta la tua casella e iniziano le tue: {{autre}} vedrà le tue risposte solo nel report."
     },
     "domaine": {
       "partie": "Parte {{n}} di {{total}}",
@@ -138,7 +177,14 @@
       "titre": "Dove ti mandiamo il report?",
       "texte": "Le tue risposte sono salvate! Manca solo l'indirizzo a cui mandare il report.",
       "bouton": "Continua",
-      "revenir": "Torna all'ultima domanda"
+      "revenir": "Torna all'ultima domanda",
+      "aideTel": "Il link al tuo report in PDF sarà inviato a questo indirizzo. Serve anche a ritrovare la valutazione se chiudi la pagina. Ti scriveremo quando il report sarà pronto, e una sola volta in più se il giorno dopo non è ancora sbloccato.",
+      "paireTitre": "Dove vi mandiamo il report?",
+      "paireTexte": "Le vostre risposte sono salvate! Manca solo l'indirizzo a cui mandare il link del report.",
+      "paireEmail": "L'e-mail di {{nom}}",
+      "paireEmailFacultatif": "L'e-mail di {{nom}} (facoltativa)",
+      "paireAide": "Il link al report in PDF sarà inviato a questi indirizzi. Servono anche a ritrovare la valutazione se chiudete la pagina. Vi scriveremo una sola volta se il giorno dopo il report non è ancora sbloccato.",
+      "paireAideAutre": "Senza indirizzo per {{autre}}, il link arriva solo a quello di {{moi}}."
     },
     "pause": {
       "titre": "È salvato",
@@ -161,7 +207,11 @@
       "relance": "Manda un promemoria a {{autre}}",
       "relanceMessage": "Ho finito le mie risposte per il nostra valutazione di coppia, ti aspetto! Riprendi da dove avevi lasciato, sul tuo telefono.",
       "prevenu": "Ti scriviamo a {{email}} appena {{autre}} ha finito: puoi chiudere questa pagina.",
-      "tourAutre": "Passa il telefono a {{autre}}"
+      "tourAutre": "Passa il telefono a {{autre}}",
+      "titreNom": "{{moi}} ha finito!",
+      "iciTitre": "{{autre}} è con te adesso?",
+      "iciTexte": "{{autre}} può rispondere subito su questo telefono.",
+      "iciBouton": "{{autre}} risponde su questo telefono"
     },
     "paywall": {
       "titre": "Il vostro report completo",
@@ -255,10 +305,9 @@
       },
       "creation": {
         "autreAide": "Serve solo a scrivere le domande. Non gli viene inviato niente.",
-        "soloNote": "Fai la valutazione da solo/a: {{autre}} non viene avvisato, non gli viene inviato niente, e solo tu vedrai il report.",
-        "consentement": "Ho 18 anni o più e acconsento a che le mie risposte vengano registrate, unicamente per produrre il report di valutazione.",
-        "accordAide": "Le tue risposte, anche su argomenti intimi, e quello che immagini che {{autre}} risponderebbe servono solo a questo report, che vedrai solo tu. La valutazione è conservata 60 giorni dopo la tua ultima risposta se non viene pagata, sei mesi dopo il pagamento, e puoi cancellarla in qualsiasi momento. Nessun account da creare.",
-        "prixRappel": "Le domande sono gratuite. Il report completo costa {{prix}}: lo sblocchi quando hai finito le tue risposte.",
+        "consentement": "Ho 18 anni o più e accetto che le mie risposte, anche quelle intime, servano solo per il mio report.",
+        "accordAide": "Il report lo vedrai solo tu: {{autre}} non viene avvisato/a e non riceve niente.",
+        "prixRappel": "Le domande sono gratuite. Il report costa {{prix}}, e si paga alla fine.",
         "creer": "Iniziare la mia valutazione",
         "emailAide": "Il link al tuo report in PDF sarà inviato a questo indirizzo. Serve anche a ritrovare la tua valutazione se chiudi la pagina e a mandarti un solo promemoria se il giorno dopo il tuo report è ancora in attesa.",
         "apportTitre": "Cosa ti dà la valutazione da solo/a",
@@ -267,7 +316,8 @@
           "Sugli argomenti che contano di più, dove pensi di essere d'accordo con {{autre}}, e dove no",
           "Gli argomenti su cui non sai cosa pensa {{autre}}: spesso sono le conversazioni da fare"
         ],
-        "apportNote": "100 domande, circa 25 minuti. Puoi fare una pausa e riprendere più tardi."
+        "apportNote": "100 domande, circa 25 minuti. Puoi fare una pausa e riprendere più tardi.",
+        "conservation": "Senza pagamento, la valutazione viene cancellata 60 giorni dopo la tua ultima risposta. Dopo il pagamento, viene conservata sei mesi. Puoi cancellare tutto quando vuoi. Nessun account da creare."
       },
       "domaine": {
         "nb": "{{n}} domande, due risposte ciascuna, circa {{min}} min"
@@ -750,10 +800,10 @@
           "Il tuo modo di amare, cosa ti trattiene, e tre conversazioni per andare avanti"
         ],
         "apportNote": "50 domande su quello che vivi, circa 12 minuti. Puoi fare una pausa e riprendere più tardi.",
-        "accordAide": "Le tue risposte, anche sulla tua intimità e sulla tua sicurezza, servono solo a questo report, che vedrai solo tu. Il punto viene conservato 60 giorni dopo la tua ultima risposta se non paghi, sei mesi dopo il pagamento, e puoi cancellarlo in qualsiasi momento. Nessun account da creare.",
-        "prixRappel": "Le domande sono gratis. Il report costa {{prixPoint}}: lo sblocchi quando hai finito.",
+        "accordAide": "Il report lo vedrai solo tu: {{autre}} non viene avvisato/a e non riceve niente.",
+        "prixRappel": "Le domande sono gratuite. Il report costa {{prixPoint}}, e si paga alla fine.",
         "creer": "Inizia il mio punto",
-        "soloNote": "Fai il punto da solo/a: {{autre}} non viene avvisato/a e non riceve niente, e il report lo vedrai solo tu."
+        "conservation": "Senza pagamento, il punto viene cancellato 60 giorni dopo la tua ultima risposta. Dopo il pagamento, viene conservato sei mesi. Puoi cancellare tutto quando vuoi. Nessun account da creare."
       },
       "domaine": {
         "nb": "{{n}} domande, circa {{min}} min",
