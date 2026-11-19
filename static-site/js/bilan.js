@@ -547,9 +547,10 @@
       if (e.invite) return rejoindre(e, jeton, parQr, unTel);
       var entree = { id: id, jeton: jeton, role: e.role, mode: e.mode || 'duo', formule: e.formule || null, moi: e.moi.prenom, autre: e.autre.prenom };
       // Ce que l'appareil savait déjà de cette évaluation : l'invitation, et
-      // la façon de se passer le téléphone (un seul téléphone).
+      // la façon de se passer le téléphone (un seul téléphone), choisie ou
+      // encore à choisir.
       var ancienne = entreeRole(id, e.role);
-      if (ancienne) ['invitation', 'invitationVue', 'unTel'].forEach(function (k) { if (ancienne[k] != null) entree[k] = ancienne[k]; });
+      if (ancienne) ['invitation', 'invitationVue', 'unTel', 'reglage'].forEach(function (k) { if (ancienne[k] != null) entree[k] = ancienne[k]; });
       garder(entree);
       if (arret) return arreterRappels(entree, e);
       suiteEtat(entree, e);
@@ -992,6 +993,9 @@
           if (r.statut !== 200) return erreur(r.json.erreur === 'trop' ? 'erreurs.trop' : 'erreurs.serveur');
           var entree = { id: r.json.id, jeton: r.json.jeton, mode: brouillon.mode, formule: formule || null, invitation: r.json.invitation || null, invitationVue: true, role: 'a', moi: brouillon.moi, autre: brouillon.autre, statut: 'encours' };
           var tel = brouillon.tel;
+          // Ensemble sur ce téléphone : noté jusqu'au choix de la façon, pour
+          // qu'une page rechargée revienne à ce choix (commencerSession).
+          if (entree.mode !== 'solo' && tel === 'un') entree.reglage = true;
           garder(entree);
           brouillon = null;
           // Seul(e) : personne à inviter, la situation puis les questions.
@@ -1299,7 +1303,8 @@
         if (choix !== 'question' && choix !== 'suite') return erreur('unTel.choixManque', '.bilan-facons');
         if (choix === 'suite') {
           entree.unTel = 'suite';
-          majEntree(entree.id, entree.role, { unTel: 'suite' });
+          entree.reglage = false;
+          majEntree(entree.id, entree.role, { unTel: 'suite', reglage: false });
           compterVue('un_telephone', { mode: 'duo', id: entree.id, cle: 'suite' });
           return ouvrir(entree);
         }
@@ -1309,7 +1314,8 @@
         var deja = entreeRole(entree.id, roleAutre(entree.role));
         var suite = function () {
           entree.unTel = 'question';
-          majEntree(entree.id, entree.role, { unTel: 'question' });
+          entree.reglage = false;
+          majEntree(entree.id, entree.role, { unTel: 'question', reglage: false });
           compterVue('un_telephone', { mode: 'duo', id: entree.id, cle: 'question' });
           ouvrirPaire(entree.id);
         };
@@ -1323,7 +1329,11 @@
           suite();
         }).catch(function () { b.disabled = false; erreur('erreurs.reseau'); });
       },
-      deuxTel: function () { invitation(entree, etat); },
+      deuxTel: function () {
+        entree.reglage = false;
+        majEntree(entree.id, entree.role, { reglage: false });
+        invitation(entree, etat);
+      },
     };
   }
 
@@ -1946,6 +1956,13 @@
     S.liste = listeQuestions();
     S.index = revoir ? 0 : premierSansReponse();
     if (S.index > 0 && S.index < S.liste.length) S.introsVues[S.liste[S.index].domaine] = !!revoir;
+    // Ensemble sur ce téléphone, la façon pas encore choisie (une page
+    // rechargée sur reglerTelephone) : on y revient, tant que personne n'a
+    // répondu.
+    if (!revoir && S.mode === 'duo' && etat.role === 'a' && !etat.autre.rejoint && S.index === 0 && entree.reglage && !unTelDe(entree)) {
+      S = null;
+      return reglerTelephone(entree, etat);
+    }
     // À deux, le créateur qui n'a encore rien répondu et dont l'invitation
     // n'est pas acceptée commence par l'invitation.
     if (!revoir && S.mode === 'duo' && etat.role === 'a' && !etat.autre.rejoint && S.index === 0 && entree.invitation && !entree.invitationVue) {
