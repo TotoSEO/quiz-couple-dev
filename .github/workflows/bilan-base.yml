@@ -14,7 +14,9 @@ name: Évaluation de couple · base Supabase
 # 20261104120000_evaluation_point.sql (« Le point sur ma relation », le
 # seul(e) refait : colonne formule, compteurs du point, source et situation
 # des célibataires, get_bilan_point pour l'admin ; ses contraintes sont à part
-# et ne gênent pas celle d'avant)
+# et ne gênent pas celle d'avant) puis 20261119120000_bilan_personnes.sql
+# (get_bilan_personnes : les personnes allées au bout de leurs questions, le
+# nombre que la page de vente affiche, lu par le site à la construction)
 # par l'API de gestion de Supabase, comme
 # avis-base.yml, avec les secrets déjà là pour les fonctions
 # (SUPABASE_ACCESS_TOKEN et SUPABASE_PROJECT_REF). Rien à faire à la main.
@@ -42,6 +44,7 @@ on:
       - 'supabase/migrations/20261025140000_bilan_celib.sql'
       - 'supabase/migrations/20261031130000_langue_nl.sql'
       - 'supabase/migrations/20261104120000_evaluation_point.sql'
+      - 'supabase/migrations/20261119120000_bilan_personnes.sql'
       - '.github/workflows/bilan-base.yml'
   workflow_dispatch:
 
@@ -70,7 +73,8 @@ jobs:
                    supabase/migrations/20261024140000_bilan_reprise.sql \
                    supabase/migrations/20261025140000_bilan_celib.sql \
                    supabase/migrations/20261031130000_langue_nl.sql \
-                   supabase/migrations/20261104120000_evaluation_point.sql; do
+                   supabase/migrations/20261104120000_evaluation_point.sql \
+                   supabase/migrations/20261119120000_bilan_personnes.sql; do
             jq -Rs '{query: .}' "$f" > requete.json
             code=$(curl -sS -o reponse.json -w '%{http_code}' -X POST \
               "https://api.supabase.com/v1/projects/$SUPABASE_PROJECT_REF/database/query" \

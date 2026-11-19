@@ -826,6 +826,9 @@
       "lien": "Zieh Bilanz über deine Beziehung ({{prixPoint}})"
     },
     "preuve": "{{nom}}: Tausende Besucher jeden Tag",
+    "personnes": {
+      "texte": "{{n}} Menschen haben die Fragen schon beantwortet!"
+    },
     "paiements": "Sichere Zahlung über Stripe",
     "visuel": {
       "sur": "Beispielbericht · fiktives Paar",

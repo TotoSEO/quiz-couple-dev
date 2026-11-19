@@ -821,6 +821,9 @@
       "lien": "Kijk waar je relatie staat ({{prixPoint}})"
     },
     "preuve": "{{nom}}, elke dag duizenden bezoekers",
+    "personnes": {
+      "texte": "{{n}} mensen hebben de vragen al beantwoord!"
+    },
     "paiements": "Veilig betalen via Stripe",
     "visuel": {
       "sur": "Voorbeeldrapport · fictief stel",

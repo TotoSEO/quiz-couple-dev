@@ -821,6 +821,9 @@
       "lien": "Take My Relationship Check-Up ({{prixPoint}})"
     },
     "preuve": "{{nom}}: thousands of visitors every day",
+    "personnes": {
+      "texte": "{{n}} people have already answered the questions!"
+    },
     "paiements": "Secure payment via Stripe",
     "visuel": {
       "sur": "Sample report · fictional couple",
