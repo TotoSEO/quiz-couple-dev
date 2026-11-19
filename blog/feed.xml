@@ -6,12 +6,21 @@
     <atom:link href="https://quiz-couple.com/blog/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Les articles de Quiz Couple sur la vie de couple, la psychologie et les histoires d&#39;amour.</description>
     <language>fr</language>
-    <lastBuildDate>Tue, 17 Nov 2026 13:15:00 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 19 Nov 2026 07:30:00 GMT</lastBuildDate>
     <image>
       <url>https://quiz-couple.com/apple-touch-icon.png</url>
       <title>Quiz Couple · Le blog</title>
       <link>https://quiz-couple.com/blog/</link>
     </image>
+    <item>
+      <title>Avoir un meilleur ami du sexe opposé : 51 % pour, 49 % contre sur Quiz Couple</title>
+      <link>https://quiz-couple.com/blog/meilleur-ami-du-sexe-oppose-en-couple/</link>
+      <guid isPermaLink="true">https://quiz-couple.com/blog/meilleur-ami-du-sexe-oppose-en-couple/</guid>
+      <pubDate>Thu, 19 Nov 2026 07:30:00 GMT</pubDate>
+      <category>En chiffres</category>
+      <description>Peut-on avoir un meilleur ami du sexe opposé quand on est en couple ? Sur Quiz Couple, 753 votes : 51 % pour, 49 % contre. C&#39;est le vote le plus serré du jeu.</description>
+      <media:content url="https://quiz-couple.com/blog/meilleur-ami-du-sexe-oppose-en-couple.webp" medium="image" type="image/webp" width="1536" height="864"/>
+    </item>
     <item>
       <title>Dépendance affective et rupture : survivre au sevrage et rebondir</title>
       <link>https://quiz-couple.com/blog/dependance-affective-rupture/</link>
@@ -272,15 +281,6 @@
       <category>Psychologie</category>
       <description>Le téléphone vérifié 40 fois, la peur du silence, le couple qui prend toute la place... Les 16 symptômes de la dépendance affective, sphère par sphère.</description>
       <media:content url="https://quiz-couple.com/blog/dependance-affective-symptomes.webp" medium="image" type="image/webp" width="1536" height="1024"/>
-    </item>
-    <item>
-      <title>Les 90 meilleures questions à poser à une fille pour la connaître</title>
-      <link>https://quiz-couple.com/blog/questions-a-poser-a-une-fille/</link>
-      <guid isPermaLink="true">https://quiz-couple.com/blog/questions-a-poser-a-une-fille/</guid>
-      <pubDate>Tue, 08 Sep 2026 11:26:00 GMT</pubDate>
-      <category>Vie de couple</category>
-      <description>Marre du « salut, ça va ? » qui ne mène nulle part ? 90 questions à poser à une fille, du premier message au vrai tête-à-tête, sans jamais tomber dans l&#39;interrogatoire.</description>
-      <media:content url="https://quiz-couple.com/blog/questions-a-poser-a-une-fille.webp" medium="image" type="image/webp" width="1536" height="1024"/>
     </item>
   </channel>
 </rss>
