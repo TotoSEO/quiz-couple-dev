@@ -23,13 +23,19 @@
       "pret": "Ready: the report just needs unlocking",
       "reprise": "You have an assessment in progress with {{autre}}.",
       "repriseRapport": "Your report with {{autre}} is available.",
-      "quitter": "Back"
+      "quitter": "Back",
+      "deux": "{{moi}} and {{autre}}",
+      "repriseDeux": "{{moi}} and {{autre}}'s assessment is in progress.",
+      "repriseRapportDeux": "{{moi}} and {{autre}}'s report is available.",
+      "ligneFini": "{{nom}} has finished their answers",
+      "ligneProgression": "{{nom}}: {{n}} questions out of {{total}}",
+      "ligneAttente": "{{nom}} hasn't started yet"
     },
     "creation": {
       "titre": "Your assessment",
       "modeTitre": "How are you doing the assessment?",
       "modeDuo": "Together",
-      "modeDuoAide": "You each answer on your own phone, without seeing the other's answers. The report compares your two sets of answers.",
+      "modeDuoAide": "You each answer on your own, without seeing the other's answers. The report puts them side by side.",
       "modeSolo": "On your own",
       "modeSoloAide": "My Relationship Check-Up: 50 questions about what you're living in your relationship, just for you. Your partner isn't told and sees nothing.",
       "prenomsTitre": "Your two first names",
@@ -41,9 +47,9 @@
       "homme": "A man",
       "sansGenre": "I'd rather not say",
       "genreAide": "It's only used to pick the characters next to your names.",
-      "consentement": "I'm 18 or over and I consent to my answers being stored, solely to produce the assessment report.",
-      "accordAide": "Your answers, including on intimate topics, are used for this report only, where {{autre}} will see them next to their own. The assessment is kept for 60 days after your last answer if unpaid, six months after payment, and either of you can delete it at any time. No account to create.",
-      "prixRappel": "The questions are free. The full report costs {{prix}} for both of you: you unlock it once you've finished your answers.",
+      "consentement": "I'm 18 or over and I agree that my answers, even the intimate ones, are used only for our report.",
+      "accordAide": "{{autre}} will see them in the report, next to their own.",
+      "prixRappel": "The questions are free. The report costs {{prix}} for both of you, paid at the end.",
       "retour": "Back",
       "creer": "Create our assessment",
       "prenomManque": "Write both your first names.",
@@ -59,7 +65,15 @@
         "couple": "In a relationship",
         "complique": "It's complicated",
         "celib": "Single"
-      }
+      },
+      "telTitre": "How will you answer?",
+      "telDeux": "Each on your own phone",
+      "telDeuxAide": "{{autre}} gets a link, or scans a code.",
+      "telUn": "Together, on this phone",
+      "telUnAide": "You pass the phone back and forth.",
+      "telManque": "Tell us how you'll answer: each on your own phone, or together on this one.",
+      "conservationTitre": "How long are they kept?",
+      "conservation": "If unpaid, the assessment is deleted 60 days after your last answer. After payment, it's kept for six months. Either of you can delete everything at any time. No account to create."
     },
     "invitation": {
       "ensembleTitre": "Is {{autre}} with you right now?",
@@ -79,23 +93,46 @@
       "monLienAide": "It lets you pick up your answers on another device. Don't give it to anyone, not even {{autre}}: it's the key to your answers.",
       "copierMonLien": "Copy my link",
       "dejaRejoint": "{{autre}} has joined the assessment.",
-      "unTelTitre": "Only one phone between you?",
-      "unTelTexte": "Take turns on this one: one part for you, then the same part for {{autre}}, without seeing each other's answers.",
-      "unTelBouton": "Take turns on this phone"
+      "unTelTitre": "Together, with only one phone?",
+      "unTelTexte": "Answer on this one: the same question taking turns, or 100 questions each.",
+      "unTelBouton": "Answer together on this phone"
     },
     "unTel": {
-      "titre": "Taking turns on this phone",
-      "texte": "{{moi}} answers one part, then hands the phone to {{autre}}, who answers the same one. You keep going like that until the end, part by part.",
-      "prive": "The other person's answers are never shown: each turn starts on a fresh screen. And no peeking over the shoulder!",
-      "duree": "About forty minutes for the two of you, with a break whenever you like",
-      "commencer": "{{moi}} goes first",
-      "retour": "Back to the invitation",
-      "relaisTitre": "{{autre}}'s turn!",
-      "relaisTexte": "Hand the phone to {{autre}}. Your answers are saved, and they won't be shown.",
-      "relaisPremier": "{{autre}} first types their name and ticks the box, then answers the same part as you.",
-      "relaisPartie": "Part {{n}} of {{total}}: {{domaine}}",
-      "relaisFin": "{{moi}} has finished. {{autre}} still has a few answers to go.",
-      "relaisBouton": "I'm {{autre}}, let's go"
+      "titre": "How will you pass the phone?",
+      "questionTitre": "Same question, taking turns",
+      "questionTexte": "Each question goes to one of you, then the other, before moving on to the next. You finish together.",
+      "questionDuree": "About forty minutes for the two of you",
+      "suiteTitre": "100 questions each",
+      "suiteTexte": "{{moi}} answers all their questions, then it's {{autre}}'s turn. {{autre}} can also answer on their own phone.",
+      "suiteDuree": "About twenty minutes each",
+      "consentTitre": "Now {{autre}} ticks their box:",
+      "consentNote": "{{moi}} will see {{autre}}'s answers in the report, next to their own.",
+      "consentManque": "{{autre}} needs to tick their box to start.",
+      "choixManque": "Choose how you'll pass the phone.",
+      "prive": "No cheating: don't look at the screen when it isn't your turn!",
+      "commencer": "Let's go!",
+      "deuxTel": "Actually, each on our own phone",
+      "tour": "{{nom}}'s turn to answer!",
+      "tourNote": "Pass the phone when the name changes.",
+      "qui": "{{nom}}'s answers",
+      "passerTitre": "{{autre}}'s turn now!",
+      "passerTexte": "{{moi}} has finished their questions. Hand the phone to {{autre}}: everyone's answers stay hidden until the report.",
+      "passerBouton": "I'm {{autre}}, let's start",
+      "lienTitre": "Would {{autre}} rather answer on their own phone?",
+      "lienTexte": "Send this link to {{autre}}, or let them scan this code: their part of the assessment starts on their phone.",
+      "lienQr": "QR code of the link for {{autre}}",
+      "message": "Here's the link to answer your questions for our relationship assessment: {{lien}}",
+      "plusTard": "{{autre}} will answer later",
+      "reprendre": "Continue together",
+      "separer": "Continue on separate phones",
+      "separerTitre": "Who keeps this phone?",
+      "separerTexte": "The other one carries on from their own phone, without losing any answers.",
+      "garde": "{{nom}} keeps this phone",
+      "lienAutreTitre": "{{autre}} carries on from their phone",
+      "lienAutreTexte": "{{autre}} scans this code, or gets this link: their questions pick up where they left off. This link opens their answers, so only send it to {{autre}}.",
+      "continuerIci": "{{moi}} carries on here",
+      "pauseTexte": "You can close the page: your answers are saved. To pick up again, come back to this page from this phone.",
+      "progression": "{{nom}}: {{n}} answers out of {{total}}"
     },
     "rejoindre": {
       "titre": "{{autre}} would like you to do your relationship assessment together",
@@ -106,7 +143,9 @@
       "commencer": "I agree, let's start",
       "lienUtilise": "This invitation link has already been used. If it was you, open your personal link, or come back to this page from the phone you started on.",
       "paye": "Good news: {{autre}} has already paid for the report for both of you. It'll open as soon as you've finished your answers.",
-      "prenomManque": "Write your first name."
+      "prenomManque": "Write your first name.",
+      "telTitre": "Your turn, {{moi}}!",
+      "telTexte": "{{autre}} has finished their questions. Tick your box and yours begin: {{autre}} will only see your answers in the report."
     },
     "domaine": {
       "partie": "Part {{n}} of {{total}}",
@@ -138,7 +177,14 @@
       "titre": "Where should we send your report?",
       "texte": "Your answers are saved! All that's left is to tell us where to send the report.",
       "bouton": "Continue",
-      "revenir": "Back to the last question"
+      "revenir": "Back to the last question",
+      "aideTel": "The link to your PDF report will be sent to this address. It also lets you find the assessment again if you close the page. We'll email you when the report is ready, then just once more if it isn't unlocked the next day.",
+      "paireTitre": "Where should we send your report?",
+      "paireTexte": "Your answers are saved! All that's left is to tell us where to send the link to the report.",
+      "paireEmail": "{{nom}}'s email",
+      "paireEmailFacultatif": "{{nom}}'s email (optional)",
+      "paireAide": "The link to the PDF report will be sent to these addresses. They also let you find the assessment again if you close the page. We'll email you just once if the report isn't unlocked the next day.",
+      "paireAideAutre": "Without an address for {{autre}}, the link only goes to {{moi}}'s."
     },
     "pause": {
       "titre": "It's saved",
@@ -161,7 +207,11 @@
       "relance": "Send {{autre}} a little reminder",
       "relanceMessage": "I've finished my answers for our relationship assessment, I'm waiting for you! You'll pick up where you left off, on your phone.",
       "prevenu": "We'll email you at {{email}} as soon as {{autre}} has finished, so you can close this page.",
-      "tourAutre": "Hand the phone to {{autre}}"
+      "tourAutre": "Hand the phone to {{autre}}",
+      "titreNom": "{{moi}} is done!",
+      "iciTitre": "Is {{autre}} with you right now?",
+      "iciTexte": "{{autre}} can answer on this phone right away.",
+      "iciBouton": "{{autre}} answers on this phone"
     },
     "paywall": {
       "titre": "Your full report",
@@ -255,10 +305,9 @@
       },
       "creation": {
         "autreAide": "It's only used to write the questions. Nothing is sent to them.",
-        "soloNote": "You're doing the assessment on your own: {{autre}} isn't told, nothing is sent to them, and only you will see the report.",
-        "consentement": "I'm 18 or over and I consent to my answers being stored, solely to produce the assessment report.",
-        "accordAide": "Your answers, including on intimate topics, and what you imagine {{autre}} would answer are used for this report only, which you alone will see. The assessment is kept for 60 days after your last answer if unpaid, six months after payment, and you can delete it at any time. No account to create.",
-        "prixRappel": "The questions are free. The full report costs {{prix}}: you unlock it once you've finished your answers.",
+        "consentement": "I'm 18 or over and I agree that my answers, even the intimate ones, are used only for my report.",
+        "accordAide": "Only you will see the report: {{autre}} isn't told, and nothing is sent to them.",
+        "prixRappel": "The questions are free. The report costs {{prix}}, paid at the end.",
         "creer": "Start my assessment",
         "emailAide": "The link to your PDF report will be sent to this address. It also lets you find your assessment again if you close the page, and we'll send a single reminder if your report is still waiting the next day.",
         "apportTitre": "What the solo assessment gives you",
@@ -267,7 +316,8 @@
           "On the topics that matter most, where you think you agree with {{autre}}, and where you don't",
           "The topics where you don't know what {{autre}} thinks: often the conversations worth having"
         ],
-        "apportNote": "100 questions, about 25 minutes. You can take a break and pick up later."
+        "apportNote": "100 questions, about 25 minutes. You can take a break and pick up later.",
+        "conservation": "If unpaid, the assessment is deleted 60 days after your last answer. After payment, it's kept for six months. You can delete everything at any time. No account to create."
       },
       "domaine": {
         "nb": "{{n}} questions, two answers each, about {{min}} min"
@@ -746,10 +796,11 @@
           "The way you love, what keeps you here, and three conversations to move forward"
         ],
         "apportNote": "50 questions about what you're living, about 12 minutes. You can take a break and come back later.",
-        "accordAide": "Your answers, including about your intimacy and your safety, are only used for this report, which only you will see. The check-up is kept 60 days after your last answer if you don't pay, six months after payment, and you can delete it at any time. No account to create.",
-        "prixRappel": "The questions are free. The report costs {{prixPoint}}: you unlock it when you've finished.",
+        "consentement": "I'm 18 or over and I agree that my answers, including about my intimacy and my safety, are used only for my report.",
+        "accordAide": "Only you will see the report: {{autre}} isn't told, and nothing is sent to them.",
+        "prixRappel": "The questions are free. The report costs {{prixPoint}}, paid at the end.",
         "creer": "Start my check-up",
-        "soloNote": "You're doing the check-up on your own: {{autre}} isn't told, nothing is sent to them, and only you will see the report."
+        "conservation": "If unpaid, the check-up is deleted 60 days after your last answer. After payment, it's kept for six months. You can delete everything at any time. No account to create."
       },
       "domaine": {
         "nb": "{{n}} questions, about {{min}} min",

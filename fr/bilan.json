@@ -23,13 +23,19 @@
       "pret": "Prêt : il reste à débloquer le rapport",
       "reprise": "Vous avez une évaluation en cours avec {{autre}}.",
       "repriseRapport": "Votre rapport avec {{autre}} est disponible.",
-      "quitter": "Retour"
+      "quitter": "Retour",
+      "deux": "{{moi}} et {{autre}}",
+      "repriseDeux": "L'évaluation de {{moi}} et {{autre}} est en cours.",
+      "repriseRapportDeux": "Le rapport de {{moi}} et {{autre}} est disponible.",
+      "ligneFini": "{{nom}} a fini ses réponses",
+      "ligneProgression": "{{nom}} : {{n}} questions sur {{total}}",
+      "ligneAttente": "{{nom}} n'a pas encore commencé"
     },
     "creation": {
       "titre": "Votre évaluation",
       "modeTitre": "Comment faites-vous l'évaluation ?",
       "modeDuo": "À deux",
-      "modeDuoAide": "Chacun répond de son côté, sur son téléphone, sans voir les réponses de l'autre. Le rapport compare vos deux séries de réponses.",
+      "modeDuoAide": "Vous répondez chacun de votre côté, sans voir les réponses de l'autre. Le rapport les met face à face.",
       "modeSolo": "Seul(e)",
       "modeSoloAide": "Le point sur ma relation : 50 questions sur ce que vous vivez dans votre couple, pour vous seul(e). Votre partenaire n'est pas prévenu(e) et ne voit rien.",
       "prenomsTitre": "Vos deux prénoms",
@@ -41,9 +47,9 @@
       "homme": "Un homme",
       "sansGenre": "Je préfère ne pas le dire",
       "genreAide": "Ça sert seulement à accorder les questions (« heureux » ou « heureuse ») et à choisir les personnages.",
-      "consentement": "J'ai 18 ans ou plus et je consens à ce que mes réponses soient enregistrées, uniquement dans le but de fournir le rapport d'évaluation.",
-      "accordAide": "Vos réponses, y compris sur les sujets intimes, ne servent qu'à ce rapport, où {{autre}} les verra en face des siennes. L'évaluation est gardée 60 jours après votre dernière réponse sans paiement, six mois après le paiement, et chacun de vous peut la supprimer à tout moment. Pas de compte à créer.",
-      "prixRappel": "Les questions sont gratuites. Le rapport complet coûte {{prix}} pour vous deux : vous le débloquez quand vous avez fini vos réponses.",
+      "consentement": "J'ai 18 ans ou plus et j'accepte que mes réponses, même intimes, servent uniquement à notre rapport.",
+      "accordAide": "{{autre}} les verra dans le rapport, à côté des siennes.",
+      "prixRappel": "Les questions sont gratuites. Le rapport coûte {{prix}} pour vous deux, à régler à la fin.",
       "retour": "Retour",
       "creer": "Créer notre évaluation",
       "prenomManque": "Écrivez vos deux prénoms.",
@@ -59,7 +65,15 @@
         "couple": "En couple",
         "complique": "C'est compliqué",
         "celib": "Célibataire"
-      }
+      },
+      "telTitre": "Comment allez-vous répondre ?",
+      "telDeux": "Chacun sur son téléphone",
+      "telDeuxAide": "{{autre}} reçoit un lien, ou scanne un code.",
+      "telUn": "Ensemble, sur ce téléphone",
+      "telUnAide": "Vous vous passez le téléphone.",
+      "telManque": "Dites comment vous allez répondre : chacun sur son téléphone, ou ensemble sur celui-ci.",
+      "conservationTitre": "Combien de temps sont-elles gardées ?",
+      "conservation": "Sans paiement, l'évaluation est effacée 60 jours après votre dernière réponse. Après paiement, elle est gardée six mois. Chacun de vous peut tout supprimer quand il veut. Pas de compte à créer."
     },
     "invitation": {
       "ensembleTitre": "{{autre}} est à côté de vous ?",
@@ -79,23 +93,46 @@
       "monLienAide": "Il vous permet de reprendre vos réponses sur un autre appareil. Ne le donnez à personne, même pas à {{autre}} : c'est la clé de vos réponses.",
       "copierMonLien": "Copier mon lien",
       "dejaRejoint": "{{autre}} a rejoint l'évaluation.",
-      "unTelTitre": "Un seul téléphone pour vous deux ?",
-      "unTelTexte": "Répondez chacun votre tour sur celui‑ci : une partie pour vous, puis la même partie pour {{autre}}, sans voir les réponses de l'autre.",
-      "unTelBouton": "Chacun son tour sur ce téléphone"
+      "unTelTitre": "Vous êtes ensemble, avec un seul téléphone ?",
+      "unTelTexte": "Répondez sur celui-ci : la même question chacun son tour, ou chacun ses 100 questions.",
+      "unTelBouton": "Répondre ensemble sur ce téléphone"
     },
     "unTel": {
-      "titre": "Chacun son tour, sur ce téléphone",
-      "texte": "{{moi}} répond à une partie, puis passe le téléphone à {{autre}}, qui répond à la même. Vous continuez comme ça jusqu'à la fin, partie après partie.",
-      "prive": "Les réponses de l'autre ne s'affichent jamais : chaque tour commence sur un écran neuf. Et on ne regarde pas par-dessus l'épaule !",
-      "duree": "Une quarantaine de minutes à deux, et une pause quand vous voulez",
-      "commencer": "{{moi}} commence",
-      "retour": "Revenir à l'invitation",
-      "relaisTitre": "À {{autre}} de répondre !",
-      "relaisTexte": "Passez le téléphone à {{autre}}. Vos réponses sont enregistrées, et elles ne s'afficheront pas.",
-      "relaisPremier": "{{autre}} écrit d'abord son prénom et coche la case, puis répond à la même partie que vous.",
-      "relaisPartie": "Partie {{n}} sur {{total}} : {{domaine}}",
-      "relaisFin": "{{moi}} a fini ses réponses. Il reste à {{autre}} à finir les siennes.",
-      "relaisBouton": "Je suis {{autre}}, c'est parti"
+      "titre": "Comment vous passer le téléphone ?",
+      "questionTitre": "La même question, chacun son tour",
+      "questionTexte": "Chaque question est posée à l'un, puis à l'autre, avant de passer à la suivante. Vous finissez ensemble.",
+      "questionDuree": "Une quarantaine de minutes à deux",
+      "suiteTitre": "Chacun ses 100 questions",
+      "suiteTexte": "{{moi}} répond à toutes ses questions, puis c'est le tour de {{autre}}. {{autre}} pourra aussi répondre sur son téléphone.",
+      "suiteDuree": "Une vingtaine de minutes chacun",
+      "consentTitre": "À {{autre}} de cocher sa case :",
+      "consentNote": "{{moi}} verra les réponses de {{autre}} dans le rapport, à côté des siennes.",
+      "consentManque": "{{autre}} doit cocher sa case pour commencer.",
+      "choixManque": "Choisissez comment vous passer le téléphone.",
+      "prive": "Pas de triche : on ne regarde pas l'écran quand ce n'est pas son tour !",
+      "commencer": "C'est parti !",
+      "deuxTel": "Finalement, chacun sur son téléphone",
+      "tour": "À {{nom}} de répondre !",
+      "tourNote": "Passez le téléphone quand le prénom change.",
+      "qui": "Les réponses de {{nom}}",
+      "passerTitre": "À {{autre}} maintenant !",
+      "passerTexte": "{{moi}} a fini ses questions. Passez le téléphone à {{autre}} : les réponses de chacun restent cachées jusqu'au rapport.",
+      "passerBouton": "Je suis {{autre}}, je commence",
+      "lienTitre": "{{autre}} préfère répondre sur son téléphone ?",
+      "lienTexte": "Envoyez ce lien à {{autre}}, ou faites scanner ce code : sa partie de l'évaluation démarre sur son téléphone.",
+      "lienQr": "QR code du lien pour {{autre}}",
+      "message": "Voici le lien pour répondre à tes questions de notre évaluation de couple : {{lien}}",
+      "plusTard": "{{autre}} répondra plus tard",
+      "reprendre": "Reprendre ensemble",
+      "separer": "Continuer chacun sur son téléphone",
+      "separerTitre": "Qui garde ce téléphone ?",
+      "separerTexte": "L'autre continue sur son téléphone, sans rien perdre de ses réponses.",
+      "garde": "{{nom}} garde ce téléphone",
+      "lienAutreTitre": "{{autre}} continue sur son téléphone",
+      "lienAutreTexte": "{{autre}} scanne ce code, ou reçoit ce lien : ses questions reprennent là où elles en étaient. Ce lien ouvre ses réponses, ne l'envoyez qu'à {{autre}}.",
+      "continuerIci": "{{moi}} continue ici",
+      "pauseTexte": "Vous pouvez fermer la page : vos réponses sont gardées. Pour reprendre, revenez sur cette page depuis ce téléphone.",
+      "progression": "{{nom}} : {{n}} réponses sur {{total}}"
     },
     "rejoindre": {
       "titre": "{{autre}} vous propose de faire votre évaluation de couple",
@@ -106,7 +143,9 @@
       "commencer": "J'accepte et je commence",
       "lienUtilise": "Ce lien d'invitation a déjà été utilisé. Si c'était vous, ouvrez votre lien personnel, ou revenez sur cette page depuis le téléphone où vous avez commencé.",
       "paye": "Bonne nouvelle : {{autre}} a déjà réglé le rapport pour vous deux. Il s'ouvrira dès que vous aurez fini vos réponses.",
-      "prenomManque": "Écrivez votre prénom."
+      "prenomManque": "Écrivez votre prénom.",
+      "telTitre": "À vous, {{moi}} !",
+      "telTexte": "{{autre}} a fini ses questions. Cochez votre case, et les vôtres commencent : {{autre}} ne verra vos réponses que dans le rapport."
     },
     "domaine": {
       "partie": "Partie {{n}} sur {{total}}",
@@ -138,7 +177,14 @@
       "titre": "Où vous envoyer le rapport ?",
       "texte": "Vos réponses sont enregistrées ! Il ne reste qu'à dire où envoyer le rapport.",
       "bouton": "Continuer",
-      "revenir": "Revenir à la dernière question"
+      "revenir": "Revenir à la dernière question",
+      "aideTel": "Le lien de votre rapport PDF partira à cette adresse. Elle sert aussi à retrouver l'évaluation si vous fermez la page. On vous écrira quand le rapport sera prêt, puis une seule fois s'il n'est pas débloqué le lendemain.",
+      "paireTitre": "Où envoyer votre rapport ?",
+      "paireTexte": "Vos réponses sont enregistrées ! Il reste à dire où envoyer le lien du rapport.",
+      "paireEmail": "L'e-mail de {{nom}}",
+      "paireEmailFacultatif": "L'e-mail de {{nom}} (facultatif)",
+      "paireAide": "Le lien du rapport PDF partira à ces adresses. Elles servent aussi à retrouver l'évaluation si vous fermez la page. On vous écrira une seule fois si le rapport n'est pas débloqué le lendemain.",
+      "paireAideAutre": "Sans adresse pour {{autre}}, le lien part seulement à celle de {{moi}}."
     },
     "pause": {
       "titre": "C'est enregistré",
@@ -161,7 +207,11 @@
       "relance": "Envoyer un petit rappel à {{autre}}",
       "relanceMessage": "J'ai fini mes réponses pour notre évaluation de couple, je t'attends ! Tu reprends là où tu en étais, sur ton téléphone.",
       "prevenu": "On vous écrit à {{email}} dès que {{autre}} a fini : vous pouvez fermer cette page.",
-      "tourAutre": "Passer le téléphone à {{autre}}"
+      "tourAutre": "Passer le téléphone à {{autre}}",
+      "titreNom": "C'est fini pour {{moi}} !",
+      "iciTitre": "{{autre}} est à côté de vous ?",
+      "iciTexte": "{{autre}} peut répondre tout de suite sur ce téléphone.",
+      "iciBouton": "{{autre}} répond sur ce téléphone"
     },
     "paywall": {
       "titre": "Votre rapport complet",
@@ -255,10 +305,9 @@
       },
       "creation": {
         "autreAide": "Il sert seulement à écrire les questions. Rien ne lui est envoyé.",
-        "soloNote": "Vous faites l'évaluation seul(e) : {{autre}} n'est pas prévenu(e), rien ne lui est envoyé, et vous seul(e) verrez le rapport.",
-        "consentement": "J'ai 18 ans ou plus et je consens à ce que mes réponses soient enregistrées, uniquement dans le but de fournir le rapport d'évaluation.",
-        "accordAide": "Vos réponses, y compris sur les sujets intimes, et ce que vous imaginez de celles de {{autre}} ne servent qu'à ce rapport, que vous seul(e) verrez. L'évaluation est gardée 60 jours après votre dernière réponse sans paiement, six mois après le paiement, et vous pouvez la supprimer à tout moment. Pas de compte à créer.",
-        "prixRappel": "Les questions sont gratuites. Le rapport complet coûte {{prix}} : vous le débloquez quand vous avez fini vos réponses.",
+        "consentement": "J'ai 18 ans ou plus et j'accepte que mes réponses, même intimes, servent uniquement à mon rapport.",
+        "accordAide": "Vous seul(e) verrez le rapport : {{autre}} n'est pas prévenu(e), et rien ne lui est envoyé.",
+        "prixRappel": "Les questions sont gratuites. Le rapport coûte {{prix}}, à régler à la fin.",
         "creer": "Commencer mon évaluation",
         "emailAide": "Le lien de votre rapport PDF sera envoyé à cette adresse. Elle sert aussi à retrouver votre évaluation si vous fermez la page, et à vous envoyer un seul rappel si votre rapport attend encore le lendemain.",
         "apportTitre": "Ce que l'évaluation seul(e) vous apporte",
@@ -267,7 +316,8 @@
           "Sur les sujets qui comptent le plus, là où vous pensez être d'accord avec {{autre}}, et là où non",
           "Les sujets où vous ne savez pas ce qu'en pense {{autre}} : ce sont souvent les conversations à avoir"
         ],
-        "apportNote": "100 questions, environ 25 minutes. Vous pouvez faire une pause et reprendre plus tard."
+        "apportNote": "100 questions, environ 25 minutes. Vous pouvez faire une pause et reprendre plus tard.",
+        "conservation": "Sans paiement, l'évaluation est effacée 60 jours après votre dernière réponse. Après paiement, elle est gardée six mois. Vous pouvez tout supprimer quand vous voulez. Pas de compte à créer."
       },
       "domaine": {
         "nb": "{{n}} questions, deux réponses chacune, environ {{min}} min"
@@ -746,10 +796,11 @@
           "Votre façon d'aimer, ce qui vous retient, et trois conversations pour avancer"
         ],
         "apportNote": "50 questions sur ce que vous vivez, environ 12 minutes. Vous pouvez faire une pause et reprendre plus tard.",
-        "accordAide": "Vos réponses, y compris sur votre intimité et votre sécurité, ne servent qu'à ce rapport, que vous seul(e) verrez. L'évaluation est gardée 60 jours après votre dernière réponse sans paiement, six mois après le paiement, et vous pouvez la supprimer à tout moment. Pas de compte à créer.",
-        "prixRappel": "Les questions sont gratuites. Le rapport coûte {{prixPoint}} : vous le débloquez quand vous avez fini.",
+        "consentement": "J'ai 18 ans ou plus et j'accepte que mes réponses, même sur mon intimité et ma sécurité, servent uniquement à mon rapport.",
+        "accordAide": "Vous seul(e) verrez le rapport : {{autre}} n'est pas prévenu(e), et rien ne lui est envoyé.",
+        "prixRappel": "Les questions sont gratuites. Le rapport coûte {{prixPoint}}, à régler à la fin.",
         "creer": "Commencer mon point",
-        "soloNote": "Vous faites le point seul(e) : {{autre}} n'est pas prévenu(e), rien ne lui est envoyé, et vous seul(e) verrez le rapport."
+        "conservation": "Sans paiement, le point est effacé 60 jours après votre dernière réponse. Après paiement, il est gardé six mois. Vous pouvez tout supprimer quand vous voulez. Pas de compte à créer."
       },
       "domaine": {
         "nb": "{{n}} questions, environ {{min}} min",

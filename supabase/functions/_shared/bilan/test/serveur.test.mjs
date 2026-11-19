@@ -1366,8 +1366,48 @@ test('un seul téléphone : le choix compté, et le partenaire qui accepte sur p
   const r = await m.appel({ action: 'vue', quoi: 'un_telephone', mode: 'duo' });
   assert.equal(r.statut, 200, JSON.stringify(r.json));
   await m.appel({ action: 'vue', quoi: 'invitation_vue', mode: 'duo', cle: 'tel' });
+  // Depuis le 19 novembre 2026 : la façon de se passer le téléphone en clé,
+  // et « Comment allez-vous répondre ? » sans réponse au départ.
+  await m.appel({ action: 'vue', quoi: 'un_telephone', mode: 'duo', cle: 'question' });
+  await m.appel({ action: 'vue', quoi: 'un_telephone', mode: 'duo', cle: 'suite' });
+  await m.appel({ action: 'vue', quoi: 'un_telephone', mode: 'duo', cle: '<b>' });
+  await m.appel({ action: 'vue', quoi: 'depart_erreur', mode: 'duo', cle: 'tel' });
   const c = m.stockage.compteurs.map((x) => `${x.evenement}:${x.cle}`);
-  assert.deepEqual(c, ['un_telephone:', 'invitation_vue:tel']);
+  assert.deepEqual(c, ['un_telephone:', 'invitation_vue:tel', 'un_telephone:question', 'un_telephone:suite', 'un_telephone:', 'depart_erreur:tel']);
+});
+
+test('un seul téléphone, la même question chacun son tour : pas d\'e-mail « rapport prêt » quand les deux finissent ensemble', async () => {
+  const { appel, stockage, courriel } = monter();
+  const c = (await appel({
+    action: 'creer', lang: 'fr', moi: { prenom: 'Léa', genre: 'f' }, autre: { prenom: 'Tom', genre: 'h' }, consentement: true, majeur: true,
+  })).json;
+  const A = { id: c.id, jeton: c.jeton };
+  const B = { id: c.id, jeton: (await appel({ action: 'consentir', id: c.id, jeton: c.invitation, consentement: true, majeur: true })).json.jeton };
+  await appel({ action: 'situation', ...A, situation: SIT });
+  // L'écran de leurs adresses : celle de Léa annonce le seul rappel ; Tom
+  // n'en donne pas, le rapport part à celle de Léa.
+  await appel({ action: 'email', ...A, email: 'lea@exemple.fr', rappel: true, reprise: false });
+  await appel({ action: 'email', ...B, email: 'lea@exemple.fr', rappel: false, reprise: false });
+  const ra = toutRepondre(SIT, (q) => (q.type === 'qui' ? 1 : 0));
+  const rb = toutRepondre(SIT, (q) => (q.type === 'qui' ? 3 : 1));
+  assert.equal((await appel({ action: 'repondre', ...A, reponses: ra, nn: [], fini: true })).json.fini, true);
+  const fb = await appel({ action: 'repondre', ...B, reponses: rb, nn: [], fini: true, ensemble: true });
+  assert.equal(fb.json.fini, true);
+  assert.equal(fb.json.etat.verrouille, true);
+  assert.equal(courriel.envoyes.length, 0, 'ni « rapport prêt » ni autre e-mail');
+  assert.ok(!stockage.lignes.get(c.id).pret_mail_le);
+  // Sans `ensemble` (chacun sur son téléphone), le premier est prévenu.
+  const m2 = monter();
+  const c2 = (await m2.appel({ action: 'creer', lang: 'fr', moi: { prenom: 'Léa' }, autre: { prenom: 'Tom' }, consentement: true, majeur: true })).json;
+  const A2 = { id: c2.id, jeton: c2.jeton };
+  const B2 = { id: c2.id, jeton: (await m2.appel({ action: 'consentir', id: c2.id, jeton: c2.invitation, consentement: true, majeur: true })).json.jeton };
+  await m2.appel({ action: 'situation', ...A2, situation: SIT });
+  await m2.appel({ action: 'email', ...A2, email: 'lea@exemple.fr', rappel: true });
+  await m2.appel({ action: 'email', ...B2, email: 'tom@exemple.fr', rappel: true });
+  await m2.appel({ action: 'repondre', ...A2, reponses: ra, nn: [], fini: true });
+  await m2.appel({ action: 'repondre', ...B2, reponses: rb, nn: [], fini: true });
+  assert.equal(m2.courriel.envoyes.length, 1);
+  assert.equal(m2.courriel.envoyes[0].a, 'lea@exemple.fr');
 });
 
 test('l\'offre : le bouton de paiement vu, la barre collée touchée, la case cochée', async () => {

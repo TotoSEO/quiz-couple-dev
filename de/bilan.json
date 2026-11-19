@@ -21,15 +21,21 @@
       "violence": "Dieser Check zeigt jedem die Antworten des anderen. Wenn du Angst vor deinem Partner oder deiner Partnerin hast, ist er nicht für deine Situation gedacht: In Deutschland ist das Hilfetelefon „Gewalt gegen Frauen“ rund um die Uhr kostenlos und anonym unter 116 016 erreichbar, in Österreich die Frauenhelpline unter 0800 222 555.",
       "nouveau": "Einen neuen Check starten",
       "pret": "Fertig: Der Bericht muss nur noch freigeschaltet werden",
-      "reprise": "Du hast einen laufendie Analyse mit {{autre}}.",
+      "reprise": "Du hast eine laufende Analyse mit {{autre}}.",
       "repriseRapport": "Dein Bericht mit {{autre}} ist verfügbar.",
-      "quitter": "Zurück"
+      "quitter": "Zurück",
+      "deux": "{{moi}} und {{autre}}",
+      "repriseDeux": "Die Analyse von {{moi}} und {{autre}} läuft.",
+      "repriseRapportDeux": "Der Bericht von {{moi}} und {{autre}} ist verfügbar.",
+      "ligneFini": "{{nom}} hat alle Fragen beantwortet",
+      "ligneProgression": "{{nom}}: {{n}} von {{total}} Fragen",
+      "ligneAttente": "{{nom}} hat noch nicht angefangen"
     },
     "creation": {
       "titre": "Euer Check",
       "modeTitre": "Wie macht ihr die Analyse?",
       "modeDuo": "Zu zweit",
-      "modeDuoAide": "Jeder antwortet für sich, auf dem eigenen Handy, ohne die Antworten des anderen zu sehen. Der Bericht vergleicht eure beiden Antwortreihen.",
+      "modeDuoAide": "Jeder antwortet für sich, ohne die Antworten des anderen zu sehen. Der Bericht stellt sie nebeneinander.",
       "modeSolo": "Allein",
       "modeSoloAide": "Wo steht meine Beziehung?: 50 Fragen dazu, was du in deiner Beziehung erlebst, nur für dich. Dein Partner oder deine Partnerin erfährt nichts davon und sieht nichts.",
       "prenomsTitre": "Eure beiden Vornamen",
@@ -41,9 +47,9 @@
       "homme": "Ein Mann",
       "sansGenre": "Möchte ich nicht sagen",
       "genreAide": "Das dient nur dazu, die Figuren neben euren Namen auszuwählen.",
-      "consentement": "Ich bin 18 Jahre oder älter und willige ein, dass meine Antworten gespeichert werden, ausschließlich um den Analysebericht zu erstellen.",
-      "accordAide": "Deine Antworten, auch zu intimen Themen, dienen nur diesem Bericht, in dem {{autre}} sie neben den eigenen sieht. Die Analyse wird 60 Tage nach deiner letzten Antwort aufbewahrt, wenn sie nicht bezahlt ist, sonst sechs Monate nach der Zahlung, und jeder von euch kann sie jederzeit löschen. Kein Konto nötig.",
-      "prixRappel": "Die Fragen sind kostenlos. Der vollständige Bericht kostet {{prix}} für euch beide: Du schaltest ihn frei, sobald du deine Antworten fertig hast.",
+      "consentement": "Ich bin 18 Jahre oder älter und bin einverstanden, dass meine Antworten, auch die intimen, nur für unseren Bericht verwendet werden.",
+      "accordAide": "{{autre}} sieht sie im Bericht, neben den eigenen.",
+      "prixRappel": "Die Fragen sind kostenlos. Der Bericht kostet {{prix}} für euch beide und wird am Ende bezahlt.",
       "retour": "Zurück",
       "creer": "Unseren Check erstellen",
       "prenomManque": "Schreib eure beiden Vornamen.",
@@ -59,7 +65,15 @@
         "couple": "In einer Beziehung",
         "complique": "Es ist kompliziert",
         "celib": "Single"
-      }
+      },
+      "telTitre": "Wie wollt ihr antworten?",
+      "telDeux": "Jeder auf dem eigenen Handy",
+      "telDeuxAide": "{{autre}} bekommt einen Link oder scannt einen Code.",
+      "telUn": "Zusammen, auf diesem Handy",
+      "telUnAide": "Ihr gebt das Handy hin und her.",
+      "telManque": "Sag uns, wie ihr antworten wollt: jeder auf dem eigenen Handy oder zusammen auf diesem.",
+      "conservationTitre": "Wie lange werden sie aufbewahrt?",
+      "conservation": "Ohne Zahlung wird die Analyse 60 Tage nach deiner letzten Antwort gelöscht. Nach der Zahlung wird sie sechs Monate aufbewahrt. Jeder von euch kann jederzeit alles löschen. Kein Konto nötig."
     },
     "invitation": {
       "ensembleTitre": "Ist {{autre}} gerade bei dir?",
@@ -79,23 +93,46 @@
       "monLienAide": "Damit kannst du deine Antworten auf einem anderen Gerät fortsetzen. Gib ihn niemandem, auch nicht {{autre}}: Er ist der Schlüssel zu deinen Antworten.",
       "copierMonLien": "Meinen Link kopieren",
       "dejaRejoint": "{{autre}} ist der Analyse beigetreten.",
-      "unTelTitre": "Nur ein Handy für euch beide?",
-      "unTelTexte": "Antwortet abwechselnd auf diesem: ein Teil für dich, dann derselbe Teil für {{autre}}, ohne die Antworten des anderen zu sehen.",
-      "unTelBouton": "Abwechselnd auf diesem Handy"
+      "unTelTitre": "Ihr seid zusammen und habt nur ein Handy?",
+      "unTelTexte": "Antwortet auf diesem: dieselbe Frage abwechselnd, oder jeder seine 100 Fragen.",
+      "unTelBouton": "Zusammen auf diesem Handy antworten"
     },
     "unTel": {
-      "titre": "Abwechselnd, auf diesem Handy",
-      "texte": "{{moi}} beantwortet einen Teil und gibt das Handy dann an {{autre}} weiter, der oder die denselben Teil beantwortet. So geht es weiter bis zum Ende, Teil für Teil.",
-      "prive": "Die Antworten des anderen werden nie angezeigt: Jede Runde beginnt auf einem neuen Bildschirm. Und nicht über die Schulter schauen!",
-      "duree": "Etwa vierzig Minuten für euch beide, mit einer Pause, wann ihr wollt",
-      "commencer": "{{moi}} fängt an",
-      "retour": "Zurück zur Einladung",
-      "relaisTitre": "{{autre}} ist dran!",
-      "relaisTexte": "Gib das Handy an {{autre}} weiter. Deine Antworten sind gespeichert und werden nicht angezeigt.",
-      "relaisPremier": "{{autre}} trägt zuerst den eigenen Vornamen ein und setzt das Häkchen, dann kommt derselbe Teil wie bei dir.",
-      "relaisPartie": "Teil {{n}} von {{total}}: {{domaine}}",
-      "relaisFin": "{{moi}} ist fertig. {{autre}} hat noch ein paar Antworten vor sich.",
-      "relaisBouton": "Ich bin {{autre}}, los geht's"
+      "titre": "Wie gebt ihr das Handy weiter?",
+      "questionTitre": "Dieselbe Frage, abwechselnd",
+      "questionTexte": "Jede Frage beantwortet erst der eine, dann der andere, bevor es zur nächsten geht. Ihr werdet zusammen fertig.",
+      "questionDuree": "Etwa vierzig Minuten zu zweit",
+      "suiteTitre": "Jeder seine 100 Fragen",
+      "suiteTexte": "{{moi}} beantwortet alle eigenen Fragen, danach ist {{autre}} dran. {{autre}} kann auch auf dem eigenen Handy antworten.",
+      "suiteDuree": "Etwa zwanzig Minuten pro Person",
+      "consentTitre": "Jetzt setzt {{autre}} das eigene Häkchen:",
+      "consentNote": "{{moi}} sieht die Antworten von {{autre}} im Bericht, neben den eigenen.",
+      "consentManque": "{{autre}} muss das eigene Häkchen setzen, damit es losgeht.",
+      "choixManque": "Wählt, wie ihr das Handy weitergebt.",
+      "prive": "Nicht schummeln: Wer nicht dran ist, schaut nicht aufs Display!",
+      "commencer": "Los geht's!",
+      "deuxTel": "Doch lieber jeder auf dem eigenen Handy",
+      "tour": "{{nom}} ist dran!",
+      "tourNote": "Gebt das Handy weiter, wenn sich der Name ändert.",
+      "qui": "Die Antworten von {{nom}}",
+      "passerTitre": "Jetzt ist {{autre}} dran!",
+      "passerTexte": "{{moi}} hat alle Fragen beantwortet. Gib das Handy an {{autre}} weiter: Die Antworten bleiben bis zum Bericht verborgen.",
+      "passerBouton": "Ich bin {{autre}}, ich fange an",
+      "lienTitre": "Möchte {{autre}} lieber auf dem eigenen Handy antworten?",
+      "lienTexte": "Schick diesen Link an {{autre}}, oder lass den Code scannen. Dann geht es auf dem Handy von {{autre}} los.",
+      "lienQr": "QR-Code des Links für {{autre}}",
+      "message": "Hier ist der Link für deine Fragen in unserer Beziehungsanalyse: {{lien}}",
+      "plusTard": "{{autre}} antwortet später",
+      "reprendre": "Zusammen weitermachen",
+      "separer": "Jeder auf dem eigenen Handy weitermachen",
+      "separerTitre": "Wer behält dieses Handy?",
+      "separerTexte": "Der oder die andere macht auf dem eigenen Handy weiter, ohne eine Antwort zu verlieren.",
+      "garde": "{{nom}} behält dieses Handy",
+      "lienAutreTitre": "{{autre}} macht auf dem eigenen Handy weiter",
+      "lienAutreTexte": "{{autre}} scannt diesen Code oder bekommt diesen Link: Die Fragen gehen dort weiter, wo sie stehen geblieben sind. Der Link öffnet die Antworten von {{autre}}, schick ihn also nur an {{autre}}.",
+      "continuerIci": "{{moi}} macht hier weiter",
+      "pauseTexte": "Ihr könnt die Seite schließen: Eure Antworten sind gespeichert. Um weiterzumachen, kommt von diesem Handy auf diese Seite zurück.",
+      "progression": "{{nom}}: {{n}} von {{total}} Antworten"
     },
     "rejoindre": {
       "titre": "{{autre}} schlägt dir vor, eure Beziehungsanalyse zu machen",
@@ -106,7 +143,9 @@
       "commencer": "Einverstanden, los geht's",
       "lienUtilise": "Dieser Einladungslink wurde schon benutzt. Wenn du das warst, öffne deinen persönlichen Link, oder komm von dem Handy auf diese Seite zurück, auf dem du angefangen hast.",
       "paye": "Gute Nachricht: {{autre}} hat den Bericht für euch beide schon bezahlt. Er öffnet sich, sobald du deine Antworten fertig hast.",
-      "prenomManque": "Schreib deinen Vornamen."
+      "prenomManque": "Schreib deinen Vornamen.",
+      "telTitre": "Du bist dran, {{moi}}!",
+      "telTexte": "{{autre}} hat alle Fragen beantwortet. Setz dein Häkchen, dann geht es mit deinen Fragen los: {{autre}} sieht deine Antworten erst im Bericht."
     },
     "domaine": {
       "partie": "Teil {{n}} von {{total}}",
@@ -138,7 +177,14 @@
       "titre": "Wohin sollen wir deinen Bericht schicken?",
       "texte": "Deine Antworten sind gespeichert! Jetzt fehlt nur noch die Adresse für den Bericht.",
       "bouton": "Weiter",
-      "revenir": "Zurück zur letzten Frage"
+      "revenir": "Zurück zur letzten Frage",
+      "aideTel": "Der Link zu deinem Bericht als PDF geht an diese Adresse. Mit ihr findest du die Analyse auch wieder, wenn du die Seite schließt. Wir schreiben dir, wenn der Bericht bereit ist, und nur noch ein einziges Mal, falls er am nächsten Tag noch nicht freigeschaltet ist.",
+      "paireTitre": "Wohin sollen wir euren Bericht schicken?",
+      "paireTexte": "Eure Antworten sind gespeichert! Jetzt fehlt nur noch die Adresse für den Link zum Bericht.",
+      "paireEmail": "E-Mail von {{nom}}",
+      "paireEmailFacultatif": "E-Mail von {{nom}} (freiwillig)",
+      "paireAide": "Der Link zum Bericht als PDF geht an diese Adressen. Mit ihnen findet ihr die Analyse auch wieder, wenn ihr die Seite schließt. Wir schreiben euch nur ein einziges Mal, falls der Bericht am nächsten Tag noch nicht freigeschaltet ist.",
+      "paireAideAutre": "Ohne Adresse für {{autre}} geht der Link nur an die Adresse von {{moi}}."
     },
     "pause": {
       "titre": "Ist gespeichert",
@@ -161,7 +207,11 @@
       "relance": "{{autre}} kurz erinnern",
       "relanceMessage": "Ich bin mit meinen Antworten für unsere Beziehungsanalyse fertig, ich warte auf dich! Du machst da weiter, wo du aufgehört hast, auf deinem Handy.",
       "prevenu": "Wir schreiben dir an {{email}}, sobald {{autre}} fertig ist: Du kannst diese Seite schließen.",
-      "tourAutre": "Das Handy an {{autre}} weitergeben"
+      "tourAutre": "Das Handy an {{autre}} weitergeben",
+      "titreNom": "{{moi}} ist fertig!",
+      "iciTitre": "Ist {{autre}} gerade bei dir?",
+      "iciTexte": "{{autre}} kann gleich auf diesem Handy antworten.",
+      "iciBouton": "{{autre}} antwortet auf diesem Handy"
     },
     "paywall": {
       "titre": "Euer vollständiger Bericht",
@@ -255,10 +305,9 @@
       },
       "creation": {
         "autreAide": "Er dient nur dazu, die Fragen zu schreiben. Es wird nichts verschickt.",
-        "soloNote": "Du machst die Analyse allein: {{autre}} erfährt nichts davon, es wird nichts verschickt, und nur du wirst den Bericht sehen.",
-        "consentement": "Ich bin 18 Jahre oder älter und willige ein, dass meine Antworten gespeichert werden, ausschließlich um den Analysebericht zu erstellen.",
-        "accordAide": "Deine Antworten, auch zu intimen Themen, und das, was {{autre}} deiner Meinung nach antworten würde, dienen nur diesem Bericht, den nur du siehst. Die Analyse wird 60 Tage nach deiner letzten Antwort aufbewahrt, wenn sie nicht bezahlt ist, sonst sechs Monate nach der Zahlung, und du kannst sie jederzeit löschen. Kein Konto nötig.",
-        "prixRappel": "Die Fragen sind kostenlos. Der vollständige Bericht kostet {{prix}}: Du schaltest ihn frei, sobald du deine Antworten abgeschlossen hast.",
+        "consentement": "Ich bin 18 Jahre oder älter und bin einverstanden, dass meine Antworten, auch die intimen, nur für meinen Bericht verwendet werden.",
+        "accordAide": "Nur du siehst den Bericht: {{autre}} erfährt nichts davon, und es wird nichts verschickt.",
+        "prixRappel": "Die Fragen sind kostenlos. Der Bericht kostet {{prix}} und wird am Ende bezahlt.",
         "creer": "Meine Analyse beginnen",
         "emailAide": "Der Link zu deinem Bericht als PDF geht an diese Adresse. Mit ihr findest du deine Analyse auch wieder, wenn du die Seite schließt, und wir schicken dir eine einzige Erinnerung, falls dein Bericht am nächsten Tag noch wartet.",
         "apportTitre": "Was dir die Analyse allein bringt",
@@ -267,7 +316,8 @@
           "Bei den wichtigsten Themen: wo {{autre}} deiner Meinung nach so denkt wie du, und wo nicht",
           "Die Themen, bei denen du nicht weißt, was {{autre}} denkt: oft die Gespräche, die noch anstehen"
         ],
-        "apportNote": "100 Fragen, etwa 25 Minuten. Du kannst eine Pause machen und später weitermachen."
+        "apportNote": "100 Fragen, etwa 25 Minuten. Du kannst eine Pause machen und später weitermachen.",
+        "conservation": "Ohne Zahlung wird die Analyse 60 Tage nach deiner letzten Antwort gelöscht. Nach der Zahlung wird sie sechs Monate aufbewahrt. Du kannst jederzeit alles löschen. Kein Konto nötig."
       },
       "domaine": {
         "nb": "{{n}} Fragen, je zwei Antworten, etwa {{min}} Min."
@@ -750,10 +800,11 @@
           "Wie du liebst, was dich hält, und drei Gespräche, um weiterzukommen"
         ],
         "apportNote": "50 Fragen dazu, was du erlebst, etwa 12 Minuten. Du kannst eine Pause machen und später weitermachen.",
-        "accordAide": "Deine Antworten, auch zu deiner Intimität und deiner Sicherheit, dienen nur diesem Bericht, den nur du sehen wirst. Der Check wird ohne Zahlung 60 Tage nach deiner letzten Antwort aufbewahrt, nach der Zahlung sechs Monate, und du kannst ihn jederzeit löschen. Kein Konto nötig.",
-        "prixRappel": "Die Fragen sind kostenlos. Der Bericht kostet {{prixPoint}}: Du schaltest ihn frei, wenn du fertig bist.",
+        "consentement": "Ich bin 18 Jahre oder älter und bin einverstanden, dass meine Antworten, auch zu meiner Intimität und meiner Sicherheit, nur für meinen Bericht verwendet werden.",
+        "accordAide": "Nur du siehst den Bericht: {{autre}} erfährt nichts davon, und es wird nichts verschickt.",
+        "prixRappel": "Die Fragen sind kostenlos. Der Bericht kostet {{prixPoint}} und wird am Ende bezahlt.",
         "creer": "Meinen Check starten",
-        "soloNote": "Du machst den Check allein: {{autre}} erfährt nichts davon, bekommt nichts zugeschickt, und nur du wirst den Bericht sehen."
+        "conservation": "Ohne Zahlung wird der Check 60 Tage nach deiner letzten Antwort gelöscht. Nach der Zahlung wird er sechs Monate aufbewahrt. Du kannst jederzeit alles löschen. Kein Konto nötig."
       },
       "domaine": {
         "nb": "{{n}} Fragen, etwa {{min}} Min.",

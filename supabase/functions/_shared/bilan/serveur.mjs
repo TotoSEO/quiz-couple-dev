@@ -189,7 +189,10 @@ export const JETONS_MAIL_MAX = ENVOIS_MAX + 5;
 // bilan célibataire arrive » à la fin des tests célibataires
 // (js/celib-bientot.js), la clé est l'identifiant de la page.
 // `un_telephone` (10 novembre 2026) : à deux, le choix « chacun son tour sur
-// ce téléphone » de l'écran d'invitation.
+// ce téléphone » de l'écran d'invitation. Depuis le 19 novembre 2026, la
+// façon de se passer le téléphone en clé : `question` (la même question,
+// chacun son tour) ou `suite` (chacun ses cent questions, l'un après
+// l'autre).
 // `achat_vu`, `colle_clic` et `case_cochee` (13 novembre 2026) : ce que font
 // les gens sur l'offre, sans rien changer à l'écran. Le bouton de paiement
 // arrivé à l'écran, l'appui sur la barre collée qui y descend, la case de la
@@ -210,7 +213,9 @@ export const CELIB_PAR_JOUR = 400;
 // comptées ensemble) et depuis le 25 octobre 2026 (une seule case, « 18 ans
 // ou plus » et le consentement) ; entre les deux, la case des 18 ans
 // (`majeur`) et celle du consentement étaient comptées à part.
-const CAUSES_DEPART = ['prenoms', 'majeur', 'consentement', 'accord', 'email', 'email_faux'];
+// `tel` (19 novembre 2026) : à deux, « Comment allez-vous répondre ? »
+// (chacun sur son téléphone, ou ensemble sur un seul) laissé sans réponse.
+const CAUSES_DEPART = ['prenoms', 'majeur', 'consentement', 'accord', 'email', 'email_faux', 'tel'];
 
 // ── Petits outils ───────────────────────────────────────────────────────
 
@@ -485,6 +490,7 @@ export function creerServeur({ stockage, stripe = null, stripeTest = false, cour
     // 10 novembre 2026, `tel` : le partenaire qui accepte sur le téléphone du
     // créateur, chacun son tour.
     else if (quoi === 'invitation_vue') cle = corps.cle === 'qr' || corps.cle === 'tel' ? corps.cle : '';
+    else if (quoi === 'un_telephone') cle = corps.cle === 'question' || corps.cle === 'suite' ? corps.cle : '';
     else if (quoi === 'offre_vue') cle = C.zoneValide(corps.cle);
     else if (quoi === 'achat_vu' || quoi === 'case_cochee') cle = corps.cle === 'attente' ? 'attente' : '';
     else if (quoi === 'celib_carte_vue' || quoi === 'celib_carte_clic') cle = typeof corps.cle === 'string' && PAGE_SITE.test(corps.cle) ? corps.cle : 'autre';
@@ -675,8 +681,12 @@ export function creerServeur({ stockage, stripe = null, stripeTest = false, cour
     for (const d of apres.entres) if (!avant.entres.includes(d)) await compter('domaine_entre', d);
     for (const d of apres.finis) if (!avant.finis.includes(d)) await compter('domaine_fini', d);
     // Le second vient de finir : le premier, qui n'est plus sur la page, est
-    // prévenu par e-mail que le rapport l'attend.
-    if (fini && !dejaFini && !solo && estVerrouille(maj) && !maj.paye_le) {
+    // prévenu par e-mail que le rapport l'attend. Sauf quand les deux
+    // finissent ensemble sur le même téléphone (`ensemble`, la même
+    // question chacun son tour, 19 novembre 2026) : ils sont devant
+    // l'écran du rapport, et l'écran de leurs adresses n'annonce pas cet
+    // e-mail.
+    if (fini && !dejaFini && !solo && estVerrouille(maj) && !maj.paye_le && corps.ensemble !== true) {
       await avertirPret(maj, role === 'a' ? 'b' : 'a');
     }
     const prog = C.progression(maj.situation, v.reponses, solo ? v.percu : undefined);
