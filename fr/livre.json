@@ -21,6 +21,14 @@
     "badgeNoel": "Cadeau de Noël idéal !",
     "badge": "Idée cadeau pour votre moitié"
   },
+  "suite": {
+    "raison": {
+      "score": "Votre couple va très bien ! Pour la suite, notre livre propose 100 aventures à vivre à deux, avec une page pour raconter chacune.",
+      "jeu": "Vous aimez faire des choses à deux ? Notre livre propose 100 aventures à vivre ensemble, avec une page pour raconter chacune.",
+      "compteur": "Et pour la suite de votre histoire, notre livre propose 100 aventures à vivre à deux, avec une page pour raconter chacune.",
+      "noces": "Une idée de cadeau pour vos noces ? Notre livre propose 100 aventures à vivre à deux, avec une page pour raconter chacune."
+    }
+  },
   "bandeau": {
     "ligne1": "Votre carnet d'activités",
     "ligne2": "à compléter <em>à deux</em>",

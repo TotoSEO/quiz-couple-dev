@@ -20,7 +20,7 @@ import {
   getArticlePath, getArticleUrl, getArticleAlternates,
   estPageJouable, genrePageJouable, pagePublicitaire, BILAN_OUVERT, bilanOuvertPour, BILAN_ENTREES, CAPTURE_PAGES, VENDEUR, MOYENS_PAIEMENT, ROUTES_JEUX,
 } from './config.js';
-import { saisonActive, saisonQuizActive, LIVRE, livreNoelActif } from './config.js';
+import { saisonActive, saisonQuizActive, LIVRE, livreNoelActif, LIVRE_APRES_RESULTAT } from './config.js';
 import { createT, createTgd, loadTranslations } from './i18n.js';
 // Le « 100 » dessiné du livre (tracés tirés de Fredoka Bold), le même que sur
 // sa couverture : la page du livre le reprend dans son titre.
@@ -619,6 +619,24 @@ function livreEncartPour(lang, entree) {
   const menu = livreMenuPour(lang);
   if (!menu) return null;
   return { url: menu.url, noel: livreNoelActif(), images: menu.images };
+}
+// La carte du livre dans « Et maintenant ? » à l'écran de résultat
+// (19 novembre 2026, LIVRE_APRES_RESULTAT dans config.js) : seulement dans
+// les langues où le livre est en vente. related-tests.ejs prépare le bloc dans
+// un <template id="qc-livre"> que l'écran de résultat recopie (le moteur,
+// les deux outils par quiz-extras.js, le tu préfères et la pause des jeux sans
+// fin). des : le score minimal ; source : ce que le lien dit à la mesure de la
+// page du livre (data-livre-lien, « suite-score », « suite-jeu »...).
+function livreApresResultatPour(routeKey, lang) {
+  const regle = LIVRE_APRES_RESULTAT[routeKey];
+  if (!regle) return null;
+  const menu = livreMenuPour(lang);
+  if (!menu) return null;
+  return {
+    url: menu.url, images: menu.images, noel: livreNoelActif(),
+    des: typeof regle.des === 'number' ? regle.des : null,
+    raison: regle.raison, source: 'suite-' + regle.raison,
+  };
 }
 // Ce que la page du livre reçoit en plus : l'édition (lien, prix, ISBN), la
 // période de Noël et le « 100 » dessiné de la couverture, sans sa taille
@@ -1425,7 +1443,7 @@ function renderTemplate(templateName, data) {
   }
   // La saison du site est connue de tous les gabarits (base.ejs la pose
   // sur le body et ecrit sa feuille), sans que chaque page la passe.
-  data = Object.assign({ saison: SAISON_ACTIVE, saisonQuiz: SAISON_QUIZ_ACTIVE, cssSaison: CSS_SAISON, livreMenuPour, livreEncartPour }, data || {});
+  data = Object.assign({ saison: SAISON_ACTIVE, saisonQuiz: SAISON_QUIZ_ACTIVE, cssSaison: CSS_SAISON, livreMenuPour, livreEncartPour, livreApresResultatPour }, data || {});
   return ejs.renderFile(templatePath, data, {
     views: [TEMPLATES_DIR],
     async: false,

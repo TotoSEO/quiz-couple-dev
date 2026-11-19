@@ -394,3 +394,33 @@
   </div>
 </section>
 <% } %>
+<%
+  // La carte du livre dans « Et maintenant ? » (19 novembre 2026, Thomas :
+  // « oui fais la carte du livre dans les pages qui sont propices à afficher
+  // ça » ; LIVRE_APRES_RESULTAT dans config.js, livreApresResultatPour dans
+  // generate.js). Le bloc entier, titre et phrase compris, attend ici dans un
+  // <template> : l'écran de résultat du moteur (livreSelonResultat), les deux
+  // outils (quiz-extras.js), le tu préfères et la pause des jeux sans fin le
+  // recopient. data-des : le score minimal (en %) des tests qui notent le
+  // couple. Jamais sous un article (suiteRoutes).
+  const _livre = (typeof suiteRoutes === 'undefined' || !Array.isArray(suiteRoutes)) && typeof livreApresResultatPour === 'function'
+    ? livreApresResultatPour(routeKey, lang) : null;
+  const _livreRaison = _livre ? t('livre:suite.raison.' + _livre.raison, '') : '';
+%>
+<% if (_livre && _livreRaison) { %>
+<template id="qc-livre"<% if (_livre.des !== null) { %> data-des="<%= _livre.des %>"<% } %> data-source="<%= _livre.source %>">
+  <div class="result-related-section result-related-section--cartes qc-conseil qc-livre">
+    <p class="text-lg font-bold text-center mb-2"><%= t('common:suiteResultat.titre', 'Et maintenant ?') %></p>
+    <p class="text-muted-foreground text-center mb-4"><%= _livreRaison %></p>
+    <a class="suite-livre" href="<%= _livre.url %>" data-livre-lien="<%= _livre.source %>">
+      <span class="suite-livre-media" aria-hidden="true"><img src="<%= _livre.images %>livre-3d-240.webp" srcset="<%= _livre.images %>livre-3d-240.webp 240w, <%= _livre.images %>livre-3d-480.webp 480w" sizes="6rem" alt="" width="480" height="518" loading="lazy" decoding="async" draggable="false"></span>
+      <span class="suite-livre-corps">
+        <span class="suite-livre-sur"><%= t('livre:encart.sur', '') %></span>
+        <span class="suite-livre-titre"><%= t('livre:encart.titre', '') %></span>
+        <span class="suite-livre-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 12v9H4v-9M2 7h20v5H2zM12 21V7M12 7H7.5a2.5 2.5 0 1 1 0-5C11 2 12 7 12 7zM12 7h4.5a2.5 2.5 0 1 0 0-5C13 2 12 7 12 7z"/></svg><span><%= _livre.noel ? t('livre:encart.badgeNoel', '') : t('livre:encart.badge', '') %></span></span>
+        <span class="suite-livre-cta"><%= t('livre:encart.bouton', '') %><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></span>
+      </span>
+    </a>
+  </div>
+</template>
+<% } %>

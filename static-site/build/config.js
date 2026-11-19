@@ -787,6 +787,54 @@ export function livreNoelActif(maintenant = new Date()) {
   const [, mois, jour] = new Intl.DateTimeFormat('en-CA', { timeZone: 'Europe/Paris', year: 'numeric', month: '2-digit', day: '2-digit' }).format(maintenant).split('-');
   return mois === '11' || (mois === '12' && jour <= '24');
 }
+// La carte du livre dans « Et maintenant ? » (19 novembre 2026, Thomas :
+// « oui fais la carte du livre dans les pages qui sont propices à afficher
+// ça ») : à l'écran de résultat, le bloc « Et maintenant ? » (en tête des
+// cartes de la suite) propose le livre, là où un couple vient de passer un bon
+// moment à deux. Du 14 au 18 novembre 2026, sur 154 visites de la page du
+// livre, une seule venait des encarts des écrans de résultat (le livre à côté
+// de l'évaluation, sous le score ou sous le verdict), qu'on lit comme une
+// publicité ; « Et maintenant ? » est l'endroit où l'on choisit la suite.
+// Quand la carte y est, l'encart montre l'évaluation seule : le livre n'est
+// jamais deux fois sur le même écran.
+//   des : le score (en %) à partir duquel le livre est proposé, pour les
+//         tests qui notent le couple (la tranche du meilleur verdict) ; sans
+//         des, à chaque résultat.
+//   raison : la phrase qui l'amène (suite.raison.<raison> de livre.json).
+// Les jeux et les quiz fun « pour nous » (groupe jeu de BILAN_ENTREES) y sont
+// tous, et un jeu ajouté au groupe y entre de lui-même, sauf le jeu de soirée
+// et les jeux par message, qui n'ont pas d'écran de résultat du moteur. Les
+// jeux sans fin la montrent aussi sur leur pause des dix cartes. Jamais : les
+// tests où l'on doute (groupe doute, point sur ma relation), les tests
+// célibataires et sur l'ex, le quiz des ados, les pages coquines, et les
+// langues où le livre n'est pas en vente (LIVRE, livreApresResultatPour).
+const LIVRE_HORS_JEUX = new Set(['jeuSoireeCouples', 'jeuxParMessage']);
+export const LIVRE_APRES_RESULTAT = {
+  // Les tests qui notent le couple : seulement avec un bon score.
+  testCouple: { des: 75, raison: 'score' },
+  testCompatibilite: { des: 75, raison: 'score' },
+  testCommonPoints: { des: 75, raison: 'score' },
+  quizAmoureux: { des: 75, raison: 'score' },
+  // « Prêts à vous marier » : le verdict « Feu vert » (le tiers du haut) ;
+  // « prêts à emménager » : « Foncez, vous êtes prêts » (le quart du haut).
+  testMariage: { des: 67, raison: 'score' },
+  testEmmenager: { des: 75, raison: 'score' },
+  // Les jeux, les quiz fun et les quiz à deux, à chaque résultat.
+  ...Object.fromEntries(Object.keys(BILAN_ENTREES)
+    .filter((k) => BILAN_ENTREES[k].groupe === 'jeu' && !LIVRE_HORS_JEUX.has(k))
+    .map((k) => [k, { raison: 'jeu' }])),
+  quizTypeCouple: { raison: 'jeu' },
+  testQuiAime: { raison: 'jeu' },
+  quizKnowledge: { raison: 'jeu' },
+  quizGenant: { raison: 'jeu' },
+  testLangageAmour: { raison: 'jeu' },
+  quizMarrant: { raison: 'jeu' },
+  zamours: { raison: 'jeu' },
+  quizRencontre: { raison: 'jeu' },
+  // Deux outils : les jours ensemble, les noces.
+  compteurCouple: { raison: 'compteur' },
+  nocesMariage: { raison: 'noces' },
+};
 // La régie du site est The Moneytizer. Le fichier ads.txt qu'elle fournit est
 // écrit tel quel dans public/, il déclare quiz-couple.com comme propriétaire
 // et themoneytizer.com comme gestionnaire. Il n'y a plus d'identifiant

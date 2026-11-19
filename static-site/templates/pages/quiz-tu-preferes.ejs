@@ -729,6 +729,16 @@
     var self = this;
     this.brancheProlonger();
 
+    // La carte du livre de « Et maintenant ? » (19 novembre 2026,
+    // LIVRE_APRES_RESULTAT dans config.js), après le score et la proposition
+    // de prolonger, avant le détail des dilemmes.
+    var livre = window.QuizEngine && QuizEngine.livreSelonResultat ? QuizEngine.livreSelonResultat(null) : null;
+    var detail = this.container.querySelector('.wyr-detail');
+    if (livre && detail) {
+      livre.classList.add('wyr-livre');
+      detail.parentNode.insertBefore(livre, detail);
+    }
+
     document.getElementById('wyr-retake').addEventListener('click', function() {
       // La partie repart sur place, sans rechargement : l'adresse annoncerait
       // sinon un résultat devant l'écran de départ.
