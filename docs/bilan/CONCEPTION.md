@@ -2700,9 +2700,11 @@ fin, « Envoyez ce lien si X veut le faire sur son téléphone directement ».
   est repliée, le prix tient en une ligne sous le bouton.
 - **Ensemble sur un téléphone, deux façons** :
   - *La même question, chacun son tour* : les deux évaluations avancent
-    ensemble, chaque question à l'un puis à l'autre, le bandeau « À Julien de
-    répondre ! » quand la main change (450 ms où les réponses restent sourdes,
-    comme les tests du site). La situation est demandée une fois pour les
+    ensemble, chaque question à l'un puis à l'autre, et celui qui vient de
+    répondre ouvre la suivante : chacun répond à deux questions d'affilée, et
+    le téléphone change de main deux fois moins souvent. Le bandeau « À
+    Julien de répondre ! » arrive quand la main change (450 ms où les
+    réponses restent sourdes, comme les tests du site). La situation est demandée une fois pour les
     deux. À la fin, les deux adresses sur un écran, puis « rapport prêt ».
     Aucun e-mail « rapport prêt » ne part à des gens qui sont devant
     (`ensemble: true` envoyé à `repondre`) ; le rappel du lendemain part une

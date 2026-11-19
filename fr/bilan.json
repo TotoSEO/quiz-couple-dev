@@ -100,7 +100,7 @@
     "unTel": {
       "titre": "Comment vous passer le téléphone ?",
       "questionTitre": "La même question, chacun son tour",
-      "questionTexte": "{{moi}} répond, puis {{autre}}, puis vous passez à la question suivante. Vous finissez ensemble.",
+      "questionTexte": "Chaque question est posée à l'un, puis à l'autre, avant de passer à la suivante. Vous finissez ensemble.",
       "questionDuree": "Une quarantaine de minutes à deux",
       "suiteTitre": "Chacun ses 100 questions",
       "suiteTexte": "{{moi}} répond à toutes ses questions, puis c'est le tour de {{autre}}. {{autre}} pourra aussi répondre sur son téléphone.",
@@ -113,7 +113,7 @@
       "commencer": "C'est parti !",
       "deuxTel": "Finalement, chacun sur son téléphone",
       "tour": "À {{nom}} de répondre !",
-      "tourNote": "Le téléphone passe à l'autre après chaque réponse.",
+      "tourNote": "Passez le téléphone quand le prénom change.",
       "qui": "Les réponses de {{nom}}",
       "passerTitre": "À {{autre}} maintenant !",
       "passerTexte": "{{moi}} a fini ses questions. Passez le téléphone à {{autre}} : les réponses de chacun restent cachées jusqu'au rapport.",
@@ -796,6 +796,7 @@
           "Votre façon d'aimer, ce qui vous retient, et trois conversations pour avancer"
         ],
         "apportNote": "50 questions sur ce que vous vivez, environ 12 minutes. Vous pouvez faire une pause et reprendre plus tard.",
+        "consentement": "J'ai 18 ans ou plus et j'accepte que mes réponses, même sur mon intimité et ma sécurité, servent uniquement à mon rapport.",
         "accordAide": "Vous seul(e) verrez le rapport : {{autre}} n'est pas prévenu(e), et rien ne lui est envoyé.",
         "prixRappel": "Les questions sont gratuites. Le rapport coûte {{prixPoint}}, à régler à la fin.",
         "creer": "Commencer mon point",

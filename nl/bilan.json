@@ -100,7 +100,7 @@
     "unTel": {
       "titre": "Hoe geven jullie de telefoon door?",
       "questionTitre": "Dezelfde vraag, om de beurt",
-      "questionTexte": "{{moi}} antwoordt, dan {{autre}}, en dan gaan jullie naar de volgende vraag. Jullie zijn samen klaar.",
+      "questionTexte": "Elke vraag gaat eerst naar de een en dan naar de ander, voordat jullie naar de volgende gaan. Jullie zijn samen klaar.",
       "questionDuree": "Een minuut of veertig samen",
       "suiteTitre": "Ieder zijn eigen 100 vragen",
       "suiteTexte": "{{moi}} beantwoordt alle eigen vragen, daarna is {{autre}} aan de beurt. {{autre}} kan ook op de eigen telefoon antwoorden.",
@@ -113,7 +113,7 @@
       "commencer": "Daar gaan we!",
       "deuxTel": "Toch liever ieder op de eigen telefoon",
       "tour": "{{nom}} is aan de beurt!",
-      "tourNote": "Na elk antwoord gaat de telefoon naar de ander.",
+      "tourNote": "Geef de telefoon door als de naam verandert.",
       "qui": "De antwoorden van {{nom}}",
       "passerTitre": "Nu is {{autre}} aan de beurt!",
       "passerTexte": "{{moi}} heeft alle vragen beantwoord. Geef de telefoon aan {{autre}}: ieders antwoorden blijven verborgen tot het rapport.",
@@ -796,6 +796,7 @@
           "Hoe je liefhebt, wat je vasthoudt, en drie gesprekken om verder te komen"
         ],
         "apportNote": "50 vragen over wat je beleeft, ongeveer 12 minuten. Je kunt een pauze nemen en later verdergaan.",
+        "consentement": "Ik ben 18 jaar of ouder en ik ga ermee akkoord dat mijn antwoorden, ook over mijn intimiteit en mijn veiligheid, alleen voor mijn rapport worden gebruikt.",
         "accordAide": "Alleen jij ziet het rapport: {{autre}} wordt niet op de hoogte gebracht en krijgt niets toegestuurd.",
         "prixRappel": "De vragen zijn gratis. Het rapport kost {{prixPoint}}, en je betaalt pas aan het einde.",
         "creer": "Mijn check starten",

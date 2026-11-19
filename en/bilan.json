@@ -100,7 +100,7 @@
     "unTel": {
       "titre": "How will you pass the phone?",
       "questionTitre": "Same question, taking turns",
-      "questionTexte": "{{moi}} answers, then {{autre}}, then you move on to the next question. You finish together.",
+      "questionTexte": "Each question goes to one of you, then the other, before moving on to the next. You finish together.",
       "questionDuree": "About forty minutes for the two of you",
       "suiteTitre": "100 questions each",
       "suiteTexte": "{{moi}} answers all their questions, then it's {{autre}}'s turn. {{autre}} can also answer on their own phone.",
@@ -113,7 +113,7 @@
       "commencer": "Let's go!",
       "deuxTel": "Actually, each on our own phone",
       "tour": "{{nom}}'s turn to answer!",
-      "tourNote": "The phone goes to the other person after each answer.",
+      "tourNote": "Pass the phone when the name changes.",
       "qui": "{{nom}}'s answers",
       "passerTitre": "{{autre}}'s turn now!",
       "passerTexte": "{{moi}} has finished their questions. Hand the phone to {{autre}}: everyone's answers stay hidden until the report.",
@@ -796,6 +796,7 @@
           "The way you love, what keeps you here, and three conversations to move forward"
         ],
         "apportNote": "50 questions about what you're living, about 12 minutes. You can take a break and come back later.",
+        "consentement": "I'm 18 or over and I agree that my answers, including about my intimacy and my safety, are used only for my report.",
         "accordAide": "Only you will see the report: {{autre}} isn't told, and nothing is sent to them.",
         "prixRappel": "The questions are free. The report costs {{prixPoint}}, paid at the end.",
         "creer": "Start my check-up",

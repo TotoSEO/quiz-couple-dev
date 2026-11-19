@@ -100,7 +100,7 @@
     "unTel": {
       "titre": "¿Cómo os vais a pasar el teléfono?",
       "questionTitre": "La misma pregunta, por turnos",
-      "questionTexte": "Responde {{moi}}, luego {{autre}}, y pasáis a la siguiente pregunta. Termináis juntos.",
+      "questionTexte": "Cada pregunta la responde uno y luego el otro, antes de pasar a la siguiente. Termináis juntos.",
       "questionDuree": "Unos cuarenta minutos entre los dos",
       "suiteTitre": "Cada uno sus 100 preguntas",
       "suiteTexte": "{{moi}} responde a todas sus preguntas, y luego le toca a {{autre}}. {{autre}} también podrá responder en su propio teléfono.",
@@ -113,7 +113,7 @@
       "commencer": "¡Vamos allá!",
       "deuxTel": "Mejor cada uno en su teléfono",
       "tour": "¡Le toca responder a {{nom}}!",
-      "tourNote": "El teléfono pasa al otro después de cada respuesta.",
+      "tourNote": "Pasaos el teléfono cuando cambie el nombre.",
       "qui": "Las respuestas de {{nom}}",
       "passerTitre": "¡Ahora le toca a {{autre}}!",
       "passerTexte": "{{moi}} ha terminado sus preguntas. Pásale el teléfono a {{autre}}: las respuestas de cada uno siguen ocultas hasta el informe.",
@@ -800,6 +800,7 @@
           "Tu forma de querer, lo que te retiene, y tres conversaciones para avanzar"
         ],
         "apportNote": "50 preguntas sobre lo que vives, unos 12 minutos. Puedes hacer una pausa y seguir más tarde.",
+        "consentement": "Tengo 18 años o más y acepto que mis respuestas, también sobre mi intimidad y mi seguridad, sirvan únicamente para mi informe.",
         "accordAide": "Solo tú verás el informe: {{autre}} no recibe ningún aviso, y no se le envía nada.",
         "prixRappel": "Las preguntas son gratis. El informe cuesta {{prixPoint}}, y se paga al final.",
         "creer": "Empezar mi balance",

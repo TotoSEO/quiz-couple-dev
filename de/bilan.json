@@ -100,7 +100,7 @@
     "unTel": {
       "titre": "Wie gebt ihr das Handy weiter?",
       "questionTitre": "Dieselbe Frage, abwechselnd",
-      "questionTexte": "{{moi}} antwortet, dann {{autre}}, dann geht es zur nächsten Frage. Ihr werdet zusammen fertig.",
+      "questionTexte": "Jede Frage beantwortet erst der eine, dann der andere, bevor es zur nächsten geht. Ihr werdet zusammen fertig.",
       "questionDuree": "Etwa vierzig Minuten zu zweit",
       "suiteTitre": "Jeder seine 100 Fragen",
       "suiteTexte": "{{moi}} beantwortet alle eigenen Fragen, danach ist {{autre}} dran. {{autre}} kann auch auf dem eigenen Handy antworten.",
@@ -113,7 +113,7 @@
       "commencer": "Los geht's!",
       "deuxTel": "Doch lieber jeder auf dem eigenen Handy",
       "tour": "{{nom}} ist dran!",
-      "tourNote": "Nach jeder Antwort geht das Handy an den anderen.",
+      "tourNote": "Gebt das Handy weiter, wenn sich der Name ändert.",
       "qui": "Die Antworten von {{nom}}",
       "passerTitre": "Jetzt ist {{autre}} dran!",
       "passerTexte": "{{moi}} hat alle Fragen beantwortet. Gib das Handy an {{autre}} weiter: Die Antworten bleiben bis zum Bericht verborgen.",
@@ -800,6 +800,7 @@
           "Wie du liebst, was dich hält, und drei Gespräche, um weiterzukommen"
         ],
         "apportNote": "50 Fragen dazu, was du erlebst, etwa 12 Minuten. Du kannst eine Pause machen und später weitermachen.",
+        "consentement": "Ich bin 18 Jahre oder älter und bin einverstanden, dass meine Antworten, auch zu meiner Intimität und meiner Sicherheit, nur für meinen Bericht verwendet werden.",
         "accordAide": "Nur du siehst den Bericht: {{autre}} erfährt nichts davon, und es wird nichts verschickt.",
         "prixRappel": "Die Fragen sind kostenlos. Der Bericht kostet {{prixPoint}} und wird am Ende bezahlt.",
         "creer": "Meinen Check starten",
