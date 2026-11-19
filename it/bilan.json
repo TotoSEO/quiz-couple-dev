@@ -824,6 +824,9 @@
       "lien": "Fai il punto sulla tua relazione ({{prixPoint}})"
     },
     "preuve": "{{nom}}, migliaia di visitatori ogni giorno",
+    "personnes": {
+      "texte": "{{n}} persone hanno già risposto alle domande!"
+    },
     "paiements": "Pagamento sicuro con Stripe",
     "visuel": {
       "sur": "Report di esempio · coppia immaginaria",

@@ -821,6 +821,9 @@
       "lien": "Faites le point sur votre relation ({{prixPoint}})"
     },
     "preuve": "{{nom}}, des milliers de visiteurs chaque jour",
+    "personnes": {
+      "texte": "{{n}} personnes ont déjà répondu aux questions !"
+    },
     "paiements": "Paiement sécurisé par Stripe",
     "visuel": {
       "sur": "Rapport d'exemple · couple fictif",

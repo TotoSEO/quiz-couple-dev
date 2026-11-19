@@ -236,6 +236,23 @@
   // n'a pas encore d'avis à citer.
   const preuve = e(ins(L('preuve'))).replace('{{nom}}', '<strong>Quiz Couple</strong>');
 
+  // Les personnes qui ont déjà répondu aux questions (19 novembre 2026,
+  // Thomas : « rajoute une section "X personnes ont déjà répondu aux
+  // questions !" ») : celles allées au bout de leurs propres questions,
+  // payé ou non, toutes langues réunies (get_bilan_personnes, lu à la
+  // construction par fetchPersonnesBilan dans generate.js). Le chiffre
+  // monte jusqu'à sa valeur quand la section arrive à l'écran (bilan-lp.js) ;
+  // le lecteur d'écran lit la copie cachée. Sans réponse de la base, ou sous
+  // PERSONNES_MIN, la section n'est pas écrite.
+  const PERSONNES_MIN = 100;
+  const nPersonnes = (typeof bilanPersonnes === 'number' && bilanPersonnes >= PERSONNES_MIN) ? bilanPersonnes : null;
+  const textePersonnes = String(L('personnes.texte') || '');
+  const personnes = (nPersonnes && textePersonnes.includes('{{n}}')) ? (() => {
+    const chiffre = new Intl.NumberFormat(lang).format(nPersonnes);
+    return e(ins(textePersonnes)).replace('{{n}}',
+      '<strong class="blp-personnes-n"><span class="blp-personnes-chiffre" data-compte="' + nPersonnes + '" aria-hidden="true">' + chiffre + '</span><span class="sr-only">' + chiffre + '</span></strong>');
+  })() : '';
+
   // Le départ, en haut de page et au dernier appel : le gros bouton à deux,
   // la phrase des questions gratuites avec le prix (le prix barré pendant une
   // vraie réduction, marque()), et le point en lien dessous avec son prix
@@ -296,6 +313,16 @@
       </div>
     </div>
   </section>
+
+  <% if (personnes) { %>
+  <!-- Les personnes qui ont déjà répondu aux questions -->
+  <section class="blp-personnes">
+    <div class="blp-wrap blp-personnes-grille">
+      <span class="blp-personnes-foule" aria-hidden="true"><%- masc('rose', 'joie', 'blp-personnes-masc') %><%- masc('violet', 'salut', 'blp-personnes-masc') %><%- masc('rose', 'rire', 'blp-personnes-masc') %><%- masc('violet', 'amoureux', 'blp-personnes-masc') %><%- masc('rose', 'mignon', 'blp-personnes-masc') %></span>
+      <p class="blp-personnes-texte"><%- personnes %></p>
+    </div>
+  </section>
+  <% } %>
 
   <!-- Quelques chiffres -->
   <section class="blp-chiffres" aria-label="<%- x('badge') %>">

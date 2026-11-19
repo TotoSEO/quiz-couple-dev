@@ -1238,6 +1238,32 @@ async function fetchReviewStats() {
   }
 }
 
+// Le nombre de personnes allées au bout de leurs questions de l'évaluation
+// (19 novembre 2026, Thomas : « rajoute une section "X personnes ont déjà
+// répondu aux questions !" ») : get_bilan_personnes() additionne fini_a et
+// fini_b des compteurs, sans la sonde (migration
+// 20261119120000_bilan_personnes.sql). Lu une fois par construction, écrit
+// dans la page de vente ; sans réponse, la section n'est pas écrite.
+// QC_BILAN_PERSONNES=<nombre> le force pour un build local, Supabase étant
+// injoignable depuis une session de travail.
+let personnesBilan = null;
+async function fetchPersonnesBilan() {
+  const force = String(process.env.QC_BILAN_PERSONNES || '').trim();
+  if (/^\d+$/.test(force)) {
+    personnesBilan = Number(force);
+    console.log(`[bilan] ${personnesBilan} personnes (QC_BILAN_PERSONNES)`);
+    return;
+  }
+  try {
+    const v = await appelRpc('get_bilan_personnes');
+    const n = Number(Array.isArray(v) ? (v[0] && typeof v[0] === 'object' ? Object.values(v[0])[0] : v[0]) : v);
+    if (Number.isFinite(n) && n >= 0) personnesBilan = Math.floor(n);
+    console.log(`[bilan] ${personnesBilan} personnes allées au bout de leurs questions`);
+  } catch (e) {
+    console.warn(`[bilan] get_bilan_personnes indisponible (${e.message}) : la page de l'évaluation sort sans le compteur`);
+  }
+}
+
 async function fetchAccueilCuit() {
   try {
     const v = await appelRpc('get_quiz_total', {});
@@ -1937,6 +1963,9 @@ async function generatePage(routeKey, lang) {
     bilanPrix: prixBilan(lang),
     bilanPrixBase: prixBilanBase(lang),
     bilanPromo: promoBilanPour(lang),
+    // Les personnes allées au bout de leurs questions (fetchPersonnesBilan),
+    // pour la section de la page de vente.
+    bilanPersonnes: routeKey === 'bilanCouple' ? personnesBilan : null,
     bandeauPromo: bandeauPromoPour(routeKey, null, lang),
     bandeauLivre: bandeauLivrePour(routeKey, null, lang),
     moyensPaiement: MOYENS_PAIEMENT,
@@ -3270,6 +3299,7 @@ async function main() {
   await fetchCompteursParties();
   await fetchLecturesArticles();
   await fetchAccueilCuit();
+  await fetchPersonnesBilan();
 
   // Clean dist
   if (fs.existsSync(DIST_DIR)) {

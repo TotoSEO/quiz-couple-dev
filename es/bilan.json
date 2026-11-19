@@ -825,6 +825,9 @@
       "lien": "Haz balance de tu relación ({{prixPoint}})"
     },
     "preuve": "{{nom}}, miles de visitantes cada día",
+    "personnes": {
+      "texte": "¡{{n}} personas ya han respondido a las preguntas!"
+    },
     "paiements": "Pago seguro con Stripe",
     "visuel": {
       "sur": "Informe de ejemplo · pareja ficticia",

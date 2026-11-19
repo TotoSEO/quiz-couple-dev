@@ -202,6 +202,30 @@
 .blp-masc--violet { right: -1.4rem; width: 4.2rem; }
 @media (max-width: 900px) { .blp-hero-visuel { max-width: 26rem; } }
 
+/* ── Les personnes qui ont déjà répondu ──────────────────────────────── */
+/* Sous le haut de page : une petite foule des deux personnages et la
+   phrase, le nombre en grand. Le nombre garde sa largeur finale pendant
+   qu'il monte (bilan-lp.js pose min-width), chiffres à chasse fixe. */
+
+/* Le haut de page garde moins de marge en bas quand la section le suit. */
+.blp-hero:has(+ .blp-personnes) { padding-bottom: 3rem; }
+.blp-personnes { padding: .75rem 0 2.75rem; background: hsl(var(--background)); }
+.blp-personnes-grille { display: flex; align-items: center; justify-content: center; gap: 1rem 1.5rem; }
+.blp-personnes-foule { display: inline-flex; align-items: flex-end; flex: none; padding: .55rem 1rem 0; border-radius: 999px; background: hsl(var(--primary) / .1); }
+.blp-personnes-masc { position: relative; display: block; width: 2.5rem; height: auto; }
+.blp-personnes-masc + .blp-personnes-masc { margin-left: -.65rem; }
+.blp-personnes-masc:nth-child(2), .blp-personnes-masc:nth-child(4) { width: 2.2rem; }
+.blp-personnes-masc:nth-child(3) { z-index: 1; width: 2.8rem; }
+.blp-personnes-texte { flex: 0 1 auto; min-width: 0; margin: 0; max-width: 40rem; text-align: left; font-family: var(--blp-page); font-size: clamp(1.15rem, 2.4vw, 1.45rem); font-weight: 700; line-height: 1.35; letter-spacing: -.015em; color: hsl(var(--foreground)); text-wrap: balance; }
+.blp-personnes-n { font-weight: 800; color: hsl(var(--primary-texte)); white-space: nowrap; }
+.blp-personnes-chiffre { display: inline-block; font-size: 1.55em; line-height: 1; font-variant-numeric: tabular-nums; text-align: right; }
+@media (max-width: 900px) { .blp-hero:has(+ .blp-personnes) { padding-bottom: 2.75rem; } }
+@media (max-width: 640px) {
+  .blp-personnes { padding: .5rem 0 2.25rem; }
+  .blp-personnes-grille { flex-direction: column; }
+  .blp-personnes-texte { text-align: center; }
+}
+
 /* ── Les chiffres ────────────────────────────────────────────────────── */
 
 .blp-chiffres { background: hsl(var(--card)); border-top: 1px solid hsl(var(--border)); border-bottom: 1px solid hsl(var(--border)); }
