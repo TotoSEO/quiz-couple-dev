@@ -1,12 +1,12 @@
 {
-  "genere_le": "2026-11-18T11:35:43.569Z",
+  "genere_le": "2026-11-19T03:16:17.874Z",
   "langue": "fr",
   "compte": {
     "nom": "mipaps_stories",
     "actif": true
   },
   "fuseau": "Europe/Paris",
-  "aujourdhui": "2026-11-18",
+  "aujourdhui": "2026-11-19",
   "melange": {
     "midi": {
       "1": null,
@@ -28,39 +28,12 @@
     },
     "matin": "mipaps-anime"
   },
-  "reserve_jours": 134,
+  "reserve_jours": 133,
   "a_remplir": [],
   "a_corriger": [],
   "hors_grille": [],
   "refuses": [],
   "recents_et_prevus": [
-    {
-      "jour": "2026-10-19",
-      "creneau": "matin",
-      "gabarit": "mipaps-reel",
-      "categorie": "mipaps-anime",
-      "statut": "publie",
-      "texte": null,
-      "erreur": null
-    },
-    {
-      "jour": "2026-10-19",
-      "creneau": "midi",
-      "gabarit": "mipaps-post",
-      "categorie": "mipaps-post",
-      "statut": "publie",
-      "texte": "j'ai trop hâte de me blottir contre toi ce soir",
-      "erreur": null
-    },
-    {
-      "jour": "2026-10-19",
-      "creneau": "soir",
-      "gabarit": "mipaps-carrousel",
-      "categorie": "mipaps-histoire",
-      "statut": "publie",
-      "texte": null,
-      "erreur": null
-    },
     {
       "jour": "2026-10-20",
       "creneau": "matin",
@@ -2621,7 +2594,7 @@
   "idees": [],
   "prochain_creneau": {
     "mipaps-anime": {
-      "jour": "2026-11-19",
+      "jour": "2026-11-20",
       "creneau": "matin"
     },
     "mipaps-statique": null,
