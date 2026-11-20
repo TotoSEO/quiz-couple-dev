@@ -2737,3 +2737,60 @@ l'allure de la case : elle tient maintenant en une phrase.
   jour par jour (`bilan-chiffres.yml`) ;
 - la part des évaluations à deux qui vont au bout, et la part de ces couples
   qui paient.
+
+## 20 novembre 2026 : dix jours après le 10, et la nuit du 19
+
+Lu par `bilan-chiffres.yml` (10 jours) le 20 novembre à 10 h, heure de
+Paris, avec la lecture par tranches de trois heures ajoutée ce jour-là.
+
+### Du 11 au 18 novembre, par jour
+
+- La page de l'évaluation : environ 340 visites, une sur deux clique sur
+  « Commencer » (51 % en moyenne, 46 à 55 %).
+- Environ 70 évaluations à deux créées et 10 couples au bout (le relevé du
+  13 en lisait 5 à 6 : les fins arrivent après les créations).
+- Le point : 8 finis.
+- Dix ventes (61,24 €) : 8 à deux, dont 2 payées avant que le partenaire
+  ouvre l'invitation, et 2 points.
+- Sur les 92 couples allés au bout du 11 novembre au 20 au matin, 10 ont
+  ouvert la page de paiement (11 %) et 6 ont payé (7 %) : 8 % en espagnol (39 couples), 10 %
+  en français (31), aucun en anglais (16 couples, une page ouverte). Avant
+  le 10 novembre, 19 % des couples au bout payaient.
+- À deux, du 13 au 19 : 160 offres vues, le bouton de paiement à l'écran
+  136 fois, la case cochée 16 fois, 13 pages de paiement ouvertes, 8 ventes.
+
+### Un seul téléphone, les dix-huit premières heures
+
+Du 19 à 15 h au 20 à 9 h : « ensemble sur ce téléphone » choisi 32 fois (6 à
+15 par jour avant), 25 fois « la même question chacun son tour » et 7 fois
+« chacun ses 100 questions » ; 27 partenaires ont accepté sur place (2 à 11
+par jour avant) ; le choix oublié au départ (`tel`) 5 fois. 11 couples au
+bout dans ces dix-huit heures, dans la moyenne. Trop tôt pour dire si l'une
+des deux façons finit mieux que l'autre.
+
+### La nuit du 19 : aucune fin pendant seize heures
+
+Aucune évaluation, à deux ni point, n'est allée au bout le 19 entre 1 h et
+17 h 35, heure de Paris, contre 6 à 17 sur la même plage les autres jours.
+Les créations étaient normales (31 à deux et 11 points de minuit à 15 h)
+mais presque personne ne finissait : des évaluations à deux créées de minuit
+à 9 h, un couple au bout sur 21 (6 sur 22 la nuit d'avant, 6 sur 29 la nuit
+d'après). Ce qui a été vérifié :
+
+- la fonction `bilan` n'a renvoyé que des 200 (et quelques 402, 403, 404
+  ordinaires) à partir de 10 h 14, heure de Paris ; les journaux d'avant
+  étaient déjà effacés (24 heures sur le plan gratuit) ;
+- les écritures de l'évaluation dans la base (`/rest/v1/bilans`) n'ont eu
+  aucune erreur ; les 146 erreurs 500 et les 166 délais dépassés des
+  journaux viennent des compteurs publics des pages, la nuit suivante, entre
+  3 h et 6 h ;
+- les styles mis en ligne le 18 à 22 h 46 (PR 840) ne touchent aucune classe
+  de l'évaluation ;
+- la version du site en ligne cette nuit-là, construite et rejouée dans
+  Chromium avec la fonction de la même version en mémoire, va au bout à deux
+  (deux téléphones) et en point, en français, en espagnol et en anglais.
+
+Aucune panne trouvée. Depuis 17 h 35 le 19, les fins sont revenues au
+rythme habituel. Si une telle nuit revient, lire tout de suite
+`supabase-inventaire.yml` (la fonction `bilan` heure par heure et par code,
+en tête des journaux) avant que les journaux s'effacent.
