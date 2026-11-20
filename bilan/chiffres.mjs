@@ -122,6 +122,43 @@ export function completesDansLOrdre(lignes) {
       + (l.paye_le ? ` · payée ${heureParis(l.paye_le)}${l.paiement_montant ? ` (${(l.paiement_montant / 100).toFixed(2)} €)` : ''}` : ''));
 }
 
+// Les dernières heures, par tranche de trois heures de la création (heure de
+// Paris), à deux et seul(e) : créées, créateur au bout, partenaire arrivé et
+// au bout, l'étape où s'arrêtent ceux qui n'ont pas fini, et combien de
+// minutes ils ont répondu avant de s'arrêter (création → dernière activité,
+// médiane). Le 20 novembre 2026, aucune évaluation n'était allée au bout le
+// 19 entre 1 h et 17 h 35, contre 6 à 17 les autres jours : cette lecture dit
+// si l'on ne commençait pas, ou si l'on s'arrêtait en route, et où.
+export function parTranche(lignes, depuis) {
+  const fmt = new Intl.DateTimeFormat('fr-FR', { timeZone: 'Europe/Paris', day: '2-digit', month: '2-digit', hour: '2-digit', hourCycle: 'h23' });
+  const t = new Map();
+  for (const l of lignes || []) {
+    if (l.cree_le < depuis) continue;
+    const p = fmt.formatToParts(new Date(l.cree_le));
+    const v = (n) => (p.find((x) => x.type === n) || {}).value;
+    const h = Math.floor(Number(v('hour')) / 3) * 3;
+    const k = `${v('day')}/${v('month')} ${String(h).padStart(2, '0')}-${String(h + 3).padStart(2, '0')} h · ${l.mode === 'solo' ? (l.formule === 'point' ? 'point' : 'seul') : 'deux'}`;
+    if (!t.has(k)) t.set(k, { creees: 0, a_fini: 0, b_arrive: 0, b_fini: 0, arrets: {}, minutes: [] });
+    const e = t.get(k);
+    e.creees++;
+    if (l.a_fini) e.a_fini++;
+    if (l.b_consent) e.b_arrive++;
+    if (l.b_fini) e.b_fini++;
+    if (!l.a_fini) {
+      const s = l.a_etape || 'aucune';
+      e.arrets[s] = (e.arrets[s] || 0) + 1;
+      if (l.maj_le) e.minutes.push(Math.round((new Date(l.maj_le) - new Date(l.cree_le)) / 60000));
+    }
+  }
+  return [...t.entries()].sort().map(([k, e]) => {
+    const m = e.minutes.sort((a, b) => a - b);
+    const med = m.length ? m[Math.floor(m.length / 2)] : null;
+    const arrets = Object.entries(e.arrets).sort((a, b) => b[1] - a[1]).slice(0, 4).map(([s, n]) => `${s} ${n}`).join(', ');
+    return `${k.padEnd(28)} créées ${String(e.creees).padStart(3)} · créateur au bout ${String(e.a_fini).padStart(2)} · partenaire arrivé ${String(e.b_arrive).padStart(2)}, au bout ${String(e.b_fini).padStart(2)}`
+      + (arrets ? ` · arrêts : ${arrets}` : '') + (med != null ? ` · médiane avant l'arrêt ${med} min` : '');
+  });
+}
+
 // Où s'arrête la personne qui a créé l'évaluation et n'a pas fini : l'étape
 // gardée dans a_etape (le premier domaine pas fini), « aucune » si elle n'a
 // rien envoyé.
@@ -221,7 +258,7 @@ async function analyse(base, jours) {
   }
   try {
     const depuis = new Date(Date.now() - jours * 86400000).toISOString();
-    const colonnes = 'lang,mode,src,cree_le,a_etape,a_fini,b_consent,b_fini,renonciation_le,paye_le,paiement_montant';
+    const colonnes = 'lang,mode,formule,src,cree_le,maj_le,a_etape,a_fini,b_consent,b_fini,renonciation_le,paye_le,paiement_montant';
     const lignes = [];
     for (let offset = 0; offset < 20000; offset += 1000) {
       const lot = await base.select('bilans', `select=${colonnes}&cree_le=gte.${depuis}&order=cree_le.asc&limit=1000&offset=${offset}`);
@@ -254,6 +291,9 @@ async function analyse(base, jours) {
       heures[h] = (heures[h] || 0) + 1;
     }
     console.log('Créations par heure de Paris :', JSON.stringify(heures));
+    const depuisTranches = new Date(Date.now() - 4 * 86400000).toISOString();
+    console.log('\nLes quatre derniers jours, par tranche de trois heures de la création (heure de Paris) :');
+    for (const l of parTranche(lignes, depuisTranches)) console.log('  ' + l);
   } catch (e) {
     console.log(`\nÉvaluations par langue : ${e.message}`);
   }

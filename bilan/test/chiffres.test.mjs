@@ -70,6 +70,22 @@ test('completesDansLOrdre : les évaluations allées au bout, dans l\'ordre, ave
   ]);
 });
 
+test('parTranche : par tranche de trois heures de la création, ce qui va au bout et où l\'on s\'arrête', async () => {
+  const { parTranche } = await import('../chiffres.mjs');
+  const l = parTranche([
+    // 19/11 à 4 h 10 et 5 h 50 à Paris : la même tranche ; l'une au bout, l'autre arrêtée sur « temps » après 25 minutes.
+    { mode: 'duo', cree_le: '2026-11-19T03:10:00Z', maj_le: '2026-11-19T04:00:00Z', a_etape: null, a_fini: '2026-11-19T03:40:00Z', b_consent: '2026-11-19T03:15:00Z', b_fini: '2026-11-19T03:59:00Z' },
+    { mode: 'duo', cree_le: '2026-11-19T04:50:00Z', maj_le: '2026-11-19T05:15:00Z', a_etape: 'temps', a_fini: null, b_consent: null, b_fini: null },
+    { mode: 'solo', formule: 'point', cree_le: '2026-11-19T04:55:00Z', maj_le: '2026-11-19T05:00:00Z', a_etape: 'besoins', a_fini: null },
+    // Avant la date de départ : laissée de côté.
+    { mode: 'duo', cree_le: '2026-11-15T10:00:00Z', maj_le: '2026-11-15T10:10:00Z', a_etape: 'temps', a_fini: null },
+  ], '2026-11-16T00:00:00Z');
+  assert.deepEqual(l, [
+    "19/11 03-06 h · deux         créées   2 · créateur au bout  1 · partenaire arrivé  1, au bout  1 · arrêts : temps 1 · médiane avant l'arrêt 25 min",
+    "19/11 03-06 h · point        créées   1 · créateur au bout  0 · partenaire arrivé  0, au bout  0 · arrêts : besoins 1 · médiane avant l'arrêt 5 min",
+  ]);
+});
+
 test('duoParJour : les évaluations à deux, jour par jour (heure de Paris) et langue par langue', async () => {
   const { duoParJour } = await import('../chiffres.mjs');
   const l = duoParJour([
