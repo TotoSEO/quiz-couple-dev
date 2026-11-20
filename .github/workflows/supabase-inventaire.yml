@@ -139,7 +139,11 @@ jobs:
           # par code (20 novembre 2026 : aucune évaluation au bout le 19
           # entre 1 h et 17 h 35, heure de Paris ; une panne de la fonction
           # se verrait ici en 4xx ou 5xx). Des comptes seulement.
-          logs "Évaluation : la fonction bilan, heure par heure (UTC) et par code" "select toStartOfHour(timestamp) as heure, toInt32OrZero(log_attributes['response.status_code']) as statut, count(*) as n from logs where source = 'edge_logs' and log_attributes['request.path'] like '/functions/v1/bilan%' group by heure, statut order by heure, statut"
+          logs "Fonctions serveur : les clés de leurs lignes de log" "select arrayJoin(mapKeys(log_attributes)) as cle, count(*) as n from logs where source = 'function_edge_logs' group by cle order by n desc limit 40"
+          logs "Fonctions serveur : messages de console les plus fréquents" "select substring(event_message, 1, 140) as debut, count(*) as n from logs where source = 'function_logs' group by debut order by n desc limit 30"
+          logs "Passerelle d'API : les erreurs (400 et plus), heure par heure (UTC), par chemin et par code" "select toStartOfHour(timestamp) as heure, log_attributes['request.method'] as methode, log_attributes['request.path'] as chemin, toInt32OrZero(log_attributes['response.status_code']) as statut, count(*) as n from logs where source = 'edge_logs' and toInt32OrZero(log_attributes['response.status_code']) >= 400 group by heure, methode, chemin, statut order by heure, n desc limit 200"
+          logs "Postgres : les délais dépassés, heure par heure (UTC)" "select toStartOfHour(timestamp) as heure, count(*) as n from logs where source = 'postgres_logs' and event_message like 'canceling statement due to statement timeout%' group by heure order by heure"
+          logs "Postgres : les clés des lignes de log" "select arrayJoin(mapKeys(log_attributes)) as cle, count(*) as n from logs where source = 'postgres_logs' group by cle order by n desc limit 40"
           rm -f reponse.json
       # Avant de toucher à la mesure d'audience : la passerelle d'API
       # accepte-t-elle la clé publique en paramètre d'adresse ? Si oui, une
