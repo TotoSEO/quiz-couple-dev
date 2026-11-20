@@ -128,22 +128,25 @@ jobs:
             jq -r '(if type == "object" then (.result // .data // []) else . end) as $l | if ($l | length) == 0 then "(aucune ligne)" else ($l[0] | keys_unsorted | join(" | ")), ($l[] | [.[] | tostring] | join(" | ")) end' reponse.json 2>/dev/null || head -c 3000 reponse.json
           }
           echo "Fenêtre : $debut → $fin"
+          # D'abord ce qui sert à comprendre une panne de l'évaluation (l'API
+          # des journaux freine au-delà d'une dizaine de requêtes d'affilée) :
+          # les réponses de la fonction bilan par heure et par code, avec leur
+          # durée moyenne (20 novembre 2026 : aucune évaluation au bout le 19
+          # entre 1 h et 17 h 35, heure de Paris), puis les requêtes coupées
+          # pour délai dépassé. Des comptes seulement.
+          logs "Évaluation : la fonction bilan, heure par heure (UTC) et par code" "select toStartOfHour(timestamp) as heure, toInt32OrZero(log_attributes['response.status_code']) as statut, count(*) as n, round(avg(toFloat64OrZero(log_attributes['execution_time_ms']))) as ms from logs where source = 'function_edge_logs' and log_attributes['request.pathname'] like '%/bilan' group by heure, statut order by heure, statut"
+          logs "Postgres : les délais dépassés, heure par heure (UTC)" "select toStartOfHour(timestamp) as heure, count(*) as n from logs where source = 'postgres_logs' and event_message like 'canceling statement due to statement timeout%' group by heure order by heure"
           logs "Lignes de log par service, et octets des messages" "select source, count(*) as lignes, sum(length(event_message)) as octets_message from logs group by source order by lignes desc"
           logs "Passerelle d'API : les trente chemins les plus appelés" "select log_attributes['request.method'] as methode, log_attributes['request.path'] as chemin, count(*) as n from logs where source = 'edge_logs' group by methode, chemin order by n desc limit 30"
           logs "Passerelle d'API : par code de réponse" "select toInt32OrZero(log_attributes['response.status_code']) as statut, count(*) as n from logs where source = 'edge_logs' group by statut order by n desc limit 15"
           logs "Passerelle d'API : par navigateur ou robot (début du user agent)" "select substring(log_attributes['request.headers.user_agent'], 1, 60) as agent, count(*) as n from logs where source = 'edge_logs' group by agent order by n desc limit 15"
           logs "Postgres : les vingt débuts de message les plus fréquents" "select substring(event_message, 1, 90) as debut, count(*) as n from logs where source = 'postgres_logs' group by debut order by n desc limit 20"
           logs "Realtime : les quinze débuts de message les plus fréquents" "select substring(event_message, 1, 90) as debut, count(*) as n from logs where source = 'realtime_logs' group by debut order by n desc limit 15"
-          logs "Fonctions serveur : par fonction" "select log_attributes['request.path'] as chemin, count(*) as n from logs where source = 'function_edge_logs' group by chemin order by n desc limit 15"
-          # L'évaluation heure par heure : les réponses de la fonction bilan
-          # par code (20 novembre 2026 : aucune évaluation au bout le 19
-          # entre 1 h et 17 h 35, heure de Paris ; une panne de la fonction
-          # se verrait ici en 4xx ou 5xx). Des comptes seulement.
-          logs "Fonctions serveur : les clés de leurs lignes de log" "select arrayJoin(mapKeys(log_attributes)) as cle, count(*) as n from logs where source = 'function_edge_logs' group by cle order by n desc limit 40"
+          logs "Fonctions serveur : par fonction" "select log_attributes['request.pathname'] as chemin, count(*) as n from logs where source = 'function_edge_logs' group by chemin order by n desc limit 15"
+          # Ce que les fonctions écrivent en console, et les erreurs de la
+          # passerelle heure par heure, par chemin et par code.
           logs "Fonctions serveur : messages de console les plus fréquents" "select substring(event_message, 1, 140) as debut, count(*) as n from logs where source = 'function_logs' group by debut order by n desc limit 30"
           logs "Passerelle d'API : les erreurs (400 et plus), heure par heure (UTC), par chemin et par code" "select toStartOfHour(timestamp) as heure, log_attributes['request.method'] as methode, log_attributes['request.path'] as chemin, toInt32OrZero(log_attributes['response.status_code']) as statut, count(*) as n from logs where source = 'edge_logs' and toInt32OrZero(log_attributes['response.status_code']) >= 400 group by heure, methode, chemin, statut order by heure, n desc limit 200"
-          logs "Postgres : les délais dépassés, heure par heure (UTC)" "select toStartOfHour(timestamp) as heure, count(*) as n from logs where source = 'postgres_logs' and event_message like 'canceling statement due to statement timeout%' group by heure order by heure"
-          logs "Postgres : les clés des lignes de log" "select arrayJoin(mapKeys(log_attributes)) as cle, count(*) as n from logs where source = 'postgres_logs' group by cle order by n desc limit 40"
           rm -f reponse.json
       # Avant de toucher à la mesure d'audience : la passerelle d'API
       # accepte-t-elle la clé publique en paramètre d'adresse ? Si oui, une
