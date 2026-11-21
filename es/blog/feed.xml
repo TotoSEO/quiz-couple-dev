@@ -6,12 +6,21 @@
     <atom:link href="https://quiz-couple.com/es/blog/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Los artículos de Quiz Couple sobre la vida en pareja, la psicología y las historias de amor.</description>
     <language>es</language>
-    <lastBuildDate>Tue, 17 Nov 2026 13:15:00 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 21 Nov 2026 11:28:00 GMT</lastBuildDate>
     <image>
       <url>https://quiz-couple.com/apple-touch-icon.png</url>
       <title>Quiz Couple · Blog</title>
       <link>https://quiz-couple.com/es/blog/</link>
     </image>
+    <item>
+      <title>Gaslighting: cuando te hacen dudar de tu propia realidad</title>
+      <link>https://quiz-couple.com/es/blog/gaslighting-senales/</link>
+      <guid isPermaLink="true">https://quiz-couple.com/es/blog/gaslighting-senales/</guid>
+      <pubDate>Sat, 21 Nov 2026 11:28:00 GMT</pubDate>
+      <category>Psicología</category>
+      <description>«Yo nunca dije eso», «estás loca», «te lo inventas»... El gaslighting explicado: el mecanismo en 3 tiempos, las frases tipo y cómo recuperar el pie.</description>
+      <media:content url="https://quiz-couple.com/blog/gaslighting.webp" medium="image" type="image/webp" width="1536" height="1024"/>
+    </item>
     <item>
       <title>Dependencia emocional y ruptura: sobrevivir a la abstinencia y salir adelante</title>
       <link>https://quiz-couple.com/es/blog/dependencia-emocional-tras-una-ruptura/</link>
@@ -272,15 +281,6 @@
       <category>Psicología</category>
       <description>«Eres demasiado sensible», «es culpa tuya», «te lo digo por tu bien»... 35 frases de manipulador descifradas, con su traducción real y cómo replicar.</description>
       <media:content url="https://quiz-couple.com/blog/phrases-preferees-des-manipulateurs.webp" medium="image" type="image/webp" width="1536" height="1024"/>
-    </item>
-    <item>
-      <title>100 preguntas para tu crush, por mensaje o en persona</title>
-      <link>https://quiz-couple.com/es/blog/preguntas-para-tu-crush/</link>
-      <guid isPermaLink="true">https://quiz-couple.com/es/blog/preguntas-para-tu-crush/</guid>
-      <pubDate>Tue, 01 Sep 2026 09:34:00 GMT</pubDate>
-      <category>Vida en pareja</category>
-      <description>¿Harta de conversaciones que se apagan? 100 preguntas para hacerle a tu crush, ordenadas por situación: por mensaje, para reír, para flirtear, para ver si encajáis.</description>
-      <media:content url="https://quiz-couple.com/blog/questions-a-poser-a-son-crush.webp" medium="image" type="image/webp" width="1536" height="1024"/>
     </item>
   </channel>
 </rss>

@@ -6,12 +6,21 @@
     <atom:link href="https://quiz-couple.com/nl/blog/feed.xml" rel="self" type="application/rss+xml"/>
     <description>De artikelen van Quiz Couple over relaties, psychologie en liefdesverhalen.</description>
     <language>nl</language>
-    <lastBuildDate>Tue, 17 Nov 2026 13:15:00 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 21 Nov 2026 11:28:00 GMT</lastBuildDate>
     <image>
       <url>https://quiz-couple.com/apple-touch-icon.png</url>
       <title>Quiz Couple · Blog</title>
       <link>https://quiz-couple.com/nl/blog/</link>
     </image>
+    <item>
+      <title>Gaslighting in een relatie: als je gaat twijfelen aan je eigen werkelijkheid</title>
+      <link>https://quiz-couple.com/nl/blog/gaslighting-signalen/</link>
+      <guid isPermaLink="true">https://quiz-couple.com/nl/blog/gaslighting-signalen/</guid>
+      <pubDate>Sat, 21 Nov 2026 11:28:00 GMT</pubDate>
+      <category>Psychologie</category>
+      <description>“Dat heb ik nooit gezegd”, “je bent gek”, “je verzint het”... De signalen van gaslighting, het mechanisme in 3 stappen en hoe je weer vaste grond vindt.</description>
+      <media:content url="https://quiz-couple.com/blog/gaslighting.webp" medium="image" type="image/webp" width="1536" height="1024"/>
+    </item>
     <item>
       <title>Emotionele afhankelijkheid na een breuk: het afkicken overleven en weer opkrabbelen</title>
       <link>https://quiz-couple.com/nl/blog/emotionele-afhankelijkheid-na-een-breuk/</link>
@@ -272,15 +281,6 @@
       <category>Psychologie</category>
       <description>“Je bent te gevoelig”, “het is jouw schuld”, “ik zeg het voor je eigen bestwil”... 35 zinnen van een manipulator, wat ze betekenen en wat je terugzegt.</description>
       <media:content url="https://quiz-couple.com/blog/phrases-preferees-des-manipulateurs.webp" medium="image" type="image/webp" width="1536" height="1024"/>
-    </item>
-    <item>
-      <title>100 vragen om aan je crush te stellen, via berichtjes of als jullie afspreken</title>
-      <link>https://quiz-couple.com/nl/blog/vragen-om-aan-je-crush-te-stellen/</link>
-      <guid isPermaLink="true">https://quiz-couple.com/nl/blog/vragen-om-aan-je-crush-te-stellen/</guid>
-      <pubDate>Tue, 01 Sep 2026 09:34:00 GMT</pubDate>
-      <category>Relatie</category>
-      <description>Gesprekken die doodbloeden? 100 vragen om aan je crush te stellen, per situatie: via berichtjes, om te lachen, om te flirten, om te zien of het klikt.</description>
-      <media:content url="https://quiz-couple.com/blog/questions-a-poser-a-son-crush.webp" medium="image" type="image/webp" width="1536" height="1024"/>
     </item>
   </channel>
 </rss>

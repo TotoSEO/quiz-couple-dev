@@ -6,12 +6,21 @@
     <atom:link href="https://quiz-couple.com/en/blog/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Quiz Couple articles on relationships, psychology and love stories.</description>
     <language>en</language>
-    <lastBuildDate>Tue, 17 Nov 2026 13:15:00 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 21 Nov 2026 11:28:00 GMT</lastBuildDate>
     <image>
       <url>https://quiz-couple.com/apple-touch-icon.png</url>
       <title>Quiz Couple · Blog</title>
       <link>https://quiz-couple.com/en/blog/</link>
     </image>
+    <item>
+      <title>Gaslighting: when you&#39;re made to doubt your own reality</title>
+      <link>https://quiz-couple.com/en/blog/gaslighting-signs/</link>
+      <guid isPermaLink="true">https://quiz-couple.com/en/blog/gaslighting-signs/</guid>
+      <pubDate>Sat, 21 Nov 2026 11:28:00 GMT</pubDate>
+      <category>Psychology</category>
+      <description>«I never said that», «you&#39;re crazy», «you&#39;re making it up»... Gaslighting explained: the three-stage mechanism, the typical phrases, and how to find your footing again.</description>
+      <media:content url="https://quiz-couple.com/blog/gaslighting.webp" medium="image" type="image/webp" width="1536" height="1024"/>
+    </item>
     <item>
       <title>Emotional dependency and break-ups: surviving the withdrawal and bouncing back</title>
       <link>https://quiz-couple.com/en/blog/emotional-dependency-after-a-breakup/</link>
@@ -272,15 +281,6 @@
       <category>Psychology</category>
       <description>«You&#39;re too sensitive», «it&#39;s your fault», «I&#39;m saying this for your own good»... 35 manipulator phrases decoded, with their real translation and how to respond.</description>
       <media:content url="https://quiz-couple.com/blog/phrases-preferees-des-manipulateurs.webp" medium="image" type="image/webp" width="1536" height="1024"/>
-    </item>
-    <item>
-      <title>100 Questions to Ask Your Crush, by Text or in Person</title>
-      <link>https://quiz-couple.com/en/blog/questions-to-ask-your-crush/</link>
-      <guid isPermaLink="true">https://quiz-couple.com/en/blog/questions-to-ask-your-crush/</guid>
-      <pubDate>Tue, 01 Sep 2026 09:34:00 GMT</pubDate>
-      <category>Relationship</category>
-      <description>Tired of conversations that fizzle out? 100 questions to ask your crush, sorted by situation: by message, to make them laugh, to flirt, to see if it fits.</description>
-      <media:content url="https://quiz-couple.com/blog/questions-a-poser-a-son-crush.webp" medium="image" type="image/webp" width="1536" height="1024"/>
     </item>
   </channel>
 </rss>

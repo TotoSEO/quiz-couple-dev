@@ -6,12 +6,21 @@
     <atom:link href="https://quiz-couple.com/blog/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Les articles de Quiz Couple sur la vie de couple, la psychologie et les histoires d&#39;amour.</description>
     <language>fr</language>
-    <lastBuildDate>Thu, 19 Nov 2026 07:30:00 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 21 Nov 2026 11:28:00 GMT</lastBuildDate>
     <image>
       <url>https://quiz-couple.com/apple-touch-icon.png</url>
       <title>Quiz Couple · Le blog</title>
       <link>https://quiz-couple.com/blog/</link>
     </image>
+    <item>
+      <title>Gaslighting : quand on te fait douter de ta propre réalité</title>
+      <link>https://quiz-couple.com/blog/gaslighting/</link>
+      <guid isPermaLink="true">https://quiz-couple.com/blog/gaslighting/</guid>
+      <pubDate>Sat, 21 Nov 2026 11:28:00 GMT</pubDate>
+      <category>Psychologie</category>
+      <description>« Je n&#39;ai jamais dit ça », « tu es folle », « tu inventes »... Le gaslighting expliqué : le mécanisme en 3 temps, les phrases types, et comment reprendre pied.</description>
+      <media:content url="https://quiz-couple.com/blog/gaslighting.webp" medium="image" type="image/webp" width="1536" height="1024"/>
+    </item>
     <item>
       <title>Avoir un meilleur ami du sexe opposé : 51 % pour, 49 % contre sur Quiz Couple</title>
       <link>https://quiz-couple.com/blog/meilleur-ami-du-sexe-oppose-en-couple/</link>
@@ -272,15 +281,6 @@
       <category>Psychologie</category>
       <description>Ses techniques dans l&#39;ordre où il les sort, ses vrais points faibles, l&#39;effet du silence sur lui et ses réactions quand on le démasque. Le mode d&#39;emploi complet.</description>
       <media:content url="https://quiz-couple.com/blog/manipulateur-narcissique.webp" medium="image" type="image/webp" width="1536" height="1024"/>
-    </item>
-    <item>
-      <title>Les symptômes de la dépendance affective : Exemples et résultats</title>
-      <link>https://quiz-couple.com/blog/dependance-affective-symptomes/</link>
-      <guid isPermaLink="true">https://quiz-couple.com/blog/dependance-affective-symptomes/</guid>
-      <pubDate>Sat, 12 Sep 2026 09:33:00 GMT</pubDate>
-      <category>Psychologie</category>
-      <description>Le téléphone vérifié 40 fois, la peur du silence, le couple qui prend toute la place... Les 16 symptômes de la dépendance affective, sphère par sphère.</description>
-      <media:content url="https://quiz-couple.com/blog/dependance-affective-symptomes.webp" medium="image" type="image/webp" width="1536" height="1024"/>
     </item>
   </channel>
 </rss>
