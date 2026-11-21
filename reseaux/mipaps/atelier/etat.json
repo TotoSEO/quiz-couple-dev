@@ -1,12 +1,12 @@
 {
-  "genere_le": "2026-11-20T11:33:36.090Z",
+  "genere_le": "2026-11-21T03:17:39.066Z",
   "langue": "fr",
   "compte": {
     "nom": "mipaps_stories",
     "actif": true
   },
   "fuseau": "Europe/Paris",
-  "aujourdhui": "2026-11-20",
+  "aujourdhui": "2026-11-21",
   "melange": {
     "midi": {
       "1": null,
@@ -28,39 +28,12 @@
     },
     "matin": "mipaps-anime"
   },
-  "reserve_jours": 132,
+  "reserve_jours": 131,
   "a_remplir": [],
   "a_corriger": [],
   "hors_grille": [],
   "refuses": [],
   "recents_et_prevus": [
-    {
-      "jour": "2026-10-21",
-      "creneau": "matin",
-      "gabarit": "mipaps-reel",
-      "categorie": "mipaps-anime",
-      "statut": "publie",
-      "texte": null,
-      "erreur": null
-    },
-    {
-      "jour": "2026-10-21",
-      "creneau": "midi",
-      "gabarit": "mipaps-post",
-      "categorie": "mipaps-post",
-      "statut": "publie",
-      "texte": "notre liste de courses",
-      "erreur": null
-    },
-    {
-      "jour": "2026-10-21",
-      "creneau": "soir",
-      "gabarit": "mipaps-carrousel",
-      "categorie": "mipaps-histoire",
-      "statut": "publie",
-      "texte": null,
-      "erreur": null
-    },
     {
       "jour": "2026-10-22",
       "creneau": "matin",
@@ -2568,7 +2541,7 @@
   "prochain_creneau": {
     "mipaps-anime": {
       "jour": "2026-11-21",
-      "creneau": "matin"
+      "creneau": "soir"
     },
     "mipaps-statique": null,
     "mipaps-histoire": null,
