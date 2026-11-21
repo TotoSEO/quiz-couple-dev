@@ -1,5 +1,5 @@
 {
-  "genere_le": "2026-11-21T03:17:35.525Z",
+  "genere_le": "2026-11-21T11:00:49.588Z",
   "langue": "en",
   "compte": {
     "nom": "quiz_couple_official",
@@ -858,7 +858,7 @@
       "creneau": "midi",
       "gabarit": "tu-preferes",
       "categorie": "tu-preferes",
-      "statut": "rendu",
+      "statut": "conteneur",
       "texte": "Would you rather: couple edition",
       "erreur": null
     },
@@ -3228,8 +3228,8 @@
       "creneau": "soir"
     },
     "tu-preferes": {
-      "jour": "2026-11-21",
-      "creneau": "midi"
+      "jour": "2026-11-22",
+      "creneau": "soir"
     },
     "phrase": null,
     "carrousel": null,
@@ -4644,18 +4644,36 @@
       "jour": "2026-11-13",
       "creneau": "soir",
       "theme": null
+    },
+    {
+      "variante_id": "a75d5d35-c136-4980-b566-22201260a871",
+      "releve": "j7",
+      "vues": 628,
+      "portee": 479,
+      "likes": 3,
+      "commentaires": 0,
+      "partages": 16,
+      "enregistrements": 6,
+      "releve_le": "2026-11-21T11:00:40.670053+00:00",
+      "publie_le": "2026-11-14T10:20:11.642+00:00",
+      "categorie": "tu-preferes",
+      "format": "reel",
+      "gabarit": "tu-preferes",
+      "jour": "2026-11-14",
+      "creneau": "midi",
+      "theme": null
     }
   ],
   "statistiques_par_categorie": [
     {
       "categorie": "tu-preferes",
-      "posts": 24,
-      "vues_mediane": 2339,
-      "vues_moyenne": 12211,
+      "posts": 25,
+      "vues_mediane": 2211,
+      "vues_moyenne": 11748,
       "vues_max": 107713,
-      "partages": 10224,
-      "enregistrements": 3841,
-      "likes": 3902,
+      "partages": 10240,
+      "enregistrements": 3847,
+      "likes": 3905,
       "commentaires": 8
     },
     {
