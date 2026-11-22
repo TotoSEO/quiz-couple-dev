@@ -1,12 +1,12 @@
 {
-  "genere_le": "2026-11-21T11:00:49.588Z",
+  "genere_le": "2026-11-22T03:17:46.913Z",
   "langue": "en",
   "compte": {
     "nom": "quiz_couple_official",
     "actif": true
   },
   "fuseau": "Europe/Paris",
-  "aujourdhui": "2026-11-21",
+  "aujourdhui": "2026-11-22",
   "melange": {
     "midi": {
       "1": null,
@@ -28,39 +28,12 @@
     },
     "matin": null
   },
-  "reserve_jours": 131,
+  "reserve_jours": 130,
   "a_remplir": [],
   "a_corriger": [],
   "hors_grille": [],
   "refuses": [],
   "recents_et_prevus": [
-    {
-      "jour": "2026-10-22",
-      "creneau": "matin",
-      "gabarit": "baton",
-      "categorie": "baton",
-      "statut": "publie",
-      "texte": null,
-      "erreur": null
-    },
-    {
-      "jour": "2026-10-22",
-      "creneau": "midi",
-      "gabarit": "tu-preferes",
-      "categorie": "tu-preferes",
-      "statut": "publie",
-      "texte": "Would you rather: couple edition",
-      "erreur": null
-    },
-    {
-      "jour": "2026-10-22",
-      "creneau": "soir",
-      "gabarit": "carrousel",
-      "categorie": "carrousel",
-      "statut": "publie",
-      "texte": "8 questions about our first days",
-      "erreur": null
-    },
     {
       "jour": "2026-10-23",
       "creneau": "matin",
@@ -858,7 +831,7 @@
       "creneau": "midi",
       "gabarit": "tu-preferes",
       "categorie": "tu-preferes",
-      "statut": "conteneur",
+      "statut": "publie",
       "texte": "Would you rather: couple edition",
       "erreur": null
     },
@@ -867,7 +840,7 @@
       "creneau": "soir",
       "gabarit": "baton",
       "categorie": "baton",
-      "statut": "rendu",
+      "statut": "publie",
       "texte": null,
       "erreur": null
     },
@@ -921,7 +894,7 @@
       "creneau": "soir",
       "gabarit": "tu-preferes",
       "categorie": "tu-preferes",
-      "statut": "a_rendre",
+      "statut": "rendu",
       "texte": "Would you rather: couple edition",
       "erreur": null
     },
@@ -3236,7 +3209,7 @@
     "bd": null,
     "dix-mais": null,
     "baton": {
-      "jour": "2026-11-21",
+      "jour": "2026-11-28",
       "creneau": "soir"
     }
   },
@@ -4662,6 +4635,24 @@
       "jour": "2026-11-14",
       "creneau": "midi",
       "theme": null
+    },
+    {
+      "variante_id": "181016a0-a979-4b64-a2fc-4d9ab44b8bde",
+      "releve": "j7",
+      "vues": 1300,
+      "portee": 1103,
+      "likes": 7,
+      "commentaires": 0,
+      "partages": 3,
+      "enregistrements": 1,
+      "releve_le": "2026-11-22T03:17:46.756299+00:00",
+      "publie_le": "2026-11-14T15:10:11.896+00:00",
+      "categorie": "baton",
+      "format": "reel",
+      "gabarit": "baton",
+      "jour": "2026-11-14",
+      "creneau": "soir",
+      "theme": null
     }
   ],
   "statistiques_par_categorie": [
@@ -4689,13 +4680,13 @@
     },
     {
       "categorie": "baton",
-      "posts": 11,
-      "vues_mediane": 1427,
-      "vues_moyenne": 1329,
+      "posts": 12,
+      "vues_mediane": 1385,
+      "vues_moyenne": 1327,
       "vues_max": 1647,
-      "partages": 37,
-      "enregistrements": 20,
-      "likes": 210,
+      "partages": 40,
+      "enregistrements": 21,
+      "likes": 217,
       "commentaires": 0
     },
     {
