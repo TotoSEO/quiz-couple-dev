@@ -19,7 +19,7 @@
 
 import { readFileSync, existsSync } from 'node:fs';
 import { createHash } from 'node:crypto';
-import { CAPTURE_PAGES, BILAN_ENTREES, LANGUAGES, BASE_URL, getLocalizedUrl } from '../static-site/build/config.js';
+import { CAPTURE_PAGES, BILAN_ENTREES, LANGUAGES, BASE_URL, LIVRE, livreNoelActif, getLocalizedUrl } from '../static-site/build/config.js';
 import { PRIX_CENTIMES, PROMO_POURCENT, PROMO_CODE, prixPromo, promoEnCours } from '../supabase/functions/_shared/bilan/coeur.mjs';
 
 export const TYPES = ['e1', 'e2'];
@@ -84,6 +84,17 @@ const EVALUATION = Object.fromEntries(LANGUES.map((l) => {
 // Les images des e-mails, servies par le site (public/email/).
 const IMAGES = `${BASE_URL}/email/`;
 
+// Le livre « 100 aventures à deux » en PS de l'e1 sobre (22 novembre 2026,
+// Thomas : « Oui vas-y ») : dans les langues où il est en vente (LIVRE de
+// config.js) et dont le site a la page (<langue>/livre.json, d'où vient le
+// titre de l'édition). Le lien mène à la page du livre, jamais à Amazon, et
+// l'e-mail ne nomme jamais Amazon : le règlement des Partenaires n'accepte
+// pas les liens de Partenaire dans un e-mail de ce genre, ni ses marques.
+const LIVRES = Object.fromEntries(LANGUES
+  .filter((l) => LIVRE[l] && present(`../${l}/livre.json`))
+  .map((l) => [l, JSON.parse(lire(`../${l}/livre.json`)).livre.titre]));
+export const LANGUES_LIVRE = Object.keys(LIVRES);
+
 // La famille du test d'où vient l'adresse (BILAN_ENTREES : score, projet,
 // doute) ; « general » pour une source inconnue.
 const GROUPES = {};
@@ -145,6 +156,23 @@ export function prixDu(lang, instant = new Date(), promoForcee, pourcent = PROMO
 // désigne la personne. La version sobre a sa propre source
 // (`email-e1-sobre`) : c'est ce qui compte ses visites, ses évaluations et
 // ses ventes à part de la maquette.
+// La page du livre, avec la source que sa mesure compte (livre.js,
+// provenance : `src` est lu puis retiré de l'adresse) : « email-e1 ».
+export function lienLivre(lang, type = 'e1') {
+  return `${getLocalizedUrl('livreQuizCouple', lang)}?${new URLSearchParams({ src: `email-${type}` })}`;
+}
+
+// Le PS du livre de l'e1, ou null : « cadeau de Noël » tant que la page du
+// livre parle de Noël le lendemain (livreNoelActif, jusqu'au 24 décembre : un
+// e-mail lu le lendemain ne promet pas un cadeau qui n'arriverait plus),
+// « cadeau » tout court le reste de l'année.
+export function psLivre(lang, instant = new Date()) {
+  const titre = LIVRES[lang];
+  const t = TEXTES[lang] && TEXTES[lang].sobre.livre;
+  if (!titre || !t) return null;
+  return { texte: livreNoelActif(new Date(instant.getTime() + 24 * 3600e3)) ? t.noel : t.cadeau, titre };
+}
+
 export function lien(lang, type, { solo = false, version = 'a' } = {}) {
   const base = getLocalizedUrl('bilanCouple', lang);
   const q = new URLSearchParams({ src: `email-${type}${version === 'b' ? '-sobre' : ''}` });
@@ -162,15 +190,18 @@ const ROSE = '#b12559';
 const ROSE_PALE = '#fae6ec';
 const DOUX = '#785e6c';
 
-// Après échappement : **gras**, et [texte](solo) ou [texte](evaluation) pour
-// un lien vers la façon seul(e) ou vers la page de l'évaluation.
+// Après échappement : **gras**, et [texte](solo), [texte](evaluation) ou
+// [texte](livre) pour un lien vers la façon seul(e), vers la page de
+// l'évaluation ou vers celle du livre.
 const LIEN_MAQUETTE = `color:${VIOLET};font-weight:700;text-decoration:underline;`;
 const LIEN_SOBRE = 'color:#1a5fb4;text-decoration:underline;';
 function enLigne(texte, liens, styleLien = LIEN_MAQUETTE) {
   return echapper(texte)
     .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
-    .replace(/\[([^\]]+)\]\((solo|evaluation)\)/g, (m, mot, cible) =>
-      `<a href="${echapper(liens[cible])}" target="_blank" style="${styleLien}">${mot}</a>`);
+    .replace(/\[([^\]]+)\]\((solo|evaluation|livre)\)/g, (m, mot, cible) => {
+      if (!liens[cible]) throw new Error(`lien sans adresse : ${cible}`);
+      return `<a href="${echapper(liens[cible])}" target="_blank" style="${styleLien}">${mot}</a>`;
+    });
 }
 
 const P = `margin:0 0 16px;font-size:17px;line-height:27px;color:${ENCRE};`;
@@ -246,8 +277,10 @@ function questionSobre(e) {
 
 // La version sobre (« b ») : le même sujet, le même aperçu, la même accroche
 // (le champ INTRO) et le même PS que la maquette, sans image, ticket ni
-// cartes, et un seul lien vers l'évaluation, écrit dans une phrase.
-function campagneSobre({ type, lang, t, e, ecrire, liens, variante, ev, sujet, apercu, promo, sansPrix }) {
+// cartes, et un seul lien vers l'évaluation, écrit dans une phrase. Depuis le
+// 22 novembre 2026, l'e1 d'une langue où le livre est en vente a le livre en
+// PS, à la place de la phrase de la page de vente (psLivre).
+function campagneSobre({ type, lang, t, e, ecrire, liens, variante, ev, sujet, apercu, promo, sansPrix, livre }) {
   const s = t.sobre;
   const enTexte = (x) => enLigne(ecrire(x), liens, LIEN_SOBRE);
   const p = (html) => `<p style="margin:0 0 16px;">${html}</p>`;
@@ -262,7 +295,8 @@ function campagneSobre({ type, lang, t, e, ecrire, liens, variante, ev, sujet, a
     SALUTATION: '{{ contact.SALUTATION }}',
     CORPS: corps.join('\n'),
     SIGNATURE: s.signature.map((x) => echapper(ecrire(x))).join('<br>'),
-    PS: e.ps ? `<p style="margin:20px 0 0;">${enTexte(e.ps)}</p>` : '',
+    PS: livre ? `<p style="margin:20px 0 0;">${enTexte(livre.texte)}</p>`
+      : e.ps ? `<p style="margin:20px 0 0;">${enTexte(e.ps)}</p>` : '',
     PIED: `${echapper(ecrire(t.pied.pourquoi))}<br>${echapper(ecrire(t.pied.editeur))}`,
     DESINSCRIPTION_LIEN: '{{ unsubscribe }}',
     DESINSCRIPTION_TEXTE: echapper(ecrire(t.pied.desinscription)),
@@ -270,7 +304,7 @@ function campagneSobre({ type, lang, t, e, ecrire, liens, variante, ev, sujet, a
     MENTIONS_TEXTE: echapper(ecrire(t.pied.mentions)),
   });
   verifier(html);
-  return { type, lang, version: 'b', promo, sansPrix, sujet, apercu, html, expediteur: s.expediteur };
+  return { type, lang, version: 'b', promo, sansPrix, livre: !!livre, sujet, apercu, html, expediteur: s.expediteur };
 }
 
 // `promo` (vrai ou faux) force l'une des deux variantes du prix : aperçus
@@ -294,11 +328,14 @@ export function campagne(type, lang, instant = new Date(), { promo, version = 'a
     // la carte juste au-dessus la montre en entier.
     accroche: ev.accroche, reponseA: ev.options[EXEMPLE.reponseA], reponseB: ev.options[EXEMPLE.reponseB].split(',')[0],
   };
+  const livre = version === 'b' && type === 'e1' ? psLivre(lang, instant) : null;
+  if (livre) v.livreTitre = livre.titre;
   const ecrire = (texte) => typo(remplir(texte, v), lang);
   const liens = { evaluation: lien(lang, type, { version }), solo: lien(lang, type, { solo: true, version }) };
+  if (livre) liens.livre = lienLivre(lang, type);
   const sujet = ecrire(e.sujet);
   const apercu = ecrire(typeof e.apercu === 'string' ? e.apercu : e.apercu[variante]);
-  if (version === 'b') return campagneSobre({ type, lang, t, e, ecrire, liens, variante, ev, sujet, apercu, promo: p.promo, sansPrix });
+  if (version === 'b') return campagneSobre({ type, lang, t, e, ecrire, liens, variante, ev, sujet, apercu, promo: p.promo, sansPrix, livre });
   const points = liste(e.points.map((x) => enLigne(ecrire(x), liens)));
 
   // L'e1 présente l'évaluation ; l'e2 montre une de ses questions, ce que le

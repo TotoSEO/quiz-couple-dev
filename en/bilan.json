@@ -55,7 +55,7 @@
       "prenomManque": "Write both your first names.",
       "accordManque": "Tick the box to continue.",
       "email": "Your email",
-      "emailAide": "The link to your PDF report will be sent to this address. It also lets you find your assessment again if you close the page. We'll email you when your report is ready, once if {{autre}} is slow to finish, and just once more if it's still waiting the next day.",
+      "emailAide": "The link to your PDF report will be sent to this address. It also lets you find your assessment again if you close the page. We'll email you when your report is ready.",
       "emailSuggestion": "Did you mean {{email}}?",
       "emailFaux": "This email address doesn't look complete.",
       "emailManque": "Enter your email address: that's where the link to the PDF report will be sent.",
@@ -178,12 +178,12 @@
       "texte": "Your answers are saved! All that's left is to tell us where to send the report.",
       "bouton": "Continue",
       "revenir": "Back to the last question",
-      "aideTel": "The link to your PDF report will be sent to this address. It also lets you find the assessment again if you close the page. We'll email you when the report is ready, then just once more if it isn't unlocked the next day.",
+      "aideTel": "The link to your PDF report will be sent to this address. It also lets you find the assessment again if you close the page. We'll email you when the report is ready.",
       "paireTitre": "Where should we send your report?",
       "paireTexte": "Your answers are saved! All that's left is to tell us where to send the link to the report.",
       "paireEmail": "{{nom}}'s email",
       "paireEmailFacultatif": "{{nom}}'s email (optional)",
-      "paireAide": "The link to the PDF report will be sent to these addresses. They also let you find the assessment again if you close the page. We'll email you just once if the report isn't unlocked the next day.",
+      "paireAide": "The link to the PDF report will be sent to these addresses. They also let you find the assessment again if you close the page.",
       "paireAideAutre": "Without an address for {{autre}}, the link only goes to {{moi}}'s."
     },
     "pause": {
@@ -309,7 +309,7 @@
         "accordAide": "Only you will see the report: {{autre}} isn't told, and nothing is sent to them.",
         "prixRappel": "The questions are free. The report costs {{prix}}, paid at the end.",
         "creer": "Start my assessment",
-        "emailAide": "The link to your PDF report will be sent to this address. It also lets you find your assessment again if you close the page, and we'll send a single reminder if your report is still waiting the next day.",
+        "emailAide": "The link to your PDF report will be sent to this address. It also lets you find your assessment again if you close the page.",
         "apportTitre": "What the solo assessment gives you",
         "apport": [
           "Your view of the twelve areas of your relationship, from everyday life to intimacy",
@@ -722,7 +722,7 @@
       "titre": "Email me my link",
       "placeholder": "you@email.com",
       "bouton": "Send",
-      "aide": "To find your answers again if you close this page or change phones. If you don't finish, we'll send you a single reminder.",
+      "aide": "To find your answers again if you close this page or change phones.",
       "envoye": "Done: your link is in your inbox ({{email}}). Check your spam folder too.",
       "faux": "This email address doesn't look complete.",
       "trop": "Too many emails for this assessment. Try again in an hour."

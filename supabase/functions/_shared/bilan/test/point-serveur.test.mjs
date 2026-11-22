@@ -35,7 +35,8 @@ function monter() {
   const envoyes = [];
   const courriel = { envoyes, async envoyer(m) { envoyes.push(m); return { ok: true }; } };
   let t = new Date('2026-11-04T10:00:00Z');
-  const serveur = creerServeur({ stockage, stripe, courriel, sel: 'sel', maintenant: () => t });
+  // Le rappel et la reprise, arrêtés depuis le 22 novembre 2026, rallumés pour leurs tests.
+  const serveur = creerServeur({ stockage, stripe, courriel, sel: 'sel', maintenant: () => t, relances: true, reprises: true });
   const appel = (corps, ip = '1.2.3.4', ctx = {}) => serveur.traiter(corps, { ip, ...ctx });
   return { stockage, stripe, courriel, appel, serveur, avancer: (h) => { t = new Date(t.getTime() + h * 3600e3); } };
 }

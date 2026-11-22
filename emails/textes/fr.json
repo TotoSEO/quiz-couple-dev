@@ -117,6 +117,10 @@
     },
     "e2": {
       "lien": "Si ça te tente : [faire l'évaluation de couple](evaluation)."
+    },
+    "livre": {
+      "noel": "**PS :** j'ai aussi sorti un livre à remplir à deux, « [[livreTitre]] ». Il propose 100 choses à vivre ensemble, avec de la place pour vos photos. Si tu cherches un cadeau de Noël pour ton ou ta partenaire, [il est ici](livre).",
+      "cadeau": "**PS :** j'ai aussi sorti un livre à remplir à deux, « [[livreTitre]] ». Il propose 100 choses à vivre ensemble, avec de la place pour vos photos. Si tu cherches une idée de cadeau pour ton ou ta partenaire, [il est ici](livre)."
     }
   }
 }

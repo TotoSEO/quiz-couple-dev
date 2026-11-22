@@ -55,7 +55,7 @@
       "prenomManque": "Escribe vuestros dos nombres.",
       "accordManque": "Marca la casilla para continuar.",
       "email": "Tu e-mail",
-      "emailAide": "El enlace a tu informe en PDF se enviará a esta dirección. También sirve para recuperar tu evaluación si cierras la página. Te escribiremos cuando tu informe esté listo, una vez si {{autre}} tarda en terminar, y una sola vez más si al día siguiente sigue esperando.",
+      "emailAide": "El enlace a tu informe en PDF se enviará a esta dirección. También sirve para recuperar tu evaluación si cierras la página. Te escribiremos cuando tu informe esté listo.",
       "emailSuggestion": "¿Querías decir {{email}}?",
       "emailFaux": "Esta dirección de e-mail no parece completa.",
       "emailManque": "Escribe tu dirección de e-mail: es ahí donde se enviará el enlace al informe en PDF.",
@@ -178,12 +178,12 @@
       "texte": "¡Tus respuestas están guardadas! Solo falta decirnos dónde enviar el informe.",
       "bouton": "Continuar",
       "revenir": "Volver a la última pregunta",
-      "aideTel": "El enlace a tu informe en PDF se enviará a esta dirección. También sirve para recuperar la evaluación si cierras la página. Te escribiremos cuando el informe esté listo, y una sola vez más si al día siguiente no está desbloqueado.",
+      "aideTel": "El enlace a tu informe en PDF se enviará a esta dirección. También sirve para recuperar la evaluación si cierras la página. Te escribiremos cuando el informe esté listo.",
       "paireTitre": "¿Dónde os enviamos el informe?",
       "paireTexte": "¡Vuestras respuestas están guardadas! Solo falta decirnos dónde enviar el enlace del informe.",
       "paireEmail": "El e-mail de {{nom}}",
       "paireEmailFacultatif": "El e-mail de {{nom}} (opcional)",
-      "paireAide": "El enlace al informe en PDF se enviará a estas direcciones. También sirven para recuperar la evaluación si cerráis la página. Os escribiremos una sola vez si al día siguiente el informe no está desbloqueado.",
+      "paireAide": "El enlace al informe en PDF se enviará a estas direcciones. También sirven para recuperar la evaluación si cerráis la página.",
       "paireAideAutre": "Sin dirección para {{autre}}, el enlace solo se envía a la de {{moi}}."
     },
     "pause": {
@@ -309,7 +309,7 @@
         "accordAide": "Solo tú verás el informe: {{autre}} no recibe ningún aviso, y no se le envía nada.",
         "prixRappel": "Las preguntas son gratis. El informe cuesta {{prix}}, y se paga al final.",
         "creer": "Empezar mi evaluación",
-        "emailAide": "El enlace a tu informe en PDF se enviará a esta dirección. También sirve para recuperar tu evaluación si cierras la página y para enviarte un solo recordatorio si al día siguiente tu informe sigue esperando.",
+        "emailAide": "El enlace a tu informe en PDF se enviará a esta dirección. También sirve para recuperar tu evaluación si cierras la página.",
         "apportTitre": "Lo que te aporta la evaluación a solas",
         "apport": [
           "Tu mirada sobre las doce áreas de vuestra pareja, del día a día a la intimidad",
@@ -726,7 +726,7 @@
       "titre": "Recibir mi enlace por e-mail",
       "placeholder": "tu@email.com",
       "bouton": "Enviar",
-      "aide": "Para recuperar tus respuestas si cierras esta página o cambias de móvil. Si no terminas, te enviaremos un solo recordatorio.",
+      "aide": "Para recuperar tus respuestas si cierras esta página o cambias de móvil.",
       "envoye": "Listo: tu enlace está en tu bandeja ({{email}}). Mira también en el correo no deseado.",
       "faux": "Esta dirección de e-mail no parece completa.",
       "trop": "Demasiados envíos para esta evaluación. Vuelve a intentarlo dentro de una hora."

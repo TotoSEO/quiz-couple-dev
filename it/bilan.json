@@ -55,7 +55,7 @@
       "prenomManque": "Scrivi i vostri due nomi.",
       "accordManque": "Spunta la casella per continuare.",
       "email": "La tua e-mail",
-      "emailAide": "Il link al tuo report in PDF sarà inviato a questo indirizzo. Serve anche a ritrovare la tua valutazione se chiudi la pagina. Ti scriveremo quando il tuo report sarà pronto, una volta se {{autre}} tarda a finire, e una sola volta se il giorno dopo è ancora in attesa.",
+      "emailAide": "Il link al tuo report in PDF sarà inviato a questo indirizzo. Serve anche a ritrovare la tua valutazione se chiudi la pagina. Ti scriveremo quando il tuo report sarà pronto.",
       "emailSuggestion": "Intendevi {{email}}?",
       "emailFaux": "Questo indirizzo e-mail non sembra completo.",
       "emailManque": "Scrivi il tuo indirizzo e-mail: è lì che sarà inviato il link al report in PDF.",
@@ -178,12 +178,12 @@
       "texte": "Le tue risposte sono salvate! Manca solo l'indirizzo a cui mandare il report.",
       "bouton": "Continua",
       "revenir": "Torna all'ultima domanda",
-      "aideTel": "Il link al tuo report in PDF sarà inviato a questo indirizzo. Serve anche a ritrovare la valutazione se chiudi la pagina. Ti scriveremo quando il report sarà pronto, e una sola volta in più se il giorno dopo non è ancora sbloccato.",
+      "aideTel": "Il link al tuo report in PDF sarà inviato a questo indirizzo. Serve anche a ritrovare la valutazione se chiudi la pagina. Ti scriveremo quando il report sarà pronto.",
       "paireTitre": "Dove vi mandiamo il report?",
       "paireTexte": "Le vostre risposte sono salvate! Manca solo l'indirizzo a cui mandare il link del report.",
       "paireEmail": "L'e-mail di {{nom}}",
       "paireEmailFacultatif": "L'e-mail di {{nom}} (facoltativa)",
-      "paireAide": "Il link al report in PDF sarà inviato a questi indirizzi. Servono anche a ritrovare la valutazione se chiudete la pagina. Vi scriveremo una sola volta se il giorno dopo il report non è ancora sbloccato.",
+      "paireAide": "Il link al report in PDF sarà inviato a questi indirizzi. Servono anche a ritrovare la valutazione se chiudete la pagina.",
       "paireAideAutre": "Senza indirizzo per {{autre}}, il link arriva solo a quello di {{moi}}."
     },
     "pause": {
@@ -309,7 +309,7 @@
         "accordAide": "Il report lo vedrai solo tu: {{autre}} non viene avvisato/a e non riceve niente.",
         "prixRappel": "Le domande sono gratuite. Il report costa {{prix}}, e si paga alla fine.",
         "creer": "Iniziare la mia valutazione",
-        "emailAide": "Il link al tuo report in PDF sarà inviato a questo indirizzo. Serve anche a ritrovare la tua valutazione se chiudi la pagina e a mandarti un solo promemoria se il giorno dopo il tuo report è ancora in attesa.",
+        "emailAide": "Il link al tuo report in PDF sarà inviato a questo indirizzo. Serve anche a ritrovare la tua valutazione se chiudi la pagina.",
         "apportTitre": "Cosa ti dà la valutazione da solo/a",
         "apport": [
           "Il tuo sguardo sulle dodici aree della vostra coppia, dalla vita di tutti i giorni all'intimità",
@@ -726,7 +726,7 @@
       "titre": "Ricevere il mio link via e-mail",
       "placeholder": "tu@email.com",
       "bouton": "Invia",
-      "aide": "Per ritrovare le tue risposte se chiudi questa pagina o cambi telefono. Se non finisci, ti manderemo un solo promemoria.",
+      "aide": "Per ritrovare le tue risposte se chiudi questa pagina o cambi telefono.",
       "envoye": "Fatto: il tuo link è nella tua casella ({{email}}). Controlla anche lo spam.",
       "faux": "Questo indirizzo e-mail non sembra completo.",
       "trop": "Troppi invii per questa valutazione. Riprova tra un'ora."

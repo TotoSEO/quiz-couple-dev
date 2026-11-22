@@ -23,9 +23,26 @@ export const REGLAGES = {
   // maquette, « b » l'e-mail sobre signé de Thomas. `ab` faux, tout le monde
   // reçoit `version`. Le bilan du test se lit dans l'action « verif » de
   // brevo-reglages.yml, à partir de `abDepuis` (le premier soir du test).
-  ab: true,
-  version: 'a',
+  // Arrêté le 22 novembre 2026 (Thomas : « Oui vas-y »), version sobre pour
+  // tout le monde : sur l'e1 parti dans la minute, ouvert autant dans les deux
+  // versions (18,5 % et 18,8 %), la version sobre faisait 128 clics contre 53,
+  // 133 visites de l'évaluation contre 45, et la seule vente (section du
+  // 22 novembre 2026 de docs/emailing/CONCEPTION.md).
+  ab: false,
+  version: 'b',
   abDepuis: '2026-10-25',
+  // Les e-mails que le parcours envoie. L'e2, l'e-mail de vente trois jours
+  // après l'e1, est arrêté depuis le 22 novembre 2026 : 1 150 envoyés par
+  // l'API transactionnelle du 3 au 22 novembre, 10 ouvertures, 3 clics, deux
+  // visites de l'évaluation et aucune évaluation commencée, et il ne partait
+  // qu'en anglais (la file sert l'anglais d'abord, 100 e-mails par soir).
+  // Envoyer ce que personne n'ouvre abîme la réputation du domaine chez Gmail,
+  // dont l'e1 et les e-mails du livre ont besoin. La base lit cette liste dans
+  // emails_reglages (clé « parcours », écrite à chaque passage du soir et par
+  // « installer ») : la file du soir ne prend plus d'e2
+  // (20261122120000_emails_sans_e2.sql), et l'envoi du soir les écarte aussi.
+  // Le remettre : `types: ['e1', 'e2']`, par une PR.
+  types: ['e1'],
   // Les listes du soir (« AAAA-MM-JJ · e1 · fr · 19:02 ») sont rangées là, et
   // supprimées après `listesGardees` jours ; la liste « Essais » y vit aussi.
   dossier: 'Parcours Quiz Couple',

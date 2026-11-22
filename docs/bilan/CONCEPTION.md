@@ -2794,3 +2794,51 @@ Aucune panne trouvée. Depuis 17 h 35 le 19, les fins sont revenues au
 rythme habituel. Si une telle nuit revient, lire tout de suite
 `supabase-inventaire.yml` (la fonction `bilan` heure par heure et par code,
 en tête des journaux) avant que les journaux s'effacent.
+
+## 22 novembre 2026 : le rappel du lendemain et la reprise arrêtés
+
+Thomas : « Est ce que nos mails fonctionnent ? Ça ramène des gens et du
+chiffre ? », puis « Oui vas-y ». Lu par `bilan-chiffres.yml` (30 jours, les
+évaluations créées depuis le 23 octobre), bloc `rappels` de
+`get_bilan_tableau`, qui ne lit que les dates de la base.
+
+- **« Votre rapport est prêt »** : 140 envoyés, et 16 de ces évaluations ont
+  été payées ensuite, sur 22 ventes dans le mois. C'est l'e-mail qui compte :
+  il prévient la première personne quand la seconde a fini. On ne sait pas
+  combien de ces ventes il a déclenchées, le couple étant souvent encore
+  devant l'écran. Il reste.
+- **Le rappel du lendemain** (rapport prêt, pas débloqué) : 174 envoyés,
+  aucun suivi d'un paiement.
+- **La reprise** : 122 « vos questions vous attendent », dont aucune n'a été
+  suivie de réponses finies, et 59 « l'autre n'a pas fini », suivies d'un seul
+  partenaire revenu finir ; aucun paiement après une reprise. Depuis le
+  2 novembre 2026, l'adresse ne se demande plus au départ : la reprise « moi »
+  ne pouvait presque plus partir (6 en dix jours).
+
+**Ce qui change.** La fonction bilan n'envoie plus le rappel ni la reprise
+(`RELANCES_ACTIVES` et `REPRISES_ACTIVES` de serveur.mjs, à faux ;
+`creerServeur` les prend en options, et les tests de la mécanique les
+rallument) : `relancer` répond `{ relances: 0, reprises: 0, arretes: true }`
+sans rien envoyer ni marquer. `bilan_relances_dues()` ne compte plus rien
+(`20261122130000_bilan_sans_rappel.sql`, appliquée par bilan-base.yml en
+dernier) : la tâche pg_cron ne lance plus `bilan-relance.yml`, dont l'horaire
+de secours est retiré, et l'onglet Évaluation ne montre plus d'envois dus. Le
+« prêt », le lien du rapport, « Recevoir mon lien » et « Retrouver mon
+évaluation » partent comme avant. Les phrases sous le champ de l'adresse ne
+promettent plus de rappel (`creation.emailAide`, `fin.aideTel`,
+`fin.paireAide`, `solo.creation.emailAide`, `lien.aide`), ni la politique de
+confidentialité (`privacy.bilanItems`), dans les six langues, ni le registre
+(docs/rgpd/REGISTRE.md). La page envoie toujours `rappel: true` (le « prêt »
+en dépend) et `reprise: true`, qui ne sert plus.
+
+**Les remettre** : les deux valeurs de serveur.mjs à vrai, le corps de
+`bilan_relances_dues()` de `20261024140000_bilan_reprise.sql` dans une
+nouvelle migration, l'horaire de secours de `bilan-relance.yml`, et les
+phrases.
+
+Vérification : `node --test supabase/functions/_shared/bilan/test/*.test.mjs`
+(104 tests, dont le serveur monté comme la fonction, qui n'envoie rien),
+`cd bilan && npm test` (45), et l'évaluation rejouée contre le site construit
+et la fonction en mémoire (`scratchpad/rejeu/rejeu.mjs` de la session : à
+deux en français et en néerlandais, chacun sur son téléphone, jusqu'à l'offre
+des deux côtés ; le point en anglais).

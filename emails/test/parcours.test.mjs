@@ -12,8 +12,12 @@ import { versionDe, campagne } from '../contenu.mjs';
 // une campagne par e-mail et par langue ; le test A/B a les siens, en bas.
 // De même, ils envoient tout en campagne : l'envoi par l'API
 // transactionnelle (REGLAGES.transactionnel, l'e2 depuis le 3 novembre 2026)
-// a ses tests, en bas.
+// a ses tests, en bas. Et ils envoient les deux e-mails : l'e2 est arrêté
+// depuis le 22 novembre 2026 (REGLAGES.types), ce qui a son test aussi.
+const REELS = { ab: REGLAGES.ab, version: REGLAGES.version, types: REGLAGES.types };
 REGLAGES.ab = false;
+REGLAGES.version = 'a';
+REGLAGES.types = ['e1', 'e2'];
 const TRANSACTIONNEL = REGLAGES.transactionnel;
 REGLAGES.transactionnel = [];
 
@@ -201,7 +205,7 @@ test('mode « arret » : rien n\'est lu ni envoyé, et l\'e-mail immédiat s\'ar
   assert.equal(brevo.appels.length, 0);
   // La seule écriture : les réglages de l'e-mail immédiat, arrêté.
   assert.equal(base.ecritures, 1);
-  assert.equal(base.t.emails_reglages[0].valeur.actif, false);
+  assert.equal(base.t.emails_reglages.find((r) => r.cle === 'immediat').valeur.actif, false);
   assert.equal(base.t.emails_modeles.length, 0);
 });
 
@@ -213,6 +217,33 @@ test('hors de la fenêtre du soir : rien, sauf si on force', async () => {
   assert.equal(brevo.appels.length, 0);
   const b2 = await passage({ base, brevo, maintenant: MATIN, mode: 'reel', forcer: true, journal: silence });
   assert.equal(b2.envois['e1:fr:a'], 1);
+});
+
+test('les réglages du 22 novembre 2026 : la version sobre pour tout le monde, l\'e2 arrêté', () => {
+  assert.equal(REELS.ab, false);
+  assert.equal(REELS.version, 'b');
+  assert.deepEqual(REELS.types, ['e1']);
+});
+
+test('l\'e2 arrêté : s\'il en reste dans la file, aucun ne part et aucune ligne n\'est écrite', async () => {
+  REGLAGES.types = ['e1'];
+  try {
+    const file = [candidat(1, 'e1', 'fr', 'toxique'), candidat(2, 'e2', 'en', 'mariage'), candidat(3, 'e2', 'fr', 'mariage')];
+    const base = new FausseBase({ file, abonnes: file.map((c) => ({ id: c.abonne_id, email: c.email })) });
+    const brevo = new FauxBrevo();
+    const lignes = [];
+    const b = await passage({ base, brevo, maintenant: SOIR, mode: 'reel', journal: (m) => lignes.push(m) });
+    assert.deepEqual(b.envois, { 'e1:fr:a': 1 });
+    assert.equal(b.ecartes, 2);
+    assert.deepEqual(base.t.emails_envois.map((l) => l.type), ['e1']);
+    assert.equal(brevo.campagnesCreees.length, 1);
+    assert.ok(lignes.some((l) => /2 e-mail\(s\) d'un type arrêté \(e2\)/.test(l)));
+    // Les réglages que la base lit : la clé « parcours » ne garde que l'e1.
+    const parcours = base.t.emails_reglages.find((r) => r.cle === 'parcours');
+    assert.deepEqual(parcours.valeur, { types: ['e1'] });
+  } finally {
+    REGLAGES.types = ['e1', 'e2'];
+  }
 });
 
 test('à blanc : la file est lue et rendue, rien n\'est écrit ni envoyé', async () => {

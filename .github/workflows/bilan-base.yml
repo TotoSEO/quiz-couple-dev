@@ -17,6 +17,9 @@ name: Évaluation de couple · base Supabase
 # et ne gênent pas celle d'avant) puis 20261119120000_bilan_personnes.sql
 # (get_bilan_personnes : les personnes allées au bout de leurs questions, le
 # nombre que la page de vente affiche, lu par le site à la construction)
+# puis 20261122130000_bilan_sans_rappel.sql (le rappel du lendemain et la
+# reprise arrêtés : bilan_relances_dues() ne compte plus rien ; après
+# 20261024140000_bilan_reprise.sql, qui en réécrit le corps à chaque passage)
 # par l'API de gestion de Supabase, comme
 # avis-base.yml, avec les secrets déjà là pour les fonctions
 # (SUPABASE_ACCESS_TOKEN et SUPABASE_PROJECT_REF). Rien à faire à la main.
@@ -45,6 +48,7 @@ on:
       - 'supabase/migrations/20261031130000_langue_nl.sql'
       - 'supabase/migrations/20261104120000_evaluation_point.sql'
       - 'supabase/migrations/20261119120000_bilan_personnes.sql'
+      - 'supabase/migrations/20261122130000_bilan_sans_rappel.sql'
       - '.github/workflows/bilan-base.yml'
   workflow_dispatch:
 
@@ -74,7 +78,8 @@ jobs:
                    supabase/migrations/20261025140000_bilan_celib.sql \
                    supabase/migrations/20261031130000_langue_nl.sql \
                    supabase/migrations/20261104120000_evaluation_point.sql \
-                   supabase/migrations/20261119120000_bilan_personnes.sql; do
+                   supabase/migrations/20261119120000_bilan_personnes.sql \
+                   supabase/migrations/20261122130000_bilan_sans_rappel.sql; do
             jq -Rs '{query: .}' "$f" > requete.json
             code=$(curl -sS -o reponse.json -w '%{http_code}' -X POST \
               "https://api.supabase.com/v1/projects/$SUPABASE_PROJECT_REF/database/query" \

@@ -55,7 +55,7 @@
       "prenomManque": "Écrivez vos deux prénoms.",
       "accordManque": "Cochez la case pour continuer.",
       "email": "Votre e-mail",
-      "emailAide": "Le lien de votre rapport PDF sera envoyé à cette adresse. Elle sert aussi à retrouver votre évaluation si vous fermez la page. On vous écrira quand votre rapport sera prêt, une fois si {{autre}} tarde à finir, et une seule fois s'il attend encore le lendemain.",
+      "emailAide": "Le lien de votre rapport PDF sera envoyé à cette adresse. Elle sert aussi à retrouver votre évaluation si vous fermez la page. On vous écrira quand votre rapport sera prêt.",
       "emailSuggestion": "Vous vouliez dire {{email}} ?",
       "emailFaux": "Cette adresse e-mail n'a pas l'air complète.",
       "emailManque": "Écrivez votre adresse e-mail : c'est là que le lien du rapport PDF sera envoyé.",
@@ -178,12 +178,12 @@
       "texte": "Vos réponses sont enregistrées ! Il ne reste qu'à dire où envoyer le rapport.",
       "bouton": "Continuer",
       "revenir": "Revenir à la dernière question",
-      "aideTel": "Le lien de votre rapport PDF partira à cette adresse. Elle sert aussi à retrouver l'évaluation si vous fermez la page. On vous écrira quand le rapport sera prêt, puis une seule fois s'il n'est pas débloqué le lendemain.",
+      "aideTel": "Le lien de votre rapport PDF partira à cette adresse. Elle sert aussi à retrouver l'évaluation si vous fermez la page. On vous écrira quand le rapport sera prêt.",
       "paireTitre": "Où envoyer votre rapport ?",
       "paireTexte": "Vos réponses sont enregistrées ! Il reste à dire où envoyer le lien du rapport.",
       "paireEmail": "L'e-mail de {{nom}}",
       "paireEmailFacultatif": "L'e-mail de {{nom}} (facultatif)",
-      "paireAide": "Le lien du rapport PDF partira à ces adresses. Elles servent aussi à retrouver l'évaluation si vous fermez la page. On vous écrira une seule fois si le rapport n'est pas débloqué le lendemain.",
+      "paireAide": "Le lien du rapport PDF partira à ces adresses. Elles servent aussi à retrouver l'évaluation si vous fermez la page.",
       "paireAideAutre": "Sans adresse pour {{autre}}, le lien part seulement à celle de {{moi}}."
     },
     "pause": {
@@ -309,7 +309,7 @@
         "accordAide": "Vous seul(e) verrez le rapport : {{autre}} n'est pas prévenu(e), et rien ne lui est envoyé.",
         "prixRappel": "Les questions sont gratuites. Le rapport coûte {{prix}}, à régler à la fin.",
         "creer": "Commencer mon évaluation",
-        "emailAide": "Le lien de votre rapport PDF sera envoyé à cette adresse. Elle sert aussi à retrouver votre évaluation si vous fermez la page, et à vous envoyer un seul rappel si votre rapport attend encore le lendemain.",
+        "emailAide": "Le lien de votre rapport PDF sera envoyé à cette adresse. Elle sert aussi à retrouver votre évaluation si vous fermez la page.",
         "apportTitre": "Ce que l'évaluation seul(e) vous apporte",
         "apport": [
           "Votre regard sur les douze domaines de votre couple, du quotidien à l'intimité",
@@ -722,7 +722,7 @@
       "titre": "Recevoir mon lien par e-mail",
       "placeholder": "votre@email.com",
       "bouton": "Envoyer",
-      "aide": "Pour retrouver vos réponses si vous fermez cette page ou changez de téléphone. Si vous ne finissez pas, on vous enverra un seul rappel.",
+      "aide": "Pour retrouver vos réponses si vous fermez cette page ou changez de téléphone.",
       "envoye": "C'est parti : votre lien est dans votre boîte ({{email}}). Pensez aux indésirables.",
       "faux": "Cette adresse e-mail n'a pas l'air complète.",
       "trop": "Trop d'envois pour cette évaluation. Réessayez dans une heure."

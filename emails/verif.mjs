@@ -215,7 +215,7 @@ await etape('La file du soir', async () => {
   const { connexion } = await import('./base.mjs');
   const base = await connexion();
   const file = await base.rpc('emails_file', {});
-  info(`e1 en attente : ${file.e1} (dont ${file.e1_recents} de moins de 48 h) · e2 en attente : ${file.e2}`);
+  info(`e1 en attente : ${file.e1} (dont ${file.e1_recents} de moins de 48 h) · e2 ${file.e2_arrete ? 'arrêté (REGLAGES.types)' : `en attente : ${file.e2}`}`);
   const passages = await base.select('emails_passages', 'select=jour,debut,fin,bilan&order=jour.desc&limit=3');
   for (const p of passages || []) info(`passage du ${p.jour} : ${p.fin ? 'terminé' : 'NON TERMINÉ'} · ${JSON.stringify((p.bilan && p.bilan.envois) || {})}`);
 });

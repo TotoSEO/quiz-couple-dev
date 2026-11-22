@@ -12,8 +12,10 @@ name: E-mails · base Supabase
 # soir sur sept jours, les événements du webhook transactionnel) et
 # 20261103120000_emails_transactionnel.sql (l'e2 du soir par l'API
 # transactionnelle : un événement qui arrive avant l'identifiant de son
-# message se pose sur le dernier envoi hors campagne de l'adresse), par l'API
-# de gestion de Supabase, comme abonnes-base.yml, avec les
+# message se pose sur le dernier envoi hors campagne de l'adresse) et
+# 20261122120000_emails_sans_e2.sql (la file du soir ne prend que les e-mails
+# que le parcours envoie encore : l'e2 est arrêté depuis le 22 novembre 2026),
+# par l'API de gestion de Supabase, comme abonnes-base.yml, avec les
 # secrets déjà là (SUPABASE_ACCESS_TOKEN et SUPABASE_PROJECT_REF).
 # Idempotentes : la relancer (« Run workflow ») est sans risque, et chacune
 # repasse toujours après celles d'avant, qui réécrivent la file à l'ancienne.
@@ -28,6 +30,7 @@ on:
       - 'supabase/migrations/20261028120000_emails_recents.sql'
       - 'supabase/migrations/20261029120000_emails_immediat.sql'
       - 'supabase/migrations/20261103120000_emails_transactionnel.sql'
+      - 'supabase/migrations/20261122120000_emails_sans_e2.sql'
       - '.github/workflows/emails-base.yml'
   workflow_dispatch:
 
@@ -51,7 +54,8 @@ jobs:
                    supabase/migrations/20261027120000_emails_langues.sql \
                    supabase/migrations/20261028120000_emails_recents.sql \
                    supabase/migrations/20261029120000_emails_immediat.sql \
-                   supabase/migrations/20261103120000_emails_transactionnel.sql; do
+                   supabase/migrations/20261103120000_emails_transactionnel.sql \
+                   supabase/migrations/20261122120000_emails_sans_e2.sql; do
             jq -Rs '{query: .}' "$f" > requete.json
             code=$(curl -sS -o reponse.json -w '%{http_code}' -X POST \
               "https://api.supabase.com/v1/projects/$SUPABASE_PROJECT_REF/database/query" \
