@@ -8,7 +8,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import * as C from '../coeur.mjs';
-import { creerServeur, traiterWebhook, CHEMINS, CREATIONS_PAR_HEURE, CELIB_PAR_HEURE, CELIB_PAR_JOUR, REPRISES_PAR_JOUR, ENVOIS_AVANT_RESERVE, RAPPELS_PAR_JOUR, empreinte } from '../serveur.mjs';
+import { creerServeur, traiterWebhook, CHEMINS, CREATIONS_PAR_HEURE, CELIB_PAR_HEURE, CELIB_PAR_JOUR, REPRISES_PAR_JOUR, ENVOIS_AVANT_RESERVE, RAPPELS_PAR_JOUR, RELANCES_ACTIVES, REPRISES_ACTIVES, empreinte } from '../serveur.mjs';
 import { creerStockageMemoire } from '../stockage-rest.mjs';
 import { verifierSignature, signer, encoderFormulaire, creerStripe } from '../stripe.mjs';
 
@@ -88,7 +88,10 @@ function monter(options = {}) {
   const stockage = creerStockageMemoire();
   const stripe = options.sansStripe ? null : fauxStripe({ ...(options.stripe || {}), promo: options.promo || null });
   const courriel = fausseBoite();
-  const { traiter, marquerPaye, marquerRembourse } = creerServeur({ stockage, stripe, courriel, stripeTest: !!options.stripeTest, sel: 'sel', ...(options.maintenant ? { maintenant: options.maintenant } : {}), ...(options.promo ? { promo: options.promo } : {}) });
+  // Le rappel et la reprise sont arrêtés depuis le 22 novembre 2026
+  // (RELANCES_ACTIVES, REPRISES_ACTIVES) : leurs tests les rallument, pour que
+  // la mécanique reste juste le jour où on les remet.
+  const { traiter, marquerPaye, marquerRembourse } = creerServeur({ stockage, stripe, courriel, stripeTest: !!options.stripeTest, sel: 'sel', relances: options.relances ?? true, reprises: options.reprises ?? true, ...(options.maintenant ? { maintenant: options.maintenant } : {}), ...(options.promo ? { promo: options.promo } : {}) });
   const appel = (corps, ip = '1.2.3.4', interne = false) => traiter(corps, { ip, interne });
   return { stockage, stripe, courriel, traiter, appel, marquerPaye, marquerRembourse };
 }
@@ -1094,6 +1097,31 @@ test('reprise : sans les colonnes en base (migration pas encore passée), l\'adr
 });
 
 // ── L'adresse au départ (25 octobre 2026) ────────────────────────────────
+
+test('le rappel et la reprise arrêtés (22 novembre 2026) : relancer n\'envoie rien et ne marque rien', async () => {
+  assert.equal(RELANCES_ACTIVES, false);
+  assert.equal(REPRISES_ACTIVES, false);
+  let t = new Date('2026-11-22T10:00:00Z');
+  const plus = (h) => { t = new Date(t.getTime() + h * 3600e3); };
+  // Le serveur tel que la fonction le monte : sans les options des tests.
+  const stockage = creerStockageMemoire();
+  const courriel = fausseBoite();
+  const { traiter } = creerServeur({ stockage, stripe: null, courriel, sel: 'sel', maintenant: () => t });
+  const appel = (corps, interne = false) => traiter(corps, { ip: '1.2.3.4', interne });
+  const c = (await appel({ action: 'creer', lang: 'fr', moi: { prenom: 'Léa', genre: 'f' }, autre: { prenom: 'Tom', genre: 'h' }, email: 'Lea@Exemple.fr', rappel: true, reprise: true, consentement: true, majeur: true })).json;
+  await appel({ action: 'consentir', id: c.id, jeton: c.invitation, prenom: 'Tom', genre: 'h', email: 'tom@exemple.fr', rappel: true, reprise: true, consentement: true, majeur: true });
+  const avant = courriel.envoyes.length;
+  // Personne ne répond : 72 heures plus tard, une reprise serait due à chacun.
+  plus(72);
+  assert.deepEqual((await appel({ action: 'relancer' }, true)).json, { relances: 0, reprises: 0, arretes: true });
+  assert.equal(courriel.envoyes.length, avant, 'aucun e-mail');
+  const l = stockage.lignes.get(c.id);
+  assert.equal(l.a_reprise_le ?? null, null);
+  assert.equal(l.b_reprise_le ?? null, null);
+  assert.equal(l.relance_le ?? null, null);
+  // Toujours réservé à la clé de service.
+  assert.equal((await appel({ action: 'relancer' })).statut, 403);
+});
 
 test('adresse au départ : la reprise part à qui s\'arrête en route, créatrice comme partenaire', async () => {
   let t = new Date();

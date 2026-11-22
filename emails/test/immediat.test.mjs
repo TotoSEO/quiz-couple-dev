@@ -59,15 +59,18 @@ test('la publication : les modèles puis les réglages, en remplaçant ceux de l
   const base = { insert: async (table, lignes, o) => { ecrits.push({ table, lignes, o }); return lignes; } };
   const r = await publierImmediat(base, { instant: SOIR, mode: 'reel' });
   // Une langue du parcours sur deux versions (a, b) : six langues, douze modèles.
-  assert.deepEqual(r, { actif: true, modeles: 12 });
+  assert.deepEqual(r, { actif: true, modeles: 12, types: ['e1'] });
   assert.deepEqual(ecrits.map((e) => [e.table, e.o]), [
     ['emails_modeles', { conflit: 'type,lang,version' }],
     ['emails_reglages', { conflit: 'cle' }],
   ]);
   assert.equal(ecrits[1].lignes[0].cle, 'immediat');
   assert.equal(ecrits[1].lignes[0].valeur.actif, true);
+  // Les e-mails du parcours (22 novembre 2026 : l'e2 est arrêté), lus par la file du soir.
+  assert.equal(ecrits[1].lignes[1].cle, 'parcours');
+  assert.deepEqual(ecrits[1].lignes[1].valeur, { types: ['e1'] });
   ecrits.length = 0;
-  assert.deepEqual(await publierImmediat(base, { instant: SOIR, mode: 'arret' }), { actif: false, modeles: 0 });
+  assert.deepEqual(await publierImmediat(base, { instant: SOIR, mode: 'arret' }), { actif: false, modeles: 0, types: ['e1'] });
   assert.deepEqual(ecrits.map((e) => e.table), ['emails_reglages']);
 });
 

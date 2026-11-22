@@ -165,6 +165,19 @@ export const REPRISE_JOURS = 30;
 // le lien d'un rapport payé.
 export const REPRISES_PAR_JOUR = 40;
 export const ENVOIS_AVANT_RESERVE = 60;
+// Le rappel du lendemain et la reprise sont arrêtés depuis le 22 novembre
+// 2026 (Thomas : « Oui vas-y ») : sur les évaluations créées en trente
+// jours, 174 rappels n'avaient été suivis d'aucun paiement, et 181 reprises
+// d'aucun paiement et d'un seul partenaire revenu finir. Le « prêt », le lien
+// du rapport et les liens qu'on demande partent toujours. `relancer` ne
+// fait plus rien tant que ces deux valeurs sont fausses, et
+// bilan_relances_dues() ne compte plus rien
+// (20261122130000_bilan_sans_rappel.sql). Les remettre : les deux valeurs
+// ici, et le corps de bilan_relances_dues() de 20261024140000_bilan_reprise.sql
+// dans une nouvelle migration. creerServeur les prend aussi en options, pour
+// les tests de la mécanique.
+export const RELANCES_ACTIVES = false;
+export const REPRISES_ACTIVES = false;
 // Ce que l'évaluation envoie par Resend, compté jour par jour dans
 // bilan_compteurs.
 const ENVOIS_DU_JOUR = ['pret_envoye', 'relance_envoye', 'reprise_envoye', 'lien_envoye', 'retrouver_envoye', 'retrouver_aucun', 'envoi_ok', 'envoi_echec'];
@@ -359,7 +372,7 @@ function sansCle(message) {
 }
 const PROMO_COEUR = { code: C.PROMO_CODE, stripe: C.PROMO_STRIPE, pourcent: C.PROMO_POURCENT, fin: C.PROMO_FIN };
 
-export function creerServeur({ stockage, stripe = null, stripeTest = false, courriel = null, sel = '', maintenant = () => new Date(), promo: P = PROMO_COEUR }) {
+export function creerServeur({ stockage, stripe = null, stripeTest = false, courriel = null, sel = '', maintenant = () => new Date(), promo: P = PROMO_COEUR, relances: RELANCES = RELANCES_ACTIVES, reprises: REPRISES = REPRISES_ACTIVES }) {
 
   // Un compteur qui rate ne doit jamais faire échouer une réponse.
   async function compter(evenement, cle, montant) {
@@ -1250,10 +1263,14 @@ export function creerServeur({ stockage, stripe = null, stripeTest = false, cour
 
   // Réservé à bilan/relance.mjs (clé de service, vérifiée par index.ts) : le
   // rappel unique des rapports prêts depuis RELANCE_APRES_H heures et
-  // toujours pas débloqués.
+  // toujours pas débloqués, puis les reprises. Arrêtés depuis le 22 novembre
+  // 2026 (RELANCES_ACTIVES, REPRISES_ACTIVES) : rien ne part et rien n'est
+  // marqué, une ligne reste donc telle quelle.
   async function relancer(corps, ctx) {
     if (!ctx?.interne) return non(403, 'interne');
     if (!courriel) return non(503, 'courriel');
+    if (!RELANCES && !REPRISES) return ok({ relances: 0, reprises: 0, arretes: true });
+    if (!RELANCES) return ok({ relances: 0, ...(await reprendre()) });
     if (!stockage.aRelancer) return ok({ relances: 0 });
     const avant = new Date(maintenant().getTime() - RELANCE_APRES_H * 3600e3).toISOString();
     const lignes = await stockage.aRelancer(avant, 25);
@@ -1278,7 +1295,7 @@ export function creerServeur({ stockage, stripe = null, stripeTest = false, cour
       // Une seule fois, même quand un envoi a raté : jamais deux rappels.
       await stockage.maj(ligne.id, { jetons_mail: jetons, relance_le: maintenant().toISOString() });
     }
-    const reprises = await reprendre();
+    const reprises = REPRISES ? await reprendre() : { reprises: 0 };
     return ok({ relances: envoyes, vus, ...reprises });
   }
 

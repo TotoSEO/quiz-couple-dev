@@ -55,7 +55,7 @@
       "prenomManque": "Vul jullie twee voornamen in.",
       "accordManque": "Vink het vakje aan om verder te gaan.",
       "email": "Je e-mailadres",
-      "emailAide": "De link naar je rapport als pdf wordt naar dit adres gestuurd. Je kunt er ook je relatiecheck mee terugvinden als je de pagina sluit. We mailen je als je rapport klaar is, één keer als {{autre}} lang over het afmaken doet, en één keer als het rapport de volgende dag nog wacht.",
+      "emailAide": "De link naar je rapport als pdf wordt naar dit adres gestuurd. Je kunt er ook je relatiecheck mee terugvinden als je de pagina sluit. We mailen je als je rapport klaar is.",
       "emailSuggestion": "Bedoelde je {{email}}?",
       "emailFaux": "Dit e-mailadres lijkt niet compleet.",
       "emailManque": "Vul je e-mailadres in: daar sturen we de link naar het rapport als pdf naartoe.",
@@ -178,12 +178,12 @@
       "texte": "Je antwoorden zijn opgeslagen! We hoeven alleen nog te weten waar we het rapport naartoe sturen.",
       "bouton": "Verder",
       "revenir": "Terug naar de laatste vraag",
-      "aideTel": "De link naar je rapport als pdf wordt naar dit adres gestuurd. Je kunt er ook de relatiecheck mee terugvinden als je de pagina sluit. We mailen je als het rapport klaar is, en daarna nog één keer als het de volgende dag nog niet ontgrendeld is.",
+      "aideTel": "De link naar je rapport als pdf wordt naar dit adres gestuurd. Je kunt er ook de relatiecheck mee terugvinden als je de pagina sluit. We mailen je als het rapport klaar is.",
       "paireTitre": "Waar mogen we jullie rapport naartoe sturen?",
       "paireTexte": "Jullie antwoorden zijn opgeslagen! We hoeven alleen nog te weten waar we de link naar het rapport naartoe sturen.",
       "paireEmail": "E-mailadres van {{nom}}",
       "paireEmailFacultatif": "E-mailadres van {{nom}} (optioneel)",
-      "paireAide": "De link naar het rapport als pdf wordt naar deze adressen gestuurd. Jullie kunnen er ook de relatiecheck mee terugvinden als je de pagina sluit. We mailen één keer als het rapport de volgende dag nog niet ontgrendeld is.",
+      "paireAide": "De link naar het rapport als pdf wordt naar deze adressen gestuurd. Jullie kunnen er ook de relatiecheck mee terugvinden als je de pagina sluit.",
       "paireAideAutre": "Zonder adres voor {{autre}} gaat de link alleen naar het adres van {{moi}}."
     },
     "pause": {
@@ -309,7 +309,7 @@
         "accordAide": "Alleen jij ziet het rapport: {{autre}} wordt niet op de hoogte gebracht en krijgt niets toegestuurd.",
         "prixRappel": "De vragen zijn gratis. Het rapport kost {{prix}}, en je betaalt pas aan het einde.",
         "creer": "Mijn relatiecheck beginnen",
-        "emailAide": "De link naar je rapport als pdf wordt naar dit adres gestuurd. Je kunt er ook je relatiecheck mee terugvinden als je de pagina sluit, en we sturen je één herinnering als je rapport de volgende dag nog wacht.",
+        "emailAide": "De link naar je rapport als pdf wordt naar dit adres gestuurd. Je kunt er ook je relatiecheck mee terugvinden als je de pagina sluit.",
         "apportTitre": "Wat de relatiecheck alleen je oplevert",
         "apport": [
           "Jouw kijk op de twaalf thema's van je relatie, van het dagelijks leven tot intimiteit",
@@ -722,7 +722,7 @@
       "titre": "Mijn link per e-mail ontvangen",
       "placeholder": "jouw@email.com",
       "bouton": "Versturen",
-      "aide": "Zo vind je je antwoorden terug als je deze pagina sluit of een andere telefoon gebruikt. Maak je de vragen niet af, dan sturen we je één herinnering.",
+      "aide": "Zo vind je je antwoorden terug als je deze pagina sluit of een andere telefoon gebruikt.",
       "envoye": "Verstuurd: je link staat in je mailbox ({{email}}). Kijk ook even bij je spam.",
       "faux": "Dit e-mailadres lijkt niet compleet.",
       "trop": "Te veel verzendingen voor deze relatiecheck. Probeer het over een uur opnieuw."

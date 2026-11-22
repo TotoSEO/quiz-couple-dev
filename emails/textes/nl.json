@@ -117,6 +117,10 @@
     },
     "e2": {
       "lien": "Zin om het te proberen? [Doe de relatiecheck](evaluation)."
+    },
+    "livre": {
+      "noel": "**PS:** Ik heb ook een boek uitgebracht dat je samen invult: ‘[[livreTitre]]’. Er staan 100 dingen in om samen te beleven, met ruimte voor jullie foto's. Zoek je een kerstcadeau voor je partner? [Hier vind je het](livre).",
+      "cadeau": "**PS:** Ik heb ook een boek uitgebracht dat je samen invult: ‘[[livreTitre]]’. Er staan 100 dingen in om samen te beleven, met ruimte voor jullie foto's. Zoek je een cadeau voor je partner? [Hier vind je het](livre)."
     }
   }
 }

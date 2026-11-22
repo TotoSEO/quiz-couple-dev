@@ -46,8 +46,24 @@
   // téléphone ou dans le pied de page (audience.js garde le clic dans
   // qc-livre-clic, lu ici une fois puis effacé), sinon la page du site d'où
   // l'on vient, sinon le site (Google, Instagram...), sinon « direct ». Jamais
-  // l'adresse complète d'un autre site, seulement son nom.
+  // l'adresse complète d'un autre site, seulement son nom. Le lien d'un e-mail
+  // du parcours (le PS de l'e1, depuis le 22 novembre 2026) porte sa source
+  // dans l'adresse, « ?src=email-e1 » (emails/contenu.mjs, lienLivre) : lue
+  // une fois puis retirée de l'adresse, comme bilan.js le fait pour
+  // l'évaluation ; une autre valeur est retirée sans être comptée.
+  function depuisUnEmail() {
+    try {
+      var u = new URL(window.location.href);
+      if (!u.searchParams.has('src')) return null;
+      var s = u.searchParams.get('src') || '';
+      u.searchParams.delete('src');
+      if (window.history && history.replaceState) history.replaceState(history.state, '', u.pathname + u.search + u.hash);
+      return /^email-e[0-9]{1,2}(-[a-z]{1,12})?$/.test(s) ? s : null;
+    } catch (err) { return null; }
+  }
   function provenance() {
+    var email = depuisUnEmail();
+    if (email) return email;
     try {
       var m = JSON.parse(window.localStorage.getItem('qc-livre-clic') || 'null');
       window.localStorage.removeItem('qc-livre-clic');

@@ -15,7 +15,8 @@
 //      la file s'ils ne sont pas partis, marqués envoyés s'ils le sont ;
 //   4. les désinscriptions faites chez Brevo que le webhook aurait
 //      manquées (contacts du parcours bloqués ces trois derniers jours) ;
-//   5. la file du soir (emails_du_jour), coupée aux crédits de Brevo et au
+//   5. la file du soir (emails_du_jour), sans les e-mails que REGLAGES.types
+//      n'envoie plus (l'e2 depuis le 22 novembre 2026), coupée aux crédits de Brevo et au
 //      plafond du soir (montée en charge les premiers soirs, puis
 //      REGLAGES.plafond, jamais plus que REGLAGES.retenue quand elle est
 //      posée), puis, par e-mail et par langue : les lignes
@@ -34,7 +35,7 @@ import { REGLAGES } from './reglages.mjs';
 import { clientBrevo, creditsRestants } from './brevo.mjs';
 import { connexion } from './base.mjs';
 import { campagne, attributsContact, angleDe, versionDe, LANGUES, TYPES } from './contenu.mjs';
-import { publierImmediat, modeles } from './immediat.mjs';
+import { publierImmediat, modeles, typesDuParcours } from './immediat.mjs';
 import { corpsBrevo } from '../supabase/functions/_shared/emails/immediat.mjs';
 import { messageIdPropre } from '../supabase/functions/_shared/emails/evenements.mjs';
 
@@ -467,9 +468,18 @@ export async function passage({ base, brevo, maintenant = new Date(), mode = REG
     ? (await base.rpc('emails_du_jour', { p_limite: bilan.limite, p_maintenant: maintenant.toISOString() })) || []
     : [];
   bilan.file = file.length;
+  // La base ne met plus dans la file un e-mail arrêté (clé « parcours » de
+  // emails_reglages, écrite au début du passage) ; s'il en arrive un quand
+  // même (migration pas encore appliquée), il reste là, sans ligne d'envoi.
+  const actifs = typesDuParcours();
+  const ecartes = file.filter((x) => TYPES.includes(x.type) && !actifs.includes(x.type)).length;
+  if (ecartes) {
+    bilan.ecartes = ecartes;
+    journal(`${ecartes} e-mail(s) d'un type arrêté (${TYPES.filter((t) => !actifs.includes(t)).join(', ')}) laissé(s) de côté.`);
+  }
   const groupes = new Map();
   for (const x of file) {
-    if (!TYPES.includes(x.type) || !LANGUES.includes(x.lang)) continue;
+    if (!actifs.includes(x.type) || !LANGUES.includes(x.lang)) continue;
     const email = String(x.email).toLowerCase();
     const version = versionPour(x, email);
     const cle = `${x.type}:${x.lang}:${version}`;

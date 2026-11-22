@@ -55,7 +55,7 @@
       "prenomManque": "Schreib eure beiden Vornamen.",
       "accordManque": "Setz das Häkchen, um weiterzumachen.",
       "email": "Deine E-Mail",
-      "emailAide": "Der Link zu deinem Bericht als PDF geht an diese Adresse. Mit ihr findest du deine Analyse auch wieder, wenn du die Seite schließt. Wir schreiben dir, wenn dein Bericht bereit ist, einmal, falls {{autre}} sich mit dem Antworten Zeit lässt, und ein einziges Mal, falls er am nächsten Tag noch wartet.",
+      "emailAide": "Der Link zu deinem Bericht als PDF geht an diese Adresse. Mit ihr findest du deine Analyse auch wieder, wenn du die Seite schließt. Wir schreiben dir, wenn dein Bericht bereit ist.",
       "emailSuggestion": "Meintest du {{email}}?",
       "emailFaux": "Diese E-Mail-Adresse sieht nicht vollständig aus.",
       "emailManque": "Schreib deine E-Mail-Adresse: Dorthin geht der Link zum Bericht als PDF.",
@@ -178,12 +178,12 @@
       "texte": "Deine Antworten sind gespeichert! Jetzt fehlt nur noch die Adresse für den Bericht.",
       "bouton": "Weiter",
       "revenir": "Zurück zur letzten Frage",
-      "aideTel": "Der Link zu deinem Bericht als PDF geht an diese Adresse. Mit ihr findest du die Analyse auch wieder, wenn du die Seite schließt. Wir schreiben dir, wenn der Bericht bereit ist, und nur noch ein einziges Mal, falls er am nächsten Tag noch nicht freigeschaltet ist.",
+      "aideTel": "Der Link zu deinem Bericht als PDF geht an diese Adresse. Mit ihr findest du die Analyse auch wieder, wenn du die Seite schließt. Wir schreiben dir, wenn der Bericht bereit ist.",
       "paireTitre": "Wohin sollen wir euren Bericht schicken?",
       "paireTexte": "Eure Antworten sind gespeichert! Jetzt fehlt nur noch die Adresse für den Link zum Bericht.",
       "paireEmail": "E-Mail von {{nom}}",
       "paireEmailFacultatif": "E-Mail von {{nom}} (freiwillig)",
-      "paireAide": "Der Link zum Bericht als PDF geht an diese Adressen. Mit ihnen findet ihr die Analyse auch wieder, wenn ihr die Seite schließt. Wir schreiben euch nur ein einziges Mal, falls der Bericht am nächsten Tag noch nicht freigeschaltet ist.",
+      "paireAide": "Der Link zum Bericht als PDF geht an diese Adressen. Mit ihnen findet ihr die Analyse auch wieder, wenn ihr die Seite schließt.",
       "paireAideAutre": "Ohne Adresse für {{autre}} geht der Link nur an die Adresse von {{moi}}."
     },
     "pause": {
@@ -309,7 +309,7 @@
         "accordAide": "Nur du siehst den Bericht: {{autre}} erfährt nichts davon, und es wird nichts verschickt.",
         "prixRappel": "Die Fragen sind kostenlos. Der Bericht kostet {{prix}} und wird am Ende bezahlt.",
         "creer": "Meine Analyse beginnen",
-        "emailAide": "Der Link zu deinem Bericht als PDF geht an diese Adresse. Mit ihr findest du deine Analyse auch wieder, wenn du die Seite schließt, und wir schicken dir eine einzige Erinnerung, falls dein Bericht am nächsten Tag noch wartet.",
+        "emailAide": "Der Link zu deinem Bericht als PDF geht an diese Adresse. Mit ihr findest du deine Analyse auch wieder, wenn du die Seite schließt.",
         "apportTitre": "Was dir die Analyse allein bringt",
         "apport": [
           "Dein Blick auf die zwölf Bereiche eurer Beziehung, vom Alltag bis zur Intimität",
@@ -726,7 +726,7 @@
       "titre": "Meinen Link per E-Mail erhalten",
       "placeholder": "du@email.com",
       "bouton": "Senden",
-      "aide": "Um deine Antworten wiederzufinden, wenn du diese Seite schließt oder das Handy wechselst. Wenn du nicht fertig wirst, schicken wir dir eine einzige Erinnerung.",
+      "aide": "Um deine Antworten wiederzufinden, wenn du diese Seite schließt oder das Handy wechselst.",
       "envoye": "Erledigt: Dein Link ist in deinem Postfach ({{email}}). Schau auch im Spam-Ordner nach.",
       "faux": "Diese E-Mail-Adresse sieht nicht vollständig aus.",
       "trop": "Zu viele Sendungen für diese Analyse. Versuche es in einer Stunde noch einmal."

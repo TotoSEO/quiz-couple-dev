@@ -10,7 +10,7 @@
 //   node emails/immediat.mjs essai <adresse> [langues=fr] [prenom=Thomas] [versions=a,b]
 
 import { REGLAGES } from './reglages.mjs';
-import { LANGUES, VERSIONS, ANGLES, campagne, textes, typo, intro, famillesDesSources } from './contenu.mjs';
+import { LANGUES, VERSIONS, ANGLES, TYPES, campagne, textes, typo, intro, famillesDesSources } from './contenu.mjs';
 import { adresseVariante } from './essai.mjs';
 import { corpsBrevo } from '../supabase/functions/_shared/emails/immediat.mjs';
 
@@ -85,7 +85,17 @@ export function reglagesImmediat(mode = REGLAGES.mode) {
   };
 }
 
-// Écrit les réglages, et les modèles quand l'envoi immédiat est actif.
+// Les e-mails que le parcours envoie (REGLAGES.types ; l'e2 est arrêté depuis
+// le 22 novembre 2026) : ce que la base lit sous la clé « parcours » de
+// emails_reglages, pour que la file du soir ne prenne que ceux-là
+// (20261122120000_emails_sans_e2.sql). Sans liste dans les réglages, tous.
+export function typesDuParcours() {
+  return Array.isArray(REGLAGES.types) ? TYPES.filter((t) => REGLAGES.types.includes(t)) : [...TYPES];
+}
+export const reglagesParcours = () => ({ types: typesDuParcours() });
+
+// Écrit les réglages (l'envoi immédiat et les e-mails du parcours), et les
+// modèles quand l'envoi immédiat est actif.
 export async function publierImmediat(base, { instant = new Date(), mode = REGLAGES.mode } = {}) {
   const valeur = reglagesImmediat(mode);
   let n = 0;
@@ -94,8 +104,11 @@ export async function publierImmediat(base, { instant = new Date(), mode = REGLA
     await base.insert('emails_modeles', lignes, { conflit: 'type,lang,version' });
     n = lignes.length;
   }
-  await base.insert('emails_reglages', [{ cle: 'immediat', valeur, maj_le: instant.toISOString() }], { conflit: 'cle' });
-  return { actif: valeur.actif, modeles: n };
+  await base.insert('emails_reglages', [
+    { cle: 'immediat', valeur, maj_le: instant.toISOString() },
+    { cle: 'parcours', valeur: reglagesParcours(), maj_le: instant.toISOString() },
+  ], { conflit: 'cle' });
+  return { actif: valeur.actif, modeles: n, types: typesDuParcours() };
 }
 
 // Ce que emails_immediat_prendre rendrait pour une personne : de quoi

@@ -117,6 +117,10 @@
     },
     "e2": {
       "lien": "Se ti va: [fai la valutazione di coppia](evaluation)."
+    },
+    "livre": {
+      "noel": "**P.S.** Ho anche pubblicato un libro da riempire in due, «[[livreTitre]]». Propone 100 cose da vivere insieme, con lo spazio per le vostre foto. Se cerchi un regalo di Natale per il tuo partner, [eccolo qui](livre).",
+      "cadeau": "**P.S.** Ho anche pubblicato un libro da riempire in due, «[[livreTitre]]». Propone 100 cose da vivere insieme, con lo spazio per le vostre foto. Se cerchi un regalo per il tuo partner, [eccolo qui](livre)."
     }
   }
 }

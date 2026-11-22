@@ -117,6 +117,10 @@
     },
     "e2": {
       "lien": "Wenn du Lust hast: [die Beziehungsanalyse machen](evaluation)."
+    },
+    "livre": {
+      "noel": "**PS:** Ich habe auch ein Buch herausgebracht, das man zu zweit ausfüllt: „[[livreTitre]]“. Darin stehen 100 Dinge, die ihr zusammen erleben könnt, mit Platz für eure Fotos. Wenn du ein Weihnachtsgeschenk für deinen Partner oder deine Partnerin suchst, [hier ist es](livre).",
+      "cadeau": "**PS:** Ich habe auch ein Buch herausgebracht, das man zu zweit ausfüllt: „[[livreTitre]]“. Darin stehen 100 Dinge, die ihr zusammen erleben könnt, mit Platz für eure Fotos. Wenn du ein Geschenk für deinen Partner oder deine Partnerin suchst, [hier ist es](livre)."
     }
   }
 }

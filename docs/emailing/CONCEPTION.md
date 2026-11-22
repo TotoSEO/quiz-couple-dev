@@ -1000,3 +1000,87 @@ qu'elle le demande : désinscrite du parcours (la synchro du soir l'efface chez
 Brevo), rappels et reprises de ses évaluations coupés (jamais le lien d'un
 rapport payé), adresse effacée de la liste d'attente. Une adresse désinscrite
 est effacée trois mois après, comme le dit la politique de confidentialité.
+
+## 22 novembre 2026 : ce que rapportent les e-mails, et ce qui change
+
+Thomas : « Est ce que nos mails fonctionnent ? Ça ramène des gens et du
+chiffre ? », puis, sur les quatre changements proposés : « Oui vas-y ». Lu
+le 22 novembre par `bilan-chiffres.yml` (30 jours) et l'action `verif` de
+`brevo-reglages.yml`.
+
+### Les chiffres
+
+- **Ils arrivent.** Sur 30 jours, 5 544 `e1` envoyés (4 109 dans la minute)
+  et 5 242 remis, 1 515 `e2` envoyés et 1 507 remis. 3 désinscriptions, et
+  de une plainte (les comptes de la base) à trois (les envois et Brevo). Les
+  rebonds durs (176) viennent d'adresses mal tapées à la
+  porte des résultats ; ils effacent l'adresse.
+- **Seul l'`e1` dans la minute est lu.** Brevo compte 18,5 % d'ouvertures
+  pour la maquette et 18,8 % pour la version sobre (avec les ouvertures
+  automatiques d'Apple Mail : un peu moins en vrai). Les `e1` du soir, en
+  campagne, font 2 à 5 % (25 vues pour 1 367 remis chez Gmail). L'`e2`, parti
+  par l'API transactionnelle depuis le 3 novembre : 1 150 remis, 10
+  ouvertures, 3 clics. Et il ne partait qu'en anglais : la file du soir sert
+  l'anglais d'abord et la retenue laisse partir 100 e-mails par soir, si bien
+  que 3 048 `e2` d'autres langues attendaient sans jamais partir.
+- **Ce que la page de l'évaluation en a vu.** Depuis le 25 octobre (le test
+  A/B) : `email-e1` 45 visites, 5 « Commencer », 4 évaluations, aucune vente ;
+  `email-e1-sobre` 133 visites, 14 « Commencer », 6 évaluations (5 seul(e)),
+  une page de paiement ouverte, une vente (le point, 4,90 €) ; `email-e2`
+  2 visites ; `email-e2-sobre` aucune. Sur le mois, l'évaluation a fait 22
+  ventes et 141,38 € : les e-mails du parcours en ont amené 4,90 €.
+- **Le test A/B est tranché.** Ouvertures égales, mais la version sobre fait
+  128 clics contre 53 sur l'`e1` dans la minute, 133 visites de l'évaluation
+  contre 45, et la seule vente.
+
+### Ce qui change
+
+- **La version sobre pour tout le monde** : `ab: false`, `version: 'b'`
+  (emails/reglages.mjs). L'e1 dans la minute la prend dès que la base relit
+  ses réglages (passage du soir, ou action « installer »).
+- **L'`e2` est arrêté** : `types: ['e1']`. Envoyer chaque soir des e-mails
+  que personne n'ouvre abîme la réputation du domaine chez Gmail, dont l'`e1`
+  et les e-mails du livre (Noël, Saint-Valentin) ont besoin. Chaque passage
+  du soir écrit la liste sous la clé « parcours » de `emails_reglages`, et la
+  file du soir ne prend plus que ces e-mails
+  (`20261122120000_emails_sans_e2.sql`, `emails_types_parcours()`) ; l'envoi
+  du soir écarte aussi un `e2` qui arriverait quand même (`ecartes` dans le
+  bilan du passage). `emails_file` dit `e2_arrete`, que l'admin et `verif`
+  affichent (« e2 arrêté »). La mécanique de l'`e2` reste, avec ses tests :
+  on le remet par une PR (`types: ['e1', 'e2']`).
+- **Le livre en PS de l'`e1` sobre** (`psLivre` et `lienLivre` de
+  emails/contenu.mjs, textes `sobre.livre` des six fichiers) : dans les
+  langues où le livre est en vente (`LIVRE` de config.js, le français et
+  l'anglais), à la place de la phrase de la page de vente. Le titre vient de
+  l'édition (`livre.titre` de `<langue>/livre.json`), le lien mène à la page
+  du livre avec `?src=email-e1`, que la mesure de la page compte (livre.js,
+  `depuisUnEmail`, puis retiré de l'adresse) et que l'onglet Livre de l'admin
+  écrit « E-mail de bienvenue ». Jamais un lien vers Amazon ni le nom
+  d'Amazon dans l'e-mail : le règlement des Partenaires n'accepte pas les
+  liens de Partenaire dans un e-mail de ce genre, ni ses marques. La phrase
+  parle du cadeau de Noël tant que la page du livre en parle le lendemain
+  (`livreNoelActif` le lendemain du passage : jusqu'au passage du 23
+  décembre), d'un cadeau tout court ensuite. Une langue ajoutée au livre
+  prend son PS d'elle-même : les textes des quatre autres langues sont déjà
+  écrits.
+- **La politique de confidentialité** ne dit plus « un second trois jours
+  plus tard » (`privacy.emailsItems`, six langues), ni le rappel et la
+  reprise de l'évaluation (`privacy.bilanItems`, voir la section du même jour
+  de docs/bilan/CONCEPTION.md).
+
+Vérification : `node --test emails/test/*.test.mjs` (78 tests, dont le PS du
+livre, l'`e2` arrêté et les réglages du jour), la file du soir sur un
+Postgres en mémoire (PGlite, `scratchpad/pglite/sql-e2.mjs` de la session :
+les migrations du parcours dans l'ordre d'emails-base.yml, l'`e2` présent
+avant et absent après, la clé rejouée, `e2_arrete`), et la page du livre
+ouverte depuis le lien de l'e-mail dans Chromium
+(`scratchpad/mails22/livre-src.mjs` : source comptée, adresse nettoyée, une
+valeur inconnue ignorée).
+
+### À relire
+
+Les clics vers la page du livre (`email-e1` dans l'onglet Livre), et
+l'ouverture de l'`e1` dans `verif`. Si les ouvertures du soir ne remontent
+pas, les `e1` du soir peuvent passer par l'API transactionnelle comme l'`e2`
+l'a fait (`transactionnel`), mais l'`e1` dans la minute en couvre déjà
+presque tous.

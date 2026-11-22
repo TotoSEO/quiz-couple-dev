@@ -117,6 +117,10 @@
     },
     "e2": {
       "lien": "Si te apetece: [hacer la evaluación de pareja](evaluation)."
+    },
+    "livre": {
+      "noel": "**PD:** también he publicado un libro para rellenar en pareja, «[[livreTitre]]». Propone 100 cosas para vivir juntos, con sitio para vuestras fotos. Si buscas un regalo de Navidad para tu pareja, [aquí lo tienes](livre).",
+      "cadeau": "**PD:** también he publicado un libro para rellenar en pareja, «[[livreTitre]]». Propone 100 cosas para vivir juntos, con sitio para vuestras fotos. Si buscas un regalo para tu pareja, [aquí lo tienes](livre)."
     }
   }
 }

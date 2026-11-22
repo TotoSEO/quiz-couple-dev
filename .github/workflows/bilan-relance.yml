@@ -7,13 +7,17 @@ name: Évaluation de couple · rappel
 # Qui le lance : la base elle-même, par pg_cron deux fois par heure,
 # seulement quand un rappel est dû (bilan_lancer_relance →
 # social_declencher_workflow, le même jeton que l'horloge des réseaux). Le
-# « schedule » ci-dessous n'est qu'un secours. Le relancer à la main est sans
-# risque : un rappel ne part jamais deux fois (relance_le).
+# relancer à la main est sans risque : un rappel ne part jamais deux fois
+# (relance_le).
+#
+# Arrêté depuis le 22 novembre 2026 : le rappel et la reprise ne partent plus
+# (RELANCES_ACTIVES et REPRISES_ACTIVES de serveur.mjs), bilan_relances_dues()
+# ne compte plus rien (20261122130000_bilan_sans_rappel.sql), donc pg_cron ne
+# le lance plus, et son horaire de secours (« schedule », quatre passages par
+# jour) est retiré. Le lancer à la main ne fait rien.
 
 on:
   workflow_dispatch:
-  schedule:
-    - cron: '29 */6 * * *'
 
 concurrency:
   group: bilan-relance

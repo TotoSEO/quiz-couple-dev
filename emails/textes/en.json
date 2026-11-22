@@ -117,6 +117,10 @@
     },
     "e2": {
       "lien": "If you feel like it: [take the relationship assessment](evaluation)."
+    },
+    "livre": {
+      "noel": "**PS:** I've also published a book you fill in together, “[[livreTitre]].” It has 100 things to do as a couple, with room for your photos. If you're looking for a Christmas gift for your partner, [here it is](livre).",
+      "cadeau": "**PS:** I've also published a book you fill in together, “[[livreTitre]].” It has 100 things to do as a couple, with room for your photos. If you're looking for a gift for your partner, [here it is](livre)."
     }
   }
 }

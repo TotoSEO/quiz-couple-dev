@@ -3,7 +3,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import {
-  TYPES, LANGUES, ANGLES, VERSIONS, MARQUEURS_BREVO, LANGUES_SANS_PRIX, campagne, attributsContact, angleDe, lien, verifier, pourContact, typo, prixDu, versionDe,
+  TYPES, LANGUES, ANGLES, VERSIONS, MARQUEURS_BREVO, LANGUES_SANS_PRIX, LANGUES_LIVRE, campagne, attributsContact, angleDe, lien, lienLivre, psLivre, verifier, pourContact, typo, prixDu, versionDe,
 } from '../contenu.mjs';
 import { CAPTURE_PAGES, BILAN_ENTREES, LANGUAGES } from '../../static-site/build/config.js';
 
@@ -278,10 +278,13 @@ test('la version sobre : sans image ni ticket, un seul lien vers l\'évaluation,
         assert.equal(c.apercu, a.apercu);
         assert.equal(a.expediteur, null);
         // Les liens : l'évaluation une fois (avec la source de la version
-        // sobre), la désinscription et les mentions légales.
+        // sobre), la désinscription et les mentions légales ; et dans l'e1
+        // d'une langue où le livre est en vente, la page du livre (22 novembre 2026).
         const liens = [...c.html.matchAll(/href="([^"]+)"/g)].map((m) => m[1]);
-        assert.equal(liens.length, 3, `${type} ${lang} : ${liens.join(' ')}`);
+        const avecLivre = type === 'e1' && LANGUES_LIVRE.includes(lang);
+        assert.equal(liens.length, avecLivre ? 4 : 3, `${type} ${lang} : ${liens.join(' ')}`);
         assert.equal(liens.filter((x) => x.includes(`src=email-${type}-sobre`)).length, 1);
+        if (avecLivre) assert.equal(liens.filter((x) => x === lienLivre(lang)).length, 1, `${lang} : lien du livre`);
         assert.ok(liens.includes('{{ unsubscribe }}'));
         // Le prix, dit dans une phrase, et la réduction seulement quand elle vaut.
         const p = prixDu(lang, SOIR, promo, REDUC);
@@ -299,10 +302,59 @@ test('la version sobre : sans image ni ticket, un seul lien vers l\'évaluation,
       }
     }
   }
-  // Le PS de Thomas reste dans l'e1 sobre, la question d'exemple dans l'e2 sobre.
-  const e1 = campagne('e1', 'fr', SOIR, { version: 'b' });
-  assert.ok(e1.html.includes('<strong>PS\u00a0:</strong> Les couples oublient trop souvent'));
+  // Le PS de Thomas reste dans l'e1 sobre d'une langue sans le livre (en
+  // français, le livre l'a remplacé le 22 novembre 2026), la question
+  // d'exemple dans l'e2 sobre.
+  const e1 = campagne('e1', 'it', SOIR, { version: 'b' });
+  assert.ok(e1.html.includes('<strong>P.S.</strong> Le coppie dimenticano troppo spesso'), e1.html.slice(-1200));
+  assert.ok(campagne('e1', 'fr', SOIR, { version: 'b' }).html.includes('<strong>PS\u00a0:</strong> j\'ai aussi sorti un livre'));
   const e2 = campagne('e2', 'fr', SOIR, { version: 'b' });
   assert.ok(e2.html.includes('<strong>Votre argent dans le couple, idéalement...</strong><br>– Tout en commun'));
   assert.ok(e2.html.includes('«\u00a0Tout en commun\u00a0» et l\'autre «\u00a0Chacun son argent\u00a0»'));
+});
+
+test('le livre en PS de l\'e1 sobre (22 novembre 2026) : en français et en anglais, vers la page du livre, jamais Amazon', () => {
+  const lire = (chemin) => JSON.parse(readFileSync(new URL(chemin, import.meta.url), 'utf8'));
+  assert.deepEqual(LANGUES_LIVRE, ['fr', 'en']);
+  const esc = (x) => x.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+  const NOV = new Date('2026-11-22T17:55:00Z');
+  const VEILLE = new Date('2026-12-23T17:55:00Z');
+  const NOEL = new Date('2026-12-24T17:55:00Z');
+  const FEV = new Date('2027-02-01T17:55:00Z');
+  for (const lang of LANGUES) {
+    const t = lireTextes(lang);
+    const accroche = lire(`../../${lang}/bilan.json`).lp.prix.accroche;
+    const e1 = campagne('e1', lang, NOV, { version: 'b' });
+    if (!LANGUES_LIVRE.includes(lang)) {
+      // Pas de livre dans la langue : le PS reste la phrase de la page de vente.
+      assert.equal(e1.livre, false, lang);
+      assert.equal(psLivre(lang, NOV), null, lang);
+      assert.ok(e1.html.includes(esc(typo(accroche, lang))), `${lang} : PS de la page de vente`);
+      assert.ok(!/livre-quiz-couple|bucket-list-book/.test(e1.html), `${lang} : lien du livre`);
+      continue;
+    }
+    const titre = lire(`../../${lang}/livre.json`).livre.titre;
+    assert.equal(e1.livre, true, lang);
+    assert.ok(e1.html.includes(esc(typo(titre, lang))), `${lang} : titre de l'édition`);
+    assert.ok(!e1.html.includes(esc(typo(accroche, lang))), `${lang} : un seul PS`);
+    assert.ok(e1.html.includes(`href="${esc(lienLivre(lang))}"`), `${lang} : lien`);
+    assert.match(lienLivre(lang), /^https:\/\/quiz-couple\.com\/(en\/)?[a-z-]+\/\?src=email-e1$/);
+    // Jamais un lien vers Amazon ni le nom d'Amazon dans l'e-mail (règlement des Partenaires).
+    assert.ok(!/amazon|amzn|link\.amazon/i.test(e1.html), `${lang} : Amazon`);
+    // Noël tant que la page du livre en parle le lendemain, un cadeau tout court ensuite.
+    const phrase = (instant) => campagne('e1', lang, instant, { version: 'b' }).html;
+    // La dernière phrase, jusqu'au lien : « Si tu cherches un cadeau de Noël pour... ».
+    const fin = (x) => esc(typo(x.split('. ').pop().split('[')[0], lang));
+    const noel = fin(t.sobre.livre.noel);
+    const cadeau = fin(t.sobre.livre.cadeau);
+    assert.ok(phrase(NOV).includes(noel) && /No[eë]l|Christmas/.test(phrase(NOV)), `${lang} : Noël en novembre`);
+    assert.ok(/No[eë]l|Christmas/.test(phrase(VEILLE)), `${lang} : Noël le 23 au soir`);
+    assert.ok(!/No[eë]l|Christmas/.test(phrase(NOEL)), `${lang} : plus Noël le 24 au soir`);
+    assert.ok(!/No[eë]l|Christmas/.test(phrase(FEV)), `${lang} : pas Noël en février`);
+    assert.ok(phrase(FEV).includes(cadeau), `${lang} : la phrase du cadeau`);
+    assert.ok(verifier(e1.html));
+    // Ni dans l'e2, ni dans la maquette.
+    assert.ok(!campagne('e2', lang, NOV, { version: 'b' }).html.includes(esc(typo(titre, lang))), `${lang} : e2`);
+    assert.ok(!campagne('e1', lang, NOV).html.includes(esc(typo(titre, lang))), `${lang} : maquette`);
+  }
 });
