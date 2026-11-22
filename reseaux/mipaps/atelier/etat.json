@@ -1,12 +1,12 @@
 {
-  "genere_le": "2026-11-21T11:00:58.383Z",
+  "genere_le": "2026-11-22T03:17:52.139Z",
   "langue": "fr",
   "compte": {
     "nom": "mipaps_stories",
     "actif": true
   },
   "fuseau": "Europe/Paris",
-  "aujourdhui": "2026-11-21",
+  "aujourdhui": "2026-11-22",
   "melange": {
     "midi": {
       "1": null,
@@ -28,39 +28,12 @@
     },
     "matin": "mipaps-anime"
   },
-  "reserve_jours": 131,
+  "reserve_jours": 130,
   "a_remplir": [],
   "a_corriger": [],
   "hors_grille": [],
   "refuses": [],
   "recents_et_prevus": [
-    {
-      "jour": "2026-10-22",
-      "creneau": "matin",
-      "gabarit": "mipaps-reel",
-      "categorie": "mipaps-anime",
-      "statut": "publie",
-      "texte": null,
-      "erreur": null
-    },
-    {
-      "jour": "2026-10-22",
-      "creneau": "midi",
-      "gabarit": "mipaps-post",
-      "categorie": "mipaps-post",
-      "statut": "publie",
-      "texte": "tu dors ?",
-      "erreur": null
-    },
-    {
-      "jour": "2026-10-22",
-      "creneau": "soir",
-      "gabarit": "mipaps-statique",
-      "categorie": "mipaps-statique",
-      "statut": "publie",
-      "texte": "t'es la personne à qui je veux raconter les trucs nuls de ma journée",
-      "erreur": null
-    },
     {
       "jour": "2026-10-23",
       "creneau": "matin",
@@ -867,7 +840,7 @@
       "creneau": "soir",
       "gabarit": "mipaps-reel",
       "categorie": "mipaps-anime",
-      "statut": "rendu",
+      "statut": "publie",
       "texte": null,
       "erreur": null
     },
@@ -2540,8 +2513,8 @@
   "idees": [],
   "prochain_creneau": {
     "mipaps-anime": {
-      "jour": "2026-11-21",
-      "creneau": "soir"
+      "jour": "2026-11-23",
+      "creneau": "matin"
     },
     "mipaps-statique": null,
     "mipaps-histoire": null,
@@ -3771,18 +3744,36 @@
       "jour": "2026-11-14",
       "creneau": "matin",
       "theme": null
+    },
+    {
+      "variante_id": "69388f9a-ddf3-4ace-abe8-b43b37fa2021",
+      "releve": "j7",
+      "vues": 382,
+      "portee": 322,
+      "likes": 21,
+      "commentaires": 0,
+      "partages": 1,
+      "enregistrements": 2,
+      "releve_le": "2026-11-22T03:17:44.069232+00:00",
+      "publie_le": "2026-11-14T15:50:10.784+00:00",
+      "categorie": "mipaps-anime",
+      "format": "reel",
+      "gabarit": "mipaps-reel",
+      "jour": "2026-11-14",
+      "creneau": "soir",
+      "theme": null
     }
   ],
   "statistiques_par_categorie": [
     {
       "categorie": "mipaps-anime",
-      "posts": 38,
-      "vues_mediane": 743,
-      "vues_moyenne": 1127,
+      "posts": 39,
+      "vues_mediane": 727,
+      "vues_moyenne": 1108,
       "vues_max": 3437,
-      "partages": 216,
-      "enregistrements": 66,
-      "likes": 1550,
+      "partages": 217,
+      "enregistrements": 68,
+      "likes": 1571,
       "commentaires": 0
     },
     {
