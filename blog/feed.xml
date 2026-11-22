@@ -6,12 +6,21 @@
     <atom:link href="https://quiz-couple.com/blog/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Les articles de Quiz Couple sur la vie de couple, la psychologie et les histoires d&#39;amour.</description>
     <language>fr</language>
-    <lastBuildDate>Sat, 21 Nov 2026 11:28:00 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 22 Nov 2026 07:30:00 GMT</lastBuildDate>
     <image>
       <url>https://quiz-couple.com/apple-touch-icon.png</url>
       <title>Quiz Couple · Le blog</title>
       <link>https://quiz-couple.com/blog/</link>
     </image>
+    <item>
+      <title>Faire chambre à part : sur Quiz Couple, 60 % sont contre</title>
+      <link>https://quiz-couple.com/blog/faire-chambre-a-part-en-couple/</link>
+      <guid isPermaLink="true">https://quiz-couple.com/blog/faire-chambre-a-part-en-couple/</guid>
+      <pubDate>Sun, 22 Nov 2026 07:30:00 GMT</pubDate>
+      <category>En chiffres</category>
+      <description>Dormir dans des chambres séparées quand on en a besoin ? Sur Quiz Couple, 769 votes : 60 % sont contre. Et 69 % refusent même quand l&#39;autre ronfle.</description>
+      <media:content url="https://quiz-couple.com/blog/faire-chambre-a-part-en-couple.webp" medium="image" type="image/webp" width="1536" height="864"/>
+    </item>
     <item>
       <title>Gaslighting : quand on te fait douter de ta propre réalité</title>
       <link>https://quiz-couple.com/blog/gaslighting/</link>
@@ -272,15 +281,6 @@
       <category>Vie de couple</category>
       <description>L&#39;intimité, ce n&#39;est pas que sous la couette : c&#39;est aussi dans les questions qu&#39;on ose se poser. 65 questions intimes, graduées du tendre au brûlant.</description>
       <media:content url="https://quiz-couple.com/blog/questions-intimes-couple.webp" medium="image" type="image/webp" width="1536" height="1024"/>
-    </item>
-    <item>
-      <title>Le manipulateur narcissique : comment le repérer simplement</title>
-      <link>https://quiz-couple.com/blog/manipulateur-narcissique/</link>
-      <guid isPermaLink="true">https://quiz-couple.com/blog/manipulateur-narcissique/</guid>
-      <pubDate>Tue, 15 Sep 2026 11:53:00 GMT</pubDate>
-      <category>Psychologie</category>
-      <description>Ses techniques dans l&#39;ordre où il les sort, ses vrais points faibles, l&#39;effet du silence sur lui et ses réactions quand on le démasque. Le mode d&#39;emploi complet.</description>
-      <media:content url="https://quiz-couple.com/blog/manipulateur-narcissique.webp" medium="image" type="image/webp" width="1536" height="1024"/>
     </item>
   </channel>
 </rss>
