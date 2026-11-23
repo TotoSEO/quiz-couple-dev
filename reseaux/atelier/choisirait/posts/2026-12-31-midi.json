@@ -12,17 +12,17 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "lui",
+        "pour": "elle",
         "etiquette": "Drinks edition",
-        "accroche": "What would he choose?",
-        "consigne": "Pick A, B or C for him, then send it to him!",
+        "accroche": "What would she choose?",
+        "consigne": "One photo per round: the one she would pick!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "What would he order at the bar?",
+            "question": "What would she order at the bar?",
             "options": [
               {
                 "texte": "Mojito",
@@ -39,7 +39,7 @@
             ]
           },
           {
-            "question": "Which drink would he get?",
+            "question": "Which drink would she get?",
             "options": [
               {
                 "texte": "Bubble tea",
@@ -56,7 +56,7 @@
             ]
           },
           {
-            "question": "Which coffee would he order?",
+            "question": "Which coffee would she order?",
             "options": [
               {
                 "texte": "Espresso",
@@ -74,15 +74,15 @@
           }
         ],
         "fin": {
-          "question": "Now send it to him. Did you guess right?",
-          "bouton": "Send this to him",
+          "question": "Got her 3 picks? Send it and see!",
+          "bouton": "Send this to her",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Drinks edition. Guess first, send it after. Then compare.\n\nSend this to him",
+      "legende": "Drinks edition. Pick for her, then let her prove you wrong.\n\nSend this to her",
       "hashtags": [
         "#couplequiz",
-        "#boyfriendquiz",
+        "#girlfriendquiz",
         "#thisorthat",
         "#cocktails",
         "#quizcouple"

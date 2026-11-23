@@ -15,7 +15,7 @@
         "pour": "lui",
         "etiquette": "Weekend edition",
         "accroche": "What would he choose?",
-        "consigne": "One photo per round: the one he would pick!",
+        "consigne": "Pick A, B or C for him, then send it to him!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
@@ -79,7 +79,7 @@
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Weekend edition. Write down his three letters before you send it.\n\nSend this to him",
+      "legende": "Weekend edition. He will swear you got at least one wrong.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
         "#boyfriendquiz",

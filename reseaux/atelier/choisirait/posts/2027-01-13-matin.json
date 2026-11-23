@@ -12,79 +12,79 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "elle",
-        "etiquette": "Dream home edition",
-        "accroche": "What would she choose?",
-        "consigne": "One photo per round: the one she would pick!",
+        "pour": "lui",
+        "etiquette": "Morning edition",
+        "accroche": "What would he choose?",
+        "consigne": "Pick A, B or C for him, then send it to him!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which dream house would she pick?",
+            "question": "How would he have his eggs?",
             "options": [
               {
-                "texte": "Lake house",
-                "image": "choisirait/maison/maison-lac.webp"
+                "texte": "Omelette",
+                "image": "choisirait/oeufs/omelette.webp"
               },
               {
-                "texte": "Castle",
-                "image": "choisirait/maison/chateau.webp"
+                "texte": "Scrambled",
+                "image": "choisirait/oeufs/brouilles.webp"
               },
               {
-                "texte": "Beach house",
-                "image": "choisirait/maison/maison-plage.webp"
+                "texte": "Poached",
+                "image": "choisirait/oeufs/poche.webp"
               }
             ]
           },
           {
-            "question": "Which view would she wake up to?",
+            "question": "Which breakfast would he choose?",
             "options": [
               {
-                "texte": "Forest",
-                "image": "choisirait/vue/foret.webp"
+                "texte": "Pancakes",
+                "image": "choisirait/petitdej/pancakes.webp"
               },
               {
-                "texte": "Rice fields",
-                "image": "choisirait/vue/rizieres.webp"
+                "texte": "Eggs Benedict",
+                "image": "choisirait/petitdej/benedict.webp"
               },
               {
-                "texte": "Tropical beach",
-                "image": "choisirait/vue/plage-tropicale.webp"
+                "texte": "Avocado toast",
+                "image": "choisirait/petitdej/avocado-toast.webp"
               }
             ]
           },
           {
-            "question": "Which cat would she adopt?",
+            "question": "What would he grab at the bakery?",
             "options": [
               {
-                "texte": "Sphynx",
-                "image": "choisirait/chat/sphynx.webp"
+                "texte": "Donut",
+                "image": "choisirait/boulangerie/donut.webp"
               },
               {
-                "texte": "Siamese",
-                "image": "choisirait/chat/siamois.webp"
+                "texte": "Baguette",
+                "image": "choisirait/boulangerie/baguette.webp"
               },
               {
-                "texte": "Bengal",
-                "image": "choisirait/chat/bengal.webp"
+                "texte": "Bagel",
+                "image": "choisirait/boulangerie/bagel.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Got her 3 picks? Send it and see!",
-          "bouton": "Send this to her",
+          "question": "Now send it to him. Did you guess right?",
+          "bouton": "Send this to him",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Dream home edition. Pick for her, then let her prove you wrong.\n\nSend this to her",
+      "legende": "Morning edition. One letter per question, then send it to him.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
-        "#girlfriendquiz",
+        "#boyfriendquiz",
         "#thisorthat",
-        "#dreamhome",
+        "#breakfast",
         "#quizcouple"
       ]
     }

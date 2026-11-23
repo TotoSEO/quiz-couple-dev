@@ -12,79 +12,79 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "elle",
-        "etiquette": "Luxury edition",
-        "accroche": "What would she choose?",
-        "consigne": "Choose the photo she would pick. 3 rounds!",
+        "pour": "lui",
+        "etiquette": "Game night edition",
+        "accroche": "What would he choose?",
+        "consigne": "One photo per round: the one he would pick!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which watch would she wear?",
+            "question": "What would he order at 2 a.m.?",
             "options": [
               {
-                "texte": "Casio G-Shock",
-                "image": "choisirait/montre/g-shock.webp"
+                "texte": "Kebab",
+                "image": "choisirait/fastfood/kebab.webp"
               },
               {
-                "texte": "Rolex Submariner",
-                "image": "choisirait/montre/rolex.webp"
+                "texte": "Instant noodles",
+                "image": "choisirait/fastfood/nouilles.webp"
               },
               {
-                "texte": "Casio digital",
-                "image": "choisirait/montre/casio.webp"
+                "texte": "Tacos",
+                "image": "choisirait/fastfood/tacos.webp"
               }
             ]
           },
           {
-            "question": "How would she travel with you?",
+            "question": "Which drink would he get?",
             "options": [
               {
-                "texte": "Hot air balloon",
-                "image": "choisirait/voyage/montgolfiere.webp"
+                "texte": "Bubble tea",
+                "image": "choisirait/boisson/bubble-tea.webp"
               },
               {
-                "texte": "Motorbike",
-                "image": "choisirait/moto/bmw-gs.webp"
+                "texte": "Lemonade",
+                "image": "choisirait/boisson/limonade.webp"
               },
               {
-                "texte": "Private jet",
-                "image": "choisirait/voyage/jet.webp"
+                "texte": "Smoothie",
+                "image": "choisirait/boisson/smoothie.webp"
               }
             ]
           },
           {
-            "question": "Where would she book a weekend?",
+            "question": "Which console would he pick?",
             "options": [
               {
-                "texte": "Log cabin",
-                "image": "choisirait/weekend/chalet-bois.webp"
+                "texte": "PlayStation 5",
+                "image": "choisirait/console/ps5.webp"
               },
               {
-                "texte": "Beach bungalow",
-                "image": "choisirait/weekend/bungalow-plage.webp"
+                "texte": "Gaming PC",
+                "image": "choisirait/console/pc-gamer.webp"
               },
               {
-                "texte": "Houseboat",
-                "image": "choisirait/weekend/peniche.webp"
+                "texte": "PlayStation 2",
+                "image": "choisirait/console/ps2.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Got her 3 picks? Send it and see!",
-          "bouton": "Send this to her",
+          "question": "Now send it to him. Did you guess right?",
+          "bouton": "Send this to him",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Luxury edition. Your answers first, then her reaction.\n\nSend this to her",
+      "legende": "Game night edition. Easy for you? Then the next one is for him.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
-        "#girlfriendquiz",
+        "#boyfriendquiz",
         "#thisorthat",
-        "#luxurylife",
+        "#gamenight",
         "#quizcouple"
       ]
     }

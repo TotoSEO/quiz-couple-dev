@@ -12,79 +12,79 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "lui",
-        "etiquette": "Travel edition",
-        "accroche": "What would he choose?",
-        "consigne": "Answer for him: A, B or C? Then send it!",
+        "pour": "elle",
+        "etiquette": "Sweet tooth edition",
+        "accroche": "What would she choose?",
+        "consigne": "Pick A, B or C for her, then send it to her!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which city would he take you to?",
+            "question": "Which ice cream would she get?",
             "options": [
               {
-                "texte": "Venice",
-                "image": "choisirait/ville/venise.webp"
+                "texte": "Affogato",
+                "image": "choisirait/glace/affogato.webp"
               },
               {
-                "texte": "Amsterdam",
-                "image": "choisirait/ville/amsterdam.webp"
+                "texte": "Popsicle",
+                "image": "choisirait/glace/esquimau.webp"
               },
               {
-                "texte": "New York",
-                "image": "choisirait/ville/new-york.webp"
+                "texte": "Sundae",
+                "image": "choisirait/glace/sundae.webp"
               }
             ]
           },
           {
-            "question": "How would he travel with you?",
+            "question": "Which movie snack would she pick?",
             "options": [
               {
-                "texte": "Convertible",
-                "image": "choisirait/voyage/cabriolet.webp"
+                "texte": "Ice cream tub",
+                "image": "choisirait/snack/pot-glace.webp"
               },
               {
-                "texte": "Sailboat",
-                "image": "choisirait/voyage/voilier.webp"
+                "texte": "Licorice",
+                "image": "choisirait/snack/reglisse.webp"
               },
               {
-                "texte": "Cruise ship",
-                "image": "choisirait/voyage/croisiere.webp"
+                "texte": "Chocolate bar",
+                "image": "choisirait/snack/tablette.webp"
               }
             ]
           },
           {
-            "question": "Where would he go on vacation?",
+            "question": "Which cake would she pick?",
             "options": [
               {
-                "texte": "Bora Bora",
-                "image": "choisirait/vacances/bora-bora.webp"
+                "texte": "Tiramisu",
+                "image": "choisirait/dessert/tiramisu.webp"
               },
               {
-                "texte": "USA",
-                "image": "choisirait/vacances/usa.webp"
+                "texte": "Cheesecake",
+                "image": "choisirait/dessert/cheesecake.webp"
               },
               {
-                "texte": "Hawaii",
-                "image": "choisirait/vacances/hawaii.webp"
+                "texte": "Churros",
+                "image": "choisirait/dessert/churros.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Send it to him: how many did you get?",
-          "bouton": "Send this to him",
+          "question": "Send it to her: how many did you get?",
+          "bouton": "Send this to her",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Travel edition. He will swear you got at least one wrong.\n\nSend this to him",
+      "legende": "Sweet tooth edition. Guess first, send it after. Then compare.\n\nSend this to her",
       "hashtags": [
         "#couplequiz",
-        "#boyfriendquiz",
+        "#girlfriendquiz",
         "#thisorthat",
-        "#travelcouple",
+        "#dessert",
         "#quizcouple"
       ]
     }

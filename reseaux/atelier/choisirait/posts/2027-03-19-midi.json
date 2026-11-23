@@ -13,7 +13,7 @@
         "langue": "en",
         "theme": "light",
         "pour": "lui",
-        "etiquette": "Adventure edition",
+        "etiquette": "Spring edition",
         "accroche": "What would he choose?",
         "consigne": "Choose the photo he would pick. 3 rounds!",
         "secondes": 4,
@@ -22,19 +22,36 @@
         },
         "questions": [
           {
-            "question": "Which sport would he watch?",
+            "question": "Which season would he pick?",
             "options": [
               {
-                "texte": "Boxing",
-                "image": "choisirait/sport/boxe.webp"
+                "texte": "Winter",
+                "image": "choisirait/saison/hiver-saison.webp"
               },
               {
-                "texte": "Football",
-                "image": "choisirait/sport/foot.webp"
+                "texte": "Spring",
+                "image": "choisirait/saison/printemps.webp"
               },
               {
-                "texte": "Tennis",
-                "image": "choisirait/sport/tennis.webp"
+                "texte": "Autumn",
+                "image": "choisirait/saison/automne.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which flowers would he get you?",
+            "options": [
+              {
+                "texte": "Wildflowers",
+                "image": "choisirait/fleurs/fleurs-sauvages.webp"
+              },
+              {
+                "texte": "Peonies",
+                "image": "choisirait/fleurs/pivoines.webp"
+              },
+              {
+                "texte": "Tulips",
+                "image": "choisirait/fleurs/tulipes.webp"
               }
             ]
           },
@@ -42,33 +59,16 @@
             "question": "Which adventure would he try?",
             "options": [
               {
-                "texte": "Scuba diving",
-                "image": "choisirait/aventure/plongee.webp"
+                "texte": "Kayaking",
+                "image": "choisirait/aventure/kayak.webp"
               },
               {
-                "texte": "Surfing",
-                "image": "choisirait/aventure/surf.webp"
+                "texte": "Snowboarding",
+                "image": "choisirait/aventure/snowboard.webp"
               },
               {
-                "texte": "Bungee jumping",
-                "image": "choisirait/aventure/saut-elastique.webp"
-              }
-            ]
-          },
-          {
-            "question": "Where would he take you on vacation?",
-            "options": [
-              {
-                "texte": "Dubai",
-                "image": "choisirait/vacances/dubai.webp"
-              },
-              {
-                "texte": "Croatia",
-                "image": "choisirait/vacances/croatie.webp"
-              },
-              {
-                "texte": "Costa Rica",
-                "image": "choisirait/vacances/costa-rica.webp"
+                "texte": "Horse riding",
+                "image": "choisirait/aventure/equitation.webp"
               }
             ]
           }
@@ -79,12 +79,12 @@
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Adventure edition. Your answers first, then his reaction.\n\nSend this to him",
+      "legende": "Spring edition. Easy for you? Then the next one is for him.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
         "#boyfriendquiz",
         "#thisorthat",
-        "#adventurecouple",
+        "#spring",
         "#quizcouple"
       ]
     }

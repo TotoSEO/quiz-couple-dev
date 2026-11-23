@@ -12,79 +12,79 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "lui",
-        "etiquette": "Car lovers edition",
-        "accroche": "What would he choose?",
-        "consigne": "Answer for him: A, B or C? Then send it!",
+        "pour": "elle",
+        "etiquette": "Spring edition",
+        "accroche": "What would she choose?",
+        "consigne": "Pick A, B or C for her, then send it to her!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which classic car would he drive?",
+            "question": "Which season would she pick?",
             "options": [
               {
-                "texte": "1967 Mustang",
-                "image": "choisirait/vintage/mustang-67.webp"
+                "texte": "Winter",
+                "image": "choisirait/saison/hiver-saison.webp"
               },
               {
-                "texte": "Porsche 356",
-                "image": "choisirait/vintage/porsche-356.webp"
+                "texte": "Autumn",
+                "image": "choisirait/saison/automne.webp"
               },
               {
-                "texte": "Jaguar E-Type",
-                "image": "choisirait/vintage/e-type.webp"
+                "texte": "Spring",
+                "image": "choisirait/saison/printemps.webp"
               }
             ]
           },
           {
-            "question": "Which motorbike would he ride?",
+            "question": "Which date would she take you on?",
             "options": [
               {
-                "texte": "Vespa",
-                "image": "choisirait/moto/vespa.webp"
+                "texte": "Picnic",
+                "image": "choisirait/date/pique-nique.webp"
               },
               {
-                "texte": "Indian Scout",
-                "image": "choisirait/moto/indian.webp"
+                "texte": "Cinema night",
+                "image": "choisirait/date/cinema.webp"
               },
               {
-                "texte": "Ducati Panigale",
-                "image": "choisirait/moto/ducati.webp"
+                "texte": "Stargazing",
+                "image": "choisirait/date/etoiles.webp"
               }
             ]
           },
           {
-            "question": "Which car would he drive?",
+            "question": "Which flowers would she want?",
             "options": [
               {
-                "texte": "Toyota Supra",
-                "image": "choisirait/voiture/supra.webp"
+                "texte": "Hydrangeas",
+                "image": "choisirait/fleurs/hortensias.webp"
               },
               {
-                "texte": "McLaren 720S",
-                "image": "choisirait/voiture/mclaren.webp"
+                "texte": "Peonies",
+                "image": "choisirait/fleurs/pivoines.webp"
               },
               {
-                "texte": "Bugatti Chiron",
-                "image": "choisirait/voiture/bugatti.webp"
+                "texte": "Orchid",
+                "image": "choisirait/fleurs/orchidee.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Now send it to him. Did you guess right?",
-          "bouton": "Send this to him",
+          "question": "Got her 3 picks? Send it and see!",
+          "bouton": "Send this to her",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Car lovers edition. No cheating: decide before the timer runs out.\n\nSend this to him",
+      "legende": "Spring edition. She will swear you got at least one wrong.\n\nSend this to her",
       "hashtags": [
         "#couplequiz",
-        "#boyfriendquiz",
+        "#girlfriendquiz",
         "#thisorthat",
-        "#carlovers",
+        "#spring",
         "#quizcouple"
       ]
     }

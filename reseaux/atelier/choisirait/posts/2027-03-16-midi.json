@@ -13,62 +13,62 @@
         "langue": "en",
         "theme": "light",
         "pour": "lui",
-        "etiquette": "Luxury edition",
+        "etiquette": "Weekend edition",
         "accroche": "What would he choose?",
-        "consigne": "One photo per round: the one he would pick!",
+        "consigne": "Answer for him: A, B or C? Then send it!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which watch would he wear?",
+            "question": "Which date would he plan?",
             "options": [
               {
-                "texte": "Seiko diver",
-                "image": "choisirait/montre/seiko.webp"
+                "texte": "Mini golf",
+                "image": "choisirait/date/mini-golf.webp"
               },
               {
-                "texte": "Casio G-Shock",
-                "image": "choisirait/montre/g-shock.webp"
+                "texte": "Stargazing",
+                "image": "choisirait/date/etoiles.webp"
               },
               {
-                "texte": "Omega Speedmaster",
-                "image": "choisirait/montre/speedmaster.webp"
+                "texte": "Theme park",
+                "image": "choisirait/date/parc.webp"
               }
             ]
           },
           {
-            "question": "How would he travel with you?",
+            "question": "Which game night would he pick?",
             "options": [
               {
-                "texte": "Camper van",
-                "image": "choisirait/voyage/van.webp"
+                "texte": "Chess",
+                "image": "choisirait/jeu/echecs-soir.webp"
               },
               {
-                "texte": "Sailboat",
-                "image": "choisirait/voyage/voilier.webp"
+                "texte": "Poker",
+                "image": "choisirait/jeu/poker.webp"
               },
               {
-                "texte": "Private jet",
-                "image": "choisirait/voyage/jet.webp"
+                "texte": "Video games",
+                "image": "choisirait/jeu/jeux-video.webp"
               }
             ]
           },
           {
-            "question": "Where would he book a weekend for two?",
+            "question": "Which sport would he watch?",
             "options": [
               {
-                "texte": "Ski chalet",
-                "image": "choisirait/weekend/chalet-ski.webp"
+                "texte": "Boxing",
+                "image": "choisirait/sport/boxe.webp"
               },
               {
-                "texte": "Desert camp",
-                "image": "choisirait/weekend/desert.webp"
+                "texte": "Rugby",
+                "image": "choisirait/sport/rugby.webp"
               },
               {
-                "texte": "Castle hotel",
-                "image": "choisirait/weekend/chateau-hotel.webp"
+                "texte": "Basketball",
+                "image": "choisirait/sport/basket.webp"
               }
             ]
           }
@@ -79,12 +79,12 @@
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Luxury edition. Write down his three letters before you send it.\n\nSend this to him",
+      "legende": "Weekend edition. He will swear you got at least one wrong.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
         "#boyfriendquiz",
         "#thisorthat",
-        "#luxurylife",
+        "#weekendvibes",
         "#quizcouple"
       ]
     }

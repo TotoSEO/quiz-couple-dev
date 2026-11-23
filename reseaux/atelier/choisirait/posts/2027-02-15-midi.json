@@ -13,62 +13,62 @@
         "langue": "en",
         "theme": "light",
         "pour": "lui",
-        "etiquette": "Luxury edition",
+        "etiquette": "Winter edition",
         "accroche": "What would he choose?",
-        "consigne": "Choose the photo he would pick. 3 rounds!",
+        "consigne": "One photo per round: the one he would pick!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which watch would he wear?",
+            "question": "Which winter date would he pick?",
             "options": [
               {
-                "texte": "Casio G-Shock",
-                "image": "choisirait/montre/g-shock.webp"
+                "texte": "Cabin by the fire",
+                "image": "choisirait/hiver/feu-cheminee.webp"
               },
               {
-                "texte": "Seiko diver",
-                "image": "choisirait/montre/seiko.webp"
+                "texte": "Building a snowman",
+                "image": "choisirait/hiver/bonhomme.webp"
               },
               {
-                "texte": "Casio digital",
-                "image": "choisirait/montre/casio.webp"
+                "texte": "Sledding",
+                "image": "choisirait/hiver/luge.webp"
               }
             ]
           },
           {
-            "question": "How would he travel with you?",
+            "question": "Which dinner would he pick?",
             "options": [
               {
-                "texte": "Convertible",
-                "image": "choisirait/voyage/cabriolet.webp"
+                "texte": "Pad thai",
+                "image": "choisirait/diner/pad-thai.webp"
               },
               {
-                "texte": "Motorbike",
-                "image": "choisirait/moto/bmw-gs.webp"
+                "texte": "Indian curry",
+                "image": "choisirait/diner/curry.webp"
               },
               {
-                "texte": "Camper van",
-                "image": "choisirait/voyage/van.webp"
+                "texte": "Risotto",
+                "image": "choisirait/diner/risotto.webp"
               }
             ]
           },
           {
-            "question": "Which car would he pick?",
+            "question": "Where would he book a weekend for two?",
             "options": [
               {
-                "texte": "McLaren 720S",
-                "image": "choisirait/voiture/mclaren.webp"
+                "texte": "Overwater villa",
+                "image": "choisirait/weekend/bungalow-eau.webp"
               },
               {
-                "texte": "Land Rover Defender",
-                "image": "choisirait/voiture/defender.webp"
+                "texte": "Desert camp",
+                "image": "choisirait/weekend/desert.webp"
               },
               {
-                "texte": "Rolls-Royce",
-                "image": "choisirait/voiture/rolls-royce.webp"
+                "texte": "Castle hotel",
+                "image": "choisirait/weekend/chateau-hotel.webp"
               }
             ]
           }
@@ -79,12 +79,12 @@
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Luxury edition. Your answers first, then his reaction.\n\nSend this to him",
+      "legende": "Winter edition. Easy for you? Then the next one is for him.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
         "#boyfriendquiz",
         "#thisorthat",
-        "#luxurylife",
+        "#winter",
         "#quizcouple"
       ]
     }

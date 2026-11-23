@@ -13,7 +13,7 @@
         "langue": "en",
         "theme": "light",
         "pour": "lui",
-        "etiquette": "Car lovers edition",
+        "etiquette": "Hobbies edition",
         "accroche": "What would he choose?",
         "consigne": "Choose the photo he would pick. 3 rounds!",
         "secondes": 4,
@@ -22,69 +22,69 @@
         },
         "questions": [
           {
-            "question": "Which classic car would he drive?",
+            "question": "Which instrument would he play?",
             "options": [
               {
-                "texte": "VW Camper Van",
-                "image": "choisirait/vintage/combi.webp"
+                "texte": "Violin",
+                "image": "choisirait/instrument/violon.webp"
               },
               {
-                "texte": "VW Beetle",
-                "image": "choisirait/vintage/coccinelle.webp"
+                "texte": "Saxophone",
+                "image": "choisirait/instrument/saxophone.webp"
               },
               {
-                "texte": "Porsche 356",
-                "image": "choisirait/vintage/porsche-356.webp"
+                "texte": "Piano",
+                "image": "choisirait/instrument/piano.webp"
               }
             ]
           },
           {
-            "question": "Which motorbike would he ride?",
+            "question": "Which workout would he pick?",
             "options": [
               {
-                "texte": "Kawasaki Ninja",
-                "image": "choisirait/moto/ninja.webp"
+                "texte": "Yoga",
+                "image": "choisirait/salle/yoga.webp"
               },
               {
-                "texte": "BMW GS",
-                "image": "choisirait/moto/bmw-gs.webp"
+                "texte": "Weightlifting",
+                "image": "choisirait/salle/muscu.webp"
               },
               {
-                "texte": "Triumph Bonneville",
-                "image": "choisirait/moto/bonneville.webp"
+                "texte": "Swimming",
+                "image": "choisirait/salle/natation.webp"
               }
             ]
           },
           {
-            "question": "Which car would he pick?",
+            "question": "Which hobby would he pick up?",
             "options": [
               {
-                "texte": "Mercedes-AMG C63 S",
-                "image": "choisirait/voiture/amg-c63.webp"
+                "texte": "Woodworking",
+                "image": "choisirait/loisir/menuiserie.webp"
               },
               {
-                "texte": "Ferrari F8",
-                "image": "choisirait/voiture/ferrari-f8.webp"
+                "texte": "Pottery",
+                "image": "choisirait/loisir/poterie.webp"
               },
               {
-                "texte": "Jeep Wrangler",
-                "image": "choisirait/voiture/jeep-wrangler.webp"
+                "texte": "Fishing",
+                "image": "choisirait/loisir/peche.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Now send it to him. Did you guess right?",
+          "question": "Got his 3 picks? Send it and see!",
           "bouton": "Send this to him",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Car lovers edition. Write down his three letters before you send it.\n\nSend this to him",
+      "legende": "Hobbies edition. Write down his three letters before you send it.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
         "#boyfriendquiz",
         "#thisorthat",
-        "#carlovers",
+        "#hobbies",
         "#quizcouple"
       ]
     }

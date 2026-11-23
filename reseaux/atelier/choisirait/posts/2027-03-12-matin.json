@@ -12,79 +12,79 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "elle",
-        "etiquette": "Style edition",
-        "accroche": "What would she choose?",
-        "consigne": "One photo per round: the one she would pick!",
+        "pour": "lui",
+        "etiquette": "Weekend edition",
+        "accroche": "What would he choose?",
+        "consigne": "Answer for him: A, B or C? Then send it!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which shoes would she pick?",
+            "question": "Which sport would he watch?",
             "options": [
               {
-                "texte": "High heels",
-                "image": "choisirait/chaussures/talons.webp"
+                "texte": "Ice hockey",
+                "image": "choisirait/sport/hockey.webp"
               },
               {
-                "texte": "UGG boots",
-                "image": "choisirait/chaussures/ugg.webp"
+                "texte": "Baseball",
+                "image": "choisirait/sport/baseball.webp"
               },
               {
-                "texte": "Knee-high boots",
-                "image": "choisirait/chaussures/cuissardes.webp"
+                "texte": "Boxing",
+                "image": "choisirait/sport/boxe.webp"
               }
             ]
           },
           {
-            "question": "Which phone would she pick?",
+            "question": "Which game night would he pick?",
             "options": [
               {
-                "texte": "Nokia 3310",
-                "image": "choisirait/telephone/nokia.webp"
+                "texte": "Foosball",
+                "image": "choisirait/jeu/baby-foot.webp"
               },
               {
-                "texte": "Samsung Galaxy",
-                "image": "choisirait/telephone/galaxy.webp"
+                "texte": "Pool",
+                "image": "choisirait/jeu/billard.webp"
               },
               {
-                "texte": "Flip phone",
-                "image": "choisirait/telephone/clapet.webp"
+                "texte": "Board games",
+                "image": "choisirait/jeu/jeux-societe.webp"
               }
             ]
           },
           {
-            "question": "Which sneakers would she pick?",
+            "question": "Which date would he take you on?",
             "options": [
               {
-                "texte": "Vans Old Skool",
-                "image": "choisirait/baskets/vans.webp"
+                "texte": "Cinema night",
+                "image": "choisirait/date/cinema.webp"
               },
               {
-                "texte": "Air Jordan",
-                "image": "choisirait/baskets/jordan.webp"
+                "texte": "Ice skating",
+                "image": "choisirait/date/patinoire.webp"
               },
               {
-                "texte": "Adidas Samba",
-                "image": "choisirait/baskets/samba.webp"
+                "texte": "Wine tasting",
+                "image": "choisirait/date/degustation.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Got her 3 picks? Send it and see!",
-          "bouton": "Send this to her",
+          "question": "Now send it to him. Did you guess right?",
+          "bouton": "Send this to him",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Style edition. If you get all three, you know her by heart.\n\nSend this to her",
+      "legende": "Weekend edition. Guess first, send it after. Then compare.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
-        "#girlfriendquiz",
+        "#boyfriendquiz",
         "#thisorthat",
-        "#style",
+        "#weekendvibes",
         "#quizcouple"
       ]
     }

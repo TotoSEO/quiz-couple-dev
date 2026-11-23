@@ -13,28 +13,28 @@
         "langue": "en",
         "theme": "light",
         "pour": "lui",
-        "etiquette": "Dream home edition",
+        "etiquette": "Dream life edition",
         "accroche": "What would he choose?",
-        "consigne": "One photo per round: the one he would pick!",
+        "consigne": "Pick A, B or C for him, then send it to him!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which house would he pick?",
+            "question": "Which dream house would he pick?",
             "options": [
               {
-                "texte": "Beach house",
-                "image": "choisirait/maison/maison-plage.webp"
+                "texte": "Cozy cabin",
+                "image": "choisirait/weekend/chalet-bois.webp"
               },
               {
-                "texte": "Victorian house",
-                "image": "choisirait/maison/victorienne.webp"
+                "texte": "Lake house",
+                "image": "choisirait/maison/maison-lac.webp"
               },
               {
-                "texte": "Castle",
-                "image": "choisirait/maison/chateau.webp"
+                "texte": "Mountain chalet",
+                "image": "choisirait/maison/chalet.webp"
               }
             ]
           },
@@ -42,33 +42,33 @@
             "question": "Which view would he wake up to?",
             "options": [
               {
+                "texte": "Tropical beach",
+                "image": "choisirait/vue/plage-tropicale.webp"
+              },
+              {
                 "texte": "Mountains",
                 "image": "choisirait/vue/montagnes.webp"
               },
               {
-                "texte": "Eiffel Tower",
-                "image": "choisirait/vue/tour-eiffel.webp"
-              },
-              {
-                "texte": "Northern lights",
-                "image": "choisirait/vue/aurores.webp"
+                "texte": "Desert",
+                "image": "choisirait/vue/desert-vue.webp"
               }
             ]
           },
           {
-            "question": "Which cat would he adopt?",
+            "question": "How would he travel with you?",
             "options": [
               {
-                "texte": "British Shorthair",
-                "image": "choisirait/chat/british.webp"
+                "texte": "Sailboat",
+                "image": "choisirait/voyage/voilier.webp"
               },
               {
-                "texte": "Maine Coon",
-                "image": "choisirait/chat/maine-coon.webp"
+                "texte": "Convertible",
+                "image": "choisirait/voyage/cabriolet.webp"
               },
               {
-                "texte": "Norwegian Forest Cat",
-                "image": "choisirait/chat/norvegien.webp"
+                "texte": "Cruise ship",
+                "image": "choisirait/voyage/croisiere.webp"
               }
             ]
           }
@@ -79,12 +79,12 @@
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Dream home edition. Write down his three letters before you send it.\n\nSend this to him",
+      "legende": "Dream life edition. He will swear you got at least one wrong.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
         "#boyfriendquiz",
         "#thisorthat",
-        "#dreamhome",
+        "#dreamlife",
         "#quizcouple"
       ]
     }

@@ -22,64 +22,64 @@
         },
         "questions": [
           {
-            "question": "What would she cook for date night?",
+            "question": "Which winter date would she pick?",
+            "options": [
+              {
+                "texte": "Hot tub in the snow",
+                "image": "choisirait/hiver/jacuzzi.webp"
+              },
+              {
+                "texte": "Ice skating",
+                "image": "choisirait/hiver/hiver-patin.webp"
+              },
+              {
+                "texte": "Cabin by the fire",
+                "image": "choisirait/hiver/feu-cheminee.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which dinner would she pick?",
             "options": [
               {
                 "texte": "Steak and fries",
                 "image": "choisirait/diner/steak-frites.webp"
               },
               {
-                "texte": "Risotto",
-                "image": "choisirait/diner/risotto.webp"
+                "texte": "Paella",
+                "image": "choisirait/diner/paella.webp"
               },
               {
-                "texte": "Raclette",
-                "image": "choisirait/diner/raclette.webp"
+                "texte": "Fish and chips",
+                "image": "choisirait/diner/fish-chips.webp"
               }
             ]
           },
           {
-            "question": "Where would she book a weekend for two?",
+            "question": "Where would she book a weekend?",
             "options": [
-              {
-                "texte": "Houseboat",
-                "image": "choisirait/weekend/peniche.webp"
-              },
               {
                 "texte": "Treehouse",
                 "image": "choisirait/weekend/cabane-arbre.webp"
+              },
+              {
+                "texte": "Houseboat",
+                "image": "choisirait/weekend/peniche.webp"
               },
               {
                 "texte": "Overwater villa",
                 "image": "choisirait/weekend/bungalow-eau.webp"
               }
             ]
-          },
-          {
-            "question": "Which winter date would she pick?",
-            "options": [
-              {
-                "texte": "Ice skating",
-                "image": "choisirait/hiver/hiver-patin.webp"
-              },
-              {
-                "texte": "Skiing",
-                "image": "choisirait/hiver/hiver-ski.webp"
-              },
-              {
-                "texte": "Hot tub in the snow",
-                "image": "choisirait/hiver/jacuzzi.webp"
-              }
-            ]
           }
         ],
         "fin": {
-          "question": "Got her 3 picks? Send it and see!",
+          "question": "Now send it to her. Did you guess right?",
           "bouton": "Send this to her",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Winter edition. She will swear you got at least one wrong.\n\nSend this to her",
+      "legende": "Winter edition. Guess first, send it after. Then compare.\n\nSend this to her",
       "hashtags": [
         "#couplequiz",
         "#girlfriendquiz",

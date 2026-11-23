@@ -12,79 +12,79 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "lui",
-        "etiquette": "Date night edition",
-        "accroche": "What would he choose?",
-        "consigne": "Pick A, B or C for him, then send it to him!",
+        "pour": "elle",
+        "etiquette": "Game night edition",
+        "accroche": "What would she choose?",
+        "consigne": "Choose the photo she would pick. 3 rounds!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "What would he cook for date night?",
+            "question": "What would she order at 2 a.m.?",
             "options": [
               {
-                "texte": "Ramen",
-                "image": "choisirait/diner/ramen.webp"
+                "texte": "Grilled cheese",
+                "image": "choisirait/fastfood/croque.webp"
               },
               {
-                "texte": "Sushi",
-                "image": "choisirait/diner/sushi.webp"
+                "texte": "Instant noodles",
+                "image": "choisirait/fastfood/nouilles.webp"
               },
               {
-                "texte": "Paella",
-                "image": "choisirait/diner/paella.webp"
+                "texte": "Kebab",
+                "image": "choisirait/fastfood/kebab.webp"
               }
             ]
           },
           {
-            "question": "Which date would he plan?",
+            "question": "Which console would she pick?",
             "options": [
               {
-                "texte": "Picnic",
-                "image": "choisirait/date/pique-nique.webp"
+                "texte": "Xbox",
+                "image": "choisirait/console/xbox.webp"
               },
               {
-                "texte": "Mini golf",
-                "image": "choisirait/date/mini-golf.webp"
+                "texte": "Gaming PC",
+                "image": "choisirait/console/pc-gamer.webp"
               },
               {
-                "texte": "Museum",
-                "image": "choisirait/date/musee.webp"
+                "texte": "PlayStation 5",
+                "image": "choisirait/console/ps5.webp"
               }
             ]
           },
           {
-            "question": "Which movie snack would he pick?",
+            "question": "Which drink would she get?",
             "options": [
               {
-                "texte": "Licorice",
-                "image": "choisirait/snack/reglisse.webp"
+                "texte": "Lemonade",
+                "image": "choisirait/boisson/limonade.webp"
               },
               {
-                "texte": "Popcorn",
-                "image": "choisirait/snack/popcorn.webp"
+                "texte": "Bubble tea",
+                "image": "choisirait/boisson/bubble-tea.webp"
               },
               {
-                "texte": "Chocolate bar",
-                "image": "choisirait/snack/tablette.webp"
+                "texte": "Smoothie",
+                "image": "choisirait/boisson/smoothie.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Now send it to him. Did you guess right?",
-          "bouton": "Send this to him",
+          "question": "Got her 3 picks? Send it and see!",
+          "bouton": "Send this to her",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Date night edition. Guess first, send it after. Then compare.\n\nSend this to him",
+      "legende": "Game night edition. Pick for her, then let her prove you wrong.\n\nSend this to her",
       "hashtags": [
         "#couplequiz",
-        "#boyfriendquiz",
+        "#girlfriendquiz",
         "#thisorthat",
-        "#datenight",
+        "#gamenight",
         "#quizcouple"
       ]
     }

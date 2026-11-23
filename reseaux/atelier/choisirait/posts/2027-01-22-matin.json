@@ -12,79 +12,79 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "lui",
-        "etiquette": "Cozy night in edition",
-        "accroche": "What would he choose?",
-        "consigne": "Pick A, B or C for him, then send it to him!",
+        "pour": "elle",
+        "etiquette": "Weekend edition",
+        "accroche": "What would she choose?",
+        "consigne": "One photo per round: the one she would pick!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which game night would he pick?",
+            "question": "Which workout would she pick?",
             "options": [
               {
-                "texte": "Poker",
-                "image": "choisirait/jeu/poker.webp"
+                "texte": "Cycling",
+                "image": "choisirait/salle/velo.webp"
               },
               {
-                "texte": "Pool",
-                "image": "choisirait/jeu/billard.webp"
+                "texte": "Running",
+                "image": "choisirait/salle/course.webp"
               },
               {
-                "texte": "Ping pong",
-                "image": "choisirait/jeu/ping-pong.webp"
+                "texte": "Boxing",
+                "image": "choisirait/salle/boxe-salle.webp"
               }
             ]
           },
           {
-            "question": "Which drink would he get?",
+            "question": "Which sport would she watch?",
             "options": [
               {
-                "texte": "Lemonade",
-                "image": "choisirait/boisson/limonade.webp"
+                "texte": "American football",
+                "image": "choisirait/sport/foot-us.webp"
               },
               {
-                "texte": "Smoothie",
-                "image": "choisirait/boisson/smoothie.webp"
+                "texte": "Formula 1",
+                "image": "choisirait/sport/f1.webp"
               },
               {
-                "texte": "Bubble tea",
-                "image": "choisirait/boisson/bubble-tea.webp"
+                "texte": "Rugby",
+                "image": "choisirait/sport/rugby.webp"
               }
             ]
           },
           {
-            "question": "Which movie snack would he pick?",
+            "question": "Which adventure would she try?",
             "options": [
               {
-                "texte": "Ice cream tub",
-                "image": "choisirait/snack/pot-glace.webp"
+                "texte": "Bungee jumping",
+                "image": "choisirait/aventure/saut-elastique.webp"
               },
               {
-                "texte": "Chocolate bar",
-                "image": "choisirait/snack/tablette.webp"
+                "texte": "Horse riding",
+                "image": "choisirait/aventure/equitation.webp"
               },
               {
-                "texte": "Popcorn",
-                "image": "choisirait/snack/popcorn.webp"
+                "texte": "Surfing",
+                "image": "choisirait/aventure/surf.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Send it to him: how many did you get?",
-          "bouton": "Send this to him",
+          "question": "Send it to her: how many did you get?",
+          "bouton": "Send this to her",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Cozy night in edition. Guess first, send it after. Then compare.\n\nSend this to him",
+      "legende": "Weekend edition. Pick for her, then let her prove you wrong.\n\nSend this to her",
       "hashtags": [
         "#couplequiz",
-        "#boyfriendquiz",
+        "#girlfriendquiz",
         "#thisorthat",
-        "#cozynight",
+        "#weekendvibes",
         "#quizcouple"
       ]
     }

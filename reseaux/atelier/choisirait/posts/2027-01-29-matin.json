@@ -12,79 +12,79 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "elle",
-        "etiquette": "Weekend edition",
-        "accroche": "What would she choose?",
-        "consigne": "Choose the photo she would pick. 3 rounds!",
+        "pour": "lui",
+        "etiquette": "Luxury edition",
+        "accroche": "What would he choose?",
+        "consigne": "One photo per round: the one he would pick!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which workout would she pick?",
+            "question": "Which car would he drive?",
             "options": [
               {
-                "texte": "CrossFit",
-                "image": "choisirait/salle/crossfit.webp"
+                "texte": "BMW M3",
+                "image": "choisirait/voiture/bmw-m3.webp"
               },
               {
-                "texte": "Boxing",
-                "image": "choisirait/salle/boxe-salle.webp"
+                "texte": "Corvette",
+                "image": "choisirait/voiture/corvette.webp"
               },
               {
-                "texte": "Running",
-                "image": "choisirait/salle/course.webp"
+                "texte": "Tesla Model S",
+                "image": "choisirait/voiture/tesla-model-s.webp"
               }
             ]
           },
           {
-            "question": "Which hobby would she pick up?",
+            "question": "Which house would he pick?",
             "options": [
               {
-                "texte": "Photography",
-                "image": "choisirait/loisir/photo.webp"
+                "texte": "Loft apartment",
+                "image": "choisirait/maison/loft.webp"
               },
               {
-                "texte": "Chess",
-                "image": "choisirait/loisir/echecs.webp"
+                "texte": "Victorian house",
+                "image": "choisirait/maison/victorienne.webp"
               },
               {
-                "texte": "Fishing",
-                "image": "choisirait/loisir/peche.webp"
+                "texte": "Mountain chalet",
+                "image": "choisirait/maison/chalet.webp"
               }
             ]
           },
           {
-            "question": "Which sport would she watch?",
+            "question": "Which watch would he wear?",
             "options": [
               {
-                "texte": "Baseball",
-                "image": "choisirait/sport/baseball.webp"
+                "texte": "Casio G-Shock",
+                "image": "choisirait/montre/g-shock.webp"
               },
               {
-                "texte": "Formula 1",
-                "image": "choisirait/sport/f1.webp"
+                "texte": "Seiko diver",
+                "image": "choisirait/montre/seiko.webp"
               },
               {
-                "texte": "Basketball",
-                "image": "choisirait/sport/basket.webp"
+                "texte": "Casio digital",
+                "image": "choisirait/montre/casio.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Got her 3 picks? Send it and see!",
-          "bouton": "Send this to her",
+          "question": "Now send it to him. Did you guess right?",
+          "bouton": "Send this to him",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Weekend edition. Pick for her, then let her prove you wrong.\n\nSend this to her",
+      "legende": "Luxury edition. If you get all three, you know him by heart.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
-        "#girlfriendquiz",
+        "#boyfriendquiz",
         "#thisorthat",
-        "#weekendvibes",
+        "#luxurylife",
         "#quizcouple"
       ]
     }

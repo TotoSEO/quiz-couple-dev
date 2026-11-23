@@ -12,79 +12,79 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "lui",
-        "etiquette": "Valentine's edition",
-        "accroche": "What would he choose?",
-        "consigne": "Pick A, B or C for him, then send it to him!",
+        "pour": "elle",
+        "etiquette": "Style edition",
+        "accroche": "What would she choose?",
+        "consigne": "One photo per round: the one she would pick!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "What would he get you for Valentine's?",
+            "question": "Which shoes would she pick?",
             "options": [
               {
-                "texte": "Heart balloons",
-                "image": "choisirait/valentin/ballons-coeur.webp"
+                "texte": "High heels",
+                "image": "choisirait/chaussures/talons.webp"
               },
               {
-                "texte": "Perfume",
-                "image": "choisirait/valentin/parfum-valentin.webp"
+                "texte": "UGG boots",
+                "image": "choisirait/chaussures/ugg.webp"
               },
               {
-                "texte": "Red roses",
-                "image": "choisirait/valentin/valentin-roses.webp"
+                "texte": "Ballet flats",
+                "image": "choisirait/chaussures/ballerines.webp"
               }
             ]
           },
           {
-            "question": "Which date would he take you on?",
+            "question": "Which sneakers would she pick?",
             "options": [
               {
-                "texte": "Wine tasting",
-                "image": "choisirait/date/degustation.webp"
+                "texte": "Crocs",
+                "image": "choisirait/baskets/crocs.webp"
               },
               {
-                "texte": "Ice skating",
-                "image": "choisirait/date/patinoire.webp"
+                "texte": "Air Jordan",
+                "image": "choisirait/baskets/jordan.webp"
               },
               {
-                "texte": "Hot air balloon",
-                "image": "choisirait/date/montgolfiere-date.webp"
+                "texte": "Adidas Samba",
+                "image": "choisirait/baskets/samba.webp"
               }
             ]
           },
           {
-            "question": "Which ring would he pick for you?",
+            "question": "Which phone would she pick?",
             "options": [
               {
-                "texte": "Vintage ring",
-                "image": "choisirait/bague/vintage-bague.webp"
+                "texte": "iPhone",
+                "image": "choisirait/telephone/iphone.webp"
               },
               {
-                "texte": "Emerald ring",
-                "image": "choisirait/bague/emeraude.webp"
+                "texte": "Google Pixel",
+                "image": "choisirait/telephone/pixel.webp"
               },
               {
-                "texte": "Halo ring",
-                "image": "choisirait/bague/halo.webp"
+                "texte": "BlackBerry",
+                "image": "choisirait/telephone/blackberry.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Now send it to him. Did you guess right?",
-          "bouton": "Send this to him",
+          "question": "Got her 3 picks? Send it and see!",
+          "bouton": "Send this to her",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Valentine's edition. No cheating: decide before the timer runs out.\n\nSend this to him",
+      "legende": "Style edition. Write down her three letters before you send it.\n\nSend this to her",
       "hashtags": [
         "#couplequiz",
-        "#boyfriendquiz",
+        "#girlfriendquiz",
         "#thisorthat",
-        "#valentinesday",
+        "#style",
         "#quizcouple"
       ]
     }

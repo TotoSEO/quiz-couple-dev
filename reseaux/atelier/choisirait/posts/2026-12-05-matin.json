@@ -12,17 +12,17 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "elle",
+        "pour": "lui",
         "etiquette": "Car lovers edition",
-        "accroche": "What would she choose?",
-        "consigne": "One photo per round: the one she would pick!",
+        "accroche": "What would he choose?",
+        "consigne": "Pick A, B or C for him, then send it to him!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which classic car would she drive?",
+            "question": "Which classic car would he drive?",
             "options": [
               {
                 "texte": "Mercedes 300 SL",
@@ -39,7 +39,7 @@
             ]
           },
           {
-            "question": "Which motorbike would she ride?",
+            "question": "Which motorbike would he ride?",
             "options": [
               {
                 "texte": "Ducati Panigale",
@@ -56,7 +56,7 @@
             ]
           },
           {
-            "question": "Which car would she drive?",
+            "question": "Which car would he drive?",
             "options": [
               {
                 "texte": "Corvette",
@@ -74,15 +74,15 @@
           }
         ],
         "fin": {
-          "question": "Got her 3 picks? Send it and see!",
-          "bouton": "Send this to her",
+          "question": "Now send it to him. Did you guess right?",
+          "bouton": "Send this to him",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Car lovers edition. If you get all three, you know her by heart.\n\nSend this to her",
+      "legende": "Car lovers edition. Guess first, send it after. Then compare.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
-        "#girlfriendquiz",
+        "#boyfriendquiz",
         "#thisorthat",
         "#carlovers",
         "#quizcouple"

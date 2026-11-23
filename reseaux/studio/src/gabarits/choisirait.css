@@ -110,7 +110,9 @@
 /* ── L'accroche ───────────────────────────────────────────────────────
    Un mur des neuf photos du reel, penché, qui défile derrière une carte
    (l'édition, « What would HE choose? », la consigne, les lettres A, B,
-   C), et les deux personnages dessous. */
+   C), et les deux personnages dessous. Le mur est à 70 % d'opacité
+   (23 novembre 2026, Thomas : « sinon ça fait pâté moche ») : les photos
+   restent lisibles sans écraser la carte. */
 
 .chi-mur {
   position: absolute;
@@ -119,6 +121,7 @@
   width: 1500px;
   height: 2240px;
   transform-origin: 50% 50%;
+  opacity: 0.7;
 }
 .chi-rang {
   position: absolute;

@@ -56,7 +56,7 @@
             ]
           },
           {
-            "question": "Which car would he pick?",
+            "question": "Which car would he drive?",
             "options": [
               {
                 "texte": "Audi R8",
@@ -79,7 +79,7 @@
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Car lovers edition. Easy for you? Then the next one is for him.\n\nSend this to him",
+      "legende": "Car lovers edition. Pick for him, then let him prove you wrong.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
         "#boyfriendquiz",

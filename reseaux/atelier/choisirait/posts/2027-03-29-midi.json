@@ -13,45 +13,28 @@
         "langue": "en",
         "theme": "light",
         "pour": "lui",
-        "etiquette": "Spring edition",
+        "etiquette": "Adventure edition",
         "accroche": "What would he choose?",
-        "consigne": "One photo per round: the one he would pick!",
+        "consigne": "Answer for him: A, B or C? Then send it!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which season would he pick?",
+            "question": "Which sport would he watch?",
             "options": [
               {
-                "texte": "Summer",
-                "image": "choisirait/saison/ete.webp"
+                "texte": "Football",
+                "image": "choisirait/sport/foot.webp"
               },
               {
-                "texte": "Winter",
-                "image": "choisirait/saison/hiver-saison.webp"
+                "texte": "American football",
+                "image": "choisirait/sport/foot-us.webp"
               },
               {
-                "texte": "Spring",
-                "image": "choisirait/saison/printemps.webp"
-              }
-            ]
-          },
-          {
-            "question": "Which flowers would he get you?",
-            "options": [
-              {
-                "texte": "Hydrangeas",
-                "image": "choisirait/fleurs/hortensias.webp"
-              },
-              {
-                "texte": "Daisies",
-                "image": "choisirait/fleurs/marguerites.webp"
-              },
-              {
-                "texte": "Tulips",
-                "image": "choisirait/fleurs/tulipes.webp"
+                "texte": "Ice hockey",
+                "image": "choisirait/sport/hockey.webp"
               }
             ]
           },
@@ -59,16 +42,33 @@
             "question": "Which adventure would he try?",
             "options": [
               {
-                "texte": "Horse riding",
-                "image": "choisirait/aventure/equitation.webp"
+                "texte": "Skydiving",
+                "image": "choisirait/aventure/parachute.webp"
               },
               {
-                "texte": "Kayaking",
-                "image": "choisirait/aventure/kayak.webp"
+                "texte": "Bungee jumping",
+                "image": "choisirait/aventure/saut-elastique.webp"
               },
               {
-                "texte": "Scuba diving",
-                "image": "choisirait/aventure/plongee.webp"
+                "texte": "Surfing",
+                "image": "choisirait/aventure/surf.webp"
+              }
+            ]
+          },
+          {
+            "question": "How would he travel with you?",
+            "options": [
+              {
+                "texte": "Cruise ship",
+                "image": "choisirait/voyage/croisiere.webp"
+              },
+              {
+                "texte": "Camper van",
+                "image": "choisirait/voyage/van.webp"
+              },
+              {
+                "texte": "Convertible",
+                "image": "choisirait/voyage/cabriolet.webp"
               }
             ]
           }
@@ -79,12 +79,12 @@
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Spring edition. Pick for him, then let him prove you wrong.\n\nSend this to him",
+      "legende": "Adventure edition. One letter per question, then send it to him.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
         "#boyfriendquiz",
         "#thisorthat",
-        "#spring",
+        "#adventurecouple",
         "#quizcouple"
       ]
     }

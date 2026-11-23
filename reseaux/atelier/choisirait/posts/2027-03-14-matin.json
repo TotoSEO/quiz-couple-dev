@@ -13,7 +13,7 @@
         "langue": "en",
         "theme": "light",
         "pour": "elle",
-        "etiquette": "Wedding edition",
+        "etiquette": "Car lovers edition",
         "accroche": "What would she choose?",
         "consigne": "Answer for her: A, B or C? Then send it!",
         "secondes": 4,
@@ -22,69 +22,69 @@
         },
         "questions": [
           {
-            "question": "Where would she want to get married?",
+            "question": "Which classic car would she drive?",
             "options": [
               {
-                "texte": "Garden",
-                "image": "choisirait/mariage/mariage-jardin.webp"
+                "texte": "Porsche 356",
+                "image": "choisirait/vintage/porsche-356.webp"
               },
               {
-                "texte": "Castle",
-                "image": "choisirait/mariage/mariage-chateau.webp"
+                "texte": "Citroën 2CV",
+                "image": "choisirait/vintage/2cv.webp"
               },
               {
-                "texte": "City hall",
-                "image": "choisirait/mariage/mairie.webp"
+                "texte": "1959 Cadillac",
+                "image": "choisirait/vintage/cadillac.webp"
               }
             ]
           },
           {
-            "question": "Where would she want you to propose?",
+            "question": "Which motorbike would she ride?",
             "options": [
               {
-                "texte": "Eiffel Tower",
-                "image": "choisirait/demande/demande-eiffel.webp"
+                "texte": "BMW GS",
+                "image": "choisirait/moto/bmw-gs.webp"
               },
               {
-                "texte": "Northern lights",
-                "image": "choisirait/demande/demande-aurores.webp"
+                "texte": "Yamaha MT-07",
+                "image": "choisirait/moto/mt07.webp"
               },
               {
-                "texte": "Beach at sunset",
-                "image": "choisirait/demande/demande-plage.webp"
+                "texte": "Triumph Bonneville",
+                "image": "choisirait/moto/bonneville.webp"
               }
             ]
           },
           {
-            "question": "Which ring would she want?",
+            "question": "Which car would she drive?",
             "options": [
               {
-                "texte": "Emerald ring",
-                "image": "choisirait/bague/emeraude.webp"
+                "texte": "Lamborghini Huracán",
+                "image": "choisirait/voiture/lamborghini-huracan.webp"
               },
               {
-                "texte": "Solitaire diamond",
-                "image": "choisirait/bague/solitaire.webp"
+                "texte": "Porsche 911",
+                "image": "choisirait/voiture/porsche-911.webp"
               },
               {
-                "texte": "Gold band",
-                "image": "choisirait/bague/alliance-or.webp"
+                "texte": "Land Rover Defender",
+                "image": "choisirait/voiture/defender.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Got her 3 picks? Send it and see!",
+          "question": "Now send it to her. Did you guess right?",
           "bouton": "Send this to her",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Wedding edition. She will swear you got at least one wrong.\n\nSend this to her",
+      "legende": "Car lovers edition. Guess first, send it after. Then compare.\n\nSend this to her",
       "hashtags": [
         "#couplequiz",
         "#girlfriendquiz",
         "#thisorthat",
-        "#engaged",
+        "#carlovers",
         "#quizcouple"
       ]
     }

@@ -12,17 +12,17 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "lui",
+        "pour": "elle",
         "etiquette": "Wedding edition",
-        "accroche": "What would he choose?",
-        "consigne": "Pick A, B or C for him, then send it to him!",
+        "accroche": "What would she choose?",
+        "consigne": "One photo per round: the one she would pick!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which ring would he pick for you?",
+            "question": "Which ring would she want?",
             "options": [
               {
                 "texte": "Rose gold ring",
@@ -39,7 +39,7 @@
             ]
           },
           {
-            "question": "Where would he want to get married?",
+            "question": "Where would she want to get married?",
             "options": [
               {
                 "texte": "Vegas chapel",
@@ -56,7 +56,7 @@
             ]
           },
           {
-            "question": "Which flowers would he get you?",
+            "question": "Which flowers would she want?",
             "options": [
               {
                 "texte": "Lavender",
@@ -74,15 +74,15 @@
           }
         ],
         "fin": {
-          "question": "Now send it to him. Did you guess right?",
-          "bouton": "Send this to him",
+          "question": "Got her 3 picks? Send it and see!",
+          "bouton": "Send this to her",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Wedding edition. One letter per question, then send it to him.\n\nSend this to him",
+      "legende": "Wedding edition. If you get all three, you know her by heart.\n\nSend this to her",
       "hashtags": [
         "#couplequiz",
-        "#boyfriendquiz",
+        "#girlfriendquiz",
         "#thisorthat",
         "#engaged",
         "#quizcouple"

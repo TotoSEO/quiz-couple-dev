@@ -13,78 +13,78 @@
         "langue": "en",
         "theme": "light",
         "pour": "elle",
-        "etiquette": "Luxury edition",
+        "etiquette": "Adventure edition",
         "accroche": "What would she choose?",
-        "consigne": "Pick A, B or C for her, then send it to her!",
+        "consigne": "Choose the photo she would pick. 3 rounds!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which watch would she wear?",
+            "question": "Which sport would she watch?",
             "options": [
               {
-                "texte": "Pocket watch",
-                "image": "choisirait/montre/gousset.webp"
+                "texte": "American football",
+                "image": "choisirait/sport/foot-us.webp"
               },
               {
-                "texte": "Omega Speedmaster",
-                "image": "choisirait/montre/speedmaster.webp"
+                "texte": "Tennis",
+                "image": "choisirait/sport/tennis.webp"
               },
               {
-                "texte": "Cartier Tank",
-                "image": "choisirait/montre/cartier.webp"
+                "texte": "Formula 1",
+                "image": "choisirait/sport/f1.webp"
               }
             ]
           },
           {
-            "question": "Which dream house would she pick?",
+            "question": "How would she travel with you?",
             "options": [
               {
-                "texte": "Lake house",
-                "image": "choisirait/maison/maison-lac.webp"
+                "texte": "Camper van",
+                "image": "choisirait/voyage/van.webp"
               },
               {
-                "texte": "Mountain chalet",
-                "image": "choisirait/maison/chalet.webp"
+                "texte": "Sailboat",
+                "image": "choisirait/voyage/voilier.webp"
               },
               {
-                "texte": "Modern villa",
-                "image": "choisirait/maison/villa-moderne.webp"
+                "texte": "Motorbike",
+                "image": "choisirait/moto/bmw-gs.webp"
               }
             ]
           },
           {
-            "question": "Where would she book a weekend for two?",
+            "question": "Where would she take you on vacation?",
             "options": [
               {
-                "texte": "Houseboat",
-                "image": "choisirait/weekend/peniche.webp"
+                "texte": "Greece",
+                "image": "choisirait/vacances/grece.webp"
               },
               {
-                "texte": "Treehouse",
-                "image": "choisirait/weekend/cabane-arbre.webp"
+                "texte": "Switzerland",
+                "image": "choisirait/vacances/suisse.webp"
               },
               {
-                "texte": "Glamping tent",
-                "image": "choisirait/weekend/glamping.webp"
+                "texte": "Thailand",
+                "image": "choisirait/vacances/thailande.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Got her 3 picks? Send it and see!",
+          "question": "Now send it to her. Did you guess right?",
           "bouton": "Send this to her",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Luxury edition. One letter per question, then send it to her.\n\nSend this to her",
+      "legende": "Adventure edition. If you get all three, you know her by heart.\n\nSend this to her",
       "hashtags": [
         "#couplequiz",
         "#girlfriendquiz",
         "#thisorthat",
-        "#luxurylife",
+        "#adventurecouple",
         "#quizcouple"
       ]
     }

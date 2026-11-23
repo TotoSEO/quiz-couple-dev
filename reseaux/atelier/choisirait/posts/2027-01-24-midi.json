@@ -13,45 +13,28 @@
         "langue": "en",
         "theme": "light",
         "pour": "elle",
-        "etiquette": "Adventure edition",
+        "etiquette": "Travel edition",
         "accroche": "What would she choose?",
-        "consigne": "Pick A, B or C for her, then send it to her!",
+        "consigne": "Choose the photo she would pick. 3 rounds!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which adventure would she try?",
+            "question": "Which city would she take you to?",
             "options": [
               {
-                "texte": "Surfing",
-                "image": "choisirait/aventure/surf.webp"
+                "texte": "Lisbon",
+                "image": "choisirait/ville/lisbonne.webp"
               },
               {
-                "texte": "Rock climbing",
-                "image": "choisirait/aventure/escalade.webp"
+                "texte": "New York",
+                "image": "choisirait/ville/new-york.webp"
               },
               {
-                "texte": "Kayaking",
-                "image": "choisirait/aventure/kayak.webp"
-              }
-            ]
-          },
-          {
-            "question": "Which sport would she watch?",
-            "options": [
-              {
-                "texte": "Tennis",
-                "image": "choisirait/sport/tennis.webp"
-              },
-              {
-                "texte": "Boxing",
-                "image": "choisirait/sport/boxe.webp"
-              },
-              {
-                "texte": "Ice hockey",
-                "image": "choisirait/sport/hockey.webp"
+                "texte": "Barcelona",
+                "image": "choisirait/ville/barcelone.webp"
               }
             ]
           },
@@ -63,28 +46,45 @@
                 "image": "choisirait/weekend/desert.webp"
               },
               {
-                "texte": "Overwater villa",
-                "image": "choisirait/weekend/bungalow-eau.webp"
+                "texte": "Houseboat",
+                "image": "choisirait/weekend/peniche.webp"
               },
               {
                 "texte": "Treehouse",
                 "image": "choisirait/weekend/cabane-arbre.webp"
               }
             ]
+          },
+          {
+            "question": "Which view would she wake up to?",
+            "options": [
+              {
+                "texte": "Eiffel Tower",
+                "image": "choisirait/vue/tour-eiffel.webp"
+              },
+              {
+                "texte": "Desert",
+                "image": "choisirait/vue/desert-vue.webp"
+              },
+              {
+                "texte": "Mountains",
+                "image": "choisirait/vue/montagnes.webp"
+              }
+            ]
           }
         ],
         "fin": {
-          "question": "Got her 3 picks? Send it and see!",
+          "question": "Now send it to her. Did you guess right?",
           "bouton": "Send this to her",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Adventure edition. She will swear you got at least one wrong.\n\nSend this to her",
+      "legende": "Travel edition. Your answers first, then her reaction.\n\nSend this to her",
       "hashtags": [
         "#couplequiz",
         "#girlfriendquiz",
         "#thisorthat",
-        "#adventurecouple",
+        "#travelcouple",
         "#quizcouple"
       ]
     }

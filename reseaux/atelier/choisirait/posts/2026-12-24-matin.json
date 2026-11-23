@@ -12,17 +12,17 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "lui",
+        "pour": "elle",
         "etiquette": "Christmas edition",
-        "accroche": "What would he choose?",
-        "consigne": "Answer for him: A, B or C? Then send it!",
+        "accroche": "What would she choose?",
+        "consigne": "Pick A, B or C for her, then send it to her!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which winter date would he pick?",
+            "question": "Which winter date would she pick?",
             "options": [
               {
                 "texte": "Building a snowman",
@@ -39,7 +39,7 @@
             ]
           },
           {
-            "question": "Which Christmas date would he plan?",
+            "question": "Which Christmas date would she plan?",
             "options": [
               {
                 "texte": "Snowy chalet",
@@ -56,7 +56,7 @@
             ]
           },
           {
-            "question": "Which Christmas treat would he pick?",
+            "question": "Which Christmas treat would she pick?",
             "options": [
               {
                 "texte": "Gingerbread house",
@@ -74,15 +74,15 @@
           }
         ],
         "fin": {
-          "question": "Send it to him: how many did you get?",
-          "bouton": "Send this to him",
+          "question": "Send it to her: how many did you get?",
+          "bouton": "Send this to her",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Christmas edition. One letter per question, then send it to him.\n\nSend this to him",
+      "legende": "Christmas edition. One letter per question, then send it to her.\n\nSend this to her",
       "hashtags": [
         "#couplequiz",
-        "#boyfriendquiz",
+        "#girlfriendquiz",
         "#thisorthat",
         "#christmas",
         "#quizcouple"

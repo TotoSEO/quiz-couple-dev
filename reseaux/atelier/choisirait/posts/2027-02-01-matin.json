@@ -12,79 +12,79 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "lui",
-        "etiquette": "Valentine's edition",
-        "accroche": "What would he choose?",
-        "consigne": "Answer for him: A, B or C? Then send it!",
+        "pour": "elle",
+        "etiquette": "Dream home edition",
+        "accroche": "What would she choose?",
+        "consigne": "Pick A, B or C for her, then send it to her!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "What would he get you for Valentine's?",
+            "question": "Which view would she wake up to?",
             "options": [
               {
-                "texte": "Red roses",
-                "image": "choisirait/valentin/valentin-roses.webp"
+                "texte": "Snowy peaks",
+                "image": "choisirait/vue/neige.webp"
               },
               {
-                "texte": "Love letter",
-                "image": "choisirait/valentin/lettre.webp"
+                "texte": "Forest",
+                "image": "choisirait/vue/foret.webp"
               },
               {
-                "texte": "Jewelry",
-                "image": "choisirait/valentin/bijou.webp"
+                "texte": "Lake",
+                "image": "choisirait/vue/lac.webp"
               }
             ]
           },
           {
-            "question": "Which ring would he pick for you?",
+            "question": "Which house would she pick?",
             "options": [
               {
-                "texte": "Rose gold ring",
-                "image": "choisirait/bague/or-rose.webp"
+                "texte": "Lake house",
+                "image": "choisirait/maison/maison-lac.webp"
               },
               {
-                "texte": "Vintage ring",
-                "image": "choisirait/bague/vintage-bague.webp"
+                "texte": "Tiny house",
+                "image": "choisirait/maison/tiny-house.webp"
               },
               {
-                "texte": "Gold band",
-                "image": "choisirait/bague/alliance-or.webp"
+                "texte": "Cozy cabin",
+                "image": "choisirait/weekend/chalet-bois.webp"
               }
             ]
           },
           {
-            "question": "Which flowers would he get you?",
+            "question": "Which cat would she adopt?",
             "options": [
               {
-                "texte": "Orchid",
-                "image": "choisirait/fleurs/orchidee.webp"
+                "texte": "Black cat",
+                "image": "choisirait/chat/chat-noir.webp"
               },
               {
-                "texte": "Tulips",
-                "image": "choisirait/fleurs/tulipes.webp"
+                "texte": "Ragdoll",
+                "image": "choisirait/chat/ragdoll.webp"
               },
               {
-                "texte": "Peonies",
-                "image": "choisirait/fleurs/pivoines.webp"
+                "texte": "Persian",
+                "image": "choisirait/chat/persan.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Send it to him: how many did you get?",
-          "bouton": "Send this to him",
+          "question": "Send it to her: how many did you get?",
+          "bouton": "Send this to her",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Valentine's edition. Answer for him first, no peeking.\n\nSend this to him",
+      "legende": "Dream home edition. No cheating: decide before the timer runs out.\n\nSend this to her",
       "hashtags": [
         "#couplequiz",
-        "#boyfriendquiz",
+        "#girlfriendquiz",
         "#thisorthat",
-        "#valentinesday",
+        "#dreamhome",
         "#quizcouple"
       ]
     }

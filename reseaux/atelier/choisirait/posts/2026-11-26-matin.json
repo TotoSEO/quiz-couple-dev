@@ -12,17 +12,17 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "lui",
+        "pour": "elle",
         "etiquette": "Adventure edition",
-        "accroche": "What would he choose?",
-        "consigne": "Answer for him: A, B or C? Then send it!",
+        "accroche": "What would she choose?",
+        "consigne": "Answer for her: A, B or C? Then send it!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Where would he book a weekend?",
+            "question": "Where would she book a weekend?",
             "options": [
               {
                 "texte": "Desert camp",
@@ -39,7 +39,7 @@
             ]
           },
           {
-            "question": "Which sport would he watch?",
+            "question": "Which sport would she watch?",
             "options": [
               {
                 "texte": "Basketball",
@@ -56,7 +56,7 @@
             ]
           },
           {
-            "question": "Which adventure would he try?",
+            "question": "Which adventure would she try?",
             "options": [
               {
                 "texte": "Surfing",
@@ -74,15 +74,15 @@
           }
         ],
         "fin": {
-          "question": "Now send it to him. Did you guess right?",
-          "bouton": "Send this to him",
+          "question": "Got her 3 picks? Send it and see!",
+          "bouton": "Send this to her",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Adventure edition. He will swear you got at least one wrong.\n\nSend this to him",
+      "legende": "Adventure edition. Guess first, send it after. Then compare.\n\nSend this to her",
       "hashtags": [
         "#couplequiz",
-        "#boyfriendquiz",
+        "#girlfriendquiz",
         "#thisorthat",
         "#adventurecouple",
         "#quizcouple"

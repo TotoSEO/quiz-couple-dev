@@ -12,79 +12,79 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "elle",
-        "etiquette": "Car lovers edition",
-        "accroche": "What would she choose?",
-        "consigne": "One photo per round: the one she would pick!",
+        "pour": "lui",
+        "etiquette": "Dream home edition",
+        "accroche": "What would he choose?",
+        "consigne": "Answer for him: A, B or C? Then send it!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which classic car would she drive?",
+            "question": "Which house would he pick?",
             "options": [
               {
-                "texte": "Citroën 2CV",
-                "image": "choisirait/vintage/2cv.webp"
+                "texte": "Cozy cabin",
+                "image": "choisirait/weekend/chalet-bois.webp"
               },
               {
-                "texte": "Classic Mini",
-                "image": "choisirait/vintage/mini-classique.webp"
+                "texte": "Beach house",
+                "image": "choisirait/maison/maison-plage.webp"
               },
               {
-                "texte": "Mercedes 300 SL",
-                "image": "choisirait/vintage/300sl.webp"
+                "texte": "Modern villa",
+                "image": "choisirait/maison/villa-moderne.webp"
               }
             ]
           },
           {
-            "question": "Which motorbike would she ride?",
+            "question": "Which view would he wake up to?",
             "options": [
               {
-                "texte": "Harley-Davidson",
-                "image": "choisirait/moto/harley.webp"
+                "texte": "City skyline",
+                "image": "choisirait/vue/skyline.webp"
               },
               {
-                "texte": "Yamaha MT-07",
-                "image": "choisirait/moto/mt07.webp"
+                "texte": "Lake",
+                "image": "choisirait/vue/lac.webp"
               },
               {
-                "texte": "Triumph Bonneville",
-                "image": "choisirait/moto/bonneville.webp"
+                "texte": "Forest",
+                "image": "choisirait/vue/foret.webp"
               }
             ]
           },
           {
-            "question": "Which car would she pick?",
+            "question": "Which dog would he adopt?",
             "options": [
               {
-                "texte": "Mercedes-AMG C63 S",
-                "image": "choisirait/voiture/amg-c63.webp"
+                "texte": "Cavalier King Charles",
+                "image": "choisirait/chien/cavalier.webp"
               },
               {
-                "texte": "Ford Mustang",
-                "image": "choisirait/voiture/mustang.webp"
+                "texte": "Belgian Malinois",
+                "image": "choisirait/chien/malinois.webp"
               },
               {
-                "texte": "Nissan GT-R",
-                "image": "choisirait/voiture/gtr.webp"
+                "texte": "Bernese Mountain Dog",
+                "image": "choisirait/chien/bouvier.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Got her 3 picks? Send it and see!",
-          "bouton": "Send this to her",
+          "question": "Now send it to him. Did you guess right?",
+          "bouton": "Send this to him",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Car lovers edition. Your answers first, then her reaction.\n\nSend this to her",
+      "legende": "Dream home edition. No cheating: decide before the timer runs out.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
-        "#girlfriendquiz",
+        "#boyfriendquiz",
         "#thisorthat",
-        "#carlovers",
+        "#dreamhome",
         "#quizcouple"
       ]
     }

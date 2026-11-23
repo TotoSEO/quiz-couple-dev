@@ -13,78 +13,78 @@
         "langue": "en",
         "theme": "light",
         "pour": "elle",
-        "etiquette": "Morning edition",
+        "etiquette": "Weekend edition",
         "accroche": "What would she choose?",
-        "consigne": "Answer for her: A, B or C? Then send it!",
+        "consigne": "Pick A, B or C for her, then send it to her!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "How would she have her eggs?",
+            "question": "Which hobby would she pick up?",
             "options": [
               {
-                "texte": "Fried",
-                "image": "choisirait/oeufs/oeuf-plat.webp"
+                "texte": "Pottery",
+                "image": "choisirait/loisir/poterie.webp"
               },
               {
-                "texte": "Omelette",
-                "image": "choisirait/oeufs/omelette.webp"
+                "texte": "Chess",
+                "image": "choisirait/loisir/echecs.webp"
               },
               {
-                "texte": "Poached",
-                "image": "choisirait/oeufs/poche.webp"
+                "texte": "Knitting",
+                "image": "choisirait/loisir/tricot.webp"
               }
             ]
           },
           {
-            "question": "Which breakfast would she make you?",
+            "question": "Which workout would she pick?",
             "options": [
               {
-                "texte": "Pancakes",
-                "image": "choisirait/petitdej/pancakes.webp"
+                "texte": "Running",
+                "image": "choisirait/salle/course.webp"
               },
               {
-                "texte": "Croissant & coffee",
-                "image": "choisirait/petitdej/croissant-cafe.webp"
+                "texte": "Swimming",
+                "image": "choisirait/salle/natation.webp"
               },
               {
-                "texte": "Avocado toast",
-                "image": "choisirait/petitdej/avocado-toast.webp"
+                "texte": "Cycling",
+                "image": "choisirait/salle/velo.webp"
               }
             ]
           },
           {
-            "question": "What would she grab at the bakery?",
+            "question": "Which sport would she watch?",
             "options": [
               {
-                "texte": "Bagel",
-                "image": "choisirait/boulangerie/bagel.webp"
+                "texte": "Tennis",
+                "image": "choisirait/sport/tennis.webp"
               },
               {
-                "texte": "Pain au chocolat",
-                "image": "choisirait/boulangerie/pain-chocolat.webp"
+                "texte": "Golf",
+                "image": "choisirait/sport/golf.webp"
               },
               {
-                "texte": "Donut",
-                "image": "choisirait/boulangerie/donut.webp"
+                "texte": "Football",
+                "image": "choisirait/sport/foot.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Got her 3 picks? Send it and see!",
+          "question": "Now send it to her. Did you guess right?",
           "bouton": "Send this to her",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Morning edition. One letter per question, then send it to her.\n\nSend this to her",
+      "legende": "Weekend edition. One letter per question, then send it to her.\n\nSend this to her",
       "hashtags": [
         "#couplequiz",
         "#girlfriendquiz",
         "#thisorthat",
-        "#breakfast",
+        "#weekendvibes",
         "#quizcouple"
       ]
     }

@@ -13,62 +13,62 @@
         "langue": "en",
         "theme": "light",
         "pour": "lui",
-        "etiquette": "Cozy night in edition",
+        "etiquette": "Luxury edition",
         "accroche": "What would he choose?",
-        "consigne": "Choose the photo he would pick. 3 rounds!",
+        "consigne": "One photo per round: the one he would pick!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which cake would he pick?",
+            "question": "Which car would he pick?",
             "options": [
               {
-                "texte": "Mille-feuille",
-                "image": "choisirait/dessert/mille-feuille.webp"
+                "texte": "Bugatti Chiron",
+                "image": "choisirait/voiture/bugatti.webp"
               },
               {
-                "texte": "Crêpes",
-                "image": "choisirait/dessert/crepes.webp"
+                "texte": "Jeep Wrangler",
+                "image": "choisirait/voiture/jeep-wrangler.webp"
               },
               {
-                "texte": "Apple pie",
-                "image": "choisirait/dessert/tarte-pommes.webp"
+                "texte": "Tesla Model S",
+                "image": "choisirait/voiture/tesla-model-s.webp"
               }
             ]
           },
           {
-            "question": "Which movie snack would he pick?",
+            "question": "Which watch would he wear?",
             "options": [
               {
-                "texte": "Ice cream tub",
-                "image": "choisirait/snack/pot-glace.webp"
+                "texte": "Seiko diver",
+                "image": "choisirait/montre/seiko.webp"
               },
               {
-                "texte": "Gummy bears",
-                "image": "choisirait/snack/oursons.webp"
+                "texte": "Omega Speedmaster",
+                "image": "choisirait/montre/speedmaster.webp"
               },
               {
-                "texte": "Licorice",
-                "image": "choisirait/snack/reglisse.webp"
+                "texte": "Casio G-Shock",
+                "image": "choisirait/montre/g-shock.webp"
               }
             ]
           },
           {
-            "question": "What would he cook for date night?",
+            "question": "Where would he book a weekend for two?",
             "options": [
               {
-                "texte": "Cheese fondue",
-                "image": "choisirait/diner/fondue.webp"
+                "texte": "Treehouse",
+                "image": "choisirait/weekend/cabane-arbre.webp"
               },
               {
-                "texte": "Raclette",
-                "image": "choisirait/diner/raclette.webp"
+                "texte": "Castle hotel",
+                "image": "choisirait/weekend/chateau-hotel.webp"
               },
               {
-                "texte": "Fish and chips",
-                "image": "choisirait/diner/fish-chips.webp"
+                "texte": "Houseboat",
+                "image": "choisirait/weekend/peniche.webp"
               }
             ]
           }
@@ -79,12 +79,12 @@
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Cozy night in edition. Pick for him, then let him prove you wrong.\n\nSend this to him",
+      "legende": "Luxury edition. If you get all three, you know him by heart.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
         "#boyfriendquiz",
         "#thisorthat",
-        "#cozynight",
+        "#luxurylife",
         "#quizcouple"
       ]
     }

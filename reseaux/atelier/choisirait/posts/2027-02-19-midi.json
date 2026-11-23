@@ -13,78 +13,78 @@
         "langue": "en",
         "theme": "light",
         "pour": "lui",
-        "etiquette": "Pet lovers edition",
+        "etiquette": "Weekend edition",
         "accroche": "What would he choose?",
-        "consigne": "Choose the photo he would pick. 3 rounds!",
+        "consigne": "One photo per round: the one he would pick!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which pet would he want?",
+            "question": "Which workout would he pick?",
             "options": [
               {
-                "texte": "Rabbit",
-                "image": "choisirait/animal/lapin.webp"
+                "texte": "Boxing",
+                "image": "choisirait/salle/boxe-salle.webp"
               },
               {
-                "texte": "Hamster",
-                "image": "choisirait/animal/hamster.webp"
+                "texte": "Weightlifting",
+                "image": "choisirait/salle/muscu.webp"
               },
               {
-                "texte": "Horse",
-                "image": "choisirait/animal/cheval.webp"
+                "texte": "Running",
+                "image": "choisirait/salle/course.webp"
               }
             ]
           },
           {
-            "question": "Which cat would he adopt?",
+            "question": "Which hobby would he pick up?",
             "options": [
               {
-                "texte": "Siamese",
-                "image": "choisirait/chat/siamois.webp"
+                "texte": "Chess",
+                "image": "choisirait/loisir/echecs.webp"
               },
               {
-                "texte": "Persian",
-                "image": "choisirait/chat/persan.webp"
+                "texte": "Pottery",
+                "image": "choisirait/loisir/poterie.webp"
               },
               {
-                "texte": "Ragdoll",
-                "image": "choisirait/chat/ragdoll.webp"
+                "texte": "Woodworking",
+                "image": "choisirait/loisir/menuiserie.webp"
               }
             ]
           },
           {
-            "question": "Which dog would he pick?",
+            "question": "Which sport would he watch?",
             "options": [
               {
-                "texte": "Pomeranian",
-                "image": "choisirait/chien/pomeranien.webp"
+                "texte": "Golf",
+                "image": "choisirait/sport/golf.webp"
               },
               {
-                "texte": "Poodle",
-                "image": "choisirait/chien/caniche.webp"
+                "texte": "Basketball",
+                "image": "choisirait/sport/basket.webp"
               },
               {
-                "texte": "Great Dane",
-                "image": "choisirait/chien/dogue.webp"
+                "texte": "Rugby",
+                "image": "choisirait/sport/rugby.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Now send it to him. Did you guess right?",
+          "question": "Got his 3 picks? Send it and see!",
           "bouton": "Send this to him",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Pet lovers edition. Pick for him, then let him prove you wrong.\n\nSend this to him",
+      "legende": "Weekend edition. If you get all three, you know him by heart.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
         "#boyfriendquiz",
         "#thisorthat",
-        "#petlovers",
+        "#weekendvibes",
         "#quizcouple"
       ]
     }

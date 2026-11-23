@@ -13,7 +13,7 @@
         "langue": "en",
         "theme": "light",
         "pour": "elle",
-        "etiquette": "Sweet tooth edition",
+        "etiquette": "Adventure edition",
         "accroche": "What would she choose?",
         "consigne": "Answer for her: A, B or C? Then send it!",
         "secondes": 4,
@@ -22,69 +22,69 @@
         },
         "questions": [
           {
-            "question": "Which ice cream would she get?",
+            "question": "Which sport would she watch?",
             "options": [
               {
-                "texte": "Banana split",
-                "image": "choisirait/glace/banana-split.webp"
+                "texte": "Formula 1",
+                "image": "choisirait/sport/f1.webp"
               },
               {
-                "texte": "Popsicle",
-                "image": "choisirait/glace/esquimau.webp"
+                "texte": "American football",
+                "image": "choisirait/sport/foot-us.webp"
               },
               {
-                "texte": "Mochi ice cream",
-                "image": "choisirait/glace/mochi.webp"
+                "texte": "Boxing",
+                "image": "choisirait/sport/boxe.webp"
               }
             ]
           },
           {
-            "question": "What would she grab at the bakery?",
+            "question": "How would she travel with you?",
             "options": [
               {
-                "texte": "Cinnamon roll",
-                "image": "choisirait/boulangerie/cinnamon-roll.webp"
+                "texte": "Camper van",
+                "image": "choisirait/voyage/van.webp"
               },
               {
-                "texte": "Croissant",
-                "image": "choisirait/boulangerie/croissant.webp"
+                "texte": "Hot air balloon",
+                "image": "choisirait/voyage/montgolfiere.webp"
               },
               {
-                "texte": "Bagel",
-                "image": "choisirait/boulangerie/bagel.webp"
+                "texte": "Motorbike",
+                "image": "choisirait/moto/bmw-gs.webp"
               }
             ]
           },
           {
-            "question": "Which cake would she pick?",
+            "question": "Which adventure would she try?",
             "options": [
               {
-                "texte": "Brownie",
-                "image": "choisirait/dessert/brownie.webp"
+                "texte": "Bungee jumping",
+                "image": "choisirait/aventure/saut-elastique.webp"
               },
               {
-                "texte": "Mille-feuille",
-                "image": "choisirait/dessert/mille-feuille.webp"
+                "texte": "Paragliding",
+                "image": "choisirait/aventure/parapente.webp"
               },
               {
-                "texte": "Strawberry tart",
-                "image": "choisirait/dessert/tarte-fraises.webp"
+                "texte": "Kayaking",
+                "image": "choisirait/aventure/kayak.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Got her 3 picks? Send it and see!",
+          "question": "Now send it to her. Did you guess right?",
           "bouton": "Send this to her",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Sweet tooth edition. One letter per question, then send it to her.\n\nSend this to her",
+      "legende": "Adventure edition. One letter per question, then send it to her.\n\nSend this to her",
       "hashtags": [
         "#couplequiz",
         "#girlfriendquiz",
         "#thisorthat",
-        "#dessert",
+        "#adventurecouple",
         "#quizcouple"
       ]
     }

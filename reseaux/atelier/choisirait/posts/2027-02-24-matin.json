@@ -12,79 +12,79 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "elle",
-        "etiquette": "Sweet tooth edition",
-        "accroche": "What would she choose?",
-        "consigne": "Choose the photo she would pick. 3 rounds!",
+        "pour": "lui",
+        "etiquette": "Adventure edition",
+        "accroche": "What would he choose?",
+        "consigne": "One photo per round: the one he would pick!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "What would she grab at the bakery?",
+            "question": "Where would he take you on vacation?",
             "options": [
               {
-                "texte": "Brioche",
-                "image": "choisirait/boulangerie/brioche.webp"
+                "texte": "Hawaii",
+                "image": "choisirait/vacances/hawaii.webp"
               },
               {
-                "texte": "Donut",
-                "image": "choisirait/boulangerie/donut.webp"
+                "texte": "Egypt",
+                "image": "choisirait/vacances/egypte.webp"
               },
               {
-                "texte": "Muffin",
-                "image": "choisirait/boulangerie/muffin.webp"
+                "texte": "Canada",
+                "image": "choisirait/vacances/canada.webp"
               }
             ]
           },
           {
-            "question": "Which ice cream would she get?",
+            "question": "Which adventure would he try?",
             "options": [
               {
-                "texte": "Sundae",
-                "image": "choisirait/glace/sundae.webp"
+                "texte": "Scuba diving",
+                "image": "choisirait/aventure/plongee.webp"
               },
               {
-                "texte": "Gelato",
-                "image": "choisirait/glace/gelato.webp"
+                "texte": "Bungee jumping",
+                "image": "choisirait/aventure/saut-elastique.webp"
               },
               {
-                "texte": "Soft serve",
-                "image": "choisirait/glace/italienne.webp"
+                "texte": "Skiing",
+                "image": "choisirait/aventure/ski.webp"
               }
             ]
           },
           {
-            "question": "Which movie snack would she pick?",
+            "question": "How would he travel with you?",
             "options": [
               {
-                "texte": "Licorice",
-                "image": "choisirait/snack/reglisse.webp"
+                "texte": "Convertible",
+                "image": "choisirait/voyage/cabriolet.webp"
               },
               {
-                "texte": "Popcorn",
-                "image": "choisirait/snack/popcorn.webp"
+                "texte": "Hot air balloon",
+                "image": "choisirait/voyage/montgolfiere.webp"
               },
               {
-                "texte": "Nachos",
-                "image": "choisirait/snack/nachos.webp"
+                "texte": "Camper van",
+                "image": "choisirait/voyage/van.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Got her 3 picks? Send it and see!",
-          "bouton": "Send this to her",
+          "question": "Now send it to him. Did you guess right?",
+          "bouton": "Send this to him",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Sweet tooth edition. If you get all three, you know her by heart.\n\nSend this to her",
+      "legende": "Adventure edition. Your answers first, then his reaction.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
-        "#girlfriendquiz",
+        "#boyfriendquiz",
         "#thisorthat",
-        "#dessert",
+        "#adventurecouple",
         "#quizcouple"
       ]
     }

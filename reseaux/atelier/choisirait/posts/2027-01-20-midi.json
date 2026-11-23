@@ -13,62 +13,62 @@
         "langue": "en",
         "theme": "light",
         "pour": "lui",
-        "etiquette": "Car lovers edition",
+        "etiquette": "Travel edition",
         "accroche": "What would he choose?",
-        "consigne": "Choose the photo he would pick. 3 rounds!",
+        "consigne": "One photo per round: the one he would pick!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which classic car would he drive?",
+            "question": "Which city would he take you to?",
             "options": [
               {
-                "texte": "1967 Mustang",
-                "image": "choisirait/vintage/mustang-67.webp"
+                "texte": "New York",
+                "image": "choisirait/ville/new-york.webp"
               },
               {
-                "texte": "Classic Mini",
-                "image": "choisirait/vintage/mini-classique.webp"
+                "texte": "Amsterdam",
+                "image": "choisirait/ville/amsterdam.webp"
               },
               {
-                "texte": "VW Camper Van",
-                "image": "choisirait/vintage/combi.webp"
+                "texte": "Prague",
+                "image": "choisirait/ville/prague.webp"
               }
             ]
           },
           {
-            "question": "Which motorbike would he ride?",
+            "question": "How would he travel with you?",
             "options": [
               {
-                "texte": "Harley-Davidson",
-                "image": "choisirait/moto/harley.webp"
-              },
-              {
-                "texte": "Indian Scout",
-                "image": "choisirait/moto/indian.webp"
-              },
-              {
-                "texte": "BMW GS",
+                "texte": "Motorbike",
                 "image": "choisirait/moto/bmw-gs.webp"
+              },
+              {
+                "texte": "Private jet",
+                "image": "choisirait/voyage/jet.webp"
+              },
+              {
+                "texte": "Sailboat",
+                "image": "choisirait/voyage/voilier.webp"
               }
             ]
           },
           {
-            "question": "Which car would he pick?",
+            "question": "Which view would he wake up to?",
             "options": [
               {
-                "texte": "Nissan GT-R",
-                "image": "choisirait/voiture/gtr.webp"
+                "texte": "Vineyards",
+                "image": "choisirait/vue/vignes.webp"
               },
               {
-                "texte": "Corvette",
-                "image": "choisirait/voiture/corvette.webp"
+                "texte": "Tropical beach",
+                "image": "choisirait/vue/plage-tropicale.webp"
               },
               {
-                "texte": "Mercedes-AMG C63 S",
-                "image": "choisirait/voiture/amg-c63.webp"
+                "texte": "Rice fields",
+                "image": "choisirait/vue/rizieres.webp"
               }
             ]
           }
@@ -79,12 +79,12 @@
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Car lovers edition. Easy for you? Then the next one is for him.\n\nSend this to him",
+      "legende": "Travel edition. Pick for him, then let him prove you wrong.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
         "#boyfriendquiz",
         "#thisorthat",
-        "#carlovers",
+        "#travelcouple",
         "#quizcouple"
       ]
     }

@@ -12,79 +12,79 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "elle",
-        "etiquette": "Dream home edition",
-        "accroche": "What would she choose?",
-        "consigne": "Choose the photo she would pick. 3 rounds!",
+        "pour": "lui",
+        "etiquette": "Car lovers edition",
+        "accroche": "What would he choose?",
+        "consigne": "Choose the photo he would pick. 3 rounds!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which view would she wake up to?",
+            "question": "Which motorbike would he ride?",
             "options": [
               {
-                "texte": "Vineyards",
-                "image": "choisirait/vue/vignes.webp"
+                "texte": "Ducati Panigale",
+                "image": "choisirait/moto/ducati.webp"
               },
               {
-                "texte": "Rice fields",
-                "image": "choisirait/vue/rizieres.webp"
+                "texte": "Yamaha MT-07",
+                "image": "choisirait/moto/mt07.webp"
               },
               {
-                "texte": "Forest",
-                "image": "choisirait/vue/foret.webp"
+                "texte": "Vespa",
+                "image": "choisirait/moto/vespa.webp"
               }
             ]
           },
           {
-            "question": "Which dream house would she pick?",
+            "question": "Which classic car would he drive?",
             "options": [
               {
-                "texte": "Loft apartment",
-                "image": "choisirait/maison/loft.webp"
+                "texte": "Classic Mini",
+                "image": "choisirait/vintage/mini-classique.webp"
               },
               {
-                "texte": "Mountain chalet",
-                "image": "choisirait/maison/chalet.webp"
+                "texte": "Mercedes 300 SL",
+                "image": "choisirait/vintage/300sl.webp"
               },
               {
-                "texte": "Victorian house",
-                "image": "choisirait/maison/victorienne.webp"
+                "texte": "1967 Mustang",
+                "image": "choisirait/vintage/mustang-67.webp"
               }
             ]
           },
           {
-            "question": "Which cat would she adopt?",
+            "question": "Which car would he pick?",
             "options": [
               {
-                "texte": "Black cat",
-                "image": "choisirait/chat/chat-noir.webp"
+                "texte": "Mercedes-AMG C63 S",
+                "image": "choisirait/voiture/amg-c63.webp"
               },
               {
-                "texte": "Bengal",
-                "image": "choisirait/chat/bengal.webp"
+                "texte": "Ferrari F8",
+                "image": "choisirait/voiture/ferrari-f8.webp"
               },
               {
-                "texte": "Scottish Fold",
-                "image": "choisirait/chat/scottish.webp"
+                "texte": "Mercedes G-Class",
+                "image": "choisirait/voiture/g-class.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Got her 3 picks? Send it and see!",
-          "bouton": "Send this to her",
+          "question": "Now send it to him. Did you guess right?",
+          "bouton": "Send this to him",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Dream home edition. Your answers first, then her reaction.\n\nSend this to her",
+      "legende": "Car lovers edition. Easy for you? Then the next one is for him.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
-        "#girlfriendquiz",
+        "#boyfriendquiz",
         "#thisorthat",
-        "#dreamhome",
+        "#carlovers",
         "#quizcouple"
       ]
     }

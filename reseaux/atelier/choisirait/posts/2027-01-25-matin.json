@@ -13,78 +13,78 @@
         "langue": "en",
         "theme": "light",
         "pour": "lui",
-        "etiquette": "Dream home edition",
+        "etiquette": "Style edition",
         "accroche": "What would he choose?",
-        "consigne": "Choose the photo he would pick. 3 rounds!",
+        "consigne": "One photo per round: the one he would pick!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which dream house would he pick?",
+            "question": "Which phone would he pick?",
             "options": [
               {
-                "texte": "Tiny house",
-                "image": "choisirait/maison/tiny-house.webp"
+                "texte": "Samsung Galaxy",
+                "image": "choisirait/telephone/galaxy.webp"
               },
               {
-                "texte": "Mountain chalet",
-                "image": "choisirait/maison/chalet.webp"
+                "texte": "Google Pixel",
+                "image": "choisirait/telephone/pixel.webp"
               },
               {
-                "texte": "Victorian house",
-                "image": "choisirait/maison/victorienne.webp"
+                "texte": "Flip phone",
+                "image": "choisirait/telephone/clapet.webp"
               }
             ]
           },
           {
-            "question": "Which view would he wake up to?",
+            "question": "Which sneakers would he pick?",
             "options": [
               {
-                "texte": "Snowy peaks",
-                "image": "choisirait/vue/neige.webp"
+                "texte": "Birkenstock",
+                "image": "choisirait/baskets/birkenstock.webp"
               },
               {
-                "texte": "Tropical beach",
-                "image": "choisirait/vue/plage-tropicale.webp"
+                "texte": "Stan Smith",
+                "image": "choisirait/baskets/stan-smith.webp"
               },
               {
-                "texte": "Ocean",
-                "image": "choisirait/vue/ocean.webp"
+                "texte": "Vans Old Skool",
+                "image": "choisirait/baskets/vans.webp"
               }
             ]
           },
           {
-            "question": "Which dog would he pick?",
+            "question": "Which watch would he wear?",
             "options": [
               {
-                "texte": "Corgi",
-                "image": "choisirait/chien/corgi.webp"
+                "texte": "Cartier Tank",
+                "image": "choisirait/montre/cartier.webp"
               },
               {
-                "texte": "Australian Shepherd",
-                "image": "choisirait/chien/berger-australien.webp"
+                "texte": "Pocket watch",
+                "image": "choisirait/montre/gousset.webp"
               },
               {
-                "texte": "Beagle",
-                "image": "choisirait/chien/beagle.webp"
+                "texte": "Omega Speedmaster",
+                "image": "choisirait/montre/speedmaster.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Now send it to him. Did you guess right?",
+          "question": "Got his 3 picks? Send it and see!",
           "bouton": "Send this to him",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Dream home edition. Your answers first, then his reaction.\n\nSend this to him",
+      "legende": "Style edition. Easy for you? Then the next one is for him.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
         "#boyfriendquiz",
         "#thisorthat",
-        "#dreamhome",
+        "#style",
         "#quizcouple"
       ]
     }

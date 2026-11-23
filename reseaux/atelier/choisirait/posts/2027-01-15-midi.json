@@ -12,79 +12,79 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "lui",
-        "etiquette": "Sweet tooth edition",
-        "accroche": "What would he choose?",
-        "consigne": "Pick A, B or C for him, then send it to him!",
+        "pour": "elle",
+        "etiquette": "Game night edition",
+        "accroche": "What would she choose?",
+        "consigne": "Choose the photo she would pick. 3 rounds!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which movie snack would he pick?",
+            "question": "Which game night would she pick?",
+            "options": [
+              {
+                "texte": "Foosball",
+                "image": "choisirait/jeu/baby-foot.webp"
+              },
+              {
+                "texte": "Pool",
+                "image": "choisirait/jeu/billard.webp"
+              },
+              {
+                "texte": "Video games",
+                "image": "choisirait/jeu/jeux-video.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which console would she pick?",
+            "options": [
+              {
+                "texte": "Game Boy",
+                "image": "choisirait/console/gameboy.webp"
+              },
+              {
+                "texte": "Nintendo Switch",
+                "image": "choisirait/console/switch.webp"
+              },
+              {
+                "texte": "Gaming PC",
+                "image": "choisirait/console/pc-gamer.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which movie snack would she pick?",
             "options": [
               {
                 "texte": "Popcorn",
                 "image": "choisirait/snack/popcorn.webp"
               },
               {
-                "texte": "Nachos",
-                "image": "choisirait/snack/nachos.webp"
-              },
-              {
                 "texte": "Gummy bears",
                 "image": "choisirait/snack/oursons.webp"
-              }
-            ]
-          },
-          {
-            "question": "What would he grab at the bakery?",
-            "options": [
-              {
-                "texte": "Bagel",
-                "image": "choisirait/boulangerie/bagel.webp"
               },
               {
-                "texte": "Donut",
-                "image": "choisirait/boulangerie/donut.webp"
-              },
-              {
-                "texte": "Croissant",
-                "image": "choisirait/boulangerie/croissant.webp"
-              }
-            ]
-          },
-          {
-            "question": "Which ice cream would he get?",
-            "options": [
-              {
-                "texte": "Ice cream sandwich",
-                "image": "choisirait/glace/sandwich-glace.webp"
-              },
-              {
-                "texte": "Sundae",
-                "image": "choisirait/glace/sundae.webp"
-              },
-              {
-                "texte": "Gelato",
-                "image": "choisirait/glace/gelato.webp"
+                "texte": "Nachos",
+                "image": "choisirait/snack/nachos.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Send it to him: how many did you get?",
-          "bouton": "Send this to him",
+          "question": "Send it to her: how many did you get?",
+          "bouton": "Send this to her",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Sweet tooth edition. Answer for him first, no peeking.\n\nSend this to him",
+      "legende": "Game night edition. Easy for you? Then the next one is for her.\n\nSend this to her",
       "hashtags": [
         "#couplequiz",
-        "#boyfriendquiz",
+        "#girlfriendquiz",
         "#thisorthat",
-        "#dessert",
+        "#gamenight",
         "#quizcouple"
       ]
     }

@@ -13,62 +13,62 @@
         "langue": "en",
         "theme": "light",
         "pour": "lui",
-        "etiquette": "Dream life edition",
+        "etiquette": "Game night edition",
         "accroche": "What would he choose?",
-        "consigne": "Choose the photo he would pick. 3 rounds!",
+        "consigne": "One photo per round: the one he would pick!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which watch would he wear?",
+            "question": "What would he order at 2 a.m.?",
             "options": [
               {
-                "texte": "Rolex Submariner",
-                "image": "choisirait/montre/rolex.webp"
+                "texte": "Fried chicken",
+                "image": "choisirait/fastfood/poulet-frit.webp"
               },
               {
-                "texte": "Cartier Tank",
-                "image": "choisirait/montre/cartier.webp"
+                "texte": "Kebab",
+                "image": "choisirait/fastfood/kebab.webp"
               },
               {
-                "texte": "Pocket watch",
-                "image": "choisirait/montre/gousset.webp"
+                "texte": "Grilled cheese",
+                "image": "choisirait/fastfood/croque.webp"
               }
             ]
           },
           {
-            "question": "Which house would he pick?",
+            "question": "Which drink would he get?",
             "options": [
               {
-                "texte": "Lake house",
-                "image": "choisirait/maison/maison-lac.webp"
+                "texte": "Lemonade",
+                "image": "choisirait/boisson/limonade.webp"
               },
               {
-                "texte": "Loft apartment",
-                "image": "choisirait/maison/loft.webp"
+                "texte": "Bubble tea",
+                "image": "choisirait/boisson/bubble-tea.webp"
               },
               {
-                "texte": "Tiny house",
-                "image": "choisirait/maison/tiny-house.webp"
+                "texte": "Iced tea",
+                "image": "choisirait/boisson/the-glace.webp"
               }
             ]
           },
           {
-            "question": "Where would he take you on vacation?",
+            "question": "Which console would he pick?",
             "options": [
               {
-                "texte": "Morocco",
-                "image": "choisirait/vacances/maroc.webp"
+                "texte": "Nintendo Switch",
+                "image": "choisirait/console/switch.webp"
               },
               {
-                "texte": "Switzerland",
-                "image": "choisirait/vacances/suisse.webp"
+                "texte": "Game Boy",
+                "image": "choisirait/console/gameboy.webp"
               },
               {
-                "texte": "Japan",
-                "image": "choisirait/vacances/japon.webp"
+                "texte": "Xbox",
+                "image": "choisirait/console/xbox.webp"
               }
             ]
           }
@@ -79,12 +79,12 @@
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Dream life edition. Write down his three letters before you send it.\n\nSend this to him",
+      "legende": "Game night edition. Write down his three letters before you send it.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
         "#boyfriendquiz",
         "#thisorthat",
-        "#dreamlife",
+        "#gamenight",
         "#quizcouple"
       ]
     }

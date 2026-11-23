@@ -13,78 +13,78 @@
         "langue": "en",
         "theme": "light",
         "pour": "elle",
-        "etiquette": "Adventure edition",
+        "etiquette": "Date night edition",
         "accroche": "What would she choose?",
-        "consigne": "Pick A, B or C for her, then send it to her!",
+        "consigne": "Choose the photo she would pick. 3 rounds!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which adventure would she try?",
+            "question": "Which flowers would she want?",
             "options": [
               {
-                "texte": "Skiing",
-                "image": "choisirait/aventure/ski.webp"
+                "texte": "Lilies",
+                "image": "choisirait/fleurs/lys.webp"
               },
               {
-                "texte": "Horse riding",
-                "image": "choisirait/aventure/equitation.webp"
+                "texte": "Orchid",
+                "image": "choisirait/fleurs/orchidee.webp"
               },
               {
-                "texte": "Surfing",
-                "image": "choisirait/aventure/surf.webp"
+                "texte": "Wildflowers",
+                "image": "choisirait/fleurs/fleurs-sauvages.webp"
               }
             ]
           },
           {
-            "question": "Which sport would she watch?",
+            "question": "What would she order at the bar?",
             "options": [
               {
-                "texte": "Basketball",
-                "image": "choisirait/sport/basket.webp"
+                "texte": "Espresso martini",
+                "image": "choisirait/bar/espresso-martini.webp"
               },
               {
-                "texte": "Golf",
-                "image": "choisirait/sport/golf.webp"
+                "texte": "Margarita",
+                "image": "choisirait/bar/margarita.webp"
               },
               {
-                "texte": "Football",
-                "image": "choisirait/sport/foot.webp"
+                "texte": "Gin and tonic",
+                "image": "choisirait/bar/gin-tonic.webp"
               }
             ]
           },
           {
-            "question": "Where would she take you on vacation?",
+            "question": "Which dessert would she pick?",
             "options": [
               {
-                "texte": "Peru",
-                "image": "choisirait/vacances/perou.webp"
+                "texte": "Pavlova",
+                "image": "choisirait/dessert/pavlova.webp"
               },
               {
-                "texte": "Egypt",
-                "image": "choisirait/vacances/egypte.webp"
+                "texte": "Crêpes",
+                "image": "choisirait/dessert/crepes.webp"
               },
               {
-                "texte": "Iceland",
-                "image": "choisirait/vacances/islande.webp"
+                "texte": "Huge birthday cake",
+                "image": "choisirait/dessert/gateau-anniversaire.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Got her 3 picks? Send it and see!",
+          "question": "Now send it to her. Did you guess right?",
           "bouton": "Send this to her",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Adventure edition. No cheating: decide before the timer runs out.\n\nSend this to her",
+      "legende": "Date night edition. Write down her three letters before you send it.\n\nSend this to her",
       "hashtags": [
         "#couplequiz",
         "#girlfriendquiz",
         "#thisorthat",
-        "#adventurecouple",
+        "#datenight",
         "#quizcouple"
       ]
     }

@@ -12,79 +12,79 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "lui",
-        "etiquette": "Wedding edition",
-        "accroche": "What would he choose?",
-        "consigne": "Pick A, B or C for him, then send it to him!",
+        "pour": "elle",
+        "etiquette": "Hobbies edition",
+        "accroche": "What would she choose?",
+        "consigne": "One photo per round: the one she would pick!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which ring would he pick for you?",
+            "question": "Which instrument would she play?",
             "options": [
               {
-                "texte": "Halo ring",
-                "image": "choisirait/bague/halo.webp"
+                "texte": "Piano",
+                "image": "choisirait/instrument/piano.webp"
               },
               {
-                "texte": "Solitaire diamond",
-                "image": "choisirait/bague/solitaire.webp"
+                "texte": "DJ decks",
+                "image": "choisirait/instrument/platines.webp"
               },
               {
-                "texte": "Emerald ring",
-                "image": "choisirait/bague/emeraude.webp"
+                "texte": "Drums",
+                "image": "choisirait/instrument/batterie.webp"
               }
             ]
           },
           {
-            "question": "Where would he want to get married?",
+            "question": "Which game night would she pick?",
             "options": [
               {
-                "texte": "Lakeside",
-                "image": "choisirait/vue/lac.webp"
+                "texte": "Chess",
+                "image": "choisirait/jeu/echecs-soir.webp"
               },
               {
-                "texte": "Forest",
-                "image": "choisirait/vue/foret.webp"
+                "texte": "Pool",
+                "image": "choisirait/jeu/billard.webp"
               },
               {
-                "texte": "Garden",
-                "image": "choisirait/mariage/mariage-jardin.webp"
+                "texte": "Ping pong",
+                "image": "choisirait/jeu/ping-pong.webp"
               }
             ]
           },
           {
-            "question": "Where would he propose?",
+            "question": "Which hobby would she pick up?",
             "options": [
               {
-                "texte": "Eiffel Tower",
-                "image": "choisirait/demande/demande-eiffel.webp"
+                "texte": "Pottery",
+                "image": "choisirait/loisir/poterie.webp"
               },
               {
-                "texte": "Mountaintop",
-                "image": "choisirait/demande/demande-montagne.webp"
+                "texte": "Gardening",
+                "image": "choisirait/loisir/jardinage.webp"
               },
               {
-                "texte": "Beach at sunset",
-                "image": "choisirait/demande/demande-plage.webp"
+                "texte": "Woodworking",
+                "image": "choisirait/loisir/menuiserie.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Now send it to him. Did you guess right?",
-          "bouton": "Send this to him",
+          "question": "Got her 3 picks? Send it and see!",
+          "bouton": "Send this to her",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Wedding edition. Answer for him first, no peeking.\n\nSend this to him",
+      "legende": "Hobbies edition. Easy for you? Then the next one is for her.\n\nSend this to her",
       "hashtags": [
         "#couplequiz",
-        "#boyfriendquiz",
+        "#girlfriendquiz",
         "#thisorthat",
-        "#engaged",
+        "#hobbies",
         "#quizcouple"
       ]
     }

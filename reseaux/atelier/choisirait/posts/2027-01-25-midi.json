@@ -12,79 +12,79 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "lui",
-        "etiquette": "Date night edition",
-        "accroche": "What would he choose?",
-        "consigne": "Answer for him: A, B or C? Then send it!",
+        "pour": "elle",
+        "etiquette": "Wedding edition",
+        "accroche": "What would she choose?",
+        "consigne": "Answer for her: A, B or C? Then send it!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which flowers would he get you?",
+            "question": "Which ring would she want?",
             "options": [
               {
-                "texte": "Red roses",
-                "image": "choisirait/fleurs/roses.webp"
+                "texte": "Halo ring",
+                "image": "choisirait/bague/halo.webp"
               },
               {
-                "texte": "Lilies",
-                "image": "choisirait/fleurs/lys.webp"
+                "texte": "Gold band",
+                "image": "choisirait/bague/alliance-or.webp"
               },
               {
-                "texte": "Sunflowers",
-                "image": "choisirait/fleurs/tournesols.webp"
+                "texte": "Solitaire diamond",
+                "image": "choisirait/bague/solitaire.webp"
               }
             ]
           },
           {
-            "question": "Which date would he take you on?",
+            "question": "Where would she want you to propose?",
             "options": [
               {
-                "texte": "Fancy dinner",
-                "image": "choisirait/demande/demande-resto.webp"
+                "texte": "Disney castle",
+                "image": "choisirait/demande/demande-chateau.webp"
               },
               {
-                "texte": "Stargazing",
-                "image": "choisirait/date/etoiles.webp"
+                "texte": "Mountaintop",
+                "image": "choisirait/demande/demande-montagne.webp"
               },
               {
-                "texte": "Theme park",
-                "image": "choisirait/date/parc.webp"
+                "texte": "Northern lights",
+                "image": "choisirait/demande/demande-aurores.webp"
               }
             ]
           },
           {
-            "question": "What would he order at the bar?",
+            "question": "Where would she want to get married?",
             "options": [
               {
-                "texte": "Red wine",
-                "image": "choisirait/bar/vin-rouge.webp"
+                "texte": "Vineyard",
+                "image": "choisirait/vue/vignes.webp"
               },
               {
-                "texte": "Gin and tonic",
-                "image": "choisirait/bar/gin-tonic.webp"
+                "texte": "Mountaintop",
+                "image": "choisirait/mariage/sommet.webp"
               },
               {
-                "texte": "Aperol Spritz",
-                "image": "choisirait/bar/spritz.webp"
+                "texte": "Beach",
+                "image": "choisirait/vue/plage-tropicale.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Send it to him: how many did you get?",
-          "bouton": "Send this to him",
+          "question": "Send it to her: how many did you get?",
+          "bouton": "Send this to her",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Date night edition. One letter per question, then send it to him.\n\nSend this to him",
+      "legende": "Wedding edition. One letter per question, then send it to her.\n\nSend this to her",
       "hashtags": [
         "#couplequiz",
-        "#boyfriendquiz",
+        "#girlfriendquiz",
         "#thisorthat",
-        "#datenight",
+        "#engaged",
         "#quizcouple"
       ]
     }

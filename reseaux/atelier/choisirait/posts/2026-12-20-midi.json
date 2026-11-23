@@ -15,7 +15,7 @@
         "pour": "lui",
         "etiquette": "Winter edition",
         "accroche": "What would he choose?",
-        "consigne": "One photo per round: the one he would pick!",
+        "consigne": "Answer for him: A, B or C? Then send it!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
@@ -56,7 +56,7 @@
             ]
           },
           {
-            "question": "Which dinner would he pick?",
+            "question": "What would he cook for date night?",
             "options": [
               {
                 "texte": "Cheese fondue",
@@ -74,12 +74,12 @@
           }
         ],
         "fin": {
-          "question": "Now send it to him. Did you guess right?",
+          "question": "Got his 3 picks? Send it and see!",
           "bouton": "Send this to him",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Winter edition. Write down his three letters before you send it.\n\nSend this to him",
+      "legende": "Winter edition. He will swear you got at least one wrong.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
         "#boyfriendquiz",

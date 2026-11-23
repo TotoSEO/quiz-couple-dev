@@ -15,7 +15,7 @@
         "pour": "lui",
         "etiquette": "Dream home edition",
         "accroche": "What would he choose?",
-        "consigne": "Choose the photo he would pick. 3 rounds!",
+        "consigne": "One photo per round: the one he would pick!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
@@ -39,7 +39,7 @@
             ]
           },
           {
-            "question": "Which dream house would he pick?",
+            "question": "Which house would he pick?",
             "options": [
               {
                 "texte": "Tiny house",
@@ -56,7 +56,7 @@
             ]
           },
           {
-            "question": "Which dog would he adopt?",
+            "question": "Which dog would he pick?",
             "options": [
               {
                 "texte": "Doberman",
@@ -74,12 +74,12 @@
           }
         ],
         "fin": {
-          "question": "Now send it to him. Did you guess right?",
+          "question": "Got his 3 picks? Send it and see!",
           "bouton": "Send this to him",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Dream home edition. Easy for you? Then the next one is for him.\n\nSend this to him",
+      "legende": "Dream home edition. Pick for him, then let him prove you wrong.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
         "#boyfriendquiz",

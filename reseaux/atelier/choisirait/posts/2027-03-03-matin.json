@@ -12,79 +12,79 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "lui",
-        "etiquette": "Cozy night in edition",
-        "accroche": "What would he choose?",
-        "consigne": "Answer for him: A, B or C? Then send it!",
+        "pour": "elle",
+        "etiquette": "Spring edition",
+        "accroche": "What would she choose?",
+        "consigne": "Pick A, B or C for her, then send it to her!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which dessert would he pick?",
+            "question": "Which season would she pick?",
             "options": [
               {
-                "texte": "Crêpes",
-                "image": "choisirait/dessert/crepes.webp"
+                "texte": "Autumn",
+                "image": "choisirait/saison/automne.webp"
               },
               {
-                "texte": "Macarons",
-                "image": "choisirait/dessert/macarons.webp"
+                "texte": "Summer",
+                "image": "choisirait/saison/ete.webp"
               },
               {
-                "texte": "Huge birthday cake",
-                "image": "choisirait/dessert/gateau-anniversaire.webp"
+                "texte": "Winter",
+                "image": "choisirait/saison/hiver-saison.webp"
               }
             ]
           },
           {
-            "question": "What would he cook for date night?",
+            "question": "Which adventure would she try?",
             "options": [
               {
-                "texte": "Indian curry",
-                "image": "choisirait/diner/curry.webp"
+                "texte": "Surfing",
+                "image": "choisirait/aventure/surf.webp"
               },
               {
-                "texte": "Ramen",
-                "image": "choisirait/diner/ramen.webp"
+                "texte": "Rock climbing",
+                "image": "choisirait/aventure/escalade.webp"
               },
               {
-                "texte": "Paella",
-                "image": "choisirait/diner/paella.webp"
+                "texte": "Skydiving",
+                "image": "choisirait/aventure/parachute.webp"
               }
             ]
           },
           {
-            "question": "Which game night would he pick?",
+            "question": "Which date would she plan?",
             "options": [
               {
-                "texte": "Video games",
-                "image": "choisirait/jeu/jeux-video.webp"
+                "texte": "Mini golf",
+                "image": "choisirait/date/mini-golf.webp"
               },
               {
-                "texte": "Board games",
-                "image": "choisirait/jeu/jeux-societe.webp"
+                "texte": "Fancy dinner",
+                "image": "choisirait/demande/demande-resto.webp"
               },
               {
-                "texte": "Poker",
-                "image": "choisirait/jeu/poker.webp"
+                "texte": "Hot air balloon",
+                "image": "choisirait/date/montgolfiere-date.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Now send it to him. Did you guess right?",
-          "bouton": "Send this to him",
+          "question": "Got her 3 picks? Send it and see!",
+          "bouton": "Send this to her",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Cozy night in edition. He will swear you got at least one wrong.\n\nSend this to him",
+      "legende": "Spring edition. Guess first, send it after. Then compare.\n\nSend this to her",
       "hashtags": [
         "#couplequiz",
-        "#boyfriendquiz",
+        "#girlfriendquiz",
         "#thisorthat",
-        "#cozynight",
+        "#spring",
         "#quizcouple"
       ]
     }

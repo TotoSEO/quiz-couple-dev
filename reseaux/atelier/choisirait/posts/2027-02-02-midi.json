@@ -13,62 +13,62 @@
         "langue": "en",
         "theme": "light",
         "pour": "lui",
-        "etiquette": "Cozy night in edition",
+        "etiquette": "Valentine's edition",
         "accroche": "What would he choose?",
-        "consigne": "Choose the photo he would pick. 3 rounds!",
+        "consigne": "One photo per round: the one he would pick!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which game night would he pick?",
+            "question": "What would he get you for Valentine's?",
             "options": [
               {
-                "texte": "Board games",
-                "image": "choisirait/jeu/jeux-societe.webp"
+                "texte": "Box of chocolates",
+                "image": "choisirait/valentin/boite-chocolats.webp"
               },
               {
-                "texte": "Foosball",
-                "image": "choisirait/jeu/baby-foot.webp"
+                "texte": "Love letter",
+                "image": "choisirait/valentin/lettre.webp"
               },
               {
-                "texte": "Chess",
-                "image": "choisirait/jeu/echecs-soir.webp"
+                "texte": "Jewelry",
+                "image": "choisirait/valentin/bijou.webp"
               }
             ]
           },
           {
-            "question": "Which drink would he get?",
+            "question": "Which ring would he pick for you?",
             "options": [
               {
-                "texte": "Iced tea",
-                "image": "choisirait/boisson/the-glace.webp"
+                "texte": "Gold band",
+                "image": "choisirait/bague/alliance-or.webp"
               },
               {
-                "texte": "Lemonade",
-                "image": "choisirait/boisson/limonade.webp"
+                "texte": "Halo ring",
+                "image": "choisirait/bague/halo.webp"
               },
               {
-                "texte": "Bubble tea",
-                "image": "choisirait/boisson/bubble-tea.webp"
+                "texte": "Emerald ring",
+                "image": "choisirait/bague/emeraude.webp"
               }
             ]
           },
           {
-            "question": "Which console would he pick?",
+            "question": "Which flowers would he get you?",
             "options": [
               {
-                "texte": "PlayStation 5",
-                "image": "choisirait/console/ps5.webp"
+                "texte": "Orchid",
+                "image": "choisirait/fleurs/orchidee.webp"
               },
               {
-                "texte": "Xbox",
-                "image": "choisirait/console/xbox.webp"
+                "texte": "Sunflowers",
+                "image": "choisirait/fleurs/tournesols.webp"
               },
               {
-                "texte": "Nintendo Switch",
-                "image": "choisirait/console/switch.webp"
+                "texte": "Peonies",
+                "image": "choisirait/fleurs/pivoines.webp"
               }
             ]
           }
@@ -79,12 +79,12 @@
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Cozy night in edition. If you get all three, you know him by heart.\n\nSend this to him",
+      "legende": "Valentine's edition. Your answers first, then his reaction.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
         "#boyfriendquiz",
         "#thisorthat",
-        "#cozynight",
+        "#valentinesday",
         "#quizcouple"
       ]
     }

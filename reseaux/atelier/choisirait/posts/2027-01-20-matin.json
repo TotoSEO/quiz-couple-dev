@@ -12,79 +12,79 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "lui",
-        "etiquette": "Food edition",
-        "accroche": "What would he choose?",
-        "consigne": "Pick A, B or C for him, then send it to him!",
+        "pour": "elle",
+        "etiquette": "Date night edition",
+        "accroche": "What would she choose?",
+        "consigne": "Choose the photo she would pick. 3 rounds!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which pasta would he pick?",
+            "question": "Which flowers would she want?",
             "options": [
               {
-                "texte": "Mac and cheese",
-                "image": "choisirait/pates/mac-cheese.webp"
+                "texte": "Lavender",
+                "image": "choisirait/fleurs/lavande.webp"
               },
               {
-                "texte": "Gnocchi",
-                "image": "choisirait/pates/gnocchi.webp"
+                "texte": "Wildflowers",
+                "image": "choisirait/fleurs/fleurs-sauvages.webp"
               },
               {
-                "texte": "Seafood pasta",
-                "image": "choisirait/pates/fruits-mer.webp"
+                "texte": "Lilies",
+                "image": "choisirait/fleurs/lys.webp"
               }
             ]
           },
           {
-            "question": "Which potato would he pick?",
+            "question": "Which date would she take you on?",
             "options": [
               {
-                "texte": "Hash browns",
-                "image": "choisirait/patate/hash-browns.webp"
+                "texte": "Theme park",
+                "image": "choisirait/date/parc.webp"
               },
               {
-                "texte": "French fries",
-                "image": "choisirait/patate/frites.webp"
+                "texte": "Fancy dinner",
+                "image": "choisirait/demande/demande-resto.webp"
               },
               {
-                "texte": "Potato gratin",
-                "image": "choisirait/patate/gratin.webp"
+                "texte": "Stargazing",
+                "image": "choisirait/date/etoiles.webp"
               }
             ]
           },
           {
-            "question": "How would he have his eggs?",
+            "question": "What would she order at the bar?",
             "options": [
               {
-                "texte": "Omelette",
-                "image": "choisirait/oeufs/omelette.webp"
+                "texte": "Whiskey",
+                "image": "choisirait/bar/whisky.webp"
               },
               {
-                "texte": "Soft-boiled",
-                "image": "choisirait/oeufs/coque.webp"
+                "texte": "Espresso martini",
+                "image": "choisirait/bar/espresso-martini.webp"
               },
               {
-                "texte": "Poached",
-                "image": "choisirait/oeufs/poche.webp"
+                "texte": "Gin and tonic",
+                "image": "choisirait/bar/gin-tonic.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Now send it to him. Did you guess right?",
-          "bouton": "Send this to him",
+          "question": "Got her 3 picks? Send it and see!",
+          "bouton": "Send this to her",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Food edition. One letter per question, then send it to him.\n\nSend this to him",
+      "legende": "Date night edition. If you get all three, you know her by heart.\n\nSend this to her",
       "hashtags": [
         "#couplequiz",
-        "#boyfriendquiz",
+        "#girlfriendquiz",
         "#thisorthat",
-        "#foodie",
+        "#datenight",
         "#quizcouple"
       ]
     }

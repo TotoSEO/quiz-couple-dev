@@ -13,78 +13,78 @@
         "langue": "en",
         "theme": "light",
         "pour": "lui",
-        "etiquette": "Pet lovers edition",
+        "etiquette": "Cozy night in edition",
         "accroche": "What would he choose?",
-        "consigne": "One photo per round: the one he would pick!",
+        "consigne": "Answer for him: A, B or C? Then send it!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which pet would he want?",
+            "question": "Which drink would he get?",
             "options": [
               {
-                "texte": "Hedgehog",
-                "image": "choisirait/animal/herisson.webp"
+                "texte": "Smoothie",
+                "image": "choisirait/boisson/smoothie.webp"
               },
               {
-                "texte": "Chameleon",
-                "image": "choisirait/animal/cameleon.webp"
+                "texte": "Iced tea",
+                "image": "choisirait/boisson/the-glace.webp"
               },
               {
-                "texte": "Turtle",
-                "image": "choisirait/animal/tortue.webp"
+                "texte": "Bubble tea",
+                "image": "choisirait/boisson/bubble-tea.webp"
               }
             ]
           },
           {
-            "question": "Which cat would he adopt?",
+            "question": "Which console would he pick?",
             "options": [
               {
-                "texte": "Persian",
-                "image": "choisirait/chat/persan.webp"
+                "texte": "Xbox",
+                "image": "choisirait/console/xbox.webp"
               },
               {
-                "texte": "Sphynx",
-                "image": "choisirait/chat/sphynx.webp"
+                "texte": "Nintendo Switch",
+                "image": "choisirait/console/switch.webp"
               },
               {
-                "texte": "Ginger cat",
-                "image": "choisirait/chat/chat-roux.webp"
+                "texte": "PlayStation 5",
+                "image": "choisirait/console/ps5.webp"
               }
             ]
           },
           {
-            "question": "Which dog would he adopt?",
+            "question": "Which game night would he pick?",
             "options": [
               {
-                "texte": "Border Collie",
-                "image": "choisirait/chien/border-collie.webp"
+                "texte": "Video games",
+                "image": "choisirait/jeu/jeux-video.webp"
               },
               {
-                "texte": "Pug",
-                "image": "choisirait/chien/carlin.webp"
+                "texte": "Chess",
+                "image": "choisirait/jeu/echecs-soir.webp"
               },
               {
-                "texte": "Rottweiler",
-                "image": "choisirait/chien/rottweiler.webp"
+                "texte": "Foosball",
+                "image": "choisirait/jeu/baby-foot.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Now send it to him. Did you guess right?",
+          "question": "Got his 3 picks? Send it and see!",
           "bouton": "Send this to him",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Pet lovers edition. Write down his three letters before you send it.\n\nSend this to him",
+      "legende": "Cozy night in edition. He will swear you got at least one wrong.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
         "#boyfriendquiz",
         "#thisorthat",
-        "#petlovers",
+        "#cozynight",
         "#quizcouple"
       ]
     }

@@ -13,78 +13,78 @@
         "langue": "en",
         "theme": "light",
         "pour": "elle",
-        "etiquette": "Cozy night in edition",
+        "etiquette": "Food edition",
         "accroche": "What would she choose?",
-        "consigne": "Pick A, B or C for her, then send it to her!",
+        "consigne": "Choose the photo she would pick. 3 rounds!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which cake would she pick?",
+            "question": "Which pizza would she order?",
             "options": [
               {
-                "texte": "Macarons",
-                "image": "choisirait/dessert/macarons.webp"
+                "texte": "Margherita",
+                "image": "choisirait/pizza/margherita.webp"
               },
               {
-                "texte": "Chocolate lava cake",
-                "image": "choisirait/dessert/fondant.webp"
+                "texte": "Calzone",
+                "image": "choisirait/pizza/calzone.webp"
               },
               {
-                "texte": "Tiramisu",
-                "image": "choisirait/dessert/tiramisu.webp"
+                "texte": "Hawaiian",
+                "image": "choisirait/pizza/hawaienne.webp"
               }
             ]
           },
           {
-            "question": "Which dinner would she pick?",
+            "question": "Which pasta would she pick?",
             "options": [
               {
-                "texte": "Sushi",
-                "image": "choisirait/diner/sushi.webp"
+                "texte": "Carbonara",
+                "image": "choisirait/pates/carbonara.webp"
               },
               {
-                "texte": "Paella",
-                "image": "choisirait/diner/paella.webp"
+                "texte": "Bolognese",
+                "image": "choisirait/pates/bolognaise.webp"
               },
               {
-                "texte": "Lobster",
-                "image": "choisirait/diner/homard.webp"
+                "texte": "Pesto",
+                "image": "choisirait/pates/pesto.webp"
               }
             ]
           },
           {
-            "question": "Which console would she pick?",
+            "question": "Which potato would she pick?",
             "options": [
               {
-                "texte": "Game Boy",
-                "image": "choisirait/console/gameboy.webp"
+                "texte": "Potato gratin",
+                "image": "choisirait/patate/gratin.webp"
               },
               {
-                "texte": "Nintendo Switch",
-                "image": "choisirait/console/switch.webp"
+                "texte": "Rösti",
+                "image": "choisirait/patate/rosti.webp"
               },
               {
-                "texte": "Xbox",
-                "image": "choisirait/console/xbox.webp"
+                "texte": "Hash browns",
+                "image": "choisirait/patate/hash-browns.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Got her 3 picks? Send it and see!",
+          "question": "Now send it to her. Did you guess right?",
           "bouton": "Send this to her",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Cozy night in edition. Guess first, send it after. Then compare.\n\nSend this to her",
+      "legende": "Food edition. Pick for her, then let her prove you wrong.\n\nSend this to her",
       "hashtags": [
         "#couplequiz",
         "#girlfriendquiz",
         "#thisorthat",
-        "#cozynight",
+        "#foodie",
         "#quizcouple"
       ]
     }

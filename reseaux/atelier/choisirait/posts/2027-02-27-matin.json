@@ -12,79 +12,79 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "elle",
-        "etiquette": "Style edition",
-        "accroche": "What would she choose?",
-        "consigne": "One photo per round: the one she would pick!",
+        "pour": "lui",
+        "etiquette": "Date night edition",
+        "accroche": "What would he choose?",
+        "consigne": "Answer for him: A, B or C? Then send it!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which shoes would she pick?",
+            "question": "Which flowers would he get you?",
             "options": [
               {
-                "texte": "High heels",
-                "image": "choisirait/chaussures/talons.webp"
+                "texte": "Daisies",
+                "image": "choisirait/fleurs/marguerites.webp"
               },
               {
-                "texte": "Ballet flats",
-                "image": "choisirait/chaussures/ballerines.webp"
+                "texte": "Hydrangeas",
+                "image": "choisirait/fleurs/hortensias.webp"
               },
               {
-                "texte": "UGG boots",
-                "image": "choisirait/chaussures/ugg.webp"
+                "texte": "Sunflowers",
+                "image": "choisirait/fleurs/tournesols.webp"
               }
             ]
           },
           {
-            "question": "Which phone would she pick?",
+            "question": "Which dessert would he pick?",
             "options": [
               {
-                "texte": "BlackBerry",
-                "image": "choisirait/telephone/blackberry.webp"
+                "texte": "Cheesecake",
+                "image": "choisirait/dessert/cheesecake.webp"
               },
               {
-                "texte": "iPhone",
-                "image": "choisirait/telephone/iphone.webp"
+                "texte": "Crème brûlée",
+                "image": "choisirait/dessert/creme-brulee.webp"
               },
               {
-                "texte": "Google Pixel",
-                "image": "choisirait/telephone/pixel.webp"
+                "texte": "Chocolate lava cake",
+                "image": "choisirait/dessert/fondant.webp"
               }
             ]
           },
           {
-            "question": "Which sneakers would she pick?",
+            "question": "Which movie snack would he pick?",
             "options": [
               {
-                "texte": "Stan Smith",
-                "image": "choisirait/baskets/stan-smith.webp"
+                "texte": "Chocolate bar",
+                "image": "choisirait/snack/tablette.webp"
               },
               {
-                "texte": "Crocs",
-                "image": "choisirait/baskets/crocs.webp"
+                "texte": "Popcorn",
+                "image": "choisirait/snack/popcorn.webp"
               },
               {
-                "texte": "New Balance",
-                "image": "choisirait/baskets/new-balance.webp"
+                "texte": "Ice cream tub",
+                "image": "choisirait/snack/pot-glace.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Got her 3 picks? Send it and see!",
-          "bouton": "Send this to her",
+          "question": "Now send it to him. Did you guess right?",
+          "bouton": "Send this to him",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Style edition. Easy for you? Then the next one is for her.\n\nSend this to her",
+      "legende": "Date night edition. Answer for him first, no peeking.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
-        "#girlfriendquiz",
+        "#boyfriendquiz",
         "#thisorthat",
-        "#style",
+        "#datenight",
         "#quizcouple"
       ]
     }

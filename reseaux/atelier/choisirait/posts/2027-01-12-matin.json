@@ -13,78 +13,78 @@
         "langue": "en",
         "theme": "light",
         "pour": "lui",
-        "etiquette": "Pet lovers edition",
+        "etiquette": "Date night edition",
         "accroche": "What would he choose?",
-        "consigne": "Choose the photo he would pick. 3 rounds!",
+        "consigne": "One photo per round: the one he would pick!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which pet would he want?",
+            "question": "Which flowers would he get you?",
             "options": [
               {
-                "texte": "Chameleon",
-                "image": "choisirait/animal/cameleon.webp"
+                "texte": "Red roses",
+                "image": "choisirait/fleurs/roses.webp"
               },
               {
-                "texte": "Axolotl",
-                "image": "choisirait/animal/axolotl.webp"
+                "texte": "Sunflowers",
+                "image": "choisirait/fleurs/tournesols.webp"
               },
               {
-                "texte": "Goldfish",
-                "image": "choisirait/animal/poisson.webp"
+                "texte": "Peonies",
+                "image": "choisirait/fleurs/pivoines.webp"
               }
             ]
           },
           {
-            "question": "Which cat would he adopt?",
+            "question": "Which dessert would he pick?",
             "options": [
               {
-                "texte": "Ragdoll",
-                "image": "choisirait/chat/ragdoll.webp"
+                "texte": "Brownie",
+                "image": "choisirait/dessert/brownie.webp"
               },
               {
-                "texte": "British Shorthair",
-                "image": "choisirait/chat/british.webp"
+                "texte": "Huge birthday cake",
+                "image": "choisirait/dessert/gateau-anniversaire.webp"
               },
               {
-                "texte": "Black cat",
-                "image": "choisirait/chat/chat-noir.webp"
+                "texte": "Macarons",
+                "image": "choisirait/dessert/macarons.webp"
               }
             ]
           },
           {
-            "question": "Which dog would he pick?",
+            "question": "Which movie snack would he pick?",
             "options": [
               {
-                "texte": "Shiba Inu",
-                "image": "choisirait/chien/shiba.webp"
+                "texte": "Nachos",
+                "image": "choisirait/snack/nachos.webp"
               },
               {
-                "texte": "Rottweiler",
-                "image": "choisirait/chien/rottweiler.webp"
+                "texte": "Chocolate bar",
+                "image": "choisirait/snack/tablette.webp"
               },
               {
-                "texte": "French Bulldog",
-                "image": "choisirait/chien/bouledogue.webp"
+                "texte": "Ice cream tub",
+                "image": "choisirait/snack/pot-glace.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Now send it to him. Did you guess right?",
+          "question": "Got his 3 picks? Send it and see!",
           "bouton": "Send this to him",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Pet lovers edition. If you get all three, you know him by heart.\n\nSend this to him",
+      "legende": "Date night edition. Your answers first, then his reaction.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
         "#boyfriendquiz",
         "#thisorthat",
-        "#petlovers",
+        "#datenight",
         "#quizcouple"
       ]
     }

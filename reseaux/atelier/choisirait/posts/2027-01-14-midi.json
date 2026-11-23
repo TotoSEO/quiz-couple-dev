@@ -13,78 +13,78 @@
         "langue": "en",
         "theme": "light",
         "pour": "elle",
-        "etiquette": "Wedding edition",
+        "etiquette": "Weekend edition",
         "accroche": "What would she choose?",
-        "consigne": "Answer for her: A, B or C? Then send it!",
+        "consigne": "Pick A, B or C for her, then send it to her!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which ring would she want?",
+            "question": "Which adventure would she try?",
             "options": [
               {
-                "texte": "Rose gold ring",
-                "image": "choisirait/bague/or-rose.webp"
+                "texte": "Horse riding",
+                "image": "choisirait/aventure/equitation.webp"
               },
               {
-                "texte": "Emerald ring",
-                "image": "choisirait/bague/emeraude.webp"
+                "texte": "Paragliding",
+                "image": "choisirait/aventure/parapente.webp"
               },
               {
-                "texte": "Halo ring",
-                "image": "choisirait/bague/halo.webp"
+                "texte": "Scuba diving",
+                "image": "choisirait/aventure/plongee.webp"
               }
             ]
           },
           {
-            "question": "Where would she want you to propose?",
+            "question": "Which sport would she watch?",
             "options": [
               {
-                "texte": "Rooftop",
-                "image": "choisirait/demande/demande-rooftop.webp"
+                "texte": "Ice hockey",
+                "image": "choisirait/sport/hockey.webp"
               },
               {
-                "texte": "Hot air balloon",
-                "image": "choisirait/demande/demande-montgolfiere.webp"
+                "texte": "Tennis",
+                "image": "choisirait/sport/tennis.webp"
               },
               {
-                "texte": "Mountaintop",
-                "image": "choisirait/demande/demande-montagne.webp"
+                "texte": "Golf",
+                "image": "choisirait/sport/golf.webp"
               }
             ]
           },
           {
-            "question": "Where would she want to get married?",
+            "question": "Which hobby would she pick up?",
             "options": [
               {
-                "texte": "Mountaintop",
-                "image": "choisirait/mariage/sommet.webp"
+                "texte": "Gardening",
+                "image": "choisirait/loisir/jardinage.webp"
               },
               {
-                "texte": "Vineyard",
-                "image": "choisirait/vue/vignes.webp"
+                "texte": "Woodworking",
+                "image": "choisirait/loisir/menuiserie.webp"
               },
               {
-                "texte": "Vegas chapel",
-                "image": "choisirait/mariage/vegas.webp"
+                "texte": "Chess",
+                "image": "choisirait/loisir/echecs.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Got her 3 picks? Send it and see!",
+          "question": "Now send it to her. Did you guess right?",
           "bouton": "Send this to her",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Wedding edition. One letter per question, then send it to her.\n\nSend this to her",
+      "legende": "Weekend edition. One letter per question, then send it to her.\n\nSend this to her",
       "hashtags": [
         "#couplequiz",
         "#girlfriendquiz",
         "#thisorthat",
-        "#engaged",
+        "#weekendvibes",
         "#quizcouple"
       ]
     }

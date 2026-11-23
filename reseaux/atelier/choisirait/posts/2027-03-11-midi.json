@@ -12,79 +12,79 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "lui",
-        "etiquette": "Spring edition",
-        "accroche": "What would he choose?",
-        "consigne": "Answer for him: A, B or C? Then send it!",
+        "pour": "elle",
+        "etiquette": "Wedding edition",
+        "accroche": "What would she choose?",
+        "consigne": "Pick A, B or C for her, then send it to her!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which season would he pick?",
+            "question": "Where would she want to get married?",
             "options": [
               {
-                "texte": "Summer",
-                "image": "choisirait/saison/ete.webp"
+                "texte": "Lakeside",
+                "image": "choisirait/vue/lac.webp"
               },
               {
-                "texte": "Spring",
-                "image": "choisirait/saison/printemps.webp"
+                "texte": "Beach",
+                "image": "choisirait/vue/plage-tropicale.webp"
               },
               {
-                "texte": "Autumn",
-                "image": "choisirait/saison/automne.webp"
+                "texte": "Vegas chapel",
+                "image": "choisirait/mariage/vegas.webp"
               }
             ]
           },
           {
-            "question": "Which adventure would he try?",
+            "question": "Where would she want you to propose?",
             "options": [
               {
-                "texte": "Snowboarding",
-                "image": "choisirait/aventure/snowboard.webp"
+                "texte": "Northern lights",
+                "image": "choisirait/demande/demande-aurores.webp"
               },
               {
-                "texte": "Skiing",
-                "image": "choisirait/aventure/ski.webp"
+                "texte": "Eiffel Tower",
+                "image": "choisirait/demande/demande-eiffel.webp"
               },
               {
-                "texte": "Rock climbing",
-                "image": "choisirait/aventure/escalade.webp"
+                "texte": "Disney castle",
+                "image": "choisirait/demande/demande-chateau.webp"
               }
             ]
           },
           {
-            "question": "Which date would he plan?",
+            "question": "Which ring would she want?",
             "options": [
               {
-                "texte": "Cinema night",
-                "image": "choisirait/date/cinema.webp"
+                "texte": "Rose gold ring",
+                "image": "choisirait/bague/or-rose.webp"
               },
               {
-                "texte": "Beach sunset",
-                "image": "choisirait/date/coucher-soleil.webp"
+                "texte": "Gold band",
+                "image": "choisirait/bague/alliance-or.webp"
               },
               {
-                "texte": "Ice skating",
-                "image": "choisirait/date/patinoire.webp"
+                "texte": "Emerald ring",
+                "image": "choisirait/bague/emeraude.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Send it to him: how many did you get?",
-          "bouton": "Send this to him",
+          "question": "Send it to her: how many did you get?",
+          "bouton": "Send this to her",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Spring edition. Guess first, send it after. Then compare.\n\nSend this to him",
+      "legende": "Wedding edition. Answer for her first, no peeking.\n\nSend this to her",
       "hashtags": [
         "#couplequiz",
-        "#boyfriendquiz",
+        "#girlfriendquiz",
         "#thisorthat",
-        "#spring",
+        "#engaged",
         "#quizcouple"
       ]
     }

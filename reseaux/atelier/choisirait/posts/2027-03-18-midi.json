@@ -12,79 +12,79 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "elle",
-        "etiquette": "Sweet tooth edition",
-        "accroche": "What would she choose?",
-        "consigne": "One photo per round: the one she would pick!",
+        "pour": "lui",
+        "etiquette": "Dream home edition",
+        "accroche": "What would he choose?",
+        "consigne": "Pick A, B or C for him, then send it to him!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which ice cream would she get?",
+            "question": "Which dream house would he pick?",
             "options": [
               {
-                "texte": "Mochi ice cream",
-                "image": "choisirait/glace/mochi.webp"
+                "texte": "Cozy cabin",
+                "image": "choisirait/weekend/chalet-bois.webp"
               },
               {
-                "texte": "Banana split",
-                "image": "choisirait/glace/banana-split.webp"
+                "texte": "Lake house",
+                "image": "choisirait/maison/maison-lac.webp"
               },
               {
-                "texte": "Ice cream sandwich",
-                "image": "choisirait/glace/sandwich-glace.webp"
+                "texte": "Victorian house",
+                "image": "choisirait/maison/victorienne.webp"
               }
             ]
           },
           {
-            "question": "What would she grab at the bakery?",
+            "question": "Which dog would he pick?",
             "options": [
               {
-                "texte": "Brioche",
-                "image": "choisirait/boulangerie/brioche.webp"
+                "texte": "Husky",
+                "image": "choisirait/chien/husky.webp"
               },
               {
-                "texte": "Croissant",
-                "image": "choisirait/boulangerie/croissant.webp"
+                "texte": "Pomeranian",
+                "image": "choisirait/chien/pomeranien.webp"
               },
               {
-                "texte": "Baguette",
-                "image": "choisirait/boulangerie/baguette.webp"
+                "texte": "Rottweiler",
+                "image": "choisirait/chien/rottweiler.webp"
               }
             ]
           },
           {
-            "question": "Which movie snack would she pick?",
+            "question": "Which cat would he adopt?",
             "options": [
               {
-                "texte": "Nachos",
-                "image": "choisirait/snack/nachos.webp"
+                "texte": "Ginger cat",
+                "image": "choisirait/chat/chat-roux.webp"
               },
               {
-                "texte": "Ice cream tub",
-                "image": "choisirait/snack/pot-glace.webp"
+                "texte": "Bengal",
+                "image": "choisirait/chat/bengal.webp"
               },
               {
-                "texte": "Chocolate bar",
-                "image": "choisirait/snack/tablette.webp"
+                "texte": "Norwegian Forest Cat",
+                "image": "choisirait/chat/norvegien.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Got her 3 picks? Send it and see!",
-          "bouton": "Send this to her",
+          "question": "Now send it to him. Did you guess right?",
+          "bouton": "Send this to him",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Sweet tooth edition. Pick for her, then let her prove you wrong.\n\nSend this to her",
+      "legende": "Dream home edition. One letter per question, then send it to him.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
-        "#girlfriendquiz",
+        "#boyfriendquiz",
         "#thisorthat",
-        "#dessert",
+        "#dreamhome",
         "#quizcouple"
       ]
     }

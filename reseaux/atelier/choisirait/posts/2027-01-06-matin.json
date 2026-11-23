@@ -12,25 +12,42 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "lui",
+        "pour": "elle",
         "etiquette": "Style edition",
-        "accroche": "What would he choose?",
-        "consigne": "Answer for him: A, B or C? Then send it!",
+        "accroche": "What would she choose?",
+        "consigne": "Pick A, B or C for her, then send it to her!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which sneakers would he pick?",
+            "question": "Which shoes would she pick?",
             "options": [
               {
-                "texte": "Crocs",
-                "image": "choisirait/baskets/crocs.webp"
+                "texte": "UGG boots",
+                "image": "choisirait/chaussures/ugg.webp"
               },
               {
-                "texte": "Vans Old Skool",
-                "image": "choisirait/baskets/vans.webp"
+                "texte": "Knee-high boots",
+                "image": "choisirait/chaussures/cuissardes.webp"
+              },
+              {
+                "texte": "Ballet flats",
+                "image": "choisirait/chaussures/ballerines.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which sneakers would she pick?",
+            "options": [
+              {
+                "texte": "Stan Smith",
+                "image": "choisirait/baskets/stan-smith.webp"
+              },
+              {
+                "texte": "Birkenstock",
+                "image": "choisirait/baskets/birkenstock.webp"
               },
               {
                 "texte": "Air Force 1",
@@ -39,50 +56,33 @@
             ]
           },
           {
-            "question": "Which phone would he pick?",
+            "question": "Which phone would she pick?",
             "options": [
               {
-                "texte": "Nokia 3310",
-                "image": "choisirait/telephone/nokia.webp"
+                "texte": "BlackBerry",
+                "image": "choisirait/telephone/blackberry.webp"
               },
               {
-                "texte": "Samsung Galaxy",
-                "image": "choisirait/telephone/galaxy.webp"
+                "texte": "Google Pixel",
+                "image": "choisirait/telephone/pixel.webp"
               },
               {
-                "texte": "iPhone",
-                "image": "choisirait/telephone/iphone.webp"
-              }
-            ]
-          },
-          {
-            "question": "Which watch would he wear?",
-            "options": [
-              {
-                "texte": "Casio digital",
-                "image": "choisirait/montre/casio.webp"
-              },
-              {
-                "texte": "Cartier Tank",
-                "image": "choisirait/montre/cartier.webp"
-              },
-              {
-                "texte": "Casio G-Shock",
-                "image": "choisirait/montre/g-shock.webp"
+                "texte": "Flip phone",
+                "image": "choisirait/telephone/clapet.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Send it to him: how many did you get?",
-          "bouton": "Send this to him",
+          "question": "Send it to her: how many did you get?",
+          "bouton": "Send this to her",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Style edition. Guess first, send it after. Then compare.\n\nSend this to him",
+      "legende": "Style edition. Answer for her first, no peeking.\n\nSend this to her",
       "hashtags": [
         "#couplequiz",
-        "#boyfriendquiz",
+        "#girlfriendquiz",
         "#thisorthat",
         "#style",
         "#quizcouple"

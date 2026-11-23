@@ -12,79 +12,79 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "lui",
-        "etiquette": "Wedding edition",
-        "accroche": "What would he choose?",
-        "consigne": "Pick A, B or C for him, then send it to him!",
+        "pour": "elle",
+        "etiquette": "Food edition",
+        "accroche": "What would she choose?",
+        "consigne": "Choose the photo she would pick. 3 rounds!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Where would he propose?",
+            "question": "Which potato would she pick?",
             "options": [
               {
-                "texte": "Northern lights",
-                "image": "choisirait/demande/demande-aurores.webp"
+                "texte": "Hash browns",
+                "image": "choisirait/patate/hash-browns.webp"
               },
               {
-                "texte": "Beach at sunset",
-                "image": "choisirait/demande/demande-plage.webp"
+                "texte": "Rösti",
+                "image": "choisirait/patate/rosti.webp"
               },
               {
-                "texte": "Disney castle",
-                "image": "choisirait/demande/demande-chateau.webp"
+                "texte": "French fries",
+                "image": "choisirait/patate/frites.webp"
               }
             ]
           },
           {
-            "question": "Which ring would he pick for you?",
+            "question": "Which pasta would she pick?",
             "options": [
               {
-                "texte": "Gold band",
-                "image": "choisirait/bague/alliance-or.webp"
+                "texte": "Lasagna",
+                "image": "choisirait/pates/lasagnes.webp"
               },
               {
-                "texte": "Solitaire diamond",
-                "image": "choisirait/bague/solitaire.webp"
+                "texte": "Carbonara",
+                "image": "choisirait/pates/carbonara.webp"
               },
               {
-                "texte": "Vintage ring",
-                "image": "choisirait/bague/vintage-bague.webp"
+                "texte": "Bolognese",
+                "image": "choisirait/pates/bolognaise.webp"
               }
             ]
           },
           {
-            "question": "Where would he want to get married?",
+            "question": "Which breakfast would she make you?",
             "options": [
               {
-                "texte": "Forest",
-                "image": "choisirait/vue/foret.webp"
+                "texte": "Cereal",
+                "image": "choisirait/petitdej/cereales.webp"
               },
               {
-                "texte": "City hall",
-                "image": "choisirait/mariage/mairie.webp"
+                "texte": "Full English",
+                "image": "choisirait/petitdej/english.webp"
               },
               {
-                "texte": "Beach",
-                "image": "choisirait/vue/plage-tropicale.webp"
+                "texte": "Croissant & coffee",
+                "image": "choisirait/petitdej/croissant-cafe.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Now send it to him. Did you guess right?",
-          "bouton": "Send this to him",
+          "question": "Got her 3 picks? Send it and see!",
+          "bouton": "Send this to her",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Wedding edition. No cheating: decide before the timer runs out.\n\nSend this to him",
+      "legende": "Food edition. Write down her three letters before you send it.\n\nSend this to her",
       "hashtags": [
         "#couplequiz",
-        "#boyfriendquiz",
+        "#girlfriendquiz",
         "#thisorthat",
-        "#engaged",
+        "#foodie",
         "#quizcouple"
       ]
     }

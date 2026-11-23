@@ -13,7 +13,7 @@
         "langue": "en",
         "theme": "light",
         "pour": "lui",
-        "etiquette": "Travel edition",
+        "etiquette": "Winter edition",
         "accroche": "What would he choose?",
         "consigne": "Choose the photo he would pick. 3 rounds!",
         "secondes": 4,
@@ -22,53 +22,53 @@
         },
         "questions": [
           {
-            "question": "Which city would he take you to?",
+            "question": "Which winter date would he pick?",
             "options": [
               {
-                "texte": "Tokyo",
-                "image": "choisirait/ville/tokyo.webp"
+                "texte": "Building a snowman",
+                "image": "choisirait/hiver/bonhomme.webp"
               },
               {
-                "texte": "Prague",
-                "image": "choisirait/ville/prague.webp"
+                "texte": "Sledding",
+                "image": "choisirait/hiver/luge.webp"
               },
               {
-                "texte": "Venice",
-                "image": "choisirait/ville/venise.webp"
+                "texte": "Ice skating",
+                "image": "choisirait/hiver/hiver-patin.webp"
               }
             ]
           },
           {
-            "question": "Which view would he wake up to?",
+            "question": "Where would he book a weekend?",
             "options": [
               {
-                "texte": "Vineyards",
-                "image": "choisirait/vue/vignes.webp"
+                "texte": "Glamping tent",
+                "image": "choisirait/weekend/glamping.webp"
               },
               {
-                "texte": "Rice fields",
-                "image": "choisirait/vue/rizieres.webp"
+                "texte": "Treehouse",
+                "image": "choisirait/weekend/cabane-arbre.webp"
               },
               {
-                "texte": "Tropical beach",
-                "image": "choisirait/vue/plage-tropicale.webp"
+                "texte": "Beach bungalow",
+                "image": "choisirait/weekend/bungalow-plage.webp"
               }
             ]
           },
           {
-            "question": "Where would he go on vacation?",
+            "question": "Which coffee would he order?",
             "options": [
               {
-                "texte": "Norway",
-                "image": "choisirait/vacances/norvege.webp"
+                "texte": "Matcha latte",
+                "image": "choisirait/cafe/matcha.webp"
               },
               {
-                "texte": "Greece",
-                "image": "choisirait/vacances/grece.webp"
+                "texte": "Cappuccino",
+                "image": "choisirait/cafe/cappuccino.webp"
               },
               {
-                "texte": "Bora Bora",
-                "image": "choisirait/vacances/bora-bora.webp"
+                "texte": "Espresso",
+                "image": "choisirait/cafe/espresso.webp"
               }
             ]
           }
@@ -79,12 +79,12 @@
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Travel edition. Easy for you? Then the next one is for him.\n\nSend this to him",
+      "legende": "Winter edition. Pick for him, then let him prove you wrong.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
         "#boyfriendquiz",
         "#thisorthat",
-        "#travelcouple",
+        "#winter",
         "#quizcouple"
       ]
     }

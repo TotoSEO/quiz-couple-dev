@@ -12,17 +12,17 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "lui",
+        "pour": "elle",
         "etiquette": "Cozy night in edition",
-        "accroche": "What would he choose?",
-        "consigne": "Answer for him: A, B or C? Then send it!",
+        "accroche": "What would she choose?",
+        "consigne": "Answer for her: A, B or C? Then send it!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which game night would he pick?",
+            "question": "Which game night would she pick?",
             "options": [
               {
                 "texte": "Board games",
@@ -39,7 +39,7 @@
             ]
           },
           {
-            "question": "Which console would he pick?",
+            "question": "Which console would she pick?",
             "options": [
               {
                 "texte": "PlayStation 2",
@@ -56,7 +56,7 @@
             ]
           },
           {
-            "question": "Which drink would he get?",
+            "question": "Which drink would she get?",
             "options": [
               {
                 "texte": "Lemonade",
@@ -74,15 +74,15 @@
           }
         ],
         "fin": {
-          "question": "Send it to him: how many did you get?",
-          "bouton": "Send this to him",
+          "question": "Send it to her: how many did you get?",
+          "bouton": "Send this to her",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Cozy night in edition. He will swear you got at least one wrong.\n\nSend this to him",
+      "legende": "Cozy night in edition. Guess first, send it after. Then compare.\n\nSend this to her",
       "hashtags": [
         "#couplequiz",
-        "#boyfriendquiz",
+        "#girlfriendquiz",
         "#thisorthat",
         "#cozynight",
         "#quizcouple"

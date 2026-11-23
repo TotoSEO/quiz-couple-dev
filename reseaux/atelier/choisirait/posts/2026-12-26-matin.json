@@ -39,7 +39,7 @@
             ]
           },
           {
-            "question": "Which date would she plan?",
+            "question": "Which date would she take you on?",
             "options": [
               {
                 "texte": "Camping",
@@ -56,7 +56,7 @@
             ]
           },
           {
-            "question": "Where would she go on vacation?",
+            "question": "Where would she take you on vacation?",
             "options": [
               {
                 "texte": "Thailand",
@@ -74,12 +74,12 @@
           }
         ],
         "fin": {
-          "question": "Got her 3 picks? Send it and see!",
+          "question": "Now send it to her. Did you guess right?",
           "bouton": "Send this to her",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "New Year's edition. Guess first, send it after. Then compare.\n\nSend this to her",
+      "legende": "New Year's edition. Answer for her first, no peeking.\n\nSend this to her",
       "hashtags": [
         "#couplequiz",
         "#girlfriendquiz",

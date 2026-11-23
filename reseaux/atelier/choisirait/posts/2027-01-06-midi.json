@@ -12,79 +12,79 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "elle",
-        "etiquette": "Sweet tooth edition",
-        "accroche": "What would she choose?",
-        "consigne": "One photo per round: the one she would pick!",
+        "pour": "lui",
+        "etiquette": "Dream home edition",
+        "accroche": "What would he choose?",
+        "consigne": "Answer for him: A, B or C? Then send it!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "What would she grab at the bakery?",
+            "question": "Which dream house would he pick?",
             "options": [
               {
-                "texte": "Pain au chocolat",
-                "image": "choisirait/boulangerie/pain-chocolat.webp"
+                "texte": "Loft apartment",
+                "image": "choisirait/maison/loft.webp"
               },
               {
-                "texte": "Baguette",
-                "image": "choisirait/boulangerie/baguette.webp"
+                "texte": "Modern villa",
+                "image": "choisirait/maison/villa-moderne.webp"
               },
               {
-                "texte": "Donut",
-                "image": "choisirait/boulangerie/donut.webp"
+                "texte": "Castle",
+                "image": "choisirait/maison/chateau.webp"
               }
             ]
           },
           {
-            "question": "Which ice cream would she get?",
+            "question": "Which view would he wake up to?",
             "options": [
               {
-                "texte": "Affogato",
-                "image": "choisirait/glace/affogato.webp"
+                "texte": "Northern lights",
+                "image": "choisirait/vue/aurores.webp"
               },
               {
-                "texte": "Sundae",
-                "image": "choisirait/glace/sundae.webp"
+                "texte": "Ocean",
+                "image": "choisirait/vue/ocean.webp"
               },
               {
-                "texte": "Popsicle",
-                "image": "choisirait/glace/esquimau.webp"
+                "texte": "City skyline",
+                "image": "choisirait/vue/skyline.webp"
               }
             ]
           },
           {
-            "question": "Which cake would she pick?",
+            "question": "Which dog would he pick?",
             "options": [
               {
-                "texte": "Huge birthday cake",
-                "image": "choisirait/dessert/gateau-anniversaire.webp"
+                "texte": "Bernese Mountain Dog",
+                "image": "choisirait/chien/bouvier.webp"
               },
               {
-                "texte": "Mille-feuille",
-                "image": "choisirait/dessert/mille-feuille.webp"
+                "texte": "Belgian Malinois",
+                "image": "choisirait/chien/malinois.webp"
               },
               {
-                "texte": "Churros",
-                "image": "choisirait/dessert/churros.webp"
+                "texte": "Golden Retriever",
+                "image": "choisirait/chien/golden.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Got her 3 picks? Send it and see!",
-          "bouton": "Send this to her",
+          "question": "Now send it to him. Did you guess right?",
+          "bouton": "Send this to him",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Sweet tooth edition. If you get all three, you know her by heart.\n\nSend this to her",
+      "legende": "Dream home edition. Guess first, send it after. Then compare.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
-        "#girlfriendquiz",
+        "#boyfriendquiz",
         "#thisorthat",
-        "#dessert",
+        "#dreamhome",
         "#quizcouple"
       ]
     }

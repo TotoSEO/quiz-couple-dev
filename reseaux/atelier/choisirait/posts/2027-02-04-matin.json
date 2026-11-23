@@ -12,79 +12,79 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "lui",
-        "etiquette": "Valentine's edition",
-        "accroche": "What would he choose?",
-        "consigne": "Pick A, B or C for him, then send it to him!",
+        "pour": "elle",
+        "etiquette": "Date night edition",
+        "accroche": "What would she choose?",
+        "consigne": "One photo per round: the one she would pick!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "What would he get you for Valentine's?",
+            "question": "Which flowers would she want?",
             "options": [
               {
-                "texte": "Heart balloons",
-                "image": "choisirait/valentin/ballons-coeur.webp"
-              },
-              {
-                "texte": "Box of chocolates",
-                "image": "choisirait/valentin/boite-chocolats.webp"
-              },
-              {
-                "texte": "Breakfast in bed",
-                "image": "choisirait/valentin/petit-dej-lit.webp"
-              }
-            ]
-          },
-          {
-            "question": "Which ring would he pick for you?",
-            "options": [
-              {
-                "texte": "Gold band",
-                "image": "choisirait/bague/alliance-or.webp"
-              },
-              {
-                "texte": "Emerald ring",
-                "image": "choisirait/bague/emeraude.webp"
-              },
-              {
-                "texte": "Rose gold ring",
-                "image": "choisirait/bague/or-rose.webp"
-              }
-            ]
-          },
-          {
-            "question": "Which flowers would he get you?",
-            "options": [
-              {
-                "texte": "Hydrangeas",
-                "image": "choisirait/fleurs/hortensias.webp"
-              },
-              {
-                "texte": "Lavender",
-                "image": "choisirait/fleurs/lavande.webp"
+                "texte": "Tulips",
+                "image": "choisirait/fleurs/tulipes.webp"
               },
               {
                 "texte": "Wildflowers",
                 "image": "choisirait/fleurs/fleurs-sauvages.webp"
+              },
+              {
+                "texte": "Daisies",
+                "image": "choisirait/fleurs/marguerites.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which date would she take you on?",
+            "options": [
+              {
+                "texte": "Hot air balloon",
+                "image": "choisirait/date/montgolfiere-date.webp"
+              },
+              {
+                "texte": "Museum",
+                "image": "choisirait/date/musee.webp"
+              },
+              {
+                "texte": "Beach sunset",
+                "image": "choisirait/date/coucher-soleil.webp"
+              }
+            ]
+          },
+          {
+            "question": "What would she order at the bar?",
+            "options": [
+              {
+                "texte": "Red wine",
+                "image": "choisirait/bar/vin-rouge.webp"
+              },
+              {
+                "texte": "Margarita",
+                "image": "choisirait/bar/margarita.webp"
+              },
+              {
+                "texte": "Piña colada",
+                "image": "choisirait/bar/pina-colada.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Send it to him: how many did you get?",
-          "bouton": "Send this to him",
+          "question": "Send it to her: how many did you get?",
+          "bouton": "Send this to her",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Valentine's edition. He will swear you got at least one wrong.\n\nSend this to him",
+      "legende": "Date night edition. Your answers first, then her reaction.\n\nSend this to her",
       "hashtags": [
         "#couplequiz",
-        "#boyfriendquiz",
+        "#girlfriendquiz",
         "#thisorthat",
-        "#valentinesday",
+        "#datenight",
         "#quizcouple"
       ]
     }

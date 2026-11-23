@@ -13,78 +13,78 @@
         "langue": "en",
         "theme": "light",
         "pour": "elle",
-        "etiquette": "Car lovers edition",
+        "etiquette": "Drinks edition",
         "accroche": "What would she choose?",
-        "consigne": "Pick A, B or C for her, then send it to her!",
+        "consigne": "Choose the photo she would pick. 3 rounds!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which motorbike would she ride?",
+            "question": "Which drink would she get?",
             "options": [
               {
-                "texte": "BMW GS",
-                "image": "choisirait/moto/bmw-gs.webp"
+                "texte": "Lemonade",
+                "image": "choisirait/boisson/limonade.webp"
               },
               {
-                "texte": "Kawasaki Ninja",
-                "image": "choisirait/moto/ninja.webp"
+                "texte": "Bubble tea",
+                "image": "choisirait/boisson/bubble-tea.webp"
               },
               {
-                "texte": "Vespa",
-                "image": "choisirait/moto/vespa.webp"
+                "texte": "Iced tea",
+                "image": "choisirait/boisson/the-glace.webp"
               }
             ]
           },
           {
-            "question": "Which classic car would she drive?",
+            "question": "What would she order at the bar?",
             "options": [
               {
-                "texte": "VW Beetle",
-                "image": "choisirait/vintage/coccinelle.webp"
+                "texte": "Margarita",
+                "image": "choisirait/bar/margarita.webp"
               },
               {
-                "texte": "Jaguar E-Type",
-                "image": "choisirait/vintage/e-type.webp"
+                "texte": "Aperol Spritz",
+                "image": "choisirait/bar/spritz.webp"
               },
               {
-                "texte": "Mercedes 300 SL",
-                "image": "choisirait/vintage/300sl.webp"
+                "texte": "Gin and tonic",
+                "image": "choisirait/bar/gin-tonic.webp"
               }
             ]
           },
           {
-            "question": "Which car would she drive?",
+            "question": "Which coffee would she order?",
             "options": [
               {
-                "texte": "BMW M3",
-                "image": "choisirait/voiture/bmw-m3.webp"
+                "texte": "Matcha latte",
+                "image": "choisirait/cafe/matcha.webp"
               },
               {
-                "texte": "Audi R8",
-                "image": "choisirait/voiture/audi-r8.webp"
+                "texte": "Americano",
+                "image": "choisirait/cafe/americano.webp"
               },
               {
-                "texte": "Ferrari F8",
-                "image": "choisirait/voiture/ferrari-f8.webp"
+                "texte": "Iced latte",
+                "image": "choisirait/cafe/iced-latte.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Got her 3 picks? Send it and see!",
+          "question": "Now send it to her. Did you guess right?",
           "bouton": "Send this to her",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Car lovers edition. Guess first, send it after. Then compare.\n\nSend this to her",
+      "legende": "Drinks edition. Pick for her, then let her prove you wrong.\n\nSend this to her",
       "hashtags": [
         "#couplequiz",
         "#girlfriendquiz",
         "#thisorthat",
-        "#carlovers",
+        "#cocktails",
         "#quizcouple"
       ]
     }

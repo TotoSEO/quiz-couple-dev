@@ -12,17 +12,17 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "elle",
+        "pour": "lui",
         "etiquette": "Pet lovers edition",
-        "accroche": "What would she choose?",
-        "consigne": "Choose the photo she would pick. 3 rounds!",
+        "accroche": "What would he choose?",
+        "consigne": "One photo per round: the one he would pick!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which pet would she want?",
+            "question": "Which pet would he want?",
             "options": [
               {
                 "texte": "Guinea pig",
@@ -39,7 +39,7 @@
             ]
           },
           {
-            "question": "Which dog would she pick?",
+            "question": "Which dog would he adopt?",
             "options": [
               {
                 "texte": "Cavalier King Charles",
@@ -56,7 +56,7 @@
             ]
           },
           {
-            "question": "Which cat would she adopt?",
+            "question": "Which cat would he adopt?",
             "options": [
               {
                 "texte": "Persian",
@@ -74,15 +74,15 @@
           }
         ],
         "fin": {
-          "question": "Got her 3 picks? Send it and see!",
-          "bouton": "Send this to her",
+          "question": "Now send it to him. Did you guess right?",
+          "bouton": "Send this to him",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Pet lovers edition. Easy for you? Then the next one is for her.\n\nSend this to her",
+      "legende": "Pet lovers edition. Pick for him, then let him prove you wrong.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
-        "#girlfriendquiz",
+        "#boyfriendquiz",
         "#thisorthat",
         "#petlovers",
         "#quizcouple"

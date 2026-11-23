@@ -13,78 +13,78 @@
         "langue": "en",
         "theme": "light",
         "pour": "lui",
-        "etiquette": "Car lovers edition",
+        "etiquette": "Cozy night in edition",
         "accroche": "What would he choose?",
-        "consigne": "One photo per round: the one he would pick!",
+        "consigne": "Pick A, B or C for him, then send it to him!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which classic car would he drive?",
+            "question": "Which movie snack would he pick?",
             "options": [
               {
-                "texte": "Porsche 356",
-                "image": "choisirait/vintage/porsche-356.webp"
+                "texte": "Popcorn",
+                "image": "choisirait/snack/popcorn.webp"
               },
               {
-                "texte": "Classic Mini",
-                "image": "choisirait/vintage/mini-classique.webp"
+                "texte": "Gummy bears",
+                "image": "choisirait/snack/oursons.webp"
               },
               {
-                "texte": "1967 Mustang",
-                "image": "choisirait/vintage/mustang-67.webp"
+                "texte": "Licorice",
+                "image": "choisirait/snack/reglisse.webp"
               }
             ]
           },
           {
-            "question": "Which motorbike would he ride?",
+            "question": "Which console would he pick?",
             "options": [
               {
-                "texte": "Ducati Panigale",
-                "image": "choisirait/moto/ducati.webp"
+                "texte": "Xbox",
+                "image": "choisirait/console/xbox.webp"
               },
               {
-                "texte": "Vespa",
-                "image": "choisirait/moto/vespa.webp"
+                "texte": "PlayStation 5",
+                "image": "choisirait/console/ps5.webp"
               },
               {
-                "texte": "Yamaha MT-07",
-                "image": "choisirait/moto/mt07.webp"
+                "texte": "PlayStation 2",
+                "image": "choisirait/console/ps2.webp"
               }
             ]
           },
           {
-            "question": "Which car would he drive?",
+            "question": "Which cake would he pick?",
             "options": [
               {
-                "texte": "Lamborghini Huracán",
-                "image": "choisirait/voiture/lamborghini-huracan.webp"
+                "texte": "Mille-feuille",
+                "image": "choisirait/dessert/mille-feuille.webp"
               },
               {
-                "texte": "Porsche 911",
-                "image": "choisirait/voiture/porsche-911.webp"
+                "texte": "Crème brûlée",
+                "image": "choisirait/dessert/creme-brulee.webp"
               },
               {
-                "texte": "Toyota Supra",
-                "image": "choisirait/voiture/supra.webp"
+                "texte": "Apple pie",
+                "image": "choisirait/dessert/tarte-pommes.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Now send it to him. Did you guess right?",
+          "question": "Got his 3 picks? Send it and see!",
           "bouton": "Send this to him",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Car lovers edition. Your answers first, then his reaction.\n\nSend this to him",
+      "legende": "Cozy night in edition. No cheating: decide before the timer runs out.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
         "#boyfriendquiz",
         "#thisorthat",
-        "#carlovers",
+        "#cozynight",
         "#quizcouple"
       ]
     }

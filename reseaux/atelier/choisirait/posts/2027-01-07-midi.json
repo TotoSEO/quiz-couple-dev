@@ -13,62 +13,62 @@
         "langue": "en",
         "theme": "light",
         "pour": "lui",
-        "etiquette": "Dream home edition",
+        "etiquette": "Travel edition",
         "accroche": "What would he choose?",
-        "consigne": "Choose the photo he would pick. 3 rounds!",
+        "consigne": "One photo per round: the one he would pick!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which view would he wake up to?",
+            "question": "Which city would he take you to?",
             "options": [
               {
-                "texte": "Ocean",
-                "image": "choisirait/vue/ocean.webp"
+                "texte": "Tokyo",
+                "image": "choisirait/ville/tokyo.webp"
               },
               {
-                "texte": "City skyline",
-                "image": "choisirait/vue/skyline.webp"
+                "texte": "London",
+                "image": "choisirait/ville/londres.webp"
               },
               {
-                "texte": "Lake",
-                "image": "choisirait/vue/lac.webp"
+                "texte": "Venice",
+                "image": "choisirait/ville/venise.webp"
               }
             ]
           },
           {
-            "question": "Which dream house would he pick?",
+            "question": "Where would he go on vacation?",
             "options": [
               {
-                "texte": "Loft apartment",
-                "image": "choisirait/maison/loft.webp"
+                "texte": "Norway",
+                "image": "choisirait/vacances/norvege.webp"
               },
               {
-                "texte": "Castle",
-                "image": "choisirait/maison/chateau.webp"
+                "texte": "Dubai",
+                "image": "choisirait/vacances/dubai.webp"
               },
               {
-                "texte": "Modern villa",
-                "image": "choisirait/maison/villa-moderne.webp"
+                "texte": "Bora Bora",
+                "image": "choisirait/vacances/bora-bora.webp"
               }
             ]
           },
           {
-            "question": "Which cat would he adopt?",
+            "question": "How would he travel with you?",
             "options": [
               {
-                "texte": "Persian",
-                "image": "choisirait/chat/persan.webp"
+                "texte": "Camper van",
+                "image": "choisirait/voyage/van.webp"
               },
               {
-                "texte": "Scottish Fold",
-                "image": "choisirait/chat/scottish.webp"
+                "texte": "Motorbike",
+                "image": "choisirait/moto/bmw-gs.webp"
               },
               {
-                "texte": "Ginger cat",
-                "image": "choisirait/chat/chat-roux.webp"
+                "texte": "Cruise ship",
+                "image": "choisirait/voyage/croisiere.webp"
               }
             ]
           }
@@ -79,12 +79,12 @@
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Dream home edition. Pick for him, then let him prove you wrong.\n\nSend this to him",
+      "legende": "Travel edition. If you get all three, you know him by heart.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
         "#boyfriendquiz",
         "#thisorthat",
-        "#dreamhome",
+        "#travelcouple",
         "#quizcouple"
       ]
     }

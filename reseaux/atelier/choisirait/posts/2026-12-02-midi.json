@@ -12,17 +12,17 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "lui",
+        "pour": "elle",
         "etiquette": "Sweet tooth edition",
-        "accroche": "What would he choose?",
-        "consigne": "Answer for him: A, B or C? Then send it!",
+        "accroche": "What would she choose?",
+        "consigne": "Pick A, B or C for her, then send it to her!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which ice cream would he get?",
+            "question": "Which ice cream would she get?",
             "options": [
               {
                 "texte": "Ice cream cone",
@@ -39,7 +39,7 @@
             ]
           },
           {
-            "question": "What would he grab at the bakery?",
+            "question": "What would she grab at the bakery?",
             "options": [
               {
                 "texte": "Bagel",
@@ -56,7 +56,7 @@
             ]
           },
           {
-            "question": "Which dessert would he pick?",
+            "question": "Which dessert would she pick?",
             "options": [
               {
                 "texte": "Macarons",
@@ -74,15 +74,15 @@
           }
         ],
         "fin": {
-          "question": "Now send it to him. Did you guess right?",
-          "bouton": "Send this to him",
+          "question": "Got her 3 picks? Send it and see!",
+          "bouton": "Send this to her",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Sweet tooth edition. One letter per question, then send it to him.\n\nSend this to him",
+      "legende": "Sweet tooth edition. One letter per question, then send it to her.\n\nSend this to her",
       "hashtags": [
         "#couplequiz",
-        "#boyfriendquiz",
+        "#girlfriendquiz",
         "#thisorthat",
         "#dessert",
         "#quizcouple"

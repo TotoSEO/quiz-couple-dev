@@ -12,77 +12,77 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "lui",
+        "pour": "elle",
         "etiquette": "Travel edition",
-        "accroche": "What would he choose?",
-        "consigne": "Answer for him: A, B or C? Then send it!",
+        "accroche": "What would she choose?",
+        "consigne": "Answer for her: A, B or C? Then send it!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which city would he take you to?",
+            "question": "Which city would she take you to?",
             "options": [
               {
-                "texte": "Paris",
-                "image": "choisirait/ville/paris.webp"
+                "texte": "Lisbon",
+                "image": "choisirait/ville/lisbonne.webp"
               },
               {
-                "texte": "Marrakech",
-                "image": "choisirait/ville/marrakech.webp"
+                "texte": "Rome",
+                "image": "choisirait/ville/rome.webp"
               },
               {
-                "texte": "Rio de Janeiro",
-                "image": "choisirait/ville/rio.webp"
+                "texte": "Prague",
+                "image": "choisirait/ville/prague.webp"
               }
             ]
           },
           {
-            "question": "Where would he go on vacation?",
+            "question": "Which view would she wake up to?",
             "options": [
               {
-                "texte": "Italy",
-                "image": "choisirait/vacances/italie.webp"
+                "texte": "Ocean",
+                "image": "choisirait/vue/ocean.webp"
               },
               {
-                "texte": "Bali",
-                "image": "choisirait/vacances/bali.webp"
+                "texte": "Eiffel Tower",
+                "image": "choisirait/vue/tour-eiffel.webp"
               },
               {
-                "texte": "Hawaii",
-                "image": "choisirait/vacances/hawaii.webp"
+                "texte": "Snowy peaks",
+                "image": "choisirait/vue/neige.webp"
               }
             ]
           },
           {
-            "question": "How would he travel with you?",
+            "question": "Where would she go on vacation?",
             "options": [
               {
-                "texte": "Convertible",
-                "image": "choisirait/voyage/cabriolet.webp"
+                "texte": "Croatia",
+                "image": "choisirait/vacances/croatie.webp"
               },
               {
-                "texte": "Motorbike",
-                "image": "choisirait/moto/bmw-gs.webp"
+                "texte": "Japan",
+                "image": "choisirait/vacances/japon.webp"
               },
               {
-                "texte": "Cruise ship",
-                "image": "choisirait/voyage/croisiere.webp"
+                "texte": "Iceland",
+                "image": "choisirait/vacances/islande.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Send it to him: how many did you get?",
-          "bouton": "Send this to him",
+          "question": "Send it to her: how many did you get?",
+          "bouton": "Send this to her",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Travel edition. No cheating: decide before the timer runs out.\n\nSend this to him",
+      "legende": "Travel edition. She will swear you got at least one wrong.\n\nSend this to her",
       "hashtags": [
         "#couplequiz",
-        "#boyfriendquiz",
+        "#girlfriendquiz",
         "#thisorthat",
         "#travelcouple",
         "#quizcouple"

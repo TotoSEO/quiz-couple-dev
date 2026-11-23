@@ -15,7 +15,7 @@
         "pour": "lui",
         "etiquette": "Christmas edition",
         "accroche": "What would he choose?",
-        "consigne": "One photo per round: the one he would pick!",
+        "consigne": "Answer for him: A, B or C? Then send it!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
@@ -56,7 +56,7 @@
             ]
           },
           {
-            "question": "Which gift would he want?",
+            "question": "Which gift would make him happy?",
             "options": [
               {
                 "texte": "Drone",
@@ -79,7 +79,7 @@
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Christmas edition. If you get all three, you know him by heart.\n\nSend this to him",
+      "legende": "Christmas edition. Guess first, send it after. Then compare.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
         "#boyfriendquiz",

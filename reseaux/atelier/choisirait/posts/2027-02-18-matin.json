@@ -12,79 +12,79 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "lui",
-        "etiquette": "Car lovers edition",
-        "accroche": "What would he choose?",
-        "consigne": "Answer for him: A, B or C? Then send it!",
+        "pour": "elle",
+        "etiquette": "Winter edition",
+        "accroche": "What would she choose?",
+        "consigne": "Pick A, B or C for her, then send it to her!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which classic car would he drive?",
+            "question": "Which winter date would she pick?",
             "options": [
               {
-                "texte": "Citroën 2CV",
-                "image": "choisirait/vintage/2cv.webp"
+                "texte": "Skiing",
+                "image": "choisirait/hiver/hiver-ski.webp"
               },
               {
-                "texte": "Porsche 356",
-                "image": "choisirait/vintage/porsche-356.webp"
+                "texte": "Ice skating",
+                "image": "choisirait/hiver/hiver-patin.webp"
               },
               {
-                "texte": "Jaguar E-Type",
-                "image": "choisirait/vintage/e-type.webp"
+                "texte": "Hot tub in the snow",
+                "image": "choisirait/hiver/jacuzzi.webp"
               }
             ]
           },
           {
-            "question": "Which motorbike would he ride?",
+            "question": "What would she cook for date night?",
             "options": [
               {
-                "texte": "Yamaha MT-07",
-                "image": "choisirait/moto/mt07.webp"
+                "texte": "Steak and fries",
+                "image": "choisirait/diner/steak-frites.webp"
               },
               {
-                "texte": "BMW GS",
-                "image": "choisirait/moto/bmw-gs.webp"
+                "texte": "Lobster",
+                "image": "choisirait/diner/homard.webp"
               },
               {
-                "texte": "Harley-Davidson",
-                "image": "choisirait/moto/harley.webp"
+                "texte": "Ramen",
+                "image": "choisirait/diner/ramen.webp"
               }
             ]
           },
           {
-            "question": "Which car would he drive?",
+            "question": "Which coffee would she order?",
             "options": [
               {
-                "texte": "Nissan GT-R",
-                "image": "choisirait/voiture/gtr.webp"
+                "texte": "Matcha latte",
+                "image": "choisirait/cafe/matcha.webp"
               },
               {
-                "texte": "Lamborghini Huracán",
-                "image": "choisirait/voiture/lamborghini-huracan.webp"
+                "texte": "Cappuccino",
+                "image": "choisirait/cafe/cappuccino.webp"
               },
               {
-                "texte": "BMW M3",
-                "image": "choisirait/voiture/bmw-m3.webp"
+                "texte": "Espresso",
+                "image": "choisirait/cafe/espresso.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Now send it to him. Did you guess right?",
-          "bouton": "Send this to him",
+          "question": "Got her 3 picks? Send it and see!",
+          "bouton": "Send this to her",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Car lovers edition. Guess first, send it after. Then compare.\n\nSend this to him",
+      "legende": "Winter edition. Answer for her first, no peeking.\n\nSend this to her",
       "hashtags": [
         "#couplequiz",
-        "#boyfriendquiz",
+        "#girlfriendquiz",
         "#thisorthat",
-        "#carlovers",
+        "#winter",
         "#quizcouple"
       ]
     }

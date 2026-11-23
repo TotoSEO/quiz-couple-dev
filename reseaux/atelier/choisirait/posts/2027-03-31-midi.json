@@ -12,79 +12,79 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "elle",
-        "etiquette": "Cozy night in edition",
-        "accroche": "What would she choose?",
-        "consigne": "One photo per round: the one she would pick!",
+        "pour": "lui",
+        "etiquette": "Spring edition",
+        "accroche": "What would he choose?",
+        "consigne": "Pick A, B or C for him, then send it to him!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which console would she pick?",
+            "question": "Which season would he pick?",
             "options": [
               {
-                "texte": "PlayStation 2",
-                "image": "choisirait/console/ps2.webp"
+                "texte": "Spring",
+                "image": "choisirait/saison/printemps.webp"
               },
               {
-                "texte": "PlayStation 5",
-                "image": "choisirait/console/ps5.webp"
+                "texte": "Winter",
+                "image": "choisirait/saison/hiver-saison.webp"
               },
               {
-                "texte": "Gaming PC",
-                "image": "choisirait/console/pc-gamer.webp"
+                "texte": "Summer",
+                "image": "choisirait/saison/ete.webp"
               }
             ]
           },
           {
-            "question": "Which dessert would she pick?",
+            "question": "Which date would he plan?",
             "options": [
               {
-                "texte": "Apple pie",
-                "image": "choisirait/dessert/tarte-pommes.webp"
+                "texte": "Ice skating",
+                "image": "choisirait/date/patinoire.webp"
               },
               {
-                "texte": "Pavlova",
-                "image": "choisirait/dessert/pavlova.webp"
+                "texte": "Museum",
+                "image": "choisirait/date/musee.webp"
               },
               {
-                "texte": "Huge birthday cake",
-                "image": "choisirait/dessert/gateau-anniversaire.webp"
+                "texte": "Hot air balloon",
+                "image": "choisirait/date/montgolfiere-date.webp"
               }
             ]
           },
           {
-            "question": "Which game night would she pick?",
+            "question": "Which flowers would he get you?",
             "options": [
               {
-                "texte": "Chess",
-                "image": "choisirait/jeu/echecs-soir.webp"
+                "texte": "Red roses",
+                "image": "choisirait/fleurs/roses.webp"
               },
               {
-                "texte": "Poker",
-                "image": "choisirait/jeu/poker.webp"
+                "texte": "Lavender",
+                "image": "choisirait/fleurs/lavande.webp"
               },
               {
-                "texte": "Board games",
-                "image": "choisirait/jeu/jeux-societe.webp"
+                "texte": "Sunflowers",
+                "image": "choisirait/fleurs/tournesols.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Got her 3 picks? Send it and see!",
-          "bouton": "Send this to her",
+          "question": "Now send it to him. Did you guess right?",
+          "bouton": "Send this to him",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Cozy night in edition. Easy for you? Then the next one is for her.\n\nSend this to her",
+      "legende": "Spring edition. Answer for him first, no peeking.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
-        "#girlfriendquiz",
+        "#boyfriendquiz",
         "#thisorthat",
-        "#cozynight",
+        "#spring",
         "#quizcouple"
       ]
     }

@@ -13,78 +13,78 @@
         "langue": "en",
         "theme": "light",
         "pour": "elle",
-        "etiquette": "Food edition",
+        "etiquette": "Travel edition",
         "accroche": "What would she choose?",
-        "consigne": "Pick A, B or C for her, then send it to her!",
+        "consigne": "One photo per round: the one she would pick!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which pizza would she order?",
+            "question": "Which city would she take you to?",
             "options": [
               {
-                "texte": "Deep dish",
-                "image": "choisirait/pizza/deep-dish.webp"
+                "texte": "Rome",
+                "image": "choisirait/ville/rome.webp"
               },
               {
-                "texte": "Margherita",
-                "image": "choisirait/pizza/margherita.webp"
+                "texte": "Tokyo",
+                "image": "choisirait/ville/tokyo.webp"
               },
               {
-                "texte": "Pepperoni",
-                "image": "choisirait/pizza/pepperoni.webp"
+                "texte": "Marrakech",
+                "image": "choisirait/ville/marrakech.webp"
               }
             ]
           },
           {
-            "question": "Which pasta would she pick?",
+            "question": "Where would she go on vacation?",
             "options": [
               {
-                "texte": "Pesto",
-                "image": "choisirait/pates/pesto.webp"
+                "texte": "Croatia",
+                "image": "choisirait/vacances/croatie.webp"
               },
               {
-                "texte": "Lasagna",
-                "image": "choisirait/pates/lasagnes.webp"
+                "texte": "Switzerland",
+                "image": "choisirait/vacances/suisse.webp"
               },
               {
-                "texte": "Ravioli",
-                "image": "choisirait/pates/raviolis.webp"
+                "texte": "USA",
+                "image": "choisirait/vacances/usa.webp"
               }
             ]
           },
           {
-            "question": "Which potato would she pick?",
+            "question": "How would she travel with you?",
             "options": [
               {
-                "texte": "Rösti",
-                "image": "choisirait/patate/rosti.webp"
+                "texte": "Cruise ship",
+                "image": "choisirait/voyage/croisiere.webp"
               },
               {
-                "texte": "French fries",
-                "image": "choisirait/patate/frites.webp"
+                "texte": "Private jet",
+                "image": "choisirait/voyage/jet.webp"
               },
               {
-                "texte": "Curly fries",
-                "image": "choisirait/patate/curly.webp"
+                "texte": "Sailboat",
+                "image": "choisirait/voyage/voilier.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Got her 3 picks? Send it and see!",
+          "question": "Now send it to her. Did you guess right?",
           "bouton": "Send this to her",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Food edition. She will swear you got at least one wrong.\n\nSend this to her",
+      "legende": "Travel edition. Your answers first, then her reaction.\n\nSend this to her",
       "hashtags": [
         "#couplequiz",
         "#girlfriendquiz",
         "#thisorthat",
-        "#foodie",
+        "#travelcouple",
         "#quizcouple"
       ]
     }

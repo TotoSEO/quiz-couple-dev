@@ -12,79 +12,79 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "lui",
-        "etiquette": "Date night edition",
-        "accroche": "What would he choose?",
-        "consigne": "Pick A, B or C for him, then send it to him!",
+        "pour": "elle",
+        "etiquette": "Morning edition",
+        "accroche": "What would she choose?",
+        "consigne": "One photo per round: the one she would pick!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which flowers would he get you?",
+            "question": "Which breakfast would she choose?",
             "options": [
               {
-                "texte": "Wildflowers",
-                "image": "choisirait/fleurs/fleurs-sauvages.webp"
+                "texte": "Eggs Benedict",
+                "image": "choisirait/petitdej/benedict.webp"
               },
               {
-                "texte": "Orchid",
-                "image": "choisirait/fleurs/orchidee.webp"
+                "texte": "Açaí bowl",
+                "image": "choisirait/petitdej/acai.webp"
               },
               {
-                "texte": "Peonies",
-                "image": "choisirait/fleurs/pivoines.webp"
+                "texte": "Croissant & coffee",
+                "image": "choisirait/petitdej/croissant-cafe.webp"
               }
             ]
           },
           {
-            "question": "Which date would he take you on?",
+            "question": "How would she have her eggs?",
             "options": [
               {
-                "texte": "Wine tasting",
-                "image": "choisirait/date/degustation.webp"
+                "texte": "Omelette",
+                "image": "choisirait/oeufs/omelette.webp"
               },
               {
-                "texte": "Theme park",
-                "image": "choisirait/date/parc.webp"
+                "texte": "Poached",
+                "image": "choisirait/oeufs/poche.webp"
               },
               {
-                "texte": "Stargazing",
-                "image": "choisirait/date/etoiles.webp"
+                "texte": "Soft-boiled",
+                "image": "choisirait/oeufs/coque.webp"
               }
             ]
           },
           {
-            "question": "What would he order at the bar?",
+            "question": "Which drink would she get?",
             "options": [
               {
-                "texte": "Mojito",
-                "image": "choisirait/bar/mojito.webp"
+                "texte": "Smoothie",
+                "image": "choisirait/boisson/smoothie.webp"
               },
               {
-                "texte": "Whiskey",
-                "image": "choisirait/bar/whisky.webp"
+                "texte": "Iced tea",
+                "image": "choisirait/boisson/the-glace.webp"
               },
               {
-                "texte": "Red wine",
-                "image": "choisirait/bar/vin-rouge.webp"
+                "texte": "Lemonade",
+                "image": "choisirait/boisson/limonade.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Now send it to him. Did you guess right?",
-          "bouton": "Send this to him",
+          "question": "Got her 3 picks? Send it and see!",
+          "bouton": "Send this to her",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Date night edition. He will swear you got at least one wrong.\n\nSend this to him",
+      "legende": "Morning edition. Your answers first, then her reaction.\n\nSend this to her",
       "hashtags": [
         "#couplequiz",
-        "#boyfriendquiz",
+        "#girlfriendquiz",
         "#thisorthat",
-        "#datenight",
+        "#breakfast",
         "#quizcouple"
       ]
     }

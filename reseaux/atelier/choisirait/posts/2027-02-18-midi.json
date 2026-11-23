@@ -13,62 +13,62 @@
         "langue": "en",
         "theme": "light",
         "pour": "lui",
-        "etiquette": "Game night edition",
+        "etiquette": "Sweet tooth edition",
         "accroche": "What would he choose?",
-        "consigne": "One photo per round: the one he would pick!",
+        "consigne": "Answer for him: A, B or C? Then send it!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "What would he order at 2 a.m.?",
+            "question": "Which ice cream would he get?",
             "options": [
               {
-                "texte": "Instant noodles",
-                "image": "choisirait/fastfood/nouilles.webp"
+                "texte": "Affogato",
+                "image": "choisirait/glace/affogato.webp"
               },
               {
-                "texte": "Nuggets",
-                "image": "choisirait/fastfood/nuggets.webp"
+                "texte": "Banana split",
+                "image": "choisirait/glace/banana-split.webp"
               },
               {
-                "texte": "Kebab",
-                "image": "choisirait/fastfood/kebab.webp"
+                "texte": "Soft serve",
+                "image": "choisirait/glace/italienne.webp"
               }
             ]
           },
           {
-            "question": "Which game night would he pick?",
+            "question": "What would he grab at the bakery?",
             "options": [
               {
-                "texte": "Foosball",
-                "image": "choisirait/jeu/baby-foot.webp"
+                "texte": "Cinnamon roll",
+                "image": "choisirait/boulangerie/cinnamon-roll.webp"
               },
               {
-                "texte": "Video games",
-                "image": "choisirait/jeu/jeux-video.webp"
+                "texte": "Bagel",
+                "image": "choisirait/boulangerie/bagel.webp"
               },
               {
-                "texte": "Ping pong",
-                "image": "choisirait/jeu/ping-pong.webp"
+                "texte": "Muffin",
+                "image": "choisirait/boulangerie/muffin.webp"
               }
             ]
           },
           {
-            "question": "Which console would he pick?",
+            "question": "Which movie snack would he pick?",
             "options": [
               {
-                "texte": "Nintendo Switch",
-                "image": "choisirait/console/switch.webp"
+                "texte": "Licorice",
+                "image": "choisirait/snack/reglisse.webp"
               },
               {
-                "texte": "Game Boy",
-                "image": "choisirait/console/gameboy.webp"
+                "texte": "Popcorn",
+                "image": "choisirait/snack/popcorn.webp"
               },
               {
-                "texte": "Gaming PC",
-                "image": "choisirait/console/pc-gamer.webp"
+                "texte": "Nachos",
+                "image": "choisirait/snack/nachos.webp"
               }
             ]
           }
@@ -79,12 +79,12 @@
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Game night edition. If you get all three, you know him by heart.\n\nSend this to him",
+      "legende": "Sweet tooth edition. Guess first, send it after. Then compare.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
         "#boyfriendquiz",
         "#thisorthat",
-        "#gamenight",
+        "#dessert",
         "#quizcouple"
       ]
     }

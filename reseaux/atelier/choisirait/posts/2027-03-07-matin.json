@@ -13,7 +13,7 @@
         "langue": "en",
         "theme": "light",
         "pour": "lui",
-        "etiquette": "Cozy night in edition",
+        "etiquette": "Travel edition",
         "accroche": "What would he choose?",
         "consigne": "Choose the photo he would pick. 3 rounds!",
         "secondes": 4,
@@ -22,53 +22,53 @@
         },
         "questions": [
           {
-            "question": "Which console would he pick?",
+            "question": "Which city would he take you to?",
             "options": [
               {
-                "texte": "Nintendo Switch",
-                "image": "choisirait/console/switch.webp"
+                "texte": "Prague",
+                "image": "choisirait/ville/prague.webp"
               },
               {
-                "texte": "PlayStation 5",
-                "image": "choisirait/console/ps5.webp"
+                "texte": "Venice",
+                "image": "choisirait/ville/venise.webp"
               },
               {
-                "texte": "Game Boy",
-                "image": "choisirait/console/gameboy.webp"
+                "texte": "Amsterdam",
+                "image": "choisirait/ville/amsterdam.webp"
               }
             ]
           },
           {
-            "question": "Which drink would he get?",
+            "question": "Where would he take you on vacation?",
             "options": [
               {
-                "texte": "Smoothie",
-                "image": "choisirait/boisson/smoothie.webp"
+                "texte": "Norway",
+                "image": "choisirait/vacances/norvege.webp"
               },
               {
-                "texte": "Lemonade",
-                "image": "choisirait/boisson/limonade.webp"
+                "texte": "Maldives",
+                "image": "choisirait/vacances/maldives.webp"
               },
               {
-                "texte": "Iced tea",
-                "image": "choisirait/boisson/the-glace.webp"
+                "texte": "Costa Rica",
+                "image": "choisirait/vacances/costa-rica.webp"
               }
             ]
           },
           {
-            "question": "Which game night would he pick?",
+            "question": "Where would he book a weekend?",
             "options": [
               {
-                "texte": "Chess",
-                "image": "choisirait/jeu/echecs-soir.webp"
+                "texte": "Ski chalet",
+                "image": "choisirait/weekend/chalet-ski.webp"
               },
               {
-                "texte": "Pool",
-                "image": "choisirait/jeu/billard.webp"
+                "texte": "Overwater villa",
+                "image": "choisirait/weekend/bungalow-eau.webp"
               },
               {
-                "texte": "Ping pong",
-                "image": "choisirait/jeu/ping-pong.webp"
+                "texte": "Houseboat",
+                "image": "choisirait/weekend/peniche.webp"
               }
             ]
           }
@@ -79,12 +79,12 @@
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Cozy night in edition. If you get all three, you know him by heart.\n\nSend this to him",
+      "legende": "Travel edition. Your answers first, then his reaction.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
         "#boyfriendquiz",
         "#thisorthat",
-        "#cozynight",
+        "#travelcouple",
         "#quizcouple"
       ]
     }

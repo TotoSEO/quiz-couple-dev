@@ -12,79 +12,79 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "lui",
-        "etiquette": "Weekend edition",
-        "accroche": "What would he choose?",
-        "consigne": "Answer for him: A, B or C? Then send it!",
+        "pour": "elle",
+        "etiquette": "Cozy night in edition",
+        "accroche": "What would she choose?",
+        "consigne": "Pick A, B or C for her, then send it to her!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which workout would he pick?",
+            "question": "Which game night would she pick?",
             "options": [
               {
-                "texte": "Running",
-                "image": "choisirait/salle/course.webp"
+                "texte": "Poker",
+                "image": "choisirait/jeu/poker.webp"
               },
               {
-                "texte": "Cycling",
-                "image": "choisirait/salle/velo.webp"
+                "texte": "Board games",
+                "image": "choisirait/jeu/jeux-societe.webp"
               },
               {
-                "texte": "Boxing",
-                "image": "choisirait/salle/boxe-salle.webp"
+                "texte": "Foosball",
+                "image": "choisirait/jeu/baby-foot.webp"
               }
             ]
           },
           {
-            "question": "Which hobby would he pick up?",
+            "question": "Which console would she pick?",
             "options": [
               {
-                "texte": "Pottery",
-                "image": "choisirait/loisir/poterie.webp"
+                "texte": "Game Boy",
+                "image": "choisirait/console/gameboy.webp"
               },
               {
-                "texte": "Chess",
-                "image": "choisirait/loisir/echecs.webp"
+                "texte": "Nintendo Switch",
+                "image": "choisirait/console/switch.webp"
               },
               {
-                "texte": "Gardening",
-                "image": "choisirait/loisir/jardinage.webp"
+                "texte": "PlayStation 2",
+                "image": "choisirait/console/ps2.webp"
               }
             ]
           },
           {
-            "question": "Which adventure would he try?",
+            "question": "Which movie snack would she pick?",
             "options": [
               {
-                "texte": "Bungee jumping",
-                "image": "choisirait/aventure/saut-elastique.webp"
+                "texte": "Nachos",
+                "image": "choisirait/snack/nachos.webp"
               },
               {
-                "texte": "Paragliding",
-                "image": "choisirait/aventure/parapente.webp"
+                "texte": "Popcorn",
+                "image": "choisirait/snack/popcorn.webp"
               },
               {
-                "texte": "Skydiving",
-                "image": "choisirait/aventure/parachute.webp"
+                "texte": "Chocolate bar",
+                "image": "choisirait/snack/tablette.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Now send it to him. Did you guess right?",
-          "bouton": "Send this to him",
+          "question": "Got her 3 picks? Send it and see!",
+          "bouton": "Send this to her",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Weekend edition. One letter per question, then send it to him.\n\nSend this to him",
+      "legende": "Cozy night in edition. One letter per question, then send it to her.\n\nSend this to her",
       "hashtags": [
         "#couplequiz",
-        "#boyfriendquiz",
+        "#girlfriendquiz",
         "#thisorthat",
-        "#weekendvibes",
+        "#cozynight",
         "#quizcouple"
       ]
     }

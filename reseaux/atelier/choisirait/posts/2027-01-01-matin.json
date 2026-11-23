@@ -39,7 +39,7 @@
             ]
           },
           {
-            "question": "Which car would he drive?",
+            "question": "Which car would he pick?",
             "options": [
               {
                 "texte": "Aston Martin DB11",
@@ -79,7 +79,7 @@
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Luxury edition. If you get all three, you know him by heart.\n\nSend this to him",
+      "legende": "Luxury edition. Your answers first, then his reaction.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
         "#boyfriendquiz",

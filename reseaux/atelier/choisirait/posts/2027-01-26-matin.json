@@ -12,79 +12,79 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "elle",
-        "etiquette": "Car lovers edition",
-        "accroche": "What would she choose?",
-        "consigne": "One photo per round: the one she would pick!",
+        "pour": "lui",
+        "etiquette": "Weekend edition",
+        "accroche": "What would he choose?",
+        "consigne": "Pick A, B or C for him, then send it to him!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which motorbike would she ride?",
+            "question": "Which workout would he pick?",
             "options": [
               {
-                "texte": "Yamaha MT-07",
-                "image": "choisirait/moto/mt07.webp"
+                "texte": "Swimming",
+                "image": "choisirait/salle/natation.webp"
               },
               {
-                "texte": "Triumph Bonneville",
-                "image": "choisirait/moto/bonneville.webp"
+                "texte": "CrossFit",
+                "image": "choisirait/salle/crossfit.webp"
               },
               {
-                "texte": "Ducati Panigale",
-                "image": "choisirait/moto/ducati.webp"
+                "texte": "Weightlifting",
+                "image": "choisirait/salle/muscu.webp"
               }
             ]
           },
           {
-            "question": "Which classic car would she drive?",
+            "question": "Which hobby would he pick up?",
             "options": [
               {
-                "texte": "VW Beetle",
-                "image": "choisirait/vintage/coccinelle.webp"
+                "texte": "Woodworking",
+                "image": "choisirait/loisir/menuiserie.webp"
               },
               {
-                "texte": "Porsche 356",
-                "image": "choisirait/vintage/porsche-356.webp"
+                "texte": "Fishing",
+                "image": "choisirait/loisir/peche.webp"
               },
               {
-                "texte": "Citroën 2CV",
-                "image": "choisirait/vintage/2cv.webp"
+                "texte": "Photography",
+                "image": "choisirait/loisir/photo.webp"
               }
             ]
           },
           {
-            "question": "Which car would she pick?",
+            "question": "Which sport would he watch?",
             "options": [
               {
-                "texte": "Bugatti Chiron",
-                "image": "choisirait/voiture/bugatti.webp"
+                "texte": "Football",
+                "image": "choisirait/sport/foot.webp"
               },
               {
-                "texte": "Rolls-Royce",
-                "image": "choisirait/voiture/rolls-royce.webp"
+                "texte": "Golf",
+                "image": "choisirait/sport/golf.webp"
               },
               {
-                "texte": "Mini Cooper",
-                "image": "choisirait/voiture/mini.webp"
+                "texte": "Basketball",
+                "image": "choisirait/sport/basket.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Got her 3 picks? Send it and see!",
-          "bouton": "Send this to her",
+          "question": "Now send it to him. Did you guess right?",
+          "bouton": "Send this to him",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Car lovers edition. Easy for you? Then the next one is for her.\n\nSend this to her",
+      "legende": "Weekend edition. Answer for him first, no peeking.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
-        "#girlfriendquiz",
+        "#boyfriendquiz",
         "#thisorthat",
-        "#carlovers",
+        "#weekendvibes",
         "#quizcouple"
       ]
     }

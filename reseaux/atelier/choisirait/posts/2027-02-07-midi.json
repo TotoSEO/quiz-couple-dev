@@ -12,79 +12,79 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "lui",
-        "etiquette": "Car lovers edition",
-        "accroche": "What would he choose?",
-        "consigne": "Answer for him: A, B or C? Then send it!",
+        "pour": "elle",
+        "etiquette": "Sweet tooth edition",
+        "accroche": "What would she choose?",
+        "consigne": "Answer for her: A, B or C? Then send it!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which classic car would he drive?",
+            "question": "Which ice cream would she get?",
             "options": [
               {
-                "texte": "1967 Mustang",
-                "image": "choisirait/vintage/mustang-67.webp"
+                "texte": "Gelato",
+                "image": "choisirait/glace/gelato.webp"
               },
               {
-                "texte": "VW Beetle",
-                "image": "choisirait/vintage/coccinelle.webp"
+                "texte": "Ice cream sandwich",
+                "image": "choisirait/glace/sandwich-glace.webp"
               },
               {
-                "texte": "VW Camper Van",
-                "image": "choisirait/vintage/combi.webp"
+                "texte": "Popsicle",
+                "image": "choisirait/glace/esquimau.webp"
               }
             ]
           },
           {
-            "question": "Which motorbike would he ride?",
+            "question": "What would she grab at the bakery?",
             "options": [
               {
-                "texte": "Vespa",
-                "image": "choisirait/moto/vespa.webp"
+                "texte": "Bagel",
+                "image": "choisirait/boulangerie/bagel.webp"
               },
               {
-                "texte": "Triumph Bonneville",
-                "image": "choisirait/moto/bonneville.webp"
+                "texte": "Brioche",
+                "image": "choisirait/boulangerie/brioche.webp"
               },
               {
-                "texte": "Ducati Panigale",
-                "image": "choisirait/moto/ducati.webp"
+                "texte": "Baguette",
+                "image": "choisirait/boulangerie/baguette.webp"
               }
             ]
           },
           {
-            "question": "Which car would he pick?",
+            "question": "Which coffee would she order?",
             "options": [
               {
-                "texte": "Mercedes G-Class",
-                "image": "choisirait/voiture/g-class.webp"
+                "texte": "Matcha latte",
+                "image": "choisirait/cafe/matcha.webp"
               },
               {
-                "texte": "Toyota Supra",
-                "image": "choisirait/voiture/supra.webp"
+                "texte": "Cappuccino",
+                "image": "choisirait/cafe/cappuccino.webp"
               },
               {
-                "texte": "Audi R8",
-                "image": "choisirait/voiture/audi-r8.webp"
+                "texte": "Americano",
+                "image": "choisirait/cafe/americano.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Send it to him: how many did you get?",
-          "bouton": "Send this to him",
+          "question": "Send it to her: how many did you get?",
+          "bouton": "Send this to her",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Car lovers edition. Guess first, send it after. Then compare.\n\nSend this to him",
+      "legende": "Sweet tooth edition. Answer for her first, no peeking.\n\nSend this to her",
       "hashtags": [
         "#couplequiz",
-        "#boyfriendquiz",
+        "#girlfriendquiz",
         "#thisorthat",
-        "#carlovers",
+        "#dessert",
         "#quizcouple"
       ]
     }
