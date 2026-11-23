@@ -66,40 +66,58 @@ export const planCitation = (r: RecetteCitation): Plan => {
 };
 
 // What would he choose? : une intro, trois questions à trois photos, une fin.
-// Les photos entrent l'une après l'autre (une tous les deux PAS), le chrono
-// part dès qu'elles sont toutes là et que la question a eu le temps d'être
-// lue (1,2 s), puis une demi-seconde pour fixer son choix avant la suivante.
-// Une photo se regarde plus vite qu'une phrase ne se lit : pas de temps de
-// lecture par mot ici, sinon chaque question durerait près de huit secondes.
+// Les photos entrent l'une après l'autre (une tous les deux PAS), puis on
+// laisse le temps de les regarder (REGARD : les lettres A, B, C s'allument
+// l'une après l'autre) avant que le chrono parte, et une demi-seconde après
+// pour fixer son choix avant la suivante. Jusqu'au 23 novembre 2026, le
+// chrono partait un dixième de seconde après la dernière photo, et Thomas
+// trouvait que le temps filait trop vite. Une photo se regarde plus vite
+// qu'une phrase ne se lit : pas de temps de lecture par mot ici.
 export const ENTREE_PHOTO = 2 * PAS;
 // l'image où la photo k (0, 1, 2) commence à entrer, depuis le début de la question
 export const debutPhoto = (k: number) => PAS + (k + 1) * ENTREE_PHOTO;
+export const REGARD = Math.round(1.6 * FPS);
+// pendant REGARD, la lettre de la photo k s'allume à cette image (depuis le début de la question)
+export const allumeLettre = (pret: number, k: number) => pret + 4 + k * Math.round(0.4 * FPS);
+// la durée de l'intro, à part : la couverture y est prise
+export const INTRO_CHOISIRAIT = 3 * FPS;
 export const planChoisirait = (r: RecetteChoisirait): Plan => {
   const s = r.secondes ?? 4;
-  const intro = 3 * FPS;
-  const apres = Math.round(0.5 * FPS);
+  const intro = INTRO_CHOISIRAIT;
+  const apres = Math.round(0.6 * FPS);
   const fin = Math.round(3.5 * FPS);
   const entre = 2 * TEMPO.moyen;
   const scenes: Scene[] = [{ type: 'intro', debut: 0, duree: intro }];
-  const sons: EvenementSonore[] = [{ nom: 'pop', a: 0 }, { nom: 'intro', a: 4 }, { nom: 'saut', a: 15 }, { nom: 'saut', a: 31 }, { nom: 'coeur', a: 18 }];
+  // l'accroche : le mur de photos est là dès la première image, la carte
+  // arrive en rebond, les lettres A, B, C sautent l'une après l'autre
+  const sons: EvenementSonore[] = [
+    { nom: 'pop', a: 0 },
+    { nom: 'intro', a: 4 },
+    { nom: 'reponse', a: 20, volume: 0.5 },
+    { nom: 'reponse', a: 26, volume: 0.5 },
+    { nom: 'reponse', a: 32, volume: 0.5 },
+    { nom: 'bulle', a: 46 },
+  ];
   const verifs = [entre];
   let t = intro;
   r.questions.forEach((q, i) => {
     const derniere = debutPhoto(q.options.length - 1);
-    const lire = Math.max(Math.round(1.2 * FPS), derniere + TEMPO.moyen);
-    const chrono = lire;
+    const pret = derniere + TEMPO.moyen;
+    const chrono = pret + REGARD;
     const finChrono = chrono + s * FPS;
     const duree = finChrono + apres;
-    scenes.push({ type: 'question', debut: t, duree, index: i, lecture: lire, chrono, finChrono });
+    scenes.push({ type: 'question', debut: t, duree, index: i, lecture: pret, chrono, finChrono });
     sons.push({ nom: 'apparition', a: t });
     q.options.forEach((_, k) => sons.push({ nom: 'pop', a: t + debutPhoto(k) }));
+    // le départ du chrono s'entend, puis une seconde sur deux
+    sons.push({ nom: 'bulle', a: t + chrono, volume: 0.6 });
     for (let k = s - 1; k >= 1; k--) {
       const volume = k > (s * 2) / 3 ? 0.22 : k > s / 3 ? 0.32 : 0.45;
       sons.push({ nom: 'tic', a: t + chrono + (s - k) * FPS, volume });
     }
     sons.push({ nom: 'bulle', a: t + finChrono });
-    // une image quand tout est entré, une avec le chrono lancé, une à la fin
-    verifs.push(t + derniere + TEMPO.moyen, t + chrono + entre, t + finChrono + Math.min(entre, apres - 1));
+    // une image quand tout est entré, une pendant le regard, une avec le chrono lancé, une à la fin
+    verifs.push(t + pret, t + pret + Math.round(REGARD / 2), t + chrono + entre, t + finChrono + Math.min(entre, apres - 1));
     t += duree;
   });
   scenes.push({ type: 'fin', debut: t, duree: fin });
