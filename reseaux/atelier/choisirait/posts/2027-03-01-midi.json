@@ -13,78 +13,78 @@
         "langue": "en",
         "theme": "light",
         "pour": "lui",
-        "etiquette": "Wedding edition",
+        "etiquette": "Hobbies edition",
         "accroche": "What would he choose?",
-        "consigne": "One photo per round: the one he would pick!",
+        "consigne": "Pick A, B or C for him, then send it to him!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Where would he want to get married?",
+            "question": "Which instrument would he play?",
             "options": [
               {
-                "texte": "Vegas chapel",
-                "image": "choisirait/mariage/vegas.webp"
+                "texte": "Trumpet",
+                "image": "choisirait/instrument/trompette.webp"
               },
               {
-                "texte": "Lakeside",
-                "image": "choisirait/vue/lac.webp"
+                "texte": "Electric guitar",
+                "image": "choisirait/instrument/guitare-electrique.webp"
               },
               {
-                "texte": "Beach",
-                "image": "choisirait/vue/plage-tropicale.webp"
+                "texte": "Acoustic guitar",
+                "image": "choisirait/instrument/guitare-acoustique.webp"
               }
             ]
           },
           {
-            "question": "Where would he propose?",
+            "question": "Which workout would he pick?",
             "options": [
               {
-                "texte": "Hot air balloon",
-                "image": "choisirait/demande/demande-montgolfiere.webp"
+                "texte": "Swimming",
+                "image": "choisirait/salle/natation.webp"
               },
               {
-                "texte": "Restaurant",
-                "image": "choisirait/demande/demande-resto.webp"
+                "texte": "Boxing",
+                "image": "choisirait/salle/boxe-salle.webp"
               },
               {
-                "texte": "Mountaintop",
-                "image": "choisirait/demande/demande-montagne.webp"
+                "texte": "Yoga",
+                "image": "choisirait/salle/yoga.webp"
               }
             ]
           },
           {
-            "question": "Which ring would he pick for you?",
+            "question": "Which hobby would he pick up?",
             "options": [
               {
-                "texte": "Vintage ring",
-                "image": "choisirait/bague/vintage-bague.webp"
+                "texte": "Photography",
+                "image": "choisirait/loisir/photo.webp"
               },
               {
-                "texte": "Halo ring",
-                "image": "choisirait/bague/halo.webp"
+                "texte": "Gardening",
+                "image": "choisirait/loisir/jardinage.webp"
               },
               {
-                "texte": "Rose gold ring",
-                "image": "choisirait/bague/or-rose.webp"
+                "texte": "Fishing",
+                "image": "choisirait/loisir/peche.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Now send it to him. Did you guess right?",
+          "question": "Got his 3 picks? Send it and see!",
           "bouton": "Send this to him",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Wedding edition. If you get all three, you know him by heart.\n\nSend this to him",
+      "legende": "Hobbies edition. Guess first, send it after. Then compare.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
         "#boyfriendquiz",
         "#thisorthat",
-        "#engaged",
+        "#hobbies",
         "#quizcouple"
       ]
     }

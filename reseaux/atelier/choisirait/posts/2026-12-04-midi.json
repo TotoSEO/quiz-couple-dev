@@ -12,17 +12,17 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "lui",
+        "pour": "elle",
         "etiquette": "Wedding edition",
-        "accroche": "What would he choose?",
-        "consigne": "Answer for him: A, B or C? Then send it!",
+        "accroche": "What would she choose?",
+        "consigne": "Answer for her: A, B or C? Then send it!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which ring would he pick for you?",
+            "question": "Which ring would she want?",
             "options": [
               {
                 "texte": "Solitaire diamond",
@@ -39,7 +39,7 @@
             ]
           },
           {
-            "question": "Which flowers would he get you?",
+            "question": "Which flowers would she want?",
             "options": [
               {
                 "texte": "Lavender",
@@ -56,7 +56,7 @@
             ]
           },
           {
-            "question": "Where would he propose?",
+            "question": "Where would she want you to propose?",
             "options": [
               {
                 "texte": "Hot air balloon",
@@ -74,15 +74,15 @@
           }
         ],
         "fin": {
-          "question": "Send it to him: how many did you get?",
-          "bouton": "Send this to him",
+          "question": "Send it to her: how many did you get?",
+          "bouton": "Send this to her",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Wedding edition. Guess first, send it after. Then compare.\n\nSend this to him",
+      "legende": "Wedding edition. Answer for her first, no peeking.\n\nSend this to her",
       "hashtags": [
         "#couplequiz",
-        "#boyfriendquiz",
+        "#girlfriendquiz",
         "#thisorthat",
         "#engaged",
         "#quizcouple"

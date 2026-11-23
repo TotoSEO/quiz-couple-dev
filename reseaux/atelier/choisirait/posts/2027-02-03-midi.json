@@ -13,78 +13,78 @@
         "langue": "en",
         "theme": "light",
         "pour": "lui",
-        "etiquette": "Sweet tooth edition",
+        "etiquette": "Pet lovers edition",
         "accroche": "What would he choose?",
-        "consigne": "One photo per round: the one he would pick!",
+        "consigne": "Pick A, B or C for him, then send it to him!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "What would he grab at the bakery?",
+            "question": "Which pet would he want?",
             "options": [
               {
-                "texte": "Baguette",
-                "image": "choisirait/boulangerie/baguette.webp"
+                "texte": "Axolotl",
+                "image": "choisirait/animal/axolotl.webp"
               },
               {
-                "texte": "Bagel",
-                "image": "choisirait/boulangerie/bagel.webp"
+                "texte": "Goldfish",
+                "image": "choisirait/animal/poisson.webp"
               },
               {
-                "texte": "Pain au chocolat",
-                "image": "choisirait/boulangerie/pain-chocolat.webp"
+                "texte": "Chameleon",
+                "image": "choisirait/animal/cameleon.webp"
               }
             ]
           },
           {
-            "question": "Which ice cream would he get?",
+            "question": "Which cat would he adopt?",
             "options": [
               {
-                "texte": "Popsicle",
-                "image": "choisirait/glace/esquimau.webp"
+                "texte": "Norwegian Forest Cat",
+                "image": "choisirait/chat/norvegien.webp"
               },
               {
-                "texte": "Soft serve",
-                "image": "choisirait/glace/italienne.webp"
+                "texte": "Bengal",
+                "image": "choisirait/chat/bengal.webp"
               },
               {
-                "texte": "Affogato",
-                "image": "choisirait/glace/affogato.webp"
+                "texte": "Sphynx",
+                "image": "choisirait/chat/sphynx.webp"
               }
             ]
           },
           {
-            "question": "Which movie snack would he pick?",
+            "question": "Which dog would he adopt?",
             "options": [
               {
-                "texte": "Gummy bears",
-                "image": "choisirait/snack/oursons.webp"
+                "texte": "Poodle",
+                "image": "choisirait/chien/caniche.webp"
               },
               {
-                "texte": "Ice cream tub",
-                "image": "choisirait/snack/pot-glace.webp"
+                "texte": "Beagle",
+                "image": "choisirait/chien/beagle.webp"
               },
               {
-                "texte": "Nachos",
-                "image": "choisirait/snack/nachos.webp"
+                "texte": "Husky",
+                "image": "choisirait/chien/husky.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Now send it to him. Did you guess right?",
+          "question": "Got his 3 picks? Send it and see!",
           "bouton": "Send this to him",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Sweet tooth edition. Pick for him, then let him prove you wrong.\n\nSend this to him",
+      "legende": "Pet lovers edition. One letter per question, then send it to him.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
         "#boyfriendquiz",
         "#thisorthat",
-        "#dessert",
+        "#petlovers",
         "#quizcouple"
       ]
     }

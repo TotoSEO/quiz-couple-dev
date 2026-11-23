@@ -12,79 +12,79 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "elle",
-        "etiquette": "Sweet tooth edition",
-        "accroche": "What would she choose?",
-        "consigne": "Choose the photo she would pick. 3 rounds!",
+        "pour": "lui",
+        "etiquette": "Game night edition",
+        "accroche": "What would he choose?",
+        "consigne": "Choose the photo he would pick. 3 rounds!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which ice cream would she get?",
+            "question": "What would he order at 2 a.m.?",
             "options": [
               {
-                "texte": "Ice cream cone",
-                "image": "choisirait/glace/cornet.webp"
+                "texte": "Burger",
+                "image": "choisirait/fastfood/burger.webp"
               },
               {
-                "texte": "Popsicle",
-                "image": "choisirait/glace/esquimau.webp"
+                "texte": "Burrito",
+                "image": "choisirait/fastfood/burrito.webp"
               },
               {
-                "texte": "Soft serve",
-                "image": "choisirait/glace/italienne.webp"
+                "texte": "Tacos",
+                "image": "choisirait/fastfood/tacos.webp"
               }
             ]
           },
           {
-            "question": "What would she grab at the bakery?",
+            "question": "Which game night would he pick?",
             "options": [
               {
-                "texte": "Baguette",
-                "image": "choisirait/boulangerie/baguette.webp"
+                "texte": "Chess",
+                "image": "choisirait/jeu/echecs-soir.webp"
               },
               {
-                "texte": "Brioche",
-                "image": "choisirait/boulangerie/brioche.webp"
+                "texte": "Poker",
+                "image": "choisirait/jeu/poker.webp"
               },
               {
-                "texte": "Muffin",
-                "image": "choisirait/boulangerie/muffin.webp"
+                "texte": "Board games",
+                "image": "choisirait/jeu/jeux-societe.webp"
               }
             ]
           },
           {
-            "question": "Which dessert would she pick?",
+            "question": "Which console would he pick?",
             "options": [
               {
-                "texte": "Vanilla éclair",
-                "image": "choisirait/dessert/eclair.webp"
+                "texte": "PlayStation 5",
+                "image": "choisirait/console/ps5.webp"
               },
               {
-                "texte": "Apple pie",
-                "image": "choisirait/dessert/tarte-pommes.webp"
+                "texte": "Nintendo Switch",
+                "image": "choisirait/console/switch.webp"
               },
               {
-                "texte": "Macarons",
-                "image": "choisirait/dessert/macarons.webp"
+                "texte": "Game Boy",
+                "image": "choisirait/console/gameboy.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Got her 3 picks? Send it and see!",
-          "bouton": "Send this to her",
+          "question": "Now send it to him. Did you guess right?",
+          "bouton": "Send this to him",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Sweet tooth edition. If you get all three, you know her by heart.\n\nSend this to her",
+      "legende": "Game night edition. Your answers first, then his reaction.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
-        "#girlfriendquiz",
+        "#boyfriendquiz",
         "#thisorthat",
-        "#dessert",
+        "#gamenight",
         "#quizcouple"
       ]
     }

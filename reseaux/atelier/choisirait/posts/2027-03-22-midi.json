@@ -12,79 +12,79 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "lui",
-        "etiquette": "Adventure edition",
-        "accroche": "What would he choose?",
-        "consigne": "Answer for him: A, B or C? Then send it!",
+        "pour": "elle",
+        "etiquette": "Car lovers edition",
+        "accroche": "What would she choose?",
+        "consigne": "Answer for her: A, B or C? Then send it!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which sport would he watch?",
+            "question": "Which classic car would she drive?",
             "options": [
               {
-                "texte": "Basketball",
-                "image": "choisirait/sport/basket.webp"
+                "texte": "Classic Mini",
+                "image": "choisirait/vintage/mini-classique.webp"
               },
               {
-                "texte": "American football",
-                "image": "choisirait/sport/foot-us.webp"
+                "texte": "Mercedes 300 SL",
+                "image": "choisirait/vintage/300sl.webp"
               },
               {
-                "texte": "Tennis",
-                "image": "choisirait/sport/tennis.webp"
+                "texte": "VW Camper Van",
+                "image": "choisirait/vintage/combi.webp"
               }
             ]
           },
           {
-            "question": "Which adventure would he try?",
+            "question": "Which motorbike would she ride?",
             "options": [
               {
-                "texte": "Paragliding",
-                "image": "choisirait/aventure/parapente.webp"
+                "texte": "Harley-Davidson",
+                "image": "choisirait/moto/harley.webp"
               },
               {
-                "texte": "Skydiving",
-                "image": "choisirait/aventure/parachute.webp"
+                "texte": "Triumph Bonneville",
+                "image": "choisirait/moto/bonneville.webp"
               },
               {
-                "texte": "Skiing",
-                "image": "choisirait/aventure/ski.webp"
+                "texte": "Ducati Panigale",
+                "image": "choisirait/moto/ducati.webp"
               }
             ]
           },
           {
-            "question": "Where would he go on vacation?",
+            "question": "Which car would she pick?",
             "options": [
               {
-                "texte": "Canada",
-                "image": "choisirait/vacances/canada.webp"
+                "texte": "BMW M3",
+                "image": "choisirait/voiture/bmw-m3.webp"
               },
               {
-                "texte": "Lapland",
-                "image": "choisirait/vacances/laponie.webp"
+                "texte": "Mercedes G-Class",
+                "image": "choisirait/voiture/g-class.webp"
               },
               {
-                "texte": "Mexico",
-                "image": "choisirait/vacances/mexique.webp"
+                "texte": "Corvette",
+                "image": "choisirait/voiture/corvette.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Now send it to him. Did you guess right?",
-          "bouton": "Send this to him",
+          "question": "Got her 3 picks? Send it and see!",
+          "bouton": "Send this to her",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Adventure edition. Guess first, send it after. Then compare.\n\nSend this to him",
+      "legende": "Car lovers edition. Answer for her first, no peeking.\n\nSend this to her",
       "hashtags": [
         "#couplequiz",
-        "#boyfriendquiz",
+        "#girlfriendquiz",
         "#thisorthat",
-        "#adventurecouple",
+        "#carlovers",
         "#quizcouple"
       ]
     }

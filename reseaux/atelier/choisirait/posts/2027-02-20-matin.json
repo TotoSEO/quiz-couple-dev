@@ -12,79 +12,79 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "lui",
-        "etiquette": "Date night edition",
-        "accroche": "What would he choose?",
-        "consigne": "Answer for him: A, B or C? Then send it!",
+        "pour": "elle",
+        "etiquette": "Food edition",
+        "accroche": "What would she choose?",
+        "consigne": "Answer for her: A, B or C? Then send it!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which date would he plan?",
+            "question": "How would she have her eggs?",
             "options": [
               {
-                "texte": "Camping",
-                "image": "choisirait/date/camping.webp"
+                "texte": "Poached",
+                "image": "choisirait/oeufs/poche.webp"
               },
               {
-                "texte": "Museum",
-                "image": "choisirait/date/musee.webp"
+                "texte": "Omelette",
+                "image": "choisirait/oeufs/omelette.webp"
               },
               {
-                "texte": "Arcade",
-                "image": "choisirait/date/arcade.webp"
+                "texte": "Fried",
+                "image": "choisirait/oeufs/oeuf-plat.webp"
               }
             ]
           },
           {
-            "question": "Which movie snack would he pick?",
+            "question": "Which potato would she pick?",
             "options": [
               {
-                "texte": "Licorice",
-                "image": "choisirait/snack/reglisse.webp"
+                "texte": "French fries",
+                "image": "choisirait/patate/frites.webp"
               },
               {
-                "texte": "Chocolate bar",
-                "image": "choisirait/snack/tablette.webp"
+                "texte": "Potato gratin",
+                "image": "choisirait/patate/gratin.webp"
               },
               {
-                "texte": "Gummy bears",
-                "image": "choisirait/snack/oursons.webp"
+                "texte": "Hash browns",
+                "image": "choisirait/patate/hash-browns.webp"
               }
             ]
           },
           {
-            "question": "Which flowers would he get you?",
+            "question": "Which pizza would she order?",
             "options": [
               {
-                "texte": "Lilies",
-                "image": "choisirait/fleurs/lys.webp"
+                "texte": "Veggie",
+                "image": "choisirait/pizza/vegetarienne.webp"
               },
               {
-                "texte": "Tulips",
-                "image": "choisirait/fleurs/tulipes.webp"
+                "texte": "Four cheese",
+                "image": "choisirait/pizza/quatre-fromages.webp"
               },
               {
-                "texte": "Sunflowers",
-                "image": "choisirait/fleurs/tournesols.webp"
+                "texte": "Pepperoni",
+                "image": "choisirait/pizza/pepperoni.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Send it to him: how many did you get?",
-          "bouton": "Send this to him",
+          "question": "Send it to her: how many did you get?",
+          "bouton": "Send this to her",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Date night edition. He will swear you got at least one wrong.\n\nSend this to him",
+      "legende": "Food edition. Guess first, send it after. Then compare.\n\nSend this to her",
       "hashtags": [
         "#couplequiz",
-        "#boyfriendquiz",
+        "#girlfriendquiz",
         "#thisorthat",
-        "#datenight",
+        "#foodie",
         "#quizcouple"
       ]
     }

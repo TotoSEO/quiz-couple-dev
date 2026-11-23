@@ -12,17 +12,17 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "elle",
+        "pour": "lui",
         "etiquette": "Winter edition",
-        "accroche": "What would she choose?",
-        "consigne": "Choose the photo she would pick. 3 rounds!",
+        "accroche": "What would he choose?",
+        "consigne": "Choose the photo he would pick. 3 rounds!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which winter date would she pick?",
+            "question": "Which winter date would he pick?",
             "options": [
               {
                 "texte": "Hot tub in the snow",
@@ -39,7 +39,7 @@
             ]
           },
           {
-            "question": "Which coffee would she order?",
+            "question": "Which coffee would he order?",
             "options": [
               {
                 "texte": "Matcha latte",
@@ -56,7 +56,7 @@
             ]
           },
           {
-            "question": "Where would she book a weekend?",
+            "question": "Where would he book a weekend?",
             "options": [
               {
                 "texte": "Ski chalet",
@@ -74,15 +74,15 @@
           }
         ],
         "fin": {
-          "question": "Got her 3 picks? Send it and see!",
-          "bouton": "Send this to her",
+          "question": "Now send it to him. Did you guess right?",
+          "bouton": "Send this to him",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Winter edition. Your answers first, then her reaction.\n\nSend this to her",
+      "legende": "Winter edition. Easy for you? Then the next one is for him.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
-        "#girlfriendquiz",
+        "#boyfriendquiz",
         "#thisorthat",
         "#winter",
         "#quizcouple"

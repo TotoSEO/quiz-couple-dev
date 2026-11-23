@@ -12,79 +12,79 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "lui",
-        "etiquette": "Weekend edition",
-        "accroche": "What would he choose?",
-        "consigne": "Pick A, B or C for him, then send it to him!",
+        "pour": "elle",
+        "etiquette": "Dream home edition",
+        "accroche": "What would she choose?",
+        "consigne": "Choose the photo she would pick. 3 rounds!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which workout would he pick?",
+            "question": "Which dog would she pick?",
             "options": [
               {
-                "texte": "Cycling",
-                "image": "choisirait/salle/velo.webp"
+                "texte": "Pug",
+                "image": "choisirait/chien/carlin.webp"
               },
               {
-                "texte": "Running",
-                "image": "choisirait/salle/course.webp"
+                "texte": "Dalmatian",
+                "image": "choisirait/chien/dalmatien.webp"
               },
               {
-                "texte": "Weightlifting",
-                "image": "choisirait/salle/muscu.webp"
+                "texte": "Australian Shepherd",
+                "image": "choisirait/chien/berger-australien.webp"
               }
             ]
           },
           {
-            "question": "Which hobby would he pick up?",
+            "question": "Which house would she pick?",
             "options": [
               {
-                "texte": "Chess",
-                "image": "choisirait/loisir/echecs.webp"
+                "texte": "Victorian house",
+                "image": "choisirait/maison/victorienne.webp"
               },
               {
-                "texte": "Knitting",
-                "image": "choisirait/loisir/tricot.webp"
+                "texte": "Castle",
+                "image": "choisirait/maison/chateau.webp"
               },
               {
-                "texte": "Fishing",
-                "image": "choisirait/loisir/peche.webp"
+                "texte": "Tiny house",
+                "image": "choisirait/maison/tiny-house.webp"
               }
             ]
           },
           {
-            "question": "Which adventure would he try?",
+            "question": "Which view would she wake up to?",
             "options": [
               {
-                "texte": "Skydiving",
-                "image": "choisirait/aventure/parachute.webp"
+                "texte": "City skyline",
+                "image": "choisirait/vue/skyline.webp"
               },
               {
-                "texte": "Snowboarding",
-                "image": "choisirait/aventure/snowboard.webp"
+                "texte": "Eiffel Tower",
+                "image": "choisirait/vue/tour-eiffel.webp"
               },
               {
-                "texte": "Skiing",
-                "image": "choisirait/aventure/ski.webp"
+                "texte": "Northern lights",
+                "image": "choisirait/vue/aurores.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Send it to him: how many did you get?",
-          "bouton": "Send this to him",
+          "question": "Send it to her: how many did you get?",
+          "bouton": "Send this to her",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Weekend edition. Guess first, send it after. Then compare.\n\nSend this to him",
+      "legende": "Dream home edition. Pick for her, then let her prove you wrong.\n\nSend this to her",
       "hashtags": [
         "#couplequiz",
-        "#boyfriendquiz",
+        "#girlfriendquiz",
         "#thisorthat",
-        "#weekendvibes",
+        "#dreamhome",
         "#quizcouple"
       ]
     }

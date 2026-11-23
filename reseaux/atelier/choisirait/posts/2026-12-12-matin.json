@@ -12,17 +12,17 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "lui",
+        "pour": "elle",
         "etiquette": "Sweet tooth edition",
-        "accroche": "What would he choose?",
-        "consigne": "Pick A, B or C for him, then send it to him!",
+        "accroche": "What would she choose?",
+        "consigne": "Choose the photo she would pick. 3 rounds!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which ice cream would he get?",
+            "question": "Which ice cream would she get?",
             "options": [
               {
                 "texte": "Banana split",
@@ -39,7 +39,7 @@
             ]
           },
           {
-            "question": "Which cake would he pick?",
+            "question": "Which cake would she pick?",
             "options": [
               {
                 "texte": "Chocolate lava cake",
@@ -56,7 +56,7 @@
             ]
           },
           {
-            "question": "Which movie snack would he pick?",
+            "question": "Which movie snack would she pick?",
             "options": [
               {
                 "texte": "Nachos",
@@ -74,15 +74,15 @@
           }
         ],
         "fin": {
-          "question": "Now send it to him. Did you guess right?",
-          "bouton": "Send this to him",
+          "question": "Got her 3 picks? Send it and see!",
+          "bouton": "Send this to her",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Sweet tooth edition. He will swear you got at least one wrong.\n\nSend this to him",
+      "legende": "Sweet tooth edition. Your answers first, then her reaction.\n\nSend this to her",
       "hashtags": [
         "#couplequiz",
-        "#boyfriendquiz",
+        "#girlfriendquiz",
         "#thisorthat",
         "#dessert",
         "#quizcouple"

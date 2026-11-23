@@ -12,79 +12,79 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "lui",
-        "etiquette": "Dream home edition",
-        "accroche": "What would he choose?",
-        "consigne": "Answer for him: A, B or C? Then send it!",
+        "pour": "elle",
+        "etiquette": "Weekend edition",
+        "accroche": "What would she choose?",
+        "consigne": "Pick A, B or C for her, then send it to her!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which house would he pick?",
+            "question": "Which adventure would she try?",
             "options": [
               {
-                "texte": "Loft apartment",
-                "image": "choisirait/maison/loft.webp"
+                "texte": "Rock climbing",
+                "image": "choisirait/aventure/escalade.webp"
               },
               {
-                "texte": "Modern villa",
-                "image": "choisirait/maison/villa-moderne.webp"
+                "texte": "Skydiving",
+                "image": "choisirait/aventure/parachute.webp"
               },
               {
-                "texte": "Cozy cabin",
-                "image": "choisirait/weekend/chalet-bois.webp"
+                "texte": "Bungee jumping",
+                "image": "choisirait/aventure/saut-elastique.webp"
               }
             ]
           },
           {
-            "question": "Which view would he wake up to?",
+            "question": "Which sport would she watch?",
             "options": [
               {
-                "texte": "Snowy peaks",
-                "image": "choisirait/vue/neige.webp"
+                "texte": "Baseball",
+                "image": "choisirait/sport/baseball.webp"
               },
               {
-                "texte": "Mountains",
-                "image": "choisirait/vue/montagnes.webp"
+                "texte": "American football",
+                "image": "choisirait/sport/foot-us.webp"
               },
               {
-                "texte": "Desert",
-                "image": "choisirait/vue/desert-vue.webp"
+                "texte": "Boxing",
+                "image": "choisirait/sport/boxe.webp"
               }
             ]
           },
           {
-            "question": "Which dog would he adopt?",
+            "question": "Which hobby would she pick up?",
             "options": [
               {
-                "texte": "Pug",
-                "image": "choisirait/chien/carlin.webp"
+                "texte": "Fishing",
+                "image": "choisirait/loisir/peche.webp"
               },
               {
-                "texte": "Poodle",
-                "image": "choisirait/chien/caniche.webp"
+                "texte": "Knitting",
+                "image": "choisirait/loisir/tricot.webp"
               },
               {
-                "texte": "Dalmatian",
-                "image": "choisirait/chien/dalmatien.webp"
+                "texte": "Photography",
+                "image": "choisirait/loisir/photo.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Now send it to him. Did you guess right?",
-          "bouton": "Send this to him",
+          "question": "Got her 3 picks? Send it and see!",
+          "bouton": "Send this to her",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Dream home edition. Answer for him first, no peeking.\n\nSend this to him",
+      "legende": "Weekend edition. No cheating: decide before the timer runs out.\n\nSend this to her",
       "hashtags": [
         "#couplequiz",
-        "#boyfriendquiz",
+        "#girlfriendquiz",
         "#thisorthat",
-        "#dreamhome",
+        "#weekendvibes",
         "#quizcouple"
       ]
     }

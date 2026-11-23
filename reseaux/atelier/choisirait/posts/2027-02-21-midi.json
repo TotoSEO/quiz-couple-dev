@@ -12,79 +12,79 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "lui",
-        "etiquette": "Game night edition",
-        "accroche": "What would he choose?",
-        "consigne": "Pick A, B or C for him, then send it to him!",
+        "pour": "elle",
+        "etiquette": "Style edition",
+        "accroche": "What would she choose?",
+        "consigne": "One photo per round: the one she would pick!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "What would he order at 2 a.m.?",
+            "question": "Which shoes would she pick?",
             "options": [
               {
-                "texte": "Fried chicken",
-                "image": "choisirait/fastfood/poulet-frit.webp"
+                "texte": "Knee-high boots",
+                "image": "choisirait/chaussures/cuissardes.webp"
               },
               {
-                "texte": "Nuggets",
-                "image": "choisirait/fastfood/nuggets.webp"
+                "texte": "High heels",
+                "image": "choisirait/chaussures/talons.webp"
               },
               {
-                "texte": "Burger",
-                "image": "choisirait/fastfood/burger.webp"
+                "texte": "UGG boots",
+                "image": "choisirait/chaussures/ugg.webp"
               }
             ]
           },
           {
-            "question": "Which game night would he pick?",
+            "question": "Which phone would she pick?",
             "options": [
               {
-                "texte": "Pool",
-                "image": "choisirait/jeu/billard.webp"
+                "texte": "Flip phone",
+                "image": "choisirait/telephone/clapet.webp"
               },
               {
-                "texte": "Poker",
-                "image": "choisirait/jeu/poker.webp"
+                "texte": "iPhone",
+                "image": "choisirait/telephone/iphone.webp"
               },
               {
-                "texte": "Chess",
-                "image": "choisirait/jeu/echecs-soir.webp"
+                "texte": "Google Pixel",
+                "image": "choisirait/telephone/pixel.webp"
               }
             ]
           },
           {
-            "question": "Which console would he pick?",
+            "question": "Which sneakers would she pick?",
             "options": [
               {
-                "texte": "Gaming PC",
-                "image": "choisirait/console/pc-gamer.webp"
+                "texte": "Air Jordan",
+                "image": "choisirait/baskets/jordan.webp"
               },
               {
-                "texte": "Game Boy",
-                "image": "choisirait/console/gameboy.webp"
+                "texte": "Vans Old Skool",
+                "image": "choisirait/baskets/vans.webp"
               },
               {
-                "texte": "Xbox",
-                "image": "choisirait/console/xbox.webp"
+                "texte": "Birkenstock",
+                "image": "choisirait/baskets/birkenstock.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Now send it to him. Did you guess right?",
-          "bouton": "Send this to him",
+          "question": "Got her 3 picks? Send it and see!",
+          "bouton": "Send this to her",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Game night edition. One letter per question, then send it to him.\n\nSend this to him",
+      "legende": "Style edition. If you get all three, you know her by heart.\n\nSend this to her",
       "hashtags": [
         "#couplequiz",
-        "#boyfriendquiz",
+        "#girlfriendquiz",
         "#thisorthat",
-        "#gamenight",
+        "#style",
         "#quizcouple"
       ]
     }

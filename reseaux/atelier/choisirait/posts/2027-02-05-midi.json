@@ -13,62 +13,62 @@
         "langue": "en",
         "theme": "light",
         "pour": "lui",
-        "etiquette": "Game night edition",
+        "etiquette": "Weekend edition",
         "accroche": "What would he choose?",
-        "consigne": "One photo per round: the one he would pick!",
+        "consigne": "Answer for him: A, B or C? Then send it!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "What would he order at 2 a.m.?",
+            "question": "Which workout would he pick?",
             "options": [
               {
-                "texte": "Tacos",
-                "image": "choisirait/fastfood/tacos.webp"
+                "texte": "Yoga",
+                "image": "choisirait/salle/yoga.webp"
               },
               {
-                "texte": "Fried chicken",
-                "image": "choisirait/fastfood/poulet-frit.webp"
+                "texte": "Cycling",
+                "image": "choisirait/salle/velo.webp"
               },
               {
-                "texte": "Burrito",
-                "image": "choisirait/fastfood/burrito.webp"
+                "texte": "CrossFit",
+                "image": "choisirait/salle/crossfit.webp"
               }
             ]
           },
           {
-            "question": "Which game night would he pick?",
+            "question": "Which hobby would he pick up?",
             "options": [
               {
-                "texte": "Pool",
-                "image": "choisirait/jeu/billard.webp"
+                "texte": "Knitting",
+                "image": "choisirait/loisir/tricot.webp"
               },
               {
-                "texte": "Foosball",
-                "image": "choisirait/jeu/baby-foot.webp"
+                "texte": "Photography",
+                "image": "choisirait/loisir/photo.webp"
               },
               {
-                "texte": "Video games",
-                "image": "choisirait/jeu/jeux-video.webp"
+                "texte": "Chess",
+                "image": "choisirait/loisir/echecs.webp"
               }
             ]
           },
           {
-            "question": "Which console would he pick?",
+            "question": "Which adventure would he try?",
             "options": [
               {
-                "texte": "PlayStation 2",
-                "image": "choisirait/console/ps2.webp"
+                "texte": "Paragliding",
+                "image": "choisirait/aventure/parapente.webp"
               },
               {
-                "texte": "Game Boy",
-                "image": "choisirait/console/gameboy.webp"
+                "texte": "Kayaking",
+                "image": "choisirait/aventure/kayak.webp"
               },
               {
-                "texte": "Gaming PC",
-                "image": "choisirait/console/pc-gamer.webp"
+                "texte": "Horse riding",
+                "image": "choisirait/aventure/equitation.webp"
               }
             ]
           }
@@ -79,12 +79,12 @@
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Game night edition. Easy for you? Then the next one is for him.\n\nSend this to him",
+      "legende": "Weekend edition. Answer for him first, no peeking.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
         "#boyfriendquiz",
         "#thisorthat",
-        "#gamenight",
+        "#weekendvibes",
         "#quizcouple"
       ]
     }

@@ -13,78 +13,78 @@
         "langue": "en",
         "theme": "light",
         "pour": "lui",
-        "etiquette": "Travel edition",
+        "etiquette": "Game night edition",
         "accroche": "What would he choose?",
-        "consigne": "One photo per round: the one he would pick!",
+        "consigne": "Answer for him: A, B or C? Then send it!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which city would he take you to?",
+            "question": "Which console would he pick?",
             "options": [
               {
-                "texte": "Las Vegas",
-                "image": "choisirait/ville/las-vegas.webp"
+                "texte": "Xbox",
+                "image": "choisirait/console/xbox.webp"
               },
               {
-                "texte": "Barcelona",
-                "image": "choisirait/ville/barcelone.webp"
+                "texte": "PlayStation 2",
+                "image": "choisirait/console/ps2.webp"
               },
               {
-                "texte": "London",
-                "image": "choisirait/ville/londres.webp"
+                "texte": "Gaming PC",
+                "image": "choisirait/console/pc-gamer.webp"
               }
             ]
           },
           {
-            "question": "Where would he go on vacation?",
+            "question": "Which movie snack would he pick?",
             "options": [
               {
-                "texte": "Dubai",
-                "image": "choisirait/vacances/dubai.webp"
+                "texte": "Gummy bears",
+                "image": "choisirait/snack/oursons.webp"
               },
               {
-                "texte": "Thailand",
-                "image": "choisirait/vacances/thailande.webp"
+                "texte": "Licorice",
+                "image": "choisirait/snack/reglisse.webp"
               },
               {
-                "texte": "Australia",
-                "image": "choisirait/vacances/australie.webp"
+                "texte": "Ice cream tub",
+                "image": "choisirait/snack/pot-glace.webp"
               }
             ]
           },
           {
-            "question": "Where would he book a weekend?",
+            "question": "Which game night would he pick?",
             "options": [
               {
-                "texte": "Desert camp",
-                "image": "choisirait/weekend/desert.webp"
+                "texte": "Video games",
+                "image": "choisirait/jeu/jeux-video.webp"
               },
               {
-                "texte": "Beach bungalow",
-                "image": "choisirait/weekend/bungalow-plage.webp"
+                "texte": "Foosball",
+                "image": "choisirait/jeu/baby-foot.webp"
               },
               {
-                "texte": "Log cabin",
-                "image": "choisirait/weekend/chalet-bois.webp"
+                "texte": "Ping pong",
+                "image": "choisirait/jeu/ping-pong.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Now send it to him. Did you guess right?",
+          "question": "Got his 3 picks? Send it and see!",
           "bouton": "Send this to him",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Travel edition. If you get all three, you know him by heart.\n\nSend this to him",
+      "legende": "Game night edition. Guess first, send it after. Then compare.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
         "#boyfriendquiz",
         "#thisorthat",
-        "#travelcouple",
+        "#gamenight",
         "#quizcouple"
       ]
     }

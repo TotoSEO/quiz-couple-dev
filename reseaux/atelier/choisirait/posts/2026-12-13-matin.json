@@ -15,7 +15,7 @@
         "pour": "lui",
         "etiquette": "Car lovers edition",
         "accroche": "What would he choose?",
-        "consigne": "Choose the photo he would pick. 3 rounds!",
+        "consigne": "One photo per round: the one he would pick!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
@@ -56,7 +56,7 @@
             ]
           },
           {
-            "question": "Which car would he drive?",
+            "question": "Which car would he pick?",
             "options": [
               {
                 "texte": "Mercedes G-Class",
@@ -79,7 +79,7 @@
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Car lovers edition. Your answers first, then his reaction.\n\nSend this to him",
+      "legende": "Car lovers edition. Easy for you? Then the next one is for him.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
         "#boyfriendquiz",

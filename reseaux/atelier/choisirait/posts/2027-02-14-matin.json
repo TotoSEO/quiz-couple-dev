@@ -12,79 +12,79 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "lui",
-        "etiquette": "Dream life edition",
-        "accroche": "What would he choose?",
-        "consigne": "Answer for him: A, B or C? Then send it!",
+        "pour": "elle",
+        "etiquette": "Dream home edition",
+        "accroche": "What would she choose?",
+        "consigne": "Pick A, B or C for her, then send it to her!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which watch would he wear?",
+            "question": "Which view would she wake up to?",
             "options": [
               {
-                "texte": "Casio G-Shock",
-                "image": "choisirait/montre/g-shock.webp"
+                "texte": "Lake",
+                "image": "choisirait/vue/lac.webp"
               },
               {
-                "texte": "Cartier Tank",
-                "image": "choisirait/montre/cartier.webp"
+                "texte": "Snowy peaks",
+                "image": "choisirait/vue/neige.webp"
               },
               {
-                "texte": "Rolex Submariner",
-                "image": "choisirait/montre/rolex.webp"
+                "texte": "Rice fields",
+                "image": "choisirait/vue/rizieres.webp"
               }
             ]
           },
           {
-            "question": "Where would he book a weekend?",
+            "question": "Which cat would she adopt?",
             "options": [
               {
-                "texte": "Log cabin",
-                "image": "choisirait/weekend/chalet-bois.webp"
+                "texte": "Scottish Fold",
+                "image": "choisirait/chat/scottish.webp"
               },
               {
-                "texte": "Treehouse",
-                "image": "choisirait/weekend/cabane-arbre.webp"
+                "texte": "Ginger cat",
+                "image": "choisirait/chat/chat-roux.webp"
               },
               {
-                "texte": "Ski chalet",
-                "image": "choisirait/weekend/chalet-ski.webp"
+                "texte": "Maine Coon",
+                "image": "choisirait/chat/maine-coon.webp"
               }
             ]
           },
           {
-            "question": "Which dog would he adopt?",
+            "question": "Which dream house would she pick?",
             "options": [
               {
-                "texte": "Bernese Mountain Dog",
-                "image": "choisirait/chien/bouvier.webp"
+                "texte": "Modern villa",
+                "image": "choisirait/maison/villa-moderne.webp"
               },
               {
-                "texte": "Dalmatian",
-                "image": "choisirait/chien/dalmatien.webp"
+                "texte": "Beach house",
+                "image": "choisirait/maison/maison-plage.webp"
               },
               {
-                "texte": "Cavalier King Charles",
-                "image": "choisirait/chien/cavalier.webp"
+                "texte": "Loft apartment",
+                "image": "choisirait/maison/loft.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Send it to him: how many did you get?",
-          "bouton": "Send this to him",
+          "question": "Send it to her: how many did you get?",
+          "bouton": "Send this to her",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Dream life edition. No cheating: decide before the timer runs out.\n\nSend this to him",
+      "legende": "Dream home edition. She will swear you got at least one wrong.\n\nSend this to her",
       "hashtags": [
         "#couplequiz",
-        "#boyfriendquiz",
+        "#girlfriendquiz",
         "#thisorthat",
-        "#dreamlife",
+        "#dreamhome",
         "#quizcouple"
       ]
     }

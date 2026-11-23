@@ -284,7 +284,8 @@ Le reel : **l'accroche montre tout de suite qu'on va choisir des photos**
 comprend pas dès le début que la personne va devoir choisir des images et
 c'est ça qui fait rester ») : dès la première image, un mur penché des neuf
 photos du reel défile derrière une carte, chaque photo avec sa lettre comme
-dans le jeu ; la carte porte l'édition en pastille (« Dream life edition »,
+dans le jeu, à 70 % d'opacité (Thomas, le même jour : sinon « ça fait pâté
+moche ») ; la carte porte l'édition en pastille (« Dream life edition »,
 « Food edition »...), « What would he choose? » avec « he » (ou « she ») en
 couleur, une consigne qui dit le geste (« Pick A, B or C for him, then send
 it to him! », « Choose the photo he would pick. 3 rounds! »...) et les trois
@@ -299,8 +300,11 @@ quatre secondes du chrono : jusqu'au 23 novembre 2026, le chrono partait
 juste après la dernière photo et Thomas trouvait que le temps filait trop
 vite. La mascotte réfléchit à côté (le violet quand on devine pour lui, la
 rose pour elle), puis la fin : « Now send it to him. Did you guess right? »
-et « Send this to him ». Le reel dure 28 secondes. Deux reels sur trois sont
-pour lui (c'est elle qui devine), un sur trois pour elle.
+et « Send this to him ». Le reel dure 28 secondes. Un reel sur deux est
+pour lui (c'est elle qui devine), un sur deux pour elle, en alternance
+(Thomas, le 23 novembre 2026 : « Il faut faire les deux hein ! » ; un sur
+trois pour elle jusque-là) ; les consignes, les fins et les légendes
+tournent dans chaque série (`rangPour` de la fabrique).
 
 **Les photos** : 446 options en 49 familles (voitures, motos, chiens, chats,
 vacances, villes, desserts, pizzas, petits-déjeuners, bars, montres,

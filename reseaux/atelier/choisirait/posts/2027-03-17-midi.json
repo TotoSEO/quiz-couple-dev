@@ -13,78 +13,78 @@
         "langue": "en",
         "theme": "light",
         "pour": "lui",
-        "etiquette": "Food edition",
+        "etiquette": "Date night edition",
         "accroche": "What would he choose?",
-        "consigne": "Choose the photo he would pick. 3 rounds!",
+        "consigne": "One photo per round: the one he would pick!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which pasta would he pick?",
+            "question": "What would he cook for date night?",
             "options": [
               {
-                "texte": "Carbonara",
-                "image": "choisirait/pates/carbonara.webp"
+                "texte": "Sushi",
+                "image": "choisirait/diner/sushi.webp"
               },
               {
-                "texte": "Mac and cheese",
-                "image": "choisirait/pates/mac-cheese.webp"
+                "texte": "Cheese fondue",
+                "image": "choisirait/diner/fondue.webp"
               },
               {
-                "texte": "Gnocchi",
-                "image": "choisirait/pates/gnocchi.webp"
+                "texte": "Raclette",
+                "image": "choisirait/diner/raclette.webp"
               }
             ]
           },
           {
-            "question": "Which pizza would he order?",
+            "question": "What would he order at the bar?",
             "options": [
               {
-                "texte": "Calzone",
-                "image": "choisirait/pizza/calzone.webp"
+                "texte": "Red wine",
+                "image": "choisirait/bar/vin-rouge.webp"
               },
               {
-                "texte": "Veggie",
-                "image": "choisirait/pizza/vegetarienne.webp"
+                "texte": "Piña colada",
+                "image": "choisirait/bar/pina-colada.webp"
               },
               {
-                "texte": "Deep dish",
-                "image": "choisirait/pizza/deep-dish.webp"
+                "texte": "Aperol Spritz",
+                "image": "choisirait/bar/spritz.webp"
               }
             ]
           },
           {
-            "question": "Which potato would he pick?",
+            "question": "Which cake would he pick?",
             "options": [
               {
-                "texte": "Rösti",
-                "image": "choisirait/patate/rosti.webp"
+                "texte": "Tiramisu",
+                "image": "choisirait/dessert/tiramisu.webp"
               },
               {
-                "texte": "French fries",
-                "image": "choisirait/patate/frites.webp"
+                "texte": "Crêpes",
+                "image": "choisirait/dessert/crepes.webp"
               },
               {
-                "texte": "Hash browns",
-                "image": "choisirait/patate/hash-browns.webp"
+                "texte": "Pavlova",
+                "image": "choisirait/dessert/pavlova.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Now send it to him. Did you guess right?",
+          "question": "Got his 3 picks? Send it and see!",
           "bouton": "Send this to him",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Food edition. If you get all three, you know him by heart.\n\nSend this to him",
+      "legende": "Date night edition. Your answers first, then his reaction.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
         "#boyfriendquiz",
         "#thisorthat",
-        "#foodie",
+        "#datenight",
         "#quizcouple"
       ]
     }

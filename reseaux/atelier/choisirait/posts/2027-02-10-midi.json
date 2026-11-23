@@ -12,17 +12,17 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "lui",
+        "pour": "elle",
         "etiquette": "Winter edition",
-        "accroche": "What would he choose?",
-        "consigne": "Pick A, B or C for him, then send it to him!",
+        "accroche": "What would she choose?",
+        "consigne": "Choose the photo she would pick. 3 rounds!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which winter date would he pick?",
+            "question": "Which winter date would she pick?",
             "options": [
               {
                 "texte": "Sledding",
@@ -39,32 +39,32 @@
             ]
           },
           {
-            "question": "Which dinner would he pick?",
+            "question": "Which coffee would she order?",
             "options": [
               {
-                "texte": "Risotto",
-                "image": "choisirait/diner/risotto.webp"
+                "texte": "Matcha latte",
+                "image": "choisirait/cafe/matcha.webp"
               },
               {
-                "texte": "Steak and fries",
-                "image": "choisirait/diner/steak-frites.webp"
+                "texte": "Espresso",
+                "image": "choisirait/cafe/espresso.webp"
               },
               {
-                "texte": "Fish and chips",
-                "image": "choisirait/diner/fish-chips.webp"
+                "texte": "Americano",
+                "image": "choisirait/cafe/americano.webp"
               }
             ]
           },
           {
-            "question": "Where would he book a weekend for two?",
+            "question": "Where would she book a weekend?",
             "options": [
               {
-                "texte": "Overwater villa",
-                "image": "choisirait/weekend/bungalow-eau.webp"
+                "texte": "Treehouse",
+                "image": "choisirait/weekend/cabane-arbre.webp"
               },
               {
-                "texte": "Houseboat",
-                "image": "choisirait/weekend/peniche.webp"
+                "texte": "Log cabin",
+                "image": "choisirait/weekend/chalet-bois.webp"
               },
               {
                 "texte": "Ski chalet",
@@ -74,15 +74,15 @@
           }
         ],
         "fin": {
-          "question": "Send it to him: how many did you get?",
-          "bouton": "Send this to him",
+          "question": "Send it to her: how many did you get?",
+          "bouton": "Send this to her",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Winter edition. One letter per question, then send it to him.\n\nSend this to him",
+      "legende": "Winter edition. If you get all three, you know her by heart.\n\nSend this to her",
       "hashtags": [
         "#couplequiz",
-        "#boyfriendquiz",
+        "#girlfriendquiz",
         "#thisorthat",
         "#winter",
         "#quizcouple"

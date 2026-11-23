@@ -12,79 +12,79 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "lui",
-        "etiquette": "Style edition",
-        "accroche": "What would he choose?",
-        "consigne": "Answer for him: A, B or C? Then send it!",
+        "pour": "elle",
+        "etiquette": "Drinks edition",
+        "accroche": "What would she choose?",
+        "consigne": "Answer for her: A, B or C? Then send it!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which phone would he pick?",
+            "question": "What would she order at the bar?",
             "options": [
               {
-                "texte": "iPhone",
-                "image": "choisirait/telephone/iphone.webp"
+                "texte": "Piña colada",
+                "image": "choisirait/bar/pina-colada.webp"
               },
               {
-                "texte": "Flip phone",
-                "image": "choisirait/telephone/clapet.webp"
+                "texte": "Beer",
+                "image": "choisirait/bar/biere.webp"
               },
               {
-                "texte": "Google Pixel",
-                "image": "choisirait/telephone/pixel.webp"
+                "texte": "Red wine",
+                "image": "choisirait/bar/vin-rouge.webp"
               }
             ]
           },
           {
-            "question": "Which sneakers would he pick?",
+            "question": "Which coffee would she order?",
             "options": [
               {
-                "texte": "New Balance",
-                "image": "choisirait/baskets/new-balance.webp"
+                "texte": "Cappuccino",
+                "image": "choisirait/cafe/cappuccino.webp"
               },
               {
-                "texte": "Air Jordan",
-                "image": "choisirait/baskets/jordan.webp"
+                "texte": "Iced latte",
+                "image": "choisirait/cafe/iced-latte.webp"
               },
               {
-                "texte": "Adidas Samba",
-                "image": "choisirait/baskets/samba.webp"
+                "texte": "Espresso",
+                "image": "choisirait/cafe/espresso.webp"
               }
             ]
           },
           {
-            "question": "Which watch would he wear?",
+            "question": "Which drink would she get?",
             "options": [
               {
-                "texte": "Omega Speedmaster",
-                "image": "choisirait/montre/speedmaster.webp"
+                "texte": "Bubble tea",
+                "image": "choisirait/boisson/bubble-tea.webp"
               },
               {
-                "texte": "Cartier Tank",
-                "image": "choisirait/montre/cartier.webp"
+                "texte": "Smoothie",
+                "image": "choisirait/boisson/smoothie.webp"
               },
               {
-                "texte": "Seiko diver",
-                "image": "choisirait/montre/seiko.webp"
+                "texte": "Iced tea",
+                "image": "choisirait/boisson/the-glace.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Now send it to him. Did you guess right?",
-          "bouton": "Send this to him",
+          "question": "Got her 3 picks? Send it and see!",
+          "bouton": "Send this to her",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Style edition. Guess first, send it after. Then compare.\n\nSend this to him",
+      "legende": "Drinks edition. Answer for her first, no peeking.\n\nSend this to her",
       "hashtags": [
         "#couplequiz",
-        "#boyfriendquiz",
+        "#girlfriendquiz",
         "#thisorthat",
-        "#style",
+        "#cocktails",
         "#quizcouple"
       ]
     }

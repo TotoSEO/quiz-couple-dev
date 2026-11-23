@@ -12,79 +12,79 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "elle",
-        "etiquette": "Adventure edition",
-        "accroche": "What would she choose?",
-        "consigne": "Choose the photo she would pick. 3 rounds!",
+        "pour": "lui",
+        "etiquette": "Style edition",
+        "accroche": "What would he choose?",
+        "consigne": "Choose the photo he would pick. 3 rounds!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which sport would she watch?",
+            "question": "Which sneakers would he pick?",
             "options": [
               {
-                "texte": "American football",
-                "image": "choisirait/sport/foot-us.webp"
+                "texte": "Adidas Samba",
+                "image": "choisirait/baskets/samba.webp"
               },
               {
-                "texte": "Football",
-                "image": "choisirait/sport/foot.webp"
+                "texte": "Nike Air Max",
+                "image": "choisirait/baskets/air-max.webp"
               },
               {
-                "texte": "Ice hockey",
-                "image": "choisirait/sport/hockey.webp"
+                "texte": "Vans Old Skool",
+                "image": "choisirait/baskets/vans.webp"
               }
             ]
           },
           {
-            "question": "Which adventure would she try?",
+            "question": "Which phone would he pick?",
             "options": [
               {
-                "texte": "Paragliding",
-                "image": "choisirait/aventure/parapente.webp"
+                "texte": "iPhone",
+                "image": "choisirait/telephone/iphone.webp"
               },
               {
-                "texte": "Horse riding",
-                "image": "choisirait/aventure/equitation.webp"
+                "texte": "Nokia 3310",
+                "image": "choisirait/telephone/nokia.webp"
               },
               {
-                "texte": "Skydiving",
-                "image": "choisirait/aventure/parachute.webp"
+                "texte": "Samsung Galaxy",
+                "image": "choisirait/telephone/galaxy.webp"
               }
             ]
           },
           {
-            "question": "Where would she go on vacation?",
+            "question": "Which watch would he wear?",
             "options": [
               {
-                "texte": "Egypt",
-                "image": "choisirait/vacances/egypte.webp"
+                "texte": "Casio digital",
+                "image": "choisirait/montre/casio.webp"
               },
               {
-                "texte": "Bora Bora",
-                "image": "choisirait/vacances/bora-bora.webp"
+                "texte": "Cartier Tank",
+                "image": "choisirait/montre/cartier.webp"
               },
               {
-                "texte": "Lapland",
-                "image": "choisirait/vacances/laponie.webp"
+                "texte": "Casio G-Shock",
+                "image": "choisirait/montre/g-shock.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Got her 3 picks? Send it and see!",
-          "bouton": "Send this to her",
+          "question": "Now send it to him. Did you guess right?",
+          "bouton": "Send this to him",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Adventure edition. Easy for you? Then the next one is for her.\n\nSend this to her",
+      "legende": "Style edition. Pick for him, then let him prove you wrong.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
-        "#girlfriendquiz",
+        "#boyfriendquiz",
         "#thisorthat",
-        "#adventurecouple",
+        "#style",
         "#quizcouple"
       ]
     }

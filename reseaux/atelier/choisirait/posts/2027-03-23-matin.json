@@ -13,62 +13,62 @@
         "langue": "en",
         "theme": "light",
         "pour": "lui",
-        "etiquette": "Food edition",
+        "etiquette": "Game night edition",
         "accroche": "What would he choose?",
-        "consigne": "One photo per round: the one he would pick!",
+        "consigne": "Pick A, B or C for him, then send it to him!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which pasta would he pick?",
+            "question": "What would he order at 2 a.m.?",
             "options": [
               {
-                "texte": "Ravioli",
-                "image": "choisirait/pates/raviolis.webp"
+                "texte": "Fried chicken",
+                "image": "choisirait/fastfood/poulet-frit.webp"
               },
               {
-                "texte": "Carbonara",
-                "image": "choisirait/pates/carbonara.webp"
+                "texte": "Burger",
+                "image": "choisirait/fastfood/burger.webp"
               },
               {
-                "texte": "Bolognese",
-                "image": "choisirait/pates/bolognaise.webp"
+                "texte": "Instant noodles",
+                "image": "choisirait/fastfood/nouilles.webp"
               }
             ]
           },
           {
-            "question": "Which potato would he pick?",
+            "question": "Which console would he pick?",
             "options": [
               {
-                "texte": "Potato gratin",
-                "image": "choisirait/patate/gratin.webp"
+                "texte": "Game Boy",
+                "image": "choisirait/console/gameboy.webp"
               },
               {
-                "texte": "Hash browns",
-                "image": "choisirait/patate/hash-browns.webp"
+                "texte": "Gaming PC",
+                "image": "choisirait/console/pc-gamer.webp"
               },
               {
-                "texte": "Rösti",
-                "image": "choisirait/patate/rosti.webp"
+                "texte": "Xbox",
+                "image": "choisirait/console/xbox.webp"
               }
             ]
           },
           {
-            "question": "Which pizza would he order?",
+            "question": "Which movie snack would he pick?",
             "options": [
               {
-                "texte": "Margherita",
-                "image": "choisirait/pizza/margherita.webp"
+                "texte": "Gummy bears",
+                "image": "choisirait/snack/oursons.webp"
               },
               {
-                "texte": "Deep dish",
-                "image": "choisirait/pizza/deep-dish.webp"
+                "texte": "Chocolate bar",
+                "image": "choisirait/snack/tablette.webp"
               },
               {
-                "texte": "Calzone",
-                "image": "choisirait/pizza/calzone.webp"
+                "texte": "Licorice",
+                "image": "choisirait/snack/reglisse.webp"
               }
             ]
           }
@@ -79,12 +79,12 @@
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Food edition. If you get all three, you know him by heart.\n\nSend this to him",
+      "legende": "Game night edition. Guess first, send it after. Then compare.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
         "#boyfriendquiz",
         "#thisorthat",
-        "#foodie",
+        "#gamenight",
         "#quizcouple"
       ]
     }

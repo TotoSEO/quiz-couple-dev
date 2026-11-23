@@ -13,78 +13,78 @@
         "langue": "en",
         "theme": "light",
         "pour": "lui",
-        "etiquette": "Food edition",
+        "etiquette": "Spring edition",
         "accroche": "What would he choose?",
-        "consigne": "One photo per round: the one he would pick!",
+        "consigne": "Pick A, B or C for him, then send it to him!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which breakfast would he choose?",
+            "question": "Which season would he pick?",
             "options": [
               {
-                "texte": "Croissant & coffee",
-                "image": "choisirait/petitdej/croissant-cafe.webp"
+                "texte": "Spring",
+                "image": "choisirait/saison/printemps.webp"
               },
               {
-                "texte": "Waffles",
-                "image": "choisirait/petitdej/gaufres.webp"
+                "texte": "Winter",
+                "image": "choisirait/saison/hiver-saison.webp"
               },
               {
-                "texte": "Avocado toast",
-                "image": "choisirait/petitdej/avocado-toast.webp"
+                "texte": "Summer",
+                "image": "choisirait/saison/ete.webp"
               }
             ]
           },
           {
-            "question": "Which potato would he pick?",
+            "question": "Which flowers would he get you?",
             "options": [
               {
-                "texte": "Curly fries",
-                "image": "choisirait/patate/curly.webp"
+                "texte": "Lilies",
+                "image": "choisirait/fleurs/lys.webp"
               },
               {
-                "texte": "Hash browns",
-                "image": "choisirait/patate/hash-browns.webp"
+                "texte": "Tulips",
+                "image": "choisirait/fleurs/tulipes.webp"
               },
               {
-                "texte": "Potato gratin",
-                "image": "choisirait/patate/gratin.webp"
+                "texte": "Red roses",
+                "image": "choisirait/fleurs/roses.webp"
               }
             ]
           },
           {
-            "question": "Which pizza would he order?",
+            "question": "Which adventure would he try?",
             "options": [
               {
-                "texte": "Margherita",
-                "image": "choisirait/pizza/margherita.webp"
+                "texte": "Snowboarding",
+                "image": "choisirait/aventure/snowboard.webp"
               },
               {
-                "texte": "Four cheese",
-                "image": "choisirait/pizza/quatre-fromages.webp"
+                "texte": "Bungee jumping",
+                "image": "choisirait/aventure/saut-elastique.webp"
               },
               {
-                "texte": "Hawaiian",
-                "image": "choisirait/pizza/hawaienne.webp"
+                "texte": "Horse riding",
+                "image": "choisirait/aventure/equitation.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Now send it to him. Did you guess right?",
+          "question": "Got his 3 picks? Send it and see!",
           "bouton": "Send this to him",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Food edition. Your answers first, then his reaction.\n\nSend this to him",
+      "legende": "Spring edition. No cheating: decide before the timer runs out.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
         "#boyfriendquiz",
         "#thisorthat",
-        "#foodie",
+        "#spring",
         "#quizcouple"
       ]
     }

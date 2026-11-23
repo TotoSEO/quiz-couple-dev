@@ -13,78 +13,78 @@
         "langue": "en",
         "theme": "light",
         "pour": "elle",
-        "etiquette": "Food edition",
+        "etiquette": "Travel edition",
         "accroche": "What would she choose?",
-        "consigne": "Pick A, B or C for her, then send it to her!",
+        "consigne": "Choose the photo she would pick. 3 rounds!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which breakfast would she choose?",
+            "question": "Which city would she take you to?",
             "options": [
               {
-                "texte": "Cereal",
-                "image": "choisirait/petitdej/cereales.webp"
+                "texte": "Istanbul",
+                "image": "choisirait/ville/istanbul.webp"
               },
               {
-                "texte": "Açaí bowl",
-                "image": "choisirait/petitdej/acai.webp"
+                "texte": "Seoul",
+                "image": "choisirait/ville/seoul.webp"
               },
               {
-                "texte": "Waffles",
-                "image": "choisirait/petitdej/gaufres.webp"
+                "texte": "Marrakech",
+                "image": "choisirait/ville/marrakech.webp"
               }
             ]
           },
           {
-            "question": "Which potato would she pick?",
+            "question": "Where would she book a weekend?",
             "options": [
               {
-                "texte": "French fries",
-                "image": "choisirait/patate/frites.webp"
+                "texte": "Log cabin",
+                "image": "choisirait/weekend/chalet-bois.webp"
               },
               {
-                "texte": "Curly fries",
-                "image": "choisirait/patate/curly.webp"
+                "texte": "Ski chalet",
+                "image": "choisirait/weekend/chalet-ski.webp"
               },
               {
-                "texte": "Hash browns",
-                "image": "choisirait/patate/hash-browns.webp"
+                "texte": "Beach bungalow",
+                "image": "choisirait/weekend/bungalow-plage.webp"
               }
             ]
           },
           {
-            "question": "Which pasta would she pick?",
+            "question": "Which view would she wake up to?",
             "options": [
               {
-                "texte": "Gnocchi",
-                "image": "choisirait/pates/gnocchi.webp"
+                "texte": "Tropical beach",
+                "image": "choisirait/vue/plage-tropicale.webp"
               },
               {
-                "texte": "Ravioli",
-                "image": "choisirait/pates/raviolis.webp"
+                "texte": "Desert",
+                "image": "choisirait/vue/desert-vue.webp"
               },
               {
-                "texte": "Lasagna",
-                "image": "choisirait/pates/lasagnes.webp"
+                "texte": "Northern lights",
+                "image": "choisirait/vue/aurores.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Got her 3 picks? Send it and see!",
+          "question": "Now send it to her. Did you guess right?",
           "bouton": "Send this to her",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Food edition. She will swear you got at least one wrong.\n\nSend this to her",
+      "legende": "Travel edition. Your answers first, then her reaction.\n\nSend this to her",
       "hashtags": [
         "#couplequiz",
         "#girlfriendquiz",
         "#thisorthat",
-        "#foodie",
+        "#travelcouple",
         "#quizcouple"
       ]
     }

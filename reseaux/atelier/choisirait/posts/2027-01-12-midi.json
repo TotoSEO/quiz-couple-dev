@@ -12,79 +12,79 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "lui",
-        "etiquette": "Adventure edition",
-        "accroche": "What would he choose?",
-        "consigne": "Answer for him: A, B or C? Then send it!",
+        "pour": "elle",
+        "etiquette": "Dream life edition",
+        "accroche": "What would she choose?",
+        "consigne": "Answer for her: A, B or C? Then send it!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which sport would he watch?",
+            "question": "Which watch would she wear?",
             "options": [
               {
-                "texte": "Baseball",
-                "image": "choisirait/sport/baseball.webp"
+                "texte": "Casio digital",
+                "image": "choisirait/montre/casio.webp"
               },
               {
-                "texte": "Golf",
-                "image": "choisirait/sport/golf.webp"
+                "texte": "Seiko diver",
+                "image": "choisirait/montre/seiko.webp"
               },
               {
-                "texte": "Formula 1",
-                "image": "choisirait/sport/f1.webp"
+                "texte": "Rolex Submariner",
+                "image": "choisirait/montre/rolex.webp"
               }
             ]
           },
           {
-            "question": "Which adventure would he try?",
+            "question": "Where would she take you on vacation?",
             "options": [
               {
-                "texte": "Scuba diving",
-                "image": "choisirait/aventure/plongee.webp"
+                "texte": "Iceland",
+                "image": "choisirait/vacances/islande.webp"
               },
               {
-                "texte": "Rock climbing",
-                "image": "choisirait/aventure/escalade.webp"
+                "texte": "Bora Bora",
+                "image": "choisirait/vacances/bora-bora.webp"
               },
-              {
-                "texte": "Bungee jumping",
-                "image": "choisirait/aventure/saut-elastique.webp"
-              }
-            ]
-          },
-          {
-            "question": "Where would he take you on vacation?",
-            "options": [
               {
                 "texte": "Mexico",
                 "image": "choisirait/vacances/mexique.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which car would she pick?",
+            "options": [
+              {
+                "texte": "Toyota Supra",
+                "image": "choisirait/voiture/supra.webp"
               },
               {
-                "texte": "Norway",
-                "image": "choisirait/vacances/norvege.webp"
+                "texte": "Audi R8",
+                "image": "choisirait/voiture/audi-r8.webp"
               },
               {
-                "texte": "Japan",
-                "image": "choisirait/vacances/japon.webp"
+                "texte": "Rolls-Royce",
+                "image": "choisirait/voiture/rolls-royce.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Send it to him: how many did you get?",
-          "bouton": "Send this to him",
+          "question": "Send it to her: how many did you get?",
+          "bouton": "Send this to her",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Adventure edition. No cheating: decide before the timer runs out.\n\nSend this to him",
+      "legende": "Dream life edition. She will swear you got at least one wrong.\n\nSend this to her",
       "hashtags": [
         "#couplequiz",
-        "#boyfriendquiz",
+        "#girlfriendquiz",
         "#thisorthat",
-        "#adventurecouple",
+        "#dreamlife",
         "#quizcouple"
       ]
     }

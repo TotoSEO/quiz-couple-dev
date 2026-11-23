@@ -12,79 +12,79 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "elle",
-        "etiquette": "Style edition",
-        "accroche": "What would she choose?",
-        "consigne": "One photo per round: the one she would pick!",
+        "pour": "lui",
+        "etiquette": "Adventure edition",
+        "accroche": "What would he choose?",
+        "consigne": "Answer for him: A, B or C? Then send it!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which shoes would she pick?",
+            "question": "Which adventure would he try?",
             "options": [
               {
-                "texte": "Knee-high boots",
-                "image": "choisirait/chaussures/cuissardes.webp"
+                "texte": "Snowboarding",
+                "image": "choisirait/aventure/snowboard.webp"
               },
               {
-                "texte": "High heels",
-                "image": "choisirait/chaussures/talons.webp"
+                "texte": "Surfing",
+                "image": "choisirait/aventure/surf.webp"
               },
               {
-                "texte": "Ballet flats",
-                "image": "choisirait/chaussures/ballerines.webp"
+                "texte": "Rock climbing",
+                "image": "choisirait/aventure/escalade.webp"
               }
             ]
           },
           {
-            "question": "Which sneakers would she pick?",
+            "question": "Where would he book a weekend for two?",
             "options": [
               {
-                "texte": "Nike Air Max",
-                "image": "choisirait/baskets/air-max.webp"
+                "texte": "Ski chalet",
+                "image": "choisirait/weekend/chalet-ski.webp"
               },
               {
-                "texte": "Birkenstock",
-                "image": "choisirait/baskets/birkenstock.webp"
+                "texte": "Log cabin",
+                "image": "choisirait/weekend/chalet-bois.webp"
               },
               {
-                "texte": "Air Force 1",
-                "image": "choisirait/baskets/air-force.webp"
+                "texte": "Glamping tent",
+                "image": "choisirait/weekend/glamping.webp"
               }
             ]
           },
           {
-            "question": "Which phone would she pick?",
+            "question": "How would he travel with you?",
             "options": [
               {
-                "texte": "Samsung Galaxy",
-                "image": "choisirait/telephone/galaxy.webp"
+                "texte": "Cruise ship",
+                "image": "choisirait/voyage/croisiere.webp"
               },
               {
-                "texte": "BlackBerry",
-                "image": "choisirait/telephone/blackberry.webp"
+                "texte": "Camper van",
+                "image": "choisirait/voyage/van.webp"
               },
               {
-                "texte": "Nokia 3310",
-                "image": "choisirait/telephone/nokia.webp"
+                "texte": "Private jet",
+                "image": "choisirait/voyage/jet.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Got her 3 picks? Send it and see!",
-          "bouton": "Send this to her",
+          "question": "Now send it to him. Did you guess right?",
+          "bouton": "Send this to him",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Style edition. Write down her three letters before you send it.\n\nSend this to her",
+      "legende": "Adventure edition. He will swear you got at least one wrong.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
-        "#girlfriendquiz",
+        "#boyfriendquiz",
         "#thisorthat",
-        "#style",
+        "#adventurecouple",
         "#quizcouple"
       ]
     }

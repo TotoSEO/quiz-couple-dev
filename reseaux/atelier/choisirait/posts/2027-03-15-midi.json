@@ -12,79 +12,79 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "elle",
-        "etiquette": "Game night edition",
-        "accroche": "What would she choose?",
-        "consigne": "Choose the photo she would pick. 3 rounds!",
+        "pour": "lui",
+        "etiquette": "Hobbies edition",
+        "accroche": "What would he choose?",
+        "consigne": "Choose the photo he would pick. 3 rounds!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "What would she order at 2 a.m.?",
+            "question": "Which instrument would he play?",
             "options": [
               {
-                "texte": "Nuggets",
-                "image": "choisirait/fastfood/nuggets.webp"
+                "texte": "Saxophone",
+                "image": "choisirait/instrument/saxophone.webp"
               },
               {
-                "texte": "Kebab",
-                "image": "choisirait/fastfood/kebab.webp"
+                "texte": "Acoustic guitar",
+                "image": "choisirait/instrument/guitare-acoustique.webp"
               },
               {
-                "texte": "Grilled cheese",
-                "image": "choisirait/fastfood/croque.webp"
+                "texte": "Trumpet",
+                "image": "choisirait/instrument/trompette.webp"
               }
             ]
           },
           {
-            "question": "Which game night would she pick?",
+            "question": "Which hobby would he pick up?",
             "options": [
               {
-                "texte": "Ping pong",
-                "image": "choisirait/jeu/ping-pong.webp"
+                "texte": "Photography",
+                "image": "choisirait/loisir/photo.webp"
               },
               {
-                "texte": "Board games",
-                "image": "choisirait/jeu/jeux-societe.webp"
+                "texte": "Gardening",
+                "image": "choisirait/loisir/jardinage.webp"
               },
               {
-                "texte": "Video games",
-                "image": "choisirait/jeu/jeux-video.webp"
+                "texte": "Knitting",
+                "image": "choisirait/loisir/tricot.webp"
               }
             ]
           },
           {
-            "question": "Which drink would she get?",
+            "question": "Which workout would he pick?",
             "options": [
               {
-                "texte": "Lemonade",
-                "image": "choisirait/boisson/limonade.webp"
+                "texte": "CrossFit",
+                "image": "choisirait/salle/crossfit.webp"
               },
               {
-                "texte": "Smoothie",
-                "image": "choisirait/boisson/smoothie.webp"
+                "texte": "Cycling",
+                "image": "choisirait/salle/velo.webp"
               },
               {
-                "texte": "Iced tea",
-                "image": "choisirait/boisson/the-glace.webp"
+                "texte": "Weightlifting",
+                "image": "choisirait/salle/muscu.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Got her 3 picks? Send it and see!",
-          "bouton": "Send this to her",
+          "question": "Now send it to him. Did you guess right?",
+          "bouton": "Send this to him",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Game night edition. Easy for you? Then the next one is for her.\n\nSend this to her",
+      "legende": "Hobbies edition. Pick for him, then let him prove you wrong.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
-        "#girlfriendquiz",
+        "#boyfriendquiz",
         "#thisorthat",
-        "#gamenight",
+        "#hobbies",
         "#quizcouple"
       ]
     }

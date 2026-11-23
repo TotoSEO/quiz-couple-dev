@@ -12,79 +12,79 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "lui",
-        "etiquette": "Morning edition",
-        "accroche": "What would he choose?",
-        "consigne": "Answer for him: A, B or C? Then send it!",
+        "pour": "elle",
+        "etiquette": "Dream life edition",
+        "accroche": "What would she choose?",
+        "consigne": "Pick A, B or C for her, then send it to her!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which breakfast would he choose?",
+            "question": "Which dream house would she pick?",
             "options": [
               {
-                "texte": "Pancakes",
-                "image": "choisirait/petitdej/pancakes.webp"
+                "texte": "Castle",
+                "image": "choisirait/maison/chateau.webp"
               },
               {
-                "texte": "Cereal",
-                "image": "choisirait/petitdej/cereales.webp"
+                "texte": "Beach house",
+                "image": "choisirait/maison/maison-plage.webp"
               },
               {
-                "texte": "Eggs Benedict",
-                "image": "choisirait/petitdej/benedict.webp"
+                "texte": "Modern villa",
+                "image": "choisirait/maison/villa-moderne.webp"
               }
             ]
           },
           {
-            "question": "How would he have his eggs?",
+            "question": "Which watch would she wear?",
             "options": [
               {
-                "texte": "Fried",
-                "image": "choisirait/oeufs/oeuf-plat.webp"
+                "texte": "Casio digital",
+                "image": "choisirait/montre/casio.webp"
               },
               {
-                "texte": "Omelette",
-                "image": "choisirait/oeufs/omelette.webp"
+                "texte": "Rolex Submariner",
+                "image": "choisirait/montre/rolex.webp"
               },
               {
-                "texte": "Scrambled",
-                "image": "choisirait/oeufs/brouilles.webp"
+                "texte": "Omega Speedmaster",
+                "image": "choisirait/montre/speedmaster.webp"
               }
             ]
           },
           {
-            "question": "Which coffee would he order?",
+            "question": "Where would she go on vacation?",
             "options": [
               {
-                "texte": "Iced latte",
-                "image": "choisirait/cafe/iced-latte.webp"
+                "texte": "Morocco",
+                "image": "choisirait/vacances/maroc.webp"
               },
               {
-                "texte": "Americano",
-                "image": "choisirait/cafe/americano.webp"
+                "texte": "USA",
+                "image": "choisirait/vacances/usa.webp"
               },
               {
-                "texte": "Matcha latte",
-                "image": "choisirait/cafe/matcha.webp"
+                "texte": "Thailand",
+                "image": "choisirait/vacances/thailande.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Now send it to him. Did you guess right?",
-          "bouton": "Send this to him",
+          "question": "Got her 3 picks? Send it and see!",
+          "bouton": "Send this to her",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Morning edition. No cheating: decide before the timer runs out.\n\nSend this to him",
+      "legende": "Dream life edition. She will swear you got at least one wrong.\n\nSend this to her",
       "hashtags": [
         "#couplequiz",
-        "#boyfriendquiz",
+        "#girlfriendquiz",
         "#thisorthat",
-        "#breakfast",
+        "#dreamlife",
         "#quizcouple"
       ]
     }

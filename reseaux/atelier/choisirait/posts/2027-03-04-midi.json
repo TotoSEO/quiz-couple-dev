@@ -13,45 +13,45 @@
         "langue": "en",
         "theme": "light",
         "pour": "lui",
-        "etiquette": "Dream home edition",
+        "etiquette": "Pet lovers edition",
         "accroche": "What would he choose?",
-        "consigne": "Choose the photo he would pick. 3 rounds!",
+        "consigne": "One photo per round: the one he would pick!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which view would he wake up to?",
+            "question": "Which pet would he want?",
             "options": [
               {
-                "texte": "Lake",
-                "image": "choisirait/vue/lac.webp"
+                "texte": "Hamster",
+                "image": "choisirait/animal/hamster.webp"
               },
               {
-                "texte": "Desert",
-                "image": "choisirait/vue/desert-vue.webp"
+                "texte": "Hedgehog",
+                "image": "choisirait/animal/herisson.webp"
               },
               {
-                "texte": "Mountains",
-                "image": "choisirait/vue/montagnes.webp"
+                "texte": "Goldfish",
+                "image": "choisirait/animal/poisson.webp"
               }
             ]
           },
           {
-            "question": "Which dog would he pick?",
+            "question": "Which dog would he adopt?",
             "options": [
               {
-                "texte": "Samoyed",
-                "image": "choisirait/chien/samoyede.webp"
+                "texte": "Shiba Inu",
+                "image": "choisirait/chien/shiba.webp"
               },
               {
-                "texte": "Australian Shepherd",
-                "image": "choisirait/chien/berger-australien.webp"
+                "texte": "German Shepherd",
+                "image": "choisirait/chien/berger-allemand.webp"
               },
               {
-                "texte": "French Bulldog",
-                "image": "choisirait/chien/bouledogue.webp"
+                "texte": "Great Dane",
+                "image": "choisirait/chien/dogue.webp"
               }
             ]
           },
@@ -59,32 +59,32 @@
             "question": "Which cat would he adopt?",
             "options": [
               {
-                "texte": "Norwegian Forest Cat",
-                "image": "choisirait/chat/norvegien.webp"
+                "texte": "British Shorthair",
+                "image": "choisirait/chat/british.webp"
               },
               {
                 "texte": "Black cat",
                 "image": "choisirait/chat/chat-noir.webp"
               },
               {
-                "texte": "Ragdoll",
-                "image": "choisirait/chat/ragdoll.webp"
+                "texte": "Sphynx",
+                "image": "choisirait/chat/sphynx.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Now send it to him. Did you guess right?",
+          "question": "Got his 3 picks? Send it and see!",
           "bouton": "Send this to him",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Dream home edition. Easy for you? Then the next one is for him.\n\nSend this to him",
+      "legende": "Pet lovers edition. Pick for him, then let him prove you wrong.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
         "#boyfriendquiz",
         "#thisorthat",
-        "#dreamhome",
+        "#petlovers",
         "#quizcouple"
       ]
     }

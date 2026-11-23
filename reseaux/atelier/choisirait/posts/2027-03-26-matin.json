@@ -13,62 +13,62 @@
         "langue": "en",
         "theme": "light",
         "pour": "lui",
-        "etiquette": "Adventure edition",
+        "etiquette": "Date night edition",
         "accroche": "What would he choose?",
-        "consigne": "Choose the photo he would pick. 3 rounds!",
+        "consigne": "One photo per round: the one he would pick!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which sport would he watch?",
+            "question": "Which dinner would he pick?",
             "options": [
               {
-                "texte": "Ice hockey",
-                "image": "choisirait/sport/hockey.webp"
+                "texte": "Lobster",
+                "image": "choisirait/diner/homard.webp"
               },
               {
-                "texte": "Baseball",
-                "image": "choisirait/sport/baseball.webp"
+                "texte": "Sushi",
+                "image": "choisirait/diner/sushi.webp"
               },
               {
-                "texte": "Golf",
-                "image": "choisirait/sport/golf.webp"
+                "texte": "Fish and chips",
+                "image": "choisirait/diner/fish-chips.webp"
               }
             ]
           },
           {
-            "question": "Which adventure would he try?",
+            "question": "What would he order at the bar?",
             "options": [
               {
-                "texte": "Skydiving",
-                "image": "choisirait/aventure/parachute.webp"
+                "texte": "Mojito",
+                "image": "choisirait/bar/mojito.webp"
               },
               {
-                "texte": "Surfing",
-                "image": "choisirait/aventure/surf.webp"
+                "texte": "Margarita",
+                "image": "choisirait/bar/margarita.webp"
               },
               {
-                "texte": "Paragliding",
-                "image": "choisirait/aventure/parapente.webp"
+                "texte": "Whiskey",
+                "image": "choisirait/bar/whisky.webp"
               }
             ]
           },
           {
-            "question": "How would he travel with you?",
+            "question": "Which dessert would he pick?",
             "options": [
               {
-                "texte": "Cruise ship",
-                "image": "choisirait/voyage/croisiere.webp"
+                "texte": "Huge birthday cake",
+                "image": "choisirait/dessert/gateau-anniversaire.webp"
               },
               {
-                "texte": "Sailboat",
-                "image": "choisirait/voyage/voilier.webp"
+                "texte": "Vanilla éclair",
+                "image": "choisirait/dessert/eclair.webp"
               },
               {
-                "texte": "Private jet",
-                "image": "choisirait/voyage/jet.webp"
+                "texte": "Churros",
+                "image": "choisirait/dessert/churros.webp"
               }
             ]
           }
@@ -79,12 +79,12 @@
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Adventure edition. Easy for you? Then the next one is for him.\n\nSend this to him",
+      "legende": "Date night edition. Pick for him, then let him prove you wrong.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
         "#boyfriendquiz",
         "#thisorthat",
-        "#adventurecouple",
+        "#datenight",
         "#quizcouple"
       ]
     }

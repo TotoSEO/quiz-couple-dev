@@ -12,17 +12,17 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "lui",
+        "pour": "elle",
         "etiquette": "Sweet tooth edition",
-        "accroche": "What would he choose?",
-        "consigne": "Answer for him: A, B or C? Then send it!",
+        "accroche": "What would she choose?",
+        "consigne": "Answer for her: A, B or C? Then send it!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which movie snack would he pick?",
+            "question": "Which movie snack would she pick?",
             "options": [
               {
                 "texte": "Gummy bears",
@@ -39,7 +39,7 @@
             ]
           },
           {
-            "question": "Which ice cream would he get?",
+            "question": "Which ice cream would she get?",
             "options": [
               {
                 "texte": "Gelato",
@@ -56,7 +56,7 @@
             ]
           },
           {
-            "question": "Which coffee would he order?",
+            "question": "Which coffee would she order?",
             "options": [
               {
                 "texte": "Iced latte",
@@ -74,15 +74,15 @@
           }
         ],
         "fin": {
-          "question": "Now send it to him. Did you guess right?",
-          "bouton": "Send this to him",
+          "question": "Got her 3 picks? Send it and see!",
+          "bouton": "Send this to her",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Sweet tooth edition. No cheating: decide before the timer runs out.\n\nSend this to him",
+      "legende": "Sweet tooth edition. She will swear you got at least one wrong.\n\nSend this to her",
       "hashtags": [
         "#couplequiz",
-        "#boyfriendquiz",
+        "#girlfriendquiz",
         "#thisorthat",
         "#dessert",
         "#quizcouple"

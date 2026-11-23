@@ -15,7 +15,7 @@
         "pour": "elle",
         "etiquette": "Travel edition",
         "accroche": "What would she choose?",
-        "consigne": "Answer for her: A, B or C? Then send it!",
+        "consigne": "Pick A, B or C for her, then send it to her!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
@@ -56,7 +56,7 @@
             ]
           },
           {
-            "question": "Where would she take you on vacation?",
+            "question": "Where would she go on vacation?",
             "options": [
               {
                 "texte": "Italy",
@@ -74,12 +74,12 @@
           }
         ],
         "fin": {
-          "question": "Got her 3 picks? Send it and see!",
+          "question": "Now send it to her. Did you guess right?",
           "bouton": "Send this to her",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Travel edition. Answer for her first, no peeking.\n\nSend this to her",
+      "legende": "Travel edition. No cheating: decide before the timer runs out.\n\nSend this to her",
       "hashtags": [
         "#couplequiz",
         "#girlfriendquiz",

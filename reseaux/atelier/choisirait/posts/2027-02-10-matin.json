@@ -13,78 +13,78 @@
         "langue": "en",
         "theme": "light",
         "pour": "lui",
-        "etiquette": "Weekend edition",
+        "etiquette": "Sweet tooth edition",
         "accroche": "What would he choose?",
-        "consigne": "One photo per round: the one he would pick!",
+        "consigne": "Answer for him: A, B or C? Then send it!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which hobby would he pick up?",
+            "question": "Which ice cream would he get?",
             "options": [
               {
-                "texte": "Knitting",
-                "image": "choisirait/loisir/tricot.webp"
+                "texte": "Popsicle",
+                "image": "choisirait/glace/esquimau.webp"
               },
               {
-                "texte": "Woodworking",
-                "image": "choisirait/loisir/menuiserie.webp"
+                "texte": "Ice cream cone",
+                "image": "choisirait/glace/cornet.webp"
               },
               {
-                "texte": "Gardening",
-                "image": "choisirait/loisir/jardinage.webp"
+                "texte": "Ice cream sandwich",
+                "image": "choisirait/glace/sandwich-glace.webp"
               }
             ]
           },
           {
-            "question": "Which workout would he pick?",
+            "question": "What would he grab at the bakery?",
             "options": [
               {
-                "texte": "Swimming",
-                "image": "choisirait/salle/natation.webp"
+                "texte": "Pain au chocolat",
+                "image": "choisirait/boulangerie/pain-chocolat.webp"
               },
               {
-                "texte": "CrossFit",
-                "image": "choisirait/salle/crossfit.webp"
+                "texte": "Donut",
+                "image": "choisirait/boulangerie/donut.webp"
               },
               {
-                "texte": "Yoga",
-                "image": "choisirait/salle/yoga.webp"
+                "texte": "Croissant",
+                "image": "choisirait/boulangerie/croissant.webp"
               }
             ]
           },
           {
-            "question": "Which sport would he watch?",
+            "question": "Which cake would he pick?",
             "options": [
               {
-                "texte": "Golf",
-                "image": "choisirait/sport/golf.webp"
+                "texte": "Strawberry tart",
+                "image": "choisirait/dessert/tarte-fraises.webp"
               },
               {
-                "texte": "Tennis",
-                "image": "choisirait/sport/tennis.webp"
+                "texte": "Mille-feuille",
+                "image": "choisirait/dessert/mille-feuille.webp"
               },
               {
-                "texte": "Boxing",
-                "image": "choisirait/sport/boxe.webp"
+                "texte": "Vanilla éclair",
+                "image": "choisirait/dessert/eclair.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Now send it to him. Did you guess right?",
+          "question": "Got his 3 picks? Send it and see!",
           "bouton": "Send this to him",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Weekend edition. Your answers first, then his reaction.\n\nSend this to him",
+      "legende": "Sweet tooth edition. No cheating: decide before the timer runs out.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
         "#boyfriendquiz",
         "#thisorthat",
-        "#weekendvibes",
+        "#dessert",
         "#quizcouple"
       ]
     }

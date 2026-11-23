@@ -12,79 +12,79 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "elle",
-        "etiquette": "Drinks edition",
-        "accroche": "What would she choose?",
-        "consigne": "One photo per round: the one she would pick!",
+        "pour": "lui",
+        "etiquette": "Wedding edition",
+        "accroche": "What would he choose?",
+        "consigne": "Pick A, B or C for him, then send it to him!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which drink would she get?",
+            "question": "Where would he want to get married?",
             "options": [
               {
-                "texte": "Smoothie",
-                "image": "choisirait/boisson/smoothie.webp"
+                "texte": "Vineyard",
+                "image": "choisirait/vue/vignes.webp"
               },
               {
-                "texte": "Lemonade",
-                "image": "choisirait/boisson/limonade.webp"
+                "texte": "Mountaintop",
+                "image": "choisirait/mariage/sommet.webp"
               },
               {
-                "texte": "Iced tea",
-                "image": "choisirait/boisson/the-glace.webp"
+                "texte": "Vegas chapel",
+                "image": "choisirait/mariage/vegas.webp"
               }
             ]
           },
           {
-            "question": "What would she order at the bar?",
+            "question": "Where would he propose?",
             "options": [
               {
-                "texte": "Beer",
-                "image": "choisirait/bar/biere.webp"
+                "texte": "Hot air balloon",
+                "image": "choisirait/demande/demande-montgolfiere.webp"
               },
               {
-                "texte": "Margarita",
-                "image": "choisirait/bar/margarita.webp"
+                "texte": "Eiffel Tower",
+                "image": "choisirait/demande/demande-eiffel.webp"
               },
               {
-                "texte": "Espresso martini",
-                "image": "choisirait/bar/espresso-martini.webp"
+                "texte": "Mountaintop",
+                "image": "choisirait/demande/demande-montagne.webp"
               }
             ]
           },
           {
-            "question": "Which coffee would she order?",
+            "question": "Which ring would he pick for you?",
             "options": [
               {
-                "texte": "Cappuccino",
-                "image": "choisirait/cafe/cappuccino.webp"
+                "texte": "Gold band",
+                "image": "choisirait/bague/alliance-or.webp"
               },
               {
-                "texte": "Iced latte",
-                "image": "choisirait/cafe/iced-latte.webp"
+                "texte": "Rose gold ring",
+                "image": "choisirait/bague/or-rose.webp"
               },
               {
-                "texte": "Espresso",
-                "image": "choisirait/cafe/espresso.webp"
+                "texte": "Vintage ring",
+                "image": "choisirait/bague/vintage-bague.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Got her 3 picks? Send it and see!",
-          "bouton": "Send this to her",
+          "question": "Now send it to him. Did you guess right?",
+          "bouton": "Send this to him",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Drinks edition. Your answers first, then her reaction.\n\nSend this to her",
+      "legende": "Wedding edition. No cheating: decide before the timer runs out.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
-        "#girlfriendquiz",
+        "#boyfriendquiz",
         "#thisorthat",
-        "#cocktails",
+        "#engaged",
         "#quizcouple"
       ]
     }

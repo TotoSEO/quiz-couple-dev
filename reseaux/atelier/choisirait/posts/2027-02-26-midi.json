@@ -12,79 +12,79 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "lui",
-        "etiquette": "Dream home edition",
-        "accroche": "What would he choose?",
-        "consigne": "Answer for him: A, B or C? Then send it!",
+        "pour": "elle",
+        "etiquette": "Luxury edition",
+        "accroche": "What would she choose?",
+        "consigne": "Pick A, B or C for her, then send it to her!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which dream house would he pick?",
+            "question": "Which car would she drive?",
             "options": [
               {
-                "texte": "Castle",
-                "image": "choisirait/maison/chateau.webp"
+                "texte": "Nissan GT-R",
+                "image": "choisirait/voiture/gtr.webp"
+              },
+              {
+                "texte": "Lamborghini Huracán",
+                "image": "choisirait/voiture/lamborghini-huracan.webp"
+              },
+              {
+                "texte": "McLaren 720S",
+                "image": "choisirait/voiture/mclaren.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which watch would she wear?",
+            "options": [
+              {
+                "texte": "Pocket watch",
+                "image": "choisirait/montre/gousset.webp"
+              },
+              {
+                "texte": "Omega Speedmaster",
+                "image": "choisirait/montre/speedmaster.webp"
+              },
+              {
+                "texte": "Casio G-Shock",
+                "image": "choisirait/montre/g-shock.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which dream house would she pick?",
+            "options": [
+              {
+                "texte": "Beach house",
+                "image": "choisirait/maison/maison-plage.webp"
               },
               {
                 "texte": "Cozy cabin",
                 "image": "choisirait/weekend/chalet-bois.webp"
               },
               {
-                "texte": "Mountain chalet",
-                "image": "choisirait/maison/chalet.webp"
-              }
-            ]
-          },
-          {
-            "question": "Which view would he wake up to?",
-            "options": [
-              {
-                "texte": "Northern lights",
-                "image": "choisirait/vue/aurores.webp"
-              },
-              {
-                "texte": "Eiffel Tower",
-                "image": "choisirait/vue/tour-eiffel.webp"
-              },
-              {
-                "texte": "Ocean",
-                "image": "choisirait/vue/ocean.webp"
-              }
-            ]
-          },
-          {
-            "question": "Which cat would he adopt?",
-            "options": [
-              {
-                "texte": "Siamese",
-                "image": "choisirait/chat/siamois.webp"
-              },
-              {
-                "texte": "British Shorthair",
-                "image": "choisirait/chat/british.webp"
-              },
-              {
-                "texte": "Ginger cat",
-                "image": "choisirait/chat/chat-roux.webp"
+                "texte": "Victorian house",
+                "image": "choisirait/maison/victorienne.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Send it to him: how many did you get?",
-          "bouton": "Send this to him",
+          "question": "Send it to her: how many did you get?",
+          "bouton": "Send this to her",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Dream home edition. One letter per question, then send it to him.\n\nSend this to him",
+      "legende": "Luxury edition. One letter per question, then send it to her.\n\nSend this to her",
       "hashtags": [
         "#couplequiz",
-        "#boyfriendquiz",
+        "#girlfriendquiz",
         "#thisorthat",
-        "#dreamhome",
+        "#luxurylife",
         "#quizcouple"
       ]
     }

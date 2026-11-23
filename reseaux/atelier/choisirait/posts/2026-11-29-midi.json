@@ -12,17 +12,17 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "lui",
+        "pour": "elle",
         "etiquette": "Pet lovers edition",
-        "accroche": "What would he choose?",
-        "consigne": "Pick A, B or C for him, then send it to him!",
+        "accroche": "What would she choose?",
+        "consigne": "Choose the photo she would pick. 3 rounds!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which pet would he want?",
+            "question": "Which pet would she want?",
             "options": [
               {
                 "texte": "Ferret",
@@ -39,7 +39,7 @@
             ]
           },
           {
-            "question": "Which cat would he adopt?",
+            "question": "Which cat would she adopt?",
             "options": [
               {
                 "texte": "Siamese",
@@ -56,7 +56,7 @@
             ]
           },
           {
-            "question": "Which dog would he pick?",
+            "question": "Which dog would she adopt?",
             "options": [
               {
                 "texte": "Bernese Mountain Dog",
@@ -74,15 +74,15 @@
           }
         ],
         "fin": {
-          "question": "Now send it to him. Did you guess right?",
-          "bouton": "Send this to him",
+          "question": "Got her 3 picks? Send it and see!",
+          "bouton": "Send this to her",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Pet lovers edition. Guess first, send it after. Then compare.\n\nSend this to him",
+      "legende": "Pet lovers edition. Pick for her, then let her prove you wrong.\n\nSend this to her",
       "hashtags": [
         "#couplequiz",
-        "#boyfriendquiz",
+        "#girlfriendquiz",
         "#thisorthat",
         "#petlovers",
         "#quizcouple"

@@ -13,7 +13,7 @@
         "langue": "en",
         "theme": "light",
         "pour": "elle",
-        "etiquette": "Winter edition",
+        "etiquette": "Sweet tooth edition",
         "accroche": "What would she choose?",
         "consigne": "Answer for her: A, B or C? Then send it!",
         "secondes": 4,
@@ -22,69 +22,69 @@
         },
         "questions": [
           {
-            "question": "Which winter date would she pick?",
+            "question": "Which ice cream would she get?",
             "options": [
               {
-                "texte": "Building a snowman",
-                "image": "choisirait/hiver/bonhomme.webp"
+                "texte": "Soft serve",
+                "image": "choisirait/glace/italienne.webp"
               },
               {
-                "texte": "Sledding",
-                "image": "choisirait/hiver/luge.webp"
+                "texte": "Mochi ice cream",
+                "image": "choisirait/glace/mochi.webp"
               },
               {
-                "texte": "Cabin by the fire",
-                "image": "choisirait/hiver/feu-cheminee.webp"
+                "texte": "Banana split",
+                "image": "choisirait/glace/banana-split.webp"
               }
             ]
           },
           {
-            "question": "Which coffee would she order?",
+            "question": "What would she grab at the bakery?",
             "options": [
               {
-                "texte": "Iced latte",
-                "image": "choisirait/cafe/iced-latte.webp"
+                "texte": "Croissant",
+                "image": "choisirait/boulangerie/croissant.webp"
               },
               {
-                "texte": "Espresso",
-                "image": "choisirait/cafe/espresso.webp"
+                "texte": "Brioche",
+                "image": "choisirait/boulangerie/brioche.webp"
               },
               {
-                "texte": "Matcha latte",
-                "image": "choisirait/cafe/matcha.webp"
+                "texte": "Muffin",
+                "image": "choisirait/boulangerie/muffin.webp"
               }
             ]
           },
           {
-            "question": "Where would she book a weekend?",
+            "question": "Which dessert would she pick?",
             "options": [
               {
-                "texte": "Castle hotel",
-                "image": "choisirait/weekend/chateau-hotel.webp"
+                "texte": "Brownie",
+                "image": "choisirait/dessert/brownie.webp"
               },
               {
-                "texte": "Glamping tent",
-                "image": "choisirait/weekend/glamping.webp"
+                "texte": "Crème brûlée",
+                "image": "choisirait/dessert/creme-brulee.webp"
               },
               {
-                "texte": "Treehouse",
-                "image": "choisirait/weekend/cabane-arbre.webp"
+                "texte": "Churros",
+                "image": "choisirait/dessert/churros.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Got her 3 picks? Send it and see!",
+          "question": "Now send it to her. Did you guess right?",
           "bouton": "Send this to her",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Winter edition. No cheating: decide before the timer runs out.\n\nSend this to her",
+      "legende": "Sweet tooth edition. She will swear you got at least one wrong.\n\nSend this to her",
       "hashtags": [
         "#couplequiz",
         "#girlfriendquiz",
         "#thisorthat",
-        "#winter",
+        "#dessert",
         "#quizcouple"
       ]
     }

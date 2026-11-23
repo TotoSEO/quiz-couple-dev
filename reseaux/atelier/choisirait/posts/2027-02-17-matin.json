@@ -12,79 +12,79 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "lui",
-        "etiquette": "Wedding edition",
-        "accroche": "What would he choose?",
-        "consigne": "Pick A, B or C for him, then send it to him!",
+        "pour": "elle",
+        "etiquette": "Dream home edition",
+        "accroche": "What would she choose?",
+        "consigne": "One photo per round: the one she would pick!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Where would he propose?",
+            "question": "Which dog would she adopt?",
             "options": [
               {
-                "texte": "Disney castle",
-                "image": "choisirait/demande/demande-chateau.webp"
+                "texte": "French Bulldog",
+                "image": "choisirait/chien/bouledogue.webp"
               },
               {
-                "texte": "Rooftop",
-                "image": "choisirait/demande/demande-rooftop.webp"
+                "texte": "Shiba Inu",
+                "image": "choisirait/chien/shiba.webp"
               },
               {
-                "texte": "Beach at sunset",
-                "image": "choisirait/demande/demande-plage.webp"
+                "texte": "Rottweiler",
+                "image": "choisirait/chien/rottweiler.webp"
               }
             ]
           },
           {
-            "question": "Where would he want to get married?",
+            "question": "Which cat would she adopt?",
             "options": [
               {
-                "texte": "Mountaintop",
-                "image": "choisirait/mariage/sommet.webp"
+                "texte": "Ginger cat",
+                "image": "choisirait/chat/chat-roux.webp"
               },
               {
-                "texte": "Vineyard",
+                "texte": "Siamese",
+                "image": "choisirait/chat/siamois.webp"
+              },
+              {
+                "texte": "British Shorthair",
+                "image": "choisirait/chat/british.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which view would she wake up to?",
+            "options": [
+              {
+                "texte": "Vineyards",
                 "image": "choisirait/vue/vignes.webp"
               },
               {
                 "texte": "Forest",
                 "image": "choisirait/vue/foret.webp"
-              }
-            ]
-          },
-          {
-            "question": "Which ring would he pick for you?",
-            "options": [
-              {
-                "texte": "Rose gold ring",
-                "image": "choisirait/bague/or-rose.webp"
               },
               {
-                "texte": "Solitaire diamond",
-                "image": "choisirait/bague/solitaire.webp"
-              },
-              {
-                "texte": "Gold band",
-                "image": "choisirait/bague/alliance-or.webp"
+                "texte": "Ocean",
+                "image": "choisirait/vue/ocean.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Send it to him: how many did you get?",
-          "bouton": "Send this to him",
+          "question": "Send it to her: how many did you get?",
+          "bouton": "Send this to her",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Wedding edition. Answer for him first, no peeking.\n\nSend this to him",
+      "legende": "Dream home edition. Easy for you? Then the next one is for her.\n\nSend this to her",
       "hashtags": [
         "#couplequiz",
-        "#boyfriendquiz",
+        "#girlfriendquiz",
         "#thisorthat",
-        "#engaged",
+        "#dreamhome",
         "#quizcouple"
       ]
     }

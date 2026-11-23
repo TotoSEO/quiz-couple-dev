@@ -13,7 +13,7 @@
         "langue": "en",
         "theme": "light",
         "pour": "lui",
-        "etiquette": "Game night edition",
+        "etiquette": "Food edition",
         "accroche": "What would he choose?",
         "consigne": "Choose the photo he would pick. 3 rounds!",
         "secondes": 4,
@@ -22,69 +22,69 @@
         },
         "questions": [
           {
-            "question": "What would he order at 2 a.m.?",
+            "question": "Which potato would he pick?",
             "options": [
               {
-                "texte": "Tacos",
-                "image": "choisirait/fastfood/tacos.webp"
+                "texte": "Rösti",
+                "image": "choisirait/patate/rosti.webp"
               },
               {
-                "texte": "Fried chicken",
-                "image": "choisirait/fastfood/poulet-frit.webp"
+                "texte": "French fries",
+                "image": "choisirait/patate/frites.webp"
               },
               {
-                "texte": "Instant noodles",
-                "image": "choisirait/fastfood/nouilles.webp"
+                "texte": "Potato gratin",
+                "image": "choisirait/patate/gratin.webp"
               }
             ]
           },
           {
-            "question": "Which drink would he get?",
+            "question": "Which pizza would he order?",
             "options": [
               {
-                "texte": "Smoothie",
-                "image": "choisirait/boisson/smoothie.webp"
+                "texte": "Deep dish",
+                "image": "choisirait/pizza/deep-dish.webp"
               },
               {
-                "texte": "Lemonade",
-                "image": "choisirait/boisson/limonade.webp"
+                "texte": "Pepperoni",
+                "image": "choisirait/pizza/pepperoni.webp"
               },
               {
-                "texte": "Iced tea",
-                "image": "choisirait/boisson/the-glace.webp"
+                "texte": "Hawaiian",
+                "image": "choisirait/pizza/hawaienne.webp"
               }
             ]
           },
           {
-            "question": "Which console would he pick?",
+            "question": "Which pasta would he pick?",
             "options": [
               {
-                "texte": "Xbox",
-                "image": "choisirait/console/xbox.webp"
+                "texte": "Seafood pasta",
+                "image": "choisirait/pates/fruits-mer.webp"
               },
               {
-                "texte": "Gaming PC",
-                "image": "choisirait/console/pc-gamer.webp"
+                "texte": "Carbonara",
+                "image": "choisirait/pates/carbonara.webp"
               },
               {
-                "texte": "Nintendo Switch",
-                "image": "choisirait/console/switch.webp"
+                "texte": "Ravioli",
+                "image": "choisirait/pates/raviolis.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Now send it to him. Did you guess right?",
+          "question": "Got his 3 picks? Send it and see!",
           "bouton": "Send this to him",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Game night edition. Pick for him, then let him prove you wrong.\n\nSend this to him",
+      "legende": "Food edition. If you get all three, you know him by heart.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
         "#boyfriendquiz",
         "#thisorthat",
-        "#gamenight",
+        "#foodie",
         "#quizcouple"
       ]
     }

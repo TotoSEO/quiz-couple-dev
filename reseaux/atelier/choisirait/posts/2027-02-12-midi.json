@@ -15,43 +15,26 @@
         "pour": "elle",
         "etiquette": "Date night edition",
         "accroche": "What would she choose?",
-        "consigne": "Pick A, B or C for her, then send it to her!",
+        "consigne": "One photo per round: the one she would pick!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which flowers would she want?",
-            "options": [
-              {
-                "texte": "Red roses",
-                "image": "choisirait/fleurs/roses.webp"
-              },
-              {
-                "texte": "Lavender",
-                "image": "choisirait/fleurs/lavande.webp"
-              },
-              {
-                "texte": "Tulips",
-                "image": "choisirait/fleurs/tulipes.webp"
-              }
-            ]
-          },
-          {
-            "question": "Which date would she take you on?",
+            "question": "Which date would she plan?",
             "options": [
               {
                 "texte": "Theme park",
                 "image": "choisirait/date/parc.webp"
               },
               {
-                "texte": "Arcade",
-                "image": "choisirait/date/arcade.webp"
+                "texte": "Fancy dinner",
+                "image": "choisirait/demande/demande-resto.webp"
               },
               {
-                "texte": "Camping",
-                "image": "choisirait/date/camping.webp"
+                "texte": "Ice skating",
+                "image": "choisirait/date/patinoire.webp"
               }
             ]
           },
@@ -63,23 +46,40 @@
                 "image": "choisirait/bar/pina-colada.webp"
               },
               {
-                "texte": "Red wine",
-                "image": "choisirait/bar/vin-rouge.webp"
+                "texte": "Beer",
+                "image": "choisirait/bar/biere.webp"
               },
               {
-                "texte": "Gin and tonic",
-                "image": "choisirait/bar/gin-tonic.webp"
+                "texte": "Mojito",
+                "image": "choisirait/bar/mojito.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which cake would she pick?",
+            "options": [
+              {
+                "texte": "Red velvet cake",
+                "image": "choisirait/dessert/red-velvet.webp"
+              },
+              {
+                "texte": "Chocolate lava cake",
+                "image": "choisirait/dessert/fondant.webp"
+              },
+              {
+                "texte": "Tiramisu",
+                "image": "choisirait/dessert/tiramisu.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Got her 3 picks? Send it and see!",
+          "question": "Now send it to her. Did you guess right?",
           "bouton": "Send this to her",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Date night edition. Guess first, send it after. Then compare.\n\nSend this to her",
+      "legende": "Date night edition. Pick for her, then let her prove you wrong.\n\nSend this to her",
       "hashtags": [
         "#couplequiz",
         "#girlfriendquiz",

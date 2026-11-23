@@ -13,78 +13,78 @@
         "langue": "en",
         "theme": "light",
         "pour": "lui",
-        "etiquette": "Hobbies edition",
+        "etiquette": "Food edition",
         "accroche": "What would he choose?",
-        "consigne": "One photo per round: the one he would pick!",
+        "consigne": "Answer for him: A, B or C? Then send it!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which instrument would he play?",
+            "question": "Which pizza would he order?",
             "options": [
               {
-                "texte": "Violin",
-                "image": "choisirait/instrument/violon.webp"
+                "texte": "Veggie",
+                "image": "choisirait/pizza/vegetarienne.webp"
               },
               {
-                "texte": "DJ decks",
-                "image": "choisirait/instrument/platines.webp"
+                "texte": "Calzone",
+                "image": "choisirait/pizza/calzone.webp"
               },
               {
-                "texte": "Trumpet",
-                "image": "choisirait/instrument/trompette.webp"
+                "texte": "Margherita",
+                "image": "choisirait/pizza/margherita.webp"
               }
             ]
           },
           {
-            "question": "Which hobby would he pick up?",
+            "question": "What would he order at 2 a.m.?",
             "options": [
               {
-                "texte": "Knitting",
-                "image": "choisirait/loisir/tricot.webp"
+                "texte": "Grilled cheese",
+                "image": "choisirait/fastfood/croque.webp"
               },
               {
-                "texte": "Woodworking",
-                "image": "choisirait/loisir/menuiserie.webp"
+                "texte": "Tacos",
+                "image": "choisirait/fastfood/tacos.webp"
               },
               {
-                "texte": "Photography",
-                "image": "choisirait/loisir/photo.webp"
+                "texte": "Fried chicken",
+                "image": "choisirait/fastfood/poulet-frit.webp"
               }
             ]
           },
           {
-            "question": "Which workout would he pick?",
+            "question": "Which pasta would he pick?",
             "options": [
               {
-                "texte": "Yoga",
-                "image": "choisirait/salle/yoga.webp"
+                "texte": "Pesto",
+                "image": "choisirait/pates/pesto.webp"
               },
               {
-                "texte": "Weightlifting",
-                "image": "choisirait/salle/muscu.webp"
+                "texte": "Lasagna",
+                "image": "choisirait/pates/lasagnes.webp"
               },
               {
-                "texte": "Cycling",
-                "image": "choisirait/salle/velo.webp"
+                "texte": "Ravioli",
+                "image": "choisirait/pates/raviolis.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Now send it to him. Did you guess right?",
+          "question": "Got his 3 picks? Send it and see!",
           "bouton": "Send this to him",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Hobbies edition. Easy for you? Then the next one is for him.\n\nSend this to him",
+      "legende": "Food edition. Answer for him first, no peeking.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
         "#boyfriendquiz",
         "#thisorthat",
-        "#hobbies",
+        "#foodie",
         "#quizcouple"
       ]
     }

@@ -13,9 +13,9 @@
         "langue": "en",
         "theme": "light",
         "pour": "lui",
-        "etiquette": "Game night edition",
+        "etiquette": "Food edition",
         "accroche": "What would he choose?",
-        "consigne": "One photo per round: the one he would pick!",
+        "consigne": "Answer for him: A, B or C? Then send it!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
@@ -25,50 +25,50 @@
             "question": "What would he order at 2 a.m.?",
             "options": [
               {
+                "texte": "Nuggets",
+                "image": "choisirait/fastfood/nuggets.webp"
+              },
+              {
+                "texte": "Instant noodles",
+                "image": "choisirait/fastfood/nouilles.webp"
+              },
+              {
                 "texte": "Burrito",
                 "image": "choisirait/fastfood/burrito.webp"
-              },
-              {
-                "texte": "Burger",
-                "image": "choisirait/fastfood/burger.webp"
-              },
-              {
-                "texte": "Grilled cheese",
-                "image": "choisirait/fastfood/croque.webp"
               }
             ]
           },
           {
-            "question": "Which game night would he pick?",
+            "question": "Which potato would he pick?",
             "options": [
               {
-                "texte": "Pool",
-                "image": "choisirait/jeu/billard.webp"
+                "texte": "Potato gratin",
+                "image": "choisirait/patate/gratin.webp"
               },
               {
-                "texte": "Ping pong",
-                "image": "choisirait/jeu/ping-pong.webp"
+                "texte": "Hash browns",
+                "image": "choisirait/patate/hash-browns.webp"
               },
               {
-                "texte": "Board games",
-                "image": "choisirait/jeu/jeux-societe.webp"
+                "texte": "Curly fries",
+                "image": "choisirait/patate/curly.webp"
               }
             ]
           },
           {
-            "question": "Which console would he pick?",
+            "question": "Which pasta would he pick?",
             "options": [
               {
-                "texte": "Game Boy",
-                "image": "choisirait/console/gameboy.webp"
+                "texte": "Mac and cheese",
+                "image": "choisirait/pates/mac-cheese.webp"
               },
               {
-                "texte": "Nintendo Switch",
-                "image": "choisirait/console/switch.webp"
+                "texte": "Carbonara",
+                "image": "choisirait/pates/carbonara.webp"
               },
               {
-                "texte": "PlayStation 2",
-                "image": "choisirait/console/ps2.webp"
+                "texte": "Gnocchi",
+                "image": "choisirait/pates/gnocchi.webp"
               }
             ]
           }
@@ -79,12 +79,12 @@
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Game night edition. Write down his three letters before you send it.\n\nSend this to him",
+      "legende": "Food edition. He will swear you got at least one wrong.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
         "#boyfriendquiz",
         "#thisorthat",
-        "#gamenight",
+        "#foodie",
         "#quizcouple"
       ]
     }

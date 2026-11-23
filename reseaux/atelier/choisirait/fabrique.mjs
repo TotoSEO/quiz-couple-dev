@@ -205,10 +205,17 @@ function question(cle, pour, ids, variante) {
 }
 
 const posts = [];
+// le rang de chaque reel parmi ceux du même personnage : les consignes, les
+// fins et les légendes tournent dans chaque série, sinon, avec un reel sur
+// deux pour elle, une consigne sur deux ne servirait jamais à l'une
+const rangPour = { lui: 0, elle: 0 };
 creneaux.forEach(({ jour, creneau }, i) => {
-  // deux reels sur trois pour lui, un sur trois pour elle
+  // un reel sur deux pour elle, en alternance (23 novembre 2026, Thomas :
+  // « Il faut faire les deux hein ! » ; un sur trois jusque-là) ; les deux
+  // premiers sont les exemples de Thomas, pour lui
   const premier = PREMIERS[i];
-  const pour = premier?.pour ?? (i % 3 === 2 ? 'elle' : 'lui');
+  const pour = premier?.pour ?? (i % 2 === 0 ? 'elle' : 'lui');
+  const k = rangPour[pour]++;
   let edition;
   let qs;
   if (premier) {
@@ -240,7 +247,7 @@ creneaux.forEach(({ jour, creneau }, i) => {
   }
   editionsRecentes.push(edition.nom);
   const T = TEXTES[pour];
-  const legende = `${edition.nom}. ${T.legendes[i % T.legendes.length]}\n\n${T.bouton}`;
+  const legende = `${edition.nom}. ${T.legendes[k % T.legendes.length]}\n\n${T.bouton}`;
   const hashtags = [...T.hashtags.slice(0, 3), edition.tag, '#quizcouple'];
   const sujet = `ch-${String(i + 1).padStart(3, '0')}`;
   posts.push({
@@ -264,11 +271,11 @@ creneaux.forEach(({ jour, creneau }, i) => {
             pour,
             etiquette: edition.nom,
             accroche: T.accroche,
-            consigne: T.consignes[i % T.consignes.length],
+            consigne: T.consignes[k % T.consignes.length],
             secondes: 4,
             son: { ambiance: 'jeu' },
             questions: qs.map((q) => ({ question: q.texte, options: q.options.map((o) => ({ texte: o.texte, image: o.image, ...(o.cadrage ? { cadrage: o.cadrage } : {}) })) })),
-            fin: { question: T.fins[i % T.fins.length], bouton: T.bouton, signature: SIGNATURE },
+            fin: { question: T.fins[k % T.fins.length], bouton: T.bouton, signature: SIGNATURE },
           },
           legende,
           hashtags,

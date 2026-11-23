@@ -12,79 +12,79 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "lui",
-        "etiquette": "Car lovers edition",
-        "accroche": "What would he choose?",
-        "consigne": "Pick A, B or C for him, then send it to him!",
+        "pour": "elle",
+        "etiquette": "Pet lovers edition",
+        "accroche": "What would she choose?",
+        "consigne": "Choose the photo she would pick. 3 rounds!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which classic car would he drive?",
+            "question": "Which pet would she want?",
             "options": [
               {
-                "texte": "1959 Cadillac",
-                "image": "choisirait/vintage/cadillac.webp"
+                "texte": "Axolotl",
+                "image": "choisirait/animal/axolotl.webp"
               },
               {
-                "texte": "1967 Mustang",
-                "image": "choisirait/vintage/mustang-67.webp"
+                "texte": "Horse",
+                "image": "choisirait/animal/cheval.webp"
               },
               {
-                "texte": "Citroën 2CV",
-                "image": "choisirait/vintage/2cv.webp"
+                "texte": "Rabbit",
+                "image": "choisirait/animal/lapin.webp"
               }
             ]
           },
           {
-            "question": "Which motorbike would he ride?",
+            "question": "Which dog would she pick?",
             "options": [
               {
-                "texte": "Indian Scout",
-                "image": "choisirait/moto/indian.webp"
+                "texte": "Pug",
+                "image": "choisirait/chien/carlin.webp"
               },
               {
-                "texte": "Yamaha MT-07",
-                "image": "choisirait/moto/mt07.webp"
+                "texte": "Samoyed",
+                "image": "choisirait/chien/samoyede.webp"
               },
               {
-                "texte": "Kawasaki Ninja",
-                "image": "choisirait/moto/ninja.webp"
+                "texte": "Corgi",
+                "image": "choisirait/chien/corgi.webp"
               }
             ]
           },
           {
-            "question": "Which car would he drive?",
+            "question": "Which cat would she adopt?",
             "options": [
               {
-                "texte": "Porsche 911",
-                "image": "choisirait/voiture/porsche-911.webp"
+                "texte": "Scottish Fold",
+                "image": "choisirait/chat/scottish.webp"
               },
               {
-                "texte": "Tesla Model S",
-                "image": "choisirait/voiture/tesla-model-s.webp"
+                "texte": "Maine Coon",
+                "image": "choisirait/chat/maine-coon.webp"
               },
               {
-                "texte": "Mini Cooper",
-                "image": "choisirait/voiture/mini.webp"
+                "texte": "Persian",
+                "image": "choisirait/chat/persan.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Send it to him: how many did you get?",
-          "bouton": "Send this to him",
+          "question": "Send it to her: how many did you get?",
+          "bouton": "Send this to her",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Car lovers edition. He will swear you got at least one wrong.\n\nSend this to him",
+      "legende": "Pet lovers edition. Your answers first, then her reaction.\n\nSend this to her",
       "hashtags": [
         "#couplequiz",
-        "#boyfriendquiz",
+        "#girlfriendquiz",
         "#thisorthat",
-        "#carlovers",
+        "#petlovers",
         "#quizcouple"
       ]
     }

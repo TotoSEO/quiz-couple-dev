@@ -13,7 +13,7 @@
         "langue": "en",
         "theme": "light",
         "pour": "elle",
-        "etiquette": "Game night edition",
+        "etiquette": "Dream home edition",
         "accroche": "What would she choose?",
         "consigne": "Answer for her: A, B or C? Then send it!",
         "secondes": 4,
@@ -22,69 +22,69 @@
         },
         "questions": [
           {
-            "question": "What would she order at 2 a.m.?",
+            "question": "Which view would she wake up to?",
             "options": [
               {
-                "texte": "Burrito",
-                "image": "choisirait/fastfood/burrito.webp"
+                "texte": "Vineyards",
+                "image": "choisirait/vue/vignes.webp"
               },
               {
-                "texte": "Tacos",
-                "image": "choisirait/fastfood/tacos.webp"
+                "texte": "Forest",
+                "image": "choisirait/vue/foret.webp"
               },
               {
-                "texte": "Instant noodles",
-                "image": "choisirait/fastfood/nouilles.webp"
+                "texte": "Rice fields",
+                "image": "choisirait/vue/rizieres.webp"
               }
             ]
           },
           {
-            "question": "Which game night would she pick?",
+            "question": "Which house would she pick?",
             "options": [
               {
-                "texte": "Foosball",
-                "image": "choisirait/jeu/baby-foot.webp"
+                "texte": "Modern villa",
+                "image": "choisirait/maison/villa-moderne.webp"
               },
               {
-                "texte": "Chess",
-                "image": "choisirait/jeu/echecs-soir.webp"
+                "texte": "Tiny house",
+                "image": "choisirait/maison/tiny-house.webp"
               },
               {
-                "texte": "Pool",
-                "image": "choisirait/jeu/billard.webp"
+                "texte": "Loft apartment",
+                "image": "choisirait/maison/loft.webp"
               }
             ]
           },
           {
-            "question": "Which movie snack would she pick?",
+            "question": "Which cat would she adopt?",
             "options": [
               {
-                "texte": "Gummy bears",
-                "image": "choisirait/snack/oursons.webp"
+                "texte": "Sphynx",
+                "image": "choisirait/chat/sphynx.webp"
               },
               {
-                "texte": "Chocolate bar",
-                "image": "choisirait/snack/tablette.webp"
+                "texte": "Ragdoll",
+                "image": "choisirait/chat/ragdoll.webp"
               },
               {
-                "texte": "Ice cream tub",
-                "image": "choisirait/snack/pot-glace.webp"
+                "texte": "Black cat",
+                "image": "choisirait/chat/chat-noir.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Got her 3 picks? Send it and see!",
+          "question": "Now send it to her. Did you guess right?",
           "bouton": "Send this to her",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Game night edition. Guess first, send it after. Then compare.\n\nSend this to her",
+      "legende": "Dream home edition. Answer for her first, no peeking.\n\nSend this to her",
       "hashtags": [
         "#couplequiz",
         "#girlfriendquiz",
         "#thisorthat",
-        "#gamenight",
+        "#dreamhome",
         "#quizcouple"
       ]
     }

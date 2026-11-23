@@ -13,78 +13,78 @@
         "langue": "en",
         "theme": "light",
         "pour": "elle",
-        "etiquette": "Luxury edition",
+        "etiquette": "Drinks edition",
         "accroche": "What would she choose?",
-        "consigne": "Answer for her: A, B or C? Then send it!",
+        "consigne": "Pick A, B or C for her, then send it to her!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which watch would she wear?",
+            "question": "What would she order at the bar?",
             "options": [
               {
-                "texte": "Cartier Tank",
-                "image": "choisirait/montre/cartier.webp"
+                "texte": "Beer",
+                "image": "choisirait/bar/biere.webp"
               },
               {
-                "texte": "Omega Speedmaster",
-                "image": "choisirait/montre/speedmaster.webp"
+                "texte": "Aperol Spritz",
+                "image": "choisirait/bar/spritz.webp"
               },
               {
-                "texte": "Casio digital",
-                "image": "choisirait/montre/casio.webp"
+                "texte": "Mojito",
+                "image": "choisirait/bar/mojito.webp"
               }
             ]
           },
           {
-            "question": "How would she travel with you?",
+            "question": "Which drink would she get?",
             "options": [
               {
-                "texte": "Private jet",
-                "image": "choisirait/voyage/jet.webp"
+                "texte": "Lemonade",
+                "image": "choisirait/boisson/limonade.webp"
               },
               {
-                "texte": "Sailboat",
-                "image": "choisirait/voyage/voilier.webp"
+                "texte": "Bubble tea",
+                "image": "choisirait/boisson/bubble-tea.webp"
               },
               {
-                "texte": "Motorbike",
-                "image": "choisirait/moto/bmw-gs.webp"
+                "texte": "Smoothie",
+                "image": "choisirait/boisson/smoothie.webp"
               }
             ]
           },
           {
-            "question": "Which car would she drive?",
+            "question": "Which coffee would she order?",
             "options": [
               {
-                "texte": "McLaren 720S",
-                "image": "choisirait/voiture/mclaren.webp"
+                "texte": "Matcha latte",
+                "image": "choisirait/cafe/matcha.webp"
               },
               {
-                "texte": "Mercedes G-Class",
-                "image": "choisirait/voiture/g-class.webp"
+                "texte": "Cappuccino",
+                "image": "choisirait/cafe/cappuccino.webp"
               },
               {
-                "texte": "Ford Mustang",
-                "image": "choisirait/voiture/mustang.webp"
+                "texte": "Americano",
+                "image": "choisirait/cafe/americano.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Got her 3 picks? Send it and see!",
+          "question": "Now send it to her. Did you guess right?",
           "bouton": "Send this to her",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Luxury edition. Guess first, send it after. Then compare.\n\nSend this to her",
+      "legende": "Drinks edition. Answer for her first, no peeking.\n\nSend this to her",
       "hashtags": [
         "#couplequiz",
         "#girlfriendquiz",
         "#thisorthat",
-        "#luxurylife",
+        "#cocktails",
         "#quizcouple"
       ]
     }

@@ -12,79 +12,79 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "lui",
-        "etiquette": "Date night edition",
-        "accroche": "What would he choose?",
-        "consigne": "Pick A, B or C for him, then send it to him!",
+        "pour": "elle",
+        "etiquette": "Dream life edition",
+        "accroche": "What would she choose?",
+        "consigne": "One photo per round: the one she would pick!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "What would he order at the bar?",
+            "question": "Which watch would she wear?",
             "options": [
               {
-                "texte": "Espresso martini",
-                "image": "choisirait/bar/espresso-martini.webp"
+                "texte": "Omega Speedmaster",
+                "image": "choisirait/montre/speedmaster.webp"
               },
               {
-                "texte": "Whiskey",
-                "image": "choisirait/bar/whisky.webp"
+                "texte": "Rolex Submariner",
+                "image": "choisirait/montre/rolex.webp"
               },
               {
-                "texte": "Gin and tonic",
-                "image": "choisirait/bar/gin-tonic.webp"
+                "texte": "Casio G-Shock",
+                "image": "choisirait/montre/g-shock.webp"
               }
             ]
           },
           {
-            "question": "Which flowers would he get you?",
+            "question": "Which car would she drive?",
             "options": [
               {
-                "texte": "Peonies",
-                "image": "choisirait/fleurs/pivoines.webp"
+                "texte": "Mini Cooper",
+                "image": "choisirait/voiture/mini.webp"
               },
               {
-                "texte": "Sunflowers",
-                "image": "choisirait/fleurs/tournesols.webp"
+                "texte": "Rolls-Royce",
+                "image": "choisirait/voiture/rolls-royce.webp"
               },
               {
-                "texte": "Orchid",
-                "image": "choisirait/fleurs/orchidee.webp"
+                "texte": "Ferrari F8",
+                "image": "choisirait/voiture/ferrari-f8.webp"
               }
             ]
           },
           {
-            "question": "Which cake would he pick?",
+            "question": "Where would she go on vacation?",
             "options": [
               {
-                "texte": "Strawberry tart",
-                "image": "choisirait/dessert/tarte-fraises.webp"
+                "texte": "Italy",
+                "image": "choisirait/vacances/italie.webp"
               },
               {
-                "texte": "Crème brûlée",
-                "image": "choisirait/dessert/creme-brulee.webp"
+                "texte": "Hawaii",
+                "image": "choisirait/vacances/hawaii.webp"
               },
               {
-                "texte": "Cheesecake",
-                "image": "choisirait/dessert/cheesecake.webp"
+                "texte": "Australia",
+                "image": "choisirait/vacances/australie.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Send it to him: how many did you get?",
-          "bouton": "Send this to him",
+          "question": "Send it to her: how many did you get?",
+          "bouton": "Send this to her",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Date night edition. Guess first, send it after. Then compare.\n\nSend this to him",
+      "legende": "Dream life edition. Pick for her, then let her prove you wrong.\n\nSend this to her",
       "hashtags": [
         "#couplequiz",
-        "#boyfriendquiz",
+        "#girlfriendquiz",
         "#thisorthat",
-        "#datenight",
+        "#dreamlife",
         "#quizcouple"
       ]
     }

@@ -12,79 +12,79 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "elle",
-        "etiquette": "Style edition",
-        "accroche": "What would she choose?",
-        "consigne": "Choose the photo she would pick. 3 rounds!",
+        "pour": "lui",
+        "etiquette": "Adventure edition",
+        "accroche": "What would he choose?",
+        "consigne": "One photo per round: the one he would pick!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which shoes would she pick?",
+            "question": "Which sport would he watch?",
             "options": [
               {
-                "texte": "UGG boots",
-                "image": "choisirait/chaussures/ugg.webp"
+                "texte": "Ice hockey",
+                "image": "choisirait/sport/hockey.webp"
               },
               {
-                "texte": "Knee-high boots",
-                "image": "choisirait/chaussures/cuissardes.webp"
+                "texte": "American football",
+                "image": "choisirait/sport/foot-us.webp"
               },
               {
-                "texte": "Ballet flats",
-                "image": "choisirait/chaussures/ballerines.webp"
+                "texte": "Baseball",
+                "image": "choisirait/sport/baseball.webp"
               }
             ]
           },
           {
-            "question": "Which phone would she pick?",
+            "question": "Which adventure would he try?",
             "options": [
               {
-                "texte": "BlackBerry",
-                "image": "choisirait/telephone/blackberry.webp"
+                "texte": "Paragliding",
+                "image": "choisirait/aventure/parapente.webp"
               },
               {
-                "texte": "Flip phone",
-                "image": "choisirait/telephone/clapet.webp"
+                "texte": "Rock climbing",
+                "image": "choisirait/aventure/escalade.webp"
               },
               {
-                "texte": "Nokia 3310",
-                "image": "choisirait/telephone/nokia.webp"
+                "texte": "Surfing",
+                "image": "choisirait/aventure/surf.webp"
               }
             ]
           },
           {
-            "question": "Which sneakers would she pick?",
+            "question": "How would he travel with you?",
             "options": [
               {
-                "texte": "Nike Air Max",
-                "image": "choisirait/baskets/air-max.webp"
+                "texte": "Hot air balloon",
+                "image": "choisirait/voyage/montgolfiere.webp"
               },
               {
-                "texte": "Vans Old Skool",
-                "image": "choisirait/baskets/vans.webp"
+                "texte": "Private jet",
+                "image": "choisirait/voyage/jet.webp"
               },
               {
-                "texte": "Birkenstock",
-                "image": "choisirait/baskets/birkenstock.webp"
+                "texte": "Sailboat",
+                "image": "choisirait/voyage/voilier.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Got her 3 picks? Send it and see!",
-          "bouton": "Send this to her",
+          "question": "Now send it to him. Did you guess right?",
+          "bouton": "Send this to him",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Style edition. Write down her three letters before you send it.\n\nSend this to her",
+      "legende": "Adventure edition. Write down his three letters before you send it.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
-        "#girlfriendquiz",
+        "#boyfriendquiz",
         "#thisorthat",
-        "#style",
+        "#adventurecouple",
         "#quizcouple"
       ]
     }

@@ -15,7 +15,7 @@
         "pour": "lui",
         "etiquette": "Christmas edition",
         "accroche": "What would he choose?",
-        "consigne": "Choose the photo he would pick. 3 rounds!",
+        "consigne": "One photo per round: the one he would pick!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
@@ -74,7 +74,7 @@
           }
         ],
         "fin": {
-          "question": "Now send it to him. Did you guess right?",
+          "question": "Got his 3 picks? Send it and see!",
           "bouton": "Send this to him",
           "signature": "More couple quizzes on quiz-couple.com"
         }

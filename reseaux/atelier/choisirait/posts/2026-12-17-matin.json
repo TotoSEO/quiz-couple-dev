@@ -15,14 +15,14 @@
         "pour": "lui",
         "etiquette": "Date night edition",
         "accroche": "What would he choose?",
-        "consigne": "Choose the photo he would pick. 3 rounds!",
+        "consigne": "One photo per round: the one he would pick!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which date would he take you on?",
+            "question": "Which date would he plan?",
             "options": [
               {
                 "texte": "Wine tasting",
@@ -39,7 +39,7 @@
             ]
           },
           {
-            "question": "What would he cook for date night?",
+            "question": "Which dinner would he pick?",
             "options": [
               {
                 "texte": "Steak and fries",
@@ -74,12 +74,12 @@
           }
         ],
         "fin": {
-          "question": "Now send it to him. Did you guess right?",
+          "question": "Got his 3 picks? Send it and see!",
           "bouton": "Send this to him",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Date night edition. Pick for him, then let him prove you wrong.\n\nSend this to him",
+      "legende": "Date night edition. If you get all three, you know him by heart.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
         "#boyfriendquiz",

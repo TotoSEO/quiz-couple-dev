@@ -12,79 +12,79 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "elle",
-        "etiquette": "Hobbies edition",
-        "accroche": "What would she choose?",
-        "consigne": "Choose the photo she would pick. 3 rounds!",
+        "pour": "lui",
+        "etiquette": "Sweet tooth edition",
+        "accroche": "What would he choose?",
+        "consigne": "Choose the photo he would pick. 3 rounds!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which instrument would she play?",
+            "question": "Which ice cream would he get?",
             "options": [
               {
-                "texte": "Violin",
-                "image": "choisirait/instrument/violon.webp"
+                "texte": "Gelato",
+                "image": "choisirait/glace/gelato.webp"
               },
               {
-                "texte": "Acoustic guitar",
-                "image": "choisirait/instrument/guitare-acoustique.webp"
+                "texte": "Sundae",
+                "image": "choisirait/glace/sundae.webp"
               },
               {
-                "texte": "Saxophone",
-                "image": "choisirait/instrument/saxophone.webp"
+                "texte": "Mochi ice cream",
+                "image": "choisirait/glace/mochi.webp"
               }
             ]
           },
           {
-            "question": "Which workout would she pick?",
+            "question": "What would he grab at the bakery?",
             "options": [
               {
-                "texte": "Swimming",
-                "image": "choisirait/salle/natation.webp"
+                "texte": "Baguette",
+                "image": "choisirait/boulangerie/baguette.webp"
               },
               {
-                "texte": "CrossFit",
-                "image": "choisirait/salle/crossfit.webp"
+                "texte": "Donut",
+                "image": "choisirait/boulangerie/donut.webp"
               },
               {
-                "texte": "Running",
-                "image": "choisirait/salle/course.webp"
+                "texte": "Cinnamon roll",
+                "image": "choisirait/boulangerie/cinnamon-roll.webp"
               }
             ]
           },
           {
-            "question": "Which hobby would she pick up?",
+            "question": "Which coffee would he order?",
             "options": [
               {
-                "texte": "Gardening",
-                "image": "choisirait/loisir/jardinage.webp"
+                "texte": "Matcha latte",
+                "image": "choisirait/cafe/matcha.webp"
               },
               {
-                "texte": "Fishing",
-                "image": "choisirait/loisir/peche.webp"
+                "texte": "Iced latte",
+                "image": "choisirait/cafe/iced-latte.webp"
               },
               {
-                "texte": "Pottery",
-                "image": "choisirait/loisir/poterie.webp"
+                "texte": "Espresso",
+                "image": "choisirait/cafe/espresso.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Got her 3 picks? Send it and see!",
-          "bouton": "Send this to her",
+          "question": "Now send it to him. Did you guess right?",
+          "bouton": "Send this to him",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Hobbies edition. Pick for her, then let her prove you wrong.\n\nSend this to her",
+      "legende": "Sweet tooth edition. If you get all three, you know him by heart.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
-        "#girlfriendquiz",
+        "#boyfriendquiz",
         "#thisorthat",
-        "#hobbies",
+        "#dessert",
         "#quizcouple"
       ]
     }

@@ -12,17 +12,17 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "elle",
+        "pour": "lui",
         "etiquette": "Food edition",
-        "accroche": "What would she choose?",
-        "consigne": "One photo per round: the one she would pick!",
+        "accroche": "What would he choose?",
+        "consigne": "Answer for him: A, B or C? Then send it!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which potato would she pick?",
+            "question": "Which potato would he pick?",
             "options": [
               {
                 "texte": "Potato gratin",
@@ -39,7 +39,7 @@
             ]
           },
           {
-            "question": "What would she order at 2 a.m.?",
+            "question": "What would he order at 2 a.m.?",
             "options": [
               {
                 "texte": "Burrito",
@@ -56,7 +56,7 @@
             ]
           },
           {
-            "question": "Which pizza would she order?",
+            "question": "Which pizza would he order?",
             "options": [
               {
                 "texte": "Deep dish",
@@ -74,15 +74,15 @@
           }
         ],
         "fin": {
-          "question": "Got her 3 picks? Send it and see!",
-          "bouton": "Send this to her",
+          "question": "Now send it to him. Did you guess right?",
+          "bouton": "Send this to him",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Food edition. Pick for her, then let her prove you wrong.\n\nSend this to her",
+      "legende": "Food edition. One letter per question, then send it to him.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
-        "#girlfriendquiz",
+        "#boyfriendquiz",
         "#thisorthat",
         "#foodie",
         "#quizcouple"

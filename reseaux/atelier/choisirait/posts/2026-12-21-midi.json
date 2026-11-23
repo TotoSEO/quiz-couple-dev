@@ -12,17 +12,17 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "elle",
+        "pour": "lui",
         "etiquette": "Dream life edition",
-        "accroche": "What would she choose?",
-        "consigne": "Choose the photo she would pick. 3 rounds!",
+        "accroche": "What would he choose?",
+        "consigne": "One photo per round: the one he would pick!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which watch would she wear?",
+            "question": "Which watch would he wear?",
             "options": [
               {
                 "texte": "Omega Speedmaster",
@@ -39,7 +39,7 @@
             ]
           },
           {
-            "question": "Which house would she pick?",
+            "question": "Which dream house would he pick?",
             "options": [
               {
                 "texte": "Mountain chalet",
@@ -56,7 +56,7 @@
             ]
           },
           {
-            "question": "Which view would she wake up to?",
+            "question": "Which view would he wake up to?",
             "options": [
               {
                 "texte": "Rice fields",
@@ -74,15 +74,15 @@
           }
         ],
         "fin": {
-          "question": "Got her 3 picks? Send it and see!",
-          "bouton": "Send this to her",
+          "question": "Now send it to him. Did you guess right?",
+          "bouton": "Send this to him",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Dream life edition. If you get all three, you know her by heart.\n\nSend this to her",
+      "legende": "Dream life edition. Your answers first, then his reaction.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
-        "#girlfriendquiz",
+        "#boyfriendquiz",
         "#thisorthat",
         "#dreamlife",
         "#quizcouple"

@@ -13,7 +13,7 @@
         "langue": "en",
         "theme": "light",
         "pour": "elle",
-        "etiquette": "Luxury edition",
+        "etiquette": "Style edition",
         "accroche": "What would she choose?",
         "consigne": "Answer for her: A, B or C? Then send it!",
         "secondes": 4,
@@ -22,69 +22,69 @@
         },
         "questions": [
           {
-            "question": "Which watch would she wear?",
+            "question": "Which shoes would she pick?",
             "options": [
               {
-                "texte": "Casio digital",
-                "image": "choisirait/montre/casio.webp"
+                "texte": "UGG boots",
+                "image": "choisirait/chaussures/ugg.webp"
               },
               {
-                "texte": "Pocket watch",
-                "image": "choisirait/montre/gousset.webp"
+                "texte": "High heels",
+                "image": "choisirait/chaussures/talons.webp"
               },
               {
-                "texte": "Rolex Submariner",
-                "image": "choisirait/montre/rolex.webp"
+                "texte": "Knee-high boots",
+                "image": "choisirait/chaussures/cuissardes.webp"
               }
             ]
           },
           {
-            "question": "How would she travel with you?",
+            "question": "Which phone would she pick?",
             "options": [
               {
-                "texte": "Hot air balloon",
-                "image": "choisirait/voyage/montgolfiere.webp"
+                "texte": "BlackBerry",
+                "image": "choisirait/telephone/blackberry.webp"
               },
               {
-                "texte": "Motorbike",
-                "image": "choisirait/moto/bmw-gs.webp"
+                "texte": "iPhone",
+                "image": "choisirait/telephone/iphone.webp"
               },
               {
-                "texte": "Camper van",
-                "image": "choisirait/voyage/van.webp"
+                "texte": "Nokia 3310",
+                "image": "choisirait/telephone/nokia.webp"
               }
             ]
           },
           {
-            "question": "Where would she book a weekend?",
+            "question": "Which sneakers would she pick?",
             "options": [
               {
-                "texte": "Glamping tent",
-                "image": "choisirait/weekend/glamping.webp"
+                "texte": "New Balance",
+                "image": "choisirait/baskets/new-balance.webp"
               },
               {
-                "texte": "Beach bungalow",
-                "image": "choisirait/weekend/bungalow-plage.webp"
+                "texte": "Crocs",
+                "image": "choisirait/baskets/crocs.webp"
               },
               {
-                "texte": "Houseboat",
-                "image": "choisirait/weekend/peniche.webp"
+                "texte": "Air Jordan",
+                "image": "choisirait/baskets/jordan.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Got her 3 picks? Send it and see!",
+          "question": "Now send it to her. Did you guess right?",
           "bouton": "Send this to her",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Luxury edition. Answer for her first, no peeking.\n\nSend this to her",
+      "legende": "Style edition. No cheating: decide before the timer runs out.\n\nSend this to her",
       "hashtags": [
         "#couplequiz",
         "#girlfriendquiz",
         "#thisorthat",
-        "#luxurylife",
+        "#style",
         "#quizcouple"
       ]
     }

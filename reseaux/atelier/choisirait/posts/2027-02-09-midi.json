@@ -13,78 +13,78 @@
         "langue": "en",
         "theme": "light",
         "pour": "elle",
-        "etiquette": "Dream home edition",
+        "etiquette": "Date night edition",
         "accroche": "What would she choose?",
-        "consigne": "Answer for her: A, B or C? Then send it!",
+        "consigne": "Pick A, B or C for her, then send it to her!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which view would she wake up to?",
+            "question": "Which dinner would she pick?",
             "options": [
               {
-                "texte": "Desert",
-                "image": "choisirait/vue/desert-vue.webp"
+                "texte": "Indian curry",
+                "image": "choisirait/diner/curry.webp"
               },
               {
-                "texte": "Lake",
-                "image": "choisirait/vue/lac.webp"
+                "texte": "Ramen",
+                "image": "choisirait/diner/ramen.webp"
               },
               {
-                "texte": "City skyline",
-                "image": "choisirait/vue/skyline.webp"
+                "texte": "Korean BBQ",
+                "image": "choisirait/diner/bbq-coreen.webp"
               }
             ]
           },
           {
-            "question": "Which house would she pick?",
+            "question": "Which flowers would she want?",
             "options": [
               {
-                "texte": "Lake house",
-                "image": "choisirait/maison/maison-lac.webp"
+                "texte": "Tulips",
+                "image": "choisirait/fleurs/tulipes.webp"
               },
               {
-                "texte": "Modern villa",
-                "image": "choisirait/maison/villa-moderne.webp"
+                "texte": "Hydrangeas",
+                "image": "choisirait/fleurs/hortensias.webp"
               },
               {
-                "texte": "Beach house",
-                "image": "choisirait/maison/maison-plage.webp"
+                "texte": "Orchid",
+                "image": "choisirait/fleurs/orchidee.webp"
               }
             ]
           },
           {
-            "question": "Which dog would she pick?",
+            "question": "What would she order at the bar?",
             "options": [
               {
-                "texte": "Samoyed",
-                "image": "choisirait/chien/samoyede.webp"
+                "texte": "Red wine",
+                "image": "choisirait/bar/vin-rouge.webp"
               },
               {
-                "texte": "Belgian Malinois",
-                "image": "choisirait/chien/malinois.webp"
+                "texte": "Aperol Spritz",
+                "image": "choisirait/bar/spritz.webp"
               },
               {
-                "texte": "Great Dane",
-                "image": "choisirait/chien/dogue.webp"
+                "texte": "Whiskey",
+                "image": "choisirait/bar/whisky.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Got her 3 picks? Send it and see!",
+          "question": "Now send it to her. Did you guess right?",
           "bouton": "Send this to her",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Dream home edition. She will swear you got at least one wrong.\n\nSend this to her",
+      "legende": "Date night edition. Guess first, send it after. Then compare.\n\nSend this to her",
       "hashtags": [
         "#couplequiz",
         "#girlfriendquiz",
         "#thisorthat",
-        "#dreamhome",
+        "#datenight",
         "#quizcouple"
       ]
     }

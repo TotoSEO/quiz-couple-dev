@@ -12,79 +12,79 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "lui",
-        "etiquette": "Luxury edition",
-        "accroche": "What would he choose?",
-        "consigne": "Answer for him: A, B or C? Then send it!",
+        "pour": "elle",
+        "etiquette": "Valentine's edition",
+        "accroche": "What would she choose?",
+        "consigne": "Answer for her: A, B or C? Then send it!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which watch would he wear?",
+            "question": "What would she want for Valentine's?",
             "options": [
               {
-                "texte": "Seiko diver",
-                "image": "choisirait/montre/seiko.webp"
+                "texte": "Heart balloons",
+                "image": "choisirait/valentin/ballons-coeur.webp"
               },
               {
-                "texte": "Omega Speedmaster",
-                "image": "choisirait/montre/speedmaster.webp"
+                "texte": "Perfume",
+                "image": "choisirait/valentin/parfum-valentin.webp"
               },
               {
-                "texte": "Casio digital",
-                "image": "choisirait/montre/casio.webp"
+                "texte": "Jewelry",
+                "image": "choisirait/valentin/bijou.webp"
               }
             ]
           },
           {
-            "question": "How would he travel with you?",
+            "question": "Which ring would she want?",
             "options": [
               {
-                "texte": "Hot air balloon",
-                "image": "choisirait/voyage/montgolfiere.webp"
+                "texte": "Rose gold ring",
+                "image": "choisirait/bague/or-rose.webp"
               },
               {
-                "texte": "Cruise ship",
-                "image": "choisirait/voyage/croisiere.webp"
+                "texte": "Solitaire diamond",
+                "image": "choisirait/bague/solitaire.webp"
               },
               {
-                "texte": "Camper van",
-                "image": "choisirait/voyage/van.webp"
+                "texte": "Gold band",
+                "image": "choisirait/bague/alliance-or.webp"
               }
             ]
           },
           {
-            "question": "Which car would he drive?",
+            "question": "Which flowers would she want?",
             "options": [
               {
-                "texte": "Fiat 500",
-                "image": "choisirait/voiture/fiat-500.webp"
+                "texte": "Daisies",
+                "image": "choisirait/fleurs/marguerites.webp"
               },
               {
-                "texte": "Corvette",
-                "image": "choisirait/voiture/corvette.webp"
+                "texte": "Wildflowers",
+                "image": "choisirait/fleurs/fleurs-sauvages.webp"
               },
               {
-                "texte": "Bugatti Chiron",
-                "image": "choisirait/voiture/bugatti.webp"
+                "texte": "Sunflowers",
+                "image": "choisirait/fleurs/tournesols.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Now send it to him. Did you guess right?",
-          "bouton": "Send this to him",
+          "question": "Got her 3 picks? Send it and see!",
+          "bouton": "Send this to her",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Luxury edition. Answer for him first, no peeking.\n\nSend this to him",
+      "legende": "Valentine's edition. No cheating: decide before the timer runs out.\n\nSend this to her",
       "hashtags": [
         "#couplequiz",
-        "#boyfriendquiz",
+        "#girlfriendquiz",
         "#thisorthat",
-        "#luxurylife",
+        "#valentinesday",
         "#quizcouple"
       ]
     }

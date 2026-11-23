@@ -13,62 +13,62 @@
         "langue": "en",
         "theme": "light",
         "pour": "lui",
-        "etiquette": "Game night edition",
+        "etiquette": "Travel edition",
         "accroche": "What would he choose?",
-        "consigne": "One photo per round: the one he would pick!",
+        "consigne": "Answer for him: A, B or C? Then send it!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "What would he order at 2 a.m.?",
+            "question": "Which city would he take you to?",
             "options": [
               {
-                "texte": "Grilled cheese",
-                "image": "choisirait/fastfood/croque.webp"
+                "texte": "London",
+                "image": "choisirait/ville/londres.webp"
               },
               {
-                "texte": "Tacos",
-                "image": "choisirait/fastfood/tacos.webp"
+                "texte": "Paris",
+                "image": "choisirait/ville/paris.webp"
               },
               {
-                "texte": "Kebab",
-                "image": "choisirait/fastfood/kebab.webp"
+                "texte": "Rio de Janeiro",
+                "image": "choisirait/ville/rio.webp"
               }
             ]
           },
           {
-            "question": "Which console would he pick?",
+            "question": "Where would he go on vacation?",
             "options": [
               {
-                "texte": "Nintendo Switch",
-                "image": "choisirait/console/switch.webp"
+                "texte": "Morocco",
+                "image": "choisirait/vacances/maroc.webp"
               },
               {
-                "texte": "PlayStation 5",
-                "image": "choisirait/console/ps5.webp"
+                "texte": "Dubai",
+                "image": "choisirait/vacances/dubai.webp"
               },
               {
-                "texte": "PlayStation 2",
-                "image": "choisirait/console/ps2.webp"
+                "texte": "Egypt",
+                "image": "choisirait/vacances/egypte.webp"
               }
             ]
           },
           {
-            "question": "Which movie snack would he pick?",
+            "question": "Where would he book a weekend for two?",
             "options": [
               {
-                "texte": "Popcorn",
-                "image": "choisirait/snack/popcorn.webp"
+                "texte": "Desert camp",
+                "image": "choisirait/weekend/desert.webp"
               },
               {
-                "texte": "Nachos",
-                "image": "choisirait/snack/nachos.webp"
+                "texte": "Log cabin",
+                "image": "choisirait/weekend/chalet-bois.webp"
               },
               {
-                "texte": "Chocolate bar",
-                "image": "choisirait/snack/tablette.webp"
+                "texte": "Castle hotel",
+                "image": "choisirait/weekend/chateau-hotel.webp"
               }
             ]
           }
@@ -79,12 +79,12 @@
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Game night edition. Your answers first, then his reaction.\n\nSend this to him",
+      "legende": "Travel edition. No cheating: decide before the timer runs out.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
         "#boyfriendquiz",
         "#thisorthat",
-        "#gamenight",
+        "#travelcouple",
         "#quizcouple"
       ]
     }

@@ -15,7 +15,7 @@
         "pour": "elle",
         "etiquette": "Adventure edition",
         "accroche": "What would she choose?",
-        "consigne": "Pick A, B or C for her, then send it to her!",
+        "consigne": "One photo per round: the one she would pick!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
@@ -74,12 +74,12 @@
           }
         ],
         "fin": {
-          "question": "Got her 3 picks? Send it and see!",
+          "question": "Now send it to her. Did you guess right?",
           "bouton": "Send this to her",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Adventure edition. Guess first, send it after. Then compare.\n\nSend this to her",
+      "legende": "Adventure edition. Pick for her, then let her prove you wrong.\n\nSend this to her",
       "hashtags": [
         "#couplequiz",
         "#girlfriendquiz",

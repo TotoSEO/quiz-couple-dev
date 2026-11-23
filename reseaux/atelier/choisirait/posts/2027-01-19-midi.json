@@ -12,79 +12,79 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "elle",
-        "etiquette": "Sweet tooth edition",
-        "accroche": "What would she choose?",
-        "consigne": "One photo per round: the one she would pick!",
+        "pour": "lui",
+        "etiquette": "Adventure edition",
+        "accroche": "What would he choose?",
+        "consigne": "Answer for him: A, B or C? Then send it!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "What would she grab at the bakery?",
+            "question": "Which adventure would he try?",
             "options": [
               {
-                "texte": "Cinnamon roll",
-                "image": "choisirait/boulangerie/cinnamon-roll.webp"
+                "texte": "Skiing",
+                "image": "choisirait/aventure/ski.webp"
               },
               {
-                "texte": "Brioche",
-                "image": "choisirait/boulangerie/brioche.webp"
+                "texte": "Kayaking",
+                "image": "choisirait/aventure/kayak.webp"
               },
               {
-                "texte": "Muffin",
-                "image": "choisirait/boulangerie/muffin.webp"
+                "texte": "Surfing",
+                "image": "choisirait/aventure/surf.webp"
               }
             ]
           },
           {
-            "question": "Which ice cream would she get?",
+            "question": "Which sport would he watch?",
             "options": [
               {
-                "texte": "Banana split",
-                "image": "choisirait/glace/banana-split.webp"
+                "texte": "Football",
+                "image": "choisirait/sport/foot.webp"
               },
               {
-                "texte": "Mochi ice cream",
-                "image": "choisirait/glace/mochi.webp"
+                "texte": "Formula 1",
+                "image": "choisirait/sport/f1.webp"
               },
               {
-                "texte": "Affogato",
-                "image": "choisirait/glace/affogato.webp"
+                "texte": "Ice hockey",
+                "image": "choisirait/sport/hockey.webp"
               }
             ]
           },
           {
-            "question": "Which cake would she pick?",
+            "question": "Where would he take you on vacation?",
             "options": [
               {
-                "texte": "Red velvet cake",
-                "image": "choisirait/dessert/red-velvet.webp"
+                "texte": "Costa Rica",
+                "image": "choisirait/vacances/costa-rica.webp"
               },
               {
-                "texte": "Crêpes",
-                "image": "choisirait/dessert/crepes.webp"
+                "texte": "Lapland",
+                "image": "choisirait/vacances/laponie.webp"
               },
               {
-                "texte": "Cheesecake",
-                "image": "choisirait/dessert/cheesecake.webp"
+                "texte": "Bali",
+                "image": "choisirait/vacances/bali.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Got her 3 picks? Send it and see!",
-          "bouton": "Send this to her",
+          "question": "Now send it to him. Did you guess right?",
+          "bouton": "Send this to him",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Sweet tooth edition. Your answers first, then her reaction.\n\nSend this to her",
+      "legende": "Adventure edition. No cheating: decide before the timer runs out.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
-        "#girlfriendquiz",
+        "#boyfriendquiz",
         "#thisorthat",
-        "#dessert",
+        "#adventurecouple",
         "#quizcouple"
       ]
     }

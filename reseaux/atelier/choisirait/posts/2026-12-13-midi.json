@@ -39,7 +39,7 @@
             ]
           },
           {
-            "question": "Which gift would she want?",
+            "question": "Which gift would make her happy?",
             "options": [
               {
                 "texte": "Lego set",
@@ -74,7 +74,7 @@
           }
         ],
         "fin": {
-          "question": "Got her 3 picks? Send it and see!",
+          "question": "Now send it to her. Did you guess right?",
           "bouton": "Send this to her",
           "signature": "More couple quizzes on quiz-couple.com"
         }

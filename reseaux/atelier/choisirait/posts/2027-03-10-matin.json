@@ -13,62 +13,62 @@
         "langue": "en",
         "theme": "light",
         "pour": "lui",
-        "etiquette": "Weekend edition",
+        "etiquette": "Morning edition",
         "accroche": "What would he choose?",
-        "consigne": "One photo per round: the one he would pick!",
+        "consigne": "Pick A, B or C for him, then send it to him!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which hobby would he pick up?",
+            "question": "Which breakfast would he choose?",
             "options": [
               {
-                "texte": "Photography",
-                "image": "choisirait/loisir/photo.webp"
+                "texte": "French toast",
+                "image": "choisirait/petitdej/pain-perdu.webp"
               },
               {
-                "texte": "Woodworking",
-                "image": "choisirait/loisir/menuiserie.webp"
+                "texte": "Full English",
+                "image": "choisirait/petitdej/english.webp"
               },
               {
-                "texte": "Fishing",
-                "image": "choisirait/loisir/peche.webp"
+                "texte": "Shakshuka",
+                "image": "choisirait/petitdej/shakshuka.webp"
               }
             ]
           },
           {
-            "question": "Which workout would he pick?",
+            "question": "How would he have his eggs?",
             "options": [
               {
-                "texte": "Swimming",
-                "image": "choisirait/salle/natation.webp"
+                "texte": "Omelette",
+                "image": "choisirait/oeufs/omelette.webp"
               },
               {
-                "texte": "Yoga",
-                "image": "choisirait/salle/yoga.webp"
+                "texte": "Soft-boiled",
+                "image": "choisirait/oeufs/coque.webp"
               },
               {
-                "texte": "Boxing",
-                "image": "choisirait/salle/boxe-salle.webp"
+                "texte": "Scrambled",
+                "image": "choisirait/oeufs/brouilles.webp"
               }
             ]
           },
           {
-            "question": "Which adventure would he try?",
+            "question": "Which coffee would he order?",
             "options": [
               {
-                "texte": "Surfing",
-                "image": "choisirait/aventure/surf.webp"
+                "texte": "Cappuccino",
+                "image": "choisirait/cafe/cappuccino.webp"
               },
               {
-                "texte": "Horse riding",
-                "image": "choisirait/aventure/equitation.webp"
+                "texte": "Matcha latte",
+                "image": "choisirait/cafe/matcha.webp"
               },
               {
-                "texte": "Kayaking",
-                "image": "choisirait/aventure/kayak.webp"
+                "texte": "Iced latte",
+                "image": "choisirait/cafe/iced-latte.webp"
               }
             ]
           }
@@ -79,12 +79,12 @@
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Weekend edition. Easy for you? Then the next one is for him.\n\nSend this to him",
+      "legende": "Morning edition. Answer for him first, no peeking.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
         "#boyfriendquiz",
         "#thisorthat",
-        "#weekendvibes",
+        "#breakfast",
         "#quizcouple"
       ]
     }

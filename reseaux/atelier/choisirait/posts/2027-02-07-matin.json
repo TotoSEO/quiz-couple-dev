@@ -13,78 +13,78 @@
         "langue": "en",
         "theme": "light",
         "pour": "lui",
-        "etiquette": "Wedding edition",
+        "etiquette": "Travel edition",
         "accroche": "What would he choose?",
-        "consigne": "Choose the photo he would pick. 3 rounds!",
+        "consigne": "One photo per round: the one he would pick!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Where would he propose?",
+            "question": "Which city would he take you to?",
             "options": [
               {
-                "texte": "Eiffel Tower",
-                "image": "choisirait/demande/demande-eiffel.webp"
+                "texte": "Seoul",
+                "image": "choisirait/ville/seoul.webp"
               },
               {
-                "texte": "Mountaintop",
-                "image": "choisirait/demande/demande-montagne.webp"
+                "texte": "Las Vegas",
+                "image": "choisirait/ville/las-vegas.webp"
               },
               {
-                "texte": "Northern lights",
-                "image": "choisirait/demande/demande-aurores.webp"
+                "texte": "Istanbul",
+                "image": "choisirait/ville/istanbul.webp"
               }
             ]
           },
           {
-            "question": "Where would he want to get married?",
+            "question": "Where would he book a weekend?",
             "options": [
               {
-                "texte": "Vineyard",
-                "image": "choisirait/vue/vignes.webp"
+                "texte": "Houseboat",
+                "image": "choisirait/weekend/peniche.webp"
               },
               {
-                "texte": "Vegas chapel",
-                "image": "choisirait/mariage/vegas.webp"
+                "texte": "Glamping tent",
+                "image": "choisirait/weekend/glamping.webp"
               },
               {
-                "texte": "Beach",
-                "image": "choisirait/vue/plage-tropicale.webp"
+                "texte": "Beach bungalow",
+                "image": "choisirait/weekend/bungalow-plage.webp"
               }
             ]
           },
           {
-            "question": "Which ring would he pick for you?",
+            "question": "Where would he go on vacation?",
             "options": [
               {
-                "texte": "Solitaire diamond",
-                "image": "choisirait/bague/solitaire.webp"
+                "texte": "Australia",
+                "image": "choisirait/vacances/australie.webp"
               },
               {
-                "texte": "Halo ring",
-                "image": "choisirait/bague/halo.webp"
+                "texte": "Peru",
+                "image": "choisirait/vacances/perou.webp"
               },
               {
-                "texte": "Vintage ring",
-                "image": "choisirait/bague/vintage-bague.webp"
+                "texte": "Italy",
+                "image": "choisirait/vacances/italie.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Now send it to him. Did you guess right?",
+          "question": "Got his 3 picks? Send it and see!",
           "bouton": "Send this to him",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Wedding edition. Write down his three letters before you send it.\n\nSend this to him",
+      "legende": "Travel edition. Write down his three letters before you send it.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
         "#boyfriendquiz",
         "#thisorthat",
-        "#engaged",
+        "#travelcouple",
         "#quizcouple"
       ]
     }

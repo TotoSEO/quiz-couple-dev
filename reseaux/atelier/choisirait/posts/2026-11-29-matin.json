@@ -12,17 +12,17 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "elle",
+        "pour": "lui",
         "etiquette": "Cozy night in edition",
-        "accroche": "What would she choose?",
-        "consigne": "One photo per round: the one she would pick!",
+        "accroche": "What would he choose?",
+        "consigne": "Answer for him: A, B or C? Then send it!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which console would she pick?",
+            "question": "Which console would he pick?",
             "options": [
               {
                 "texte": "Nintendo Switch",
@@ -39,7 +39,7 @@
             ]
           },
           {
-            "question": "Which game night would she pick?",
+            "question": "Which game night would he pick?",
             "options": [
               {
                 "texte": "Board games",
@@ -56,7 +56,7 @@
             ]
           },
           {
-            "question": "Which movie snack would she pick?",
+            "question": "Which movie snack would he pick?",
             "options": [
               {
                 "texte": "Popcorn",
@@ -74,15 +74,15 @@
           }
         ],
         "fin": {
-          "question": "Got her 3 picks? Send it and see!",
-          "bouton": "Send this to her",
+          "question": "Now send it to him. Did you guess right?",
+          "bouton": "Send this to him",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Cozy night in edition. Write down her three letters before you send it.\n\nSend this to her",
+      "legende": "Cozy night in edition. He will swear you got at least one wrong.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
-        "#girlfriendquiz",
+        "#boyfriendquiz",
         "#thisorthat",
         "#cozynight",
         "#quizcouple"

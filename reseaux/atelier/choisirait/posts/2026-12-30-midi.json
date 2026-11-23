@@ -12,17 +12,17 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "lui",
+        "pour": "elle",
         "etiquette": "Winter edition",
-        "accroche": "What would he choose?",
-        "consigne": "Answer for him: A, B or C? Then send it!",
+        "accroche": "What would she choose?",
+        "consigne": "Answer for her: A, B or C? Then send it!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which winter date would he pick?",
+            "question": "Which winter date would she pick?",
             "options": [
               {
                 "texte": "Sledding",
@@ -39,7 +39,7 @@
             ]
           },
           {
-            "question": "Which dinner would he pick?",
+            "question": "What would she cook for date night?",
             "options": [
               {
                 "texte": "Lobster",
@@ -56,7 +56,7 @@
             ]
           },
           {
-            "question": "Where would he book a weekend?",
+            "question": "Where would she book a weekend for two?",
             "options": [
               {
                 "texte": "Glamping tent",
@@ -74,15 +74,15 @@
           }
         ],
         "fin": {
-          "question": "Send it to him: how many did you get?",
-          "bouton": "Send this to him",
+          "question": "Send it to her: how many did you get?",
+          "bouton": "Send this to her",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Winter edition. Answer for him first, no peeking.\n\nSend this to him",
+      "legende": "Winter edition. No cheating: decide before the timer runs out.\n\nSend this to her",
       "hashtags": [
         "#couplequiz",
-        "#boyfriendquiz",
+        "#girlfriendquiz",
         "#thisorthat",
         "#winter",
         "#quizcouple"

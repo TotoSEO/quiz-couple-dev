@@ -15,7 +15,7 @@
         "pour": "lui",
         "etiquette": "New Year's edition",
         "accroche": "What would he choose?",
-        "consigne": "One photo per round: the one he would pick!",
+        "consigne": "Answer for him: A, B or C? Then send it!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
@@ -56,7 +56,7 @@
             ]
           },
           {
-            "question": "Which date would he plan?",
+            "question": "Which date would he take you on?",
             "options": [
               {
                 "texte": "Beach sunset",
@@ -79,7 +79,7 @@
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "New Year's edition. Your answers first, then his reaction.\n\nSend this to him",
+      "legende": "New Year's edition. No cheating: decide before the timer runs out.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
         "#boyfriendquiz",

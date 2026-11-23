@@ -13,45 +13,45 @@
         "langue": "en",
         "theme": "light",
         "pour": "elle",
-        "etiquette": "Date night edition",
+        "etiquette": "Valentine's edition",
         "accroche": "What would she choose?",
-        "consigne": "Pick A, B or C for her, then send it to her!",
+        "consigne": "Choose the photo she would pick. 3 rounds!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which dinner would she pick?",
+            "question": "What would she want for Valentine's?",
             "options": [
               {
-                "texte": "Fish and chips",
-                "image": "choisirait/diner/fish-chips.webp"
+                "texte": "Red roses",
+                "image": "choisirait/valentin/valentin-roses.webp"
               },
               {
-                "texte": "Lobster",
-                "image": "choisirait/diner/homard.webp"
+                "texte": "Breakfast in bed",
+                "image": "choisirait/valentin/petit-dej-lit.webp"
               },
               {
-                "texte": "Cheese fondue",
-                "image": "choisirait/diner/fondue.webp"
+                "texte": "Heart balloons",
+                "image": "choisirait/valentin/ballons-coeur.webp"
               }
             ]
           },
           {
-            "question": "What would she order at the bar?",
+            "question": "Which ring would she want?",
             "options": [
               {
-                "texte": "Margarita",
-                "image": "choisirait/bar/margarita.webp"
+                "texte": "Vintage ring",
+                "image": "choisirait/bague/vintage-bague.webp"
               },
               {
-                "texte": "Gin and tonic",
-                "image": "choisirait/bar/gin-tonic.webp"
+                "texte": "Rose gold ring",
+                "image": "choisirait/bague/or-rose.webp"
               },
               {
-                "texte": "Aperol Spritz",
-                "image": "choisirait/bar/spritz.webp"
+                "texte": "Solitaire diamond",
+                "image": "choisirait/bague/solitaire.webp"
               }
             ]
           },
@@ -59,32 +59,32 @@
             "question": "Which flowers would she want?",
             "options": [
               {
+                "texte": "Lavender",
+                "image": "choisirait/fleurs/lavande.webp"
+              },
+              {
                 "texte": "Peonies",
                 "image": "choisirait/fleurs/pivoines.webp"
               },
               {
-                "texte": "Daisies",
-                "image": "choisirait/fleurs/marguerites.webp"
-              },
-              {
-                "texte": "Sunflowers",
-                "image": "choisirait/fleurs/tournesols.webp"
+                "texte": "Red roses",
+                "image": "choisirait/fleurs/roses.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Got her 3 picks? Send it and see!",
+          "question": "Now send it to her. Did you guess right?",
           "bouton": "Send this to her",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Date night edition. Answer for her first, no peeking.\n\nSend this to her",
+      "legende": "Valentine's edition. Easy for you? Then the next one is for her.\n\nSend this to her",
       "hashtags": [
         "#couplequiz",
         "#girlfriendquiz",
         "#thisorthat",
-        "#datenight",
+        "#valentinesday",
         "#quizcouple"
       ]
     }

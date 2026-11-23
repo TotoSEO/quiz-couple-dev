@@ -13,78 +13,78 @@
         "langue": "en",
         "theme": "light",
         "pour": "elle",
-        "etiquette": "Winter edition",
+        "etiquette": "Date night edition",
         "accroche": "What would she choose?",
-        "consigne": "Answer for her: A, B or C? Then send it!",
+        "consigne": "Pick A, B or C for her, then send it to her!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which winter date would she pick?",
+            "question": "Which date would she take you on?",
             "options": [
               {
-                "texte": "Sledding",
-                "image": "choisirait/hiver/luge.webp"
+                "texte": "Camping",
+                "image": "choisirait/date/camping.webp"
               },
               {
-                "texte": "Building a snowman",
-                "image": "choisirait/hiver/bonhomme.webp"
+                "texte": "Museum",
+                "image": "choisirait/date/musee.webp"
               },
               {
-                "texte": "Ice skating",
-                "image": "choisirait/hiver/hiver-patin.webp"
+                "texte": "Arcade",
+                "image": "choisirait/date/arcade.webp"
               }
             ]
           },
           {
-            "question": "What would she cook for date night?",
+            "question": "Which movie snack would she pick?",
             "options": [
               {
-                "texte": "Raclette",
-                "image": "choisirait/diner/raclette.webp"
+                "texte": "Gummy bears",
+                "image": "choisirait/snack/oursons.webp"
               },
               {
-                "texte": "Pad thai",
-                "image": "choisirait/diner/pad-thai.webp"
+                "texte": "Nachos",
+                "image": "choisirait/snack/nachos.webp"
               },
               {
-                "texte": "Sushi",
-                "image": "choisirait/diner/sushi.webp"
+                "texte": "Licorice",
+                "image": "choisirait/snack/reglisse.webp"
               }
             ]
           },
           {
-            "question": "Which coffee would she order?",
+            "question": "Which flowers would she want?",
             "options": [
               {
-                "texte": "Matcha latte",
-                "image": "choisirait/cafe/matcha.webp"
+                "texte": "Peonies",
+                "image": "choisirait/fleurs/pivoines.webp"
               },
               {
-                "texte": "Americano",
-                "image": "choisirait/cafe/americano.webp"
+                "texte": "Lavender",
+                "image": "choisirait/fleurs/lavande.webp"
               },
               {
-                "texte": "Iced latte",
-                "image": "choisirait/cafe/iced-latte.webp"
+                "texte": "Lilies",
+                "image": "choisirait/fleurs/lys.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Got her 3 picks? Send it and see!",
+          "question": "Now send it to her. Did you guess right?",
           "bouton": "Send this to her",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Winter edition. Answer for her first, no peeking.\n\nSend this to her",
+      "legende": "Date night edition. No cheating: decide before the timer runs out.\n\nSend this to her",
       "hashtags": [
         "#couplequiz",
         "#girlfriendquiz",
         "#thisorthat",
-        "#winter",
+        "#datenight",
         "#quizcouple"
       ]
     }

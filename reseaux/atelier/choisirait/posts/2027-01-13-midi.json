@@ -12,79 +12,79 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "lui",
-        "etiquette": "Travel edition",
-        "accroche": "What would he choose?",
-        "consigne": "Pick A, B or C for him, then send it to him!",
+        "pour": "elle",
+        "etiquette": "Hobbies edition",
+        "accroche": "What would she choose?",
+        "consigne": "One photo per round: the one she would pick!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which city would he take you to?",
+            "question": "Which instrument would she play?",
             "options": [
               {
-                "texte": "London",
-                "image": "choisirait/ville/londres.webp"
+                "texte": "DJ decks",
+                "image": "choisirait/instrument/platines.webp"
               },
               {
-                "texte": "Prague",
-                "image": "choisirait/ville/prague.webp"
+                "texte": "Trumpet",
+                "image": "choisirait/instrument/trompette.webp"
               },
               {
-                "texte": "Tokyo",
-                "image": "choisirait/ville/tokyo.webp"
+                "texte": "Electric guitar",
+                "image": "choisirait/instrument/guitare-electrique.webp"
               }
             ]
           },
           {
-            "question": "How would he travel with you?",
+            "question": "Which workout would she pick?",
             "options": [
               {
-                "texte": "Cruise ship",
-                "image": "choisirait/voyage/croisiere.webp"
+                "texte": "Running",
+                "image": "choisirait/salle/course.webp"
               },
               {
-                "texte": "Motorbike",
-                "image": "choisirait/moto/bmw-gs.webp"
+                "texte": "Cycling",
+                "image": "choisirait/salle/velo.webp"
               },
               {
-                "texte": "Camper van",
-                "image": "choisirait/voyage/van.webp"
+                "texte": "Yoga",
+                "image": "choisirait/salle/yoga.webp"
               }
             ]
           },
           {
-            "question": "Where would he book a weekend for two?",
+            "question": "Which game night would she pick?",
             "options": [
               {
-                "texte": "Ski chalet",
-                "image": "choisirait/weekend/chalet-ski.webp"
+                "texte": "Board games",
+                "image": "choisirait/jeu/jeux-societe.webp"
               },
               {
-                "texte": "Castle hotel",
-                "image": "choisirait/weekend/chateau-hotel.webp"
+                "texte": "Ping pong",
+                "image": "choisirait/jeu/ping-pong.webp"
               },
               {
-                "texte": "Log cabin",
-                "image": "choisirait/weekend/chalet-bois.webp"
+                "texte": "Pool",
+                "image": "choisirait/jeu/billard.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Now send it to him. Did you guess right?",
-          "bouton": "Send this to him",
+          "question": "Got her 3 picks? Send it and see!",
+          "bouton": "Send this to her",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Travel edition. He will swear you got at least one wrong.\n\nSend this to him",
+      "legende": "Hobbies edition. Your answers first, then her reaction.\n\nSend this to her",
       "hashtags": [
         "#couplequiz",
-        "#boyfriendquiz",
+        "#girlfriendquiz",
         "#thisorthat",
-        "#travelcouple",
+        "#hobbies",
         "#quizcouple"
       ]
     }

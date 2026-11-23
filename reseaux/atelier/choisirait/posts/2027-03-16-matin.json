@@ -12,79 +12,79 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "lui",
-        "etiquette": "Morning edition",
-        "accroche": "What would he choose?",
-        "consigne": "Answer for him: A, B or C? Then send it!",
+        "pour": "elle",
+        "etiquette": "Adventure edition",
+        "accroche": "What would she choose?",
+        "consigne": "Pick A, B or C for her, then send it to her!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "How would he have his eggs?",
+            "question": "Which sport would she watch?",
             "options": [
               {
-                "texte": "Scrambled",
-                "image": "choisirait/oeufs/brouilles.webp"
+                "texte": "Football",
+                "image": "choisirait/sport/foot.webp"
               },
               {
-                "texte": "Omelette",
-                "image": "choisirait/oeufs/omelette.webp"
+                "texte": "Formula 1",
+                "image": "choisirait/sport/f1.webp"
               },
               {
-                "texte": "Poached",
-                "image": "choisirait/oeufs/poche.webp"
+                "texte": "Golf",
+                "image": "choisirait/sport/golf.webp"
               }
             ]
           },
           {
-            "question": "Which breakfast would he make you?",
+            "question": "Which adventure would she try?",
             "options": [
               {
-                "texte": "Full English",
-                "image": "choisirait/petitdej/english.webp"
+                "texte": "Scuba diving",
+                "image": "choisirait/aventure/plongee.webp"
               },
               {
-                "texte": "Cereal",
-                "image": "choisirait/petitdej/cereales.webp"
+                "texte": "Paragliding",
+                "image": "choisirait/aventure/parapente.webp"
               },
               {
-                "texte": "French toast",
-                "image": "choisirait/petitdej/pain-perdu.webp"
+                "texte": "Skiing",
+                "image": "choisirait/aventure/ski.webp"
               }
             ]
           },
           {
-            "question": "What would he grab at the bakery?",
+            "question": "How would she travel with you?",
             "options": [
               {
-                "texte": "Pain au chocolat",
-                "image": "choisirait/boulangerie/pain-chocolat.webp"
+                "texte": "Hot air balloon",
+                "image": "choisirait/voyage/montgolfiere.webp"
               },
               {
-                "texte": "Cinnamon roll",
-                "image": "choisirait/boulangerie/cinnamon-roll.webp"
+                "texte": "Motorbike",
+                "image": "choisirait/moto/bmw-gs.webp"
               },
               {
-                "texte": "Muffin",
-                "image": "choisirait/boulangerie/muffin.webp"
+                "texte": "Convertible",
+                "image": "choisirait/voyage/cabriolet.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Now send it to him. Did you guess right?",
-          "bouton": "Send this to him",
+          "question": "Got her 3 picks? Send it and see!",
+          "bouton": "Send this to her",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Morning edition. Answer for him first, no peeking.\n\nSend this to him",
+      "legende": "Adventure edition. No cheating: decide before the timer runs out.\n\nSend this to her",
       "hashtags": [
         "#couplequiz",
-        "#boyfriendquiz",
+        "#girlfriendquiz",
         "#thisorthat",
-        "#breakfast",
+        "#adventurecouple",
         "#quizcouple"
       ]
     }

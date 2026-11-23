@@ -15,7 +15,7 @@
         "pour": "lui",
         "etiquette": "Sweet tooth edition",
         "accroche": "What would he choose?",
-        "consigne": "One photo per round: the one he would pick!",
+        "consigne": "Answer for him: A, B or C? Then send it!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
@@ -74,12 +74,12 @@
           }
         ],
         "fin": {
-          "question": "Now send it to him. Did you guess right?",
+          "question": "Got his 3 picks? Send it and see!",
           "bouton": "Send this to him",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Sweet tooth edition. If you get all three, you know him by heart.\n\nSend this to him",
+      "legende": "Sweet tooth edition. Guess first, send it after. Then compare.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
         "#boyfriendquiz",

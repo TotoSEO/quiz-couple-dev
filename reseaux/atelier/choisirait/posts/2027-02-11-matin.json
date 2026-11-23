@@ -12,59 +12,59 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "elle",
+        "pour": "lui",
         "etiquette": "Cozy night in edition",
-        "accroche": "What would she choose?",
-        "consigne": "Choose the photo she would pick. 3 rounds!",
+        "accroche": "What would he choose?",
+        "consigne": "One photo per round: the one he would pick!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which cake would she pick?",
+            "question": "What would he cook for date night?",
             "options": [
               {
-                "texte": "Apple pie",
-                "image": "choisirait/dessert/tarte-pommes.webp"
+                "texte": "Fish and chips",
+                "image": "choisirait/diner/fish-chips.webp"
               },
               {
-                "texte": "Crème brûlée",
-                "image": "choisirait/dessert/creme-brulee.webp"
+                "texte": "Korean BBQ",
+                "image": "choisirait/diner/bbq-coreen.webp"
               },
               {
-                "texte": "Pavlova",
-                "image": "choisirait/dessert/pavlova.webp"
+                "texte": "Paella",
+                "image": "choisirait/diner/paella.webp"
               }
             ]
           },
           {
-            "question": "Which game night would she pick?",
+            "question": "Which game night would he pick?",
             "options": [
               {
-                "texte": "Board games",
-                "image": "choisirait/jeu/jeux-societe.webp"
+                "texte": "Poker",
+                "image": "choisirait/jeu/poker.webp"
               },
               {
                 "texte": "Ping pong",
                 "image": "choisirait/jeu/ping-pong.webp"
               },
               {
-                "texte": "Poker",
-                "image": "choisirait/jeu/poker.webp"
+                "texte": "Board games",
+                "image": "choisirait/jeu/jeux-societe.webp"
               }
             ]
           },
           {
-            "question": "Which movie snack would she pick?",
+            "question": "Which movie snack would he pick?",
             "options": [
               {
-                "texte": "Nachos",
-                "image": "choisirait/snack/nachos.webp"
+                "texte": "Gummy bears",
+                "image": "choisirait/snack/oursons.webp"
               },
               {
-                "texte": "Popcorn",
-                "image": "choisirait/snack/popcorn.webp"
+                "texte": "Chocolate bar",
+                "image": "choisirait/snack/tablette.webp"
               },
               {
                 "texte": "Ice cream tub",
@@ -74,15 +74,15 @@
           }
         ],
         "fin": {
-          "question": "Got her 3 picks? Send it and see!",
-          "bouton": "Send this to her",
+          "question": "Now send it to him. Did you guess right?",
+          "bouton": "Send this to him",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Cozy night in edition. Easy for you? Then the next one is for her.\n\nSend this to her",
+      "legende": "Cozy night in edition. Pick for him, then let him prove you wrong.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
-        "#girlfriendquiz",
+        "#boyfriendquiz",
         "#thisorthat",
         "#cozynight",
         "#quizcouple"

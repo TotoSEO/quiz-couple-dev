@@ -12,17 +12,17 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "lui",
+        "pour": "elle",
         "etiquette": "Christmas edition",
-        "accroche": "What would he choose?",
-        "consigne": "Answer for him: A, B or C? Then send it!",
+        "accroche": "What would she choose?",
+        "consigne": "Answer for her: A, B or C? Then send it!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which gift would make him happy?",
+            "question": "Which gift would she want?",
             "options": [
               {
                 "texte": "Book",
@@ -39,7 +39,7 @@
             ]
           },
           {
-            "question": "Which Christmas date would he plan?",
+            "question": "Which Christmas date would she plan?",
             "options": [
               {
                 "texte": "Snowy chalet",
@@ -56,7 +56,7 @@
             ]
           },
           {
-            "question": "Which Christmas treat would he pick?",
+            "question": "Which Christmas treat would she pick?",
             "options": [
               {
                 "texte": "Christmas pudding",
@@ -74,15 +74,15 @@
           }
         ],
         "fin": {
-          "question": "Now send it to him. Did you guess right?",
-          "bouton": "Send this to him",
+          "question": "Got her 3 picks? Send it and see!",
+          "bouton": "Send this to her",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Christmas edition. Answer for him first, no peeking.\n\nSend this to him",
+      "legende": "Christmas edition. No cheating: decide before the timer runs out.\n\nSend this to her",
       "hashtags": [
         "#couplequiz",
-        "#boyfriendquiz",
+        "#girlfriendquiz",
         "#thisorthat",
         "#christmas",
         "#quizcouple"

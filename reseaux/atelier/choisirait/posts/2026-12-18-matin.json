@@ -12,17 +12,17 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "elle",
+        "pour": "lui",
         "etiquette": "Morning edition",
-        "accroche": "What would she choose?",
-        "consigne": "One photo per round: the one she would pick!",
+        "accroche": "What would he choose?",
+        "consigne": "Pick A, B or C for him, then send it to him!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "How would she have her eggs?",
+            "question": "How would he have his eggs?",
             "options": [
               {
                 "texte": "Scrambled",
@@ -39,7 +39,7 @@
             ]
           },
           {
-            "question": "Which breakfast would she choose?",
+            "question": "Which breakfast would he make you?",
             "options": [
               {
                 "texte": "French toast",
@@ -56,7 +56,7 @@
             ]
           },
           {
-            "question": "What would she grab at the bakery?",
+            "question": "What would he grab at the bakery?",
             "options": [
               {
                 "texte": "Bagel",
@@ -74,15 +74,15 @@
           }
         ],
         "fin": {
-          "question": "Got her 3 picks? Send it and see!",
-          "bouton": "Send this to her",
+          "question": "Now send it to him. Did you guess right?",
+          "bouton": "Send this to him",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Morning edition. Your answers first, then her reaction.\n\nSend this to her",
+      "legende": "Morning edition. No cheating: decide before the timer runs out.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
-        "#girlfriendquiz",
+        "#boyfriendquiz",
         "#thisorthat",
         "#breakfast",
         "#quizcouple"

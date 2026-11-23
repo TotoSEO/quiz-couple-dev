@@ -12,79 +12,79 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "lui",
-        "etiquette": "Food edition",
-        "accroche": "What would he choose?",
-        "consigne": "Pick A, B or C for him, then send it to him!",
+        "pour": "elle",
+        "etiquette": "Morning edition",
+        "accroche": "What would she choose?",
+        "consigne": "One photo per round: the one she would pick!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which potato would he pick?",
+            "question": "How would she have her eggs?",
             "options": [
               {
-                "texte": "Rösti",
-                "image": "choisirait/patate/rosti.webp"
+                "texte": "Fried",
+                "image": "choisirait/oeufs/oeuf-plat.webp"
               },
               {
-                "texte": "Potato gratin",
-                "image": "choisirait/patate/gratin.webp"
+                "texte": "Omelette",
+                "image": "choisirait/oeufs/omelette.webp"
               },
               {
-                "texte": "French fries",
-                "image": "choisirait/patate/frites.webp"
+                "texte": "Soft-boiled",
+                "image": "choisirait/oeufs/coque.webp"
               }
             ]
           },
           {
-            "question": "Which pasta would he pick?",
+            "question": "Which breakfast would she choose?",
             "options": [
               {
-                "texte": "Carbonara",
-                "image": "choisirait/pates/carbonara.webp"
+                "texte": "Açaí bowl",
+                "image": "choisirait/petitdej/acai.webp"
               },
               {
-                "texte": "Lasagna",
-                "image": "choisirait/pates/lasagnes.webp"
+                "texte": "French toast",
+                "image": "choisirait/petitdej/pain-perdu.webp"
               },
               {
-                "texte": "Bolognese",
-                "image": "choisirait/pates/bolognaise.webp"
+                "texte": "Waffles",
+                "image": "choisirait/petitdej/gaufres.webp"
               }
             ]
           },
           {
-            "question": "Which pizza would he order?",
+            "question": "What would she grab at the bakery?",
             "options": [
               {
-                "texte": "Veggie",
-                "image": "choisirait/pizza/vegetarienne.webp"
+                "texte": "Cinnamon roll",
+                "image": "choisirait/boulangerie/cinnamon-roll.webp"
               },
               {
-                "texte": "Pepperoni",
-                "image": "choisirait/pizza/pepperoni.webp"
+                "texte": "Donut",
+                "image": "choisirait/boulangerie/donut.webp"
               },
               {
-                "texte": "Calzone",
-                "image": "choisirait/pizza/calzone.webp"
+                "texte": "Brioche",
+                "image": "choisirait/boulangerie/brioche.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Send it to him: how many did you get?",
-          "bouton": "Send this to him",
+          "question": "Send it to her: how many did you get?",
+          "bouton": "Send this to her",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Food edition. One letter per question, then send it to him.\n\nSend this to him",
+      "legende": "Morning edition. If you get all three, you know her by heart.\n\nSend this to her",
       "hashtags": [
         "#couplequiz",
-        "#boyfriendquiz",
+        "#girlfriendquiz",
         "#thisorthat",
-        "#foodie",
+        "#breakfast",
         "#quizcouple"
       ]
     }

@@ -12,79 +12,79 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "lui",
-        "etiquette": "Car lovers edition",
-        "accroche": "What would he choose?",
-        "consigne": "Pick A, B or C for him, then send it to him!",
+        "pour": "elle",
+        "etiquette": "Date night edition",
+        "accroche": "What would she choose?",
+        "consigne": "Choose the photo she would pick. 3 rounds!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which motorbike would he ride?",
+            "question": "Which flowers would she want?",
             "options": [
               {
-                "texte": "BMW GS",
-                "image": "choisirait/moto/bmw-gs.webp"
+                "texte": "Red roses",
+                "image": "choisirait/fleurs/roses.webp"
               },
               {
-                "texte": "Indian Scout",
-                "image": "choisirait/moto/indian.webp"
+                "texte": "Hydrangeas",
+                "image": "choisirait/fleurs/hortensias.webp"
               },
               {
-                "texte": "Kawasaki Ninja",
-                "image": "choisirait/moto/ninja.webp"
+                "texte": "Lilies",
+                "image": "choisirait/fleurs/lys.webp"
               }
             ]
           },
           {
-            "question": "Which classic car would he drive?",
+            "question": "Which date would she plan?",
             "options": [
               {
-                "texte": "1959 Cadillac",
-                "image": "choisirait/vintage/cadillac.webp"
+                "texte": "Picnic",
+                "image": "choisirait/date/pique-nique.webp"
               },
               {
-                "texte": "Mercedes 300 SL",
-                "image": "choisirait/vintage/300sl.webp"
+                "texte": "Mini golf",
+                "image": "choisirait/date/mini-golf.webp"
               },
               {
-                "texte": "Jaguar E-Type",
-                "image": "choisirait/vintage/e-type.webp"
+                "texte": "Wine tasting",
+                "image": "choisirait/date/degustation.webp"
               }
             ]
           },
           {
-            "question": "Which car would he drive?",
+            "question": "What would she cook for date night?",
             "options": [
               {
-                "texte": "Tesla Model S",
-                "image": "choisirait/voiture/tesla-model-s.webp"
+                "texte": "Cheese fondue",
+                "image": "choisirait/diner/fondue.webp"
               },
               {
-                "texte": "Jeep Wrangler",
-                "image": "choisirait/voiture/jeep-wrangler.webp"
+                "texte": "Risotto",
+                "image": "choisirait/diner/risotto.webp"
               },
               {
-                "texte": "Land Rover Defender",
-                "image": "choisirait/voiture/defender.webp"
+                "texte": "Raclette",
+                "image": "choisirait/diner/raclette.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Send it to him: how many did you get?",
-          "bouton": "Send this to him",
+          "question": "Send it to her: how many did you get?",
+          "bouton": "Send this to her",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Car lovers edition. No cheating: decide before the timer runs out.\n\nSend this to him",
+      "legende": "Date night edition. Write down her three letters before you send it.\n\nSend this to her",
       "hashtags": [
         "#couplequiz",
-        "#boyfriendquiz",
+        "#girlfriendquiz",
         "#thisorthat",
-        "#carlovers",
+        "#datenight",
         "#quizcouple"
       ]
     }

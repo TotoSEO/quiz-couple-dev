@@ -12,79 +12,79 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "lui",
-        "etiquette": "Cozy night in edition",
-        "accroche": "What would he choose?",
-        "consigne": "Pick A, B or C for him, then send it to him!",
+        "pour": "elle",
+        "etiquette": "Pet lovers edition",
+        "accroche": "What would she choose?",
+        "consigne": "Choose the photo she would pick. 3 rounds!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which dessert would he pick?",
+            "question": "Which pet would she want?",
             "options": [
               {
-                "texte": "Pavlova",
-                "image": "choisirait/dessert/pavlova.webp"
+                "texte": "Chameleon",
+                "image": "choisirait/animal/cameleon.webp"
               },
               {
-                "texte": "Brownie",
-                "image": "choisirait/dessert/brownie.webp"
+                "texte": "Turtle",
+                "image": "choisirait/animal/tortue.webp"
               },
               {
-                "texte": "Churros",
-                "image": "choisirait/dessert/churros.webp"
+                "texte": "Axolotl",
+                "image": "choisirait/animal/axolotl.webp"
               }
             ]
           },
           {
-            "question": "Which game night would he pick?",
+            "question": "Which dog would she pick?",
             "options": [
               {
-                "texte": "Foosball",
-                "image": "choisirait/jeu/baby-foot.webp"
+                "texte": "Poodle",
+                "image": "choisirait/chien/caniche.webp"
               },
               {
-                "texte": "Pool",
-                "image": "choisirait/jeu/billard.webp"
+                "texte": "Jack Russell",
+                "image": "choisirait/chien/jack-russell.webp"
               },
               {
-                "texte": "Ping pong",
-                "image": "choisirait/jeu/ping-pong.webp"
+                "texte": "Border Collie",
+                "image": "choisirait/chien/border-collie.webp"
               }
             ]
           },
           {
-            "question": "Which dinner would he pick?",
+            "question": "Which cat would she adopt?",
             "options": [
               {
-                "texte": "Risotto",
-                "image": "choisirait/diner/risotto.webp"
+                "texte": "Siamese",
+                "image": "choisirait/chat/siamois.webp"
               },
               {
-                "texte": "Steak and fries",
-                "image": "choisirait/diner/steak-frites.webp"
+                "texte": "British Shorthair",
+                "image": "choisirait/chat/british.webp"
               },
               {
-                "texte": "Korean BBQ",
-                "image": "choisirait/diner/bbq-coreen.webp"
+                "texte": "Ragdoll",
+                "image": "choisirait/chat/ragdoll.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Send it to him: how many did you get?",
-          "bouton": "Send this to him",
+          "question": "Send it to her: how many did you get?",
+          "bouton": "Send this to her",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Cozy night in edition. Answer for him first, no peeking.\n\nSend this to him",
+      "legende": "Pet lovers edition. Easy for you? Then the next one is for her.\n\nSend this to her",
       "hashtags": [
         "#couplequiz",
-        "#boyfriendquiz",
+        "#girlfriendquiz",
         "#thisorthat",
-        "#cozynight",
+        "#petlovers",
         "#quizcouple"
       ]
     }

@@ -13,78 +13,78 @@
         "langue": "en",
         "theme": "light",
         "pour": "elle",
-        "etiquette": "Luxury edition",
+        "etiquette": "Style edition",
         "accroche": "What would she choose?",
-        "consigne": "Pick A, B or C for her, then send it to her!",
+        "consigne": "One photo per round: the one she would pick!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which watch would she wear?",
+            "question": "Which shoes would she pick?",
             "options": [
               {
-                "texte": "Seiko diver",
-                "image": "choisirait/montre/seiko.webp"
+                "texte": "Knee-high boots",
+                "image": "choisirait/chaussures/cuissardes.webp"
               },
               {
-                "texte": "Pocket watch",
-                "image": "choisirait/montre/gousset.webp"
+                "texte": "Ballet flats",
+                "image": "choisirait/chaussures/ballerines.webp"
               },
               {
-                "texte": "Casio G-Shock",
-                "image": "choisirait/montre/g-shock.webp"
+                "texte": "High heels",
+                "image": "choisirait/chaussures/talons.webp"
               }
             ]
           },
           {
-            "question": "Which house would she pick?",
+            "question": "Which sneakers would she pick?",
             "options": [
               {
-                "texte": "Modern villa",
-                "image": "choisirait/maison/villa-moderne.webp"
+                "texte": "Air Force 1",
+                "image": "choisirait/baskets/air-force.webp"
               },
               {
-                "texte": "Tiny house",
-                "image": "choisirait/maison/tiny-house.webp"
+                "texte": "Adidas Samba",
+                "image": "choisirait/baskets/samba.webp"
               },
               {
-                "texte": "Cozy cabin",
-                "image": "choisirait/weekend/chalet-bois.webp"
+                "texte": "Nike Air Max",
+                "image": "choisirait/baskets/air-max.webp"
               }
             ]
           },
           {
-            "question": "How would she travel with you?",
+            "question": "Which phone would she pick?",
             "options": [
               {
-                "texte": "Private jet",
-                "image": "choisirait/voyage/jet.webp"
+                "texte": "Flip phone",
+                "image": "choisirait/telephone/clapet.webp"
               },
               {
-                "texte": "Sailboat",
-                "image": "choisirait/voyage/voilier.webp"
+                "texte": "Nokia 3310",
+                "image": "choisirait/telephone/nokia.webp"
               },
               {
-                "texte": "Convertible",
-                "image": "choisirait/voyage/cabriolet.webp"
+                "texte": "Samsung Galaxy",
+                "image": "choisirait/telephone/galaxy.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Got her 3 picks? Send it and see!",
+          "question": "Now send it to her. Did you guess right?",
           "bouton": "Send this to her",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Luxury edition. One letter per question, then send it to her.\n\nSend this to her",
+      "legende": "Style edition. If you get all three, you know her by heart.\n\nSend this to her",
       "hashtags": [
         "#couplequiz",
         "#girlfriendquiz",
         "#thisorthat",
-        "#luxurylife",
+        "#style",
         "#quizcouple"
       ]
     }

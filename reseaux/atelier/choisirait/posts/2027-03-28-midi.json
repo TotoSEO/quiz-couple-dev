@@ -12,79 +12,79 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "elle",
-        "etiquette": "Style edition",
-        "accroche": "What would she choose?",
-        "consigne": "Choose the photo she would pick. 3 rounds!",
+        "pour": "lui",
+        "etiquette": "Sweet tooth edition",
+        "accroche": "What would he choose?",
+        "consigne": "Choose the photo he would pick. 3 rounds!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which shoes would she pick?",
+            "question": "Which ice cream would he get?",
             "options": [
               {
-                "texte": "Ballet flats",
-                "image": "choisirait/chaussures/ballerines.webp"
+                "texte": "Mochi ice cream",
+                "image": "choisirait/glace/mochi.webp"
               },
               {
-                "texte": "Knee-high boots",
-                "image": "choisirait/chaussures/cuissardes.webp"
+                "texte": "Gelato",
+                "image": "choisirait/glace/gelato.webp"
               },
               {
-                "texte": "UGG boots",
-                "image": "choisirait/chaussures/ugg.webp"
+                "texte": "Soft serve",
+                "image": "choisirait/glace/italienne.webp"
               }
             ]
           },
           {
-            "question": "Which phone would she pick?",
+            "question": "Which movie snack would he pick?",
             "options": [
               {
-                "texte": "iPhone",
-                "image": "choisirait/telephone/iphone.webp"
+                "texte": "Chocolate bar",
+                "image": "choisirait/snack/tablette.webp"
               },
               {
-                "texte": "Samsung Galaxy",
-                "image": "choisirait/telephone/galaxy.webp"
+                "texte": "Popcorn",
+                "image": "choisirait/snack/popcorn.webp"
               },
               {
-                "texte": "Google Pixel",
-                "image": "choisirait/telephone/pixel.webp"
+                "texte": "Licorice",
+                "image": "choisirait/snack/reglisse.webp"
               }
             ]
           },
           {
-            "question": "Which sneakers would she pick?",
+            "question": "Which cake would he pick?",
             "options": [
               {
-                "texte": "Air Force 1",
-                "image": "choisirait/baskets/air-force.webp"
+                "texte": "Brownie",
+                "image": "choisirait/dessert/brownie.webp"
               },
               {
-                "texte": "Crocs",
-                "image": "choisirait/baskets/crocs.webp"
+                "texte": "Red velvet cake",
+                "image": "choisirait/dessert/red-velvet.webp"
               },
               {
-                "texte": "Stan Smith",
-                "image": "choisirait/baskets/stan-smith.webp"
+                "texte": "Macarons",
+                "image": "choisirait/dessert/macarons.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Got her 3 picks? Send it and see!",
-          "bouton": "Send this to her",
+          "question": "Now send it to him. Did you guess right?",
+          "bouton": "Send this to him",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Style edition. If you get all three, you know her by heart.\n\nSend this to her",
+      "legende": "Sweet tooth edition. Your answers first, then his reaction.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
-        "#girlfriendquiz",
+        "#boyfriendquiz",
         "#thisorthat",
-        "#style",
+        "#dessert",
         "#quizcouple"
       ]
     }

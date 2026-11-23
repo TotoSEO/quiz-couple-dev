@@ -12,79 +12,79 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "elle",
-        "etiquette": "Date night edition",
-        "accroche": "What would she choose?",
-        "consigne": "Choose the photo she would pick. 3 rounds!",
+        "pour": "lui",
+        "etiquette": "Food edition",
+        "accroche": "What would he choose?",
+        "consigne": "Choose the photo he would pick. 3 rounds!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which flowers would she want?",
+            "question": "How would he have his eggs?",
             "options": [
               {
-                "texte": "Wildflowers",
-                "image": "choisirait/fleurs/fleurs-sauvages.webp"
+                "texte": "Poached",
+                "image": "choisirait/oeufs/poche.webp"
               },
               {
-                "texte": "Orchid",
-                "image": "choisirait/fleurs/orchidee.webp"
+                "texte": "Soft-boiled",
+                "image": "choisirait/oeufs/coque.webp"
               },
               {
-                "texte": "Hydrangeas",
-                "image": "choisirait/fleurs/hortensias.webp"
+                "texte": "Scrambled",
+                "image": "choisirait/oeufs/brouilles.webp"
               }
             ]
           },
           {
-            "question": "Which date would she plan?",
+            "question": "Which pasta would he pick?",
             "options": [
               {
-                "texte": "Beach sunset",
-                "image": "choisirait/date/coucher-soleil.webp"
+                "texte": "Mac and cheese",
+                "image": "choisirait/pates/mac-cheese.webp"
               },
               {
-                "texte": "Fancy dinner",
-                "image": "choisirait/demande/demande-resto.webp"
+                "texte": "Bolognese",
+                "image": "choisirait/pates/bolognaise.webp"
               },
               {
-                "texte": "Cinema night",
-                "image": "choisirait/date/cinema.webp"
+                "texte": "Pesto",
+                "image": "choisirait/pates/pesto.webp"
               }
             ]
           },
           {
-            "question": "Which dinner would she pick?",
+            "question": "Which breakfast would he make you?",
             "options": [
               {
-                "texte": "Lobster",
-                "image": "choisirait/diner/homard.webp"
+                "texte": "Full English",
+                "image": "choisirait/petitdej/english.webp"
               },
               {
-                "texte": "Cheese fondue",
-                "image": "choisirait/diner/fondue.webp"
+                "texte": "Avocado toast",
+                "image": "choisirait/petitdej/avocado-toast.webp"
               },
               {
-                "texte": "Korean BBQ",
-                "image": "choisirait/diner/bbq-coreen.webp"
+                "texte": "Cereal",
+                "image": "choisirait/petitdej/cereales.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Got her 3 picks? Send it and see!",
-          "bouton": "Send this to her",
+          "question": "Now send it to him. Did you guess right?",
+          "bouton": "Send this to him",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Date night edition. Write down her three letters before you send it.\n\nSend this to her",
+      "legende": "Food edition. Write down his three letters before you send it.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
-        "#girlfriendquiz",
+        "#boyfriendquiz",
         "#thisorthat",
-        "#datenight",
+        "#foodie",
         "#quizcouple"
       ]
     }

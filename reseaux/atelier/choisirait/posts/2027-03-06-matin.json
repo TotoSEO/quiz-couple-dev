@@ -12,79 +12,79 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "lui",
-        "etiquette": "Weekend edition",
-        "accroche": "What would he choose?",
-        "consigne": "Pick A, B or C for him, then send it to him!",
+        "pour": "elle",
+        "etiquette": "Morning edition",
+        "accroche": "What would she choose?",
+        "consigne": "One photo per round: the one she would pick!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which hobby would he pick up?",
+            "question": "How would she have her eggs?",
             "options": [
               {
-                "texte": "Chess",
-                "image": "choisirait/loisir/echecs.webp"
+                "texte": "Soft-boiled",
+                "image": "choisirait/oeufs/coque.webp"
               },
               {
-                "texte": "Knitting",
-                "image": "choisirait/loisir/tricot.webp"
+                "texte": "Scrambled",
+                "image": "choisirait/oeufs/brouilles.webp"
               },
               {
-                "texte": "Pottery",
-                "image": "choisirait/loisir/poterie.webp"
+                "texte": "Fried",
+                "image": "choisirait/oeufs/oeuf-plat.webp"
               }
             ]
           },
           {
-            "question": "Which sport would he watch?",
+            "question": "Which breakfast would she make you?",
             "options": [
               {
-                "texte": "American football",
-                "image": "choisirait/sport/foot-us.webp"
+                "texte": "Shakshuka",
+                "image": "choisirait/petitdej/shakshuka.webp"
               },
               {
-                "texte": "Baseball",
-                "image": "choisirait/sport/baseball.webp"
+                "texte": "Pancakes",
+                "image": "choisirait/petitdej/pancakes.webp"
               },
               {
-                "texte": "Boxing",
-                "image": "choisirait/sport/boxe.webp"
+                "texte": "Croissant & coffee",
+                "image": "choisirait/petitdej/croissant-cafe.webp"
               }
             ]
           },
           {
-            "question": "Which workout would he pick?",
+            "question": "What would she grab at the bakery?",
             "options": [
               {
-                "texte": "CrossFit",
-                "image": "choisirait/salle/crossfit.webp"
+                "texte": "Baguette",
+                "image": "choisirait/boulangerie/baguette.webp"
               },
               {
-                "texte": "Cycling",
-                "image": "choisirait/salle/velo.webp"
+                "texte": "Croissant",
+                "image": "choisirait/boulangerie/croissant.webp"
               },
               {
-                "texte": "Weightlifting",
-                "image": "choisirait/salle/muscu.webp"
+                "texte": "Pain au chocolat",
+                "image": "choisirait/boulangerie/pain-chocolat.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Now send it to him. Did you guess right?",
-          "bouton": "Send this to him",
+          "question": "Got her 3 picks? Send it and see!",
+          "bouton": "Send this to her",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Weekend edition. Guess first, send it after. Then compare.\n\nSend this to him",
+      "legende": "Morning edition. Pick for her, then let her prove you wrong.\n\nSend this to her",
       "hashtags": [
         "#couplequiz",
-        "#boyfriendquiz",
+        "#girlfriendquiz",
         "#thisorthat",
-        "#weekendvibes",
+        "#breakfast",
         "#quizcouple"
       ]
     }

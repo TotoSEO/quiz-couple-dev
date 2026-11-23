@@ -12,79 +12,79 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "lui",
-        "etiquette": "Wedding edition",
-        "accroche": "What would he choose?",
-        "consigne": "Answer for him: A, B or C? Then send it!",
+        "pour": "elle",
+        "etiquette": "Pet lovers edition",
+        "accroche": "What would she choose?",
+        "consigne": "Answer for her: A, B or C? Then send it!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Where would he want to get married?",
+            "question": "Which pet would she want?",
             "options": [
               {
-                "texte": "Castle",
-                "image": "choisirait/mariage/mariage-chateau.webp"
+                "texte": "Guinea pig",
+                "image": "choisirait/animal/cochon-dinde.webp"
               },
               {
-                "texte": "Vegas chapel",
-                "image": "choisirait/mariage/vegas.webp"
+                "texte": "Goldfish",
+                "image": "choisirait/animal/poisson.webp"
               },
               {
-                "texte": "Vineyard",
-                "image": "choisirait/vue/vignes.webp"
+                "texte": "Parrot",
+                "image": "choisirait/animal/perroquet.webp"
               }
             ]
           },
           {
-            "question": "Where would he propose?",
+            "question": "Which cat would she adopt?",
             "options": [
               {
-                "texte": "Disney castle",
-                "image": "choisirait/demande/demande-chateau.webp"
+                "texte": "Maine Coon",
+                "image": "choisirait/chat/maine-coon.webp"
               },
               {
-                "texte": "Eiffel Tower",
-                "image": "choisirait/demande/demande-eiffel.webp"
+                "texte": "Bengal",
+                "image": "choisirait/chat/bengal.webp"
               },
               {
-                "texte": "Hot air balloon",
-                "image": "choisirait/demande/demande-montgolfiere.webp"
+                "texte": "Scottish Fold",
+                "image": "choisirait/chat/scottish.webp"
               }
             ]
           },
           {
-            "question": "Which ring would he pick for you?",
+            "question": "Which dog would she adopt?",
             "options": [
               {
-                "texte": "Solitaire diamond",
-                "image": "choisirait/bague/solitaire.webp"
+                "texte": "French Bulldog",
+                "image": "choisirait/chien/bouledogue.webp"
               },
               {
-                "texte": "Vintage ring",
-                "image": "choisirait/bague/vintage-bague.webp"
+                "texte": "Dachshund",
+                "image": "choisirait/chien/teckel.webp"
               },
               {
-                "texte": "Rose gold ring",
-                "image": "choisirait/bague/or-rose.webp"
+                "texte": "Dalmatian",
+                "image": "choisirait/chien/dalmatien.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Send it to him: how many did you get?",
-          "bouton": "Send this to him",
+          "question": "Send it to her: how many did you get?",
+          "bouton": "Send this to her",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Wedding edition. One letter per question, then send it to him.\n\nSend this to him",
+      "legende": "Pet lovers edition. One letter per question, then send it to her.\n\nSend this to her",
       "hashtags": [
         "#couplequiz",
-        "#boyfriendquiz",
+        "#girlfriendquiz",
         "#thisorthat",
-        "#engaged",
+        "#petlovers",
         "#quizcouple"
       ]
     }

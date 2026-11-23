@@ -13,78 +13,78 @@
         "langue": "en",
         "theme": "light",
         "pour": "elle",
-        "etiquette": "Weekend edition",
+        "etiquette": "Dream life edition",
         "accroche": "What would she choose?",
-        "consigne": "Pick A, B or C for her, then send it to her!",
+        "consigne": "One photo per round: the one she would pick!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which hobby would she pick up?",
+            "question": "Which watch would she wear?",
             "options": [
               {
-                "texte": "Woodworking",
-                "image": "choisirait/loisir/menuiserie.webp"
+                "texte": "Pocket watch",
+                "image": "choisirait/montre/gousset.webp"
               },
               {
-                "texte": "Fishing",
-                "image": "choisirait/loisir/peche.webp"
+                "texte": "Cartier Tank",
+                "image": "choisirait/montre/cartier.webp"
               },
               {
-                "texte": "Pottery",
-                "image": "choisirait/loisir/poterie.webp"
+                "texte": "Rolex Submariner",
+                "image": "choisirait/montre/rolex.webp"
               }
             ]
           },
           {
-            "question": "Which workout would she pick?",
+            "question": "Where would she take you on vacation?",
             "options": [
               {
-                "texte": "Boxing",
-                "image": "choisirait/salle/boxe-salle.webp"
+                "texte": "Canada",
+                "image": "choisirait/vacances/canada.webp"
               },
               {
-                "texte": "Running",
-                "image": "choisirait/salle/course.webp"
+                "texte": "Peru",
+                "image": "choisirait/vacances/perou.webp"
               },
               {
-                "texte": "Swimming",
-                "image": "choisirait/salle/natation.webp"
+                "texte": "Mexico",
+                "image": "choisirait/vacances/mexique.webp"
               }
             ]
           },
           {
-            "question": "Which date would she plan?",
+            "question": "Where would she book a weekend for two?",
             "options": [
               {
-                "texte": "Beach sunset",
-                "image": "choisirait/date/coucher-soleil.webp"
+                "texte": "Overwater villa",
+                "image": "choisirait/weekend/bungalow-eau.webp"
               },
               {
-                "texte": "Ice skating",
-                "image": "choisirait/date/patinoire.webp"
+                "texte": "Desert camp",
+                "image": "choisirait/weekend/desert.webp"
               },
               {
-                "texte": "Mini golf",
-                "image": "choisirait/date/mini-golf.webp"
+                "texte": "Glamping tent",
+                "image": "choisirait/weekend/glamping.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Got her 3 picks? Send it and see!",
+          "question": "Now send it to her. Did you guess right?",
           "bouton": "Send this to her",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Weekend edition. No cheating: decide before the timer runs out.\n\nSend this to her",
+      "legende": "Dream life edition. Write down her three letters before you send it.\n\nSend this to her",
       "hashtags": [
         "#couplequiz",
         "#girlfriendquiz",
         "#thisorthat",
-        "#weekendvibes",
+        "#dreamlife",
         "#quizcouple"
       ]
     }

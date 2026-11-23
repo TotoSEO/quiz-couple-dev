@@ -13,78 +13,78 @@
         "langue": "en",
         "theme": "light",
         "pour": "lui",
-        "etiquette": "Travel edition",
+        "etiquette": "Sweet tooth edition",
         "accroche": "What would he choose?",
-        "consigne": "One photo per round: the one he would pick!",
+        "consigne": "Pick A, B or C for him, then send it to him!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which city would he take you to?",
+            "question": "Which ice cream would he get?",
             "options": [
               {
-                "texte": "Rome",
-                "image": "choisirait/ville/rome.webp"
+                "texte": "Ice cream cone",
+                "image": "choisirait/glace/cornet.webp"
               },
               {
-                "texte": "Seoul",
-                "image": "choisirait/ville/seoul.webp"
+                "texte": "Sundae",
+                "image": "choisirait/glace/sundae.webp"
               },
               {
-                "texte": "Paris",
-                "image": "choisirait/ville/paris.webp"
+                "texte": "Affogato",
+                "image": "choisirait/glace/affogato.webp"
               }
             ]
           },
           {
-            "question": "Where would he take you on vacation?",
+            "question": "What would he grab at the bakery?",
             "options": [
               {
-                "texte": "Croatia",
-                "image": "choisirait/vacances/croatie.webp"
+                "texte": "Cinnamon roll",
+                "image": "choisirait/boulangerie/cinnamon-roll.webp"
               },
               {
-                "texte": "Italy",
-                "image": "choisirait/vacances/italie.webp"
+                "texte": "Donut",
+                "image": "choisirait/boulangerie/donut.webp"
               },
               {
-                "texte": "Morocco",
-                "image": "choisirait/vacances/maroc.webp"
+                "texte": "Pain au chocolat",
+                "image": "choisirait/boulangerie/pain-chocolat.webp"
               }
             ]
           },
           {
-            "question": "Which view would he wake up to?",
+            "question": "Which dessert would he pick?",
             "options": [
               {
-                "texte": "Northern lights",
-                "image": "choisirait/vue/aurores.webp"
+                "texte": "Apple pie",
+                "image": "choisirait/dessert/tarte-pommes.webp"
               },
               {
-                "texte": "Eiffel Tower",
-                "image": "choisirait/vue/tour-eiffel.webp"
+                "texte": "Macarons",
+                "image": "choisirait/dessert/macarons.webp"
               },
               {
-                "texte": "Vineyards",
-                "image": "choisirait/vue/vignes.webp"
+                "texte": "Cheesecake",
+                "image": "choisirait/dessert/cheesecake.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Now send it to him. Did you guess right?",
+          "question": "Got his 3 picks? Send it and see!",
           "bouton": "Send this to him",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Travel edition. Write down his three letters before you send it.\n\nSend this to him",
+      "legende": "Sweet tooth edition. He will swear you got at least one wrong.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
         "#boyfriendquiz",
         "#thisorthat",
-        "#travelcouple",
+        "#dessert",
         "#quizcouple"
       ]
     }

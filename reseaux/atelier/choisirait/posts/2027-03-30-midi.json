@@ -13,78 +13,78 @@
         "langue": "en",
         "theme": "light",
         "pour": "lui",
-        "etiquette": "Adventure edition",
+        "etiquette": "Dream home edition",
         "accroche": "What would he choose?",
-        "consigne": "Choose the photo he would pick. 3 rounds!",
+        "consigne": "One photo per round: the one he would pick!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which sport would he watch?",
+            "question": "Which dream house would he pick?",
             "options": [
               {
-                "texte": "Formula 1",
-                "image": "choisirait/sport/f1.webp"
+                "texte": "Tiny house",
+                "image": "choisirait/maison/tiny-house.webp"
               },
               {
-                "texte": "Rugby",
-                "image": "choisirait/sport/rugby.webp"
+                "texte": "Mountain chalet",
+                "image": "choisirait/maison/chalet.webp"
               },
               {
-                "texte": "Football",
-                "image": "choisirait/sport/foot.webp"
+                "texte": "Beach house",
+                "image": "choisirait/maison/maison-plage.webp"
               }
             ]
           },
           {
-            "question": "Where would he book a weekend?",
+            "question": "Which cat would he adopt?",
             "options": [
               {
-                "texte": "Desert camp",
-                "image": "choisirait/weekend/desert.webp"
+                "texte": "Siamese",
+                "image": "choisirait/chat/siamois.webp"
               },
               {
-                "texte": "Ski chalet",
-                "image": "choisirait/weekend/chalet-ski.webp"
+                "texte": "Black cat",
+                "image": "choisirait/chat/chat-noir.webp"
               },
               {
-                "texte": "Treehouse",
-                "image": "choisirait/weekend/cabane-arbre.webp"
+                "texte": "Sphynx",
+                "image": "choisirait/chat/sphynx.webp"
               }
             ]
           },
           {
-            "question": "Where would he take you on vacation?",
+            "question": "Which dog would he pick?",
             "options": [
               {
-                "texte": "Thailand",
-                "image": "choisirait/vacances/thailande.webp"
+                "texte": "Dalmatian",
+                "image": "choisirait/chien/dalmatien.webp"
               },
               {
-                "texte": "USA",
-                "image": "choisirait/vacances/usa.webp"
+                "texte": "Golden Retriever",
+                "image": "choisirait/chien/golden.webp"
               },
               {
-                "texte": "Maldives",
-                "image": "choisirait/vacances/maldives.webp"
+                "texte": "Chihuahua",
+                "image": "choisirait/chien/chihuahua.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Now send it to him. Did you guess right?",
+          "question": "Got his 3 picks? Send it and see!",
           "bouton": "Send this to him",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Adventure edition. Your answers first, then his reaction.\n\nSend this to him",
+      "legende": "Dream home edition. Easy for you? Then the next one is for him.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
         "#boyfriendquiz",
         "#thisorthat",
-        "#adventurecouple",
+        "#dreamhome",
         "#quizcouple"
       ]
     }

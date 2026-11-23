@@ -12,17 +12,17 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "elle",
+        "pour": "lui",
         "etiquette": "Date night edition",
-        "accroche": "What would she choose?",
-        "consigne": "One photo per round: the one she would pick!",
+        "accroche": "What would he choose?",
+        "consigne": "Pick A, B or C for him, then send it to him!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which flowers would she want?",
+            "question": "Which flowers would he get you?",
             "options": [
               {
                 "texte": "Tulips",
@@ -39,7 +39,7 @@
             ]
           },
           {
-            "question": "Which dessert would she pick?",
+            "question": "Which dessert would he pick?",
             "options": [
               {
                 "texte": "Chocolate lava cake",
@@ -56,7 +56,7 @@
             ]
           },
           {
-            "question": "Which date would she take you on?",
+            "question": "Which date would he plan?",
             "options": [
               {
                 "texte": "Mini golf",
@@ -74,15 +74,15 @@
           }
         ],
         "fin": {
-          "question": "Got her 3 picks? Send it and see!",
-          "bouton": "Send this to her",
+          "question": "Now send it to him. Did you guess right?",
+          "bouton": "Send this to him",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Date night edition. Write down her three letters before you send it.\n\nSend this to her",
+      "legende": "Date night edition. He will swear you got at least one wrong.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
-        "#girlfriendquiz",
+        "#boyfriendquiz",
         "#thisorthat",
         "#datenight",
         "#quizcouple"

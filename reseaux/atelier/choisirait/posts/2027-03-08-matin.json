@@ -13,78 +13,78 @@
         "langue": "en",
         "theme": "light",
         "pour": "lui",
-        "etiquette": "Dream home edition",
+        "etiquette": "Dream life edition",
         "accroche": "What would he choose?",
-        "consigne": "One photo per round: the one he would pick!",
+        "consigne": "Answer for him: A, B or C? Then send it!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which view would he wake up to?",
+            "question": "Which watch would he wear?",
             "options": [
               {
-                "texte": "Forest",
-                "image": "choisirait/vue/foret.webp"
+                "texte": "Rolex Submariner",
+                "image": "choisirait/montre/rolex.webp"
               },
               {
-                "texte": "City skyline",
-                "image": "choisirait/vue/skyline.webp"
+                "texte": "Casio digital",
+                "image": "choisirait/montre/casio.webp"
               },
               {
-                "texte": "Snowy peaks",
-                "image": "choisirait/vue/neige.webp"
+                "texte": "Cartier Tank",
+                "image": "choisirait/montre/cartier.webp"
               }
             ]
           },
           {
-            "question": "Which dream house would he pick?",
+            "question": "How would he travel with you?",
             "options": [
               {
-                "texte": "Victorian house",
-                "image": "choisirait/maison/victorienne.webp"
+                "texte": "Cruise ship",
+                "image": "choisirait/voyage/croisiere.webp"
               },
               {
-                "texte": "Loft apartment",
-                "image": "choisirait/maison/loft.webp"
+                "texte": "Private jet",
+                "image": "choisirait/voyage/jet.webp"
               },
               {
-                "texte": "Tiny house",
-                "image": "choisirait/maison/tiny-house.webp"
+                "texte": "Motorbike",
+                "image": "choisirait/moto/bmw-gs.webp"
               }
             ]
           },
           {
-            "question": "Which dog would he adopt?",
+            "question": "Which house would he pick?",
             "options": [
               {
-                "texte": "Jack Russell",
-                "image": "choisirait/chien/jack-russell.webp"
+                "texte": "Lake house",
+                "image": "choisirait/maison/maison-lac.webp"
               },
               {
-                "texte": "Labrador",
-                "image": "choisirait/chien/labrador.webp"
+                "texte": "Castle",
+                "image": "choisirait/maison/chateau.webp"
               },
               {
-                "texte": "Husky",
-                "image": "choisirait/chien/husky.webp"
+                "texte": "Mountain chalet",
+                "image": "choisirait/maison/chalet.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Now send it to him. Did you guess right?",
+          "question": "Got his 3 picks? Send it and see!",
           "bouton": "Send this to him",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Dream home edition. Pick for him, then let him prove you wrong.\n\nSend this to him",
+      "legende": "Dream life edition. One letter per question, then send it to him.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
         "#boyfriendquiz",
         "#thisorthat",
-        "#dreamhome",
+        "#dreamlife",
         "#quizcouple"
       ]
     }

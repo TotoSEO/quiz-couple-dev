@@ -15,7 +15,7 @@
         "pour": "lui",
         "etiquette": "Winter edition",
         "accroche": "What would he choose?",
-        "consigne": "One photo per round: the one he would pick!",
+        "consigne": "Pick A, B or C for him, then send it to him!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
@@ -39,7 +39,7 @@
             ]
           },
           {
-            "question": "What would he cook for date night?",
+            "question": "Which dinner would he pick?",
             "options": [
               {
                 "texte": "Fish and chips",
@@ -74,12 +74,12 @@
           }
         ],
         "fin": {
-          "question": "Now send it to him. Did you guess right?",
+          "question": "Got his 3 picks? Send it and see!",
           "bouton": "Send this to him",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Winter edition. If you get all three, you know him by heart.\n\nSend this to him",
+      "legende": "Winter edition. Guess first, send it after. Then compare.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
         "#boyfriendquiz",

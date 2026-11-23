@@ -12,77 +12,77 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "elle",
+        "pour": "lui",
         "etiquette": "Cozy night in edition",
-        "accroche": "What would she choose?",
-        "consigne": "Choose the photo she would pick. 3 rounds!",
+        "accroche": "What would he choose?",
+        "consigne": "One photo per round: the one he would pick!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which console would she pick?",
+            "question": "Which drink would he get?",
             "options": [
               {
-                "texte": "Gaming PC",
-                "image": "choisirait/console/pc-gamer.webp"
+                "texte": "Iced tea",
+                "image": "choisirait/boisson/the-glace.webp"
               },
               {
-                "texte": "Xbox",
-                "image": "choisirait/console/xbox.webp"
+                "texte": "Smoothie",
+                "image": "choisirait/boisson/smoothie.webp"
               },
               {
-                "texte": "PlayStation 5",
-                "image": "choisirait/console/ps5.webp"
+                "texte": "Lemonade",
+                "image": "choisirait/boisson/limonade.webp"
               }
             ]
           },
           {
-            "question": "Which dessert would she pick?",
+            "question": "Which cake would he pick?",
             "options": [
               {
-                "texte": "Crème brûlée",
-                "image": "choisirait/dessert/creme-brulee.webp"
+                "texte": "Vanilla éclair",
+                "image": "choisirait/dessert/eclair.webp"
               },
               {
-                "texte": "Tiramisu",
-                "image": "choisirait/dessert/tiramisu.webp"
+                "texte": "Red velvet cake",
+                "image": "choisirait/dessert/red-velvet.webp"
               },
               {
-                "texte": "Brownie",
-                "image": "choisirait/dessert/brownie.webp"
+                "texte": "Crêpes",
+                "image": "choisirait/dessert/crepes.webp"
               }
             ]
           },
           {
-            "question": "Which game night would she pick?",
+            "question": "Which dinner would he pick?",
             "options": [
               {
-                "texte": "Chess",
-                "image": "choisirait/jeu/echecs-soir.webp"
+                "texte": "Pad thai",
+                "image": "choisirait/diner/pad-thai.webp"
               },
               {
-                "texte": "Board games",
-                "image": "choisirait/jeu/jeux-societe.webp"
+                "texte": "Sushi",
+                "image": "choisirait/diner/sushi.webp"
               },
               {
-                "texte": "Video games",
-                "image": "choisirait/jeu/jeux-video.webp"
+                "texte": "Lobster",
+                "image": "choisirait/diner/homard.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Got her 3 picks? Send it and see!",
-          "bouton": "Send this to her",
+          "question": "Now send it to him. Did you guess right?",
+          "bouton": "Send this to him",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Cozy night in edition. Write down her three letters before you send it.\n\nSend this to her",
+      "legende": "Cozy night in edition. Write down his three letters before you send it.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
-        "#girlfriendquiz",
+        "#boyfriendquiz",
         "#thisorthat",
         "#cozynight",
         "#quizcouple"

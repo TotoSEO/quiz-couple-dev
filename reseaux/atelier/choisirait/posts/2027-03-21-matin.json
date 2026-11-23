@@ -13,78 +13,78 @@
         "langue": "en",
         "theme": "light",
         "pour": "lui",
-        "etiquette": "Pet lovers edition",
+        "etiquette": "Dream life edition",
         "accroche": "What would he choose?",
-        "consigne": "One photo per round: the one he would pick!",
+        "consigne": "Answer for him: A, B or C? Then send it!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which pet would he want?",
+            "question": "Which car would he drive?",
             "options": [
               {
-                "texte": "Rabbit",
-                "image": "choisirait/animal/lapin.webp"
+                "texte": "Mercedes-AMG C63 S",
+                "image": "choisirait/voiture/amg-c63.webp"
               },
               {
-                "texte": "Guinea pig",
-                "image": "choisirait/animal/cochon-dinde.webp"
+                "texte": "Range Rover",
+                "image": "choisirait/voiture/range-rover.webp"
               },
               {
-                "texte": "Hedgehog",
-                "image": "choisirait/animal/herisson.webp"
+                "texte": "Aston Martin DB11",
+                "image": "choisirait/voiture/aston-martin.webp"
               }
             ]
           },
           {
-            "question": "Which cat would he adopt?",
+            "question": "Which watch would he wear?",
             "options": [
               {
-                "texte": "Scottish Fold",
-                "image": "choisirait/chat/scottish.webp"
+                "texte": "Seiko diver",
+                "image": "choisirait/montre/seiko.webp"
               },
               {
-                "texte": "Maine Coon",
-                "image": "choisirait/chat/maine-coon.webp"
+                "texte": "Pocket watch",
+                "image": "choisirait/montre/gousset.webp"
               },
               {
-                "texte": "Persian",
-                "image": "choisirait/chat/persan.webp"
+                "texte": "Casio digital",
+                "image": "choisirait/montre/casio.webp"
               }
             ]
           },
           {
-            "question": "Which dog would he pick?",
+            "question": "Which view would he wake up to?",
             "options": [
               {
-                "texte": "Doberman",
-                "image": "choisirait/chien/dobermann.webp"
+                "texte": "Desert",
+                "image": "choisirait/vue/desert-vue.webp"
               },
               {
-                "texte": "Beagle",
-                "image": "choisirait/chien/beagle.webp"
+                "texte": "Northern lights",
+                "image": "choisirait/vue/aurores.webp"
               },
               {
-                "texte": "German Shepherd",
-                "image": "choisirait/chien/berger-allemand.webp"
+                "texte": "City skyline",
+                "image": "choisirait/vue/skyline.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Now send it to him. Did you guess right?",
+          "question": "Got his 3 picks? Send it and see!",
           "bouton": "Send this to him",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Pet lovers edition. Easy for you? Then the next one is for him.\n\nSend this to him",
+      "legende": "Dream life edition. Answer for him first, no peeking.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
         "#boyfriendquiz",
         "#thisorthat",
-        "#petlovers",
+        "#dreamlife",
         "#quizcouple"
       ]
     }

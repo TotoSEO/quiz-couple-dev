@@ -15,7 +15,7 @@
         "pour": "elle",
         "etiquette": "Luxury edition",
         "accroche": "What would she choose?",
-        "consigne": "Pick A, B or C for her, then send it to her!",
+        "consigne": "Choose the photo she would pick. 3 rounds!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
@@ -74,12 +74,12 @@
           }
         ],
         "fin": {
-          "question": "Got her 3 picks? Send it and see!",
+          "question": "Now send it to her. Did you guess right?",
           "bouton": "Send this to her",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Luxury edition. Answer for her first, no peeking.\n\nSend this to her",
+      "legende": "Luxury edition. Easy for you? Then the next one is for her.\n\nSend this to her",
       "hashtags": [
         "#couplequiz",
         "#girlfriendquiz",

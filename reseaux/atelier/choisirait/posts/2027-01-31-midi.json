@@ -13,7 +13,7 @@
         "langue": "en",
         "theme": "light",
         "pour": "lui",
-        "etiquette": "Adventure edition",
+        "etiquette": "Wedding edition",
         "accroche": "What would he choose?",
         "consigne": "Choose the photo he would pick. 3 rounds!",
         "secondes": 4,
@@ -22,69 +22,69 @@
         },
         "questions": [
           {
-            "question": "Which adventure would he try?",
+            "question": "Where would he want to get married?",
             "options": [
               {
-                "texte": "Snowboarding",
-                "image": "choisirait/aventure/snowboard.webp"
+                "texte": "Vegas chapel",
+                "image": "choisirait/mariage/vegas.webp"
               },
               {
-                "texte": "Kayaking",
-                "image": "choisirait/aventure/kayak.webp"
+                "texte": "City hall",
+                "image": "choisirait/mariage/mairie.webp"
               },
               {
-                "texte": "Scuba diving",
-                "image": "choisirait/aventure/plongee.webp"
+                "texte": "Forest",
+                "image": "choisirait/vue/foret.webp"
               }
             ]
           },
           {
-            "question": "Which sport would he watch?",
+            "question": "Where would he propose?",
             "options": [
               {
-                "texte": "American football",
-                "image": "choisirait/sport/foot-us.webp"
+                "texte": "Rooftop",
+                "image": "choisirait/demande/demande-rooftop.webp"
               },
               {
-                "texte": "Rugby",
-                "image": "choisirait/sport/rugby.webp"
+                "texte": "Beach at sunset",
+                "image": "choisirait/demande/demande-plage.webp"
               },
               {
-                "texte": "Football",
-                "image": "choisirait/sport/foot.webp"
+                "texte": "Disney castle",
+                "image": "choisirait/demande/demande-chateau.webp"
               }
             ]
           },
           {
-            "question": "Where would he take you on vacation?",
+            "question": "Which ring would he pick for you?",
             "options": [
               {
-                "texte": "Switzerland",
-                "image": "choisirait/vacances/suisse.webp"
+                "texte": "Emerald ring",
+                "image": "choisirait/bague/emeraude.webp"
               },
               {
-                "texte": "Costa Rica",
-                "image": "choisirait/vacances/costa-rica.webp"
+                "texte": "Vintage ring",
+                "image": "choisirait/bague/vintage-bague.webp"
               },
               {
-                "texte": "Canada",
-                "image": "choisirait/vacances/canada.webp"
+                "texte": "Rose gold ring",
+                "image": "choisirait/bague/or-rose.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Now send it to him. Did you guess right?",
+          "question": "Got his 3 picks? Send it and see!",
           "bouton": "Send this to him",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Adventure edition. Easy for you? Then the next one is for him.\n\nSend this to him",
+      "legende": "Wedding edition. Pick for him, then let him prove you wrong.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
         "#boyfriendquiz",
         "#thisorthat",
-        "#adventurecouple",
+        "#engaged",
         "#quizcouple"
       ]
     }

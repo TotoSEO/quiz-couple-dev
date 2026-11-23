@@ -13,7 +13,7 @@
         "langue": "en",
         "theme": "light",
         "pour": "lui",
-        "etiquette": "Travel edition",
+        "etiquette": "Style edition",
         "accroche": "What would he choose?",
         "consigne": "Choose the photo he would pick. 3 rounds!",
         "secondes": 4,
@@ -22,69 +22,69 @@
         },
         "questions": [
           {
-            "question": "Which city would he take you to?",
+            "question": "Which phone would he pick?",
             "options": [
               {
-                "texte": "New York",
-                "image": "choisirait/ville/new-york.webp"
+                "texte": "BlackBerry",
+                "image": "choisirait/telephone/blackberry.webp"
               },
               {
-                "texte": "Lisbon",
-                "image": "choisirait/ville/lisbonne.webp"
+                "texte": "Samsung Galaxy",
+                "image": "choisirait/telephone/galaxy.webp"
               },
               {
-                "texte": "Marrakech",
-                "image": "choisirait/ville/marrakech.webp"
+                "texte": "Nokia 3310",
+                "image": "choisirait/telephone/nokia.webp"
               }
             ]
           },
           {
-            "question": "Where would he go on vacation?",
+            "question": "Which sneakers would he pick?",
             "options": [
               {
-                "texte": "Bali",
-                "image": "choisirait/vacances/bali.webp"
+                "texte": "New Balance",
+                "image": "choisirait/baskets/new-balance.webp"
               },
               {
-                "texte": "Iceland",
-                "image": "choisirait/vacances/islande.webp"
+                "texte": "Nike Air Max",
+                "image": "choisirait/baskets/air-max.webp"
               },
               {
-                "texte": "Peru",
-                "image": "choisirait/vacances/perou.webp"
+                "texte": "Air Force 1",
+                "image": "choisirait/baskets/air-force.webp"
               }
             ]
           },
           {
-            "question": "How would he travel with you?",
+            "question": "Which watch would he wear?",
             "options": [
               {
-                "texte": "Hot air balloon",
-                "image": "choisirait/voyage/montgolfiere.webp"
+                "texte": "Seiko diver",
+                "image": "choisirait/montre/seiko.webp"
               },
               {
-                "texte": "Sailboat",
-                "image": "choisirait/voyage/voilier.webp"
+                "texte": "Pocket watch",
+                "image": "choisirait/montre/gousset.webp"
               },
               {
-                "texte": "Cruise ship",
-                "image": "choisirait/voyage/croisiere.webp"
+                "texte": "Omega Speedmaster",
+                "image": "choisirait/montre/speedmaster.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Now send it to him. Did you guess right?",
+          "question": "Got his 3 picks? Send it and see!",
           "bouton": "Send this to him",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Travel edition. If you get all three, you know him by heart.\n\nSend this to him",
+      "legende": "Style edition. Your answers first, then his reaction.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
         "#boyfriendquiz",
         "#thisorthat",
-        "#travelcouple",
+        "#style",
         "#quizcouple"
       ]
     }

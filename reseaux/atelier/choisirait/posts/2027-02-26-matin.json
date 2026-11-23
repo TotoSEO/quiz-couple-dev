@@ -13,7 +13,7 @@
         "langue": "en",
         "theme": "light",
         "pour": "lui",
-        "etiquette": "Hobbies edition",
+        "etiquette": "Pet lovers edition",
         "accroche": "What would he choose?",
         "consigne": "Choose the photo he would pick. 3 rounds!",
         "secondes": 4,
@@ -22,69 +22,69 @@
         },
         "questions": [
           {
-            "question": "Which instrument would he play?",
+            "question": "Which pet would he want?",
             "options": [
               {
-                "texte": "Drums",
-                "image": "choisirait/instrument/batterie.webp"
+                "texte": "Guinea pig",
+                "image": "choisirait/animal/cochon-dinde.webp"
               },
               {
-                "texte": "Piano",
-                "image": "choisirait/instrument/piano.webp"
+                "texte": "Turtle",
+                "image": "choisirait/animal/tortue.webp"
               },
               {
-                "texte": "Electric guitar",
-                "image": "choisirait/instrument/guitare-electrique.webp"
+                "texte": "Parrot",
+                "image": "choisirait/animal/perroquet.webp"
               }
             ]
           },
           {
-            "question": "Which workout would he pick?",
+            "question": "Which cat would he adopt?",
             "options": [
               {
-                "texte": "Weightlifting",
-                "image": "choisirait/salle/muscu.webp"
+                "texte": "Norwegian Forest Cat",
+                "image": "choisirait/chat/norvegien.webp"
               },
               {
-                "texte": "Yoga",
-                "image": "choisirait/salle/yoga.webp"
+                "texte": "Maine Coon",
+                "image": "choisirait/chat/maine-coon.webp"
               },
               {
-                "texte": "Boxing",
-                "image": "choisirait/salle/boxe-salle.webp"
+                "texte": "Bengal",
+                "image": "choisirait/chat/bengal.webp"
               }
             ]
           },
           {
-            "question": "Which hobby would he pick up?",
+            "question": "Which dog would he pick?",
             "options": [
               {
-                "texte": "Gardening",
-                "image": "choisirait/loisir/jardinage.webp"
+                "texte": "Corgi",
+                "image": "choisirait/chien/corgi.webp"
               },
               {
-                "texte": "Woodworking",
-                "image": "choisirait/loisir/menuiserie.webp"
+                "texte": "Great Dane",
+                "image": "choisirait/chien/dogue.webp"
               },
               {
-                "texte": "Photography",
-                "image": "choisirait/loisir/photo.webp"
+                "texte": "Samoyed",
+                "image": "choisirait/chien/samoyede.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Now send it to him. Did you guess right?",
+          "question": "Got his 3 picks? Send it and see!",
           "bouton": "Send this to him",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Hobbies edition. Your answers first, then his reaction.\n\nSend this to him",
+      "legende": "Pet lovers edition. Easy for you? Then the next one is for him.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
         "#boyfriendquiz",
         "#thisorthat",
-        "#hobbies",
+        "#petlovers",
         "#quizcouple"
       ]
     }

@@ -12,17 +12,17 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "lui",
+        "pour": "elle",
         "etiquette": "Dream life edition",
-        "accroche": "What would he choose?",
-        "consigne": "Pick A, B or C for him, then send it to him!",
+        "accroche": "What would she choose?",
+        "consigne": "One photo per round: the one she would pick!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which watch would he wear?",
+            "question": "Which watch would she wear?",
             "options": [
               {
                 "texte": "Rolex Submariner",
@@ -39,7 +39,7 @@
             ]
           },
           {
-            "question": "How would he travel with you?",
+            "question": "How would she travel with you?",
             "options": [
               {
                 "texte": "Motorbike",
@@ -56,7 +56,7 @@
             ]
           },
           {
-            "question": "Which house would he pick?",
+            "question": "Which dream house would she pick?",
             "options": [
               {
                 "texte": "Victorian house",
@@ -74,15 +74,15 @@
           }
         ],
         "fin": {
-          "question": "Send it to him: how many did you get?",
-          "bouton": "Send this to him",
+          "question": "Send it to her: how many did you get?",
+          "bouton": "Send this to her",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Dream life edition. No cheating: decide before the timer runs out.\n\nSend this to him",
+      "legende": "Dream life edition. Write down her three letters before you send it.\n\nSend this to her",
       "hashtags": [
         "#couplequiz",
-        "#boyfriendquiz",
+        "#girlfriendquiz",
         "#thisorthat",
         "#dreamlife",
         "#quizcouple"

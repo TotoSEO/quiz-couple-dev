@@ -12,17 +12,17 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "lui",
+        "pour": "elle",
         "etiquette": "Dream home edition",
-        "accroche": "What would he choose?",
-        "consigne": "Answer for him: A, B or C? Then send it!",
+        "accroche": "What would she choose?",
+        "consigne": "Answer for her: A, B or C? Then send it!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which house would he pick?",
+            "question": "Which house would she pick?",
             "options": [
               {
                 "texte": "Beach house",
@@ -39,7 +39,7 @@
             ]
           },
           {
-            "question": "Which view would he wake up to?",
+            "question": "Which view would she wake up to?",
             "options": [
               {
                 "texte": "Forest",
@@ -56,7 +56,7 @@
             ]
           },
           {
-            "question": "Which cat would he adopt?",
+            "question": "Which cat would she adopt?",
             "options": [
               {
                 "texte": "Siamese",
@@ -74,15 +74,15 @@
           }
         ],
         "fin": {
-          "question": "Now send it to him. Did you guess right?",
-          "bouton": "Send this to him",
+          "question": "Got her 3 picks? Send it and see!",
+          "bouton": "Send this to her",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Dream home edition. One letter per question, then send it to him.\n\nSend this to him",
+      "legende": "Dream home edition. One letter per question, then send it to her.\n\nSend this to her",
       "hashtags": [
         "#couplequiz",
-        "#boyfriendquiz",
+        "#girlfriendquiz",
         "#thisorthat",
         "#dreamhome",
         "#quizcouple"

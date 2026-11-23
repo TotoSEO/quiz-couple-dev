@@ -12,79 +12,79 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "lui",
-        "etiquette": "Travel edition",
-        "accroche": "What would he choose?",
-        "consigne": "Answer for him: A, B or C? Then send it!",
+        "pour": "elle",
+        "etiquette": "Food edition",
+        "accroche": "What would she choose?",
+        "consigne": "Answer for her: A, B or C? Then send it!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which city would he take you to?",
+            "question": "Which breakfast would she choose?",
             "options": [
               {
-                "texte": "Tokyo",
-                "image": "choisirait/ville/tokyo.webp"
+                "texte": "Eggs Benedict",
+                "image": "choisirait/petitdej/benedict.webp"
               },
               {
-                "texte": "Las Vegas",
-                "image": "choisirait/ville/las-vegas.webp"
+                "texte": "Açaí bowl",
+                "image": "choisirait/petitdej/acai.webp"
               },
               {
-                "texte": "New York",
-                "image": "choisirait/ville/new-york.webp"
+                "texte": "French toast",
+                "image": "choisirait/petitdej/pain-perdu.webp"
               }
             ]
           },
           {
-            "question": "How would he travel with you?",
+            "question": "How would she have her eggs?",
             "options": [
               {
-                "texte": "Hot air balloon",
-                "image": "choisirait/voyage/montgolfiere.webp"
+                "texte": "Omelette",
+                "image": "choisirait/oeufs/omelette.webp"
               },
               {
-                "texte": "Private jet",
-                "image": "choisirait/voyage/jet.webp"
+                "texte": "Poached",
+                "image": "choisirait/oeufs/poche.webp"
               },
               {
-                "texte": "Cruise ship",
-                "image": "choisirait/voyage/croisiere.webp"
+                "texte": "Soft-boiled",
+                "image": "choisirait/oeufs/coque.webp"
               }
             ]
           },
           {
-            "question": "Where would he book a weekend?",
+            "question": "What would she order at 2 a.m.?",
             "options": [
               {
-                "texte": "Overwater villa",
-                "image": "choisirait/weekend/bungalow-eau.webp"
+                "texte": "Burrito",
+                "image": "choisirait/fastfood/burrito.webp"
               },
               {
-                "texte": "Beach bungalow",
-                "image": "choisirait/weekend/bungalow-plage.webp"
+                "texte": "Nuggets",
+                "image": "choisirait/fastfood/nuggets.webp"
               },
               {
-                "texte": "Glamping tent",
-                "image": "choisirait/weekend/glamping.webp"
+                "texte": "Burger",
+                "image": "choisirait/fastfood/burger.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Now send it to him. Did you guess right?",
-          "bouton": "Send this to him",
+          "question": "Got her 3 picks? Send it and see!",
+          "bouton": "Send this to her",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Travel edition. No cheating: decide before the timer runs out.\n\nSend this to him",
+      "legende": "Food edition. She will swear you got at least one wrong.\n\nSend this to her",
       "hashtags": [
         "#couplequiz",
-        "#boyfriendquiz",
+        "#girlfriendquiz",
         "#thisorthat",
-        "#travelcouple",
+        "#foodie",
         "#quizcouple"
       ]
     }
