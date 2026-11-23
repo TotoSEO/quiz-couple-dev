@@ -82,11 +82,14 @@ const PREMIERS = [
 const TEXTES = {
   lui: {
     accroche: 'What would he choose?',
+    // l'accroche montre le mur des photos : la consigne dit le geste,
+    // choisir une photo à sa place (23 novembre 2026) ; le gabarit garde
+    // « A, B or C » sur une seule ligne
     consignes: [
-      'Guess his 3 picks, then send it to him!',
-      'Answer for him, then let him check!',
-      '3 questions, 4 seconds each. Pick for him!',
-      'Pick what he would pick. Then send it to him!',
+      'Pick A, B or C for him, then send it to him!',
+      'Choose the photo he would pick. 3 rounds!',
+      'Answer for him: A, B or C? Then send it!',
+      'One photo per round: the one he would pick!',
     ],
     fins: ['Now send it to him. Did you guess right?', 'Send it to him: how many did you get?', 'Got his 3 picks? Send it and see!'],
     bouton: 'Send this to him',
@@ -107,10 +110,10 @@ const TEXTES = {
   elle: {
     accroche: 'What would she choose?',
     consignes: [
-      'Guess her 3 picks, then send it to her!',
-      'Answer for her, then let her check!',
-      '3 questions, 4 seconds each. Pick for her!',
-      'Pick what she would pick. Then send it to her!',
+      'Pick A, B or C for her, then send it to her!',
+      'Choose the photo she would pick. 3 rounds!',
+      'Answer for her: A, B or C? Then send it!',
+      'One photo per round: the one she would pick!',
     ],
     fins: ['Now send it to her. Did you guess right?', 'Send it to her: how many did you get?', 'Got her 3 picks? Send it and see!'],
     bouton: 'Send this to her',

@@ -96,3 +96,118 @@
   font-weight: 600;
   color: var(--encre);
 }
+
+/* Pendant le regard qui précède le chrono, la photo dont la lettre
+   s'allume reçoit un anneau clair. */
+.ch-anneau {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  box-shadow: inset 0 0 0 8px color-mix(in srgb, var(--blanc) 85%, transparent);
+  pointer-events: none;
+}
+
+/* ── L'accroche ───────────────────────────────────────────────────────
+   Un mur des neuf photos du reel, penché, qui défile derrière une carte
+   (l'édition, « What would HE choose? », la consigne, les lettres A, B,
+   C), et les deux personnages dessous. */
+
+.chi-mur {
+  position: absolute;
+  left: -210px;
+  top: -160px;
+  width: 1500px;
+  height: 2240px;
+  transform-origin: 50% 50%;
+}
+.chi-rang {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 184px;
+}
+.chi-tuile {
+  position: absolute;
+  top: 0;
+  width: 520px;
+  height: 184px;
+  overflow: hidden;
+  border-radius: 28px;
+  background: var(--trait);
+  box-shadow: 0 8px 22px rgba(43, 23, 34, 0.24);
+}
+.chi-tuile-photo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.ch-lettre.chi-tuile-lettre {
+  position: absolute;
+  left: 12px;
+  bottom: 12px;
+  width: 48px;
+  height: 48px;
+  font-size: 30px;
+  box-shadow: 0 3px 8px rgba(43, 23, 34, 0.3);
+}
+/* un voile très léger sur le bas du mur, derrière les personnages */
+.chi-voile {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 52%, color-mix(in srgb, var(--fond) 38%, transparent) 70%, color-mix(in srgb, var(--fond) 50%, transparent) 100%);
+}
+.qc-canevas.is-choisirait .qc-utile.chi-zone {
+  justify-content: flex-start;
+  padding-top: var(--pas-2);
+}
+.chi-carte {
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--pas-3);
+  padding: var(--pas-6) var(--pas-6) var(--pas-8);
+  border-radius: var(--rayon-grand);
+  background: var(--papier);
+  box-shadow: 0 0 0 8px color-mix(in srgb, var(--blanc) 75%, transparent), 0 34px 80px rgba(43, 23, 34, 0.42);
+}
+.qc-canevas.is-choisirait .chi-edition {
+  padding: var(--pas-1) var(--pas-4);
+  border-radius: var(--rayon-pilule);
+  background: var(--rose);
+  color: var(--blanc);
+  font-size: 38px;
+}
+.qc-canevas.is-choisirait .chi-accroche {
+  font-size: 112px;
+  line-height: 1;
+}
+.chi-pronom {
+  padding: 0 0.08em;
+  border-radius: 0.18em;
+  color: var(--violet-texte);
+  background: linear-gradient(180deg, transparent 58%, color-mix(in srgb, var(--violet) 24%, transparent) 58%);
+}
+.chi-pronom.is-rose {
+  color: var(--rose-texte);
+  background: linear-gradient(180deg, transparent 58%, color-mix(in srgb, var(--rose) 28%, transparent) 58%);
+}
+.qc-canevas.is-choisirait .chi-consigne {
+  font-size: 44px;
+  font-weight: 700;
+  line-height: 1.25;
+}
+.chi-lettres {
+  display: flex;
+  gap: var(--pas-4);
+  margin-top: var(--pas-1);
+}
+.ch-lettre.chi-lettre {
+  width: 104px;
+  height: 104px;
+  font-size: 62px;
+  box-shadow: 0 8px 18px rgba(43, 23, 34, 0.28);
+}

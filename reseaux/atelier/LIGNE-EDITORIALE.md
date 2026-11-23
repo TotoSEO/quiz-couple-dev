@@ -279,16 +279,27 @@ propositions à chaque fois [...] le but c'est que la fille réponde à la place
 du garçon, puis qu'il lui partage sur insta en mode : pour moi tu prends
 AAC ». Tous les matins et tous les midis sauf le samedi.
 
-Le reel : l'édition en étiquette (« Dream life edition », « Food edition »...),
-l'accroche « What would he choose? » (ou « she »), une consigne (« Guess his 3
-picks, then send it to him! »), puis **trois questions de trois photos**
-(« Which car would he pick? » : Porsche 911, Lamborghini Huracán,
-Mercedes-AMG C63 S), chaque photo marquée A, B ou C avec son nom, quatre
-secondes de chrono par question, la mascotte qui réfléchit à côté (le violet
-quand on devine pour lui, la rose pour elle), puis la fin : « Now send it to
-him. Did you guess right? » et « Send this to him ». Le reel dure
-24 secondes. Deux reels sur trois sont pour lui (c'est elle qui
-devine), un sur trois pour elle.
+Le reel : **l'accroche montre tout de suite qu'on va choisir des photos**
+(23 novembre 2026, Thomas : « l'intro est trop flat, trop basique. On
+comprend pas dès le début que la personne va devoir choisir des images et
+c'est ça qui fait rester ») : dès la première image, un mur penché des neuf
+photos du reel défile derrière une carte, chaque photo avec sa lettre comme
+dans le jeu ; la carte porte l'édition en pastille (« Dream life edition »,
+« Food edition »...), « What would he choose? » avec « he » (ou « she ») en
+couleur, une consigne qui dit le geste (« Pick A, B or C for him, then send
+it to him! », « Choose the photo he would pick. 3 rounds! »...) et les trois
+lettres A, B, C qui sautent l'une après l'autre ; dessous, celui qui devine
+fait coucou et l'autre réfléchit sous un « ? ». Puis **trois questions de
+trois photos** (« Which car would he pick? » : Porsche 911, Lamborghini
+Huracán, Mercedes-AMG C63 S), chaque photo marquée A, B ou C avec son nom ;
+une fois les photos arrivées, **1,6 seconde pour les regarder** (les lettres
+s'allument l'une après l'autre, le chrono reste plein et pâle) avant les
+quatre secondes du chrono : jusqu'au 23 novembre 2026, le chrono partait
+juste après la dernière photo et Thomas trouvait que le temps filait trop
+vite. La mascotte réfléchit à côté (le violet quand on devine pour lui, la
+rose pour elle), puis la fin : « Now send it to him. Did you guess right? »
+et « Send this to him ». Le reel dure 28 secondes. Deux reels sur trois sont
+pour lui (c'est elle qui devine), un sur trois pour elle.
 
 **Les photos** : 446 options en 49 familles (voitures, motos, chiens, chats,
 vacances, villes, desserts, pizzas, petits-déjeuners, bars, montres,
@@ -296,7 +307,17 @@ baskets, bagues, demandes en mariage, sports, consoles, Noël, Nouvel An,
 Saint-Valentin, hiver...), des photos réelles tirées de Wikimedia Commons et
 d'Openverse, recadrées en 1000 x 354 en WebP dans
 `reseaux/studio/public/choisirait/<famille>/<id>.webp` ; la source, la
-licence et l'auteur de chacune sont dans `choisirait/sources.json`. Les
+licence et l'auteur de chacune sont dans `choisirait/sources.json`. Une
+photo s'affiche telle quelle dans sa case (840 x 299, le même format), avec
+un rapprochement de 4 % au plus depuis le centre : jusqu'au 23 novembre
+2026, elle s'approchait de 12 % en dérivant de côté, et coupait des têtes de
+chiens et des toits de voitures. Ce jour-là, chaque photo a été revue à la
+taille de sa case, avec la pastille de la lettre et du nom par-dessus (elle
+cache le bas à gauche) ; 94 ont été recoupées depuis leur original en
+1280 px, et leur `cadrage` est noté dans `sources.json` : un nombre de 0
+(la bande du haut) à 1 (celle du bas), `[cx, cy, z]` (le centre du cadre en
+fractions de l'image et un zoom), ou `contenir` (la photo entière sur un
+fond flouté, pour un objet en hauteur : un cornet, une trompette). Les
 familles, leurs questions (à lui, à elle) et leurs options sont dans
 `choisirait/banque.json`. Les chaussures ne se posent que pour elle.
 

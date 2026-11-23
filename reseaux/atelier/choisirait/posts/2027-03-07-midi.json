@@ -15,7 +15,7 @@
         "pour": "elle",
         "etiquette": "Drinks edition",
         "accroche": "What would she choose?",
-        "consigne": "3 questions, 4 seconds each. Pick for her!",
+        "consigne": "Answer for her: A, B or C? Then send it!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
