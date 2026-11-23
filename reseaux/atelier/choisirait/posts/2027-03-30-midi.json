@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "choisirait",
   "categorie": "choisirait",
-  "sujet": "ch-236",
+  "sujet": "ch-238",
   "idee_id": null,
   "variantes": {
     "en": {
@@ -13,9 +13,9 @@
         "langue": "en",
         "theme": "light",
         "pour": "lui",
-        "etiquette": "Weekend edition",
+        "etiquette": "Adventure edition",
         "accroche": "What would he choose?",
-        "consigne": "Pick what he would pick. Then send it to him!",
+        "consigne": "Answer for him, then let him check!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
@@ -25,12 +25,12 @@
             "question": "Which sport would he watch?",
             "options": [
               {
-                "texte": "Golf",
-                "image": "choisirait/sport/golf.webp"
+                "texte": "Formula 1",
+                "image": "choisirait/sport/f1.webp"
               },
               {
-                "texte": "Boxing",
-                "image": "choisirait/sport/boxe.webp"
+                "texte": "Rugby",
+                "image": "choisirait/sport/rugby.webp"
               },
               {
                 "texte": "Football",
@@ -39,52 +39,52 @@
             ]
           },
           {
-            "question": "Which adventure would he try?",
+            "question": "Where would he book a weekend?",
             "options": [
               {
-                "texte": "Skiing",
-                "image": "choisirait/aventure/ski.webp"
+                "texte": "Desert camp",
+                "image": "choisirait/weekend/desert.webp"
               },
               {
-                "texte": "Scuba diving",
-                "image": "choisirait/aventure/plongee.webp"
+                "texte": "Ski chalet",
+                "image": "choisirait/weekend/chalet-ski.webp"
               },
               {
-                "texte": "Kayaking",
-                "image": "choisirait/aventure/kayak.webp"
+                "texte": "Treehouse",
+                "image": "choisirait/weekend/cabane-arbre.webp"
               }
             ]
           },
           {
-            "question": "Which hobby would he pick up?",
+            "question": "Where would he take you on vacation?",
             "options": [
               {
-                "texte": "Knitting",
-                "image": "choisirait/loisir/tricot.webp"
+                "texte": "Thailand",
+                "image": "choisirait/vacances/thailande.webp"
               },
               {
-                "texte": "Gardening",
-                "image": "choisirait/loisir/jardinage.webp"
+                "texte": "USA",
+                "image": "choisirait/vacances/usa.webp"
               },
               {
-                "texte": "Pottery",
-                "image": "choisirait/loisir/poterie.webp"
+                "texte": "Maldives",
+                "image": "choisirait/vacances/maldives.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Send it to him: how many did you get?",
+          "question": "Now send it to him. Did you guess right?",
           "bouton": "Send this to him",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Weekend edition. Pick for him, then let him prove you wrong.\n\nSend this to him",
+      "legende": "Adventure edition. Your answers first, then his reaction.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
         "#boyfriendquiz",
         "#thisorthat",
-        "#weekendvibes",
+        "#adventurecouple",
         "#quizcouple"
       ]
     }

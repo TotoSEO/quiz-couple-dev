@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "choisirait",
   "categorie": "choisirait",
-  "sujet": "ch-069",
+  "sujet": "ch-071",
   "idee_id": null,
   "variantes": {
     "en": {
@@ -12,79 +12,79 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "elle",
-        "etiquette": "Date night edition",
-        "accroche": "What would she choose?",
-        "consigne": "Guess her 3 picks, then send it to her!",
+        "pour": "lui",
+        "etiquette": "Winter edition",
+        "accroche": "What would he choose?",
+        "consigne": "3 questions, 4 seconds each. Pick for him!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which flowers would she want?",
+            "question": "Which winter date would he pick?",
             "options": [
               {
-                "texte": "Red roses",
-                "image": "choisirait/fleurs/roses.webp"
+                "texte": "Sledding",
+                "image": "choisirait/hiver/luge.webp"
               },
               {
-                "texte": "Daisies",
-                "image": "choisirait/fleurs/marguerites.webp"
+                "texte": "Ice skating",
+                "image": "choisirait/hiver/hiver-patin.webp"
               },
               {
-                "texte": "Lilies",
-                "image": "choisirait/fleurs/lys.webp"
+                "texte": "Cabin by the fire",
+                "image": "choisirait/hiver/feu-cheminee.webp"
               }
             ]
           },
           {
-            "question": "Which dessert would she pick?",
+            "question": "Which dinner would he pick?",
             "options": [
               {
-                "texte": "Macarons",
-                "image": "choisirait/dessert/macarons.webp"
+                "texte": "Lobster",
+                "image": "choisirait/diner/homard.webp"
               },
               {
-                "texte": "Cheesecake",
-                "image": "choisirait/dessert/cheesecake.webp"
+                "texte": "Sushi",
+                "image": "choisirait/diner/sushi.webp"
               },
               {
-                "texte": "Red velvet cake",
-                "image": "choisirait/dessert/red-velvet.webp"
+                "texte": "Risotto",
+                "image": "choisirait/diner/risotto.webp"
               }
             ]
           },
           {
-            "question": "Which date would she take you on?",
+            "question": "Where would he book a weekend?",
             "options": [
               {
-                "texte": "Fancy dinner",
-                "image": "choisirait/demande/demande-resto.webp"
+                "texte": "Glamping tent",
+                "image": "choisirait/weekend/glamping.webp"
               },
               {
-                "texte": "Cinema night",
-                "image": "choisirait/date/cinema.webp"
+                "texte": "Beach bungalow",
+                "image": "choisirait/weekend/bungalow-plage.webp"
               },
               {
-                "texte": "Wine tasting",
-                "image": "choisirait/date/degustation.webp"
+                "texte": "Castle hotel",
+                "image": "choisirait/weekend/chateau-hotel.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Got her 3 picks? Send it and see!",
-          "bouton": "Send this to her",
+          "question": "Send it to him: how many did you get?",
+          "bouton": "Send this to him",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Date night edition. One letter per question, then send it to her.\n\nSend this to her",
+      "legende": "Winter edition. Answer for him first, no peeking.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
-        "#girlfriendquiz",
+        "#boyfriendquiz",
         "#thisorthat",
-        "#datenight",
+        "#winter",
         "#quizcouple"
       ]
     }

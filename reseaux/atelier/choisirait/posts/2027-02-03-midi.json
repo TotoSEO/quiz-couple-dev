@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "choisirait",
   "categorie": "choisirait",
-  "sujet": "ch-134",
+  "sujet": "ch-136",
   "idee_id": null,
   "variantes": {
     "en": {
@@ -13,78 +13,78 @@
         "langue": "en",
         "theme": "light",
         "pour": "lui",
-        "etiquette": "Cozy night in edition",
+        "etiquette": "Sweet tooth edition",
         "accroche": "What would he choose?",
-        "consigne": "Answer for him, then let him check!",
+        "consigne": "Pick what he would pick. Then send it to him!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which cake would he pick?",
+            "question": "What would he grab at the bakery?",
             "options": [
               {
-                "texte": "Vanilla éclair",
-                "image": "choisirait/dessert/eclair.webp"
+                "texte": "Baguette",
+                "image": "choisirait/boulangerie/baguette.webp"
               },
               {
-                "texte": "Chocolate lava cake",
-                "image": "choisirait/dessert/fondant.webp"
+                "texte": "Bagel",
+                "image": "choisirait/boulangerie/bagel.webp"
               },
               {
-                "texte": "Red velvet cake",
-                "image": "choisirait/dessert/red-velvet.webp"
+                "texte": "Pain au chocolat",
+                "image": "choisirait/boulangerie/pain-chocolat.webp"
               }
             ]
           },
           {
-            "question": "Which game night would he pick?",
+            "question": "Which ice cream would he get?",
             "options": [
               {
-                "texte": "Video games",
-                "image": "choisirait/jeu/jeux-video.webp"
+                "texte": "Popsicle",
+                "image": "choisirait/glace/esquimau.webp"
               },
               {
-                "texte": "Poker",
-                "image": "choisirait/jeu/poker.webp"
+                "texte": "Soft serve",
+                "image": "choisirait/glace/italienne.webp"
               },
               {
-                "texte": "Board games",
-                "image": "choisirait/jeu/jeux-societe.webp"
+                "texte": "Affogato",
+                "image": "choisirait/glace/affogato.webp"
               }
             ]
           },
           {
-            "question": "Which dinner would he pick?",
+            "question": "Which movie snack would he pick?",
             "options": [
               {
-                "texte": "Cheese fondue",
-                "image": "choisirait/diner/fondue.webp"
+                "texte": "Gummy bears",
+                "image": "choisirait/snack/oursons.webp"
               },
               {
-                "texte": "Risotto",
-                "image": "choisirait/diner/risotto.webp"
+                "texte": "Ice cream tub",
+                "image": "choisirait/snack/pot-glace.webp"
               },
               {
-                "texte": "Raclette",
-                "image": "choisirait/diner/raclette.webp"
+                "texte": "Nachos",
+                "image": "choisirait/snack/nachos.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Send it to him: how many did you get?",
+          "question": "Now send it to him. Did you guess right?",
           "bouton": "Send this to him",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Cozy night in edition. If you get all three, you know him by heart.\n\nSend this to him",
+      "legende": "Sweet tooth edition. Pick for him, then let him prove you wrong.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
         "#boyfriendquiz",
         "#thisorthat",
-        "#cozynight",
+        "#dessert",
         "#quizcouple"
       ]
     }

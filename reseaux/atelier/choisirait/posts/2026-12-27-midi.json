@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "choisirait",
   "categorie": "choisirait",
-  "sujet": "ch-063",
+  "sujet": "ch-065",
   "idee_id": null,
   "variantes": {
     "en": {
@@ -12,79 +12,79 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "elle",
-        "etiquette": "Date night edition",
-        "accroche": "What would she choose?",
-        "consigne": "3 questions, 4 seconds each. Pick for her!",
+        "pour": "lui",
+        "etiquette": "Dream life edition",
+        "accroche": "What would he choose?",
+        "consigne": "Guess his 3 picks, then send it to him!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which flowers would she want?",
+            "question": "Which watch would he wear?",
             "options": [
               {
-                "texte": "Tulips",
-                "image": "choisirait/fleurs/tulipes.webp"
+                "texte": "Rolex Submariner",
+                "image": "choisirait/montre/rolex.webp"
               },
               {
-                "texte": "Lavender",
-                "image": "choisirait/fleurs/lavande.webp"
+                "texte": "Pocket watch",
+                "image": "choisirait/montre/gousset.webp"
               },
               {
-                "texte": "Sunflowers",
-                "image": "choisirait/fleurs/tournesols.webp"
+                "texte": "Omega Speedmaster",
+                "image": "choisirait/montre/speedmaster.webp"
               }
             ]
           },
           {
-            "question": "Which movie snack would she pick?",
+            "question": "How would he travel with you?",
             "options": [
               {
-                "texte": "Chocolate bar",
-                "image": "choisirait/snack/tablette.webp"
+                "texte": "Motorbike",
+                "image": "choisirait/moto/bmw-gs.webp"
               },
               {
-                "texte": "Licorice",
-                "image": "choisirait/snack/reglisse.webp"
+                "texte": "Hot air balloon",
+                "image": "choisirait/voyage/montgolfiere.webp"
               },
               {
-                "texte": "Popcorn",
-                "image": "choisirait/snack/popcorn.webp"
+                "texte": "Sailboat",
+                "image": "choisirait/voyage/voilier.webp"
               }
             ]
           },
           {
-            "question": "Which cake would she pick?",
+            "question": "Which house would he pick?",
             "options": [
               {
-                "texte": "Crêpes",
-                "image": "choisirait/dessert/crepes.webp"
+                "texte": "Victorian house",
+                "image": "choisirait/maison/victorienne.webp"
               },
               {
-                "texte": "Cheesecake",
-                "image": "choisirait/dessert/cheesecake.webp"
+                "texte": "Cozy cabin",
+                "image": "choisirait/weekend/chalet-bois.webp"
               },
               {
-                "texte": "Chocolate lava cake",
-                "image": "choisirait/dessert/fondant.webp"
+                "texte": "Tiny house",
+                "image": "choisirait/maison/tiny-house.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Got her 3 picks? Send it and see!",
-          "bouton": "Send this to her",
+          "question": "Send it to him: how many did you get?",
+          "bouton": "Send this to him",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Date night edition. Guess first, send it after. Then compare.\n\nSend this to her",
+      "legende": "Dream life edition. No cheating: decide before the timer runs out.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
-        "#girlfriendquiz",
+        "#boyfriendquiz",
         "#thisorthat",
-        "#datenight",
+        "#dreamlife",
         "#quizcouple"
       ]
     }

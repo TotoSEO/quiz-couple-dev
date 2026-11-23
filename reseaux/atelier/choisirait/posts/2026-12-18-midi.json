@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "choisirait",
   "categorie": "choisirait",
-  "sujet": "ch-047",
+  "sujet": "ch-049",
   "idee_id": null,
   "variantes": {
     "en": {
@@ -13,78 +13,78 @@
         "langue": "en",
         "theme": "light",
         "pour": "lui",
-        "etiquette": "Winter edition",
+        "etiquette": "Wedding edition",
         "accroche": "What would he choose?",
-        "consigne": "3 questions, 4 seconds each. Pick for him!",
+        "consigne": "Guess his 3 picks, then send it to him!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which winter date would he pick?",
+            "question": "Which ring would he pick for you?",
             "options": [
               {
-                "texte": "Skiing",
-                "image": "choisirait/hiver/hiver-ski.webp"
+                "texte": "Rose gold ring",
+                "image": "choisirait/bague/or-rose.webp"
               },
               {
-                "texte": "Sledding",
-                "image": "choisirait/hiver/luge.webp"
+                "texte": "Halo ring",
+                "image": "choisirait/bague/halo.webp"
               },
               {
-                "texte": "Cabin by the fire",
-                "image": "choisirait/hiver/feu-cheminee.webp"
+                "texte": "Gold band",
+                "image": "choisirait/bague/alliance-or.webp"
               }
             ]
           },
           {
-            "question": "Which dinner would he pick?",
+            "question": "Where would he want to get married?",
             "options": [
               {
-                "texte": "Lobster",
-                "image": "choisirait/diner/homard.webp"
+                "texte": "Vegas chapel",
+                "image": "choisirait/mariage/vegas.webp"
               },
               {
-                "texte": "Fish and chips",
-                "image": "choisirait/diner/fish-chips.webp"
+                "texte": "Castle",
+                "image": "choisirait/mariage/mariage-chateau.webp"
               },
               {
-                "texte": "Cheese fondue",
-                "image": "choisirait/diner/fondue.webp"
+                "texte": "Lakeside",
+                "image": "choisirait/vue/lac.webp"
               }
             ]
           },
           {
-            "question": "Where would he book a weekend for two?",
+            "question": "Which flowers would he get you?",
             "options": [
               {
-                "texte": "Log cabin",
-                "image": "choisirait/weekend/chalet-bois.webp"
+                "texte": "Lavender",
+                "image": "choisirait/fleurs/lavande.webp"
               },
               {
-                "texte": "Houseboat",
-                "image": "choisirait/weekend/peniche.webp"
+                "texte": "Orchid",
+                "image": "choisirait/fleurs/orchidee.webp"
               },
               {
-                "texte": "Castle hotel",
-                "image": "choisirait/weekend/chateau-hotel.webp"
+                "texte": "Hydrangeas",
+                "image": "choisirait/fleurs/hortensias.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Send it to him: how many did you get?",
+          "question": "Now send it to him. Did you guess right?",
           "bouton": "Send this to him",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Winter edition. He will swear you got at least one wrong.\n\nSend this to him",
+      "legende": "Wedding edition. One letter per question, then send it to him.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
         "#boyfriendquiz",
         "#thisorthat",
-        "#winter",
+        "#engaged",
         "#quizcouple"
       ]
     }

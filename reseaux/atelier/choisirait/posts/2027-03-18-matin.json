@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "choisirait",
   "categorie": "choisirait",
-  "sujet": "ch-213",
+  "sujet": "ch-215",
   "idee_id": null,
   "variantes": {
     "en": {
@@ -12,79 +12,79 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "elle",
-        "etiquette": "Dream home edition",
-        "accroche": "What would she choose?",
-        "consigne": "Guess her 3 picks, then send it to her!",
+        "pour": "lui",
+        "etiquette": "Travel edition",
+        "accroche": "What would he choose?",
+        "consigne": "3 questions, 4 seconds each. Pick for him!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which cat would she adopt?",
+            "question": "Which city would he take you to?",
             "options": [
               {
-                "texte": "Black cat",
-                "image": "choisirait/chat/chat-noir.webp"
+                "texte": "Paris",
+                "image": "choisirait/ville/paris.webp"
               },
               {
-                "texte": "British Shorthair",
-                "image": "choisirait/chat/british.webp"
+                "texte": "Marrakech",
+                "image": "choisirait/ville/marrakech.webp"
               },
               {
-                "texte": "Maine Coon",
-                "image": "choisirait/chat/maine-coon.webp"
+                "texte": "Rio de Janeiro",
+                "image": "choisirait/ville/rio.webp"
               }
             ]
           },
           {
-            "question": "Which dog would she pick?",
+            "question": "Where would he go on vacation?",
             "options": [
               {
-                "texte": "Dachshund",
-                "image": "choisirait/chien/teckel.webp"
+                "texte": "Italy",
+                "image": "choisirait/vacances/italie.webp"
               },
               {
-                "texte": "French Bulldog",
-                "image": "choisirait/chien/bouledogue.webp"
+                "texte": "Bali",
+                "image": "choisirait/vacances/bali.webp"
               },
               {
-                "texte": "Dalmatian",
-                "image": "choisirait/chien/dalmatien.webp"
+                "texte": "Hawaii",
+                "image": "choisirait/vacances/hawaii.webp"
               }
             ]
           },
           {
-            "question": "Which view would she wake up to?",
+            "question": "How would he travel with you?",
             "options": [
               {
-                "texte": "Lake",
-                "image": "choisirait/vue/lac.webp"
+                "texte": "Convertible",
+                "image": "choisirait/voyage/cabriolet.webp"
               },
               {
-                "texte": "Rice fields",
-                "image": "choisirait/vue/rizieres.webp"
+                "texte": "Motorbike",
+                "image": "choisirait/moto/bmw-gs.webp"
               },
               {
-                "texte": "Eiffel Tower",
-                "image": "choisirait/vue/tour-eiffel.webp"
+                "texte": "Cruise ship",
+                "image": "choisirait/voyage/croisiere.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Got her 3 picks? Send it and see!",
-          "bouton": "Send this to her",
+          "question": "Send it to him: how many did you get?",
+          "bouton": "Send this to him",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Dream home edition. Guess first, send it after. Then compare.\n\nSend this to her",
+      "legende": "Travel edition. No cheating: decide before the timer runs out.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
-        "#girlfriendquiz",
+        "#boyfriendquiz",
         "#thisorthat",
-        "#dreamhome",
+        "#travelcouple",
         "#quizcouple"
       ]
     }

@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "choisirait",
   "categorie": "choisirait",
-  "sujet": "ch-130",
+  "sujet": "ch-132",
   "idee_id": null,
   "variantes": {
     "en": {
@@ -12,79 +12,79 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "lui",
-        "etiquette": "Luxury edition",
-        "accroche": "What would he choose?",
-        "consigne": "Answer for him, then let him check!",
+        "pour": "elle",
+        "etiquette": "Style edition",
+        "accroche": "What would she choose?",
+        "consigne": "Pick what she would pick. Then send it to her!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which dream house would he pick?",
+            "question": "Which shoes would she pick?",
             "options": [
               {
-                "texte": "Lake house",
-                "image": "choisirait/maison/maison-lac.webp"
+                "texte": "Knee-high boots",
+                "image": "choisirait/chaussures/cuissardes.webp"
               },
               {
-                "texte": "Beach house",
-                "image": "choisirait/maison/maison-plage.webp"
+                "texte": "High heels",
+                "image": "choisirait/chaussures/talons.webp"
               },
               {
-                "texte": "Mountain chalet",
-                "image": "choisirait/maison/chalet.webp"
+                "texte": "Ballet flats",
+                "image": "choisirait/chaussures/ballerines.webp"
               }
             ]
           },
           {
-            "question": "How would he travel with you?",
+            "question": "Which sneakers would she pick?",
             "options": [
               {
-                "texte": "Motorbike",
-                "image": "choisirait/moto/bmw-gs.webp"
+                "texte": "Nike Air Max",
+                "image": "choisirait/baskets/air-max.webp"
               },
               {
-                "texte": "Private jet",
-                "image": "choisirait/voyage/jet.webp"
+                "texte": "Birkenstock",
+                "image": "choisirait/baskets/birkenstock.webp"
               },
               {
-                "texte": "Hot air balloon",
-                "image": "choisirait/voyage/montgolfiere.webp"
+                "texte": "Air Force 1",
+                "image": "choisirait/baskets/air-force.webp"
               }
             ]
           },
           {
-            "question": "Where would he book a weekend for two?",
+            "question": "Which phone would she pick?",
             "options": [
               {
-                "texte": "Desert camp",
-                "image": "choisirait/weekend/desert.webp"
+                "texte": "Samsung Galaxy",
+                "image": "choisirait/telephone/galaxy.webp"
               },
               {
-                "texte": "Houseboat",
-                "image": "choisirait/weekend/peniche.webp"
+                "texte": "BlackBerry",
+                "image": "choisirait/telephone/blackberry.webp"
               },
               {
-                "texte": "Castle hotel",
-                "image": "choisirait/weekend/chateau-hotel.webp"
+                "texte": "Nokia 3310",
+                "image": "choisirait/telephone/nokia.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Now send it to him. Did you guess right?",
-          "bouton": "Send this to him",
+          "question": "Got her 3 picks? Send it and see!",
+          "bouton": "Send this to her",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Luxury edition. Easy for you? Then the next one is for him.\n\nSend this to him",
+      "legende": "Style edition. Write down her three letters before you send it.\n\nSend this to her",
       "hashtags": [
         "#couplequiz",
-        "#boyfriendquiz",
+        "#girlfriendquiz",
         "#thisorthat",
-        "#luxurylife",
+        "#style",
         "#quizcouple"
       ]
     }

@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "choisirait",
   "categorie": "choisirait",
-  "sujet": "ch-152",
+  "sujet": "ch-154",
   "idee_id": null,
   "variantes": {
     "en": {
@@ -13,78 +13,78 @@
         "langue": "en",
         "theme": "light",
         "pour": "lui",
-        "etiquette": "Adventure edition",
+        "etiquette": "Travel edition",
         "accroche": "What would he choose?",
-        "consigne": "Pick what he would pick. Then send it to him!",
+        "consigne": "Answer for him, then let him check!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which adventure would he try?",
+            "question": "Which city would he take you to?",
             "options": [
               {
-                "texte": "Rock climbing",
-                "image": "choisirait/aventure/escalade.webp"
+                "texte": "New York",
+                "image": "choisirait/ville/new-york.webp"
               },
               {
-                "texte": "Skiing",
-                "image": "choisirait/aventure/ski.webp"
+                "texte": "Lisbon",
+                "image": "choisirait/ville/lisbonne.webp"
               },
               {
-                "texte": "Scuba diving",
-                "image": "choisirait/aventure/plongee.webp"
+                "texte": "Marrakech",
+                "image": "choisirait/ville/marrakech.webp"
               }
             ]
           },
           {
-            "question": "Which sport would he watch?",
+            "question": "Where would he go on vacation?",
             "options": [
               {
-                "texte": "Golf",
-                "image": "choisirait/sport/golf.webp"
+                "texte": "Bali",
+                "image": "choisirait/vacances/bali.webp"
               },
               {
-                "texte": "Boxing",
-                "image": "choisirait/sport/boxe.webp"
+                "texte": "Iceland",
+                "image": "choisirait/vacances/islande.webp"
               },
               {
-                "texte": "Baseball",
-                "image": "choisirait/sport/baseball.webp"
+                "texte": "Peru",
+                "image": "choisirait/vacances/perou.webp"
               }
             ]
           },
           {
-            "question": "Where would he book a weekend?",
+            "question": "How would he travel with you?",
             "options": [
               {
-                "texte": "Ski chalet",
-                "image": "choisirait/weekend/chalet-ski.webp"
+                "texte": "Hot air balloon",
+                "image": "choisirait/voyage/montgolfiere.webp"
               },
               {
-                "texte": "Overwater villa",
-                "image": "choisirait/weekend/bungalow-eau.webp"
+                "texte": "Sailboat",
+                "image": "choisirait/voyage/voilier.webp"
               },
               {
-                "texte": "Desert camp",
-                "image": "choisirait/weekend/desert.webp"
+                "texte": "Cruise ship",
+                "image": "choisirait/voyage/croisiere.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Send it to him: how many did you get?",
+          "question": "Now send it to him. Did you guess right?",
           "bouton": "Send this to him",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Adventure edition. Write down his three letters before you send it.\n\nSend this to him",
+      "legende": "Travel edition. If you get all three, you know him by heart.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
         "#boyfriendquiz",
         "#thisorthat",
-        "#adventurecouple",
+        "#travelcouple",
         "#quizcouple"
       ]
     }

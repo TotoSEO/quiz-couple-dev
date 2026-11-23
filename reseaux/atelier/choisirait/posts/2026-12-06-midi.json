@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "choisirait",
   "categorie": "choisirait",
-  "sujet": "ch-024",
+  "sujet": "ch-026",
   "idee_id": null,
   "variantes": {
     "en": {
@@ -12,79 +12,79 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "elle",
-        "etiquette": "Sweet tooth edition",
-        "accroche": "What would she choose?",
-        "consigne": "Pick what she would pick. Then send it to her!",
+        "pour": "lui",
+        "etiquette": "Weekend edition",
+        "accroche": "What would he choose?",
+        "consigne": "Answer for him, then let him check!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which ice cream would she get?",
+            "question": "Which sport would he watch?",
             "options": [
               {
-                "texte": "Popsicle",
-                "image": "choisirait/glace/esquimau.webp"
+                "texte": "Boxing",
+                "image": "choisirait/sport/boxe.webp"
               },
               {
-                "texte": "Gelato",
-                "image": "choisirait/glace/gelato.webp"
+                "texte": "Rugby",
+                "image": "choisirait/sport/rugby.webp"
               },
               {
-                "texte": "Ice cream cone",
-                "image": "choisirait/glace/cornet.webp"
+                "texte": "Golf",
+                "image": "choisirait/sport/golf.webp"
               }
             ]
           },
           {
-            "question": "Which movie snack would she pick?",
+            "question": "Which adventure would he try?",
             "options": [
               {
-                "texte": "Chocolate bar",
-                "image": "choisirait/snack/tablette.webp"
+                "texte": "Kayaking",
+                "image": "choisirait/aventure/kayak.webp"
               },
               {
-                "texte": "Licorice",
-                "image": "choisirait/snack/reglisse.webp"
+                "texte": "Bungee jumping",
+                "image": "choisirait/aventure/saut-elastique.webp"
               },
               {
-                "texte": "Ice cream tub",
-                "image": "choisirait/snack/pot-glace.webp"
+                "texte": "Scuba diving",
+                "image": "choisirait/aventure/plongee.webp"
               }
             ]
           },
           {
-            "question": "What would she grab at the bakery?",
+            "question": "Which workout would he pick?",
             "options": [
               {
-                "texte": "Muffin",
-                "image": "choisirait/boulangerie/muffin.webp"
+                "texte": "Running",
+                "image": "choisirait/salle/course.webp"
               },
               {
-                "texte": "Donut",
-                "image": "choisirait/boulangerie/donut.webp"
+                "texte": "Yoga",
+                "image": "choisirait/salle/yoga.webp"
               },
               {
-                "texte": "Brioche",
-                "image": "choisirait/boulangerie/brioche.webp"
+                "texte": "Boxing",
+                "image": "choisirait/salle/boxe-salle.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Got her 3 picks? Send it and see!",
-          "bouton": "Send this to her",
+          "question": "Send it to him: how many did you get?",
+          "bouton": "Send this to him",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Sweet tooth edition. If you get all three, you know her by heart.\n\nSend this to her",
+      "legende": "Weekend edition. Pick for him, then let him prove you wrong.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
-        "#girlfriendquiz",
+        "#boyfriendquiz",
         "#thisorthat",
-        "#dessert",
+        "#weekendvibes",
         "#quizcouple"
       ]
     }

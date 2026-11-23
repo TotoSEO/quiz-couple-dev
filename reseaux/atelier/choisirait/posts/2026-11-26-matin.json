@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "choisirait",
   "categorie": "choisirait",
-  "sujet": "ch-005",
+  "sujet": "ch-007",
   "idee_id": null,
   "variantes": {
     "en": {
@@ -13,9 +13,9 @@
         "langue": "en",
         "theme": "light",
         "pour": "lui",
-        "etiquette": "Travel edition",
+        "etiquette": "Adventure edition",
         "accroche": "What would he choose?",
-        "consigne": "Guess his 3 picks, then send it to him!",
+        "consigne": "3 questions, 4 seconds each. Pick for him!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
@@ -25,66 +25,66 @@
             "question": "Where would he book a weekend?",
             "options": [
               {
-                "texte": "Beach bungalow",
-                "image": "choisirait/weekend/bungalow-plage.webp"
-              },
-              {
-                "texte": "Ski chalet",
-                "image": "choisirait/weekend/chalet-ski.webp"
-              },
-              {
                 "texte": "Desert camp",
                 "image": "choisirait/weekend/desert.webp"
+              },
+              {
+                "texte": "Treehouse",
+                "image": "choisirait/weekend/cabane-arbre.webp"
+              },
+              {
+                "texte": "Log cabin",
+                "image": "choisirait/weekend/chalet-bois.webp"
               }
             ]
           },
           {
-            "question": "Which view would he wake up to?",
+            "question": "Which sport would he watch?",
             "options": [
               {
-                "texte": "Mountains",
-                "image": "choisirait/vue/montagnes.webp"
+                "texte": "Basketball",
+                "image": "choisirait/sport/basket.webp"
               },
               {
-                "texte": "Snowy peaks",
-                "image": "choisirait/vue/neige.webp"
+                "texte": "Ice hockey",
+                "image": "choisirait/sport/hockey.webp"
               },
               {
-                "texte": "Desert",
-                "image": "choisirait/vue/desert-vue.webp"
+                "texte": "Baseball",
+                "image": "choisirait/sport/baseball.webp"
               }
             ]
           },
           {
-            "question": "How would he travel with you?",
+            "question": "Which adventure would he try?",
             "options": [
               {
-                "texte": "Private jet",
-                "image": "choisirait/voyage/jet.webp"
+                "texte": "Surfing",
+                "image": "choisirait/aventure/surf.webp"
               },
               {
-                "texte": "Motorbike",
-                "image": "choisirait/moto/bmw-gs.webp"
+                "texte": "Horse riding",
+                "image": "choisirait/aventure/equitation.webp"
               },
               {
-                "texte": "Cruise ship",
-                "image": "choisirait/voyage/croisiere.webp"
+                "texte": "Snowboarding",
+                "image": "choisirait/aventure/snowboard.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Send it to him: how many did you get?",
+          "question": "Now send it to him. Did you guess right?",
           "bouton": "Send this to him",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Travel edition. No cheating: decide before the timer runs out.\n\nSend this to him",
+      "legende": "Adventure edition. He will swear you got at least one wrong.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
         "#boyfriendquiz",
         "#thisorthat",
-        "#travelcouple",
+        "#adventurecouple",
         "#quizcouple"
       ]
     }

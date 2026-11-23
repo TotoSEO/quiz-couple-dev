@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "choisirait",
   "categorie": "choisirait",
-  "sujet": "ch-074",
+  "sujet": "ch-076",
   "idee_id": null,
   "variantes": {
     "en": {
@@ -13,78 +13,78 @@
         "langue": "en",
         "theme": "light",
         "pour": "lui",
-        "etiquette": "Date night edition",
+        "etiquette": "Pet lovers edition",
         "accroche": "What would he choose?",
-        "consigne": "Answer for him, then let him check!",
+        "consigne": "Pick what he would pick. Then send it to him!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which flowers would he get you?",
+            "question": "Which pet would he want?",
             "options": [
               {
-                "texte": "Sunflowers",
-                "image": "choisirait/fleurs/tournesols.webp"
+                "texte": "Horse",
+                "image": "choisirait/animal/cheval.webp"
               },
               {
-                "texte": "Hydrangeas",
-                "image": "choisirait/fleurs/hortensias.webp"
+                "texte": "Ferret",
+                "image": "choisirait/animal/furet.webp"
               },
               {
-                "texte": "Orchid",
-                "image": "choisirait/fleurs/orchidee.webp"
+                "texte": "Hedgehog",
+                "image": "choisirait/animal/herisson.webp"
               }
             ]
           },
           {
-            "question": "Which cake would he pick?",
+            "question": "Which cat would he adopt?",
             "options": [
               {
-                "texte": "Pavlova",
-                "image": "choisirait/dessert/pavlova.webp"
+                "texte": "Black cat",
+                "image": "choisirait/chat/chat-noir.webp"
               },
               {
-                "texte": "Crêpes",
-                "image": "choisirait/dessert/crepes.webp"
+                "texte": "Bengal",
+                "image": "choisirait/chat/bengal.webp"
               },
               {
-                "texte": "Chocolate lava cake",
-                "image": "choisirait/dessert/fondant.webp"
+                "texte": "Sphynx",
+                "image": "choisirait/chat/sphynx.webp"
               }
             ]
           },
           {
-            "question": "Which movie snack would he pick?",
+            "question": "Which dog would he pick?",
             "options": [
               {
-                "texte": "Popcorn",
-                "image": "choisirait/snack/popcorn.webp"
+                "texte": "Border Collie",
+                "image": "choisirait/chien/border-collie.webp"
               },
               {
-                "texte": "Nachos",
-                "image": "choisirait/snack/nachos.webp"
+                "texte": "Dachshund",
+                "image": "choisirait/chien/teckel.webp"
               },
               {
-                "texte": "Ice cream tub",
-                "image": "choisirait/snack/pot-glace.webp"
+                "texte": "Jack Russell",
+                "image": "choisirait/chien/jack-russell.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Send it to him: how many did you get?",
+          "question": "Now send it to him. Did you guess right?",
           "bouton": "Send this to him",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Date night edition. If you get all three, you know him by heart.\n\nSend this to him",
+      "legende": "Pet lovers edition. Pick for him, then let him prove you wrong.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
         "#boyfriendquiz",
         "#thisorthat",
-        "#datenight",
+        "#petlovers",
         "#quizcouple"
       ]
     }

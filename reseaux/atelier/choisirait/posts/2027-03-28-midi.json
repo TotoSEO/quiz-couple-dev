@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "choisirait",
   "categorie": "choisirait",
-  "sujet": "ch-232",
+  "sujet": "ch-234",
   "idee_id": null,
   "variantes": {
     "en": {
@@ -12,79 +12,79 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "lui",
-        "etiquette": "Travel edition",
-        "accroche": "What would he choose?",
-        "consigne": "Pick what he would pick. Then send it to him!",
+        "pour": "elle",
+        "etiquette": "Style edition",
+        "accroche": "What would she choose?",
+        "consigne": "Answer for her, then let her check!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which city would he take you to?",
+            "question": "Which shoes would she pick?",
             "options": [
               {
-                "texte": "Rio de Janeiro",
-                "image": "choisirait/ville/rio.webp"
+                "texte": "Ballet flats",
+                "image": "choisirait/chaussures/ballerines.webp"
               },
               {
-                "texte": "Marrakech",
-                "image": "choisirait/ville/marrakech.webp"
+                "texte": "Knee-high boots",
+                "image": "choisirait/chaussures/cuissardes.webp"
               },
               {
-                "texte": "Las Vegas",
-                "image": "choisirait/ville/las-vegas.webp"
+                "texte": "UGG boots",
+                "image": "choisirait/chaussures/ugg.webp"
               }
             ]
           },
           {
-            "question": "Which view would he wake up to?",
+            "question": "Which phone would she pick?",
             "options": [
               {
-                "texte": "Tropical beach",
-                "image": "choisirait/vue/plage-tropicale.webp"
+                "texte": "iPhone",
+                "image": "choisirait/telephone/iphone.webp"
               },
               {
-                "texte": "City skyline",
-                "image": "choisirait/vue/skyline.webp"
+                "texte": "Samsung Galaxy",
+                "image": "choisirait/telephone/galaxy.webp"
               },
               {
-                "texte": "Forest",
-                "image": "choisirait/vue/foret.webp"
+                "texte": "Google Pixel",
+                "image": "choisirait/telephone/pixel.webp"
               }
             ]
           },
           {
-            "question": "Where would he book a weekend for two?",
+            "question": "Which sneakers would she pick?",
             "options": [
               {
-                "texte": "Desert camp",
-                "image": "choisirait/weekend/desert.webp"
+                "texte": "Air Force 1",
+                "image": "choisirait/baskets/air-force.webp"
               },
               {
-                "texte": "Castle hotel",
-                "image": "choisirait/weekend/chateau-hotel.webp"
+                "texte": "Crocs",
+                "image": "choisirait/baskets/crocs.webp"
               },
               {
-                "texte": "Beach bungalow",
-                "image": "choisirait/weekend/bungalow-plage.webp"
+                "texte": "Stan Smith",
+                "image": "choisirait/baskets/stan-smith.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Now send it to him. Did you guess right?",
-          "bouton": "Send this to him",
+          "question": "Got her 3 picks? Send it and see!",
+          "bouton": "Send this to her",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Travel edition. Write down his three letters before you send it.\n\nSend this to him",
+      "legende": "Style edition. If you get all three, you know her by heart.\n\nSend this to her",
       "hashtags": [
         "#couplequiz",
-        "#boyfriendquiz",
+        "#girlfriendquiz",
         "#thisorthat",
-        "#travelcouple",
+        "#style",
         "#quizcouple"
       ]
     }

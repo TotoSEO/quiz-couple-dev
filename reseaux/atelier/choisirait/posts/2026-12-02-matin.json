@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "choisirait",
   "categorie": "choisirait",
-  "sujet": "ch-016",
+  "sujet": "ch-018",
   "idee_id": null,
   "variantes": {
     "en": {
@@ -12,79 +12,79 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "lui",
-        "etiquette": "Morning edition",
-        "accroche": "What would he choose?",
-        "consigne": "Pick what he would pick. Then send it to him!",
+        "pour": "elle",
+        "etiquette": "Winter edition",
+        "accroche": "What would she choose?",
+        "consigne": "Answer for her, then let her check!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which breakfast would he make you?",
+            "question": "Which winter date would she pick?",
             "options": [
               {
-                "texte": "Waffles",
-                "image": "choisirait/petitdej/gaufres.webp"
+                "texte": "Hot tub in the snow",
+                "image": "choisirait/hiver/jacuzzi.webp"
               },
               {
-                "texte": "Açaí bowl",
-                "image": "choisirait/petitdej/acai.webp"
+                "texte": "Building a snowman",
+                "image": "choisirait/hiver/bonhomme.webp"
               },
               {
-                "texte": "Shakshuka",
-                "image": "choisirait/petitdej/shakshuka.webp"
+                "texte": "Sledding",
+                "image": "choisirait/hiver/luge.webp"
               }
             ]
           },
           {
-            "question": "What would he grab at the bakery?",
+            "question": "Which coffee would she order?",
             "options": [
               {
-                "texte": "Muffin",
-                "image": "choisirait/boulangerie/muffin.webp"
+                "texte": "Matcha latte",
+                "image": "choisirait/cafe/matcha.webp"
               },
               {
-                "texte": "Pain au chocolat",
-                "image": "choisirait/boulangerie/pain-chocolat.webp"
+                "texte": "Americano",
+                "image": "choisirait/cafe/americano.webp"
               },
               {
-                "texte": "Cinnamon roll",
-                "image": "choisirait/boulangerie/cinnamon-roll.webp"
+                "texte": "Espresso",
+                "image": "choisirait/cafe/espresso.webp"
               }
             ]
           },
           {
-            "question": "How would he have his eggs?",
+            "question": "Where would she book a weekend?",
             "options": [
               {
-                "texte": "Omelette",
-                "image": "choisirait/oeufs/omelette.webp"
+                "texte": "Ski chalet",
+                "image": "choisirait/weekend/chalet-ski.webp"
               },
               {
-                "texte": "Scrambled",
-                "image": "choisirait/oeufs/brouilles.webp"
+                "texte": "Glamping tent",
+                "image": "choisirait/weekend/glamping.webp"
               },
               {
-                "texte": "Fried",
-                "image": "choisirait/oeufs/oeuf-plat.webp"
+                "texte": "Beach bungalow",
+                "image": "choisirait/weekend/bungalow-plage.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Now send it to him. Did you guess right?",
-          "bouton": "Send this to him",
+          "question": "Got her 3 picks? Send it and see!",
+          "bouton": "Send this to her",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Morning edition. Pick for him, then let him prove you wrong.\n\nSend this to him",
+      "legende": "Winter edition. Your answers first, then her reaction.\n\nSend this to her",
       "hashtags": [
         "#couplequiz",
-        "#boyfriendquiz",
+        "#girlfriendquiz",
         "#thisorthat",
-        "#breakfast",
+        "#winter",
         "#quizcouple"
       ]
     }

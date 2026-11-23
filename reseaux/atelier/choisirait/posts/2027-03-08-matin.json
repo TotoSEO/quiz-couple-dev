@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "choisirait",
   "categorie": "choisirait",
-  "sujet": "ch-194",
+  "sujet": "ch-196",
   "idee_id": null,
   "variantes": {
     "en": {
@@ -13,78 +13,78 @@
         "langue": "en",
         "theme": "light",
         "pour": "lui",
-        "etiquette": "Spring edition",
+        "etiquette": "Dream home edition",
         "accroche": "What would he choose?",
-        "consigne": "Answer for him, then let him check!",
+        "consigne": "Pick what he would pick. Then send it to him!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which season would he pick?",
+            "question": "Which view would he wake up to?",
             "options": [
               {
-                "texte": "Spring",
-                "image": "choisirait/saison/printemps.webp"
+                "texte": "Forest",
+                "image": "choisirait/vue/foret.webp"
               },
               {
-                "texte": "Autumn",
-                "image": "choisirait/saison/automne.webp"
+                "texte": "City skyline",
+                "image": "choisirait/vue/skyline.webp"
               },
               {
-                "texte": "Winter",
-                "image": "choisirait/saison/hiver-saison.webp"
+                "texte": "Snowy peaks",
+                "image": "choisirait/vue/neige.webp"
               }
             ]
           },
           {
-            "question": "Which adventure would he try?",
+            "question": "Which dream house would he pick?",
             "options": [
               {
-                "texte": "Kayaking",
-                "image": "choisirait/aventure/kayak.webp"
+                "texte": "Victorian house",
+                "image": "choisirait/maison/victorienne.webp"
               },
               {
-                "texte": "Skiing",
-                "image": "choisirait/aventure/ski.webp"
+                "texte": "Loft apartment",
+                "image": "choisirait/maison/loft.webp"
               },
               {
-                "texte": "Paragliding",
-                "image": "choisirait/aventure/parapente.webp"
+                "texte": "Tiny house",
+                "image": "choisirait/maison/tiny-house.webp"
               }
             ]
           },
           {
-            "question": "Which date would he plan?",
+            "question": "Which dog would he adopt?",
             "options": [
               {
-                "texte": "Stargazing",
-                "image": "choisirait/date/etoiles.webp"
+                "texte": "Jack Russell",
+                "image": "choisirait/chien/jack-russell.webp"
               },
               {
-                "texte": "Theme park",
-                "image": "choisirait/date/parc.webp"
+                "texte": "Labrador",
+                "image": "choisirait/chien/labrador.webp"
               },
               {
-                "texte": "Beach sunset",
-                "image": "choisirait/date/coucher-soleil.webp"
+                "texte": "Husky",
+                "image": "choisirait/chien/husky.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Send it to him: how many did you get?",
+          "question": "Now send it to him. Did you guess right?",
           "bouton": "Send this to him",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Spring edition. If you get all three, you know him by heart.\n\nSend this to him",
+      "legende": "Dream home edition. Pick for him, then let him prove you wrong.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
         "#boyfriendquiz",
         "#thisorthat",
-        "#spring",
+        "#dreamhome",
         "#quizcouple"
       ]
     }

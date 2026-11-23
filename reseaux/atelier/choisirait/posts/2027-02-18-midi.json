@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "choisirait",
   "categorie": "choisirait",
-  "sujet": "ch-162",
+  "sujet": "ch-164",
   "idee_id": null,
   "variantes": {
     "en": {
@@ -12,79 +12,79 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "elle",
-        "etiquette": "Food edition",
-        "accroche": "What would she choose?",
-        "consigne": "Answer for her, then let her check!",
+        "pour": "lui",
+        "etiquette": "Game night edition",
+        "accroche": "What would he choose?",
+        "consigne": "Pick what he would pick. Then send it to him!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which pasta would she pick?",
+            "question": "What would he order at 2 a.m.?",
             "options": [
               {
-                "texte": "Pesto",
-                "image": "choisirait/pates/pesto.webp"
+                "texte": "Instant noodles",
+                "image": "choisirait/fastfood/nouilles.webp"
               },
               {
-                "texte": "Lasagna",
-                "image": "choisirait/pates/lasagnes.webp"
+                "texte": "Nuggets",
+                "image": "choisirait/fastfood/nuggets.webp"
               },
               {
-                "texte": "Gnocchi",
-                "image": "choisirait/pates/gnocchi.webp"
+                "texte": "Kebab",
+                "image": "choisirait/fastfood/kebab.webp"
               }
             ]
           },
           {
-            "question": "Which pizza would she order?",
+            "question": "Which game night would he pick?",
             "options": [
               {
-                "texte": "Deep dish",
-                "image": "choisirait/pizza/deep-dish.webp"
+                "texte": "Foosball",
+                "image": "choisirait/jeu/baby-foot.webp"
               },
               {
-                "texte": "Margherita",
-                "image": "choisirait/pizza/margherita.webp"
+                "texte": "Video games",
+                "image": "choisirait/jeu/jeux-video.webp"
               },
               {
-                "texte": "Calzone",
-                "image": "choisirait/pizza/calzone.webp"
+                "texte": "Ping pong",
+                "image": "choisirait/jeu/ping-pong.webp"
               }
             ]
           },
           {
-            "question": "Which potato would she pick?",
+            "question": "Which console would he pick?",
             "options": [
               {
-                "texte": "Rösti",
-                "image": "choisirait/patate/rosti.webp"
+                "texte": "Nintendo Switch",
+                "image": "choisirait/console/switch.webp"
               },
               {
-                "texte": "Curly fries",
-                "image": "choisirait/patate/curly.webp"
+                "texte": "Game Boy",
+                "image": "choisirait/console/gameboy.webp"
               },
               {
-                "texte": "French fries",
-                "image": "choisirait/patate/frites.webp"
+                "texte": "Gaming PC",
+                "image": "choisirait/console/pc-gamer.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Got her 3 picks? Send it and see!",
-          "bouton": "Send this to her",
+          "question": "Send it to him: how many did you get?",
+          "bouton": "Send this to him",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Food edition. Write down her three letters before you send it.\n\nSend this to her",
+      "legende": "Game night edition. If you get all three, you know him by heart.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
-        "#girlfriendquiz",
+        "#boyfriendquiz",
         "#thisorthat",
-        "#foodie",
+        "#gamenight",
         "#quizcouple"
       ]
     }

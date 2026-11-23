@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "choisirait",
   "categorie": "choisirait",
-  "sujet": "ch-041",
+  "sujet": "ch-043",
   "idee_id": null,
   "variantes": {
     "en": {
@@ -13,78 +13,78 @@
         "langue": "en",
         "theme": "light",
         "pour": "lui",
-        "etiquette": "Travel edition",
+        "etiquette": "Sweet tooth edition",
         "accroche": "What would he choose?",
-        "consigne": "Guess his 3 picks, then send it to him!",
+        "consigne": "3 questions, 4 seconds each. Pick for him!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which city would he take you to?",
+            "question": "Which ice cream would he get?",
             "options": [
               {
-                "texte": "Tokyo",
-                "image": "choisirait/ville/tokyo.webp"
+                "texte": "Ice cream cone",
+                "image": "choisirait/glace/cornet.webp"
               },
               {
-                "texte": "New York",
-                "image": "choisirait/ville/new-york.webp"
+                "texte": "Soft serve",
+                "image": "choisirait/glace/italienne.webp"
               },
               {
-                "texte": "Rio de Janeiro",
-                "image": "choisirait/ville/rio.webp"
+                "texte": "Ice cream sandwich",
+                "image": "choisirait/glace/sandwich-glace.webp"
               }
             ]
           },
           {
-            "question": "Where would he go on vacation?",
+            "question": "What would he grab at the bakery?",
             "options": [
               {
-                "texte": "Italy",
-                "image": "choisirait/vacances/italie.webp"
+                "texte": "Cinnamon roll",
+                "image": "choisirait/boulangerie/cinnamon-roll.webp"
               },
               {
-                "texte": "Bora Bora",
-                "image": "choisirait/vacances/bora-bora.webp"
+                "texte": "Pain au chocolat",
+                "image": "choisirait/boulangerie/pain-chocolat.webp"
               },
               {
-                "texte": "Canada",
-                "image": "choisirait/vacances/canada.webp"
+                "texte": "Brioche",
+                "image": "choisirait/boulangerie/brioche.webp"
               }
             ]
           },
           {
-            "question": "Which view would he wake up to?",
+            "question": "Which dessert would he pick?",
             "options": [
               {
-                "texte": "Rice fields",
-                "image": "choisirait/vue/rizieres.webp"
+                "texte": "Crêpes",
+                "image": "choisirait/dessert/crepes.webp"
               },
               {
-                "texte": "Northern lights",
-                "image": "choisirait/vue/aurores.webp"
+                "texte": "Tiramisu",
+                "image": "choisirait/dessert/tiramisu.webp"
               },
               {
-                "texte": "Snowy peaks",
-                "image": "choisirait/vue/neige.webp"
+                "texte": "Red velvet cake",
+                "image": "choisirait/dessert/red-velvet.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Send it to him: how many did you get?",
+          "question": "Now send it to him. Did you guess right?",
           "bouton": "Send this to him",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Travel edition. Answer for him first, no peeking.\n\nSend this to him",
+      "legende": "Sweet tooth edition. Guess first, send it after. Then compare.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
         "#boyfriendquiz",
         "#thisorthat",
-        "#travelcouple",
+        "#dessert",
         "#quizcouple"
       ]
     }

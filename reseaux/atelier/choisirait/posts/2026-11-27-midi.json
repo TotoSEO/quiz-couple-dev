@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "choisirait",
   "categorie": "choisirait",
-  "sujet": "ch-008",
+  "sujet": "ch-010",
   "idee_id": null,
   "variantes": {
     "en": {
@@ -13,78 +13,78 @@
         "langue": "en",
         "theme": "light",
         "pour": "lui",
-        "etiquette": "Luxury edition",
+        "etiquette": "Date night edition",
         "accroche": "What would he choose?",
-        "consigne": "Pick what he would pick. Then send it to him!",
+        "consigne": "Answer for him, then let him check!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Where would he book a weekend for two?",
+            "question": "What would he order at the bar?",
             "options": [
               {
-                "texte": "Overwater villa",
-                "image": "choisirait/weekend/bungalow-eau.webp"
+                "texte": "Gin and tonic",
+                "image": "choisirait/bar/gin-tonic.webp"
               },
               {
-                "texte": "Castle hotel",
-                "image": "choisirait/weekend/chateau-hotel.webp"
+                "texte": "Piña colada",
+                "image": "choisirait/bar/pina-colada.webp"
               },
               {
-                "texte": "Log cabin",
-                "image": "choisirait/weekend/chalet-bois.webp"
+                "texte": "Aperol Spritz",
+                "image": "choisirait/bar/spritz.webp"
               }
             ]
           },
           {
-            "question": "How would he travel with you?",
+            "question": "Which date would he plan?",
             "options": [
               {
-                "texte": "Convertible",
-                "image": "choisirait/voyage/cabriolet.webp"
+                "texte": "Beach sunset",
+                "image": "choisirait/date/coucher-soleil.webp"
               },
               {
-                "texte": "Sailboat",
-                "image": "choisirait/voyage/voilier.webp"
+                "texte": "Stargazing",
+                "image": "choisirait/date/etoiles.webp"
               },
               {
                 "texte": "Hot air balloon",
-                "image": "choisirait/voyage/montgolfiere.webp"
+                "image": "choisirait/date/montgolfiere-date.webp"
               }
             ]
           },
           {
-            "question": "Which house would he pick?",
+            "question": "Which cake would he pick?",
             "options": [
               {
-                "texte": "Tiny house",
-                "image": "choisirait/maison/tiny-house.webp"
+                "texte": "Pavlova",
+                "image": "choisirait/dessert/pavlova.webp"
               },
               {
-                "texte": "Modern villa",
-                "image": "choisirait/maison/villa-moderne.webp"
+                "texte": "Mille-feuille",
+                "image": "choisirait/dessert/mille-feuille.webp"
               },
               {
-                "texte": "Lake house",
-                "image": "choisirait/maison/maison-lac.webp"
+                "texte": "Churros",
+                "image": "choisirait/dessert/churros.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Send it to him: how many did you get?",
+          "question": "Now send it to him. Did you guess right?",
           "bouton": "Send this to him",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Luxury edition. Your answers first, then his reaction.\n\nSend this to him",
+      "legende": "Date night edition. Easy for you? Then the next one is for him.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
         "#boyfriendquiz",
         "#thisorthat",
-        "#luxurylife",
+        "#datenight",
         "#quizcouple"
       ]
     }

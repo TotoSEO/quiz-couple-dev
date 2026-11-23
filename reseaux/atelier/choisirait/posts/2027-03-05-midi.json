@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "choisirait",
   "categorie": "choisirait",
-  "sujet": "ch-190",
+  "sujet": "ch-192",
   "idee_id": null,
   "variantes": {
     "en": {
@@ -12,79 +12,79 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "lui",
-        "etiquette": "Cozy night in edition",
-        "accroche": "What would he choose?",
-        "consigne": "Answer for him, then let him check!",
+        "pour": "elle",
+        "etiquette": "Date night edition",
+        "accroche": "What would she choose?",
+        "consigne": "Pick what she would pick. Then send it to her!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which console would he pick?",
+            "question": "Which date would she take you on?",
             "options": [
               {
-                "texte": "Game Boy",
-                "image": "choisirait/console/gameboy.webp"
+                "texte": "Fancy dinner",
+                "image": "choisirait/demande/demande-resto.webp"
               },
               {
-                "texte": "Gaming PC",
-                "image": "choisirait/console/pc-gamer.webp"
+                "texte": "Hot air balloon",
+                "image": "choisirait/date/montgolfiere-date.webp"
               },
               {
-                "texte": "PlayStation 2",
-                "image": "choisirait/console/ps2.webp"
+                "texte": "Mini golf",
+                "image": "choisirait/date/mini-golf.webp"
               }
             ]
           },
           {
-            "question": "Which movie snack would he pick?",
+            "question": "What would she order at the bar?",
             "options": [
               {
-                "texte": "Chocolate bar",
-                "image": "choisirait/snack/tablette.webp"
+                "texte": "Beer",
+                "image": "choisirait/bar/biere.webp"
               },
               {
-                "texte": "Nachos",
-                "image": "choisirait/snack/nachos.webp"
+                "texte": "Margarita",
+                "image": "choisirait/bar/margarita.webp"
               },
               {
-                "texte": "Ice cream tub",
-                "image": "choisirait/snack/pot-glace.webp"
+                "texte": "Aperol Spritz",
+                "image": "choisirait/bar/spritz.webp"
               }
             ]
           },
           {
-            "question": "Which drink would he get?",
+            "question": "Which dessert would she pick?",
             "options": [
               {
-                "texte": "Lemonade",
-                "image": "choisirait/boisson/limonade.webp"
+                "texte": "Huge birthday cake",
+                "image": "choisirait/dessert/gateau-anniversaire.webp"
               },
               {
-                "texte": "Iced tea",
-                "image": "choisirait/boisson/the-glace.webp"
+                "texte": "Vanilla éclair",
+                "image": "choisirait/dessert/eclair.webp"
               },
               {
-                "texte": "Smoothie",
-                "image": "choisirait/boisson/smoothie.webp"
+                "texte": "Red velvet cake",
+                "image": "choisirait/dessert/red-velvet.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Now send it to him. Did you guess right?",
-          "bouton": "Send this to him",
+          "question": "Got her 3 picks? Send it and see!",
+          "bouton": "Send this to her",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Cozy night in edition. Easy for you? Then the next one is for him.\n\nSend this to him",
+      "legende": "Date night edition. Write down her three letters before you send it.\n\nSend this to her",
       "hashtags": [
         "#couplequiz",
-        "#boyfriendquiz",
+        "#girlfriendquiz",
         "#thisorthat",
-        "#cozynight",
+        "#datenight",
         "#quizcouple"
       ]
     }

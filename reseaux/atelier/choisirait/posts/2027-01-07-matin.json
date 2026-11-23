@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "choisirait",
   "categorie": "choisirait",
-  "sujet": "ch-083",
+  "sujet": "ch-085",
   "idee_id": null,
   "variantes": {
     "en": {
@@ -13,78 +13,78 @@
         "langue": "en",
         "theme": "light",
         "pour": "lui",
-        "etiquette": "Morning edition",
+        "etiquette": "Wedding edition",
         "accroche": "What would he choose?",
-        "consigne": "3 questions, 4 seconds each. Pick for him!",
+        "consigne": "Guess his 3 picks, then send it to him!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "What would he grab at the bakery?",
+            "question": "Where would he propose?",
             "options": [
               {
-                "texte": "Baguette",
-                "image": "choisirait/boulangerie/baguette.webp"
+                "texte": "Northern lights",
+                "image": "choisirait/demande/demande-aurores.webp"
               },
               {
-                "texte": "Bagel",
-                "image": "choisirait/boulangerie/bagel.webp"
+                "texte": "Beach at sunset",
+                "image": "choisirait/demande/demande-plage.webp"
               },
               {
-                "texte": "Pain au chocolat",
-                "image": "choisirait/boulangerie/pain-chocolat.webp"
+                "texte": "Disney castle",
+                "image": "choisirait/demande/demande-chateau.webp"
               }
             ]
           },
           {
-            "question": "Which breakfast would he choose?",
+            "question": "Which ring would he pick for you?",
             "options": [
               {
-                "texte": "Cereal",
-                "image": "choisirait/petitdej/cereales.webp"
+                "texte": "Gold band",
+                "image": "choisirait/bague/alliance-or.webp"
               },
               {
-                "texte": "Shakshuka",
-                "image": "choisirait/petitdej/shakshuka.webp"
+                "texte": "Solitaire diamond",
+                "image": "choisirait/bague/solitaire.webp"
               },
               {
-                "texte": "Waffles",
-                "image": "choisirait/petitdej/gaufres.webp"
+                "texte": "Vintage ring",
+                "image": "choisirait/bague/vintage-bague.webp"
               }
             ]
           },
           {
-            "question": "How would he have his eggs?",
+            "question": "Where would he want to get married?",
             "options": [
               {
-                "texte": "Fried",
-                "image": "choisirait/oeufs/oeuf-plat.webp"
+                "texte": "Forest",
+                "image": "choisirait/vue/foret.webp"
               },
               {
-                "texte": "Poached",
-                "image": "choisirait/oeufs/poche.webp"
+                "texte": "City hall",
+                "image": "choisirait/mariage/mairie.webp"
               },
               {
-                "texte": "Soft-boiled",
-                "image": "choisirait/oeufs/coque.webp"
+                "texte": "Beach",
+                "image": "choisirait/vue/plage-tropicale.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Send it to him: how many did you get?",
+          "question": "Now send it to him. Did you guess right?",
           "bouton": "Send this to him",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Morning edition. Guess first, send it after. Then compare.\n\nSend this to him",
+      "legende": "Wedding edition. No cheating: decide before the timer runs out.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
         "#boyfriendquiz",
         "#thisorthat",
-        "#breakfast",
+        "#engaged",
         "#quizcouple"
       ]
     }

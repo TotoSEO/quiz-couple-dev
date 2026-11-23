@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "choisirait",
   "categorie": "choisirait",
-  "sujet": "ch-173",
+  "sujet": "ch-175",
   "idee_id": null,
   "variantes": {
     "en": {
@@ -13,78 +13,78 @@
         "langue": "en",
         "theme": "light",
         "pour": "lui",
-        "etiquette": "Winter edition",
+        "etiquette": "Travel edition",
         "accroche": "What would he choose?",
-        "consigne": "Guess his 3 picks, then send it to him!",
+        "consigne": "3 questions, 4 seconds each. Pick for him!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which winter date would he pick?",
+            "question": "Which city would he take you to?",
             "options": [
               {
-                "texte": "Ice skating",
-                "image": "choisirait/hiver/hiver-patin.webp"
+                "texte": "Tokyo",
+                "image": "choisirait/ville/tokyo.webp"
               },
               {
-                "texte": "Skiing",
-                "image": "choisirait/hiver/hiver-ski.webp"
+                "texte": "Las Vegas",
+                "image": "choisirait/ville/las-vegas.webp"
               },
               {
-                "texte": "Hot tub in the snow",
-                "image": "choisirait/hiver/jacuzzi.webp"
+                "texte": "New York",
+                "image": "choisirait/ville/new-york.webp"
               }
             ]
           },
           {
-            "question": "What would he cook for date night?",
+            "question": "How would he travel with you?",
             "options": [
               {
-                "texte": "Fish and chips",
-                "image": "choisirait/diner/fish-chips.webp"
+                "texte": "Hot air balloon",
+                "image": "choisirait/voyage/montgolfiere.webp"
               },
               {
-                "texte": "Pad thai",
-                "image": "choisirait/diner/pad-thai.webp"
+                "texte": "Private jet",
+                "image": "choisirait/voyage/jet.webp"
               },
               {
-                "texte": "Lobster",
-                "image": "choisirait/diner/homard.webp"
+                "texte": "Cruise ship",
+                "image": "choisirait/voyage/croisiere.webp"
               }
             ]
           },
           {
-            "question": "Which coffee would he order?",
+            "question": "Where would he book a weekend?",
             "options": [
               {
-                "texte": "Espresso",
-                "image": "choisirait/cafe/espresso.webp"
+                "texte": "Overwater villa",
+                "image": "choisirait/weekend/bungalow-eau.webp"
               },
               {
-                "texte": "Cappuccino",
-                "image": "choisirait/cafe/cappuccino.webp"
+                "texte": "Beach bungalow",
+                "image": "choisirait/weekend/bungalow-plage.webp"
               },
               {
-                "texte": "Iced latte",
-                "image": "choisirait/cafe/iced-latte.webp"
+                "texte": "Glamping tent",
+                "image": "choisirait/weekend/glamping.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Send it to him: how many did you get?",
+          "question": "Now send it to him. Did you guess right?",
           "bouton": "Send this to him",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Winter edition. Guess first, send it after. Then compare.\n\nSend this to him",
+      "legende": "Travel edition. No cheating: decide before the timer runs out.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
         "#boyfriendquiz",
         "#thisorthat",
-        "#winter",
+        "#travelcouple",
         "#quizcouple"
       ]
     }

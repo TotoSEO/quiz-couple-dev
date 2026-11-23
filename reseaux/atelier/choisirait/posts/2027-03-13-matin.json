@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "choisirait",
   "categorie": "choisirait",
-  "sujet": "ch-204",
+  "sujet": "ch-206",
   "idee_id": null,
   "variantes": {
     "en": {
@@ -12,77 +12,77 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "elle",
+        "pour": "lui",
         "etiquette": "Cozy night in edition",
-        "accroche": "What would she choose?",
-        "consigne": "Pick what she would pick. Then send it to her!",
+        "accroche": "What would he choose?",
+        "consigne": "Answer for him, then let him check!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which dessert would she pick?",
+            "question": "Which cake would he pick?",
             "options": [
-              {
-                "texte": "Strawberry tart",
-                "image": "choisirait/dessert/tarte-fraises.webp"
-              },
               {
                 "texte": "Mille-feuille",
                 "image": "choisirait/dessert/mille-feuille.webp"
               },
               {
-                "texte": "Brownie",
-                "image": "choisirait/dessert/brownie.webp"
+                "texte": "Crêpes",
+                "image": "choisirait/dessert/crepes.webp"
+              },
+              {
+                "texte": "Apple pie",
+                "image": "choisirait/dessert/tarte-pommes.webp"
               }
             ]
           },
           {
-            "question": "Which dinner would she pick?",
+            "question": "Which movie snack would he pick?",
             "options": [
-              {
-                "texte": "Korean BBQ",
-                "image": "choisirait/diner/bbq-coreen.webp"
-              },
-              {
-                "texte": "Pad thai",
-                "image": "choisirait/diner/pad-thai.webp"
-              },
-              {
-                "texte": "Paella",
-                "image": "choisirait/diner/paella.webp"
-              }
-            ]
-          },
-          {
-            "question": "Which movie snack would she pick?",
-            "options": [
-              {
-                "texte": "Nachos",
-                "image": "choisirait/snack/nachos.webp"
-              },
               {
                 "texte": "Ice cream tub",
                 "image": "choisirait/snack/pot-glace.webp"
+              },
+              {
+                "texte": "Gummy bears",
+                "image": "choisirait/snack/oursons.webp"
               },
               {
                 "texte": "Licorice",
                 "image": "choisirait/snack/reglisse.webp"
               }
             ]
+          },
+          {
+            "question": "What would he cook for date night?",
+            "options": [
+              {
+                "texte": "Cheese fondue",
+                "image": "choisirait/diner/fondue.webp"
+              },
+              {
+                "texte": "Raclette",
+                "image": "choisirait/diner/raclette.webp"
+              },
+              {
+                "texte": "Fish and chips",
+                "image": "choisirait/diner/fish-chips.webp"
+              }
+            ]
           }
         ],
         "fin": {
-          "question": "Got her 3 picks? Send it and see!",
-          "bouton": "Send this to her",
+          "question": "Send it to him: how many did you get?",
+          "bouton": "Send this to him",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Cozy night in edition. If you get all three, you know her by heart.\n\nSend this to her",
+      "legende": "Cozy night in edition. Pick for him, then let him prove you wrong.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
-        "#girlfriendquiz",
+        "#boyfriendquiz",
         "#thisorthat",
         "#cozynight",
         "#quizcouple"

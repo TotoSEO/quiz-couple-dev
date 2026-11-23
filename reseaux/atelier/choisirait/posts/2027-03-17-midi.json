@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "choisirait",
   "categorie": "choisirait",
-  "sujet": "ch-212",
+  "sujet": "ch-214",
   "idee_id": null,
   "variantes": {
     "en": {
@@ -13,78 +13,78 @@
         "langue": "en",
         "theme": "light",
         "pour": "lui",
-        "etiquette": "Style edition",
+        "etiquette": "Food edition",
         "accroche": "What would he choose?",
-        "consigne": "Pick what he would pick. Then send it to him!",
+        "consigne": "Answer for him, then let him check!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which phone would he pick?",
+            "question": "Which pasta would he pick?",
             "options": [
               {
-                "texte": "BlackBerry",
-                "image": "choisirait/telephone/blackberry.webp"
+                "texte": "Carbonara",
+                "image": "choisirait/pates/carbonara.webp"
               },
               {
-                "texte": "iPhone",
-                "image": "choisirait/telephone/iphone.webp"
+                "texte": "Mac and cheese",
+                "image": "choisirait/pates/mac-cheese.webp"
               },
               {
-                "texte": "Google Pixel",
-                "image": "choisirait/telephone/pixel.webp"
+                "texte": "Gnocchi",
+                "image": "choisirait/pates/gnocchi.webp"
               }
             ]
           },
           {
-            "question": "Which sneakers would he pick?",
+            "question": "Which pizza would he order?",
             "options": [
               {
-                "texte": "New Balance",
-                "image": "choisirait/baskets/new-balance.webp"
+                "texte": "Calzone",
+                "image": "choisirait/pizza/calzone.webp"
               },
               {
-                "texte": "Vans Old Skool",
-                "image": "choisirait/baskets/vans.webp"
+                "texte": "Veggie",
+                "image": "choisirait/pizza/vegetarienne.webp"
               },
               {
-                "texte": "Adidas Samba",
-                "image": "choisirait/baskets/samba.webp"
+                "texte": "Deep dish",
+                "image": "choisirait/pizza/deep-dish.webp"
               }
             ]
           },
           {
-            "question": "Which watch would he wear?",
+            "question": "Which potato would he pick?",
             "options": [
               {
-                "texte": "Rolex Submariner",
-                "image": "choisirait/montre/rolex.webp"
+                "texte": "Rösti",
+                "image": "choisirait/patate/rosti.webp"
               },
               {
-                "texte": "Casio digital",
-                "image": "choisirait/montre/casio.webp"
+                "texte": "French fries",
+                "image": "choisirait/patate/frites.webp"
               },
               {
-                "texte": "Cartier Tank",
-                "image": "choisirait/montre/cartier.webp"
+                "texte": "Hash browns",
+                "image": "choisirait/patate/hash-browns.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Send it to him: how many did you get?",
+          "question": "Now send it to him. Did you guess right?",
           "bouton": "Send this to him",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Style edition. Write down his three letters before you send it.\n\nSend this to him",
+      "legende": "Food edition. If you get all three, you know him by heart.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
         "#boyfriendquiz",
         "#thisorthat",
-        "#style",
+        "#foodie",
         "#quizcouple"
       ]
     }

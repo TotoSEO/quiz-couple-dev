@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "choisirait",
   "categorie": "choisirait",
-  "sujet": "ch-042",
+  "sujet": "ch-044",
   "idee_id": null,
   "variantes": {
     "en": {
@@ -12,79 +12,79 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "elle",
-        "etiquette": "Wedding edition",
-        "accroche": "What would she choose?",
-        "consigne": "Answer for her, then let her check!",
+        "pour": "lui",
+        "etiquette": "Christmas edition",
+        "accroche": "What would he choose?",
+        "consigne": "Pick what he would pick. Then send it to him!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Where would she want you to propose?",
+            "question": "Which winter date would he pick?",
             "options": [
               {
-                "texte": "Hot air balloon",
-                "image": "choisirait/demande/demande-montgolfiere.webp"
+                "texte": "Skiing",
+                "image": "choisirait/hiver/hiver-ski.webp"
               },
               {
-                "texte": "Rooftop",
-                "image": "choisirait/demande/demande-rooftop.webp"
+                "texte": "Sledding",
+                "image": "choisirait/hiver/luge.webp"
               },
               {
-                "texte": "Beach at sunset",
-                "image": "choisirait/demande/demande-plage.webp"
+                "texte": "Hot tub in the snow",
+                "image": "choisirait/hiver/jacuzzi.webp"
               }
             ]
           },
           {
-            "question": "Where would she want to get married?",
+            "question": "Which Christmas treat would he pick?",
             "options": [
               {
-                "texte": "Garden",
-                "image": "choisirait/mariage/mariage-jardin.webp"
+                "texte": "Mince pies",
+                "image": "choisirait/noel-gourmandise/mince-pies.webp"
               },
               {
-                "texte": "Castle",
-                "image": "choisirait/mariage/mariage-chateau.webp"
+                "texte": "Yule log",
+                "image": "choisirait/noel-gourmandise/buche.webp"
               },
               {
-                "texte": "Beach",
-                "image": "choisirait/vue/plage-tropicale.webp"
+                "texte": "Hot chocolate",
+                "image": "choisirait/noel-gourmandise/chocolat-noel.webp"
               }
             ]
           },
           {
-            "question": "Which ring would she want?",
+            "question": "Which gift would he want?",
             "options": [
               {
-                "texte": "Emerald ring",
-                "image": "choisirait/bague/emeraude.webp"
+                "texte": "Drone",
+                "image": "choisirait/cadeau/drone.webp"
               },
               {
-                "texte": "Rose gold ring",
-                "image": "choisirait/bague/or-rose.webp"
+                "texte": "Camera",
+                "image": "choisirait/cadeau/appareil-photo.webp"
               },
               {
-                "texte": "Gold band",
-                "image": "choisirait/bague/alliance-or.webp"
+                "texte": "Game console",
+                "image": "choisirait/cadeau/console-cadeau.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Got her 3 picks? Send it and see!",
-          "bouton": "Send this to her",
+          "question": "Send it to him: how many did you get?",
+          "bouton": "Send this to him",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Wedding edition. Write down her three letters before you send it.\n\nSend this to her",
+      "legende": "Christmas edition. If you get all three, you know him by heart.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
-        "#girlfriendquiz",
+        "#boyfriendquiz",
         "#thisorthat",
-        "#engaged",
+        "#christmas",
         "#quizcouple"
       ]
     }

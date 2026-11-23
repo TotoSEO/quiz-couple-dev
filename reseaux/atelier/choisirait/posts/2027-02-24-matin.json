@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "choisirait",
   "categorie": "choisirait",
-  "sujet": "ch-172",
+  "sujet": "ch-174",
   "idee_id": null,
   "variantes": {
     "en": {
@@ -12,79 +12,79 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "lui",
-        "etiquette": "Luxury edition",
-        "accroche": "What would he choose?",
-        "consigne": "Pick what he would pick. Then send it to him!",
+        "pour": "elle",
+        "etiquette": "Sweet tooth edition",
+        "accroche": "What would she choose?",
+        "consigne": "Answer for her, then let her check!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which car would he pick?",
+            "question": "What would she grab at the bakery?",
             "options": [
               {
-                "texte": "McLaren 720S",
-                "image": "choisirait/voiture/mclaren.webp"
+                "texte": "Brioche",
+                "image": "choisirait/boulangerie/brioche.webp"
               },
               {
-                "texte": "Range Rover",
-                "image": "choisirait/voiture/range-rover.webp"
+                "texte": "Donut",
+                "image": "choisirait/boulangerie/donut.webp"
               },
               {
-                "texte": "Corvette",
-                "image": "choisirait/voiture/corvette.webp"
+                "texte": "Muffin",
+                "image": "choisirait/boulangerie/muffin.webp"
               }
             ]
           },
           {
-            "question": "Which dream house would he pick?",
+            "question": "Which ice cream would she get?",
             "options": [
               {
-                "texte": "Mountain chalet",
-                "image": "choisirait/maison/chalet.webp"
+                "texte": "Sundae",
+                "image": "choisirait/glace/sundae.webp"
               },
               {
-                "texte": "Tiny house",
-                "image": "choisirait/maison/tiny-house.webp"
+                "texte": "Gelato",
+                "image": "choisirait/glace/gelato.webp"
               },
               {
-                "texte": "Modern villa",
-                "image": "choisirait/maison/villa-moderne.webp"
+                "texte": "Soft serve",
+                "image": "choisirait/glace/italienne.webp"
               }
             ]
           },
           {
-            "question": "Which watch would he wear?",
+            "question": "Which movie snack would she pick?",
             "options": [
               {
-                "texte": "Rolex Submariner",
-                "image": "choisirait/montre/rolex.webp"
+                "texte": "Licorice",
+                "image": "choisirait/snack/reglisse.webp"
               },
               {
-                "texte": "Casio digital",
-                "image": "choisirait/montre/casio.webp"
+                "texte": "Popcorn",
+                "image": "choisirait/snack/popcorn.webp"
               },
               {
-                "texte": "Omega Speedmaster",
-                "image": "choisirait/montre/speedmaster.webp"
+                "texte": "Nachos",
+                "image": "choisirait/snack/nachos.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Now send it to him. Did you guess right?",
-          "bouton": "Send this to him",
+          "question": "Got her 3 picks? Send it and see!",
+          "bouton": "Send this to her",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Luxury edition. Write down his three letters before you send it.\n\nSend this to him",
+      "legende": "Sweet tooth edition. If you get all three, you know her by heart.\n\nSend this to her",
       "hashtags": [
         "#couplequiz",
-        "#boyfriendquiz",
+        "#girlfriendquiz",
         "#thisorthat",
-        "#luxurylife",
+        "#dessert",
         "#quizcouple"
       ]
     }

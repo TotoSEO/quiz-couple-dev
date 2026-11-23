@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "choisirait",
   "categorie": "choisirait",
-  "sujet": "ch-104",
+  "sujet": "ch-106",
   "idee_id": null,
   "variantes": {
     "en": {
@@ -13,78 +13,78 @@
         "langue": "en",
         "theme": "light",
         "pour": "lui",
-        "etiquette": "Travel edition",
+        "etiquette": "Game night edition",
         "accroche": "What would he choose?",
-        "consigne": "Pick what he would pick. Then send it to him!",
+        "consigne": "Answer for him, then let him check!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which city would he take you to?",
+            "question": "What would he order at 2 a.m.?",
             "options": [
               {
-                "texte": "Istanbul",
-                "image": "choisirait/ville/istanbul.webp"
+                "texte": "Tacos",
+                "image": "choisirait/fastfood/tacos.webp"
               },
               {
-                "texte": "Venice",
-                "image": "choisirait/ville/venise.webp"
+                "texte": "Fried chicken",
+                "image": "choisirait/fastfood/poulet-frit.webp"
               },
               {
-                "texte": "Amsterdam",
-                "image": "choisirait/ville/amsterdam.webp"
+                "texte": "Instant noodles",
+                "image": "choisirait/fastfood/nouilles.webp"
               }
             ]
           },
           {
-            "question": "Which view would he wake up to?",
+            "question": "Which drink would he get?",
             "options": [
               {
-                "texte": "Mountains",
-                "image": "choisirait/vue/montagnes.webp"
+                "texte": "Smoothie",
+                "image": "choisirait/boisson/smoothie.webp"
               },
               {
-                "texte": "Forest",
-                "image": "choisirait/vue/foret.webp"
+                "texte": "Lemonade",
+                "image": "choisirait/boisson/limonade.webp"
               },
               {
-                "texte": "Tropical beach",
-                "image": "choisirait/vue/plage-tropicale.webp"
+                "texte": "Iced tea",
+                "image": "choisirait/boisson/the-glace.webp"
               }
             ]
           },
           {
-            "question": "Where would he book a weekend for two?",
+            "question": "Which console would he pick?",
             "options": [
               {
-                "texte": "Log cabin",
-                "image": "choisirait/weekend/chalet-bois.webp"
+                "texte": "Xbox",
+                "image": "choisirait/console/xbox.webp"
               },
               {
-                "texte": "Beach bungalow",
-                "image": "choisirait/weekend/bungalow-plage.webp"
+                "texte": "Gaming PC",
+                "image": "choisirait/console/pc-gamer.webp"
               },
               {
-                "texte": "Ski chalet",
-                "image": "choisirait/weekend/chalet-ski.webp"
+                "texte": "Nintendo Switch",
+                "image": "choisirait/console/switch.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Send it to him: how many did you get?",
+          "question": "Now send it to him. Did you guess right?",
           "bouton": "Send this to him",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Travel edition. If you get all three, you know him by heart.\n\nSend this to him",
+      "legende": "Game night edition. Pick for him, then let him prove you wrong.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
         "#boyfriendquiz",
         "#thisorthat",
-        "#travelcouple",
+        "#gamenight",
         "#quizcouple"
       ]
     }

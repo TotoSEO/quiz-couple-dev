@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "choisirait",
   "categorie": "choisirait",
-  "sujet": "ch-045",
+  "sujet": "ch-047",
   "idee_id": null,
   "variantes": {
     "en": {
@@ -12,79 +12,79 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "elle",
-        "etiquette": "Adventure edition",
-        "accroche": "What would she choose?",
-        "consigne": "Guess her 3 picks, then send it to her!",
+        "pour": "lui",
+        "etiquette": "Cozy night in edition",
+        "accroche": "What would he choose?",
+        "consigne": "3 questions, 4 seconds each. Pick for him!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which adventure would she try?",
+            "question": "Which game night would he pick?",
             "options": [
               {
-                "texte": "Paragliding",
-                "image": "choisirait/aventure/parapente.webp"
+                "texte": "Board games",
+                "image": "choisirait/jeu/jeux-societe.webp"
               },
               {
-                "texte": "Kayaking",
-                "image": "choisirait/aventure/kayak.webp"
+                "texte": "Foosball",
+                "image": "choisirait/jeu/baby-foot.webp"
               },
               {
-                "texte": "Surfing",
-                "image": "choisirait/aventure/surf.webp"
+                "texte": "Video games",
+                "image": "choisirait/jeu/jeux-video.webp"
               }
             ]
           },
           {
-            "question": "Which sport would she watch?",
+            "question": "Which console would he pick?",
             "options": [
               {
-                "texte": "Basketball",
-                "image": "choisirait/sport/basket.webp"
+                "texte": "PlayStation 2",
+                "image": "choisirait/console/ps2.webp"
               },
               {
-                "texte": "Boxing",
-                "image": "choisirait/sport/boxe.webp"
+                "texte": "Nintendo Switch",
+                "image": "choisirait/console/switch.webp"
               },
               {
-                "texte": "Formula 1",
-                "image": "choisirait/sport/f1.webp"
+                "texte": "Xbox",
+                "image": "choisirait/console/xbox.webp"
               }
             ]
           },
           {
-            "question": "How would she travel with you?",
+            "question": "Which drink would he get?",
             "options": [
               {
-                "texte": "Camper van",
-                "image": "choisirait/voyage/van.webp"
+                "texte": "Lemonade",
+                "image": "choisirait/boisson/limonade.webp"
               },
               {
-                "texte": "Sailboat",
-                "image": "choisirait/voyage/voilier.webp"
+                "texte": "Bubble tea",
+                "image": "choisirait/boisson/bubble-tea.webp"
               },
               {
-                "texte": "Private jet",
-                "image": "choisirait/voyage/jet.webp"
+                "texte": "Smoothie",
+                "image": "choisirait/boisson/smoothie.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Got her 3 picks? Send it and see!",
-          "bouton": "Send this to her",
+          "question": "Send it to him: how many did you get?",
+          "bouton": "Send this to him",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Adventure edition. No cheating: decide before the timer runs out.\n\nSend this to her",
+      "legende": "Cozy night in edition. He will swear you got at least one wrong.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
-        "#girlfriendquiz",
+        "#boyfriendquiz",
         "#thisorthat",
-        "#adventurecouple",
+        "#cozynight",
         "#quizcouple"
       ]
     }

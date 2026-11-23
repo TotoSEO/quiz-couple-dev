@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "choisirait",
   "categorie": "choisirait",
-  "sujet": "ch-132",
+  "sujet": "ch-134",
   "idee_id": null,
   "variantes": {
     "en": {
@@ -12,79 +12,79 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "elle",
-        "etiquette": "Valentine's edition",
-        "accroche": "What would she choose?",
-        "consigne": "Pick what she would pick. Then send it to her!",
+        "pour": "lui",
+        "etiquette": "Cozy night in edition",
+        "accroche": "What would he choose?",
+        "consigne": "Answer for him, then let him check!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "What would she want for Valentine's?",
+            "question": "Which game night would he pick?",
             "options": [
               {
-                "texte": "Box of chocolates",
-                "image": "choisirait/valentin/boite-chocolats.webp"
+                "texte": "Board games",
+                "image": "choisirait/jeu/jeux-societe.webp"
               },
               {
-                "texte": "Love letter",
-                "image": "choisirait/valentin/lettre.webp"
+                "texte": "Foosball",
+                "image": "choisirait/jeu/baby-foot.webp"
               },
               {
-                "texte": "Red roses",
-                "image": "choisirait/valentin/valentin-roses.webp"
+                "texte": "Chess",
+                "image": "choisirait/jeu/echecs-soir.webp"
               }
             ]
           },
           {
-            "question": "Which flowers would she want?",
+            "question": "Which drink would he get?",
             "options": [
               {
-                "texte": "Red roses",
-                "image": "choisirait/fleurs/roses.webp"
+                "texte": "Iced tea",
+                "image": "choisirait/boisson/the-glace.webp"
               },
               {
-                "texte": "Hydrangeas",
-                "image": "choisirait/fleurs/hortensias.webp"
+                "texte": "Lemonade",
+                "image": "choisirait/boisson/limonade.webp"
               },
               {
-                "texte": "Orchid",
-                "image": "choisirait/fleurs/orchidee.webp"
+                "texte": "Bubble tea",
+                "image": "choisirait/boisson/bubble-tea.webp"
               }
             ]
           },
           {
-            "question": "Which date would she take you on?",
+            "question": "Which console would he pick?",
             "options": [
               {
-                "texte": "Museum",
-                "image": "choisirait/date/musee.webp"
+                "texte": "PlayStation 5",
+                "image": "choisirait/console/ps5.webp"
               },
               {
-                "texte": "Wine tasting",
-                "image": "choisirait/date/degustation.webp"
+                "texte": "Xbox",
+                "image": "choisirait/console/xbox.webp"
               },
               {
-                "texte": "Stargazing",
-                "image": "choisirait/date/etoiles.webp"
+                "texte": "Nintendo Switch",
+                "image": "choisirait/console/switch.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Got her 3 picks? Send it and see!",
-          "bouton": "Send this to her",
+          "question": "Send it to him: how many did you get?",
+          "bouton": "Send this to him",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Valentine's edition. Write down her three letters before you send it.\n\nSend this to her",
+      "legende": "Cozy night in edition. If you get all three, you know him by heart.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
-        "#girlfriendquiz",
+        "#boyfriendquiz",
         "#thisorthat",
-        "#valentinesday",
+        "#cozynight",
         "#quizcouple"
       ]
     }

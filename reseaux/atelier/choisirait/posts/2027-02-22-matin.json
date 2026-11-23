@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "choisirait",
   "categorie": "choisirait",
-  "sujet": "ch-168",
+  "sujet": "ch-170",
   "idee_id": null,
   "variantes": {
     "en": {
@@ -12,79 +12,79 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "elle",
-        "etiquette": "Dream life edition",
-        "accroche": "What would she choose?",
-        "consigne": "Pick what she would pick. Then send it to her!",
+        "pour": "lui",
+        "etiquette": "Travel edition",
+        "accroche": "What would he choose?",
+        "consigne": "Answer for him, then let him check!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which watch would she wear?",
+            "question": "Which city would he take you to?",
             "options": [
               {
-                "texte": "Cartier Tank",
-                "image": "choisirait/montre/cartier.webp"
+                "texte": "Tokyo",
+                "image": "choisirait/ville/tokyo.webp"
               },
               {
-                "texte": "Casio G-Shock",
-                "image": "choisirait/montre/g-shock.webp"
+                "texte": "Prague",
+                "image": "choisirait/ville/prague.webp"
               },
               {
-                "texte": "Pocket watch",
-                "image": "choisirait/montre/gousset.webp"
+                "texte": "Venice",
+                "image": "choisirait/ville/venise.webp"
               }
             ]
           },
           {
-            "question": "Which dream house would she pick?",
+            "question": "Which view would he wake up to?",
             "options": [
               {
-                "texte": "Modern villa",
-                "image": "choisirait/maison/villa-moderne.webp"
+                "texte": "Vineyards",
+                "image": "choisirait/vue/vignes.webp"
               },
               {
-                "texte": "Victorian house",
-                "image": "choisirait/maison/victorienne.webp"
+                "texte": "Rice fields",
+                "image": "choisirait/vue/rizieres.webp"
               },
               {
-                "texte": "Castle",
-                "image": "choisirait/maison/chateau.webp"
+                "texte": "Tropical beach",
+                "image": "choisirait/vue/plage-tropicale.webp"
               }
             ]
           },
           {
-            "question": "Which dog would she adopt?",
+            "question": "Where would he go on vacation?",
             "options": [
               {
-                "texte": "Pomeranian",
-                "image": "choisirait/chien/pomeranien.webp"
+                "texte": "Norway",
+                "image": "choisirait/vacances/norvege.webp"
               },
               {
-                "texte": "Belgian Malinois",
-                "image": "choisirait/chien/malinois.webp"
+                "texte": "Greece",
+                "image": "choisirait/vacances/grece.webp"
               },
               {
-                "texte": "Cavalier King Charles",
-                "image": "choisirait/chien/cavalier.webp"
+                "texte": "Bora Bora",
+                "image": "choisirait/vacances/bora-bora.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Got her 3 picks? Send it and see!",
-          "bouton": "Send this to her",
+          "question": "Send it to him: how many did you get?",
+          "bouton": "Send this to him",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Dream life edition. Your answers first, then her reaction.\n\nSend this to her",
+      "legende": "Travel edition. Easy for you? Then the next one is for him.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
-        "#girlfriendquiz",
+        "#boyfriendquiz",
         "#thisorthat",
-        "#dreamlife",
+        "#travelcouple",
         "#quizcouple"
       ]
     }

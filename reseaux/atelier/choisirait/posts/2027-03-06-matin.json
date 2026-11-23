@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "choisirait",
   "categorie": "choisirait",
-  "sujet": "ch-191",
+  "sujet": "ch-193",
   "idee_id": null,
   "variantes": {
     "en": {
@@ -13,78 +13,78 @@
         "langue": "en",
         "theme": "light",
         "pour": "lui",
-        "etiquette": "Food edition",
+        "etiquette": "Weekend edition",
         "accroche": "What would he choose?",
-        "consigne": "3 questions, 4 seconds each. Pick for him!",
+        "consigne": "Guess his 3 picks, then send it to him!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which pizza would he order?",
+            "question": "Which hobby would he pick up?",
             "options": [
               {
-                "texte": "Pepperoni",
-                "image": "choisirait/pizza/pepperoni.webp"
+                "texte": "Chess",
+                "image": "choisirait/loisir/echecs.webp"
               },
               {
-                "texte": "Veggie",
-                "image": "choisirait/pizza/vegetarienne.webp"
+                "texte": "Knitting",
+                "image": "choisirait/loisir/tricot.webp"
               },
               {
-                "texte": "Four cheese",
-                "image": "choisirait/pizza/quatre-fromages.webp"
+                "texte": "Pottery",
+                "image": "choisirait/loisir/poterie.webp"
               }
             ]
           },
           {
-            "question": "Which pasta would he pick?",
+            "question": "Which sport would he watch?",
             "options": [
               {
-                "texte": "Seafood pasta",
-                "image": "choisirait/pates/fruits-mer.webp"
+                "texte": "American football",
+                "image": "choisirait/sport/foot-us.webp"
               },
               {
-                "texte": "Mac and cheese",
-                "image": "choisirait/pates/mac-cheese.webp"
+                "texte": "Baseball",
+                "image": "choisirait/sport/baseball.webp"
               },
               {
-                "texte": "Carbonara",
-                "image": "choisirait/pates/carbonara.webp"
+                "texte": "Boxing",
+                "image": "choisirait/sport/boxe.webp"
               }
             ]
           },
           {
-            "question": "Which potato would he pick?",
+            "question": "Which workout would he pick?",
             "options": [
               {
-                "texte": "French fries",
-                "image": "choisirait/patate/frites.webp"
+                "texte": "CrossFit",
+                "image": "choisirait/salle/crossfit.webp"
               },
               {
-                "texte": "Hash browns",
-                "image": "choisirait/patate/hash-browns.webp"
+                "texte": "Cycling",
+                "image": "choisirait/salle/velo.webp"
               },
               {
-                "texte": "Potato gratin",
-                "image": "choisirait/patate/gratin.webp"
+                "texte": "Weightlifting",
+                "image": "choisirait/salle/muscu.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Send it to him: how many did you get?",
+          "question": "Now send it to him. Did you guess right?",
           "bouton": "Send this to him",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Food edition. Answer for him first, no peeking.\n\nSend this to him",
+      "legende": "Weekend edition. Guess first, send it after. Then compare.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
         "#boyfriendquiz",
         "#thisorthat",
-        "#foodie",
+        "#weekendvibes",
         "#quizcouple"
       ]
     }

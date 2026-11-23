@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "choisirait",
   "categorie": "choisirait",
-  "sujet": "ch-052",
+  "sujet": "ch-054",
   "idee_id": null,
   "variantes": {
     "en": {
@@ -12,79 +12,79 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "lui",
-        "etiquette": "Game night edition",
-        "accroche": "What would he choose?",
-        "consigne": "Pick what he would pick. Then send it to him!",
+        "pour": "elle",
+        "etiquette": "Dream life edition",
+        "accroche": "What would she choose?",
+        "consigne": "Answer for her, then let her check!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "What would he order at 2 a.m.?",
+            "question": "Which watch would she wear?",
             "options": [
               {
-                "texte": "Fried chicken",
-                "image": "choisirait/fastfood/poulet-frit.webp"
+                "texte": "Omega Speedmaster",
+                "image": "choisirait/montre/speedmaster.webp"
               },
               {
-                "texte": "Nuggets",
-                "image": "choisirait/fastfood/nuggets.webp"
+                "texte": "Casio digital",
+                "image": "choisirait/montre/casio.webp"
               },
               {
-                "texte": "Burrito",
-                "image": "choisirait/fastfood/burrito.webp"
+                "texte": "Casio G-Shock",
+                "image": "choisirait/montre/g-shock.webp"
               }
             ]
           },
           {
-            "question": "Which console would he pick?",
+            "question": "Which house would she pick?",
             "options": [
               {
-                "texte": "Gaming PC",
-                "image": "choisirait/console/pc-gamer.webp"
+                "texte": "Mountain chalet",
+                "image": "choisirait/maison/chalet.webp"
               },
               {
-                "texte": "PlayStation 5",
-                "image": "choisirait/console/ps5.webp"
+                "texte": "Castle",
+                "image": "choisirait/maison/chateau.webp"
               },
               {
-                "texte": "Nintendo Switch",
-                "image": "choisirait/console/switch.webp"
+                "texte": "Beach house",
+                "image": "choisirait/maison/maison-plage.webp"
               }
             ]
           },
           {
-            "question": "Which drink would he get?",
+            "question": "Which view would she wake up to?",
             "options": [
               {
-                "texte": "Bubble tea",
-                "image": "choisirait/boisson/bubble-tea.webp"
+                "texte": "Rice fields",
+                "image": "choisirait/vue/rizieres.webp"
               },
               {
-                "texte": "Iced tea",
-                "image": "choisirait/boisson/the-glace.webp"
+                "texte": "Lake",
+                "image": "choisirait/vue/lac.webp"
               },
               {
-                "texte": "Lemonade",
-                "image": "choisirait/boisson/limonade.webp"
+                "texte": "Eiffel Tower",
+                "image": "choisirait/vue/tour-eiffel.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Now send it to him. Did you guess right?",
-          "bouton": "Send this to him",
+          "question": "Got her 3 picks? Send it and see!",
+          "bouton": "Send this to her",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Game night edition. Write down his three letters before you send it.\n\nSend this to him",
+      "legende": "Dream life edition. If you get all three, you know her by heart.\n\nSend this to her",
       "hashtags": [
         "#couplequiz",
-        "#boyfriendquiz",
+        "#girlfriendquiz",
         "#thisorthat",
-        "#gamenight",
+        "#dreamlife",
         "#quizcouple"
       ]
     }

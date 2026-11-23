@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "choisirait",
   "categorie": "choisirait",
-  "sujet": "ch-059",
+  "sujet": "ch-061",
   "idee_id": null,
   "variantes": {
     "en": {
@@ -13,78 +13,78 @@
         "langue": "en",
         "theme": "light",
         "pour": "lui",
-        "etiquette": "Style edition",
+        "etiquette": "Adventure edition",
         "accroche": "What would he choose?",
-        "consigne": "3 questions, 4 seconds each. Pick for him!",
+        "consigne": "Guess his 3 picks, then send it to him!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which sneakers would he pick?",
+            "question": "Which adventure would he try?",
             "options": [
               {
-                "texte": "Nike Air Max",
-                "image": "choisirait/baskets/air-max.webp"
+                "texte": "Skiing",
+                "image": "choisirait/aventure/ski.webp"
               },
               {
-                "texte": "Adidas Samba",
-                "image": "choisirait/baskets/samba.webp"
+                "texte": "Paragliding",
+                "image": "choisirait/aventure/parapente.webp"
               },
               {
-                "texte": "Birkenstock",
-                "image": "choisirait/baskets/birkenstock.webp"
+                "texte": "Snowboarding",
+                "image": "choisirait/aventure/snowboard.webp"
               }
             ]
           },
           {
-            "question": "Which phone would he pick?",
+            "question": "Which sport would he watch?",
             "options": [
               {
-                "texte": "iPhone",
-                "image": "choisirait/telephone/iphone.webp"
+                "texte": "Basketball",
+                "image": "choisirait/sport/basket.webp"
               },
               {
-                "texte": "Nokia 3310",
-                "image": "choisirait/telephone/nokia.webp"
+                "texte": "Rugby",
+                "image": "choisirait/sport/rugby.webp"
               },
               {
-                "texte": "Flip phone",
-                "image": "choisirait/telephone/clapet.webp"
+                "texte": "American football",
+                "image": "choisirait/sport/foot-us.webp"
               }
             ]
           },
           {
-            "question": "Which watch would he wear?",
+            "question": "Where would he book a weekend?",
             "options": [
               {
-                "texte": "Omega Speedmaster",
-                "image": "choisirait/montre/speedmaster.webp"
+                "texte": "Glamping tent",
+                "image": "choisirait/weekend/glamping.webp"
               },
               {
-                "texte": "Rolex Submariner",
-                "image": "choisirait/montre/rolex.webp"
+                "texte": "Desert camp",
+                "image": "choisirait/weekend/desert.webp"
               },
               {
-                "texte": "Casio G-Shock",
-                "image": "choisirait/montre/g-shock.webp"
+                "texte": "Ski chalet",
+                "image": "choisirait/weekend/chalet-ski.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Send it to him: how many did you get?",
+          "question": "Now send it to him. Did you guess right?",
           "bouton": "Send this to him",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Style edition. One letter per question, then send it to him.\n\nSend this to him",
+      "legende": "Adventure edition. Answer for him first, no peeking.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
         "#boyfriendquiz",
         "#thisorthat",
-        "#style",
+        "#adventurecouple",
         "#quizcouple"
       ]
     }

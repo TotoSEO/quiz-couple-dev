@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "choisirait",
   "categorie": "choisirait",
-  "sujet": "ch-089",
+  "sujet": "ch-091",
   "idee_id": null,
   "variantes": {
     "en": {
@@ -13,78 +13,78 @@
         "langue": "en",
         "theme": "light",
         "pour": "lui",
-        "etiquette": "Winter edition",
+        "etiquette": "Dream home edition",
         "accroche": "What would he choose?",
-        "consigne": "Guess his 3 picks, then send it to him!",
+        "consigne": "3 questions, 4 seconds each. Pick for him!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which winter date would he pick?",
+            "question": "Which house would he pick?",
             "options": [
               {
-                "texte": "Skiing",
-                "image": "choisirait/hiver/hiver-ski.webp"
+                "texte": "Loft apartment",
+                "image": "choisirait/maison/loft.webp"
               },
               {
-                "texte": "Cabin by the fire",
-                "image": "choisirait/hiver/feu-cheminee.webp"
+                "texte": "Modern villa",
+                "image": "choisirait/maison/villa-moderne.webp"
               },
               {
-                "texte": "Ice skating",
-                "image": "choisirait/hiver/hiver-patin.webp"
+                "texte": "Cozy cabin",
+                "image": "choisirait/weekend/chalet-bois.webp"
               }
             ]
           },
           {
-            "question": "What would he cook for date night?",
+            "question": "Which view would he wake up to?",
             "options": [
               {
-                "texte": "Raclette",
-                "image": "choisirait/diner/raclette.webp"
+                "texte": "Snowy peaks",
+                "image": "choisirait/vue/neige.webp"
               },
               {
-                "texte": "Cheese fondue",
-                "image": "choisirait/diner/fondue.webp"
+                "texte": "Mountains",
+                "image": "choisirait/vue/montagnes.webp"
               },
               {
-                "texte": "Steak and fries",
-                "image": "choisirait/diner/steak-frites.webp"
+                "texte": "Desert",
+                "image": "choisirait/vue/desert-vue.webp"
               }
             ]
           },
           {
-            "question": "Where would he book a weekend?",
+            "question": "Which dog would he adopt?",
             "options": [
               {
-                "texte": "Houseboat",
-                "image": "choisirait/weekend/peniche.webp"
+                "texte": "Pug",
+                "image": "choisirait/chien/carlin.webp"
               },
               {
-                "texte": "Ski chalet",
-                "image": "choisirait/weekend/chalet-ski.webp"
+                "texte": "Poodle",
+                "image": "choisirait/chien/caniche.webp"
               },
               {
-                "texte": "Treehouse",
-                "image": "choisirait/weekend/cabane-arbre.webp"
+                "texte": "Dalmatian",
+                "image": "choisirait/chien/dalmatien.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Send it to him: how many did you get?",
+          "question": "Now send it to him. Did you guess right?",
           "bouton": "Send this to him",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Winter edition. One letter per question, then send it to him.\n\nSend this to him",
+      "legende": "Dream home edition. Answer for him first, no peeking.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
         "#boyfriendquiz",
         "#thisorthat",
-        "#winter",
+        "#dreamhome",
         "#quizcouple"
       ]
     }

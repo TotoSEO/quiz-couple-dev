@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "choisirait",
   "categorie": "choisirait",
-  "sujet": "ch-150",
+  "sujet": "ch-152",
   "idee_id": null,
   "variantes": {
     "en": {
@@ -12,79 +12,79 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "elle",
-        "etiquette": "Valentine's edition",
-        "accroche": "What would she choose?",
-        "consigne": "Answer for her, then let her check!",
+        "pour": "lui",
+        "etiquette": "Dream home edition",
+        "accroche": "What would he choose?",
+        "consigne": "Pick what he would pick. Then send it to him!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "What would she want for Valentine's?",
+            "question": "Which house would he pick?",
             "options": [
               {
-                "texte": "Perfume",
-                "image": "choisirait/valentin/parfum-valentin.webp"
+                "texte": "Beach house",
+                "image": "choisirait/maison/maison-plage.webp"
               },
               {
-                "texte": "Box of chocolates",
-                "image": "choisirait/valentin/boite-chocolats.webp"
+                "texte": "Victorian house",
+                "image": "choisirait/maison/victorienne.webp"
               },
               {
-                "texte": "Love letter",
-                "image": "choisirait/valentin/lettre.webp"
+                "texte": "Castle",
+                "image": "choisirait/maison/chateau.webp"
               }
             ]
           },
           {
-            "question": "Which ring would she want?",
+            "question": "Which view would he wake up to?",
             "options": [
               {
-                "texte": "Emerald ring",
-                "image": "choisirait/bague/emeraude.webp"
+                "texte": "Mountains",
+                "image": "choisirait/vue/montagnes.webp"
               },
               {
-                "texte": "Vintage ring",
-                "image": "choisirait/bague/vintage-bague.webp"
+                "texte": "Eiffel Tower",
+                "image": "choisirait/vue/tour-eiffel.webp"
               },
               {
-                "texte": "Solitaire diamond",
-                "image": "choisirait/bague/solitaire.webp"
+                "texte": "Northern lights",
+                "image": "choisirait/vue/aurores.webp"
               }
             ]
           },
           {
-            "question": "Which flowers would she want?",
+            "question": "Which cat would he adopt?",
             "options": [
               {
-                "texte": "Hydrangeas",
-                "image": "choisirait/fleurs/hortensias.webp"
+                "texte": "British Shorthair",
+                "image": "choisirait/chat/british.webp"
               },
               {
-                "texte": "Wildflowers",
-                "image": "choisirait/fleurs/fleurs-sauvages.webp"
+                "texte": "Maine Coon",
+                "image": "choisirait/chat/maine-coon.webp"
               },
               {
-                "texte": "Peonies",
-                "image": "choisirait/fleurs/pivoines.webp"
+                "texte": "Norwegian Forest Cat",
+                "image": "choisirait/chat/norvegien.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Got her 3 picks? Send it and see!",
-          "bouton": "Send this to her",
+          "question": "Send it to him: how many did you get?",
+          "bouton": "Send this to him",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Valentine's edition. Easy for you? Then the next one is for her.\n\nSend this to her",
+      "legende": "Dream home edition. Write down his three letters before you send it.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
-        "#girlfriendquiz",
+        "#boyfriendquiz",
         "#thisorthat",
-        "#valentinesday",
+        "#dreamhome",
         "#quizcouple"
       ]
     }

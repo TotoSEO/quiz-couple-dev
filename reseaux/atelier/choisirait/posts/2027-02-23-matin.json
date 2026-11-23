@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "choisirait",
   "categorie": "choisirait",
-  "sujet": "ch-170",
+  "sujet": "ch-172",
   "idee_id": null,
   "variantes": {
     "en": {
@@ -13,78 +13,78 @@
         "langue": "en",
         "theme": "light",
         "pour": "lui",
-        "etiquette": "Morning edition",
+        "etiquette": "Pet lovers edition",
         "accroche": "What would he choose?",
-        "consigne": "Answer for him, then let him check!",
+        "consigne": "Pick what he would pick. Then send it to him!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which breakfast would he make you?",
+            "question": "Which pet would he want?",
             "options": [
               {
-                "texte": "Shakshuka",
-                "image": "choisirait/petitdej/shakshuka.webp"
+                "texte": "Hedgehog",
+                "image": "choisirait/animal/herisson.webp"
               },
               {
-                "texte": "Avocado toast",
-                "image": "choisirait/petitdej/avocado-toast.webp"
+                "texte": "Chameleon",
+                "image": "choisirait/animal/cameleon.webp"
               },
               {
-                "texte": "Eggs Benedict",
-                "image": "choisirait/petitdej/benedict.webp"
+                "texte": "Turtle",
+                "image": "choisirait/animal/tortue.webp"
               }
             ]
           },
           {
-            "question": "How would he have his eggs?",
+            "question": "Which cat would he adopt?",
             "options": [
               {
-                "texte": "Poached",
-                "image": "choisirait/oeufs/poche.webp"
+                "texte": "Persian",
+                "image": "choisirait/chat/persan.webp"
               },
               {
-                "texte": "Omelette",
-                "image": "choisirait/oeufs/omelette.webp"
+                "texte": "Sphynx",
+                "image": "choisirait/chat/sphynx.webp"
               },
               {
-                "texte": "Fried",
-                "image": "choisirait/oeufs/oeuf-plat.webp"
+                "texte": "Ginger cat",
+                "image": "choisirait/chat/chat-roux.webp"
               }
             ]
           },
           {
-            "question": "Which coffee would he order?",
+            "question": "Which dog would he adopt?",
             "options": [
               {
-                "texte": "Espresso",
-                "image": "choisirait/cafe/espresso.webp"
+                "texte": "Border Collie",
+                "image": "choisirait/chien/border-collie.webp"
               },
               {
-                "texte": "Americano",
-                "image": "choisirait/cafe/americano.webp"
+                "texte": "Pug",
+                "image": "choisirait/chien/carlin.webp"
               },
               {
-                "texte": "Iced latte",
-                "image": "choisirait/cafe/iced-latte.webp"
+                "texte": "Rottweiler",
+                "image": "choisirait/chien/rottweiler.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Send it to him: how many did you get?",
+          "question": "Now send it to him. Did you guess right?",
           "bouton": "Send this to him",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Morning edition. Easy for you? Then the next one is for him.\n\nSend this to him",
+      "legende": "Pet lovers edition. Write down his three letters before you send it.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
         "#boyfriendquiz",
         "#thisorthat",
-        "#breakfast",
+        "#petlovers",
         "#quizcouple"
       ]
     }

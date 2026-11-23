@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "choisirait",
   "categorie": "choisirait",
-  "sujet": "ch-181",
+  "sujet": "ch-183",
   "idee_id": null,
   "variantes": {
     "en": {
@@ -12,79 +12,79 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "lui",
-        "etiquette": "Adventure edition",
-        "accroche": "What would he choose?",
-        "consigne": "Guess his 3 picks, then send it to him!",
+        "pour": "elle",
+        "etiquette": "Game night edition",
+        "accroche": "What would she choose?",
+        "consigne": "3 questions, 4 seconds each. Pick for her!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which adventure would he try?",
+            "question": "What would she order at 2 a.m.?",
             "options": [
               {
-                "texte": "Horse riding",
-                "image": "choisirait/aventure/equitation.webp"
+                "texte": "Burrito",
+                "image": "choisirait/fastfood/burrito.webp"
               },
               {
-                "texte": "Bungee jumping",
-                "image": "choisirait/aventure/saut-elastique.webp"
+                "texte": "Tacos",
+                "image": "choisirait/fastfood/tacos.webp"
               },
               {
-                "texte": "Rock climbing",
-                "image": "choisirait/aventure/escalade.webp"
+                "texte": "Instant noodles",
+                "image": "choisirait/fastfood/nouilles.webp"
               }
             ]
           },
           {
-            "question": "Which sport would he watch?",
+            "question": "Which game night would she pick?",
             "options": [
               {
-                "texte": "Ice hockey",
-                "image": "choisirait/sport/hockey.webp"
+                "texte": "Foosball",
+                "image": "choisirait/jeu/baby-foot.webp"
               },
               {
-                "texte": "Golf",
-                "image": "choisirait/sport/golf.webp"
+                "texte": "Chess",
+                "image": "choisirait/jeu/echecs-soir.webp"
               },
               {
-                "texte": "Basketball",
-                "image": "choisirait/sport/basket.webp"
+                "texte": "Pool",
+                "image": "choisirait/jeu/billard.webp"
               }
             ]
           },
           {
-            "question": "Where would he go on vacation?",
+            "question": "Which movie snack would she pick?",
             "options": [
               {
-                "texte": "USA",
-                "image": "choisirait/vacances/usa.webp"
+                "texte": "Gummy bears",
+                "image": "choisirait/snack/oursons.webp"
               },
               {
-                "texte": "Iceland",
-                "image": "choisirait/vacances/islande.webp"
+                "texte": "Chocolate bar",
+                "image": "choisirait/snack/tablette.webp"
               },
               {
-                "texte": "Thailand",
-                "image": "choisirait/vacances/thailande.webp"
+                "texte": "Ice cream tub",
+                "image": "choisirait/snack/pot-glace.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Now send it to him. Did you guess right?",
-          "bouton": "Send this to him",
+          "question": "Got her 3 picks? Send it and see!",
+          "bouton": "Send this to her",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Adventure edition. Answer for him first, no peeking.\n\nSend this to him",
+      "legende": "Game night edition. Guess first, send it after. Then compare.\n\nSend this to her",
       "hashtags": [
         "#couplequiz",
-        "#boyfriendquiz",
+        "#girlfriendquiz",
         "#thisorthat",
-        "#adventurecouple",
+        "#gamenight",
         "#quizcouple"
       ]
     }

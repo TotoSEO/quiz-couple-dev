@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "choisirait",
   "categorie": "choisirait",
-  "sujet": "ch-106",
+  "sujet": "ch-108",
   "idee_id": null,
   "variantes": {
     "en": {
@@ -12,42 +12,25 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "lui",
+        "pour": "elle",
         "etiquette": "Sweet tooth edition",
-        "accroche": "What would he choose?",
-        "consigne": "Answer for him, then let him check!",
+        "accroche": "What would she choose?",
+        "consigne": "Pick what she would pick. Then send it to her!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which ice cream would he get?",
+            "question": "What would she grab at the bakery?",
             "options": [
               {
-                "texte": "Sundae",
-                "image": "choisirait/glace/sundae.webp"
+                "texte": "Cinnamon roll",
+                "image": "choisirait/boulangerie/cinnamon-roll.webp"
               },
               {
-                "texte": "Soft serve",
-                "image": "choisirait/glace/italienne.webp"
-              },
-              {
-                "texte": "Mochi ice cream",
-                "image": "choisirait/glace/mochi.webp"
-              }
-            ]
-          },
-          {
-            "question": "What would he grab at the bakery?",
-            "options": [
-              {
-                "texte": "Donut",
-                "image": "choisirait/boulangerie/donut.webp"
-              },
-              {
-                "texte": "Bagel",
-                "image": "choisirait/boulangerie/bagel.webp"
+                "texte": "Brioche",
+                "image": "choisirait/boulangerie/brioche.webp"
               },
               {
                 "texte": "Muffin",
@@ -56,33 +39,50 @@
             ]
           },
           {
-            "question": "Which dessert would he pick?",
+            "question": "Which ice cream would she get?",
             "options": [
               {
-                "texte": "Huge birthday cake",
-                "image": "choisirait/dessert/gateau-anniversaire.webp"
+                "texte": "Banana split",
+                "image": "choisirait/glace/banana-split.webp"
               },
               {
-                "texte": "Brownie",
-                "image": "choisirait/dessert/brownie.webp"
+                "texte": "Mochi ice cream",
+                "image": "choisirait/glace/mochi.webp"
               },
               {
-                "texte": "Churros",
-                "image": "choisirait/dessert/churros.webp"
+                "texte": "Affogato",
+                "image": "choisirait/glace/affogato.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which cake would she pick?",
+            "options": [
+              {
+                "texte": "Red velvet cake",
+                "image": "choisirait/dessert/red-velvet.webp"
+              },
+              {
+                "texte": "Crêpes",
+                "image": "choisirait/dessert/crepes.webp"
+              },
+              {
+                "texte": "Cheesecake",
+                "image": "choisirait/dessert/cheesecake.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Now send it to him. Did you guess right?",
-          "bouton": "Send this to him",
+          "question": "Got her 3 picks? Send it and see!",
+          "bouton": "Send this to her",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Sweet tooth edition. Pick for him, then let him prove you wrong.\n\nSend this to him",
+      "legende": "Sweet tooth edition. Your answers first, then her reaction.\n\nSend this to her",
       "hashtags": [
         "#couplequiz",
-        "#boyfriendquiz",
+        "#girlfriendquiz",
         "#thisorthat",
         "#dessert",
         "#quizcouple"

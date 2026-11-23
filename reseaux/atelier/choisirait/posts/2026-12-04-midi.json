@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "choisirait",
   "categorie": "choisirait",
-  "sujet": "ch-021",
+  "sujet": "ch-023",
   "idee_id": null,
   "variantes": {
     "en": {
@@ -12,79 +12,79 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "elle",
-        "etiquette": "Date night edition",
-        "accroche": "What would she choose?",
-        "consigne": "Guess her 3 picks, then send it to her!",
+        "pour": "lui",
+        "etiquette": "Wedding edition",
+        "accroche": "What would he choose?",
+        "consigne": "3 questions, 4 seconds each. Pick for him!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "What would she order at the bar?",
+            "question": "Which ring would he pick for you?",
             "options": [
               {
-                "texte": "Margarita",
-                "image": "choisirait/bar/margarita.webp"
+                "texte": "Solitaire diamond",
+                "image": "choisirait/bague/solitaire.webp"
               },
               {
-                "texte": "Mojito",
-                "image": "choisirait/bar/mojito.webp"
+                "texte": "Rose gold ring",
+                "image": "choisirait/bague/or-rose.webp"
               },
               {
-                "texte": "Red wine",
-                "image": "choisirait/bar/vin-rouge.webp"
+                "texte": "Emerald ring",
+                "image": "choisirait/bague/emeraude.webp"
               }
             ]
           },
           {
-            "question": "Which flowers would she want?",
+            "question": "Which flowers would he get you?",
             "options": [
               {
-                "texte": "Daisies",
-                "image": "choisirait/fleurs/marguerites.webp"
+                "texte": "Lavender",
+                "image": "choisirait/fleurs/lavande.webp"
+              },
+              {
+                "texte": "Wildflowers",
+                "image": "choisirait/fleurs/fleurs-sauvages.webp"
               },
               {
                 "texte": "Tulips",
                 "image": "choisirait/fleurs/tulipes.webp"
-              },
-              {
-                "texte": "Peonies",
-                "image": "choisirait/fleurs/pivoines.webp"
               }
             ]
           },
           {
-            "question": "Which date would she take you on?",
+            "question": "Where would he propose?",
             "options": [
               {
-                "texte": "Camping",
-                "image": "choisirait/date/camping.webp"
-              },
-              {
-                "texte": "Arcade",
-                "image": "choisirait/date/arcade.webp"
-              },
-              {
                 "texte": "Hot air balloon",
-                "image": "choisirait/date/montgolfiere-date.webp"
+                "image": "choisirait/demande/demande-montgolfiere.webp"
+              },
+              {
+                "texte": "Mountaintop",
+                "image": "choisirait/demande/demande-montagne.webp"
+              },
+              {
+                "texte": "Beach at sunset",
+                "image": "choisirait/demande/demande-plage.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Got her 3 picks? Send it and see!",
-          "bouton": "Send this to her",
+          "question": "Send it to him: how many did you get?",
+          "bouton": "Send this to him",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Date night edition. Answer for her first, no peeking.\n\nSend this to her",
+      "legende": "Wedding edition. Guess first, send it after. Then compare.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
-        "#girlfriendquiz",
+        "#boyfriendquiz",
         "#thisorthat",
-        "#datenight",
+        "#engaged",
         "#quizcouple"
       ]
     }

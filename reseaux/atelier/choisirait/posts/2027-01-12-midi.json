@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "choisirait",
   "categorie": "choisirait",
-  "sujet": "ch-093",
+  "sujet": "ch-095",
   "idee_id": null,
   "variantes": {
     "en": {
@@ -12,79 +12,79 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "elle",
-        "etiquette": "Game night edition",
-        "accroche": "What would she choose?",
-        "consigne": "Guess her 3 picks, then send it to her!",
+        "pour": "lui",
+        "etiquette": "Adventure edition",
+        "accroche": "What would he choose?",
+        "consigne": "3 questions, 4 seconds each. Pick for him!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "What would she order at 2 a.m.?",
+            "question": "Which sport would he watch?",
             "options": [
               {
-                "texte": "Burger",
-                "image": "choisirait/fastfood/burger.webp"
+                "texte": "Baseball",
+                "image": "choisirait/sport/baseball.webp"
               },
               {
-                "texte": "Grilled cheese",
-                "image": "choisirait/fastfood/croque.webp"
+                "texte": "Golf",
+                "image": "choisirait/sport/golf.webp"
               },
               {
-                "texte": "Burrito",
-                "image": "choisirait/fastfood/burrito.webp"
+                "texte": "Formula 1",
+                "image": "choisirait/sport/f1.webp"
               }
             ]
           },
           {
-            "question": "Which console would she pick?",
+            "question": "Which adventure would he try?",
             "options": [
               {
-                "texte": "Xbox",
-                "image": "choisirait/console/xbox.webp"
+                "texte": "Scuba diving",
+                "image": "choisirait/aventure/plongee.webp"
               },
               {
-                "texte": "Nintendo Switch",
-                "image": "choisirait/console/switch.webp"
+                "texte": "Rock climbing",
+                "image": "choisirait/aventure/escalade.webp"
               },
               {
-                "texte": "Game Boy",
-                "image": "choisirait/console/gameboy.webp"
+                "texte": "Bungee jumping",
+                "image": "choisirait/aventure/saut-elastique.webp"
               }
             ]
           },
           {
-            "question": "Which movie snack would she pick?",
+            "question": "Where would he take you on vacation?",
             "options": [
               {
-                "texte": "Ice cream tub",
-                "image": "choisirait/snack/pot-glace.webp"
+                "texte": "Mexico",
+                "image": "choisirait/vacances/mexique.webp"
               },
               {
-                "texte": "Popcorn",
-                "image": "choisirait/snack/popcorn.webp"
+                "texte": "Norway",
+                "image": "choisirait/vacances/norvege.webp"
               },
               {
-                "texte": "Chocolate bar",
-                "image": "choisirait/snack/tablette.webp"
+                "texte": "Japan",
+                "image": "choisirait/vacances/japon.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Got her 3 picks? Send it and see!",
-          "bouton": "Send this to her",
+          "question": "Send it to him: how many did you get?",
+          "bouton": "Send this to him",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Game night edition. Guess first, send it after. Then compare.\n\nSend this to her",
+      "legende": "Adventure edition. No cheating: decide before the timer runs out.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
-        "#girlfriendquiz",
+        "#boyfriendquiz",
         "#thisorthat",
-        "#gamenight",
+        "#adventurecouple",
         "#quizcouple"
       ]
     }

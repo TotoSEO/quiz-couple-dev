@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "choisirait",
   "categorie": "choisirait",
-  "sujet": "ch-075",
+  "sujet": "ch-077",
   "idee_id": null,
   "variantes": {
     "en": {
@@ -12,79 +12,79 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "elle",
-        "etiquette": "Travel edition",
-        "accroche": "What would she choose?",
-        "consigne": "3 questions, 4 seconds each. Pick for her!",
+        "pour": "lui",
+        "etiquette": "Game night edition",
+        "accroche": "What would he choose?",
+        "consigne": "Guess his 3 picks, then send it to him!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which city would she take you to?",
+            "question": "What would he order at 2 a.m.?",
             "options": [
               {
-                "texte": "Marrakech",
-                "image": "choisirait/ville/marrakech.webp"
+                "texte": "Kebab",
+                "image": "choisirait/fastfood/kebab.webp"
               },
               {
-                "texte": "Las Vegas",
-                "image": "choisirait/ville/las-vegas.webp"
+                "texte": "Fried chicken",
+                "image": "choisirait/fastfood/poulet-frit.webp"
               },
               {
-                "texte": "Seoul",
-                "image": "choisirait/ville/seoul.webp"
+                "texte": "Burger",
+                "image": "choisirait/fastfood/burger.webp"
               }
             ]
           },
           {
-            "question": "Which view would she wake up to?",
+            "question": "Which game night would he pick?",
             "options": [
               {
-                "texte": "Lake",
-                "image": "choisirait/vue/lac.webp"
+                "texte": "Poker",
+                "image": "choisirait/jeu/poker.webp"
               },
               {
-                "texte": "City skyline",
-                "image": "choisirait/vue/skyline.webp"
+                "texte": "Chess",
+                "image": "choisirait/jeu/echecs-soir.webp"
               },
               {
-                "texte": "Mountains",
-                "image": "choisirait/vue/montagnes.webp"
+                "texte": "Foosball",
+                "image": "choisirait/jeu/baby-foot.webp"
               }
             ]
           },
           {
-            "question": "How would she travel with you?",
+            "question": "Which console would he pick?",
             "options": [
               {
-                "texte": "Hot air balloon",
-                "image": "choisirait/voyage/montgolfiere.webp"
+                "texte": "Game Boy",
+                "image": "choisirait/console/gameboy.webp"
               },
               {
-                "texte": "Convertible",
-                "image": "choisirait/voyage/cabriolet.webp"
+                "texte": "Xbox",
+                "image": "choisirait/console/xbox.webp"
               },
               {
-                "texte": "Cruise ship",
-                "image": "choisirait/voyage/croisiere.webp"
+                "texte": "PlayStation 5",
+                "image": "choisirait/console/ps5.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Got her 3 picks? Send it and see!",
-          "bouton": "Send this to her",
+          "question": "Send it to him: how many did you get?",
+          "bouton": "Send this to him",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Travel edition. No cheating: decide before the timer runs out.\n\nSend this to her",
+      "legende": "Game night edition. He will swear you got at least one wrong.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
-        "#girlfriendquiz",
+        "#boyfriendquiz",
         "#thisorthat",
-        "#travelcouple",
+        "#gamenight",
         "#quizcouple"
       ]
     }

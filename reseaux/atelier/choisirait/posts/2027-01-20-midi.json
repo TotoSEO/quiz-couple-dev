@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "choisirait",
   "categorie": "choisirait",
-  "sujet": "ch-108",
+  "sujet": "ch-110",
   "idee_id": null,
   "variantes": {
     "en": {
@@ -12,79 +12,79 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "elle",
-        "etiquette": "Dream life edition",
-        "accroche": "What would she choose?",
-        "consigne": "Pick what she would pick. Then send it to her!",
+        "pour": "lui",
+        "etiquette": "Car lovers edition",
+        "accroche": "What would he choose?",
+        "consigne": "Answer for him, then let him check!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which view would she wake up to?",
+            "question": "Which classic car would he drive?",
             "options": [
               {
-                "texte": "City skyline",
-                "image": "choisirait/vue/skyline.webp"
+                "texte": "1967 Mustang",
+                "image": "choisirait/vintage/mustang-67.webp"
               },
               {
-                "texte": "Vineyards",
-                "image": "choisirait/vue/vignes.webp"
+                "texte": "Classic Mini",
+                "image": "choisirait/vintage/mini-classique.webp"
               },
               {
-                "texte": "Northern lights",
-                "image": "choisirait/vue/aurores.webp"
+                "texte": "VW Camper Van",
+                "image": "choisirait/vintage/combi.webp"
               }
             ]
           },
           {
-            "question": "Which house would she pick?",
+            "question": "Which motorbike would he ride?",
             "options": [
               {
-                "texte": "Castle",
-                "image": "choisirait/maison/chateau.webp"
+                "texte": "Harley-Davidson",
+                "image": "choisirait/moto/harley.webp"
               },
               {
-                "texte": "Cozy cabin",
-                "image": "choisirait/weekend/chalet-bois.webp"
+                "texte": "Indian Scout",
+                "image": "choisirait/moto/indian.webp"
               },
               {
-                "texte": "Modern villa",
-                "image": "choisirait/maison/villa-moderne.webp"
+                "texte": "BMW GS",
+                "image": "choisirait/moto/bmw-gs.webp"
               }
             ]
           },
           {
-            "question": "Which dog would she pick?",
+            "question": "Which car would he pick?",
             "options": [
               {
-                "texte": "German Shepherd",
-                "image": "choisirait/chien/berger-allemand.webp"
+                "texte": "Nissan GT-R",
+                "image": "choisirait/voiture/gtr.webp"
               },
               {
-                "texte": "Border Collie",
-                "image": "choisirait/chien/border-collie.webp"
+                "texte": "Corvette",
+                "image": "choisirait/voiture/corvette.webp"
               },
               {
-                "texte": "Doberman",
-                "image": "choisirait/chien/dobermann.webp"
+                "texte": "Mercedes-AMG C63 S",
+                "image": "choisirait/voiture/amg-c63.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Got her 3 picks? Send it and see!",
-          "bouton": "Send this to her",
+          "question": "Send it to him: how many did you get?",
+          "bouton": "Send this to him",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Dream life edition. Your answers first, then her reaction.\n\nSend this to her",
+      "legende": "Car lovers edition. Easy for you? Then the next one is for him.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
-        "#girlfriendquiz",
+        "#boyfriendquiz",
         "#thisorthat",
-        "#dreamlife",
+        "#carlovers",
         "#quizcouple"
       ]
     }

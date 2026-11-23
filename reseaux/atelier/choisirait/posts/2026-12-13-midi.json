@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "choisirait",
   "categorie": "choisirait",
-  "sujet": "ch-037",
+  "sujet": "ch-039",
   "idee_id": null,
   "variantes": {
     "en": {
@@ -12,79 +12,79 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "lui",
-        "etiquette": "Winter edition",
-        "accroche": "What would he choose?",
-        "consigne": "Guess his 3 picks, then send it to him!",
+        "pour": "elle",
+        "etiquette": "Christmas edition",
+        "accroche": "What would she choose?",
+        "consigne": "3 questions, 4 seconds each. Pick for her!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which winter date would he pick?",
+            "question": "Which Christmas date would she plan?",
             "options": [
               {
-                "texte": "Sledding",
-                "image": "choisirait/hiver/luge.webp"
+                "texte": "Christmas lights",
+                "image": "choisirait/noel-sortie/illuminations.webp"
+              },
+              {
+                "texte": "Snowy chalet",
+                "image": "choisirait/noel-sortie/chalet-noel.webp"
               },
               {
                 "texte": "Ice skating",
-                "image": "choisirait/hiver/hiver-patin.webp"
-              },
-              {
-                "texte": "Skiing",
-                "image": "choisirait/hiver/hiver-ski.webp"
+                "image": "choisirait/noel-sortie/patinoire-noel.webp"
               }
             ]
           },
           {
-            "question": "What would he cook for date night?",
+            "question": "Which gift would she want?",
             "options": [
               {
-                "texte": "Paella",
-                "image": "choisirait/diner/paella.webp"
+                "texte": "Lego set",
+                "image": "choisirait/cadeau/lego.webp"
               },
               {
-                "texte": "Steak and fries",
-                "image": "choisirait/diner/steak-frites.webp"
+                "texte": "Game console",
+                "image": "choisirait/cadeau/console-cadeau.webp"
               },
               {
-                "texte": "Indian curry",
-                "image": "choisirait/diner/curry.webp"
+                "texte": "Perfume",
+                "image": "choisirait/cadeau/parfum.webp"
               }
             ]
           },
           {
-            "question": "Which coffee would he order?",
+            "question": "Which Christmas treat would she pick?",
             "options": [
               {
-                "texte": "Matcha latte",
-                "image": "choisirait/cafe/matcha.webp"
+                "texte": "Hot chocolate",
+                "image": "choisirait/noel-gourmandise/chocolat-noel.webp"
               },
               {
-                "texte": "Iced latte",
-                "image": "choisirait/cafe/iced-latte.webp"
+                "texte": "Mince pies",
+                "image": "choisirait/noel-gourmandise/mince-pies.webp"
               },
               {
-                "texte": "Americano",
-                "image": "choisirait/cafe/americano.webp"
+                "texte": "Gingerbread house",
+                "image": "choisirait/noel-gourmandise/maison-pain-epices.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Now send it to him. Did you guess right?",
-          "bouton": "Send this to him",
+          "question": "Got her 3 picks? Send it and see!",
+          "bouton": "Send this to her",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Winter edition. He will swear you got at least one wrong.\n\nSend this to him",
+      "legende": "Christmas edition. One letter per question, then send it to her.\n\nSend this to her",
       "hashtags": [
         "#couplequiz",
-        "#boyfriendquiz",
+        "#girlfriendquiz",
         "#thisorthat",
-        "#winter",
+        "#christmas",
         "#quizcouple"
       ]
     }

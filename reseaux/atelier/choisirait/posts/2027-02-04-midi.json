@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "choisirait",
   "categorie": "choisirait",
-  "sujet": "ch-136",
+  "sujet": "ch-138",
   "idee_id": null,
   "variantes": {
     "en": {
@@ -12,79 +12,79 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "lui",
-        "etiquette": "Winter edition",
-        "accroche": "What would he choose?",
-        "consigne": "Pick what he would pick. Then send it to him!",
+        "pour": "elle",
+        "etiquette": "Dream home edition",
+        "accroche": "What would she choose?",
+        "consigne": "Answer for her, then let her check!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which winter date would he pick?",
+            "question": "Which view would she wake up to?",
             "options": [
               {
-                "texte": "Ice skating",
-                "image": "choisirait/hiver/hiver-patin.webp"
+                "texte": "Vineyards",
+                "image": "choisirait/vue/vignes.webp"
               },
               {
-                "texte": "Building a snowman",
-                "image": "choisirait/hiver/bonhomme.webp"
+                "texte": "Rice fields",
+                "image": "choisirait/vue/rizieres.webp"
               },
               {
-                "texte": "Sledding",
-                "image": "choisirait/hiver/luge.webp"
+                "texte": "Forest",
+                "image": "choisirait/vue/foret.webp"
               }
             ]
           },
           {
-            "question": "Which coffee would he order?",
+            "question": "Which dream house would she pick?",
             "options": [
               {
-                "texte": "Matcha latte",
-                "image": "choisirait/cafe/matcha.webp"
+                "texte": "Loft apartment",
+                "image": "choisirait/maison/loft.webp"
               },
               {
-                "texte": "Iced latte",
-                "image": "choisirait/cafe/iced-latte.webp"
+                "texte": "Mountain chalet",
+                "image": "choisirait/maison/chalet.webp"
               },
               {
-                "texte": "Espresso",
-                "image": "choisirait/cafe/espresso.webp"
+                "texte": "Victorian house",
+                "image": "choisirait/maison/victorienne.webp"
               }
             ]
           },
           {
-            "question": "Where would he book a weekend?",
+            "question": "Which cat would she adopt?",
             "options": [
               {
-                "texte": "Beach bungalow",
-                "image": "choisirait/weekend/bungalow-plage.webp"
+                "texte": "Black cat",
+                "image": "choisirait/chat/chat-noir.webp"
               },
               {
-                "texte": "Treehouse",
-                "image": "choisirait/weekend/cabane-arbre.webp"
+                "texte": "Bengal",
+                "image": "choisirait/chat/bengal.webp"
               },
               {
-                "texte": "Houseboat",
-                "image": "choisirait/weekend/peniche.webp"
+                "texte": "Scottish Fold",
+                "image": "choisirait/chat/scottish.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Now send it to him. Did you guess right?",
-          "bouton": "Send this to him",
+          "question": "Got her 3 picks? Send it and see!",
+          "bouton": "Send this to her",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Winter edition. Pick for him, then let him prove you wrong.\n\nSend this to him",
+      "legende": "Dream home edition. Your answers first, then her reaction.\n\nSend this to her",
       "hashtags": [
         "#couplequiz",
-        "#boyfriendquiz",
+        "#girlfriendquiz",
         "#thisorthat",
-        "#winter",
+        "#dreamhome",
         "#quizcouple"
       ]
     }

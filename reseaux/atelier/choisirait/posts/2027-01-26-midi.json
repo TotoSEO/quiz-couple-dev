@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "choisirait",
   "categorie": "choisirait",
-  "sujet": "ch-119",
+  "sujet": "ch-121",
   "idee_id": null,
   "variantes": {
     "en": {
@@ -13,78 +13,78 @@
         "langue": "en",
         "theme": "light",
         "pour": "lui",
-        "etiquette": "Hobbies edition",
+        "etiquette": "Wedding edition",
         "accroche": "What would he choose?",
-        "consigne": "3 questions, 4 seconds each. Pick for him!",
+        "consigne": "Guess his 3 picks, then send it to him!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which instrument would he play?",
+            "question": "Which ring would he pick for you?",
             "options": [
               {
-                "texte": "Electric guitar",
-                "image": "choisirait/instrument/guitare-electrique.webp"
+                "texte": "Halo ring",
+                "image": "choisirait/bague/halo.webp"
               },
               {
-                "texte": "Piano",
-                "image": "choisirait/instrument/piano.webp"
+                "texte": "Solitaire diamond",
+                "image": "choisirait/bague/solitaire.webp"
               },
               {
-                "texte": "DJ decks",
-                "image": "choisirait/instrument/platines.webp"
+                "texte": "Emerald ring",
+                "image": "choisirait/bague/emeraude.webp"
               }
             ]
           },
           {
-            "question": "Which workout would he pick?",
+            "question": "Where would he want to get married?",
             "options": [
               {
-                "texte": "Swimming",
-                "image": "choisirait/salle/natation.webp"
+                "texte": "Lakeside",
+                "image": "choisirait/vue/lac.webp"
               },
               {
-                "texte": "Boxing",
-                "image": "choisirait/salle/boxe-salle.webp"
+                "texte": "Forest",
+                "image": "choisirait/vue/foret.webp"
               },
               {
-                "texte": "Weightlifting",
-                "image": "choisirait/salle/muscu.webp"
+                "texte": "Garden",
+                "image": "choisirait/mariage/mariage-jardin.webp"
               }
             ]
           },
           {
-            "question": "Which hobby would he pick up?",
+            "question": "Where would he propose?",
             "options": [
               {
-                "texte": "Chess",
-                "image": "choisirait/loisir/echecs.webp"
+                "texte": "Eiffel Tower",
+                "image": "choisirait/demande/demande-eiffel.webp"
               },
               {
-                "texte": "Gardening",
-                "image": "choisirait/loisir/jardinage.webp"
+                "texte": "Mountaintop",
+                "image": "choisirait/demande/demande-montagne.webp"
               },
               {
-                "texte": "Photography",
-                "image": "choisirait/loisir/photo.webp"
+                "texte": "Beach at sunset",
+                "image": "choisirait/demande/demande-plage.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Send it to him: how many did you get?",
+          "question": "Now send it to him. Did you guess right?",
           "bouton": "Send this to him",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Hobbies edition. One letter per question, then send it to him.\n\nSend this to him",
+      "legende": "Wedding edition. Answer for him first, no peeking.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
         "#boyfriendquiz",
         "#thisorthat",
-        "#hobbies",
+        "#engaged",
         "#quizcouple"
       ]
     }

@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "choisirait",
   "categorie": "choisirait",
-  "sujet": "ch-061",
+  "sujet": "ch-063",
   "idee_id": null,
   "variantes": {
     "en": {
@@ -12,77 +12,77 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "lui",
+        "pour": "elle",
         "etiquette": "New Year's edition",
-        "accroche": "What would he choose?",
-        "consigne": "Guess his 3 picks, then send it to him!",
+        "accroche": "What would she choose?",
+        "consigne": "3 questions, 4 seconds each. Pick for her!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Where would he spend New Year's Eve?",
+            "question": "Where would she spend New Year's Eve?",
             "options": [
-              {
-                "texte": "Rooftop party",
-                "image": "choisirait/nouvel-an/rooftop-nouvel-an.webp"
-              },
               {
                 "texte": "Times Square",
                 "image": "choisirait/nouvel-an/times-square.webp"
               },
               {
-                "texte": "Cozy night in",
-                "image": "choisirait/nouvel-an/soiree-maison.webp"
+                "texte": "City fireworks",
+                "image": "choisirait/nouvel-an/feux-artifice.webp"
+              },
+              {
+                "texte": "Mountain chalet",
+                "image": "choisirait/nouvel-an/soiree-chalet.webp"
               }
             ]
           },
           {
-            "question": "What would he order at the bar?",
+            "question": "Which date would she plan?",
             "options": [
               {
-                "texte": "Red wine",
-                "image": "choisirait/bar/vin-rouge.webp"
+                "texte": "Camping",
+                "image": "choisirait/date/camping.webp"
               },
               {
-                "texte": "Gin and tonic",
-                "image": "choisirait/bar/gin-tonic.webp"
-              },
-              {
-                "texte": "Whiskey",
-                "image": "choisirait/bar/whisky.webp"
-              }
-            ]
-          },
-          {
-            "question": "Which date would he plan?",
-            "options": [
-              {
-                "texte": "Mini golf",
-                "image": "choisirait/date/mini-golf.webp"
+                "texte": "Arcade",
+                "image": "choisirait/date/arcade.webp"
               },
               {
                 "texte": "Ice skating",
                 "image": "choisirait/date/patinoire.webp"
+              }
+            ]
+          },
+          {
+            "question": "Where would she go on vacation?",
+            "options": [
+              {
+                "texte": "Thailand",
+                "image": "choisirait/vacances/thailande.webp"
               },
               {
-                "texte": "Picnic",
-                "image": "choisirait/date/pique-nique.webp"
+                "texte": "Morocco",
+                "image": "choisirait/vacances/maroc.webp"
+              },
+              {
+                "texte": "Egypt",
+                "image": "choisirait/vacances/egypte.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Now send it to him. Did you guess right?",
-          "bouton": "Send this to him",
+          "question": "Got her 3 picks? Send it and see!",
+          "bouton": "Send this to her",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "New Year's edition. Answer for him first, no peeking.\n\nSend this to him",
+      "legende": "New Year's edition. Guess first, send it after. Then compare.\n\nSend this to her",
       "hashtags": [
         "#couplequiz",
-        "#boyfriendquiz",
+        "#girlfriendquiz",
         "#thisorthat",
         "#newyearseve",
         "#quizcouple"

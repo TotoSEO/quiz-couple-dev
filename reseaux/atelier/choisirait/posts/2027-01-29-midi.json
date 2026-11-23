@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "choisirait",
   "categorie": "choisirait",
-  "sujet": "ch-125",
+  "sujet": "ch-127",
   "idee_id": null,
   "variantes": {
     "en": {
@@ -13,78 +13,78 @@
         "langue": "en",
         "theme": "light",
         "pour": "lui",
-        "etiquette": "Adventure edition",
+        "etiquette": "Game night edition",
         "accroche": "What would he choose?",
-        "consigne": "Guess his 3 picks, then send it to him!",
+        "consigne": "3 questions, 4 seconds each. Pick for him!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which sport would he watch?",
+            "question": "What would he order at 2 a.m.?",
             "options": [
               {
-                "texte": "Baseball",
-                "image": "choisirait/sport/baseball.webp"
+                "texte": "Grilled cheese",
+                "image": "choisirait/fastfood/croque.webp"
               },
               {
-                "texte": "Football",
-                "image": "choisirait/sport/foot.webp"
+                "texte": "Nuggets",
+                "image": "choisirait/fastfood/nuggets.webp"
               },
               {
-                "texte": "Basketball",
-                "image": "choisirait/sport/basket.webp"
+                "texte": "Burger",
+                "image": "choisirait/fastfood/burger.webp"
               }
             ]
           },
           {
-            "question": "Which adventure would he try?",
+            "question": "Which movie snack would he pick?",
             "options": [
               {
-                "texte": "Scuba diving",
-                "image": "choisirait/aventure/plongee.webp"
+                "texte": "Gummy bears",
+                "image": "choisirait/snack/oursons.webp"
               },
               {
-                "texte": "Horse riding",
-                "image": "choisirait/aventure/equitation.webp"
+                "texte": "Licorice",
+                "image": "choisirait/snack/reglisse.webp"
               },
               {
-                "texte": "Rock climbing",
-                "image": "choisirait/aventure/escalade.webp"
+                "texte": "Nachos",
+                "image": "choisirait/snack/nachos.webp"
               }
             ]
           },
           {
-            "question": "Where would he go on vacation?",
+            "question": "Which console would he pick?",
             "options": [
               {
-                "texte": "Switzerland",
-                "image": "choisirait/vacances/suisse.webp"
+                "texte": "PlayStation 2",
+                "image": "choisirait/console/ps2.webp"
               },
               {
-                "texte": "Egypt",
-                "image": "choisirait/vacances/egypte.webp"
+                "texte": "Game Boy",
+                "image": "choisirait/console/gameboy.webp"
               },
               {
-                "texte": "Morocco",
-                "image": "choisirait/vacances/maroc.webp"
+                "texte": "PlayStation 5",
+                "image": "choisirait/console/ps5.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Send it to him: how many did you get?",
+          "question": "Now send it to him. Did you guess right?",
           "bouton": "Send this to him",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Adventure edition. No cheating: decide before the timer runs out.\n\nSend this to him",
+      "legende": "Game night edition. He will swear you got at least one wrong.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
         "#boyfriendquiz",
         "#thisorthat",
-        "#adventurecouple",
+        "#gamenight",
         "#quizcouple"
       ]
     }

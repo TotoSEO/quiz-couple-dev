@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "choisirait",
   "categorie": "choisirait",
-  "sujet": "ch-029",
+  "sujet": "ch-031",
   "idee_id": null,
   "variantes": {
     "en": {
@@ -13,78 +13,78 @@
         "langue": "en",
         "theme": "light",
         "pour": "lui",
-        "etiquette": "Sweet tooth edition",
+        "etiquette": "Christmas edition",
         "accroche": "What would he choose?",
-        "consigne": "Guess his 3 picks, then send it to him!",
+        "consigne": "3 questions, 4 seconds each. Pick for him!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which ice cream would he get?",
+            "question": "Which gift would make him happy?",
             "options": [
               {
-                "texte": "Banana split",
-                "image": "choisirait/glace/banana-split.webp"
+                "texte": "Book",
+                "image": "choisirait/cadeau/livre.webp"
               },
               {
-                "texte": "Ice cream sandwich",
-                "image": "choisirait/glace/sandwich-glace.webp"
+                "texte": "Vinyl records",
+                "image": "choisirait/cadeau/vinyles.webp"
               },
               {
-                "texte": "Affogato",
-                "image": "choisirait/glace/affogato.webp"
+                "texte": "Headphones",
+                "image": "choisirait/cadeau/casque.webp"
               }
             ]
           },
           {
-            "question": "Which dessert would he pick?",
+            "question": "Which Christmas date would he plan?",
             "options": [
               {
-                "texte": "Red velvet cake",
-                "image": "choisirait/dessert/red-velvet.webp"
+                "texte": "Snowy chalet",
+                "image": "choisirait/noel-sortie/chalet-noel.webp"
               },
               {
-                "texte": "Macarons",
-                "image": "choisirait/dessert/macarons.webp"
+                "texte": "Christmas market",
+                "image": "choisirait/noel-sortie/marche-noel.webp"
               },
               {
-                "texte": "Churros",
-                "image": "choisirait/dessert/churros.webp"
+                "texte": "Christmas lights",
+                "image": "choisirait/noel-sortie/illuminations.webp"
               }
             ]
           },
           {
-            "question": "Which movie snack would he pick?",
+            "question": "Which Christmas treat would he pick?",
             "options": [
               {
-                "texte": "Ice cream tub",
-                "image": "choisirait/snack/pot-glace.webp"
+                "texte": "Christmas pudding",
+                "image": "choisirait/noel-gourmandise/pudding.webp"
               },
               {
-                "texte": "Popcorn",
-                "image": "choisirait/snack/popcorn.webp"
+                "texte": "Candy canes",
+                "image": "choisirait/noel-gourmandise/sucres-orge.webp"
               },
               {
-                "texte": "Licorice",
-                "image": "choisirait/snack/reglisse.webp"
+                "texte": "Yule log",
+                "image": "choisirait/noel-gourmandise/buche.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Send it to him: how many did you get?",
+          "question": "Now send it to him. Did you guess right?",
           "bouton": "Send this to him",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Sweet tooth edition. One letter per question, then send it to him.\n\nSend this to him",
+      "legende": "Christmas edition. Answer for him first, no peeking.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
         "#boyfriendquiz",
         "#thisorthat",
-        "#dessert",
+        "#christmas",
         "#quizcouple"
       ]
     }

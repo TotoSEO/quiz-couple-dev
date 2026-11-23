@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "choisirait",
   "categorie": "choisirait",
-  "sujet": "ch-178",
+  "sujet": "ch-180",
   "idee_id": null,
   "variantes": {
     "en": {
@@ -12,79 +12,79 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "lui",
-        "etiquette": "Weekend edition",
-        "accroche": "What would he choose?",
-        "consigne": "Answer for him, then let him check!",
+        "pour": "elle",
+        "etiquette": "Style edition",
+        "accroche": "What would she choose?",
+        "consigne": "Pick what she would pick. Then send it to her!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which sport would he watch?",
+            "question": "Which shoes would she pick?",
             "options": [
               {
-                "texte": "Football",
-                "image": "choisirait/sport/foot.webp"
+                "texte": "High heels",
+                "image": "choisirait/chaussures/talons.webp"
               },
               {
-                "texte": "Tennis",
-                "image": "choisirait/sport/tennis.webp"
+                "texte": "Ballet flats",
+                "image": "choisirait/chaussures/ballerines.webp"
               },
               {
-                "texte": "Formula 1",
-                "image": "choisirait/sport/f1.webp"
+                "texte": "UGG boots",
+                "image": "choisirait/chaussures/ugg.webp"
               }
             ]
           },
           {
-            "question": "Which hobby would he pick up?",
+            "question": "Which phone would she pick?",
             "options": [
               {
-                "texte": "Pottery",
-                "image": "choisirait/loisir/poterie.webp"
+                "texte": "BlackBerry",
+                "image": "choisirait/telephone/blackberry.webp"
               },
               {
-                "texte": "Fishing",
-                "image": "choisirait/loisir/peche.webp"
+                "texte": "iPhone",
+                "image": "choisirait/telephone/iphone.webp"
               },
               {
-                "texte": "Knitting",
-                "image": "choisirait/loisir/tricot.webp"
+                "texte": "Google Pixel",
+                "image": "choisirait/telephone/pixel.webp"
               }
             ]
           },
           {
-            "question": "Which workout would he pick?",
+            "question": "Which sneakers would she pick?",
             "options": [
               {
-                "texte": "Swimming",
-                "image": "choisirait/salle/natation.webp"
+                "texte": "Stan Smith",
+                "image": "choisirait/baskets/stan-smith.webp"
               },
               {
-                "texte": "Yoga",
-                "image": "choisirait/salle/yoga.webp"
+                "texte": "Crocs",
+                "image": "choisirait/baskets/crocs.webp"
               },
               {
-                "texte": "Weightlifting",
-                "image": "choisirait/salle/muscu.webp"
+                "texte": "New Balance",
+                "image": "choisirait/baskets/new-balance.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Now send it to him. Did you guess right?",
-          "bouton": "Send this to him",
+          "question": "Got her 3 picks? Send it and see!",
+          "bouton": "Send this to her",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Weekend edition. Your answers first, then his reaction.\n\nSend this to him",
+      "legende": "Style edition. Easy for you? Then the next one is for her.\n\nSend this to her",
       "hashtags": [
         "#couplequiz",
-        "#boyfriendquiz",
+        "#girlfriendquiz",
         "#thisorthat",
-        "#weekendvibes",
+        "#style",
         "#quizcouple"
       ]
     }

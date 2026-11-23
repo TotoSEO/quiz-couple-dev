@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "choisirait",
   "categorie": "choisirait",
-  "sujet": "ch-139",
+  "sujet": "ch-141",
   "idee_id": null,
   "variantes": {
     "en": {
@@ -12,79 +12,79 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "lui",
-        "etiquette": "Valentine's edition",
-        "accroche": "What would he choose?",
-        "consigne": "3 questions, 4 seconds each. Pick for him!",
+        "pour": "elle",
+        "etiquette": "Date night edition",
+        "accroche": "What would she choose?",
+        "consigne": "Guess her 3 picks, then send it to her!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "What would he get you for Valentine's?",
+            "question": "Which dinner would she pick?",
             "options": [
               {
-                "texte": "Breakfast in bed",
-                "image": "choisirait/valentin/petit-dej-lit.webp"
+                "texte": "Fish and chips",
+                "image": "choisirait/diner/fish-chips.webp"
               },
               {
-                "texte": "Heart balloons",
-                "image": "choisirait/valentin/ballons-coeur.webp"
+                "texte": "Lobster",
+                "image": "choisirait/diner/homard.webp"
               },
               {
-                "texte": "Jewelry",
-                "image": "choisirait/valentin/bijou.webp"
+                "texte": "Cheese fondue",
+                "image": "choisirait/diner/fondue.webp"
               }
             ]
           },
           {
-            "question": "Which ring would he pick for you?",
+            "question": "What would she order at the bar?",
             "options": [
               {
-                "texte": "Rose gold ring",
-                "image": "choisirait/bague/or-rose.webp"
+                "texte": "Margarita",
+                "image": "choisirait/bar/margarita.webp"
               },
               {
-                "texte": "Halo ring",
-                "image": "choisirait/bague/halo.webp"
+                "texte": "Gin and tonic",
+                "image": "choisirait/bar/gin-tonic.webp"
               },
               {
-                "texte": "Emerald ring",
-                "image": "choisirait/bague/emeraude.webp"
+                "texte": "Aperol Spritz",
+                "image": "choisirait/bar/spritz.webp"
               }
             ]
           },
           {
-            "question": "Which flowers would he get you?",
+            "question": "Which flowers would she want?",
             "options": [
               {
-                "texte": "Orchid",
-                "image": "choisirait/fleurs/orchidee.webp"
+                "texte": "Peonies",
+                "image": "choisirait/fleurs/pivoines.webp"
               },
               {
-                "texte": "Tulips",
-                "image": "choisirait/fleurs/tulipes.webp"
+                "texte": "Daisies",
+                "image": "choisirait/fleurs/marguerites.webp"
               },
               {
-                "texte": "Red roses",
-                "image": "choisirait/fleurs/roses.webp"
+                "texte": "Sunflowers",
+                "image": "choisirait/fleurs/tournesols.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Now send it to him. Did you guess right?",
-          "bouton": "Send this to him",
+          "question": "Got her 3 picks? Send it and see!",
+          "bouton": "Send this to her",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Valentine's edition. One letter per question, then send it to him.\n\nSend this to him",
+      "legende": "Date night edition. Answer for her first, no peeking.\n\nSend this to her",
       "hashtags": [
         "#couplequiz",
-        "#boyfriendquiz",
+        "#girlfriendquiz",
         "#thisorthat",
-        "#valentinesday",
+        "#datenight",
         "#quizcouple"
       ]
     }

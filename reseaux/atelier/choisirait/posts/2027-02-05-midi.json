@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "choisirait",
   "categorie": "choisirait",
-  "sujet": "ch-138",
+  "sujet": "ch-140",
   "idee_id": null,
   "variantes": {
     "en": {
@@ -12,79 +12,79 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "elle",
-        "etiquette": "Dream home edition",
-        "accroche": "What would she choose?",
-        "consigne": "Answer for her, then let her check!",
+        "pour": "lui",
+        "etiquette": "Game night edition",
+        "accroche": "What would he choose?",
+        "consigne": "Pick what he would pick. Then send it to him!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which dream house would she pick?",
+            "question": "What would he order at 2 a.m.?",
             "options": [
               {
-                "texte": "Tiny house",
-                "image": "choisirait/maison/tiny-house.webp"
+                "texte": "Tacos",
+                "image": "choisirait/fastfood/tacos.webp"
               },
               {
-                "texte": "Loft apartment",
-                "image": "choisirait/maison/loft.webp"
+                "texte": "Fried chicken",
+                "image": "choisirait/fastfood/poulet-frit.webp"
               },
               {
-                "texte": "Victorian house",
-                "image": "choisirait/maison/victorienne.webp"
+                "texte": "Burrito",
+                "image": "choisirait/fastfood/burrito.webp"
               }
             ]
           },
           {
-            "question": "Which view would she wake up to?",
+            "question": "Which game night would he pick?",
             "options": [
               {
-                "texte": "Eiffel Tower",
-                "image": "choisirait/vue/tour-eiffel.webp"
+                "texte": "Pool",
+                "image": "choisirait/jeu/billard.webp"
               },
               {
-                "texte": "Rice fields",
-                "image": "choisirait/vue/rizieres.webp"
+                "texte": "Foosball",
+                "image": "choisirait/jeu/baby-foot.webp"
               },
               {
-                "texte": "Ocean",
-                "image": "choisirait/vue/ocean.webp"
+                "texte": "Video games",
+                "image": "choisirait/jeu/jeux-video.webp"
               }
             ]
           },
           {
-            "question": "Which cat would she adopt?",
+            "question": "Which console would he pick?",
             "options": [
               {
-                "texte": "Ginger cat",
-                "image": "choisirait/chat/chat-roux.webp"
+                "texte": "PlayStation 2",
+                "image": "choisirait/console/ps2.webp"
               },
               {
-                "texte": "Scottish Fold",
-                "image": "choisirait/chat/scottish.webp"
+                "texte": "Game Boy",
+                "image": "choisirait/console/gameboy.webp"
               },
               {
-                "texte": "Ragdoll",
-                "image": "choisirait/chat/ragdoll.webp"
+                "texte": "Gaming PC",
+                "image": "choisirait/console/pc-gamer.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Got her 3 picks? Send it and see!",
-          "bouton": "Send this to her",
+          "question": "Send it to him: how many did you get?",
+          "bouton": "Send this to him",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Dream home edition. Your answers first, then her reaction.\n\nSend this to her",
+      "legende": "Game night edition. Easy for you? Then the next one is for him.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
-        "#girlfriendquiz",
+        "#boyfriendquiz",
         "#thisorthat",
-        "#dreamhome",
+        "#gamenight",
         "#quizcouple"
       ]
     }

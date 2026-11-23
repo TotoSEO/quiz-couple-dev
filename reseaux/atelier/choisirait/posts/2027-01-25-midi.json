@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "choisirait",
   "categorie": "choisirait",
-  "sujet": "ch-117",
+  "sujet": "ch-119",
   "idee_id": null,
   "variantes": {
     "en": {
@@ -12,79 +12,79 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "elle",
-        "etiquette": "Cozy night in edition",
-        "accroche": "What would she choose?",
-        "consigne": "Guess her 3 picks, then send it to her!",
+        "pour": "lui",
+        "etiquette": "Date night edition",
+        "accroche": "What would he choose?",
+        "consigne": "3 questions, 4 seconds each. Pick for him!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which movie snack would she pick?",
+            "question": "Which flowers would he get you?",
             "options": [
               {
-                "texte": "Chocolate bar",
-                "image": "choisirait/snack/tablette.webp"
+                "texte": "Red roses",
+                "image": "choisirait/fleurs/roses.webp"
               },
               {
-                "texte": "Popcorn",
-                "image": "choisirait/snack/popcorn.webp"
+                "texte": "Lilies",
+                "image": "choisirait/fleurs/lys.webp"
               },
               {
-                "texte": "Nachos",
-                "image": "choisirait/snack/nachos.webp"
+                "texte": "Sunflowers",
+                "image": "choisirait/fleurs/tournesols.webp"
               }
             ]
           },
           {
-            "question": "What would she cook for date night?",
+            "question": "Which date would he take you on?",
             "options": [
               {
-                "texte": "Lobster",
-                "image": "choisirait/diner/homard.webp"
+                "texte": "Fancy dinner",
+                "image": "choisirait/demande/demande-resto.webp"
               },
               {
-                "texte": "Indian curry",
-                "image": "choisirait/diner/curry.webp"
+                "texte": "Stargazing",
+                "image": "choisirait/date/etoiles.webp"
               },
               {
-                "texte": "Risotto",
-                "image": "choisirait/diner/risotto.webp"
+                "texte": "Theme park",
+                "image": "choisirait/date/parc.webp"
               }
             ]
           },
           {
-            "question": "Which console would she pick?",
+            "question": "What would he order at the bar?",
             "options": [
               {
-                "texte": "PlayStation 5",
-                "image": "choisirait/console/ps5.webp"
+                "texte": "Red wine",
+                "image": "choisirait/bar/vin-rouge.webp"
               },
               {
-                "texte": "Xbox",
-                "image": "choisirait/console/xbox.webp"
+                "texte": "Gin and tonic",
+                "image": "choisirait/bar/gin-tonic.webp"
               },
               {
-                "texte": "PlayStation 2",
-                "image": "choisirait/console/ps2.webp"
+                "texte": "Aperol Spritz",
+                "image": "choisirait/bar/spritz.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Got her 3 picks? Send it and see!",
-          "bouton": "Send this to her",
+          "question": "Send it to him: how many did you get?",
+          "bouton": "Send this to him",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Cozy night in edition. She will swear you got at least one wrong.\n\nSend this to her",
+      "legende": "Date night edition. One letter per question, then send it to him.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
-        "#girlfriendquiz",
+        "#boyfriendquiz",
         "#thisorthat",
-        "#cozynight",
+        "#datenight",
         "#quizcouple"
       ]
     }

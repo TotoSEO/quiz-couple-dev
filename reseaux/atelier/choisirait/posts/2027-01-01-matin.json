@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "choisirait",
   "categorie": "choisirait",
-  "sujet": "ch-072",
+  "sujet": "ch-074",
   "idee_id": null,
   "variantes": {
     "en": {
@@ -12,79 +12,79 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "elle",
-        "etiquette": "Morning edition",
-        "accroche": "What would she choose?",
-        "consigne": "Pick what she would pick. Then send it to her!",
+        "pour": "lui",
+        "etiquette": "Luxury edition",
+        "accroche": "What would he choose?",
+        "consigne": "Answer for him, then let him check!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "How would she have her eggs?",
+            "question": "Which watch would he wear?",
             "options": [
               {
-                "texte": "Omelette",
-                "image": "choisirait/oeufs/omelette.webp"
+                "texte": "Pocket watch",
+                "image": "choisirait/montre/gousset.webp"
               },
               {
-                "texte": "Poached",
-                "image": "choisirait/oeufs/poche.webp"
+                "texte": "Cartier Tank",
+                "image": "choisirait/montre/cartier.webp"
               },
               {
-                "texte": "Scrambled",
-                "image": "choisirait/oeufs/brouilles.webp"
+                "texte": "Seiko diver",
+                "image": "choisirait/montre/seiko.webp"
               }
             ]
           },
           {
-            "question": "Which breakfast would she make you?",
+            "question": "Which car would he drive?",
             "options": [
               {
-                "texte": "Cereal",
-                "image": "choisirait/petitdej/cereales.webp"
+                "texte": "Aston Martin DB11",
+                "image": "choisirait/voiture/aston-martin.webp"
               },
               {
-                "texte": "Eggs Benedict",
-                "image": "choisirait/petitdej/benedict.webp"
+                "texte": "Fiat 500",
+                "image": "choisirait/voiture/fiat-500.webp"
               },
               {
-                "texte": "Pancakes",
-                "image": "choisirait/petitdej/pancakes.webp"
+                "texte": "Nissan GT-R",
+                "image": "choisirait/voiture/gtr.webp"
               }
             ]
           },
           {
-            "question": "What would she grab at the bakery?",
+            "question": "How would he travel with you?",
             "options": [
               {
-                "texte": "Brioche",
-                "image": "choisirait/boulangerie/brioche.webp"
+                "texte": "Camper van",
+                "image": "choisirait/voyage/van.webp"
               },
               {
-                "texte": "Cinnamon roll",
-                "image": "choisirait/boulangerie/cinnamon-roll.webp"
+                "texte": "Convertible",
+                "image": "choisirait/voyage/cabriolet.webp"
               },
               {
-                "texte": "Croissant",
-                "image": "choisirait/boulangerie/croissant.webp"
+                "texte": "Private jet",
+                "image": "choisirait/voyage/jet.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Got her 3 picks? Send it and see!",
-          "bouton": "Send this to her",
+          "question": "Send it to him: how many did you get?",
+          "bouton": "Send this to him",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Morning edition. Write down her three letters before you send it.\n\nSend this to her",
+      "legende": "Luxury edition. If you get all three, you know him by heart.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
-        "#girlfriendquiz",
+        "#boyfriendquiz",
         "#thisorthat",
-        "#breakfast",
+        "#luxurylife",
         "#quizcouple"
       ]
     }

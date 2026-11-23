@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "choisirait",
   "categorie": "choisirait",
-  "sujet": "ch-198",
+  "sujet": "ch-200",
   "idee_id": null,
   "variantes": {
     "en": {
@@ -12,77 +12,77 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "elle",
+        "pour": "lui",
         "etiquette": "Weekend edition",
-        "accroche": "What would she choose?",
-        "consigne": "Answer for her, then let her check!",
+        "accroche": "What would he choose?",
+        "consigne": "Pick what he would pick. Then send it to him!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which workout would she pick?",
+            "question": "Which hobby would he pick up?",
             "options": [
-              {
-                "texte": "Boxing",
-                "image": "choisirait/salle/boxe-salle.webp"
-              },
-              {
-                "texte": "Running",
-                "image": "choisirait/salle/course.webp"
-              },
-              {
-                "texte": "Swimming",
-                "image": "choisirait/salle/natation.webp"
-              }
-            ]
-          },
-          {
-            "question": "Which hobby would she pick up?",
-            "options": [
-              {
-                "texte": "Gardening",
-                "image": "choisirait/loisir/jardinage.webp"
-              },
               {
                 "texte": "Photography",
                 "image": "choisirait/loisir/photo.webp"
               },
               {
-                "texte": "Pottery",
-                "image": "choisirait/loisir/poterie.webp"
+                "texte": "Woodworking",
+                "image": "choisirait/loisir/menuiserie.webp"
+              },
+              {
+                "texte": "Fishing",
+                "image": "choisirait/loisir/peche.webp"
               }
             ]
           },
           {
-            "question": "Which game night would she pick?",
+            "question": "Which workout would he pick?",
             "options": [
               {
-                "texte": "Foosball",
-                "image": "choisirait/jeu/baby-foot.webp"
+                "texte": "Swimming",
+                "image": "choisirait/salle/natation.webp"
               },
               {
-                "texte": "Chess",
-                "image": "choisirait/jeu/echecs-soir.webp"
+                "texte": "Yoga",
+                "image": "choisirait/salle/yoga.webp"
               },
               {
-                "texte": "Pool",
-                "image": "choisirait/jeu/billard.webp"
+                "texte": "Boxing",
+                "image": "choisirait/salle/boxe-salle.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which adventure would he try?",
+            "options": [
+              {
+                "texte": "Surfing",
+                "image": "choisirait/aventure/surf.webp"
+              },
+              {
+                "texte": "Horse riding",
+                "image": "choisirait/aventure/equitation.webp"
+              },
+              {
+                "texte": "Kayaking",
+                "image": "choisirait/aventure/kayak.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Got her 3 picks? Send it and see!",
-          "bouton": "Send this to her",
+          "question": "Send it to him: how many did you get?",
+          "bouton": "Send this to him",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Weekend edition. Your answers first, then her reaction.\n\nSend this to her",
+      "legende": "Weekend edition. Easy for you? Then the next one is for him.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
-        "#girlfriendquiz",
+        "#boyfriendquiz",
         "#thisorthat",
         "#weekendvibes",
         "#quizcouple"

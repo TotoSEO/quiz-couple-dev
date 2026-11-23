@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "choisirait",
   "categorie": "choisirait",
-  "sujet": "ch-025",
+  "sujet": "ch-027",
   "idee_id": null,
   "variantes": {
     "en": {
@@ -12,79 +12,79 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "lui",
-        "etiquette": "Weekend edition",
-        "accroche": "What would he choose?",
-        "consigne": "Guess his 3 picks, then send it to him!",
+        "pour": "elle",
+        "etiquette": "Cozy night in edition",
+        "accroche": "What would she choose?",
+        "consigne": "3 questions, 4 seconds each. Pick for her!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which game night would he pick?",
+            "question": "Which drink would she get?",
             "options": [
               {
-                "texte": "Video games",
-                "image": "choisirait/jeu/jeux-video.webp"
+                "texte": "Lemonade",
+                "image": "choisirait/boisson/limonade.webp"
               },
               {
-                "texte": "Poker",
-                "image": "choisirait/jeu/poker.webp"
+                "texte": "Smoothie",
+                "image": "choisirait/boisson/smoothie.webp"
+              },
+              {
+                "texte": "Bubble tea",
+                "image": "choisirait/boisson/bubble-tea.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which game night would she pick?",
+            "options": [
+              {
+                "texte": "Pool",
+                "image": "choisirait/jeu/billard.webp"
               },
               {
                 "texte": "Chess",
                 "image": "choisirait/jeu/echecs-soir.webp"
+              },
+              {
+                "texte": "Video games",
+                "image": "choisirait/jeu/jeux-video.webp"
               }
             ]
           },
           {
-            "question": "Which workout would he pick?",
+            "question": "Which console would she pick?",
             "options": [
               {
-                "texte": "Boxing",
-                "image": "choisirait/salle/boxe-salle.webp"
+                "texte": "PlayStation 5",
+                "image": "choisirait/console/ps5.webp"
               },
               {
-                "texte": "Running",
-                "image": "choisirait/salle/course.webp"
+                "texte": "Gaming PC",
+                "image": "choisirait/console/pc-gamer.webp"
               },
               {
-                "texte": "Cycling",
-                "image": "choisirait/salle/velo.webp"
-              }
-            ]
-          },
-          {
-            "question": "Which sport would he watch?",
-            "options": [
-              {
-                "texte": "American football",
-                "image": "choisirait/sport/foot-us.webp"
-              },
-              {
-                "texte": "Football",
-                "image": "choisirait/sport/foot.webp"
-              },
-              {
-                "texte": "Baseball",
-                "image": "choisirait/sport/baseball.webp"
+                "texte": "Game Boy",
+                "image": "choisirait/console/gameboy.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Now send it to him. Did you guess right?",
-          "bouton": "Send this to him",
+          "question": "Got her 3 picks? Send it and see!",
+          "bouton": "Send this to her",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Weekend edition. No cheating: decide before the timer runs out.\n\nSend this to him",
+      "legende": "Cozy night in edition. She will swear you got at least one wrong.\n\nSend this to her",
       "hashtags": [
         "#couplequiz",
-        "#boyfriendquiz",
+        "#girlfriendquiz",
         "#thisorthat",
-        "#weekendvibes",
+        "#cozynight",
         "#quizcouple"
       ]
     }

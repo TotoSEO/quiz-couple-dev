@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "choisirait",
   "categorie": "choisirait",
-  "sujet": "ch-009",
+  "sujet": "ch-011",
   "idee_id": null,
   "variantes": {
     "en": {
@@ -12,79 +12,79 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "elle",
-        "etiquette": "Date night edition",
-        "accroche": "What would she choose?",
-        "consigne": "Guess her 3 picks, then send it to her!",
+        "pour": "lui",
+        "etiquette": "Dream home edition",
+        "accroche": "What would he choose?",
+        "consigne": "3 questions, 4 seconds each. Pick for him!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which date would she plan?",
+            "question": "Which cat would he adopt?",
             "options": [
               {
-                "texte": "Fancy dinner",
-                "image": "choisirait/demande/demande-resto.webp"
+                "texte": "Black cat",
+                "image": "choisirait/chat/chat-noir.webp"
               },
               {
-                "texte": "Stargazing",
-                "image": "choisirait/date/etoiles.webp"
+                "texte": "Ginger cat",
+                "image": "choisirait/chat/chat-roux.webp"
               },
               {
-                "texte": "Mini golf",
-                "image": "choisirait/date/mini-golf.webp"
+                "texte": "Scottish Fold",
+                "image": "choisirait/chat/scottish.webp"
               }
             ]
           },
           {
-            "question": "Which dinner would she pick?",
+            "question": "Which dog would he adopt?",
             "options": [
               {
-                "texte": "Risotto",
-                "image": "choisirait/diner/risotto.webp"
+                "texte": "Labrador",
+                "image": "choisirait/chien/labrador.webp"
               },
               {
-                "texte": "Lobster",
-                "image": "choisirait/diner/homard.webp"
+                "texte": "Great Dane",
+                "image": "choisirait/chien/dogue.webp"
               },
               {
-                "texte": "Paella",
-                "image": "choisirait/diner/paella.webp"
+                "texte": "Rottweiler",
+                "image": "choisirait/chien/rottweiler.webp"
               }
             ]
           },
           {
-            "question": "Which movie snack would she pick?",
+            "question": "Which dream house would he pick?",
             "options": [
               {
-                "texte": "Popcorn",
-                "image": "choisirait/snack/popcorn.webp"
+                "texte": "Tiny house",
+                "image": "choisirait/maison/tiny-house.webp"
               },
               {
-                "texte": "Gummy bears",
-                "image": "choisirait/snack/oursons.webp"
+                "texte": "Castle",
+                "image": "choisirait/maison/chateau.webp"
               },
               {
-                "texte": "Nachos",
-                "image": "choisirait/snack/nachos.webp"
+                "texte": "Lake house",
+                "image": "choisirait/maison/maison-lac.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Got her 3 picks? Send it and see!",
-          "bouton": "Send this to her",
+          "question": "Send it to him: how many did you get?",
+          "bouton": "Send this to him",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Date night edition. One letter per question, then send it to her.\n\nSend this to her",
+      "legende": "Dream home edition. Answer for him first, no peeking.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
-        "#girlfriendquiz",
+        "#boyfriendquiz",
         "#thisorthat",
-        "#datenight",
+        "#dreamhome",
         "#quizcouple"
       ]
     }

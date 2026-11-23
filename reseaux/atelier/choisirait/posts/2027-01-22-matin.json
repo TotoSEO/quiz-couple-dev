@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "choisirait",
   "categorie": "choisirait",
-  "sujet": "ch-111",
+  "sujet": "ch-113",
   "idee_id": null,
   "variantes": {
     "en": {
@@ -12,79 +12,79 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "elle",
-        "etiquette": "Weekend edition",
-        "accroche": "What would she choose?",
-        "consigne": "3 questions, 4 seconds each. Pick for her!",
+        "pour": "lui",
+        "etiquette": "Cozy night in edition",
+        "accroche": "What would he choose?",
+        "consigne": "Guess his 3 picks, then send it to him!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which adventure would she try?",
+            "question": "Which game night would he pick?",
             "options": [
               {
-                "texte": "Skydiving",
-                "image": "choisirait/aventure/parachute.webp"
+                "texte": "Poker",
+                "image": "choisirait/jeu/poker.webp"
               },
               {
-                "texte": "Skiing",
-                "image": "choisirait/aventure/ski.webp"
+                "texte": "Pool",
+                "image": "choisirait/jeu/billard.webp"
               },
               {
-                "texte": "Paragliding",
-                "image": "choisirait/aventure/parapente.webp"
+                "texte": "Ping pong",
+                "image": "choisirait/jeu/ping-pong.webp"
               }
             ]
           },
           {
-            "question": "Which sport would she watch?",
+            "question": "Which drink would he get?",
             "options": [
               {
-                "texte": "Tennis",
-                "image": "choisirait/sport/tennis.webp"
+                "texte": "Lemonade",
+                "image": "choisirait/boisson/limonade.webp"
               },
               {
-                "texte": "Ice hockey",
-                "image": "choisirait/sport/hockey.webp"
+                "texte": "Smoothie",
+                "image": "choisirait/boisson/smoothie.webp"
               },
               {
-                "texte": "Boxing",
-                "image": "choisirait/sport/boxe.webp"
+                "texte": "Bubble tea",
+                "image": "choisirait/boisson/bubble-tea.webp"
               }
             ]
           },
           {
-            "question": "Which date would she plan?",
+            "question": "Which movie snack would he pick?",
             "options": [
               {
-                "texte": "Picnic",
-                "image": "choisirait/date/pique-nique.webp"
+                "texte": "Ice cream tub",
+                "image": "choisirait/snack/pot-glace.webp"
               },
               {
-                "texte": "Fancy dinner",
-                "image": "choisirait/demande/demande-resto.webp"
+                "texte": "Chocolate bar",
+                "image": "choisirait/snack/tablette.webp"
               },
               {
-                "texte": "Cinema night",
-                "image": "choisirait/date/cinema.webp"
+                "texte": "Popcorn",
+                "image": "choisirait/snack/popcorn.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Got her 3 picks? Send it and see!",
-          "bouton": "Send this to her",
+          "question": "Send it to him: how many did you get?",
+          "bouton": "Send this to him",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Weekend edition. Answer for her first, no peeking.\n\nSend this to her",
+      "legende": "Cozy night in edition. Guess first, send it after. Then compare.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
-        "#girlfriendquiz",
+        "#boyfriendquiz",
         "#thisorthat",
-        "#weekendvibes",
+        "#cozynight",
         "#quizcouple"
       ]
     }

@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "choisirait",
   "categorie": "choisirait",
-  "sujet": "ch-224",
+  "sujet": "ch-226",
   "idee_id": null,
   "variantes": {
     "en": {
@@ -13,78 +13,78 @@
         "langue": "en",
         "theme": "light",
         "pour": "lui",
-        "etiquette": "Cozy night in edition",
+        "etiquette": "Spring edition",
         "accroche": "What would he choose?",
-        "consigne": "Pick what he would pick. Then send it to him!",
+        "consigne": "Answer for him, then let him check!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which console would he pick?",
+            "question": "Which season would he pick?",
             "options": [
               {
-                "texte": "Nintendo Switch",
-                "image": "choisirait/console/switch.webp"
+                "texte": "Summer",
+                "image": "choisirait/saison/ete.webp"
               },
               {
-                "texte": "PlayStation 2",
-                "image": "choisirait/console/ps2.webp"
+                "texte": "Winter",
+                "image": "choisirait/saison/hiver-saison.webp"
               },
               {
-                "texte": "PlayStation 5",
-                "image": "choisirait/console/ps5.webp"
+                "texte": "Autumn",
+                "image": "choisirait/saison/automne.webp"
               }
             ]
           },
           {
-            "question": "Which drink would he get?",
+            "question": "Which adventure would he try?",
             "options": [
               {
-                "texte": "Bubble tea",
-                "image": "choisirait/boisson/bubble-tea.webp"
+                "texte": "Snowboarding",
+                "image": "choisirait/aventure/snowboard.webp"
               },
               {
-                "texte": "Iced tea",
-                "image": "choisirait/boisson/the-glace.webp"
+                "texte": "Bungee jumping",
+                "image": "choisirait/aventure/saut-elastique.webp"
               },
               {
-                "texte": "Lemonade",
-                "image": "choisirait/boisson/limonade.webp"
+                "texte": "Rock climbing",
+                "image": "choisirait/aventure/escalade.webp"
               }
             ]
           },
           {
-            "question": "Which cake would he pick?",
+            "question": "Which flowers would he get you?",
             "options": [
               {
-                "texte": "Brownie",
-                "image": "choisirait/dessert/brownie.webp"
+                "texte": "Lilies",
+                "image": "choisirait/fleurs/lys.webp"
               },
               {
-                "texte": "Crêpes",
-                "image": "choisirait/dessert/crepes.webp"
+                "texte": "Lavender",
+                "image": "choisirait/fleurs/lavande.webp"
               },
               {
-                "texte": "Cheesecake",
-                "image": "choisirait/dessert/cheesecake.webp"
+                "texte": "Red roses",
+                "image": "choisirait/fleurs/roses.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Send it to him: how many did you get?",
+          "question": "Now send it to him. Did you guess right?",
           "bouton": "Send this to him",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Cozy night in edition. If you get all three, you know him by heart.\n\nSend this to him",
+      "legende": "Spring edition. Pick for him, then let him prove you wrong.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
         "#boyfriendquiz",
         "#thisorthat",
-        "#cozynight",
+        "#spring",
         "#quizcouple"
       ]
     }

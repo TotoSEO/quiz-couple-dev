@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "choisirait",
   "categorie": "choisirait",
-  "sujet": "ch-022",
+  "sujet": "ch-024",
   "idee_id": null,
   "variantes": {
     "en": {
@@ -12,79 +12,79 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "lui",
-        "etiquette": "Luxury edition",
-        "accroche": "What would he choose?",
-        "consigne": "Answer for him, then let him check!",
+        "pour": "elle",
+        "etiquette": "Car lovers edition",
+        "accroche": "What would she choose?",
+        "consigne": "Pick what she would pick. Then send it to her!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which watch would he wear?",
+            "question": "Which classic car would she drive?",
             "options": [
               {
-                "texte": "Omega Speedmaster",
-                "image": "choisirait/montre/speedmaster.webp"
+                "texte": "Mercedes 300 SL",
+                "image": "choisirait/vintage/300sl.webp"
               },
               {
-                "texte": "Cartier Tank",
-                "image": "choisirait/montre/cartier.webp"
+                "texte": "Classic Mini",
+                "image": "choisirait/vintage/mini-classique.webp"
               },
               {
-                "texte": "Casio digital",
-                "image": "choisirait/montre/casio.webp"
+                "texte": "Jaguar E-Type",
+                "image": "choisirait/vintage/e-type.webp"
               }
             ]
           },
           {
-            "question": "Which house would he pick?",
+            "question": "Which motorbike would she ride?",
             "options": [
               {
-                "texte": "Tiny house",
-                "image": "choisirait/maison/tiny-house.webp"
+                "texte": "Ducati Panigale",
+                "image": "choisirait/moto/ducati.webp"
               },
               {
-                "texte": "Beach house",
-                "image": "choisirait/maison/maison-plage.webp"
+                "texte": "BMW GS",
+                "image": "choisirait/moto/bmw-gs.webp"
               },
               {
-                "texte": "Mountain chalet",
-                "image": "choisirait/maison/chalet.webp"
+                "texte": "Yamaha MT-07",
+                "image": "choisirait/moto/mt07.webp"
               }
             ]
           },
           {
-            "question": "Where would he book a weekend for two?",
+            "question": "Which car would she drive?",
             "options": [
               {
-                "texte": "Beach bungalow",
-                "image": "choisirait/weekend/bungalow-plage.webp"
+                "texte": "Corvette",
+                "image": "choisirait/voiture/corvette.webp"
               },
               {
-                "texte": "Overwater villa",
-                "image": "choisirait/weekend/bungalow-eau.webp"
+                "texte": "Jeep Wrangler",
+                "image": "choisirait/voiture/jeep-wrangler.webp"
               },
               {
-                "texte": "Desert camp",
-                "image": "choisirait/weekend/desert.webp"
+                "texte": "Rolls-Royce",
+                "image": "choisirait/voiture/rolls-royce.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Now send it to him. Did you guess right?",
-          "bouton": "Send this to him",
+          "question": "Got her 3 picks? Send it and see!",
+          "bouton": "Send this to her",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Luxury edition. Write down his three letters before you send it.\n\nSend this to him",
+      "legende": "Car lovers edition. If you get all three, you know her by heart.\n\nSend this to her",
       "hashtags": [
         "#couplequiz",
-        "#boyfriendquiz",
+        "#girlfriendquiz",
         "#thisorthat",
-        "#luxurylife",
+        "#carlovers",
         "#quizcouple"
       ]
     }

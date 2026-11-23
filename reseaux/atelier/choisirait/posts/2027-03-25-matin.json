@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "choisirait",
   "categorie": "choisirait",
-  "sujet": "ch-226",
+  "sujet": "ch-228",
   "idee_id": null,
   "variantes": {
     "en": {
@@ -12,79 +12,79 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "lui",
-        "etiquette": "Travel edition",
-        "accroche": "What would he choose?",
-        "consigne": "Answer for him, then let him check!",
+        "pour": "elle",
+        "etiquette": "Car lovers edition",
+        "accroche": "What would she choose?",
+        "consigne": "Pick what she would pick. Then send it to her!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which city would he take you to?",
+            "question": "Which classic car would she drive?",
             "options": [
               {
-                "texte": "London",
-                "image": "choisirait/ville/londres.webp"
+                "texte": "Citroën 2CV",
+                "image": "choisirait/vintage/2cv.webp"
               },
               {
-                "texte": "Marrakech",
-                "image": "choisirait/ville/marrakech.webp"
+                "texte": "Classic Mini",
+                "image": "choisirait/vintage/mini-classique.webp"
               },
               {
-                "texte": "Barcelona",
-                "image": "choisirait/ville/barcelone.webp"
+                "texte": "Mercedes 300 SL",
+                "image": "choisirait/vintage/300sl.webp"
               }
             ]
           },
           {
-            "question": "How would he travel with you?",
+            "question": "Which motorbike would she ride?",
             "options": [
               {
-                "texte": "Convertible",
-                "image": "choisirait/voyage/cabriolet.webp"
+                "texte": "Harley-Davidson",
+                "image": "choisirait/moto/harley.webp"
               },
               {
-                "texte": "Camper van",
-                "image": "choisirait/voyage/van.webp"
+                "texte": "Yamaha MT-07",
+                "image": "choisirait/moto/mt07.webp"
               },
               {
-                "texte": "Sailboat",
-                "image": "choisirait/voyage/voilier.webp"
+                "texte": "Triumph Bonneville",
+                "image": "choisirait/moto/bonneville.webp"
               }
             ]
           },
           {
-            "question": "Where would he book a weekend?",
+            "question": "Which car would she pick?",
             "options": [
               {
-                "texte": "Treehouse",
-                "image": "choisirait/weekend/cabane-arbre.webp"
+                "texte": "Mercedes-AMG C63 S",
+                "image": "choisirait/voiture/amg-c63.webp"
               },
               {
-                "texte": "Log cabin",
-                "image": "choisirait/weekend/chalet-bois.webp"
+                "texte": "Ford Mustang",
+                "image": "choisirait/voiture/mustang.webp"
               },
               {
-                "texte": "Houseboat",
-                "image": "choisirait/weekend/peniche.webp"
+                "texte": "Nissan GT-R",
+                "image": "choisirait/voiture/gtr.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Now send it to him. Did you guess right?",
-          "bouton": "Send this to him",
+          "question": "Got her 3 picks? Send it and see!",
+          "bouton": "Send this to her",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Travel edition. Pick for him, then let him prove you wrong.\n\nSend this to him",
+      "legende": "Car lovers edition. Your answers first, then her reaction.\n\nSend this to her",
       "hashtags": [
         "#couplequiz",
-        "#boyfriendquiz",
+        "#girlfriendquiz",
         "#thisorthat",
-        "#travelcouple",
+        "#carlovers",
         "#quizcouple"
       ]
     }

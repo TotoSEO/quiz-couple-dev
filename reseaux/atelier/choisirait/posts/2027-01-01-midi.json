@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "choisirait",
   "categorie": "choisirait",
-  "sujet": "ch-073",
+  "sujet": "ch-075",
   "idee_id": null,
   "variantes": {
     "en": {
@@ -12,79 +12,79 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "lui",
-        "etiquette": "Drinks edition",
-        "accroche": "What would he choose?",
-        "consigne": "Guess his 3 picks, then send it to him!",
+        "pour": "elle",
+        "etiquette": "New Year's edition",
+        "accroche": "What would she choose?",
+        "consigne": "3 questions, 4 seconds each. Pick for her!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "What would he order at the bar?",
+            "question": "Where would she spend New Year's Eve?",
             "options": [
               {
-                "texte": "Aperol Spritz",
-                "image": "choisirait/bar/spritz.webp"
+                "texte": "City fireworks",
+                "image": "choisirait/nouvel-an/feux-artifice.webp"
               },
               {
-                "texte": "Red wine",
-                "image": "choisirait/bar/vin-rouge.webp"
+                "texte": "Tropical beach",
+                "image": "choisirait/nouvel-an/plage-nouvel-an.webp"
               },
               {
-                "texte": "Espresso martini",
-                "image": "choisirait/bar/espresso-martini.webp"
+                "texte": "Rooftop party",
+                "image": "choisirait/nouvel-an/rooftop-nouvel-an.webp"
               }
             ]
           },
           {
-            "question": "Which coffee would he order?",
+            "question": "Where would she take you on vacation?",
             "options": [
               {
-                "texte": "Matcha latte",
-                "image": "choisirait/cafe/matcha.webp"
+                "texte": "Maldives",
+                "image": "choisirait/vacances/maldives.webp"
               },
               {
-                "texte": "Americano",
-                "image": "choisirait/cafe/americano.webp"
+                "texte": "Peru",
+                "image": "choisirait/vacances/perou.webp"
               },
               {
-                "texte": "Espresso",
-                "image": "choisirait/cafe/espresso.webp"
+                "texte": "Iceland",
+                "image": "choisirait/vacances/islande.webp"
               }
             ]
           },
           {
-            "question": "Which drink would he get?",
+            "question": "Which date would she plan?",
             "options": [
               {
-                "texte": "Iced tea",
-                "image": "choisirait/boisson/the-glace.webp"
+                "texte": "Museum",
+                "image": "choisirait/date/musee.webp"
               },
               {
-                "texte": "Smoothie",
-                "image": "choisirait/boisson/smoothie.webp"
+                "texte": "Hot air balloon",
+                "image": "choisirait/date/montgolfiere-date.webp"
               },
               {
-                "texte": "Lemonade",
-                "image": "choisirait/boisson/limonade.webp"
+                "texte": "Wine tasting",
+                "image": "choisirait/date/degustation.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Now send it to him. Did you guess right?",
-          "bouton": "Send this to him",
+          "question": "Got her 3 picks? Send it and see!",
+          "bouton": "Send this to her",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Drinks edition. Guess first, send it after. Then compare.\n\nSend this to him",
+      "legende": "New Year's edition. No cheating: decide before the timer runs out.\n\nSend this to her",
       "hashtags": [
         "#couplequiz",
-        "#boyfriendquiz",
+        "#girlfriendquiz",
         "#thisorthat",
-        "#cocktails",
+        "#newyearseve",
         "#quizcouple"
       ]
     }

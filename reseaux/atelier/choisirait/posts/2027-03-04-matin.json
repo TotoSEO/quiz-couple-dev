@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "choisirait",
   "categorie": "choisirait",
-  "sujet": "ch-187",
+  "sujet": "ch-189",
   "idee_id": null,
   "variantes": {
     "en": {
@@ -12,79 +12,79 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "lui",
-        "etiquette": "Weekend edition",
-        "accroche": "What would he choose?",
-        "consigne": "3 questions, 4 seconds each. Pick for him!",
+        "pour": "elle",
+        "etiquette": "Luxury edition",
+        "accroche": "What would she choose?",
+        "consigne": "Guess her 3 picks, then send it to her!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which workout would he pick?",
+            "question": "Which watch would she wear?",
             "options": [
               {
-                "texte": "Weightlifting",
-                "image": "choisirait/salle/muscu.webp"
+                "texte": "Pocket watch",
+                "image": "choisirait/montre/gousset.webp"
               },
               {
-                "texte": "Cycling",
-                "image": "choisirait/salle/velo.webp"
+                "texte": "Omega Speedmaster",
+                "image": "choisirait/montre/speedmaster.webp"
               },
               {
-                "texte": "Yoga",
-                "image": "choisirait/salle/yoga.webp"
+                "texte": "Cartier Tank",
+                "image": "choisirait/montre/cartier.webp"
               }
             ]
           },
           {
-            "question": "Which hobby would he pick up?",
+            "question": "Which dream house would she pick?",
             "options": [
               {
-                "texte": "Knitting",
-                "image": "choisirait/loisir/tricot.webp"
+                "texte": "Lake house",
+                "image": "choisirait/maison/maison-lac.webp"
               },
               {
-                "texte": "Chess",
-                "image": "choisirait/loisir/echecs.webp"
+                "texte": "Mountain chalet",
+                "image": "choisirait/maison/chalet.webp"
               },
               {
-                "texte": "Gardening",
-                "image": "choisirait/loisir/jardinage.webp"
+                "texte": "Modern villa",
+                "image": "choisirait/maison/villa-moderne.webp"
               }
             ]
           },
           {
-            "question": "Which sport would he watch?",
+            "question": "Where would she book a weekend for two?",
             "options": [
               {
-                "texte": "Football",
-                "image": "choisirait/sport/foot.webp"
+                "texte": "Houseboat",
+                "image": "choisirait/weekend/peniche.webp"
               },
               {
-                "texte": "American football",
-                "image": "choisirait/sport/foot-us.webp"
+                "texte": "Treehouse",
+                "image": "choisirait/weekend/cabane-arbre.webp"
               },
               {
-                "texte": "Rugby",
-                "image": "choisirait/sport/rugby.webp"
+                "texte": "Glamping tent",
+                "image": "choisirait/weekend/glamping.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Now send it to him. Did you guess right?",
-          "bouton": "Send this to him",
+          "question": "Got her 3 picks? Send it and see!",
+          "bouton": "Send this to her",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Weekend edition. He will swear you got at least one wrong.\n\nSend this to him",
+      "legende": "Luxury edition. One letter per question, then send it to her.\n\nSend this to her",
       "hashtags": [
         "#couplequiz",
-        "#boyfriendquiz",
+        "#girlfriendquiz",
         "#thisorthat",
-        "#weekendvibes",
+        "#luxurylife",
         "#quizcouple"
       ]
     }

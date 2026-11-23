@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "choisirait",
   "categorie": "choisirait",
-  "sujet": "ch-085",
+  "sujet": "ch-087",
   "idee_id": null,
   "variantes": {
     "en": {
@@ -12,79 +12,79 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "lui",
-        "etiquette": "Dream life edition",
-        "accroche": "What would he choose?",
-        "consigne": "Guess his 3 picks, then send it to him!",
+        "pour": "elle",
+        "etiquette": "Winter edition",
+        "accroche": "What would she choose?",
+        "consigne": "3 questions, 4 seconds each. Pick for her!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which watch would he wear?",
+            "question": "What would she cook for date night?",
             "options": [
               {
-                "texte": "Seiko diver",
-                "image": "choisirait/montre/seiko.webp"
+                "texte": "Steak and fries",
+                "image": "choisirait/diner/steak-frites.webp"
               },
               {
-                "texte": "Cartier Tank",
-                "image": "choisirait/montre/cartier.webp"
+                "texte": "Risotto",
+                "image": "choisirait/diner/risotto.webp"
               },
               {
-                "texte": "Casio digital",
-                "image": "choisirait/montre/casio.webp"
+                "texte": "Raclette",
+                "image": "choisirait/diner/raclette.webp"
               }
             ]
           },
           {
-            "question": "Which house would he pick?",
+            "question": "Where would she book a weekend for two?",
             "options": [
               {
-                "texte": "Loft apartment",
-                "image": "choisirait/maison/loft.webp"
+                "texte": "Houseboat",
+                "image": "choisirait/weekend/peniche.webp"
               },
               {
-                "texte": "Modern villa",
-                "image": "choisirait/maison/villa-moderne.webp"
+                "texte": "Treehouse",
+                "image": "choisirait/weekend/cabane-arbre.webp"
               },
               {
-                "texte": "Victorian house",
-                "image": "choisirait/maison/victorienne.webp"
+                "texte": "Overwater villa",
+                "image": "choisirait/weekend/bungalow-eau.webp"
               }
             ]
           },
           {
-            "question": "Which car would he drive?",
+            "question": "Which winter date would she pick?",
             "options": [
               {
-                "texte": "BMW M3",
-                "image": "choisirait/voiture/bmw-m3.webp"
+                "texte": "Ice skating",
+                "image": "choisirait/hiver/hiver-patin.webp"
               },
               {
-                "texte": "Rolls-Royce",
-                "image": "choisirait/voiture/rolls-royce.webp"
+                "texte": "Skiing",
+                "image": "choisirait/hiver/hiver-ski.webp"
               },
               {
-                "texte": "Tesla Model S",
-                "image": "choisirait/voiture/tesla-model-s.webp"
+                "texte": "Hot tub in the snow",
+                "image": "choisirait/hiver/jacuzzi.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Now send it to him. Did you guess right?",
-          "bouton": "Send this to him",
+          "question": "Got her 3 picks? Send it and see!",
+          "bouton": "Send this to her",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Dream life edition. No cheating: decide before the timer runs out.\n\nSend this to him",
+      "legende": "Winter edition. She will swear you got at least one wrong.\n\nSend this to her",
       "hashtags": [
         "#couplequiz",
-        "#boyfriendquiz",
+        "#girlfriendquiz",
         "#thisorthat",
-        "#dreamlife",
+        "#winter",
         "#quizcouple"
       ]
     }

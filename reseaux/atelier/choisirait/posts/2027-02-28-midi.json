@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "choisirait",
   "categorie": "choisirait",
-  "sujet": "ch-180",
+  "sujet": "ch-182",
   "idee_id": null,
   "variantes": {
     "en": {
@@ -12,79 +12,79 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "elle",
-        "etiquette": "Winter edition",
-        "accroche": "What would she choose?",
-        "consigne": "Pick what she would pick. Then send it to her!",
+        "pour": "lui",
+        "etiquette": "Dream life edition",
+        "accroche": "What would he choose?",
+        "consigne": "Answer for him, then let him check!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which winter date would she pick?",
+            "question": "Which watch would he wear?",
             "options": [
               {
-                "texte": "Cabin by the fire",
-                "image": "choisirait/hiver/feu-cheminee.webp"
+                "texte": "Rolex Submariner",
+                "image": "choisirait/montre/rolex.webp"
               },
               {
-                "texte": "Building a snowman",
-                "image": "choisirait/hiver/bonhomme.webp"
+                "texte": "Cartier Tank",
+                "image": "choisirait/montre/cartier.webp"
               },
               {
-                "texte": "Sledding",
-                "image": "choisirait/hiver/luge.webp"
+                "texte": "Pocket watch",
+                "image": "choisirait/montre/gousset.webp"
               }
             ]
           },
           {
-            "question": "Which dinner would she pick?",
+            "question": "Which house would he pick?",
             "options": [
               {
-                "texte": "Steak and fries",
-                "image": "choisirait/diner/steak-frites.webp"
+                "texte": "Lake house",
+                "image": "choisirait/maison/maison-lac.webp"
               },
               {
-                "texte": "Fish and chips",
-                "image": "choisirait/diner/fish-chips.webp"
+                "texte": "Loft apartment",
+                "image": "choisirait/maison/loft.webp"
               },
               {
-                "texte": "Cheese fondue",
-                "image": "choisirait/diner/fondue.webp"
+                "texte": "Tiny house",
+                "image": "choisirait/maison/tiny-house.webp"
               }
             ]
           },
           {
-            "question": "Which coffee would she order?",
+            "question": "Where would he take you on vacation?",
             "options": [
               {
-                "texte": "Cappuccino",
-                "image": "choisirait/cafe/cappuccino.webp"
+                "texte": "Morocco",
+                "image": "choisirait/vacances/maroc.webp"
               },
               {
-                "texte": "Iced latte",
-                "image": "choisirait/cafe/iced-latte.webp"
+                "texte": "Switzerland",
+                "image": "choisirait/vacances/suisse.webp"
               },
               {
-                "texte": "Americano",
-                "image": "choisirait/cafe/americano.webp"
+                "texte": "Japan",
+                "image": "choisirait/vacances/japon.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Got her 3 picks? Send it and see!",
-          "bouton": "Send this to her",
+          "question": "Send it to him: how many did you get?",
+          "bouton": "Send this to him",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Winter edition. Easy for you? Then the next one is for her.\n\nSend this to her",
+      "legende": "Dream life edition. Write down his three letters before you send it.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
-        "#girlfriendquiz",
+        "#boyfriendquiz",
         "#thisorthat",
-        "#winter",
+        "#dreamlife",
         "#quizcouple"
       ]
     }

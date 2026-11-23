@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "choisirait",
   "categorie": "choisirait",
-  "sujet": "ch-017",
+  "sujet": "ch-019",
   "idee_id": null,
   "variantes": {
     "en": {
@@ -13,78 +13,78 @@
         "langue": "en",
         "theme": "light",
         "pour": "lui",
-        "etiquette": "Dream life edition",
+        "etiquette": "Sweet tooth edition",
         "accroche": "What would he choose?",
-        "consigne": "Guess his 3 picks, then send it to him!",
+        "consigne": "3 questions, 4 seconds each. Pick for him!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Where would he take you on vacation?",
+            "question": "Which ice cream would he get?",
             "options": [
               {
-                "texte": "Maldives",
-                "image": "choisirait/vacances/maldives.webp"
+                "texte": "Ice cream cone",
+                "image": "choisirait/glace/cornet.webp"
               },
               {
-                "texte": "Croatia",
-                "image": "choisirait/vacances/croatie.webp"
+                "texte": "Sundae",
+                "image": "choisirait/glace/sundae.webp"
               },
               {
-                "texte": "Australia",
-                "image": "choisirait/vacances/australie.webp"
+                "texte": "Mochi ice cream",
+                "image": "choisirait/glace/mochi.webp"
               }
             ]
           },
           {
-            "question": "Which watch would he wear?",
+            "question": "What would he grab at the bakery?",
             "options": [
               {
-                "texte": "Pocket watch",
-                "image": "choisirait/montre/gousset.webp"
+                "texte": "Bagel",
+                "image": "choisirait/boulangerie/bagel.webp"
               },
               {
-                "texte": "Cartier Tank",
-                "image": "choisirait/montre/cartier.webp"
+                "texte": "Donut",
+                "image": "choisirait/boulangerie/donut.webp"
               },
               {
-                "texte": "Seiko diver",
-                "image": "choisirait/montre/seiko.webp"
+                "texte": "Muffin",
+                "image": "choisirait/boulangerie/muffin.webp"
               }
             ]
           },
           {
-            "question": "Where would he book a weekend?",
+            "question": "Which dessert would he pick?",
             "options": [
               {
-                "texte": "Treehouse",
-                "image": "choisirait/weekend/cabane-arbre.webp"
+                "texte": "Macarons",
+                "image": "choisirait/dessert/macarons.webp"
               },
               {
-                "texte": "Houseboat",
-                "image": "choisirait/weekend/peniche.webp"
+                "texte": "Cheesecake",
+                "image": "choisirait/dessert/cheesecake.webp"
               },
               {
-                "texte": "Glamping tent",
-                "image": "choisirait/weekend/glamping.webp"
+                "texte": "Crème brûlée",
+                "image": "choisirait/dessert/creme-brulee.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Send it to him: how many did you get?",
+          "question": "Now send it to him. Did you guess right?",
           "bouton": "Send this to him",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Dream life edition. He will swear you got at least one wrong.\n\nSend this to him",
+      "legende": "Sweet tooth edition. One letter per question, then send it to him.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
         "#boyfriendquiz",
         "#thisorthat",
-        "#dreamlife",
+        "#dessert",
         "#quizcouple"
       ]
     }

@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "choisirait",
   "categorie": "choisirait",
-  "sujet": "ch-137",
+  "sujet": "ch-139",
   "idee_id": null,
   "variantes": {
     "en": {
@@ -13,78 +13,78 @@
         "langue": "en",
         "theme": "light",
         "pour": "lui",
-        "etiquette": "Pet lovers edition",
+        "etiquette": "Weekend edition",
         "accroche": "What would he choose?",
-        "consigne": "Guess his 3 picks, then send it to him!",
+        "consigne": "3 questions, 4 seconds each. Pick for him!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which pet would he want?",
+            "question": "Which workout would he pick?",
             "options": [
               {
-                "texte": "Goldfish",
-                "image": "choisirait/animal/poisson.webp"
+                "texte": "Running",
+                "image": "choisirait/salle/course.webp"
               },
               {
-                "texte": "Hedgehog",
-                "image": "choisirait/animal/herisson.webp"
+                "texte": "Cycling",
+                "image": "choisirait/salle/velo.webp"
               },
               {
-                "texte": "Horse",
-                "image": "choisirait/animal/cheval.webp"
+                "texte": "Boxing",
+                "image": "choisirait/salle/boxe-salle.webp"
               }
             ]
           },
           {
-            "question": "Which cat would he adopt?",
+            "question": "Which hobby would he pick up?",
             "options": [
               {
-                "texte": "Norwegian Forest Cat",
-                "image": "choisirait/chat/norvegien.webp"
+                "texte": "Pottery",
+                "image": "choisirait/loisir/poterie.webp"
               },
               {
-                "texte": "Bengal",
-                "image": "choisirait/chat/bengal.webp"
+                "texte": "Chess",
+                "image": "choisirait/loisir/echecs.webp"
               },
               {
-                "texte": "Black cat",
-                "image": "choisirait/chat/chat-noir.webp"
+                "texte": "Gardening",
+                "image": "choisirait/loisir/jardinage.webp"
               }
             ]
           },
           {
-            "question": "Which dog would he adopt?",
+            "question": "Which adventure would he try?",
             "options": [
               {
-                "texte": "Australian Shepherd",
-                "image": "choisirait/chien/berger-australien.webp"
+                "texte": "Bungee jumping",
+                "image": "choisirait/aventure/saut-elastique.webp"
               },
               {
-                "texte": "Jack Russell",
-                "image": "choisirait/chien/jack-russell.webp"
+                "texte": "Paragliding",
+                "image": "choisirait/aventure/parapente.webp"
               },
               {
-                "texte": "Labrador",
-                "image": "choisirait/chien/labrador.webp"
+                "texte": "Skydiving",
+                "image": "choisirait/aventure/parachute.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Send it to him: how many did you get?",
+          "question": "Now send it to him. Did you guess right?",
           "bouton": "Send this to him",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Pet lovers edition. He will swear you got at least one wrong.\n\nSend this to him",
+      "legende": "Weekend edition. One letter per question, then send it to him.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
         "#boyfriendquiz",
         "#thisorthat",
-        "#petlovers",
+        "#weekendvibes",
         "#quizcouple"
       ]
     }

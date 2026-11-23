@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "choisirait",
   "categorie": "choisirait",
-  "sujet": "ch-223",
+  "sujet": "ch-225",
   "idee_id": null,
   "variantes": {
     "en": {
@@ -12,79 +12,79 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "lui",
-        "etiquette": "Dream home edition",
-        "accroche": "What would he choose?",
-        "consigne": "3 questions, 4 seconds each. Pick for him!",
+        "pour": "elle",
+        "etiquette": "Weekend edition",
+        "accroche": "What would she choose?",
+        "consigne": "Guess her 3 picks, then send it to her!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which cat would he adopt?",
+            "question": "Which hobby would she pick up?",
             "options": [
               {
-                "texte": "Siamese",
-                "image": "choisirait/chat/siamois.webp"
+                "texte": "Woodworking",
+                "image": "choisirait/loisir/menuiserie.webp"
               },
               {
-                "texte": "Black cat",
-                "image": "choisirait/chat/chat-noir.webp"
+                "texte": "Fishing",
+                "image": "choisirait/loisir/peche.webp"
               },
               {
-                "texte": "Bengal",
-                "image": "choisirait/chat/bengal.webp"
+                "texte": "Pottery",
+                "image": "choisirait/loisir/poterie.webp"
               }
             ]
           },
           {
-            "question": "Which dog would he pick?",
+            "question": "Which workout would she pick?",
             "options": [
               {
-                "texte": "Cavalier King Charles",
-                "image": "choisirait/chien/cavalier.webp"
+                "texte": "Boxing",
+                "image": "choisirait/salle/boxe-salle.webp"
               },
               {
-                "texte": "Doberman",
-                "image": "choisirait/chien/dobermann.webp"
+                "texte": "Running",
+                "image": "choisirait/salle/course.webp"
               },
               {
-                "texte": "Bernese Mountain Dog",
-                "image": "choisirait/chien/bouvier.webp"
+                "texte": "Swimming",
+                "image": "choisirait/salle/natation.webp"
               }
             ]
           },
           {
-            "question": "Which dream house would he pick?",
+            "question": "Which date would she plan?",
             "options": [
               {
-                "texte": "Beach house",
-                "image": "choisirait/maison/maison-plage.webp"
+                "texte": "Beach sunset",
+                "image": "choisirait/date/coucher-soleil.webp"
               },
               {
-                "texte": "Tiny house",
-                "image": "choisirait/maison/tiny-house.webp"
+                "texte": "Ice skating",
+                "image": "choisirait/date/patinoire.webp"
               },
               {
-                "texte": "Loft apartment",
-                "image": "choisirait/maison/loft.webp"
+                "texte": "Mini golf",
+                "image": "choisirait/date/mini-golf.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Now send it to him. Did you guess right?",
-          "bouton": "Send this to him",
+          "question": "Got her 3 picks? Send it and see!",
+          "bouton": "Send this to her",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Dream home edition. Guess first, send it after. Then compare.\n\nSend this to him",
+      "legende": "Weekend edition. No cheating: decide before the timer runs out.\n\nSend this to her",
       "hashtags": [
         "#couplequiz",
-        "#boyfriendquiz",
+        "#girlfriendquiz",
         "#thisorthat",
-        "#dreamhome",
+        "#weekendvibes",
         "#quizcouple"
       ]
     }

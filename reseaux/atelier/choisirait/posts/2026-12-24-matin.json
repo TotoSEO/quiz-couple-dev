@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "choisirait",
   "categorie": "choisirait",
-  "sujet": "ch-057",
+  "sujet": "ch-059",
   "idee_id": null,
   "variantes": {
     "en": {
@@ -12,79 +12,79 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "elle",
-        "etiquette": "Wedding edition",
-        "accroche": "What would she choose?",
-        "consigne": "Guess her 3 picks, then send it to her!",
+        "pour": "lui",
+        "etiquette": "Christmas edition",
+        "accroche": "What would he choose?",
+        "consigne": "3 questions, 4 seconds each. Pick for him!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Where would she want you to propose?",
+            "question": "Which winter date would he pick?",
             "options": [
               {
-                "texte": "Mountaintop",
-                "image": "choisirait/demande/demande-montagne.webp"
+                "texte": "Building a snowman",
+                "image": "choisirait/hiver/bonhomme.webp"
               },
               {
-                "texte": "Disney castle",
-                "image": "choisirait/demande/demande-chateau.webp"
+                "texte": "Cabin by the fire",
+                "image": "choisirait/hiver/feu-cheminee.webp"
               },
               {
-                "texte": "Restaurant",
-                "image": "choisirait/demande/demande-resto.webp"
+                "texte": "Skiing",
+                "image": "choisirait/hiver/hiver-ski.webp"
               }
             ]
           },
           {
-            "question": "Which ring would she want?",
+            "question": "Which Christmas date would he plan?",
             "options": [
               {
-                "texte": "Rose gold ring",
-                "image": "choisirait/bague/or-rose.webp"
+                "texte": "Snowy chalet",
+                "image": "choisirait/noel-sortie/chalet-noel.webp"
               },
               {
-                "texte": "Solitaire diamond",
-                "image": "choisirait/bague/solitaire.webp"
+                "texte": "Ice skating",
+                "image": "choisirait/noel-sortie/patinoire-noel.webp"
               },
               {
-                "texte": "Vintage ring",
-                "image": "choisirait/bague/vintage-bague.webp"
+                "texte": "Movie by the tree",
+                "image": "choisirait/noel-sortie/film-sapin.webp"
               }
             ]
           },
           {
-            "question": "Where would she want to get married?",
+            "question": "Which Christmas treat would he pick?",
             "options": [
               {
-                "texte": "Lakeside",
-                "image": "choisirait/vue/lac.webp"
+                "texte": "Gingerbread house",
+                "image": "choisirait/noel-gourmandise/maison-pain-epices.webp"
               },
               {
-                "texte": "Mountaintop",
-                "image": "choisirait/mariage/sommet.webp"
+                "texte": "Panettone",
+                "image": "choisirait/noel-gourmandise/panettone.webp"
               },
               {
-                "texte": "Vineyard",
-                "image": "choisirait/vue/vignes.webp"
+                "texte": "Christmas pudding",
+                "image": "choisirait/noel-gourmandise/pudding.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Got her 3 picks? Send it and see!",
-          "bouton": "Send this to her",
+          "question": "Send it to him: how many did you get?",
+          "bouton": "Send this to him",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Wedding edition. She will swear you got at least one wrong.\n\nSend this to her",
+      "legende": "Christmas edition. One letter per question, then send it to him.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
-        "#girlfriendquiz",
+        "#boyfriendquiz",
         "#thisorthat",
-        "#engaged",
+        "#christmas",
         "#quizcouple"
       ]
     }

@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "choisirait",
   "categorie": "choisirait",
-  "sujet": "ch-062",
+  "sujet": "ch-064",
   "idee_id": null,
   "variantes": {
     "en": {
@@ -13,78 +13,78 @@
         "langue": "en",
         "theme": "light",
         "pour": "lui",
-        "etiquette": "Drinks edition",
+        "etiquette": "Winter edition",
         "accroche": "What would he choose?",
-        "consigne": "Answer for him, then let him check!",
+        "consigne": "Pick what he would pick. Then send it to him!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which coffee would he order?",
+            "question": "Which winter date would he pick?",
             "options": [
               {
-                "texte": "Espresso",
-                "image": "choisirait/cafe/espresso.webp"
+                "texte": "Ice skating",
+                "image": "choisirait/hiver/hiver-patin.webp"
               },
               {
-                "texte": "Cappuccino",
-                "image": "choisirait/cafe/cappuccino.webp"
+                "texte": "Sledding",
+                "image": "choisirait/hiver/luge.webp"
               },
               {
-                "texte": "Iced latte",
-                "image": "choisirait/cafe/iced-latte.webp"
+                "texte": "Hot tub in the snow",
+                "image": "choisirait/hiver/jacuzzi.webp"
               }
             ]
           },
           {
-            "question": "Which drink would he get?",
+            "question": "What would he cook for date night?",
             "options": [
               {
-                "texte": "Smoothie",
-                "image": "choisirait/boisson/smoothie.webp"
+                "texte": "Fish and chips",
+                "image": "choisirait/diner/fish-chips.webp"
               },
               {
-                "texte": "Iced tea",
-                "image": "choisirait/boisson/the-glace.webp"
+                "texte": "Ramen",
+                "image": "choisirait/diner/ramen.webp"
               },
               {
-                "texte": "Lemonade",
-                "image": "choisirait/boisson/limonade.webp"
+                "texte": "Raclette",
+                "image": "choisirait/diner/raclette.webp"
               }
             ]
           },
           {
-            "question": "What would he order at the bar?",
+            "question": "Where would he book a weekend for two?",
             "options": [
               {
-                "texte": "Mojito",
-                "image": "choisirait/bar/mojito.webp"
+                "texte": "Log cabin",
+                "image": "choisirait/weekend/chalet-bois.webp"
               },
               {
-                "texte": "Aperol Spritz",
-                "image": "choisirait/bar/spritz.webp"
+                "texte": "Ski chalet",
+                "image": "choisirait/weekend/chalet-ski.webp"
               },
               {
-                "texte": "Beer",
-                "image": "choisirait/bar/biere.webp"
+                "texte": "Desert camp",
+                "image": "choisirait/weekend/desert.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Send it to him: how many did you get?",
+          "question": "Now send it to him. Did you guess right?",
           "bouton": "Send this to him",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Drinks edition. Write down his three letters before you send it.\n\nSend this to him",
+      "legende": "Winter edition. If you get all three, you know him by heart.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
         "#boyfriendquiz",
         "#thisorthat",
-        "#cocktails",
+        "#winter",
         "#quizcouple"
       ]
     }

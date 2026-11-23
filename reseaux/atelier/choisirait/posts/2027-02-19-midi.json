@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "choisirait",
   "categorie": "choisirait",
-  "sujet": "ch-164",
+  "sujet": "ch-166",
   "idee_id": null,
   "variantes": {
     "en": {
@@ -13,78 +13,78 @@
         "langue": "en",
         "theme": "light",
         "pour": "lui",
-        "etiquette": "Game night edition",
+        "etiquette": "Pet lovers edition",
         "accroche": "What would he choose?",
-        "consigne": "Pick what he would pick. Then send it to him!",
+        "consigne": "Answer for him, then let him check!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "What would he order at 2 a.m.?",
+            "question": "Which pet would he want?",
             "options": [
               {
-                "texte": "Burrito",
-                "image": "choisirait/fastfood/burrito.webp"
+                "texte": "Rabbit",
+                "image": "choisirait/animal/lapin.webp"
               },
               {
-                "texte": "Tacos",
-                "image": "choisirait/fastfood/tacos.webp"
+                "texte": "Hamster",
+                "image": "choisirait/animal/hamster.webp"
               },
               {
-                "texte": "Nuggets",
-                "image": "choisirait/fastfood/nuggets.webp"
+                "texte": "Horse",
+                "image": "choisirait/animal/cheval.webp"
               }
             ]
           },
           {
-            "question": "Which console would he pick?",
+            "question": "Which cat would he adopt?",
             "options": [
               {
-                "texte": "PlayStation 5",
-                "image": "choisirait/console/ps5.webp"
+                "texte": "Siamese",
+                "image": "choisirait/chat/siamois.webp"
               },
               {
-                "texte": "Xbox",
-                "image": "choisirait/console/xbox.webp"
+                "texte": "Persian",
+                "image": "choisirait/chat/persan.webp"
               },
               {
-                "texte": "Nintendo Switch",
-                "image": "choisirait/console/switch.webp"
+                "texte": "Ragdoll",
+                "image": "choisirait/chat/ragdoll.webp"
               }
             ]
           },
           {
-            "question": "Which movie snack would he pick?",
+            "question": "Which dog would he pick?",
             "options": [
               {
-                "texte": "Gummy bears",
-                "image": "choisirait/snack/oursons.webp"
+                "texte": "Pomeranian",
+                "image": "choisirait/chien/pomeranien.webp"
               },
               {
-                "texte": "Ice cream tub",
-                "image": "choisirait/snack/pot-glace.webp"
+                "texte": "Poodle",
+                "image": "choisirait/chien/caniche.webp"
               },
               {
-                "texte": "Chocolate bar",
-                "image": "choisirait/snack/tablette.webp"
+                "texte": "Great Dane",
+                "image": "choisirait/chien/dogue.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Send it to him: how many did you get?",
+          "question": "Now send it to him. Did you guess right?",
           "bouton": "Send this to him",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Game night edition. If you get all three, you know him by heart.\n\nSend this to him",
+      "legende": "Pet lovers edition. Pick for him, then let him prove you wrong.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
         "#boyfriendquiz",
         "#thisorthat",
-        "#gamenight",
+        "#petlovers",
         "#quizcouple"
       ]
     }

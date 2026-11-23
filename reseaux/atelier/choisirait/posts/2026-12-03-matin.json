@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "choisirait",
   "categorie": "choisirait",
-  "sujet": "ch-018",
+  "sujet": "ch-020",
   "idee_id": null,
   "variantes": {
     "en": {
@@ -12,79 +12,79 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "elle",
-        "etiquette": "Christmas edition",
-        "accroche": "What would she choose?",
-        "consigne": "Answer for her, then let her check!",
+        "pour": "lui",
+        "etiquette": "Weekend edition",
+        "accroche": "What would he choose?",
+        "consigne": "Pick what he would pick. Then send it to him!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which gift would she want?",
+            "question": "Which workout would he pick?",
             "options": [
               {
-                "texte": "Game console",
-                "image": "choisirait/cadeau/console-cadeau.webp"
+                "texte": "Running",
+                "image": "choisirait/salle/course.webp"
               },
               {
-                "texte": "Headphones",
-                "image": "choisirait/cadeau/casque.webp"
+                "texte": "CrossFit",
+                "image": "choisirait/salle/crossfit.webp"
               },
               {
-                "texte": "Sneakers",
-                "image": "choisirait/cadeau/baskets-cadeau.webp"
+                "texte": "Weightlifting",
+                "image": "choisirait/salle/muscu.webp"
               }
             ]
           },
           {
-            "question": "Which Christmas treat would she pick?",
+            "question": "Which date would he take you on?",
             "options": [
               {
-                "texte": "Stollen",
-                "image": "choisirait/noel-gourmandise/stollen.webp"
+                "texte": "Picnic",
+                "image": "choisirait/date/pique-nique.webp"
               },
               {
-                "texte": "Yule log",
-                "image": "choisirait/noel-gourmandise/buche.webp"
+                "texte": "Mini golf",
+                "image": "choisirait/date/mini-golf.webp"
               },
               {
-                "texte": "Gingerbread house",
-                "image": "choisirait/noel-gourmandise/maison-pain-epices.webp"
+                "texte": "Cinema night",
+                "image": "choisirait/date/cinema.webp"
               }
             ]
           },
           {
-            "question": "Which Christmas date would she plan?",
+            "question": "Which hobby would he pick up?",
             "options": [
               {
-                "texte": "Christmas market",
-                "image": "choisirait/noel-sortie/marche-noel.webp"
+                "texte": "Chess",
+                "image": "choisirait/loisir/echecs.webp"
               },
               {
-                "texte": "Ice skating",
-                "image": "choisirait/noel-sortie/patinoire-noel.webp"
+                "texte": "Photography",
+                "image": "choisirait/loisir/photo.webp"
               },
               {
-                "texte": "Movie by the tree",
-                "image": "choisirait/noel-sortie/film-sapin.webp"
+                "texte": "Woodworking",
+                "image": "choisirait/loisir/menuiserie.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Got her 3 picks? Send it and see!",
-          "bouton": "Send this to her",
+          "question": "Send it to him: how many did you get?",
+          "bouton": "Send this to him",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Christmas edition. Your answers first, then her reaction.\n\nSend this to her",
+      "legende": "Weekend edition. Easy for you? Then the next one is for him.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
-        "#girlfriendquiz",
+        "#boyfriendquiz",
         "#thisorthat",
-        "#christmas",
+        "#weekendvibes",
         "#quizcouple"
       ]
     }

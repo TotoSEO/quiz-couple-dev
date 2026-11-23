@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "choisirait",
   "categorie": "choisirait",
-  "sujet": "ch-140",
+  "sujet": "ch-142",
   "idee_id": null,
   "variantes": {
     "en": {
@@ -15,7 +15,7 @@
         "pour": "lui",
         "etiquette": "Wedding edition",
         "accroche": "What would he choose?",
-        "consigne": "Pick what he would pick. Then send it to him!",
+        "consigne": "Answer for him, then let him check!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
@@ -29,12 +29,12 @@
                 "image": "choisirait/demande/demande-eiffel.webp"
               },
               {
-                "texte": "Hot air balloon",
-                "image": "choisirait/demande/demande-montgolfiere.webp"
+                "texte": "Mountaintop",
+                "image": "choisirait/demande/demande-montagne.webp"
               },
               {
-                "texte": "Beach at sunset",
-                "image": "choisirait/demande/demande-plage.webp"
+                "texte": "Northern lights",
+                "image": "choisirait/demande/demande-aurores.webp"
               }
             ]
           },
@@ -42,12 +42,12 @@
             "question": "Where would he want to get married?",
             "options": [
               {
-                "texte": "Garden",
-                "image": "choisirait/mariage/mariage-jardin.webp"
+                "texte": "Vineyard",
+                "image": "choisirait/vue/vignes.webp"
               },
               {
-                "texte": "City hall",
-                "image": "choisirait/mariage/mairie.webp"
+                "texte": "Vegas chapel",
+                "image": "choisirait/mariage/vegas.webp"
               },
               {
                 "texte": "Beach",
@@ -63,23 +63,23 @@
                 "image": "choisirait/bague/solitaire.webp"
               },
               {
-                "texte": "Emerald ring",
-                "image": "choisirait/bague/emeraude.webp"
+                "texte": "Halo ring",
+                "image": "choisirait/bague/halo.webp"
               },
               {
-                "texte": "Gold band",
-                "image": "choisirait/bague/alliance-or.webp"
+                "texte": "Vintage ring",
+                "image": "choisirait/bague/vintage-bague.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Send it to him: how many did you get?",
+          "question": "Now send it to him. Did you guess right?",
           "bouton": "Send this to him",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Wedding edition. Easy for you? Then the next one is for him.\n\nSend this to him",
+      "legende": "Wedding edition. Write down his three letters before you send it.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
         "#boyfriendquiz",

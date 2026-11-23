@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "choisirait",
   "categorie": "choisirait",
-  "sujet": "ch-231",
+  "sujet": "ch-233",
   "idee_id": null,
   "variantes": {
     "en": {
@@ -12,79 +12,79 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "elle",
-        "etiquette": "Pet lovers edition",
-        "accroche": "What would she choose?",
-        "consigne": "3 questions, 4 seconds each. Pick for her!",
+        "pour": "lui",
+        "etiquette": "Date night edition",
+        "accroche": "What would he choose?",
+        "consigne": "Guess his 3 picks, then send it to him!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which pet would she want?",
+            "question": "What would he order at the bar?",
             "options": [
               {
-                "texte": "Rabbit",
-                "image": "choisirait/animal/lapin.webp"
+                "texte": "Espresso martini",
+                "image": "choisirait/bar/espresso-martini.webp"
               },
               {
-                "texte": "Axolotl",
-                "image": "choisirait/animal/axolotl.webp"
+                "texte": "Whiskey",
+                "image": "choisirait/bar/whisky.webp"
               },
               {
-                "texte": "Hedgehog",
-                "image": "choisirait/animal/herisson.webp"
+                "texte": "Gin and tonic",
+                "image": "choisirait/bar/gin-tonic.webp"
               }
             ]
           },
           {
-            "question": "Which cat would she adopt?",
+            "question": "Which flowers would he get you?",
             "options": [
               {
-                "texte": "Persian",
-                "image": "choisirait/chat/persan.webp"
+                "texte": "Peonies",
+                "image": "choisirait/fleurs/pivoines.webp"
               },
               {
-                "texte": "Maine Coon",
-                "image": "choisirait/chat/maine-coon.webp"
+                "texte": "Sunflowers",
+                "image": "choisirait/fleurs/tournesols.webp"
               },
               {
-                "texte": "Norwegian Forest Cat",
-                "image": "choisirait/chat/norvegien.webp"
+                "texte": "Orchid",
+                "image": "choisirait/fleurs/orchidee.webp"
               }
             ]
           },
           {
-            "question": "Which dog would she adopt?",
+            "question": "Which cake would he pick?",
             "options": [
               {
-                "texte": "Beagle",
-                "image": "choisirait/chien/beagle.webp"
+                "texte": "Strawberry tart",
+                "image": "choisirait/dessert/tarte-fraises.webp"
               },
               {
-                "texte": "Husky",
-                "image": "choisirait/chien/husky.webp"
+                "texte": "Crème brûlée",
+                "image": "choisirait/dessert/creme-brulee.webp"
               },
               {
-                "texte": "Rottweiler",
-                "image": "choisirait/chien/rottweiler.webp"
+                "texte": "Cheesecake",
+                "image": "choisirait/dessert/cheesecake.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Got her 3 picks? Send it and see!",
-          "bouton": "Send this to her",
+          "question": "Send it to him: how many did you get?",
+          "bouton": "Send this to him",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Pet lovers edition. Answer for her first, no peeking.\n\nSend this to her",
+      "legende": "Date night edition. Guess first, send it after. Then compare.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
-        "#girlfriendquiz",
+        "#boyfriendquiz",
         "#thisorthat",
-        "#petlovers",
+        "#datenight",
         "#quizcouple"
       ]
     }

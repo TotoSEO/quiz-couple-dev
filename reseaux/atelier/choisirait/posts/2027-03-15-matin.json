@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "choisirait",
   "categorie": "choisirait",
-  "sujet": "ch-207",
+  "sujet": "ch-209",
   "idee_id": null,
   "variantes": {
     "en": {
@@ -12,79 +12,79 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "elle",
-        "etiquette": "Date night edition",
-        "accroche": "What would she choose?",
-        "consigne": "3 questions, 4 seconds each. Pick for her!",
+        "pour": "lui",
+        "etiquette": "Hobbies edition",
+        "accroche": "What would he choose?",
+        "consigne": "Guess his 3 picks, then send it to him!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which flowers would she want?",
+            "question": "Which instrument would he play?",
             "options": [
               {
-                "texte": "Wildflowers",
-                "image": "choisirait/fleurs/fleurs-sauvages.webp"
+                "texte": "Electric guitar",
+                "image": "choisirait/instrument/guitare-electrique.webp"
               },
               {
-                "texte": "Sunflowers",
-                "image": "choisirait/fleurs/tournesols.webp"
+                "texte": "DJ decks",
+                "image": "choisirait/instrument/platines.webp"
               },
               {
-                "texte": "Orchid",
-                "image": "choisirait/fleurs/orchidee.webp"
+                "texte": "Acoustic guitar",
+                "image": "choisirait/instrument/guitare-acoustique.webp"
               }
             ]
           },
           {
-            "question": "What would she order at the bar?",
+            "question": "Which hobby would he pick up?",
             "options": [
               {
-                "texte": "Red wine",
-                "image": "choisirait/bar/vin-rouge.webp"
+                "texte": "Gardening",
+                "image": "choisirait/loisir/jardinage.webp"
               },
               {
-                "texte": "Piña colada",
-                "image": "choisirait/bar/pina-colada.webp"
+                "texte": "Photography",
+                "image": "choisirait/loisir/photo.webp"
               },
               {
-                "texte": "Margarita",
-                "image": "choisirait/bar/margarita.webp"
+                "texte": "Knitting",
+                "image": "choisirait/loisir/tricot.webp"
               }
             ]
           },
           {
-            "question": "Which date would she take you on?",
+            "question": "Which workout would he pick?",
             "options": [
               {
-                "texte": "Picnic",
-                "image": "choisirait/date/pique-nique.webp"
+                "texte": "Weightlifting",
+                "image": "choisirait/salle/muscu.webp"
               },
               {
-                "texte": "Hot air balloon",
-                "image": "choisirait/date/montgolfiere-date.webp"
+                "texte": "CrossFit",
+                "image": "choisirait/salle/crossfit.webp"
               },
               {
-                "texte": "Arcade",
-                "image": "choisirait/date/arcade.webp"
+                "texte": "Yoga",
+                "image": "choisirait/salle/yoga.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Got her 3 picks? Send it and see!",
-          "bouton": "Send this to her",
+          "question": "Send it to him: how many did you get?",
+          "bouton": "Send this to him",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Date night edition. She will swear you got at least one wrong.\n\nSend this to her",
+      "legende": "Hobbies edition. One letter per question, then send it to him.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
-        "#girlfriendquiz",
+        "#boyfriendquiz",
         "#thisorthat",
-        "#datenight",
+        "#hobbies",
         "#quizcouple"
       ]
     }

@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "choisirait",
   "categorie": "choisirait",
-  "sujet": "ch-004",
+  "sujet": "ch-006",
   "idee_id": null,
   "variantes": {
     "en": {
@@ -12,77 +12,77 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "lui",
+        "pour": "elle",
         "etiquette": "Hobbies edition",
-        "accroche": "What would he choose?",
-        "consigne": "Pick what he would pick. Then send it to him!",
+        "accroche": "What would she choose?",
+        "consigne": "Answer for her, then let her check!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which workout would he pick?",
+            "question": "Which instrument would she play?",
             "options": [
               {
-                "texte": "Weightlifting",
-                "image": "choisirait/salle/muscu.webp"
+                "texte": "Piano",
+                "image": "choisirait/instrument/piano.webp"
               },
+              {
+                "texte": "Acoustic guitar",
+                "image": "choisirait/instrument/guitare-acoustique.webp"
+              },
+              {
+                "texte": "Trumpet",
+                "image": "choisirait/instrument/trompette.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which workout would she pick?",
+            "options": [
               {
                 "texte": "Swimming",
                 "image": "choisirait/salle/natation.webp"
               },
               {
-                "texte": "CrossFit",
-                "image": "choisirait/salle/crossfit.webp"
+                "texte": "Cycling",
+                "image": "choisirait/salle/velo.webp"
+              },
+              {
+                "texte": "Yoga",
+                "image": "choisirait/salle/yoga.webp"
               }
             ]
           },
           {
-            "question": "Which game night would he pick?",
+            "question": "Which hobby would she pick up?",
             "options": [
-              {
-                "texte": "Foosball",
-                "image": "choisirait/jeu/baby-foot.webp"
-              },
-              {
-                "texte": "Pool",
-                "image": "choisirait/jeu/billard.webp"
-              },
-              {
-                "texte": "Board games",
-                "image": "choisirait/jeu/jeux-societe.webp"
-              }
-            ]
-          },
-          {
-            "question": "Which hobby would he pick up?",
-            "options": [
-              {
-                "texte": "Chess",
-                "image": "choisirait/loisir/echecs.webp"
-              },
-              {
-                "texte": "Fishing",
-                "image": "choisirait/loisir/peche.webp"
-              },
               {
                 "texte": "Gardening",
                 "image": "choisirait/loisir/jardinage.webp"
+              },
+              {
+                "texte": "Knitting",
+                "image": "choisirait/loisir/tricot.webp"
+              },
+              {
+                "texte": "Pottery",
+                "image": "choisirait/loisir/poterie.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Now send it to him. Did you guess right?",
-          "bouton": "Send this to him",
+          "question": "Got her 3 picks? Send it and see!",
+          "bouton": "Send this to her",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Hobbies edition. If you get all three, you know him by heart.\n\nSend this to him",
+      "legende": "Hobbies edition. Pick for her, then let her prove you wrong.\n\nSend this to her",
       "hashtags": [
         "#couplequiz",
-        "#boyfriendquiz",
+        "#girlfriendquiz",
         "#thisorthat",
         "#hobbies",
         "#quizcouple"

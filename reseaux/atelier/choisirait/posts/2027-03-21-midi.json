@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "choisirait",
   "categorie": "choisirait",
-  "sujet": "ch-219",
+  "sujet": "ch-221",
   "idee_id": null,
   "variantes": {
     "en": {
@@ -12,79 +12,79 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "elle",
-        "etiquette": "Hobbies edition",
-        "accroche": "What would she choose?",
-        "consigne": "3 questions, 4 seconds each. Pick for her!",
+        "pour": "lui",
+        "etiquette": "Cozy night in edition",
+        "accroche": "What would he choose?",
+        "consigne": "Guess his 3 picks, then send it to him!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which instrument would she play?",
+            "question": "Which dessert would he pick?",
             "options": [
               {
-                "texte": "Acoustic guitar",
-                "image": "choisirait/instrument/guitare-acoustique.webp"
+                "texte": "Pavlova",
+                "image": "choisirait/dessert/pavlova.webp"
               },
               {
-                "texte": "Electric guitar",
-                "image": "choisirait/instrument/guitare-electrique.webp"
+                "texte": "Brownie",
+                "image": "choisirait/dessert/brownie.webp"
               },
               {
-                "texte": "DJ decks",
-                "image": "choisirait/instrument/platines.webp"
+                "texte": "Churros",
+                "image": "choisirait/dessert/churros.webp"
               }
             ]
           },
           {
-            "question": "Which game night would she pick?",
+            "question": "Which game night would he pick?",
             "options": [
-              {
-                "texte": "Board games",
-                "image": "choisirait/jeu/jeux-societe.webp"
-              },
-              {
-                "texte": "Chess",
-                "image": "choisirait/jeu/echecs-soir.webp"
-              },
               {
                 "texte": "Foosball",
                 "image": "choisirait/jeu/baby-foot.webp"
+              },
+              {
+                "texte": "Pool",
+                "image": "choisirait/jeu/billard.webp"
+              },
+              {
+                "texte": "Ping pong",
+                "image": "choisirait/jeu/ping-pong.webp"
               }
             ]
           },
           {
-            "question": "Which workout would she pick?",
+            "question": "Which dinner would he pick?",
             "options": [
               {
-                "texte": "Swimming",
-                "image": "choisirait/salle/natation.webp"
+                "texte": "Risotto",
+                "image": "choisirait/diner/risotto.webp"
               },
               {
-                "texte": "CrossFit",
-                "image": "choisirait/salle/crossfit.webp"
+                "texte": "Steak and fries",
+                "image": "choisirait/diner/steak-frites.webp"
               },
               {
-                "texte": "Cycling",
-                "image": "choisirait/salle/velo.webp"
+                "texte": "Korean BBQ",
+                "image": "choisirait/diner/bbq-coreen.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Got her 3 picks? Send it and see!",
-          "bouton": "Send this to her",
+          "question": "Send it to him: how many did you get?",
+          "bouton": "Send this to him",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Hobbies edition. One letter per question, then send it to her.\n\nSend this to her",
+      "legende": "Cozy night in edition. Answer for him first, no peeking.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
-        "#girlfriendquiz",
+        "#boyfriendquiz",
         "#thisorthat",
-        "#hobbies",
+        "#cozynight",
         "#quizcouple"
       ]
     }

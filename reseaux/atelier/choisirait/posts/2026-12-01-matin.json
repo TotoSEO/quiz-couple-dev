@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "choisirait",
   "categorie": "choisirait",
-  "sujet": "ch-014",
+  "sujet": "ch-016",
   "idee_id": null,
   "variantes": {
     "en": {
@@ -13,78 +13,78 @@
         "langue": "en",
         "theme": "light",
         "pour": "lui",
-        "etiquette": "Winter edition",
+        "etiquette": "Dream home edition",
         "accroche": "What would he choose?",
-        "consigne": "Answer for him, then let him check!",
+        "consigne": "Pick what he would pick. Then send it to him!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which winter date would he pick?",
+            "question": "Which view would he wake up to?",
             "options": [
               {
-                "texte": "Hot tub in the snow",
-                "image": "choisirait/hiver/jacuzzi.webp"
+                "texte": "Eiffel Tower",
+                "image": "choisirait/vue/tour-eiffel.webp"
               },
               {
-                "texte": "Sledding",
-                "image": "choisirait/hiver/luge.webp"
+                "texte": "Lake",
+                "image": "choisirait/vue/lac.webp"
               },
               {
-                "texte": "Skiing",
-                "image": "choisirait/hiver/hiver-ski.webp"
+                "texte": "Northern lights",
+                "image": "choisirait/vue/aurores.webp"
               }
             ]
           },
           {
-            "question": "Which coffee would he order?",
+            "question": "Which house would he pick?",
             "options": [
               {
-                "texte": "Espresso",
-                "image": "choisirait/cafe/espresso.webp"
+                "texte": "Cozy cabin",
+                "image": "choisirait/weekend/chalet-bois.webp"
               },
               {
-                "texte": "Iced latte",
-                "image": "choisirait/cafe/iced-latte.webp"
+                "texte": "Loft apartment",
+                "image": "choisirait/maison/loft.webp"
               },
               {
-                "texte": "Americano",
-                "image": "choisirait/cafe/americano.webp"
+                "texte": "Victorian house",
+                "image": "choisirait/maison/victorienne.webp"
               }
             ]
           },
           {
-            "question": "Which dinner would he pick?",
+            "question": "Which cat would he adopt?",
             "options": [
               {
-                "texte": "Pad thai",
-                "image": "choisirait/diner/pad-thai.webp"
+                "texte": "Maine Coon",
+                "image": "choisirait/chat/maine-coon.webp"
               },
               {
-                "texte": "Sushi",
-                "image": "choisirait/diner/sushi.webp"
+                "texte": "Norwegian Forest Cat",
+                "image": "choisirait/chat/norvegien.webp"
               },
               {
-                "texte": "Steak and fries",
-                "image": "choisirait/diner/steak-frites.webp"
+                "texte": "Ragdoll",
+                "image": "choisirait/chat/ragdoll.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Send it to him: how many did you get?",
+          "question": "Now send it to him. Did you guess right?",
           "bouton": "Send this to him",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Winter edition. If you get all three, you know him by heart.\n\nSend this to him",
+      "legende": "Dream home edition. Pick for him, then let him prove you wrong.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
         "#boyfriendquiz",
         "#thisorthat",
-        "#winter",
+        "#dreamhome",
         "#quizcouple"
       ]
     }

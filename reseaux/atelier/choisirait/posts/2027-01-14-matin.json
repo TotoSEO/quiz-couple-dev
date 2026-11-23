@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "choisirait",
   "categorie": "choisirait",
-  "sujet": "ch-096",
+  "sujet": "ch-098",
   "idee_id": null,
   "variantes": {
     "en": {
@@ -12,79 +12,79 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "elle",
-        "etiquette": "Hobbies edition",
-        "accroche": "What would she choose?",
-        "consigne": "Pick what she would pick. Then send it to her!",
+        "pour": "lui",
+        "etiquette": "Style edition",
+        "accroche": "What would he choose?",
+        "consigne": "Answer for him, then let him check!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which instrument would she play?",
+            "question": "Which phone would he pick?",
             "options": [
               {
-                "texte": "DJ decks",
-                "image": "choisirait/instrument/platines.webp"
+                "texte": "Google Pixel",
+                "image": "choisirait/telephone/pixel.webp"
               },
               {
-                "texte": "Saxophone",
-                "image": "choisirait/instrument/saxophone.webp"
+                "texte": "Flip phone",
+                "image": "choisirait/telephone/clapet.webp"
               },
               {
-                "texte": "Piano",
-                "image": "choisirait/instrument/piano.webp"
+                "texte": "BlackBerry",
+                "image": "choisirait/telephone/blackberry.webp"
               }
             ]
           },
           {
-            "question": "Which workout would she pick?",
+            "question": "Which sneakers would he pick?",
             "options": [
               {
-                "texte": "CrossFit",
-                "image": "choisirait/salle/crossfit.webp"
+                "texte": "Nike Air Max",
+                "image": "choisirait/baskets/air-max.webp"
               },
               {
-                "texte": "Boxing",
-                "image": "choisirait/salle/boxe-salle.webp"
+                "texte": "Birkenstock",
+                "image": "choisirait/baskets/birkenstock.webp"
               },
               {
-                "texte": "Weightlifting",
-                "image": "choisirait/salle/muscu.webp"
+                "texte": "Stan Smith",
+                "image": "choisirait/baskets/stan-smith.webp"
               }
             ]
           },
           {
-            "question": "Which hobby would she pick up?",
+            "question": "Which watch would he wear?",
             "options": [
               {
-                "texte": "Photography",
-                "image": "choisirait/loisir/photo.webp"
+                "texte": "Casio G-Shock",
+                "image": "choisirait/montre/g-shock.webp"
               },
               {
-                "texte": "Chess",
-                "image": "choisirait/loisir/echecs.webp"
+                "texte": "Pocket watch",
+                "image": "choisirait/montre/gousset.webp"
               },
               {
-                "texte": "Pottery",
-                "image": "choisirait/loisir/poterie.webp"
+                "texte": "Rolex Submariner",
+                "image": "choisirait/montre/rolex.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Got her 3 picks? Send it and see!",
-          "bouton": "Send this to her",
+          "question": "Send it to him: how many did you get?",
+          "bouton": "Send this to him",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Hobbies edition. Pick for her, then let her prove you wrong.\n\nSend this to her",
+      "legende": "Style edition. Your answers first, then his reaction.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
-        "#girlfriendquiz",
+        "#boyfriendquiz",
         "#thisorthat",
-        "#hobbies",
+        "#style",
         "#quizcouple"
       ]
     }

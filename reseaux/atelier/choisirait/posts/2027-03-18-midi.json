@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "choisirait",
   "categorie": "choisirait",
-  "sujet": "ch-214",
+  "sujet": "ch-216",
   "idee_id": null,
   "variantes": {
     "en": {
@@ -12,79 +12,79 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "lui",
-        "etiquette": "Date night edition",
-        "accroche": "What would he choose?",
-        "consigne": "Answer for him, then let him check!",
+        "pour": "elle",
+        "etiquette": "Sweet tooth edition",
+        "accroche": "What would she choose?",
+        "consigne": "Pick what she would pick. Then send it to her!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "What would he order at the bar?",
+            "question": "Which ice cream would she get?",
             "options": [
               {
-                "texte": "Beer",
-                "image": "choisirait/bar/biere.webp"
+                "texte": "Mochi ice cream",
+                "image": "choisirait/glace/mochi.webp"
               },
               {
-                "texte": "Margarita",
-                "image": "choisirait/bar/margarita.webp"
+                "texte": "Banana split",
+                "image": "choisirait/glace/banana-split.webp"
               },
               {
-                "texte": "Mojito",
-                "image": "choisirait/bar/mojito.webp"
+                "texte": "Ice cream sandwich",
+                "image": "choisirait/glace/sandwich-glace.webp"
               }
             ]
           },
           {
-            "question": "Which flowers would he get you?",
+            "question": "What would she grab at the bakery?",
             "options": [
               {
-                "texte": "Peonies",
-                "image": "choisirait/fleurs/pivoines.webp"
+                "texte": "Brioche",
+                "image": "choisirait/boulangerie/brioche.webp"
               },
               {
-                "texte": "Red roses",
-                "image": "choisirait/fleurs/roses.webp"
+                "texte": "Croissant",
+                "image": "choisirait/boulangerie/croissant.webp"
               },
               {
-                "texte": "Lilies",
-                "image": "choisirait/fleurs/lys.webp"
+                "texte": "Baguette",
+                "image": "choisirait/boulangerie/baguette.webp"
               }
             ]
           },
           {
-            "question": "Which date would he take you on?",
+            "question": "Which movie snack would she pick?",
             "options": [
               {
-                "texte": "Cinema night",
-                "image": "choisirait/date/cinema.webp"
+                "texte": "Nachos",
+                "image": "choisirait/snack/nachos.webp"
               },
               {
-                "texte": "Camping",
-                "image": "choisirait/date/camping.webp"
+                "texte": "Ice cream tub",
+                "image": "choisirait/snack/pot-glace.webp"
               },
               {
-                "texte": "Museum",
-                "image": "choisirait/date/musee.webp"
+                "texte": "Chocolate bar",
+                "image": "choisirait/snack/tablette.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Now send it to him. Did you guess right?",
-          "bouton": "Send this to him",
+          "question": "Got her 3 picks? Send it and see!",
+          "bouton": "Send this to her",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Date night edition. If you get all three, you know him by heart.\n\nSend this to him",
+      "legende": "Sweet tooth edition. Pick for her, then let her prove you wrong.\n\nSend this to her",
       "hashtags": [
         "#couplequiz",
-        "#boyfriendquiz",
+        "#girlfriendquiz",
         "#thisorthat",
-        "#datenight",
+        "#dessert",
         "#quizcouple"
       ]
     }

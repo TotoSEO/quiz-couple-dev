@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "choisirait",
   "categorie": "choisirait",
-  "sujet": "ch-039",
+  "sujet": "ch-041",
   "idee_id": null,
   "variantes": {
     "en": {
@@ -12,79 +12,79 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "elle",
-        "etiquette": "Cozy night in edition",
-        "accroche": "What would she choose?",
-        "consigne": "3 questions, 4 seconds each. Pick for her!",
+        "pour": "lui",
+        "etiquette": "Dream home edition",
+        "accroche": "What would he choose?",
+        "consigne": "Guess his 3 picks, then send it to him!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which console would she pick?",
+            "question": "Which view would he wake up to?",
             "options": [
               {
-                "texte": "Game Boy",
-                "image": "choisirait/console/gameboy.webp"
+                "texte": "Vineyards",
+                "image": "choisirait/vue/vignes.webp"
               },
               {
-                "texte": "PlayStation 2",
-                "image": "choisirait/console/ps2.webp"
+                "texte": "Forest",
+                "image": "choisirait/vue/foret.webp"
               },
               {
-                "texte": "Xbox",
-                "image": "choisirait/console/xbox.webp"
+                "texte": "Mountains",
+                "image": "choisirait/vue/montagnes.webp"
               }
             ]
           },
           {
-            "question": "Which game night would she pick?",
+            "question": "Which dog would he adopt?",
             "options": [
               {
-                "texte": "Ping pong",
-                "image": "choisirait/jeu/ping-pong.webp"
+                "texte": "Dalmatian",
+                "image": "choisirait/chien/dalmatien.webp"
               },
               {
-                "texte": "Foosball",
-                "image": "choisirait/jeu/baby-foot.webp"
+                "texte": "Samoyed",
+                "image": "choisirait/chien/samoyede.webp"
               },
               {
-                "texte": "Chess",
-                "image": "choisirait/jeu/echecs-soir.webp"
+                "texte": "Australian Shepherd",
+                "image": "choisirait/chien/berger-australien.webp"
               }
             ]
           },
           {
-            "question": "Which drink would she get?",
+            "question": "Which cat would he adopt?",
             "options": [
               {
-                "texte": "Smoothie",
-                "image": "choisirait/boisson/smoothie.webp"
+                "texte": "Siamese",
+                "image": "choisirait/chat/siamois.webp"
               },
               {
-                "texte": "Iced tea",
-                "image": "choisirait/boisson/the-glace.webp"
+                "texte": "Ragdoll",
+                "image": "choisirait/chat/ragdoll.webp"
               },
               {
-                "texte": "Bubble tea",
-                "image": "choisirait/boisson/bubble-tea.webp"
+                "texte": "Sphynx",
+                "image": "choisirait/chat/sphynx.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Got her 3 picks? Send it and see!",
-          "bouton": "Send this to her",
+          "question": "Send it to him: how many did you get?",
+          "bouton": "Send this to him",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Cozy night in edition. One letter per question, then send it to her.\n\nSend this to her",
+      "legende": "Dream home edition. Answer for him first, no peeking.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
-        "#girlfriendquiz",
+        "#boyfriendquiz",
         "#thisorthat",
-        "#cozynight",
+        "#dreamhome",
         "#quizcouple"
       ]
     }

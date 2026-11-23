@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "choisirait",
   "categorie": "choisirait",
-  "sujet": "ch-103",
+  "sujet": "ch-105",
   "idee_id": null,
   "variantes": {
     "en": {
@@ -12,79 +12,79 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "lui",
-        "etiquette": "Cozy night in edition",
-        "accroche": "What would he choose?",
-        "consigne": "3 questions, 4 seconds each. Pick for him!",
+        "pour": "elle",
+        "etiquette": "Date night edition",
+        "accroche": "What would she choose?",
+        "consigne": "Guess her 3 picks, then send it to her!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which dinner would he pick?",
+            "question": "Which flowers would she want?",
             "options": [
               {
-                "texte": "Paella",
-                "image": "choisirait/diner/paella.webp"
+                "texte": "Sunflowers",
+                "image": "choisirait/fleurs/tournesols.webp"
               },
               {
-                "texte": "Ramen",
-                "image": "choisirait/diner/ramen.webp"
+                "texte": "Lilies",
+                "image": "choisirait/fleurs/lys.webp"
               },
               {
-                "texte": "Korean BBQ",
-                "image": "choisirait/diner/bbq-coreen.webp"
+                "texte": "Wildflowers",
+                "image": "choisirait/fleurs/fleurs-sauvages.webp"
               }
             ]
           },
           {
-            "question": "Which movie snack would he pick?",
+            "question": "What would she order at the bar?",
+            "options": [
+              {
+                "texte": "Piña colada",
+                "image": "choisirait/bar/pina-colada.webp"
+              },
+              {
+                "texte": "Beer",
+                "image": "choisirait/bar/biere.webp"
+              },
+              {
+                "texte": "Margarita",
+                "image": "choisirait/bar/margarita.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which movie snack would she pick?",
             "options": [
               {
                 "texte": "Licorice",
                 "image": "choisirait/snack/reglisse.webp"
               },
               {
-                "texte": "Gummy bears",
-                "image": "choisirait/snack/oursons.webp"
+                "texte": "Chocolate bar",
+                "image": "choisirait/snack/tablette.webp"
               },
               {
-                "texte": "Nachos",
-                "image": "choisirait/snack/nachos.webp"
-              }
-            ]
-          },
-          {
-            "question": "Which drink would he get?",
-            "options": [
-              {
-                "texte": "Iced tea",
-                "image": "choisirait/boisson/the-glace.webp"
-              },
-              {
-                "texte": "Lemonade",
-                "image": "choisirait/boisson/limonade.webp"
-              },
-              {
-                "texte": "Smoothie",
-                "image": "choisirait/boisson/smoothie.webp"
+                "texte": "Ice cream tub",
+                "image": "choisirait/snack/pot-glace.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Now send it to him. Did you guess right?",
-          "bouton": "Send this to him",
+          "question": "Got her 3 picks? Send it and see!",
+          "bouton": "Send this to her",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Cozy night in edition. Guess first, send it after. Then compare.\n\nSend this to him",
+      "legende": "Date night edition. No cheating: decide before the timer runs out.\n\nSend this to her",
       "hashtags": [
         "#couplequiz",
-        "#boyfriendquiz",
+        "#girlfriendquiz",
         "#thisorthat",
-        "#cozynight",
+        "#datenight",
         "#quizcouple"
       ]
     }

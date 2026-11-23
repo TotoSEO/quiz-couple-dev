@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "choisirait",
   "categorie": "choisirait",
-  "sujet": "ch-195",
+  "sujet": "ch-197",
   "idee_id": null,
   "variantes": {
     "en": {
@@ -12,79 +12,79 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "elle",
-        "etiquette": "Pet lovers edition",
-        "accroche": "What would she choose?",
-        "consigne": "3 questions, 4 seconds each. Pick for her!",
+        "pour": "lui",
+        "etiquette": "Car lovers edition",
+        "accroche": "What would he choose?",
+        "consigne": "Guess his 3 picks, then send it to him!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which pet would she want?",
+            "question": "Which classic car would he drive?",
             "options": [
               {
-                "texte": "Parrot",
-                "image": "choisirait/animal/perroquet.webp"
+                "texte": "1959 Cadillac",
+                "image": "choisirait/vintage/cadillac.webp"
               },
               {
-                "texte": "Turtle",
-                "image": "choisirait/animal/tortue.webp"
+                "texte": "1967 Mustang",
+                "image": "choisirait/vintage/mustang-67.webp"
               },
               {
-                "texte": "Ferret",
-                "image": "choisirait/animal/furet.webp"
+                "texte": "Citroën 2CV",
+                "image": "choisirait/vintage/2cv.webp"
               }
             ]
           },
           {
-            "question": "Which cat would she adopt?",
+            "question": "Which motorbike would he ride?",
             "options": [
               {
-                "texte": "Persian",
-                "image": "choisirait/chat/persan.webp"
+                "texte": "Indian Scout",
+                "image": "choisirait/moto/indian.webp"
               },
               {
-                "texte": "Sphynx",
-                "image": "choisirait/chat/sphynx.webp"
+                "texte": "Yamaha MT-07",
+                "image": "choisirait/moto/mt07.webp"
               },
               {
-                "texte": "Norwegian Forest Cat",
-                "image": "choisirait/chat/norvegien.webp"
+                "texte": "Kawasaki Ninja",
+                "image": "choisirait/moto/ninja.webp"
               }
             ]
           },
           {
-            "question": "Which dog would she adopt?",
+            "question": "Which car would he drive?",
             "options": [
               {
-                "texte": "Jack Russell",
-                "image": "choisirait/chien/jack-russell.webp"
+                "texte": "Porsche 911",
+                "image": "choisirait/voiture/porsche-911.webp"
               },
               {
-                "texte": "Belgian Malinois",
-                "image": "choisirait/chien/malinois.webp"
+                "texte": "Tesla Model S",
+                "image": "choisirait/voiture/tesla-model-s.webp"
               },
               {
-                "texte": "Pug",
-                "image": "choisirait/chien/carlin.webp"
+                "texte": "Mini Cooper",
+                "image": "choisirait/voiture/mini.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Got her 3 picks? Send it and see!",
-          "bouton": "Send this to her",
+          "question": "Send it to him: how many did you get?",
+          "bouton": "Send this to him",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Pet lovers edition. No cheating: decide before the timer runs out.\n\nSend this to her",
+      "legende": "Car lovers edition. He will swear you got at least one wrong.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
-        "#girlfriendquiz",
+        "#boyfriendquiz",
         "#thisorthat",
-        "#petlovers",
+        "#carlovers",
         "#quizcouple"
       ]
     }

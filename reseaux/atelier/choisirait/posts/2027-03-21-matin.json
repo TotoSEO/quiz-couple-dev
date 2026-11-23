@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "choisirait",
   "categorie": "choisirait",
-  "sujet": "ch-218",
+  "sujet": "ch-220",
   "idee_id": null,
   "variantes": {
     "en": {
@@ -13,78 +13,78 @@
         "langue": "en",
         "theme": "light",
         "pour": "lui",
-        "etiquette": "Dream home edition",
+        "etiquette": "Pet lovers edition",
         "accroche": "What would he choose?",
-        "consigne": "Answer for him, then let him check!",
+        "consigne": "Pick what he would pick. Then send it to him!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
+            "question": "Which pet would he want?",
+            "options": [
+              {
+                "texte": "Rabbit",
+                "image": "choisirait/animal/lapin.webp"
+              },
+              {
+                "texte": "Guinea pig",
+                "image": "choisirait/animal/cochon-dinde.webp"
+              },
+              {
+                "texte": "Hedgehog",
+                "image": "choisirait/animal/herisson.webp"
+              }
+            ]
+          },
+          {
             "question": "Which cat would he adopt?",
             "options": [
               {
-                "texte": "Sphynx",
-                "image": "choisirait/chat/sphynx.webp"
+                "texte": "Scottish Fold",
+                "image": "choisirait/chat/scottish.webp"
               },
               {
-                "texte": "Ragdoll",
-                "image": "choisirait/chat/ragdoll.webp"
+                "texte": "Maine Coon",
+                "image": "choisirait/chat/maine-coon.webp"
               },
               {
-                "texte": "Ginger cat",
-                "image": "choisirait/chat/chat-roux.webp"
+                "texte": "Persian",
+                "image": "choisirait/chat/persan.webp"
               }
             ]
           },
           {
-            "question": "Which view would he wake up to?",
+            "question": "Which dog would he pick?",
             "options": [
               {
-                "texte": "Vineyards",
-                "image": "choisirait/vue/vignes.webp"
+                "texte": "Doberman",
+                "image": "choisirait/chien/dobermann.webp"
               },
               {
-                "texte": "Forest",
-                "image": "choisirait/vue/foret.webp"
+                "texte": "Beagle",
+                "image": "choisirait/chien/beagle.webp"
               },
               {
-                "texte": "Ocean",
-                "image": "choisirait/vue/ocean.webp"
-              }
-            ]
-          },
-          {
-            "question": "Which house would he pick?",
-            "options": [
-              {
-                "texte": "Victorian house",
-                "image": "choisirait/maison/victorienne.webp"
-              },
-              {
-                "texte": "Lake house",
-                "image": "choisirait/maison/maison-lac.webp"
-              },
-              {
-                "texte": "Castle",
-                "image": "choisirait/maison/chateau.webp"
+                "texte": "German Shepherd",
+                "image": "choisirait/chien/berger-allemand.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Send it to him: how many did you get?",
+          "question": "Now send it to him. Did you guess right?",
           "bouton": "Send this to him",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Dream home edition. Your answers first, then his reaction.\n\nSend this to him",
+      "legende": "Pet lovers edition. Easy for you? Then the next one is for him.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
         "#boyfriendquiz",
         "#thisorthat",
-        "#dreamhome",
+        "#petlovers",
         "#quizcouple"
       ]
     }

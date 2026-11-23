@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "choisirait",
   "categorie": "choisirait",
-  "sujet": "ch-185",
+  "sujet": "ch-187",
   "idee_id": null,
   "variantes": {
     "en": {
@@ -13,78 +13,78 @@
         "langue": "en",
         "theme": "light",
         "pour": "lui",
-        "etiquette": "Dream life edition",
+        "etiquette": "Cozy night in edition",
         "accroche": "What would he choose?",
-        "consigne": "Guess his 3 picks, then send it to him!",
+        "consigne": "3 questions, 4 seconds each. Pick for him!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which dog would he adopt?",
+            "question": "Which dessert would he pick?",
             "options": [
               {
-                "texte": "Great Dane",
-                "image": "choisirait/chien/dogue.webp"
+                "texte": "Crêpes",
+                "image": "choisirait/dessert/crepes.webp"
               },
               {
-                "texte": "Pomeranian",
-                "image": "choisirait/chien/pomeranien.webp"
+                "texte": "Macarons",
+                "image": "choisirait/dessert/macarons.webp"
               },
               {
-                "texte": "Corgi",
-                "image": "choisirait/chien/corgi.webp"
+                "texte": "Huge birthday cake",
+                "image": "choisirait/dessert/gateau-anniversaire.webp"
               }
             ]
           },
           {
-            "question": "Which view would he wake up to?",
+            "question": "What would he cook for date night?",
             "options": [
               {
-                "texte": "City skyline",
-                "image": "choisirait/vue/skyline.webp"
+                "texte": "Indian curry",
+                "image": "choisirait/diner/curry.webp"
               },
               {
-                "texte": "Mountains",
-                "image": "choisirait/vue/montagnes.webp"
+                "texte": "Ramen",
+                "image": "choisirait/diner/ramen.webp"
               },
               {
-                "texte": "Northern lights",
-                "image": "choisirait/vue/aurores.webp"
+                "texte": "Paella",
+                "image": "choisirait/diner/paella.webp"
               }
             ]
           },
           {
-            "question": "Which watch would he wear?",
+            "question": "Which game night would he pick?",
             "options": [
               {
-                "texte": "Seiko diver",
-                "image": "choisirait/montre/seiko.webp"
+                "texte": "Video games",
+                "image": "choisirait/jeu/jeux-video.webp"
               },
               {
-                "texte": "Cartier Tank",
-                "image": "choisirait/montre/cartier.webp"
+                "texte": "Board games",
+                "image": "choisirait/jeu/jeux-societe.webp"
               },
               {
-                "texte": "Casio G-Shock",
-                "image": "choisirait/montre/g-shock.webp"
+                "texte": "Poker",
+                "image": "choisirait/jeu/poker.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Send it to him: how many did you get?",
+          "question": "Now send it to him. Did you guess right?",
           "bouton": "Send this to him",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Dream life edition. No cheating: decide before the timer runs out.\n\nSend this to him",
+      "legende": "Cozy night in edition. He will swear you got at least one wrong.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
         "#boyfriendquiz",
         "#thisorthat",
-        "#dreamlife",
+        "#cozynight",
         "#quizcouple"
       ]
     }

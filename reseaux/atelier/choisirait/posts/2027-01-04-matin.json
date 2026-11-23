@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "choisirait",
   "categorie": "choisirait",
-  "sujet": "ch-077",
+  "sujet": "ch-079",
   "idee_id": null,
   "variantes": {
     "en": {
@@ -13,78 +13,78 @@
         "langue": "en",
         "theme": "light",
         "pour": "lui",
-        "etiquette": "Wedding edition",
+        "etiquette": "Dream home edition",
         "accroche": "What would he choose?",
-        "consigne": "Guess his 3 picks, then send it to him!",
+        "consigne": "3 questions, 4 seconds each. Pick for him!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Where would he propose?",
+            "question": "Which house would he pick?",
             "options": [
               {
-                "texte": "Northern lights",
-                "image": "choisirait/demande/demande-aurores.webp"
+                "texte": "Beach house",
+                "image": "choisirait/maison/maison-plage.webp"
               },
               {
-                "texte": "Beach at sunset",
-                "image": "choisirait/demande/demande-plage.webp"
+                "texte": "Lake house",
+                "image": "choisirait/maison/maison-lac.webp"
               },
               {
-                "texte": "Eiffel Tower",
-                "image": "choisirait/demande/demande-eiffel.webp"
+                "texte": "Victorian house",
+                "image": "choisirait/maison/victorienne.webp"
               }
             ]
           },
           {
-            "question": "Which ring would he pick for you?",
+            "question": "Which view would he wake up to?",
             "options": [
               {
-                "texte": "Emerald ring",
-                "image": "choisirait/bague/emeraude.webp"
+                "texte": "Forest",
+                "image": "choisirait/vue/foret.webp"
               },
               {
-                "texte": "Gold band",
-                "image": "choisirait/bague/alliance-or.webp"
+                "texte": "Snowy peaks",
+                "image": "choisirait/vue/neige.webp"
               },
               {
-                "texte": "Halo ring",
-                "image": "choisirait/bague/halo.webp"
+                "texte": "Mountains",
+                "image": "choisirait/vue/montagnes.webp"
               }
             ]
           },
           {
-            "question": "Where would he want to get married?",
+            "question": "Which cat would he adopt?",
             "options": [
               {
-                "texte": "Castle",
-                "image": "choisirait/mariage/mariage-chateau.webp"
+                "texte": "Siamese",
+                "image": "choisirait/chat/siamois.webp"
               },
               {
-                "texte": "Garden",
-                "image": "choisirait/mariage/mariage-jardin.webp"
+                "texte": "Maine Coon",
+                "image": "choisirait/chat/maine-coon.webp"
               },
               {
-                "texte": "Vegas chapel",
-                "image": "choisirait/mariage/vegas.webp"
+                "texte": "British Shorthair",
+                "image": "choisirait/chat/british.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Send it to him: how many did you get?",
+          "question": "Now send it to him. Did you guess right?",
           "bouton": "Send this to him",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Wedding edition. He will swear you got at least one wrong.\n\nSend this to him",
+      "legende": "Dream home edition. One letter per question, then send it to him.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
         "#boyfriendquiz",
         "#thisorthat",
-        "#engaged",
+        "#dreamhome",
         "#quizcouple"
       ]
     }

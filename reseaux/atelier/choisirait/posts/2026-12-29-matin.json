@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "choisirait",
   "categorie": "choisirait",
-  "sujet": "ch-066",
+  "sujet": "ch-068",
   "idee_id": null,
   "variantes": {
     "en": {
@@ -12,79 +12,79 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "elle",
-        "etiquette": "Weekend edition",
-        "accroche": "What would she choose?",
-        "consigne": "Answer for her, then let her check!",
+        "pour": "lui",
+        "etiquette": "New Year's edition",
+        "accroche": "What would he choose?",
+        "consigne": "Pick what he would pick. Then send it to him!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which workout would she pick?",
+            "question": "Where would he spend New Year's Eve?",
             "options": [
               {
-                "texte": "Yoga",
-                "image": "choisirait/salle/yoga.webp"
+                "texte": "Tropical beach",
+                "image": "choisirait/nouvel-an/plage-nouvel-an.webp"
               },
               {
-                "texte": "Cycling",
-                "image": "choisirait/salle/velo.webp"
+                "texte": "Cozy night in",
+                "image": "choisirait/nouvel-an/soiree-maison.webp"
               },
               {
-                "texte": "Swimming",
-                "image": "choisirait/salle/natation.webp"
+                "texte": "Rooftop party",
+                "image": "choisirait/nouvel-an/rooftop-nouvel-an.webp"
               }
             ]
           },
           {
-            "question": "Which hobby would she pick up?",
+            "question": "What would he order at the bar?",
             "options": [
               {
-                "texte": "Fishing",
-                "image": "choisirait/loisir/peche.webp"
+                "texte": "Piña colada",
+                "image": "choisirait/bar/pina-colada.webp"
               },
               {
-                "texte": "Chess",
-                "image": "choisirait/loisir/echecs.webp"
+                "texte": "Whiskey",
+                "image": "choisirait/bar/whisky.webp"
               },
               {
-                "texte": "Pottery",
-                "image": "choisirait/loisir/poterie.webp"
+                "texte": "Beer",
+                "image": "choisirait/bar/biere.webp"
               }
             ]
           },
           {
-            "question": "Which date would she plan?",
+            "question": "Which date would he plan?",
             "options": [
               {
-                "texte": "Stargazing",
-                "image": "choisirait/date/etoiles.webp"
+                "texte": "Beach sunset",
+                "image": "choisirait/date/coucher-soleil.webp"
               },
               {
-                "texte": "Museum",
-                "image": "choisirait/date/musee.webp"
+                "texte": "Camping",
+                "image": "choisirait/date/camping.webp"
               },
               {
-                "texte": "Theme park",
-                "image": "choisirait/date/parc.webp"
+                "texte": "Picnic",
+                "image": "choisirait/date/pique-nique.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Got her 3 picks? Send it and see!",
-          "bouton": "Send this to her",
+          "question": "Send it to him: how many did you get?",
+          "bouton": "Send this to him",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Weekend edition. Pick for her, then let her prove you wrong.\n\nSend this to her",
+      "legende": "New Year's edition. Your answers first, then his reaction.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
-        "#girlfriendquiz",
+        "#boyfriendquiz",
         "#thisorthat",
-        "#weekendvibes",
+        "#newyearseve",
         "#quizcouple"
       ]
     }

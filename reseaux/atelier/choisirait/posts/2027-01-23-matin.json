@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "choisirait",
   "categorie": "choisirait",
-  "sujet": "ch-113",
+  "sujet": "ch-115",
   "idee_id": null,
   "variantes": {
     "en": {
@@ -15,71 +15,71 @@
         "pour": "lui",
         "etiquette": "Morning edition",
         "accroche": "What would he choose?",
-        "consigne": "Guess his 3 picks, then send it to him!",
+        "consigne": "3 questions, 4 seconds each. Pick for him!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
+            "question": "Which breakfast would he choose?",
+            "options": [
+              {
+                "texte": "Pancakes",
+                "image": "choisirait/petitdej/pancakes.webp"
+              },
+              {
+                "texte": "Cereal",
+                "image": "choisirait/petitdej/cereales.webp"
+              },
+              {
+                "texte": "Eggs Benedict",
+                "image": "choisirait/petitdej/benedict.webp"
+              }
+            ]
+          },
+          {
             "question": "How would he have his eggs?",
             "options": [
               {
-                "texte": "Poached",
-                "image": "choisirait/oeufs/poche.webp"
+                "texte": "Fried",
+                "image": "choisirait/oeufs/oeuf-plat.webp"
               },
               {
                 "texte": "Omelette",
                 "image": "choisirait/oeufs/omelette.webp"
               },
               {
-                "texte": "Soft-boiled",
-                "image": "choisirait/oeufs/coque.webp"
+                "texte": "Scrambled",
+                "image": "choisirait/oeufs/brouilles.webp"
               }
             ]
           },
           {
-            "question": "Which breakfast would he choose?",
+            "question": "Which coffee would he order?",
             "options": [
               {
-                "texte": "Cereal",
-                "image": "choisirait/petitdej/cereales.webp"
+                "texte": "Iced latte",
+                "image": "choisirait/cafe/iced-latte.webp"
               },
               {
-                "texte": "Avocado toast",
-                "image": "choisirait/petitdej/avocado-toast.webp"
+                "texte": "Americano",
+                "image": "choisirait/cafe/americano.webp"
               },
               {
-                "texte": "Croissant & coffee",
-                "image": "choisirait/petitdej/croissant-cafe.webp"
-              }
-            ]
-          },
-          {
-            "question": "What would he grab at the bakery?",
-            "options": [
-              {
-                "texte": "Croissant",
-                "image": "choisirait/boulangerie/croissant.webp"
-              },
-              {
-                "texte": "Baguette",
-                "image": "choisirait/boulangerie/baguette.webp"
-              },
-              {
-                "texte": "Cinnamon roll",
-                "image": "choisirait/boulangerie/cinnamon-roll.webp"
+                "texte": "Matcha latte",
+                "image": "choisirait/cafe/matcha.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Send it to him: how many did you get?",
+          "question": "Now send it to him. Did you guess right?",
           "bouton": "Send this to him",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Morning edition. Guess first, send it after. Then compare.\n\nSend this to him",
+      "legende": "Morning edition. No cheating: decide before the timer runs out.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
         "#boyfriendquiz",

@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "choisirait",
   "categorie": "choisirait",
-  "sujet": "ch-064",
+  "sujet": "ch-066",
   "idee_id": null,
   "variantes": {
     "en": {
@@ -12,79 +12,79 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "lui",
-        "etiquette": "Cozy night in edition",
-        "accroche": "What would he choose?",
-        "consigne": "Pick what he would pick. Then send it to him!",
+        "pour": "elle",
+        "etiquette": "Pet lovers edition",
+        "accroche": "What would she choose?",
+        "consigne": "Answer for her, then let her check!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which console would he pick?",
+            "question": "Which pet would she want?",
             "options": [
               {
-                "texte": "PlayStation 5",
-                "image": "choisirait/console/ps5.webp"
+                "texte": "Rabbit",
+                "image": "choisirait/animal/lapin.webp"
               },
               {
-                "texte": "Xbox",
-                "image": "choisirait/console/xbox.webp"
+                "texte": "Guinea pig",
+                "image": "choisirait/animal/cochon-dinde.webp"
               },
               {
-                "texte": "Game Boy",
-                "image": "choisirait/console/gameboy.webp"
+                "texte": "Hamster",
+                "image": "choisirait/animal/hamster.webp"
               }
             ]
           },
           {
-            "question": "Which game night would he pick?",
+            "question": "Which dog would she adopt?",
             "options": [
               {
-                "texte": "Poker",
-                "image": "choisirait/jeu/poker.webp"
+                "texte": "Cavalier King Charles",
+                "image": "choisirait/chien/cavalier.webp"
               },
               {
-                "texte": "Pool",
-                "image": "choisirait/jeu/billard.webp"
+                "texte": "Labrador",
+                "image": "choisirait/chien/labrador.webp"
               },
               {
-                "texte": "Foosball",
-                "image": "choisirait/jeu/baby-foot.webp"
+                "texte": "German Shepherd",
+                "image": "choisirait/chien/berger-allemand.webp"
               }
             ]
           },
           {
-            "question": "Which dinner would he pick?",
+            "question": "Which cat would she adopt?",
             "options": [
               {
-                "texte": "Sushi",
-                "image": "choisirait/diner/sushi.webp"
+                "texte": "Scottish Fold",
+                "image": "choisirait/chat/scottish.webp"
               },
               {
-                "texte": "Pad thai",
-                "image": "choisirait/diner/pad-thai.webp"
+                "texte": "Ginger cat",
+                "image": "choisirait/chat/chat-roux.webp"
               },
               {
-                "texte": "Korean BBQ",
-                "image": "choisirait/diner/bbq-coreen.webp"
+                "texte": "Ragdoll",
+                "image": "choisirait/chat/ragdoll.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Now send it to him. Did you guess right?",
-          "bouton": "Send this to him",
+          "question": "Got her 3 picks? Send it and see!",
+          "bouton": "Send this to her",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Cozy night in edition. If you get all three, you know him by heart.\n\nSend this to him",
+      "legende": "Pet lovers edition. Pick for her, then let her prove you wrong.\n\nSend this to her",
       "hashtags": [
         "#couplequiz",
-        "#boyfriendquiz",
+        "#girlfriendquiz",
         "#thisorthat",
-        "#cozynight",
+        "#petlovers",
         "#quizcouple"
       ]
     }

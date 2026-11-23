@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "choisirait",
   "categorie": "choisirait",
-  "sujet": "ch-209",
+  "sujet": "ch-211",
   "idee_id": null,
   "variantes": {
     "en": {
@@ -13,78 +13,78 @@
         "langue": "en",
         "theme": "light",
         "pour": "lui",
-        "etiquette": "Car lovers edition",
+        "etiquette": "Morning edition",
         "accroche": "What would he choose?",
-        "consigne": "Guess his 3 picks, then send it to him!",
+        "consigne": "3 questions, 4 seconds each. Pick for him!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which motorbike would he ride?",
+            "question": "How would he have his eggs?",
             "options": [
               {
-                "texte": "Harley-Davidson",
-                "image": "choisirait/moto/harley.webp"
+                "texte": "Scrambled",
+                "image": "choisirait/oeufs/brouilles.webp"
               },
               {
-                "texte": "Vespa",
-                "image": "choisirait/moto/vespa.webp"
+                "texte": "Omelette",
+                "image": "choisirait/oeufs/omelette.webp"
               },
               {
-                "texte": "Triumph Bonneville",
-                "image": "choisirait/moto/bonneville.webp"
+                "texte": "Poached",
+                "image": "choisirait/oeufs/poche.webp"
               }
             ]
           },
           {
-            "question": "Which classic car would he drive?",
+            "question": "Which breakfast would he make you?",
             "options": [
               {
-                "texte": "Citroën 2CV",
-                "image": "choisirait/vintage/2cv.webp"
+                "texte": "Full English",
+                "image": "choisirait/petitdej/english.webp"
               },
               {
-                "texte": "1959 Cadillac",
-                "image": "choisirait/vintage/cadillac.webp"
+                "texte": "Cereal",
+                "image": "choisirait/petitdej/cereales.webp"
               },
               {
-                "texte": "1967 Mustang",
-                "image": "choisirait/vintage/mustang-67.webp"
+                "texte": "French toast",
+                "image": "choisirait/petitdej/pain-perdu.webp"
               }
             ]
           },
           {
-            "question": "Which car would he pick?",
+            "question": "What would he grab at the bakery?",
             "options": [
               {
-                "texte": "Audi R8",
-                "image": "choisirait/voiture/audi-r8.webp"
+                "texte": "Pain au chocolat",
+                "image": "choisirait/boulangerie/pain-chocolat.webp"
               },
               {
-                "texte": "Jeep Wrangler",
-                "image": "choisirait/voiture/jeep-wrangler.webp"
+                "texte": "Cinnamon roll",
+                "image": "choisirait/boulangerie/cinnamon-roll.webp"
               },
               {
-                "texte": "Lamborghini Huracán",
-                "image": "choisirait/voiture/lamborghini-huracan.webp"
+                "texte": "Muffin",
+                "image": "choisirait/boulangerie/muffin.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Send it to him: how many did you get?",
+          "question": "Now send it to him. Did you guess right?",
           "bouton": "Send this to him",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Car lovers edition. One letter per question, then send it to him.\n\nSend this to him",
+      "legende": "Morning edition. Answer for him first, no peeking.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
         "#boyfriendquiz",
         "#thisorthat",
-        "#carlovers",
+        "#breakfast",
         "#quizcouple"
       ]
     }

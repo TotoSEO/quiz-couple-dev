@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "choisirait",
   "categorie": "choisirait",
-  "sujet": "ch-028",
+  "sujet": "ch-030",
   "idee_id": null,
   "variantes": {
     "en": {
@@ -12,79 +12,79 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "lui",
-        "etiquette": "Christmas edition",
-        "accroche": "What would he choose?",
-        "consigne": "Pick what he would pick. Then send it to him!",
+        "pour": "elle",
+        "etiquette": "Pet lovers edition",
+        "accroche": "What would she choose?",
+        "consigne": "Answer for her, then let her check!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which Christmas date would he plan?",
+            "question": "Which pet would she want?",
             "options": [
               {
-                "texte": "Snowy chalet",
-                "image": "choisirait/noel-sortie/chalet-noel.webp"
+                "texte": "Guinea pig",
+                "image": "choisirait/animal/cochon-dinde.webp"
               },
               {
-                "texte": "Movie by the tree",
-                "image": "choisirait/noel-sortie/film-sapin.webp"
+                "texte": "Chameleon",
+                "image": "choisirait/animal/cameleon.webp"
               },
               {
-                "texte": "Christmas lights",
-                "image": "choisirait/noel-sortie/illuminations.webp"
+                "texte": "Turtle",
+                "image": "choisirait/animal/tortue.webp"
               }
             ]
           },
           {
-            "question": "Which gift would he want?",
+            "question": "Which dog would she pick?",
             "options": [
               {
-                "texte": "Vinyl records",
-                "image": "choisirait/cadeau/vinyles.webp"
+                "texte": "Cavalier King Charles",
+                "image": "choisirait/chien/cavalier.webp"
               },
               {
-                "texte": "Lego set",
-                "image": "choisirait/cadeau/lego.webp"
+                "texte": "Shiba Inu",
+                "image": "choisirait/chien/shiba.webp"
               },
               {
-                "texte": "Camera",
-                "image": "choisirait/cadeau/appareil-photo.webp"
+                "texte": "Pomeranian",
+                "image": "choisirait/chien/pomeranien.webp"
               }
             ]
           },
           {
-            "question": "Which Christmas treat would he pick?",
+            "question": "Which cat would she adopt?",
             "options": [
               {
-                "texte": "Mince pies",
-                "image": "choisirait/noel-gourmandise/mince-pies.webp"
+                "texte": "Persian",
+                "image": "choisirait/chat/persan.webp"
               },
               {
-                "texte": "Panettone",
-                "image": "choisirait/noel-gourmandise/panettone.webp"
+                "texte": "Sphynx",
+                "image": "choisirait/chat/sphynx.webp"
               },
               {
-                "texte": "Gingerbread cookies",
-                "image": "choisirait/noel-gourmandise/pain-epices.webp"
+                "texte": "Bengal",
+                "image": "choisirait/chat/bengal.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Now send it to him. Did you guess right?",
-          "bouton": "Send this to him",
+          "question": "Got her 3 picks? Send it and see!",
+          "bouton": "Send this to her",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Christmas edition. Your answers first, then his reaction.\n\nSend this to him",
+      "legende": "Pet lovers edition. Easy for you? Then the next one is for her.\n\nSend this to her",
       "hashtags": [
         "#couplequiz",
-        "#boyfriendquiz",
+        "#girlfriendquiz",
         "#thisorthat",
-        "#christmas",
+        "#petlovers",
         "#quizcouple"
       ]
     }

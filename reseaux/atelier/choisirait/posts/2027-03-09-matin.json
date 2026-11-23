@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "choisirait",
   "categorie": "choisirait",
-  "sujet": "ch-196",
+  "sujet": "ch-198",
   "idee_id": null,
   "variantes": {
     "en": {
@@ -12,79 +12,79 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "lui",
-        "etiquette": "Morning edition",
-        "accroche": "What would he choose?",
-        "consigne": "Pick what he would pick. Then send it to him!",
+        "pour": "elle",
+        "etiquette": "Luxury edition",
+        "accroche": "What would she choose?",
+        "consigne": "Answer for her, then let her check!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which breakfast would he choose?",
+            "question": "Which watch would she wear?",
             "options": [
               {
-                "texte": "French toast",
-                "image": "choisirait/petitdej/pain-perdu.webp"
+                "texte": "Casio G-Shock",
+                "image": "choisirait/montre/g-shock.webp"
               },
               {
-                "texte": "Croissant & coffee",
-                "image": "choisirait/petitdej/croissant-cafe.webp"
+                "texte": "Rolex Submariner",
+                "image": "choisirait/montre/rolex.webp"
               },
               {
-                "texte": "Açaí bowl",
-                "image": "choisirait/petitdej/acai.webp"
+                "texte": "Casio digital",
+                "image": "choisirait/montre/casio.webp"
               }
             ]
           },
           {
-            "question": "How would he have his eggs?",
+            "question": "How would she travel with you?",
             "options": [
               {
-                "texte": "Fried",
-                "image": "choisirait/oeufs/oeuf-plat.webp"
+                "texte": "Hot air balloon",
+                "image": "choisirait/voyage/montgolfiere.webp"
               },
               {
-                "texte": "Scrambled",
-                "image": "choisirait/oeufs/brouilles.webp"
+                "texte": "Motorbike",
+                "image": "choisirait/moto/bmw-gs.webp"
               },
               {
-                "texte": "Soft-boiled",
-                "image": "choisirait/oeufs/coque.webp"
+                "texte": "Private jet",
+                "image": "choisirait/voyage/jet.webp"
               }
             ]
           },
           {
-            "question": "What would he grab at the bakery?",
+            "question": "Where would she book a weekend?",
             "options": [
               {
-                "texte": "Brioche",
-                "image": "choisirait/boulangerie/brioche.webp"
+                "texte": "Log cabin",
+                "image": "choisirait/weekend/chalet-bois.webp"
               },
               {
-                "texte": "Bagel",
-                "image": "choisirait/boulangerie/bagel.webp"
+                "texte": "Beach bungalow",
+                "image": "choisirait/weekend/bungalow-plage.webp"
               },
               {
-                "texte": "Pain au chocolat",
-                "image": "choisirait/boulangerie/pain-chocolat.webp"
+                "texte": "Houseboat",
+                "image": "choisirait/weekend/peniche.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Now send it to him. Did you guess right?",
-          "bouton": "Send this to him",
+          "question": "Got her 3 picks? Send it and see!",
+          "bouton": "Send this to her",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Morning edition. Pick for him, then let him prove you wrong.\n\nSend this to him",
+      "legende": "Luxury edition. Your answers first, then her reaction.\n\nSend this to her",
       "hashtags": [
         "#couplequiz",
-        "#boyfriendquiz",
+        "#girlfriendquiz",
         "#thisorthat",
-        "#breakfast",
+        "#luxurylife",
         "#quizcouple"
       ]
     }

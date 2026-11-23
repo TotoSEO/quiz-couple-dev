@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "choisirait",
   "categorie": "choisirait",
-  "sujet": "ch-217",
+  "sujet": "ch-219",
   "idee_id": null,
   "variantes": {
     "en": {
@@ -12,79 +12,79 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "lui",
-        "etiquette": "Sweet tooth edition",
-        "accroche": "What would he choose?",
-        "consigne": "Guess his 3 picks, then send it to him!",
+        "pour": "elle",
+        "etiquette": "Morning edition",
+        "accroche": "What would she choose?",
+        "consigne": "3 questions, 4 seconds each. Pick for her!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which ice cream would he get?",
+            "question": "How would she have her eggs?",
             "options": [
               {
-                "texte": "Mochi ice cream",
-                "image": "choisirait/glace/mochi.webp"
+                "texte": "Fried",
+                "image": "choisirait/oeufs/oeuf-plat.webp"
               },
               {
-                "texte": "Soft serve",
-                "image": "choisirait/glace/italienne.webp"
+                "texte": "Omelette",
+                "image": "choisirait/oeufs/omelette.webp"
               },
               {
-                "texte": "Affogato",
-                "image": "choisirait/glace/affogato.webp"
+                "texte": "Poached",
+                "image": "choisirait/oeufs/poche.webp"
               }
             ]
           },
           {
-            "question": "What would he grab at the bakery?",
+            "question": "Which breakfast would she make you?",
             "options": [
               {
-                "texte": "Baguette",
-                "image": "choisirait/boulangerie/baguette.webp"
+                "texte": "Pancakes",
+                "image": "choisirait/petitdej/pancakes.webp"
               },
               {
-                "texte": "Cinnamon roll",
-                "image": "choisirait/boulangerie/cinnamon-roll.webp"
+                "texte": "Croissant & coffee",
+                "image": "choisirait/petitdej/croissant-cafe.webp"
               },
               {
-                "texte": "Muffin",
-                "image": "choisirait/boulangerie/muffin.webp"
+                "texte": "Avocado toast",
+                "image": "choisirait/petitdej/avocado-toast.webp"
               }
             ]
           },
           {
-            "question": "Which dessert would he pick?",
+            "question": "What would she grab at the bakery?",
             "options": [
               {
-                "texte": "Apple pie",
-                "image": "choisirait/dessert/tarte-pommes.webp"
+                "texte": "Bagel",
+                "image": "choisirait/boulangerie/bagel.webp"
               },
               {
-                "texte": "Red velvet cake",
-                "image": "choisirait/dessert/red-velvet.webp"
+                "texte": "Pain au chocolat",
+                "image": "choisirait/boulangerie/pain-chocolat.webp"
               },
               {
-                "texte": "Pavlova",
-                "image": "choisirait/dessert/pavlova.webp"
+                "texte": "Donut",
+                "image": "choisirait/boulangerie/donut.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Now send it to him. Did you guess right?",
-          "bouton": "Send this to him",
+          "question": "Got her 3 picks? Send it and see!",
+          "bouton": "Send this to her",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Sweet tooth edition. He will swear you got at least one wrong.\n\nSend this to him",
+      "legende": "Morning edition. One letter per question, then send it to her.\n\nSend this to her",
       "hashtags": [
         "#couplequiz",
-        "#boyfriendquiz",
+        "#girlfriendquiz",
         "#thisorthat",
-        "#dessert",
+        "#breakfast",
         "#quizcouple"
       ]
     }

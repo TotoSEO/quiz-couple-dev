@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "choisirait",
   "categorie": "choisirait",
-  "sujet": "ch-034",
+  "sujet": "ch-036",
   "idee_id": null,
   "variantes": {
     "en": {
@@ -12,79 +12,79 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "lui",
-        "etiquette": "Christmas edition",
-        "accroche": "What would he choose?",
-        "consigne": "Answer for him, then let him check!",
+        "pour": "elle",
+        "etiquette": "Food edition",
+        "accroche": "What would she choose?",
+        "consigne": "Pick what she would pick. Then send it to her!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which Christmas treat would he pick?",
+            "question": "Which potato would she pick?",
             "options": [
               {
-                "texte": "Christmas pudding",
-                "image": "choisirait/noel-gourmandise/pudding.webp"
+                "texte": "Potato gratin",
+                "image": "choisirait/patate/gratin.webp"
               },
               {
-                "texte": "Candy canes",
-                "image": "choisirait/noel-gourmandise/sucres-orge.webp"
+                "texte": "Curly fries",
+                "image": "choisirait/patate/curly.webp"
               },
               {
-                "texte": "Hot chocolate",
-                "image": "choisirait/noel-gourmandise/chocolat-noel.webp"
+                "texte": "French fries",
+                "image": "choisirait/patate/frites.webp"
               }
             ]
           },
           {
-            "question": "Which Christmas date would he plan?",
+            "question": "What would she order at 2 a.m.?",
             "options": [
               {
-                "texte": "Ice skating",
-                "image": "choisirait/noel-sortie/patinoire-noel.webp"
+                "texte": "Burrito",
+                "image": "choisirait/fastfood/burrito.webp"
               },
               {
-                "texte": "Snowy chalet",
-                "image": "choisirait/noel-sortie/chalet-noel.webp"
+                "texte": "Instant noodles",
+                "image": "choisirait/fastfood/nouilles.webp"
               },
               {
-                "texte": "Christmas lights",
-                "image": "choisirait/noel-sortie/illuminations.webp"
+                "texte": "Kebab",
+                "image": "choisirait/fastfood/kebab.webp"
               }
             ]
           },
           {
-            "question": "Which gift would make him happy?",
+            "question": "Which pizza would she order?",
             "options": [
               {
-                "texte": "Drone",
-                "image": "choisirait/cadeau/drone.webp"
+                "texte": "Deep dish",
+                "image": "choisirait/pizza/deep-dish.webp"
               },
               {
-                "texte": "Book",
-                "image": "choisirait/cadeau/livre.webp"
+                "texte": "Calzone",
+                "image": "choisirait/pizza/calzone.webp"
               },
               {
-                "texte": "Perfume",
-                "image": "choisirait/cadeau/parfum.webp"
+                "texte": "Four cheese",
+                "image": "choisirait/pizza/quatre-fromages.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Now send it to him. Did you guess right?",
-          "bouton": "Send this to him",
+          "question": "Got her 3 picks? Send it and see!",
+          "bouton": "Send this to her",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Christmas edition. If you get all three, you know him by heart.\n\nSend this to him",
+      "legende": "Food edition. Pick for her, then let her prove you wrong.\n\nSend this to her",
       "hashtags": [
         "#couplequiz",
-        "#boyfriendquiz",
+        "#girlfriendquiz",
         "#thisorthat",
-        "#christmas",
+        "#foodie",
         "#quizcouple"
       ]
     }

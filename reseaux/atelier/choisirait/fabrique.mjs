@@ -7,7 +7,7 @@
 // catégorie `choisirait` (les matins, et les midis sauf le samedi), à partir
 // de la banque de photos (banque.json) et des éditions ci-dessous.
 //
-//   node reseaux/atelier/choisirait/fabrique.mjs --du 2026-11-24 --au 2027-03-31 [--ecrire]
+//   node reseaux/atelier/choisirait/fabrique.mjs --du 2026-11-23 --au 2027-03-31 [--ecrire]
 //
 // Sans --ecrire, elle affiche le bilan sans rien toucher. Avec, elle écrit les
 // posts dans posts/ (un fichier par créneau, AAAA-MM-JJ-creneau.json), et la
@@ -60,10 +60,10 @@ export const EDITIONS = [
   { nom: 'Drinks edition', familles: ['bar', 'cafe', 'boisson'], tag: '#cocktails' },
   { nom: 'Cozy night in edition', familles: ['snack', 'diner', 'jeu', 'dessert', 'boisson', 'console'], tag: '#cozynight' },
   { nom: 'Dream home edition', familles: ['maison', 'vue', 'chien', 'chat'], tag: '#dreamhome' },
-  { nom: 'Christmas edition', familles: ['noel-gourmandise', 'noel-sortie', 'cadeau', 'hiver'], du: '12-01', au: '12-25', poids: 4, tag: '#christmas' },
-  { nom: "New Year's edition", familles: ['nouvel-an', 'bar', 'date', 'vacances'], du: '12-26', au: '01-01', poids: 6, tag: '#newyearseve' },
+  { nom: 'Christmas edition', familles: ['noel-gourmandise', 'noel-sortie', 'cadeau', 'hiver'], du: '12-01', au: '12-25', poids: 6, tag: '#christmas' },
+  { nom: "New Year's edition", familles: ['nouvel-an', 'bar', 'date', 'vacances'], du: '12-26', au: '01-01', poids: 10, tag: '#newyearseve' },
   { nom: 'Winter edition', familles: ['hiver', 'weekend', 'cafe', 'diner'], du: '11-20', au: '02-28', poids: 1, tag: '#winter' },
-  { nom: "Valentine's edition", familles: ['valentin', 'fleurs', 'date', 'diner', 'bague'], du: '02-01', au: '02-14', poids: 5, tag: '#valentinesday' },
+  { nom: "Valentine's edition", familles: ['valentin', 'fleurs', 'date', 'diner', 'bague'], du: '02-01', au: '02-14', poids: 10, tag: '#valentinesday' },
   { nom: 'Spring edition', familles: ['fleurs', 'date', 'vacances', 'saison', 'aventure'], du: '03-01', au: '03-31', poids: 2, tag: '#spring' },
 ];
 

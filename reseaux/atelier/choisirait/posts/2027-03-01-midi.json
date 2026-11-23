@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "choisirait",
   "categorie": "choisirait",
-  "sujet": "ch-182",
+  "sujet": "ch-184",
   "idee_id": null,
   "variantes": {
     "en": {
@@ -13,78 +13,78 @@
         "langue": "en",
         "theme": "light",
         "pour": "lui",
-        "etiquette": "Travel edition",
+        "etiquette": "Wedding edition",
         "accroche": "What would he choose?",
-        "consigne": "Answer for him, then let him check!",
+        "consigne": "Pick what he would pick. Then send it to him!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which city would he take you to?",
+            "question": "Where would he want to get married?",
             "options": [
               {
-                "texte": "Paris",
-                "image": "choisirait/ville/paris.webp"
+                "texte": "Vegas chapel",
+                "image": "choisirait/mariage/vegas.webp"
               },
               {
-                "texte": "Amsterdam",
-                "image": "choisirait/ville/amsterdam.webp"
+                "texte": "Lakeside",
+                "image": "choisirait/vue/lac.webp"
               },
               {
-                "texte": "Las Vegas",
-                "image": "choisirait/ville/las-vegas.webp"
-              }
-            ]
-          },
-          {
-            "question": "Which view would he wake up to?",
-            "options": [
-              {
-                "texte": "Tropical beach",
+                "texte": "Beach",
                 "image": "choisirait/vue/plage-tropicale.webp"
-              },
-              {
-                "texte": "Desert",
-                "image": "choisirait/vue/desert-vue.webp"
-              },
-              {
-                "texte": "Snowy peaks",
-                "image": "choisirait/vue/neige.webp"
               }
             ]
           },
           {
-            "question": "Where would he book a weekend for two?",
+            "question": "Where would he propose?",
             "options": [
               {
-                "texte": "Glamping tent",
-                "image": "choisirait/weekend/glamping.webp"
+                "texte": "Hot air balloon",
+                "image": "choisirait/demande/demande-montgolfiere.webp"
               },
               {
-                "texte": "Beach bungalow",
-                "image": "choisirait/weekend/bungalow-plage.webp"
+                "texte": "Restaurant",
+                "image": "choisirait/demande/demande-resto.webp"
               },
               {
-                "texte": "Houseboat",
-                "image": "choisirait/weekend/peniche.webp"
+                "texte": "Mountaintop",
+                "image": "choisirait/demande/demande-montagne.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which ring would he pick for you?",
+            "options": [
+              {
+                "texte": "Vintage ring",
+                "image": "choisirait/bague/vintage-bague.webp"
+              },
+              {
+                "texte": "Halo ring",
+                "image": "choisirait/bague/halo.webp"
+              },
+              {
+                "texte": "Rose gold ring",
+                "image": "choisirait/bague/or-rose.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Send it to him: how many did you get?",
+          "question": "Now send it to him. Did you guess right?",
           "bouton": "Send this to him",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Travel edition. Write down his three letters before you send it.\n\nSend this to him",
+      "legende": "Wedding edition. If you get all three, you know him by heart.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
         "#boyfriendquiz",
         "#thisorthat",
-        "#travelcouple",
+        "#engaged",
         "#quizcouple"
       ]
     }

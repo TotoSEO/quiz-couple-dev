@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "choisirait",
   "categorie": "choisirait",
-  "sujet": "ch-002",
+  "sujet": "ch-004",
   "idee_id": null,
   "variantes": {
     "en": {
@@ -13,78 +13,78 @@
         "langue": "en",
         "theme": "light",
         "pour": "lui",
-        "etiquette": "Food edition",
+        "etiquette": "Sweet tooth edition",
         "accroche": "What would he choose?",
-        "consigne": "Answer for him, then let him check!",
+        "consigne": "Pick what he would pick. Then send it to him!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which cake would he pick?",
+            "question": "What would he grab at the bakery?",
             "options": [
               {
-                "texte": "Huge birthday cake",
-                "image": "choisirait/dessert/gateau-anniversaire.webp"
+                "texte": "Cinnamon roll",
+                "image": "choisirait/boulangerie/cinnamon-roll.webp"
               },
               {
-                "texte": "Vanilla éclair",
-                "image": "choisirait/dessert/eclair.webp"
+                "texte": "Croissant",
+                "image": "choisirait/boulangerie/croissant.webp"
               },
               {
-                "texte": "Strawberry tart",
-                "image": "choisirait/dessert/tarte-fraises.webp"
+                "texte": "Baguette",
+                "image": "choisirait/boulangerie/baguette.webp"
               }
             ]
           },
           {
-            "question": "Which pizza would he order?",
+            "question": "Which ice cream would he get?",
             "options": [
               {
-                "texte": "Margherita",
-                "image": "choisirait/pizza/margherita.webp"
+                "texte": "Soft serve",
+                "image": "choisirait/glace/italienne.webp"
               },
               {
-                "texte": "Pepperoni",
-                "image": "choisirait/pizza/pepperoni.webp"
+                "texte": "Ice cream sandwich",
+                "image": "choisirait/glace/sandwich-glace.webp"
               },
               {
-                "texte": "Hawaiian",
-                "image": "choisirait/pizza/hawaienne.webp"
+                "texte": "Affogato",
+                "image": "choisirait/glace/affogato.webp"
               }
             ]
           },
           {
-            "question": "Which breakfast would he choose?",
+            "question": "Which coffee would he order?",
             "options": [
               {
-                "texte": "Pancakes",
-                "image": "choisirait/petitdej/pancakes.webp"
+                "texte": "Cappuccino",
+                "image": "choisirait/cafe/cappuccino.webp"
               },
               {
-                "texte": "Full English",
-                "image": "choisirait/petitdej/english.webp"
+                "texte": "Espresso",
+                "image": "choisirait/cafe/espresso.webp"
               },
               {
-                "texte": "Croissant & coffee",
-                "image": "choisirait/petitdej/croissant-cafe.webp"
+                "texte": "Iced latte",
+                "image": "choisirait/cafe/iced-latte.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Send it to him: how many did you get?",
+          "question": "Now send it to him. Did you guess right?",
           "bouton": "Send this to him",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Food edition. Write down his three letters before you send it.\n\nSend this to him",
+      "legende": "Sweet tooth edition. If you get all three, you know him by heart.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
         "#boyfriendquiz",
         "#thisorthat",
-        "#foodie",
+        "#dessert",
         "#quizcouple"
       ]
     }

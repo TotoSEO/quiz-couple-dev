@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "choisirait",
   "categorie": "choisirait",
-  "sujet": "ch-156",
+  "sujet": "ch-158",
   "idee_id": null,
   "variantes": {
     "en": {
@@ -12,79 +12,79 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "elle",
-        "etiquette": "Drinks edition",
-        "accroche": "What would she choose?",
-        "consigne": "Pick what she would pick. Then send it to her!",
+        "pour": "lui",
+        "etiquette": "Luxury edition",
+        "accroche": "What would he choose?",
+        "consigne": "Answer for him, then let him check!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which drink would she get?",
+            "question": "Which watch would he wear?",
             "options": [
               {
-                "texte": "Lemonade",
-                "image": "choisirait/boisson/limonade.webp"
+                "texte": "Casio G-Shock",
+                "image": "choisirait/montre/g-shock.webp"
               },
               {
-                "texte": "Bubble tea",
-                "image": "choisirait/boisson/bubble-tea.webp"
+                "texte": "Seiko diver",
+                "image": "choisirait/montre/seiko.webp"
               },
               {
-                "texte": "Smoothie",
-                "image": "choisirait/boisson/smoothie.webp"
+                "texte": "Casio digital",
+                "image": "choisirait/montre/casio.webp"
               }
             ]
           },
           {
-            "question": "Which coffee would she order?",
+            "question": "How would he travel with you?",
             "options": [
               {
-                "texte": "Americano",
-                "image": "choisirait/cafe/americano.webp"
+                "texte": "Convertible",
+                "image": "choisirait/voyage/cabriolet.webp"
               },
               {
-                "texte": "Espresso",
-                "image": "choisirait/cafe/espresso.webp"
+                "texte": "Motorbike",
+                "image": "choisirait/moto/bmw-gs.webp"
               },
               {
-                "texte": "Cappuccino",
-                "image": "choisirait/cafe/cappuccino.webp"
+                "texte": "Camper van",
+                "image": "choisirait/voyage/van.webp"
               }
             ]
           },
           {
-            "question": "What would she order at the bar?",
+            "question": "Which car would he pick?",
             "options": [
               {
-                "texte": "Whiskey",
-                "image": "choisirait/bar/whisky.webp"
+                "texte": "McLaren 720S",
+                "image": "choisirait/voiture/mclaren.webp"
               },
               {
-                "texte": "Espresso martini",
-                "image": "choisirait/bar/espresso-martini.webp"
+                "texte": "Land Rover Defender",
+                "image": "choisirait/voiture/defender.webp"
               },
               {
-                "texte": "Mojito",
-                "image": "choisirait/bar/mojito.webp"
+                "texte": "Rolls-Royce",
+                "image": "choisirait/voiture/rolls-royce.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Got her 3 picks? Send it and see!",
-          "bouton": "Send this to her",
+          "question": "Send it to him: how many did you get?",
+          "bouton": "Send this to him",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Drinks edition. Pick for her, then let her prove you wrong.\n\nSend this to her",
+      "legende": "Luxury edition. Your answers first, then his reaction.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
-        "#girlfriendquiz",
+        "#boyfriendquiz",
         "#thisorthat",
-        "#cocktails",
+        "#luxurylife",
         "#quizcouple"
       ]
     }

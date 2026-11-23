@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "choisirait",
   "categorie": "choisirait",
-  "sujet": "ch-098",
+  "sujet": "ch-100",
   "idee_id": null,
   "variantes": {
     "en": {
@@ -13,78 +13,78 @@
         "langue": "en",
         "theme": "light",
         "pour": "lui",
-        "etiquette": "Style edition",
+        "etiquette": "Hobbies edition",
         "accroche": "What would he choose?",
-        "consigne": "Answer for him, then let him check!",
+        "consigne": "Pick what he would pick. Then send it to him!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which phone would he pick?",
+            "question": "Which instrument would he play?",
             "options": [
               {
-                "texte": "Flip phone",
-                "image": "choisirait/telephone/clapet.webp"
+                "texte": "Violin",
+                "image": "choisirait/instrument/violon.webp"
               },
               {
-                "texte": "Samsung Galaxy",
-                "image": "choisirait/telephone/galaxy.webp"
+                "texte": "DJ decks",
+                "image": "choisirait/instrument/platines.webp"
               },
               {
-                "texte": "Google Pixel",
-                "image": "choisirait/telephone/pixel.webp"
+                "texte": "Trumpet",
+                "image": "choisirait/instrument/trompette.webp"
               }
             ]
           },
           {
-            "question": "Which sneakers would he pick?",
+            "question": "Which hobby would he pick up?",
             "options": [
               {
-                "texte": "Vans Old Skool",
-                "image": "choisirait/baskets/vans.webp"
+                "texte": "Knitting",
+                "image": "choisirait/loisir/tricot.webp"
               },
               {
-                "texte": "Adidas Samba",
-                "image": "choisirait/baskets/samba.webp"
+                "texte": "Woodworking",
+                "image": "choisirait/loisir/menuiserie.webp"
               },
               {
-                "texte": "Nike Air Max",
-                "image": "choisirait/baskets/air-max.webp"
+                "texte": "Photography",
+                "image": "choisirait/loisir/photo.webp"
               }
             ]
           },
           {
-            "question": "Which watch would he wear?",
+            "question": "Which workout would he pick?",
             "options": [
               {
-                "texte": "Seiko diver",
-                "image": "choisirait/montre/seiko.webp"
+                "texte": "Yoga",
+                "image": "choisirait/salle/yoga.webp"
               },
               {
-                "texte": "Casio digital",
-                "image": "choisirait/montre/casio.webp"
+                "texte": "Weightlifting",
+                "image": "choisirait/salle/muscu.webp"
               },
               {
-                "texte": "Casio G-Shock",
-                "image": "choisirait/montre/g-shock.webp"
+                "texte": "Cycling",
+                "image": "choisirait/salle/velo.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Send it to him: how many did you get?",
+          "question": "Now send it to him. Did you guess right?",
           "bouton": "Send this to him",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Style edition. Your answers first, then his reaction.\n\nSend this to him",
+      "legende": "Hobbies edition. Easy for you? Then the next one is for him.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
         "#boyfriendquiz",
         "#thisorthat",
-        "#style",
+        "#hobbies",
         "#quizcouple"
       ]
     }

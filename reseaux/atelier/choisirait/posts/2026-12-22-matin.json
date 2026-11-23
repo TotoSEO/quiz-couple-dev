@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "choisirait",
   "categorie": "choisirait",
-  "sujet": "ch-053",
+  "sujet": "ch-055",
   "idee_id": null,
   "variantes": {
     "en": {
@@ -13,78 +13,78 @@
         "langue": "en",
         "theme": "light",
         "pour": "lui",
-        "etiquette": "Adventure edition",
+        "etiquette": "Sweet tooth edition",
         "accroche": "What would he choose?",
-        "consigne": "Guess his 3 picks, then send it to him!",
+        "consigne": "3 questions, 4 seconds each. Pick for him!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which sport would he watch?",
+            "question": "Which movie snack would he pick?",
             "options": [
               {
-                "texte": "Football",
-                "image": "choisirait/sport/foot.webp"
+                "texte": "Gummy bears",
+                "image": "choisirait/snack/oursons.webp"
               },
               {
-                "texte": "Rugby",
-                "image": "choisirait/sport/rugby.webp"
+                "texte": "Chocolate bar",
+                "image": "choisirait/snack/tablette.webp"
               },
               {
-                "texte": "Basketball",
-                "image": "choisirait/sport/basket.webp"
+                "texte": "Nachos",
+                "image": "choisirait/snack/nachos.webp"
               }
             ]
           },
           {
-            "question": "Which adventure would he try?",
+            "question": "Which ice cream would he get?",
             "options": [
               {
-                "texte": "Skiing",
-                "image": "choisirait/aventure/ski.webp"
+                "texte": "Gelato",
+                "image": "choisirait/glace/gelato.webp"
               },
               {
-                "texte": "Scuba diving",
-                "image": "choisirait/aventure/plongee.webp"
+                "texte": "Banana split",
+                "image": "choisirait/glace/banana-split.webp"
               },
               {
-                "texte": "Horse riding",
-                "image": "choisirait/aventure/equitation.webp"
+                "texte": "Mochi ice cream",
+                "image": "choisirait/glace/mochi.webp"
               }
             ]
           },
           {
-            "question": "Where would he take you on vacation?",
+            "question": "Which coffee would he order?",
             "options": [
               {
-                "texte": "Mexico",
-                "image": "choisirait/vacances/mexique.webp"
+                "texte": "Iced latte",
+                "image": "choisirait/cafe/iced-latte.webp"
               },
               {
-                "texte": "Lapland",
-                "image": "choisirait/vacances/laponie.webp"
+                "texte": "Espresso",
+                "image": "choisirait/cafe/espresso.webp"
               },
               {
-                "texte": "Dubai",
-                "image": "choisirait/vacances/dubai.webp"
+                "texte": "Matcha latte",
+                "image": "choisirait/cafe/matcha.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Send it to him: how many did you get?",
+          "question": "Now send it to him. Did you guess right?",
           "bouton": "Send this to him",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Adventure edition. Guess first, send it after. Then compare.\n\nSend this to him",
+      "legende": "Sweet tooth edition. No cheating: decide before the timer runs out.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
         "#boyfriendquiz",
         "#thisorthat",
-        "#adventurecouple",
+        "#dessert",
         "#quizcouple"
       ]
     }

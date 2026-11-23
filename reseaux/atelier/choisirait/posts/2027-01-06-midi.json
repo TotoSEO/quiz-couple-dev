@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "choisirait",
   "categorie": "choisirait",
-  "sujet": "ch-082",
+  "sujet": "ch-084",
   "idee_id": null,
   "variantes": {
     "en": {
@@ -12,79 +12,79 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "lui",
-        "etiquette": "Cozy night in edition",
-        "accroche": "What would he choose?",
-        "consigne": "Answer for him, then let him check!",
+        "pour": "elle",
+        "etiquette": "Sweet tooth edition",
+        "accroche": "What would she choose?",
+        "consigne": "Pick what she would pick. Then send it to her!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which game night would he pick?",
+            "question": "What would she grab at the bakery?",
             "options": [
               {
-                "texte": "Pool",
-                "image": "choisirait/jeu/billard.webp"
+                "texte": "Pain au chocolat",
+                "image": "choisirait/boulangerie/pain-chocolat.webp"
               },
               {
-                "texte": "Ping pong",
-                "image": "choisirait/jeu/ping-pong.webp"
+                "texte": "Baguette",
+                "image": "choisirait/boulangerie/baguette.webp"
               },
               {
-                "texte": "Poker",
-                "image": "choisirait/jeu/poker.webp"
+                "texte": "Donut",
+                "image": "choisirait/boulangerie/donut.webp"
               }
             ]
           },
           {
-            "question": "Which console would he pick?",
+            "question": "Which ice cream would she get?",
             "options": [
               {
-                "texte": "Gaming PC",
-                "image": "choisirait/console/pc-gamer.webp"
+                "texte": "Affogato",
+                "image": "choisirait/glace/affogato.webp"
               },
               {
-                "texte": "PlayStation 5",
-                "image": "choisirait/console/ps5.webp"
+                "texte": "Sundae",
+                "image": "choisirait/glace/sundae.webp"
               },
               {
-                "texte": "Xbox",
-                "image": "choisirait/console/xbox.webp"
+                "texte": "Popsicle",
+                "image": "choisirait/glace/esquimau.webp"
               }
             ]
           },
           {
-            "question": "Which dessert would he pick?",
+            "question": "Which cake would she pick?",
             "options": [
               {
-                "texte": "Strawberry tart",
-                "image": "choisirait/dessert/tarte-fraises.webp"
+                "texte": "Huge birthday cake",
+                "image": "choisirait/dessert/gateau-anniversaire.webp"
               },
               {
-                "texte": "Vanilla éclair",
-                "image": "choisirait/dessert/eclair.webp"
+                "texte": "Mille-feuille",
+                "image": "choisirait/dessert/mille-feuille.webp"
               },
               {
-                "texte": "Apple pie",
-                "image": "choisirait/dessert/tarte-pommes.webp"
+                "texte": "Churros",
+                "image": "choisirait/dessert/churros.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Now send it to him. Did you guess right?",
-          "bouton": "Send this to him",
+          "question": "Got her 3 picks? Send it and see!",
+          "bouton": "Send this to her",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Cozy night in edition. Write down his three letters before you send it.\n\nSend this to him",
+      "legende": "Sweet tooth edition. If you get all three, you know her by heart.\n\nSend this to her",
       "hashtags": [
         "#couplequiz",
-        "#boyfriendquiz",
+        "#girlfriendquiz",
         "#thisorthat",
-        "#cozynight",
+        "#dessert",
         "#quizcouple"
       ]
     }

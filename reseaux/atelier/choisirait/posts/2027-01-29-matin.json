@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "choisirait",
   "categorie": "choisirait",
-  "sujet": "ch-124",
+  "sujet": "ch-126",
   "idee_id": null,
   "variantes": {
     "en": {
@@ -12,79 +12,79 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "lui",
-        "etiquette": "Car lovers edition",
-        "accroche": "What would he choose?",
-        "consigne": "Pick what he would pick. Then send it to him!",
+        "pour": "elle",
+        "etiquette": "Weekend edition",
+        "accroche": "What would she choose?",
+        "consigne": "Answer for her, then let her check!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which motorbike would he ride?",
+            "question": "Which workout would she pick?",
             "options": [
               {
-                "texte": "Ducati Panigale",
-                "image": "choisirait/moto/ducati.webp"
+                "texte": "CrossFit",
+                "image": "choisirait/salle/crossfit.webp"
               },
               {
-                "texte": "Triumph Bonneville",
-                "image": "choisirait/moto/bonneville.webp"
+                "texte": "Boxing",
+                "image": "choisirait/salle/boxe-salle.webp"
               },
               {
-                "texte": "BMW GS",
-                "image": "choisirait/moto/bmw-gs.webp"
+                "texte": "Running",
+                "image": "choisirait/salle/course.webp"
               }
             ]
           },
           {
-            "question": "Which classic car would he drive?",
+            "question": "Which hobby would she pick up?",
             "options": [
               {
-                "texte": "Jaguar E-Type",
-                "image": "choisirait/vintage/e-type.webp"
+                "texte": "Photography",
+                "image": "choisirait/loisir/photo.webp"
               },
               {
-                "texte": "VW Camper Van",
-                "image": "choisirait/vintage/combi.webp"
+                "texte": "Chess",
+                "image": "choisirait/loisir/echecs.webp"
               },
               {
-                "texte": "VW Beetle",
-                "image": "choisirait/vintage/coccinelle.webp"
+                "texte": "Fishing",
+                "image": "choisirait/loisir/peche.webp"
               }
             ]
           },
           {
-            "question": "Which car would he pick?",
+            "question": "Which sport would she watch?",
             "options": [
               {
-                "texte": "Mercedes-AMG C63 S",
-                "image": "choisirait/voiture/amg-c63.webp"
+                "texte": "Baseball",
+                "image": "choisirait/sport/baseball.webp"
               },
               {
-                "texte": "Mercedes G-Class",
-                "image": "choisirait/voiture/g-class.webp"
+                "texte": "Formula 1",
+                "image": "choisirait/sport/f1.webp"
               },
               {
-                "texte": "Audi R8",
-                "image": "choisirait/voiture/audi-r8.webp"
+                "texte": "Basketball",
+                "image": "choisirait/sport/basket.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Now send it to him. Did you guess right?",
-          "bouton": "Send this to him",
+          "question": "Got her 3 picks? Send it and see!",
+          "bouton": "Send this to her",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Car lovers edition. If you get all three, you know him by heart.\n\nSend this to him",
+      "legende": "Weekend edition. Pick for her, then let her prove you wrong.\n\nSend this to her",
       "hashtags": [
         "#couplequiz",
-        "#boyfriendquiz",
+        "#girlfriendquiz",
         "#thisorthat",
-        "#carlovers",
+        "#weekendvibes",
         "#quizcouple"
       ]
     }

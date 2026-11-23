@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "choisirait",
   "categorie": "choisirait",
-  "sujet": "ch-001",
+  "sujet": "ch-003",
   "idee_id": null,
   "variantes": {
     "en": {
@@ -12,79 +12,79 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "lui",
-        "etiquette": "Dream life edition",
-        "accroche": "What would he choose?",
-        "consigne": "Guess his 3 picks, then send it to him!",
+        "pour": "elle",
+        "etiquette": "Cozy night in edition",
+        "accroche": "What would she choose?",
+        "consigne": "3 questions, 4 seconds each. Pick for her!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which car would he pick?",
+            "question": "Which movie snack would she pick?",
             "options": [
               {
-                "texte": "Porsche 911",
-                "image": "choisirait/voiture/porsche-911.webp"
+                "texte": "Ice cream tub",
+                "image": "choisirait/snack/pot-glace.webp"
               },
               {
-                "texte": "Lamborghini Huracán",
-                "image": "choisirait/voiture/lamborghini-huracan.webp"
+                "texte": "Nachos",
+                "image": "choisirait/snack/nachos.webp"
               },
               {
-                "texte": "Mercedes-AMG C63 S",
-                "image": "choisirait/voiture/amg-c63.webp"
+                "texte": "Licorice",
+                "image": "choisirait/snack/reglisse.webp"
               }
             ]
           },
           {
-            "question": "Which dog would he pick?",
+            "question": "Which drink would she get?",
             "options": [
               {
-                "texte": "Golden Retriever",
-                "image": "choisirait/chien/golden.webp"
+                "texte": "Bubble tea",
+                "image": "choisirait/boisson/bubble-tea.webp"
               },
               {
-                "texte": "Belgian Malinois",
-                "image": "choisirait/chien/malinois.webp"
+                "texte": "Lemonade",
+                "image": "choisirait/boisson/limonade.webp"
               },
               {
-                "texte": "Border Collie",
-                "image": "choisirait/chien/border-collie.webp"
+                "texte": "Iced tea",
+                "image": "choisirait/boisson/the-glace.webp"
               }
             ]
           },
           {
-            "question": "Where would he go on vacation?",
+            "question": "Which dinner would she pick?",
             "options": [
               {
-                "texte": "Bali",
-                "image": "choisirait/vacances/bali.webp"
+                "texte": "Raclette",
+                "image": "choisirait/diner/raclette.webp"
               },
               {
-                "texte": "Norway",
-                "image": "choisirait/vacances/norvege.webp"
+                "texte": "Risotto",
+                "image": "choisirait/diner/risotto.webp"
               },
               {
-                "texte": "USA",
-                "image": "choisirait/vacances/usa.webp"
+                "texte": "Sushi",
+                "image": "choisirait/diner/sushi.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Now send it to him. Did you guess right?",
-          "bouton": "Send this to him",
+          "question": "Got her 3 picks? Send it and see!",
+          "bouton": "Send this to her",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Dream life edition. Answer for him first, no peeking.\n\nSend this to him",
+      "legende": "Cozy night in edition. Guess first, send it after. Then compare.\n\nSend this to her",
       "hashtags": [
         "#couplequiz",
-        "#boyfriendquiz",
+        "#girlfriendquiz",
         "#thisorthat",
-        "#dreamlife",
+        "#cozynight",
         "#quizcouple"
       ]
     }

@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "choisirait",
   "categorie": "choisirait",
-  "sujet": "ch-188",
+  "sujet": "ch-190",
   "idee_id": null,
   "variantes": {
     "en": {
@@ -13,78 +13,78 @@
         "langue": "en",
         "theme": "light",
         "pour": "lui",
-        "etiquette": "Hobbies edition",
+        "etiquette": "Dream home edition",
         "accroche": "What would he choose?",
-        "consigne": "Pick what he would pick. Then send it to him!",
+        "consigne": "Answer for him, then let him check!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which instrument would he play?",
+            "question": "Which view would he wake up to?",
             "options": [
               {
-                "texte": "Drums",
-                "image": "choisirait/instrument/batterie.webp"
+                "texte": "Lake",
+                "image": "choisirait/vue/lac.webp"
               },
               {
-                "texte": "Piano",
-                "image": "choisirait/instrument/piano.webp"
+                "texte": "Desert",
+                "image": "choisirait/vue/desert-vue.webp"
               },
               {
-                "texte": "Saxophone",
-                "image": "choisirait/instrument/saxophone.webp"
+                "texte": "Mountains",
+                "image": "choisirait/vue/montagnes.webp"
               }
             ]
           },
           {
-            "question": "Which game night would he pick?",
+            "question": "Which dog would he pick?",
             "options": [
               {
-                "texte": "Foosball",
-                "image": "choisirait/jeu/baby-foot.webp"
+                "texte": "Samoyed",
+                "image": "choisirait/chien/samoyede.webp"
               },
               {
-                "texte": "Video games",
-                "image": "choisirait/jeu/jeux-video.webp"
+                "texte": "Australian Shepherd",
+                "image": "choisirait/chien/berger-australien.webp"
               },
               {
-                "texte": "Ping pong",
-                "image": "choisirait/jeu/ping-pong.webp"
+                "texte": "French Bulldog",
+                "image": "choisirait/chien/bouledogue.webp"
               }
             ]
           },
           {
-            "question": "Which hobby would he pick up?",
+            "question": "Which cat would he adopt?",
             "options": [
               {
-                "texte": "Woodworking",
-                "image": "choisirait/loisir/menuiserie.webp"
+                "texte": "Norwegian Forest Cat",
+                "image": "choisirait/chat/norvegien.webp"
               },
               {
-                "texte": "Pottery",
-                "image": "choisirait/loisir/poterie.webp"
+                "texte": "Black cat",
+                "image": "choisirait/chat/chat-noir.webp"
               },
               {
-                "texte": "Fishing",
-                "image": "choisirait/loisir/peche.webp"
+                "texte": "Ragdoll",
+                "image": "choisirait/chat/ragdoll.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Send it to him: how many did you get?",
+          "question": "Now send it to him. Did you guess right?",
           "bouton": "Send this to him",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Hobbies edition. Your answers first, then his reaction.\n\nSend this to him",
+      "legende": "Dream home edition. Easy for you? Then the next one is for him.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
         "#boyfriendquiz",
         "#thisorthat",
-        "#hobbies",
+        "#dreamhome",
         "#quizcouple"
       ]
     }

@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "choisirait",
   "categorie": "choisirait",
-  "sujet": "ch-208",
+  "sujet": "ch-210",
   "idee_id": null,
   "variantes": {
     "en": {
@@ -12,79 +12,79 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "lui",
-        "etiquette": "Spring edition",
-        "accroche": "What would he choose?",
-        "consigne": "Pick what he would pick. Then send it to him!",
+        "pour": "elle",
+        "etiquette": "Game night edition",
+        "accroche": "What would she choose?",
+        "consigne": "Answer for her, then let her check!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which season would he pick?",
+            "question": "What would she order at 2 a.m.?",
             "options": [
               {
-                "texte": "Summer",
-                "image": "choisirait/saison/ete.webp"
+                "texte": "Nuggets",
+                "image": "choisirait/fastfood/nuggets.webp"
               },
               {
-                "texte": "Winter",
-                "image": "choisirait/saison/hiver-saison.webp"
+                "texte": "Kebab",
+                "image": "choisirait/fastfood/kebab.webp"
               },
               {
-                "texte": "Autumn",
-                "image": "choisirait/saison/automne.webp"
+                "texte": "Grilled cheese",
+                "image": "choisirait/fastfood/croque.webp"
               }
             ]
           },
           {
-            "question": "Which adventure would he try?",
+            "question": "Which game night would she pick?",
             "options": [
               {
-                "texte": "Bungee jumping",
-                "image": "choisirait/aventure/saut-elastique.webp"
+                "texte": "Ping pong",
+                "image": "choisirait/jeu/ping-pong.webp"
               },
               {
-                "texte": "Snowboarding",
-                "image": "choisirait/aventure/snowboard.webp"
+                "texte": "Board games",
+                "image": "choisirait/jeu/jeux-societe.webp"
               },
               {
-                "texte": "Rock climbing",
-                "image": "choisirait/aventure/escalade.webp"
+                "texte": "Video games",
+                "image": "choisirait/jeu/jeux-video.webp"
               }
             ]
           },
           {
-            "question": "Where would he take you on vacation?",
+            "question": "Which drink would she get?",
             "options": [
               {
-                "texte": "Australia",
-                "image": "choisirait/vacances/australie.webp"
+                "texte": "Lemonade",
+                "image": "choisirait/boisson/limonade.webp"
               },
               {
-                "texte": "Costa Rica",
-                "image": "choisirait/vacances/costa-rica.webp"
+                "texte": "Smoothie",
+                "image": "choisirait/boisson/smoothie.webp"
               },
               {
-                "texte": "Bora Bora",
-                "image": "choisirait/vacances/bora-bora.webp"
+                "texte": "Iced tea",
+                "image": "choisirait/boisson/the-glace.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Now send it to him. Did you guess right?",
-          "bouton": "Send this to him",
+          "question": "Got her 3 picks? Send it and see!",
+          "bouton": "Send this to her",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Spring edition. Your answers first, then his reaction.\n\nSend this to him",
+      "legende": "Game night edition. Easy for you? Then the next one is for her.\n\nSend this to her",
       "hashtags": [
         "#couplequiz",
-        "#boyfriendquiz",
+        "#girlfriendquiz",
         "#thisorthat",
-        "#spring",
+        "#gamenight",
         "#quizcouple"
       ]
     }

@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "choisirait",
   "categorie": "choisirait",
-  "sujet": "ch-027",
+  "sujet": "ch-029",
   "idee_id": null,
   "variantes": {
     "en": {
@@ -12,79 +12,79 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "elle",
-        "etiquette": "Morning edition",
-        "accroche": "What would she choose?",
-        "consigne": "3 questions, 4 seconds each. Pick for her!",
+        "pour": "lui",
+        "etiquette": "Food edition",
+        "accroche": "What would he choose?",
+        "consigne": "Guess his 3 picks, then send it to him!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which coffee would she order?",
+            "question": "Which potato would he pick?",
             "options": [
               {
-                "texte": "Cappuccino",
-                "image": "choisirait/cafe/cappuccino.webp"
+                "texte": "Hash browns",
+                "image": "choisirait/patate/hash-browns.webp"
               },
               {
-                "texte": "Matcha latte",
-                "image": "choisirait/cafe/matcha.webp"
+                "texte": "Rösti",
+                "image": "choisirait/patate/rosti.webp"
               },
               {
-                "texte": "Espresso",
-                "image": "choisirait/cafe/espresso.webp"
+                "texte": "Curly fries",
+                "image": "choisirait/patate/curly.webp"
               }
             ]
           },
           {
-            "question": "Which breakfast would she choose?",
+            "question": "What would he order at 2 a.m.?",
             "options": [
               {
-                "texte": "French toast",
-                "image": "choisirait/petitdej/pain-perdu.webp"
+                "texte": "Nuggets",
+                "image": "choisirait/fastfood/nuggets.webp"
               },
               {
-                "texte": "Eggs Benedict",
-                "image": "choisirait/petitdej/benedict.webp"
+                "texte": "Tacos",
+                "image": "choisirait/fastfood/tacos.webp"
               },
               {
-                "texte": "Avocado toast",
-                "image": "choisirait/petitdej/avocado-toast.webp"
+                "texte": "Grilled cheese",
+                "image": "choisirait/fastfood/croque.webp"
               }
             ]
           },
           {
-            "question": "How would she have her eggs?",
+            "question": "Which pasta would he pick?",
             "options": [
               {
-                "texte": "Soft-boiled",
-                "image": "choisirait/oeufs/coque.webp"
+                "texte": "Gnocchi",
+                "image": "choisirait/pates/gnocchi.webp"
               },
               {
-                "texte": "Fried",
-                "image": "choisirait/oeufs/oeuf-plat.webp"
+                "texte": "Seafood pasta",
+                "image": "choisirait/pates/fruits-mer.webp"
               },
               {
-                "texte": "Omelette",
-                "image": "choisirait/oeufs/omelette.webp"
+                "texte": "Pesto",
+                "image": "choisirait/pates/pesto.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Got her 3 picks? Send it and see!",
-          "bouton": "Send this to her",
+          "question": "Send it to him: how many did you get?",
+          "bouton": "Send this to him",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Morning edition. She will swear you got at least one wrong.\n\nSend this to her",
+      "legende": "Food edition. One letter per question, then send it to him.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
-        "#girlfriendquiz",
+        "#boyfriendquiz",
         "#thisorthat",
-        "#breakfast",
+        "#foodie",
         "#quizcouple"
       ]
     }

@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "choisirait",
   "categorie": "choisirait",
-  "sujet": "ch-035",
+  "sujet": "ch-037",
   "idee_id": null,
   "variantes": {
     "en": {
@@ -13,78 +13,78 @@
         "langue": "en",
         "theme": "light",
         "pour": "lui",
-        "etiquette": "Weekend edition",
+        "etiquette": "Sweet tooth edition",
         "accroche": "What would he choose?",
-        "consigne": "3 questions, 4 seconds each. Pick for him!",
+        "consigne": "Guess his 3 picks, then send it to him!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which date would he plan?",
+            "question": "Which ice cream would he get?",
             "options": [
               {
-                "texte": "Museum",
-                "image": "choisirait/date/musee.webp"
+                "texte": "Banana split",
+                "image": "choisirait/glace/banana-split.webp"
               },
               {
-                "texte": "Beach sunset",
-                "image": "choisirait/date/coucher-soleil.webp"
+                "texte": "Gelato",
+                "image": "choisirait/glace/gelato.webp"
               },
               {
-                "texte": "Wine tasting",
-                "image": "choisirait/date/degustation.webp"
+                "texte": "Popsicle",
+                "image": "choisirait/glace/esquimau.webp"
               }
             ]
           },
           {
-            "question": "Which hobby would he pick up?",
+            "question": "Which cake would he pick?",
             "options": [
               {
-                "texte": "Knitting",
-                "image": "choisirait/loisir/tricot.webp"
+                "texte": "Chocolate lava cake",
+                "image": "choisirait/dessert/fondant.webp"
               },
               {
-                "texte": "Woodworking",
-                "image": "choisirait/loisir/menuiserie.webp"
+                "texte": "Apple pie",
+                "image": "choisirait/dessert/tarte-pommes.webp"
               },
               {
-                "texte": "Gardening",
-                "image": "choisirait/loisir/jardinage.webp"
+                "texte": "Brownie",
+                "image": "choisirait/dessert/brownie.webp"
               }
             ]
           },
           {
-            "question": "Which adventure would he try?",
+            "question": "Which movie snack would he pick?",
             "options": [
               {
-                "texte": "Kayaking",
-                "image": "choisirait/aventure/kayak.webp"
+                "texte": "Nachos",
+                "image": "choisirait/snack/nachos.webp"
               },
               {
-                "texte": "Rock climbing",
-                "image": "choisirait/aventure/escalade.webp"
+                "texte": "Chocolate bar",
+                "image": "choisirait/snack/tablette.webp"
               },
               {
-                "texte": "Scuba diving",
-                "image": "choisirait/aventure/plongee.webp"
+                "texte": "Licorice",
+                "image": "choisirait/snack/reglisse.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Send it to him: how many did you get?",
+          "question": "Now send it to him. Did you guess right?",
           "bouton": "Send this to him",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Weekend edition. No cheating: decide before the timer runs out.\n\nSend this to him",
+      "legende": "Sweet tooth edition. He will swear you got at least one wrong.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
         "#boyfriendquiz",
         "#thisorthat",
-        "#weekendvibes",
+        "#dessert",
         "#quizcouple"
       ]
     }

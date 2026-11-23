@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "choisirait",
   "categorie": "choisirait",
-  "sujet": "ch-235",
+  "sujet": "ch-237",
   "idee_id": null,
   "variantes": {
     "en": {
@@ -12,79 +12,79 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "lui",
-        "etiquette": "Dream home edition",
-        "accroche": "What would he choose?",
-        "consigne": "3 questions, 4 seconds each. Pick for him!",
+        "pour": "elle",
+        "etiquette": "Food edition",
+        "accroche": "What would she choose?",
+        "consigne": "Guess her 3 picks, then send it to her!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which cat would he adopt?",
+            "question": "Which breakfast would she choose?",
             "options": [
               {
-                "texte": "Scottish Fold",
-                "image": "choisirait/chat/scottish.webp"
+                "texte": "Cereal",
+                "image": "choisirait/petitdej/cereales.webp"
               },
               {
-                "texte": "Black cat",
-                "image": "choisirait/chat/chat-noir.webp"
+                "texte": "Açaí bowl",
+                "image": "choisirait/petitdej/acai.webp"
               },
               {
-                "texte": "Siamese",
-                "image": "choisirait/chat/siamois.webp"
+                "texte": "Waffles",
+                "image": "choisirait/petitdej/gaufres.webp"
               }
             ]
           },
           {
-            "question": "Which dream house would he pick?",
+            "question": "Which potato would she pick?",
             "options": [
               {
-                "texte": "Lake house",
-                "image": "choisirait/maison/maison-lac.webp"
+                "texte": "French fries",
+                "image": "choisirait/patate/frites.webp"
               },
               {
-                "texte": "Victorian house",
-                "image": "choisirait/maison/victorienne.webp"
+                "texte": "Curly fries",
+                "image": "choisirait/patate/curly.webp"
               },
               {
-                "texte": "Tiny house",
-                "image": "choisirait/maison/tiny-house.webp"
+                "texte": "Hash browns",
+                "image": "choisirait/patate/hash-browns.webp"
               }
             ]
           },
           {
-            "question": "Which dog would he pick?",
+            "question": "Which pasta would she pick?",
             "options": [
               {
-                "texte": "Chihuahua",
-                "image": "choisirait/chien/chihuahua.webp"
+                "texte": "Gnocchi",
+                "image": "choisirait/pates/gnocchi.webp"
               },
               {
-                "texte": "Samoyed",
-                "image": "choisirait/chien/samoyede.webp"
+                "texte": "Ravioli",
+                "image": "choisirait/pates/raviolis.webp"
               },
               {
-                "texte": "Australian Shepherd",
-                "image": "choisirait/chien/berger-australien.webp"
+                "texte": "Lasagna",
+                "image": "choisirait/pates/lasagnes.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Now send it to him. Did you guess right?",
-          "bouton": "Send this to him",
+          "question": "Got her 3 picks? Send it and see!",
+          "bouton": "Send this to her",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Dream home edition. No cheating: decide before the timer runs out.\n\nSend this to him",
+      "legende": "Food edition. She will swear you got at least one wrong.\n\nSend this to her",
       "hashtags": [
         "#couplequiz",
-        "#boyfriendquiz",
+        "#girlfriendquiz",
         "#thisorthat",
-        "#dreamhome",
+        "#foodie",
         "#quizcouple"
       ]
     }

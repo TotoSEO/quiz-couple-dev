@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "choisirait",
   "categorie": "choisirait",
-  "sujet": "ch-038",
+  "sujet": "ch-040",
   "idee_id": null,
   "variantes": {
     "en": {
@@ -13,78 +13,78 @@
         "langue": "en",
         "theme": "light",
         "pour": "lui",
-        "etiquette": "Pet lovers edition",
+        "etiquette": "Luxury edition",
         "accroche": "What would he choose?",
-        "consigne": "Answer for him, then let him check!",
+        "consigne": "Pick what he would pick. Then send it to him!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which pet would he want?",
+            "question": "Which watch would he wear?",
             "options": [
               {
-                "texte": "Hedgehog",
-                "image": "choisirait/animal/herisson.webp"
+                "texte": "Casio digital",
+                "image": "choisirait/montre/casio.webp"
               },
               {
-                "texte": "Rabbit",
-                "image": "choisirait/animal/lapin.webp"
+                "texte": "Pocket watch",
+                "image": "choisirait/montre/gousset.webp"
               },
               {
-                "texte": "Horse",
-                "image": "choisirait/animal/cheval.webp"
+                "texte": "Cartier Tank",
+                "image": "choisirait/montre/cartier.webp"
               }
             ]
           },
           {
-            "question": "Which cat would he adopt?",
+            "question": "How would he travel with you?",
             "options": [
               {
-                "texte": "Maine Coon",
-                "image": "choisirait/chat/maine-coon.webp"
+                "texte": "Sailboat",
+                "image": "choisirait/voyage/voilier.webp"
               },
               {
-                "texte": "Scottish Fold",
-                "image": "choisirait/chat/scottish.webp"
+                "texte": "Camper van",
+                "image": "choisirait/voyage/van.webp"
               },
               {
-                "texte": "Norwegian Forest Cat",
-                "image": "choisirait/chat/norvegien.webp"
+                "texte": "Cruise ship",
+                "image": "choisirait/voyage/croisiere.webp"
               }
             ]
           },
           {
-            "question": "Which dog would he adopt?",
+            "question": "Which dream house would he pick?",
             "options": [
               {
-                "texte": "Australian Shepherd",
-                "image": "choisirait/chien/berger-australien.webp"
+                "texte": "Loft apartment",
+                "image": "choisirait/maison/loft.webp"
               },
               {
-                "texte": "Dachshund",
-                "image": "choisirait/chien/teckel.webp"
+                "texte": "Modern villa",
+                "image": "choisirait/maison/villa-moderne.webp"
               },
               {
-                "texte": "Corgi",
-                "image": "choisirait/chien/corgi.webp"
+                "texte": "Lake house",
+                "image": "choisirait/maison/maison-lac.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Send it to him: how many did you get?",
+          "question": "Now send it to him. Did you guess right?",
           "bouton": "Send this to him",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Pet lovers edition. Your answers first, then his reaction.\n\nSend this to him",
+      "legende": "Luxury edition. Easy for you? Then the next one is for him.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
         "#boyfriendquiz",
         "#thisorthat",
-        "#petlovers",
+        "#luxurylife",
         "#quizcouple"
       ]
     }

@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "choisirait",
   "categorie": "choisirait",
-  "sujet": "ch-097",
+  "sujet": "ch-099",
   "idee_id": null,
   "variantes": {
     "en": {
@@ -12,79 +12,79 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "lui",
-        "etiquette": "Pet lovers edition",
-        "accroche": "What would he choose?",
-        "consigne": "Guess his 3 picks, then send it to him!",
+        "pour": "elle",
+        "etiquette": "Wedding edition",
+        "accroche": "What would she choose?",
+        "consigne": "3 questions, 4 seconds each. Pick for her!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which pet would he want?",
+            "question": "Which ring would she want?",
             "options": [
               {
-                "texte": "Chameleon",
-                "image": "choisirait/animal/cameleon.webp"
+                "texte": "Rose gold ring",
+                "image": "choisirait/bague/or-rose.webp"
               },
               {
-                "texte": "Parrot",
-                "image": "choisirait/animal/perroquet.webp"
+                "texte": "Emerald ring",
+                "image": "choisirait/bague/emeraude.webp"
               },
               {
-                "texte": "Goldfish",
-                "image": "choisirait/animal/poisson.webp"
+                "texte": "Halo ring",
+                "image": "choisirait/bague/halo.webp"
               }
             ]
           },
           {
-            "question": "Which cat would he adopt?",
+            "question": "Where would she want you to propose?",
             "options": [
               {
-                "texte": "Sphynx",
-                "image": "choisirait/chat/sphynx.webp"
+                "texte": "Rooftop",
+                "image": "choisirait/demande/demande-rooftop.webp"
               },
               {
-                "texte": "Persian",
-                "image": "choisirait/chat/persan.webp"
+                "texte": "Hot air balloon",
+                "image": "choisirait/demande/demande-montgolfiere.webp"
               },
               {
-                "texte": "British Shorthair",
-                "image": "choisirait/chat/british.webp"
+                "texte": "Mountaintop",
+                "image": "choisirait/demande/demande-montagne.webp"
               }
             ]
           },
           {
-            "question": "Which dog would he pick?",
+            "question": "Where would she want to get married?",
             "options": [
               {
-                "texte": "Chihuahua",
-                "image": "choisirait/chien/chihuahua.webp"
+                "texte": "Mountaintop",
+                "image": "choisirait/mariage/sommet.webp"
               },
               {
-                "texte": "Shiba Inu",
-                "image": "choisirait/chien/shiba.webp"
+                "texte": "Vineyard",
+                "image": "choisirait/vue/vignes.webp"
               },
               {
-                "texte": "Husky",
-                "image": "choisirait/chien/husky.webp"
+                "texte": "Vegas chapel",
+                "image": "choisirait/mariage/vegas.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Now send it to him. Did you guess right?",
-          "bouton": "Send this to him",
+          "question": "Got her 3 picks? Send it and see!",
+          "bouton": "Send this to her",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Pet lovers edition. He will swear you got at least one wrong.\n\nSend this to him",
+      "legende": "Wedding edition. One letter per question, then send it to her.\n\nSend this to her",
       "hashtags": [
         "#couplequiz",
-        "#boyfriendquiz",
+        "#girlfriendquiz",
         "#thisorthat",
-        "#petlovers",
+        "#engaged",
         "#quizcouple"
       ]
     }

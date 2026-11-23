@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "choisirait",
   "categorie": "choisirait",
-  "sujet": "ch-205",
+  "sujet": "ch-207",
   "idee_id": null,
   "variantes": {
     "en": {
@@ -12,79 +12,79 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "lui",
-        "etiquette": "Hobbies edition",
-        "accroche": "What would he choose?",
-        "consigne": "Guess his 3 picks, then send it to him!",
+        "pour": "elle",
+        "etiquette": "Wedding edition",
+        "accroche": "What would she choose?",
+        "consigne": "3 questions, 4 seconds each. Pick for her!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which instrument would he play?",
+            "question": "Where would she want to get married?",
             "options": [
               {
-                "texte": "DJ decks",
-                "image": "choisirait/instrument/platines.webp"
+                "texte": "Garden",
+                "image": "choisirait/mariage/mariage-jardin.webp"
               },
               {
-                "texte": "Violin",
-                "image": "choisirait/instrument/violon.webp"
+                "texte": "Castle",
+                "image": "choisirait/mariage/mariage-chateau.webp"
               },
               {
-                "texte": "Trumpet",
-                "image": "choisirait/instrument/trompette.webp"
+                "texte": "City hall",
+                "image": "choisirait/mariage/mairie.webp"
               }
             ]
           },
           {
-            "question": "Which workout would he pick?",
+            "question": "Where would she want you to propose?",
             "options": [
               {
-                "texte": "Cycling",
-                "image": "choisirait/salle/velo.webp"
+                "texte": "Eiffel Tower",
+                "image": "choisirait/demande/demande-eiffel.webp"
               },
               {
-                "texte": "CrossFit",
-                "image": "choisirait/salle/crossfit.webp"
+                "texte": "Northern lights",
+                "image": "choisirait/demande/demande-aurores.webp"
               },
               {
-                "texte": "Boxing",
-                "image": "choisirait/salle/boxe-salle.webp"
+                "texte": "Beach at sunset",
+                "image": "choisirait/demande/demande-plage.webp"
               }
             ]
           },
           {
-            "question": "Which hobby would he pick up?",
+            "question": "Which ring would she want?",
             "options": [
               {
-                "texte": "Fishing",
-                "image": "choisirait/loisir/peche.webp"
+                "texte": "Emerald ring",
+                "image": "choisirait/bague/emeraude.webp"
               },
               {
-                "texte": "Photography",
-                "image": "choisirait/loisir/photo.webp"
+                "texte": "Solitaire diamond",
+                "image": "choisirait/bague/solitaire.webp"
               },
               {
-                "texte": "Knitting",
-                "image": "choisirait/loisir/tricot.webp"
+                "texte": "Gold band",
+                "image": "choisirait/bague/alliance-or.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Now send it to him. Did you guess right?",
-          "bouton": "Send this to him",
+          "question": "Got her 3 picks? Send it and see!",
+          "bouton": "Send this to her",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Hobbies edition. No cheating: decide before the timer runs out.\n\nSend this to him",
+      "legende": "Wedding edition. She will swear you got at least one wrong.\n\nSend this to her",
       "hashtags": [
         "#couplequiz",
-        "#boyfriendquiz",
+        "#girlfriendquiz",
         "#thisorthat",
-        "#hobbies",
+        "#engaged",
         "#quizcouple"
       ]
     }

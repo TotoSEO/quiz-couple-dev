@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "choisirait",
   "categorie": "choisirait",
-  "sujet": "ch-165",
+  "sujet": "ch-167",
   "idee_id": null,
   "variantes": {
     "en": {
@@ -12,79 +12,79 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "elle",
-        "etiquette": "Travel edition",
-        "accroche": "What would she choose?",
-        "consigne": "Guess her 3 picks, then send it to her!",
+        "pour": "lui",
+        "etiquette": "Date night edition",
+        "accroche": "What would he choose?",
+        "consigne": "3 questions, 4 seconds each. Pick for him!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which city would she take you to?",
+            "question": "Which date would he plan?",
             "options": [
               {
-                "texte": "Tokyo",
-                "image": "choisirait/ville/tokyo.webp"
+                "texte": "Camping",
+                "image": "choisirait/date/camping.webp"
               },
               {
-                "texte": "Lisbon",
-                "image": "choisirait/ville/lisbonne.webp"
+                "texte": "Museum",
+                "image": "choisirait/date/musee.webp"
               },
               {
-                "texte": "Paris",
-                "image": "choisirait/ville/paris.webp"
+                "texte": "Arcade",
+                "image": "choisirait/date/arcade.webp"
               }
             ]
           },
           {
-            "question": "Where would she take you on vacation?",
+            "question": "Which movie snack would he pick?",
             "options": [
               {
-                "texte": "Canada",
-                "image": "choisirait/vacances/canada.webp"
+                "texte": "Licorice",
+                "image": "choisirait/snack/reglisse.webp"
               },
               {
-                "texte": "Greece",
-                "image": "choisirait/vacances/grece.webp"
+                "texte": "Chocolate bar",
+                "image": "choisirait/snack/tablette.webp"
               },
               {
-                "texte": "Costa Rica",
-                "image": "choisirait/vacances/costa-rica.webp"
+                "texte": "Gummy bears",
+                "image": "choisirait/snack/oursons.webp"
               }
             ]
           },
           {
-            "question": "How would she travel with you?",
+            "question": "Which flowers would he get you?",
             "options": [
               {
-                "texte": "Motorbike",
-                "image": "choisirait/moto/bmw-gs.webp"
+                "texte": "Lilies",
+                "image": "choisirait/fleurs/lys.webp"
               },
               {
-                "texte": "Camper van",
-                "image": "choisirait/voyage/van.webp"
+                "texte": "Tulips",
+                "image": "choisirait/fleurs/tulipes.webp"
               },
               {
-                "texte": "Cruise ship",
-                "image": "choisirait/voyage/croisiere.webp"
+                "texte": "Sunflowers",
+                "image": "choisirait/fleurs/tournesols.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Got her 3 picks? Send it and see!",
-          "bouton": "Send this to her",
+          "question": "Send it to him: how many did you get?",
+          "bouton": "Send this to him",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Travel edition. No cheating: decide before the timer runs out.\n\nSend this to her",
+      "legende": "Date night edition. He will swear you got at least one wrong.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
-        "#girlfriendquiz",
+        "#boyfriendquiz",
         "#thisorthat",
-        "#travelcouple",
+        "#datenight",
         "#quizcouple"
       ]
     }

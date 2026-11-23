@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "choisirait",
   "categorie": "choisirait",
-  "sujet": "ch-036",
+  "sujet": "ch-038",
   "idee_id": null,
   "variantes": {
     "en": {
@@ -12,79 +12,79 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "elle",
-        "etiquette": "Style edition",
-        "accroche": "What would she choose?",
-        "consigne": "Pick what she would pick. Then send it to her!",
+        "pour": "lui",
+        "etiquette": "Car lovers edition",
+        "accroche": "What would he choose?",
+        "consigne": "Answer for him, then let him check!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which phone would she pick?",
+            "question": "Which classic car would he drive?",
             "options": [
               {
-                "texte": "Nokia 3310",
-                "image": "choisirait/telephone/nokia.webp"
+                "texte": "Citroën 2CV",
+                "image": "choisirait/vintage/2cv.webp"
               },
               {
-                "texte": "Flip phone",
-                "image": "choisirait/telephone/clapet.webp"
+                "texte": "VW Beetle",
+                "image": "choisirait/vintage/coccinelle.webp"
               },
               {
-                "texte": "Google Pixel",
-                "image": "choisirait/telephone/pixel.webp"
+                "texte": "1959 Cadillac",
+                "image": "choisirait/vintage/cadillac.webp"
               }
             ]
           },
           {
-            "question": "Which sneakers would she pick?",
+            "question": "Which motorbike would he ride?",
             "options": [
               {
-                "texte": "Air Force 1",
-                "image": "choisirait/baskets/air-force.webp"
+                "texte": "Vespa",
+                "image": "choisirait/moto/vespa.webp"
               },
               {
-                "texte": "Vans Old Skool",
-                "image": "choisirait/baskets/vans.webp"
+                "texte": "Harley-Davidson",
+                "image": "choisirait/moto/harley.webp"
               },
               {
-                "texte": "Crocs",
-                "image": "choisirait/baskets/crocs.webp"
+                "texte": "Indian Scout",
+                "image": "choisirait/moto/indian.webp"
               }
             ]
           },
           {
-            "question": "Which shoes would she pick?",
+            "question": "Which car would he drive?",
             "options": [
               {
-                "texte": "High heels",
-                "image": "choisirait/chaussures/talons.webp"
+                "texte": "Mercedes G-Class",
+                "image": "choisirait/voiture/g-class.webp"
               },
               {
-                "texte": "Knee-high boots",
-                "image": "choisirait/chaussures/cuissardes.webp"
+                "texte": "Ferrari F8",
+                "image": "choisirait/voiture/ferrari-f8.webp"
               },
               {
-                "texte": "Ballet flats",
-                "image": "choisirait/chaussures/ballerines.webp"
+                "texte": "Range Rover",
+                "image": "choisirait/voiture/range-rover.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Got her 3 picks? Send it and see!",
-          "bouton": "Send this to her",
+          "question": "Send it to him: how many did you get?",
+          "bouton": "Send this to him",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Style edition. Pick for her, then let her prove you wrong.\n\nSend this to her",
+      "legende": "Car lovers edition. Your answers first, then his reaction.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
-        "#girlfriendquiz",
+        "#boyfriendquiz",
         "#thisorthat",
-        "#style",
+        "#carlovers",
         "#quizcouple"
       ]
     }

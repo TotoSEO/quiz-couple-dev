@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "choisirait",
   "categorie": "choisirait",
-  "sujet": "ch-215",
+  "sujet": "ch-217",
   "idee_id": null,
   "variantes": {
     "en": {
@@ -13,78 +13,78 @@
         "langue": "en",
         "theme": "light",
         "pour": "lui",
-        "etiquette": "Travel edition",
+        "etiquette": "Date night edition",
         "accroche": "What would he choose?",
-        "consigne": "3 questions, 4 seconds each. Pick for him!",
+        "consigne": "Guess his 3 picks, then send it to him!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which city would he take you to?",
+            "question": "Which flowers would he get you?",
             "options": [
               {
-                "texte": "Rome",
-                "image": "choisirait/ville/rome.webp"
+                "texte": "Wildflowers",
+                "image": "choisirait/fleurs/fleurs-sauvages.webp"
               },
               {
-                "texte": "Venice",
-                "image": "choisirait/ville/venise.webp"
+                "texte": "Orchid",
+                "image": "choisirait/fleurs/orchidee.webp"
               },
               {
-                "texte": "New York",
-                "image": "choisirait/ville/new-york.webp"
+                "texte": "Peonies",
+                "image": "choisirait/fleurs/pivoines.webp"
               }
             ]
           },
           {
-            "question": "Where would he go on vacation?",
+            "question": "Which date would he take you on?",
             "options": [
               {
-                "texte": "Switzerland",
-                "image": "choisirait/vacances/suisse.webp"
+                "texte": "Wine tasting",
+                "image": "choisirait/date/degustation.webp"
               },
               {
-                "texte": "Peru",
-                "image": "choisirait/vacances/perou.webp"
+                "texte": "Theme park",
+                "image": "choisirait/date/parc.webp"
               },
               {
-                "texte": "Italy",
-                "image": "choisirait/vacances/italie.webp"
+                "texte": "Stargazing",
+                "image": "choisirait/date/etoiles.webp"
               }
             ]
           },
           {
-            "question": "How would he travel with you?",
+            "question": "What would he order at the bar?",
             "options": [
               {
-                "texte": "Motorbike",
-                "image": "choisirait/moto/bmw-gs.webp"
+                "texte": "Mojito",
+                "image": "choisirait/bar/mojito.webp"
               },
               {
-                "texte": "Convertible",
-                "image": "choisirait/voyage/cabriolet.webp"
+                "texte": "Whiskey",
+                "image": "choisirait/bar/whisky.webp"
               },
               {
-                "texte": "Cruise ship",
-                "image": "choisirait/voyage/croisiere.webp"
+                "texte": "Red wine",
+                "image": "choisirait/bar/vin-rouge.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Send it to him: how many did you get?",
+          "question": "Now send it to him. Did you guess right?",
           "bouton": "Send this to him",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Travel edition. No cheating: decide before the timer runs out.\n\nSend this to him",
+      "legende": "Date night edition. He will swear you got at least one wrong.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
         "#boyfriendquiz",
         "#thisorthat",
-        "#travelcouple",
+        "#datenight",
         "#quizcouple"
       ]
     }

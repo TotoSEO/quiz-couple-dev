@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "choisirait",
   "categorie": "choisirait",
-  "sujet": "ch-186",
+  "sujet": "ch-188",
   "idee_id": null,
   "variantes": {
     "en": {
@@ -12,79 +12,79 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "elle",
-        "etiquette": "Spring edition",
-        "accroche": "What would she choose?",
-        "consigne": "Answer for her, then let her check!",
+        "pour": "lui",
+        "etiquette": "Game night edition",
+        "accroche": "What would he choose?",
+        "consigne": "Pick what he would pick. Then send it to him!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which season would she pick?",
+            "question": "What would he order at 2 a.m.?",
             "options": [
               {
-                "texte": "Winter",
-                "image": "choisirait/saison/hiver-saison.webp"
+                "texte": "Grilled cheese",
+                "image": "choisirait/fastfood/croque.webp"
               },
               {
-                "texte": "Spring",
-                "image": "choisirait/saison/printemps.webp"
+                "texte": "Tacos",
+                "image": "choisirait/fastfood/tacos.webp"
               },
               {
-                "texte": "Summer",
-                "image": "choisirait/saison/ete.webp"
+                "texte": "Kebab",
+                "image": "choisirait/fastfood/kebab.webp"
               }
             ]
           },
           {
-            "question": "Which flowers would she want?",
+            "question": "Which console would he pick?",
             "options": [
               {
-                "texte": "Sunflowers",
-                "image": "choisirait/fleurs/tournesols.webp"
+                "texte": "Nintendo Switch",
+                "image": "choisirait/console/switch.webp"
               },
               {
-                "texte": "Red roses",
-                "image": "choisirait/fleurs/roses.webp"
+                "texte": "PlayStation 5",
+                "image": "choisirait/console/ps5.webp"
               },
               {
-                "texte": "Lavender",
-                "image": "choisirait/fleurs/lavande.webp"
+                "texte": "PlayStation 2",
+                "image": "choisirait/console/ps2.webp"
               }
             ]
           },
           {
-            "question": "Which date would she take you on?",
+            "question": "Which movie snack would he pick?",
             "options": [
               {
-                "texte": "Cinema night",
-                "image": "choisirait/date/cinema.webp"
+                "texte": "Popcorn",
+                "image": "choisirait/snack/popcorn.webp"
               },
               {
-                "texte": "Mini golf",
-                "image": "choisirait/date/mini-golf.webp"
+                "texte": "Nachos",
+                "image": "choisirait/snack/nachos.webp"
               },
               {
-                "texte": "Fancy dinner",
-                "image": "choisirait/demande/demande-resto.webp"
+                "texte": "Chocolate bar",
+                "image": "choisirait/snack/tablette.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Got her 3 picks? Send it and see!",
-          "bouton": "Send this to her",
+          "question": "Send it to him: how many did you get?",
+          "bouton": "Send this to him",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Spring edition. Pick for her, then let her prove you wrong.\n\nSend this to her",
+      "legende": "Game night edition. Your answers first, then his reaction.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
-        "#girlfriendquiz",
+        "#boyfriendquiz",
         "#thisorthat",
-        "#spring",
+        "#gamenight",
         "#quizcouple"
       ]
     }

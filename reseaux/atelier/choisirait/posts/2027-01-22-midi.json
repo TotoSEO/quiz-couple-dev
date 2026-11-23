@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "choisirait",
   "categorie": "choisirait",
-  "sujet": "ch-112",
+  "sujet": "ch-114",
   "idee_id": null,
   "variantes": {
     "en": {
@@ -12,79 +12,79 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "lui",
-        "etiquette": "Pet lovers edition",
-        "accroche": "What would he choose?",
-        "consigne": "Pick what he would pick. Then send it to him!",
+        "pour": "elle",
+        "etiquette": "Sweet tooth edition",
+        "accroche": "What would she choose?",
+        "consigne": "Answer for her, then let her check!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which pet would he want?",
+            "question": "Which ice cream would she get?",
             "options": [
               {
-                "texte": "Axolotl",
-                "image": "choisirait/animal/axolotl.webp"
+                "texte": "Ice cream cone",
+                "image": "choisirait/glace/cornet.webp"
               },
               {
-                "texte": "Parrot",
-                "image": "choisirait/animal/perroquet.webp"
+                "texte": "Popsicle",
+                "image": "choisirait/glace/esquimau.webp"
               },
               {
-                "texte": "Hamster",
-                "image": "choisirait/animal/hamster.webp"
+                "texte": "Soft serve",
+                "image": "choisirait/glace/italienne.webp"
               }
             ]
           },
           {
-            "question": "Which cat would he adopt?",
+            "question": "What would she grab at the bakery?",
             "options": [
               {
-                "texte": "Scottish Fold",
-                "image": "choisirait/chat/scottish.webp"
+                "texte": "Baguette",
+                "image": "choisirait/boulangerie/baguette.webp"
               },
               {
-                "texte": "Siamese",
-                "image": "choisirait/chat/siamois.webp"
+                "texte": "Brioche",
+                "image": "choisirait/boulangerie/brioche.webp"
               },
               {
-                "texte": "Maine Coon",
-                "image": "choisirait/chat/maine-coon.webp"
+                "texte": "Muffin",
+                "image": "choisirait/boulangerie/muffin.webp"
               }
             ]
           },
           {
-            "question": "Which dog would he adopt?",
+            "question": "Which dessert would she pick?",
             "options": [
               {
-                "texte": "Pug",
-                "image": "choisirait/chien/carlin.webp"
+                "texte": "Vanilla éclair",
+                "image": "choisirait/dessert/eclair.webp"
               },
               {
-                "texte": "Bernese Mountain Dog",
-                "image": "choisirait/chien/bouvier.webp"
+                "texte": "Apple pie",
+                "image": "choisirait/dessert/tarte-pommes.webp"
               },
               {
-                "texte": "Beagle",
-                "image": "choisirait/chien/beagle.webp"
+                "texte": "Macarons",
+                "image": "choisirait/dessert/macarons.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Now send it to him. Did you guess right?",
-          "bouton": "Send this to him",
+          "question": "Got her 3 picks? Send it and see!",
+          "bouton": "Send this to her",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Pet lovers edition. Write down his three letters before you send it.\n\nSend this to him",
+      "legende": "Sweet tooth edition. If you get all three, you know her by heart.\n\nSend this to her",
       "hashtags": [
         "#couplequiz",
-        "#boyfriendquiz",
+        "#girlfriendquiz",
         "#thisorthat",
-        "#petlovers",
+        "#dessert",
         "#quizcouple"
       ]
     }

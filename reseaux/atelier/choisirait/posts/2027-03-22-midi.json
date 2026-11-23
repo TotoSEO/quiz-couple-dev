@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "choisirait",
   "categorie": "choisirait",
-  "sujet": "ch-221",
+  "sujet": "ch-223",
   "idee_id": null,
   "variantes": {
     "en": {
@@ -13,78 +13,78 @@
         "langue": "en",
         "theme": "light",
         "pour": "lui",
-        "etiquette": "Travel edition",
+        "etiquette": "Adventure edition",
         "accroche": "What would he choose?",
-        "consigne": "Guess his 3 picks, then send it to him!",
+        "consigne": "3 questions, 4 seconds each. Pick for him!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which city would he take you to?",
+            "question": "Which sport would he watch?",
             "options": [
               {
-                "texte": "Lisbon",
-                "image": "choisirait/ville/lisbonne.webp"
+                "texte": "Basketball",
+                "image": "choisirait/sport/basket.webp"
               },
               {
-                "texte": "Prague",
-                "image": "choisirait/ville/prague.webp"
+                "texte": "American football",
+                "image": "choisirait/sport/foot-us.webp"
               },
               {
-                "texte": "Tokyo",
-                "image": "choisirait/ville/tokyo.webp"
+                "texte": "Tennis",
+                "image": "choisirait/sport/tennis.webp"
               }
             ]
           },
           {
-            "question": "Where would he book a weekend for two?",
+            "question": "Which adventure would he try?",
             "options": [
               {
-                "texte": "Overwater villa",
-                "image": "choisirait/weekend/bungalow-eau.webp"
+                "texte": "Paragliding",
+                "image": "choisirait/aventure/parapente.webp"
               },
               {
-                "texte": "Castle hotel",
-                "image": "choisirait/weekend/chateau-hotel.webp"
+                "texte": "Skydiving",
+                "image": "choisirait/aventure/parachute.webp"
               },
               {
-                "texte": "Ski chalet",
-                "image": "choisirait/weekend/chalet-ski.webp"
+                "texte": "Skiing",
+                "image": "choisirait/aventure/ski.webp"
               }
             ]
           },
           {
-            "question": "Which view would he wake up to?",
+            "question": "Where would he go on vacation?",
             "options": [
               {
-                "texte": "Desert",
-                "image": "choisirait/vue/desert-vue.webp"
+                "texte": "Canada",
+                "image": "choisirait/vacances/canada.webp"
               },
               {
-                "texte": "Vineyards",
-                "image": "choisirait/vue/vignes.webp"
+                "texte": "Lapland",
+                "image": "choisirait/vacances/laponie.webp"
               },
               {
-                "texte": "Northern lights",
-                "image": "choisirait/vue/aurores.webp"
+                "texte": "Mexico",
+                "image": "choisirait/vacances/mexique.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Send it to him: how many did you get?",
+          "question": "Now send it to him. Did you guess right?",
           "bouton": "Send this to him",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Travel edition. Answer for him first, no peeking.\n\nSend this to him",
+      "legende": "Adventure edition. Guess first, send it after. Then compare.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
         "#boyfriendquiz",
         "#thisorthat",
-        "#travelcouple",
+        "#adventurecouple",
         "#quizcouple"
       ]
     }

@@ -789,9 +789,9 @@ branche retire son post du planning (annulé par la synchro, dix fichiers au
 moins sur la branche) ; un fichier qui revient le fait revivre. La story du
 jour reprend le premier reel que la grille ouvre.
 
-## Les matins et les midis : « What would he/she choose? » (24 novembre 2026)
+## Les matins et les midis : « What would he/she choose? » (23 novembre 2026)
 
-Depuis le 24 novembre 2026, la grille ouvre aussi tous les matins et tous
+Depuis le 23 novembre 2026, la grille ouvre aussi tous les matins et tous
 les midis sauf le samedi, à la catégorie `choisirait` (vingt et un reels par
 semaine, voir « La semaine type » de LIGNE-EDITORIALE). Ces créneaux ne
 sont pas pour la routine : la fabrique (`choisirait/fabrique.mjs`) les a

@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "choisirait",
   "categorie": "choisirait",
-  "sujet": "ch-141",
+  "sujet": "ch-143",
   "idee_id": null,
   "variantes": {
     "en": {
@@ -12,79 +12,79 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "elle",
-        "etiquette": "Drinks edition",
-        "accroche": "What would she choose?",
-        "consigne": "Guess her 3 picks, then send it to her!",
+        "pour": "lui",
+        "etiquette": "Car lovers edition",
+        "accroche": "What would he choose?",
+        "consigne": "3 questions, 4 seconds each. Pick for him!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "What would she order at the bar?",
+            "question": "Which classic car would he drive?",
             "options": [
               {
-                "texte": "Mojito",
-                "image": "choisirait/bar/mojito.webp"
+                "texte": "1967 Mustang",
+                "image": "choisirait/vintage/mustang-67.webp"
               },
               {
-                "texte": "Gin and tonic",
-                "image": "choisirait/bar/gin-tonic.webp"
+                "texte": "VW Beetle",
+                "image": "choisirait/vintage/coccinelle.webp"
               },
               {
-                "texte": "Beer",
-                "image": "choisirait/bar/biere.webp"
+                "texte": "VW Camper Van",
+                "image": "choisirait/vintage/combi.webp"
               }
             ]
           },
           {
-            "question": "Which drink would she get?",
+            "question": "Which motorbike would he ride?",
             "options": [
               {
-                "texte": "Smoothie",
-                "image": "choisirait/boisson/smoothie.webp"
+                "texte": "Vespa",
+                "image": "choisirait/moto/vespa.webp"
               },
               {
-                "texte": "Lemonade",
-                "image": "choisirait/boisson/limonade.webp"
+                "texte": "Triumph Bonneville",
+                "image": "choisirait/moto/bonneville.webp"
               },
               {
-                "texte": "Bubble tea",
-                "image": "choisirait/boisson/bubble-tea.webp"
+                "texte": "Ducati Panigale",
+                "image": "choisirait/moto/ducati.webp"
               }
             ]
           },
           {
-            "question": "Which coffee would she order?",
+            "question": "Which car would he pick?",
             "options": [
               {
-                "texte": "Espresso",
-                "image": "choisirait/cafe/espresso.webp"
+                "texte": "Mercedes G-Class",
+                "image": "choisirait/voiture/g-class.webp"
               },
               {
-                "texte": "Iced latte",
-                "image": "choisirait/cafe/iced-latte.webp"
+                "texte": "Toyota Supra",
+                "image": "choisirait/voiture/supra.webp"
               },
               {
-                "texte": "Matcha latte",
-                "image": "choisirait/cafe/matcha.webp"
+                "texte": "Audi R8",
+                "image": "choisirait/voiture/audi-r8.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Got her 3 picks? Send it and see!",
-          "bouton": "Send this to her",
+          "question": "Send it to him: how many did you get?",
+          "bouton": "Send this to him",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Drinks edition. Answer for her first, no peeking.\n\nSend this to her",
+      "legende": "Car lovers edition. Guess first, send it after. Then compare.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
-        "#girlfriendquiz",
+        "#boyfriendquiz",
         "#thisorthat",
-        "#cocktails",
+        "#carlovers",
         "#quizcouple"
       ]
     }

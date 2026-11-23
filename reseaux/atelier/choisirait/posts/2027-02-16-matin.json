@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "choisirait",
   "categorie": "choisirait",
-  "sujet": "ch-157",
+  "sujet": "ch-159",
   "idee_id": null,
   "variantes": {
     "en": {
@@ -12,79 +12,79 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "lui",
-        "etiquette": "Pet lovers edition",
-        "accroche": "What would he choose?",
-        "consigne": "Guess his 3 picks, then send it to him!",
+        "pour": "elle",
+        "etiquette": "Sweet tooth edition",
+        "accroche": "What would she choose?",
+        "consigne": "3 questions, 4 seconds each. Pick for her!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which pet would he want?",
+            "question": "Which ice cream would she get?",
             "options": [
               {
-                "texte": "Ferret",
-                "image": "choisirait/animal/furet.webp"
+                "texte": "Banana split",
+                "image": "choisirait/glace/banana-split.webp"
               },
               {
-                "texte": "Axolotl",
-                "image": "choisirait/animal/axolotl.webp"
+                "texte": "Popsicle",
+                "image": "choisirait/glace/esquimau.webp"
               },
               {
-                "texte": "Guinea pig",
-                "image": "choisirait/animal/cochon-dinde.webp"
+                "texte": "Mochi ice cream",
+                "image": "choisirait/glace/mochi.webp"
               }
             ]
           },
           {
-            "question": "Which cat would he adopt?",
+            "question": "What would she grab at the bakery?",
             "options": [
               {
-                "texte": "Bengal",
-                "image": "choisirait/chat/bengal.webp"
+                "texte": "Cinnamon roll",
+                "image": "choisirait/boulangerie/cinnamon-roll.webp"
               },
               {
-                "texte": "British Shorthair",
-                "image": "choisirait/chat/british.webp"
+                "texte": "Croissant",
+                "image": "choisirait/boulangerie/croissant.webp"
               },
               {
-                "texte": "Siamese",
-                "image": "choisirait/chat/siamois.webp"
+                "texte": "Bagel",
+                "image": "choisirait/boulangerie/bagel.webp"
               }
             ]
           },
           {
-            "question": "Which dog would he pick?",
+            "question": "Which cake would she pick?",
             "options": [
               {
-                "texte": "Samoyed",
-                "image": "choisirait/chien/samoyede.webp"
+                "texte": "Brownie",
+                "image": "choisirait/dessert/brownie.webp"
               },
               {
-                "texte": "Dachshund",
-                "image": "choisirait/chien/teckel.webp"
+                "texte": "Mille-feuille",
+                "image": "choisirait/dessert/mille-feuille.webp"
               },
               {
-                "texte": "Corgi",
-                "image": "choisirait/chien/corgi.webp"
+                "texte": "Strawberry tart",
+                "image": "choisirait/dessert/tarte-fraises.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Now send it to him. Did you guess right?",
-          "bouton": "Send this to him",
+          "question": "Got her 3 picks? Send it and see!",
+          "bouton": "Send this to her",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Pet lovers edition. He will swear you got at least one wrong.\n\nSend this to him",
+      "legende": "Sweet tooth edition. One letter per question, then send it to her.\n\nSend this to her",
       "hashtags": [
         "#couplequiz",
-        "#boyfriendquiz",
+        "#girlfriendquiz",
         "#thisorthat",
-        "#petlovers",
+        "#dessert",
         "#quizcouple"
       ]
     }

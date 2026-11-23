@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "choisirait",
   "categorie": "choisirait",
-  "sujet": "ch-203",
+  "sujet": "ch-205",
   "idee_id": null,
   "variantes": {
     "en": {
@@ -13,78 +13,78 @@
         "langue": "en",
         "theme": "light",
         "pour": "lui",
-        "etiquette": "Car lovers edition",
+        "etiquette": "Game night edition",
         "accroche": "What would he choose?",
-        "consigne": "3 questions, 4 seconds each. Pick for him!",
+        "consigne": "Guess his 3 picks, then send it to him!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which motorbike would he ride?",
+            "question": "What would he order at 2 a.m.?",
             "options": [
               {
-                "texte": "Indian Scout",
-                "image": "choisirait/moto/indian.webp"
+                "texte": "Fried chicken",
+                "image": "choisirait/fastfood/poulet-frit.webp"
               },
               {
-                "texte": "Yamaha MT-07",
-                "image": "choisirait/moto/mt07.webp"
+                "texte": "Burger",
+                "image": "choisirait/fastfood/burger.webp"
               },
               {
-                "texte": "Vespa",
-                "image": "choisirait/moto/vespa.webp"
+                "texte": "Instant noodles",
+                "image": "choisirait/fastfood/nouilles.webp"
               }
             ]
           },
           {
-            "question": "Which classic car would he drive?",
+            "question": "Which console would he pick?",
             "options": [
               {
-                "texte": "Jaguar E-Type",
-                "image": "choisirait/vintage/e-type.webp"
+                "texte": "Xbox",
+                "image": "choisirait/console/xbox.webp"
               },
               {
-                "texte": "Porsche 356",
-                "image": "choisirait/vintage/porsche-356.webp"
+                "texte": "PlayStation 2",
+                "image": "choisirait/console/ps2.webp"
               },
               {
-                "texte": "Classic Mini",
-                "image": "choisirait/vintage/mini-classique.webp"
+                "texte": "Gaming PC",
+                "image": "choisirait/console/pc-gamer.webp"
               }
             ]
           },
           {
-            "question": "Which car would he drive?",
+            "question": "Which game night would he pick?",
             "options": [
               {
-                "texte": "Ford Mustang",
-                "image": "choisirait/voiture/mustang.webp"
+                "texte": "Poker",
+                "image": "choisirait/jeu/poker.webp"
               },
               {
-                "texte": "Land Rover Defender",
-                "image": "choisirait/voiture/defender.webp"
+                "texte": "Video games",
+                "image": "choisirait/jeu/jeux-video.webp"
               },
               {
-                "texte": "Mercedes-AMG C63 S",
-                "image": "choisirait/voiture/amg-c63.webp"
+                "texte": "Foosball",
+                "image": "choisirait/jeu/baby-foot.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Send it to him: how many did you get?",
+          "question": "Now send it to him. Did you guess right?",
           "bouton": "Send this to him",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Car lovers edition. Guess first, send it after. Then compare.\n\nSend this to him",
+      "legende": "Game night edition. No cheating: decide before the timer runs out.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
         "#boyfriendquiz",
         "#thisorthat",
-        "#carlovers",
+        "#gamenight",
         "#quizcouple"
       ]
     }

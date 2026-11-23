@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "choisirait",
   "categorie": "choisirait",
-  "sujet": "ch-147",
+  "sujet": "ch-149",
   "idee_id": null,
   "variantes": {
     "en": {
@@ -12,79 +12,79 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "elle",
-        "etiquette": "Wedding edition",
-        "accroche": "What would she choose?",
-        "consigne": "3 questions, 4 seconds each. Pick for her!",
+        "pour": "lui",
+        "etiquette": "Winter edition",
+        "accroche": "What would he choose?",
+        "consigne": "Guess his 3 picks, then send it to him!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Where would she want you to propose?",
+            "question": "Which winter date would he pick?",
             "options": [
               {
-                "texte": "Mountaintop",
-                "image": "choisirait/demande/demande-montagne.webp"
+                "texte": "Sledding",
+                "image": "choisirait/hiver/luge.webp"
               },
               {
-                "texte": "Northern lights",
-                "image": "choisirait/demande/demande-aurores.webp"
+                "texte": "Building a snowman",
+                "image": "choisirait/hiver/bonhomme.webp"
               },
               {
-                "texte": "Rooftop",
-                "image": "choisirait/demande/demande-rooftop.webp"
+                "texte": "Skiing",
+                "image": "choisirait/hiver/hiver-ski.webp"
               }
             ]
           },
           {
-            "question": "Where would she want to get married?",
+            "question": "Which dinner would he pick?",
             "options": [
               {
-                "texte": "Forest",
-                "image": "choisirait/vue/foret.webp"
+                "texte": "Risotto",
+                "image": "choisirait/diner/risotto.webp"
               },
               {
-                "texte": "Vineyard",
-                "image": "choisirait/vue/vignes.webp"
+                "texte": "Steak and fries",
+                "image": "choisirait/diner/steak-frites.webp"
               },
               {
-                "texte": "Lakeside",
-                "image": "choisirait/vue/lac.webp"
+                "texte": "Fish and chips",
+                "image": "choisirait/diner/fish-chips.webp"
               }
             ]
           },
           {
-            "question": "Which ring would she want?",
+            "question": "Where would he book a weekend for two?",
             "options": [
               {
-                "texte": "Halo ring",
-                "image": "choisirait/bague/halo.webp"
+                "texte": "Overwater villa",
+                "image": "choisirait/weekend/bungalow-eau.webp"
               },
               {
-                "texte": "Vintage ring",
-                "image": "choisirait/bague/vintage-bague.webp"
+                "texte": "Houseboat",
+                "image": "choisirait/weekend/peniche.webp"
               },
               {
-                "texte": "Rose gold ring",
-                "image": "choisirait/bague/or-rose.webp"
+                "texte": "Ski chalet",
+                "image": "choisirait/weekend/chalet-ski.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Got her 3 picks? Send it and see!",
-          "bouton": "Send this to her",
+          "question": "Send it to him: how many did you get?",
+          "bouton": "Send this to him",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Wedding edition. She will swear you got at least one wrong.\n\nSend this to her",
+      "legende": "Winter edition. One letter per question, then send it to him.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
-        "#girlfriendquiz",
+        "#boyfriendquiz",
         "#thisorthat",
-        "#engaged",
+        "#winter",
         "#quizcouple"
       ]
     }

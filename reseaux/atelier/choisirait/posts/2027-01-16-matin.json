@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "choisirait",
   "categorie": "choisirait",
-  "sujet": "ch-100",
+  "sujet": "ch-102",
   "idee_id": null,
   "variantes": {
     "en": {
@@ -12,79 +12,79 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "lui",
-        "etiquette": "Morning edition",
-        "accroche": "What would he choose?",
-        "consigne": "Pick what he would pick. Then send it to him!",
+        "pour": "elle",
+        "etiquette": "Cozy night in edition",
+        "accroche": "What would she choose?",
+        "consigne": "Answer for her, then let her check!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "What would he grab at the bakery?",
+            "question": "Which console would she pick?",
             "options": [
               {
-                "texte": "Pain au chocolat",
-                "image": "choisirait/boulangerie/pain-chocolat.webp"
+                "texte": "Gaming PC",
+                "image": "choisirait/console/pc-gamer.webp"
               },
               {
-                "texte": "Brioche",
-                "image": "choisirait/boulangerie/brioche.webp"
+                "texte": "Xbox",
+                "image": "choisirait/console/xbox.webp"
               },
               {
-                "texte": "Donut",
-                "image": "choisirait/boulangerie/donut.webp"
+                "texte": "PlayStation 5",
+                "image": "choisirait/console/ps5.webp"
               }
             ]
           },
           {
-            "question": "Which breakfast would he make you?",
+            "question": "Which dessert would she pick?",
             "options": [
               {
-                "texte": "Full English",
-                "image": "choisirait/petitdej/english.webp"
+                "texte": "Crème brûlée",
+                "image": "choisirait/dessert/creme-brulee.webp"
               },
               {
-                "texte": "French toast",
-                "image": "choisirait/petitdej/pain-perdu.webp"
+                "texte": "Tiramisu",
+                "image": "choisirait/dessert/tiramisu.webp"
               },
               {
-                "texte": "Açaí bowl",
-                "image": "choisirait/petitdej/acai.webp"
+                "texte": "Brownie",
+                "image": "choisirait/dessert/brownie.webp"
               }
             ]
           },
           {
-            "question": "How would he have his eggs?",
+            "question": "Which game night would she pick?",
             "options": [
               {
-                "texte": "Fried",
-                "image": "choisirait/oeufs/oeuf-plat.webp"
+                "texte": "Chess",
+                "image": "choisirait/jeu/echecs-soir.webp"
               },
               {
-                "texte": "Scrambled",
-                "image": "choisirait/oeufs/brouilles.webp"
+                "texte": "Board games",
+                "image": "choisirait/jeu/jeux-societe.webp"
               },
               {
-                "texte": "Poached",
-                "image": "choisirait/oeufs/poche.webp"
+                "texte": "Video games",
+                "image": "choisirait/jeu/jeux-video.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Now send it to him. Did you guess right?",
-          "bouton": "Send this to him",
+          "question": "Got her 3 picks? Send it and see!",
+          "bouton": "Send this to her",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Morning edition. Easy for you? Then the next one is for him.\n\nSend this to him",
+      "legende": "Cozy night in edition. Write down her three letters before you send it.\n\nSend this to her",
       "hashtags": [
         "#couplequiz",
-        "#boyfriendquiz",
+        "#girlfriendquiz",
         "#thisorthat",
-        "#breakfast",
+        "#cozynight",
         "#quizcouple"
       ]
     }

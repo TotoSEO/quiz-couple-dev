@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "choisirait",
   "categorie": "choisirait",
-  "sujet": "ch-206",
+  "sujet": "ch-208",
   "idee_id": null,
   "variantes": {
     "en": {
@@ -13,78 +13,78 @@
         "langue": "en",
         "theme": "light",
         "pour": "lui",
-        "etiquette": "Wedding edition",
+        "etiquette": "Food edition",
         "accroche": "What would he choose?",
-        "consigne": "Answer for him, then let him check!",
+        "consigne": "Pick what he would pick. Then send it to him!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Where would he propose?",
+            "question": "Which breakfast would he choose?",
             "options": [
               {
-                "texte": "Disney castle",
-                "image": "choisirait/demande/demande-chateau.webp"
+                "texte": "Croissant & coffee",
+                "image": "choisirait/petitdej/croissant-cafe.webp"
               },
               {
-                "texte": "Eiffel Tower",
-                "image": "choisirait/demande/demande-eiffel.webp"
+                "texte": "Waffles",
+                "image": "choisirait/petitdej/gaufres.webp"
               },
               {
-                "texte": "Beach at sunset",
-                "image": "choisirait/demande/demande-plage.webp"
+                "texte": "Avocado toast",
+                "image": "choisirait/petitdej/avocado-toast.webp"
               }
             ]
           },
           {
-            "question": "Where would he want to get married?",
+            "question": "Which potato would he pick?",
             "options": [
               {
-                "texte": "Forest",
-                "image": "choisirait/vue/foret.webp"
+                "texte": "Curly fries",
+                "image": "choisirait/patate/curly.webp"
               },
               {
-                "texte": "Garden",
-                "image": "choisirait/mariage/mariage-jardin.webp"
+                "texte": "Hash browns",
+                "image": "choisirait/patate/hash-browns.webp"
               },
               {
-                "texte": "Lakeside",
-                "image": "choisirait/vue/lac.webp"
+                "texte": "Potato gratin",
+                "image": "choisirait/patate/gratin.webp"
               }
             ]
           },
           {
-            "question": "Which ring would he pick for you?",
+            "question": "Which pizza would he order?",
             "options": [
               {
-                "texte": "Gold band",
-                "image": "choisirait/bague/alliance-or.webp"
+                "texte": "Margherita",
+                "image": "choisirait/pizza/margherita.webp"
               },
               {
-                "texte": "Rose gold ring",
-                "image": "choisirait/bague/or-rose.webp"
+                "texte": "Four cheese",
+                "image": "choisirait/pizza/quatre-fromages.webp"
               },
               {
-                "texte": "Halo ring",
-                "image": "choisirait/bague/halo.webp"
+                "texte": "Hawaiian",
+                "image": "choisirait/pizza/hawaienne.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Send it to him: how many did you get?",
+          "question": "Now send it to him. Did you guess right?",
           "bouton": "Send this to him",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Wedding edition. Pick for him, then let him prove you wrong.\n\nSend this to him",
+      "legende": "Food edition. Your answers first, then his reaction.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
         "#boyfriendquiz",
         "#thisorthat",
-        "#engaged",
+        "#foodie",
         "#quizcouple"
       ]
     }

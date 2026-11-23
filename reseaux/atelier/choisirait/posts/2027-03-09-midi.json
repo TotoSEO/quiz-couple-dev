@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "choisirait",
   "categorie": "choisirait",
-  "sujet": "ch-197",
+  "sujet": "ch-199",
   "idee_id": null,
   "variantes": {
     "en": {
@@ -13,78 +13,78 @@
         "langue": "en",
         "theme": "light",
         "pour": "lui",
-        "etiquette": "Luxury edition",
+        "etiquette": "Date night edition",
         "accroche": "What would he choose?",
-        "consigne": "Guess his 3 picks, then send it to him!",
+        "consigne": "3 questions, 4 seconds each. Pick for him!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which house would he pick?",
+            "question": "Which date would he take you on?",
             "options": [
               {
-                "texte": "Cozy cabin",
-                "image": "choisirait/weekend/chalet-bois.webp"
+                "texte": "Theme park",
+                "image": "choisirait/date/parc.webp"
               },
               {
-                "texte": "Lake house",
-                "image": "choisirait/maison/maison-lac.webp"
+                "texte": "Picnic",
+                "image": "choisirait/date/pique-nique.webp"
               },
               {
-                "texte": "Victorian house",
-                "image": "choisirait/maison/victorienne.webp"
+                "texte": "Stargazing",
+                "image": "choisirait/date/etoiles.webp"
               }
             ]
           },
           {
-            "question": "How would he travel with you?",
+            "question": "Which flowers would he get you?",
             "options": [
               {
-                "texte": "Private jet",
-                "image": "choisirait/voyage/jet.webp"
+                "texte": "Daisies",
+                "image": "choisirait/fleurs/marguerites.webp"
               },
               {
-                "texte": "Cruise ship",
-                "image": "choisirait/voyage/croisiere.webp"
+                "texte": "Wildflowers",
+                "image": "choisirait/fleurs/fleurs-sauvages.webp"
               },
               {
-                "texte": "Convertible",
-                "image": "choisirait/voyage/cabriolet.webp"
+                "texte": "Lilies",
+                "image": "choisirait/fleurs/lys.webp"
               }
             ]
           },
           {
-            "question": "Which car would he pick?",
+            "question": "Which dinner would he pick?",
             "options": [
               {
-                "texte": "Mini Cooper",
-                "image": "choisirait/voiture/mini.webp"
+                "texte": "Ramen",
+                "image": "choisirait/diner/ramen.webp"
               },
               {
-                "texte": "Toyota Supra",
-                "image": "choisirait/voiture/supra.webp"
+                "texte": "Pad thai",
+                "image": "choisirait/diner/pad-thai.webp"
               },
               {
-                "texte": "Nissan GT-R",
-                "image": "choisirait/voiture/gtr.webp"
+                "texte": "Indian curry",
+                "image": "choisirait/diner/curry.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Send it to him: how many did you get?",
+          "question": "Now send it to him. Did you guess right?",
           "bouton": "Send this to him",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Luxury edition. He will swear you got at least one wrong.\n\nSend this to him",
+      "legende": "Date night edition. One letter per question, then send it to him.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
         "#boyfriendquiz",
         "#thisorthat",
-        "#luxurylife",
+        "#datenight",
         "#quizcouple"
       ]
     }

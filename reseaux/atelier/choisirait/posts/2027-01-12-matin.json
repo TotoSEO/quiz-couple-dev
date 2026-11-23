@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "choisirait",
   "categorie": "choisirait",
-  "sujet": "ch-092",
+  "sujet": "ch-094",
   "idee_id": null,
   "variantes": {
     "en": {
@@ -13,78 +13,78 @@
         "langue": "en",
         "theme": "light",
         "pour": "lui",
-        "etiquette": "Car lovers edition",
+        "etiquette": "Pet lovers edition",
         "accroche": "What would he choose?",
-        "consigne": "Pick what he would pick. Then send it to him!",
+        "consigne": "Answer for him, then let him check!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which motorbike would he ride?",
+            "question": "Which pet would he want?",
             "options": [
               {
-                "texte": "BMW GS",
-                "image": "choisirait/moto/bmw-gs.webp"
+                "texte": "Chameleon",
+                "image": "choisirait/animal/cameleon.webp"
               },
               {
-                "texte": "Harley-Davidson",
-                "image": "choisirait/moto/harley.webp"
+                "texte": "Axolotl",
+                "image": "choisirait/animal/axolotl.webp"
               },
               {
-                "texte": "Indian Scout",
-                "image": "choisirait/moto/indian.webp"
+                "texte": "Goldfish",
+                "image": "choisirait/animal/poisson.webp"
               }
             ]
           },
           {
-            "question": "Which classic car would he drive?",
+            "question": "Which cat would he adopt?",
             "options": [
               {
-                "texte": "1967 Mustang",
-                "image": "choisirait/vintage/mustang-67.webp"
+                "texte": "Ragdoll",
+                "image": "choisirait/chat/ragdoll.webp"
               },
               {
-                "texte": "Classic Mini",
-                "image": "choisirait/vintage/mini-classique.webp"
+                "texte": "British Shorthair",
+                "image": "choisirait/chat/british.webp"
               },
               {
-                "texte": "Jaguar E-Type",
-                "image": "choisirait/vintage/e-type.webp"
+                "texte": "Black cat",
+                "image": "choisirait/chat/chat-noir.webp"
               }
             ]
           },
           {
-            "question": "Which car would he drive?",
+            "question": "Which dog would he pick?",
             "options": [
               {
-                "texte": "Mini Cooper",
-                "image": "choisirait/voiture/mini.webp"
+                "texte": "Shiba Inu",
+                "image": "choisirait/chien/shiba.webp"
               },
               {
-                "texte": "Range Rover",
-                "image": "choisirait/voiture/range-rover.webp"
+                "texte": "Rottweiler",
+                "image": "choisirait/chien/rottweiler.webp"
               },
               {
-                "texte": "Ford Mustang",
-                "image": "choisirait/voiture/mustang.webp"
+                "texte": "French Bulldog",
+                "image": "choisirait/chien/bouledogue.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Send it to him: how many did you get?",
+          "question": "Now send it to him. Did you guess right?",
           "bouton": "Send this to him",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Car lovers edition. Write down his three letters before you send it.\n\nSend this to him",
+      "legende": "Pet lovers edition. If you get all three, you know him by heart.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
         "#boyfriendquiz",
         "#thisorthat",
-        "#carlovers",
+        "#petlovers",
         "#quizcouple"
       ]
     }

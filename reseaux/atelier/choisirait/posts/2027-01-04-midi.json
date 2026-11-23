@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "choisirait",
   "categorie": "choisirait",
-  "sujet": "ch-078",
+  "sujet": "ch-080",
   "idee_id": null,
   "variantes": {
     "en": {
@@ -12,25 +12,25 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "elle",
+        "pour": "lui",
         "etiquette": "Luxury edition",
-        "accroche": "What would she choose?",
-        "consigne": "Answer for her, then let her check!",
+        "accroche": "What would he choose?",
+        "consigne": "Pick what he would pick. Then send it to him!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which watch would she wear?",
+            "question": "Which watch would he wear?",
             "options": [
               {
-                "texte": "Casio G-Shock",
-                "image": "choisirait/montre/g-shock.webp"
+                "texte": "Seiko diver",
+                "image": "choisirait/montre/seiko.webp"
               },
               {
-                "texte": "Casio digital",
-                "image": "choisirait/montre/casio.webp"
+                "texte": "Omega Speedmaster",
+                "image": "choisirait/montre/speedmaster.webp"
               },
               {
                 "texte": "Rolex Submariner",
@@ -39,50 +39,50 @@
             ]
           },
           {
-            "question": "Which car would she drive?",
+            "question": "Which car would he pick?",
             "options": [
               {
-                "texte": "Nissan GT-R",
-                "image": "choisirait/voiture/gtr.webp"
-              },
-              {
-                "texte": "Rolls-Royce",
-                "image": "choisirait/voiture/rolls-royce.webp"
+                "texte": "Bugatti Chiron",
+                "image": "choisirait/voiture/bugatti.webp"
               },
               {
                 "texte": "BMW M3",
                 "image": "choisirait/voiture/bmw-m3.webp"
+              },
+              {
+                "texte": "McLaren 720S",
+                "image": "choisirait/voiture/mclaren.webp"
               }
             ]
           },
           {
-            "question": "How would she travel with you?",
+            "question": "How would he travel with you?",
             "options": [
+              {
+                "texte": "Private jet",
+                "image": "choisirait/voyage/jet.webp"
+              },
               {
                 "texte": "Hot air balloon",
                 "image": "choisirait/voyage/montgolfiere.webp"
               },
               {
-                "texte": "Motorbike",
-                "image": "choisirait/moto/bmw-gs.webp"
-              },
-              {
-                "texte": "Cruise ship",
-                "image": "choisirait/voyage/croisiere.webp"
+                "texte": "Convertible",
+                "image": "choisirait/voyage/cabriolet.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Got her 3 picks? Send it and see!",
-          "bouton": "Send this to her",
+          "question": "Send it to him: how many did you get?",
+          "bouton": "Send this to him",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Luxury edition. Your answers first, then her reaction.\n\nSend this to her",
+      "legende": "Luxury edition. Easy for you? Then the next one is for him.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
-        "#girlfriendquiz",
+        "#boyfriendquiz",
         "#thisorthat",
         "#luxurylife",
         "#quizcouple"

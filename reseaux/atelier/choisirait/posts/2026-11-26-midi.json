@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "choisirait",
   "categorie": "choisirait",
-  "sujet": "ch-006",
+  "sujet": "ch-008",
   "idee_id": null,
   "variantes": {
     "en": {
@@ -12,77 +12,77 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "elle",
+        "pour": "lui",
         "etiquette": "Dream life edition",
-        "accroche": "What would she choose?",
-        "consigne": "Answer for her, then let her check!",
+        "accroche": "What would he choose?",
+        "consigne": "Pick what he would pick. Then send it to him!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which house would she pick?",
+            "question": "How would he travel with you?",
             "options": [
               {
-                "texte": "Mountain chalet",
-                "image": "choisirait/maison/chalet.webp"
+                "texte": "Private jet",
+                "image": "choisirait/voyage/jet.webp"
               },
               {
-                "texte": "Cozy cabin",
-                "image": "choisirait/weekend/chalet-bois.webp"
+                "texte": "Camper van",
+                "image": "choisirait/voyage/van.webp"
+              },
+              {
+                "texte": "Hot air balloon",
+                "image": "choisirait/voyage/montgolfiere.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which house would he pick?",
+            "options": [
+              {
+                "texte": "Modern villa",
+                "image": "choisirait/maison/villa-moderne.webp"
               },
               {
                 "texte": "Beach house",
                 "image": "choisirait/maison/maison-plage.webp"
+              },
+              {
+                "texte": "Mountain chalet",
+                "image": "choisirait/maison/chalet.webp"
               }
             ]
           },
           {
-            "question": "Which watch would she wear?",
+            "question": "Which view would he wake up to?",
             "options": [
               {
-                "texte": "Pocket watch",
-                "image": "choisirait/montre/gousset.webp"
+                "texte": "Rice fields",
+                "image": "choisirait/vue/rizieres.webp"
               },
               {
-                "texte": "Rolex Submariner",
-                "image": "choisirait/montre/rolex.webp"
+                "texte": "Tropical beach",
+                "image": "choisirait/vue/plage-tropicale.webp"
               },
               {
-                "texte": "Casio digital",
-                "image": "choisirait/montre/casio.webp"
-              }
-            ]
-          },
-          {
-            "question": "Which car would she pick?",
-            "options": [
-              {
-                "texte": "Range Rover",
-                "image": "choisirait/voiture/range-rover.webp"
-              },
-              {
-                "texte": "Aston Martin DB11",
-                "image": "choisirait/voiture/aston-martin.webp"
-              },
-              {
-                "texte": "Ferrari F8",
-                "image": "choisirait/voiture/ferrari-f8.webp"
+                "texte": "Ocean",
+                "image": "choisirait/vue/ocean.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Got her 3 picks? Send it and see!",
-          "bouton": "Send this to her",
+          "question": "Send it to him: how many did you get?",
+          "bouton": "Send this to him",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Dream life edition. Pick for her, then let her prove you wrong.\n\nSend this to her",
+      "legende": "Dream life edition. Your answers first, then his reaction.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
-        "#girlfriendquiz",
+        "#boyfriendquiz",
         "#thisorthat",
         "#dreamlife",
         "#quizcouple"

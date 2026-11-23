@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "choisirait",
   "categorie": "choisirait",
-  "sujet": "ch-076",
+  "sujet": "ch-078",
   "idee_id": null,
   "variantes": {
     "en": {
@@ -12,79 +12,79 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "lui",
-        "etiquette": "Dream home edition",
-        "accroche": "What would he choose?",
-        "consigne": "Pick what he would pick. Then send it to him!",
+        "pour": "elle",
+        "etiquette": "Winter edition",
+        "accroche": "What would she choose?",
+        "consigne": "Answer for her, then let her check!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which dream house would he pick?",
+            "question": "Which winter date would she pick?",
             "options": [
               {
-                "texte": "Victorian house",
-                "image": "choisirait/maison/victorienne.webp"
+                "texte": "Building a snowman",
+                "image": "choisirait/hiver/bonhomme.webp"
               },
               {
-                "texte": "Modern villa",
-                "image": "choisirait/maison/villa-moderne.webp"
+                "texte": "Skiing",
+                "image": "choisirait/hiver/hiver-ski.webp"
               },
               {
-                "texte": "Cozy cabin",
-                "image": "choisirait/weekend/chalet-bois.webp"
+                "texte": "Hot tub in the snow",
+                "image": "choisirait/hiver/jacuzzi.webp"
               }
             ]
           },
           {
-            "question": "Which cat would he adopt?",
+            "question": "Which dinner would she pick?",
             "options": [
               {
-                "texte": "Bengal",
-                "image": "choisirait/chat/bengal.webp"
+                "texte": "Paella",
+                "image": "choisirait/diner/paella.webp"
               },
               {
-                "texte": "Scottish Fold",
-                "image": "choisirait/chat/scottish.webp"
+                "texte": "Indian curry",
+                "image": "choisirait/diner/curry.webp"
               },
               {
-                "texte": "Siamese",
-                "image": "choisirait/chat/siamois.webp"
+                "texte": "Korean BBQ",
+                "image": "choisirait/diner/bbq-coreen.webp"
               }
             ]
           },
           {
-            "question": "Which dog would he adopt?",
+            "question": "Which coffee would she order?",
             "options": [
               {
-                "texte": "Pug",
-                "image": "choisirait/chien/carlin.webp"
+                "texte": "Espresso",
+                "image": "choisirait/cafe/espresso.webp"
               },
               {
-                "texte": "Samoyed",
-                "image": "choisirait/chien/samoyede.webp"
+                "texte": "Cappuccino",
+                "image": "choisirait/cafe/cappuccino.webp"
               },
               {
-                "texte": "Jack Russell",
-                "image": "choisirait/chien/jack-russell.webp"
+                "texte": "Americano",
+                "image": "choisirait/cafe/americano.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Now send it to him. Did you guess right?",
-          "bouton": "Send this to him",
+          "question": "Got her 3 picks? Send it and see!",
+          "bouton": "Send this to her",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Dream home edition. Pick for him, then let him prove you wrong.\n\nSend this to him",
+      "legende": "Winter edition. Your answers first, then her reaction.\n\nSend this to her",
       "hashtags": [
         "#couplequiz",
-        "#boyfriendquiz",
+        "#girlfriendquiz",
         "#thisorthat",
-        "#dreamhome",
+        "#winter",
         "#quizcouple"
       ]
     }

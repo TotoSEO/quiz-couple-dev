@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "choisirait",
   "categorie": "choisirait",
-  "sujet": "ch-091",
+  "sujet": "ch-093",
   "idee_id": null,
   "variantes": {
     "en": {
@@ -12,79 +12,79 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "lui",
-        "etiquette": "Travel edition",
-        "accroche": "What would he choose?",
-        "consigne": "3 questions, 4 seconds each. Pick for him!",
+        "pour": "elle",
+        "etiquette": "Car lovers edition",
+        "accroche": "What would she choose?",
+        "consigne": "Guess her 3 picks, then send it to her!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which city would he take you to?",
+            "question": "Which motorbike would she ride?",
             "options": [
               {
-                "texte": "Prague",
-                "image": "choisirait/ville/prague.webp"
+                "texte": "BMW GS",
+                "image": "choisirait/moto/bmw-gs.webp"
               },
               {
-                "texte": "Rome",
-                "image": "choisirait/ville/rome.webp"
+                "texte": "Kawasaki Ninja",
+                "image": "choisirait/moto/ninja.webp"
               },
               {
-                "texte": "Barcelona",
-                "image": "choisirait/ville/barcelone.webp"
+                "texte": "Vespa",
+                "image": "choisirait/moto/vespa.webp"
               }
             ]
           },
           {
-            "question": "Which view would he wake up to?",
+            "question": "Which classic car would she drive?",
             "options": [
               {
-                "texte": "Ocean",
-                "image": "choisirait/vue/ocean.webp"
+                "texte": "VW Beetle",
+                "image": "choisirait/vintage/coccinelle.webp"
               },
               {
-                "texte": "Desert",
-                "image": "choisirait/vue/desert-vue.webp"
+                "texte": "Jaguar E-Type",
+                "image": "choisirait/vintage/e-type.webp"
               },
               {
-                "texte": "Vineyards",
-                "image": "choisirait/vue/vignes.webp"
+                "texte": "Mercedes 300 SL",
+                "image": "choisirait/vintage/300sl.webp"
               }
             ]
           },
           {
-            "question": "Where would he take you on vacation?",
+            "question": "Which car would she drive?",
             "options": [
               {
-                "texte": "Thailand",
-                "image": "choisirait/vacances/thailande.webp"
+                "texte": "BMW M3",
+                "image": "choisirait/voiture/bmw-m3.webp"
               },
               {
-                "texte": "Japan",
-                "image": "choisirait/vacances/japon.webp"
+                "texte": "Audi R8",
+                "image": "choisirait/voiture/audi-r8.webp"
               },
               {
-                "texte": "Canada",
-                "image": "choisirait/vacances/canada.webp"
+                "texte": "Ferrari F8",
+                "image": "choisirait/voiture/ferrari-f8.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Now send it to him. Did you guess right?",
-          "bouton": "Send this to him",
+          "question": "Got her 3 picks? Send it and see!",
+          "bouton": "Send this to her",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Travel edition. Answer for him first, no peeking.\n\nSend this to him",
+      "legende": "Car lovers edition. Guess first, send it after. Then compare.\n\nSend this to her",
       "hashtags": [
         "#couplequiz",
-        "#boyfriendquiz",
+        "#girlfriendquiz",
         "#thisorthat",
-        "#travelcouple",
+        "#carlovers",
         "#quizcouple"
       ]
     }

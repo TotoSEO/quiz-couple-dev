@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "choisirait",
   "categorie": "choisirait",
-  "sujet": "ch-011",
+  "sujet": "ch-013",
   "idee_id": null,
   "variantes": {
     "en": {
@@ -13,78 +13,78 @@
         "langue": "en",
         "theme": "light",
         "pour": "lui",
-        "etiquette": "Cozy night in edition",
+        "etiquette": "Pet lovers edition",
         "accroche": "What would he choose?",
-        "consigne": "3 questions, 4 seconds each. Pick for him!",
+        "consigne": "Guess his 3 picks, then send it to him!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which console would he pick?",
+            "question": "Which pet would he want?",
             "options": [
               {
-                "texte": "PlayStation 5",
-                "image": "choisirait/console/ps5.webp"
+                "texte": "Ferret",
+                "image": "choisirait/animal/furet.webp"
               },
               {
-                "texte": "Game Boy",
-                "image": "choisirait/console/gameboy.webp"
+                "texte": "Horse",
+                "image": "choisirait/animal/cheval.webp"
               },
               {
-                "texte": "Nintendo Switch",
-                "image": "choisirait/console/switch.webp"
+                "texte": "Axolotl",
+                "image": "choisirait/animal/axolotl.webp"
               }
             ]
           },
           {
-            "question": "Which cake would he pick?",
+            "question": "Which cat would he adopt?",
             "options": [
               {
-                "texte": "Mille-feuille",
-                "image": "choisirait/dessert/mille-feuille.webp"
+                "texte": "Siamese",
+                "image": "choisirait/chat/siamois.webp"
               },
               {
-                "texte": "Apple pie",
-                "image": "choisirait/dessert/tarte-pommes.webp"
+                "texte": "Persian",
+                "image": "choisirait/chat/persan.webp"
               },
               {
-                "texte": "Tiramisu",
-                "image": "choisirait/dessert/tiramisu.webp"
+                "texte": "British Shorthair",
+                "image": "choisirait/chat/british.webp"
               }
             ]
           },
           {
-            "question": "Which drink would he get?",
+            "question": "Which dog would he pick?",
             "options": [
               {
-                "texte": "Lemonade",
-                "image": "choisirait/boisson/limonade.webp"
+                "texte": "Bernese Mountain Dog",
+                "image": "choisirait/chien/bouvier.webp"
               },
               {
-                "texte": "Smoothie",
-                "image": "choisirait/boisson/smoothie.webp"
+                "texte": "Husky",
+                "image": "choisirait/chien/husky.webp"
               },
               {
-                "texte": "Iced tea",
-                "image": "choisirait/boisson/the-glace.webp"
+                "texte": "German Shepherd",
+                "image": "choisirait/chien/berger-allemand.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Send it to him: how many did you get?",
+          "question": "Now send it to him. Did you guess right?",
           "bouton": "Send this to him",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Cozy night in edition. Answer for him first, no peeking.\n\nSend this to him",
+      "legende": "Pet lovers edition. Guess first, send it after. Then compare.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
         "#boyfriendquiz",
         "#thisorthat",
-        "#cozynight",
+        "#petlovers",
         "#quizcouple"
       ]
     }

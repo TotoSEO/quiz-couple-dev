@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "choisirait",
   "categorie": "choisirait",
-  "sujet": "ch-068",
+  "sujet": "ch-070",
   "idee_id": null,
   "variantes": {
     "en": {
@@ -13,78 +13,78 @@
         "langue": "en",
         "theme": "light",
         "pour": "lui",
-        "etiquette": "Food edition",
+        "etiquette": "Dream home edition",
         "accroche": "What would he choose?",
-        "consigne": "Pick what he would pick. Then send it to him!",
+        "consigne": "Answer for him, then let him check!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which potato would he pick?",
+            "question": "Which view would he wake up to?",
             "options": [
               {
-                "texte": "Hash browns",
-                "image": "choisirait/patate/hash-browns.webp"
+                "texte": "Ocean",
+                "image": "choisirait/vue/ocean.webp"
               },
               {
-                "texte": "Potato gratin",
-                "image": "choisirait/patate/gratin.webp"
+                "texte": "Northern lights",
+                "image": "choisirait/vue/aurores.webp"
               },
               {
-                "texte": "Rösti",
-                "image": "choisirait/patate/rosti.webp"
+                "texte": "Desert",
+                "image": "choisirait/vue/desert-vue.webp"
               }
             ]
           },
           {
-            "question": "Which pasta would he pick?",
+            "question": "Which dream house would he pick?",
             "options": [
               {
-                "texte": "Ravioli",
-                "image": "choisirait/pates/raviolis.webp"
+                "texte": "Tiny house",
+                "image": "choisirait/maison/tiny-house.webp"
               },
               {
-                "texte": "Pesto",
-                "image": "choisirait/pates/pesto.webp"
+                "texte": "Mountain chalet",
+                "image": "choisirait/maison/chalet.webp"
               },
               {
-                "texte": "Mac and cheese",
-                "image": "choisirait/pates/mac-cheese.webp"
+                "texte": "Cozy cabin",
+                "image": "choisirait/weekend/chalet-bois.webp"
               }
             ]
           },
           {
-            "question": "Which pizza would he order?",
+            "question": "Which dog would he adopt?",
             "options": [
               {
-                "texte": "Four cheese",
-                "image": "choisirait/pizza/quatre-fromages.webp"
+                "texte": "Doberman",
+                "image": "choisirait/chien/dobermann.webp"
               },
               {
-                "texte": "Deep dish",
-                "image": "choisirait/pizza/deep-dish.webp"
+                "texte": "Pomeranian",
+                "image": "choisirait/chien/pomeranien.webp"
               },
               {
-                "texte": "Calzone",
-                "image": "choisirait/pizza/calzone.webp"
+                "texte": "Chihuahua",
+                "image": "choisirait/chien/chihuahua.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Send it to him: how many did you get?",
+          "question": "Now send it to him. Did you guess right?",
           "bouton": "Send this to him",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Food edition. Your answers first, then his reaction.\n\nSend this to him",
+      "legende": "Dream home edition. Easy for you? Then the next one is for him.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
         "#boyfriendquiz",
         "#thisorthat",
-        "#foodie",
+        "#dreamhome",
         "#quizcouple"
       ]
     }

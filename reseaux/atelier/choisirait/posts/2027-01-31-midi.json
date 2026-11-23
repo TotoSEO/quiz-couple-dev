@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "choisirait",
   "categorie": "choisirait",
-  "sujet": "ch-128",
+  "sujet": "ch-130",
   "idee_id": null,
   "variantes": {
     "en": {
@@ -13,78 +13,78 @@
         "langue": "en",
         "theme": "light",
         "pour": "lui",
-        "etiquette": "Drinks edition",
+        "etiquette": "Adventure edition",
         "accroche": "What would he choose?",
-        "consigne": "Pick what he would pick. Then send it to him!",
+        "consigne": "Answer for him, then let him check!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which coffee would he order?",
+            "question": "Which adventure would he try?",
             "options": [
               {
-                "texte": "Americano",
-                "image": "choisirait/cafe/americano.webp"
+                "texte": "Snowboarding",
+                "image": "choisirait/aventure/snowboard.webp"
               },
               {
-                "texte": "Cappuccino",
-                "image": "choisirait/cafe/cappuccino.webp"
+                "texte": "Kayaking",
+                "image": "choisirait/aventure/kayak.webp"
               },
               {
-                "texte": "Matcha latte",
-                "image": "choisirait/cafe/matcha.webp"
+                "texte": "Scuba diving",
+                "image": "choisirait/aventure/plongee.webp"
               }
             ]
           },
           {
-            "question": "Which drink would he get?",
+            "question": "Which sport would he watch?",
             "options": [
               {
-                "texte": "Lemonade",
-                "image": "choisirait/boisson/limonade.webp"
+                "texte": "American football",
+                "image": "choisirait/sport/foot-us.webp"
               },
               {
-                "texte": "Bubble tea",
-                "image": "choisirait/boisson/bubble-tea.webp"
+                "texte": "Rugby",
+                "image": "choisirait/sport/rugby.webp"
               },
               {
-                "texte": "Smoothie",
-                "image": "choisirait/boisson/smoothie.webp"
+                "texte": "Football",
+                "image": "choisirait/sport/foot.webp"
               }
             ]
           },
           {
-            "question": "What would he order at the bar?",
+            "question": "Where would he take you on vacation?",
             "options": [
               {
-                "texte": "Aperol Spritz",
-                "image": "choisirait/bar/spritz.webp"
+                "texte": "Switzerland",
+                "image": "choisirait/vacances/suisse.webp"
               },
               {
-                "texte": "Margarita",
-                "image": "choisirait/bar/margarita.webp"
+                "texte": "Costa Rica",
+                "image": "choisirait/vacances/costa-rica.webp"
               },
               {
-                "texte": "Piña colada",
-                "image": "choisirait/bar/pina-colada.webp"
+                "texte": "Canada",
+                "image": "choisirait/vacances/canada.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Send it to him: how many did you get?",
+          "question": "Now send it to him. Did you guess right?",
           "bouton": "Send this to him",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Drinks edition. Your answers first, then his reaction.\n\nSend this to him",
+      "legende": "Adventure edition. Easy for you? Then the next one is for him.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
         "#boyfriendquiz",
         "#thisorthat",
-        "#cocktails",
+        "#adventurecouple",
         "#quizcouple"
       ]
     }

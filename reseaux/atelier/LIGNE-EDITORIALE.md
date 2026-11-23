@@ -58,7 +58,7 @@ dans le lit. Une image qui ne bouge pas est un reel qu'on fait défiler.
 
 ## La semaine type (heure de Paris)
 
-**Vingt et un reels par semaine depuis le 24 novembre 2026** : les huit du
+**Vingt et un reels par semaine depuis le 23 novembre 2026** : les huit du
 soir (et du samedi midi) ne bougent pas, et les matins comme les midis, sauf
 le samedi midi, passent au nouveau jeu « What would he/she choose? »
 (catégorie `choisirait`, voir plus bas), treize reels de plus par semaine.
@@ -83,7 +83,7 @@ c'est le format fait pour être envoyé. La migration
 `20261123090000_choisirait_matins_midis.sql` porte cette grille dans le
 réglage `melange` (la même que `MELANGE_DEFAUT`).
 
-### La grille du 26 octobre au 23 novembre 2026
+### La grille du 26 octobre au 22 novembre 2026
 
 Huit reels par semaine, et rien d'autre. Thomas,
 ce jour-là : il ne reprend sans doute pas l'abonnement Claude, « il faut
@@ -318,8 +318,8 @@ Thomas (la voiture, le chien, les vacances ; puis le gâteau).
 **La fabrique** écrit un post par créneau, avec une graine fixe :
 
 ```bash
-node reseaux/atelier/choisirait/fabrique.mjs --du 2026-11-24 --au 2027-03-31           # le bilan, sans rien écrire
-node reseaux/atelier/choisirait/fabrique.mjs --du 2026-11-24 --au 2027-03-31 --ecrire  # les posts et la banque de sujets
+node reseaux/atelier/choisirait/fabrique.mjs --du 2026-11-23 --au 2027-03-31           # le bilan, sans rien écrire
+node reseaux/atelier/choisirait/fabrique.mjs --du 2026-11-23 --au 2027-03-31 --ecrire  # les posts et la banque de sujets
 node reseaux/automates/controler.mjs reseaux/atelier/choisirait/posts/*.json
 ```
 
@@ -462,7 +462,7 @@ tant que Thomas ne l'y a pas mis.
 ## La story du matin
 
 Chaque jour, le premier reel que la grille ouvre (le « choisirait » du matin
-depuis le 24 novembre 2026, le reel du soir du 27 octobre au 23 novembre)
+depuis le 23 novembre 2026, le reel du soir du 27 octobre au 22 novembre)
 repart **en story** juste après sa publication : même vidéo, 24 heures, sans légende ni son ajouté. C'est une
 deuxième surface pour le même travail, et c'est l'automate qui s'en occupe
 (`publierStories` dans `publication.mjs`) : la routine n'a rien à écrire.

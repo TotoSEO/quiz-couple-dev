@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "choisirait",
   "categorie": "choisirait",
-  "sujet": "ch-176",
+  "sujet": "ch-178",
   "idee_id": null,
   "variantes": {
     "en": {
@@ -13,78 +13,78 @@
         "langue": "en",
         "theme": "light",
         "pour": "lui",
-        "etiquette": "Travel edition",
+        "etiquette": "Hobbies edition",
         "accroche": "What would he choose?",
-        "consigne": "Pick what he would pick. Then send it to him!",
+        "consigne": "Answer for him, then let him check!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which city would he take you to?",
+            "question": "Which instrument would he play?",
             "options": [
               {
-                "texte": "Marrakech",
-                "image": "choisirait/ville/marrakech.webp"
+                "texte": "Drums",
+                "image": "choisirait/instrument/batterie.webp"
               },
               {
-                "texte": "Rome",
-                "image": "choisirait/ville/rome.webp"
+                "texte": "Piano",
+                "image": "choisirait/instrument/piano.webp"
               },
               {
-                "texte": "Amsterdam",
-                "image": "choisirait/ville/amsterdam.webp"
+                "texte": "Electric guitar",
+                "image": "choisirait/instrument/guitare-electrique.webp"
               }
             ]
           },
           {
-            "question": "Where would he take you on vacation?",
+            "question": "Which workout would he pick?",
             "options": [
               {
-                "texte": "Hawaii",
-                "image": "choisirait/vacances/hawaii.webp"
+                "texte": "Weightlifting",
+                "image": "choisirait/salle/muscu.webp"
               },
               {
-                "texte": "Japan",
-                "image": "choisirait/vacances/japon.webp"
+                "texte": "Yoga",
+                "image": "choisirait/salle/yoga.webp"
               },
               {
-                "texte": "Greece",
-                "image": "choisirait/vacances/grece.webp"
+                "texte": "Boxing",
+                "image": "choisirait/salle/boxe-salle.webp"
               }
             ]
           },
           {
-            "question": "How would he travel with you?",
+            "question": "Which hobby would he pick up?",
             "options": [
               {
-                "texte": "Convertible",
-                "image": "choisirait/voyage/cabriolet.webp"
+                "texte": "Gardening",
+                "image": "choisirait/loisir/jardinage.webp"
               },
               {
-                "texte": "Private jet",
-                "image": "choisirait/voyage/jet.webp"
+                "texte": "Woodworking",
+                "image": "choisirait/loisir/menuiserie.webp"
               },
               {
-                "texte": "Hot air balloon",
-                "image": "choisirait/voyage/montgolfiere.webp"
+                "texte": "Photography",
+                "image": "choisirait/loisir/photo.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Send it to him: how many did you get?",
+          "question": "Now send it to him. Did you guess right?",
           "bouton": "Send this to him",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Travel edition. Pick for him, then let him prove you wrong.\n\nSend this to him",
+      "legende": "Hobbies edition. Your answers first, then his reaction.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
         "#boyfriendquiz",
         "#thisorthat",
-        "#travelcouple",
+        "#hobbies",
         "#quizcouple"
       ]
     }

@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "choisirait",
   "categorie": "choisirait",
-  "sujet": "ch-228",
+  "sujet": "ch-230",
   "idee_id": null,
   "variantes": {
     "en": {
@@ -12,79 +12,79 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "elle",
-        "etiquette": "Hobbies edition",
-        "accroche": "What would she choose?",
-        "consigne": "Pick what she would pick. Then send it to her!",
+        "pour": "lui",
+        "etiquette": "Adventure edition",
+        "accroche": "What would he choose?",
+        "consigne": "Answer for him, then let him check!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which instrument would she play?",
+            "question": "Which sport would he watch?",
             "options": [
               {
-                "texte": "Drums",
-                "image": "choisirait/instrument/batterie.webp"
+                "texte": "Ice hockey",
+                "image": "choisirait/sport/hockey.webp"
               },
               {
-                "texte": "Trumpet",
-                "image": "choisirait/instrument/trompette.webp"
+                "texte": "Baseball",
+                "image": "choisirait/sport/baseball.webp"
               },
               {
-                "texte": "Saxophone",
-                "image": "choisirait/instrument/saxophone.webp"
+                "texte": "Golf",
+                "image": "choisirait/sport/golf.webp"
               }
             ]
           },
           {
-            "question": "Which hobby would she pick up?",
+            "question": "Which adventure would he try?",
             "options": [
               {
-                "texte": "Chess",
-                "image": "choisirait/loisir/echecs.webp"
+                "texte": "Skydiving",
+                "image": "choisirait/aventure/parachute.webp"
               },
               {
-                "texte": "Fishing",
-                "image": "choisirait/loisir/peche.webp"
+                "texte": "Surfing",
+                "image": "choisirait/aventure/surf.webp"
               },
               {
-                "texte": "Woodworking",
-                "image": "choisirait/loisir/menuiserie.webp"
+                "texte": "Paragliding",
+                "image": "choisirait/aventure/parapente.webp"
               }
             ]
           },
           {
-            "question": "Which workout would she pick?",
+            "question": "How would he travel with you?",
             "options": [
               {
-                "texte": "Weightlifting",
-                "image": "choisirait/salle/muscu.webp"
+                "texte": "Cruise ship",
+                "image": "choisirait/voyage/croisiere.webp"
               },
               {
-                "texte": "Boxing",
-                "image": "choisirait/salle/boxe-salle.webp"
+                "texte": "Sailboat",
+                "image": "choisirait/voyage/voilier.webp"
               },
               {
-                "texte": "Running",
-                "image": "choisirait/salle/course.webp"
+                "texte": "Private jet",
+                "image": "choisirait/voyage/jet.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Got her 3 picks? Send it and see!",
-          "bouton": "Send this to her",
+          "question": "Send it to him: how many did you get?",
+          "bouton": "Send this to him",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Hobbies edition. Your answers first, then her reaction.\n\nSend this to her",
+      "legende": "Adventure edition. Easy for you? Then the next one is for him.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
-        "#girlfriendquiz",
+        "#boyfriendquiz",
         "#thisorthat",
-        "#hobbies",
+        "#adventurecouple",
         "#quizcouple"
       ]
     }

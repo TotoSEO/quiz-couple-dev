@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "choisirait",
   "categorie": "choisirait",
-  "sujet": "ch-101",
+  "sujet": "ch-103",
   "idee_id": null,
   "variantes": {
     "en": {
@@ -13,78 +13,78 @@
         "langue": "en",
         "theme": "light",
         "pour": "lui",
-        "etiquette": "Game night edition",
+        "etiquette": "Style edition",
         "accroche": "What would he choose?",
-        "consigne": "Guess his 3 picks, then send it to him!",
+        "consigne": "3 questions, 4 seconds each. Pick for him!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "What would he order at 2 a.m.?",
+            "question": "Which phone would he pick?",
             "options": [
               {
-                "texte": "Burger",
-                "image": "choisirait/fastfood/burger.webp"
+                "texte": "iPhone",
+                "image": "choisirait/telephone/iphone.webp"
               },
               {
-                "texte": "Burrito",
-                "image": "choisirait/fastfood/burrito.webp"
+                "texte": "Flip phone",
+                "image": "choisirait/telephone/clapet.webp"
               },
               {
-                "texte": "Kebab",
-                "image": "choisirait/fastfood/kebab.webp"
+                "texte": "Google Pixel",
+                "image": "choisirait/telephone/pixel.webp"
               }
             ]
           },
           {
-            "question": "Which game night would he pick?",
+            "question": "Which sneakers would he pick?",
             "options": [
               {
-                "texte": "Chess",
-                "image": "choisirait/jeu/echecs-soir.webp"
+                "texte": "New Balance",
+                "image": "choisirait/baskets/new-balance.webp"
               },
               {
-                "texte": "Pool",
-                "image": "choisirait/jeu/billard.webp"
+                "texte": "Air Jordan",
+                "image": "choisirait/baskets/jordan.webp"
               },
               {
-                "texte": "Poker",
-                "image": "choisirait/jeu/poker.webp"
+                "texte": "Adidas Samba",
+                "image": "choisirait/baskets/samba.webp"
               }
             ]
           },
           {
-            "question": "Which console would he pick?",
+            "question": "Which watch would he wear?",
             "options": [
               {
-                "texte": "PlayStation 2",
-                "image": "choisirait/console/ps2.webp"
+                "texte": "Omega Speedmaster",
+                "image": "choisirait/montre/speedmaster.webp"
               },
               {
-                "texte": "PlayStation 5",
-                "image": "choisirait/console/ps5.webp"
+                "texte": "Cartier Tank",
+                "image": "choisirait/montre/cartier.webp"
               },
               {
-                "texte": "Gaming PC",
-                "image": "choisirait/console/pc-gamer.webp"
+                "texte": "Seiko diver",
+                "image": "choisirait/montre/seiko.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Send it to him: how many did you get?",
+          "question": "Now send it to him. Did you guess right?",
           "bouton": "Send this to him",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Game night edition. Answer for him first, no peeking.\n\nSend this to him",
+      "legende": "Style edition. Guess first, send it after. Then compare.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
         "#boyfriendquiz",
         "#thisorthat",
-        "#gamenight",
+        "#style",
         "#quizcouple"
       ]
     }

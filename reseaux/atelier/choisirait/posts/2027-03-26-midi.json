@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "choisirait",
   "categorie": "choisirait",
-  "sujet": "ch-229",
+  "sujet": "ch-231",
   "idee_id": null,
   "variantes": {
     "en": {
@@ -12,79 +12,79 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "lui",
-        "etiquette": "Dream life edition",
-        "accroche": "What would he choose?",
-        "consigne": "Guess his 3 picks, then send it to him!",
+        "pour": "elle",
+        "etiquette": "Food edition",
+        "accroche": "What would she choose?",
+        "consigne": "3 questions, 4 seconds each. Pick for her!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which dog would he adopt?",
+            "question": "Which pasta would she pick?",
             "options": [
               {
-                "texte": "Border Collie",
-                "image": "choisirait/chien/border-collie.webp"
+                "texte": "Lasagna",
+                "image": "choisirait/pates/lasagnes.webp"
               },
               {
-                "texte": "Labrador",
-                "image": "choisirait/chien/labrador.webp"
+                "texte": "Seafood pasta",
+                "image": "choisirait/pates/fruits-mer.webp"
               },
               {
-                "texte": "Shiba Inu",
-                "image": "choisirait/chien/shiba.webp"
+                "texte": "Pesto",
+                "image": "choisirait/pates/pesto.webp"
               }
             ]
           },
           {
-            "question": "Where would he take you on vacation?",
+            "question": "How would she have her eggs?",
             "options": [
               {
-                "texte": "Dubai",
-                "image": "choisirait/vacances/dubai.webp"
+                "texte": "Poached",
+                "image": "choisirait/oeufs/poche.webp"
               },
               {
-                "texte": "Bali",
-                "image": "choisirait/vacances/bali.webp"
+                "texte": "Soft-boiled",
+                "image": "choisirait/oeufs/coque.webp"
               },
               {
-                "texte": "Lapland",
-                "image": "choisirait/vacances/laponie.webp"
+                "texte": "Scrambled",
+                "image": "choisirait/oeufs/brouilles.webp"
               }
             ]
           },
           {
-            "question": "How would he travel with you?",
+            "question": "Which pizza would she order?",
             "options": [
               {
-                "texte": "Cruise ship",
-                "image": "choisirait/voyage/croisiere.webp"
+                "texte": "Four cheese",
+                "image": "choisirait/pizza/quatre-fromages.webp"
               },
               {
-                "texte": "Sailboat",
-                "image": "choisirait/voyage/voilier.webp"
+                "texte": "Veggie",
+                "image": "choisirait/pizza/vegetarienne.webp"
               },
               {
-                "texte": "Hot air balloon",
-                "image": "choisirait/voyage/montgolfiere.webp"
+                "texte": "Pepperoni",
+                "image": "choisirait/pizza/pepperoni.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Now send it to him. Did you guess right?",
-          "bouton": "Send this to him",
+          "question": "Got her 3 picks? Send it and see!",
+          "bouton": "Send this to her",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Dream life edition. One letter per question, then send it to him.\n\nSend this to him",
+      "legende": "Food edition. Answer for her first, no peeking.\n\nSend this to her",
       "hashtags": [
         "#couplequiz",
-        "#boyfriendquiz",
+        "#girlfriendquiz",
         "#thisorthat",
-        "#dreamlife",
+        "#foodie",
         "#quizcouple"
       ]
     }

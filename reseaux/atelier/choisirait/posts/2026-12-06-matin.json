@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "choisirait",
   "categorie": "choisirait",
-  "sujet": "ch-023",
+  "sujet": "ch-025",
   "idee_id": null,
   "variantes": {
     "en": {
@@ -13,78 +13,78 @@
         "langue": "en",
         "theme": "light",
         "pour": "lui",
-        "etiquette": "Winter edition",
+        "etiquette": "Date night edition",
         "accroche": "What would he choose?",
-        "consigne": "3 questions, 4 seconds each. Pick for him!",
+        "consigne": "Guess his 3 picks, then send it to him!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which winter date would he pick?",
+            "question": "Which dinner would he pick?",
             "options": [
               {
-                "texte": "Building a snowman",
-                "image": "choisirait/hiver/bonhomme.webp"
+                "texte": "Ramen",
+                "image": "choisirait/diner/ramen.webp"
               },
               {
-                "texte": "Ice skating",
-                "image": "choisirait/hiver/hiver-patin.webp"
-              },
-              {
-                "texte": "Cabin by the fire",
-                "image": "choisirait/hiver/feu-cheminee.webp"
-              }
-            ]
-          },
-          {
-            "question": "Which coffee would he order?",
-            "options": [
-              {
-                "texte": "Iced latte",
-                "image": "choisirait/cafe/iced-latte.webp"
-              },
-              {
-                "texte": "Cappuccino",
-                "image": "choisirait/cafe/cappuccino.webp"
-              },
-              {
-                "texte": "Matcha latte",
-                "image": "choisirait/cafe/matcha.webp"
-              }
-            ]
-          },
-          {
-            "question": "What would he cook for date night?",
-            "options": [
-              {
-                "texte": "Cheese fondue",
-                "image": "choisirait/diner/fondue.webp"
-              },
-              {
-                "texte": "Korean BBQ",
-                "image": "choisirait/diner/bbq-coreen.webp"
+                "texte": "Paella",
+                "image": "choisirait/diner/paella.webp"
               },
               {
                 "texte": "Fish and chips",
                 "image": "choisirait/diner/fish-chips.webp"
               }
             ]
+          },
+          {
+            "question": "Which movie snack would he pick?",
+            "options": [
+              {
+                "texte": "Popcorn",
+                "image": "choisirait/snack/popcorn.webp"
+              },
+              {
+                "texte": "Gummy bears",
+                "image": "choisirait/snack/oursons.webp"
+              },
+              {
+                "texte": "Ice cream tub",
+                "image": "choisirait/snack/pot-glace.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which date would he plan?",
+            "options": [
+              {
+                "texte": "Ice skating",
+                "image": "choisirait/date/patinoire.webp"
+              },
+              {
+                "texte": "Fancy dinner",
+                "image": "choisirait/demande/demande-resto.webp"
+              },
+              {
+                "texte": "Arcade",
+                "image": "choisirait/date/arcade.webp"
+              }
+            ]
           }
         ],
         "fin": {
-          "question": "Send it to him: how many did you get?",
+          "question": "Now send it to him. Did you guess right?",
           "bouton": "Send this to him",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Winter edition. Guess first, send it after. Then compare.\n\nSend this to him",
+      "legende": "Date night edition. No cheating: decide before the timer runs out.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
         "#boyfriendquiz",
         "#thisorthat",
-        "#winter",
+        "#datenight",
         "#quizcouple"
       ]
     }

@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "choisirait",
   "categorie": "choisirait",
-  "sujet": "ch-110",
+  "sujet": "ch-112",
   "idee_id": null,
   "variantes": {
     "en": {
@@ -13,78 +13,78 @@
         "langue": "en",
         "theme": "light",
         "pour": "lui",
-        "etiquette": "Hobbies edition",
+        "etiquette": "Travel edition",
         "accroche": "What would he choose?",
-        "consigne": "Answer for him, then let him check!",
+        "consigne": "Pick what he would pick. Then send it to him!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which instrument would he play?",
+            "question": "Which city would he take you to?",
             "options": [
               {
-                "texte": "Trumpet",
-                "image": "choisirait/instrument/trompette.webp"
+                "texte": "Rome",
+                "image": "choisirait/ville/rome.webp"
               },
               {
-                "texte": "Drums",
-                "image": "choisirait/instrument/batterie.webp"
+                "texte": "Seoul",
+                "image": "choisirait/ville/seoul.webp"
               },
               {
-                "texte": "Acoustic guitar",
-                "image": "choisirait/instrument/guitare-acoustique.webp"
+                "texte": "Paris",
+                "image": "choisirait/ville/paris.webp"
               }
             ]
           },
           {
-            "question": "Which workout would he pick?",
+            "question": "Where would he take you on vacation?",
             "options": [
               {
-                "texte": "Running",
-                "image": "choisirait/salle/course.webp"
+                "texte": "Croatia",
+                "image": "choisirait/vacances/croatie.webp"
               },
               {
-                "texte": "Swimming",
-                "image": "choisirait/salle/natation.webp"
+                "texte": "Italy",
+                "image": "choisirait/vacances/italie.webp"
               },
               {
-                "texte": "Weightlifting",
-                "image": "choisirait/salle/muscu.webp"
+                "texte": "Morocco",
+                "image": "choisirait/vacances/maroc.webp"
               }
             ]
           },
           {
-            "question": "Which hobby would he pick up?",
+            "question": "Which view would he wake up to?",
             "options": [
               {
-                "texte": "Pottery",
-                "image": "choisirait/loisir/poterie.webp"
+                "texte": "Northern lights",
+                "image": "choisirait/vue/aurores.webp"
               },
               {
-                "texte": "Woodworking",
-                "image": "choisirait/loisir/menuiserie.webp"
+                "texte": "Eiffel Tower",
+                "image": "choisirait/vue/tour-eiffel.webp"
               },
               {
-                "texte": "Knitting",
-                "image": "choisirait/loisir/tricot.webp"
+                "texte": "Vineyards",
+                "image": "choisirait/vue/vignes.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Send it to him: how many did you get?",
+          "question": "Now send it to him. Did you guess right?",
           "bouton": "Send this to him",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Hobbies edition. Easy for you? Then the next one is for him.\n\nSend this to him",
+      "legende": "Travel edition. Write down his three letters before you send it.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
         "#boyfriendquiz",
         "#thisorthat",
-        "#hobbies",
+        "#travelcouple",
         "#quizcouple"
       ]
     }

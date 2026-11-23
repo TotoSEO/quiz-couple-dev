@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "choisirait",
   "categorie": "choisirait",
-  "sujet": "ch-086",
+  "sujet": "ch-088",
   "idee_id": null,
   "variantes": {
     "en": {
@@ -13,78 +13,78 @@
         "langue": "en",
         "theme": "light",
         "pour": "lui",
-        "etiquette": "Game night edition",
+        "etiquette": "Car lovers edition",
         "accroche": "What would he choose?",
-        "consigne": "Answer for him, then let him check!",
+        "consigne": "Pick what he would pick. Then send it to him!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "What would he order at 2 a.m.?",
+            "question": "Which classic car would he drive?",
             "options": [
               {
-                "texte": "Tacos",
-                "image": "choisirait/fastfood/tacos.webp"
+                "texte": "Porsche 356",
+                "image": "choisirait/vintage/porsche-356.webp"
               },
               {
-                "texte": "Instant noodles",
-                "image": "choisirait/fastfood/nouilles.webp"
+                "texte": "Classic Mini",
+                "image": "choisirait/vintage/mini-classique.webp"
               },
               {
-                "texte": "Fried chicken",
-                "image": "choisirait/fastfood/poulet-frit.webp"
+                "texte": "1967 Mustang",
+                "image": "choisirait/vintage/mustang-67.webp"
               }
             ]
           },
           {
-            "question": "Which console would he pick?",
+            "question": "Which motorbike would he ride?",
             "options": [
               {
-                "texte": "Nintendo Switch",
-                "image": "choisirait/console/switch.webp"
+                "texte": "Ducati Panigale",
+                "image": "choisirait/moto/ducati.webp"
               },
               {
-                "texte": "PlayStation 2",
-                "image": "choisirait/console/ps2.webp"
+                "texte": "Vespa",
+                "image": "choisirait/moto/vespa.webp"
               },
               {
-                "texte": "Game Boy",
-                "image": "choisirait/console/gameboy.webp"
+                "texte": "Yamaha MT-07",
+                "image": "choisirait/moto/mt07.webp"
               }
             ]
           },
           {
-            "question": "Which game night would he pick?",
+            "question": "Which car would he drive?",
             "options": [
               {
-                "texte": "Board games",
-                "image": "choisirait/jeu/jeux-societe.webp"
+                "texte": "Lamborghini Huracán",
+                "image": "choisirait/voiture/lamborghini-huracan.webp"
               },
               {
-                "texte": "Poker",
-                "image": "choisirait/jeu/poker.webp"
+                "texte": "Porsche 911",
+                "image": "choisirait/voiture/porsche-911.webp"
               },
               {
-                "texte": "Ping pong",
-                "image": "choisirait/jeu/ping-pong.webp"
+                "texte": "Toyota Supra",
+                "image": "choisirait/voiture/supra.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Send it to him: how many did you get?",
+          "question": "Now send it to him. Did you guess right?",
           "bouton": "Send this to him",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Game night edition. Pick for him, then let him prove you wrong.\n\nSend this to him",
+      "legende": "Car lovers edition. Your answers first, then his reaction.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
         "#boyfriendquiz",
         "#thisorthat",
-        "#gamenight",
+        "#carlovers",
         "#quizcouple"
       ]
     }

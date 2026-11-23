@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "choisirait",
   "categorie": "choisirait",
-  "sujet": "ch-067",
+  "sujet": "ch-069",
   "idee_id": null,
   "variantes": {
     "en": {
@@ -12,79 +12,79 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "lui",
-        "etiquette": "New Year's edition",
-        "accroche": "What would he choose?",
-        "consigne": "3 questions, 4 seconds each. Pick for him!",
+        "pour": "elle",
+        "etiquette": "Hobbies edition",
+        "accroche": "What would she choose?",
+        "consigne": "Guess her 3 picks, then send it to her!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Where would he spend New Year's Eve?",
+            "question": "Which instrument would she play?",
             "options": [
               {
-                "texte": "City fireworks",
-                "image": "choisirait/nouvel-an/feux-artifice.webp"
+                "texte": "Violin",
+                "image": "choisirait/instrument/violon.webp"
               },
               {
-                "texte": "Tropical beach",
-                "image": "choisirait/nouvel-an/plage-nouvel-an.webp"
+                "texte": "DJ decks",
+                "image": "choisirait/instrument/platines.webp"
               },
               {
-                "texte": "Mountain chalet",
-                "image": "choisirait/nouvel-an/soiree-chalet.webp"
+                "texte": "Saxophone",
+                "image": "choisirait/instrument/saxophone.webp"
               }
             ]
           },
           {
-            "question": "What would he order at the bar?",
+            "question": "Which workout would she pick?",
             "options": [
               {
-                "texte": "Espresso martini",
-                "image": "choisirait/bar/espresso-martini.webp"
+                "texte": "Swimming",
+                "image": "choisirait/salle/natation.webp"
               },
               {
-                "texte": "Piña colada",
-                "image": "choisirait/bar/pina-colada.webp"
+                "texte": "Boxing",
+                "image": "choisirait/salle/boxe-salle.webp"
               },
               {
-                "texte": "Margarita",
-                "image": "choisirait/bar/margarita.webp"
+                "texte": "Weightlifting",
+                "image": "choisirait/salle/muscu.webp"
               }
             ]
           },
           {
-            "question": "Where would he go on vacation?",
+            "question": "Which hobby would she pick up?",
             "options": [
               {
-                "texte": "Japan",
-                "image": "choisirait/vacances/japon.webp"
+                "texte": "Woodworking",
+                "image": "choisirait/loisir/menuiserie.webp"
               },
               {
-                "texte": "Egypt",
-                "image": "choisirait/vacances/egypte.webp"
+                "texte": "Knitting",
+                "image": "choisirait/loisir/tricot.webp"
               },
               {
-                "texte": "Thailand",
-                "image": "choisirait/vacances/thailande.webp"
+                "texte": "Pottery",
+                "image": "choisirait/loisir/poterie.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Now send it to him. Did you guess right?",
-          "bouton": "Send this to him",
+          "question": "Got her 3 picks? Send it and see!",
+          "bouton": "Send this to her",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "New Year's edition. He will swear you got at least one wrong.\n\nSend this to him",
+      "legende": "Hobbies edition. One letter per question, then send it to her.\n\nSend this to her",
       "hashtags": [
         "#couplequiz",
-        "#boyfriendquiz",
+        "#girlfriendquiz",
         "#thisorthat",
-        "#newyearseve",
+        "#hobbies",
         "#quizcouple"
       ]
     }

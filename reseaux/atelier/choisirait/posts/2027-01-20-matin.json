@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "choisirait",
   "categorie": "choisirait",
-  "sujet": "ch-107",
+  "sujet": "ch-109",
   "idee_id": null,
   "variantes": {
     "en": {
@@ -13,78 +13,78 @@
         "langue": "en",
         "theme": "light",
         "pour": "lui",
-        "etiquette": "Car lovers edition",
+        "etiquette": "Food edition",
         "accroche": "What would he choose?",
-        "consigne": "3 questions, 4 seconds each. Pick for him!",
+        "consigne": "Guess his 3 picks, then send it to him!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which classic car would he drive?",
+            "question": "Which pasta would he pick?",
             "options": [
               {
-                "texte": "Citroën 2CV",
-                "image": "choisirait/vintage/2cv.webp"
+                "texte": "Mac and cheese",
+                "image": "choisirait/pates/mac-cheese.webp"
               },
               {
-                "texte": "Mercedes 300 SL",
-                "image": "choisirait/vintage/300sl.webp"
+                "texte": "Gnocchi",
+                "image": "choisirait/pates/gnocchi.webp"
               },
               {
-                "texte": "VW Beetle",
-                "image": "choisirait/vintage/coccinelle.webp"
+                "texte": "Seafood pasta",
+                "image": "choisirait/pates/fruits-mer.webp"
               }
             ]
           },
           {
-            "question": "Which motorbike would he ride?",
+            "question": "Which potato would he pick?",
             "options": [
               {
-                "texte": "Triumph Bonneville",
-                "image": "choisirait/moto/bonneville.webp"
+                "texte": "Hash browns",
+                "image": "choisirait/patate/hash-browns.webp"
               },
               {
-                "texte": "Vespa",
-                "image": "choisirait/moto/vespa.webp"
+                "texte": "French fries",
+                "image": "choisirait/patate/frites.webp"
               },
               {
-                "texte": "Yamaha MT-07",
-                "image": "choisirait/moto/mt07.webp"
+                "texte": "Potato gratin",
+                "image": "choisirait/patate/gratin.webp"
               }
             ]
           },
           {
-            "question": "Which car would he pick?",
+            "question": "How would he have his eggs?",
             "options": [
               {
-                "texte": "Jeep Wrangler",
-                "image": "choisirait/voiture/jeep-wrangler.webp"
+                "texte": "Omelette",
+                "image": "choisirait/oeufs/omelette.webp"
               },
               {
-                "texte": "Bugatti Chiron",
-                "image": "choisirait/voiture/bugatti.webp"
+                "texte": "Soft-boiled",
+                "image": "choisirait/oeufs/coque.webp"
               },
               {
-                "texte": "Porsche 911",
-                "image": "choisirait/voiture/porsche-911.webp"
+                "texte": "Poached",
+                "image": "choisirait/oeufs/poche.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Send it to him: how many did you get?",
+          "question": "Now send it to him. Did you guess right?",
           "bouton": "Send this to him",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Car lovers edition. He will swear you got at least one wrong.\n\nSend this to him",
+      "legende": "Food edition. One letter per question, then send it to him.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
         "#boyfriendquiz",
         "#thisorthat",
-        "#carlovers",
+        "#foodie",
         "#quizcouple"
       ]
     }

@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "choisirait",
   "categorie": "choisirait",
-  "sujet": "ch-234",
+  "sujet": "ch-236",
   "idee_id": null,
   "variantes": {
     "en": {
@@ -12,79 +12,79 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "elle",
-        "etiquette": "Food edition",
-        "accroche": "What would she choose?",
-        "consigne": "Answer for her, then let her check!",
+        "pour": "lui",
+        "etiquette": "Spring edition",
+        "accroche": "What would he choose?",
+        "consigne": "Pick what he would pick. Then send it to him!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which pasta would she pick?",
+            "question": "Which season would he pick?",
             "options": [
               {
-                "texte": "Carbonara",
-                "image": "choisirait/pates/carbonara.webp"
+                "texte": "Summer",
+                "image": "choisirait/saison/ete.webp"
               },
               {
-                "texte": "Ravioli",
-                "image": "choisirait/pates/raviolis.webp"
+                "texte": "Winter",
+                "image": "choisirait/saison/hiver-saison.webp"
               },
               {
-                "texte": "Bolognese",
-                "image": "choisirait/pates/bolognaise.webp"
+                "texte": "Spring",
+                "image": "choisirait/saison/printemps.webp"
               }
             ]
           },
           {
-            "question": "Which potato would she pick?",
+            "question": "Which flowers would he get you?",
             "options": [
               {
-                "texte": "Curly fries",
-                "image": "choisirait/patate/curly.webp"
+                "texte": "Hydrangeas",
+                "image": "choisirait/fleurs/hortensias.webp"
               },
               {
-                "texte": "Potato gratin",
-                "image": "choisirait/patate/gratin.webp"
+                "texte": "Daisies",
+                "image": "choisirait/fleurs/marguerites.webp"
               },
               {
-                "texte": "Rösti",
-                "image": "choisirait/patate/rosti.webp"
+                "texte": "Tulips",
+                "image": "choisirait/fleurs/tulipes.webp"
               }
             ]
           },
           {
-            "question": "Which pizza would she order?",
+            "question": "Which adventure would he try?",
             "options": [
               {
-                "texte": "Hawaiian",
-                "image": "choisirait/pizza/hawaienne.webp"
+                "texte": "Horse riding",
+                "image": "choisirait/aventure/equitation.webp"
               },
               {
-                "texte": "Four cheese",
-                "image": "choisirait/pizza/quatre-fromages.webp"
+                "texte": "Kayaking",
+                "image": "choisirait/aventure/kayak.webp"
               },
               {
-                "texte": "Calzone",
-                "image": "choisirait/pizza/calzone.webp"
+                "texte": "Scuba diving",
+                "image": "choisirait/aventure/plongee.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Got her 3 picks? Send it and see!",
-          "bouton": "Send this to her",
+          "question": "Send it to him: how many did you get?",
+          "bouton": "Send this to him",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Food edition. If you get all three, you know her by heart.\n\nSend this to her",
+      "legende": "Spring edition. Pick for him, then let him prove you wrong.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
-        "#girlfriendquiz",
+        "#boyfriendquiz",
         "#thisorthat",
-        "#foodie",
+        "#spring",
         "#quizcouple"
       ]
     }

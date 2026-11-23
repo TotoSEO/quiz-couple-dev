@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "choisirait",
   "categorie": "choisirait",
-  "sujet": "ch-201",
+  "sujet": "ch-203",
   "idee_id": null,
   "variantes": {
     "en": {
@@ -12,79 +12,79 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "elle",
-        "etiquette": "Date night edition",
-        "accroche": "What would she choose?",
-        "consigne": "Guess her 3 picks, then send it to her!",
+        "pour": "lui",
+        "etiquette": "Spring edition",
+        "accroche": "What would he choose?",
+        "consigne": "3 questions, 4 seconds each. Pick for him!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which date would she plan?",
+            "question": "Which season would he pick?",
             "options": [
+              {
+                "texte": "Summer",
+                "image": "choisirait/saison/ete.webp"
+              },
+              {
+                "texte": "Spring",
+                "image": "choisirait/saison/printemps.webp"
+              },
+              {
+                "texte": "Autumn",
+                "image": "choisirait/saison/automne.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which adventure would he try?",
+            "options": [
+              {
+                "texte": "Snowboarding",
+                "image": "choisirait/aventure/snowboard.webp"
+              },
+              {
+                "texte": "Skiing",
+                "image": "choisirait/aventure/ski.webp"
+              },
+              {
+                "texte": "Rock climbing",
+                "image": "choisirait/aventure/escalade.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which date would he plan?",
+            "options": [
+              {
+                "texte": "Cinema night",
+                "image": "choisirait/date/cinema.webp"
+              },
               {
                 "texte": "Beach sunset",
                 "image": "choisirait/date/coucher-soleil.webp"
               },
               {
-                "texte": "Fancy dinner",
-                "image": "choisirait/demande/demande-resto.webp"
-              },
-              {
-                "texte": "Picnic",
-                "image": "choisirait/date/pique-nique.webp"
-              }
-            ]
-          },
-          {
-            "question": "What would she cook for date night?",
-            "options": [
-              {
-                "texte": "Indian curry",
-                "image": "choisirait/diner/curry.webp"
-              },
-              {
-                "texte": "Ramen",
-                "image": "choisirait/diner/ramen.webp"
-              },
-              {
-                "texte": "Sushi",
-                "image": "choisirait/diner/sushi.webp"
-              }
-            ]
-          },
-          {
-            "question": "Which cake would she pick?",
-            "options": [
-              {
-                "texte": "Tiramisu",
-                "image": "choisirait/dessert/tiramisu.webp"
-              },
-              {
-                "texte": "Cheesecake",
-                "image": "choisirait/dessert/cheesecake.webp"
-              },
-              {
-                "texte": "Macarons",
-                "image": "choisirait/dessert/macarons.webp"
+                "texte": "Ice skating",
+                "image": "choisirait/date/patinoire.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Got her 3 picks? Send it and see!",
-          "bouton": "Send this to her",
+          "question": "Send it to him: how many did you get?",
+          "bouton": "Send this to him",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Date night edition. Answer for her first, no peeking.\n\nSend this to her",
+      "legende": "Spring edition. Guess first, send it after. Then compare.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
-        "#girlfriendquiz",
+        "#boyfriendquiz",
         "#thisorthat",
-        "#datenight",
+        "#spring",
         "#quizcouple"
       ]
     }

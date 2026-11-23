@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "choisirait",
   "categorie": "choisirait",
-  "sujet": "ch-088",
+  "sujet": "ch-090",
   "idee_id": null,
   "variantes": {
     "en": {
@@ -12,79 +12,79 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "lui",
-        "etiquette": "Luxury edition",
-        "accroche": "What would he choose?",
-        "consigne": "Pick what he would pick. Then send it to him!",
+        "pour": "elle",
+        "etiquette": "Adventure edition",
+        "accroche": "What would she choose?",
+        "consigne": "Answer for her, then let her check!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which dream house would he pick?",
+            "question": "Which sport would she watch?",
             "options": [
               {
-                "texte": "Lake house",
-                "image": "choisirait/maison/maison-lac.webp"
+                "texte": "American football",
+                "image": "choisirait/sport/foot-us.webp"
               },
               {
-                "texte": "Beach house",
-                "image": "choisirait/maison/maison-plage.webp"
+                "texte": "Football",
+                "image": "choisirait/sport/foot.webp"
               },
               {
-                "texte": "Tiny house",
-                "image": "choisirait/maison/tiny-house.webp"
+                "texte": "Ice hockey",
+                "image": "choisirait/sport/hockey.webp"
               }
             ]
           },
           {
-            "question": "Which watch would he wear?",
+            "question": "Which adventure would she try?",
             "options": [
               {
-                "texte": "Rolex Submariner",
-                "image": "choisirait/montre/rolex.webp"
+                "texte": "Paragliding",
+                "image": "choisirait/aventure/parapente.webp"
               },
               {
-                "texte": "Cartier Tank",
-                "image": "choisirait/montre/cartier.webp"
+                "texte": "Horse riding",
+                "image": "choisirait/aventure/equitation.webp"
               },
               {
-                "texte": "Pocket watch",
-                "image": "choisirait/montre/gousset.webp"
+                "texte": "Skydiving",
+                "image": "choisirait/aventure/parachute.webp"
               }
             ]
           },
           {
-            "question": "Which car would he pick?",
+            "question": "Where would she go on vacation?",
             "options": [
               {
-                "texte": "Fiat 500",
-                "image": "choisirait/voiture/fiat-500.webp"
+                "texte": "Egypt",
+                "image": "choisirait/vacances/egypte.webp"
               },
               {
-                "texte": "Ferrari F8",
-                "image": "choisirait/voiture/ferrari-f8.webp"
+                "texte": "Bora Bora",
+                "image": "choisirait/vacances/bora-bora.webp"
               },
               {
-                "texte": "Land Rover Defender",
-                "image": "choisirait/voiture/defender.webp"
+                "texte": "Lapland",
+                "image": "choisirait/vacances/laponie.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Now send it to him. Did you guess right?",
-          "bouton": "Send this to him",
+          "question": "Got her 3 picks? Send it and see!",
+          "bouton": "Send this to her",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Luxury edition. Your answers first, then his reaction.\n\nSend this to him",
+      "legende": "Adventure edition. Easy for you? Then the next one is for her.\n\nSend this to her",
       "hashtags": [
         "#couplequiz",
-        "#boyfriendquiz",
+        "#girlfriendquiz",
         "#thisorthat",
-        "#luxurylife",
+        "#adventurecouple",
         "#quizcouple"
       ]
     }

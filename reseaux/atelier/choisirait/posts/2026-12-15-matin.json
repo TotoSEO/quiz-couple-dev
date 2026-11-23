@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "choisirait",
   "categorie": "choisirait",
-  "sujet": "ch-040",
+  "sujet": "ch-042",
   "idee_id": null,
   "variantes": {
     "en": {
@@ -12,59 +12,59 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "lui",
-        "etiquette": "Luxury edition",
-        "accroche": "What would he choose?",
-        "consigne": "Pick what he would pick. Then send it to him!",
+        "pour": "elle",
+        "etiquette": "Travel edition",
+        "accroche": "What would she choose?",
+        "consigne": "Answer for her, then let her check!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "How would he travel with you?",
+            "question": "Which city would she take you to?",
             "options": [
               {
-                "texte": "Sailboat",
-                "image": "choisirait/voyage/voilier.webp"
+                "texte": "Barcelona",
+                "image": "choisirait/ville/barcelone.webp"
               },
               {
-                "texte": "Motorbike",
-                "image": "choisirait/moto/bmw-gs.webp"
+                "texte": "Las Vegas",
+                "image": "choisirait/ville/las-vegas.webp"
               },
               {
-                "texte": "Cruise ship",
-                "image": "choisirait/voyage/croisiere.webp"
+                "texte": "Paris",
+                "image": "choisirait/ville/paris.webp"
               }
             ]
           },
           {
-            "question": "Which car would he pick?",
+            "question": "Where would she go on vacation?",
             "options": [
               {
-                "texte": "Tesla Model S",
-                "image": "choisirait/voiture/tesla-model-s.webp"
+                "texte": "Mexico",
+                "image": "choisirait/vacances/mexique.webp"
               },
               {
-                "texte": "Land Rover Defender",
-                "image": "choisirait/voiture/defender.webp"
+                "texte": "Costa Rica",
+                "image": "choisirait/vacances/costa-rica.webp"
               },
               {
-                "texte": "McLaren 720S",
-                "image": "choisirait/voiture/mclaren.webp"
+                "texte": "Croatia",
+                "image": "choisirait/vacances/croatie.webp"
               }
             ]
           },
           {
-            "question": "Where would he book a weekend?",
+            "question": "Where would she book a weekend?",
             "options": [
               {
-                "texte": "Ski chalet",
-                "image": "choisirait/weekend/chalet-ski.webp"
+                "texte": "Log cabin",
+                "image": "choisirait/weekend/chalet-bois.webp"
               },
               {
-                "texte": "Glamping tent",
-                "image": "choisirait/weekend/glamping.webp"
+                "texte": "Castle hotel",
+                "image": "choisirait/weekend/chateau-hotel.webp"
               },
               {
                 "texte": "Treehouse",
@@ -74,17 +74,17 @@
           }
         ],
         "fin": {
-          "question": "Now send it to him. Did you guess right?",
-          "bouton": "Send this to him",
+          "question": "Got her 3 picks? Send it and see!",
+          "bouton": "Send this to her",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Luxury edition. Easy for you? Then the next one is for him.\n\nSend this to him",
+      "legende": "Travel edition. Write down her three letters before you send it.\n\nSend this to her",
       "hashtags": [
         "#couplequiz",
-        "#boyfriendquiz",
+        "#girlfriendquiz",
         "#thisorthat",
-        "#luxurylife",
+        "#travelcouple",
         "#quizcouple"
       ]
     }

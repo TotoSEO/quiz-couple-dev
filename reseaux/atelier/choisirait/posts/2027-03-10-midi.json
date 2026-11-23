@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "choisirait",
   "categorie": "choisirait",
-  "sujet": "ch-199",
+  "sujet": "ch-201",
   "idee_id": null,
   "variantes": {
     "en": {
@@ -12,79 +12,79 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "lui",
-        "etiquette": "Spring edition",
-        "accroche": "What would he choose?",
-        "consigne": "3 questions, 4 seconds each. Pick for him!",
+        "pour": "elle",
+        "etiquette": "Pet lovers edition",
+        "accroche": "What would she choose?",
+        "consigne": "Guess her 3 picks, then send it to her!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which season would he pick?",
+            "question": "Which pet would she want?",
             "options": [
               {
-                "texte": "Autumn",
-                "image": "choisirait/saison/automne.webp"
+                "texte": "Parrot",
+                "image": "choisirait/animal/perroquet.webp"
               },
               {
-                "texte": "Spring",
-                "image": "choisirait/saison/printemps.webp"
+                "texte": "Axolotl",
+                "image": "choisirait/animal/axolotl.webp"
               },
               {
-                "texte": "Summer",
-                "image": "choisirait/saison/ete.webp"
+                "texte": "Goldfish",
+                "image": "choisirait/animal/poisson.webp"
               }
             ]
           },
           {
-            "question": "Which flowers would he get you?",
+            "question": "Which cat would she adopt?",
             "options": [
               {
-                "texte": "Orchid",
-                "image": "choisirait/fleurs/orchidee.webp"
+                "texte": "Scottish Fold",
+                "image": "choisirait/chat/scottish.webp"
               },
               {
-                "texte": "Hydrangeas",
-                "image": "choisirait/fleurs/hortensias.webp"
+                "texte": "Bengal",
+                "image": "choisirait/chat/bengal.webp"
               },
               {
-                "texte": "Lavender",
-                "image": "choisirait/fleurs/lavande.webp"
+                "texte": "Maine Coon",
+                "image": "choisirait/chat/maine-coon.webp"
               }
             ]
           },
           {
-            "question": "Which adventure would he try?",
+            "question": "Which dog would she adopt?",
             "options": [
               {
-                "texte": "Surfing",
-                "image": "choisirait/aventure/surf.webp"
+                "texte": "Belgian Malinois",
+                "image": "choisirait/chien/malinois.webp"
               },
               {
-                "texte": "Snowboarding",
-                "image": "choisirait/aventure/snowboard.webp"
+                "texte": "Chihuahua",
+                "image": "choisirait/chien/chihuahua.webp"
               },
               {
-                "texte": "Skydiving",
-                "image": "choisirait/aventure/parachute.webp"
+                "texte": "Shiba Inu",
+                "image": "choisirait/chien/shiba.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Now send it to him. Did you guess right?",
-          "bouton": "Send this to him",
+          "question": "Got her 3 picks? Send it and see!",
+          "bouton": "Send this to her",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Spring edition. One letter per question, then send it to him.\n\nSend this to him",
+      "legende": "Pet lovers edition. Answer for her first, no peeking.\n\nSend this to her",
       "hashtags": [
         "#couplequiz",
-        "#boyfriendquiz",
+        "#girlfriendquiz",
         "#thisorthat",
-        "#spring",
+        "#petlovers",
         "#quizcouple"
       ]
     }

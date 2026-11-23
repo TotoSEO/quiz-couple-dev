@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "choisirait",
   "categorie": "choisirait",
-  "sujet": "ch-175",
+  "sujet": "ch-177",
   "idee_id": null,
   "variantes": {
     "en": {
@@ -12,79 +12,79 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "lui",
-        "etiquette": "Sweet tooth edition",
-        "accroche": "What would he choose?",
-        "consigne": "3 questions, 4 seconds each. Pick for him!",
+        "pour": "elle",
+        "etiquette": "Food edition",
+        "accroche": "What would she choose?",
+        "consigne": "Guess her 3 picks, then send it to her!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which ice cream would he get?",
+            "question": "Which pizza would she order?",
             "options": [
               {
-                "texte": "Ice cream sandwich",
-                "image": "choisirait/glace/sandwich-glace.webp"
+                "texte": "Deep dish",
+                "image": "choisirait/pizza/deep-dish.webp"
               },
               {
-                "texte": "Mochi ice cream",
-                "image": "choisirait/glace/mochi.webp"
+                "texte": "Margherita",
+                "image": "choisirait/pizza/margherita.webp"
               },
               {
-                "texte": "Soft serve",
-                "image": "choisirait/glace/italienne.webp"
+                "texte": "Pepperoni",
+                "image": "choisirait/pizza/pepperoni.webp"
               }
             ]
           },
           {
-            "question": "What would he grab at the bakery?",
+            "question": "Which pasta would she pick?",
             "options": [
               {
-                "texte": "Muffin",
-                "image": "choisirait/boulangerie/muffin.webp"
+                "texte": "Pesto",
+                "image": "choisirait/pates/pesto.webp"
               },
               {
-                "texte": "Baguette",
-                "image": "choisirait/boulangerie/baguette.webp"
+                "texte": "Lasagna",
+                "image": "choisirait/pates/lasagnes.webp"
               },
               {
-                "texte": "Donut",
-                "image": "choisirait/boulangerie/donut.webp"
+                "texte": "Ravioli",
+                "image": "choisirait/pates/raviolis.webp"
               }
             ]
           },
           {
-            "question": "Which cake would he pick?",
+            "question": "Which potato would she pick?",
             "options": [
               {
-                "texte": "Chocolate lava cake",
-                "image": "choisirait/dessert/fondant.webp"
+                "texte": "Rösti",
+                "image": "choisirait/patate/rosti.webp"
               },
               {
-                "texte": "Huge birthday cake",
-                "image": "choisirait/dessert/gateau-anniversaire.webp"
+                "texte": "French fries",
+                "image": "choisirait/patate/frites.webp"
               },
               {
-                "texte": "Churros",
-                "image": "choisirait/dessert/churros.webp"
+                "texte": "Curly fries",
+                "image": "choisirait/patate/curly.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Now send it to him. Did you guess right?",
-          "bouton": "Send this to him",
+          "question": "Got her 3 picks? Send it and see!",
+          "bouton": "Send this to her",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Sweet tooth edition. No cheating: decide before the timer runs out.\n\nSend this to him",
+      "legende": "Food edition. She will swear you got at least one wrong.\n\nSend this to her",
       "hashtags": [
         "#couplequiz",
-        "#boyfriendquiz",
+        "#girlfriendquiz",
         "#thisorthat",
-        "#dessert",
+        "#foodie",
         "#quizcouple"
       ]
     }

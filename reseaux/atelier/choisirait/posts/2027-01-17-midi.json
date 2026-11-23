@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "choisirait",
   "categorie": "choisirait",
-  "sujet": "ch-102",
+  "sujet": "ch-104",
   "idee_id": null,
   "variantes": {
     "en": {
@@ -12,79 +12,79 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "elle",
-        "etiquette": "Date night edition",
-        "accroche": "What would she choose?",
-        "consigne": "Answer for her, then let her check!",
+        "pour": "lui",
+        "etiquette": "Pet lovers edition",
+        "accroche": "What would he choose?",
+        "consigne": "Pick what he would pick. Then send it to him!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which flowers would she want?",
+            "question": "Which pet would he want?",
             "options": [
               {
-                "texte": "Wildflowers",
-                "image": "choisirait/fleurs/fleurs-sauvages.webp"
+                "texte": "Turtle",
+                "image": "choisirait/animal/tortue.webp"
               },
               {
-                "texte": "Peonies",
-                "image": "choisirait/fleurs/pivoines.webp"
+                "texte": "Ferret",
+                "image": "choisirait/animal/furet.webp"
               },
               {
-                "texte": "Sunflowers",
-                "image": "choisirait/fleurs/tournesols.webp"
+                "texte": "Guinea pig",
+                "image": "choisirait/animal/cochon-dinde.webp"
               }
             ]
           },
           {
-            "question": "Which date would she take you on?",
+            "question": "Which dog would he adopt?",
             "options": [
               {
-                "texte": "Camping",
-                "image": "choisirait/date/camping.webp"
+                "texte": "Husky",
+                "image": "choisirait/chien/husky.webp"
               },
               {
-                "texte": "Hot air balloon",
-                "image": "choisirait/date/montgolfiere-date.webp"
+                "texte": "Bernese Mountain Dog",
+                "image": "choisirait/chien/bouvier.webp"
               },
               {
-                "texte": "Ice skating",
-                "image": "choisirait/date/patinoire.webp"
+                "texte": "Golden Retriever",
+                "image": "choisirait/chien/golden.webp"
               }
             ]
           },
           {
-            "question": "Which cake would she pick?",
+            "question": "Which cat would he adopt?",
             "options": [
               {
-                "texte": "Tiramisu",
-                "image": "choisirait/dessert/tiramisu.webp"
+                "texte": "Norwegian Forest Cat",
+                "image": "choisirait/chat/norvegien.webp"
               },
               {
-                "texte": "Brownie",
-                "image": "choisirait/dessert/brownie.webp"
+                "texte": "Sphynx",
+                "image": "choisirait/chat/sphynx.webp"
               },
               {
-                "texte": "Crème brûlée",
-                "image": "choisirait/dessert/creme-brulee.webp"
+                "texte": "Maine Coon",
+                "image": "choisirait/chat/maine-coon.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Got her 3 picks? Send it and see!",
-          "bouton": "Send this to her",
+          "question": "Send it to him: how many did you get?",
+          "bouton": "Send this to him",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Date night edition. Write down her three letters before you send it.\n\nSend this to her",
+      "legende": "Pet lovers edition. If you get all three, you know him by heart.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
-        "#girlfriendquiz",
+        "#boyfriendquiz",
         "#thisorthat",
-        "#datenight",
+        "#petlovers",
         "#quizcouple"
       ]
     }

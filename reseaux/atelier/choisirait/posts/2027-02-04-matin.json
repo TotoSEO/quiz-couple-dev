@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "choisirait",
   "categorie": "choisirait",
-  "sujet": "ch-135",
+  "sujet": "ch-137",
   "idee_id": null,
   "variantes": {
     "en": {
@@ -12,79 +12,79 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "elle",
-        "etiquette": "Travel edition",
-        "accroche": "What would she choose?",
-        "consigne": "3 questions, 4 seconds each. Pick for her!",
+        "pour": "lui",
+        "etiquette": "Valentine's edition",
+        "accroche": "What would he choose?",
+        "consigne": "Guess his 3 picks, then send it to him!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which city would she take you to?",
+            "question": "What would he get you for Valentine's?",
             "options": [
               {
-                "texte": "Barcelona",
-                "image": "choisirait/ville/barcelone.webp"
+                "texte": "Heart balloons",
+                "image": "choisirait/valentin/ballons-coeur.webp"
               },
               {
-                "texte": "London",
-                "image": "choisirait/ville/londres.webp"
+                "texte": "Box of chocolates",
+                "image": "choisirait/valentin/boite-chocolats.webp"
               },
               {
-                "texte": "Istanbul",
-                "image": "choisirait/ville/istanbul.webp"
+                "texte": "Breakfast in bed",
+                "image": "choisirait/valentin/petit-dej-lit.webp"
               }
             ]
           },
           {
-            "question": "Where would she take you on vacation?",
+            "question": "Which ring would he pick for you?",
             "options": [
               {
-                "texte": "Mexico",
-                "image": "choisirait/vacances/mexique.webp"
+                "texte": "Gold band",
+                "image": "choisirait/bague/alliance-or.webp"
               },
               {
-                "texte": "Italy",
-                "image": "choisirait/vacances/italie.webp"
+                "texte": "Emerald ring",
+                "image": "choisirait/bague/emeraude.webp"
               },
               {
-                "texte": "Lapland",
-                "image": "choisirait/vacances/laponie.webp"
+                "texte": "Rose gold ring",
+                "image": "choisirait/bague/or-rose.webp"
               }
             ]
           },
           {
-            "question": "Which view would she wake up to?",
+            "question": "Which flowers would he get you?",
             "options": [
               {
-                "texte": "Lake",
-                "image": "choisirait/vue/lac.webp"
+                "texte": "Hydrangeas",
+                "image": "choisirait/fleurs/hortensias.webp"
               },
               {
-                "texte": "Snowy peaks",
-                "image": "choisirait/vue/neige.webp"
+                "texte": "Lavender",
+                "image": "choisirait/fleurs/lavande.webp"
               },
               {
-                "texte": "Desert",
-                "image": "choisirait/vue/desert-vue.webp"
+                "texte": "Wildflowers",
+                "image": "choisirait/fleurs/fleurs-sauvages.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Got her 3 picks? Send it and see!",
-          "bouton": "Send this to her",
+          "question": "Send it to him: how many did you get?",
+          "bouton": "Send this to him",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Travel edition. No cheating: decide before the timer runs out.\n\nSend this to her",
+      "legende": "Valentine's edition. He will swear you got at least one wrong.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
-        "#girlfriendquiz",
+        "#boyfriendquiz",
         "#thisorthat",
-        "#travelcouple",
+        "#valentinesday",
         "#quizcouple"
       ]
     }

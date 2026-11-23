@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "choisirait",
   "categorie": "choisirait",
-  "sujet": "ch-019",
+  "sujet": "ch-021",
   "idee_id": null,
   "variantes": {
     "en": {
@@ -12,79 +12,79 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "lui",
-        "etiquette": "Dream home edition",
-        "accroche": "What would he choose?",
-        "consigne": "3 questions, 4 seconds each. Pick for him!",
+        "pour": "elle",
+        "etiquette": "Luxury edition",
+        "accroche": "What would she choose?",
+        "consigne": "Guess her 3 picks, then send it to her!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which cat would he adopt?",
+            "question": "Which watch would she wear?",
             "options": [
               {
-                "texte": "Norwegian Forest Cat",
-                "image": "choisirait/chat/norvegien.webp"
+                "texte": "Rolex Submariner",
+                "image": "choisirait/montre/rolex.webp"
               },
               {
-                "texte": "Ginger cat",
-                "image": "choisirait/chat/chat-roux.webp"
+                "texte": "Seiko diver",
+                "image": "choisirait/montre/seiko.webp"
               },
               {
-                "texte": "Sphynx",
-                "image": "choisirait/chat/sphynx.webp"
+                "texte": "Casio G-Shock",
+                "image": "choisirait/montre/g-shock.webp"
               }
             ]
           },
           {
-            "question": "Which view would he wake up to?",
+            "question": "Which car would she pick?",
             "options": [
               {
-                "texte": "Ocean",
-                "image": "choisirait/vue/ocean.webp"
+                "texte": "Ford Mustang",
+                "image": "choisirait/voiture/mustang.webp"
               },
               {
-                "texte": "Tropical beach",
-                "image": "choisirait/vue/plage-tropicale.webp"
+                "texte": "Tesla Model S",
+                "image": "choisirait/voiture/tesla-model-s.webp"
               },
               {
-                "texte": "Northern lights",
-                "image": "choisirait/vue/aurores.webp"
+                "texte": "Land Rover Defender",
+                "image": "choisirait/voiture/defender.webp"
               }
             ]
           },
           {
-            "question": "Which dog would he adopt?",
+            "question": "How would she travel with you?",
             "options": [
               {
-                "texte": "Husky",
-                "image": "choisirait/chien/husky.webp"
+                "texte": "Motorbike",
+                "image": "choisirait/moto/bmw-gs.webp"
               },
               {
-                "texte": "Beagle",
-                "image": "choisirait/chien/beagle.webp"
+                "texte": "Sailboat",
+                "image": "choisirait/voyage/voilier.webp"
               },
               {
-                "texte": "Bernese Mountain Dog",
-                "image": "choisirait/chien/bouvier.webp"
+                "texte": "Convertible",
+                "image": "choisirait/voyage/cabriolet.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Now send it to him. Did you guess right?",
-          "bouton": "Send this to him",
+          "question": "Got her 3 picks? Send it and see!",
+          "bouton": "Send this to her",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Dream home edition. One letter per question, then send it to him.\n\nSend this to him",
+      "legende": "Luxury edition. Answer for her first, no peeking.\n\nSend this to her",
       "hashtags": [
         "#couplequiz",
-        "#boyfriendquiz",
+        "#girlfriendquiz",
         "#thisorthat",
-        "#dreamhome",
+        "#luxurylife",
         "#quizcouple"
       ]
     }

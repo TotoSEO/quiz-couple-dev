@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "choisirait",
   "categorie": "choisirait",
-  "sujet": "ch-114",
+  "sujet": "ch-116",
   "idee_id": null,
   "variantes": {
     "en": {
@@ -12,79 +12,79 @@
         "gabarit": "choisirait",
         "langue": "en",
         "theme": "light",
-        "pour": "elle",
-        "etiquette": "Style edition",
-        "accroche": "What would she choose?",
-        "consigne": "Answer for her, then let her check!",
+        "pour": "lui",
+        "etiquette": "Wedding edition",
+        "accroche": "What would he choose?",
+        "consigne": "Pick what he would pick. Then send it to him!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which shoes would she pick?",
+            "question": "Which flowers would he get you?",
             "options": [
               {
-                "texte": "Knee-high boots",
-                "image": "choisirait/chaussures/cuissardes.webp"
+                "texte": "Red roses",
+                "image": "choisirait/fleurs/roses.webp"
               },
               {
-                "texte": "UGG boots",
-                "image": "choisirait/chaussures/ugg.webp"
+                "texte": "Daisies",
+                "image": "choisirait/fleurs/marguerites.webp"
               },
               {
-                "texte": "High heels",
-                "image": "choisirait/chaussures/talons.webp"
+                "texte": "Peonies",
+                "image": "choisirait/fleurs/pivoines.webp"
               }
             ]
           },
           {
-            "question": "Which sneakers would she pick?",
+            "question": "Where would he want to get married?",
             "options": [
               {
-                "texte": "Crocs",
-                "image": "choisirait/baskets/crocs.webp"
+                "texte": "Mountaintop",
+                "image": "choisirait/mariage/sommet.webp"
               },
               {
-                "texte": "Stan Smith",
-                "image": "choisirait/baskets/stan-smith.webp"
+                "texte": "City hall",
+                "image": "choisirait/mariage/mairie.webp"
               },
               {
-                "texte": "Air Force 1",
-                "image": "choisirait/baskets/air-force.webp"
+                "texte": "Castle",
+                "image": "choisirait/mariage/mariage-chateau.webp"
               }
             ]
           },
           {
-            "question": "Which phone would she pick?",
+            "question": "Where would he propose?",
             "options": [
               {
-                "texte": "Nokia 3310",
-                "image": "choisirait/telephone/nokia.webp"
+                "texte": "Disney castle",
+                "image": "choisirait/demande/demande-chateau.webp"
               },
               {
-                "texte": "BlackBerry",
-                "image": "choisirait/telephone/blackberry.webp"
+                "texte": "Northern lights",
+                "image": "choisirait/demande/demande-aurores.webp"
               },
               {
-                "texte": "iPhone",
-                "image": "choisirait/telephone/iphone.webp"
+                "texte": "Restaurant",
+                "image": "choisirait/demande/demande-resto.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Got her 3 picks? Send it and see!",
-          "bouton": "Send this to her",
+          "question": "Send it to him: how many did you get?",
+          "bouton": "Send this to him",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Style edition. If you get all three, you know her by heart.\n\nSend this to her",
+      "legende": "Wedding edition. Pick for him, then let him prove you wrong.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
-        "#girlfriendquiz",
+        "#boyfriendquiz",
         "#thisorthat",
-        "#style",
+        "#engaged",
         "#quizcouple"
       ]
     }

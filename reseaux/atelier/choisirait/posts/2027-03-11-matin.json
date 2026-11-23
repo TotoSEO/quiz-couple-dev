@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "choisirait",
   "categorie": "choisirait",
-  "sujet": "ch-200",
+  "sujet": "ch-202",
   "idee_id": null,
   "variantes": {
     "en": {
@@ -13,78 +13,78 @@
         "langue": "en",
         "theme": "light",
         "pour": "lui",
-        "etiquette": "Sweet tooth edition",
+        "etiquette": "Car lovers edition",
         "accroche": "What would he choose?",
-        "consigne": "Pick what he would pick. Then send it to him!",
+        "consigne": "Answer for him, then let him check!",
         "secondes": 4,
         "son": {
           "ambiance": "jeu"
         },
         "questions": [
           {
-            "question": "Which ice cream would he get?",
+            "question": "Which classic car would he drive?",
             "options": [
               {
-                "texte": "Ice cream sandwich",
-                "image": "choisirait/glace/sandwich-glace.webp"
+                "texte": "VW Camper Van",
+                "image": "choisirait/vintage/combi.webp"
               },
               {
-                "texte": "Sundae",
-                "image": "choisirait/glace/sundae.webp"
+                "texte": "VW Beetle",
+                "image": "choisirait/vintage/coccinelle.webp"
               },
               {
-                "texte": "Banana split",
-                "image": "choisirait/glace/banana-split.webp"
+                "texte": "Porsche 356",
+                "image": "choisirait/vintage/porsche-356.webp"
               }
             ]
           },
           {
-            "question": "What would he grab at the bakery?",
+            "question": "Which motorbike would he ride?",
             "options": [
               {
-                "texte": "Croissant",
-                "image": "choisirait/boulangerie/croissant.webp"
+                "texte": "Kawasaki Ninja",
+                "image": "choisirait/moto/ninja.webp"
               },
               {
-                "texte": "Donut",
-                "image": "choisirait/boulangerie/donut.webp"
+                "texte": "BMW GS",
+                "image": "choisirait/moto/bmw-gs.webp"
               },
               {
-                "texte": "Cinnamon roll",
-                "image": "choisirait/boulangerie/cinnamon-roll.webp"
+                "texte": "Triumph Bonneville",
+                "image": "choisirait/moto/bonneville.webp"
               }
             ]
           },
           {
-            "question": "Which movie snack would he pick?",
+            "question": "Which car would he pick?",
             "options": [
               {
-                "texte": "Popcorn",
-                "image": "choisirait/snack/popcorn.webp"
+                "texte": "Mercedes-AMG C63 S",
+                "image": "choisirait/voiture/amg-c63.webp"
               },
               {
-                "texte": "Gummy bears",
-                "image": "choisirait/snack/oursons.webp"
+                "texte": "Ferrari F8",
+                "image": "choisirait/voiture/ferrari-f8.webp"
               },
               {
-                "texte": "Licorice",
-                "image": "choisirait/snack/reglisse.webp"
+                "texte": "Jeep Wrangler",
+                "image": "choisirait/voiture/jeep-wrangler.webp"
               }
             ]
           }
         ],
         "fin": {
-          "question": "Send it to him: how many did you get?",
+          "question": "Now send it to him. Did you guess right?",
           "bouton": "Send this to him",
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Sweet tooth edition. Easy for you? Then the next one is for him.\n\nSend this to him",
+      "legende": "Car lovers edition. Write down his three letters before you send it.\n\nSend this to him",
       "hashtags": [
         "#couplequiz",
         "#boyfriendquiz",
         "#thisorthat",
-        "#dessert",
+        "#carlovers",
         "#quizcouple"
       ]
     }
