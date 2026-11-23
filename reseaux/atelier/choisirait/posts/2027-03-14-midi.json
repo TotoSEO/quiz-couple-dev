@@ -1,0 +1,92 @@
+{
+  "jour": "2027-03-14",
+  "creneau": "midi",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-208",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "lui",
+        "etiquette": "Food edition",
+        "accroche": "What would he choose?",
+        "consigne": "Pick what he would pick. Then send it to him!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "Which breakfast would he choose?",
+            "options": [
+              {
+                "texte": "Croissant & coffee",
+                "image": "choisirait/petitdej/croissant-cafe.webp"
+              },
+              {
+                "texte": "Waffles",
+                "image": "choisirait/petitdej/gaufres.webp"
+              },
+              {
+                "texte": "Avocado toast",
+                "image": "choisirait/petitdej/avocado-toast.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which potato would he pick?",
+            "options": [
+              {
+                "texte": "Curly fries",
+                "image": "choisirait/patate/curly.webp"
+              },
+              {
+                "texte": "Hash browns",
+                "image": "choisirait/patate/hash-browns.webp"
+              },
+              {
+                "texte": "Potato gratin",
+                "image": "choisirait/patate/gratin.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which pizza would he order?",
+            "options": [
+              {
+                "texte": "Margherita",
+                "image": "choisirait/pizza/margherita.webp"
+              },
+              {
+                "texte": "Four cheese",
+                "image": "choisirait/pizza/quatre-fromages.webp"
+              },
+              {
+                "texte": "Hawaiian",
+                "image": "choisirait/pizza/hawaienne.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Now send it to him. Did you guess right?",
+          "bouton": "Send this to him",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Food edition. Your answers first, then his reaction.\n\nSend this to him",
+      "hashtags": [
+        "#couplequiz",
+        "#boyfriendquiz",
+        "#thisorthat",
+        "#foodie",
+        "#quizcouple"
+      ]
+    }
+  }
+}

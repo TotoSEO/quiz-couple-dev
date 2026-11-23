@@ -1,0 +1,92 @@
+{
+  "jour": "2027-02-14",
+  "creneau": "midi",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-156",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "elle",
+        "etiquette": "Cozy night in edition",
+        "accroche": "What would she choose?",
+        "consigne": "Pick what she would pick. Then send it to her!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "Which drink would she get?",
+            "options": [
+              {
+                "texte": "Iced tea",
+                "image": "choisirait/boisson/the-glace.webp"
+              },
+              {
+                "texte": "Bubble tea",
+                "image": "choisirait/boisson/bubble-tea.webp"
+              },
+              {
+                "texte": "Smoothie",
+                "image": "choisirait/boisson/smoothie.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which console would she pick?",
+            "options": [
+              {
+                "texte": "PlayStation 2",
+                "image": "choisirait/console/ps2.webp"
+              },
+              {
+                "texte": "PlayStation 5",
+                "image": "choisirait/console/ps5.webp"
+              },
+              {
+                "texte": "Xbox",
+                "image": "choisirait/console/xbox.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which dessert would she pick?",
+            "options": [
+              {
+                "texte": "Chocolate lava cake",
+                "image": "choisirait/dessert/fondant.webp"
+              },
+              {
+                "texte": "Vanilla éclair",
+                "image": "choisirait/dessert/eclair.webp"
+              },
+              {
+                "texte": "Tiramisu",
+                "image": "choisirait/dessert/tiramisu.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Got her 3 picks? Send it and see!",
+          "bouton": "Send this to her",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Cozy night in edition. Pick for her, then let her prove you wrong.\n\nSend this to her",
+      "hashtags": [
+        "#couplequiz",
+        "#girlfriendquiz",
+        "#thisorthat",
+        "#cozynight",
+        "#quizcouple"
+      ]
+    }
+  }
+}

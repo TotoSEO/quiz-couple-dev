@@ -1,0 +1,92 @@
+{
+  "jour": "2027-02-09",
+  "creneau": "midi",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-147",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "elle",
+        "etiquette": "Dream home edition",
+        "accroche": "What would she choose?",
+        "consigne": "3 questions, 4 seconds each. Pick for her!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "Which view would she wake up to?",
+            "options": [
+              {
+                "texte": "Desert",
+                "image": "choisirait/vue/desert-vue.webp"
+              },
+              {
+                "texte": "Lake",
+                "image": "choisirait/vue/lac.webp"
+              },
+              {
+                "texte": "City skyline",
+                "image": "choisirait/vue/skyline.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which house would she pick?",
+            "options": [
+              {
+                "texte": "Lake house",
+                "image": "choisirait/maison/maison-lac.webp"
+              },
+              {
+                "texte": "Modern villa",
+                "image": "choisirait/maison/villa-moderne.webp"
+              },
+              {
+                "texte": "Beach house",
+                "image": "choisirait/maison/maison-plage.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which dog would she pick?",
+            "options": [
+              {
+                "texte": "Samoyed",
+                "image": "choisirait/chien/samoyede.webp"
+              },
+              {
+                "texte": "Belgian Malinois",
+                "image": "choisirait/chien/malinois.webp"
+              },
+              {
+                "texte": "Great Dane",
+                "image": "choisirait/chien/dogue.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Got her 3 picks? Send it and see!",
+          "bouton": "Send this to her",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Dream home edition. She will swear you got at least one wrong.\n\nSend this to her",
+      "hashtags": [
+        "#couplequiz",
+        "#girlfriendquiz",
+        "#thisorthat",
+        "#dreamhome",
+        "#quizcouple"
+      ]
+    }
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "jour": "2026-11-24",
+  "creneau": "midi",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-004",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "lui",
+        "etiquette": "Sweet tooth edition",
+        "accroche": "What would he choose?",
+        "consigne": "Pick what he would pick. Then send it to him!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "What would he grab at the bakery?",
+            "options": [
+              {
+                "texte": "Cinnamon roll",
+                "image": "choisirait/boulangerie/cinnamon-roll.webp"
+              },
+              {
+                "texte": "Croissant",
+                "image": "choisirait/boulangerie/croissant.webp"
+              },
+              {
+                "texte": "Baguette",
+                "image": "choisirait/boulangerie/baguette.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which ice cream would he get?",
+            "options": [
+              {
+                "texte": "Soft serve",
+                "image": "choisirait/glace/italienne.webp"
+              },
+              {
+                "texte": "Ice cream sandwich",
+                "image": "choisirait/glace/sandwich-glace.webp"
+              },
+              {
+                "texte": "Affogato",
+                "image": "choisirait/glace/affogato.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which coffee would he order?",
+            "options": [
+              {
+                "texte": "Cappuccino",
+                "image": "choisirait/cafe/cappuccino.webp"
+              },
+              {
+                "texte": "Espresso",
+                "image": "choisirait/cafe/espresso.webp"
+              },
+              {
+                "texte": "Iced latte",
+                "image": "choisirait/cafe/iced-latte.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Now send it to him. Did you guess right?",
+          "bouton": "Send this to him",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Sweet tooth edition. If you get all three, you know him by heart.\n\nSend this to him",
+      "hashtags": [
+        "#couplequiz",
+        "#boyfriendquiz",
+        "#thisorthat",
+        "#dessert",
+        "#quizcouple"
+      ]
+    }
+  }
+}

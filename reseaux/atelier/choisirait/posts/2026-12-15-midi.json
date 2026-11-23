@@ -1,0 +1,92 @@
+{
+  "jour": "2026-12-15",
+  "creneau": "midi",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-043",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "lui",
+        "etiquette": "Sweet tooth edition",
+        "accroche": "What would he choose?",
+        "consigne": "3 questions, 4 seconds each. Pick for him!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "Which ice cream would he get?",
+            "options": [
+              {
+                "texte": "Ice cream cone",
+                "image": "choisirait/glace/cornet.webp"
+              },
+              {
+                "texte": "Soft serve",
+                "image": "choisirait/glace/italienne.webp"
+              },
+              {
+                "texte": "Ice cream sandwich",
+                "image": "choisirait/glace/sandwich-glace.webp"
+              }
+            ]
+          },
+          {
+            "question": "What would he grab at the bakery?",
+            "options": [
+              {
+                "texte": "Cinnamon roll",
+                "image": "choisirait/boulangerie/cinnamon-roll.webp"
+              },
+              {
+                "texte": "Pain au chocolat",
+                "image": "choisirait/boulangerie/pain-chocolat.webp"
+              },
+              {
+                "texte": "Brioche",
+                "image": "choisirait/boulangerie/brioche.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which dessert would he pick?",
+            "options": [
+              {
+                "texte": "Crêpes",
+                "image": "choisirait/dessert/crepes.webp"
+              },
+              {
+                "texte": "Tiramisu",
+                "image": "choisirait/dessert/tiramisu.webp"
+              },
+              {
+                "texte": "Red velvet cake",
+                "image": "choisirait/dessert/red-velvet.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Now send it to him. Did you guess right?",
+          "bouton": "Send this to him",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Sweet tooth edition. Guess first, send it after. Then compare.\n\nSend this to him",
+      "hashtags": [
+        "#couplequiz",
+        "#boyfriendquiz",
+        "#thisorthat",
+        "#dessert",
+        "#quizcouple"
+      ]
+    }
+  }
+}

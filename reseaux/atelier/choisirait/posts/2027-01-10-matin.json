@@ -1,0 +1,92 @@
+{
+  "jour": "2027-01-10",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-090",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "elle",
+        "etiquette": "Adventure edition",
+        "accroche": "What would she choose?",
+        "consigne": "Answer for her, then let her check!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "Which sport would she watch?",
+            "options": [
+              {
+                "texte": "American football",
+                "image": "choisirait/sport/foot-us.webp"
+              },
+              {
+                "texte": "Football",
+                "image": "choisirait/sport/foot.webp"
+              },
+              {
+                "texte": "Ice hockey",
+                "image": "choisirait/sport/hockey.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which adventure would she try?",
+            "options": [
+              {
+                "texte": "Paragliding",
+                "image": "choisirait/aventure/parapente.webp"
+              },
+              {
+                "texte": "Horse riding",
+                "image": "choisirait/aventure/equitation.webp"
+              },
+              {
+                "texte": "Skydiving",
+                "image": "choisirait/aventure/parachute.webp"
+              }
+            ]
+          },
+          {
+            "question": "Where would she go on vacation?",
+            "options": [
+              {
+                "texte": "Egypt",
+                "image": "choisirait/vacances/egypte.webp"
+              },
+              {
+                "texte": "Bora Bora",
+                "image": "choisirait/vacances/bora-bora.webp"
+              },
+              {
+                "texte": "Lapland",
+                "image": "choisirait/vacances/laponie.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Got her 3 picks? Send it and see!",
+          "bouton": "Send this to her",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Adventure edition. Easy for you? Then the next one is for her.\n\nSend this to her",
+      "hashtags": [
+        "#couplequiz",
+        "#girlfriendquiz",
+        "#thisorthat",
+        "#adventurecouple",
+        "#quizcouple"
+      ]
+    }
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "jour": "2027-02-26",
+  "creneau": "midi",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-179",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "lui",
+        "etiquette": "Dream home edition",
+        "accroche": "What would he choose?",
+        "consigne": "3 questions, 4 seconds each. Pick for him!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "Which dream house would he pick?",
+            "options": [
+              {
+                "texte": "Castle",
+                "image": "choisirait/maison/chateau.webp"
+              },
+              {
+                "texte": "Cozy cabin",
+                "image": "choisirait/weekend/chalet-bois.webp"
+              },
+              {
+                "texte": "Mountain chalet",
+                "image": "choisirait/maison/chalet.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which view would he wake up to?",
+            "options": [
+              {
+                "texte": "Northern lights",
+                "image": "choisirait/vue/aurores.webp"
+              },
+              {
+                "texte": "Eiffel Tower",
+                "image": "choisirait/vue/tour-eiffel.webp"
+              },
+              {
+                "texte": "Ocean",
+                "image": "choisirait/vue/ocean.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which cat would he adopt?",
+            "options": [
+              {
+                "texte": "Siamese",
+                "image": "choisirait/chat/siamois.webp"
+              },
+              {
+                "texte": "British Shorthair",
+                "image": "choisirait/chat/british.webp"
+              },
+              {
+                "texte": "Ginger cat",
+                "image": "choisirait/chat/chat-roux.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Send it to him: how many did you get?",
+          "bouton": "Send this to him",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Dream home edition. One letter per question, then send it to him.\n\nSend this to him",
+      "hashtags": [
+        "#couplequiz",
+        "#boyfriendquiz",
+        "#thisorthat",
+        "#dreamhome",
+        "#quizcouple"
+      ]
+    }
+  }
+}

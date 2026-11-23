@@ -1,0 +1,92 @@
+{
+  "jour": "2026-12-08",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-029",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "lui",
+        "etiquette": "Food edition",
+        "accroche": "What would he choose?",
+        "consigne": "Guess his 3 picks, then send it to him!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "Which potato would he pick?",
+            "options": [
+              {
+                "texte": "Hash browns",
+                "image": "choisirait/patate/hash-browns.webp"
+              },
+              {
+                "texte": "Rösti",
+                "image": "choisirait/patate/rosti.webp"
+              },
+              {
+                "texte": "Curly fries",
+                "image": "choisirait/patate/curly.webp"
+              }
+            ]
+          },
+          {
+            "question": "What would he order at 2 a.m.?",
+            "options": [
+              {
+                "texte": "Nuggets",
+                "image": "choisirait/fastfood/nuggets.webp"
+              },
+              {
+                "texte": "Tacos",
+                "image": "choisirait/fastfood/tacos.webp"
+              },
+              {
+                "texte": "Grilled cheese",
+                "image": "choisirait/fastfood/croque.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which pasta would he pick?",
+            "options": [
+              {
+                "texte": "Gnocchi",
+                "image": "choisirait/pates/gnocchi.webp"
+              },
+              {
+                "texte": "Seafood pasta",
+                "image": "choisirait/pates/fruits-mer.webp"
+              },
+              {
+                "texte": "Pesto",
+                "image": "choisirait/pates/pesto.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Send it to him: how many did you get?",
+          "bouton": "Send this to him",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Food edition. One letter per question, then send it to him.\n\nSend this to him",
+      "hashtags": [
+        "#couplequiz",
+        "#boyfriendquiz",
+        "#thisorthat",
+        "#foodie",
+        "#quizcouple"
+      ]
+    }
+  }
+}

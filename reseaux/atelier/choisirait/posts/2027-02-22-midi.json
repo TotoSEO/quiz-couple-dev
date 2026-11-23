@@ -1,0 +1,92 @@
+{
+  "jour": "2027-02-22",
+  "creneau": "midi",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-171",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "elle",
+        "etiquette": "Winter edition",
+        "accroche": "What would she choose?",
+        "consigne": "3 questions, 4 seconds each. Pick for her!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "Which winter date would she pick?",
+            "options": [
+              {
+                "texte": "Sledding",
+                "image": "choisirait/hiver/luge.webp"
+              },
+              {
+                "texte": "Building a snowman",
+                "image": "choisirait/hiver/bonhomme.webp"
+              },
+              {
+                "texte": "Ice skating",
+                "image": "choisirait/hiver/hiver-patin.webp"
+              }
+            ]
+          },
+          {
+            "question": "What would she cook for date night?",
+            "options": [
+              {
+                "texte": "Raclette",
+                "image": "choisirait/diner/raclette.webp"
+              },
+              {
+                "texte": "Pad thai",
+                "image": "choisirait/diner/pad-thai.webp"
+              },
+              {
+                "texte": "Sushi",
+                "image": "choisirait/diner/sushi.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which coffee would she order?",
+            "options": [
+              {
+                "texte": "Matcha latte",
+                "image": "choisirait/cafe/matcha.webp"
+              },
+              {
+                "texte": "Americano",
+                "image": "choisirait/cafe/americano.webp"
+              },
+              {
+                "texte": "Iced latte",
+                "image": "choisirait/cafe/iced-latte.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Got her 3 picks? Send it and see!",
+          "bouton": "Send this to her",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Winter edition. Answer for her first, no peeking.\n\nSend this to her",
+      "hashtags": [
+        "#couplequiz",
+        "#girlfriendquiz",
+        "#thisorthat",
+        "#winter",
+        "#quizcouple"
+      ]
+    }
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "jour": "2026-12-02",
+  "creneau": "midi",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-019",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "lui",
+        "etiquette": "Sweet tooth edition",
+        "accroche": "What would he choose?",
+        "consigne": "3 questions, 4 seconds each. Pick for him!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "Which ice cream would he get?",
+            "options": [
+              {
+                "texte": "Ice cream cone",
+                "image": "choisirait/glace/cornet.webp"
+              },
+              {
+                "texte": "Sundae",
+                "image": "choisirait/glace/sundae.webp"
+              },
+              {
+                "texte": "Mochi ice cream",
+                "image": "choisirait/glace/mochi.webp"
+              }
+            ]
+          },
+          {
+            "question": "What would he grab at the bakery?",
+            "options": [
+              {
+                "texte": "Bagel",
+                "image": "choisirait/boulangerie/bagel.webp"
+              },
+              {
+                "texte": "Donut",
+                "image": "choisirait/boulangerie/donut.webp"
+              },
+              {
+                "texte": "Muffin",
+                "image": "choisirait/boulangerie/muffin.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which dessert would he pick?",
+            "options": [
+              {
+                "texte": "Macarons",
+                "image": "choisirait/dessert/macarons.webp"
+              },
+              {
+                "texte": "Cheesecake",
+                "image": "choisirait/dessert/cheesecake.webp"
+              },
+              {
+                "texte": "Crème brûlée",
+                "image": "choisirait/dessert/creme-brulee.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Now send it to him. Did you guess right?",
+          "bouton": "Send this to him",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Sweet tooth edition. One letter per question, then send it to him.\n\nSend this to him",
+      "hashtags": [
+        "#couplequiz",
+        "#boyfriendquiz",
+        "#thisorthat",
+        "#dessert",
+        "#quizcouple"
+      ]
+    }
+  }
+}

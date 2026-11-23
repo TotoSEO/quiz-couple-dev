@@ -1,0 +1,92 @@
+{
+  "jour": "2026-12-09",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-031",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "lui",
+        "etiquette": "Christmas edition",
+        "accroche": "What would he choose?",
+        "consigne": "3 questions, 4 seconds each. Pick for him!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "Which gift would make him happy?",
+            "options": [
+              {
+                "texte": "Book",
+                "image": "choisirait/cadeau/livre.webp"
+              },
+              {
+                "texte": "Vinyl records",
+                "image": "choisirait/cadeau/vinyles.webp"
+              },
+              {
+                "texte": "Headphones",
+                "image": "choisirait/cadeau/casque.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which Christmas date would he plan?",
+            "options": [
+              {
+                "texte": "Snowy chalet",
+                "image": "choisirait/noel-sortie/chalet-noel.webp"
+              },
+              {
+                "texte": "Christmas market",
+                "image": "choisirait/noel-sortie/marche-noel.webp"
+              },
+              {
+                "texte": "Christmas lights",
+                "image": "choisirait/noel-sortie/illuminations.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which Christmas treat would he pick?",
+            "options": [
+              {
+                "texte": "Christmas pudding",
+                "image": "choisirait/noel-gourmandise/pudding.webp"
+              },
+              {
+                "texte": "Candy canes",
+                "image": "choisirait/noel-gourmandise/sucres-orge.webp"
+              },
+              {
+                "texte": "Yule log",
+                "image": "choisirait/noel-gourmandise/buche.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Now send it to him. Did you guess right?",
+          "bouton": "Send this to him",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Christmas edition. Answer for him first, no peeking.\n\nSend this to him",
+      "hashtags": [
+        "#couplequiz",
+        "#boyfriendquiz",
+        "#thisorthat",
+        "#christmas",
+        "#quizcouple"
+      ]
+    }
+  }
+}

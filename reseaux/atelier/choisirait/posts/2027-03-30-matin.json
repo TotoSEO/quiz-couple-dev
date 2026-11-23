@@ -1,0 +1,92 @@
+{
+  "jour": "2027-03-30",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-237",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "elle",
+        "etiquette": "Food edition",
+        "accroche": "What would she choose?",
+        "consigne": "Guess her 3 picks, then send it to her!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "Which breakfast would she choose?",
+            "options": [
+              {
+                "texte": "Cereal",
+                "image": "choisirait/petitdej/cereales.webp"
+              },
+              {
+                "texte": "Açaí bowl",
+                "image": "choisirait/petitdej/acai.webp"
+              },
+              {
+                "texte": "Waffles",
+                "image": "choisirait/petitdej/gaufres.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which potato would she pick?",
+            "options": [
+              {
+                "texte": "French fries",
+                "image": "choisirait/patate/frites.webp"
+              },
+              {
+                "texte": "Curly fries",
+                "image": "choisirait/patate/curly.webp"
+              },
+              {
+                "texte": "Hash browns",
+                "image": "choisirait/patate/hash-browns.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which pasta would she pick?",
+            "options": [
+              {
+                "texte": "Gnocchi",
+                "image": "choisirait/pates/gnocchi.webp"
+              },
+              {
+                "texte": "Ravioli",
+                "image": "choisirait/pates/raviolis.webp"
+              },
+              {
+                "texte": "Lasagna",
+                "image": "choisirait/pates/lasagnes.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Got her 3 picks? Send it and see!",
+          "bouton": "Send this to her",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Food edition. She will swear you got at least one wrong.\n\nSend this to her",
+      "hashtags": [
+        "#couplequiz",
+        "#girlfriendquiz",
+        "#thisorthat",
+        "#foodie",
+        "#quizcouple"
+      ]
+    }
+  }
+}

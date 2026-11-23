@@ -1,0 +1,92 @@
+{
+  "jour": "2027-03-25",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-228",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "elle",
+        "etiquette": "Car lovers edition",
+        "accroche": "What would she choose?",
+        "consigne": "Pick what she would pick. Then send it to her!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "Which classic car would she drive?",
+            "options": [
+              {
+                "texte": "Citroën 2CV",
+                "image": "choisirait/vintage/2cv.webp"
+              },
+              {
+                "texte": "Classic Mini",
+                "image": "choisirait/vintage/mini-classique.webp"
+              },
+              {
+                "texte": "Mercedes 300 SL",
+                "image": "choisirait/vintage/300sl.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which motorbike would she ride?",
+            "options": [
+              {
+                "texte": "Harley-Davidson",
+                "image": "choisirait/moto/harley.webp"
+              },
+              {
+                "texte": "Yamaha MT-07",
+                "image": "choisirait/moto/mt07.webp"
+              },
+              {
+                "texte": "Triumph Bonneville",
+                "image": "choisirait/moto/bonneville.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which car would she pick?",
+            "options": [
+              {
+                "texte": "Mercedes-AMG C63 S",
+                "image": "choisirait/voiture/amg-c63.webp"
+              },
+              {
+                "texte": "Ford Mustang",
+                "image": "choisirait/voiture/mustang.webp"
+              },
+              {
+                "texte": "Nissan GT-R",
+                "image": "choisirait/voiture/gtr.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Got her 3 picks? Send it and see!",
+          "bouton": "Send this to her",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Car lovers edition. Your answers first, then her reaction.\n\nSend this to her",
+      "hashtags": [
+        "#couplequiz",
+        "#girlfriendquiz",
+        "#thisorthat",
+        "#carlovers",
+        "#quizcouple"
+      ]
+    }
+  }
+}

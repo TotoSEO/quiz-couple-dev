@@ -1,0 +1,92 @@
+{
+  "jour": "2026-12-08",
+  "creneau": "midi",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-030",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "elle",
+        "etiquette": "Pet lovers edition",
+        "accroche": "What would she choose?",
+        "consigne": "Answer for her, then let her check!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "Which pet would she want?",
+            "options": [
+              {
+                "texte": "Guinea pig",
+                "image": "choisirait/animal/cochon-dinde.webp"
+              },
+              {
+                "texte": "Chameleon",
+                "image": "choisirait/animal/cameleon.webp"
+              },
+              {
+                "texte": "Turtle",
+                "image": "choisirait/animal/tortue.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which dog would she pick?",
+            "options": [
+              {
+                "texte": "Cavalier King Charles",
+                "image": "choisirait/chien/cavalier.webp"
+              },
+              {
+                "texte": "Shiba Inu",
+                "image": "choisirait/chien/shiba.webp"
+              },
+              {
+                "texte": "Pomeranian",
+                "image": "choisirait/chien/pomeranien.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which cat would she adopt?",
+            "options": [
+              {
+                "texte": "Persian",
+                "image": "choisirait/chat/persan.webp"
+              },
+              {
+                "texte": "Sphynx",
+                "image": "choisirait/chat/sphynx.webp"
+              },
+              {
+                "texte": "Bengal",
+                "image": "choisirait/chat/bengal.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Got her 3 picks? Send it and see!",
+          "bouton": "Send this to her",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Pet lovers edition. Easy for you? Then the next one is for her.\n\nSend this to her",
+      "hashtags": [
+        "#couplequiz",
+        "#girlfriendquiz",
+        "#thisorthat",
+        "#petlovers",
+        "#quizcouple"
+      ]
+    }
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "jour": "2027-01-10",
+  "creneau": "midi",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-091",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "lui",
+        "etiquette": "Dream home edition",
+        "accroche": "What would he choose?",
+        "consigne": "3 questions, 4 seconds each. Pick for him!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "Which house would he pick?",
+            "options": [
+              {
+                "texte": "Loft apartment",
+                "image": "choisirait/maison/loft.webp"
+              },
+              {
+                "texte": "Modern villa",
+                "image": "choisirait/maison/villa-moderne.webp"
+              },
+              {
+                "texte": "Cozy cabin",
+                "image": "choisirait/weekend/chalet-bois.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which view would he wake up to?",
+            "options": [
+              {
+                "texte": "Snowy peaks",
+                "image": "choisirait/vue/neige.webp"
+              },
+              {
+                "texte": "Mountains",
+                "image": "choisirait/vue/montagnes.webp"
+              },
+              {
+                "texte": "Desert",
+                "image": "choisirait/vue/desert-vue.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which dog would he adopt?",
+            "options": [
+              {
+                "texte": "Pug",
+                "image": "choisirait/chien/carlin.webp"
+              },
+              {
+                "texte": "Poodle",
+                "image": "choisirait/chien/caniche.webp"
+              },
+              {
+                "texte": "Dalmatian",
+                "image": "choisirait/chien/dalmatien.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Now send it to him. Did you guess right?",
+          "bouton": "Send this to him",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Dream home edition. Answer for him first, no peeking.\n\nSend this to him",
+      "hashtags": [
+        "#couplequiz",
+        "#boyfriendquiz",
+        "#thisorthat",
+        "#dreamhome",
+        "#quizcouple"
+      ]
+    }
+  }
+}

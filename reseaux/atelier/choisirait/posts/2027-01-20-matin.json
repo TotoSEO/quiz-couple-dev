@@ -1,0 +1,92 @@
+{
+  "jour": "2027-01-20",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-109",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "lui",
+        "etiquette": "Food edition",
+        "accroche": "What would he choose?",
+        "consigne": "Guess his 3 picks, then send it to him!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "Which pasta would he pick?",
+            "options": [
+              {
+                "texte": "Mac and cheese",
+                "image": "choisirait/pates/mac-cheese.webp"
+              },
+              {
+                "texte": "Gnocchi",
+                "image": "choisirait/pates/gnocchi.webp"
+              },
+              {
+                "texte": "Seafood pasta",
+                "image": "choisirait/pates/fruits-mer.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which potato would he pick?",
+            "options": [
+              {
+                "texte": "Hash browns",
+                "image": "choisirait/patate/hash-browns.webp"
+              },
+              {
+                "texte": "French fries",
+                "image": "choisirait/patate/frites.webp"
+              },
+              {
+                "texte": "Potato gratin",
+                "image": "choisirait/patate/gratin.webp"
+              }
+            ]
+          },
+          {
+            "question": "How would he have his eggs?",
+            "options": [
+              {
+                "texte": "Omelette",
+                "image": "choisirait/oeufs/omelette.webp"
+              },
+              {
+                "texte": "Soft-boiled",
+                "image": "choisirait/oeufs/coque.webp"
+              },
+              {
+                "texte": "Poached",
+                "image": "choisirait/oeufs/poche.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Now send it to him. Did you guess right?",
+          "bouton": "Send this to him",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Food edition. One letter per question, then send it to him.\n\nSend this to him",
+      "hashtags": [
+        "#couplequiz",
+        "#boyfriendquiz",
+        "#thisorthat",
+        "#foodie",
+        "#quizcouple"
+      ]
+    }
+  }
+}

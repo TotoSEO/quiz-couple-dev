@@ -69,6 +69,9 @@ jobs:
         run: cd reseaux/studio && node scripts/sons.mjs
       - name: Synchro
         if: steps.atelier.outputs.present == 'true'
-        run: node reseaux/automates/synchro.mjs atelier/reseaux/atelier/posts mipaps/reseaux/mipaps/atelier/posts
+        # « What would he/she choose? » (23 novembre 2026) : ses posts sont
+        # écrits par la fabrique sur main (reseaux/atelier/choisirait/posts),
+        # pas par une routine sur une branche d'atelier
+        run: node reseaux/automates/synchro.mjs atelier/reseaux/atelier/posts mipaps/reseaux/mipaps/atelier/posts reseaux/atelier/choisirait/posts
       - name: Rendu
         run: node reseaux/automates/rendu.mjs --heures 48

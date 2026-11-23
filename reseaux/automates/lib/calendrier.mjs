@@ -28,8 +28,16 @@ export const MELANGE_DEFAUT = {
   // soir), un bâton (samedi soir). Un créneau à `null` est fermé : la synchro
   // y retient tout post (MOTIF_FERME), l'entretien ne le compte ni à remplir
   // ni dans la réserve, et la story du jour reprend le premier reel ouvert.
-  matin: null,
-  midi: { 1: null, 2: null, 3: null, 4: null, 5: null, 6: 'tu-preferes', 7: null },
+  //
+  // Depuis le 23 novembre 2026, les matins et les midis fermés reçoivent
+  // « What would he/she choose? » (catégorie `choisirait`, gabarit du même
+  // nom), Thomas : « faire un max de réels en plus de ceux programmés [...]
+  // on spam ça ». Treize reels de plus par semaine, écrits d'avance jusqu'au
+  // 31 mars 2027 par la fabrique (reseaux/atelier/choisirait/fabrique.mjs),
+  // sans routine Claude ; les soirs et le samedi midi ne changent pas. La
+  // story du jour passe au reel du matin, le premier créneau ouvert.
+  matin: 'choisirait',
+  midi: { 1: 'choisirait', 2: 'choisirait', 3: 'choisirait', 4: 'choisirait', 5: 'choisirait', 6: 'tu-preferes', 7: 'choisirait' },
   soir: { 1: 'tu-preferes', 2: 'connais-tu', 3: 'tu-preferes', 4: 'tu-preferes', 5: 'connais-tu', 6: 'baton', 7: 'tu-preferes' },
 };
 

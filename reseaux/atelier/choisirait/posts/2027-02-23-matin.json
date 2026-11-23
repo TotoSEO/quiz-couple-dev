@@ -1,0 +1,92 @@
+{
+  "jour": "2027-02-23",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-172",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "lui",
+        "etiquette": "Pet lovers edition",
+        "accroche": "What would he choose?",
+        "consigne": "Pick what he would pick. Then send it to him!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "Which pet would he want?",
+            "options": [
+              {
+                "texte": "Hedgehog",
+                "image": "choisirait/animal/herisson.webp"
+              },
+              {
+                "texte": "Chameleon",
+                "image": "choisirait/animal/cameleon.webp"
+              },
+              {
+                "texte": "Turtle",
+                "image": "choisirait/animal/tortue.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which cat would he adopt?",
+            "options": [
+              {
+                "texte": "Persian",
+                "image": "choisirait/chat/persan.webp"
+              },
+              {
+                "texte": "Sphynx",
+                "image": "choisirait/chat/sphynx.webp"
+              },
+              {
+                "texte": "Ginger cat",
+                "image": "choisirait/chat/chat-roux.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which dog would he adopt?",
+            "options": [
+              {
+                "texte": "Border Collie",
+                "image": "choisirait/chien/border-collie.webp"
+              },
+              {
+                "texte": "Pug",
+                "image": "choisirait/chien/carlin.webp"
+              },
+              {
+                "texte": "Rottweiler",
+                "image": "choisirait/chien/rottweiler.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Now send it to him. Did you guess right?",
+          "bouton": "Send this to him",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Pet lovers edition. Write down his three letters before you send it.\n\nSend this to him",
+      "hashtags": [
+        "#couplequiz",
+        "#boyfriendquiz",
+        "#thisorthat",
+        "#petlovers",
+        "#quizcouple"
+      ]
+    }
+  }
+}

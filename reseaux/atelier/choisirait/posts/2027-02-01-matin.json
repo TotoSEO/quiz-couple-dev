@@ -1,0 +1,92 @@
+{
+  "jour": "2027-02-01",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-131",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "lui",
+        "etiquette": "Valentine's edition",
+        "accroche": "What would he choose?",
+        "consigne": "3 questions, 4 seconds each. Pick for him!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "What would he get you for Valentine's?",
+            "options": [
+              {
+                "texte": "Red roses",
+                "image": "choisirait/valentin/valentin-roses.webp"
+              },
+              {
+                "texte": "Love letter",
+                "image": "choisirait/valentin/lettre.webp"
+              },
+              {
+                "texte": "Jewelry",
+                "image": "choisirait/valentin/bijou.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which ring would he pick for you?",
+            "options": [
+              {
+                "texte": "Rose gold ring",
+                "image": "choisirait/bague/or-rose.webp"
+              },
+              {
+                "texte": "Vintage ring",
+                "image": "choisirait/bague/vintage-bague.webp"
+              },
+              {
+                "texte": "Gold band",
+                "image": "choisirait/bague/alliance-or.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which flowers would he get you?",
+            "options": [
+              {
+                "texte": "Orchid",
+                "image": "choisirait/fleurs/orchidee.webp"
+              },
+              {
+                "texte": "Tulips",
+                "image": "choisirait/fleurs/tulipes.webp"
+              },
+              {
+                "texte": "Peonies",
+                "image": "choisirait/fleurs/pivoines.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Send it to him: how many did you get?",
+          "bouton": "Send this to him",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Valentine's edition. Answer for him first, no peeking.\n\nSend this to him",
+      "hashtags": [
+        "#couplequiz",
+        "#boyfriendquiz",
+        "#thisorthat",
+        "#valentinesday",
+        "#quizcouple"
+      ]
+    }
+  }
+}

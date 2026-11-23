@@ -1,0 +1,92 @@
+{
+  "jour": "2027-01-12",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-094",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "lui",
+        "etiquette": "Pet lovers edition",
+        "accroche": "What would he choose?",
+        "consigne": "Answer for him, then let him check!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "Which pet would he want?",
+            "options": [
+              {
+                "texte": "Chameleon",
+                "image": "choisirait/animal/cameleon.webp"
+              },
+              {
+                "texte": "Axolotl",
+                "image": "choisirait/animal/axolotl.webp"
+              },
+              {
+                "texte": "Goldfish",
+                "image": "choisirait/animal/poisson.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which cat would he adopt?",
+            "options": [
+              {
+                "texte": "Ragdoll",
+                "image": "choisirait/chat/ragdoll.webp"
+              },
+              {
+                "texte": "British Shorthair",
+                "image": "choisirait/chat/british.webp"
+              },
+              {
+                "texte": "Black cat",
+                "image": "choisirait/chat/chat-noir.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which dog would he pick?",
+            "options": [
+              {
+                "texte": "Shiba Inu",
+                "image": "choisirait/chien/shiba.webp"
+              },
+              {
+                "texte": "Rottweiler",
+                "image": "choisirait/chien/rottweiler.webp"
+              },
+              {
+                "texte": "French Bulldog",
+                "image": "choisirait/chien/bouledogue.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Now send it to him. Did you guess right?",
+          "bouton": "Send this to him",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Pet lovers edition. If you get all three, you know him by heart.\n\nSend this to him",
+      "hashtags": [
+        "#couplequiz",
+        "#boyfriendquiz",
+        "#thisorthat",
+        "#petlovers",
+        "#quizcouple"
+      ]
+    }
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "jour": "2027-01-06",
+  "creneau": "midi",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-084",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "elle",
+        "etiquette": "Sweet tooth edition",
+        "accroche": "What would she choose?",
+        "consigne": "Pick what she would pick. Then send it to her!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "What would she grab at the bakery?",
+            "options": [
+              {
+                "texte": "Pain au chocolat",
+                "image": "choisirait/boulangerie/pain-chocolat.webp"
+              },
+              {
+                "texte": "Baguette",
+                "image": "choisirait/boulangerie/baguette.webp"
+              },
+              {
+                "texte": "Donut",
+                "image": "choisirait/boulangerie/donut.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which ice cream would she get?",
+            "options": [
+              {
+                "texte": "Affogato",
+                "image": "choisirait/glace/affogato.webp"
+              },
+              {
+                "texte": "Sundae",
+                "image": "choisirait/glace/sundae.webp"
+              },
+              {
+                "texte": "Popsicle",
+                "image": "choisirait/glace/esquimau.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which cake would she pick?",
+            "options": [
+              {
+                "texte": "Huge birthday cake",
+                "image": "choisirait/dessert/gateau-anniversaire.webp"
+              },
+              {
+                "texte": "Mille-feuille",
+                "image": "choisirait/dessert/mille-feuille.webp"
+              },
+              {
+                "texte": "Churros",
+                "image": "choisirait/dessert/churros.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Got her 3 picks? Send it and see!",
+          "bouton": "Send this to her",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Sweet tooth edition. If you get all three, you know her by heart.\n\nSend this to her",
+      "hashtags": [
+        "#couplequiz",
+        "#girlfriendquiz",
+        "#thisorthat",
+        "#dessert",
+        "#quizcouple"
+      ]
+    }
+  }
+}

@@ -788,3 +788,16 @@ avec le motif du créneau fermé), rien n'en part. Un fichier retiré de la
 branche retire son post du planning (annulé par la synchro, dix fichiers au
 moins sur la branche) ; un fichier qui revient le fait revivre. La story du
 jour reprend le premier reel que la grille ouvre.
+
+## Les matins et les midis : « What would he/she choose? » (23 novembre 2026)
+
+Depuis le 23 novembre 2026, la grille ouvre aussi tous les matins et tous
+les midis sauf le samedi, à la catégorie `choisirait` (vingt et un reels par
+semaine, voir « La semaine type » de LIGNE-EDITORIALE). Ces créneaux ne
+sont pas pour la routine : la fabrique (`choisirait/fabrique.mjs`) les a
+écrits jusqu'au 31 mars 2027 sur `main`, dans
+`reseaux/atelier/choisirait/posts/`, que la synchro lit à côté de cette
+branche. La routine n'écrit jamais de post `choisirait` ni de fichier sur un
+matin ou un midi en semaine : deux fichiers pour le même créneau, l'un
+écraserait l'autre. Pour aller plus loin que le 31 mars 2027, on relance la
+fabrique sur `main` (section `choisirait` de LIGNE-EDITORIALE).

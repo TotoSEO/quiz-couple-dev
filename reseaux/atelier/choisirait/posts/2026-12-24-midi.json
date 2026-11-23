@@ -1,0 +1,92 @@
+{
+  "jour": "2026-12-24",
+  "creneau": "midi",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-060",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "elle",
+        "etiquette": "Drinks edition",
+        "accroche": "What would she choose?",
+        "consigne": "Pick what she would pick. Then send it to her!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "What would she order at the bar?",
+            "options": [
+              {
+                "texte": "Gin and tonic",
+                "image": "choisirait/bar/gin-tonic.webp"
+              },
+              {
+                "texte": "Mojito",
+                "image": "choisirait/bar/mojito.webp"
+              },
+              {
+                "texte": "Espresso martini",
+                "image": "choisirait/bar/espresso-martini.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which drink would she get?",
+            "options": [
+              {
+                "texte": "Iced tea",
+                "image": "choisirait/boisson/the-glace.webp"
+              },
+              {
+                "texte": "Lemonade",
+                "image": "choisirait/boisson/limonade.webp"
+              },
+              {
+                "texte": "Smoothie",
+                "image": "choisirait/boisson/smoothie.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which coffee would she order?",
+            "options": [
+              {
+                "texte": "Americano",
+                "image": "choisirait/cafe/americano.webp"
+              },
+              {
+                "texte": "Iced latte",
+                "image": "choisirait/cafe/iced-latte.webp"
+              },
+              {
+                "texte": "Cappuccino",
+                "image": "choisirait/cafe/cappuccino.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Got her 3 picks? Send it and see!",
+          "bouton": "Send this to her",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Drinks edition. Easy for you? Then the next one is for her.\n\nSend this to her",
+      "hashtags": [
+        "#couplequiz",
+        "#girlfriendquiz",
+        "#thisorthat",
+        "#cocktails",
+        "#quizcouple"
+      ]
+    }
+  }
+}

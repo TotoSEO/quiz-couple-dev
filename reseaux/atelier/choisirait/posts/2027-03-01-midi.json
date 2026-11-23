@@ -1,0 +1,92 @@
+{
+  "jour": "2027-03-01",
+  "creneau": "midi",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-184",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "lui",
+        "etiquette": "Wedding edition",
+        "accroche": "What would he choose?",
+        "consigne": "Pick what he would pick. Then send it to him!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "Where would he want to get married?",
+            "options": [
+              {
+                "texte": "Vegas chapel",
+                "image": "choisirait/mariage/vegas.webp"
+              },
+              {
+                "texte": "Lakeside",
+                "image": "choisirait/vue/lac.webp"
+              },
+              {
+                "texte": "Beach",
+                "image": "choisirait/vue/plage-tropicale.webp"
+              }
+            ]
+          },
+          {
+            "question": "Where would he propose?",
+            "options": [
+              {
+                "texte": "Hot air balloon",
+                "image": "choisirait/demande/demande-montgolfiere.webp"
+              },
+              {
+                "texte": "Restaurant",
+                "image": "choisirait/demande/demande-resto.webp"
+              },
+              {
+                "texte": "Mountaintop",
+                "image": "choisirait/demande/demande-montagne.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which ring would he pick for you?",
+            "options": [
+              {
+                "texte": "Vintage ring",
+                "image": "choisirait/bague/vintage-bague.webp"
+              },
+              {
+                "texte": "Halo ring",
+                "image": "choisirait/bague/halo.webp"
+              },
+              {
+                "texte": "Rose gold ring",
+                "image": "choisirait/bague/or-rose.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Now send it to him. Did you guess right?",
+          "bouton": "Send this to him",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Wedding edition. If you get all three, you know him by heart.\n\nSend this to him",
+      "hashtags": [
+        "#couplequiz",
+        "#boyfriendquiz",
+        "#thisorthat",
+        "#engaged",
+        "#quizcouple"
+      ]
+    }
+  }
+}

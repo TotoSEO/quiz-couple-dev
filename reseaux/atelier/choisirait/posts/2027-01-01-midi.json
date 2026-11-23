@@ -1,0 +1,92 @@
+{
+  "jour": "2027-01-01",
+  "creneau": "midi",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-075",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "elle",
+        "etiquette": "New Year's edition",
+        "accroche": "What would she choose?",
+        "consigne": "3 questions, 4 seconds each. Pick for her!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "Where would she spend New Year's Eve?",
+            "options": [
+              {
+                "texte": "City fireworks",
+                "image": "choisirait/nouvel-an/feux-artifice.webp"
+              },
+              {
+                "texte": "Tropical beach",
+                "image": "choisirait/nouvel-an/plage-nouvel-an.webp"
+              },
+              {
+                "texte": "Rooftop party",
+                "image": "choisirait/nouvel-an/rooftop-nouvel-an.webp"
+              }
+            ]
+          },
+          {
+            "question": "Where would she take you on vacation?",
+            "options": [
+              {
+                "texte": "Maldives",
+                "image": "choisirait/vacances/maldives.webp"
+              },
+              {
+                "texte": "Peru",
+                "image": "choisirait/vacances/perou.webp"
+              },
+              {
+                "texte": "Iceland",
+                "image": "choisirait/vacances/islande.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which date would she plan?",
+            "options": [
+              {
+                "texte": "Museum",
+                "image": "choisirait/date/musee.webp"
+              },
+              {
+                "texte": "Hot air balloon",
+                "image": "choisirait/date/montgolfiere-date.webp"
+              },
+              {
+                "texte": "Wine tasting",
+                "image": "choisirait/date/degustation.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Got her 3 picks? Send it and see!",
+          "bouton": "Send this to her",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "New Year's edition. No cheating: decide before the timer runs out.\n\nSend this to her",
+      "hashtags": [
+        "#couplequiz",
+        "#girlfriendquiz",
+        "#thisorthat",
+        "#newyearseve",
+        "#quizcouple"
+      ]
+    }
+  }
+}

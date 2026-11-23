@@ -1,0 +1,92 @@
+{
+  "jour": "2027-02-07",
+  "creneau": "midi",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-143",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "lui",
+        "etiquette": "Car lovers edition",
+        "accroche": "What would he choose?",
+        "consigne": "3 questions, 4 seconds each. Pick for him!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "Which classic car would he drive?",
+            "options": [
+              {
+                "texte": "1967 Mustang",
+                "image": "choisirait/vintage/mustang-67.webp"
+              },
+              {
+                "texte": "VW Beetle",
+                "image": "choisirait/vintage/coccinelle.webp"
+              },
+              {
+                "texte": "VW Camper Van",
+                "image": "choisirait/vintage/combi.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which motorbike would he ride?",
+            "options": [
+              {
+                "texte": "Vespa",
+                "image": "choisirait/moto/vespa.webp"
+              },
+              {
+                "texte": "Triumph Bonneville",
+                "image": "choisirait/moto/bonneville.webp"
+              },
+              {
+                "texte": "Ducati Panigale",
+                "image": "choisirait/moto/ducati.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which car would he pick?",
+            "options": [
+              {
+                "texte": "Mercedes G-Class",
+                "image": "choisirait/voiture/g-class.webp"
+              },
+              {
+                "texte": "Toyota Supra",
+                "image": "choisirait/voiture/supra.webp"
+              },
+              {
+                "texte": "Audi R8",
+                "image": "choisirait/voiture/audi-r8.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Send it to him: how many did you get?",
+          "bouton": "Send this to him",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Car lovers edition. Guess first, send it after. Then compare.\n\nSend this to him",
+      "hashtags": [
+        "#couplequiz",
+        "#boyfriendquiz",
+        "#thisorthat",
+        "#carlovers",
+        "#quizcouple"
+      ]
+    }
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "jour": "2027-02-19",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-165",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "elle",
+        "etiquette": "Adventure edition",
+        "accroche": "What would she choose?",
+        "consigne": "Guess her 3 picks, then send it to her!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "Which adventure would she try?",
+            "options": [
+              {
+                "texte": "Skiing",
+                "image": "choisirait/aventure/ski.webp"
+              },
+              {
+                "texte": "Horse riding",
+                "image": "choisirait/aventure/equitation.webp"
+              },
+              {
+                "texte": "Surfing",
+                "image": "choisirait/aventure/surf.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which sport would she watch?",
+            "options": [
+              {
+                "texte": "Basketball",
+                "image": "choisirait/sport/basket.webp"
+              },
+              {
+                "texte": "Golf",
+                "image": "choisirait/sport/golf.webp"
+              },
+              {
+                "texte": "Football",
+                "image": "choisirait/sport/foot.webp"
+              }
+            ]
+          },
+          {
+            "question": "Where would she take you on vacation?",
+            "options": [
+              {
+                "texte": "Peru",
+                "image": "choisirait/vacances/perou.webp"
+              },
+              {
+                "texte": "Egypt",
+                "image": "choisirait/vacances/egypte.webp"
+              },
+              {
+                "texte": "Iceland",
+                "image": "choisirait/vacances/islande.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Got her 3 picks? Send it and see!",
+          "bouton": "Send this to her",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Adventure edition. No cheating: decide before the timer runs out.\n\nSend this to her",
+      "hashtags": [
+        "#couplequiz",
+        "#girlfriendquiz",
+        "#thisorthat",
+        "#adventurecouple",
+        "#quizcouple"
+      ]
+    }
+  }
+}

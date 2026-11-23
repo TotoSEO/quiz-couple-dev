@@ -1,0 +1,92 @@
+{
+  "jour": "2027-03-26",
+  "creneau": "midi",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-231",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "elle",
+        "etiquette": "Food edition",
+        "accroche": "What would she choose?",
+        "consigne": "3 questions, 4 seconds each. Pick for her!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "Which pasta would she pick?",
+            "options": [
+              {
+                "texte": "Lasagna",
+                "image": "choisirait/pates/lasagnes.webp"
+              },
+              {
+                "texte": "Seafood pasta",
+                "image": "choisirait/pates/fruits-mer.webp"
+              },
+              {
+                "texte": "Pesto",
+                "image": "choisirait/pates/pesto.webp"
+              }
+            ]
+          },
+          {
+            "question": "How would she have her eggs?",
+            "options": [
+              {
+                "texte": "Poached",
+                "image": "choisirait/oeufs/poche.webp"
+              },
+              {
+                "texte": "Soft-boiled",
+                "image": "choisirait/oeufs/coque.webp"
+              },
+              {
+                "texte": "Scrambled",
+                "image": "choisirait/oeufs/brouilles.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which pizza would she order?",
+            "options": [
+              {
+                "texte": "Four cheese",
+                "image": "choisirait/pizza/quatre-fromages.webp"
+              },
+              {
+                "texte": "Veggie",
+                "image": "choisirait/pizza/vegetarienne.webp"
+              },
+              {
+                "texte": "Pepperoni",
+                "image": "choisirait/pizza/pepperoni.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Got her 3 picks? Send it and see!",
+          "bouton": "Send this to her",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Food edition. Answer for her first, no peeking.\n\nSend this to her",
+      "hashtags": [
+        "#couplequiz",
+        "#girlfriendquiz",
+        "#thisorthat",
+        "#foodie",
+        "#quizcouple"
+      ]
+    }
+  }
+}

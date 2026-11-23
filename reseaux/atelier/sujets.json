@@ -4825,5 +4825,2407 @@
       "idee": "Nuit dans les montagnes, il promet : « je t'offrirai la lune » ; elle, sur son téléphone, un sourcil levé : « ... ». Gros plan sur lui, la colère qui monte, les joues rouges. Il recule de quatre pas, sort le lasso, trois tours au-dessus de la tête, le lancer au ralenti, fumée, la roche qui se brise ; la boucle s'agrippe à la lune et il tire, les pieds plantés, la lune grossit à vue d'œil au-dessus des pics. Gros plan sur elle au téléphone : grondement, secousses, elle lève les yeux, la lune dans ses pupilles, visage horrifié, fondu au noir.",
       "son": "Moonlight Shadow"
     }
+  ],
+  "choisirait": [
+    {
+      "id": "ch-001",
+      "pour": "lui",
+      "edition": "Dream life edition",
+      "questions": [
+        "Which car would he pick? Porsche 911 / Lamborghini Huracán / Mercedes-AMG C63 S",
+        "Which dog would he pick? Golden Retriever / Belgian Malinois / Border Collie",
+        "Where would he go on vacation? Bali / Norway / USA"
+      ]
+    },
+    {
+      "id": "ch-002",
+      "pour": "lui",
+      "edition": "Food edition",
+      "questions": [
+        "Which cake would he pick? Huge birthday cake / Vanilla éclair / Strawberry tart",
+        "Which pizza would he order? Margherita / Pepperoni / Hawaiian",
+        "Which breakfast would he choose? Pancakes / Full English / Croissant & coffee"
+      ]
+    },
+    {
+      "id": "ch-003",
+      "pour": "elle",
+      "edition": "Cozy night in edition",
+      "questions": [
+        "Which movie snack would she pick? Ice cream tub / Nachos / Licorice",
+        "Which drink would she get? Bubble tea / Lemonade / Iced tea",
+        "Which dinner would she pick? Raclette / Risotto / Sushi"
+      ]
+    },
+    {
+      "id": "ch-004",
+      "pour": "lui",
+      "edition": "Sweet tooth edition",
+      "questions": [
+        "What would he grab at the bakery? Cinnamon roll / Croissant / Baguette",
+        "Which ice cream would he get? Soft serve / Ice cream sandwich / Affogato",
+        "Which coffee would he order? Cappuccino / Espresso / Iced latte"
+      ]
+    },
+    {
+      "id": "ch-005",
+      "pour": "lui",
+      "edition": "Wedding edition",
+      "questions": [
+        "Which flowers would he get you? Lilies / Daisies / Sunflowers",
+        "Where would he propose? Northern lights / Restaurant / Hot air balloon",
+        "Where would he want to get married? Vineyard / Mountaintop / City hall"
+      ]
+    },
+    {
+      "id": "ch-006",
+      "pour": "elle",
+      "edition": "Hobbies edition",
+      "questions": [
+        "Which instrument would she play? Piano / Acoustic guitar / Trumpet",
+        "Which workout would she pick? Swimming / Cycling / Yoga",
+        "Which hobby would she pick up? Gardening / Knitting / Pottery"
+      ]
+    },
+    {
+      "id": "ch-007",
+      "pour": "lui",
+      "edition": "Adventure edition",
+      "questions": [
+        "Where would he book a weekend? Desert camp / Treehouse / Log cabin",
+        "Which sport would he watch? Basketball / Ice hockey / Baseball",
+        "Which adventure would he try? Surfing / Horse riding / Snowboarding"
+      ]
+    },
+    {
+      "id": "ch-008",
+      "pour": "lui",
+      "edition": "Dream life edition",
+      "questions": [
+        "How would he travel with you? Private jet / Camper van / Hot air balloon",
+        "Which house would he pick? Modern villa / Beach house / Mountain chalet",
+        "Which view would he wake up to? Rice fields / Tropical beach / Ocean"
+      ]
+    },
+    {
+      "id": "ch-009",
+      "pour": "elle",
+      "edition": "Travel edition",
+      "questions": [
+        "Which city would she take you to? Istanbul / Lisbon / Seoul",
+        "Where would she go on vacation? Lapland / Canada / Greece",
+        "Which view would she wake up to? Snowy peaks / City skyline / Desert"
+      ]
+    },
+    {
+      "id": "ch-010",
+      "pour": "lui",
+      "edition": "Date night edition",
+      "questions": [
+        "What would he order at the bar? Gin and tonic / Piña colada / Aperol Spritz",
+        "Which date would he plan? Beach sunset / Stargazing / Hot air balloon",
+        "Which cake would he pick? Pavlova / Mille-feuille / Churros"
+      ]
+    },
+    {
+      "id": "ch-011",
+      "pour": "lui",
+      "edition": "Dream home edition",
+      "questions": [
+        "Which cat would he adopt? Black cat / Ginger cat / Scottish Fold",
+        "Which dog would he adopt? Labrador / Great Dane / Rottweiler",
+        "Which dream house would he pick? Tiny house / Castle / Lake house"
+      ]
+    },
+    {
+      "id": "ch-012",
+      "pour": "elle",
+      "edition": "Cozy night in edition",
+      "questions": [
+        "Which console would she pick? Nintendo Switch / Gaming PC / PlayStation 5",
+        "Which game night would she pick? Board games / Pool / Chess",
+        "Which movie snack would she pick? Popcorn / Chocolate bar / Gummy bears"
+      ]
+    },
+    {
+      "id": "ch-013",
+      "pour": "lui",
+      "edition": "Pet lovers edition",
+      "questions": [
+        "Which pet would he want? Ferret / Horse / Axolotl",
+        "Which cat would he adopt? Siamese / Persian / British Shorthair",
+        "Which dog would he pick? Bernese Mountain Dog / Husky / German Shepherd"
+      ]
+    },
+    {
+      "id": "ch-014",
+      "pour": "lui",
+      "edition": "Wedding edition",
+      "questions": [
+        "Which ring would he pick for you? Vintage ring / Halo ring / Gold band",
+        "Where would he want to get married? Beach / Forest / Garden",
+        "Where would he propose? Disney castle / Eiffel Tower / Rooftop"
+      ]
+    },
+    {
+      "id": "ch-015",
+      "pour": "elle",
+      "edition": "Date night edition",
+      "questions": [
+        "Which flowers would she want? Hydrangeas / Red roses / Peonies",
+        "What would she cook for date night? Indian curry / Lobster / Pad thai",
+        "What would she order at the bar? Margarita / Mojito / Espresso martini"
+      ]
+    },
+    {
+      "id": "ch-016",
+      "pour": "lui",
+      "edition": "Dream home edition",
+      "questions": [
+        "Which view would he wake up to? Eiffel Tower / Lake / Northern lights",
+        "Which house would he pick? Cozy cabin / Loft apartment / Victorian house",
+        "Which cat would he adopt? Maine Coon / Norwegian Forest Cat / Ragdoll"
+      ]
+    },
+    {
+      "id": "ch-017",
+      "pour": "lui",
+      "edition": "Cozy night in edition",
+      "questions": [
+        "Which drink would he get? Smoothie / Bubble tea / Iced tea",
+        "Which game night would he pick? Poker / Foosball / Ping pong",
+        "Which console would he pick? Game Boy / Xbox / PlayStation 2"
+      ]
+    },
+    {
+      "id": "ch-018",
+      "pour": "elle",
+      "edition": "Winter edition",
+      "questions": [
+        "Which winter date would she pick? Hot tub in the snow / Building a snowman / Sledding",
+        "Which coffee would she order? Matcha latte / Americano / Espresso",
+        "Where would she book a weekend? Ski chalet / Glamping tent / Beach bungalow"
+      ]
+    },
+    {
+      "id": "ch-019",
+      "pour": "lui",
+      "edition": "Sweet tooth edition",
+      "questions": [
+        "Which ice cream would he get? Ice cream cone / Sundae / Mochi ice cream",
+        "What would he grab at the bakery? Bagel / Donut / Muffin",
+        "Which dessert would he pick? Macarons / Cheesecake / Crème brûlée"
+      ]
+    },
+    {
+      "id": "ch-020",
+      "pour": "lui",
+      "edition": "Weekend edition",
+      "questions": [
+        "Which workout would he pick? Running / CrossFit / Weightlifting",
+        "Which date would he take you on? Picnic / Mini golf / Cinema night",
+        "Which hobby would he pick up? Chess / Photography / Woodworking"
+      ]
+    },
+    {
+      "id": "ch-021",
+      "pour": "elle",
+      "edition": "Luxury edition",
+      "questions": [
+        "Which watch would she wear? Rolex Submariner / Seiko diver / Casio G-Shock",
+        "Which car would she pick? Ford Mustang / Tesla Model S / Land Rover Defender",
+        "How would she travel with you? Motorbike / Sailboat / Convertible"
+      ]
+    },
+    {
+      "id": "ch-022",
+      "pour": "lui",
+      "edition": "Christmas edition",
+      "questions": [
+        "Which Christmas date would he plan? Christmas market / Movie by the tree / Ice skating",
+        "Which gift would he want? Guitar / Watch / Sneakers",
+        "Which Christmas treat would he pick? Stollen / Panettone / Gingerbread cookies"
+      ]
+    },
+    {
+      "id": "ch-023",
+      "pour": "lui",
+      "edition": "Wedding edition",
+      "questions": [
+        "Which ring would he pick for you? Solitaire diamond / Rose gold ring / Emerald ring",
+        "Which flowers would he get you? Lavender / Wildflowers / Tulips",
+        "Where would he propose? Hot air balloon / Mountaintop / Beach at sunset"
+      ]
+    },
+    {
+      "id": "ch-024",
+      "pour": "elle",
+      "edition": "Car lovers edition",
+      "questions": [
+        "Which classic car would she drive? Mercedes 300 SL / Classic Mini / Jaguar E-Type",
+        "Which motorbike would she ride? Ducati Panigale / BMW GS / Yamaha MT-07",
+        "Which car would she drive? Corvette / Jeep Wrangler / Rolls-Royce"
+      ]
+    },
+    {
+      "id": "ch-025",
+      "pour": "lui",
+      "edition": "Date night edition",
+      "questions": [
+        "Which dinner would he pick? Ramen / Paella / Fish and chips",
+        "Which movie snack would he pick? Popcorn / Gummy bears / Ice cream tub",
+        "Which date would he plan? Ice skating / Fancy dinner / Arcade"
+      ]
+    },
+    {
+      "id": "ch-026",
+      "pour": "lui",
+      "edition": "Weekend edition",
+      "questions": [
+        "Which sport would he watch? Boxing / Rugby / Golf",
+        "Which adventure would he try? Kayaking / Bungee jumping / Scuba diving",
+        "Which workout would he pick? Running / Yoga / Boxing"
+      ]
+    },
+    {
+      "id": "ch-027",
+      "pour": "elle",
+      "edition": "Cozy night in edition",
+      "questions": [
+        "Which drink would she get? Lemonade / Smoothie / Bubble tea",
+        "Which game night would she pick? Pool / Chess / Video games",
+        "Which console would she pick? PlayStation 5 / Gaming PC / Game Boy"
+      ]
+    },
+    {
+      "id": "ch-028",
+      "pour": "lui",
+      "edition": "Winter edition",
+      "questions": [
+        "Which winter date would he pick? Skiing / Ice skating / Cabin by the fire",
+        "Where would he book a weekend for two? Houseboat / Castle hotel / Overwater villa",
+        "Which coffee would he order? Americano / Cappuccino / Matcha latte"
+      ]
+    },
+    {
+      "id": "ch-029",
+      "pour": "lui",
+      "edition": "Food edition",
+      "questions": [
+        "Which potato would he pick? Hash browns / Rösti / Curly fries",
+        "What would he order at 2 a.m.? Nuggets / Tacos / Grilled cheese",
+        "Which pasta would he pick? Gnocchi / Seafood pasta / Pesto"
+      ]
+    },
+    {
+      "id": "ch-030",
+      "pour": "elle",
+      "edition": "Pet lovers edition",
+      "questions": [
+        "Which pet would she want? Guinea pig / Chameleon / Turtle",
+        "Which dog would she pick? Cavalier King Charles / Shiba Inu / Pomeranian",
+        "Which cat would she adopt? Persian / Sphynx / Bengal"
+      ]
+    },
+    {
+      "id": "ch-031",
+      "pour": "lui",
+      "edition": "Christmas edition",
+      "questions": [
+        "Which gift would make him happy? Book / Vinyl records / Headphones",
+        "Which Christmas date would he plan? Snowy chalet / Christmas market / Christmas lights",
+        "Which Christmas treat would he pick? Christmas pudding / Candy canes / Yule log"
+      ]
+    },
+    {
+      "id": "ch-032",
+      "pour": "lui",
+      "edition": "Weekend edition",
+      "questions": [
+        "Which adventure would he try? Skydiving / Skiing / Rock climbing",
+        "Which sport would he watch? Formula 1 / Football / Tennis",
+        "Which hobby would he pick up? Gardening / Fishing / Chess"
+      ]
+    },
+    {
+      "id": "ch-033",
+      "pour": "elle",
+      "edition": "Adventure edition",
+      "questions": [
+        "How would she travel with you? Hot air balloon / Motorbike / Cruise ship",
+        "Where would she take you on vacation? Japan / Australia / Dubai",
+        "Where would she book a weekend for two? Houseboat / Beach bungalow / Overwater villa"
+      ]
+    },
+    {
+      "id": "ch-034",
+      "pour": "lui",
+      "edition": "Drinks edition",
+      "questions": [
+        "What would he order at the bar? Whiskey / Red wine / Beer",
+        "Which coffee would he order? Espresso / Americano / Iced latte",
+        "Which drink would he get? Lemonade / Smoothie / Iced tea"
+      ]
+    },
+    {
+      "id": "ch-035",
+      "pour": "lui",
+      "edition": "Morning edition",
+      "questions": [
+        "How would he have his eggs? Soft-boiled / Fried / Poached",
+        "Which breakfast would he make you? Eggs Benedict / Açaí bowl / Shakshuka",
+        "What would he grab at the bakery? Brioche / Pain au chocolat / Muffin"
+      ]
+    },
+    {
+      "id": "ch-036",
+      "pour": "elle",
+      "edition": "Food edition",
+      "questions": [
+        "Which potato would she pick? Potato gratin / Curly fries / French fries",
+        "What would she order at 2 a.m.? Burrito / Instant noodles / Kebab",
+        "Which pizza would she order? Deep dish / Calzone / Four cheese"
+      ]
+    },
+    {
+      "id": "ch-037",
+      "pour": "lui",
+      "edition": "Sweet tooth edition",
+      "questions": [
+        "Which ice cream would he get? Banana split / Gelato / Popsicle",
+        "Which cake would he pick? Chocolate lava cake / Apple pie / Brownie",
+        "Which movie snack would he pick? Nachos / Chocolate bar / Licorice"
+      ]
+    },
+    {
+      "id": "ch-038",
+      "pour": "lui",
+      "edition": "Car lovers edition",
+      "questions": [
+        "Which classic car would he drive? Citroën 2CV / VW Beetle / 1959 Cadillac",
+        "Which motorbike would he ride? Vespa / Harley-Davidson / Indian Scout",
+        "Which car would he drive? Mercedes G-Class / Ferrari F8 / Range Rover"
+      ]
+    },
+    {
+      "id": "ch-039",
+      "pour": "elle",
+      "edition": "Christmas edition",
+      "questions": [
+        "Which Christmas date would she plan? Christmas lights / Snowy chalet / Ice skating",
+        "Which gift would she want? Lego set / Game console / Perfume",
+        "Which Christmas treat would she pick? Hot chocolate / Mince pies / Gingerbread house"
+      ]
+    },
+    {
+      "id": "ch-040",
+      "pour": "lui",
+      "edition": "Luxury edition",
+      "questions": [
+        "Which watch would he wear? Casio digital / Pocket watch / Cartier Tank",
+        "How would he travel with you? Sailboat / Camper van / Cruise ship",
+        "Which dream house would he pick? Loft apartment / Modern villa / Lake house"
+      ]
+    },
+    {
+      "id": "ch-041",
+      "pour": "lui",
+      "edition": "Dream home edition",
+      "questions": [
+        "Which view would he wake up to? Vineyards / Forest / Mountains",
+        "Which dog would he adopt? Dalmatian / Samoyed / Australian Shepherd",
+        "Which cat would he adopt? Siamese / Ragdoll / Sphynx"
+      ]
+    },
+    {
+      "id": "ch-042",
+      "pour": "elle",
+      "edition": "Travel edition",
+      "questions": [
+        "Which city would she take you to? Barcelona / Las Vegas / Paris",
+        "Where would she go on vacation? Mexico / Costa Rica / Croatia",
+        "Where would she book a weekend? Log cabin / Castle hotel / Treehouse"
+      ]
+    },
+    {
+      "id": "ch-043",
+      "pour": "lui",
+      "edition": "Sweet tooth edition",
+      "questions": [
+        "Which ice cream would he get? Ice cream cone / Soft serve / Ice cream sandwich",
+        "What would he grab at the bakery? Cinnamon roll / Pain au chocolat / Brioche",
+        "Which dessert would he pick? Crêpes / Tiramisu / Red velvet cake"
+      ]
+    },
+    {
+      "id": "ch-044",
+      "pour": "lui",
+      "edition": "Christmas edition",
+      "questions": [
+        "Which winter date would he pick? Skiing / Sledding / Hot tub in the snow",
+        "Which Christmas treat would he pick? Mince pies / Yule log / Hot chocolate",
+        "Which gift would he want? Drone / Camera / Game console"
+      ]
+    },
+    {
+      "id": "ch-045",
+      "pour": "elle",
+      "edition": "Pet lovers edition",
+      "questions": [
+        "Which pet would she want? Goldfish / Rabbit / Parrot",
+        "Which dog would she adopt? French Bulldog / Chihuahua / Corgi",
+        "Which cat would she adopt? Scottish Fold / British Shorthair / Norwegian Forest Cat"
+      ]
+    },
+    {
+      "id": "ch-046",
+      "pour": "lui",
+      "edition": "Date night edition",
+      "questions": [
+        "Which date would he take you on? Wine tasting / Theme park / Museum",
+        "What would he cook for date night? Steak and fries / Cheese fondue / Korean BBQ",
+        "What would he order at the bar? Aperol Spritz / Red wine / Margarita"
+      ]
+    },
+    {
+      "id": "ch-047",
+      "pour": "lui",
+      "edition": "Cozy night in edition",
+      "questions": [
+        "Which game night would he pick? Board games / Foosball / Video games",
+        "Which console would he pick? PlayStation 2 / Nintendo Switch / Xbox",
+        "Which drink would he get? Lemonade / Bubble tea / Smoothie"
+      ]
+    },
+    {
+      "id": "ch-048",
+      "pour": "elle",
+      "edition": "Morning edition",
+      "questions": [
+        "How would she have her eggs? Scrambled / Omelette / Soft-boiled",
+        "Which breakfast would she choose? French toast / Waffles / Avocado toast",
+        "What would she grab at the bakery? Bagel / Croissant / Baguette"
+      ]
+    },
+    {
+      "id": "ch-049",
+      "pour": "lui",
+      "edition": "Wedding edition",
+      "questions": [
+        "Which ring would he pick for you? Rose gold ring / Halo ring / Gold band",
+        "Where would he want to get married? Vegas chapel / Castle / Lakeside",
+        "Which flowers would he get you? Lavender / Orchid / Hydrangeas"
+      ]
+    },
+    {
+      "id": "ch-050",
+      "pour": "lui",
+      "edition": "Car lovers edition",
+      "questions": [
+        "Which motorbike would he ride? Kawasaki Ninja / Harley-Davidson / Triumph Bonneville",
+        "Which classic car would he drive? VW Camper Van / 1967 Mustang / Porsche 356",
+        "Which car would he pick? Audi R8 / Toyota Supra / Mini Cooper"
+      ]
+    },
+    {
+      "id": "ch-051",
+      "pour": "elle",
+      "edition": "Travel edition",
+      "questions": [
+        "Which city would she take you to? Rome / Marrakech / Rio de Janeiro",
+        "How would she travel with you? Private jet / Cruise ship / Convertible",
+        "Where would she take you on vacation? Italy / Switzerland / Hawaii"
+      ]
+    },
+    {
+      "id": "ch-052",
+      "pour": "lui",
+      "edition": "Winter edition",
+      "questions": [
+        "Which winter date would he pick? Cabin by the fire / Ice skating / Building a snowman",
+        "Which coffee would he order? Iced latte / Cappuccino / Matcha latte",
+        "Which dinner would he pick? Cheese fondue / Pad thai / Steak and fries"
+      ]
+    },
+    {
+      "id": "ch-053",
+      "pour": "lui",
+      "edition": "Christmas edition",
+      "questions": [
+        "Which Christmas date would he plan? Movie by the tree / Christmas lights / Christmas market",
+        "Which Christmas treat would he pick? Gingerbread cookies / Stollen / Candy canes",
+        "Which gift would make him happy? Vinyl records / Drone / Lego set"
+      ]
+    },
+    {
+      "id": "ch-054",
+      "pour": "elle",
+      "edition": "Dream life edition",
+      "questions": [
+        "Which watch would she wear? Omega Speedmaster / Casio digital / Casio G-Shock",
+        "Which house would she pick? Mountain chalet / Castle / Beach house",
+        "Which view would she wake up to? Rice fields / Lake / Eiffel Tower"
+      ]
+    },
+    {
+      "id": "ch-055",
+      "pour": "lui",
+      "edition": "Sweet tooth edition",
+      "questions": [
+        "Which movie snack would he pick? Gummy bears / Chocolate bar / Nachos",
+        "Which ice cream would he get? Gelato / Banana split / Mochi ice cream",
+        "Which coffee would he order? Iced latte / Espresso / Matcha latte"
+      ]
+    },
+    {
+      "id": "ch-056",
+      "pour": "lui",
+      "edition": "Dream home edition",
+      "questions": [
+        "Which dog would he pick? Dachshund / Jack Russell / Pug",
+        "Which cat would he adopt? Ginger cat / Black cat / Maine Coon",
+        "Which view would he wake up to? Vineyards / City skyline / Tropical beach"
+      ]
+    },
+    {
+      "id": "ch-057",
+      "pour": "elle",
+      "edition": "Pet lovers edition",
+      "questions": [
+        "Which pet would she want? Hedgehog / Parrot / Hamster",
+        "Which dog would she pick? Beagle / Doberman / Poodle",
+        "Which cat would she adopt? Norwegian Forest Cat / Persian / Bengal"
+      ]
+    },
+    {
+      "id": "ch-058",
+      "pour": "lui",
+      "edition": "Wedding edition",
+      "questions": [
+        "Which ring would he pick for you? Vintage ring / Solitaire diamond / Emerald ring",
+        "Where would he want to get married? Garden / Lakeside / Castle",
+        "Where would he propose? Eiffel Tower / Rooftop / Restaurant"
+      ]
+    },
+    {
+      "id": "ch-059",
+      "pour": "lui",
+      "edition": "Christmas edition",
+      "questions": [
+        "Which winter date would he pick? Building a snowman / Cabin by the fire / Skiing",
+        "Which Christmas date would he plan? Snowy chalet / Ice skating / Movie by the tree",
+        "Which Christmas treat would he pick? Gingerbread house / Panettone / Christmas pudding"
+      ]
+    },
+    {
+      "id": "ch-060",
+      "pour": "elle",
+      "edition": "Drinks edition",
+      "questions": [
+        "What would she order at the bar? Gin and tonic / Mojito / Espresso martini",
+        "Which drink would she get? Iced tea / Lemonade / Smoothie",
+        "Which coffee would she order? Americano / Iced latte / Cappuccino"
+      ]
+    },
+    {
+      "id": "ch-061",
+      "pour": "lui",
+      "edition": "Adventure edition",
+      "questions": [
+        "Which adventure would he try? Skiing / Paragliding / Snowboarding",
+        "Which sport would he watch? Basketball / Rugby / American football",
+        "Where would he book a weekend? Glamping tent / Desert camp / Ski chalet"
+      ]
+    },
+    {
+      "id": "ch-062",
+      "pour": "lui",
+      "edition": "Food edition",
+      "questions": [
+        "Which pasta would he pick? Bolognese / Ravioli / Mac and cheese",
+        "How would he have his eggs? Fried / Scrambled / Poached",
+        "Which pizza would he order? Four cheese / Hawaiian / Veggie"
+      ]
+    },
+    {
+      "id": "ch-063",
+      "pour": "elle",
+      "edition": "New Year's edition",
+      "questions": [
+        "Where would she spend New Year's Eve? Times Square / City fireworks / Mountain chalet",
+        "Which date would she plan? Camping / Arcade / Ice skating",
+        "Where would she go on vacation? Thailand / Morocco / Egypt"
+      ]
+    },
+    {
+      "id": "ch-064",
+      "pour": "lui",
+      "edition": "Winter edition",
+      "questions": [
+        "Which winter date would he pick? Ice skating / Sledding / Hot tub in the snow",
+        "What would he cook for date night? Fish and chips / Ramen / Raclette",
+        "Where would he book a weekend for two? Log cabin / Ski chalet / Desert camp"
+      ]
+    },
+    {
+      "id": "ch-065",
+      "pour": "lui",
+      "edition": "Dream life edition",
+      "questions": [
+        "Which watch would he wear? Rolex Submariner / Pocket watch / Omega Speedmaster",
+        "How would he travel with you? Motorbike / Hot air balloon / Sailboat",
+        "Which house would he pick? Victorian house / Cozy cabin / Tiny house"
+      ]
+    },
+    {
+      "id": "ch-066",
+      "pour": "elle",
+      "edition": "Pet lovers edition",
+      "questions": [
+        "Which pet would she want? Rabbit / Guinea pig / Hamster",
+        "Which dog would she adopt? Cavalier King Charles / Labrador / German Shepherd",
+        "Which cat would she adopt? Scottish Fold / Ginger cat / Ragdoll"
+      ]
+    },
+    {
+      "id": "ch-067",
+      "pour": "lui",
+      "edition": "Cozy night in edition",
+      "questions": [
+        "Which game night would he pick? Poker / Video games / Ping pong",
+        "Which console would he pick? Gaming PC / Nintendo Switch / PlayStation 2",
+        "Which movie snack would he pick? Popcorn / Ice cream tub / Licorice"
+      ]
+    },
+    {
+      "id": "ch-068",
+      "pour": "lui",
+      "edition": "New Year's edition",
+      "questions": [
+        "Where would he spend New Year's Eve? Tropical beach / Cozy night in / Rooftop party",
+        "What would he order at the bar? Piña colada / Whiskey / Beer",
+        "Which date would he plan? Beach sunset / Camping / Picnic"
+      ]
+    },
+    {
+      "id": "ch-069",
+      "pour": "elle",
+      "edition": "Hobbies edition",
+      "questions": [
+        "Which instrument would she play? Violin / DJ decks / Saxophone",
+        "Which workout would she pick? Swimming / Boxing / Weightlifting",
+        "Which hobby would she pick up? Woodworking / Knitting / Pottery"
+      ]
+    },
+    {
+      "id": "ch-070",
+      "pour": "lui",
+      "edition": "Dream home edition",
+      "questions": [
+        "Which view would he wake up to? Ocean / Northern lights / Desert",
+        "Which dream house would he pick? Tiny house / Mountain chalet / Cozy cabin",
+        "Which dog would he adopt? Doberman / Pomeranian / Chihuahua"
+      ]
+    },
+    {
+      "id": "ch-071",
+      "pour": "lui",
+      "edition": "Winter edition",
+      "questions": [
+        "Which winter date would he pick? Sledding / Ice skating / Cabin by the fire",
+        "Which dinner would he pick? Lobster / Sushi / Risotto",
+        "Where would he book a weekend? Glamping tent / Beach bungalow / Castle hotel"
+      ]
+    },
+    {
+      "id": "ch-072",
+      "pour": "elle",
+      "edition": "Date night edition",
+      "questions": [
+        "Which flowers would she want? Tulips / Orchid / Daisies",
+        "Which dessert would she pick? Chocolate lava cake / Pavlova / Strawberry tart",
+        "Which date would she take you on? Mini golf / Stargazing / Cinema night"
+      ]
+    },
+    {
+      "id": "ch-073",
+      "pour": "lui",
+      "edition": "Drinks edition",
+      "questions": [
+        "What would he order at the bar? Mojito / Espresso martini / Whiskey",
+        "Which drink would he get? Bubble tea / Lemonade / Smoothie",
+        "Which coffee would he order? Espresso / Matcha latte / Cappuccino"
+      ]
+    },
+    {
+      "id": "ch-074",
+      "pour": "lui",
+      "edition": "Luxury edition",
+      "questions": [
+        "Which watch would he wear? Pocket watch / Cartier Tank / Seiko diver",
+        "Which car would he drive? Aston Martin DB11 / Fiat 500 / Nissan GT-R",
+        "How would he travel with you? Camper van / Convertible / Private jet"
+      ]
+    },
+    {
+      "id": "ch-075",
+      "pour": "elle",
+      "edition": "New Year's edition",
+      "questions": [
+        "Where would she spend New Year's Eve? City fireworks / Tropical beach / Rooftop party",
+        "Where would she take you on vacation? Maldives / Peru / Iceland",
+        "Which date would she plan? Museum / Hot air balloon / Wine tasting"
+      ]
+    },
+    {
+      "id": "ch-076",
+      "pour": "lui",
+      "edition": "Pet lovers edition",
+      "questions": [
+        "Which pet would he want? Horse / Ferret / Hedgehog",
+        "Which cat would he adopt? Black cat / Bengal / Sphynx",
+        "Which dog would he pick? Border Collie / Dachshund / Jack Russell"
+      ]
+    },
+    {
+      "id": "ch-077",
+      "pour": "lui",
+      "edition": "Game night edition",
+      "questions": [
+        "What would he order at 2 a.m.? Kebab / Fried chicken / Burger",
+        "Which game night would he pick? Poker / Chess / Foosball",
+        "Which console would he pick? Game Boy / Xbox / PlayStation 5"
+      ]
+    },
+    {
+      "id": "ch-078",
+      "pour": "elle",
+      "edition": "Winter edition",
+      "questions": [
+        "Which winter date would she pick? Building a snowman / Skiing / Hot tub in the snow",
+        "Which dinner would she pick? Paella / Indian curry / Korean BBQ",
+        "Which coffee would she order? Espresso / Cappuccino / Americano"
+      ]
+    },
+    {
+      "id": "ch-079",
+      "pour": "lui",
+      "edition": "Dream home edition",
+      "questions": [
+        "Which house would he pick? Beach house / Lake house / Victorian house",
+        "Which view would he wake up to? Forest / Snowy peaks / Mountains",
+        "Which cat would he adopt? Siamese / Maine Coon / British Shorthair"
+      ]
+    },
+    {
+      "id": "ch-080",
+      "pour": "lui",
+      "edition": "Luxury edition",
+      "questions": [
+        "Which watch would he wear? Seiko diver / Omega Speedmaster / Rolex Submariner",
+        "Which car would he pick? Bugatti Chiron / BMW M3 / McLaren 720S",
+        "How would he travel with you? Private jet / Hot air balloon / Convertible"
+      ]
+    },
+    {
+      "id": "ch-081",
+      "pour": "elle",
+      "edition": "Car lovers edition",
+      "questions": [
+        "Which classic car would she drive? Citroën 2CV / 1959 Cadillac / VW Camper Van",
+        "Which motorbike would she ride? Kawasaki Ninja / Indian Scout / Triumph Bonneville",
+        "Which car would she pick? Aston Martin DB11 / Fiat 500 / Range Rover"
+      ]
+    },
+    {
+      "id": "ch-082",
+      "pour": "lui",
+      "edition": "Hobbies edition",
+      "questions": [
+        "Which instrument would he play? Electric guitar / Drums / Saxophone",
+        "Which workout would he pick? CrossFit / Cycling / Swimming",
+        "Which hobby would he pick up? Fishing / Photography / Pottery"
+      ]
+    },
+    {
+      "id": "ch-083",
+      "pour": "lui",
+      "edition": "Style edition",
+      "questions": [
+        "Which sneakers would he pick? Crocs / Vans Old Skool / Air Force 1",
+        "Which phone would he pick? Nokia 3310 / Samsung Galaxy / iPhone",
+        "Which watch would he wear? Casio digital / Cartier Tank / Casio G-Shock"
+      ]
+    },
+    {
+      "id": "ch-084",
+      "pour": "elle",
+      "edition": "Sweet tooth edition",
+      "questions": [
+        "What would she grab at the bakery? Pain au chocolat / Baguette / Donut",
+        "Which ice cream would she get? Affogato / Sundae / Popsicle",
+        "Which cake would she pick? Huge birthday cake / Mille-feuille / Churros"
+      ]
+    },
+    {
+      "id": "ch-085",
+      "pour": "lui",
+      "edition": "Wedding edition",
+      "questions": [
+        "Where would he propose? Northern lights / Beach at sunset / Disney castle",
+        "Which ring would he pick for you? Gold band / Solitaire diamond / Vintage ring",
+        "Where would he want to get married? Forest / City hall / Beach"
+      ]
+    },
+    {
+      "id": "ch-086",
+      "pour": "lui",
+      "edition": "Dream home edition",
+      "questions": [
+        "Which view would he wake up to? Ocean / City skyline / Lake",
+        "Which dream house would he pick? Loft apartment / Castle / Modern villa",
+        "Which cat would he adopt? Persian / Scottish Fold / Ginger cat"
+      ]
+    },
+    {
+      "id": "ch-087",
+      "pour": "elle",
+      "edition": "Winter edition",
+      "questions": [
+        "What would she cook for date night? Steak and fries / Risotto / Raclette",
+        "Where would she book a weekend for two? Houseboat / Treehouse / Overwater villa",
+        "Which winter date would she pick? Ice skating / Skiing / Hot tub in the snow"
+      ]
+    },
+    {
+      "id": "ch-088",
+      "pour": "lui",
+      "edition": "Car lovers edition",
+      "questions": [
+        "Which classic car would he drive? Porsche 356 / Classic Mini / 1967 Mustang",
+        "Which motorbike would he ride? Ducati Panigale / Vespa / Yamaha MT-07",
+        "Which car would he drive? Lamborghini Huracán / Porsche 911 / Toyota Supra"
+      ]
+    },
+    {
+      "id": "ch-089",
+      "pour": "lui",
+      "edition": "Food edition",
+      "questions": [
+        "Which potato would he pick? Rösti / Potato gratin / French fries",
+        "Which pasta would he pick? Carbonara / Lasagna / Bolognese",
+        "Which pizza would he order? Veggie / Pepperoni / Calzone"
+      ]
+    },
+    {
+      "id": "ch-090",
+      "pour": "elle",
+      "edition": "Adventure edition",
+      "questions": [
+        "Which sport would she watch? American football / Football / Ice hockey",
+        "Which adventure would she try? Paragliding / Horse riding / Skydiving",
+        "Where would she go on vacation? Egypt / Bora Bora / Lapland"
+      ]
+    },
+    {
+      "id": "ch-091",
+      "pour": "lui",
+      "edition": "Dream home edition",
+      "questions": [
+        "Which house would he pick? Loft apartment / Modern villa / Cozy cabin",
+        "Which view would he wake up to? Snowy peaks / Mountains / Desert",
+        "Which dog would he adopt? Pug / Poodle / Dalmatian"
+      ]
+    },
+    {
+      "id": "ch-092",
+      "pour": "lui",
+      "edition": "Game night edition",
+      "questions": [
+        "What would he order at 2 a.m.? Burrito / Burger / Grilled cheese",
+        "Which game night would he pick? Pool / Ping pong / Board games",
+        "Which console would he pick? Game Boy / Nintendo Switch / PlayStation 2"
+      ]
+    },
+    {
+      "id": "ch-093",
+      "pour": "elle",
+      "edition": "Car lovers edition",
+      "questions": [
+        "Which motorbike would she ride? BMW GS / Kawasaki Ninja / Vespa",
+        "Which classic car would she drive? VW Beetle / Jaguar E-Type / Mercedes 300 SL",
+        "Which car would she drive? BMW M3 / Audi R8 / Ferrari F8"
+      ]
+    },
+    {
+      "id": "ch-094",
+      "pour": "lui",
+      "edition": "Pet lovers edition",
+      "questions": [
+        "Which pet would he want? Chameleon / Axolotl / Goldfish",
+        "Which cat would he adopt? Ragdoll / British Shorthair / Black cat",
+        "Which dog would he pick? Shiba Inu / Rottweiler / French Bulldog"
+      ]
+    },
+    {
+      "id": "ch-095",
+      "pour": "lui",
+      "edition": "Adventure edition",
+      "questions": [
+        "Which sport would he watch? Baseball / Golf / Formula 1",
+        "Which adventure would he try? Scuba diving / Rock climbing / Bungee jumping",
+        "Where would he take you on vacation? Mexico / Norway / Japan"
+      ]
+    },
+    {
+      "id": "ch-096",
+      "pour": "elle",
+      "edition": "Dream home edition",
+      "questions": [
+        "Which dream house would she pick? Lake house / Castle / Beach house",
+        "Which view would she wake up to? Forest / Rice fields / Tropical beach",
+        "Which cat would she adopt? Sphynx / Siamese / Bengal"
+      ]
+    },
+    {
+      "id": "ch-097",
+      "pour": "lui",
+      "edition": "Travel edition",
+      "questions": [
+        "Which city would he take you to? London / Prague / Tokyo",
+        "How would he travel with you? Cruise ship / Motorbike / Camper van",
+        "Where would he book a weekend for two? Ski chalet / Castle hotel / Log cabin"
+      ]
+    },
+    {
+      "id": "ch-098",
+      "pour": "lui",
+      "edition": "Style edition",
+      "questions": [
+        "Which phone would he pick? Google Pixel / Flip phone / BlackBerry",
+        "Which sneakers would he pick? Nike Air Max / Birkenstock / Stan Smith",
+        "Which watch would he wear? Casio G-Shock / Pocket watch / Rolex Submariner"
+      ]
+    },
+    {
+      "id": "ch-099",
+      "pour": "elle",
+      "edition": "Wedding edition",
+      "questions": [
+        "Which ring would she want? Rose gold ring / Emerald ring / Halo ring",
+        "Where would she want you to propose? Rooftop / Hot air balloon / Mountaintop",
+        "Where would she want to get married? Mountaintop / Vineyard / Vegas chapel"
+      ]
+    },
+    {
+      "id": "ch-100",
+      "pour": "lui",
+      "edition": "Hobbies edition",
+      "questions": [
+        "Which instrument would he play? Violin / DJ decks / Trumpet",
+        "Which hobby would he pick up? Knitting / Woodworking / Photography",
+        "Which workout would he pick? Yoga / Weightlifting / Cycling"
+      ]
+    },
+    {
+      "id": "ch-101",
+      "pour": "lui",
+      "edition": "Sweet tooth edition",
+      "questions": [
+        "Which movie snack would he pick? Popcorn / Nachos / Gummy bears",
+        "What would he grab at the bakery? Bagel / Donut / Croissant",
+        "Which ice cream would he get? Ice cream sandwich / Sundae / Gelato"
+      ]
+    },
+    {
+      "id": "ch-102",
+      "pour": "elle",
+      "edition": "Cozy night in edition",
+      "questions": [
+        "Which console would she pick? Gaming PC / Xbox / PlayStation 5",
+        "Which dessert would she pick? Crème brûlée / Tiramisu / Brownie",
+        "Which game night would she pick? Chess / Board games / Video games"
+      ]
+    },
+    {
+      "id": "ch-103",
+      "pour": "lui",
+      "edition": "Style edition",
+      "questions": [
+        "Which phone would he pick? iPhone / Flip phone / Google Pixel",
+        "Which sneakers would he pick? New Balance / Air Jordan / Adidas Samba",
+        "Which watch would he wear? Omega Speedmaster / Cartier Tank / Seiko diver"
+      ]
+    },
+    {
+      "id": "ch-104",
+      "pour": "lui",
+      "edition": "Pet lovers edition",
+      "questions": [
+        "Which pet would he want? Turtle / Ferret / Guinea pig",
+        "Which dog would he adopt? Husky / Bernese Mountain Dog / Golden Retriever",
+        "Which cat would he adopt? Norwegian Forest Cat / Sphynx / Maine Coon"
+      ]
+    },
+    {
+      "id": "ch-105",
+      "pour": "elle",
+      "edition": "Date night edition",
+      "questions": [
+        "Which flowers would she want? Sunflowers / Lilies / Wildflowers",
+        "What would she order at the bar? Piña colada / Beer / Margarita",
+        "Which movie snack would she pick? Licorice / Chocolate bar / Ice cream tub"
+      ]
+    },
+    {
+      "id": "ch-106",
+      "pour": "lui",
+      "edition": "Game night edition",
+      "questions": [
+        "What would he order at 2 a.m.? Tacos / Fried chicken / Instant noodles",
+        "Which drink would he get? Smoothie / Lemonade / Iced tea",
+        "Which console would he pick? Xbox / Gaming PC / Nintendo Switch"
+      ]
+    },
+    {
+      "id": "ch-107",
+      "pour": "lui",
+      "edition": "Travel edition",
+      "questions": [
+        "Which city would he take you to? Venice / Amsterdam / New York",
+        "How would he travel with you? Convertible / Sailboat / Cruise ship",
+        "Where would he go on vacation? Bora Bora / USA / Hawaii"
+      ]
+    },
+    {
+      "id": "ch-108",
+      "pour": "elle",
+      "edition": "Sweet tooth edition",
+      "questions": [
+        "What would she grab at the bakery? Cinnamon roll / Brioche / Muffin",
+        "Which ice cream would she get? Banana split / Mochi ice cream / Affogato",
+        "Which cake would she pick? Red velvet cake / Crêpes / Cheesecake"
+      ]
+    },
+    {
+      "id": "ch-109",
+      "pour": "lui",
+      "edition": "Food edition",
+      "questions": [
+        "Which pasta would he pick? Mac and cheese / Gnocchi / Seafood pasta",
+        "Which potato would he pick? Hash browns / French fries / Potato gratin",
+        "How would he have his eggs? Omelette / Soft-boiled / Poached"
+      ]
+    },
+    {
+      "id": "ch-110",
+      "pour": "lui",
+      "edition": "Car lovers edition",
+      "questions": [
+        "Which classic car would he drive? 1967 Mustang / Classic Mini / VW Camper Van",
+        "Which motorbike would he ride? Harley-Davidson / Indian Scout / BMW GS",
+        "Which car would he pick? Nissan GT-R / Corvette / Mercedes-AMG C63 S"
+      ]
+    },
+    {
+      "id": "ch-111",
+      "pour": "elle",
+      "edition": "Luxury edition",
+      "questions": [
+        "Which watch would she wear? Casio digital / Pocket watch / Rolex Submariner",
+        "How would she travel with you? Hot air balloon / Motorbike / Camper van",
+        "Where would she book a weekend? Glamping tent / Beach bungalow / Houseboat"
+      ]
+    },
+    {
+      "id": "ch-112",
+      "pour": "lui",
+      "edition": "Travel edition",
+      "questions": [
+        "Which city would he take you to? Rome / Seoul / Paris",
+        "Where would he take you on vacation? Croatia / Italy / Morocco",
+        "Which view would he wake up to? Northern lights / Eiffel Tower / Vineyards"
+      ]
+    },
+    {
+      "id": "ch-113",
+      "pour": "lui",
+      "edition": "Cozy night in edition",
+      "questions": [
+        "Which game night would he pick? Poker / Pool / Ping pong",
+        "Which drink would he get? Lemonade / Smoothie / Bubble tea",
+        "Which movie snack would he pick? Ice cream tub / Chocolate bar / Popcorn"
+      ]
+    },
+    {
+      "id": "ch-114",
+      "pour": "elle",
+      "edition": "Sweet tooth edition",
+      "questions": [
+        "Which ice cream would she get? Ice cream cone / Popsicle / Soft serve",
+        "What would she grab at the bakery? Baguette / Brioche / Muffin",
+        "Which dessert would she pick? Vanilla éclair / Apple pie / Macarons"
+      ]
+    },
+    {
+      "id": "ch-115",
+      "pour": "lui",
+      "edition": "Morning edition",
+      "questions": [
+        "Which breakfast would he choose? Pancakes / Cereal / Eggs Benedict",
+        "How would he have his eggs? Fried / Omelette / Scrambled",
+        "Which coffee would he order? Iced latte / Americano / Matcha latte"
+      ]
+    },
+    {
+      "id": "ch-116",
+      "pour": "lui",
+      "edition": "Wedding edition",
+      "questions": [
+        "Which flowers would he get you? Red roses / Daisies / Peonies",
+        "Where would he want to get married? Mountaintop / City hall / Castle",
+        "Where would he propose? Disney castle / Northern lights / Restaurant"
+      ]
+    },
+    {
+      "id": "ch-117",
+      "pour": "elle",
+      "edition": "Adventure edition",
+      "questions": [
+        "Which adventure would she try? Surfing / Rock climbing / Kayaking",
+        "Which sport would she watch? Tennis / Boxing / Ice hockey",
+        "Where would she book a weekend for two? Desert camp / Overwater villa / Treehouse"
+      ]
+    },
+    {
+      "id": "ch-118",
+      "pour": "lui",
+      "edition": "Dream home edition",
+      "questions": [
+        "Which dream house would he pick? Tiny house / Mountain chalet / Victorian house",
+        "Which view would he wake up to? Snowy peaks / Tropical beach / Ocean",
+        "Which dog would he pick? Corgi / Australian Shepherd / Beagle"
+      ]
+    },
+    {
+      "id": "ch-119",
+      "pour": "lui",
+      "edition": "Date night edition",
+      "questions": [
+        "Which flowers would he get you? Red roses / Lilies / Sunflowers",
+        "Which date would he take you on? Fancy dinner / Stargazing / Theme park",
+        "What would he order at the bar? Red wine / Gin and tonic / Aperol Spritz"
+      ]
+    },
+    {
+      "id": "ch-120",
+      "pour": "elle",
+      "edition": "Car lovers edition",
+      "questions": [
+        "Which motorbike would she ride? Yamaha MT-07 / Triumph Bonneville / Ducati Panigale",
+        "Which classic car would she drive? VW Beetle / Porsche 356 / Citroën 2CV",
+        "Which car would she pick? Bugatti Chiron / Rolls-Royce / Mini Cooper"
+      ]
+    },
+    {
+      "id": "ch-121",
+      "pour": "lui",
+      "edition": "Wedding edition",
+      "questions": [
+        "Which ring would he pick for you? Halo ring / Solitaire diamond / Emerald ring",
+        "Where would he want to get married? Lakeside / Forest / Garden",
+        "Where would he propose? Eiffel Tower / Mountaintop / Beach at sunset"
+      ]
+    },
+    {
+      "id": "ch-122",
+      "pour": "lui",
+      "edition": "Drinks edition",
+      "questions": [
+        "Which drink would he get? Lemonade / Iced tea / Bubble tea",
+        "What would he order at the bar? Piña colada / Whiskey / Mojito",
+        "Which coffee would he order? Americano / Cappuccino / Matcha latte"
+      ]
+    },
+    {
+      "id": "ch-123",
+      "pour": "elle",
+      "edition": "Luxury edition",
+      "questions": [
+        "Which watch would she wear? Cartier Tank / Omega Speedmaster / Casio digital",
+        "How would she travel with you? Private jet / Sailboat / Motorbike",
+        "Which car would she drive? McLaren 720S / Mercedes G-Class / Ford Mustang"
+      ]
+    },
+    {
+      "id": "ch-124",
+      "pour": "lui",
+      "edition": "Travel edition",
+      "questions": [
+        "Which city would he take you to? Las Vegas / Barcelona / London",
+        "Where would he go on vacation? Dubai / Thailand / Australia",
+        "Where would he book a weekend? Desert camp / Beach bungalow / Log cabin"
+      ]
+    },
+    {
+      "id": "ch-125",
+      "pour": "lui",
+      "edition": "Car lovers edition",
+      "questions": [
+        "Which motorbike would he ride? BMW GS / Indian Scout / Kawasaki Ninja",
+        "Which classic car would he drive? 1959 Cadillac / Mercedes 300 SL / Jaguar E-Type",
+        "Which car would he drive? Tesla Model S / Jeep Wrangler / Land Rover Defender"
+      ]
+    },
+    {
+      "id": "ch-126",
+      "pour": "elle",
+      "edition": "Weekend edition",
+      "questions": [
+        "Which workout would she pick? CrossFit / Boxing / Running",
+        "Which hobby would she pick up? Photography / Chess / Fishing",
+        "Which sport would she watch? Baseball / Formula 1 / Basketball"
+      ]
+    },
+    {
+      "id": "ch-127",
+      "pour": "lui",
+      "edition": "Game night edition",
+      "questions": [
+        "What would he order at 2 a.m.? Grilled cheese / Nuggets / Burger",
+        "Which movie snack would he pick? Gummy bears / Licorice / Nachos",
+        "Which console would he pick? PlayStation 2 / Game Boy / PlayStation 5"
+      ]
+    },
+    {
+      "id": "ch-128",
+      "pour": "lui",
+      "edition": "Sweet tooth edition",
+      "questions": [
+        "What would he grab at the bakery? Cinnamon roll / Donut / Croissant",
+        "Which ice cream would he get? Sundae / Ice cream cone / Ice cream sandwich",
+        "Which cake would he pick? Red velvet cake / Cheesecake / Churros"
+      ]
+    },
+    {
+      "id": "ch-129",
+      "pour": "elle",
+      "edition": "Luxury edition",
+      "questions": [
+        "Which watch would she wear? Seiko diver / Pocket watch / Casio G-Shock",
+        "Which house would she pick? Modern villa / Tiny house / Cozy cabin",
+        "How would she travel with you? Private jet / Sailboat / Convertible"
+      ]
+    },
+    {
+      "id": "ch-130",
+      "pour": "lui",
+      "edition": "Adventure edition",
+      "questions": [
+        "Which adventure would he try? Snowboarding / Kayaking / Scuba diving",
+        "Which sport would he watch? American football / Rugby / Football",
+        "Where would he take you on vacation? Switzerland / Costa Rica / Canada"
+      ]
+    },
+    {
+      "id": "ch-131",
+      "pour": "lui",
+      "edition": "Valentine's edition",
+      "questions": [
+        "What would he get you for Valentine's? Red roses / Love letter / Jewelry",
+        "Which ring would he pick for you? Rose gold ring / Vintage ring / Gold band",
+        "Which flowers would he get you? Orchid / Tulips / Peonies"
+      ]
+    },
+    {
+      "id": "ch-132",
+      "pour": "elle",
+      "edition": "Style edition",
+      "questions": [
+        "Which shoes would she pick? Knee-high boots / High heels / Ballet flats",
+        "Which sneakers would she pick? Nike Air Max / Birkenstock / Air Force 1",
+        "Which phone would she pick? Samsung Galaxy / BlackBerry / Nokia 3310"
+      ]
+    },
+    {
+      "id": "ch-133",
+      "pour": "lui",
+      "edition": "Date night edition",
+      "questions": [
+        "What would he cook for date night? Ramen / Sushi / Paella",
+        "Which date would he plan? Picnic / Mini golf / Museum",
+        "Which movie snack would he pick? Licorice / Popcorn / Chocolate bar"
+      ]
+    },
+    {
+      "id": "ch-134",
+      "pour": "lui",
+      "edition": "Cozy night in edition",
+      "questions": [
+        "Which game night would he pick? Board games / Foosball / Chess",
+        "Which drink would he get? Iced tea / Lemonade / Bubble tea",
+        "Which console would he pick? PlayStation 5 / Xbox / Nintendo Switch"
+      ]
+    },
+    {
+      "id": "ch-135",
+      "pour": "elle",
+      "edition": "Winter edition",
+      "questions": [
+        "Which winter date would she pick? Building a snowman / Sledding / Cabin by the fire",
+        "Which coffee would she order? Iced latte / Espresso / Matcha latte",
+        "Where would she book a weekend? Castle hotel / Glamping tent / Treehouse"
+      ]
+    },
+    {
+      "id": "ch-136",
+      "pour": "lui",
+      "edition": "Sweet tooth edition",
+      "questions": [
+        "What would he grab at the bakery? Baguette / Bagel / Pain au chocolat",
+        "Which ice cream would he get? Popsicle / Soft serve / Affogato",
+        "Which movie snack would he pick? Gummy bears / Ice cream tub / Nachos"
+      ]
+    },
+    {
+      "id": "ch-137",
+      "pour": "lui",
+      "edition": "Valentine's edition",
+      "questions": [
+        "What would he get you for Valentine's? Heart balloons / Box of chocolates / Breakfast in bed",
+        "Which ring would he pick for you? Gold band / Emerald ring / Rose gold ring",
+        "Which flowers would he get you? Hydrangeas / Lavender / Wildflowers"
+      ]
+    },
+    {
+      "id": "ch-138",
+      "pour": "elle",
+      "edition": "Dream home edition",
+      "questions": [
+        "Which view would she wake up to? Vineyards / Rice fields / Forest",
+        "Which dream house would she pick? Loft apartment / Mountain chalet / Victorian house",
+        "Which cat would she adopt? Black cat / Bengal / Scottish Fold"
+      ]
+    },
+    {
+      "id": "ch-139",
+      "pour": "lui",
+      "edition": "Weekend edition",
+      "questions": [
+        "Which workout would he pick? Running / Cycling / Boxing",
+        "Which hobby would he pick up? Pottery / Chess / Gardening",
+        "Which adventure would he try? Bungee jumping / Paragliding / Skydiving"
+      ]
+    },
+    {
+      "id": "ch-140",
+      "pour": "lui",
+      "edition": "Game night edition",
+      "questions": [
+        "What would he order at 2 a.m.? Tacos / Fried chicken / Burrito",
+        "Which game night would he pick? Pool / Foosball / Video games",
+        "Which console would he pick? PlayStation 2 / Game Boy / Gaming PC"
+      ]
+    },
+    {
+      "id": "ch-141",
+      "pour": "elle",
+      "edition": "Date night edition",
+      "questions": [
+        "Which dinner would she pick? Fish and chips / Lobster / Cheese fondue",
+        "What would she order at the bar? Margarita / Gin and tonic / Aperol Spritz",
+        "Which flowers would she want? Peonies / Daisies / Sunflowers"
+      ]
+    },
+    {
+      "id": "ch-142",
+      "pour": "lui",
+      "edition": "Wedding edition",
+      "questions": [
+        "Where would he propose? Eiffel Tower / Mountaintop / Northern lights",
+        "Where would he want to get married? Vineyard / Vegas chapel / Beach",
+        "Which ring would he pick for you? Solitaire diamond / Halo ring / Vintage ring"
+      ]
+    },
+    {
+      "id": "ch-143",
+      "pour": "lui",
+      "edition": "Car lovers edition",
+      "questions": [
+        "Which classic car would he drive? 1967 Mustang / VW Beetle / VW Camper Van",
+        "Which motorbike would he ride? Vespa / Triumph Bonneville / Ducati Panigale",
+        "Which car would he pick? Mercedes G-Class / Toyota Supra / Audi R8"
+      ]
+    },
+    {
+      "id": "ch-144",
+      "pour": "elle",
+      "edition": "Winter edition",
+      "questions": [
+        "Which winter date would she pick? Hot tub in the snow / Ice skating / Cabin by the fire",
+        "What would she cook for date night? Korean BBQ / Indian curry / Pad thai",
+        "Which coffee would she order? Espresso / Matcha latte / Iced latte"
+      ]
+    },
+    {
+      "id": "ch-145",
+      "pour": "lui",
+      "edition": "Valentine's edition",
+      "questions": [
+        "What would he get you for Valentine's? Heart balloons / Perfume / Red roses",
+        "Which date would he take you on? Wine tasting / Ice skating / Hot air balloon",
+        "Which ring would he pick for you? Vintage ring / Emerald ring / Halo ring"
+      ]
+    },
+    {
+      "id": "ch-146",
+      "pour": "lui",
+      "edition": "Drinks edition",
+      "questions": [
+        "Which drink would he get? Lemonade / Iced tea / Bubble tea",
+        "What would he order at the bar? Beer / Espresso martini / Red wine",
+        "Which coffee would he order? Espresso / Matcha latte / Cappuccino"
+      ]
+    },
+    {
+      "id": "ch-147",
+      "pour": "elle",
+      "edition": "Dream home edition",
+      "questions": [
+        "Which view would she wake up to? Desert / Lake / City skyline",
+        "Which house would she pick? Lake house / Modern villa / Beach house",
+        "Which dog would she pick? Samoyed / Belgian Malinois / Great Dane"
+      ]
+    },
+    {
+      "id": "ch-148",
+      "pour": "lui",
+      "edition": "Weekend edition",
+      "questions": [
+        "Which hobby would he pick up? Knitting / Woodworking / Gardening",
+        "Which workout would he pick? Swimming / CrossFit / Yoga",
+        "Which sport would he watch? Golf / Tennis / Boxing"
+      ]
+    },
+    {
+      "id": "ch-149",
+      "pour": "lui",
+      "edition": "Winter edition",
+      "questions": [
+        "Which winter date would he pick? Sledding / Building a snowman / Skiing",
+        "Which dinner would he pick? Risotto / Steak and fries / Fish and chips",
+        "Where would he book a weekend for two? Overwater villa / Houseboat / Ski chalet"
+      ]
+    },
+    {
+      "id": "ch-150",
+      "pour": "elle",
+      "edition": "Cozy night in edition",
+      "questions": [
+        "Which cake would she pick? Apple pie / Crème brûlée / Pavlova",
+        "Which game night would she pick? Board games / Ping pong / Poker",
+        "Which movie snack would she pick? Nachos / Popcorn / Ice cream tub"
+      ]
+    },
+    {
+      "id": "ch-151",
+      "pour": "lui",
+      "edition": "Luxury edition",
+      "questions": [
+        "Which watch would he wear? Seiko diver / Omega Speedmaster / Casio digital",
+        "How would he travel with you? Hot air balloon / Cruise ship / Camper van",
+        "Which car would he drive? Fiat 500 / Corvette / Bugatti Chiron"
+      ]
+    },
+    {
+      "id": "ch-152",
+      "pour": "lui",
+      "edition": "Dream home edition",
+      "questions": [
+        "Which house would he pick? Beach house / Victorian house / Castle",
+        "Which view would he wake up to? Mountains / Eiffel Tower / Northern lights",
+        "Which cat would he adopt? British Shorthair / Maine Coon / Norwegian Forest Cat"
+      ]
+    },
+    {
+      "id": "ch-153",
+      "pour": "elle",
+      "edition": "Date night edition",
+      "questions": [
+        "Which flowers would she want? Red roses / Lavender / Tulips",
+        "Which date would she take you on? Theme park / Arcade / Camping",
+        "What would she order at the bar? Piña colada / Red wine / Gin and tonic"
+      ]
+    },
+    {
+      "id": "ch-154",
+      "pour": "lui",
+      "edition": "Travel edition",
+      "questions": [
+        "Which city would he take you to? New York / Lisbon / Marrakech",
+        "Where would he go on vacation? Bali / Iceland / Peru",
+        "How would he travel with you? Hot air balloon / Sailboat / Cruise ship"
+      ]
+    },
+    {
+      "id": "ch-155",
+      "pour": "lui",
+      "edition": "Dream life edition",
+      "questions": [
+        "Which watch would he wear? Casio G-Shock / Cartier Tank / Rolex Submariner",
+        "Where would he book a weekend? Log cabin / Treehouse / Ski chalet",
+        "Which dog would he adopt? Bernese Mountain Dog / Dalmatian / Cavalier King Charles"
+      ]
+    },
+    {
+      "id": "ch-156",
+      "pour": "elle",
+      "edition": "Cozy night in edition",
+      "questions": [
+        "Which drink would she get? Iced tea / Bubble tea / Smoothie",
+        "Which console would she pick? PlayStation 2 / PlayStation 5 / Xbox",
+        "Which dessert would she pick? Chocolate lava cake / Vanilla éclair / Tiramisu"
+      ]
+    },
+    {
+      "id": "ch-157",
+      "pour": "lui",
+      "edition": "Drinks edition",
+      "questions": [
+        "What would he order at the bar? Whiskey / Mojito / Aperol Spritz",
+        "Which coffee would he order? Espresso / Americano / Cappuccino",
+        "Which drink would he get? Bubble tea / Iced tea / Smoothie"
+      ]
+    },
+    {
+      "id": "ch-158",
+      "pour": "lui",
+      "edition": "Luxury edition",
+      "questions": [
+        "Which watch would he wear? Casio G-Shock / Seiko diver / Casio digital",
+        "How would he travel with you? Convertible / Motorbike / Camper van",
+        "Which car would he pick? McLaren 720S / Land Rover Defender / Rolls-Royce"
+      ]
+    },
+    {
+      "id": "ch-159",
+      "pour": "elle",
+      "edition": "Sweet tooth edition",
+      "questions": [
+        "Which ice cream would she get? Banana split / Popsicle / Mochi ice cream",
+        "What would she grab at the bakery? Cinnamon roll / Croissant / Bagel",
+        "Which cake would she pick? Brownie / Mille-feuille / Strawberry tart"
+      ]
+    },
+    {
+      "id": "ch-160",
+      "pour": "lui",
+      "edition": "Travel edition",
+      "questions": [
+        "Which city would he take you to? Rio de Janeiro / Amsterdam / Istanbul",
+        "Where would he take you on vacation? Maldives / Australia / Greece",
+        "Where would he book a weekend for two? Overwater villa / Desert camp / Castle hotel"
+      ]
+    },
+    {
+      "id": "ch-161",
+      "pour": "lui",
+      "edition": "Wedding edition",
+      "questions": [
+        "Where would he propose? Disney castle / Rooftop / Beach at sunset",
+        "Where would he want to get married? Mountaintop / Vineyard / Forest",
+        "Which ring would he pick for you? Rose gold ring / Solitaire diamond / Gold band"
+      ]
+    },
+    {
+      "id": "ch-162",
+      "pour": "elle",
+      "edition": "Date night edition",
+      "questions": [
+        "Which flowers would she want? Wildflowers / Orchid / Hydrangeas",
+        "Which date would she plan? Beach sunset / Fancy dinner / Cinema night",
+        "Which dinner would she pick? Lobster / Cheese fondue / Korean BBQ"
+      ]
+    },
+    {
+      "id": "ch-163",
+      "pour": "lui",
+      "edition": "Car lovers edition",
+      "questions": [
+        "Which classic car would he drive? Citroën 2CV / Porsche 356 / Jaguar E-Type",
+        "Which motorbike would he ride? Yamaha MT-07 / BMW GS / Harley-Davidson",
+        "Which car would he drive? Nissan GT-R / Lamborghini Huracán / BMW M3"
+      ]
+    },
+    {
+      "id": "ch-164",
+      "pour": "lui",
+      "edition": "Game night edition",
+      "questions": [
+        "What would he order at 2 a.m.? Instant noodles / Nuggets / Kebab",
+        "Which game night would he pick? Foosball / Video games / Ping pong",
+        "Which console would he pick? Nintendo Switch / Game Boy / Gaming PC"
+      ]
+    },
+    {
+      "id": "ch-165",
+      "pour": "elle",
+      "edition": "Adventure edition",
+      "questions": [
+        "Which adventure would she try? Skiing / Horse riding / Surfing",
+        "Which sport would she watch? Basketball / Golf / Football",
+        "Where would she take you on vacation? Peru / Egypt / Iceland"
+      ]
+    },
+    {
+      "id": "ch-166",
+      "pour": "lui",
+      "edition": "Pet lovers edition",
+      "questions": [
+        "Which pet would he want? Rabbit / Hamster / Horse",
+        "Which cat would he adopt? Siamese / Persian / Ragdoll",
+        "Which dog would he pick? Pomeranian / Poodle / Great Dane"
+      ]
+    },
+    {
+      "id": "ch-167",
+      "pour": "lui",
+      "edition": "Date night edition",
+      "questions": [
+        "Which date would he plan? Camping / Museum / Arcade",
+        "Which movie snack would he pick? Licorice / Chocolate bar / Gummy bears",
+        "Which flowers would he get you? Lilies / Tulips / Sunflowers"
+      ]
+    },
+    {
+      "id": "ch-168",
+      "pour": "elle",
+      "edition": "Drinks edition",
+      "questions": [
+        "Which drink would she get? Smoothie / Lemonade / Iced tea",
+        "What would she order at the bar? Beer / Margarita / Espresso martini",
+        "Which coffee would she order? Cappuccino / Iced latte / Espresso"
+      ]
+    },
+    {
+      "id": "ch-169",
+      "pour": "lui",
+      "edition": "Game night edition",
+      "questions": [
+        "What would he order at 2 a.m.? Fried chicken / Nuggets / Burger",
+        "Which game night would he pick? Pool / Poker / Chess",
+        "Which console would he pick? Gaming PC / Game Boy / Xbox"
+      ]
+    },
+    {
+      "id": "ch-170",
+      "pour": "lui",
+      "edition": "Travel edition",
+      "questions": [
+        "Which city would he take you to? Tokyo / Prague / Venice",
+        "Which view would he wake up to? Vineyards / Rice fields / Tropical beach",
+        "Where would he go on vacation? Norway / Greece / Bora Bora"
+      ]
+    },
+    {
+      "id": "ch-171",
+      "pour": "elle",
+      "edition": "Winter edition",
+      "questions": [
+        "Which winter date would she pick? Sledding / Building a snowman / Ice skating",
+        "What would she cook for date night? Raclette / Pad thai / Sushi",
+        "Which coffee would she order? Matcha latte / Americano / Iced latte"
+      ]
+    },
+    {
+      "id": "ch-172",
+      "pour": "lui",
+      "edition": "Pet lovers edition",
+      "questions": [
+        "Which pet would he want? Hedgehog / Chameleon / Turtle",
+        "Which cat would he adopt? Persian / Sphynx / Ginger cat",
+        "Which dog would he adopt? Border Collie / Pug / Rottweiler"
+      ]
+    },
+    {
+      "id": "ch-173",
+      "pour": "lui",
+      "edition": "Weekend edition",
+      "questions": [
+        "Which workout would he pick? Cycling / Running / Weightlifting",
+        "Which hobby would he pick up? Chess / Knitting / Fishing",
+        "Which adventure would he try? Skydiving / Snowboarding / Skiing"
+      ]
+    },
+    {
+      "id": "ch-174",
+      "pour": "elle",
+      "edition": "Sweet tooth edition",
+      "questions": [
+        "What would she grab at the bakery? Brioche / Donut / Muffin",
+        "Which ice cream would she get? Sundae / Gelato / Soft serve",
+        "Which movie snack would she pick? Licorice / Popcorn / Nachos"
+      ]
+    },
+    {
+      "id": "ch-175",
+      "pour": "lui",
+      "edition": "Travel edition",
+      "questions": [
+        "Which city would he take you to? Tokyo / Las Vegas / New York",
+        "How would he travel with you? Hot air balloon / Private jet / Cruise ship",
+        "Where would he book a weekend? Overwater villa / Beach bungalow / Glamping tent"
+      ]
+    },
+    {
+      "id": "ch-176",
+      "pour": "lui",
+      "edition": "Morning edition",
+      "questions": [
+        "Which breakfast would he make you? Açaí bowl / Shakshuka / French toast",
+        "How would he have his eggs? Soft-boiled / Scrambled / Fried",
+        "Which drink would he get? Lemonade / Smoothie / Bubble tea"
+      ]
+    },
+    {
+      "id": "ch-177",
+      "pour": "elle",
+      "edition": "Food edition",
+      "questions": [
+        "Which pizza would she order? Deep dish / Margherita / Pepperoni",
+        "Which pasta would she pick? Pesto / Lasagna / Ravioli",
+        "Which potato would she pick? Rösti / French fries / Curly fries"
+      ]
+    },
+    {
+      "id": "ch-178",
+      "pour": "lui",
+      "edition": "Hobbies edition",
+      "questions": [
+        "Which instrument would he play? Drums / Piano / Electric guitar",
+        "Which workout would he pick? Weightlifting / Yoga / Boxing",
+        "Which hobby would he pick up? Gardening / Woodworking / Photography"
+      ]
+    },
+    {
+      "id": "ch-179",
+      "pour": "lui",
+      "edition": "Dream home edition",
+      "questions": [
+        "Which dream house would he pick? Castle / Cozy cabin / Mountain chalet",
+        "Which view would he wake up to? Northern lights / Eiffel Tower / Ocean",
+        "Which cat would he adopt? Siamese / British Shorthair / Ginger cat"
+      ]
+    },
+    {
+      "id": "ch-180",
+      "pour": "elle",
+      "edition": "Style edition",
+      "questions": [
+        "Which shoes would she pick? High heels / Ballet flats / UGG boots",
+        "Which phone would she pick? BlackBerry / iPhone / Google Pixel",
+        "Which sneakers would she pick? Stan Smith / Crocs / New Balance"
+      ]
+    },
+    {
+      "id": "ch-181",
+      "pour": "lui",
+      "edition": "Adventure edition",
+      "questions": [
+        "Which adventure would he try? Kayaking / Horse riding / Bungee jumping",
+        "Which sport would he watch? Rugby / Ice hockey / Formula 1",
+        "How would he travel with you? Camper van / Sailboat / Convertible"
+      ]
+    },
+    {
+      "id": "ch-182",
+      "pour": "lui",
+      "edition": "Dream life edition",
+      "questions": [
+        "Which watch would he wear? Rolex Submariner / Cartier Tank / Pocket watch",
+        "Which house would he pick? Lake house / Loft apartment / Tiny house",
+        "Where would he take you on vacation? Morocco / Switzerland / Japan"
+      ]
+    },
+    {
+      "id": "ch-183",
+      "pour": "elle",
+      "edition": "Game night edition",
+      "questions": [
+        "What would she order at 2 a.m.? Burrito / Tacos / Instant noodles",
+        "Which game night would she pick? Foosball / Chess / Pool",
+        "Which movie snack would she pick? Gummy bears / Chocolate bar / Ice cream tub"
+      ]
+    },
+    {
+      "id": "ch-184",
+      "pour": "lui",
+      "edition": "Wedding edition",
+      "questions": [
+        "Where would he want to get married? Vegas chapel / Lakeside / Beach",
+        "Where would he propose? Hot air balloon / Restaurant / Mountaintop",
+        "Which ring would he pick for you? Vintage ring / Halo ring / Rose gold ring"
+      ]
+    },
+    {
+      "id": "ch-185",
+      "pour": "lui",
+      "edition": "Car lovers edition",
+      "questions": [
+        "Which classic car would he drive? 1959 Cadillac / Mercedes 300 SL / Classic Mini",
+        "Which motorbike would he ride? Harley-Davidson / Ducati Panigale / Vespa",
+        "Which car would he pick? Ford Mustang / Range Rover / Aston Martin DB11"
+      ]
+    },
+    {
+      "id": "ch-186",
+      "pour": "elle",
+      "edition": "Hobbies edition",
+      "questions": [
+        "Which instrument would she play? Violin / Acoustic guitar / Saxophone",
+        "Which workout would she pick? Swimming / CrossFit / Running",
+        "Which hobby would she pick up? Gardening / Fishing / Pottery"
+      ]
+    },
+    {
+      "id": "ch-187",
+      "pour": "lui",
+      "edition": "Cozy night in edition",
+      "questions": [
+        "Which dessert would he pick? Crêpes / Macarons / Huge birthday cake",
+        "What would he cook for date night? Indian curry / Ramen / Paella",
+        "Which game night would he pick? Video games / Board games / Poker"
+      ]
+    },
+    {
+      "id": "ch-188",
+      "pour": "lui",
+      "edition": "Game night edition",
+      "questions": [
+        "What would he order at 2 a.m.? Grilled cheese / Tacos / Kebab",
+        "Which console would he pick? Nintendo Switch / PlayStation 5 / PlayStation 2",
+        "Which movie snack would he pick? Popcorn / Nachos / Chocolate bar"
+      ]
+    },
+    {
+      "id": "ch-189",
+      "pour": "elle",
+      "edition": "Luxury edition",
+      "questions": [
+        "Which watch would she wear? Pocket watch / Omega Speedmaster / Cartier Tank",
+        "Which dream house would she pick? Lake house / Mountain chalet / Modern villa",
+        "Where would she book a weekend for two? Houseboat / Treehouse / Glamping tent"
+      ]
+    },
+    {
+      "id": "ch-190",
+      "pour": "lui",
+      "edition": "Dream home edition",
+      "questions": [
+        "Which view would he wake up to? Lake / Desert / Mountains",
+        "Which dog would he pick? Samoyed / Australian Shepherd / French Bulldog",
+        "Which cat would he adopt? Norwegian Forest Cat / Black cat / Ragdoll"
+      ]
+    },
+    {
+      "id": "ch-191",
+      "pour": "lui",
+      "edition": "Spring edition",
+      "questions": [
+        "Which season would he pick? Autumn / Winter / Spring",
+        "Which adventure would he try? Rock climbing / Paragliding / Scuba diving",
+        "Which flowers would he get you? Red roses / Lavender / Hydrangeas"
+      ]
+    },
+    {
+      "id": "ch-192",
+      "pour": "elle",
+      "edition": "Date night edition",
+      "questions": [
+        "Which date would she take you on? Fancy dinner / Hot air balloon / Mini golf",
+        "What would she order at the bar? Beer / Margarita / Aperol Spritz",
+        "Which dessert would she pick? Huge birthday cake / Vanilla éclair / Red velvet cake"
+      ]
+    },
+    {
+      "id": "ch-193",
+      "pour": "lui",
+      "edition": "Weekend edition",
+      "questions": [
+        "Which hobby would he pick up? Chess / Knitting / Pottery",
+        "Which sport would he watch? American football / Baseball / Boxing",
+        "Which workout would he pick? CrossFit / Cycling / Weightlifting"
+      ]
+    },
+    {
+      "id": "ch-194",
+      "pour": "lui",
+      "edition": "Cozy night in edition",
+      "questions": [
+        "Which console would he pick? Nintendo Switch / PlayStation 5 / Game Boy",
+        "Which drink would he get? Smoothie / Lemonade / Iced tea",
+        "Which game night would he pick? Chess / Pool / Ping pong"
+      ]
+    },
+    {
+      "id": "ch-195",
+      "pour": "elle",
+      "edition": "Drinks edition",
+      "questions": [
+        "What would she order at the bar? Espresso martini / Piña colada / Gin and tonic",
+        "Which coffee would she order? Espresso / Americano / Matcha latte",
+        "Which drink would she get? Lemonade / Bubble tea / Iced tea"
+      ]
+    },
+    {
+      "id": "ch-196",
+      "pour": "lui",
+      "edition": "Dream home edition",
+      "questions": [
+        "Which view would he wake up to? Forest / City skyline / Snowy peaks",
+        "Which dream house would he pick? Victorian house / Loft apartment / Tiny house",
+        "Which dog would he adopt? Jack Russell / Labrador / Husky"
+      ]
+    },
+    {
+      "id": "ch-197",
+      "pour": "lui",
+      "edition": "Car lovers edition",
+      "questions": [
+        "Which classic car would he drive? 1959 Cadillac / 1967 Mustang / Citroën 2CV",
+        "Which motorbike would he ride? Indian Scout / Yamaha MT-07 / Kawasaki Ninja",
+        "Which car would he drive? Porsche 911 / Tesla Model S / Mini Cooper"
+      ]
+    },
+    {
+      "id": "ch-198",
+      "pour": "elle",
+      "edition": "Luxury edition",
+      "questions": [
+        "Which watch would she wear? Casio G-Shock / Rolex Submariner / Casio digital",
+        "How would she travel with you? Hot air balloon / Motorbike / Private jet",
+        "Where would she book a weekend? Log cabin / Beach bungalow / Houseboat"
+      ]
+    },
+    {
+      "id": "ch-199",
+      "pour": "lui",
+      "edition": "Date night edition",
+      "questions": [
+        "Which date would he take you on? Theme park / Picnic / Stargazing",
+        "Which flowers would he get you? Daisies / Wildflowers / Lilies",
+        "Which dinner would he pick? Ramen / Pad thai / Indian curry"
+      ]
+    },
+    {
+      "id": "ch-200",
+      "pour": "lui",
+      "edition": "Weekend edition",
+      "questions": [
+        "Which hobby would he pick up? Photography / Woodworking / Fishing",
+        "Which workout would he pick? Swimming / Yoga / Boxing",
+        "Which adventure would he try? Surfing / Horse riding / Kayaking"
+      ]
+    },
+    {
+      "id": "ch-201",
+      "pour": "elle",
+      "edition": "Pet lovers edition",
+      "questions": [
+        "Which pet would she want? Parrot / Axolotl / Goldfish",
+        "Which cat would she adopt? Scottish Fold / Bengal / Maine Coon",
+        "Which dog would she adopt? Belgian Malinois / Chihuahua / Shiba Inu"
+      ]
+    },
+    {
+      "id": "ch-202",
+      "pour": "lui",
+      "edition": "Car lovers edition",
+      "questions": [
+        "Which classic car would he drive? VW Camper Van / VW Beetle / Porsche 356",
+        "Which motorbike would he ride? Kawasaki Ninja / BMW GS / Triumph Bonneville",
+        "Which car would he pick? Mercedes-AMG C63 S / Ferrari F8 / Jeep Wrangler"
+      ]
+    },
+    {
+      "id": "ch-203",
+      "pour": "lui",
+      "edition": "Spring edition",
+      "questions": [
+        "Which season would he pick? Summer / Spring / Autumn",
+        "Which adventure would he try? Snowboarding / Skiing / Rock climbing",
+        "Which date would he plan? Cinema night / Beach sunset / Ice skating"
+      ]
+    },
+    {
+      "id": "ch-204",
+      "pour": "elle",
+      "edition": "Style edition",
+      "questions": [
+        "Which shoes would she pick? High heels / UGG boots / Knee-high boots",
+        "Which phone would she pick? Nokia 3310 / Samsung Galaxy / Flip phone",
+        "Which sneakers would she pick? Vans Old Skool / Air Jordan / Adidas Samba"
+      ]
+    },
+    {
+      "id": "ch-205",
+      "pour": "lui",
+      "edition": "Game night edition",
+      "questions": [
+        "What would he order at 2 a.m.? Fried chicken / Burger / Instant noodles",
+        "Which console would he pick? Xbox / PlayStation 2 / Gaming PC",
+        "Which game night would he pick? Poker / Video games / Foosball"
+      ]
+    },
+    {
+      "id": "ch-206",
+      "pour": "lui",
+      "edition": "Cozy night in edition",
+      "questions": [
+        "Which cake would he pick? Mille-feuille / Crêpes / Apple pie",
+        "Which movie snack would he pick? Ice cream tub / Gummy bears / Licorice",
+        "What would he cook for date night? Cheese fondue / Raclette / Fish and chips"
+      ]
+    },
+    {
+      "id": "ch-207",
+      "pour": "elle",
+      "edition": "Wedding edition",
+      "questions": [
+        "Where would she want to get married? Garden / Castle / City hall",
+        "Where would she want you to propose? Eiffel Tower / Northern lights / Beach at sunset",
+        "Which ring would she want? Emerald ring / Solitaire diamond / Gold band"
+      ]
+    },
+    {
+      "id": "ch-208",
+      "pour": "lui",
+      "edition": "Food edition",
+      "questions": [
+        "Which breakfast would he choose? Croissant & coffee / Waffles / Avocado toast",
+        "Which potato would he pick? Curly fries / Hash browns / Potato gratin",
+        "Which pizza would he order? Margherita / Four cheese / Hawaiian"
+      ]
+    },
+    {
+      "id": "ch-209",
+      "pour": "lui",
+      "edition": "Hobbies edition",
+      "questions": [
+        "Which instrument would he play? Electric guitar / DJ decks / Acoustic guitar",
+        "Which hobby would he pick up? Gardening / Photography / Knitting",
+        "Which workout would he pick? Weightlifting / CrossFit / Yoga"
+      ]
+    },
+    {
+      "id": "ch-210",
+      "pour": "elle",
+      "edition": "Game night edition",
+      "questions": [
+        "What would she order at 2 a.m.? Nuggets / Kebab / Grilled cheese",
+        "Which game night would she pick? Ping pong / Board games / Video games",
+        "Which drink would she get? Lemonade / Smoothie / Iced tea"
+      ]
+    },
+    {
+      "id": "ch-211",
+      "pour": "lui",
+      "edition": "Morning edition",
+      "questions": [
+        "How would he have his eggs? Scrambled / Omelette / Poached",
+        "Which breakfast would he make you? Full English / Cereal / French toast",
+        "What would he grab at the bakery? Pain au chocolat / Cinnamon roll / Muffin"
+      ]
+    },
+    {
+      "id": "ch-212",
+      "pour": "lui",
+      "edition": "Luxury edition",
+      "questions": [
+        "Which watch would he wear? Seiko diver / Casio G-Shock / Omega Speedmaster",
+        "How would he travel with you? Camper van / Sailboat / Private jet",
+        "Where would he book a weekend for two? Ski chalet / Desert camp / Castle hotel"
+      ]
+    },
+    {
+      "id": "ch-213",
+      "pour": "elle",
+      "edition": "Cozy night in edition",
+      "questions": [
+        "Which cake would she pick? Macarons / Chocolate lava cake / Tiramisu",
+        "Which dinner would she pick? Sushi / Paella / Lobster",
+        "Which console would she pick? Game Boy / Nintendo Switch / Xbox"
+      ]
+    },
+    {
+      "id": "ch-214",
+      "pour": "lui",
+      "edition": "Food edition",
+      "questions": [
+        "Which pasta would he pick? Carbonara / Mac and cheese / Gnocchi",
+        "Which pizza would he order? Calzone / Veggie / Deep dish",
+        "Which potato would he pick? Rösti / French fries / Hash browns"
+      ]
+    },
+    {
+      "id": "ch-215",
+      "pour": "lui",
+      "edition": "Travel edition",
+      "questions": [
+        "Which city would he take you to? Paris / Marrakech / Rio de Janeiro",
+        "Where would he go on vacation? Italy / Bali / Hawaii",
+        "How would he travel with you? Convertible / Motorbike / Cruise ship"
+      ]
+    },
+    {
+      "id": "ch-216",
+      "pour": "elle",
+      "edition": "Sweet tooth edition",
+      "questions": [
+        "Which ice cream would she get? Mochi ice cream / Banana split / Ice cream sandwich",
+        "What would she grab at the bakery? Brioche / Croissant / Baguette",
+        "Which movie snack would she pick? Nachos / Ice cream tub / Chocolate bar"
+      ]
+    },
+    {
+      "id": "ch-217",
+      "pour": "lui",
+      "edition": "Date night edition",
+      "questions": [
+        "Which flowers would he get you? Wildflowers / Orchid / Peonies",
+        "Which date would he take you on? Wine tasting / Theme park / Stargazing",
+        "What would he order at the bar? Mojito / Whiskey / Red wine"
+      ]
+    },
+    {
+      "id": "ch-218",
+      "pour": "lui",
+      "edition": "Adventure edition",
+      "questions": [
+        "Which sport would he watch? Boxing / Football / Tennis",
+        "Which adventure would he try? Scuba diving / Surfing / Bungee jumping",
+        "Where would he take you on vacation? Dubai / Croatia / Costa Rica"
+      ]
+    },
+    {
+      "id": "ch-219",
+      "pour": "elle",
+      "edition": "Morning edition",
+      "questions": [
+        "How would she have her eggs? Fried / Omelette / Poached",
+        "Which breakfast would she make you? Pancakes / Croissant & coffee / Avocado toast",
+        "What would she grab at the bakery? Bagel / Pain au chocolat / Donut"
+      ]
+    },
+    {
+      "id": "ch-220",
+      "pour": "lui",
+      "edition": "Pet lovers edition",
+      "questions": [
+        "Which pet would he want? Rabbit / Guinea pig / Hedgehog",
+        "Which cat would he adopt? Scottish Fold / Maine Coon / Persian",
+        "Which dog would he pick? Doberman / Beagle / German Shepherd"
+      ]
+    },
+    {
+      "id": "ch-221",
+      "pour": "lui",
+      "edition": "Cozy night in edition",
+      "questions": [
+        "Which dessert would he pick? Pavlova / Brownie / Churros",
+        "Which game night would he pick? Foosball / Pool / Ping pong",
+        "Which dinner would he pick? Risotto / Steak and fries / Korean BBQ"
+      ]
+    },
+    {
+      "id": "ch-222",
+      "pour": "elle",
+      "edition": "Style edition",
+      "questions": [
+        "Which shoes would she pick? UGG boots / Knee-high boots / Ballet flats",
+        "Which phone would she pick? BlackBerry / Flip phone / Nokia 3310",
+        "Which sneakers would she pick? Nike Air Max / Vans Old Skool / Birkenstock"
+      ]
+    },
+    {
+      "id": "ch-223",
+      "pour": "lui",
+      "edition": "Adventure edition",
+      "questions": [
+        "Which sport would he watch? Basketball / American football / Tennis",
+        "Which adventure would he try? Paragliding / Skydiving / Skiing",
+        "Where would he go on vacation? Canada / Lapland / Mexico"
+      ]
+    },
+    {
+      "id": "ch-224",
+      "pour": "lui",
+      "edition": "Food edition",
+      "questions": [
+        "Which pasta would he pick? Ravioli / Carbonara / Bolognese",
+        "Which potato would he pick? Potato gratin / Hash browns / Rösti",
+        "Which pizza would he order? Margherita / Deep dish / Calzone"
+      ]
+    },
+    {
+      "id": "ch-225",
+      "pour": "elle",
+      "edition": "Weekend edition",
+      "questions": [
+        "Which hobby would she pick up? Woodworking / Fishing / Pottery",
+        "Which workout would she pick? Boxing / Running / Swimming",
+        "Which date would she plan? Beach sunset / Ice skating / Mini golf"
+      ]
+    },
+    {
+      "id": "ch-226",
+      "pour": "lui",
+      "edition": "Spring edition",
+      "questions": [
+        "Which season would he pick? Summer / Winter / Autumn",
+        "Which adventure would he try? Snowboarding / Bungee jumping / Rock climbing",
+        "Which flowers would he get you? Lilies / Lavender / Red roses"
+      ]
+    },
+    {
+      "id": "ch-227",
+      "pour": "lui",
+      "edition": "Wedding edition",
+      "questions": [
+        "Where would he want to get married? Garden / Mountaintop / City hall",
+        "Where would he propose? Rooftop / Hot air balloon / Restaurant",
+        "Which ring would he pick for you? Emerald ring / Gold band / Halo ring"
+      ]
+    },
+    {
+      "id": "ch-228",
+      "pour": "elle",
+      "edition": "Car lovers edition",
+      "questions": [
+        "Which classic car would she drive? Citroën 2CV / Classic Mini / Mercedes 300 SL",
+        "Which motorbike would she ride? Harley-Davidson / Yamaha MT-07 / Triumph Bonneville",
+        "Which car would she pick? Mercedes-AMG C63 S / Ford Mustang / Nissan GT-R"
+      ]
+    },
+    {
+      "id": "ch-229",
+      "pour": "lui",
+      "edition": "Game night edition",
+      "questions": [
+        "What would he order at 2 a.m.? Grilled cheese / Kebab / Burrito",
+        "Which movie snack would he pick? Licorice / Popcorn / Gummy bears",
+        "Which drink would he get? Smoothie / Bubble tea / Iced tea"
+      ]
+    },
+    {
+      "id": "ch-230",
+      "pour": "lui",
+      "edition": "Adventure edition",
+      "questions": [
+        "Which sport would he watch? Ice hockey / Baseball / Golf",
+        "Which adventure would he try? Skydiving / Surfing / Paragliding",
+        "How would he travel with you? Cruise ship / Sailboat / Private jet"
+      ]
+    },
+    {
+      "id": "ch-231",
+      "pour": "elle",
+      "edition": "Food edition",
+      "questions": [
+        "Which pasta would she pick? Lasagna / Seafood pasta / Pesto",
+        "How would she have her eggs? Poached / Soft-boiled / Scrambled",
+        "Which pizza would she order? Four cheese / Veggie / Pepperoni"
+      ]
+    },
+    {
+      "id": "ch-232",
+      "pour": "lui",
+      "edition": "Weekend edition",
+      "questions": [
+        "Which workout would he pick? CrossFit / Boxing / Cycling",
+        "Which hobby would he pick up? Gardening / Knitting / Chess",
+        "Which date would he plan? Wine tasting / Picnic / Camping"
+      ]
+    },
+    {
+      "id": "ch-233",
+      "pour": "lui",
+      "edition": "Date night edition",
+      "questions": [
+        "What would he order at the bar? Espresso martini / Whiskey / Gin and tonic",
+        "Which flowers would he get you? Peonies / Sunflowers / Orchid",
+        "Which cake would he pick? Strawberry tart / Crème brûlée / Cheesecake"
+      ]
+    },
+    {
+      "id": "ch-234",
+      "pour": "elle",
+      "edition": "Style edition",
+      "questions": [
+        "Which shoes would she pick? Ballet flats / Knee-high boots / UGG boots",
+        "Which phone would she pick? iPhone / Samsung Galaxy / Google Pixel",
+        "Which sneakers would she pick? Air Force 1 / Crocs / Stan Smith"
+      ]
+    },
+    {
+      "id": "ch-235",
+      "pour": "lui",
+      "edition": "Car lovers edition",
+      "questions": [
+        "Which classic car would he drive? 1967 Mustang / Porsche 356 / Jaguar E-Type",
+        "Which motorbike would he ride? Vespa / Indian Scout / Ducati Panigale",
+        "Which car would he drive? Toyota Supra / McLaren 720S / Bugatti Chiron"
+      ]
+    },
+    {
+      "id": "ch-236",
+      "pour": "lui",
+      "edition": "Spring edition",
+      "questions": [
+        "Which season would he pick? Summer / Winter / Spring",
+        "Which flowers would he get you? Hydrangeas / Daisies / Tulips",
+        "Which adventure would he try? Horse riding / Kayaking / Scuba diving"
+      ]
+    },
+    {
+      "id": "ch-237",
+      "pour": "elle",
+      "edition": "Food edition",
+      "questions": [
+        "Which breakfast would she choose? Cereal / Açaí bowl / Waffles",
+        "Which potato would she pick? French fries / Curly fries / Hash browns",
+        "Which pasta would she pick? Gnocchi / Ravioli / Lasagna"
+      ]
+    },
+    {
+      "id": "ch-238",
+      "pour": "lui",
+      "edition": "Adventure edition",
+      "questions": [
+        "Which sport would he watch? Formula 1 / Rugby / Football",
+        "Where would he book a weekend? Desert camp / Ski chalet / Treehouse",
+        "Where would he take you on vacation? Thailand / USA / Maldives"
+      ]
+    },
+    {
+      "id": "ch-239",
+      "pour": "lui",
+      "edition": "Wedding edition",
+      "questions": [
+        "Where would he want to get married? Castle / Vegas chapel / Vineyard",
+        "Where would he propose? Disney castle / Eiffel Tower / Hot air balloon",
+        "Which ring would he pick for you? Solitaire diamond / Vintage ring / Rose gold ring"
+      ]
+    },
+    {
+      "id": "ch-240",
+      "pour": "elle",
+      "edition": "Cozy night in edition",
+      "questions": [
+        "Which console would she pick? PlayStation 2 / PlayStation 5 / Gaming PC",
+        "Which dessert would she pick? Apple pie / Pavlova / Huge birthday cake",
+        "Which game night would she pick? Chess / Poker / Board games"
+      ]
+    }
   ]
 }

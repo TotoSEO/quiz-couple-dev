@@ -1,0 +1,92 @@
+{
+  "jour": "2027-03-19",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-217",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "lui",
+        "etiquette": "Date night edition",
+        "accroche": "What would he choose?",
+        "consigne": "Guess his 3 picks, then send it to him!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "Which flowers would he get you?",
+            "options": [
+              {
+                "texte": "Wildflowers",
+                "image": "choisirait/fleurs/fleurs-sauvages.webp"
+              },
+              {
+                "texte": "Orchid",
+                "image": "choisirait/fleurs/orchidee.webp"
+              },
+              {
+                "texte": "Peonies",
+                "image": "choisirait/fleurs/pivoines.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which date would he take you on?",
+            "options": [
+              {
+                "texte": "Wine tasting",
+                "image": "choisirait/date/degustation.webp"
+              },
+              {
+                "texte": "Theme park",
+                "image": "choisirait/date/parc.webp"
+              },
+              {
+                "texte": "Stargazing",
+                "image": "choisirait/date/etoiles.webp"
+              }
+            ]
+          },
+          {
+            "question": "What would he order at the bar?",
+            "options": [
+              {
+                "texte": "Mojito",
+                "image": "choisirait/bar/mojito.webp"
+              },
+              {
+                "texte": "Whiskey",
+                "image": "choisirait/bar/whisky.webp"
+              },
+              {
+                "texte": "Red wine",
+                "image": "choisirait/bar/vin-rouge.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Now send it to him. Did you guess right?",
+          "bouton": "Send this to him",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Date night edition. He will swear you got at least one wrong.\n\nSend this to him",
+      "hashtags": [
+        "#couplequiz",
+        "#boyfriendquiz",
+        "#thisorthat",
+        "#datenight",
+        "#quizcouple"
+      ]
+    }
+  }
+}

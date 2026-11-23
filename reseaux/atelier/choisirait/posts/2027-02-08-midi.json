@@ -1,0 +1,92 @@
+{
+  "jour": "2027-02-08",
+  "creneau": "midi",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-145",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "lui",
+        "etiquette": "Valentine's edition",
+        "accroche": "What would he choose?",
+        "consigne": "Guess his 3 picks, then send it to him!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "What would he get you for Valentine's?",
+            "options": [
+              {
+                "texte": "Heart balloons",
+                "image": "choisirait/valentin/ballons-coeur.webp"
+              },
+              {
+                "texte": "Perfume",
+                "image": "choisirait/valentin/parfum-valentin.webp"
+              },
+              {
+                "texte": "Red roses",
+                "image": "choisirait/valentin/valentin-roses.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which date would he take you on?",
+            "options": [
+              {
+                "texte": "Wine tasting",
+                "image": "choisirait/date/degustation.webp"
+              },
+              {
+                "texte": "Ice skating",
+                "image": "choisirait/date/patinoire.webp"
+              },
+              {
+                "texte": "Hot air balloon",
+                "image": "choisirait/date/montgolfiere-date.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which ring would he pick for you?",
+            "options": [
+              {
+                "texte": "Vintage ring",
+                "image": "choisirait/bague/vintage-bague.webp"
+              },
+              {
+                "texte": "Emerald ring",
+                "image": "choisirait/bague/emeraude.webp"
+              },
+              {
+                "texte": "Halo ring",
+                "image": "choisirait/bague/halo.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Now send it to him. Did you guess right?",
+          "bouton": "Send this to him",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Valentine's edition. No cheating: decide before the timer runs out.\n\nSend this to him",
+      "hashtags": [
+        "#couplequiz",
+        "#boyfriendquiz",
+        "#thisorthat",
+        "#valentinesday",
+        "#quizcouple"
+      ]
+    }
+  }
+}

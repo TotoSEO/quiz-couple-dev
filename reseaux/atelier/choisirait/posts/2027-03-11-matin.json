@@ -1,0 +1,92 @@
+{
+  "jour": "2027-03-11",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-202",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "lui",
+        "etiquette": "Car lovers edition",
+        "accroche": "What would he choose?",
+        "consigne": "Answer for him, then let him check!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "Which classic car would he drive?",
+            "options": [
+              {
+                "texte": "VW Camper Van",
+                "image": "choisirait/vintage/combi.webp"
+              },
+              {
+                "texte": "VW Beetle",
+                "image": "choisirait/vintage/coccinelle.webp"
+              },
+              {
+                "texte": "Porsche 356",
+                "image": "choisirait/vintage/porsche-356.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which motorbike would he ride?",
+            "options": [
+              {
+                "texte": "Kawasaki Ninja",
+                "image": "choisirait/moto/ninja.webp"
+              },
+              {
+                "texte": "BMW GS",
+                "image": "choisirait/moto/bmw-gs.webp"
+              },
+              {
+                "texte": "Triumph Bonneville",
+                "image": "choisirait/moto/bonneville.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which car would he pick?",
+            "options": [
+              {
+                "texte": "Mercedes-AMG C63 S",
+                "image": "choisirait/voiture/amg-c63.webp"
+              },
+              {
+                "texte": "Ferrari F8",
+                "image": "choisirait/voiture/ferrari-f8.webp"
+              },
+              {
+                "texte": "Jeep Wrangler",
+                "image": "choisirait/voiture/jeep-wrangler.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Now send it to him. Did you guess right?",
+          "bouton": "Send this to him",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Car lovers edition. Write down his three letters before you send it.\n\nSend this to him",
+      "hashtags": [
+        "#couplequiz",
+        "#boyfriendquiz",
+        "#thisorthat",
+        "#carlovers",
+        "#quizcouple"
+      ]
+    }
+  }
+}

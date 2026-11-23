@@ -7,11 +7,12 @@ import { AMBIANCES, BIBLIOTHEQUE } from './musique.mjs';
 import { AMBIANCES_SON } from './son.mjs';
 import { CATEGORIES_MIPAPS, controlerMipaps, GABARITS_MIPAPS } from './mipaps.mjs';
 import { controlerBaton } from './baton.mjs';
+import { controlerChoisirait } from './choisirait.mjs';
 
 const CRENEAUX = ['matin', 'midi', 'soir'];
 // « baton » : le bonhomme bâton (« me in my dreams with u », octobre 2026),
 // un reel ; il n'a pas encore de catégorie dans la grille.
-const FORMAT_DU_GABARIT = { citation: 'reel', 'quiz-chrono': 'reel', 'connais-tu': 'reel', 'tu-preferes': 'reel', pov: 'reel', baton: 'reel', image: 'image', carrousel: 'carrousel', bd: 'image', ...GABARITS_MIPAPS };
+const FORMAT_DU_GABARIT = { citation: 'reel', 'quiz-chrono': 'reel', 'connais-tu': 'reel', 'tu-preferes': 'reel', choisirait: 'reel', pov: 'reel', baton: 'reel', image: 'image', carrousel: 'carrousel', bd: 'image', ...GABARITS_MIPAPS };
 // Le format que donne un gabarit : une image, sauf la BD rendue en carrousel
 // (une case par page) quand sa recette le demande.
 export const formatDuGabarit = (gabarit, recette) => (gabarit === 'bd' && recette?.sortie === 'carrousel' ? 'carrousel' : FORMAT_DU_GABARIT[gabarit]);
@@ -23,6 +24,9 @@ export const CATEGORIES = {
   statique: 'pov',
   'connais-tu': 'connais-tu',
   'tu-preferes': 'tu-preferes',
+  // « What would he/she choose? » (23 novembre 2026) : trois questions à
+  // trois photos, les matins et les midis
+  choisirait: 'choisirait',
   phrase: 'citation',
   post: 'image',
   carrousel: 'carrousel',
@@ -61,6 +65,7 @@ const chaines = (v, out = []) => {
 
 const titres = (r) => {
   if (['quiz-chrono', 'connais-tu', 'tu-preferes'].includes(r.gabarit)) return [r.etiquette, r.accroche, r.fin?.question];
+  if (r.gabarit === 'choisirait') return [r.etiquette, r.accroche, r.fin?.question, ...(Array.isArray(r.questions) ? r.questions.map((q) => q?.question) : [])];
   if (r.gabarit === 'pov') return [r.titre, ...(r.plans ?? []).map((p) => p.legende)];
   if (r.gabarit === 'baton') return [r.titre];
   if (r.gabarit === 'carrousel') return r.pages.flatMap((p) => [p.etiquette, p.accroche, p.question]);
@@ -96,7 +101,7 @@ export function controlerRecette(r, langue) {
   }
   if (r.musique !== undefined && !BIBLIOTHEQUE.morceaux.some((m) => m.fichier === r.musique)) f.push(`morceau absent de la bibliothèque : ${r.musique}`);
   if (r.gabarit === 'image' && !['citation', 'phrase'].includes(r.style)) f.push(`style d'image inconnu : ${r.style}`);
-  if (['quiz-chrono', 'connais-tu', 'tu-preferes'].includes(r.gabarit)) {
+  if (['quiz-chrono', 'connais-tu', 'tu-preferes', 'choisirait'].includes(r.gabarit)) {
     if (!r.etiquette?.trim() || !r.accroche?.trim() || !r.consigne?.trim()) f.push('intro incomplète (etiquette, accroche, consigne)');
     if (!r.fin?.question || !r.fin?.bouton || !r.fin?.signature) f.push('écran de fin incomplet');
     if (r.secondes && (r.secondes < 3 || r.secondes > 10)) f.push('chrono de 3 à 10 secondes');
@@ -116,6 +121,7 @@ export function controlerRecette(r, langue) {
       else if (d.a.length > 45 || d.b.length > 45) f.push(`dilemme ${i + 1} : 45 signes au plus par choix`);
     });
   }
+  if (r.gabarit === 'choisirait') f.push(...controlerChoisirait(r));
   if (r.gabarit === 'pov') f.push(...controlerPov(r));
   if (r.gabarit === 'baton') f.push(...controlerBaton(r));
   if (String(r.gabarit).startsWith('mipaps-')) f.push(...controlerMipaps(r));

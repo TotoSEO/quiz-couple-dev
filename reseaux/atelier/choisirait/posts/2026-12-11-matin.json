@@ -1,0 +1,92 @@
+{
+  "jour": "2026-12-11",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-035",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "lui",
+        "etiquette": "Morning edition",
+        "accroche": "What would he choose?",
+        "consigne": "3 questions, 4 seconds each. Pick for him!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "How would he have his eggs?",
+            "options": [
+              {
+                "texte": "Soft-boiled",
+                "image": "choisirait/oeufs/coque.webp"
+              },
+              {
+                "texte": "Fried",
+                "image": "choisirait/oeufs/oeuf-plat.webp"
+              },
+              {
+                "texte": "Poached",
+                "image": "choisirait/oeufs/poche.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which breakfast would he make you?",
+            "options": [
+              {
+                "texte": "Eggs Benedict",
+                "image": "choisirait/petitdej/benedict.webp"
+              },
+              {
+                "texte": "Açaí bowl",
+                "image": "choisirait/petitdej/acai.webp"
+              },
+              {
+                "texte": "Shakshuka",
+                "image": "choisirait/petitdej/shakshuka.webp"
+              }
+            ]
+          },
+          {
+            "question": "What would he grab at the bakery?",
+            "options": [
+              {
+                "texte": "Brioche",
+                "image": "choisirait/boulangerie/brioche.webp"
+              },
+              {
+                "texte": "Pain au chocolat",
+                "image": "choisirait/boulangerie/pain-chocolat.webp"
+              },
+              {
+                "texte": "Muffin",
+                "image": "choisirait/boulangerie/muffin.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Send it to him: how many did you get?",
+          "bouton": "Send this to him",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Morning edition. No cheating: decide before the timer runs out.\n\nSend this to him",
+      "hashtags": [
+        "#couplequiz",
+        "#boyfriendquiz",
+        "#thisorthat",
+        "#breakfast",
+        "#quizcouple"
+      ]
+    }
+  }
+}

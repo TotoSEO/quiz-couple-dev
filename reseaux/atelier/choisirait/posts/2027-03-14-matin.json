@@ -1,0 +1,92 @@
+{
+  "jour": "2027-03-14",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-207",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "elle",
+        "etiquette": "Wedding edition",
+        "accroche": "What would she choose?",
+        "consigne": "3 questions, 4 seconds each. Pick for her!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "Where would she want to get married?",
+            "options": [
+              {
+                "texte": "Garden",
+                "image": "choisirait/mariage/mariage-jardin.webp"
+              },
+              {
+                "texte": "Castle",
+                "image": "choisirait/mariage/mariage-chateau.webp"
+              },
+              {
+                "texte": "City hall",
+                "image": "choisirait/mariage/mairie.webp"
+              }
+            ]
+          },
+          {
+            "question": "Where would she want you to propose?",
+            "options": [
+              {
+                "texte": "Eiffel Tower",
+                "image": "choisirait/demande/demande-eiffel.webp"
+              },
+              {
+                "texte": "Northern lights",
+                "image": "choisirait/demande/demande-aurores.webp"
+              },
+              {
+                "texte": "Beach at sunset",
+                "image": "choisirait/demande/demande-plage.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which ring would she want?",
+            "options": [
+              {
+                "texte": "Emerald ring",
+                "image": "choisirait/bague/emeraude.webp"
+              },
+              {
+                "texte": "Solitaire diamond",
+                "image": "choisirait/bague/solitaire.webp"
+              },
+              {
+                "texte": "Gold band",
+                "image": "choisirait/bague/alliance-or.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Got her 3 picks? Send it and see!",
+          "bouton": "Send this to her",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Wedding edition. She will swear you got at least one wrong.\n\nSend this to her",
+      "hashtags": [
+        "#couplequiz",
+        "#girlfriendquiz",
+        "#thisorthat",
+        "#engaged",
+        "#quizcouple"
+      ]
+    }
+  }
+}

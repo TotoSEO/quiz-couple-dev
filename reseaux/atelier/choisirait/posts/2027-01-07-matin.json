@@ -1,0 +1,92 @@
+{
+  "jour": "2027-01-07",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-085",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "lui",
+        "etiquette": "Wedding edition",
+        "accroche": "What would he choose?",
+        "consigne": "Guess his 3 picks, then send it to him!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "Where would he propose?",
+            "options": [
+              {
+                "texte": "Northern lights",
+                "image": "choisirait/demande/demande-aurores.webp"
+              },
+              {
+                "texte": "Beach at sunset",
+                "image": "choisirait/demande/demande-plage.webp"
+              },
+              {
+                "texte": "Disney castle",
+                "image": "choisirait/demande/demande-chateau.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which ring would he pick for you?",
+            "options": [
+              {
+                "texte": "Gold band",
+                "image": "choisirait/bague/alliance-or.webp"
+              },
+              {
+                "texte": "Solitaire diamond",
+                "image": "choisirait/bague/solitaire.webp"
+              },
+              {
+                "texte": "Vintage ring",
+                "image": "choisirait/bague/vintage-bague.webp"
+              }
+            ]
+          },
+          {
+            "question": "Where would he want to get married?",
+            "options": [
+              {
+                "texte": "Forest",
+                "image": "choisirait/vue/foret.webp"
+              },
+              {
+                "texte": "City hall",
+                "image": "choisirait/mariage/mairie.webp"
+              },
+              {
+                "texte": "Beach",
+                "image": "choisirait/vue/plage-tropicale.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Now send it to him. Did you guess right?",
+          "bouton": "Send this to him",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Wedding edition. No cheating: decide before the timer runs out.\n\nSend this to him",
+      "hashtags": [
+        "#couplequiz",
+        "#boyfriendquiz",
+        "#thisorthat",
+        "#engaged",
+        "#quizcouple"
+      ]
+    }
+  }
+}

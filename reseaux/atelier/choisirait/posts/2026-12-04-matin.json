@@ -1,0 +1,92 @@
+{
+  "jour": "2026-12-04",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-022",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "lui",
+        "etiquette": "Christmas edition",
+        "accroche": "What would he choose?",
+        "consigne": "Answer for him, then let him check!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "Which Christmas date would he plan?",
+            "options": [
+              {
+                "texte": "Christmas market",
+                "image": "choisirait/noel-sortie/marche-noel.webp"
+              },
+              {
+                "texte": "Movie by the tree",
+                "image": "choisirait/noel-sortie/film-sapin.webp"
+              },
+              {
+                "texte": "Ice skating",
+                "image": "choisirait/noel-sortie/patinoire-noel.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which gift would he want?",
+            "options": [
+              {
+                "texte": "Guitar",
+                "image": "choisirait/instrument/guitare-acoustique.webp"
+              },
+              {
+                "texte": "Watch",
+                "image": "choisirait/cadeau/montre-cadeau.webp"
+              },
+              {
+                "texte": "Sneakers",
+                "image": "choisirait/cadeau/baskets-cadeau.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which Christmas treat would he pick?",
+            "options": [
+              {
+                "texte": "Stollen",
+                "image": "choisirait/noel-gourmandise/stollen.webp"
+              },
+              {
+                "texte": "Panettone",
+                "image": "choisirait/noel-gourmandise/panettone.webp"
+              },
+              {
+                "texte": "Gingerbread cookies",
+                "image": "choisirait/noel-gourmandise/pain-epices.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Now send it to him. Did you guess right?",
+          "bouton": "Send this to him",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Christmas edition. Write down his three letters before you send it.\n\nSend this to him",
+      "hashtags": [
+        "#couplequiz",
+        "#boyfriendquiz",
+        "#thisorthat",
+        "#christmas",
+        "#quizcouple"
+      ]
+    }
+  }
+}

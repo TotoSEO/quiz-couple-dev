@@ -1,0 +1,92 @@
+{
+  "jour": "2027-03-10",
+  "creneau": "midi",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-201",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "elle",
+        "etiquette": "Pet lovers edition",
+        "accroche": "What would she choose?",
+        "consigne": "Guess her 3 picks, then send it to her!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "Which pet would she want?",
+            "options": [
+              {
+                "texte": "Parrot",
+                "image": "choisirait/animal/perroquet.webp"
+              },
+              {
+                "texte": "Axolotl",
+                "image": "choisirait/animal/axolotl.webp"
+              },
+              {
+                "texte": "Goldfish",
+                "image": "choisirait/animal/poisson.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which cat would she adopt?",
+            "options": [
+              {
+                "texte": "Scottish Fold",
+                "image": "choisirait/chat/scottish.webp"
+              },
+              {
+                "texte": "Bengal",
+                "image": "choisirait/chat/bengal.webp"
+              },
+              {
+                "texte": "Maine Coon",
+                "image": "choisirait/chat/maine-coon.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which dog would she adopt?",
+            "options": [
+              {
+                "texte": "Belgian Malinois",
+                "image": "choisirait/chien/malinois.webp"
+              },
+              {
+                "texte": "Chihuahua",
+                "image": "choisirait/chien/chihuahua.webp"
+              },
+              {
+                "texte": "Shiba Inu",
+                "image": "choisirait/chien/shiba.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Got her 3 picks? Send it and see!",
+          "bouton": "Send this to her",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Pet lovers edition. Answer for her first, no peeking.\n\nSend this to her",
+      "hashtags": [
+        "#couplequiz",
+        "#girlfriendquiz",
+        "#thisorthat",
+        "#petlovers",
+        "#quizcouple"
+      ]
+    }
+  }
+}

@@ -12,8 +12,8 @@ const dossier = path.join(ici, '..', '..', 'studio', 'public', 'musique');
 export const BIBLIOTHEQUE = JSON.parse(fs.readFileSync(path.join(dossier, 'bibliotheque.json'), 'utf8'));
 export const AMBIANCES = ['leger', 'doux', 'sensuel', 'jeu', 'fetes'];
 
-const PAR_CATEGORIE = { pov: 'leger', coquin: 'sensuel', statique: 'doux', phrase: 'doux', 'connais-tu': 'jeu', 'tu-preferes': 'jeu' };
-const JEUX = ['connais-tu', 'tu-preferes', 'quiz-chrono'];
+const PAR_CATEGORIE = { pov: 'leger', coquin: 'sensuel', statique: 'doux', phrase: 'doux', 'connais-tu': 'jeu', 'tu-preferes': 'jeu', choisirait: 'jeu' };
+const JEUX = ['connais-tu', 'tu-preferes', 'quiz-chrono', 'choisirait'];
 export const AVEC_MUSIQUE = ['citation', 'pov', ...JEUX];
 // Un jeu dure plus d'une minute : il part du début du morceau (85 s), une
 // animation peut partir plus loin.

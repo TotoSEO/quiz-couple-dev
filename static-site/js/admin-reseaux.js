@@ -27,12 +27,12 @@
   var ORDRE = ['matin', 'midi', 'soir'];
   var FORMATS = { reel: 'Reel', image: 'Image', carrousel: 'Carrousel' };
   var GABARITS = {
-    citation: 'Citation', 'quiz-chrono': 'Quiz chrono', 'connais-tu': 'Connais-tu ton partenaire', 'tu-preferes': 'Tu préfères', pov: 'Animation', baton: 'Bonhomme bâton', image: 'Image', carrousel: 'Carrousel', bd: 'BD',
+    citation: 'Citation', 'quiz-chrono': 'Quiz chrono', 'connais-tu': 'Connais-tu ton partenaire', 'tu-preferes': 'Tu préfères', choisirait: 'Il / elle choisirait ?', pov: 'Animation', baton: 'Bonhomme bâton', image: 'Image', carrousel: 'Carrousel', bd: 'BD',
     'mipaps-reel': 'Reel animé', 'mipaps-statique': 'Reel statique', 'mipaps-carrousel': 'Carrousel-histoire', 'mipaps-post': 'Post'
   };
   // les catégories de la ligne éditoriale, plus parlantes que le gabarit
   var CATEGORIES = {
-    pov: 'Animation POV', coquin: 'Animation coquine', statique: 'Reel statique', 'connais-tu': 'Connais-tu ton partenaire', 'tu-preferes': 'Tu préfères', phrase: 'Phrase tendre', post: 'Post', carrousel: 'Carrousel', bd: 'BD', 'dix-mais': "He's a 10 but...", baton: 'Bonhomme bâton',
+    pov: 'Animation POV', coquin: 'Animation coquine', statique: 'Reel statique', 'connais-tu': 'Connais-tu ton partenaire', 'tu-preferes': 'Tu préfères', choisirait: 'Il / elle choisirait ? (What would he choose?)', phrase: 'Phrase tendre', post: 'Post', carrousel: 'Carrousel', bd: 'BD', 'dix-mais': "He's a 10 but...", baton: 'Bonhomme bâton',
     'mipaps-anime': 'Reel animé', 'mipaps-statique': 'Reel statique', 'mipaps-histoire': 'Carrousel-histoire', 'mipaps-post': 'Post'
   };
   // les catégories qu'une idée peut viser, par compte, avec le créneau de la

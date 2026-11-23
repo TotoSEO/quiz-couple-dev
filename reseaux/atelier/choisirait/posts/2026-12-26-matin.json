@@ -1,0 +1,92 @@
+{
+  "jour": "2026-12-26",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-063",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "elle",
+        "etiquette": "New Year's edition",
+        "accroche": "What would she choose?",
+        "consigne": "3 questions, 4 seconds each. Pick for her!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "Where would she spend New Year's Eve?",
+            "options": [
+              {
+                "texte": "Times Square",
+                "image": "choisirait/nouvel-an/times-square.webp"
+              },
+              {
+                "texte": "City fireworks",
+                "image": "choisirait/nouvel-an/feux-artifice.webp"
+              },
+              {
+                "texte": "Mountain chalet",
+                "image": "choisirait/nouvel-an/soiree-chalet.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which date would she plan?",
+            "options": [
+              {
+                "texte": "Camping",
+                "image": "choisirait/date/camping.webp"
+              },
+              {
+                "texte": "Arcade",
+                "image": "choisirait/date/arcade.webp"
+              },
+              {
+                "texte": "Ice skating",
+                "image": "choisirait/date/patinoire.webp"
+              }
+            ]
+          },
+          {
+            "question": "Where would she go on vacation?",
+            "options": [
+              {
+                "texte": "Thailand",
+                "image": "choisirait/vacances/thailande.webp"
+              },
+              {
+                "texte": "Morocco",
+                "image": "choisirait/vacances/maroc.webp"
+              },
+              {
+                "texte": "Egypt",
+                "image": "choisirait/vacances/egypte.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Got her 3 picks? Send it and see!",
+          "bouton": "Send this to her",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "New Year's edition. Guess first, send it after. Then compare.\n\nSend this to her",
+      "hashtags": [
+        "#couplequiz",
+        "#girlfriendquiz",
+        "#thisorthat",
+        "#newyearseve",
+        "#quizcouple"
+      ]
+    }
+  }
+}

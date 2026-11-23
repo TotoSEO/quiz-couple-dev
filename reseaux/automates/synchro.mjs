@@ -158,7 +158,12 @@ export async function synchroniser(base, posts, { maintenant = new Date() } = {}
         await ecrire(valeurs);
         change = true;
       } else if (MODIFIABLES.includes(existante.statut)) {
-        const aRetenter = existante.statut === 'echec' && (existante.essais || 0) < ESSAIS_RENDU_MAX;
+        // un créneau que la grille rouvre (les matins et les midis le 23
+        // novembre 2026) fait revivre le post qu'elle y avait retenu : la
+        // retenue est un échec aux essais épuisés, qu'aucun passage ne
+        // relançait, et le post ne serait jamais parti
+        const rouvert = existante.statut === 'echec' && existante.erreur === MOTIF_FERME;
+        const aRetenter = existante.statut === 'echec' && ((existante.essais || 0) < ESSAIS_RENDU_MAX || rouvert);
         if (memeContenu(existante, v) && !aRetenter) {
           // Le fichier n'a pas changé : le rendu reste bon. Jusqu'au 7 octobre
           // 2026, chaque synchro remettait toutes les déclinaisons en a_rendre
@@ -178,7 +183,7 @@ export async function synchroniser(base, posts, { maintenant = new Date() } = {}
           continue;
         }
         // la recette change (ou un rendu en échec est retenté) : il faut refaire le rendu
-        await ecrire({ ...valeurs, statut: 'a_rendre', fichiers: {}, erreur: null, essais: aRetenter ? existante.essais || 0 : 0 });
+        await ecrire({ ...valeurs, statut: 'a_rendre', fichiers: {}, erreur: null, essais: aRetenter && !rouvert ? existante.essais || 0 : 0 });
         change = true;
       } else {
         await base.journal('alerte', 'synchro', `${fichier} (${langue}) déjà ${existante.statut}, laissé tel quel`, null, existante.id);
@@ -200,13 +205,20 @@ export async function synchroniser(base, posts, { maintenant = new Date() } = {}
   // « valide » en base et partait quand même. Garde-fou : jamais quand la
   // branche d'un compte montre moins de dix fichiers (un checkout vide
   // annulerait toute la réserve). Un fichier qui revient fait revivre le post.
+  // Le seuil se compte par source (23 novembre 2026) : les posts
+  // « choisirait » sont écrits sur main par la fabrique, les autres par la
+  // routine sur la branche de l'atelier. Comptés ensemble, une branche vide
+  // (checkout raté) passerait le seuil grâce aux posts de main, et toute la
+  // réserve du soir serait annulée.
+  const source = (categorie) => (categorie === 'choisirait' ? 'choisirait' : 'atelier');
   for (const compte of comptes) {
-    const fichiers = posts.filter(({ post }) => (post.langue || Object.keys(post.variantes || {})[0]) === compte.langue);
-    if (fichiers.length < 10) continue;
-    const cles = new Set(fichiers.map(({ post }) => `${compte.langue}|${post.jour}|${post.creneau}`));
+    const duCompte = posts.filter(({ post }) => (post.langue || Object.keys(post.variantes || {})[0]) === compte.langue);
+    const cles = new Set(duCompte.map(({ post }) => `${compte.langue}|${post.jour}|${post.creneau}`));
+    const sources = new Set(['atelier', 'choisirait'].filter((src) => duCompte.filter(({ post }) => source(post.categorie) === src).length >= 10));
+    if (!sources.size) continue;
     const demain = ajouterJours(aujourdhui(compte.fuseau || 'Europe/Paris', maintenant), 1);
     for (const [cle, p] of existant.posts) {
-      if (p.langue !== compte.langue || p.statut !== 'valide' || p.jour < demain || cles.has(cle)) continue;
+      if (p.langue !== compte.langue || !sources.has(source(p.categorie)) || p.statut !== 'valide' || p.jour < demain || cles.has(cle)) continue;
       await base.update('social_posts', `id=eq.${p.id}`, { statut: 'annule', notes: { ...(p.notes || {}), annule_par: 'synchro', annule_le: maintenant.toISOString() } });
       existant.posts.set(cle, { ...p, statut: 'annule' });
       bilan.annules = (bilan.annules || 0) + 1;

@@ -1,0 +1,92 @@
+{
+  "jour": "2026-12-13",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-038",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "lui",
+        "etiquette": "Car lovers edition",
+        "accroche": "What would he choose?",
+        "consigne": "Answer for him, then let him check!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "Which classic car would he drive?",
+            "options": [
+              {
+                "texte": "Citroën 2CV",
+                "image": "choisirait/vintage/2cv.webp"
+              },
+              {
+                "texte": "VW Beetle",
+                "image": "choisirait/vintage/coccinelle.webp"
+              },
+              {
+                "texte": "1959 Cadillac",
+                "image": "choisirait/vintage/cadillac.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which motorbike would he ride?",
+            "options": [
+              {
+                "texte": "Vespa",
+                "image": "choisirait/moto/vespa.webp"
+              },
+              {
+                "texte": "Harley-Davidson",
+                "image": "choisirait/moto/harley.webp"
+              },
+              {
+                "texte": "Indian Scout",
+                "image": "choisirait/moto/indian.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which car would he drive?",
+            "options": [
+              {
+                "texte": "Mercedes G-Class",
+                "image": "choisirait/voiture/g-class.webp"
+              },
+              {
+                "texte": "Ferrari F8",
+                "image": "choisirait/voiture/ferrari-f8.webp"
+              },
+              {
+                "texte": "Range Rover",
+                "image": "choisirait/voiture/range-rover.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Send it to him: how many did you get?",
+          "bouton": "Send this to him",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Car lovers edition. Your answers first, then his reaction.\n\nSend this to him",
+      "hashtags": [
+        "#couplequiz",
+        "#boyfriendquiz",
+        "#thisorthat",
+        "#carlovers",
+        "#quizcouple"
+      ]
+    }
+  }
+}

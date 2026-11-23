@@ -1,0 +1,92 @@
+{
+  "jour": "2027-03-17",
+  "creneau": "midi",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-214",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "lui",
+        "etiquette": "Food edition",
+        "accroche": "What would he choose?",
+        "consigne": "Answer for him, then let him check!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "Which pasta would he pick?",
+            "options": [
+              {
+                "texte": "Carbonara",
+                "image": "choisirait/pates/carbonara.webp"
+              },
+              {
+                "texte": "Mac and cheese",
+                "image": "choisirait/pates/mac-cheese.webp"
+              },
+              {
+                "texte": "Gnocchi",
+                "image": "choisirait/pates/gnocchi.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which pizza would he order?",
+            "options": [
+              {
+                "texte": "Calzone",
+                "image": "choisirait/pizza/calzone.webp"
+              },
+              {
+                "texte": "Veggie",
+                "image": "choisirait/pizza/vegetarienne.webp"
+              },
+              {
+                "texte": "Deep dish",
+                "image": "choisirait/pizza/deep-dish.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which potato would he pick?",
+            "options": [
+              {
+                "texte": "Rösti",
+                "image": "choisirait/patate/rosti.webp"
+              },
+              {
+                "texte": "French fries",
+                "image": "choisirait/patate/frites.webp"
+              },
+              {
+                "texte": "Hash browns",
+                "image": "choisirait/patate/hash-browns.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Now send it to him. Did you guess right?",
+          "bouton": "Send this to him",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Food edition. If you get all three, you know him by heart.\n\nSend this to him",
+      "hashtags": [
+        "#couplequiz",
+        "#boyfriendquiz",
+        "#thisorthat",
+        "#foodie",
+        "#quizcouple"
+      ]
+    }
+  }
+}

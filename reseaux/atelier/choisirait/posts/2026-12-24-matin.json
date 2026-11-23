@@ -1,0 +1,92 @@
+{
+  "jour": "2026-12-24",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-059",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "lui",
+        "etiquette": "Christmas edition",
+        "accroche": "What would he choose?",
+        "consigne": "3 questions, 4 seconds each. Pick for him!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "Which winter date would he pick?",
+            "options": [
+              {
+                "texte": "Building a snowman",
+                "image": "choisirait/hiver/bonhomme.webp"
+              },
+              {
+                "texte": "Cabin by the fire",
+                "image": "choisirait/hiver/feu-cheminee.webp"
+              },
+              {
+                "texte": "Skiing",
+                "image": "choisirait/hiver/hiver-ski.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which Christmas date would he plan?",
+            "options": [
+              {
+                "texte": "Snowy chalet",
+                "image": "choisirait/noel-sortie/chalet-noel.webp"
+              },
+              {
+                "texte": "Ice skating",
+                "image": "choisirait/noel-sortie/patinoire-noel.webp"
+              },
+              {
+                "texte": "Movie by the tree",
+                "image": "choisirait/noel-sortie/film-sapin.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which Christmas treat would he pick?",
+            "options": [
+              {
+                "texte": "Gingerbread house",
+                "image": "choisirait/noel-gourmandise/maison-pain-epices.webp"
+              },
+              {
+                "texte": "Panettone",
+                "image": "choisirait/noel-gourmandise/panettone.webp"
+              },
+              {
+                "texte": "Christmas pudding",
+                "image": "choisirait/noel-gourmandise/pudding.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Send it to him: how many did you get?",
+          "bouton": "Send this to him",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Christmas edition. One letter per question, then send it to him.\n\nSend this to him",
+      "hashtags": [
+        "#couplequiz",
+        "#boyfriendquiz",
+        "#thisorthat",
+        "#christmas",
+        "#quizcouple"
+      ]
+    }
+  }
+}

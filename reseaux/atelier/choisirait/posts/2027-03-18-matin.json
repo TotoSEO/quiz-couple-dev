@@ -1,0 +1,92 @@
+{
+  "jour": "2027-03-18",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-215",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "lui",
+        "etiquette": "Travel edition",
+        "accroche": "What would he choose?",
+        "consigne": "3 questions, 4 seconds each. Pick for him!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "Which city would he take you to?",
+            "options": [
+              {
+                "texte": "Paris",
+                "image": "choisirait/ville/paris.webp"
+              },
+              {
+                "texte": "Marrakech",
+                "image": "choisirait/ville/marrakech.webp"
+              },
+              {
+                "texte": "Rio de Janeiro",
+                "image": "choisirait/ville/rio.webp"
+              }
+            ]
+          },
+          {
+            "question": "Where would he go on vacation?",
+            "options": [
+              {
+                "texte": "Italy",
+                "image": "choisirait/vacances/italie.webp"
+              },
+              {
+                "texte": "Bali",
+                "image": "choisirait/vacances/bali.webp"
+              },
+              {
+                "texte": "Hawaii",
+                "image": "choisirait/vacances/hawaii.webp"
+              }
+            ]
+          },
+          {
+            "question": "How would he travel with you?",
+            "options": [
+              {
+                "texte": "Convertible",
+                "image": "choisirait/voyage/cabriolet.webp"
+              },
+              {
+                "texte": "Motorbike",
+                "image": "choisirait/moto/bmw-gs.webp"
+              },
+              {
+                "texte": "Cruise ship",
+                "image": "choisirait/voyage/croisiere.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Send it to him: how many did you get?",
+          "bouton": "Send this to him",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Travel edition. No cheating: decide before the timer runs out.\n\nSend this to him",
+      "hashtags": [
+        "#couplequiz",
+        "#boyfriendquiz",
+        "#thisorthat",
+        "#travelcouple",
+        "#quizcouple"
+      ]
+    }
+  }
+}

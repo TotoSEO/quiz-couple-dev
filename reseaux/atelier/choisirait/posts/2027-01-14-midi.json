@@ -1,0 +1,92 @@
+{
+  "jour": "2027-01-14",
+  "creneau": "midi",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-099",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "elle",
+        "etiquette": "Wedding edition",
+        "accroche": "What would she choose?",
+        "consigne": "3 questions, 4 seconds each. Pick for her!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "Which ring would she want?",
+            "options": [
+              {
+                "texte": "Rose gold ring",
+                "image": "choisirait/bague/or-rose.webp"
+              },
+              {
+                "texte": "Emerald ring",
+                "image": "choisirait/bague/emeraude.webp"
+              },
+              {
+                "texte": "Halo ring",
+                "image": "choisirait/bague/halo.webp"
+              }
+            ]
+          },
+          {
+            "question": "Where would she want you to propose?",
+            "options": [
+              {
+                "texte": "Rooftop",
+                "image": "choisirait/demande/demande-rooftop.webp"
+              },
+              {
+                "texte": "Hot air balloon",
+                "image": "choisirait/demande/demande-montgolfiere.webp"
+              },
+              {
+                "texte": "Mountaintop",
+                "image": "choisirait/demande/demande-montagne.webp"
+              }
+            ]
+          },
+          {
+            "question": "Where would she want to get married?",
+            "options": [
+              {
+                "texte": "Mountaintop",
+                "image": "choisirait/mariage/sommet.webp"
+              },
+              {
+                "texte": "Vineyard",
+                "image": "choisirait/vue/vignes.webp"
+              },
+              {
+                "texte": "Vegas chapel",
+                "image": "choisirait/mariage/vegas.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Got her 3 picks? Send it and see!",
+          "bouton": "Send this to her",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Wedding edition. One letter per question, then send it to her.\n\nSend this to her",
+      "hashtags": [
+        "#couplequiz",
+        "#girlfriendquiz",
+        "#thisorthat",
+        "#engaged",
+        "#quizcouple"
+      ]
+    }
+  }
+}

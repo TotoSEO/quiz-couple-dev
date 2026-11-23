@@ -1,0 +1,92 @@
+{
+  "jour": "2026-11-27",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-009",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "elle",
+        "etiquette": "Travel edition",
+        "accroche": "What would she choose?",
+        "consigne": "Guess her 3 picks, then send it to her!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "Which city would she take you to?",
+            "options": [
+              {
+                "texte": "Istanbul",
+                "image": "choisirait/ville/istanbul.webp"
+              },
+              {
+                "texte": "Lisbon",
+                "image": "choisirait/ville/lisbonne.webp"
+              },
+              {
+                "texte": "Seoul",
+                "image": "choisirait/ville/seoul.webp"
+              }
+            ]
+          },
+          {
+            "question": "Where would she go on vacation?",
+            "options": [
+              {
+                "texte": "Lapland",
+                "image": "choisirait/vacances/laponie.webp"
+              },
+              {
+                "texte": "Canada",
+                "image": "choisirait/vacances/canada.webp"
+              },
+              {
+                "texte": "Greece",
+                "image": "choisirait/vacances/grece.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which view would she wake up to?",
+            "options": [
+              {
+                "texte": "Snowy peaks",
+                "image": "choisirait/vue/neige.webp"
+              },
+              {
+                "texte": "City skyline",
+                "image": "choisirait/vue/skyline.webp"
+              },
+              {
+                "texte": "Desert",
+                "image": "choisirait/vue/desert-vue.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Got her 3 picks? Send it and see!",
+          "bouton": "Send this to her",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Travel edition. One letter per question, then send it to her.\n\nSend this to her",
+      "hashtags": [
+        "#couplequiz",
+        "#girlfriendquiz",
+        "#thisorthat",
+        "#travelcouple",
+        "#quizcouple"
+      ]
+    }
+  }
+}

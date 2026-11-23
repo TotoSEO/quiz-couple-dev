@@ -1,0 +1,92 @@
+{
+  "jour": "2026-12-29",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-068",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "lui",
+        "etiquette": "New Year's edition",
+        "accroche": "What would he choose?",
+        "consigne": "Pick what he would pick. Then send it to him!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "Where would he spend New Year's Eve?",
+            "options": [
+              {
+                "texte": "Tropical beach",
+                "image": "choisirait/nouvel-an/plage-nouvel-an.webp"
+              },
+              {
+                "texte": "Cozy night in",
+                "image": "choisirait/nouvel-an/soiree-maison.webp"
+              },
+              {
+                "texte": "Rooftop party",
+                "image": "choisirait/nouvel-an/rooftop-nouvel-an.webp"
+              }
+            ]
+          },
+          {
+            "question": "What would he order at the bar?",
+            "options": [
+              {
+                "texte": "Piña colada",
+                "image": "choisirait/bar/pina-colada.webp"
+              },
+              {
+                "texte": "Whiskey",
+                "image": "choisirait/bar/whisky.webp"
+              },
+              {
+                "texte": "Beer",
+                "image": "choisirait/bar/biere.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which date would he plan?",
+            "options": [
+              {
+                "texte": "Beach sunset",
+                "image": "choisirait/date/coucher-soleil.webp"
+              },
+              {
+                "texte": "Camping",
+                "image": "choisirait/date/camping.webp"
+              },
+              {
+                "texte": "Picnic",
+                "image": "choisirait/date/pique-nique.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Send it to him: how many did you get?",
+          "bouton": "Send this to him",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "New Year's edition. Your answers first, then his reaction.\n\nSend this to him",
+      "hashtags": [
+        "#couplequiz",
+        "#boyfriendquiz",
+        "#thisorthat",
+        "#newyearseve",
+        "#quizcouple"
+      ]
+    }
+  }
+}

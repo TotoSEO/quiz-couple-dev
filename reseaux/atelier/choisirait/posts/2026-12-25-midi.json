@@ -1,0 +1,92 @@
+{
+  "jour": "2026-12-25",
+  "creneau": "midi",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-062",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "lui",
+        "etiquette": "Food edition",
+        "accroche": "What would he choose?",
+        "consigne": "Answer for him, then let him check!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "Which pasta would he pick?",
+            "options": [
+              {
+                "texte": "Bolognese",
+                "image": "choisirait/pates/bolognaise.webp"
+              },
+              {
+                "texte": "Ravioli",
+                "image": "choisirait/pates/raviolis.webp"
+              },
+              {
+                "texte": "Mac and cheese",
+                "image": "choisirait/pates/mac-cheese.webp"
+              }
+            ]
+          },
+          {
+            "question": "How would he have his eggs?",
+            "options": [
+              {
+                "texte": "Fried",
+                "image": "choisirait/oeufs/oeuf-plat.webp"
+              },
+              {
+                "texte": "Scrambled",
+                "image": "choisirait/oeufs/brouilles.webp"
+              },
+              {
+                "texte": "Poached",
+                "image": "choisirait/oeufs/poche.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which pizza would he order?",
+            "options": [
+              {
+                "texte": "Four cheese",
+                "image": "choisirait/pizza/quatre-fromages.webp"
+              },
+              {
+                "texte": "Hawaiian",
+                "image": "choisirait/pizza/hawaienne.webp"
+              },
+              {
+                "texte": "Veggie",
+                "image": "choisirait/pizza/vegetarienne.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Send it to him: how many did you get?",
+          "bouton": "Send this to him",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Food edition. Write down his three letters before you send it.\n\nSend this to him",
+      "hashtags": [
+        "#couplequiz",
+        "#boyfriendquiz",
+        "#thisorthat",
+        "#foodie",
+        "#quizcouple"
+      ]
+    }
+  }
+}

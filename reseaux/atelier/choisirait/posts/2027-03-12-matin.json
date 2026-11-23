@@ -1,0 +1,92 @@
+{
+  "jour": "2027-03-12",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-204",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "elle",
+        "etiquette": "Style edition",
+        "accroche": "What would she choose?",
+        "consigne": "Pick what she would pick. Then send it to her!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "Which shoes would she pick?",
+            "options": [
+              {
+                "texte": "High heels",
+                "image": "choisirait/chaussures/talons.webp"
+              },
+              {
+                "texte": "UGG boots",
+                "image": "choisirait/chaussures/ugg.webp"
+              },
+              {
+                "texte": "Knee-high boots",
+                "image": "choisirait/chaussures/cuissardes.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which phone would she pick?",
+            "options": [
+              {
+                "texte": "Nokia 3310",
+                "image": "choisirait/telephone/nokia.webp"
+              },
+              {
+                "texte": "Samsung Galaxy",
+                "image": "choisirait/telephone/galaxy.webp"
+              },
+              {
+                "texte": "Flip phone",
+                "image": "choisirait/telephone/clapet.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which sneakers would she pick?",
+            "options": [
+              {
+                "texte": "Vans Old Skool",
+                "image": "choisirait/baskets/vans.webp"
+              },
+              {
+                "texte": "Air Jordan",
+                "image": "choisirait/baskets/jordan.webp"
+              },
+              {
+                "texte": "Adidas Samba",
+                "image": "choisirait/baskets/samba.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Got her 3 picks? Send it and see!",
+          "bouton": "Send this to her",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Style edition. If you get all three, you know her by heart.\n\nSend this to her",
+      "hashtags": [
+        "#couplequiz",
+        "#girlfriendquiz",
+        "#thisorthat",
+        "#style",
+        "#quizcouple"
+      ]
+    }
+  }
+}

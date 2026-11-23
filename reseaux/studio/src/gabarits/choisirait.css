@@ -1,0 +1,98 @@
+/* What would he choose? : l'écran d'une question. Le chrono en haut, la
+   question à côté du personnage dont on devine les choix, puis les trois
+   photos, l'une sous l'autre, qui prennent toute la place qui reste dans la
+   zone utile. Les jetons sont ceux de la charte (reseaux/charte/tokens.json) :
+   ces règles ne sont pas dans qc.css parce que seul ce gabarit les utilise. */
+
+.qc-canevas.is-choisirait .qc-utile.ch-ecran {
+  justify-content: flex-start;
+  align-items: stretch;
+  gap: var(--pas-3);
+}
+
+.ch-tete {
+  display: flex;
+  align-items: center;
+  gap: var(--pas-3);
+  width: 100%;
+}
+.ch-perso { flex: none; display: flex; align-items: flex-end; justify-content: center; width: 140px; }
+.ch-perso .qc-perso svg { display: block; width: 100%; height: auto; overflow: visible; }
+.ch-titre {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--pas-1);
+  text-align: left;
+}
+.qc-canevas.is-choisirait .ch-question {
+  font-size: 62px;
+  line-height: 1.08;
+  text-wrap: balance;
+}
+
+.ch-options {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  width: 100%;
+}
+.ch-option {
+  position: relative;
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+  border-radius: var(--rayon-carte);
+  background: var(--trait);
+  box-shadow: 0 10px 28px rgba(43, 23, 34, 0.18);
+}
+.ch-photo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.ch-legende {
+  position: absolute;
+  left: 18px;
+  bottom: 18px;
+  max-width: calc(100% - 36px);
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 8px 28px 8px 8px;
+  border-radius: var(--rayon-pilule);
+  background: color-mix(in srgb, var(--papier) 95%, transparent);
+  box-shadow: 0 6px 18px rgba(43, 23, 34, 0.22);
+  transform-origin: left center;
+}
+.ch-lettre {
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 64px;
+  height: 64px;
+  border-radius: var(--rayon-pilule);
+  font-family: var(--font-display);
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 1;
+}
+.ch-lettre.is-0 { background: var(--rose); color: var(--sur-rose); }
+.ch-lettre.is-1 { background: var(--violet); color: var(--sur-violet); }
+.ch-lettre.is-2 { background: var(--celib); color: var(--blanc); }
+.ch-nom {
+  min-width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  font-family: var(--font-display);
+  font-size: 44px;
+  line-height: 1.15;
+  font-weight: 600;
+  color: var(--encre);
+}

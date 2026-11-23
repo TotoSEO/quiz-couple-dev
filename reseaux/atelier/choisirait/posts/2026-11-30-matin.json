@@ -1,0 +1,92 @@
+{
+  "jour": "2026-11-30",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-014",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "lui",
+        "etiquette": "Wedding edition",
+        "accroche": "What would he choose?",
+        "consigne": "Answer for him, then let him check!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "Which ring would he pick for you?",
+            "options": [
+              {
+                "texte": "Vintage ring",
+                "image": "choisirait/bague/vintage-bague.webp"
+              },
+              {
+                "texte": "Halo ring",
+                "image": "choisirait/bague/halo.webp"
+              },
+              {
+                "texte": "Gold band",
+                "image": "choisirait/bague/alliance-or.webp"
+              }
+            ]
+          },
+          {
+            "question": "Where would he want to get married?",
+            "options": [
+              {
+                "texte": "Beach",
+                "image": "choisirait/vue/plage-tropicale.webp"
+              },
+              {
+                "texte": "Forest",
+                "image": "choisirait/vue/foret.webp"
+              },
+              {
+                "texte": "Garden",
+                "image": "choisirait/mariage/mariage-jardin.webp"
+              }
+            ]
+          },
+          {
+            "question": "Where would he propose?",
+            "options": [
+              {
+                "texte": "Disney castle",
+                "image": "choisirait/demande/demande-chateau.webp"
+              },
+              {
+                "texte": "Eiffel Tower",
+                "image": "choisirait/demande/demande-eiffel.webp"
+              },
+              {
+                "texte": "Rooftop",
+                "image": "choisirait/demande/demande-rooftop.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Send it to him: how many did you get?",
+          "bouton": "Send this to him",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Wedding edition. If you get all three, you know him by heart.\n\nSend this to him",
+      "hashtags": [
+        "#couplequiz",
+        "#boyfriendquiz",
+        "#thisorthat",
+        "#engaged",
+        "#quizcouple"
+      ]
+    }
+  }
+}

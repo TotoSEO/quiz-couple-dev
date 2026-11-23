@@ -122,10 +122,16 @@ export async function reserve(base, { maintenant = new Date(), fuseau = 'Europe/
       grille = null;
     }
   }
+  // aujourd'hui, un créneau déjà commencé ne compte plus : plus rien ne
+  // peut y être écrit ni rendu. Sans cela, le jour où la grille ouvre un
+  // créneau (les matins et les midis le 23 novembre 2026), la réserve
+  // tombait à zéro jusqu'à minuit et l'alerte partait par e-mail.
+  const minutes = minutesLocales(fuseau, maintenant);
   let jours = 0;
   for (let i = 0; i < 180; i++) {
     const jour = ajouterJours(debut, i);
-    if (creneauxOuverts(grille, jour).every((c) => posts.some((p) => p.jour === jour && p.creneau === c))) jours++;
+    const ouverts = creneauxOuverts(grille, jour).filter((c) => i > 0 || debutCreneau(null, c) > minutes);
+    if (ouverts.every((c) => posts.some((p) => p.jour === jour && p.creneau === c))) jours++;
     else break;
   }
   return jours;

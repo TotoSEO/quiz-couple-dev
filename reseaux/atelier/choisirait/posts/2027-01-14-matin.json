@@ -1,0 +1,92 @@
+{
+  "jour": "2027-01-14",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-098",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "lui",
+        "etiquette": "Style edition",
+        "accroche": "What would he choose?",
+        "consigne": "Answer for him, then let him check!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "Which phone would he pick?",
+            "options": [
+              {
+                "texte": "Google Pixel",
+                "image": "choisirait/telephone/pixel.webp"
+              },
+              {
+                "texte": "Flip phone",
+                "image": "choisirait/telephone/clapet.webp"
+              },
+              {
+                "texte": "BlackBerry",
+                "image": "choisirait/telephone/blackberry.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which sneakers would he pick?",
+            "options": [
+              {
+                "texte": "Nike Air Max",
+                "image": "choisirait/baskets/air-max.webp"
+              },
+              {
+                "texte": "Birkenstock",
+                "image": "choisirait/baskets/birkenstock.webp"
+              },
+              {
+                "texte": "Stan Smith",
+                "image": "choisirait/baskets/stan-smith.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which watch would he wear?",
+            "options": [
+              {
+                "texte": "Casio G-Shock",
+                "image": "choisirait/montre/g-shock.webp"
+              },
+              {
+                "texte": "Pocket watch",
+                "image": "choisirait/montre/gousset.webp"
+              },
+              {
+                "texte": "Rolex Submariner",
+                "image": "choisirait/montre/rolex.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Send it to him: how many did you get?",
+          "bouton": "Send this to him",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Style edition. Your answers first, then his reaction.\n\nSend this to him",
+      "hashtags": [
+        "#couplequiz",
+        "#boyfriendquiz",
+        "#thisorthat",
+        "#style",
+        "#quizcouple"
+      ]
+    }
+  }
+}

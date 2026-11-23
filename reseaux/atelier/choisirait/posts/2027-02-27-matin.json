@@ -1,0 +1,92 @@
+{
+  "jour": "2027-02-27",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-180",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "elle",
+        "etiquette": "Style edition",
+        "accroche": "What would she choose?",
+        "consigne": "Pick what she would pick. Then send it to her!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "Which shoes would she pick?",
+            "options": [
+              {
+                "texte": "High heels",
+                "image": "choisirait/chaussures/talons.webp"
+              },
+              {
+                "texte": "Ballet flats",
+                "image": "choisirait/chaussures/ballerines.webp"
+              },
+              {
+                "texte": "UGG boots",
+                "image": "choisirait/chaussures/ugg.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which phone would she pick?",
+            "options": [
+              {
+                "texte": "BlackBerry",
+                "image": "choisirait/telephone/blackberry.webp"
+              },
+              {
+                "texte": "iPhone",
+                "image": "choisirait/telephone/iphone.webp"
+              },
+              {
+                "texte": "Google Pixel",
+                "image": "choisirait/telephone/pixel.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which sneakers would she pick?",
+            "options": [
+              {
+                "texte": "Stan Smith",
+                "image": "choisirait/baskets/stan-smith.webp"
+              },
+              {
+                "texte": "Crocs",
+                "image": "choisirait/baskets/crocs.webp"
+              },
+              {
+                "texte": "New Balance",
+                "image": "choisirait/baskets/new-balance.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Got her 3 picks? Send it and see!",
+          "bouton": "Send this to her",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Style edition. Easy for you? Then the next one is for her.\n\nSend this to her",
+      "hashtags": [
+        "#couplequiz",
+        "#girlfriendquiz",
+        "#thisorthat",
+        "#style",
+        "#quizcouple"
+      ]
+    }
+  }
+}

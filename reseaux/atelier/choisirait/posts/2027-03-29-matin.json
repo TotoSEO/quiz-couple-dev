@@ -1,0 +1,92 @@
+{
+  "jour": "2027-03-29",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-235",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "lui",
+        "etiquette": "Car lovers edition",
+        "accroche": "What would he choose?",
+        "consigne": "3 questions, 4 seconds each. Pick for him!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "Which classic car would he drive?",
+            "options": [
+              {
+                "texte": "1967 Mustang",
+                "image": "choisirait/vintage/mustang-67.webp"
+              },
+              {
+                "texte": "Porsche 356",
+                "image": "choisirait/vintage/porsche-356.webp"
+              },
+              {
+                "texte": "Jaguar E-Type",
+                "image": "choisirait/vintage/e-type.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which motorbike would he ride?",
+            "options": [
+              {
+                "texte": "Vespa",
+                "image": "choisirait/moto/vespa.webp"
+              },
+              {
+                "texte": "Indian Scout",
+                "image": "choisirait/moto/indian.webp"
+              },
+              {
+                "texte": "Ducati Panigale",
+                "image": "choisirait/moto/ducati.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which car would he drive?",
+            "options": [
+              {
+                "texte": "Toyota Supra",
+                "image": "choisirait/voiture/supra.webp"
+              },
+              {
+                "texte": "McLaren 720S",
+                "image": "choisirait/voiture/mclaren.webp"
+              },
+              {
+                "texte": "Bugatti Chiron",
+                "image": "choisirait/voiture/bugatti.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Now send it to him. Did you guess right?",
+          "bouton": "Send this to him",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Car lovers edition. No cheating: decide before the timer runs out.\n\nSend this to him",
+      "hashtags": [
+        "#couplequiz",
+        "#boyfriendquiz",
+        "#thisorthat",
+        "#carlovers",
+        "#quizcouple"
+      ]
+    }
+  }
+}

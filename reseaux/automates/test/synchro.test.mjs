@@ -454,3 +454,63 @@ test('un fichier disparu de la branche annule son post à venir (dix fichiers au
   assert.equal(admin.ignores, 1);
   assert.equal(b.tables.social_posts.find((p) => p.jour === '2026-10-22').statut, 'annule');
 });
+
+test("le seuil des dix fichiers se compte par source : une branche d'atelier vide n'annule pas la réserve du soir, même avec les posts « choisirait » de main", async () => {
+  const b = base();
+  // la grille du 23 novembre 2026 : les matins au « choisirait »
+  b.tables.social_reglages[0].valeur = { ...GRILLE_HUIT, matin: 'choisirait' };
+  const jours = ['2026-10-12', '2026-10-14', '2026-10-15', '2026-10-19', '2026-10-21', '2026-10-22', '2026-10-26', '2026-10-28', '2026-10-29', '2026-11-02', '2026-11-04', '2026-11-05'];
+  const soirs = jours.map((jour) => ({ fichier: `${jour}-soir.json`, post: postQuiz(jour, 'soir') }));
+  // douze posts « choisirait » (les matins écrits sur main par la fabrique)
+  const recette = exemple('choisirait');
+  const matins = jours.map((jour) => ({
+    fichier: `${jour}-matin.json`,
+    post: { jour, creneau: 'matin', format: 'reel', gabarit: 'choisirait', categorie: 'choisirait', variantes: { en: { recette, legende: 'Dream life edition. Answer for him first, no peeking.', hashtags: ['#couplequiz'] } } },
+  }));
+  await synchroniser(b, [...soirs, ...matins], { maintenant: MAINTENANT });
+  const valides = () => b.tables.social_posts.filter((p) => p.statut === 'valide').length;
+  assert.equal(valides(), 24);
+  // la branche de l'atelier arrive vide : les douze posts de main ne suffisent pas à annuler ceux du soir
+  const vide = await synchroniser(b, matins, { maintenant: MAINTENANT });
+  assert.equal(vide.annules, undefined);
+  assert.equal(valides(), 24);
+  // un fichier du soir disparaît, la branche étant là : seul son post est annulé
+  const sans = await synchroniser(b, [...soirs.filter((f) => f.fichier !== '2026-10-21-soir.json'), ...matins], { maintenant: MAINTENANT });
+  assert.equal(sans.annules, 1);
+  assert.equal(b.tables.social_posts.find((p) => p.jour === '2026-10-21' && p.creneau === 'soir').statut, 'annule');
+  // un fichier « choisirait » disparaît de main : son post est annulé aussi
+  const sansMatin = await synchroniser(b, [...soirs, ...matins.filter((f) => f.fichier !== '2026-10-26-matin.json')], { maintenant: MAINTENANT });
+  assert.equal(sansMatin.annules, 1);
+  assert.equal(b.tables.social_posts.find((p) => p.jour === '2026-10-26' && p.creneau === 'matin').statut, 'annule');
+});
+
+test("un créneau que la grille rouvre fait revivre le post qu'elle y avait retenu (les matins et les midis du 23 novembre 2026)", async () => {
+  const { MOTIF_FERME } = await import('../lib/calendrier.mjs');
+  const b = base();
+  const grille = b.tables.social_reglages[0].valeur;
+  const post = {
+    jour: '2026-10-12',
+    creneau: 'matin',
+    format: 'reel',
+    gabarit: 'choisirait',
+    categorie: 'choisirait',
+    variantes: { en: { recette: exemple('choisirait'), legende: 'Dream life edition. Answer for him first, no peeking.\n\nSend this to him', hashtags: ['#couplequiz', '#quizcouple'] } },
+  };
+  // la grille ferme encore les matins : le post est écrit, retenu
+  b.tables.social_reglages[0].valeur = { ...grille, matin: null };
+  await synchroniser(b, [{ fichier: 'c.json', post }], { maintenant: MAINTENANT });
+  const v = b.tables.social_variantes[0];
+  assert.equal(v.statut, 'echec');
+  assert.equal(v.erreur, MOTIF_FERME);
+  assert.equal(v.essais, 3);
+  // la grille rouvre les matins : le post repart au rendu, essais remis à zéro
+  b.tables.social_reglages[0].valeur = { ...grille, matin: 'choisirait' };
+  await synchroniser(b, [{ fichier: 'c.json', post }], { maintenant: MAINTENANT });
+  assert.equal(v.statut, 'a_rendre');
+  assert.equal(v.essais, 0);
+  assert.equal(v.erreur, null);
+  // relu une heure plus tard : rien ne bouge
+  const encore = await synchroniser(b, [{ fichier: 'c.json', post }], { maintenant: MAINTENANT });
+  assert.equal(encore.inchanges, 1);
+  assert.equal(v.statut, 'a_rendre');
+});

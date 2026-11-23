@@ -1,0 +1,92 @@
+{
+  "jour": "2026-12-13",
+  "creneau": "midi",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-039",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "elle",
+        "etiquette": "Christmas edition",
+        "accroche": "What would she choose?",
+        "consigne": "3 questions, 4 seconds each. Pick for her!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "Which Christmas date would she plan?",
+            "options": [
+              {
+                "texte": "Christmas lights",
+                "image": "choisirait/noel-sortie/illuminations.webp"
+              },
+              {
+                "texte": "Snowy chalet",
+                "image": "choisirait/noel-sortie/chalet-noel.webp"
+              },
+              {
+                "texte": "Ice skating",
+                "image": "choisirait/noel-sortie/patinoire-noel.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which gift would she want?",
+            "options": [
+              {
+                "texte": "Lego set",
+                "image": "choisirait/cadeau/lego.webp"
+              },
+              {
+                "texte": "Game console",
+                "image": "choisirait/cadeau/console-cadeau.webp"
+              },
+              {
+                "texte": "Perfume",
+                "image": "choisirait/cadeau/parfum.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which Christmas treat would she pick?",
+            "options": [
+              {
+                "texte": "Hot chocolate",
+                "image": "choisirait/noel-gourmandise/chocolat-noel.webp"
+              },
+              {
+                "texte": "Mince pies",
+                "image": "choisirait/noel-gourmandise/mince-pies.webp"
+              },
+              {
+                "texte": "Gingerbread house",
+                "image": "choisirait/noel-gourmandise/maison-pain-epices.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Got her 3 picks? Send it and see!",
+          "bouton": "Send this to her",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Christmas edition. One letter per question, then send it to her.\n\nSend this to her",
+      "hashtags": [
+        "#couplequiz",
+        "#girlfriendquiz",
+        "#thisorthat",
+        "#christmas",
+        "#quizcouple"
+      ]
+    }
+  }
+}

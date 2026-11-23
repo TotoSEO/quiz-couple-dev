@@ -1,0 +1,92 @@
+{
+  "jour": "2026-12-15",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-042",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "elle",
+        "etiquette": "Travel edition",
+        "accroche": "What would she choose?",
+        "consigne": "Answer for her, then let her check!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "Which city would she take you to?",
+            "options": [
+              {
+                "texte": "Barcelona",
+                "image": "choisirait/ville/barcelone.webp"
+              },
+              {
+                "texte": "Las Vegas",
+                "image": "choisirait/ville/las-vegas.webp"
+              },
+              {
+                "texte": "Paris",
+                "image": "choisirait/ville/paris.webp"
+              }
+            ]
+          },
+          {
+            "question": "Where would she go on vacation?",
+            "options": [
+              {
+                "texte": "Mexico",
+                "image": "choisirait/vacances/mexique.webp"
+              },
+              {
+                "texte": "Costa Rica",
+                "image": "choisirait/vacances/costa-rica.webp"
+              },
+              {
+                "texte": "Croatia",
+                "image": "choisirait/vacances/croatie.webp"
+              }
+            ]
+          },
+          {
+            "question": "Where would she book a weekend?",
+            "options": [
+              {
+                "texte": "Log cabin",
+                "image": "choisirait/weekend/chalet-bois.webp"
+              },
+              {
+                "texte": "Castle hotel",
+                "image": "choisirait/weekend/chateau-hotel.webp"
+              },
+              {
+                "texte": "Treehouse",
+                "image": "choisirait/weekend/cabane-arbre.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Got her 3 picks? Send it and see!",
+          "bouton": "Send this to her",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Travel edition. Write down her three letters before you send it.\n\nSend this to her",
+      "hashtags": [
+        "#couplequiz",
+        "#girlfriendquiz",
+        "#thisorthat",
+        "#travelcouple",
+        "#quizcouple"
+      ]
+    }
+  }
+}

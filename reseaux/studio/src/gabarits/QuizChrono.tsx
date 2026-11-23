@@ -4,7 +4,7 @@ import { rebond } from '../charte/animation';
 import { Canevas } from '../charte/Canevas';
 import { remplir } from '../charte/libelles';
 import { PAS, type Plan, type Scene } from '../plan';
-import type { RecetteConnaisTu, RecetteJeu, RecetteQuizChrono, RecetteTuPreferes } from '../recette';
+import type { RecetteChoisirait, RecetteConnaisTu, RecetteJeu, RecetteQuizChrono, RecetteTuPreferes } from '../recette';
 import { Chrono, Ecran, Fin, Intro, libelles, MascottesDuJeu, vite } from './jeu';
 
 // R7 : la question entre seule et reste le temps d'être lue, puis les
@@ -89,7 +89,7 @@ const QuestionTuPreferes: React.FC<{ r: RecetteTuPreferes; sc: Scene; plan: Plan
 };
 
 // Les trois jeux chronométrés : intro, une scène par question, fin.
-export const Jeu: React.FC<{ recette: RecetteJeu; plan: Plan; verification?: boolean }> = ({ recette: r, plan, verification }) => (
+export const Jeu: React.FC<{ recette: Exclude<RecetteJeu, RecetteChoisirait>; plan: Plan; verification?: boolean }> = ({ recette: r, plan, verification }) => (
   <Canevas theme={r.theme} format="reel" verification={verification} classes="is-texture is-quiz">
     {plan.scenes.map((sc, i) => (
       <Sequence key={i} from={sc.debut} durationInFrames={sc.duree} layout="none">

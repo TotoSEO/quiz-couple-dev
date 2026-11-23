@@ -1,0 +1,3054 @@
+{
+  "animal/axolotl": {
+    "libelle": "Axolotl",
+    "fichier": "Axolotl ambystoma mexicanum anfibio ASAG.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AAxolotl_ambystoma_mexicanum_anfibio_ASAG.jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "Amandasofiarana"
+  },
+  "animal/cameleon": {
+    "libelle": "Chameleon",
+    "fichier": "Chamaeleo calyptratus 01.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AChamaeleo_calyptratus_01.jpg",
+    "licence": "CC BY-SA 3.0",
+    "auteur": "H. Zell"
+  },
+  "animal/cheval": {
+    "libelle": "Horse",
+    "fichier": "Horse grazing at a meadow in Churdhar WS, Himachal Pradesh, India.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AHorse_grazing_at_a_meadow_in_Churdhar_WS%2C_Himachal_Pradesh%2C_India.jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "UnpetitproleX"
+  },
+  "animal/cochon-dinde": {
+    "libelle": "Guinea pig",
+    "fichier": "Cobaya (Cavia porcellus), Tierpark Hellabrunn, Múnich, Alemania, 2012-06-17, DD 01.JPG",
+    "page": "https://commons.wikimedia.org/wiki/File%3ACobaya_(Cavia_porcellus)%2C_Tierpark_Hellabrunn%2C_M%C3%BAnich%2C_Alemania%2C_2012-06-17%2C_DD_01.JPG",
+    "licence": "CC BY-SA 3.0",
+    "auteur": "Diego Delso"
+  },
+  "animal/furet": {
+    "libelle": "Ferret",
+    "fichier": "Ferret wants to be friends (8322218244).jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AFerret_wants_to_be_friends_(8322218244).jpg",
+    "licence": "CC BY 2.0",
+    "auteur": "michael marston"
+  },
+  "animal/hamster": {
+    "libelle": "Hamster",
+    "fichier": "Hamster doré angora beige.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AHamster_dor%C3%A9_angora_beige.jpg",
+    "licence": "CC BY-SA 3.0",
+    "auteur": "Florent Pécassou"
+  },
+  "animal/herisson": {
+    "libelle": "Hedgehog",
+    "fichier": "West European Hedgehog (Erinaceus europaeus)1.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AWest_European_Hedgehog_(Erinaceus_europaeus)1.jpg",
+    "licence": "CC BY-SA 3.0",
+    "auteur": "Hrald"
+  },
+  "animal/lapin": {
+    "libelle": "Rabbit",
+    "fichier": "Conejo común (Oryctolagus cuniculus), Tierpark Hellabrunn, Múnich, Alemania, 2012-06-17, DD 02.JPG",
+    "page": "https://commons.wikimedia.org/wiki/File%3AConejo_com%C3%BAn_(Oryctolagus_cuniculus)%2C_Tierpark_Hellabrunn%2C_M%C3%BAnich%2C_Alemania%2C_2012-06-17%2C_DD_02.JPG",
+    "licence": "CC BY-SA 3.0",
+    "auteur": "Diego Delso"
+  },
+  "animal/perroquet": {
+    "libelle": "Parrot",
+    "fichier": "Scarlet macaw (Ara macao cyanopterus) Copan.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AScarlet_macaw_(Ara_macao_cyanopterus)_Copan.jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "Charles J. Sharp"
+  },
+  "animal/poisson": {
+    "libelle": "Goldfish",
+    "fichier": "Carassius wild golden fish 2013 G1.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3ACarassius_wild_golden_fish_2013_G1.jpg",
+    "licence": "Public domain",
+    "auteur": "George Chernilevsky"
+  },
+  "animal/tortue": {
+    "libelle": "Turtle",
+    "fichier": "Testudo hermanni Boettgeri - 02.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3ATestudo_hermanni_Boettgeri_-_02.jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "NorbertNagel"
+  },
+  "aventure/equitation": {
+    "libelle": "Horse riding",
+    "fichier": "Horse riding in Cappadocia.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AHorse_riding_in_Cappadocia.jpg",
+    "licence": "CC BY 2.0",
+    "auteur": "Jérôme Bon"
+  },
+  "aventure/escalade": {
+    "libelle": "Rock climbing",
+    "fichier": "Joshua Tree - Jerry Brown 49.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AJoshua_Tree_-_Jerry_Brown_49.jpg",
+    "licence": "CC BY-SA 3.0",
+    "auteur": "Jarek Tuszyński"
+  },
+  "aventure/kayak": {
+    "libelle": "Kayaking",
+    "fichier": "2015-08 playboating Durance 09.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3A2015-08_playboating_Durance_09.jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "0x010C"
+  },
+  "aventure/parachute": {
+    "libelle": "Skydiving",
+    "fichier": "CH.VD.Bex 2007-09-02 Airshow 396 16x9-R 5120x2880 (cropped).jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3ACH.VD.Bex_2007-09-02_Airshow_396_16x9-R_5120x2880_(cropped).jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "Roy Egloff"
+  },
+  "aventure/parapente": {
+    "libelle": "Paragliding",
+    "fichier": "Acro-Show-Villeneuve Infinity-Tumbling 2022-08-21.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AAcro-Show-Villeneuve_Infinity-Tumbling_2022-08-21.jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "Roy Egloff"
+  },
+  "aventure/plongee": {
+    "libelle": "Scuba diving",
+    "fichier": "Star coral 12e Molasses Reef 20230714.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AStar_coral_12e_Molasses_Reef_20230714.jpg",
+    "licence": "CC0",
+    "auteur": "Jstuby"
+  },
+  "aventure/saut-elastique": {
+    "libelle": "Bungee jumping",
+    "fichier": "Bungee Jump is freedom.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3ABungee_Jump_is_freedom.jpg",
+    "licence": "CC0",
+    "auteur": "Poni Abraham"
+  },
+  "aventure/ski": {
+    "libelle": "Skiing",
+    "fichier": "Looking down the Mandarines slope, Megève, 2025.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3ALooking_down_the_Mandarines_slope%2C_Meg%C3%A8ve%2C_2025.jpg",
+    "licence": "CC0",
+    "auteur": "DimiTalen"
+  },
+  "aventure/snowboard": {
+    "libelle": "Snowboarding",
+    "fichier": "Sergey Lapushkin Stoneham 2012.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3ASergey_Lapushkin_Stoneham_2012.jpg",
+    "licence": "CC BY-SA 3.0",
+    "auteur": "Cephas"
+  },
+  "aventure/surf": {
+    "libelle": "Surfing",
+    "fichier": "Mavericks Surf Contest 2010b.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AMavericks_Surf_Contest_2010b.jpg",
+    "licence": "CC BY-SA 3.0",
+    "auteur": "Shalom Jacobovitz"
+  },
+  "bague/alliance-or": {
+    "libelle": "Gold band",
+    "fichier": "Wedding and Engagement Rings 2151px.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AWedding_and_Engagement_Rings_2151px.jpg",
+    "licence": "CC BY-SA 2.5",
+    "auteur": "Photo by Derek Ramsey ( Ram-Man )"
+  },
+  "bague/emeraude": {
+    "libelle": "Emerald ring",
+    "fichier": "Closeup of an emerald ring in a finger.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3ACloseup_of_an_emerald_ring_in_a_finger.jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "Billjones94"
+  },
+  "bague/halo": {
+    "libelle": "Halo ring",
+    "fichier": "Unique Halo Engagement Rings.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AUnique_Halo_Engagement_Rings.jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "Petragems"
+  },
+  "bague/or-rose": {
+    "libelle": "Rose gold ring",
+    "fichier": "Rose Gold Diamond Engagement Ring.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3ARose_Gold_Diamond_Engagement_Ring.jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "Petragems"
+  },
+  "bague/solitaire": {
+    "libelle": "Solitaire diamond",
+    "fichier": "Chelsea-solitaire-engagement-ring-oval-3-rows-pave-18k-white-gold.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AChelsea-solitaire-engagement-ring-oval-3-rows-pave-18k-white-gold.jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "Orcax2023"
+  },
+  "bague/vintage-bague": {
+    "libelle": "Vintage ring",
+    "fichier": "Vintage antique diamond sapphire engagement rign.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AVintage_antique_diamond_sapphire_engagement_rign.jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "Petragems"
+  },
+  "bar/biere": {
+    "libelle": "Beer",
+    "fichier": "Pint of beer with some bread.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3APint_of_beer_with_some_bread.jpg",
+    "licence": "Public domain",
+    "auteur": "Jon Sullivan"
+  },
+  "bar/espresso-martini": {
+    "libelle": "Espresso martini",
+    "fichier": "Espresso Martini on a bar.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AEspresso_Martini_on_a_bar.jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "AlphaLemur"
+  },
+  "bar/gin-tonic": {
+    "libelle": "Gin and tonic",
+    "fichier": "Gin and tonic at restaurant Loiste.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AGin_and_tonic_at_restaurant_Loiste.jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "JIP"
+  },
+  "bar/margarita": {
+    "libelle": "Margarita",
+    "fichier": "Margarita-Cocktail mit Limette",
+    "page": "https://www.flickr.com/photos/115225894@N07/54572119990",
+    "licence": "BY 2.0",
+    "auteur": "ccnull.de Bilddatenbank"
+  },
+  "bar/mojito": {
+    "libelle": "Mojito",
+    "fichier": "Erfrischender Mojito-Cocktail auf einem Holzuntergrund",
+    "page": "https://www.flickr.com/photos/115225894@N07/54338213225",
+    "licence": "BY 2.0",
+    "auteur": "ccnull.de Bilddatenbank"
+  },
+  "bar/pina-colada": {
+    "libelle": "Piña colada",
+    "fichier": "Tropischer Pina-Colada-Cocktail mit Ananas und Kokosnuss",
+    "page": "https://www.flickr.com/photos/115225894@N07/54558139820",
+    "licence": "BY 2.0",
+    "auteur": "ccnull.de Bilddatenbank"
+  },
+  "bar/spritz": {
+    "libelle": "Aperol Spritz",
+    "fichier": "Aperol Spritz - Santa Ynez Kitchen - Sarah Stierch.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AAperol_Spritz_-_Santa_Ynez_Kitchen_-_Sarah_Stierch.jpg",
+    "licence": "CC BY 4.0",
+    "auteur": "Missvain"
+  },
+  "bar/vin-rouge": {
+    "libelle": "Red wine",
+    "fichier": "Bottle and glass of red wine.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3ABottle_and_glass_of_red_wine.jpg",
+    "licence": "CC0",
+    "auteur": "congerdesign"
+  },
+  "bar/whisky": {
+    "libelle": "Whiskey",
+    "fichier": "Whiskey (Lagavulin 16) im Centrale in Tübingen.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AWhiskey_(Lagavulin_16)_im_Centrale_in_T%C3%BCbingen.jpg",
+    "licence": "CC0",
+    "auteur": "Dktue"
+  },
+  "baskets/air-force": {
+    "libelle": "Air Force 1",
+    "fichier": "Nike air Force 1 white on white.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3ANike_air_Force_1_white_on_white.jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "HI 622"
+  },
+  "baskets/air-max": {
+    "libelle": "Nike Air Max",
+    "fichier": "Air max 90.JPG",
+    "page": "https://commons.wikimedia.org/wiki/File%3AAir_max_90.JPG",
+    "licence": "Public domain",
+    "auteur": "Mr._Carter4 ( talk ) ( Uploads )"
+  },
+  "baskets/birkenstock": {
+    "libelle": "Birkenstock",
+    "fichier": "Birkenstock Sandals CNE 05.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3ABirkenstock_Sandals_CNE_05.jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "CNEcija12345"
+  },
+  "baskets/crocs": {
+    "libelle": "Crocs",
+    "fichier": "Crocs-synthetic-clogs.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3ACrocs-synthetic-clogs.jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "Skyeyemx"
+  },
+  "baskets/jordan": {
+    "libelle": "Air Jordan",
+    "fichier": "2023 Buty Nike Air Jordan.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3A2023_Buty_Nike_Air_Jordan.jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "Jacek Halicki"
+  },
+  "baskets/new-balance": {
+    "libelle": "New Balance",
+    "fichier": "New Balance 574.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3ANew_Balance_574.jpg",
+    "licence": "CC0",
+    "auteur": "LeDroider"
+  },
+  "baskets/samba": {
+    "libelle": "Adidas Samba",
+    "fichier": "Adidas Samba.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AAdidas_Samba.jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "Pangalau"
+  },
+  "baskets/stan-smith": {
+    "libelle": "Stan Smith",
+    "fichier": "Adidas Stan Smiths sneaker.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AAdidas_Stan_Smiths_sneaker.jpg",
+    "licence": "CC BY 2.0",
+    "auteur": "Jason V from New Westminster, BC, Canada"
+  },
+  "baskets/vans": {
+    "libelle": "Vans Old Skool",
+    "fichier": "Vans Shoe.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AVans_Shoe.jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "William Mucci"
+  },
+  "boisson/bubble-tea": {
+    "libelle": "Bubble tea",
+    "fichier": "Thai Iced Bubble Tea - Sonoma Pho - Stierch - 2019.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AThai_Iced_Bubble_Tea_-_Sonoma_Pho_-_Stierch_-_2019.jpg",
+    "licence": "CC BY 4.0",
+    "auteur": "Missvain"
+  },
+  "boisson/limonade": {
+    "libelle": "Lemonade",
+    "fichier": "Lemonade",
+    "page": "https://www.flickr.com/photos/100973111@N06/16791745539",
+    "licence": "BY-SA 2.0",
+    "auteur": "JohnDaHun"
+  },
+  "boisson/smoothie": {
+    "libelle": "Smoothie",
+    "fichier": "Kiwi Strawberry",
+    "page": "https://stocksnap.io/photo/kiwi-strawberry-LE497YOKKN",
+    "licence": "CC0 1.0",
+    "auteur": "WDnet Studio"
+  },
+  "boisson/the-glace": {
+    "libelle": "Iced tea",
+    "fichier": "Iced tea with ice cubes.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AIced_tea_with_ice_cubes.jpg",
+    "licence": "CC BY-SA 2.5",
+    "auteur": "Editor at Large"
+  },
+  "boulangerie/bagel": {
+    "libelle": "Bagel",
+    "fichier": "2019-10-12 15 29 51 A Thomas Plain Bagel in the Dulles section of Sterling, Loudoun County, Virginia.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3A2019-10-12_15_29_51_A_Thomas_Plain_Bagel_in_the_Dulles_section_of_Sterling%2C_Loudoun_County%2C_Virginia.jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "Famartin"
+  },
+  "boulangerie/baguette": {
+    "libelle": "Baguette",
+    "fichier": "Baguette mie.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3ABaguette_mie.jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "Popo le Chien"
+  },
+  "boulangerie/brioche": {
+    "libelle": "Brioche",
+    "fichier": "Raspberry brioche - The Pantry Bakery, Worthing 2026-07-14.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3ARaspberry_brioche_-_The_Pantry_Bakery%2C_Worthing_2026-07-14.jpg",
+    "licence": "CC0",
+    "auteur": "Andy Li"
+  },
+  "boulangerie/cinnamon-roll": {
+    "libelle": "Cinnamon roll",
+    "fichier": "Rollo de canela (Cinnamon roll).jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3ARollo_de_canela_(Cinnamon_roll).jpg",
+    "licence": "CC BY-SA 3.0",
+    "auteur": "Horacio Cambeiro"
+  },
+  "boulangerie/croissant": {
+    "libelle": "Croissant",
+    "fichier": "Three of croissants from Yasamaki Bakery.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AThree_of_croissants_from_Yasamaki_Bakery.jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "Peachyeung316"
+  },
+  "boulangerie/donut": {
+    "libelle": "Donut",
+    "fichier": "Dough-Doughnut-Blood-Orange.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3ADough-Doughnut-Blood-Orange.jpg",
+    "licence": "Public domain",
+    "auteur": "Evan-Amos"
+  },
+  "boulangerie/muffin": {
+    "libelle": "Muffin",
+    "fichier": "Plain vanilla muffin in Tuntorp.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3APlain_vanilla_muffin_in_Tuntorp.jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "W.carter"
+  },
+  "boulangerie/pain-chocolat": {
+    "libelle": "Pain au chocolat",
+    "fichier": "Pain au chocolat Luc Viatour.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3APain_au_chocolat_Luc_Viatour.jpg",
+    "licence": "CC BY-SA 3.0",
+    "auteur": "Luc Viatour"
+  },
+  "cadeau/appareil-photo": {
+    "libelle": "Camera",
+    "fichier": "Sony Alpha 7R IV elevated front view of camera body with exposed sensor.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3ASony_Alpha_7R_IV_elevated_front_view_of_camera_body_with_exposed_sensor.jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "Franz van Duns"
+  },
+  "cadeau/baskets-cadeau": {
+    "libelle": "Sneakers",
+    "fichier": "2023 Adidas Yeezy 350 V2 EF2905 (1).jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3A2023_Adidas_Yeezy_350_V2_EF2905_(1).jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "Jacek Halicki"
+  },
+  "cadeau/casque": {
+    "libelle": "Headphones",
+    "fichier": "2023 Słuchawki Sennheiser HD 540.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3A2023_S%C5%82uchawki_Sennheiser_HD_540.jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "Jacek Halicki"
+  },
+  "cadeau/console-cadeau": {
+    "libelle": "Game console",
+    "fichier": "Sony-PlayStation-3-2001A-wController-L.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3ASony-PlayStation-3-2001A-wController-L.jpg",
+    "licence": "Public domain",
+    "auteur": "Evan-Amos"
+  },
+  "cadeau/drone": {
+    "libelle": "Drone",
+    "fichier": "DJI - Drohne Mavic Air 2.JPG",
+    "page": "https://commons.wikimedia.org/wiki/File%3ADJI_-_Drohne_Mavic_Air_2.JPG",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "C.Stadler/Bwag"
+  },
+  "cadeau/lego": {
+    "libelle": "Lego set",
+    "fichier": "14-05-28-LEGO-by-RalfR-053.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3A14-05-28-LEGO-by-RalfR-053.jpg",
+    "licence": "GFDL 1.2",
+    "auteur": "Ralf Roletschek"
+  },
+  "cadeau/livre": {
+    "libelle": "Book",
+    "fichier": "Part of a bookshelf containing books by Aristotle (1).jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3APart_of_a_bookshelf_containing_books_by_Aristotle_(1).jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "Roman Eisele"
+  },
+  "cadeau/montre-cadeau": {
+    "libelle": "Watch",
+    "fichier": "Fossil wristwatch with white background.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AFossil_wristwatch_with_white_background.jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "Cvmontuy"
+  },
+  "cadeau/parfum": {
+    "libelle": "Perfume",
+    "fichier": "Gant Adventure.JPG",
+    "page": "https://commons.wikimedia.org/wiki/File%3AGant_Adventure.JPG",
+    "licence": "CC BY-SA 3.0",
+    "auteur": "kallerna"
+  },
+  "cadeau/vinyles": {
+    "libelle": "Vinyl records",
+    "fichier": "Groove and needle in close embrace from beginning to end.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AGroove_and_needle_in_close_embrace_from_beginning_to_end.jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "Franz van Duns"
+  },
+  "cafe/americano": {
+    "libelle": "Americano",
+    "fichier": "Cinnamon Bun and Americano - M&S Café, Worthing 2026-11-02.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3ACinnamon_Bun_and_Americano_-_M%26S_Caf%C3%A9%2C_Worthing_2026-11-02.jpg",
+    "licence": "CC0",
+    "auteur": "Andy Li"
+  },
+  "cafe/cappuccino": {
+    "libelle": "Cappuccino",
+    "fichier": "Latte art on cappuccino (Unsplash).jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3ALatte_art_on_cappuccino_(Unsplash).jpg",
+    "licence": "CC0",
+    "auteur": "Drew Coffman drewcoffman"
+  },
+  "cafe/espresso": {
+    "libelle": "Espresso",
+    "fichier": "Espresso BW 1.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AEspresso_BW_1.jpg",
+    "licence": "Public domain",
+    "auteur": "Berthold Werner"
+  },
+  "cafe/iced-latte": {
+    "libelle": "Iced latte",
+    "fichier": "Iced Coffee in Glass - Sunshine Coffee - Laramie Cafe (53838344552).jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AIced_Coffee_in_Glass_-_Sunshine_Coffee_-_Laramie_Cafe_(53838344552).jpg",
+    "licence": "CC BY 2.0",
+    "auteur": "Tony Webster"
+  },
+  "cafe/matcha": {
+    "libelle": "Matcha latte",
+    "fichier": "Matcha Green Tea Latte (35487991553).jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AMatcha_Green_Tea_Latte_(35487991553).jpg",
+    "licence": "CC BY 2.0",
+    "auteur": "NuCastiel from Bangkok, Thailand"
+  },
+  "chat/bengal": {
+    "libelle": "Bengal",
+    "fichier": "BEN Bengalian kitten (4492540155).jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3ABEN_Bengalian_kitten_(4492540155).jpg",
+    "licence": "CC BY-SA 2.0",
+    "auteur": "Nickolas Titkov from Moscow, Russian Federation"
+  },
+  "chat/british": {
+    "libelle": "British Shorthair",
+    "fichier": "Sitzende graue Mieze 20201026 DSC5103.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3ASitzende_graue_Mieze_20201026_DSC5103.jpg",
+    "licence": "CC BY 4.0",
+    "auteur": "PantheraLeo1359531"
+  },
+  "chat/chat-noir": {
+    "libelle": "Black cat",
+    "fichier": "Black cat lying on a blue bed quilt.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3ABlack_cat_lying_on_a_blue_bed_quilt.jpg",
+    "licence": "CC BY 4.0",
+    "auteur": "Candeadly"
+  },
+  "chat/chat-roux": {
+    "libelle": "Ginger cat",
+    "fichier": "Ginger Kitten.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AGinger_Kitten.jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "Prosthetic Head"
+  },
+  "chat/maine-coon": {
+    "libelle": "Maine Coon",
+    "fichier": "Maine Coon Cat List Characteristics.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AMaine_Coon_Cat_List_Characteristics.jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "ales brad"
+  },
+  "chat/norvegien": {
+    "libelle": "Norwegian Forest Cat",
+    "fichier": "Titran's Ursa Ultra Top (10441034525).jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3ATitran's_Ursa_Ultra_Top_(10441034525).jpg",
+    "licence": "CC BY 2.0",
+    "auteur": "Pieter &amp; Renée Lanser from The Netherlands"
+  },
+  "chat/persan": {
+    "libelle": "Persian",
+    "fichier": "Persian Cat by Pouria Afkhami pixoos.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3APersian_Cat_by_Pouria_Afkhami_pixoos.jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "Pixoos"
+  },
+  "chat/ragdoll": {
+    "libelle": "Ragdoll",
+    "fichier": "Gato Ragdoll BreedingCat.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AGato_Ragdoll_BreedingCat.jpg",
+    "licence": "CC0",
+    "auteur": "Cgomez766"
+  },
+  "chat/scottish": {
+    "libelle": "Scottish Fold",
+    "fichier": "Scottish fold 02.JPG",
+    "page": "https://commons.wikimedia.org/wiki/File%3AScottish_fold_02.JPG",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "Irryna"
+  },
+  "chat/siamois": {
+    "libelle": "Siamese",
+    "fichier": "Siamese cat, female.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3ASiamese_cat%2C_female.jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "Felinlove"
+  },
+  "chat/sphynx": {
+    "libelle": "Sphynx",
+    "fichier": "Cat Sphynx. img 025.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3ACat_Sphynx._img_025.jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "Dmitry Makeev"
+  },
+  "chaussures/ballerines": {
+    "libelle": "Ballet flats",
+    "fichier": "Shoes in the grass.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AShoes_in_the_grass.jpg",
+    "licence": "CC BY 2.0",
+    "auteur": "Dan Foy from Derby, England"
+  },
+  "chaussures/cuissardes": {
+    "libelle": "Knee-high boots",
+    "fichier": "Tory Burch Women's Knee High Boots.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3ATory_Burch_Women's_Knee_High_Boots.jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "Rimlogger"
+  },
+  "chaussures/talons": {
+    "libelle": "High heels",
+    "fichier": "2014 Erywań, Damskie buty na wysokim obcasie na witrynie sklepowej.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3A2014_Erywa%C5%84%2C_Damskie_buty_na_wysokim_obcasie_na_witrynie_sklepowej.jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "Marcin Konsek"
+  },
+  "chaussures/ugg": {
+    "libelle": "UGG boots",
+    "fichier": "Ugg boots 2 2019-11-16.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AUgg_boots_2_2019-11-16.jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "F ASTILY"
+  },
+  "chien/beagle": {
+    "libelle": "Beagle",
+    "fichier": "Beagle in Viroinval (DSC04556).jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3ABeagle_in_Viroinval_(DSC04556).jpg",
+    "licence": "CC BY 4.0",
+    "auteur": "Trougnouf (Benoit Brummer)"
+  },
+  "chien/berger-allemand": {
+    "libelle": "German Shepherd",
+    "fichier": "20110425 German Shepherd Dog 8505.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3A20110425_German_Shepherd_Dog_8505.jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "Jakub Hałun"
+  },
+  "chien/berger-australien": {
+    "libelle": "Australian Shepherd",
+    "fichier": "Wet Australian Shepherd dog, side view.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AWet_Australian_Shepherd_dog%2C_side_view.jpg",
+    "licence": "CC0",
+    "auteur": "Joselodos"
+  },
+  "chien/border-collie": {
+    "libelle": "Border Collie",
+    "fichier": "DOG-BORDER Collie 23OCT99.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3ADOG-BORDER_Collie_23OCT99.jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "Nancy Wong"
+  },
+  "chien/bouledogue": {
+    "libelle": "French Bulldog",
+    "fichier": "French bulldog head, Josselin 02.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AFrench_bulldog_head%2C_Josselin_02.jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "Tsaag Valren"
+  },
+  "chien/bouvier": {
+    "libelle": "Bernese Mountain Dog",
+    "fichier": "3-BerneseMountainDogInGrass.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3A3-BerneseMountainDogInGrass.jpg",
+    "licence": "CC BY 4.0",
+    "auteur": "FriendlyToaster"
+  },
+  "chien/caniche": {
+    "libelle": "Poodle",
+    "fichier": "Tapsi Miniature Poodle Galloping Extension Harangi Coorg Apr24 A7C 10647.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3ATapsi_Miniature_Poodle_Galloping_Extension_Harangi_Coorg_Apr24_A7C_10647.jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "This Photo was taken by Timothy A. Gonsalves . Feel free to use my photos, but please mention me as the author. I would "
+  },
+  "chien/carlin": {
+    "libelle": "Pug",
+    "fichier": "Pug dog.JPG",
+    "page": "https://commons.wikimedia.org/wiki/File%3APug_dog.JPG",
+    "licence": "CC BY-SA 3.0",
+    "auteur": "Dubyahill"
+  },
+  "chien/cavalier": {
+    "libelle": "Cavalier King Charles",
+    "fichier": "Dog In The Grass.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3ADog_In_The_Grass.jpg",
+    "licence": "CC BY-SA 3.0",
+    "auteur": "Filip B"
+  },
+  "chien/chihuahua": {
+    "libelle": "Chihuahua",
+    "fichier": "Chihuahuas- Holly, Nina, Doralice.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AChihuahuas-_Holly%2C_Nina%2C_Doralice.jpg",
+    "licence": "Public domain",
+    "auteur": "Caterinarufo"
+  },
+  "chien/corgi": {
+    "libelle": "Corgi",
+    "fichier": "Pembroke Welsh Corgi, aged 14.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3APembroke_Welsh_Corgi%2C_aged_14.jpg",
+    "licence": "Public domain",
+    "auteur": "Sean Dudley"
+  },
+  "chien/dalmatien": {
+    "libelle": "Dalmatian",
+    "fichier": "DALMATIAN ARGOS. THE IMMORTAL MEXICAN DALMATIAN..jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3ADALMATIAN_ARGOS._THE_IMMORTAL_MEXICAN_DALMATIAN..jpg",
+    "licence": "CC BY-SA 3.0",
+    "auteur": "Neoprotección"
+  },
+  "chien/dobermann": {
+    "libelle": "Doberman",
+    "fichier": "Ginger - red doberman dog portrait - Flickr - tim-johnson.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AGinger_-_red_doberman_dog_portrait_-_Flickr_-_tim-johnson.jpg",
+    "licence": "CC BY 2.0",
+    "auteur": "Tim Johnson from Savannah, GA, USA"
+  },
+  "chien/dogue": {
+    "libelle": "Great Dane",
+    "fichier": "Great Dane 2.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AGreat_Dane_2.jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "Dühring Fotografie"
+  },
+  "chien/golden": {
+    "libelle": "Golden Retriever",
+    "fichier": "Callie the golden retriever puppy.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3ACallie_the_golden_retriever_puppy.jpg",
+    "licence": "CC BY 3.0",
+    "auteur": "MichaelMcPhee"
+  },
+  "chien/husky": {
+    "libelle": "Husky",
+    "fichier": "Siberian Husky heterchromia edit.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3ASiberian_Husky_heterchromia_edit.jpg",
+    "licence": "CC BY 2.5",
+    "auteur": "user:Przykuta , corrected by Pharaoh Hound"
+  },
+  "chien/jack-russell": {
+    "libelle": "Jack Russell",
+    "fichier": "Jack Russell Terrier - Portrait.JPG",
+    "page": "https://commons.wikimedia.org/wiki/File%3AJack_Russell_Terrier_-_Portrait.JPG",
+    "licence": "CC BY-SA 3.0",
+    "auteur": "Steve-65"
+  },
+  "chien/labrador": {
+    "libelle": "Labrador",
+    "fichier": "Labrador Retriever snow.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3ALabrador_Retriever_snow.jpg",
+    "licence": "CC BY 2.5",
+    "auteur": "Original author Hand , edit by Pharaoh Hound"
+  },
+  "chien/malinois": {
+    "libelle": "Belgian Malinois",
+    "fichier": "Boss, prawie owczarek belgijski Malinois (2007-11-04) 2.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3ABoss%2C_prawie_owczarek_belgijski_Malinois_(2007-11-04)_2.jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "Olgierd Rudak"
+  },
+  "chien/pomeranien": {
+    "libelle": "Pomeranian",
+    "fichier": "Pomeranian profile.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3APomeranian_profile.jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "Горбунова М.С."
+  },
+  "chien/rottweiler": {
+    "libelle": "Rottweiler",
+    "fichier": "Rottweiler -52773841920.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3ARottweiler_-52773841920.jpg",
+    "licence": "CC0",
+    "auteur": "mar_qs"
+  },
+  "chien/samoyede": {
+    "libelle": "Samoyed",
+    "fichier": "Samoyed dog two year old female dllu.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3ASamoyed_dog_two_year_old_female_dllu.jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "Dllu"
+  },
+  "chien/shiba": {
+    "libelle": "Shiba Inu",
+    "fichier": "A Shiba Inu head.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AA_Shiba_Inu_head.jpg",
+    "licence": "CC BY 2.0",
+    "auteur": "Maja Dumat"
+  },
+  "chien/teckel": {
+    "libelle": "Dachshund",
+    "fichier": "Teckel - 39.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3ATeckel_-_39.jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "Another one of my pictures: This photograph was taken by Medium69 (William Crochot) and released under the license state"
+  },
+  "console/gameboy": {
+    "libelle": "Game Boy",
+    "fichier": "Nintendo-Game-Boy-Advance-Milky-Blue-FL.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3ANintendo-Game-Boy-Advance-Milky-Blue-FL.jpg",
+    "licence": "Public domain",
+    "auteur": "Evan-Amos"
+  },
+  "console/pc-gamer": {
+    "libelle": "Gaming PC",
+    "fichier": "Ricer gaming PC with CPU watercooler.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3ARicer_gaming_PC_with_CPU_watercooler.jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "Benlisquare"
+  },
+  "console/ps2": {
+    "libelle": "PlayStation 2",
+    "fichier": "PS2-Versions.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3APS2-Versions.jpg",
+    "licence": "Public domain",
+    "auteur": "Evan-Amos"
+  },
+  "console/ps5": {
+    "libelle": "PlayStation 5",
+    "fichier": "PlayStation 5 and DualSense.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3APlayStation_5_and_DualSense.jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "Osh33m"
+  },
+  "console/switch": {
+    "libelle": "Nintendo Switch",
+    "fichier": "Nintendo-Switch-Console-Docked-wJoyConRB.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3ANintendo-Switch-Console-Docked-wJoyConRB.jpg",
+    "licence": "Public domain",
+    "auteur": "Evan-Amos"
+  },
+  "console/xbox": {
+    "libelle": "Xbox",
+    "fichier": "Xbox-console.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AXbox-console.jpg",
+    "licence": "Public domain",
+    "auteur": "Evan-Amos"
+  },
+  "date/arcade": {
+    "libelle": "Arcade",
+    "fichier": "Retrovolt Arcade 2017 - Arcade Machines 1.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3ARetrovolt_Arcade_2017_-_Arcade_Machines_1.jpg",
+    "licence": "CC BY 2.0",
+    "auteur": "Arcade Perfect"
+  },
+  "date/camping": {
+    "libelle": "Camping",
+    "fichier": "Copper Breaks State Park with the Milky Way Galaxy.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3ACopper_Breaks_State_Park_with_the_Milky_Way_Galaxy.jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "Matthew T Rader"
+  },
+  "date/cinema": {
+    "libelle": "Cinema night",
+    "fichier": "Cinema is back 02",
+    "page": "https://www.flickr.com/photos/7512717@N06/51312607595",
+    "licence": "BY-NC 2.0",
+    "auteur": "byronv2"
+  },
+  "date/coucher-soleil": {
+    "libelle": "Beach sunset",
+    "fichier": "Kitesurfer at sunset, Workum, may 2017.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AKitesurfer_at_sunset%2C_Workum%2C_may_2017.jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "Villy Fink Isaksen"
+  },
+  "date/degustation": {
+    "libelle": "Wine tasting",
+    "fichier": "Schramsberg Vineyards, July 2019-7579+7580.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3ASchramsberg_Vineyards%2C_July_2019-7579%2B7580.jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "Frank Schulenburg"
+  },
+  "date/etoiles": {
+    "libelle": "Stargazing",
+    "fichier": "Milky Way and starry night sky (26972689115).jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AMilky_Way_and_starry_night_sky_(26972689115).jpg",
+    "licence": "Public domain",
+    "auteur": "NPS/Jacob W. Frank"
+  },
+  "date/mini-golf": {
+    "libelle": "Mini golf",
+    "fichier": "At Los Gigantes 2022 010.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AAt_Los_Gigantes_2022_010.jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "Photograph by Mike Peel ( www.mikepeel.net )."
+  },
+  "date/montgolfiere-date": {
+    "libelle": "Hot air balloon",
+    "fichier": "Hot-air balloon in Tambov - 02.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AHot-air_balloon_in_Tambov_-_02.jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "Alexander Novikov"
+  },
+  "date/musee": {
+    "libelle": "Museum",
+    "fichier": "The Harris Museum, Art Gallery & Library.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AThe_Harris_Museum%2C_Art_Gallery_%26_Library.jpg",
+    "licence": "CC0",
+    "auteur": "Michael D Beckwith"
+  },
+  "date/parc": {
+    "libelle": "Theme park",
+    "fichier": "Münster, Schlossplatz, Frühjahrssend -- 2019 -- 4126.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AM%C3%BCnster%2C_Schlossplatz%2C_Fr%C3%BChjahrssend_--_2019_--_4126.jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "Dietmar Rabich"
+  },
+  "date/patinoire": {
+    "libelle": "Ice skating",
+    "fichier": "Red Arrow Park ice rink 1292.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3ARed_Arrow_Park_ice_rink_1292.jpg",
+    "licence": "CC BY-SA 3.0 us",
+    "auteur": "Dori"
+  },
+  "date/pique-nique": {
+    "libelle": "Picnic",
+    "fichier": "Outdoor Picnic",
+    "page": "https://stocksnap.io/photo/outdoor-picnic-KOOJZRUJRZ",
+    "licence": "CC0 1.0",
+    "auteur": "Travel Adventures"
+  },
+  "demande/demande-aurores": {
+    "libelle": "Northern lights",
+    "fichier": "Aurora borealis over Eielson Air Force Base, Alaska.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AAurora_borealis_over_Eielson_Air_Force_Base%2C_Alaska.jpg",
+    "licence": "Public domain",
+    "auteur": "United States Air Force photo by Senior Airman Joshua Strang"
+  },
+  "demande/demande-chateau": {
+    "libelle": "Disney castle",
+    "fichier": "Sleeping Beauty Castle 2019.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3ASleeping_Beauty_Castle_2019.jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "CrispyCream27"
+  },
+  "demande/demande-eiffel": {
+    "libelle": "Eiffel Tower",
+    "fichier": "Paris July 2011-33.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AParis_July_2011-33.jpg",
+    "licence": "CC BY-SA 3.0",
+    "auteur": "Alvesgaspar"
+  },
+  "demande/demande-montagne": {
+    "libelle": "Mountaintop",
+    "fichier": "Green karst peaks seen from the top of Mount Nam Xay a sunny morning with fog Vang Vieng Laos.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AGreen_karst_peaks_seen_from_the_top_of_Mount_Nam_Xay_a_sunny_morning_with_fog_Vang_Vieng_Laos.jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "Basile Morin"
+  },
+  "demande/demande-montgolfiere": {
+    "libelle": "Hot air balloon",
+    "fichier": "Balloon over Luxor - Egypt denoised.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3ABalloon_over_Luxor_-_Egypt_denoised.jpg",
+    "licence": "CC BY-SA 3.0",
+    "auteur": "Balloon_over_Luxor_-_Egypt.jpg : Marcosleal derivative work: Pro2 ( talk )"
+  },
+  "demande/demande-plage": {
+    "libelle": "Beach at sunset",
+    "fichier": "Sunset at Coal Oil Point.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3ASunset_at_Coal_Oil_Point.jpg",
+    "licence": "CC BY 4.0",
+    "auteur": "Glenn Beltz"
+  },
+  "demande/demande-resto": {
+    "libelle": "Restaurant",
+    "fichier": "DZ6 2629 A cozy table for two - soft lights a single orchid and the promise of a perfect evening.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3ADZ6_2629_A_cozy_table_for_two_-_soft_lights_a_single_orchid_and_the_promise_of_a_perfect_evening.jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "PattayaPatrol"
+  },
+  "demande/demande-rooftop": {
+    "libelle": "Rooftop",
+    "fichier": "DFC 5212 A cozy rooftop table lit by a warm lamp overlooking Pattayas night lights.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3ADFC_5212_A_cozy_rooftop_table_lit_by_a_warm_lamp_overlooking_Pattayas_night_lights.jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "PattayaPatrol"
+  },
+  "dessert/brownie": {
+    "libelle": "Brownie",
+    "fichier": "Brownie IMG 001.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3ABrownie_IMG_001.jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "Phadke09"
+  },
+  "dessert/cheesecake": {
+    "libelle": "Cheesecake",
+    "fichier": "Soufflé-style cheesecake 001.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3ASouffl%C3%A9-style_cheesecake_001.jpg",
+    "licence": "CC0",
+    "auteur": "Ocdp"
+  },
+  "dessert/churros": {
+    "libelle": "Churros",
+    "fichier": "Churros en vasos en Londres - A Taste of Spain.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AChurros_en_vasos_en_Londres_-_A_Taste_of_Spain.jpg",
+    "licence": "CC BY-SA 2.0",
+    "auteur": "Garry Knight from London, England"
+  },
+  "dessert/creme-brulee": {
+    "libelle": "Crème brûlée",
+    "fichier": "Crème brûlée at restaurant in Zushi.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3ACr%C3%A8me_br%C3%BBl%C3%A9e_at_restaurant_in_Zushi.jpg",
+    "licence": "CC0",
+    "auteur": "Syced"
+  },
+  "dessert/crepes": {
+    "libelle": "Crêpes",
+    "fichier": "Hippie Kitchen Jefferson LA Oct 2018 Crepe.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AHippie_Kitchen_Jefferson_LA_Oct_2018_Crepe.jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "Infrogmation of New Orleans"
+  },
+  "dessert/eclair": {
+    "libelle": "Vanilla éclair",
+    "fichier": "Еклер.JPG",
+    "page": "https://commons.wikimedia.org/wiki/File%3A%D0%95%D0%BA%D0%BB%D0%B5%D1%80.JPG",
+    "licence": "Attribution",
+    "auteur": "uk:User:Turzh"
+  },
+  "dessert/fondant": {
+    "libelle": "Chocolate lava cake",
+    "fichier": "Chocolate Fondant.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AChocolate_Fondant.jpg",
+    "licence": "CC BY-SA 2.0",
+    "auteur": "FotoosVanRobin from Netherlands"
+  },
+  "dessert/gateau-anniversaire": {
+    "libelle": "Huge birthday cake",
+    "fichier": "3rd birthday cake (Unsplash 10b8Lvvc-4g).jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3A3rd_birthday_cake_(Unsplash_10b8Lvvc-4g).jpg",
+    "licence": "CC0",
+    "auteur": "Annie Spratt anniespratt"
+  },
+  "dessert/macarons": {
+    "libelle": "Macarons",
+    "fichier": "Des macarons de chez Bouillet (mars 2023).jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3ADes_macarons_de_chez_Bouillet_(mars_2023).jpg",
+    "licence": "CC0",
+    "auteur": "Benoît Prieur"
+  },
+  "dessert/mille-feuille": {
+    "libelle": "Mille-feuille",
+    "fichier": "Strawberry milfey - Milfey Patisserie 2026-10-30.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AStrawberry_milfey_-_Milfey_Patisserie_2026-10-30.jpg",
+    "licence": "CC0",
+    "auteur": "Andy Li"
+  },
+  "dessert/pavlova": {
+    "libelle": "Pavlova",
+    "fichier": "Pavlova dessert.JPG",
+    "page": "https://commons.wikimedia.org/wiki/File%3APavlova_dessert.JPG",
+    "licence": "Public domain",
+    "auteur": "Hazel Fowler"
+  },
+  "dessert/red-velvet": {
+    "libelle": "Red velvet cake",
+    "fichier": "Red velvet cake slice.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3ARed_velvet_cake_slice.jpg",
+    "licence": "CC BY 2.0",
+    "auteur": "Flickr user ~Twon~ : https://www.flickr.com/photos/twon/"
+  },
+  "dessert/tarte-fraises": {
+    "libelle": "Strawberry tart",
+    "fichier": "Strawberry Pie.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AStrawberry_Pie.jpg",
+    "licence": "CC BY 2.5",
+    "auteur": "User:Bangin"
+  },
+  "dessert/tarte-pommes": {
+    "libelle": "Apple pie",
+    "fichier": "Apple pie 24.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AApple_pie_24.jpg",
+    "licence": "CC BY 4.0",
+    "auteur": "Shisma"
+  },
+  "dessert/tiramisu": {
+    "libelle": "Tiramisu",
+    "fichier": "Classic Italian Tiramisu-3 (29989504485).jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AClassic_Italian_Tiramisu-3_(29989504485).jpg",
+    "licence": "CC BY 2.0",
+    "auteur": "Sharon Chen from Austin, United States"
+  },
+  "diner/bbq-coreen": {
+    "libelle": "Korean BBQ",
+    "fichier": "Korean barbecue - dipping grilled pork shoulder in meljeot.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AKorean_barbecue_-_dipping_grilled_pork_shoulder_in_meljeot.jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "대경라이프"
+  },
+  "diner/curry": {
+    "libelle": "Indian curry",
+    "fichier": "Chicken Tikka Masala - Mohammed - Spice Of Life.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AChicken_Tikka_Masala_-_Mohammed_-_Spice_Of_Life.jpg",
+    "licence": "CC0",
+    "auteur": "Andy Li"
+  },
+  "diner/fish-chips": {
+    "libelle": "Fish and chips",
+    "fichier": "Fish and chips plate with peas.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AFish_and_chips_plate_with_peas.jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "Grendelkhan"
+  },
+  "diner/fondue": {
+    "libelle": "Cheese fondue",
+    "fichier": "Fondue savoyarde.JPG",
+    "page": "https://commons.wikimedia.org/wiki/File%3AFondue_savoyarde.JPG",
+    "licence": "CC BY-SA 3.0",
+    "auteur": "Camille Gévaudan"
+  },
+  "diner/homard": {
+    "libelle": "Lobster",
+    "fichier": "Lobster dished.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3ALobster_dished.jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "Nowforever"
+  },
+  "diner/pad-thai": {
+    "libelle": "Pad thai",
+    "fichier": "Free asian noodles pad thai",
+    "page": "https://www.rawpixel.com/image/5916044/image-public-domain-food-free",
+    "licence": "CC0 1.0",
+    "auteur": ""
+  },
+  "diner/paella": {
+    "libelle": "Paella",
+    "fichier": "Paella de fruit de mer.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3APaella_de_fruit_de_mer.jpg",
+    "licence": "CC0",
+    "auteur": "Wilfredor"
+  },
+  "diner/raclette": {
+    "libelle": "Raclette",
+    "fichier": "2018-01-11-Raclette Lokal K-1449.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3A2018-01-11-Raclette_Lokal_K-1449.jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "Superbass"
+  },
+  "diner/ramen": {
+    "libelle": "Ramen",
+    "fichier": "Ramen Bowl 2.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3ARamen_Bowl_2.jpg",
+    "licence": "CC BY 4.0",
+    "auteur": "Shisma"
+  },
+  "diner/risotto": {
+    "libelle": "Risotto",
+    "fichier": "Risotto Weihnachten 2020 13.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3ARisotto_Weihnachten_2020_13.jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "Burkhard Mücke"
+  },
+  "diner/steak-frites": {
+    "libelle": "Steak and fries",
+    "fichier": "Steak frites - yummy.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3ASteak_frites_-_yummy.jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "LuvsMG481"
+  },
+  "diner/sushi": {
+    "libelle": "Sushi",
+    "fichier": "Sushi platter, Nikko, Japan.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3ASushi_platter%2C_Nikko%2C_Japan.jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "Joli Rumi"
+  },
+  "fastfood/burger": {
+    "libelle": "Burger",
+    "fichier": "McDonald's Quarter Pounder with Cheese, United States.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AMcDonald's_Quarter_Pounder_with_Cheese%2C_United_States.jpg",
+    "licence": "CC0",
+    "auteur": "Evan-Amos"
+  },
+  "fastfood/burrito": {
+    "libelle": "Burrito",
+    "fichier": "Burrito.JPG",
+    "page": "https://commons.wikimedia.org/wiki/File%3ABurrito.JPG",
+    "licence": "CC0",
+    "auteur": "samuelfernandezrivera"
+  },
+  "fastfood/croque": {
+    "libelle": "Grilled cheese",
+    "fichier": "Brisket and grilled cheese sandwich with a side of French fries.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3ABrisket_and_grilled_cheese_sandwich_with_a_side_of_French_fries.jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "Ser Amantio di Nicolao"
+  },
+  "fastfood/kebab": {
+    "libelle": "Kebab",
+    "fichier": "Kebab Gerashi.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AKebab_Gerashi.jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "Amin Noubahar"
+  },
+  "fastfood/nouilles": {
+    "libelle": "Instant noodles",
+    "fichier": "Instant noodles.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AInstant_noodles.jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "Gaurav Dhwaj Khadka"
+  },
+  "fastfood/nuggets": {
+    "libelle": "Nuggets",
+    "fichier": "Impossible chicken nuggets 2.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AImpossible_chicken_nuggets_2.jpg",
+    "licence": "CC0",
+    "auteur": "Mx. Granger"
+  },
+  "fastfood/poulet-frit": {
+    "libelle": "Fried chicken",
+    "fichier": "Fried-Chicken-Set.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AFried-Chicken-Set.jpg",
+    "licence": "CC0",
+    "auteur": "Evan-Amos"
+  },
+  "fastfood/tacos": {
+    "libelle": "Tacos",
+    "fichier": "Tacos 2.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3ATacos_2.jpg",
+    "licence": "CC BY-SA 3.0",
+    "auteur": "Popo le Chien"
+  },
+  "fleurs/fleurs-sauvages": {
+    "libelle": "Wildflowers",
+    "fichier": "Bouquet of wildflowers, Ehrenbach.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3ABouquet_of_wildflowers%2C_Ehrenbach.jpg",
+    "licence": "CC0",
+    "auteur": "Gerda Arendt"
+  },
+  "fleurs/hortensias": {
+    "libelle": "Hydrangeas",
+    "fichier": "Hydrangea macrophylla, Lévis.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AHydrangea_macrophylla%2C_L%C3%A9vis.jpg",
+    "licence": "CC BY 4.0",
+    "auteur": "Bernard Gagnon"
+  },
+  "fleurs/lavande": {
+    "libelle": "Lavender",
+    "fichier": "Lavender herb bouquets (54844470052).jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3ALavender_herb_bouquets_(54844470052).jpg",
+    "licence": "CC BY 4.0",
+    "auteur": "AS Photography from Poland"
+  },
+  "fleurs/lys": {
+    "libelle": "Lilies",
+    "fichier": "Lily Lilium 'Citronella' Flower.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3ALily_Lilium_'Citronella'_Flower.jpg",
+    "licence": "CC BY-SA 3.0",
+    "auteur": "Photo by and (c)2007 Derek Ramsey ( Ram-Man ). Co-attribution must be given to the Chanticleer Garden. Both parties have"
+  },
+  "fleurs/marguerites": {
+    "libelle": "Daisies",
+    "fichier": "Bellis perennis single Macro.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3ABellis_perennis_single_Macro.jpg",
+    "licence": "CC BY-SA 3.0 de",
+    "auteur": "Grand-Duc"
+  },
+  "fleurs/orchidee": {
+    "libelle": "Orchid",
+    "fichier": "Orchidaceae flowers - magenta colour.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AOrchidaceae_flowers_-_magenta_colour.jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "Mister rf"
+  },
+  "fleurs/pivoines": {
+    "libelle": "Peonies",
+    "fichier": "Пионы в саду Воскресенский церкви, Шушары 09.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3A%D0%9F%D0%B8%D0%BE%D0%BD%D1%8B_%D0%B2_%D1%81%D0%B0%D0%B4%D1%83_%D0%92%D0%BE%D1%81%D0%BA%D1%80%D0%B5%D1%81%D0%B5%D0%BD%D1%81%D0%BA%D0%B8%D0%B9_%D1%86%D0%B5%D1%80%D0%BA%D0%B2%D0%B8%2C_%D0%A8%D1%83%D1%88%D0%B0%D1%80%D1%8B_09.jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "Екатерина Борисова"
+  },
+  "fleurs/roses": {
+    "libelle": "Red roses",
+    "fichier": "Hochzeitsstrauß 1.JPG",
+    "page": "https://commons.wikimedia.org/wiki/File%3AHochzeitsstrau%C3%9F_1.JPG",
+    "licence": "CC BY-SA 2.5",
+    "auteur": "böhringer friedrich"
+  },
+  "fleurs/tournesols": {
+    "libelle": "Sunflowers",
+    "fichier": "Sunflower Test (6076322962).jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3ASunflower_Test_(6076322962).jpg",
+    "licence": "CC BY 2.0",
+    "auteur": "Dwight Sipler from Stow, MA, USA"
+  },
+  "fleurs/tulipes": {
+    "libelle": "Tulips",
+    "fichier": "Tulip-bouquet-vienna (Unsplash).jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3ATulip-bouquet-vienna_(Unsplash).jpg",
+    "licence": "CC0",
+    "auteur": "Gábor Juhász juhg"
+  },
+  "glace/affogato": {
+    "libelle": "Affogato",
+    "fichier": "Vinoteca, Smithfield, London (4485849609).jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AVinoteca%2C_Smithfield%2C_London_(4485849609).jpg",
+    "licence": "CC BY-SA 2.0",
+    "auteur": "Ewan Munro from London, UK"
+  },
+  "glace/banana-split": {
+    "libelle": "Banana split",
+    "fichier": "Banana split 1.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3ABanana_split_1.jpg",
+    "licence": "CC BY 2.0",
+    "auteur": "Edward Allen Lim"
+  },
+  "glace/cornet": {
+    "libelle": "Ice cream cone",
+    "fichier": "Ice cream in cones.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AIce_cream_in_cones.jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "AlphaLemur"
+  },
+  "glace/esquimau": {
+    "libelle": "Popsicle",
+    "fichier": "Cherry Popsicle (20913582635).jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3ACherry_Popsicle_(20913582635).jpg",
+    "licence": "CC BY-SA 2.0",
+    "auteur": "Willis Lam"
+  },
+  "glace/gelato": {
+    "libelle": "Gelato",
+    "fichier": "Crumble and ice cream at Black Horse Inn, Nuthurst, West Sussex, England.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3ACrumble_and_ice_cream_at_Black_Horse_Inn%2C_Nuthurst%2C_West_Sussex%2C_England.jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "Acabashi"
+  },
+  "glace/italienne": {
+    "libelle": "Soft serve",
+    "fichier": "Dickey's BBQ Pit Soft Serve Ice Cream Cone (20070080633).jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3ADickey's_BBQ_Pit_Soft_Serve_Ice_Cream_Cone_(20070080633).jpg",
+    "licence": "CC BY-SA 2.0",
+    "auteur": "Willis Lam"
+  },
+  "glace/mochi": {
+    "libelle": "Mochi ice cream",
+    "fichier": "Mochi Ice Cream.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AMochi_Ice_Cream.jpg",
+    "licence": "Public domain",
+    "auteur": "Charles Nguyen"
+  },
+  "glace/sandwich-glace": {
+    "libelle": "Ice cream sandwich",
+    "fichier": "Chipwich ice cream sandwich.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AChipwich_ice_cream_sandwich.jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "Crave Better Foods, LLC, copyright owner of The Original Chipwich"
+  },
+  "glace/sundae": {
+    "libelle": "Sundae",
+    "fichier": "Strawberry Sundae 01.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AStrawberry_Sundae_01.jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "Kritzolina"
+  },
+  "hiver/bonhomme": {
+    "libelle": "Building a snowman",
+    "fichier": "Hinterstoder Polsterlucke Priel Brotfall-3518.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AHinterstoder_Polsterlucke_Priel_Brotfall-3518.jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "Isiwal"
+  },
+  "hiver/feu-cheminee": {
+    "libelle": "Cabin by the fire",
+    "fichier": "Carters Cabin Fireplace (8264199935).jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3ACarters_Cabin_Fireplace_(8264199935).jpg",
+    "licence": "CC BY 2.0",
+    "auteur": "Virginia State Parks staff"
+  },
+  "hiver/hiver-patin": {
+    "libelle": "Ice skating",
+    "fichier": "Pörtschach Halbinselpromenade Ost-Bucht Freizeitaktivität Eislaufen 02032018 2667.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AP%C3%B6rtschach_Halbinselpromenade_Ost-Bucht_Freizeitaktivit%C3%A4t_Eislaufen_02032018_2667.jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "Johann Jaritz"
+  },
+  "hiver/hiver-ski": {
+    "libelle": "Skiing",
+    "fichier": "Roc du Grand Renard and Aiguille Grive, with TSF Charmettoger and ski slopes in the foreground, Les Arcs, 2018.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3ARoc_du_Grand_Renard_and_Aiguille_Grive%2C_with_TSF_Charmettoger_and_ski_slopes_in_the_foreground%2C_Les_Arcs%2C_2018.jpg",
+    "licence": "CC0",
+    "auteur": "DimiTalen"
+  },
+  "hiver/jacuzzi": {
+    "libelle": "Hot tub in the snow",
+    "fichier": "Korakukan Jigokudani",
+    "page": "https://www.flickr.com/photos/35118454@N00/50771244318",
+    "licence": "BY-NC-SA 2.0",
+    "auteur": "ebatty"
+  },
+  "hiver/luge": {
+    "libelle": "Sledding",
+    "fichier": "Rifugio Friedrich August - Sleigh.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3ARifugio_Friedrich_August_-_Sleigh.jpg",
+    "licence": "CC BY-SA 3.0",
+    "auteur": "H. Zell"
+  },
+  "instrument/batterie": {
+    "libelle": "Drums",
+    "fichier": "2009-03-26 Dr Feelgood, Spirit of 66, Verviers, Belgium IMG 7412.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3A2009-03-26_Dr_Feelgood%2C_Spirit_of_66%2C_Verviers%2C_Belgium_IMG_7412.jpg",
+    "licence": "CC BY-SA 3.0 de",
+    "auteur": "Eckhard Henkel"
+  },
+  "instrument/guitare-acoustique": {
+    "libelle": "Acoustic guitar",
+    "fichier": "00 Walden Acoustic Guitar D310e 01.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3A00_Walden_Acoustic_Guitar_D310e_01.jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "Elmschrat"
+  },
+  "instrument/guitare-electrique": {
+    "libelle": "Electric guitar",
+    "fichier": "E Guitar Cutouts Compo noBG.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AE_Guitar_Cutouts_Compo_noBG.jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "Auge=mit"
+  },
+  "instrument/piano": {
+    "libelle": "Piano",
+    "fichier": "Boesendorfer-5075415.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3ABoesendorfer-5075415.jpg",
+    "licence": "CC BY-SA 3.0",
+    "auteur": "ermell"
+  },
+  "instrument/platines": {
+    "libelle": "DJ decks",
+    "fichier": "Turntables and mixer.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3ATurntables_and_mixer.jpg",
+    "licence": "CC BY 3.0",
+    "auteur": "Baskoner"
+  },
+  "instrument/saxophone": {
+    "libelle": "Saxophone",
+    "fichier": "Saxofone Abel Ferreira MIS.jpeg",
+    "page": "https://commons.wikimedia.org/wiki/File%3ASaxofone_Abel_Ferreira_MIS.jpeg",
+    "licence": "CC BY 2.5",
+    "auteur": "User:Mwaldeck"
+  },
+  "instrument/trompette": {
+    "libelle": "Trumpet",
+    "fichier": "Trompete v. finn.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3ATrompete_v._finn.jpg",
+    "licence": "CC BY-SA 3.0",
+    "auteur": "Andre.Spang"
+  },
+  "instrument/violon": {
+    "libelle": "Violin",
+    "fichier": "Gma-min-00018.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AGma-min-00018.jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "JürgenMay"
+  },
+  "jeu/baby-foot": {
+    "libelle": "Foosball",
+    "fichier": "桌上足球（Table football）.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3A%E6%A1%8C%E4%B8%8A%E8%B6%B3%E7%90%83%EF%BC%88Table_football%EF%BC%89.jpg",
+    "licence": "CC0",
+    "auteur": "Nature42"
+  },
+  "jeu/billard": {
+    "libelle": "Pool",
+    "fichier": "Tavolo da Biliardo impolverato, ex caserma Pozzuolo del Friuli, Ferrara.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3ATavolo_da_Biliardo_impolverato%2C_ex_caserma_Pozzuolo_del_Friuli%2C_Ferrara.jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "Nicola Quirico"
+  },
+  "jeu/echecs-soir": {
+    "libelle": "Chess",
+    "fichier": "Atypical chess pieces (3).jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AAtypical_chess_pieces_(3).jpg",
+    "licence": "CC BY 4.0",
+    "auteur": "Tournasol7"
+  },
+  "jeu/jeux-societe": {
+    "libelle": "Board games",
+    "fichier": "Spielfiguren (surreal) -- 2021 -- 8820.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3ASpielfiguren_(surreal)_--_2021_--_8820.jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "Dietmar Rabich"
+  },
+  "jeu/jeux-video": {
+    "libelle": "Video games",
+    "fichier": "Xbox-360-Controller-Black.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AXbox-360-Controller-Black.jpg",
+    "licence": "Public domain",
+    "auteur": "Evan-Amos"
+  },
+  "jeu/ping-pong": {
+    "libelle": "Ping pong",
+    "fichier": "Mesa de ping pong, Riesstr., Múnich, Alemania 2012-04-28, DD 01.JPG",
+    "page": "https://commons.wikimedia.org/wiki/File%3AMesa_de_ping_pong%2C_Riesstr.%2C_M%C3%BAnich%2C_Alemania_2012-04-28%2C_DD_01.JPG",
+    "licence": "CC BY-SA 3.0",
+    "auteur": "Diego Delso"
+  },
+  "jeu/poker": {
+    "libelle": "Poker",
+    "fichier": "Two poker cards and poker chips 20170611.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3ATwo_poker_cards_and_poker_chips_20170611.jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "Santeri Viinamäki"
+  },
+  "loisir/echecs": {
+    "libelle": "Chess",
+    "fichier": "Schachfiguren, Bauern -- 2022 -- 0022 (bw).jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3ASchachfiguren%2C_Bauern_--_2022_--_0022_(bw).jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "Dietmar Rabich"
+  },
+  "loisir/jardinage": {
+    "libelle": "Gardening",
+    "fichier": "Kitchen garden on a Mekong bank.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AKitchen_garden_on_a_Mekong_bank.jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "Basile Morin"
+  },
+  "loisir/menuiserie": {
+    "libelle": "Woodworking",
+    "fichier": "Crafting precision in woodworking at a workshop with a bandsaw during daylight hours.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3ACrafting_precision_in_woodworking_at_a_workshop_with_a_bandsaw_during_daylight_hours.jpg",
+    "licence": "CC BY 2.0",
+    "auteur": "Shixart1985"
+  },
+  "loisir/peche": {
+    "libelle": "Fishing",
+    "fichier": "Fishing rod & reel, Mahamaya Lake (01).jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AFishing_rod_%26_reel%2C_Mahamaya_Lake_(01).jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "Moheen Reeyad"
+  },
+  "loisir/photo": {
+    "libelle": "Photography",
+    "fichier": "Photographic lenses and tubes 2025.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3APhotographic_lenses_and_tubes_2025.jpg",
+    "licence": "CC BY 4.0",
+    "auteur": "Carlos Valenzuela Montuy"
+  },
+  "loisir/poterie": {
+    "libelle": "Pottery",
+    "fichier": "Pottery workshop at Odisha Crafts Museum 08.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3APottery_workshop_at_Odisha_Crafts_Museum_08.jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "Kritzolina"
+  },
+  "loisir/tricot": {
+    "libelle": "Knitting",
+    "fichier": "Rainbow yarn for knitting, display in front of a needlework shop in Graz, Austria, GW23-100.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3ARainbow_yarn_for_knitting%2C_display_in_front_of_a_needlework_shop_in_Graz%2C_Austria%2C_GW23-100.jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "Lusi Lindwurm"
+  },
+  "maison/chalet": {
+    "libelle": "Mountain chalet",
+    "fichier": "Bergtocht van Val Sinestra via Vnà naar Zuort. 16-09-2019. (actm.) 29.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3ABergtocht_van_Val_Sinestra_via_Vn%C3%A0_naar_Zuort._16-09-2019._(actm.)_29.jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "Agnes Monkelbaan"
+  },
+  "maison/chateau": {
+    "libelle": "Castle",
+    "fichier": "Schloss Neuschwanstein 2013.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3ASchloss_Neuschwanstein_2013.jpg",
+    "licence": "CC BY-SA 3.0 de",
+    "auteur": "Thomas Wolf , www.foto-tw.de"
+  },
+  "maison/loft": {
+    "libelle": "Loft apartment",
+    "fichier": "Hayloft Apartment.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AHayloft_Apartment.jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "Сергій111111"
+  },
+  "maison/maison-lac": {
+    "libelle": "Lake house",
+    "fichier": "House in Lake Clearwater, Canterbury, New Zealand 18.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AHouse_in_Lake_Clearwater%2C_Canterbury%2C_New_Zealand_18.jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "Michal Klajban"
+  },
+  "maison/maison-plage": {
+    "libelle": "Beach house",
+    "fichier": "Beach house at Misquamicut Beach, Rhode Island.JPG",
+    "page": "https://commons.wikimedia.org/wiki/File%3ABeach_house_at_Misquamicut_Beach%2C_Rhode_Island.JPG",
+    "licence": "Public domain",
+    "auteur": "Juliancolton"
+  },
+  "maison/tiny-house": {
+    "libelle": "Tiny house",
+    "fichier": "Tiny des collines (DSC02109).jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3ATiny_des_collines_(DSC02109).jpg",
+    "licence": "CC BY 4.0",
+    "auteur": "Trougnouf (Benoit Brummer)"
+  },
+  "maison/victorienne": {
+    "libelle": "Victorian house",
+    "fichier": "Painted Ladies Alamo Square. One",
+    "page": "https://www.rawpixel.com/image/4021352/photo-image-city-car-building",
+    "licence": "CC0 1.0",
+    "auteur": ""
+  },
+  "maison/villa-moderne": {
+    "libelle": "Modern villa",
+    "fichier": "3D Rendering of Modern Luxury Villa Exterior with Pool.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3A3D_Rendering_of_Modern_Luxury_Villa_Exterior_with_Pool.jpg",
+    "licence": "CC BY 4.0",
+    "auteur": "Tuantranseo"
+  },
+  "mariage/mairie": {
+    "libelle": "City hall",
+    "fichier": "Montreal City Hall Jan 2006.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AMontreal_City_Hall_Jan_2006.jpg",
+    "licence": "CC BY 2.5",
+    "auteur": "David Iliff ( Diliff )"
+  },
+  "mariage/mariage-chateau": {
+    "libelle": "Castle",
+    "fichier": "Hensol Castle, South Wales.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AHensol_Castle%2C_South_Wales.jpg",
+    "licence": "CC BY 4.0",
+    "auteur": "TomZelinsky"
+  },
+  "mariage/mariage-jardin": {
+    "libelle": "Garden",
+    "fichier": "Wooden swing wedding ceremony chairs",
+    "page": "https://www.rawpixel.com/image/3283666/free-photo-image-yard-garden-cc0",
+    "licence": "CC0 1.0",
+    "auteur": ""
+  },
+  "mariage/sommet": {
+    "libelle": "Mountaintop",
+    "fichier": "Gokyo Ri summit, Gokyo Lake, Nepal, Himalayas.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AGokyo_Ri_summit%2C_Gokyo_Lake%2C_Nepal%2C_Himalayas.jpg",
+    "licence": "CC BY 4.0",
+    "auteur": "Vyacheslav Argenberg"
+  },
+  "mariage/vegas": {
+    "libelle": "Vegas chapel",
+    "fichier": "Las Vegas (Nevada, USA), The Strip -- 2012 -- 6286.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3ALas_Vegas_(Nevada%2C_USA)%2C_The_Strip_--_2012_--_6286.jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "Dietmar Rabich"
+  },
+  "montre/cartier": {
+    "libelle": "Cartier Tank",
+    "fichier": "Cartier Tank.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3ACartier_Tank.jpg",
+    "licence": "CC BY-SA 2.0",
+    "auteur": "Guy Sie"
+  },
+  "montre/casio": {
+    "libelle": "Casio digital",
+    "fichier": "Casio F-91W watch (2023) (front closeup - time) (minor retouch).jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3ACasio_F-91W_watch_(2023)_(front_closeup_-_time)_(minor_retouch).jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "Multicherry"
+  },
+  "montre/g-shock": {
+    "libelle": "Casio G-Shock",
+    "fichier": "Casio G-Shock analog-digital watch.jpeg",
+    "page": "https://commons.wikimedia.org/wiki/File%3ACasio_G-Shock_analog-digital_watch.jpeg",
+    "licence": "CC BY-SA 3.0",
+    "auteur": "Vaishak Suresh"
+  },
+  "montre/gousset": {
+    "libelle": "Pocket watch",
+    "fichier": "Dülmen, Kirchspiel, ehem. Sondermunitionslager Visbeck, \"What if\" -- 2023 -- 6686 (kreativ 2).jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AD%C3%BClmen%2C_Kirchspiel%2C_ehem._Sondermunitionslager_Visbeck%2C_%22What_if%22_--_2023_--_6686_(kreativ_2).jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "Dietmar Rabich"
+  },
+  "montre/rolex": {
+    "libelle": "Rolex Submariner",
+    "fichier": "Rolex Submariner 300m Chonometer.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3ARolex_Submariner_300m_Chonometer.jpg",
+    "licence": "CC BY-SA 3.0",
+    "auteur": "Si Griffiths"
+  },
+  "montre/seiko": {
+    "libelle": "Seiko diver",
+    "fichier": "Seiko SKX781 Orange Monster diver watch (2026-02-13).jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3ASeiko_SKX781_Orange_Monster_diver_watch_(2026-02-13).jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "Olgierd Rudak"
+  },
+  "montre/speedmaster": {
+    "libelle": "Omega Speedmaster",
+    "fichier": "Omega Speedmaster compilation pp01.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AOmega_Speedmaster_compilation_pp01.jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "Auge=mit"
+  },
+  "moto/bmw-gs": {
+    "libelle": "BMW GS",
+    "fichier": "BMW R 1250 GS HP (1).jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3ABMW_R_1250_GS_HP_(1).jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "Cjp24"
+  },
+  "moto/bonneville": {
+    "libelle": "Triumph Bonneville",
+    "fichier": "Triumph Bonneville T120 - 7742388010.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3ATriumph_Bonneville_T120_-_7742388010.jpg",
+    "licence": "CC BY 2.0",
+    "auteur": "SG2012"
+  },
+  "moto/ducati": {
+    "libelle": "Ducati Panigale",
+    "fichier": "Ducati Panigale V4 - Tuning World Bodensee 2018, Friedrichshafen (OW1A0484).jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3ADucati_Panigale_V4_-_Tuning_World_Bodensee_2018%2C_Friedrichshafen_(OW1A0484).jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "Matti Blume"
+  },
+  "moto/harley": {
+    "libelle": "Harley-Davidson",
+    "fichier": "Harley Davidson Fat Boy 2018 FLFBS.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AHarley_Davidson_Fat_Boy_2018_FLFBS.jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "Nitot"
+  },
+  "moto/indian": {
+    "libelle": "Indian Scout",
+    "fichier": "Indian Scout Leimershof -20190907-RM-162149.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AIndian_Scout_Leimershof_-20190907-RM-162149.jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "Ermell"
+  },
+  "moto/mt07": {
+    "libelle": "Yamaha MT-07",
+    "fichier": "Yamaha MT-07 2027.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AYamaha_MT-07_2027.jpg",
+    "licence": "CC BY 4.0",
+    "auteur": "802xr"
+  },
+  "moto/ninja": {
+    "libelle": "Kawasaki Ninja",
+    "fichier": "Kawasaki Ninja ZX-10R 2025.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AKawasaki_Ninja_ZX-10R_2025.jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "AVMOTO"
+  },
+  "moto/vespa": {
+    "libelle": "Vespa",
+    "fichier": "Vespa GTS 250.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AVespa_GTS_250.jpg",
+    "licence": "CC0",
+    "auteur": "https://pixabay.com/users/antranias-50356/"
+  },
+  "noel-gourmandise/buche": {
+    "libelle": "Yule log",
+    "fichier": "Buche de Noel (Yule Log).jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3ABuche_de_Noel_(Yule_Log).jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "Mitantig"
+  },
+  "noel-gourmandise/chocolat-noel": {
+    "libelle": "Hot chocolate",
+    "fichier": "Hot Chocolate - Finch 2026-03-21.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AHot_Chocolate_-_Finch_2026-03-21.jpg",
+    "licence": "CC0",
+    "auteur": "Andy Li"
+  },
+  "noel-gourmandise/maison-pain-epices": {
+    "libelle": "Gingerbread house",
+    "fichier": "Gingerbread House 2025.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AGingerbread_House_2025.jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "Louis174936"
+  },
+  "noel-gourmandise/mince-pies": {
+    "libelle": "Mince pies",
+    "fichier": "Mince pies on a plate.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AMince_pies_on_a_plate.jpg",
+    "licence": "CC BY 3.0",
+    "auteur": "christmasstockimages.com"
+  },
+  "noel-gourmandise/pain-epices": {
+    "libelle": "Gingerbread cookies",
+    "fichier": "Prag, Keksgeschäft \"Perníkový panáček\" -- 2019 -- 6557.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3APrag%2C_Keksgesch%C3%A4ft_%22Pern%C3%ADkov%C3%BD_pan%C3%A1%C4%8Dek%22_--_2019_--_6557.jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "Dietmar Rabich"
+  },
+  "noel-gourmandise/panettone": {
+    "libelle": "Panettone",
+    "fichier": "Panettone - Nicolettone 2017 - IMG 7085 (31752542285).jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3APanettone_-_Nicolettone_2017_-_IMG_7085_(31752542285).jpg",
+    "licence": "CC BY 2.0",
+    "auteur": "N i c o l a from Fiumicino (Rome), Italy"
+  },
+  "noel-gourmandise/pudding": {
+    "libelle": "Christmas pudding",
+    "fichier": "Christmas pudding (11927643275).jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AChristmas_pudding_(11927643275).jpg",
+    "licence": "CC BY-SA 2.0",
+    "auteur": "James Petts from London, England"
+  },
+  "noel-gourmandise/stollen": {
+    "libelle": "Stollen",
+    "fichier": "White Chocolate & Ginger Stollen",
+    "page": "https://www.flickr.com/photos/92485952@N02/15958334118",
+    "licence": "BY-NC-SA 2.0",
+    "auteur": "DanielJPHadley"
+  },
+  "noel-gourmandise/sucres-orge": {
+    "libelle": "Candy canes",
+    "fichier": "Candy Cane.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3ACandy_Cane.jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "Texas Lane"
+  },
+  "noel-sortie/chalet-noel": {
+    "libelle": "Snowy chalet",
+    "fichier": "When the sun goes skiing.",
+    "page": "https://www.flickr.com/photos/107922203@N04/54268775055",
+    "licence": "CC0 1.0",
+    "auteur": "simon_berger"
+  },
+  "noel-sortie/film-sapin": {
+    "libelle": "Movie by the tree",
+    "fichier": "Governor's Living Room.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AGovernor's_Living_Room.jpg",
+    "licence": "CC BY 2.0",
+    "auteur": "Wade Johanson"
+  },
+  "noel-sortie/illuminations": {
+    "libelle": "Christmas lights",
+    "fichier": "Dyker Lights (62317).jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3ADyker_Lights_(62317).jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "Rhododendrites"
+  },
+  "noel-sortie/marche-noel": {
+    "libelle": "Christmas market",
+    "fichier": "Dülmen, Marktplatz, Weihnachtsmarkt -- 2013 -- 5356.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AD%C3%BClmen%2C_Marktplatz%2C_Weihnachtsmarkt_--_2013_--_5356.jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "Dietmar Rabich"
+  },
+  "noel-sortie/patinoire-noel": {
+    "libelle": "Ice skating",
+    "fichier": "Ice rink at Place D’Youville, Quebec City.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AIce_rink_at_Place_D%E2%80%99Youville%2C_Quebec_City.jpg",
+    "licence": "CC0",
+    "auteur": "Wilfredor"
+  },
+  "nouvel-an/feux-artifice": {
+    "libelle": "City fireworks",
+    "fichier": "View of New Year's Eve fireworks over Times Square and Central Park South reflected in the Reservoir in Central Park, New York City.",
+    "page": "https://www.flickr.com/photos/62501682@N00/52599744650",
+    "licence": "BY-NC-ND 2.0",
+    "auteur": "diana_robinson"
+  },
+  "nouvel-an/plage-nouvel-an": {
+    "libelle": "Tropical beach",
+    "fichier": "Last night on Kauaʻi, Sunset at the Na'pali coast, Ke’e Beach at Hāʻena Beach State Park (33628900425).jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3ALast_night_on_Kaua%CA%BBi%2C_Sunset_at_the_Na'pali_coast%2C_Ke%E2%80%99e_Beach_at_H%C4%81%CA%BBena_Beach_State_Park_(33628900425).jpg",
+    "licence": "CC BY 2.0",
+    "auteur": "Deb Nystrom from Ann Arbor, Michigan, USA"
+  },
+  "nouvel-an/rooftop-nouvel-an": {
+    "libelle": "Rooftop party",
+    "fichier": "DSC_3083: a view of a city skyline at night",
+    "page": "https://www.flickr.com/photos/194424926@N05/53880517470",
+    "licence": "BY-SA 2.0",
+    "auteur": "PattayaPatrol"
+  },
+  "nouvel-an/soiree-chalet": {
+    "libelle": "Mountain chalet",
+    "fichier": "Balea Chalet at night",
+    "page": "https://www.flickr.com/photos/185635971@N07/49613115801",
+    "licence": "BY-NC 2.0",
+    "auteur": "romaniaphototours"
+  },
+  "nouvel-an/soiree-maison": {
+    "libelle": "Cozy night in",
+    "fichier": "Cozy cafe coffe time relaxing",
+    "page": "https://www.rawpixel.com/image/3302966/free-photo-image-living-room-apparel-automobile",
+    "licence": "CC0 1.0",
+    "auteur": ""
+  },
+  "nouvel-an/times-square": {
+    "libelle": "Times Square",
+    "fichier": "Times Square New Year's Eve 2023 Numbers Ball drop",
+    "page": "https://www.flickr.com/photos/22882274@N04/52579744724",
+    "licence": "BY 2.0",
+    "auteur": "Anthony Quintano"
+  },
+  "oeufs/brouilles": {
+    "libelle": "Scrambled",
+    "fichier": "At Singapore 2023 185.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AAt_Singapore_2023_185.jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "Photograph by Mike Peel ( www.mikepeel.net )."
+  },
+  "oeufs/coque": {
+    "libelle": "Soft-boiled",
+    "fichier": "Egg (Explored 2015-11-02) - Flickr - Maria Eklind.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AEgg_(Explored_2015-11-02)_-_Flickr_-_Maria_Eklind.jpg",
+    "licence": "CC BY-SA 2.0",
+    "auteur": "Maria Eklind"
+  },
+  "oeufs/oeuf-plat": {
+    "libelle": "Fried",
+    "fichier": "Leberkäs mit Spiegelei in Prien 02.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3ALeberk%C3%A4s_mit_Spiegelei_in_Prien_02.jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "Kritzolina"
+  },
+  "oeufs/omelette": {
+    "libelle": "Omelette",
+    "fichier": "Classic argentine omelette (dish).jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AClassic_argentine_omelette_(dish).jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "Horacio Cambeiro"
+  },
+  "oeufs/poche": {
+    "libelle": "Poached",
+    "fichier": "Poached egg on toast.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3APoached_egg_on_toast.jpg",
+    "licence": "CC BY 2.0",
+    "auteur": "Kai Hendry"
+  },
+  "patate/curly": {
+    "libelle": "Curly fries",
+    "fichier": "Curly fries (3764323218).jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3ACurly_fries_(3764323218).jpg",
+    "licence": "CC BY 2.0",
+    "auteur": "@joefoodie from USA"
+  },
+  "patate/frites": {
+    "libelle": "French fries",
+    "fichier": "Food on Mallorca 11.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AFood_on_Mallorca_11.jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "Kritzolina"
+  },
+  "patate/gratin": {
+    "libelle": "Potato gratin",
+    "fichier": "Gratin dauphinois.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AGratin_dauphinois.jpg",
+    "licence": "CC BY-SA 3.0",
+    "auteur": "Ludovic Péron"
+  },
+  "patate/hash-browns": {
+    "libelle": "Hash browns",
+    "fichier": "Hash browns on white plate.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AHash_browns_on_white_plate.jpg",
+    "licence": "CC BY-SA 3.0",
+    "auteur": "Jason Zhang"
+  },
+  "patate/rosti": {
+    "libelle": "Rösti",
+    "fichier": "Zürcher Geschnetzeltes with Rösti.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AZ%C3%BCrcher_Geschnetzeltes_with_R%C3%B6sti.jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "Armineaghayan"
+  },
+  "pates/bolognaise": {
+    "libelle": "Bolognese",
+    "fichier": "Spaghetti Bolognese von Unico Tauberbischofsheim.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3ASpaghetti_Bolognese_von_Unico_Tauberbischofsheim.jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "Triplec85"
+  },
+  "pates/carbonara": {
+    "libelle": "Carbonara",
+    "fichier": "Spaghetti Carbonara von Unico Tauberbischofsheim.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3ASpaghetti_Carbonara_von_Unico_Tauberbischofsheim.jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "Triplec85"
+  },
+  "pates/fruits-mer": {
+    "libelle": "Seafood pasta",
+    "fichier": "বিদেশি স্প্যাগেটির দেশি পরিণতি !.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3A%E0%A6%AC%E0%A6%BF%E0%A6%A6%E0%A7%87%E0%A6%B6%E0%A6%BF_%E0%A6%B8%E0%A7%8D%E0%A6%AA%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%97%E0%A7%87%E0%A6%9F%E0%A6%BF%E0%A6%B0_%E0%A6%A6%E0%A7%87%E0%A6%B6%E0%A6%BF_%E0%A6%AA%E0%A6%B0%E0%A6%BF%E0%A6%A3%E0%A6%A4%E0%A6%BF_!.jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "Munni Akter Mim"
+  },
+  "pates/gnocchi": {
+    "libelle": "Gnocchi",
+    "fichier": "Gnocchi Red Sauce.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AGnocchi_Red_Sauce.jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "Amy Aletheia Cahill"
+  },
+  "pates/lasagnes": {
+    "libelle": "Lasagna",
+    "fichier": "Eggplant Lasagna (Vegitarian) (1 of 6).jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AEggplant_Lasagna_(Vegitarian)_(1_of_6).jpg",
+    "licence": "CC BY 2.0",
+    "auteur": "Wheeler Cowperthwaite"
+  },
+  "pates/mac-cheese": {
+    "libelle": "Mac and cheese",
+    "fichier": "Macaroni and cheese (2) (cropped).jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AMacaroni_and_cheese_(2)_(cropped).jpg",
+    "licence": "CC BY-SA 2.0",
+    "auteur": "Sumeet Jain from San Francisco, USA"
+  },
+  "pates/pesto": {
+    "libelle": "Pesto",
+    "fichier": "Free pasta image",
+    "page": "https://www.rawpixel.com/image/5916890/free-pasta-image-public-domain-food-cc0-photo",
+    "licence": "CC0 1.0",
+    "auteur": ""
+  },
+  "pates/raviolis": {
+    "libelle": "Ravioli",
+    "fichier": "Ravioli 3.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3ARavioli_3.jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "3steph14"
+  },
+  "petitdej/acai": {
+    "libelle": "Açaí bowl",
+    "fichier": "Acai bowl - Açaí na tigela.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AAcai_bowl_-_A%C3%A7a%C3%AD_na_tigela.jpg",
+    "licence": "CC BY 2.0",
+    "auteur": "chahayes"
+  },
+  "petitdej/avocado-toast": {
+    "libelle": "Avocado toast",
+    "fichier": "Smashed Avocado on Sourdough Toast with Chai Latte - M&S cafe 2023-08-08.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3ASmashed_Avocado_on_Sourdough_Toast_with_Chai_Latte_-_M%26S_cafe_2023-08-08.jpg",
+    "licence": "CC0",
+    "auteur": "Andy Li"
+  },
+  "petitdej/benedict": {
+    "libelle": "Eggs Benedict",
+    "fichier": "Eggs Benedict-01-cropped.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AEggs_Benedict-01-cropped.jpg",
+    "licence": "CC BY 2.0",
+    "auteur": "Jon Mountjoy"
+  },
+  "petitdej/cereales": {
+    "libelle": "Cereal",
+    "fichier": "Kellogg's Limited Edition Cars 2 Cereal in Bowl (5817817036).jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AKellogg's_Limited_Edition_Cars_2_Cereal_in_Bowl_(5817817036).jpg",
+    "licence": "CC BY-SA 2.0",
+    "auteur": "theimpulsivebuy"
+  },
+  "petitdej/croissant-cafe": {
+    "libelle": "Croissant & coffee",
+    "fichier": "All butter croissant and latte - Blend Coffee Co. 2026-01-02.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AAll_butter_croissant_and_latte_-_Blend_Coffee_Co._2026-01-02.jpg",
+    "licence": "CC0",
+    "auteur": "Andy Li"
+  },
+  "petitdej/english": {
+    "libelle": "Full English",
+    "fichier": "Full English breakfast at the Chalet Cafe, Cowfold, West Sussex, England.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AFull_English_breakfast_at_the_Chalet_Cafe%2C_Cowfold%2C_West_Sussex%2C_England.jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "Acabashi"
+  },
+  "petitdej/gaufres": {
+    "libelle": "Waffles",
+    "fichier": "2021-10-03 10 01 32 Waffles at the SpringHill Suites by Marriott Ewing Princeton South in Ewing Township, Mercer County, New Jersey.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3A2021-10-03_10_01_32_Waffles_at_the_SpringHill_Suites_by_Marriott_Ewing_Princeton_South_in_Ewing_Township%2C_Mercer_County%2C_New_Jersey.jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "Famartin"
+  },
+  "petitdej/pain-perdu": {
+    "libelle": "French toast",
+    "fichier": "French toast 001.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AFrench_toast_001.jpg",
+    "licence": "CC0",
+    "auteur": "Ocdp"
+  },
+  "petitdej/pancakes": {
+    "libelle": "Pancakes",
+    "fichier": "NY breakfast 02.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3ANY_breakfast_02.jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "Kritzolina"
+  },
+  "petitdej/shakshuka": {
+    "libelle": "Shakshuka",
+    "fichier": "Shakshuka by Calliopejen1.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AShakshuka_by_Calliopejen1.jpg",
+    "licence": "CC BY-SA 3.0",
+    "auteur": "Calliopejen1"
+  },
+  "pizza/calzone": {
+    "libelle": "Calzone",
+    "fichier": "Wikimania 2016 Deryck day 0 - 07 calzone.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AWikimania_2016_Deryck_day_0_-_07_calzone.jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "Deryck Chan"
+  },
+  "pizza/deep-dish": {
+    "libelle": "Deep dish",
+    "fichier": "Bristol Farms Chicago Deep Dish meat pizza.JPG",
+    "page": "https://commons.wikimedia.org/wiki/File%3ABristol_Farms_Chicago_Deep_Dish_meat_pizza.JPG",
+    "licence": "CC BY-SA 3.0",
+    "auteur": "BrokenSphere"
+  },
+  "pizza/hawaienne": {
+    "libelle": "Hawaiian",
+    "fichier": "Pizza with pineapple.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3APizza_with_pineapple.jpg",
+    "licence": "CC BY 2.0",
+    "auteur": "Janine from Mililani, Hawaii, United States"
+  },
+  "pizza/margherita": {
+    "libelle": "Margherita",
+    "fichier": "Margherita Originale.JPG",
+    "page": "https://commons.wikimedia.org/wiki/File%3AMargherita_Originale.JPG",
+    "licence": "CC BY-SA 3.0",
+    "auteur": "Mario56"
+  },
+  "pizza/pepperoni": {
+    "libelle": "Pepperoni",
+    "fichier": "Pizza Tradición Napolitana.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3APizza_Tradici%C3%B3n_Napolitana.jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "Rjcastillo"
+  },
+  "pizza/quatre-fromages": {
+    "libelle": "Four cheese",
+    "fichier": "Pizza quattro formaggi at restaurant, Chalk Farm Road, London.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3APizza_quattro_formaggi_at_restaurant%2C_Chalk_Farm_Road%2C_London.jpg",
+    "licence": "CC BY-SA 2.0",
+    "auteur": "Ewan Munro from London, UK"
+  },
+  "pizza/vegetarienne": {
+    "libelle": "Veggie",
+    "fichier": "Vegetarian Pizza.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AVegetarian_Pizza.jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "Petar Milošević"
+  },
+  "saison/automne": {
+    "libelle": "Autumn",
+    "fichier": "Autumn leaves, Talcott Mountain State Park.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AAutumn_leaves%2C_Talcott_Mountain_State_Park.jpg",
+    "licence": "CC BY-SA 3.0",
+    "auteur": "Ragesoss"
+  },
+  "saison/ete": {
+    "libelle": "Summer",
+    "fichier": "Bagayevskaya, Don River, Beach, Trees, Summer in Russia.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3ABagayevskaya%2C_Don_River%2C_Beach%2C_Trees%2C_Summer_in_Russia.jpg",
+    "licence": "CC BY 4.0",
+    "auteur": "Vyacheslav Argenberg"
+  },
+  "saison/hiver-saison": {
+    "libelle": "Winter",
+    "fichier": "Winter auf dem Himmeldunkberg.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AWinter_auf_dem_Himmeldunkberg.jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "Jörg Braukmann"
+  },
+  "saison/printemps": {
+    "libelle": "Spring",
+    "fichier": "Wild cherry blossoms in Tuntorp 1.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AWild_cherry_blossoms_in_Tuntorp_1.jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "W.carter"
+  },
+  "salle/boxe-salle": {
+    "libelle": "Boxing",
+    "fichier": "Boxing gloves Bail 10-OZ (1).jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3ABoxing_gloves_Bail_10-OZ_(1).jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "I would appreciate being notified if you use my work outside Wikimedia. Do not copy this image illegally by ignoring the"
+  },
+  "salle/course": {
+    "libelle": "Running",
+    "fichier": "Vitoria - Mendizorrotza 02.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AVitoria_-_Mendizorrotza_02.jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "Basotxerri"
+  },
+  "salle/crossfit": {
+    "libelle": "CrossFit",
+    "fichier": "Pair of kettlebells on a shelf, Results Gym.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3APair_of_kettlebells_on_a_shelf%2C_Results_Gym.jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "Ser Amantio di Nicolao"
+  },
+  "salle/muscu": {
+    "libelle": "Weightlifting",
+    "fichier": "Colorful pile of dumbbells at the gym 2.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AColorful_pile_of_dumbbells_at_the_gym_2.jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "Ser Amantio di Nicolao"
+  },
+  "salle/natation": {
+    "libelle": "Swimming",
+    "fichier": "Aquatic Center & Eppes Recreation Ribbon Cutting",
+    "page": "https://www.flickr.com/photos/156869144@N02/52126986831",
+    "licence": "PDM 1.0",
+    "auteur": "Greenville, NC"
+  },
+  "salle/velo": {
+    "libelle": "Cycling",
+    "fichier": "CH.ZH.Affoltern-am-Albis 2024-03-30 road-bike-racing.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3ACH.ZH.Affoltern-am-Albis_2024-03-30_road-bike-racing.jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "Roy Egloff"
+  },
+  "salle/yoga": {
+    "libelle": "Yoga",
+    "fichier": "Yoga mat.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AYoga_mat.jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "Gausanchennai"
+  },
+  "snack/nachos": {
+    "libelle": "Nachos",
+    "fichier": "Nachos-cheese (cropped).jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3ANachos-cheese_(cropped).jpg",
+    "licence": "CC BY 2.0",
+    "auteur": "chee.hong from Kuala Lumpur, Malaysia"
+  },
+  "snack/oursons": {
+    "libelle": "Gummy bears",
+    "fichier": "Oursons gélatine marché Rouffignac.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AOursons_g%C3%A9latine_march%C3%A9_Rouffignac.jpg",
+    "licence": "CC0",
+    "auteur": "Jebulon"
+  },
+  "snack/popcorn": {
+    "libelle": "Popcorn",
+    "fichier": "351Photos taken during the 2020 coronavirus pandemic in Baliuag, Bulacan 50.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3A351Photos_taken_during_the_2020_coronavirus_pandemic_in_Baliuag%2C_Bulacan_50.jpg",
+    "licence": "CC0",
+    "auteur": "Judgefloro"
+  },
+  "snack/pot-glace": {
+    "libelle": "Ice cream tub",
+    "fichier": "An open tub of Zielona Budka \"Karmel z Solą\" (Caramel with Salt) ice cream; Gliwice, Silesian Voivodeship, Poland, February 2026.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AAn_open_tub_of_Zielona_Budka_%22Karmel_z_Sol%C4%85%22_(Caramel_with_Salt)_ice_cream%3B_Gliwice%2C_Silesian_Voivodeship%2C_Poland%2C_February_2026.jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "MichalPL"
+  },
+  "snack/reglisse": {
+    "libelle": "Licorice",
+    "fichier": "Silver rings on licorice candy rolls by ASQ.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3ASilver_rings_on_licorice_candy_rolls_by_ASQ.jpg",
+    "licence": "CC BY 4.0",
+    "auteur": "W.carter"
+  },
+  "snack/tablette": {
+    "libelle": "Chocolate bar",
+    "fichier": "2020-02-23 02 24 15 A Ghirardelli Dark Chocolate Mint Square broken into two pieces in the Parkway Village section of Ewing Township, Mercer County, New Jersey.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3A2020-02-23_02_24_15_A_Ghirardelli_Dark_Chocolate_Mint_Square_broken_into_two_pieces_in_the_Parkway_Village_section_of_Ewing_Township%2C_Mercer_County%2C_New_Jersey.jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "Famartin"
+  },
+  "sport/baseball": {
+    "libelle": "Baseball",
+    "fichier": "PetcoBallParkByPhilKonstantin.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3APetcoBallParkByPhilKonstantin.jpg",
+    "licence": "CC BY-SA 3.0",
+    "auteur": "Philkon Attribute to \"Phil Konstantin\""
+  },
+  "sport/basket": {
+    "libelle": "Basketball",
+    "fichier": "Basketball Hoop",
+    "page": "https://stocksnap.io/photo/basketball-hoop-RJKY5WWS8V",
+    "licence": "CC0 1.0",
+    "auteur": "Steve Johnson"
+  },
+  "sport/boxe": {
+    "libelle": "Boxing",
+    "fichier": "Set-up of a boxing Ring.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3ASet-up_of_a_boxing_Ring.jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "Micheal Kaluba"
+  },
+  "sport/f1": {
+    "libelle": "Formula 1",
+    "fichier": "2010 Malaysian GP opening lap.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3A2010_Malaysian_GP_opening_lap.jpg",
+    "licence": "CC BY-SA 3.0",
+    "auteur": "Morio"
+  },
+  "sport/foot": {
+    "libelle": "Football",
+    "fichier": "Santiagobernabeupanoramav45.JPG",
+    "page": "https://commons.wikimedia.org/wiki/File%3ASantiagobernabeupanoramav45.JPG",
+    "licence": "CC BY-SA 3.0",
+    "auteur": "لا روسا"
+  },
+  "sport/foot-us": {
+    "libelle": "American football",
+    "fichier": "2008-0913-USCOSU-Pan01 3000px tiltfixed.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3A2008-0913-USCOSU-Pan01_3000px_tiltfixed.jpg",
+    "licence": "CC BY 2.5",
+    "auteur": "Bobak Ha'Eri"
+  },
+  "sport/golf": {
+    "libelle": "Golf",
+    "fichier": "Putting green at the Royal Canberra Golf Club 4.JPG",
+    "page": "https://commons.wikimedia.org/wiki/File%3APutting_green_at_the_Royal_Canberra_Golf_Club_4.JPG",
+    "licence": "CC BY 4.0",
+    "auteur": "Neuroxic"
+  },
+  "sport/hockey": {
+    "libelle": "Ice hockey",
+    "fichier": "Den s hokejem Orlová 04.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3ADen_s_hokejem_Orlov%C3%A1_04.jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "Tadeáš Bednarz"
+  },
+  "sport/rugby": {
+    "libelle": "Rugby",
+    "fichier": "ST vs Gloucester - Match - 23.JPG",
+    "page": "https://commons.wikimedia.org/wiki/File%3AST_vs_Gloucester_-_Match_-_23.JPG",
+    "licence": "CC BY-SA 3.0",
+    "auteur": "PierreSelim"
+  },
+  "sport/tennis": {
+    "libelle": "Tennis",
+    "fichier": "Pörtschach Johannes-Brahms-Promenade Werzer-Tennis-Arena 27052017 8932.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AP%C3%B6rtschach_Johannes-Brahms-Promenade_Werzer-Tennis-Arena_27052017_8932.jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "Johann Jaritz"
+  },
+  "telephone/blackberry": {
+    "libelle": "BlackBerry",
+    "fichier": "BlackBerry Bold 9900 on its Charging Pod.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3ABlackBerry_Bold_9900_on_its_Charging_Pod.jpg",
+    "licence": "CC BY 4.0",
+    "auteur": "P2u111"
+  },
+  "telephone/clapet": {
+    "libelle": "Flip phone",
+    "fichier": "Slice of bread in bowl with flip phone from another angle.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3ASlice_of_bread_in_bowl_with_flip_phone_from_another_angle.jpg",
+    "licence": "CC BY 4.0",
+    "auteur": "Kansattica"
+  },
+  "telephone/galaxy": {
+    "libelle": "Samsung Galaxy",
+    "fichier": "Samsung Galaxy s24 series 2.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3ASamsung_Galaxy_s24_series_2.jpg",
+    "licence": "CC BY 3.0",
+    "auteur": "可恩Ke En"
+  },
+  "telephone/iphone": {
+    "libelle": "iPhone",
+    "fichier": "IPhone 15 Pro & iPhone 15 Pro Max.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AIPhone_15_Pro_%26_iPhone_15_Pro_Max.jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "IPHONE 15"
+  },
+  "telephone/nokia": {
+    "libelle": "Nokia 3310",
+    "fichier": "Nokia 3310 - Front.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3ANokia_3310_-_Front.jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "Beamish4"
+  },
+  "telephone/pixel": {
+    "libelle": "Google Pixel",
+    "fichier": "Google Pixel 8 Rose rear top-right.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AGoogle_Pixel_8_Rose_rear_top-right.jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "IXTA9839"
+  },
+  "vacances/australie": {
+    "libelle": "Australia",
+    "fichier": "Sydney Opera House and Harbour Bridge Dusk (2) 2019-06-21.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3ASydney_Opera_House_and_Harbour_Bridge_Dusk_(2)_2019-06-21.jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "Benh LIEU SONG ( Flickr )"
+  },
+  "vacances/bali": {
+    "libelle": "Bali",
+    "fichier": "Tegallalang Rice Terraces Bali.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3ATegallalang_Rice_Terraces_Bali.jpg",
+    "licence": "CC BY 4.0",
+    "auteur": "Philip Nalangan"
+  },
+  "vacances/bora-bora": {
+    "libelle": "Bora Bora",
+    "fichier": "Borabora-2.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3ABorabora-2.jpg",
+    "licence": "CC BY-SA 3.0",
+    "auteur": "Borabora.jpg : User:Taka-0905 derivative work: Alvaro qc ( talk )"
+  },
+  "vacances/canada": {
+    "libelle": "Canada",
+    "fichier": "1 moraine lake pano 2019.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3A1_moraine_lake_pano_2019.jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "Chensiyuan"
+  },
+  "vacances/costa-rica": {
+    "libelle": "Costa Rica",
+    "fichier": "Arenal volcano (70785p) (cropped).jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AArenal_volcano_(70785p)_(cropped).jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "Rhododendrites"
+  },
+  "vacances/croatie": {
+    "libelle": "Croatia",
+    "fichier": "Casco viejo de Dubrovnik, Croacia, 2014-04-14, DD 04.JPG",
+    "page": "https://commons.wikimedia.org/wiki/File%3ACasco_viejo_de_Dubrovnik%2C_Croacia%2C_2014-04-14%2C_DD_04.JPG",
+    "licence": "CC BY-SA 3.0",
+    "auteur": "Diego Delso"
+  },
+  "vacances/dubai": {
+    "libelle": "Dubai",
+    "fichier": "Dubai Skyline mit Burj Khalifa (cropped).jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3ADubai_Skyline_mit_Burj_Khalifa_(cropped).jpg",
+    "licence": "CC BY-SA 3.0",
+    "auteur": "Tim Reckmann from Hamm, Deutschland"
+  },
+  "vacances/egypte": {
+    "libelle": "Egypt",
+    "fichier": "All Gizah Pyramids.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AAll_Gizah_Pyramids.jpg",
+    "licence": "CC BY-SA 2.0",
+    "auteur": "Ricardo Liberato"
+  },
+  "vacances/grece": {
+    "libelle": "Greece",
+    "fichier": "07-17-2012 - Oia - Santorini - Greece - 15.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3A07-17-2012_-_Oia_-_Santorini_-_Greece_-_15.jpg",
+    "licence": "CC BY-SA 3.0",
+    "auteur": "Norbert Nagel"
+  },
+  "vacances/hawaii": {
+    "libelle": "Hawaii",
+    "fichier": "Na Pali Coast, Kauai, Hawaii.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3ANa_Pali_Coast%2C_Kauai%2C_Hawaii.jpg",
+    "licence": "CC BY-SA 2.0",
+    "auteur": "Jeff Kubina"
+  },
+  "vacances/islande": {
+    "libelle": "Iceland",
+    "fichier": "Skógafoss Waterfall, Iceland, 20240720 1318 2975.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3ASk%C3%B3gafoss_Waterfall%2C_Iceland%2C_20240720_1318_2975.jpg",
+    "licence": "CC BY 4.0",
+    "auteur": "Jakub Hałun"
+  },
+  "vacances/italie": {
+    "libelle": "Italy",
+    "fichier": "Positano (Italy) 03.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3APositano_(Italy)_03.jpg",
+    "licence": "CC BY 4.0",
+    "auteur": "Bernard Gagnon"
+  },
+  "vacances/japon": {
+    "libelle": "Japan",
+    "fichier": "12-Chureito-pagoda-and-Mount-Fuji-Japan (29677439878).jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3A12-Chureito-pagoda-and-Mount-Fuji-Japan_(29677439878).jpg",
+    "licence": "CC0",
+    "auteur": "Dang Son"
+  },
+  "vacances/laponie": {
+    "libelle": "Lapland",
+    "fichier": "Gentle but wide green aurora display over Tuikku, Kittilä, Lapland, Finland, 2023 September.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AGentle_but_wide_green_aurora_display_over_Tuikku%2C_Kittil%C3%A4%2C_Lapland%2C_Finland%2C_2023_September.jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "Ximonic (Simo Räsänen)"
+  },
+  "vacances/maldives": {
+    "libelle": "Maldives",
+    "fichier": "Diamonds Thudufushi Beach and Water Villas, May 2017 -08.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3ADiamonds_Thudufushi_Beach_and_Water_Villas%2C_May_2017_-08.jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "Martin Falbisoner"
+  },
+  "vacances/maroc": {
+    "libelle": "Morocco",
+    "fichier": "2018 01 (Blue) - Chaouen.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3A2018_01_(Blue)_-_Chaouen.jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "Fbrandao.1963"
+  },
+  "vacances/mexique": {
+    "libelle": "Mexico",
+    "fichier": "Maya ruins at Tulum 2023 - beach.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AMaya_ruins_at_Tulum_2023_-_beach.jpg",
+    "licence": "CC BY 2.0",
+    "auteur": "Erik Cleves Kristensen"
+  },
+  "vacances/norvege": {
+    "libelle": "Norway",
+    "fichier": "Geirangerfjord from Ørnesvingen, 2013 June.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AGeirangerfjord_from_%C3%98rnesvingen%2C_2013_June.jpg",
+    "licence": "CC BY-SA 3.0",
+    "auteur": "Ximonic (Simo Räsänen)"
+  },
+  "vacances/perou": {
+    "libelle": "Peru",
+    "fichier": "Machu Picchu, Perú, 2015-07-30, DD 37.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AMachu_Picchu%2C_Per%C3%BA%2C_2015-07-30%2C_DD_37.jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "Diego Delso"
+  },
+  "vacances/suisse": {
+    "libelle": "Switzerland",
+    "fichier": "CH.VS.Zermatt 2021-10-17 Matterhorn 8726.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3ACH.VS.Zermatt_2021-10-17_Matterhorn_8726.jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "Roy Egloff"
+  },
+  "vacances/thailande": {
+    "libelle": "Thailand",
+    "fichier": "Playa Maya, Ko Phi Phi, Tailandia, 2013-08-19, DD 13.JPG",
+    "page": "https://commons.wikimedia.org/wiki/File%3APlaya_Maya%2C_Ko_Phi_Phi%2C_Tailandia%2C_2013-08-19%2C_DD_13.JPG",
+    "licence": "CC BY-SA 3.0",
+    "auteur": "Diego Delso"
+  },
+  "vacances/usa": {
+    "libelle": "USA",
+    "fichier": "Forrest Gump Point Monument Valley November 2018 003.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AForrest_Gump_Point_Monument_Valley_November_2018_003.jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "King of Hearts"
+  },
+  "valentin/ballons-coeur": {
+    "libelle": "Heart balloons",
+    "fichier": "Heart Balloons in the sky (24190361616).jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AHeart_Balloons_in_the_sky_(24190361616).jpg",
+    "licence": "CC BY-SA 2.0",
+    "auteur": "VillageHero from Ulm, Germany"
+  },
+  "valentin/bijou": {
+    "libelle": "Jewelry",
+    "fichier": "Necklace made of rough diamonds.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3ANecklace_made_of_rough_diamonds.jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "W.carter"
+  },
+  "valentin/boite-chocolats": {
+    "libelle": "Box of chocolates",
+    "fichier": "Life is like a box of chocolates",
+    "page": "https://www.flickr.com/photos/72959997@N00/51895509858",
+    "licence": "BY-NC-ND 2.0",
+    "auteur": "Lynn Friedman"
+  },
+  "valentin/lettre": {
+    "libelle": "Love letter",
+    "fichier": "Love Letters",
+    "page": "https://stocksnap.io/photo/love-letters-CNO1FTRUAP",
+    "licence": "CC0 1.0",
+    "auteur": "Ylanite Koppens"
+  },
+  "valentin/parfum-valentin": {
+    "libelle": "Perfume",
+    "fichier": "Perfume Bottle",
+    "page": "https://stocksnap.io/photo/perfume-bottle-0BZ1W3NNQK",
+    "licence": "CC0 1.0",
+    "auteur": "Jessica Weiller"
+  },
+  "valentin/petit-dej-lit": {
+    "libelle": "Breakfast in bed",
+    "fichier": "Home sweet home",
+    "page": "https://www.flickr.com/photos/21728045@N08/52695202773",
+    "licence": "BY-NC-ND 2.0",
+    "auteur": "antefixus21"
+  },
+  "valentin/valentin-roses": {
+    "libelle": "Red roses",
+    "fichier": "Red roses from bouquet 2.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3ARed_roses_from_bouquet_2.jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "Montanabw"
+  },
+  "ville/amsterdam": {
+    "libelle": "Amsterdam",
+    "fichier": "Colorful windows and canal houses at blue hour with water reflection in Damrak Amsterdam Netherlands.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AColorful_windows_and_canal_houses_at_blue_hour_with_water_reflection_in_Damrak_Amsterdam_Netherlands.jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "Basile Morin"
+  },
+  "ville/barcelone": {
+    "libelle": "Barcelona",
+    "fichier": "Park Güell panorama from near Trias House.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3APark_G%C3%BCell_panorama_from_near_Trias_House.jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "Joe Mabel"
+  },
+  "ville/istanbul": {
+    "libelle": "Istanbul",
+    "fichier": "Hagia Sophia Mars 2013.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AHagia_Sophia_Mars_2013.jpg",
+    "licence": "CC BY-SA 3.0",
+    "auteur": "Arild Vågen"
+  },
+  "ville/las-vegas": {
+    "libelle": "Las Vegas",
+    "fichier": "Las Vegas (Nevada, USA), The Strip -- 2012 -- 6232.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3ALas_Vegas_(Nevada%2C_USA)%2C_The_Strip_--_2012_--_6232.jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "Dietmar Rabich"
+  },
+  "ville/lisbonne": {
+    "libelle": "Lisbon",
+    "fichier": "Lissabon - Alfama - Largo Santa Luzia - Streetcar - 1.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3ALissabon_-_Alfama_-_Largo_Santa_Luzia_-_Streetcar_-_1.jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "Ingo Mehling"
+  },
+  "ville/londres": {
+    "libelle": "London",
+    "fichier": "Tower Bridge London Dusk Feb 2006.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3ATower_Bridge_London_Dusk_Feb_2006.jpg",
+    "licence": "CC BY-SA 3.0",
+    "auteur": "Diliff"
+  },
+  "ville/marrakech": {
+    "libelle": "Marrakech",
+    "fichier": "Jamaa El Fna, Marrakesh, Morocco, 20250124 1804 7017.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AJamaa_El_Fna%2C_Marrakesh%2C_Morocco%2C_20250124_1804_7017.jpg",
+    "licence": "CC BY 4.0",
+    "auteur": "Jakub Hałun"
+  },
+  "ville/new-york": {
+    "libelle": "New York",
+    "fichier": "Brooklyn Bridge and the Lower Manhattan skyline from Pebble Beach, New York.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3ABrooklyn_Bridge_and_the_Lower_Manhattan_skyline_from_Pebble_Beach%2C_New_York.jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "Christian David"
+  },
+  "ville/paris": {
+    "libelle": "Paris",
+    "fichier": "Eiffel Tower and Pont Alexandre III at night.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AEiffel_Tower_and_Pont_Alexandre_III_at_night.jpg",
+    "licence": "CC BY 2.0",
+    "auteur": "Getfunky Paris"
+  },
+  "ville/prague": {
+    "libelle": "Prague",
+    "fichier": "Prague 07-2016 View from Petrinska Tower img2.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3APrague_07-2016_View_from_Petrinska_Tower_img2.jpg",
+    "licence": "FAL",
+    "auteur": "A.Savin"
+  },
+  "ville/rio": {
+    "libelle": "Rio de Janeiro",
+    "fichier": "Sugarloaf Mountain, Rio de Janeiro, Brazil.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3ASugarloaf_Mountain%2C_Rio_de_Janeiro%2C_Brazil.jpg",
+    "licence": "CC0",
+    "auteur": "Wilfredor"
+  },
+  "ville/rome": {
+    "libelle": "Rome",
+    "fichier": "Colosseum in Rome, Italy - April 2007.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AColosseum_in_Rome%2C_Italy_-_April_2007.jpg",
+    "licence": "CC BY-SA 2.5",
+    "auteur": "Diliff"
+  },
+  "ville/seoul": {
+    "libelle": "Seoul",
+    "fichier": "Gyeonghoeru (Royal Banquet Hall) at Gyeongbokgung Palace, Seoul.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AGyeonghoeru_(Royal_Banquet_Hall)_at_Gyeongbokgung_Palace%2C_Seoul.jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "Frank Schulenburg"
+  },
+  "ville/tokyo": {
+    "libelle": "Tokyo",
+    "fichier": "Tokyo Tower, Minato City.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3ATokyo_Tower%2C_Minato_City.jpg",
+    "licence": "CC BY 4.0",
+    "auteur": "David Kernan"
+  },
+  "ville/venise": {
+    "libelle": "Venice",
+    "fichier": "Canal Grande Chiesa della Salute e Dogana dal ponte dell Accademia.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3ACanal_Grande_Chiesa_della_Salute_e_Dogana_dal_ponte_dell_Accademia.jpg",
+    "licence": "CC BY-SA 3.0",
+    "auteur": "This Photo was taken by Wolfgang Moroder . Feel free to use my photos, but please mention me as the author and send me a"
+  },
+  "vintage/2cv": {
+    "libelle": "Citroën 2CV",
+    "fichier": "Citroën 2 CV Charleston (2015-08-29 3174 b).jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3ACitro%C3%ABn_2_CV_Charleston_(2015-08-29_3174_b).jpg",
+    "licence": "CC BY-SA 2.0 de",
+    "auteur": "Lothar Spurzem"
+  },
+  "vintage/300sl": {
+    "libelle": "Mercedes 300 SL",
+    "fichier": "Mercedes-Benz 300 SL Replica, Bj. 2002 (2018-06-03 Sp r).JPG",
+    "page": "https://commons.wikimedia.org/wiki/File%3AMercedes-Benz_300_SL_Replica%2C_Bj._2002_(2018-06-03_Sp_r).JPG",
+    "licence": "CC BY-SA 2.0 de",
+    "auteur": "Lothar Spurzem"
+  },
+  "vintage/cadillac": {
+    "libelle": "1959 Cadillac",
+    "fichier": "1959 Cadillac Eldorado Biarritz Convertible (22891).jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3A1959_Cadillac_Eldorado_Biarritz_Convertible_(22891).jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "Calreyn88"
+  },
+  "vintage/coccinelle": {
+    "libelle": "VW Beetle",
+    "fichier": "63 Volkswagen Beetle (7457798068).jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3A63_Volkswagen_Beetle_(7457798068).jpg",
+    "licence": "CC BY 2.0",
+    "auteur": "Greg Gjerdingen from Willmar, USA"
+  },
+  "vintage/combi": {
+    "libelle": "VW Camper Van",
+    "fichier": "Volkswagen T1 Bus in Leeuwarden (2023).jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AVolkswagen_T1_Bus_in_Leeuwarden_(2023).jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "JoachimKohler-HB"
+  },
+  "vintage/e-type": {
+    "libelle": "Jaguar E-Type",
+    "fichier": "Jaguar E-Type Series 1 4.2 Litre 1967.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AJaguar_E-Type_Series_1_4.2_Litre_1967.jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "DeFacto"
+  },
+  "vintage/mini-classique": {
+    "libelle": "Classic Mini",
+    "fichier": "1965 Austin Mini Cooper S - 2015 Sonoma Raceway - Sarah Stierch.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3A1965_Austin_Mini_Cooper_S_-_2015_Sonoma_Raceway_-_Sarah_Stierch.jpg",
+    "licence": "CC BY 4.0",
+    "auteur": "SarahStierch"
+  },
+  "vintage/mustang-67": {
+    "libelle": "1967 Mustang",
+    "fichier": "Ford-Mustang-Fastback-avant.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AFord-Mustang-Fastback-avant.jpg",
+    "licence": "Public domain",
+    "auteur": "Rundvald"
+  },
+  "vintage/porsche-356": {
+    "libelle": "Porsche 356",
+    "fichier": "Porsche 356 B Classic-Gala 2021 1X7A0119.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3APorsche_356_B_Classic-Gala_2021_1X7A0119.jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "Alexander Migl"
+  },
+  "voiture/amg-c63": {
+    "libelle": "Mercedes-AMG C63 S",
+    "fichier": "Mercedes-AMG C 63S Coupe, IAA 2017, Frankfurt (1Y7A3011).jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AMercedes-AMG_C_63S_Coupe%2C_IAA_2017%2C_Frankfurt_(1Y7A3011).jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "Matti Blume"
+  },
+  "voiture/aston-martin": {
+    "libelle": "Aston Martin DB11",
+    "fichier": "Aston Martin DB11 AMR 1X7A0202.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AAston_Martin_DB11_AMR_1X7A0202.jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "Alexander Migl"
+  },
+  "voiture/audi-r8": {
+    "libelle": "Audi R8",
+    "fichier": "2018 Audi R8 Coupe V10 plus Front.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3A2018_Audi_R8_Coupe_V10_plus_Front.jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "Vauxford"
+  },
+  "voiture/bmw-m3": {
+    "libelle": "BMW M3",
+    "fichier": "BMW M3 COMPETITION (G80) China.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3ABMW_M3_COMPETITION_(G80)_China.jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "Dinkun Chen"
+  },
+  "voiture/bugatti": {
+    "libelle": "Bugatti Chiron",
+    "fichier": "Bugatti Chiron, GIMS 2018, Le Grand-Saconnex (1X7A1765).jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3ABugatti_Chiron%2C_GIMS_2018%2C_Le_Grand-Saconnex_(1X7A1765).jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "Matti Blume"
+  },
+  "voiture/corvette": {
+    "libelle": "Corvette",
+    "fichier": "Chevrolet Corvette Stingray C8.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AChevrolet_Corvette_Stingray_C8.jpg",
+    "licence": "CC BY 4.0",
+    "auteur": "BerlinWilmer"
+  },
+  "voiture/defender": {
+    "libelle": "Land Rover Defender",
+    "fichier": "Land Rover Defender 110 Station Wagon 2016 - front.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3ALand_Rover_Defender_110_Station_Wagon_2016_-_front.jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "DeFacto"
+  },
+  "voiture/ferrari-f8": {
+    "libelle": "Ferrari F8",
+    "fichier": "Ferrari F8 Tributo DSC 7014.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AFerrari_F8_Tributo_DSC_7014.jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "Alexander Migl"
+  },
+  "voiture/fiat-500": {
+    "libelle": "Fiat 500",
+    "fichier": "Fiat 500 2007 front 20071020.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AFiat_500_2007_front_20071020.jpg",
+    "licence": "CC BY-SA 3.0",
+    "auteur": "Rudolf Stricker"
+  },
+  "voiture/g-class": {
+    "libelle": "Mercedes G-Class",
+    "fichier": "Mercedes-AMG G 63, GIMS 2018, Le Grand-Saconnex (1X7A0541).jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AMercedes-AMG_G_63%2C_GIMS_2018%2C_Le_Grand-Saconnex_(1X7A0541).jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "Matti Blume"
+  },
+  "voiture/gtr": {
+    "libelle": "Nissan GT-R",
+    "fichier": "NISSAN GT-R (R35, 2011 FACELIFT) China.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3ANISSAN_GT-R_(R35%2C_2011_FACELIFT)_China.jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "Dinkun Chen"
+  },
+  "voiture/jeep-wrangler": {
+    "libelle": "Jeep Wrangler",
+    "fichier": "Jeep Wrangler Rubicon (JL) 4xe 1X7A0285.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AJeep_Wrangler_Rubicon_(JL)_4xe_1X7A0285.jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "Alexander Migl"
+  },
+  "voiture/lamborghini-huracan": {
+    "libelle": "Lamborghini Huracán",
+    "fichier": "Lamborghini Huracan Evo, GIMS 2019, Le Grand-Saconnex (GIMS1010).jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3ALamborghini_Huracan_Evo%2C_GIMS_2019%2C_Le_Grand-Saconnex_(GIMS1010).jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "Matti Blume"
+  },
+  "voiture/mclaren": {
+    "libelle": "McLaren 720S",
+    "fichier": "McLaren 720S, IAA 2017, (1Y7A3405).jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AMcLaren_720S%2C_IAA_2017%2C_(1Y7A3405).jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "Matti Blume"
+  },
+  "voiture/mini": {
+    "libelle": "Mini Cooper",
+    "fichier": "Mini Cooper S (F56) Washington DC Metro Area, USA.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AMini_Cooper_S_(F56)_Washington_DC_Metro_Area%2C_USA.jpg",
+    "licence": "CC BY 4.0",
+    "auteur": "OWS Photography"
+  },
+  "voiture/mustang": {
+    "libelle": "Ford Mustang",
+    "fichier": "Ford Mustang VI Leimershof-20180908-RM-163624.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AFord_Mustang_VI_Leimershof-20180908-RM-163624.jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "Ermell"
+  },
+  "voiture/porsche-911": {
+    "libelle": "Porsche 911",
+    "fichier": "Porsche 992 Carrera S coupe IMG 5838.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3APorsche_992_Carrera_S_coupe_IMG_5838.jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "Alexander Migl"
+  },
+  "voiture/range-rover": {
+    "libelle": "Range Rover",
+    "fichier": "Land Rover Range Rover (5th generation) IMG 9481.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3ALand_Rover_Range_Rover_(5th_generation)_IMG_9481.jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "Alexander-93"
+  },
+  "voiture/rolls-royce": {
+    "libelle": "Rolls-Royce",
+    "fichier": "Rolls-Royce Phantom VIII Series I IMG 9101.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3ARolls-Royce_Phantom_VIII_Series_I_IMG_9101.jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "Alexander-93"
+  },
+  "voiture/supra": {
+    "libelle": "Toyota Supra",
+    "fichier": "Toyota Supra GR (2022) (52575036232).jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AToyota_Supra_GR_(2022)_(52575036232).jpg",
+    "licence": "CC BY 2.0",
+    "auteur": "Charles from Port Chester, New York"
+  },
+  "voiture/tesla-model-s": {
+    "libelle": "Tesla Model S",
+    "fichier": "20180630 Tesla Model S 70D 2015 midnight blue left front.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3A20180630_Tesla_Model_S_70D_2015_midnight_blue_left_front.jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "Granada"
+  },
+  "voyage/cabriolet": {
+    "libelle": "Convertible",
+    "fichier": "1967 Ambassador DPL conv top-down 2016 Urbana 1of3.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3A1967_Ambassador_DPL_conv_top-down_2016_Urbana_1of3.jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "CZmarlin — Christopher Ziemnowicz, releases all rights but a photo credit would be appreciated if this image is used any"
+  },
+  "voyage/croisiere": {
+    "libelle": "Cruise ship",
+    "fichier": "Birka June 2013.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3ABirka_June_2013.jpg",
+    "licence": "CC BY-SA 3.0",
+    "auteur": "Arild Vågen"
+  },
+  "voyage/jet": {
+    "libelle": "Private jet",
+    "fichier": "Static display, EBACE 2018, Le Grand-Saconnex (BL7C0562).jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AStatic_display%2C_EBACE_2018%2C_Le_Grand-Saconnex_(BL7C0562).jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "Matti Blume"
+  },
+  "voyage/montgolfiere": {
+    "libelle": "Hot air balloon",
+    "fichier": "Hot air balloon in Cappadocia 02.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AHot_air_balloon_in_Cappadocia_02.jpg",
+    "licence": "CC BY-SA 3.0",
+    "auteur": "Bernard Gagnon"
+  },
+  "voyage/van": {
+    "libelle": "Camper van",
+    "fichier": "Lilly Campervan (209675829).jpeg",
+    "page": "https://commons.wikimedia.org/wiki/File%3ALilly_Campervan_(209675829).jpeg",
+    "licence": "CC BY 3.0",
+    "auteur": "Tristan Mimet"
+  },
+  "voyage/voilier": {
+    "libelle": "Sailboat",
+    "fichier": "Sailing on Lake Constance, (1X7A9987).jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3ASailing_on_Lake_Constance%2C_(1X7A9987).jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "Matti Blume"
+  },
+  "vue/aurores": {
+    "libelle": "Northern lights",
+    "fichier": "Maardu Northern lights — Estonia, 2022.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AMaardu_Northern_lights_%E2%80%94_Estonia%2C_2022.jpg",
+    "licence": "CC BY 4.0",
+    "auteur": "Maxim Bilovitskiy"
+  },
+  "vue/desert-vue": {
+    "libelle": "Desert",
+    "fichier": "Utah Dunes Landscape - West Desert District.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AUtah_Dunes_Landscape_-_West_Desert_District.jpg",
+    "licence": "Public domain",
+    "auteur": "Bureau of Land Management - Utah/Bob Wick"
+  },
+  "vue/foret": {
+    "libelle": "Forest",
+    "fichier": "Dülmen, Umland -- 2014 -- 7056.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AD%C3%BClmen%2C_Umland_--_2014_--_7056.jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "Dietmar Rabich"
+  },
+  "vue/lac": {
+    "libelle": "Lake",
+    "fichier": "Gurudongmar Lake Sikkim, India (edit).jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AGurudongmar_Lake_Sikkim%2C_India_(edit).jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "Original: Yoghya Derivative work: UnpetitproleX"
+  },
+  "vue/montagnes": {
+    "libelle": "Mountains",
+    "fichier": "Drei Zinnen Tre Cime di Lavaredo Dolomites.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3ADrei_Zinnen_Tre_Cime_di_Lavaredo_Dolomites.jpg",
+    "licence": "CC BY-SA 3.0",
+    "auteur": "This Photo was taken by Wolfgang Moroder . Feel free to use my photos, but please mention me as the author and send me a"
+  },
+  "vue/neige": {
+    "libelle": "Snowy peaks",
+    "fichier": "Vihren & Kutelo Pirin Mountains Bulgaria 2025.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AVihren_%26_Kutelo_Pirin_Mountains_Bulgaria_2025.jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "kallerna"
+  },
+  "vue/ocean": {
+    "libelle": "Ocean",
+    "fichier": "View of sunset over Eyjafjörður in Svalbarðsstrandarhreppur commune, Iceland, 20240715 2237 1028.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AView_of_sunset_over_Eyjafj%C3%B6r%C3%B0ur_in_Svalbar%C3%B0sstrandarhreppur_commune%2C_Iceland%2C_20240715_2237_1028.jpg",
+    "licence": "CC BY 4.0",
+    "auteur": "Jakub Hałun"
+  },
+  "vue/plage-tropicale": {
+    "libelle": "Tropical beach",
+    "fichier": "Koh Mak (island), Thailand, Palms on the beach.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AKoh_Mak_(island)%2C_Thailand%2C_Palms_on_the_beach.jpg",
+    "licence": "CC BY 4.0",
+    "auteur": "Vyacheslav Argenberg"
+  },
+  "vue/rizieres": {
+    "libelle": "Rice fields",
+    "fichier": "Banaue Philippines Batad-Rice-Terraces-02.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3ABanaue_Philippines_Batad-Rice-Terraces-02.jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "CEphoto, Uwe Aranas"
+  },
+  "vue/skyline": {
+    "libelle": "City skyline",
+    "fichier": "Hong Kong Harbour Night 2019-06-11.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AHong_Kong_Harbour_Night_2019-06-11.jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "Benh LIEU SONG ( Flickr )"
+  },
+  "vue/tour-eiffel": {
+    "libelle": "Eiffel Tower",
+    "fichier": "Eiffel tower from trocadero.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AEiffel_tower_from_trocadero.jpg",
+    "licence": "CC BY-SA 3.0",
+    "auteur": "NonOmnisMoriar"
+  },
+  "vue/vignes": {
+    "libelle": "Vineyards",
+    "fichier": "Cristom Vineyard Oregon with example of clear cultivation.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3ACristom_Vineyard_Oregon_with_example_of_clear_cultivation.jpg",
+    "licence": "CC BY 2.0",
+    "auteur": "Ethan Prater"
+  },
+  "weekend/bungalow-eau": {
+    "libelle": "Overwater villa",
+    "fichier": "Überwasserbungalows des Hilton Moorea.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3A%C3%9Cberwasserbungalows_des_Hilton_Moorea.jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "Hakilon"
+  },
+  "weekend/bungalow-plage": {
+    "libelle": "Beach bungalow",
+    "fichier": "8c6cdef6-cdda-4a03-ac55-46b308b23588",
+    "page": "https://www.rawpixel.com/image/6068430/free-public-domain-cc0-photo",
+    "licence": "CC0 1.0",
+    "auteur": ""
+  },
+  "weekend/cabane-arbre": {
+    "libelle": "Treehouse",
+    "fichier": "Tree House Hullathy Nilgiris Dec24 A7CR 05422.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3ATree_House_Hullathy_Nilgiris_Dec24_A7CR_05422.jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "Timothy A. Gonsalves"
+  },
+  "weekend/chalet-bois": {
+    "libelle": "Log cabin",
+    "fichier": "HomePlace.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AHomePlace.jpg",
+    "licence": "CC BY 3.0",
+    "auteur": "Joe Schneid,Louisville, Kentucky"
+  },
+  "weekend/chalet-ski": {
+    "libelle": "Ski chalet",
+    "fichier": "Ski patrol cabin, Signal de l'Homme, Auris, 2026.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3ASki_patrol_cabin%2C_Signal_de_l'Homme%2C_Auris%2C_2026.jpg",
+    "licence": "CC0",
+    "auteur": "DimiTalen"
+  },
+  "weekend/chateau-hotel": {
+    "libelle": "Castle hotel",
+    "fichier": "Glengarry Castle Hotel (geograph 3724494).jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AGlengarry_Castle_Hotel_(geograph_3724494).jpg",
+    "licence": "CC BY-SA 2.0",
+    "auteur": "Craig Wallace"
+  },
+  "weekend/desert": {
+    "libelle": "Desert camp",
+    "fichier": "Wadi Rum Traditional Desert Bedouin Camp in Jordan.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AWadi_Rum_Traditional_Desert_Bedouin_Camp_in_Jordan.jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "Irina Alexandra S."
+  },
+  "weekend/glamping": {
+    "libelle": "Glamping tent",
+    "fichier": "Glamping Thorbjornrud Hotel.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AGlamping_Thorbjornrud_Hotel.jpg",
+    "licence": "CC BY 4.0",
+    "auteur": "JLunder96"
+  },
+  "weekend/peniche": {
+    "libelle": "Houseboat",
+    "fichier": "Houseboat in Copenhagen Harbor 06.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AHouseboat_in_Copenhagen_Harbor_06.jpg",
+    "licence": "CC BY-SA 4.0",
+    "auteur": "Kritzolina"
+  }
+}
