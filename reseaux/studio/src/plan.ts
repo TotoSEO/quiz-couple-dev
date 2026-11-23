@@ -98,7 +98,10 @@ export const planChoisirait = (r: RecetteChoisirait): Plan => {
     { nom: 'reponse', a: 32, volume: 0.5 },
     { nom: 'bulle', a: 46 },
   ];
-  const verifs = [entre];
+  // la couverture (l'image de la grille du compte) : la carte, les trois
+  // lettres et le « ? » sont là, à 1,9 s ; à 0,8 s, seul le A était entré
+  const couverture = Math.round(1.9 * FPS);
+  const verifs = [entre, couverture];
   let t = intro;
   r.questions.forEach((q, i) => {
     const derniere = debutPhoto(q.options.length - 1);
@@ -123,7 +126,7 @@ export const planChoisirait = (r: RecetteChoisirait): Plan => {
   scenes.push({ type: 'fin', debut: t, duree: fin });
   sons.push({ nom: 'fin', a: t + 2 }, { nom: 'joie', a: t + 8 });
   verifs.push(t + entre);
-  return { duree: t + fin, couverture: entre, verifs, scenes, sons, musique: r.musique, detail: { s, apres } };
+  return { duree: t + fin, couverture, verifs, scenes, sons, musique: r.musique, detail: { s, apres } };
 };
 
 // Ce qu'une question donne à lire, et combien de réponses entrent après.
