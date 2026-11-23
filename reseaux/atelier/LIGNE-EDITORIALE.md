@@ -289,7 +289,8 @@ dans le jeu ; la carte porte l'édition en pastille (« Dream life edition »,
 couleur, une consigne qui dit le geste (« Pick A, B or C for him, then send
 it to him! », « Choose the photo he would pick. 3 rounds! »...) et les trois
 lettres A, B, C qui sautent l'une après l'autre ; dessous, celui qui devine
-fait coucou et l'autre réfléchit sous un « ? ». Puis **trois questions de
+fait coucou et l'autre réfléchit sous un « ? » (la couverture du reel est
+prise à 1,9 s, quand la carte, les trois lettres et le « ? » sont là). Puis **trois questions de
 trois photos** (« Which car would he pick? » : Porsche 911, Lamborghini
 Huracán, Mercedes-AMG C63 S), chaque photo marquée A, B ou C avec son nom ;
 une fois les photos arrivées, **1,6 seconde pour les regarder** (les lettres
