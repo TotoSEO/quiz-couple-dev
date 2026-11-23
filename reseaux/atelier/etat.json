@@ -1,5 +1,5 @@
 {
-  "genere_le": "2026-11-23T03:16:15.093Z",
+  "genere_le": "2026-11-23T12:29:09.155Z",
   "langue": "en",
   "compte": {
     "nom": "quiz_couple_official",
@@ -849,7 +849,7 @@
       "creneau": "matin",
       "gabarit": "choisirait",
       "categorie": "choisirait",
-      "statut": "rendu",
+      "statut": "publie",
       "texte": "What would he choose?",
       "erreur": null
     },
@@ -858,7 +858,7 @@
       "creneau": "midi",
       "gabarit": "choisirait",
       "categorie": "choisirait",
-      "statut": "rendu",
+      "statut": "publie",
       "texte": "What would he choose?",
       "erreur": null
     },
@@ -903,8 +903,8 @@
       "creneau": "matin",
       "gabarit": "choisirait",
       "categorie": "choisirait",
-      "statut": "a_rendre",
-      "texte": "What would he choose?",
+      "statut": "rendu",
+      "texte": "What would she choose?",
       "erreur": null
     },
     {
@@ -912,8 +912,8 @@
       "creneau": "midi",
       "gabarit": "choisirait",
       "categorie": "choisirait",
-      "statut": "a_rendre",
-      "texte": "What would she choose?",
+      "statut": "rendu",
+      "texte": "What would he choose?",
       "erreur": null
     },
     {
@@ -931,7 +931,7 @@
       "gabarit": "choisirait",
       "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": "What would he choose?",
+      "texte": "What would she choose?",
       "erreur": null
     },
     {
@@ -985,7 +985,7 @@
       "gabarit": "choisirait",
       "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": "What would he choose?",
+      "texte": "What would she choose?",
       "erreur": null
     },
     {
@@ -1012,7 +1012,7 @@
       "gabarit": "choisirait",
       "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": "What would she choose?",
+      "texte": "What would he choose?",
       "erreur": null
     },
     {
@@ -1021,7 +1021,7 @@
       "gabarit": "choisirait",
       "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": "What would he choose?",
+      "texte": "What would she choose?",
       "erreur": null
     },
     {
@@ -1075,7 +1075,7 @@
       "gabarit": "choisirait",
       "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": "What would he choose?",
+      "texte": "What would she choose?",
       "erreur": null
     },
     {
@@ -1093,7 +1093,7 @@
       "gabarit": "choisirait",
       "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": "What would she choose?",
+      "texte": "What would he choose?",
       "erreur": null
     },
     {
@@ -1102,7 +1102,7 @@
       "gabarit": "choisirait",
       "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": "What would he choose?",
+      "texte": "What would she choose?",
       "erreur": null
     },
     {
@@ -1156,7 +1156,7 @@
       "gabarit": "choisirait",
       "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": "What would he choose?",
+      "texte": "What would she choose?",
       "erreur": null
     },
     {
@@ -1174,7 +1174,7 @@
       "gabarit": "choisirait",
       "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": "What would she choose?",
+      "texte": "What would he choose?",
       "erreur": null
     },
     {
@@ -1201,7 +1201,7 @@
       "gabarit": "choisirait",
       "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": "What would he choose?",
+      "texte": "What would she choose?",
       "erreur": null
     },
     {
@@ -1255,7 +1255,7 @@
       "gabarit": "choisirait",
       "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": "What would he choose?",
+      "texte": "What would she choose?",
       "erreur": null
     },
     {
@@ -1264,7 +1264,7 @@
       "gabarit": "choisirait",
       "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": "What would she choose?",
+      "texte": "What would he choose?",
       "erreur": null
     },
     {
@@ -1282,7 +1282,7 @@
       "gabarit": "choisirait",
       "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": "What would he choose?",
+      "texte": "What would she choose?",
       "erreur": null
     },
     {
@@ -1336,7 +1336,7 @@
       "gabarit": "choisirait",
       "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": "What would he choose?",
+      "texte": "What would she choose?",
       "erreur": null
     },
     {
@@ -1345,7 +1345,7 @@
       "gabarit": "choisirait",
       "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": "What would she choose?",
+      "texte": "What would he choose?",
       "erreur": null
     },
     {
@@ -1363,7 +1363,7 @@
       "gabarit": "choisirait",
       "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": "What would he choose?",
+      "texte": "What would she choose?",
       "erreur": null
     },
     {
@@ -1426,7 +1426,7 @@
       "gabarit": "choisirait",
       "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": "What would he choose?",
+      "texte": "What would she choose?",
       "erreur": null
     },
     {
@@ -1444,7 +1444,7 @@
       "gabarit": "choisirait",
       "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": "What would she choose?",
+      "texte": "What would he choose?",
       "erreur": null
     },
     {
@@ -1453,7 +1453,7 @@
       "gabarit": "choisirait",
       "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": "What would he choose?",
+      "texte": "What would she choose?",
       "erreur": null
     },
     {
@@ -1507,7 +1507,7 @@
       "gabarit": "choisirait",
       "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": "What would he choose?",
+      "texte": "What would she choose?",
       "erreur": null
     },
     {
@@ -1525,7 +1525,7 @@
       "gabarit": "choisirait",
       "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": "What would she choose?",
+      "texte": "What would he choose?",
       "erreur": null
     },
     {
@@ -1534,7 +1534,7 @@
       "gabarit": "choisirait",
       "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": "What would he choose?",
+      "texte": "What would she choose?",
       "erreur": null
     },
     {
@@ -1606,7 +1606,7 @@
       "gabarit": "choisirait",
       "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": "What would he choose?",
+      "texte": "What would she choose?",
       "erreur": null
     },
     {
@@ -1615,7 +1615,7 @@
       "gabarit": "choisirait",
       "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": "What would she choose?",
+      "texte": "What would he choose?",
       "erreur": null
     },
     {
@@ -1633,7 +1633,7 @@
       "gabarit": "choisirait",
       "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": "What would he choose?",
+      "texte": "What would she choose?",
       "erreur": null
     },
     {
@@ -1687,7 +1687,7 @@
       "gabarit": "choisirait",
       "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": "What would he choose?",
+      "texte": "What would she choose?",
       "erreur": null
     },
     {
@@ -1696,7 +1696,7 @@
       "gabarit": "choisirait",
       "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": "What would she choose?",
+      "texte": "What would he choose?",
       "erreur": null
     },
     {
@@ -1714,7 +1714,7 @@
       "gabarit": "choisirait",
       "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": "What would he choose?",
+      "texte": "What would she choose?",
       "erreur": null
     },
     {
@@ -1777,7 +1777,7 @@
       "gabarit": "choisirait",
       "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": "What would he choose?",
+      "texte": "What would she choose?",
       "erreur": null
     },
     {
@@ -1795,7 +1795,7 @@
       "gabarit": "choisirait",
       "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": "What would she choose?",
+      "texte": "What would he choose?",
       "erreur": null
     },
     {
@@ -1804,7 +1804,7 @@
       "gabarit": "choisirait",
       "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": "What would he choose?",
+      "texte": "What would she choose?",
       "erreur": null
     },
     {
@@ -1858,7 +1858,7 @@
       "gabarit": "choisirait",
       "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": "What would he choose?",
+      "texte": "What would she choose?",
       "erreur": null
     },
     {
@@ -1876,7 +1876,7 @@
       "gabarit": "choisirait",
       "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": "What would she choose?",
+      "texte": "What would he choose?",
       "erreur": null
     },
     {
@@ -1885,7 +1885,7 @@
       "gabarit": "choisirait",
       "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": "What would he choose?",
+      "texte": "What would she choose?",
       "erreur": null
     },
     {
@@ -1957,7 +1957,7 @@
       "gabarit": "choisirait",
       "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": "What would he choose?",
+      "texte": "What would she choose?",
       "erreur": null
     },
     {
@@ -1966,7 +1966,7 @@
       "gabarit": "choisirait",
       "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": "What would she choose?",
+      "texte": "What would he choose?",
       "erreur": null
     },
     {
@@ -1984,7 +1984,7 @@
       "gabarit": "choisirait",
       "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": "What would he choose?",
+      "texte": "What would she choose?",
       "erreur": null
     },
     {
@@ -2038,7 +2038,7 @@
       "gabarit": "choisirait",
       "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": "What would he choose?",
+      "texte": "What would she choose?",
       "erreur": null
     },
     {
@@ -2047,7 +2047,7 @@
       "gabarit": "choisirait",
       "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": "What would she choose?",
+      "texte": "What would he choose?",
       "erreur": null
     },
     {
@@ -2065,7 +2065,7 @@
       "gabarit": "choisirait",
       "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": "What would he choose?",
+      "texte": "What would she choose?",
       "erreur": null
     },
     {
@@ -2119,7 +2119,7 @@
       "gabarit": "choisirait",
       "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": "What would he choose?",
+      "texte": "What would she choose?",
       "erreur": null
     },
     {
@@ -2146,7 +2146,7 @@
       "gabarit": "choisirait",
       "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": "What would she choose?",
+      "texte": "What would he choose?",
       "erreur": null
     },
     {
@@ -2155,7 +2155,7 @@
       "gabarit": "choisirait",
       "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": "What would he choose?",
+      "texte": "What would she choose?",
       "erreur": null
     },
     {
@@ -2209,7 +2209,7 @@
       "gabarit": "choisirait",
       "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": "What would he choose?",
+      "texte": "What would she choose?",
       "erreur": null
     },
     {
@@ -2227,7 +2227,7 @@
       "gabarit": "choisirait",
       "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": "What would she choose?",
+      "texte": "What would he choose?",
       "erreur": null
     },
     {
@@ -2236,7 +2236,7 @@
       "gabarit": "choisirait",
       "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": "What would he choose?",
+      "texte": "What would she choose?",
       "erreur": null
     },
     {
@@ -2290,7 +2290,7 @@
       "gabarit": "choisirait",
       "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": "What would he choose?",
+      "texte": "What would she choose?",
       "erreur": null
     },
     {
@@ -2308,7 +2308,7 @@
       "gabarit": "choisirait",
       "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": "What would she choose?",
+      "texte": "What would he choose?",
       "erreur": null
     },
     {
@@ -2335,7 +2335,7 @@
       "gabarit": "choisirait",
       "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": "What would he choose?",
+      "texte": "What would she choose?",
       "erreur": null
     },
     {
@@ -2389,7 +2389,7 @@
       "gabarit": "choisirait",
       "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": "What would he choose?",
+      "texte": "What would she choose?",
       "erreur": null
     },
     {
@@ -2398,7 +2398,7 @@
       "gabarit": "choisirait",
       "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": "What would she choose?",
+      "texte": "What would he choose?",
       "erreur": null
     },
     {
@@ -2416,7 +2416,7 @@
       "gabarit": "choisirait",
       "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": "What would he choose?",
+      "texte": "What would she choose?",
       "erreur": null
     },
     {
@@ -2470,7 +2470,7 @@
       "gabarit": "choisirait",
       "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": "What would he choose?",
+      "texte": "What would she choose?",
       "erreur": null
     },
     {
@@ -2479,7 +2479,7 @@
       "gabarit": "choisirait",
       "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": "What would she choose?",
+      "texte": "What would he choose?",
       "erreur": null
     },
     {
@@ -2497,7 +2497,7 @@
       "gabarit": "choisirait",
       "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": "What would he choose?",
+      "texte": "What would she choose?",
       "erreur": null
     },
     {
@@ -2560,7 +2560,7 @@
       "gabarit": "choisirait",
       "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": "What would he choose?",
+      "texte": "What would she choose?",
       "erreur": null
     },
     {
@@ -2578,7 +2578,7 @@
       "gabarit": "choisirait",
       "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": "What would she choose?",
+      "texte": "What would he choose?",
       "erreur": null
     },
     {
@@ -2587,7 +2587,7 @@
       "gabarit": "choisirait",
       "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": "What would he choose?",
+      "texte": "What would she choose?",
       "erreur": null
     },
     {
@@ -2641,7 +2641,7 @@
       "gabarit": "choisirait",
       "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": "What would he choose?",
+      "texte": "What would she choose?",
       "erreur": null
     },
     {
@@ -2659,7 +2659,7 @@
       "gabarit": "choisirait",
       "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": "What would she choose?",
+      "texte": "What would he choose?",
       "erreur": null
     },
     {
@@ -2668,7 +2668,7 @@
       "gabarit": "choisirait",
       "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": "What would he choose?",
+      "texte": "What would she choose?",
       "erreur": null
     },
     {
@@ -2740,7 +2740,7 @@
       "gabarit": "choisirait",
       "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": "What would he choose?",
+      "texte": "What would she choose?",
       "erreur": null
     },
     {
@@ -2749,7 +2749,7 @@
       "gabarit": "choisirait",
       "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": "What would she choose?",
+      "texte": "What would he choose?",
       "erreur": null
     },
     {
@@ -2767,7 +2767,7 @@
       "gabarit": "choisirait",
       "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": "What would he choose?",
+      "texte": "What would she choose?",
       "erreur": null
     },
     {
@@ -2821,7 +2821,7 @@
       "gabarit": "choisirait",
       "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": "What would he choose?",
+      "texte": "What would she choose?",
       "erreur": null
     },
     {
@@ -2830,7 +2830,7 @@
       "gabarit": "choisirait",
       "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": "What would she choose?",
+      "texte": "What would he choose?",
       "erreur": null
     },
     {
@@ -2848,7 +2848,7 @@
       "gabarit": "choisirait",
       "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": "What would he choose?",
+      "texte": "What would she choose?",
       "erreur": null
     },
     {
@@ -2911,7 +2911,7 @@
       "gabarit": "choisirait",
       "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": "What would he choose?",
+      "texte": "What would she choose?",
       "erreur": null
     },
     {
@@ -2929,7 +2929,7 @@
       "gabarit": "choisirait",
       "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": "What would she choose?",
+      "texte": "What would he choose?",
       "erreur": null
     },
     {
@@ -2938,7 +2938,7 @@
       "gabarit": "choisirait",
       "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": "What would he choose?",
+      "texte": "What would she choose?",
       "erreur": null
     },
     {
@@ -2992,7 +2992,7 @@
       "gabarit": "choisirait",
       "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": "What would he choose?",
+      "texte": "What would she choose?",
       "erreur": null
     },
     {
@@ -3010,7 +3010,7 @@
       "gabarit": "choisirait",
       "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": "What would she choose?",
+      "texte": "What would he choose?",
       "erreur": null
     },
     {
@@ -3019,7 +3019,7 @@
       "gabarit": "choisirait",
       "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": "What would he choose?",
+      "texte": "What would she choose?",
       "erreur": null
     },
     {
@@ -3091,7 +3091,7 @@
       "gabarit": "choisirait",
       "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": "What would he choose?",
+      "texte": "What would she choose?",
       "erreur": null
     },
     {
@@ -3100,7 +3100,7 @@
       "gabarit": "choisirait",
       "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": "What would she choose?",
+      "texte": "What would he choose?",
       "erreur": null
     },
     {
@@ -3118,7 +3118,7 @@
       "gabarit": "choisirait",
       "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": "What would he choose?",
+      "texte": "What would she choose?",
       "erreur": null
     },
     {
@@ -3172,7 +3172,7 @@
       "gabarit": "choisirait",
       "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": "What would he choose?",
+      "texte": "What would she choose?",
       "erreur": null
     },
     {
@@ -3181,7 +3181,7 @@
       "gabarit": "choisirait",
       "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": "What would she choose?",
+      "texte": "What would he choose?",
       "erreur": null
     },
     {
@@ -3199,7 +3199,7 @@
       "gabarit": "choisirait",
       "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": "What would he choose?",
+      "texte": "What would she choose?",
       "erreur": null
     },
     {
@@ -3253,7 +3253,7 @@
       "gabarit": "choisirait",
       "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": "What would he choose?",
+      "texte": "What would she choose?",
       "erreur": null
     },
     {
@@ -3280,7 +3280,7 @@
       "gabarit": "choisirait",
       "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": "What would she choose?",
+      "texte": "What would he choose?",
       "erreur": null
     },
     {
@@ -3289,7 +3289,7 @@
       "gabarit": "choisirait",
       "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": "What would he choose?",
+      "texte": "What would she choose?",
       "erreur": null
     },
     {
@@ -3343,7 +3343,7 @@
       "gabarit": "choisirait",
       "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": "What would he choose?",
+      "texte": "What would she choose?",
       "erreur": null
     },
     {
@@ -3361,7 +3361,7 @@
       "gabarit": "choisirait",
       "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": "What would she choose?",
+      "texte": "What would he choose?",
       "erreur": null
     },
     {
@@ -3370,7 +3370,7 @@
       "gabarit": "choisirait",
       "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": "What would he choose?",
+      "texte": "What would she choose?",
       "erreur": null
     },
     {
@@ -3424,7 +3424,7 @@
       "gabarit": "choisirait",
       "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": "What would he choose?",
+      "texte": "What would she choose?",
       "erreur": null
     },
     {
@@ -3442,7 +3442,7 @@
       "gabarit": "choisirait",
       "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": "What would she choose?",
+      "texte": "What would he choose?",
       "erreur": null
     },
     {
@@ -3469,7 +3469,7 @@
       "gabarit": "choisirait",
       "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": "What would he choose?",
+      "texte": "What would she choose?",
       "erreur": null
     },
     {
@@ -3523,7 +3523,7 @@
       "gabarit": "choisirait",
       "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": "What would he choose?",
+      "texte": "What would she choose?",
       "erreur": null
     },
     {
@@ -3532,7 +3532,7 @@
       "gabarit": "choisirait",
       "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": "What would she choose?",
+      "texte": "What would he choose?",
       "erreur": null
     },
     {
@@ -3550,7 +3550,7 @@
       "gabarit": "choisirait",
       "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": "What would he choose?",
+      "texte": "What would she choose?",
       "erreur": null
     },
     {
@@ -3604,7 +3604,7 @@
       "gabarit": "choisirait",
       "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": "What would he choose?",
+      "texte": "What would she choose?",
       "erreur": null
     },
     {
@@ -3613,7 +3613,7 @@
       "gabarit": "choisirait",
       "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": "What would she choose?",
+      "texte": "What would he choose?",
       "erreur": null
     },
     {
@@ -3631,7 +3631,7 @@
       "gabarit": "choisirait",
       "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": "What would he choose?",
+      "texte": "What would she choose?",
       "erreur": null
     },
     {
@@ -3694,7 +3694,7 @@
       "gabarit": "choisirait",
       "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": "What would he choose?",
+      "texte": "What would she choose?",
       "erreur": null
     },
     {
@@ -3712,7 +3712,7 @@
       "gabarit": "choisirait",
       "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": "What would she choose?",
+      "texte": "What would he choose?",
       "erreur": null
     },
     {
@@ -3721,7 +3721,7 @@
       "gabarit": "choisirait",
       "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": "What would he choose?",
+      "texte": "What would she choose?",
       "erreur": null
     },
     {
@@ -3775,7 +3775,7 @@
       "gabarit": "choisirait",
       "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": "What would he choose?",
+      "texte": "What would she choose?",
       "erreur": null
     },
     {
@@ -3793,7 +3793,7 @@
       "gabarit": "choisirait",
       "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": "What would she choose?",
+      "texte": "What would he choose?",
       "erreur": null
     },
     {
@@ -3802,7 +3802,7 @@
       "gabarit": "choisirait",
       "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": "What would he choose?",
+      "texte": "What would she choose?",
       "erreur": null
     },
     {
@@ -3874,7 +3874,7 @@
       "gabarit": "choisirait",
       "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": "What would he choose?",
+      "texte": "What would she choose?",
       "erreur": null
     },
     {
@@ -3883,7 +3883,7 @@
       "gabarit": "choisirait",
       "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": "What would she choose?",
+      "texte": "What would he choose?",
       "erreur": null
     },
     {
@@ -3901,7 +3901,7 @@
       "gabarit": "choisirait",
       "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": "What would he choose?",
+      "texte": "What would she choose?",
       "erreur": null
     },
     {
@@ -3955,7 +3955,7 @@
       "gabarit": "choisirait",
       "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": "What would he choose?",
+      "texte": "What would she choose?",
       "erreur": null
     },
     {
@@ -3964,7 +3964,7 @@
       "gabarit": "choisirait",
       "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": "What would she choose?",
+      "texte": "What would he choose?",
       "erreur": null
     },
     {
@@ -3982,7 +3982,7 @@
       "gabarit": "choisirait",
       "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": "What would he choose?",
+      "texte": "What would she choose?",
       "erreur": null
     },
     {
@@ -4045,7 +4045,7 @@
       "gabarit": "choisirait",
       "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": "What would he choose?",
+      "texte": "What would she choose?",
       "erreur": null
     },
     {
@@ -4063,7 +4063,7 @@
       "gabarit": "choisirait",
       "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": "What would she choose?",
+      "texte": "What would he choose?",
       "erreur": null
     },
     {
@@ -4072,7 +4072,7 @@
       "gabarit": "choisirait",
       "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": "What would he choose?",
+      "texte": "What would she choose?",
       "erreur": null
     },
     {
@@ -4126,7 +4126,7 @@
       "gabarit": "choisirait",
       "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": "What would he choose?",
+      "texte": "What would she choose?",
       "erreur": null
     },
     {
@@ -4144,7 +4144,7 @@
       "gabarit": "choisirait",
       "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": "What would she choose?",
+      "texte": "What would he choose?",
       "erreur": null
     },
     {
@@ -4153,7 +4153,7 @@
       "gabarit": "choisirait",
       "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": "What would he choose?",
+      "texte": "What would she choose?",
       "erreur": null
     },
     {
@@ -4225,7 +4225,7 @@
       "gabarit": "choisirait",
       "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": "What would he choose?",
+      "texte": "What would she choose?",
       "erreur": null
     },
     {
@@ -4234,7 +4234,7 @@
       "gabarit": "choisirait",
       "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": "What would she choose?",
+      "texte": "What would he choose?",
       "erreur": null
     },
     {
@@ -4252,7 +4252,7 @@
       "gabarit": "choisirait",
       "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": "What would he choose?",
+      "texte": "What would she choose?",
       "erreur": null
     },
     {
@@ -4306,7 +4306,7 @@
       "gabarit": "choisirait",
       "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": "What would he choose?",
+      "texte": "What would she choose?",
       "erreur": null
     },
     {
@@ -4315,7 +4315,7 @@
       "gabarit": "choisirait",
       "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": "What would she choose?",
+      "texte": "What would he choose?",
       "erreur": null
     },
     {
@@ -4632,7 +4632,7 @@
       "creneau": "soir"
     },
     "tu-preferes": {
-      "jour": "2026-11-23",
+      "jour": "2026-11-25",
       "creneau": "soir"
     },
     "phrase": null,
