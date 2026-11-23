@@ -1,21 +1,21 @@
 {
-  "genere_le": "2026-11-22T11:17:03.260Z",
+  "genere_le": "2026-11-23T03:16:15.093Z",
   "langue": "en",
   "compte": {
     "nom": "quiz_couple_official",
     "actif": true
   },
   "fuseau": "Europe/Paris",
-  "aujourdhui": "2026-11-22",
+  "aujourdhui": "2026-11-23",
   "melange": {
     "midi": {
-      "1": null,
-      "2": null,
-      "3": null,
-      "4": null,
-      "5": null,
+      "1": "choisirait",
+      "2": "choisirait",
+      "3": "choisirait",
+      "4": "choisirait",
+      "5": "choisirait",
       "6": "tu-preferes",
-      "7": null
+      "7": "choisirait"
     },
     "soir": {
       "1": "tu-preferes",
@@ -26,41 +26,14 @@
       "6": "baton",
       "7": "tu-preferes"
     },
-    "matin": null
+    "matin": "choisirait"
   },
-  "reserve_jours": 130,
+  "reserve_jours": 129,
   "a_remplir": [],
   "a_corriger": [],
   "hors_grille": [],
   "refuses": [],
   "recents_et_prevus": [
-    {
-      "jour": "2026-10-23",
-      "creneau": "matin",
-      "gabarit": "baton",
-      "categorie": "baton",
-      "statut": "publie",
-      "texte": null,
-      "erreur": null
-    },
-    {
-      "jour": "2026-10-23",
-      "creneau": "midi",
-      "gabarit": "connais-tu",
-      "categorie": "connais-tu",
-      "statut": "publie",
-      "texte": "How well do you know your partner?",
-      "erreur": null
-    },
-    {
-      "jour": "2026-10-23",
-      "creneau": "soir",
-      "gabarit": "tu-preferes",
-      "categorie": "tu-preferes",
-      "statut": "publie",
-      "texte": "Would you rather: couple edition",
-      "erreur": null
-    },
     {
       "jour": "2026-10-24",
       "creneau": "matin",
@@ -867,26 +840,26 @@
       "creneau": "soir",
       "gabarit": "tu-preferes",
       "categorie": "tu-preferes",
-      "statut": "rendu",
+      "statut": "publie",
       "texte": "Would you rather: A or B?",
       "erreur": null
     },
     {
       "jour": "2026-11-23",
       "creneau": "matin",
-      "gabarit": "baton",
-      "categorie": "baton",
-      "statut": "a_rendre",
-      "texte": null,
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
+      "statut": "rendu",
+      "texte": "What would he choose?",
       "erreur": null
     },
     {
       "jour": "2026-11-23",
       "creneau": "midi",
-      "gabarit": "connais-tu",
-      "categorie": "connais-tu",
-      "statut": "a_rendre",
-      "texte": "How well do you know your partner?",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
+      "statut": "rendu",
+      "texte": "What would he choose?",
       "erreur": null
     },
     {
@@ -901,19 +874,19 @@
     {
       "jour": "2026-11-24",
       "creneau": "matin",
-      "gabarit": "baton",
-      "categorie": "baton",
-      "statut": "a_rendre",
-      "texte": null,
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
+      "statut": "rendu",
+      "texte": "What would she choose?",
       "erreur": null
     },
     {
       "jour": "2026-11-24",
       "creneau": "midi",
-      "gabarit": "tu-preferes",
-      "categorie": "tu-preferes",
-      "statut": "a_rendre",
-      "texte": "Would you rather: couple edition",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
+      "statut": "rendu",
+      "texte": "What would he choose?",
       "erreur": null
     },
     {
@@ -921,26 +894,26 @@
       "creneau": "soir",
       "gabarit": "connais-tu",
       "categorie": "connais-tu",
-      "statut": "a_rendre",
+      "statut": "rendu",
       "texte": "How well do you know your partner?",
       "erreur": null
     },
     {
       "jour": "2026-11-25",
       "creneau": "matin",
-      "gabarit": "baton",
-      "categorie": "baton",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": null,
+      "texte": "What would he choose?",
       "erreur": null
     },
     {
       "jour": "2026-11-25",
       "creneau": "midi",
-      "gabarit": "connais-tu",
-      "categorie": "connais-tu",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": "How well do you know your partner?",
+      "texte": "What would she choose?",
       "erreur": null
     },
     {
@@ -955,19 +928,19 @@
     {
       "jour": "2026-11-26",
       "creneau": "matin",
-      "gabarit": "baton",
-      "categorie": "baton",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": null,
+      "texte": "What would he choose?",
       "erreur": null
     },
     {
       "jour": "2026-11-26",
       "creneau": "midi",
-      "gabarit": "tu-preferes",
-      "categorie": "tu-preferes",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": "Would you rather: couple edition",
+      "texte": "What would he choose?",
       "erreur": null
     },
     {
@@ -982,19 +955,19 @@
     {
       "jour": "2026-11-27",
       "creneau": "matin",
-      "gabarit": "baton",
-      "categorie": "baton",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": null,
+      "texte": "What would she choose?",
       "erreur": null
     },
     {
       "jour": "2026-11-27",
       "creneau": "midi",
-      "gabarit": "connais-tu",
-      "categorie": "connais-tu",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": "How well do you know your partner?",
+      "texte": "What would he choose?",
       "erreur": null
     },
     {
@@ -1009,10 +982,10 @@
     {
       "jour": "2026-11-28",
       "creneau": "matin",
-      "gabarit": "baton",
-      "categorie": "baton",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": null,
+      "texte": "What would he choose?",
       "erreur": null
     },
     {
@@ -1036,19 +1009,19 @@
     {
       "jour": "2026-11-29",
       "creneau": "matin",
-      "gabarit": "baton",
-      "categorie": "baton",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": null,
+      "texte": "What would she choose?",
       "erreur": null
     },
     {
       "jour": "2026-11-29",
       "creneau": "midi",
-      "gabarit": "tu-preferes",
-      "categorie": "tu-preferes",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": "Would you rather: couple edition",
+      "texte": "What would he choose?",
       "erreur": null
     },
     {
@@ -1063,19 +1036,19 @@
     {
       "jour": "2026-11-30",
       "creneau": "matin",
-      "gabarit": "baton",
-      "categorie": "baton",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": null,
+      "texte": "What would he choose?",
       "erreur": null
     },
     {
       "jour": "2026-11-30",
       "creneau": "midi",
-      "gabarit": "connais-tu",
-      "categorie": "connais-tu",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": "How well do you know your partner?",
+      "texte": "What would she choose?",
       "erreur": null
     },
     {
@@ -1090,19 +1063,19 @@
     {
       "jour": "2026-12-01",
       "creneau": "matin",
-      "gabarit": "baton",
-      "categorie": "baton",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": null,
+      "texte": "What would he choose?",
       "erreur": null
     },
     {
       "jour": "2026-12-01",
       "creneau": "midi",
-      "gabarit": "tu-preferes",
-      "categorie": "tu-preferes",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": "Would you rather: couple edition",
+      "texte": "What would he choose?",
       "erreur": null
     },
     {
@@ -1117,19 +1090,19 @@
     {
       "jour": "2026-12-02",
       "creneau": "matin",
-      "gabarit": "baton",
-      "categorie": "baton",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": null,
+      "texte": "What would she choose?",
       "erreur": null
     },
     {
       "jour": "2026-12-02",
       "creneau": "midi",
-      "gabarit": "connais-tu",
-      "categorie": "connais-tu",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": "How well do you know your partner?",
+      "texte": "What would he choose?",
       "erreur": null
     },
     {
@@ -1144,19 +1117,19 @@
     {
       "jour": "2026-12-03",
       "creneau": "matin",
-      "gabarit": "baton",
-      "categorie": "baton",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": null,
+      "texte": "What would he choose?",
       "erreur": null
     },
     {
       "jour": "2026-12-03",
       "creneau": "midi",
-      "gabarit": "tu-preferes",
-      "categorie": "tu-preferes",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": "Would you rather: couple edition",
+      "texte": "What would she choose?",
       "erreur": null
     },
     {
@@ -1171,19 +1144,19 @@
     {
       "jour": "2026-12-04",
       "creneau": "matin",
-      "gabarit": "baton",
-      "categorie": "baton",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": null,
+      "texte": "What would he choose?",
       "erreur": null
     },
     {
       "jour": "2026-12-04",
       "creneau": "midi",
-      "gabarit": "connais-tu",
-      "categorie": "connais-tu",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": "How well do you know your partner?",
+      "texte": "What would he choose?",
       "erreur": null
     },
     {
@@ -1198,10 +1171,10 @@
     {
       "jour": "2026-12-05",
       "creneau": "matin",
-      "gabarit": "baton",
-      "categorie": "baton",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": null,
+      "texte": "What would she choose?",
       "erreur": null
     },
     {
@@ -1225,19 +1198,19 @@
     {
       "jour": "2026-12-06",
       "creneau": "matin",
-      "gabarit": "baton",
-      "categorie": "baton",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": null,
+      "texte": "What would he choose?",
       "erreur": null
     },
     {
       "jour": "2026-12-06",
       "creneau": "midi",
-      "gabarit": "tu-preferes",
-      "categorie": "tu-preferes",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": "Would you rather: couple edition",
+      "texte": "What would he choose?",
       "erreur": null
     },
     {
@@ -1252,19 +1225,19 @@
     {
       "jour": "2026-12-07",
       "creneau": "matin",
-      "gabarit": "baton",
-      "categorie": "baton",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": null,
+      "texte": "What would she choose?",
       "erreur": null
     },
     {
       "jour": "2026-12-07",
       "creneau": "midi",
-      "gabarit": "connais-tu",
-      "categorie": "connais-tu",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": "How well do you know your partner?",
+      "texte": "What would he choose?",
       "erreur": null
     },
     {
@@ -1279,19 +1252,19 @@
     {
       "jour": "2026-12-08",
       "creneau": "matin",
-      "gabarit": "baton",
-      "categorie": "baton",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": null,
+      "texte": "What would he choose?",
       "erreur": null
     },
     {
       "jour": "2026-12-08",
       "creneau": "midi",
-      "gabarit": "tu-preferes",
-      "categorie": "tu-preferes",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": "Would you rather: couple edition",
+      "texte": "What would she choose?",
       "erreur": null
     },
     {
@@ -1306,19 +1279,19 @@
     {
       "jour": "2026-12-09",
       "creneau": "matin",
-      "gabarit": "baton",
-      "categorie": "baton",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": null,
+      "texte": "What would he choose?",
       "erreur": null
     },
     {
       "jour": "2026-12-09",
       "creneau": "midi",
-      "gabarit": "connais-tu",
-      "categorie": "connais-tu",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": "How well do you know your partner?",
+      "texte": "What would he choose?",
       "erreur": null
     },
     {
@@ -1333,19 +1306,19 @@
     {
       "jour": "2026-12-10",
       "creneau": "matin",
-      "gabarit": "baton",
-      "categorie": "baton",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": null,
+      "texte": "What would she choose?",
       "erreur": null
     },
     {
       "jour": "2026-12-10",
       "creneau": "midi",
-      "gabarit": "tu-preferes",
-      "categorie": "tu-preferes",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": "Would you rather: couple edition",
+      "texte": "What would he choose?",
       "erreur": null
     },
     {
@@ -1360,19 +1333,19 @@
     {
       "jour": "2026-12-11",
       "creneau": "matin",
-      "gabarit": "baton",
-      "categorie": "baton",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": null,
+      "texte": "What would he choose?",
       "erreur": null
     },
     {
       "jour": "2026-12-11",
       "creneau": "midi",
-      "gabarit": "connais-tu",
-      "categorie": "connais-tu",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": "How well do you know your partner?",
+      "texte": "What would she choose?",
       "erreur": null
     },
     {
@@ -1387,10 +1360,10 @@
     {
       "jour": "2026-12-12",
       "creneau": "matin",
-      "gabarit": "baton",
-      "categorie": "baton",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": null,
+      "texte": "What would he choose?",
       "erreur": null
     },
     {
@@ -1414,19 +1387,19 @@
     {
       "jour": "2026-12-13",
       "creneau": "matin",
-      "gabarit": "baton",
-      "categorie": "baton",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": null,
+      "texte": "What would he choose?",
       "erreur": null
     },
     {
       "jour": "2026-12-13",
       "creneau": "midi",
-      "gabarit": "tu-preferes",
-      "categorie": "tu-preferes",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": "Would you rather: couple edition",
+      "texte": "What would she choose?",
       "erreur": null
     },
     {
@@ -1441,19 +1414,19 @@
     {
       "jour": "2026-12-14",
       "creneau": "matin",
-      "gabarit": "baton",
-      "categorie": "baton",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": null,
+      "texte": "What would he choose?",
       "erreur": null
     },
     {
       "jour": "2026-12-14",
       "creneau": "midi",
-      "gabarit": "connais-tu",
-      "categorie": "connais-tu",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": "How well do you know your partner?",
+      "texte": "What would he choose?",
       "erreur": null
     },
     {
@@ -1468,19 +1441,19 @@
     {
       "jour": "2026-12-15",
       "creneau": "matin",
-      "gabarit": "baton",
-      "categorie": "baton",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": null,
+      "texte": "What would she choose?",
       "erreur": null
     },
     {
       "jour": "2026-12-15",
       "creneau": "midi",
-      "gabarit": "tu-preferes",
-      "categorie": "tu-preferes",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": "Would you rather: couple edition",
+      "texte": "What would he choose?",
       "erreur": null
     },
     {
@@ -1495,19 +1468,19 @@
     {
       "jour": "2026-12-16",
       "creneau": "matin",
-      "gabarit": "baton",
-      "categorie": "baton",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": null,
+      "texte": "What would he choose?",
       "erreur": null
     },
     {
       "jour": "2026-12-16",
       "creneau": "midi",
-      "gabarit": "connais-tu",
-      "categorie": "connais-tu",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": "How well do you know your partner?",
+      "texte": "What would she choose?",
       "erreur": null
     },
     {
@@ -1522,19 +1495,19 @@
     {
       "jour": "2026-12-17",
       "creneau": "matin",
-      "gabarit": "baton",
-      "categorie": "baton",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": null,
+      "texte": "What would he choose?",
       "erreur": null
     },
     {
       "jour": "2026-12-17",
       "creneau": "midi",
-      "gabarit": "tu-preferes",
-      "categorie": "tu-preferes",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": "Would you rather: couple edition",
+      "texte": "What would he choose?",
       "erreur": null
     },
     {
@@ -1549,19 +1522,19 @@
     {
       "jour": "2026-12-18",
       "creneau": "matin",
-      "gabarit": "baton",
-      "categorie": "baton",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": null,
+      "texte": "What would she choose?",
       "erreur": null
     },
     {
       "jour": "2026-12-18",
       "creneau": "midi",
-      "gabarit": "connais-tu",
-      "categorie": "connais-tu",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": "How well do you know your partner?",
+      "texte": "What would he choose?",
       "erreur": null
     },
     {
@@ -1576,10 +1549,10 @@
     {
       "jour": "2026-12-19",
       "creneau": "matin",
-      "gabarit": "baton",
-      "categorie": "baton",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": null,
+      "texte": "What would he choose?",
       "erreur": null
     },
     {
@@ -1603,19 +1576,19 @@
     {
       "jour": "2026-12-20",
       "creneau": "matin",
-      "gabarit": "baton",
-      "categorie": "baton",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": null,
+      "texte": "What would she choose?",
       "erreur": null
     },
     {
       "jour": "2026-12-20",
       "creneau": "midi",
-      "gabarit": "tu-preferes",
-      "categorie": "tu-preferes",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": "Would you rather: couple edition",
+      "texte": "What would he choose?",
       "erreur": null
     },
     {
@@ -1629,11 +1602,20 @@
     },
     {
       "jour": "2026-12-21",
-      "creneau": "midi",
-      "gabarit": "connais-tu",
-      "categorie": "connais-tu",
+      "creneau": "matin",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": "How well do you know your partner?",
+      "texte": "What would he choose?",
+      "erreur": null
+    },
+    {
+      "jour": "2026-12-21",
+      "creneau": "midi",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
+      "statut": "a_rendre",
+      "texte": "What would she choose?",
       "erreur": null
     },
     {
@@ -1647,11 +1629,20 @@
     },
     {
       "jour": "2026-12-22",
-      "creneau": "midi",
-      "gabarit": "tu-preferes",
-      "categorie": "tu-preferes",
+      "creneau": "matin",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": "Would you rather: couple edition",
+      "texte": "What would he choose?",
+      "erreur": null
+    },
+    {
+      "jour": "2026-12-22",
+      "creneau": "midi",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
+      "statut": "a_rendre",
+      "texte": "What would he choose?",
       "erreur": null
     },
     {
@@ -1665,11 +1656,20 @@
     },
     {
       "jour": "2026-12-23",
-      "creneau": "midi",
-      "gabarit": "connais-tu",
-      "categorie": "connais-tu",
+      "creneau": "matin",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": "How well do you know your partner?",
+      "texte": "What would she choose?",
+      "erreur": null
+    },
+    {
+      "jour": "2026-12-23",
+      "creneau": "midi",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
+      "statut": "a_rendre",
+      "texte": "What would he choose?",
       "erreur": null
     },
     {
@@ -1684,19 +1684,19 @@
     {
       "jour": "2026-12-24",
       "creneau": "matin",
-      "gabarit": "baton",
-      "categorie": "baton",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": null,
+      "texte": "What would he choose?",
       "erreur": null
     },
     {
       "jour": "2026-12-24",
       "creneau": "midi",
-      "gabarit": "tu-preferes",
-      "categorie": "tu-preferes",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": "Would you rather: couple edition",
+      "texte": "What would she choose?",
       "erreur": null
     },
     {
@@ -1711,19 +1711,19 @@
     {
       "jour": "2026-12-25",
       "creneau": "matin",
-      "gabarit": "baton",
-      "categorie": "baton",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": null,
+      "texte": "What would he choose?",
       "erreur": null
     },
     {
       "jour": "2026-12-25",
       "creneau": "midi",
-      "gabarit": "connais-tu",
-      "categorie": "connais-tu",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": "How well do you know your partner?",
+      "texte": "What would he choose?",
       "erreur": null
     },
     {
@@ -1733,6 +1733,15 @@
       "categorie": "baton",
       "statut": "a_rendre",
       "texte": null,
+      "erreur": null
+    },
+    {
+      "jour": "2026-12-26",
+      "creneau": "matin",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
+      "statut": "a_rendre",
+      "texte": "What would she choose?",
       "erreur": null
     },
     {
@@ -1755,11 +1764,20 @@
     },
     {
       "jour": "2026-12-27",
-      "creneau": "midi",
-      "gabarit": "tu-preferes",
-      "categorie": "tu-preferes",
+      "creneau": "matin",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": "Would you rather: couple edition",
+      "texte": "What would he choose?",
+      "erreur": null
+    },
+    {
+      "jour": "2026-12-27",
+      "creneau": "midi",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
+      "statut": "a_rendre",
+      "texte": "What would he choose?",
       "erreur": null
     },
     {
@@ -1773,11 +1791,20 @@
     },
     {
       "jour": "2026-12-28",
-      "creneau": "midi",
-      "gabarit": "connais-tu",
-      "categorie": "connais-tu",
+      "creneau": "matin",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": "How well do you know your partner?",
+      "texte": "What would she choose?",
+      "erreur": null
+    },
+    {
+      "jour": "2026-12-28",
+      "creneau": "midi",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
+      "statut": "a_rendre",
+      "texte": "What would he choose?",
       "erreur": null
     },
     {
@@ -1791,11 +1818,20 @@
     },
     {
       "jour": "2026-12-29",
-      "creneau": "midi",
-      "gabarit": "tu-preferes",
-      "categorie": "tu-preferes",
+      "creneau": "matin",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": "Would you rather: couple edition",
+      "texte": "What would he choose?",
+      "erreur": null
+    },
+    {
+      "jour": "2026-12-29",
+      "creneau": "midi",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
+      "statut": "a_rendre",
+      "texte": "What would she choose?",
       "erreur": null
     },
     {
@@ -1809,11 +1845,20 @@
     },
     {
       "jour": "2026-12-30",
-      "creneau": "midi",
-      "gabarit": "connais-tu",
-      "categorie": "connais-tu",
+      "creneau": "matin",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": "How well do you know your partner?",
+      "texte": "What would he choose?",
+      "erreur": null
+    },
+    {
+      "jour": "2026-12-30",
+      "creneau": "midi",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
+      "statut": "a_rendre",
+      "texte": "What would he choose?",
       "erreur": null
     },
     {
@@ -1828,19 +1873,19 @@
     {
       "jour": "2026-12-31",
       "creneau": "matin",
-      "gabarit": "baton",
-      "categorie": "baton",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": null,
+      "texte": "What would she choose?",
       "erreur": null
     },
     {
       "jour": "2026-12-31",
       "creneau": "midi",
-      "gabarit": "tu-preferes",
-      "categorie": "tu-preferes",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": "Would you rather: couple edition",
+      "texte": "What would he choose?",
       "erreur": null
     },
     {
@@ -1855,19 +1900,19 @@
     {
       "jour": "2027-01-01",
       "creneau": "matin",
-      "gabarit": "baton",
-      "categorie": "baton",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": null,
+      "texte": "What would he choose?",
       "erreur": null
     },
     {
       "jour": "2027-01-01",
       "creneau": "midi",
-      "gabarit": "connais-tu",
-      "categorie": "connais-tu",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": "How well do you know your partner?",
+      "texte": "What would she choose?",
       "erreur": null
     },
     {
@@ -1877,6 +1922,15 @@
       "categorie": "baton",
       "statut": "a_rendre",
       "texte": null,
+      "erreur": null
+    },
+    {
+      "jour": "2027-01-02",
+      "creneau": "matin",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
+      "statut": "a_rendre",
+      "texte": "What would he choose?",
       "erreur": null
     },
     {
@@ -1899,11 +1953,20 @@
     },
     {
       "jour": "2027-01-03",
-      "creneau": "midi",
-      "gabarit": "tu-preferes",
-      "categorie": "tu-preferes",
+      "creneau": "matin",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": "Would you rather: couple edition",
+      "texte": "What would he choose?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-01-03",
+      "creneau": "midi",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
+      "statut": "a_rendre",
+      "texte": "What would she choose?",
       "erreur": null
     },
     {
@@ -1917,11 +1980,20 @@
     },
     {
       "jour": "2027-01-04",
-      "creneau": "midi",
-      "gabarit": "connais-tu",
-      "categorie": "connais-tu",
+      "creneau": "matin",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": "How well do you know your partner?",
+      "texte": "What would he choose?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-01-04",
+      "creneau": "midi",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
+      "statut": "a_rendre",
+      "texte": "What would he choose?",
       "erreur": null
     },
     {
@@ -1935,11 +2007,20 @@
     },
     {
       "jour": "2027-01-05",
-      "creneau": "midi",
-      "gabarit": "tu-preferes",
-      "categorie": "tu-preferes",
+      "creneau": "matin",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": "Would you rather: couple edition",
+      "texte": "What would she choose?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-01-05",
+      "creneau": "midi",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
+      "statut": "a_rendre",
+      "texte": "What would he choose?",
       "erreur": null
     },
     {
@@ -1953,11 +2034,20 @@
     },
     {
       "jour": "2027-01-06",
-      "creneau": "midi",
-      "gabarit": "connais-tu",
-      "categorie": "connais-tu",
+      "creneau": "matin",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": "How well do you know your partner?",
+      "texte": "What would he choose?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-01-06",
+      "creneau": "midi",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
+      "statut": "a_rendre",
+      "texte": "What would she choose?",
       "erreur": null
     },
     {
@@ -1971,11 +2061,20 @@
     },
     {
       "jour": "2027-01-07",
-      "creneau": "midi",
-      "gabarit": "tu-preferes",
-      "categorie": "tu-preferes",
+      "creneau": "matin",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": "Would you rather: couple edition",
+      "texte": "What would he choose?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-01-07",
+      "creneau": "midi",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
+      "statut": "a_rendre",
+      "texte": "What would he choose?",
       "erreur": null
     },
     {
@@ -1989,11 +2088,20 @@
     },
     {
       "jour": "2027-01-08",
-      "creneau": "midi",
-      "gabarit": "connais-tu",
-      "categorie": "connais-tu",
+      "creneau": "matin",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": "How well do you know your partner?",
+      "texte": "What would she choose?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-01-08",
+      "creneau": "midi",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
+      "statut": "a_rendre",
+      "texte": "What would he choose?",
       "erreur": null
     },
     {
@@ -2003,6 +2111,15 @@
       "categorie": "connais-tu",
       "statut": "a_rendre",
       "texte": "How well do you know your partner?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-01-09",
+      "creneau": "matin",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
+      "statut": "a_rendre",
+      "texte": "What would he choose?",
       "erreur": null
     },
     {
@@ -2025,11 +2142,20 @@
     },
     {
       "jour": "2027-01-10",
-      "creneau": "midi",
-      "gabarit": "tu-preferes",
-      "categorie": "tu-preferes",
+      "creneau": "matin",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": "Would you rather: couple edition",
+      "texte": "What would she choose?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-01-10",
+      "creneau": "midi",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
+      "statut": "a_rendre",
+      "texte": "What would he choose?",
       "erreur": null
     },
     {
@@ -2043,11 +2169,20 @@
     },
     {
       "jour": "2027-01-11",
-      "creneau": "midi",
-      "gabarit": "connais-tu",
-      "categorie": "connais-tu",
+      "creneau": "matin",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": "How well do you know your partner?",
+      "texte": "What would he choose?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-01-11",
+      "creneau": "midi",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
+      "statut": "a_rendre",
+      "texte": "What would she choose?",
       "erreur": null
     },
     {
@@ -2061,11 +2196,20 @@
     },
     {
       "jour": "2027-01-12",
-      "creneau": "midi",
-      "gabarit": "tu-preferes",
-      "categorie": "tu-preferes",
+      "creneau": "matin",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": "Would you rather: couple edition",
+      "texte": "What would he choose?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-01-12",
+      "creneau": "midi",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
+      "statut": "a_rendre",
+      "texte": "What would he choose?",
       "erreur": null
     },
     {
@@ -2079,11 +2223,20 @@
     },
     {
       "jour": "2027-01-13",
-      "creneau": "midi",
-      "gabarit": "connais-tu",
-      "categorie": "connais-tu",
+      "creneau": "matin",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": "Who's more likely to...?",
+      "texte": "What would she choose?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-01-13",
+      "creneau": "midi",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
+      "statut": "a_rendre",
+      "texte": "What would he choose?",
       "erreur": null
     },
     {
@@ -2097,11 +2250,20 @@
     },
     {
       "jour": "2027-01-14",
-      "creneau": "midi",
-      "gabarit": "tu-preferes",
-      "categorie": "tu-preferes",
+      "creneau": "matin",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
       "statut": "a_rendre",
-      "texte": "Would you rather: couple edition",
+      "texte": "What would he choose?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-01-14",
+      "creneau": "midi",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
+      "statut": "a_rendre",
+      "texte": "What would she choose?",
       "erreur": null
     },
     {
@@ -2115,11 +2277,38 @@
     },
     {
       "jour": "2027-01-15",
+      "creneau": "matin",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
+      "statut": "a_rendre",
+      "texte": "What would he choose?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-01-15",
+      "creneau": "midi",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
+      "statut": "a_rendre",
+      "texte": "What would he choose?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-01-15",
       "creneau": "soir",
       "gabarit": "connais-tu",
       "categorie": "connais-tu",
       "statut": "a_rendre",
       "texte": "How well do you know your partner?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-01-16",
+      "creneau": "matin",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
+      "statut": "a_rendre",
+      "texte": "What would she choose?",
       "erreur": null
     },
     {
@@ -2142,11 +2331,47 @@
     },
     {
       "jour": "2027-01-17",
+      "creneau": "matin",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
+      "statut": "a_rendre",
+      "texte": "What would he choose?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-01-17",
+      "creneau": "midi",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
+      "statut": "a_rendre",
+      "texte": "What would he choose?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-01-17",
       "creneau": "soir",
       "gabarit": "tu-preferes",
       "categorie": "tu-preferes",
       "statut": "a_rendre",
       "texte": "Would you rather: couple edition",
+      "erreur": null
+    },
+    {
+      "jour": "2027-01-18",
+      "creneau": "matin",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
+      "statut": "a_rendre",
+      "texte": "What would she choose?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-01-18",
+      "creneau": "midi",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
+      "statut": "a_rendre",
+      "texte": "What would he choose?",
       "erreur": null
     },
     {
@@ -2160,11 +2385,47 @@
     },
     {
       "jour": "2027-01-19",
+      "creneau": "matin",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
+      "statut": "a_rendre",
+      "texte": "What would he choose?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-01-19",
+      "creneau": "midi",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
+      "statut": "a_rendre",
+      "texte": "What would she choose?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-01-19",
       "creneau": "soir",
       "gabarit": "connais-tu",
       "categorie": "connais-tu",
       "statut": "a_rendre",
       "texte": "How well do you know your partner?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-01-20",
+      "creneau": "matin",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
+      "statut": "a_rendre",
+      "texte": "What would he choose?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-01-20",
+      "creneau": "midi",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
+      "statut": "a_rendre",
+      "texte": "What would he choose?",
       "erreur": null
     },
     {
@@ -2178,6 +2439,24 @@
     },
     {
       "jour": "2027-01-21",
+      "creneau": "matin",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
+      "statut": "a_rendre",
+      "texte": "What would she choose?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-01-21",
+      "creneau": "midi",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
+      "statut": "a_rendre",
+      "texte": "What would he choose?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-01-21",
       "creneau": "soir",
       "gabarit": "tu-preferes",
       "categorie": "tu-preferes",
@@ -2187,11 +2466,38 @@
     },
     {
       "jour": "2027-01-22",
+      "creneau": "matin",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
+      "statut": "a_rendre",
+      "texte": "What would he choose?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-01-22",
+      "creneau": "midi",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
+      "statut": "a_rendre",
+      "texte": "What would she choose?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-01-22",
       "creneau": "soir",
       "gabarit": "connais-tu",
       "categorie": "connais-tu",
       "statut": "a_rendre",
       "texte": "How well do you know your partner?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-01-23",
+      "creneau": "matin",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
+      "statut": "a_rendre",
+      "texte": "What would he choose?",
       "erreur": null
     },
     {
@@ -2214,11 +2520,47 @@
     },
     {
       "jour": "2027-01-24",
+      "creneau": "matin",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
+      "statut": "a_rendre",
+      "texte": "What would he choose?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-01-24",
+      "creneau": "midi",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
+      "statut": "a_rendre",
+      "texte": "What would she choose?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-01-24",
       "creneau": "soir",
       "gabarit": "tu-preferes",
       "categorie": "tu-preferes",
       "statut": "a_rendre",
       "texte": "Would you rather: couple edition",
+      "erreur": null
+    },
+    {
+      "jour": "2027-01-25",
+      "creneau": "matin",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
+      "statut": "a_rendre",
+      "texte": "What would he choose?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-01-25",
+      "creneau": "midi",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
+      "statut": "a_rendre",
+      "texte": "What would he choose?",
       "erreur": null
     },
     {
@@ -2232,11 +2574,47 @@
     },
     {
       "jour": "2027-01-26",
+      "creneau": "matin",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
+      "statut": "a_rendre",
+      "texte": "What would she choose?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-01-26",
+      "creneau": "midi",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
+      "statut": "a_rendre",
+      "texte": "What would he choose?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-01-26",
       "creneau": "soir",
       "gabarit": "connais-tu",
       "categorie": "connais-tu",
       "statut": "a_rendre",
       "texte": "How well do you know your partner?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-01-27",
+      "creneau": "matin",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
+      "statut": "a_rendre",
+      "texte": "What would he choose?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-01-27",
+      "creneau": "midi",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
+      "statut": "a_rendre",
+      "texte": "What would she choose?",
       "erreur": null
     },
     {
@@ -2250,6 +2628,24 @@
     },
     {
       "jour": "2027-01-28",
+      "creneau": "matin",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
+      "statut": "a_rendre",
+      "texte": "What would he choose?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-01-28",
+      "creneau": "midi",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
+      "statut": "a_rendre",
+      "texte": "What would he choose?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-01-28",
       "creneau": "soir",
       "gabarit": "tu-preferes",
       "categorie": "tu-preferes",
@@ -2259,11 +2655,38 @@
     },
     {
       "jour": "2027-01-29",
+      "creneau": "matin",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
+      "statut": "a_rendre",
+      "texte": "What would she choose?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-01-29",
+      "creneau": "midi",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
+      "statut": "a_rendre",
+      "texte": "What would he choose?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-01-29",
       "creneau": "soir",
       "gabarit": "connais-tu",
       "categorie": "connais-tu",
       "statut": "a_rendre",
       "texte": "How well do you know your partner?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-01-30",
+      "creneau": "matin",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
+      "statut": "a_rendre",
+      "texte": "What would he choose?",
       "erreur": null
     },
     {
@@ -2286,11 +2709,47 @@
     },
     {
       "jour": "2027-01-31",
+      "creneau": "matin",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
+      "statut": "a_rendre",
+      "texte": "What would she choose?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-01-31",
+      "creneau": "midi",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
+      "statut": "a_rendre",
+      "texte": "What would he choose?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-01-31",
       "creneau": "soir",
       "gabarit": "tu-preferes",
       "categorie": "tu-preferes",
       "statut": "a_rendre",
       "texte": "Would you rather: couple edition",
+      "erreur": null
+    },
+    {
+      "jour": "2027-02-01",
+      "creneau": "matin",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
+      "statut": "a_rendre",
+      "texte": "What would he choose?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-02-01",
+      "creneau": "midi",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
+      "statut": "a_rendre",
+      "texte": "What would she choose?",
       "erreur": null
     },
     {
@@ -2304,11 +2763,47 @@
     },
     {
       "jour": "2027-02-02",
+      "creneau": "matin",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
+      "statut": "a_rendre",
+      "texte": "What would he choose?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-02-02",
+      "creneau": "midi",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
+      "statut": "a_rendre",
+      "texte": "What would he choose?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-02-02",
       "creneau": "soir",
       "gabarit": "connais-tu",
       "categorie": "connais-tu",
       "statut": "a_rendre",
       "texte": "How well do you know your partner?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-02-03",
+      "creneau": "matin",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
+      "statut": "a_rendre",
+      "texte": "What would she choose?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-02-03",
+      "creneau": "midi",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
+      "statut": "a_rendre",
+      "texte": "What would he choose?",
       "erreur": null
     },
     {
@@ -2322,6 +2817,24 @@
     },
     {
       "jour": "2027-02-04",
+      "creneau": "matin",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
+      "statut": "a_rendre",
+      "texte": "What would he choose?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-02-04",
+      "creneau": "midi",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
+      "statut": "a_rendre",
+      "texte": "What would she choose?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-02-04",
       "creneau": "soir",
       "gabarit": "tu-preferes",
       "categorie": "tu-preferes",
@@ -2331,11 +2844,38 @@
     },
     {
       "jour": "2027-02-05",
+      "creneau": "matin",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
+      "statut": "a_rendre",
+      "texte": "What would he choose?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-02-05",
+      "creneau": "midi",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
+      "statut": "a_rendre",
+      "texte": "What would he choose?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-02-05",
       "creneau": "soir",
       "gabarit": "connais-tu",
       "categorie": "connais-tu",
       "statut": "a_rendre",
       "texte": "How well do you know your partner?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-02-06",
+      "creneau": "matin",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
+      "statut": "a_rendre",
+      "texte": "What would she choose?",
       "erreur": null
     },
     {
@@ -2358,11 +2898,47 @@
     },
     {
       "jour": "2027-02-07",
+      "creneau": "matin",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
+      "statut": "a_rendre",
+      "texte": "What would he choose?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-02-07",
+      "creneau": "midi",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
+      "statut": "a_rendre",
+      "texte": "What would he choose?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-02-07",
       "creneau": "soir",
       "gabarit": "tu-preferes",
       "categorie": "tu-preferes",
       "statut": "a_rendre",
       "texte": "Would you rather: couple edition",
+      "erreur": null
+    },
+    {
+      "jour": "2027-02-08",
+      "creneau": "matin",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
+      "statut": "a_rendre",
+      "texte": "What would she choose?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-02-08",
+      "creneau": "midi",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
+      "statut": "a_rendre",
+      "texte": "What would he choose?",
       "erreur": null
     },
     {
@@ -2376,11 +2952,47 @@
     },
     {
       "jour": "2027-02-09",
+      "creneau": "matin",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
+      "statut": "a_rendre",
+      "texte": "What would he choose?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-02-09",
+      "creneau": "midi",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
+      "statut": "a_rendre",
+      "texte": "What would she choose?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-02-09",
       "creneau": "soir",
       "gabarit": "connais-tu",
       "categorie": "connais-tu",
       "statut": "a_rendre",
       "texte": "How well do you know your partner?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-02-10",
+      "creneau": "matin",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
+      "statut": "a_rendre",
+      "texte": "What would he choose?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-02-10",
+      "creneau": "midi",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
+      "statut": "a_rendre",
+      "texte": "What would he choose?",
       "erreur": null
     },
     {
@@ -2394,6 +3006,24 @@
     },
     {
       "jour": "2027-02-11",
+      "creneau": "matin",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
+      "statut": "a_rendre",
+      "texte": "What would she choose?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-02-11",
+      "creneau": "midi",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
+      "statut": "a_rendre",
+      "texte": "What would he choose?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-02-11",
       "creneau": "soir",
       "gabarit": "tu-preferes",
       "categorie": "tu-preferes",
@@ -2403,11 +3033,38 @@
     },
     {
       "jour": "2027-02-12",
+      "creneau": "matin",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
+      "statut": "a_rendre",
+      "texte": "What would he choose?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-02-12",
+      "creneau": "midi",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
+      "statut": "a_rendre",
+      "texte": "What would she choose?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-02-12",
       "creneau": "soir",
       "gabarit": "connais-tu",
       "categorie": "connais-tu",
       "statut": "a_rendre",
       "texte": "How well do you know your partner?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-02-13",
+      "creneau": "matin",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
+      "statut": "a_rendre",
+      "texte": "What would he choose?",
       "erreur": null
     },
     {
@@ -2430,11 +3087,47 @@
     },
     {
       "jour": "2027-02-14",
+      "creneau": "matin",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
+      "statut": "a_rendre",
+      "texte": "What would he choose?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-02-14",
+      "creneau": "midi",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
+      "statut": "a_rendre",
+      "texte": "What would she choose?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-02-14",
       "creneau": "soir",
       "gabarit": "tu-preferes",
       "categorie": "tu-preferes",
       "statut": "a_rendre",
       "texte": "Would you rather: couple edition",
+      "erreur": null
+    },
+    {
+      "jour": "2027-02-15",
+      "creneau": "matin",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
+      "statut": "a_rendre",
+      "texte": "What would he choose?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-02-15",
+      "creneau": "midi",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
+      "statut": "a_rendre",
+      "texte": "What would he choose?",
       "erreur": null
     },
     {
@@ -2448,11 +3141,47 @@
     },
     {
       "jour": "2027-02-16",
+      "creneau": "matin",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
+      "statut": "a_rendre",
+      "texte": "What would she choose?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-02-16",
+      "creneau": "midi",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
+      "statut": "a_rendre",
+      "texte": "What would he choose?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-02-16",
       "creneau": "soir",
       "gabarit": "connais-tu",
       "categorie": "connais-tu",
       "statut": "a_rendre",
       "texte": "How well do you know your partner?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-02-17",
+      "creneau": "matin",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
+      "statut": "a_rendre",
+      "texte": "What would he choose?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-02-17",
+      "creneau": "midi",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
+      "statut": "a_rendre",
+      "texte": "What would she choose?",
       "erreur": null
     },
     {
@@ -2466,6 +3195,24 @@
     },
     {
       "jour": "2027-02-18",
+      "creneau": "matin",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
+      "statut": "a_rendre",
+      "texte": "What would he choose?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-02-18",
+      "creneau": "midi",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
+      "statut": "a_rendre",
+      "texte": "What would he choose?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-02-18",
       "creneau": "soir",
       "gabarit": "tu-preferes",
       "categorie": "tu-preferes",
@@ -2475,11 +3222,38 @@
     },
     {
       "jour": "2027-02-19",
+      "creneau": "matin",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
+      "statut": "a_rendre",
+      "texte": "What would she choose?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-02-19",
+      "creneau": "midi",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
+      "statut": "a_rendre",
+      "texte": "What would he choose?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-02-19",
       "creneau": "soir",
       "gabarit": "connais-tu",
       "categorie": "connais-tu",
       "statut": "a_rendre",
       "texte": "How well do you know your partner?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-02-20",
+      "creneau": "matin",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
+      "statut": "a_rendre",
+      "texte": "What would he choose?",
       "erreur": null
     },
     {
@@ -2502,11 +3276,47 @@
     },
     {
       "jour": "2027-02-21",
+      "creneau": "matin",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
+      "statut": "a_rendre",
+      "texte": "What would she choose?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-02-21",
+      "creneau": "midi",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
+      "statut": "a_rendre",
+      "texte": "What would he choose?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-02-21",
       "creneau": "soir",
       "gabarit": "tu-preferes",
       "categorie": "tu-preferes",
       "statut": "a_rendre",
       "texte": "Would you rather: powers?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-02-22",
+      "creneau": "matin",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
+      "statut": "a_rendre",
+      "texte": "What would he choose?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-02-22",
+      "creneau": "midi",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
+      "statut": "a_rendre",
+      "texte": "What would she choose?",
       "erreur": null
     },
     {
@@ -2520,11 +3330,47 @@
     },
     {
       "jour": "2027-02-23",
+      "creneau": "matin",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
+      "statut": "a_rendre",
+      "texte": "What would he choose?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-02-23",
+      "creneau": "midi",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
+      "statut": "a_rendre",
+      "texte": "What would he choose?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-02-23",
       "creneau": "soir",
       "gabarit": "connais-tu",
       "categorie": "connais-tu",
       "statut": "a_rendre",
       "texte": "Who's more likely to...?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-02-24",
+      "creneau": "matin",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
+      "statut": "a_rendre",
+      "texte": "What would she choose?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-02-24",
+      "creneau": "midi",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
+      "statut": "a_rendre",
+      "texte": "What would he choose?",
       "erreur": null
     },
     {
@@ -2538,6 +3384,24 @@
     },
     {
       "jour": "2027-02-25",
+      "creneau": "matin",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
+      "statut": "a_rendre",
+      "texte": "What would he choose?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-02-25",
+      "creneau": "midi",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
+      "statut": "a_rendre",
+      "texte": "What would she choose?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-02-25",
       "creneau": "soir",
       "gabarit": "tu-preferes",
       "categorie": "tu-preferes",
@@ -2547,11 +3411,38 @@
     },
     {
       "jour": "2027-02-26",
+      "creneau": "matin",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
+      "statut": "a_rendre",
+      "texte": "What would he choose?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-02-26",
+      "creneau": "midi",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
+      "statut": "a_rendre",
+      "texte": "What would he choose?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-02-26",
       "creneau": "soir",
       "gabarit": "connais-tu",
       "categorie": "connais-tu",
       "statut": "a_rendre",
       "texte": "Who's more likely to...?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-02-27",
+      "creneau": "matin",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
+      "statut": "a_rendre",
+      "texte": "What would she choose?",
       "erreur": null
     },
     {
@@ -2574,11 +3465,47 @@
     },
     {
       "jour": "2027-02-28",
+      "creneau": "matin",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
+      "statut": "a_rendre",
+      "texte": "What would he choose?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-02-28",
+      "creneau": "midi",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
+      "statut": "a_rendre",
+      "texte": "What would he choose?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-02-28",
       "creneau": "soir",
       "gabarit": "tu-preferes",
       "categorie": "tu-preferes",
       "statut": "a_rendre",
       "texte": "Would you rather: powers?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-03-01",
+      "creneau": "matin",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
+      "statut": "a_rendre",
+      "texte": "What would she choose?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-03-01",
+      "creneau": "midi",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
+      "statut": "a_rendre",
+      "texte": "What would he choose?",
       "erreur": null
     },
     {
@@ -2592,11 +3519,47 @@
     },
     {
       "jour": "2027-03-02",
+      "creneau": "matin",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
+      "statut": "a_rendre",
+      "texte": "What would he choose?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-03-02",
+      "creneau": "midi",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
+      "statut": "a_rendre",
+      "texte": "What would she choose?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-03-02",
       "creneau": "soir",
       "gabarit": "connais-tu",
       "categorie": "connais-tu",
       "statut": "a_rendre",
       "texte": "Who's more likely to...?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-03-03",
+      "creneau": "matin",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
+      "statut": "a_rendre",
+      "texte": "What would he choose?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-03-03",
+      "creneau": "midi",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
+      "statut": "a_rendre",
+      "texte": "What would he choose?",
       "erreur": null
     },
     {
@@ -2610,6 +3573,24 @@
     },
     {
       "jour": "2027-03-04",
+      "creneau": "matin",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
+      "statut": "a_rendre",
+      "texte": "What would she choose?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-03-04",
+      "creneau": "midi",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
+      "statut": "a_rendre",
+      "texte": "What would he choose?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-03-04",
       "creneau": "soir",
       "gabarit": "tu-preferes",
       "categorie": "tu-preferes",
@@ -2619,11 +3600,38 @@
     },
     {
       "jour": "2027-03-05",
+      "creneau": "matin",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
+      "statut": "a_rendre",
+      "texte": "What would he choose?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-03-05",
+      "creneau": "midi",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
+      "statut": "a_rendre",
+      "texte": "What would she choose?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-03-05",
       "creneau": "soir",
       "gabarit": "connais-tu",
       "categorie": "connais-tu",
       "statut": "a_rendre",
       "texte": "Who's more likely to...?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-03-06",
+      "creneau": "matin",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
+      "statut": "a_rendre",
+      "texte": "What would he choose?",
       "erreur": null
     },
     {
@@ -2646,11 +3654,47 @@
     },
     {
       "jour": "2027-03-07",
+      "creneau": "matin",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
+      "statut": "a_rendre",
+      "texte": "What would he choose?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-03-07",
+      "creneau": "midi",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
+      "statut": "a_rendre",
+      "texte": "What would she choose?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-03-07",
       "creneau": "soir",
       "gabarit": "tu-preferes",
       "categorie": "tu-preferes",
       "statut": "a_rendre",
       "texte": "Would you rather: powers?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-03-08",
+      "creneau": "matin",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
+      "statut": "a_rendre",
+      "texte": "What would he choose?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-03-08",
+      "creneau": "midi",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
+      "statut": "a_rendre",
+      "texte": "What would he choose?",
       "erreur": null
     },
     {
@@ -2664,11 +3708,47 @@
     },
     {
       "jour": "2027-03-09",
+      "creneau": "matin",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
+      "statut": "a_rendre",
+      "texte": "What would she choose?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-03-09",
+      "creneau": "midi",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
+      "statut": "a_rendre",
+      "texte": "What would he choose?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-03-09",
       "creneau": "soir",
       "gabarit": "connais-tu",
       "categorie": "connais-tu",
       "statut": "a_rendre",
       "texte": "Who's more likely to...?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-03-10",
+      "creneau": "matin",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
+      "statut": "a_rendre",
+      "texte": "What would he choose?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-03-10",
+      "creneau": "midi",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
+      "statut": "a_rendre",
+      "texte": "What would she choose?",
       "erreur": null
     },
     {
@@ -2682,6 +3762,24 @@
     },
     {
       "jour": "2027-03-11",
+      "creneau": "matin",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
+      "statut": "a_rendre",
+      "texte": "What would he choose?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-03-11",
+      "creneau": "midi",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
+      "statut": "a_rendre",
+      "texte": "What would he choose?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-03-11",
       "creneau": "soir",
       "gabarit": "tu-preferes",
       "categorie": "tu-preferes",
@@ -2691,11 +3789,38 @@
     },
     {
       "jour": "2027-03-12",
+      "creneau": "matin",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
+      "statut": "a_rendre",
+      "texte": "What would she choose?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-03-12",
+      "creneau": "midi",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
+      "statut": "a_rendre",
+      "texte": "What would he choose?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-03-12",
       "creneau": "soir",
       "gabarit": "connais-tu",
       "categorie": "connais-tu",
       "statut": "a_rendre",
       "texte": "Who's more likely to...?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-03-13",
+      "creneau": "matin",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
+      "statut": "a_rendre",
+      "texte": "What would he choose?",
       "erreur": null
     },
     {
@@ -2718,11 +3843,47 @@
     },
     {
       "jour": "2027-03-14",
+      "creneau": "matin",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
+      "statut": "a_rendre",
+      "texte": "What would she choose?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-03-14",
+      "creneau": "midi",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
+      "statut": "a_rendre",
+      "texte": "What would he choose?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-03-14",
       "creneau": "soir",
       "gabarit": "tu-preferes",
       "categorie": "tu-preferes",
       "statut": "a_rendre",
       "texte": "Would you rather: powers?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-03-15",
+      "creneau": "matin",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
+      "statut": "a_rendre",
+      "texte": "What would he choose?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-03-15",
+      "creneau": "midi",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
+      "statut": "a_rendre",
+      "texte": "What would she choose?",
       "erreur": null
     },
     {
@@ -2736,11 +3897,47 @@
     },
     {
       "jour": "2027-03-16",
+      "creneau": "matin",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
+      "statut": "a_rendre",
+      "texte": "What would he choose?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-03-16",
+      "creneau": "midi",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
+      "statut": "a_rendre",
+      "texte": "What would he choose?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-03-16",
       "creneau": "soir",
       "gabarit": "connais-tu",
       "categorie": "connais-tu",
       "statut": "a_rendre",
       "texte": "Who's more likely to...?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-03-17",
+      "creneau": "matin",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
+      "statut": "a_rendre",
+      "texte": "What would she choose?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-03-17",
+      "creneau": "midi",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
+      "statut": "a_rendre",
+      "texte": "What would he choose?",
       "erreur": null
     },
     {
@@ -2754,6 +3951,24 @@
     },
     {
       "jour": "2027-03-18",
+      "creneau": "matin",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
+      "statut": "a_rendre",
+      "texte": "What would he choose?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-03-18",
+      "creneau": "midi",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
+      "statut": "a_rendre",
+      "texte": "What would she choose?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-03-18",
       "creneau": "soir",
       "gabarit": "tu-preferes",
       "categorie": "tu-preferes",
@@ -2763,11 +3978,38 @@
     },
     {
       "jour": "2027-03-19",
+      "creneau": "matin",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
+      "statut": "a_rendre",
+      "texte": "What would he choose?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-03-19",
+      "creneau": "midi",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
+      "statut": "a_rendre",
+      "texte": "What would he choose?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-03-19",
       "creneau": "soir",
       "gabarit": "connais-tu",
       "categorie": "connais-tu",
       "statut": "a_rendre",
       "texte": "Who's more likely to...?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-03-20",
+      "creneau": "matin",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
+      "statut": "a_rendre",
+      "texte": "What would she choose?",
       "erreur": null
     },
     {
@@ -2790,11 +4032,47 @@
     },
     {
       "jour": "2027-03-21",
+      "creneau": "matin",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
+      "statut": "a_rendre",
+      "texte": "What would he choose?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-03-21",
+      "creneau": "midi",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
+      "statut": "a_rendre",
+      "texte": "What would he choose?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-03-21",
       "creneau": "soir",
       "gabarit": "tu-preferes",
       "categorie": "tu-preferes",
       "statut": "a_rendre",
       "texte": "Would you rather: powers?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-03-22",
+      "creneau": "matin",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
+      "statut": "a_rendre",
+      "texte": "What would she choose?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-03-22",
+      "creneau": "midi",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
+      "statut": "a_rendre",
+      "texte": "What would he choose?",
       "erreur": null
     },
     {
@@ -2808,11 +4086,47 @@
     },
     {
       "jour": "2027-03-23",
+      "creneau": "matin",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
+      "statut": "a_rendre",
+      "texte": "What would he choose?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-03-23",
+      "creneau": "midi",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
+      "statut": "a_rendre",
+      "texte": "What would she choose?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-03-23",
       "creneau": "soir",
       "gabarit": "connais-tu",
       "categorie": "connais-tu",
       "statut": "a_rendre",
       "texte": "How well do you know your partner?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-03-24",
+      "creneau": "matin",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
+      "statut": "a_rendre",
+      "texte": "What would he choose?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-03-24",
+      "creneau": "midi",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
+      "statut": "a_rendre",
+      "texte": "What would he choose?",
       "erreur": null
     },
     {
@@ -2826,6 +4140,24 @@
     },
     {
       "jour": "2027-03-25",
+      "creneau": "matin",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
+      "statut": "a_rendre",
+      "texte": "What would she choose?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-03-25",
+      "creneau": "midi",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
+      "statut": "a_rendre",
+      "texte": "What would he choose?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-03-25",
       "creneau": "soir",
       "gabarit": "tu-preferes",
       "categorie": "tu-preferes",
@@ -2835,11 +4167,38 @@
     },
     {
       "jour": "2027-03-26",
+      "creneau": "matin",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
+      "statut": "a_rendre",
+      "texte": "What would he choose?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-03-26",
+      "creneau": "midi",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
+      "statut": "a_rendre",
+      "texte": "What would she choose?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-03-26",
       "creneau": "soir",
       "gabarit": "connais-tu",
       "categorie": "connais-tu",
       "statut": "a_rendre",
       "texte": "How well do you know your partner?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-03-27",
+      "creneau": "matin",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
+      "statut": "a_rendre",
+      "texte": "What would he choose?",
       "erreur": null
     },
     {
@@ -2862,11 +4221,47 @@
     },
     {
       "jour": "2027-03-28",
+      "creneau": "matin",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
+      "statut": "a_rendre",
+      "texte": "What would he choose?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-03-28",
+      "creneau": "midi",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
+      "statut": "a_rendre",
+      "texte": "What would she choose?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-03-28",
       "creneau": "soir",
       "gabarit": "tu-preferes",
       "categorie": "tu-preferes",
       "statut": "a_rendre",
       "texte": "Would you rather: powers?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-03-29",
+      "creneau": "matin",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
+      "statut": "a_rendre",
+      "texte": "What would he choose?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-03-29",
+      "creneau": "midi",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
+      "statut": "a_rendre",
+      "texte": "What would he choose?",
       "erreur": null
     },
     {
@@ -2880,11 +4275,47 @@
     },
     {
       "jour": "2027-03-30",
+      "creneau": "matin",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
+      "statut": "a_rendre",
+      "texte": "What would she choose?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-03-30",
+      "creneau": "midi",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
+      "statut": "a_rendre",
+      "texte": "What would he choose?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-03-30",
       "creneau": "soir",
       "gabarit": "connais-tu",
       "categorie": "connais-tu",
       "statut": "a_rendre",
       "texte": "How well do you know your partner?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-03-31",
+      "creneau": "matin",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
+      "statut": "a_rendre",
+      "texte": "What would he choose?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-03-31",
+      "creneau": "midi",
+      "gabarit": "choisirait",
+      "categorie": "choisirait",
+      "statut": "a_rendre",
+      "texte": "What would she choose?",
       "erreur": null
     },
     {
@@ -3201,7 +4632,7 @@
       "creneau": "soir"
     },
     "tu-preferes": {
-      "jour": "2026-11-22",
+      "jour": "2026-11-23",
       "creneau": "soir"
     },
     "phrase": null,
@@ -4653,18 +6084,36 @@
       "jour": "2026-11-14",
       "creneau": "soir",
       "theme": null
+    },
+    {
+      "variante_id": "e887fa9b-20f1-4046-86db-765114738a1d",
+      "releve": "j7",
+      "vues": 229,
+      "portee": 185,
+      "likes": 2,
+      "commentaires": 0,
+      "partages": 8,
+      "enregistrements": 1,
+      "releve_le": "2026-11-23T03:16:11.772648+00:00",
+      "publie_le": "2026-11-15T15:30:15.939+00:00",
+      "categorie": "tu-preferes",
+      "format": "reel",
+      "gabarit": "tu-preferes",
+      "jour": "2026-11-15",
+      "creneau": "soir",
+      "theme": null
     }
   ],
   "statistiques_par_categorie": [
     {
       "categorie": "tu-preferes",
-      "posts": 25,
-      "vues_mediane": 2211,
-      "vues_moyenne": 11748,
+      "posts": 26,
+      "vues_mediane": 2143,
+      "vues_moyenne": 11305,
       "vues_max": 107713,
-      "partages": 10240,
-      "enregistrements": 3847,
-      "likes": 3905,
+      "partages": 10248,
+      "enregistrements": 3848,
+      "likes": 3907,
       "commentaires": 8
     },
     {
