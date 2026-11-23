@@ -1,0 +1,92 @@
+{
+  "jour": "2026-11-25",
+  "creneau": "midi",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-004",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "lui",
+        "etiquette": "Hobbies edition",
+        "accroche": "What would he choose?",
+        "consigne": "Pick what he would pick. Then send it to him!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "Which workout would he pick?",
+            "options": [
+              {
+                "texte": "Weightlifting",
+                "image": "choisirait/salle/muscu.webp"
+              },
+              {
+                "texte": "Swimming",
+                "image": "choisirait/salle/natation.webp"
+              },
+              {
+                "texte": "CrossFit",
+                "image": "choisirait/salle/crossfit.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which game night would he pick?",
+            "options": [
+              {
+                "texte": "Foosball",
+                "image": "choisirait/jeu/baby-foot.webp"
+              },
+              {
+                "texte": "Pool",
+                "image": "choisirait/jeu/billard.webp"
+              },
+              {
+                "texte": "Board games",
+                "image": "choisirait/jeu/jeux-societe.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which hobby would he pick up?",
+            "options": [
+              {
+                "texte": "Chess",
+                "image": "choisirait/loisir/echecs.webp"
+              },
+              {
+                "texte": "Fishing",
+                "image": "choisirait/loisir/peche.webp"
+              },
+              {
+                "texte": "Gardening",
+                "image": "choisirait/loisir/jardinage.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Now send it to him. Did you guess right?",
+          "bouton": "Send this to him",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Hobbies edition. If you get all three, you know him by heart.\n\nSend this to him",
+      "hashtags": [
+        "#couplequiz",
+        "#boyfriendquiz",
+        "#thisorthat",
+        "#hobbies",
+        "#quizcouple"
+      ]
+    }
+  }
+}

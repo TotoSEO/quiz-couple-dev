@@ -1,0 +1,92 @@
+{
+  "jour": "2026-12-08",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-027",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "elle",
+        "etiquette": "Morning edition",
+        "accroche": "What would she choose?",
+        "consigne": "3 questions, 4 seconds each. Pick for her!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "Which coffee would she order?",
+            "options": [
+              {
+                "texte": "Cappuccino",
+                "image": "choisirait/cafe/cappuccino.webp"
+              },
+              {
+                "texte": "Matcha latte",
+                "image": "choisirait/cafe/matcha.webp"
+              },
+              {
+                "texte": "Espresso",
+                "image": "choisirait/cafe/espresso.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which breakfast would she choose?",
+            "options": [
+              {
+                "texte": "French toast",
+                "image": "choisirait/petitdej/pain-perdu.webp"
+              },
+              {
+                "texte": "Eggs Benedict",
+                "image": "choisirait/petitdej/benedict.webp"
+              },
+              {
+                "texte": "Avocado toast",
+                "image": "choisirait/petitdej/avocado-toast.webp"
+              }
+            ]
+          },
+          {
+            "question": "How would she have her eggs?",
+            "options": [
+              {
+                "texte": "Soft-boiled",
+                "image": "choisirait/oeufs/coque.webp"
+              },
+              {
+                "texte": "Fried",
+                "image": "choisirait/oeufs/oeuf-plat.webp"
+              },
+              {
+                "texte": "Omelette",
+                "image": "choisirait/oeufs/omelette.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Got her 3 picks? Send it and see!",
+          "bouton": "Send this to her",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Morning edition. She will swear you got at least one wrong.\n\nSend this to her",
+      "hashtags": [
+        "#couplequiz",
+        "#girlfriendquiz",
+        "#thisorthat",
+        "#breakfast",
+        "#quizcouple"
+      ]
+    }
+  }
+}

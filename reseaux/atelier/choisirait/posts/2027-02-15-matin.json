@@ -1,0 +1,92 @@
+{
+  "jour": "2027-02-15",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-155",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "lui",
+        "etiquette": "Game night edition",
+        "accroche": "What would he choose?",
+        "consigne": "3 questions, 4 seconds each. Pick for him!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "What would he order at 2 a.m.?",
+            "options": [
+              {
+                "texte": "Fried chicken",
+                "image": "choisirait/fastfood/poulet-frit.webp"
+              },
+              {
+                "texte": "Kebab",
+                "image": "choisirait/fastfood/kebab.webp"
+              },
+              {
+                "texte": "Instant noodles",
+                "image": "choisirait/fastfood/nouilles.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which movie snack would he pick?",
+            "options": [
+              {
+                "texte": "Nachos",
+                "image": "choisirait/snack/nachos.webp"
+              },
+              {
+                "texte": "Licorice",
+                "image": "choisirait/snack/reglisse.webp"
+              },
+              {
+                "texte": "Chocolate bar",
+                "image": "choisirait/snack/tablette.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which console would he pick?",
+            "options": [
+              {
+                "texte": "Gaming PC",
+                "image": "choisirait/console/pc-gamer.webp"
+              },
+              {
+                "texte": "Nintendo Switch",
+                "image": "choisirait/console/switch.webp"
+              },
+              {
+                "texte": "Xbox",
+                "image": "choisirait/console/xbox.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Send it to him: how many did you get?",
+          "bouton": "Send this to him",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Game night edition. No cheating: decide before the timer runs out.\n\nSend this to him",
+      "hashtags": [
+        "#couplequiz",
+        "#boyfriendquiz",
+        "#thisorthat",
+        "#gamenight",
+        "#quizcouple"
+      ]
+    }
+  }
+}

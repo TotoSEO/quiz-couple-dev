@@ -1,0 +1,92 @@
+{
+  "jour": "2027-01-20",
+  "creneau": "midi",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-108",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "elle",
+        "etiquette": "Dream life edition",
+        "accroche": "What would she choose?",
+        "consigne": "Pick what she would pick. Then send it to her!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "Which view would she wake up to?",
+            "options": [
+              {
+                "texte": "City skyline",
+                "image": "choisirait/vue/skyline.webp"
+              },
+              {
+                "texte": "Vineyards",
+                "image": "choisirait/vue/vignes.webp"
+              },
+              {
+                "texte": "Northern lights",
+                "image": "choisirait/vue/aurores.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which house would she pick?",
+            "options": [
+              {
+                "texte": "Castle",
+                "image": "choisirait/maison/chateau.webp"
+              },
+              {
+                "texte": "Cozy cabin",
+                "image": "choisirait/weekend/chalet-bois.webp"
+              },
+              {
+                "texte": "Modern villa",
+                "image": "choisirait/maison/villa-moderne.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which dog would she pick?",
+            "options": [
+              {
+                "texte": "German Shepherd",
+                "image": "choisirait/chien/berger-allemand.webp"
+              },
+              {
+                "texte": "Border Collie",
+                "image": "choisirait/chien/border-collie.webp"
+              },
+              {
+                "texte": "Doberman",
+                "image": "choisirait/chien/dobermann.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Got her 3 picks? Send it and see!",
+          "bouton": "Send this to her",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Dream life edition. Your answers first, then her reaction.\n\nSend this to her",
+      "hashtags": [
+        "#couplequiz",
+        "#girlfriendquiz",
+        "#thisorthat",
+        "#dreamlife",
+        "#quizcouple"
+      ]
+    }
+  }
+}

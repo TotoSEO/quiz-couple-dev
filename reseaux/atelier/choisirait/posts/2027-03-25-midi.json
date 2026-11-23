@@ -1,0 +1,92 @@
+{
+  "jour": "2027-03-25",
+  "creneau": "midi",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-227",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "lui",
+        "etiquette": "Luxury edition",
+        "accroche": "What would he choose?",
+        "consigne": "3 questions, 4 seconds each. Pick for him!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "Which watch would he wear?",
+            "options": [
+              {
+                "texte": "Omega Speedmaster",
+                "image": "choisirait/montre/speedmaster.webp"
+              },
+              {
+                "texte": "Casio G-Shock",
+                "image": "choisirait/montre/g-shock.webp"
+              },
+              {
+                "texte": "Cartier Tank",
+                "image": "choisirait/montre/cartier.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which car would he drive?",
+            "options": [
+              {
+                "texte": "Mercedes G-Class",
+                "image": "choisirait/voiture/g-class.webp"
+              },
+              {
+                "texte": "Rolls-Royce",
+                "image": "choisirait/voiture/rolls-royce.webp"
+              },
+              {
+                "texte": "McLaren 720S",
+                "image": "choisirait/voiture/mclaren.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which house would he pick?",
+            "options": [
+              {
+                "texte": "Cozy cabin",
+                "image": "choisirait/weekend/chalet-bois.webp"
+              },
+              {
+                "texte": "Modern villa",
+                "image": "choisirait/maison/villa-moderne.webp"
+              },
+              {
+                "texte": "Beach house",
+                "image": "choisirait/maison/maison-plage.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Send it to him: how many did you get?",
+          "bouton": "Send this to him",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Luxury edition. He will swear you got at least one wrong.\n\nSend this to him",
+      "hashtags": [
+        "#couplequiz",
+        "#boyfriendquiz",
+        "#thisorthat",
+        "#luxurylife",
+        "#quizcouple"
+      ]
+    }
+  }
+}

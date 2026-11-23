@@ -1,0 +1,92 @@
+{
+  "jour": "2026-12-02",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-016",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "lui",
+        "etiquette": "Morning edition",
+        "accroche": "What would he choose?",
+        "consigne": "Pick what he would pick. Then send it to him!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "Which breakfast would he make you?",
+            "options": [
+              {
+                "texte": "Waffles",
+                "image": "choisirait/petitdej/gaufres.webp"
+              },
+              {
+                "texte": "Açaí bowl",
+                "image": "choisirait/petitdej/acai.webp"
+              },
+              {
+                "texte": "Shakshuka",
+                "image": "choisirait/petitdej/shakshuka.webp"
+              }
+            ]
+          },
+          {
+            "question": "What would he grab at the bakery?",
+            "options": [
+              {
+                "texte": "Muffin",
+                "image": "choisirait/boulangerie/muffin.webp"
+              },
+              {
+                "texte": "Pain au chocolat",
+                "image": "choisirait/boulangerie/pain-chocolat.webp"
+              },
+              {
+                "texte": "Cinnamon roll",
+                "image": "choisirait/boulangerie/cinnamon-roll.webp"
+              }
+            ]
+          },
+          {
+            "question": "How would he have his eggs?",
+            "options": [
+              {
+                "texte": "Omelette",
+                "image": "choisirait/oeufs/omelette.webp"
+              },
+              {
+                "texte": "Scrambled",
+                "image": "choisirait/oeufs/brouilles.webp"
+              },
+              {
+                "texte": "Fried",
+                "image": "choisirait/oeufs/oeuf-plat.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Now send it to him. Did you guess right?",
+          "bouton": "Send this to him",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Morning edition. Pick for him, then let him prove you wrong.\n\nSend this to him",
+      "hashtags": [
+        "#couplequiz",
+        "#boyfriendquiz",
+        "#thisorthat",
+        "#breakfast",
+        "#quizcouple"
+      ]
+    }
+  }
+}

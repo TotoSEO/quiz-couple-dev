@@ -1,0 +1,92 @@
+{
+  "jour": "2026-12-29",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-066",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "elle",
+        "etiquette": "Weekend edition",
+        "accroche": "What would she choose?",
+        "consigne": "Answer for her, then let her check!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "Which workout would she pick?",
+            "options": [
+              {
+                "texte": "Yoga",
+                "image": "choisirait/salle/yoga.webp"
+              },
+              {
+                "texte": "Cycling",
+                "image": "choisirait/salle/velo.webp"
+              },
+              {
+                "texte": "Swimming",
+                "image": "choisirait/salle/natation.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which hobby would she pick up?",
+            "options": [
+              {
+                "texte": "Fishing",
+                "image": "choisirait/loisir/peche.webp"
+              },
+              {
+                "texte": "Chess",
+                "image": "choisirait/loisir/echecs.webp"
+              },
+              {
+                "texte": "Pottery",
+                "image": "choisirait/loisir/poterie.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which date would she plan?",
+            "options": [
+              {
+                "texte": "Stargazing",
+                "image": "choisirait/date/etoiles.webp"
+              },
+              {
+                "texte": "Museum",
+                "image": "choisirait/date/musee.webp"
+              },
+              {
+                "texte": "Theme park",
+                "image": "choisirait/date/parc.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Got her 3 picks? Send it and see!",
+          "bouton": "Send this to her",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Weekend edition. Pick for her, then let her prove you wrong.\n\nSend this to her",
+      "hashtags": [
+        "#couplequiz",
+        "#girlfriendquiz",
+        "#thisorthat",
+        "#weekendvibes",
+        "#quizcouple"
+      ]
+    }
+  }
+}

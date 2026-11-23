@@ -1,0 +1,92 @@
+{
+  "jour": "2027-02-22",
+  "creneau": "midi",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-169",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "lui",
+        "etiquette": "Sweet tooth edition",
+        "accroche": "What would he choose?",
+        "consigne": "Guess his 3 picks, then send it to him!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "Which ice cream would he get?",
+            "options": [
+              {
+                "texte": "Gelato",
+                "image": "choisirait/glace/gelato.webp"
+              },
+              {
+                "texte": "Sundae",
+                "image": "choisirait/glace/sundae.webp"
+              },
+              {
+                "texte": "Ice cream cone",
+                "image": "choisirait/glace/cornet.webp"
+              }
+            ]
+          },
+          {
+            "question": "What would he grab at the bakery?",
+            "options": [
+              {
+                "texte": "Brioche",
+                "image": "choisirait/boulangerie/brioche.webp"
+              },
+              {
+                "texte": "Croissant",
+                "image": "choisirait/boulangerie/croissant.webp"
+              },
+              {
+                "texte": "Baguette",
+                "image": "choisirait/boulangerie/baguette.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which movie snack would he pick?",
+            "options": [
+              {
+                "texte": "Nachos",
+                "image": "choisirait/snack/nachos.webp"
+              },
+              {
+                "texte": "Popcorn",
+                "image": "choisirait/snack/popcorn.webp"
+              },
+              {
+                "texte": "Licorice",
+                "image": "choisirait/snack/reglisse.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Now send it to him. Did you guess right?",
+          "bouton": "Send this to him",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Sweet tooth edition. One letter per question, then send it to him.\n\nSend this to him",
+      "hashtags": [
+        "#couplequiz",
+        "#boyfriendquiz",
+        "#thisorthat",
+        "#dessert",
+        "#quizcouple"
+      ]
+    }
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "jour": "2026-12-21",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-051",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "elle",
+        "etiquette": "Dream home edition",
+        "accroche": "What would she choose?",
+        "consigne": "3 questions, 4 seconds each. Pick for her!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "Which dream house would she pick?",
+            "options": [
+              {
+                "texte": "Lake house",
+                "image": "choisirait/maison/maison-lac.webp"
+              },
+              {
+                "texte": "Loft apartment",
+                "image": "choisirait/maison/loft.webp"
+              },
+              {
+                "texte": "Castle",
+                "image": "choisirait/maison/chateau.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which cat would she adopt?",
+            "options": [
+              {
+                "texte": "Maine Coon",
+                "image": "choisirait/chat/maine-coon.webp"
+              },
+              {
+                "texte": "Black cat",
+                "image": "choisirait/chat/chat-noir.webp"
+              },
+              {
+                "texte": "Sphynx",
+                "image": "choisirait/chat/sphynx.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which dog would she adopt?",
+            "options": [
+              {
+                "texte": "Chihuahua",
+                "image": "choisirait/chien/chihuahua.webp"
+              },
+              {
+                "texte": "Doberman",
+                "image": "choisirait/chien/dobermann.webp"
+              },
+              {
+                "texte": "Pomeranian",
+                "image": "choisirait/chien/pomeranien.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Got her 3 picks? Send it and see!",
+          "bouton": "Send this to her",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Dream home edition. Answer for her first, no peeking.\n\nSend this to her",
+      "hashtags": [
+        "#couplequiz",
+        "#girlfriendquiz",
+        "#thisorthat",
+        "#dreamhome",
+        "#quizcouple"
+      ]
+    }
+  }
+}

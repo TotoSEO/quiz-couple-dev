@@ -1,0 +1,92 @@
+{
+  "jour": "2026-12-25",
+  "creneau": "midi",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-060",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "elle",
+        "etiquette": "Christmas edition",
+        "accroche": "What would she choose?",
+        "consigne": "Pick what she would pick. Then send it to her!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "Which Christmas date would she plan?",
+            "options": [
+              {
+                "texte": "Christmas market",
+                "image": "choisirait/noel-sortie/marche-noel.webp"
+              },
+              {
+                "texte": "Ice skating",
+                "image": "choisirait/noel-sortie/patinoire-noel.webp"
+              },
+              {
+                "texte": "Christmas lights",
+                "image": "choisirait/noel-sortie/illuminations.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which gift would make her happy?",
+            "options": [
+              {
+                "texte": "Camera",
+                "image": "choisirait/cadeau/appareil-photo.webp"
+              },
+              {
+                "texte": "Guitar",
+                "image": "choisirait/instrument/guitare-acoustique.webp"
+              },
+              {
+                "texte": "Game console",
+                "image": "choisirait/cadeau/console-cadeau.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which Christmas treat would she pick?",
+            "options": [
+              {
+                "texte": "Christmas pudding",
+                "image": "choisirait/noel-gourmandise/pudding.webp"
+              },
+              {
+                "texte": "Panettone",
+                "image": "choisirait/noel-gourmandise/panettone.webp"
+              },
+              {
+                "texte": "Candy canes",
+                "image": "choisirait/noel-gourmandise/sucres-orge.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Got her 3 picks? Send it and see!",
+          "bouton": "Send this to her",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Christmas edition. Easy for you? Then the next one is for her.\n\nSend this to her",
+      "hashtags": [
+        "#couplequiz",
+        "#girlfriendquiz",
+        "#thisorthat",
+        "#christmas",
+        "#quizcouple"
+      ]
+    }
+  }
+}

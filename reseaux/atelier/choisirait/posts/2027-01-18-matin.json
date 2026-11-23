@@ -1,0 +1,92 @@
+{
+  "jour": "2027-01-18",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-103",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "lui",
+        "etiquette": "Cozy night in edition",
+        "accroche": "What would he choose?",
+        "consigne": "3 questions, 4 seconds each. Pick for him!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "Which dinner would he pick?",
+            "options": [
+              {
+                "texte": "Paella",
+                "image": "choisirait/diner/paella.webp"
+              },
+              {
+                "texte": "Ramen",
+                "image": "choisirait/diner/ramen.webp"
+              },
+              {
+                "texte": "Korean BBQ",
+                "image": "choisirait/diner/bbq-coreen.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which movie snack would he pick?",
+            "options": [
+              {
+                "texte": "Licorice",
+                "image": "choisirait/snack/reglisse.webp"
+              },
+              {
+                "texte": "Gummy bears",
+                "image": "choisirait/snack/oursons.webp"
+              },
+              {
+                "texte": "Nachos",
+                "image": "choisirait/snack/nachos.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which drink would he get?",
+            "options": [
+              {
+                "texte": "Iced tea",
+                "image": "choisirait/boisson/the-glace.webp"
+              },
+              {
+                "texte": "Lemonade",
+                "image": "choisirait/boisson/limonade.webp"
+              },
+              {
+                "texte": "Smoothie",
+                "image": "choisirait/boisson/smoothie.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Now send it to him. Did you guess right?",
+          "bouton": "Send this to him",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Cozy night in edition. Guess first, send it after. Then compare.\n\nSend this to him",
+      "hashtags": [
+        "#couplequiz",
+        "#boyfriendquiz",
+        "#thisorthat",
+        "#cozynight",
+        "#quizcouple"
+      ]
+    }
+  }
+}

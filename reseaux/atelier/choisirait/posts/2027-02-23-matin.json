@@ -1,0 +1,92 @@
+{
+  "jour": "2027-02-23",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-170",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "lui",
+        "etiquette": "Morning edition",
+        "accroche": "What would he choose?",
+        "consigne": "Answer for him, then let him check!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "Which breakfast would he make you?",
+            "options": [
+              {
+                "texte": "Shakshuka",
+                "image": "choisirait/petitdej/shakshuka.webp"
+              },
+              {
+                "texte": "Avocado toast",
+                "image": "choisirait/petitdej/avocado-toast.webp"
+              },
+              {
+                "texte": "Eggs Benedict",
+                "image": "choisirait/petitdej/benedict.webp"
+              }
+            ]
+          },
+          {
+            "question": "How would he have his eggs?",
+            "options": [
+              {
+                "texte": "Poached",
+                "image": "choisirait/oeufs/poche.webp"
+              },
+              {
+                "texte": "Omelette",
+                "image": "choisirait/oeufs/omelette.webp"
+              },
+              {
+                "texte": "Fried",
+                "image": "choisirait/oeufs/oeuf-plat.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which coffee would he order?",
+            "options": [
+              {
+                "texte": "Espresso",
+                "image": "choisirait/cafe/espresso.webp"
+              },
+              {
+                "texte": "Americano",
+                "image": "choisirait/cafe/americano.webp"
+              },
+              {
+                "texte": "Iced latte",
+                "image": "choisirait/cafe/iced-latte.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Send it to him: how many did you get?",
+          "bouton": "Send this to him",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Morning edition. Easy for you? Then the next one is for him.\n\nSend this to him",
+      "hashtags": [
+        "#couplequiz",
+        "#boyfriendquiz",
+        "#thisorthat",
+        "#breakfast",
+        "#quizcouple"
+      ]
+    }
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "jour": "2026-12-07",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-025",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "lui",
+        "etiquette": "Weekend edition",
+        "accroche": "What would he choose?",
+        "consigne": "Guess his 3 picks, then send it to him!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "Which game night would he pick?",
+            "options": [
+              {
+                "texte": "Video games",
+                "image": "choisirait/jeu/jeux-video.webp"
+              },
+              {
+                "texte": "Poker",
+                "image": "choisirait/jeu/poker.webp"
+              },
+              {
+                "texte": "Chess",
+                "image": "choisirait/jeu/echecs-soir.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which workout would he pick?",
+            "options": [
+              {
+                "texte": "Boxing",
+                "image": "choisirait/salle/boxe-salle.webp"
+              },
+              {
+                "texte": "Running",
+                "image": "choisirait/salle/course.webp"
+              },
+              {
+                "texte": "Cycling",
+                "image": "choisirait/salle/velo.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which sport would he watch?",
+            "options": [
+              {
+                "texte": "American football",
+                "image": "choisirait/sport/foot-us.webp"
+              },
+              {
+                "texte": "Football",
+                "image": "choisirait/sport/foot.webp"
+              },
+              {
+                "texte": "Baseball",
+                "image": "choisirait/sport/baseball.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Now send it to him. Did you guess right?",
+          "bouton": "Send this to him",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Weekend edition. No cheating: decide before the timer runs out.\n\nSend this to him",
+      "hashtags": [
+        "#couplequiz",
+        "#boyfriendquiz",
+        "#thisorthat",
+        "#weekendvibes",
+        "#quizcouple"
+      ]
+    }
+  }
+}

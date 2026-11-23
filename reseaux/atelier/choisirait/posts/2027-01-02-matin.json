@@ -1,0 +1,92 @@
+{
+  "jour": "2027-01-02",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-074",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "lui",
+        "etiquette": "Date night edition",
+        "accroche": "What would he choose?",
+        "consigne": "Answer for him, then let him check!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "Which flowers would he get you?",
+            "options": [
+              {
+                "texte": "Sunflowers",
+                "image": "choisirait/fleurs/tournesols.webp"
+              },
+              {
+                "texte": "Hydrangeas",
+                "image": "choisirait/fleurs/hortensias.webp"
+              },
+              {
+                "texte": "Orchid",
+                "image": "choisirait/fleurs/orchidee.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which cake would he pick?",
+            "options": [
+              {
+                "texte": "Pavlova",
+                "image": "choisirait/dessert/pavlova.webp"
+              },
+              {
+                "texte": "Crêpes",
+                "image": "choisirait/dessert/crepes.webp"
+              },
+              {
+                "texte": "Chocolate lava cake",
+                "image": "choisirait/dessert/fondant.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which movie snack would he pick?",
+            "options": [
+              {
+                "texte": "Popcorn",
+                "image": "choisirait/snack/popcorn.webp"
+              },
+              {
+                "texte": "Nachos",
+                "image": "choisirait/snack/nachos.webp"
+              },
+              {
+                "texte": "Ice cream tub",
+                "image": "choisirait/snack/pot-glace.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Send it to him: how many did you get?",
+          "bouton": "Send this to him",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Date night edition. If you get all three, you know him by heart.\n\nSend this to him",
+      "hashtags": [
+        "#couplequiz",
+        "#boyfriendquiz",
+        "#thisorthat",
+        "#datenight",
+        "#quizcouple"
+      ]
+    }
+  }
+}

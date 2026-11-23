@@ -170,6 +170,14 @@ export function textesAffiches(r) {
     for (const k of ['texte', 'accroche', 'question']) if (typeof pg[k] === 'string') out.push(pg[k]);
   }
   for (const c of r.cases ?? []) for (const b of c?.bulles ?? []) out.push(typeof b === 'string' ? b : b?.texte);
+  // « What would he/she choose? » : les questions et les libellés des photos
+  if (r.gabarit === 'choisirait') {
+    for (const q of r.questions ?? []) {
+      out.push(q?.question);
+      for (const o of q?.options ?? []) out.push(o?.texte);
+    }
+    out.push(r.fin?.question);
+  }
   if (typeof r.schema?.titre === 'string') out.push(r.schema.titre);
   return out.filter((t) => typeof t === 'string' && t.trim());
 }

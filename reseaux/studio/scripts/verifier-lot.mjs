@@ -2,7 +2,7 @@
 // un seul bundle et un seul navigateur (rendre.mjs --verifier les refait à
 // chaque fichier, 24 s pièce).
 //   node verif-lot.mjs <dossier des posts> [fichiers...]
-// Lit chaque post (variantes.fr.recette), vérifie les écrans du plan, écrit
+// Lit chaque post (variantes.fr.recette, ou variantes.en.recette pour Quiz Couple), vérifie les écrans du plan, écrit
 // OK/KO par fichier et un résumé.
 import fs from 'node:fs';
 import os from 'node:os';
@@ -25,7 +25,7 @@ for (const f of fichiers) {
   let recette;
   try {
     const post = JSON.parse(fs.readFileSync(f, 'utf8'));
-    recette = post.variantes?.fr?.recette ?? post;
+    recette = post.variantes?.fr?.recette ?? post.variantes?.en?.recette ?? post;
   } catch (e) {
     console.log(`KO ${path.basename(f)} : ${e.message}`);
     ko++;

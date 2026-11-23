@@ -1,0 +1,92 @@
+{
+  "jour": "2027-03-01",
+  "creneau": "midi",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-182",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "lui",
+        "etiquette": "Travel edition",
+        "accroche": "What would he choose?",
+        "consigne": "Answer for him, then let him check!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "Which city would he take you to?",
+            "options": [
+              {
+                "texte": "Paris",
+                "image": "choisirait/ville/paris.webp"
+              },
+              {
+                "texte": "Amsterdam",
+                "image": "choisirait/ville/amsterdam.webp"
+              },
+              {
+                "texte": "Las Vegas",
+                "image": "choisirait/ville/las-vegas.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which view would he wake up to?",
+            "options": [
+              {
+                "texte": "Tropical beach",
+                "image": "choisirait/vue/plage-tropicale.webp"
+              },
+              {
+                "texte": "Desert",
+                "image": "choisirait/vue/desert-vue.webp"
+              },
+              {
+                "texte": "Snowy peaks",
+                "image": "choisirait/vue/neige.webp"
+              }
+            ]
+          },
+          {
+            "question": "Where would he book a weekend for two?",
+            "options": [
+              {
+                "texte": "Glamping tent",
+                "image": "choisirait/weekend/glamping.webp"
+              },
+              {
+                "texte": "Beach bungalow",
+                "image": "choisirait/weekend/bungalow-plage.webp"
+              },
+              {
+                "texte": "Houseboat",
+                "image": "choisirait/weekend/peniche.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Send it to him: how many did you get?",
+          "bouton": "Send this to him",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Travel edition. Write down his three letters before you send it.\n\nSend this to him",
+      "hashtags": [
+        "#couplequiz",
+        "#boyfriendquiz",
+        "#thisorthat",
+        "#travelcouple",
+        "#quizcouple"
+      ]
+    }
+  }
+}

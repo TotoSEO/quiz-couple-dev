@@ -1,0 +1,92 @@
+{
+  "jour": "2027-03-09",
+  "creneau": "midi",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-197",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "lui",
+        "etiquette": "Luxury edition",
+        "accroche": "What would he choose?",
+        "consigne": "Guess his 3 picks, then send it to him!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "Which house would he pick?",
+            "options": [
+              {
+                "texte": "Cozy cabin",
+                "image": "choisirait/weekend/chalet-bois.webp"
+              },
+              {
+                "texte": "Lake house",
+                "image": "choisirait/maison/maison-lac.webp"
+              },
+              {
+                "texte": "Victorian house",
+                "image": "choisirait/maison/victorienne.webp"
+              }
+            ]
+          },
+          {
+            "question": "How would he travel with you?",
+            "options": [
+              {
+                "texte": "Private jet",
+                "image": "choisirait/voyage/jet.webp"
+              },
+              {
+                "texte": "Cruise ship",
+                "image": "choisirait/voyage/croisiere.webp"
+              },
+              {
+                "texte": "Convertible",
+                "image": "choisirait/voyage/cabriolet.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which car would he pick?",
+            "options": [
+              {
+                "texte": "Mini Cooper",
+                "image": "choisirait/voiture/mini.webp"
+              },
+              {
+                "texte": "Toyota Supra",
+                "image": "choisirait/voiture/supra.webp"
+              },
+              {
+                "texte": "Nissan GT-R",
+                "image": "choisirait/voiture/gtr.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Send it to him: how many did you get?",
+          "bouton": "Send this to him",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Luxury edition. He will swear you got at least one wrong.\n\nSend this to him",
+      "hashtags": [
+        "#couplequiz",
+        "#boyfriendquiz",
+        "#thisorthat",
+        "#luxurylife",
+        "#quizcouple"
+      ]
+    }
+  }
+}

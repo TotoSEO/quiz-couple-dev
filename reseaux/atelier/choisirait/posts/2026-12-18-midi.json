@@ -1,0 +1,92 @@
+{
+  "jour": "2026-12-18",
+  "creneau": "midi",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-047",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "lui",
+        "etiquette": "Winter edition",
+        "accroche": "What would he choose?",
+        "consigne": "3 questions, 4 seconds each. Pick for him!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "Which winter date would he pick?",
+            "options": [
+              {
+                "texte": "Skiing",
+                "image": "choisirait/hiver/hiver-ski.webp"
+              },
+              {
+                "texte": "Sledding",
+                "image": "choisirait/hiver/luge.webp"
+              },
+              {
+                "texte": "Cabin by the fire",
+                "image": "choisirait/hiver/feu-cheminee.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which dinner would he pick?",
+            "options": [
+              {
+                "texte": "Lobster",
+                "image": "choisirait/diner/homard.webp"
+              },
+              {
+                "texte": "Fish and chips",
+                "image": "choisirait/diner/fish-chips.webp"
+              },
+              {
+                "texte": "Cheese fondue",
+                "image": "choisirait/diner/fondue.webp"
+              }
+            ]
+          },
+          {
+            "question": "Where would he book a weekend for two?",
+            "options": [
+              {
+                "texte": "Log cabin",
+                "image": "choisirait/weekend/chalet-bois.webp"
+              },
+              {
+                "texte": "Houseboat",
+                "image": "choisirait/weekend/peniche.webp"
+              },
+              {
+                "texte": "Castle hotel",
+                "image": "choisirait/weekend/chateau-hotel.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Send it to him: how many did you get?",
+          "bouton": "Send this to him",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Winter edition. He will swear you got at least one wrong.\n\nSend this to him",
+      "hashtags": [
+        "#couplequiz",
+        "#boyfriendquiz",
+        "#thisorthat",
+        "#winter",
+        "#quizcouple"
+      ]
+    }
+  }
+}

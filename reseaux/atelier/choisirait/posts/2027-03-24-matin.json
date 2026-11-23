@@ -1,0 +1,92 @@
+{
+  "jour": "2027-03-24",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-224",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "lui",
+        "etiquette": "Cozy night in edition",
+        "accroche": "What would he choose?",
+        "consigne": "Pick what he would pick. Then send it to him!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "Which console would he pick?",
+            "options": [
+              {
+                "texte": "Nintendo Switch",
+                "image": "choisirait/console/switch.webp"
+              },
+              {
+                "texte": "PlayStation 2",
+                "image": "choisirait/console/ps2.webp"
+              },
+              {
+                "texte": "PlayStation 5",
+                "image": "choisirait/console/ps5.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which drink would he get?",
+            "options": [
+              {
+                "texte": "Bubble tea",
+                "image": "choisirait/boisson/bubble-tea.webp"
+              },
+              {
+                "texte": "Iced tea",
+                "image": "choisirait/boisson/the-glace.webp"
+              },
+              {
+                "texte": "Lemonade",
+                "image": "choisirait/boisson/limonade.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which cake would he pick?",
+            "options": [
+              {
+                "texte": "Brownie",
+                "image": "choisirait/dessert/brownie.webp"
+              },
+              {
+                "texte": "Crêpes",
+                "image": "choisirait/dessert/crepes.webp"
+              },
+              {
+                "texte": "Cheesecake",
+                "image": "choisirait/dessert/cheesecake.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Send it to him: how many did you get?",
+          "bouton": "Send this to him",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Cozy night in edition. If you get all three, you know him by heart.\n\nSend this to him",
+      "hashtags": [
+        "#couplequiz",
+        "#boyfriendquiz",
+        "#thisorthat",
+        "#cozynight",
+        "#quizcouple"
+      ]
+    }
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "jour": "2027-01-14",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-096",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "elle",
+        "etiquette": "Hobbies edition",
+        "accroche": "What would she choose?",
+        "consigne": "Pick what she would pick. Then send it to her!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "Which instrument would she play?",
+            "options": [
+              {
+                "texte": "DJ decks",
+                "image": "choisirait/instrument/platines.webp"
+              },
+              {
+                "texte": "Saxophone",
+                "image": "choisirait/instrument/saxophone.webp"
+              },
+              {
+                "texte": "Piano",
+                "image": "choisirait/instrument/piano.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which workout would she pick?",
+            "options": [
+              {
+                "texte": "CrossFit",
+                "image": "choisirait/salle/crossfit.webp"
+              },
+              {
+                "texte": "Boxing",
+                "image": "choisirait/salle/boxe-salle.webp"
+              },
+              {
+                "texte": "Weightlifting",
+                "image": "choisirait/salle/muscu.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which hobby would she pick up?",
+            "options": [
+              {
+                "texte": "Photography",
+                "image": "choisirait/loisir/photo.webp"
+              },
+              {
+                "texte": "Chess",
+                "image": "choisirait/loisir/echecs.webp"
+              },
+              {
+                "texte": "Pottery",
+                "image": "choisirait/loisir/poterie.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Got her 3 picks? Send it and see!",
+          "bouton": "Send this to her",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Hobbies edition. Pick for her, then let her prove you wrong.\n\nSend this to her",
+      "hashtags": [
+        "#couplequiz",
+        "#girlfriendquiz",
+        "#thisorthat",
+        "#hobbies",
+        "#quizcouple"
+      ]
+    }
+  }
+}

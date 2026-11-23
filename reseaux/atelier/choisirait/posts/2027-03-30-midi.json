@@ -1,0 +1,92 @@
+{
+  "jour": "2027-03-30",
+  "creneau": "midi",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-236",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "lui",
+        "etiquette": "Weekend edition",
+        "accroche": "What would he choose?",
+        "consigne": "Pick what he would pick. Then send it to him!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "Which sport would he watch?",
+            "options": [
+              {
+                "texte": "Golf",
+                "image": "choisirait/sport/golf.webp"
+              },
+              {
+                "texte": "Boxing",
+                "image": "choisirait/sport/boxe.webp"
+              },
+              {
+                "texte": "Football",
+                "image": "choisirait/sport/foot.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which adventure would he try?",
+            "options": [
+              {
+                "texte": "Skiing",
+                "image": "choisirait/aventure/ski.webp"
+              },
+              {
+                "texte": "Scuba diving",
+                "image": "choisirait/aventure/plongee.webp"
+              },
+              {
+                "texte": "Kayaking",
+                "image": "choisirait/aventure/kayak.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which hobby would he pick up?",
+            "options": [
+              {
+                "texte": "Knitting",
+                "image": "choisirait/loisir/tricot.webp"
+              },
+              {
+                "texte": "Gardening",
+                "image": "choisirait/loisir/jardinage.webp"
+              },
+              {
+                "texte": "Pottery",
+                "image": "choisirait/loisir/poterie.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Send it to him: how many did you get?",
+          "bouton": "Send this to him",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Weekend edition. Pick for him, then let him prove you wrong.\n\nSend this to him",
+      "hashtags": [
+        "#couplequiz",
+        "#boyfriendquiz",
+        "#thisorthat",
+        "#weekendvibes",
+        "#quizcouple"
+      ]
+    }
+  }
+}

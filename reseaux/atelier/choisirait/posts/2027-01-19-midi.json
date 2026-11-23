@@ -1,0 +1,92 @@
+{
+  "jour": "2027-01-19",
+  "creneau": "midi",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-106",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "lui",
+        "etiquette": "Sweet tooth edition",
+        "accroche": "What would he choose?",
+        "consigne": "Answer for him, then let him check!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "Which ice cream would he get?",
+            "options": [
+              {
+                "texte": "Sundae",
+                "image": "choisirait/glace/sundae.webp"
+              },
+              {
+                "texte": "Soft serve",
+                "image": "choisirait/glace/italienne.webp"
+              },
+              {
+                "texte": "Mochi ice cream",
+                "image": "choisirait/glace/mochi.webp"
+              }
+            ]
+          },
+          {
+            "question": "What would he grab at the bakery?",
+            "options": [
+              {
+                "texte": "Donut",
+                "image": "choisirait/boulangerie/donut.webp"
+              },
+              {
+                "texte": "Bagel",
+                "image": "choisirait/boulangerie/bagel.webp"
+              },
+              {
+                "texte": "Muffin",
+                "image": "choisirait/boulangerie/muffin.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which dessert would he pick?",
+            "options": [
+              {
+                "texte": "Huge birthday cake",
+                "image": "choisirait/dessert/gateau-anniversaire.webp"
+              },
+              {
+                "texte": "Brownie",
+                "image": "choisirait/dessert/brownie.webp"
+              },
+              {
+                "texte": "Churros",
+                "image": "choisirait/dessert/churros.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Now send it to him. Did you guess right?",
+          "bouton": "Send this to him",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Sweet tooth edition. Pick for him, then let him prove you wrong.\n\nSend this to him",
+      "hashtags": [
+        "#couplequiz",
+        "#boyfriendquiz",
+        "#thisorthat",
+        "#dessert",
+        "#quizcouple"
+      ]
+    }
+  }
+}

@@ -47,7 +47,19 @@ export type RecetteConnaisTu = Jeu & { gabarit: 'connais-tu'; questions: string[
 // Tu préfères : deux choix par dilemme, aucun n'est le bon.
 export type RecetteTuPreferes = Jeu & { gabarit: 'tu-preferes'; amorce: string; dilemmes: { a: string; b: string }[] };
 
-export type RecetteJeu = RecetteQuizChrono | RecetteConnaisTu | RecetteTuPreferes;
+// What would he choose? (22 novembre 2026, l'idée de Thomas : « la fille
+// répond à la place du garçon, puis elle lui partage en mode : pour moi tu
+// prends AAC ») : trois questions, trois photos par question, et aucune
+// bonne réponse à l'écran, seul l'autre la connaît. `pour` dit de qui on
+// devine les choix (lui ou elle) ; chaque photo vient de la banque du studio
+// (public/choisirait/, liste et sources dans reseaux/atelier/choisirait/).
+// `cadrage` : la position de l'image dans sa case (object-position), quand
+// le centre ne montre pas le sujet.
+export type OptionChoix = { texte: string; image: string; cadrage?: string };
+export type QuestionChoix = { question: string; options: OptionChoix[] };
+export type RecetteChoisirait = Jeu & { gabarit: 'choisirait'; pour: 'lui' | 'elle'; questions: QuestionChoix[] };
+
+export type RecetteJeu = RecetteQuizChrono | RecetteConnaisTu | RecetteTuPreferes | RecetteChoisirait;
 
 // Une scène dessinée avec les mascottes, figée, en bas d'un post ou d'une
 // page de carrousel (même scénario qu'une animation, un seul plan).

@@ -1,0 +1,92 @@
+{
+  "jour": "2027-03-08",
+  "creneau": "midi",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-195",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "elle",
+        "etiquette": "Pet lovers edition",
+        "accroche": "What would she choose?",
+        "consigne": "3 questions, 4 seconds each. Pick for her!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "Which pet would she want?",
+            "options": [
+              {
+                "texte": "Parrot",
+                "image": "choisirait/animal/perroquet.webp"
+              },
+              {
+                "texte": "Turtle",
+                "image": "choisirait/animal/tortue.webp"
+              },
+              {
+                "texte": "Ferret",
+                "image": "choisirait/animal/furet.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which cat would she adopt?",
+            "options": [
+              {
+                "texte": "Persian",
+                "image": "choisirait/chat/persan.webp"
+              },
+              {
+                "texte": "Sphynx",
+                "image": "choisirait/chat/sphynx.webp"
+              },
+              {
+                "texte": "Norwegian Forest Cat",
+                "image": "choisirait/chat/norvegien.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which dog would she adopt?",
+            "options": [
+              {
+                "texte": "Jack Russell",
+                "image": "choisirait/chien/jack-russell.webp"
+              },
+              {
+                "texte": "Belgian Malinois",
+                "image": "choisirait/chien/malinois.webp"
+              },
+              {
+                "texte": "Pug",
+                "image": "choisirait/chien/carlin.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Got her 3 picks? Send it and see!",
+          "bouton": "Send this to her",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Pet lovers edition. No cheating: decide before the timer runs out.\n\nSend this to her",
+      "hashtags": [
+        "#couplequiz",
+        "#girlfriendquiz",
+        "#thisorthat",
+        "#petlovers",
+        "#quizcouple"
+      ]
+    }
+  }
+}

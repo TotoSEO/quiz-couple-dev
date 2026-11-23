@@ -1,0 +1,92 @@
+{
+  "jour": "2026-12-14",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-038",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "lui",
+        "etiquette": "Pet lovers edition",
+        "accroche": "What would he choose?",
+        "consigne": "Answer for him, then let him check!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "Which pet would he want?",
+            "options": [
+              {
+                "texte": "Hedgehog",
+                "image": "choisirait/animal/herisson.webp"
+              },
+              {
+                "texte": "Rabbit",
+                "image": "choisirait/animal/lapin.webp"
+              },
+              {
+                "texte": "Horse",
+                "image": "choisirait/animal/cheval.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which cat would he adopt?",
+            "options": [
+              {
+                "texte": "Maine Coon",
+                "image": "choisirait/chat/maine-coon.webp"
+              },
+              {
+                "texte": "Scottish Fold",
+                "image": "choisirait/chat/scottish.webp"
+              },
+              {
+                "texte": "Norwegian Forest Cat",
+                "image": "choisirait/chat/norvegien.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which dog would he adopt?",
+            "options": [
+              {
+                "texte": "Australian Shepherd",
+                "image": "choisirait/chien/berger-australien.webp"
+              },
+              {
+                "texte": "Dachshund",
+                "image": "choisirait/chien/teckel.webp"
+              },
+              {
+                "texte": "Corgi",
+                "image": "choisirait/chien/corgi.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Send it to him: how many did you get?",
+          "bouton": "Send this to him",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Pet lovers edition. Your answers first, then his reaction.\n\nSend this to him",
+      "hashtags": [
+        "#couplequiz",
+        "#boyfriendquiz",
+        "#thisorthat",
+        "#petlovers",
+        "#quizcouple"
+      ]
+    }
+  }
+}

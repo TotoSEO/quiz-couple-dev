@@ -1,0 +1,92 @@
+{
+  "jour": "2027-01-04",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-077",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "lui",
+        "etiquette": "Wedding edition",
+        "accroche": "What would he choose?",
+        "consigne": "Guess his 3 picks, then send it to him!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "Where would he propose?",
+            "options": [
+              {
+                "texte": "Northern lights",
+                "image": "choisirait/demande/demande-aurores.webp"
+              },
+              {
+                "texte": "Beach at sunset",
+                "image": "choisirait/demande/demande-plage.webp"
+              },
+              {
+                "texte": "Eiffel Tower",
+                "image": "choisirait/demande/demande-eiffel.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which ring would he pick for you?",
+            "options": [
+              {
+                "texte": "Emerald ring",
+                "image": "choisirait/bague/emeraude.webp"
+              },
+              {
+                "texte": "Gold band",
+                "image": "choisirait/bague/alliance-or.webp"
+              },
+              {
+                "texte": "Halo ring",
+                "image": "choisirait/bague/halo.webp"
+              }
+            ]
+          },
+          {
+            "question": "Where would he want to get married?",
+            "options": [
+              {
+                "texte": "Castle",
+                "image": "choisirait/mariage/mariage-chateau.webp"
+              },
+              {
+                "texte": "Garden",
+                "image": "choisirait/mariage/mariage-jardin.webp"
+              },
+              {
+                "texte": "Vegas chapel",
+                "image": "choisirait/mariage/vegas.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Send it to him: how many did you get?",
+          "bouton": "Send this to him",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Wedding edition. He will swear you got at least one wrong.\n\nSend this to him",
+      "hashtags": [
+        "#couplequiz",
+        "#boyfriendquiz",
+        "#thisorthat",
+        "#engaged",
+        "#quizcouple"
+      ]
+    }
+  }
+}

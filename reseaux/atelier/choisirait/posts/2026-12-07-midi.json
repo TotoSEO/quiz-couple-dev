@@ -1,0 +1,92 @@
+{
+  "jour": "2026-12-07",
+  "creneau": "midi",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-026",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "lui",
+        "etiquette": "Dream home edition",
+        "accroche": "What would he choose?",
+        "consigne": "Answer for him, then let him check!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "Which cat would he adopt?",
+            "options": [
+              {
+                "texte": "Black cat",
+                "image": "choisirait/chat/chat-noir.webp"
+              },
+              {
+                "texte": "British Shorthair",
+                "image": "choisirait/chat/british.webp"
+              },
+              {
+                "texte": "Bengal",
+                "image": "choisirait/chat/bengal.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which view would he wake up to?",
+            "options": [
+              {
+                "texte": "City skyline",
+                "image": "choisirait/vue/skyline.webp"
+              },
+              {
+                "texte": "Rice fields",
+                "image": "choisirait/vue/rizieres.webp"
+              },
+              {
+                "texte": "Eiffel Tower",
+                "image": "choisirait/vue/tour-eiffel.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which dog would he pick?",
+            "options": [
+              {
+                "texte": "Dalmatian",
+                "image": "choisirait/chien/dalmatien.webp"
+              },
+              {
+                "texte": "Cavalier King Charles",
+                "image": "choisirait/chien/cavalier.webp"
+              },
+              {
+                "texte": "Poodle",
+                "image": "choisirait/chien/caniche.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Send it to him: how many did you get?",
+          "bouton": "Send this to him",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Dream home edition. Pick for him, then let him prove you wrong.\n\nSend this to him",
+      "hashtags": [
+        "#couplequiz",
+        "#boyfriendquiz",
+        "#thisorthat",
+        "#dreamhome",
+        "#quizcouple"
+      ]
+    }
+  }
+}

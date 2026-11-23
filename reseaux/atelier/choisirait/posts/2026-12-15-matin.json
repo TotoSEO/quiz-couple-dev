@@ -1,0 +1,92 @@
+{
+  "jour": "2026-12-15",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-040",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "lui",
+        "etiquette": "Luxury edition",
+        "accroche": "What would he choose?",
+        "consigne": "Pick what he would pick. Then send it to him!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "How would he travel with you?",
+            "options": [
+              {
+                "texte": "Sailboat",
+                "image": "choisirait/voyage/voilier.webp"
+              },
+              {
+                "texte": "Motorbike",
+                "image": "choisirait/moto/bmw-gs.webp"
+              },
+              {
+                "texte": "Cruise ship",
+                "image": "choisirait/voyage/croisiere.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which car would he pick?",
+            "options": [
+              {
+                "texte": "Tesla Model S",
+                "image": "choisirait/voiture/tesla-model-s.webp"
+              },
+              {
+                "texte": "Land Rover Defender",
+                "image": "choisirait/voiture/defender.webp"
+              },
+              {
+                "texte": "McLaren 720S",
+                "image": "choisirait/voiture/mclaren.webp"
+              }
+            ]
+          },
+          {
+            "question": "Where would he book a weekend?",
+            "options": [
+              {
+                "texte": "Ski chalet",
+                "image": "choisirait/weekend/chalet-ski.webp"
+              },
+              {
+                "texte": "Glamping tent",
+                "image": "choisirait/weekend/glamping.webp"
+              },
+              {
+                "texte": "Treehouse",
+                "image": "choisirait/weekend/cabane-arbre.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Now send it to him. Did you guess right?",
+          "bouton": "Send this to him",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Luxury edition. Easy for you? Then the next one is for him.\n\nSend this to him",
+      "hashtags": [
+        "#couplequiz",
+        "#boyfriendquiz",
+        "#thisorthat",
+        "#luxurylife",
+        "#quizcouple"
+      ]
+    }
+  }
+}

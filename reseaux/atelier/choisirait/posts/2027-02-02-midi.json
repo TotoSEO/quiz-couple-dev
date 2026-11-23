@@ -1,0 +1,92 @@
+{
+  "jour": "2027-02-02",
+  "creneau": "midi",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-132",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "elle",
+        "etiquette": "Valentine's edition",
+        "accroche": "What would she choose?",
+        "consigne": "Pick what she would pick. Then send it to her!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "What would she want for Valentine's?",
+            "options": [
+              {
+                "texte": "Box of chocolates",
+                "image": "choisirait/valentin/boite-chocolats.webp"
+              },
+              {
+                "texte": "Love letter",
+                "image": "choisirait/valentin/lettre.webp"
+              },
+              {
+                "texte": "Red roses",
+                "image": "choisirait/valentin/valentin-roses.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which flowers would she want?",
+            "options": [
+              {
+                "texte": "Red roses",
+                "image": "choisirait/fleurs/roses.webp"
+              },
+              {
+                "texte": "Hydrangeas",
+                "image": "choisirait/fleurs/hortensias.webp"
+              },
+              {
+                "texte": "Orchid",
+                "image": "choisirait/fleurs/orchidee.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which date would she take you on?",
+            "options": [
+              {
+                "texte": "Museum",
+                "image": "choisirait/date/musee.webp"
+              },
+              {
+                "texte": "Wine tasting",
+                "image": "choisirait/date/degustation.webp"
+              },
+              {
+                "texte": "Stargazing",
+                "image": "choisirait/date/etoiles.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Got her 3 picks? Send it and see!",
+          "bouton": "Send this to her",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Valentine's edition. Write down her three letters before you send it.\n\nSend this to her",
+      "hashtags": [
+        "#couplequiz",
+        "#girlfriendquiz",
+        "#thisorthat",
+        "#valentinesday",
+        "#quizcouple"
+      ]
+    }
+  }
+}

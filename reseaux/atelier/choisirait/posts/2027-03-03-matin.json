@@ -1,0 +1,92 @@
+{
+  "jour": "2027-03-03",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-185",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "lui",
+        "etiquette": "Dream life edition",
+        "accroche": "What would he choose?",
+        "consigne": "Guess his 3 picks, then send it to him!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "Which dog would he adopt?",
+            "options": [
+              {
+                "texte": "Great Dane",
+                "image": "choisirait/chien/dogue.webp"
+              },
+              {
+                "texte": "Pomeranian",
+                "image": "choisirait/chien/pomeranien.webp"
+              },
+              {
+                "texte": "Corgi",
+                "image": "choisirait/chien/corgi.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which view would he wake up to?",
+            "options": [
+              {
+                "texte": "City skyline",
+                "image": "choisirait/vue/skyline.webp"
+              },
+              {
+                "texte": "Mountains",
+                "image": "choisirait/vue/montagnes.webp"
+              },
+              {
+                "texte": "Northern lights",
+                "image": "choisirait/vue/aurores.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which watch would he wear?",
+            "options": [
+              {
+                "texte": "Seiko diver",
+                "image": "choisirait/montre/seiko.webp"
+              },
+              {
+                "texte": "Cartier Tank",
+                "image": "choisirait/montre/cartier.webp"
+              },
+              {
+                "texte": "Casio G-Shock",
+                "image": "choisirait/montre/g-shock.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Send it to him: how many did you get?",
+          "bouton": "Send this to him",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Dream life edition. No cheating: decide before the timer runs out.\n\nSend this to him",
+      "hashtags": [
+        "#couplequiz",
+        "#boyfriendquiz",
+        "#thisorthat",
+        "#dreamlife",
+        "#quizcouple"
+      ]
+    }
+  }
+}

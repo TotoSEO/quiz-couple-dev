@@ -1,0 +1,92 @@
+{
+  "jour": "2027-03-19",
+  "creneau": "midi",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-216",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "elle",
+        "etiquette": "Weekend edition",
+        "accroche": "What would she choose?",
+        "consigne": "Pick what she would pick. Then send it to her!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "Which sport would she watch?",
+            "options": [
+              {
+                "texte": "Baseball",
+                "image": "choisirait/sport/baseball.webp"
+              },
+              {
+                "texte": "Ice hockey",
+                "image": "choisirait/sport/hockey.webp"
+              },
+              {
+                "texte": "American football",
+                "image": "choisirait/sport/foot-us.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which game night would she pick?",
+            "options": [
+              {
+                "texte": "Board games",
+                "image": "choisirait/jeu/jeux-societe.webp"
+              },
+              {
+                "texte": "Pool",
+                "image": "choisirait/jeu/billard.webp"
+              },
+              {
+                "texte": "Chess",
+                "image": "choisirait/jeu/echecs-soir.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which workout would she pick?",
+            "options": [
+              {
+                "texte": "CrossFit",
+                "image": "choisirait/salle/crossfit.webp"
+              },
+              {
+                "texte": "Yoga",
+                "image": "choisirait/salle/yoga.webp"
+              },
+              {
+                "texte": "Weightlifting",
+                "image": "choisirait/salle/muscu.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Got her 3 picks? Send it and see!",
+          "bouton": "Send this to her",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Weekend edition. Pick for her, then let her prove you wrong.\n\nSend this to her",
+      "hashtags": [
+        "#couplequiz",
+        "#girlfriendquiz",
+        "#thisorthat",
+        "#weekendvibes",
+        "#quizcouple"
+      ]
+    }
+  }
+}

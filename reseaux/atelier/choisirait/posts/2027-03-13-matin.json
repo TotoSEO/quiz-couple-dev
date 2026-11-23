@@ -1,0 +1,92 @@
+{
+  "jour": "2027-03-13",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-204",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "elle",
+        "etiquette": "Cozy night in edition",
+        "accroche": "What would she choose?",
+        "consigne": "Pick what she would pick. Then send it to her!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "Which dessert would she pick?",
+            "options": [
+              {
+                "texte": "Strawberry tart",
+                "image": "choisirait/dessert/tarte-fraises.webp"
+              },
+              {
+                "texte": "Mille-feuille",
+                "image": "choisirait/dessert/mille-feuille.webp"
+              },
+              {
+                "texte": "Brownie",
+                "image": "choisirait/dessert/brownie.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which dinner would she pick?",
+            "options": [
+              {
+                "texte": "Korean BBQ",
+                "image": "choisirait/diner/bbq-coreen.webp"
+              },
+              {
+                "texte": "Pad thai",
+                "image": "choisirait/diner/pad-thai.webp"
+              },
+              {
+                "texte": "Paella",
+                "image": "choisirait/diner/paella.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which movie snack would she pick?",
+            "options": [
+              {
+                "texte": "Nachos",
+                "image": "choisirait/snack/nachos.webp"
+              },
+              {
+                "texte": "Ice cream tub",
+                "image": "choisirait/snack/pot-glace.webp"
+              },
+              {
+                "texte": "Licorice",
+                "image": "choisirait/snack/reglisse.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Got her 3 picks? Send it and see!",
+          "bouton": "Send this to her",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Cozy night in edition. If you get all three, you know her by heart.\n\nSend this to her",
+      "hashtags": [
+        "#couplequiz",
+        "#girlfriendquiz",
+        "#thisorthat",
+        "#cozynight",
+        "#quizcouple"
+      ]
+    }
+  }
+}

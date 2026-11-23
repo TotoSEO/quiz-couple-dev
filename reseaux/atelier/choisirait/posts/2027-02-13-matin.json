@@ -1,0 +1,92 @@
+{
+  "jour": "2027-02-13",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-152",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "lui",
+        "etiquette": "Adventure edition",
+        "accroche": "What would he choose?",
+        "consigne": "Pick what he would pick. Then send it to him!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "Which adventure would he try?",
+            "options": [
+              {
+                "texte": "Rock climbing",
+                "image": "choisirait/aventure/escalade.webp"
+              },
+              {
+                "texte": "Skiing",
+                "image": "choisirait/aventure/ski.webp"
+              },
+              {
+                "texte": "Scuba diving",
+                "image": "choisirait/aventure/plongee.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which sport would he watch?",
+            "options": [
+              {
+                "texte": "Golf",
+                "image": "choisirait/sport/golf.webp"
+              },
+              {
+                "texte": "Boxing",
+                "image": "choisirait/sport/boxe.webp"
+              },
+              {
+                "texte": "Baseball",
+                "image": "choisirait/sport/baseball.webp"
+              }
+            ]
+          },
+          {
+            "question": "Where would he book a weekend?",
+            "options": [
+              {
+                "texte": "Ski chalet",
+                "image": "choisirait/weekend/chalet-ski.webp"
+              },
+              {
+                "texte": "Overwater villa",
+                "image": "choisirait/weekend/bungalow-eau.webp"
+              },
+              {
+                "texte": "Desert camp",
+                "image": "choisirait/weekend/desert.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Send it to him: how many did you get?",
+          "bouton": "Send this to him",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Adventure edition. Write down his three letters before you send it.\n\nSend this to him",
+      "hashtags": [
+        "#couplequiz",
+        "#boyfriendquiz",
+        "#thisorthat",
+        "#adventurecouple",
+        "#quizcouple"
+      ]
+    }
+  }
+}

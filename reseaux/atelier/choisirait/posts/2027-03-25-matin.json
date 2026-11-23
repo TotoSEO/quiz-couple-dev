@@ -1,0 +1,92 @@
+{
+  "jour": "2027-03-25",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-226",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "lui",
+        "etiquette": "Travel edition",
+        "accroche": "What would he choose?",
+        "consigne": "Answer for him, then let him check!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "Which city would he take you to?",
+            "options": [
+              {
+                "texte": "London",
+                "image": "choisirait/ville/londres.webp"
+              },
+              {
+                "texte": "Marrakech",
+                "image": "choisirait/ville/marrakech.webp"
+              },
+              {
+                "texte": "Barcelona",
+                "image": "choisirait/ville/barcelone.webp"
+              }
+            ]
+          },
+          {
+            "question": "How would he travel with you?",
+            "options": [
+              {
+                "texte": "Convertible",
+                "image": "choisirait/voyage/cabriolet.webp"
+              },
+              {
+                "texte": "Camper van",
+                "image": "choisirait/voyage/van.webp"
+              },
+              {
+                "texte": "Sailboat",
+                "image": "choisirait/voyage/voilier.webp"
+              }
+            ]
+          },
+          {
+            "question": "Where would he book a weekend?",
+            "options": [
+              {
+                "texte": "Treehouse",
+                "image": "choisirait/weekend/cabane-arbre.webp"
+              },
+              {
+                "texte": "Log cabin",
+                "image": "choisirait/weekend/chalet-bois.webp"
+              },
+              {
+                "texte": "Houseboat",
+                "image": "choisirait/weekend/peniche.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Now send it to him. Did you guess right?",
+          "bouton": "Send this to him",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Travel edition. Pick for him, then let him prove you wrong.\n\nSend this to him",
+      "hashtags": [
+        "#couplequiz",
+        "#boyfriendquiz",
+        "#thisorthat",
+        "#travelcouple",
+        "#quizcouple"
+      ]
+    }
+  }
+}

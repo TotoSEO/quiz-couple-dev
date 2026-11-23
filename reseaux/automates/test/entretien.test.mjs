@@ -267,3 +267,21 @@ test("l'état lit les déclinaisons par lots de 80 posts : 370 identifiants dans
   assert.equal(e.recents_et_prevus.length, longs.length);
   assert.ok(e.recents_et_prevus.every((p) => p.statut === 'rendu'), 'chaque post retrouve sa déclinaison');
 });
+
+test("aujourd'hui, la réserve ne compte plus un créneau déjà commencé : le jour où la grille en ouvre un, elle ne tombe pas à zéro", async () => {
+  const grille = { matin: 'choisirait', midi: 'choisirait', soir: 'tu-preferes' };
+  const b = new BaseMemoire({
+    social_comptes: [{ id: 'c', langue: 'en', fuseau: 'Europe/Paris' }],
+    social_reglages: [{ cle: 'melange', valeur: grille }],
+    // le lundi 23 novembre 2026, seul le soir a un post (les matins et les
+    // midis viennent d'ouvrir) ; les 24 et 25, tout est pris
+    social_posts: [
+      { id: 'a', langue: 'en', jour: '2026-11-23', creneau: 'soir', statut: 'valide' },
+      ...['2026-11-24', '2026-11-25'].flatMap((jour) => ['matin', 'midi', 'soir'].map((creneau) => ({ id: `${jour}-${creneau}`, langue: 'en', jour, creneau, statut: 'valide' }))),
+    ],
+  });
+  // à 14 h à Paris, le matin et le midi du 23 ont commencé : trois jours couverts
+  assert.equal(await reserve(b, { maintenant: new Date('2026-11-23T13:00:00Z') }), 3);
+  // à 5 h, le matin du 23 n'a pas commencé et n'a pas de post : zéro
+  assert.equal(await reserve(b, { maintenant: new Date('2026-11-23T04:00:00Z') }), 0);
+});

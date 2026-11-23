@@ -1,0 +1,92 @@
+{
+  "jour": "2026-12-15",
+  "creneau": "midi",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-041",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "lui",
+        "etiquette": "Travel edition",
+        "accroche": "What would he choose?",
+        "consigne": "Guess his 3 picks, then send it to him!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "Which city would he take you to?",
+            "options": [
+              {
+                "texte": "Tokyo",
+                "image": "choisirait/ville/tokyo.webp"
+              },
+              {
+                "texte": "New York",
+                "image": "choisirait/ville/new-york.webp"
+              },
+              {
+                "texte": "Rio de Janeiro",
+                "image": "choisirait/ville/rio.webp"
+              }
+            ]
+          },
+          {
+            "question": "Where would he go on vacation?",
+            "options": [
+              {
+                "texte": "Italy",
+                "image": "choisirait/vacances/italie.webp"
+              },
+              {
+                "texte": "Bora Bora",
+                "image": "choisirait/vacances/bora-bora.webp"
+              },
+              {
+                "texte": "Canada",
+                "image": "choisirait/vacances/canada.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which view would he wake up to?",
+            "options": [
+              {
+                "texte": "Rice fields",
+                "image": "choisirait/vue/rizieres.webp"
+              },
+              {
+                "texte": "Northern lights",
+                "image": "choisirait/vue/aurores.webp"
+              },
+              {
+                "texte": "Snowy peaks",
+                "image": "choisirait/vue/neige.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Send it to him: how many did you get?",
+          "bouton": "Send this to him",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Travel edition. Answer for him first, no peeking.\n\nSend this to him",
+      "hashtags": [
+        "#couplequiz",
+        "#boyfriendquiz",
+        "#thisorthat",
+        "#travelcouple",
+        "#quizcouple"
+      ]
+    }
+  }
+}

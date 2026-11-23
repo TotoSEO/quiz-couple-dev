@@ -1,0 +1,92 @@
+{
+  "jour": "2027-02-14",
+  "creneau": "midi",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-154",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "lui",
+        "etiquette": "Date night edition",
+        "accroche": "What would he choose?",
+        "consigne": "Answer for him, then let him check!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "Which date would he plan?",
+            "options": [
+              {
+                "texte": "Theme park",
+                "image": "choisirait/date/parc.webp"
+              },
+              {
+                "texte": "Arcade",
+                "image": "choisirait/date/arcade.webp"
+              },
+              {
+                "texte": "Mini golf",
+                "image": "choisirait/date/mini-golf.webp"
+              }
+            ]
+          },
+          {
+            "question": "What would he order at the bar?",
+            "options": [
+              {
+                "texte": "Red wine",
+                "image": "choisirait/bar/vin-rouge.webp"
+              },
+              {
+                "texte": "Gin and tonic",
+                "image": "choisirait/bar/gin-tonic.webp"
+              },
+              {
+                "texte": "Piña colada",
+                "image": "choisirait/bar/pina-colada.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which flowers would he get you?",
+            "options": [
+              {
+                "texte": "Daisies",
+                "image": "choisirait/fleurs/marguerites.webp"
+              },
+              {
+                "texte": "Lilies",
+                "image": "choisirait/fleurs/lys.webp"
+              },
+              {
+                "texte": "Sunflowers",
+                "image": "choisirait/fleurs/tournesols.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Now send it to him. Did you guess right?",
+          "bouton": "Send this to him",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Date night edition. If you get all three, you know him by heart.\n\nSend this to him",
+      "hashtags": [
+        "#couplequiz",
+        "#boyfriendquiz",
+        "#thisorthat",
+        "#datenight",
+        "#quizcouple"
+      ]
+    }
+  }
+}

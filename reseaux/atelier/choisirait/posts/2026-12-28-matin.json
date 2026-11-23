@@ -1,0 +1,92 @@
+{
+  "jour": "2026-12-28",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-064",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "lui",
+        "etiquette": "Cozy night in edition",
+        "accroche": "What would he choose?",
+        "consigne": "Pick what he would pick. Then send it to him!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "Which console would he pick?",
+            "options": [
+              {
+                "texte": "PlayStation 5",
+                "image": "choisirait/console/ps5.webp"
+              },
+              {
+                "texte": "Xbox",
+                "image": "choisirait/console/xbox.webp"
+              },
+              {
+                "texte": "Game Boy",
+                "image": "choisirait/console/gameboy.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which game night would he pick?",
+            "options": [
+              {
+                "texte": "Poker",
+                "image": "choisirait/jeu/poker.webp"
+              },
+              {
+                "texte": "Pool",
+                "image": "choisirait/jeu/billard.webp"
+              },
+              {
+                "texte": "Foosball",
+                "image": "choisirait/jeu/baby-foot.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which dinner would he pick?",
+            "options": [
+              {
+                "texte": "Sushi",
+                "image": "choisirait/diner/sushi.webp"
+              },
+              {
+                "texte": "Pad thai",
+                "image": "choisirait/diner/pad-thai.webp"
+              },
+              {
+                "texte": "Korean BBQ",
+                "image": "choisirait/diner/bbq-coreen.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Now send it to him. Did you guess right?",
+          "bouton": "Send this to him",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Cozy night in edition. If you get all three, you know him by heart.\n\nSend this to him",
+      "hashtags": [
+        "#couplequiz",
+        "#boyfriendquiz",
+        "#thisorthat",
+        "#cozynight",
+        "#quizcouple"
+      ]
+    }
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "jour": "2027-02-02",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-131",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "lui",
+        "etiquette": "Wedding edition",
+        "accroche": "What would he choose?",
+        "consigne": "3 questions, 4 seconds each. Pick for him!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "Where would he propose?",
+            "options": [
+              {
+                "texte": "Restaurant",
+                "image": "choisirait/demande/demande-resto.webp"
+              },
+              {
+                "texte": "Eiffel Tower",
+                "image": "choisirait/demande/demande-eiffel.webp"
+              },
+              {
+                "texte": "Disney castle",
+                "image": "choisirait/demande/demande-chateau.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which ring would he pick for you?",
+            "options": [
+              {
+                "texte": "Solitaire diamond",
+                "image": "choisirait/bague/solitaire.webp"
+              },
+              {
+                "texte": "Gold band",
+                "image": "choisirait/bague/alliance-or.webp"
+              },
+              {
+                "texte": "Vintage ring",
+                "image": "choisirait/bague/vintage-bague.webp"
+              }
+            ]
+          },
+          {
+            "question": "Where would he want to get married?",
+            "options": [
+              {
+                "texte": "Castle",
+                "image": "choisirait/mariage/mariage-chateau.webp"
+              },
+              {
+                "texte": "Vegas chapel",
+                "image": "choisirait/mariage/vegas.webp"
+              },
+              {
+                "texte": "Mountaintop",
+                "image": "choisirait/mariage/sommet.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Send it to him: how many did you get?",
+          "bouton": "Send this to him",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Wedding edition. Answer for him first, no peeking.\n\nSend this to him",
+      "hashtags": [
+        "#couplequiz",
+        "#boyfriendquiz",
+        "#thisorthat",
+        "#engaged",
+        "#quizcouple"
+      ]
+    }
+  }
+}

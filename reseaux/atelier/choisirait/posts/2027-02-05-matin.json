@@ -1,0 +1,92 @@
+{
+  "jour": "2027-02-05",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-137",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "lui",
+        "etiquette": "Pet lovers edition",
+        "accroche": "What would he choose?",
+        "consigne": "Guess his 3 picks, then send it to him!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "Which pet would he want?",
+            "options": [
+              {
+                "texte": "Goldfish",
+                "image": "choisirait/animal/poisson.webp"
+              },
+              {
+                "texte": "Hedgehog",
+                "image": "choisirait/animal/herisson.webp"
+              },
+              {
+                "texte": "Horse",
+                "image": "choisirait/animal/cheval.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which cat would he adopt?",
+            "options": [
+              {
+                "texte": "Norwegian Forest Cat",
+                "image": "choisirait/chat/norvegien.webp"
+              },
+              {
+                "texte": "Bengal",
+                "image": "choisirait/chat/bengal.webp"
+              },
+              {
+                "texte": "Black cat",
+                "image": "choisirait/chat/chat-noir.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which dog would he adopt?",
+            "options": [
+              {
+                "texte": "Australian Shepherd",
+                "image": "choisirait/chien/berger-australien.webp"
+              },
+              {
+                "texte": "Jack Russell",
+                "image": "choisirait/chien/jack-russell.webp"
+              },
+              {
+                "texte": "Labrador",
+                "image": "choisirait/chien/labrador.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Send it to him: how many did you get?",
+          "bouton": "Send this to him",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Pet lovers edition. He will swear you got at least one wrong.\n\nSend this to him",
+      "hashtags": [
+        "#couplequiz",
+        "#boyfriendquiz",
+        "#thisorthat",
+        "#petlovers",
+        "#quizcouple"
+      ]
+    }
+  }
+}

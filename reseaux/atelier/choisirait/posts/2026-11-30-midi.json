@@ -1,0 +1,92 @@
+{
+  "jour": "2026-11-30",
+  "creneau": "midi",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-013",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "lui",
+        "etiquette": "Luxury edition",
+        "accroche": "What would he choose?",
+        "consigne": "Guess his 3 picks, then send it to him!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "Which watch would he wear?",
+            "options": [
+              {
+                "texte": "Omega Speedmaster",
+                "image": "choisirait/montre/speedmaster.webp"
+              },
+              {
+                "texte": "Casio G-Shock",
+                "image": "choisirait/montre/g-shock.webp"
+              },
+              {
+                "texte": "Seiko diver",
+                "image": "choisirait/montre/seiko.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which dream house would he pick?",
+            "options": [
+              {
+                "texte": "Castle",
+                "image": "choisirait/maison/chateau.webp"
+              },
+              {
+                "texte": "Victorian house",
+                "image": "choisirait/maison/victorienne.webp"
+              },
+              {
+                "texte": "Loft apartment",
+                "image": "choisirait/maison/loft.webp"
+              }
+            ]
+          },
+          {
+            "question": "How would he travel with you?",
+            "options": [
+              {
+                "texte": "Hot air balloon",
+                "image": "choisirait/voyage/montgolfiere.webp"
+              },
+              {
+                "texte": "Convertible",
+                "image": "choisirait/voyage/cabriolet.webp"
+              },
+              {
+                "texte": "Camper van",
+                "image": "choisirait/voyage/van.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Now send it to him. Did you guess right?",
+          "bouton": "Send this to him",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Luxury edition. Guess first, send it after. Then compare.\n\nSend this to him",
+      "hashtags": [
+        "#couplequiz",
+        "#boyfriendquiz",
+        "#thisorthat",
+        "#luxurylife",
+        "#quizcouple"
+      ]
+    }
+  }
+}

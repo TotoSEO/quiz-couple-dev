@@ -1,0 +1,92 @@
+{
+  "jour": "2027-03-31",
+  "creneau": "midi",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-238",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "lui",
+        "etiquette": "Game night edition",
+        "accroche": "What would he choose?",
+        "consigne": "Answer for him, then let him check!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "What would he order at 2 a.m.?",
+            "options": [
+              {
+                "texte": "Nuggets",
+                "image": "choisirait/fastfood/nuggets.webp"
+              },
+              {
+                "texte": "Burger",
+                "image": "choisirait/fastfood/burger.webp"
+              },
+              {
+                "texte": "Burrito",
+                "image": "choisirait/fastfood/burrito.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which console would he pick?",
+            "options": [
+              {
+                "texte": "PlayStation 2",
+                "image": "choisirait/console/ps2.webp"
+              },
+              {
+                "texte": "Xbox",
+                "image": "choisirait/console/xbox.webp"
+              },
+              {
+                "texte": "Nintendo Switch",
+                "image": "choisirait/console/switch.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which drink would he get?",
+            "options": [
+              {
+                "texte": "Lemonade",
+                "image": "choisirait/boisson/limonade.webp"
+              },
+              {
+                "texte": "Smoothie",
+                "image": "choisirait/boisson/smoothie.webp"
+              },
+              {
+                "texte": "Bubble tea",
+                "image": "choisirait/boisson/bubble-tea.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Now send it to him. Did you guess right?",
+          "bouton": "Send this to him",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Game night edition. Your answers first, then his reaction.\n\nSend this to him",
+      "hashtags": [
+        "#couplequiz",
+        "#boyfriendquiz",
+        "#thisorthat",
+        "#gamenight",
+        "#quizcouple"
+      ]
+    }
+  }
+}

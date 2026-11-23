@@ -1,0 +1,92 @@
+{
+  "jour": "2027-02-26",
+  "creneau": "midi",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-177",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "elle",
+        "etiquette": "Dream life edition",
+        "accroche": "What would she choose?",
+        "consigne": "Guess her 3 picks, then send it to her!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "Which view would she wake up to?",
+            "options": [
+              {
+                "texte": "Rice fields",
+                "image": "choisirait/vue/rizieres.webp"
+              },
+              {
+                "texte": "Mountains",
+                "image": "choisirait/vue/montagnes.webp"
+              },
+              {
+                "texte": "Vineyards",
+                "image": "choisirait/vue/vignes.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which dog would she pick?",
+            "options": [
+              {
+                "texte": "Golden Retriever",
+                "image": "choisirait/chien/golden.webp"
+              },
+              {
+                "texte": "Dalmatian",
+                "image": "choisirait/chien/dalmatien.webp"
+              },
+              {
+                "texte": "Rottweiler",
+                "image": "choisirait/chien/rottweiler.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which house would she pick?",
+            "options": [
+              {
+                "texte": "Castle",
+                "image": "choisirait/maison/chateau.webp"
+              },
+              {
+                "texte": "Beach house",
+                "image": "choisirait/maison/maison-plage.webp"
+              },
+              {
+                "texte": "Loft apartment",
+                "image": "choisirait/maison/loft.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Got her 3 picks? Send it and see!",
+          "bouton": "Send this to her",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Dream life edition. She will swear you got at least one wrong.\n\nSend this to her",
+      "hashtags": [
+        "#couplequiz",
+        "#girlfriendquiz",
+        "#thisorthat",
+        "#dreamlife",
+        "#quizcouple"
+      ]
+    }
+  }
+}

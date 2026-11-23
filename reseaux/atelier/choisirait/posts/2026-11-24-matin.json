@@ -1,0 +1,92 @@
+{
+  "jour": "2026-11-24",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-001",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "lui",
+        "etiquette": "Dream life edition",
+        "accroche": "What would he choose?",
+        "consigne": "Guess his 3 picks, then send it to him!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "Which car would he pick?",
+            "options": [
+              {
+                "texte": "Porsche 911",
+                "image": "choisirait/voiture/porsche-911.webp"
+              },
+              {
+                "texte": "Lamborghini Huracán",
+                "image": "choisirait/voiture/lamborghini-huracan.webp"
+              },
+              {
+                "texte": "Mercedes-AMG C63 S",
+                "image": "choisirait/voiture/amg-c63.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which dog would he pick?",
+            "options": [
+              {
+                "texte": "Golden Retriever",
+                "image": "choisirait/chien/golden.webp"
+              },
+              {
+                "texte": "Belgian Malinois",
+                "image": "choisirait/chien/malinois.webp"
+              },
+              {
+                "texte": "Border Collie",
+                "image": "choisirait/chien/border-collie.webp"
+              }
+            ]
+          },
+          {
+            "question": "Where would he go on vacation?",
+            "options": [
+              {
+                "texte": "Bali",
+                "image": "choisirait/vacances/bali.webp"
+              },
+              {
+                "texte": "Norway",
+                "image": "choisirait/vacances/norvege.webp"
+              },
+              {
+                "texte": "USA",
+                "image": "choisirait/vacances/usa.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Now send it to him. Did you guess right?",
+          "bouton": "Send this to him",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Dream life edition. Answer for him first, no peeking.\n\nSend this to him",
+      "hashtags": [
+        "#couplequiz",
+        "#boyfriendquiz",
+        "#thisorthat",
+        "#dreamlife",
+        "#quizcouple"
+      ]
+    }
+  }
+}

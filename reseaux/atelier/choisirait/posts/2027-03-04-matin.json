@@ -1,0 +1,92 @@
+{
+  "jour": "2027-03-04",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-187",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "lui",
+        "etiquette": "Weekend edition",
+        "accroche": "What would he choose?",
+        "consigne": "3 questions, 4 seconds each. Pick for him!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "Which workout would he pick?",
+            "options": [
+              {
+                "texte": "Weightlifting",
+                "image": "choisirait/salle/muscu.webp"
+              },
+              {
+                "texte": "Cycling",
+                "image": "choisirait/salle/velo.webp"
+              },
+              {
+                "texte": "Yoga",
+                "image": "choisirait/salle/yoga.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which hobby would he pick up?",
+            "options": [
+              {
+                "texte": "Knitting",
+                "image": "choisirait/loisir/tricot.webp"
+              },
+              {
+                "texte": "Chess",
+                "image": "choisirait/loisir/echecs.webp"
+              },
+              {
+                "texte": "Gardening",
+                "image": "choisirait/loisir/jardinage.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which sport would he watch?",
+            "options": [
+              {
+                "texte": "Football",
+                "image": "choisirait/sport/foot.webp"
+              },
+              {
+                "texte": "American football",
+                "image": "choisirait/sport/foot-us.webp"
+              },
+              {
+                "texte": "Rugby",
+                "image": "choisirait/sport/rugby.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Now send it to him. Did you guess right?",
+          "bouton": "Send this to him",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Weekend edition. He will swear you got at least one wrong.\n\nSend this to him",
+      "hashtags": [
+        "#couplequiz",
+        "#boyfriendquiz",
+        "#thisorthat",
+        "#weekendvibes",
+        "#quizcouple"
+      ]
+    }
+  }
+}

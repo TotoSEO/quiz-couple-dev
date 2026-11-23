@@ -1,0 +1,92 @@
+{
+  "jour": "2027-02-23",
+  "creneau": "midi",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-171",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "elle",
+        "etiquette": "Hobbies edition",
+        "accroche": "What would she choose?",
+        "consigne": "3 questions, 4 seconds each. Pick for her!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "Which instrument would she play?",
+            "options": [
+              {
+                "texte": "Piano",
+                "image": "choisirait/instrument/piano.webp"
+              },
+              {
+                "texte": "Violin",
+                "image": "choisirait/instrument/violon.webp"
+              },
+              {
+                "texte": "DJ decks",
+                "image": "choisirait/instrument/platines.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which workout would she pick?",
+            "options": [
+              {
+                "texte": "CrossFit",
+                "image": "choisirait/salle/crossfit.webp"
+              },
+              {
+                "texte": "Boxing",
+                "image": "choisirait/salle/boxe-salle.webp"
+              },
+              {
+                "texte": "Running",
+                "image": "choisirait/salle/course.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which hobby would she pick up?",
+            "options": [
+              {
+                "texte": "Woodworking",
+                "image": "choisirait/loisir/menuiserie.webp"
+              },
+              {
+                "texte": "Chess",
+                "image": "choisirait/loisir/echecs.webp"
+              },
+              {
+                "texte": "Gardening",
+                "image": "choisirait/loisir/jardinage.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Got her 3 picks? Send it and see!",
+          "bouton": "Send this to her",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Hobbies edition. Answer for her first, no peeking.\n\nSend this to her",
+      "hashtags": [
+        "#couplequiz",
+        "#girlfriendquiz",
+        "#thisorthat",
+        "#hobbies",
+        "#quizcouple"
+      ]
+    }
+  }
+}

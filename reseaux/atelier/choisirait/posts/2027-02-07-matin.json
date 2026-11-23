@@ -1,0 +1,92 @@
+{
+  "jour": "2027-02-07",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-140",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "lui",
+        "etiquette": "Wedding edition",
+        "accroche": "What would he choose?",
+        "consigne": "Pick what he would pick. Then send it to him!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "Where would he propose?",
+            "options": [
+              {
+                "texte": "Eiffel Tower",
+                "image": "choisirait/demande/demande-eiffel.webp"
+              },
+              {
+                "texte": "Hot air balloon",
+                "image": "choisirait/demande/demande-montgolfiere.webp"
+              },
+              {
+                "texte": "Beach at sunset",
+                "image": "choisirait/demande/demande-plage.webp"
+              }
+            ]
+          },
+          {
+            "question": "Where would he want to get married?",
+            "options": [
+              {
+                "texte": "Garden",
+                "image": "choisirait/mariage/mariage-jardin.webp"
+              },
+              {
+                "texte": "City hall",
+                "image": "choisirait/mariage/mairie.webp"
+              },
+              {
+                "texte": "Beach",
+                "image": "choisirait/vue/plage-tropicale.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which ring would he pick for you?",
+            "options": [
+              {
+                "texte": "Solitaire diamond",
+                "image": "choisirait/bague/solitaire.webp"
+              },
+              {
+                "texte": "Emerald ring",
+                "image": "choisirait/bague/emeraude.webp"
+              },
+              {
+                "texte": "Gold band",
+                "image": "choisirait/bague/alliance-or.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Send it to him: how many did you get?",
+          "bouton": "Send this to him",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Wedding edition. Easy for you? Then the next one is for him.\n\nSend this to him",
+      "hashtags": [
+        "#couplequiz",
+        "#boyfriendquiz",
+        "#thisorthat",
+        "#engaged",
+        "#quizcouple"
+      ]
+    }
+  }
+}

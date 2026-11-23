@@ -1,0 +1,92 @@
+{
+  "jour": "2027-02-26",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-176",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "lui",
+        "etiquette": "Travel edition",
+        "accroche": "What would he choose?",
+        "consigne": "Pick what he would pick. Then send it to him!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "Which city would he take you to?",
+            "options": [
+              {
+                "texte": "Marrakech",
+                "image": "choisirait/ville/marrakech.webp"
+              },
+              {
+                "texte": "Rome",
+                "image": "choisirait/ville/rome.webp"
+              },
+              {
+                "texte": "Amsterdam",
+                "image": "choisirait/ville/amsterdam.webp"
+              }
+            ]
+          },
+          {
+            "question": "Where would he take you on vacation?",
+            "options": [
+              {
+                "texte": "Hawaii",
+                "image": "choisirait/vacances/hawaii.webp"
+              },
+              {
+                "texte": "Japan",
+                "image": "choisirait/vacances/japon.webp"
+              },
+              {
+                "texte": "Greece",
+                "image": "choisirait/vacances/grece.webp"
+              }
+            ]
+          },
+          {
+            "question": "How would he travel with you?",
+            "options": [
+              {
+                "texte": "Convertible",
+                "image": "choisirait/voyage/cabriolet.webp"
+              },
+              {
+                "texte": "Private jet",
+                "image": "choisirait/voyage/jet.webp"
+              },
+              {
+                "texte": "Hot air balloon",
+                "image": "choisirait/voyage/montgolfiere.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Send it to him: how many did you get?",
+          "bouton": "Send this to him",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Travel edition. Pick for him, then let him prove you wrong.\n\nSend this to him",
+      "hashtags": [
+        "#couplequiz",
+        "#boyfriendquiz",
+        "#thisorthat",
+        "#travelcouple",
+        "#quizcouple"
+      ]
+    }
+  }
+}

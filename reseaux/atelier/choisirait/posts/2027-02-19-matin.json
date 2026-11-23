@@ -1,0 +1,92 @@
+{
+  "jour": "2027-02-19",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-163",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "lui",
+        "etiquette": "Weekend edition",
+        "accroche": "What would he choose?",
+        "consigne": "3 questions, 4 seconds each. Pick for him!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "Which workout would he pick?",
+            "options": [
+              {
+                "texte": "CrossFit",
+                "image": "choisirait/salle/crossfit.webp"
+              },
+              {
+                "texte": "Yoga",
+                "image": "choisirait/salle/yoga.webp"
+              },
+              {
+                "texte": "Cycling",
+                "image": "choisirait/salle/velo.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which hobby would he pick up?",
+            "options": [
+              {
+                "texte": "Fishing",
+                "image": "choisirait/loisir/peche.webp"
+              },
+              {
+                "texte": "Gardening",
+                "image": "choisirait/loisir/jardinage.webp"
+              },
+              {
+                "texte": "Photography",
+                "image": "choisirait/loisir/photo.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which adventure would he try?",
+            "options": [
+              {
+                "texte": "Bungee jumping",
+                "image": "choisirait/aventure/saut-elastique.webp"
+              },
+              {
+                "texte": "Snowboarding",
+                "image": "choisirait/aventure/snowboard.webp"
+              },
+              {
+                "texte": "Paragliding",
+                "image": "choisirait/aventure/parapente.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Now send it to him. Did you guess right?",
+          "bouton": "Send this to him",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Weekend edition. Guess first, send it after. Then compare.\n\nSend this to him",
+      "hashtags": [
+        "#couplequiz",
+        "#boyfriendquiz",
+        "#thisorthat",
+        "#weekendvibes",
+        "#quizcouple"
+      ]
+    }
+  }
+}

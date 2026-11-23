@@ -1,0 +1,92 @@
+{
+  "jour": "2027-03-04",
+  "creneau": "midi",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-188",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "lui",
+        "etiquette": "Hobbies edition",
+        "accroche": "What would he choose?",
+        "consigne": "Pick what he would pick. Then send it to him!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "Which instrument would he play?",
+            "options": [
+              {
+                "texte": "Drums",
+                "image": "choisirait/instrument/batterie.webp"
+              },
+              {
+                "texte": "Piano",
+                "image": "choisirait/instrument/piano.webp"
+              },
+              {
+                "texte": "Saxophone",
+                "image": "choisirait/instrument/saxophone.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which game night would he pick?",
+            "options": [
+              {
+                "texte": "Foosball",
+                "image": "choisirait/jeu/baby-foot.webp"
+              },
+              {
+                "texte": "Video games",
+                "image": "choisirait/jeu/jeux-video.webp"
+              },
+              {
+                "texte": "Ping pong",
+                "image": "choisirait/jeu/ping-pong.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which hobby would he pick up?",
+            "options": [
+              {
+                "texte": "Woodworking",
+                "image": "choisirait/loisir/menuiserie.webp"
+              },
+              {
+                "texte": "Pottery",
+                "image": "choisirait/loisir/poterie.webp"
+              },
+              {
+                "texte": "Fishing",
+                "image": "choisirait/loisir/peche.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Send it to him: how many did you get?",
+          "bouton": "Send this to him",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Hobbies edition. Your answers first, then his reaction.\n\nSend this to him",
+      "hashtags": [
+        "#couplequiz",
+        "#boyfriendquiz",
+        "#thisorthat",
+        "#hobbies",
+        "#quizcouple"
+      ]
+    }
+  }
+}

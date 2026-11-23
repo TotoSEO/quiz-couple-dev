@@ -1,0 +1,92 @@
+{
+  "jour": "2027-01-17",
+  "creneau": "midi",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-102",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "elle",
+        "etiquette": "Date night edition",
+        "accroche": "What would she choose?",
+        "consigne": "Answer for her, then let her check!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "Which flowers would she want?",
+            "options": [
+              {
+                "texte": "Wildflowers",
+                "image": "choisirait/fleurs/fleurs-sauvages.webp"
+              },
+              {
+                "texte": "Peonies",
+                "image": "choisirait/fleurs/pivoines.webp"
+              },
+              {
+                "texte": "Sunflowers",
+                "image": "choisirait/fleurs/tournesols.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which date would she take you on?",
+            "options": [
+              {
+                "texte": "Camping",
+                "image": "choisirait/date/camping.webp"
+              },
+              {
+                "texte": "Hot air balloon",
+                "image": "choisirait/date/montgolfiere-date.webp"
+              },
+              {
+                "texte": "Ice skating",
+                "image": "choisirait/date/patinoire.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which cake would she pick?",
+            "options": [
+              {
+                "texte": "Tiramisu",
+                "image": "choisirait/dessert/tiramisu.webp"
+              },
+              {
+                "texte": "Brownie",
+                "image": "choisirait/dessert/brownie.webp"
+              },
+              {
+                "texte": "Crème brûlée",
+                "image": "choisirait/dessert/creme-brulee.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Got her 3 picks? Send it and see!",
+          "bouton": "Send this to her",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Date night edition. Write down her three letters before you send it.\n\nSend this to her",
+      "hashtags": [
+        "#couplequiz",
+        "#girlfriendquiz",
+        "#thisorthat",
+        "#datenight",
+        "#quizcouple"
+      ]
+    }
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "jour": "2027-01-04",
+  "creneau": "midi",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-078",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "elle",
+        "etiquette": "Luxury edition",
+        "accroche": "What would she choose?",
+        "consigne": "Answer for her, then let her check!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "Which watch would she wear?",
+            "options": [
+              {
+                "texte": "Casio G-Shock",
+                "image": "choisirait/montre/g-shock.webp"
+              },
+              {
+                "texte": "Casio digital",
+                "image": "choisirait/montre/casio.webp"
+              },
+              {
+                "texte": "Rolex Submariner",
+                "image": "choisirait/montre/rolex.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which car would she drive?",
+            "options": [
+              {
+                "texte": "Nissan GT-R",
+                "image": "choisirait/voiture/gtr.webp"
+              },
+              {
+                "texte": "Rolls-Royce",
+                "image": "choisirait/voiture/rolls-royce.webp"
+              },
+              {
+                "texte": "BMW M3",
+                "image": "choisirait/voiture/bmw-m3.webp"
+              }
+            ]
+          },
+          {
+            "question": "How would she travel with you?",
+            "options": [
+              {
+                "texte": "Hot air balloon",
+                "image": "choisirait/voyage/montgolfiere.webp"
+              },
+              {
+                "texte": "Motorbike",
+                "image": "choisirait/moto/bmw-gs.webp"
+              },
+              {
+                "texte": "Cruise ship",
+                "image": "choisirait/voyage/croisiere.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Got her 3 picks? Send it and see!",
+          "bouton": "Send this to her",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Luxury edition. Your answers first, then her reaction.\n\nSend this to her",
+      "hashtags": [
+        "#couplequiz",
+        "#girlfriendquiz",
+        "#thisorthat",
+        "#luxurylife",
+        "#quizcouple"
+      ]
+    }
+  }
+}

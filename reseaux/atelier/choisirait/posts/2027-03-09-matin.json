@@ -1,0 +1,92 @@
+{
+  "jour": "2027-03-09",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-196",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "lui",
+        "etiquette": "Morning edition",
+        "accroche": "What would he choose?",
+        "consigne": "Pick what he would pick. Then send it to him!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "Which breakfast would he choose?",
+            "options": [
+              {
+                "texte": "French toast",
+                "image": "choisirait/petitdej/pain-perdu.webp"
+              },
+              {
+                "texte": "Croissant & coffee",
+                "image": "choisirait/petitdej/croissant-cafe.webp"
+              },
+              {
+                "texte": "Açaí bowl",
+                "image": "choisirait/petitdej/acai.webp"
+              }
+            ]
+          },
+          {
+            "question": "How would he have his eggs?",
+            "options": [
+              {
+                "texte": "Fried",
+                "image": "choisirait/oeufs/oeuf-plat.webp"
+              },
+              {
+                "texte": "Scrambled",
+                "image": "choisirait/oeufs/brouilles.webp"
+              },
+              {
+                "texte": "Soft-boiled",
+                "image": "choisirait/oeufs/coque.webp"
+              }
+            ]
+          },
+          {
+            "question": "What would he grab at the bakery?",
+            "options": [
+              {
+                "texte": "Brioche",
+                "image": "choisirait/boulangerie/brioche.webp"
+              },
+              {
+                "texte": "Bagel",
+                "image": "choisirait/boulangerie/bagel.webp"
+              },
+              {
+                "texte": "Pain au chocolat",
+                "image": "choisirait/boulangerie/pain-chocolat.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Now send it to him. Did you guess right?",
+          "bouton": "Send this to him",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Morning edition. Pick for him, then let him prove you wrong.\n\nSend this to him",
+      "hashtags": [
+        "#couplequiz",
+        "#boyfriendquiz",
+        "#thisorthat",
+        "#breakfast",
+        "#quizcouple"
+      ]
+    }
+  }
+}

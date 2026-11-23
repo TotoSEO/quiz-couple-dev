@@ -1,0 +1,92 @@
+{
+  "jour": "2026-11-24",
+  "creneau": "midi",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-002",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "lui",
+        "etiquette": "Food edition",
+        "accroche": "What would he choose?",
+        "consigne": "Answer for him, then let him check!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "Which cake would he pick?",
+            "options": [
+              {
+                "texte": "Huge birthday cake",
+                "image": "choisirait/dessert/gateau-anniversaire.webp"
+              },
+              {
+                "texte": "Vanilla éclair",
+                "image": "choisirait/dessert/eclair.webp"
+              },
+              {
+                "texte": "Strawberry tart",
+                "image": "choisirait/dessert/tarte-fraises.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which pizza would he order?",
+            "options": [
+              {
+                "texte": "Margherita",
+                "image": "choisirait/pizza/margherita.webp"
+              },
+              {
+                "texte": "Pepperoni",
+                "image": "choisirait/pizza/pepperoni.webp"
+              },
+              {
+                "texte": "Hawaiian",
+                "image": "choisirait/pizza/hawaienne.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which breakfast would he choose?",
+            "options": [
+              {
+                "texte": "Pancakes",
+                "image": "choisirait/petitdej/pancakes.webp"
+              },
+              {
+                "texte": "Full English",
+                "image": "choisirait/petitdej/english.webp"
+              },
+              {
+                "texte": "Croissant & coffee",
+                "image": "choisirait/petitdej/croissant-cafe.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Send it to him: how many did you get?",
+          "bouton": "Send this to him",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Food edition. Write down his three letters before you send it.\n\nSend this to him",
+      "hashtags": [
+        "#couplequiz",
+        "#boyfriendquiz",
+        "#thisorthat",
+        "#foodie",
+        "#quizcouple"
+      ]
+    }
+  }
+}

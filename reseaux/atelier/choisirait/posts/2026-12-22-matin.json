@@ -1,0 +1,92 @@
+{
+  "jour": "2026-12-22",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-053",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "lui",
+        "etiquette": "Adventure edition",
+        "accroche": "What would he choose?",
+        "consigne": "Guess his 3 picks, then send it to him!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "Which sport would he watch?",
+            "options": [
+              {
+                "texte": "Football",
+                "image": "choisirait/sport/foot.webp"
+              },
+              {
+                "texte": "Rugby",
+                "image": "choisirait/sport/rugby.webp"
+              },
+              {
+                "texte": "Basketball",
+                "image": "choisirait/sport/basket.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which adventure would he try?",
+            "options": [
+              {
+                "texte": "Skiing",
+                "image": "choisirait/aventure/ski.webp"
+              },
+              {
+                "texte": "Scuba diving",
+                "image": "choisirait/aventure/plongee.webp"
+              },
+              {
+                "texte": "Horse riding",
+                "image": "choisirait/aventure/equitation.webp"
+              }
+            ]
+          },
+          {
+            "question": "Where would he take you on vacation?",
+            "options": [
+              {
+                "texte": "Mexico",
+                "image": "choisirait/vacances/mexique.webp"
+              },
+              {
+                "texte": "Lapland",
+                "image": "choisirait/vacances/laponie.webp"
+              },
+              {
+                "texte": "Dubai",
+                "image": "choisirait/vacances/dubai.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Send it to him: how many did you get?",
+          "bouton": "Send this to him",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Adventure edition. Guess first, send it after. Then compare.\n\nSend this to him",
+      "hashtags": [
+        "#couplequiz",
+        "#boyfriendquiz",
+        "#thisorthat",
+        "#adventurecouple",
+        "#quizcouple"
+      ]
+    }
+  }
+}

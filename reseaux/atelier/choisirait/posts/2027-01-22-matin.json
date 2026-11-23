@@ -1,0 +1,92 @@
+{
+  "jour": "2027-01-22",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-111",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "elle",
+        "etiquette": "Weekend edition",
+        "accroche": "What would she choose?",
+        "consigne": "3 questions, 4 seconds each. Pick for her!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "Which adventure would she try?",
+            "options": [
+              {
+                "texte": "Skydiving",
+                "image": "choisirait/aventure/parachute.webp"
+              },
+              {
+                "texte": "Skiing",
+                "image": "choisirait/aventure/ski.webp"
+              },
+              {
+                "texte": "Paragliding",
+                "image": "choisirait/aventure/parapente.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which sport would she watch?",
+            "options": [
+              {
+                "texte": "Tennis",
+                "image": "choisirait/sport/tennis.webp"
+              },
+              {
+                "texte": "Ice hockey",
+                "image": "choisirait/sport/hockey.webp"
+              },
+              {
+                "texte": "Boxing",
+                "image": "choisirait/sport/boxe.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which date would she plan?",
+            "options": [
+              {
+                "texte": "Picnic",
+                "image": "choisirait/date/pique-nique.webp"
+              },
+              {
+                "texte": "Fancy dinner",
+                "image": "choisirait/demande/demande-resto.webp"
+              },
+              {
+                "texte": "Cinema night",
+                "image": "choisirait/date/cinema.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Got her 3 picks? Send it and see!",
+          "bouton": "Send this to her",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Weekend edition. Answer for her first, no peeking.\n\nSend this to her",
+      "hashtags": [
+        "#couplequiz",
+        "#girlfriendquiz",
+        "#thisorthat",
+        "#weekendvibes",
+        "#quizcouple"
+      ]
+    }
+  }
+}

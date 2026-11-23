@@ -1,0 +1,92 @@
+{
+  "jour": "2027-03-28",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-231",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "elle",
+        "etiquette": "Pet lovers edition",
+        "accroche": "What would she choose?",
+        "consigne": "3 questions, 4 seconds each. Pick for her!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "Which pet would she want?",
+            "options": [
+              {
+                "texte": "Rabbit",
+                "image": "choisirait/animal/lapin.webp"
+              },
+              {
+                "texte": "Axolotl",
+                "image": "choisirait/animal/axolotl.webp"
+              },
+              {
+                "texte": "Hedgehog",
+                "image": "choisirait/animal/herisson.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which cat would she adopt?",
+            "options": [
+              {
+                "texte": "Persian",
+                "image": "choisirait/chat/persan.webp"
+              },
+              {
+                "texte": "Maine Coon",
+                "image": "choisirait/chat/maine-coon.webp"
+              },
+              {
+                "texte": "Norwegian Forest Cat",
+                "image": "choisirait/chat/norvegien.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which dog would she adopt?",
+            "options": [
+              {
+                "texte": "Beagle",
+                "image": "choisirait/chien/beagle.webp"
+              },
+              {
+                "texte": "Husky",
+                "image": "choisirait/chien/husky.webp"
+              },
+              {
+                "texte": "Rottweiler",
+                "image": "choisirait/chien/rottweiler.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Got her 3 picks? Send it and see!",
+          "bouton": "Send this to her",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Pet lovers edition. Answer for her first, no peeking.\n\nSend this to her",
+      "hashtags": [
+        "#couplequiz",
+        "#girlfriendquiz",
+        "#thisorthat",
+        "#petlovers",
+        "#quizcouple"
+      ]
+    }
+  }
+}

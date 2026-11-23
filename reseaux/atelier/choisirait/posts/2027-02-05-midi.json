@@ -1,0 +1,92 @@
+{
+  "jour": "2027-02-05",
+  "creneau": "midi",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-138",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "elle",
+        "etiquette": "Dream home edition",
+        "accroche": "What would she choose?",
+        "consigne": "Answer for her, then let her check!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "Which dream house would she pick?",
+            "options": [
+              {
+                "texte": "Tiny house",
+                "image": "choisirait/maison/tiny-house.webp"
+              },
+              {
+                "texte": "Loft apartment",
+                "image": "choisirait/maison/loft.webp"
+              },
+              {
+                "texte": "Victorian house",
+                "image": "choisirait/maison/victorienne.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which view would she wake up to?",
+            "options": [
+              {
+                "texte": "Eiffel Tower",
+                "image": "choisirait/vue/tour-eiffel.webp"
+              },
+              {
+                "texte": "Rice fields",
+                "image": "choisirait/vue/rizieres.webp"
+              },
+              {
+                "texte": "Ocean",
+                "image": "choisirait/vue/ocean.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which cat would she adopt?",
+            "options": [
+              {
+                "texte": "Ginger cat",
+                "image": "choisirait/chat/chat-roux.webp"
+              },
+              {
+                "texte": "Scottish Fold",
+                "image": "choisirait/chat/scottish.webp"
+              },
+              {
+                "texte": "Ragdoll",
+                "image": "choisirait/chat/ragdoll.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Got her 3 picks? Send it and see!",
+          "bouton": "Send this to her",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Dream home edition. Your answers first, then her reaction.\n\nSend this to her",
+      "hashtags": [
+        "#couplequiz",
+        "#girlfriendquiz",
+        "#thisorthat",
+        "#dreamhome",
+        "#quizcouple"
+      ]
+    }
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "jour": "2027-01-07",
+  "creneau": "midi",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-084",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "elle",
+        "etiquette": "Adventure edition",
+        "accroche": "What would she choose?",
+        "consigne": "Pick what she would pick. Then send it to her!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "Which adventure would she try?",
+            "options": [
+              {
+                "texte": "Surfing",
+                "image": "choisirait/aventure/surf.webp"
+              },
+              {
+                "texte": "Rock climbing",
+                "image": "choisirait/aventure/escalade.webp"
+              },
+              {
+                "texte": "Bungee jumping",
+                "image": "choisirait/aventure/saut-elastique.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which sport would she watch?",
+            "options": [
+              {
+                "texte": "Baseball",
+                "image": "choisirait/sport/baseball.webp"
+              },
+              {
+                "texte": "Ice hockey",
+                "image": "choisirait/sport/hockey.webp"
+              },
+              {
+                "texte": "Formula 1",
+                "image": "choisirait/sport/f1.webp"
+              }
+            ]
+          },
+          {
+            "question": "Where would she go on vacation?",
+            "options": [
+              {
+                "texte": "Dubai",
+                "image": "choisirait/vacances/dubai.webp"
+              },
+              {
+                "texte": "Croatia",
+                "image": "choisirait/vacances/croatie.webp"
+              },
+              {
+                "texte": "Peru",
+                "image": "choisirait/vacances/perou.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Got her 3 picks? Send it and see!",
+          "bouton": "Send this to her",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Adventure edition. If you get all three, you know her by heart.\n\nSend this to her",
+      "hashtags": [
+        "#couplequiz",
+        "#girlfriendquiz",
+        "#thisorthat",
+        "#adventurecouple",
+        "#quizcouple"
+      ]
+    }
+  }
+}

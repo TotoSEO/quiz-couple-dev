@@ -1,0 +1,92 @@
+{
+  "jour": "2027-02-09",
+  "creneau": "midi",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-145",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "lui",
+        "etiquette": "Weekend edition",
+        "accroche": "What would he choose?",
+        "consigne": "Guess his 3 picks, then send it to him!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "Which adventure would he try?",
+            "options": [
+              {
+                "texte": "Kayaking",
+                "image": "choisirait/aventure/kayak.webp"
+              },
+              {
+                "texte": "Surfing",
+                "image": "choisirait/aventure/surf.webp"
+              },
+              {
+                "texte": "Snowboarding",
+                "image": "choisirait/aventure/snowboard.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which sport would he watch?",
+            "options": [
+              {
+                "texte": "American football",
+                "image": "choisirait/sport/foot-us.webp"
+              },
+              {
+                "texte": "Golf",
+                "image": "choisirait/sport/golf.webp"
+              },
+              {
+                "texte": "Rugby",
+                "image": "choisirait/sport/rugby.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which workout would he pick?",
+            "options": [
+              {
+                "texte": "Yoga",
+                "image": "choisirait/salle/yoga.webp"
+              },
+              {
+                "texte": "Boxing",
+                "image": "choisirait/salle/boxe-salle.webp"
+              },
+              {
+                "texte": "Swimming",
+                "image": "choisirait/salle/natation.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Now send it to him. Did you guess right?",
+          "bouton": "Send this to him",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Weekend edition. No cheating: decide before the timer runs out.\n\nSend this to him",
+      "hashtags": [
+        "#couplequiz",
+        "#boyfriendquiz",
+        "#thisorthat",
+        "#weekendvibes",
+        "#quizcouple"
+      ]
+    }
+  }
+}

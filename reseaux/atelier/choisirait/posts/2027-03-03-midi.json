@@ -1,0 +1,92 @@
+{
+  "jour": "2027-03-03",
+  "creneau": "midi",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-186",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "elle",
+        "etiquette": "Spring edition",
+        "accroche": "What would she choose?",
+        "consigne": "Answer for her, then let her check!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "Which season would she pick?",
+            "options": [
+              {
+                "texte": "Winter",
+                "image": "choisirait/saison/hiver-saison.webp"
+              },
+              {
+                "texte": "Spring",
+                "image": "choisirait/saison/printemps.webp"
+              },
+              {
+                "texte": "Summer",
+                "image": "choisirait/saison/ete.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which flowers would she want?",
+            "options": [
+              {
+                "texte": "Sunflowers",
+                "image": "choisirait/fleurs/tournesols.webp"
+              },
+              {
+                "texte": "Red roses",
+                "image": "choisirait/fleurs/roses.webp"
+              },
+              {
+                "texte": "Lavender",
+                "image": "choisirait/fleurs/lavande.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which date would she take you on?",
+            "options": [
+              {
+                "texte": "Cinema night",
+                "image": "choisirait/date/cinema.webp"
+              },
+              {
+                "texte": "Mini golf",
+                "image": "choisirait/date/mini-golf.webp"
+              },
+              {
+                "texte": "Fancy dinner",
+                "image": "choisirait/demande/demande-resto.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Got her 3 picks? Send it and see!",
+          "bouton": "Send this to her",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Spring edition. Pick for her, then let her prove you wrong.\n\nSend this to her",
+      "hashtags": [
+        "#couplequiz",
+        "#girlfriendquiz",
+        "#thisorthat",
+        "#spring",
+        "#quizcouple"
+      ]
+    }
+  }
+}

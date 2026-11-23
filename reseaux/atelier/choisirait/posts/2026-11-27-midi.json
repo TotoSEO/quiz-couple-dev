@@ -1,0 +1,92 @@
+{
+  "jour": "2026-11-27",
+  "creneau": "midi",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-008",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "lui",
+        "etiquette": "Luxury edition",
+        "accroche": "What would he choose?",
+        "consigne": "Pick what he would pick. Then send it to him!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "Where would he book a weekend for two?",
+            "options": [
+              {
+                "texte": "Overwater villa",
+                "image": "choisirait/weekend/bungalow-eau.webp"
+              },
+              {
+                "texte": "Castle hotel",
+                "image": "choisirait/weekend/chateau-hotel.webp"
+              },
+              {
+                "texte": "Log cabin",
+                "image": "choisirait/weekend/chalet-bois.webp"
+              }
+            ]
+          },
+          {
+            "question": "How would he travel with you?",
+            "options": [
+              {
+                "texte": "Convertible",
+                "image": "choisirait/voyage/cabriolet.webp"
+              },
+              {
+                "texte": "Sailboat",
+                "image": "choisirait/voyage/voilier.webp"
+              },
+              {
+                "texte": "Hot air balloon",
+                "image": "choisirait/voyage/montgolfiere.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which house would he pick?",
+            "options": [
+              {
+                "texte": "Tiny house",
+                "image": "choisirait/maison/tiny-house.webp"
+              },
+              {
+                "texte": "Modern villa",
+                "image": "choisirait/maison/villa-moderne.webp"
+              },
+              {
+                "texte": "Lake house",
+                "image": "choisirait/maison/maison-lac.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Send it to him: how many did you get?",
+          "bouton": "Send this to him",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Luxury edition. Your answers first, then his reaction.\n\nSend this to him",
+      "hashtags": [
+        "#couplequiz",
+        "#boyfriendquiz",
+        "#thisorthat",
+        "#luxurylife",
+        "#quizcouple"
+      ]
+    }
+  }
+}

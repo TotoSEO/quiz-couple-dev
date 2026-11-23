@@ -1,0 +1,92 @@
+{
+  "jour": "2027-01-26",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-118",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "lui",
+        "etiquette": "Pet lovers edition",
+        "accroche": "What would he choose?",
+        "consigne": "Answer for him, then let him check!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "Which pet would he want?",
+            "options": [
+              {
+                "texte": "Rabbit",
+                "image": "choisirait/animal/lapin.webp"
+              },
+              {
+                "texte": "Chameleon",
+                "image": "choisirait/animal/cameleon.webp"
+              },
+              {
+                "texte": "Hamster",
+                "image": "choisirait/animal/hamster.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which cat would he adopt?",
+            "options": [
+              {
+                "texte": "Ginger cat",
+                "image": "choisirait/chat/chat-roux.webp"
+              },
+              {
+                "texte": "Ragdoll",
+                "image": "choisirait/chat/ragdoll.webp"
+              },
+              {
+                "texte": "British Shorthair",
+                "image": "choisirait/chat/british.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which dog would he pick?",
+            "options": [
+              {
+                "texte": "Poodle",
+                "image": "choisirait/chien/caniche.webp"
+              },
+              {
+                "texte": "French Bulldog",
+                "image": "choisirait/chien/bouledogue.webp"
+              },
+              {
+                "texte": "Great Dane",
+                "image": "choisirait/chien/dogue.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Now send it to him. Did you guess right?",
+          "bouton": "Send this to him",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Pet lovers edition. Your answers first, then his reaction.\n\nSend this to him",
+      "hashtags": [
+        "#couplequiz",
+        "#boyfriendquiz",
+        "#thisorthat",
+        "#petlovers",
+        "#quizcouple"
+      ]
+    }
+  }
+}

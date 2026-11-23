@@ -1,0 +1,92 @@
+{
+  "jour": "2027-03-10",
+  "creneau": "midi",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-199",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "lui",
+        "etiquette": "Spring edition",
+        "accroche": "What would he choose?",
+        "consigne": "3 questions, 4 seconds each. Pick for him!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "Which season would he pick?",
+            "options": [
+              {
+                "texte": "Autumn",
+                "image": "choisirait/saison/automne.webp"
+              },
+              {
+                "texte": "Spring",
+                "image": "choisirait/saison/printemps.webp"
+              },
+              {
+                "texte": "Summer",
+                "image": "choisirait/saison/ete.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which flowers would he get you?",
+            "options": [
+              {
+                "texte": "Orchid",
+                "image": "choisirait/fleurs/orchidee.webp"
+              },
+              {
+                "texte": "Hydrangeas",
+                "image": "choisirait/fleurs/hortensias.webp"
+              },
+              {
+                "texte": "Lavender",
+                "image": "choisirait/fleurs/lavande.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which adventure would he try?",
+            "options": [
+              {
+                "texte": "Surfing",
+                "image": "choisirait/aventure/surf.webp"
+              },
+              {
+                "texte": "Snowboarding",
+                "image": "choisirait/aventure/snowboard.webp"
+              },
+              {
+                "texte": "Skydiving",
+                "image": "choisirait/aventure/parachute.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Now send it to him. Did you guess right?",
+          "bouton": "Send this to him",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Spring edition. One letter per question, then send it to him.\n\nSend this to him",
+      "hashtags": [
+        "#couplequiz",
+        "#boyfriendquiz",
+        "#thisorthat",
+        "#spring",
+        "#quizcouple"
+      ]
+    }
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "jour": "2026-12-02",
+  "creneau": "midi",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-017",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "lui",
+        "etiquette": "Dream life edition",
+        "accroche": "What would he choose?",
+        "consigne": "Guess his 3 picks, then send it to him!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "Where would he take you on vacation?",
+            "options": [
+              {
+                "texte": "Maldives",
+                "image": "choisirait/vacances/maldives.webp"
+              },
+              {
+                "texte": "Croatia",
+                "image": "choisirait/vacances/croatie.webp"
+              },
+              {
+                "texte": "Australia",
+                "image": "choisirait/vacances/australie.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which watch would he wear?",
+            "options": [
+              {
+                "texte": "Pocket watch",
+                "image": "choisirait/montre/gousset.webp"
+              },
+              {
+                "texte": "Cartier Tank",
+                "image": "choisirait/montre/cartier.webp"
+              },
+              {
+                "texte": "Seiko diver",
+                "image": "choisirait/montre/seiko.webp"
+              }
+            ]
+          },
+          {
+            "question": "Where would he book a weekend?",
+            "options": [
+              {
+                "texte": "Treehouse",
+                "image": "choisirait/weekend/cabane-arbre.webp"
+              },
+              {
+                "texte": "Houseboat",
+                "image": "choisirait/weekend/peniche.webp"
+              },
+              {
+                "texte": "Glamping tent",
+                "image": "choisirait/weekend/glamping.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Send it to him: how many did you get?",
+          "bouton": "Send this to him",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Dream life edition. He will swear you got at least one wrong.\n\nSend this to him",
+      "hashtags": [
+        "#couplequiz",
+        "#boyfriendquiz",
+        "#thisorthat",
+        "#dreamlife",
+        "#quizcouple"
+      ]
+    }
+  }
+}

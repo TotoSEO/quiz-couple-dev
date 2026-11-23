@@ -1,0 +1,92 @@
+{
+  "jour": "2027-03-15",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-207",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "elle",
+        "etiquette": "Date night edition",
+        "accroche": "What would she choose?",
+        "consigne": "3 questions, 4 seconds each. Pick for her!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "Which flowers would she want?",
+            "options": [
+              {
+                "texte": "Wildflowers",
+                "image": "choisirait/fleurs/fleurs-sauvages.webp"
+              },
+              {
+                "texte": "Sunflowers",
+                "image": "choisirait/fleurs/tournesols.webp"
+              },
+              {
+                "texte": "Orchid",
+                "image": "choisirait/fleurs/orchidee.webp"
+              }
+            ]
+          },
+          {
+            "question": "What would she order at the bar?",
+            "options": [
+              {
+                "texte": "Red wine",
+                "image": "choisirait/bar/vin-rouge.webp"
+              },
+              {
+                "texte": "Piña colada",
+                "image": "choisirait/bar/pina-colada.webp"
+              },
+              {
+                "texte": "Margarita",
+                "image": "choisirait/bar/margarita.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which date would she take you on?",
+            "options": [
+              {
+                "texte": "Picnic",
+                "image": "choisirait/date/pique-nique.webp"
+              },
+              {
+                "texte": "Hot air balloon",
+                "image": "choisirait/date/montgolfiere-date.webp"
+              },
+              {
+                "texte": "Arcade",
+                "image": "choisirait/date/arcade.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Got her 3 picks? Send it and see!",
+          "bouton": "Send this to her",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Date night edition. She will swear you got at least one wrong.\n\nSend this to her",
+      "hashtags": [
+        "#couplequiz",
+        "#girlfriendquiz",
+        "#thisorthat",
+        "#datenight",
+        "#quizcouple"
+      ]
+    }
+  }
+}

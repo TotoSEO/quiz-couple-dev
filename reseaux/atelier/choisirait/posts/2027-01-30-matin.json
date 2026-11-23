@@ -1,0 +1,92 @@
+{
+  "jour": "2027-01-30",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-126",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "elle",
+        "etiquette": "Cozy night in edition",
+        "accroche": "What would she choose?",
+        "consigne": "Answer for her, then let her check!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "Which dessert would she pick?",
+            "options": [
+              {
+                "texte": "Crêpes",
+                "image": "choisirait/dessert/crepes.webp"
+              },
+              {
+                "texte": "Macarons",
+                "image": "choisirait/dessert/macarons.webp"
+              },
+              {
+                "texte": "Crème brûlée",
+                "image": "choisirait/dessert/creme-brulee.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which console would she pick?",
+            "options": [
+              {
+                "texte": "Game Boy",
+                "image": "choisirait/console/gameboy.webp"
+              },
+              {
+                "texte": "Nintendo Switch",
+                "image": "choisirait/console/switch.webp"
+              },
+              {
+                "texte": "Gaming PC",
+                "image": "choisirait/console/pc-gamer.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which game night would she pick?",
+            "options": [
+              {
+                "texte": "Chess",
+                "image": "choisirait/jeu/echecs-soir.webp"
+              },
+              {
+                "texte": "Ping pong",
+                "image": "choisirait/jeu/ping-pong.webp"
+              },
+              {
+                "texte": "Board games",
+                "image": "choisirait/jeu/jeux-societe.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Got her 3 picks? Send it and see!",
+          "bouton": "Send this to her",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Cozy night in edition. Pick for her, then let her prove you wrong.\n\nSend this to her",
+      "hashtags": [
+        "#couplequiz",
+        "#girlfriendquiz",
+        "#thisorthat",
+        "#cozynight",
+        "#quizcouple"
+      ]
+    }
+  }
+}

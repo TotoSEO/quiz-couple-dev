@@ -1,0 +1,92 @@
+{
+  "jour": "2026-11-26",
+  "creneau": "midi",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-006",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "elle",
+        "etiquette": "Dream life edition",
+        "accroche": "What would she choose?",
+        "consigne": "Answer for her, then let her check!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "Which house would she pick?",
+            "options": [
+              {
+                "texte": "Mountain chalet",
+                "image": "choisirait/maison/chalet.webp"
+              },
+              {
+                "texte": "Cozy cabin",
+                "image": "choisirait/weekend/chalet-bois.webp"
+              },
+              {
+                "texte": "Beach house",
+                "image": "choisirait/maison/maison-plage.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which watch would she wear?",
+            "options": [
+              {
+                "texte": "Pocket watch",
+                "image": "choisirait/montre/gousset.webp"
+              },
+              {
+                "texte": "Rolex Submariner",
+                "image": "choisirait/montre/rolex.webp"
+              },
+              {
+                "texte": "Casio digital",
+                "image": "choisirait/montre/casio.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which car would she pick?",
+            "options": [
+              {
+                "texte": "Range Rover",
+                "image": "choisirait/voiture/range-rover.webp"
+              },
+              {
+                "texte": "Aston Martin DB11",
+                "image": "choisirait/voiture/aston-martin.webp"
+              },
+              {
+                "texte": "Ferrari F8",
+                "image": "choisirait/voiture/ferrari-f8.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Got her 3 picks? Send it and see!",
+          "bouton": "Send this to her",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Dream life edition. Pick for her, then let her prove you wrong.\n\nSend this to her",
+      "hashtags": [
+        "#couplequiz",
+        "#girlfriendquiz",
+        "#thisorthat",
+        "#dreamlife",
+        "#quizcouple"
+      ]
+    }
+  }
+}

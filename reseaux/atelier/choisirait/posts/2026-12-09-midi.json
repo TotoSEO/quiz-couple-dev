@@ -1,0 +1,92 @@
+{
+  "jour": "2026-12-09",
+  "creneau": "midi",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-030",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "elle",
+        "etiquette": "Adventure edition",
+        "accroche": "What would she choose?",
+        "consigne": "Answer for her, then let her check!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "Which adventure would she try?",
+            "options": [
+              {
+                "texte": "Snowboarding",
+                "image": "choisirait/aventure/snowboard.webp"
+              },
+              {
+                "texte": "Horse riding",
+                "image": "choisirait/aventure/equitation.webp"
+              },
+              {
+                "texte": "Paragliding",
+                "image": "choisirait/aventure/parapente.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which sport would she watch?",
+            "options": [
+              {
+                "texte": "Boxing",
+                "image": "choisirait/sport/boxe.webp"
+              },
+              {
+                "texte": "Formula 1",
+                "image": "choisirait/sport/f1.webp"
+              },
+              {
+                "texte": "Ice hockey",
+                "image": "choisirait/sport/hockey.webp"
+              }
+            ]
+          },
+          {
+            "question": "Where would she go on vacation?",
+            "options": [
+              {
+                "texte": "Morocco",
+                "image": "choisirait/vacances/maroc.webp"
+              },
+              {
+                "texte": "Costa Rica",
+                "image": "choisirait/vacances/costa-rica.webp"
+              },
+              {
+                "texte": "Greece",
+                "image": "choisirait/vacances/grece.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Got her 3 picks? Send it and see!",
+          "bouton": "Send this to her",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Adventure edition. Easy for you? Then the next one is for her.\n\nSend this to her",
+      "hashtags": [
+        "#couplequiz",
+        "#girlfriendquiz",
+        "#thisorthat",
+        "#adventurecouple",
+        "#quizcouple"
+      ]
+    }
+  }
+}

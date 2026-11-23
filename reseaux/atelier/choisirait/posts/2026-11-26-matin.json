@@ -1,0 +1,92 @@
+{
+  "jour": "2026-11-26",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-005",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "lui",
+        "etiquette": "Travel edition",
+        "accroche": "What would he choose?",
+        "consigne": "Guess his 3 picks, then send it to him!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "Where would he book a weekend?",
+            "options": [
+              {
+                "texte": "Beach bungalow",
+                "image": "choisirait/weekend/bungalow-plage.webp"
+              },
+              {
+                "texte": "Ski chalet",
+                "image": "choisirait/weekend/chalet-ski.webp"
+              },
+              {
+                "texte": "Desert camp",
+                "image": "choisirait/weekend/desert.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which view would he wake up to?",
+            "options": [
+              {
+                "texte": "Mountains",
+                "image": "choisirait/vue/montagnes.webp"
+              },
+              {
+                "texte": "Snowy peaks",
+                "image": "choisirait/vue/neige.webp"
+              },
+              {
+                "texte": "Desert",
+                "image": "choisirait/vue/desert-vue.webp"
+              }
+            ]
+          },
+          {
+            "question": "How would he travel with you?",
+            "options": [
+              {
+                "texte": "Private jet",
+                "image": "choisirait/voyage/jet.webp"
+              },
+              {
+                "texte": "Motorbike",
+                "image": "choisirait/moto/bmw-gs.webp"
+              },
+              {
+                "texte": "Cruise ship",
+                "image": "choisirait/voyage/croisiere.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Send it to him: how many did you get?",
+          "bouton": "Send this to him",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Travel edition. No cheating: decide before the timer runs out.\n\nSend this to him",
+      "hashtags": [
+        "#couplequiz",
+        "#boyfriendquiz",
+        "#thisorthat",
+        "#travelcouple",
+        "#quizcouple"
+      ]
+    }
+  }
+}

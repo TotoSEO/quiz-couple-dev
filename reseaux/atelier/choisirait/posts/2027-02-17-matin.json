@@ -1,0 +1,92 @@
+{
+  "jour": "2027-02-17",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-159",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "elle",
+        "etiquette": "Dream life edition",
+        "accroche": "What would she choose?",
+        "consigne": "3 questions, 4 seconds each. Pick for her!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "How would she travel with you?",
+            "options": [
+              {
+                "texte": "Cruise ship",
+                "image": "choisirait/voyage/croisiere.webp"
+              },
+              {
+                "texte": "Private jet",
+                "image": "choisirait/voyage/jet.webp"
+              },
+              {
+                "texte": "Camper van",
+                "image": "choisirait/voyage/van.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which house would she pick?",
+            "options": [
+              {
+                "texte": "Lake house",
+                "image": "choisirait/maison/maison-lac.webp"
+              },
+              {
+                "texte": "Cozy cabin",
+                "image": "choisirait/weekend/chalet-bois.webp"
+              },
+              {
+                "texte": "Beach house",
+                "image": "choisirait/maison/maison-plage.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which view would she wake up to?",
+            "options": [
+              {
+                "texte": "Desert",
+                "image": "choisirait/vue/desert-vue.webp"
+              },
+              {
+                "texte": "Eiffel Tower",
+                "image": "choisirait/vue/tour-eiffel.webp"
+              },
+              {
+                "texte": "Ocean",
+                "image": "choisirait/vue/ocean.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Got her 3 picks? Send it and see!",
+          "bouton": "Send this to her",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Dream life edition. One letter per question, then send it to her.\n\nSend this to her",
+      "hashtags": [
+        "#couplequiz",
+        "#girlfriendquiz",
+        "#thisorthat",
+        "#dreamlife",
+        "#quizcouple"
+      ]
+    }
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "jour": "2027-01-08",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-085",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "lui",
+        "etiquette": "Dream life edition",
+        "accroche": "What would he choose?",
+        "consigne": "Guess his 3 picks, then send it to him!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "Which watch would he wear?",
+            "options": [
+              {
+                "texte": "Seiko diver",
+                "image": "choisirait/montre/seiko.webp"
+              },
+              {
+                "texte": "Cartier Tank",
+                "image": "choisirait/montre/cartier.webp"
+              },
+              {
+                "texte": "Casio digital",
+                "image": "choisirait/montre/casio.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which house would he pick?",
+            "options": [
+              {
+                "texte": "Loft apartment",
+                "image": "choisirait/maison/loft.webp"
+              },
+              {
+                "texte": "Modern villa",
+                "image": "choisirait/maison/villa-moderne.webp"
+              },
+              {
+                "texte": "Victorian house",
+                "image": "choisirait/maison/victorienne.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which car would he drive?",
+            "options": [
+              {
+                "texte": "BMW M3",
+                "image": "choisirait/voiture/bmw-m3.webp"
+              },
+              {
+                "texte": "Rolls-Royce",
+                "image": "choisirait/voiture/rolls-royce.webp"
+              },
+              {
+                "texte": "Tesla Model S",
+                "image": "choisirait/voiture/tesla-model-s.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Now send it to him. Did you guess right?",
+          "bouton": "Send this to him",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Dream life edition. No cheating: decide before the timer runs out.\n\nSend this to him",
+      "hashtags": [
+        "#couplequiz",
+        "#boyfriendquiz",
+        "#thisorthat",
+        "#dreamlife",
+        "#quizcouple"
+      ]
+    }
+  }
+}

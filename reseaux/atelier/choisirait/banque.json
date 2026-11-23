@@ -1,0 +1,2732 @@
+{
+ "familles": {
+  "voiture": {
+   "lui": [
+    "Which car would he pick?",
+    "Which car would he drive?"
+   ],
+   "elle": [
+    "Which car would she pick?",
+    "Which car would she drive?"
+   ],
+   "options": [
+    {
+     "id": "porsche-911",
+     "texte": "Porsche 911",
+     "image": "choisirait/voiture/porsche-911.webp"
+    },
+    {
+     "id": "lamborghini-huracan",
+     "texte": "Lamborghini Huracán",
+     "image": "choisirait/voiture/lamborghini-huracan.webp"
+    },
+    {
+     "id": "amg-c63",
+     "texte": "Mercedes-AMG C63 S",
+     "image": "choisirait/voiture/amg-c63.webp"
+    },
+    {
+     "id": "ferrari-f8",
+     "texte": "Ferrari F8",
+     "image": "choisirait/voiture/ferrari-f8.webp"
+    },
+    {
+     "id": "bmw-m3",
+     "texte": "BMW M3",
+     "image": "choisirait/voiture/bmw-m3.webp"
+    },
+    {
+     "id": "mustang",
+     "texte": "Ford Mustang",
+     "image": "choisirait/voiture/mustang.webp"
+    },
+    {
+     "id": "tesla-model-s",
+     "texte": "Tesla Model S",
+     "image": "choisirait/voiture/tesla-model-s.webp"
+    },
+    {
+     "id": "range-rover",
+     "texte": "Range Rover",
+     "image": "choisirait/voiture/range-rover.webp"
+    },
+    {
+     "id": "g-class",
+     "texte": "Mercedes G-Class",
+     "image": "choisirait/voiture/g-class.webp"
+    },
+    {
+     "id": "jeep-wrangler",
+     "texte": "Jeep Wrangler",
+     "image": "choisirait/voiture/jeep-wrangler.webp"
+    },
+    {
+     "id": "audi-r8",
+     "texte": "Audi R8",
+     "image": "choisirait/voiture/audi-r8.webp"
+    },
+    {
+     "id": "supra",
+     "texte": "Toyota Supra",
+     "image": "choisirait/voiture/supra.webp"
+    },
+    {
+     "id": "gtr",
+     "texte": "Nissan GT-R",
+     "image": "choisirait/voiture/gtr.webp"
+    },
+    {
+     "id": "mini",
+     "texte": "Mini Cooper",
+     "image": "choisirait/voiture/mini.webp"
+    },
+    {
+     "id": "fiat-500",
+     "texte": "Fiat 500",
+     "image": "choisirait/voiture/fiat-500.webp"
+    },
+    {
+     "id": "defender",
+     "texte": "Land Rover Defender",
+     "image": "choisirait/voiture/defender.webp"
+    },
+    {
+     "id": "mclaren",
+     "texte": "McLaren 720S",
+     "image": "choisirait/voiture/mclaren.webp"
+    },
+    {
+     "id": "rolls-royce",
+     "texte": "Rolls-Royce",
+     "image": "choisirait/voiture/rolls-royce.webp"
+    },
+    {
+     "id": "aston-martin",
+     "texte": "Aston Martin DB11",
+     "image": "choisirait/voiture/aston-martin.webp"
+    },
+    {
+     "id": "corvette",
+     "texte": "Corvette",
+     "image": "choisirait/voiture/corvette.webp"
+    },
+    {
+     "id": "bugatti",
+     "texte": "Bugatti Chiron",
+     "image": "choisirait/voiture/bugatti.webp"
+    }
+   ]
+  },
+  "moto": {
+   "lui": [
+    "Which motorbike would he ride?"
+   ],
+   "elle": [
+    "Which motorbike would she ride?"
+   ],
+   "options": [
+    {
+     "id": "harley",
+     "texte": "Harley-Davidson",
+     "image": "choisirait/moto/harley.webp"
+    },
+    {
+     "id": "ducati",
+     "texte": "Ducati Panigale",
+     "image": "choisirait/moto/ducati.webp"
+    },
+    {
+     "id": "vespa",
+     "texte": "Vespa",
+     "image": "choisirait/moto/vespa.webp"
+    },
+    {
+     "id": "bmw-gs",
+     "texte": "BMW GS",
+     "image": "choisirait/moto/bmw-gs.webp"
+    },
+    {
+     "id": "ninja",
+     "texte": "Kawasaki Ninja",
+     "image": "choisirait/moto/ninja.webp"
+    },
+    {
+     "id": "bonneville",
+     "texte": "Triumph Bonneville",
+     "image": "choisirait/moto/bonneville.webp"
+    },
+    {
+     "id": "mt07",
+     "texte": "Yamaha MT-07",
+     "image": "choisirait/moto/mt07.webp"
+    },
+    {
+     "id": "indian",
+     "texte": "Indian Scout",
+     "image": "choisirait/moto/indian.webp"
+    }
+   ]
+  },
+  "vintage": {
+   "lui": [
+    "Which classic car would he drive?"
+   ],
+   "elle": [
+    "Which classic car would she drive?"
+   ],
+   "options": [
+    {
+     "id": "mustang-67",
+     "texte": "1967 Mustang",
+     "image": "choisirait/vintage/mustang-67.webp"
+    },
+    {
+     "id": "coccinelle",
+     "texte": "VW Beetle",
+     "image": "choisirait/vintage/coccinelle.webp"
+    },
+    {
+     "id": "e-type",
+     "texte": "Jaguar E-Type",
+     "image": "choisirait/vintage/e-type.webp"
+    },
+    {
+     "id": "combi",
+     "texte": "VW Camper Van",
+     "image": "choisirait/vintage/combi.webp"
+    },
+    {
+     "id": "cadillac",
+     "texte": "1959 Cadillac",
+     "image": "choisirait/vintage/cadillac.webp"
+    },
+    {
+     "id": "mini-classique",
+     "texte": "Classic Mini",
+     "image": "choisirait/vintage/mini-classique.webp"
+    },
+    {
+     "id": "porsche-356",
+     "texte": "Porsche 356",
+     "image": "choisirait/vintage/porsche-356.webp"
+    },
+    {
+     "id": "2cv",
+     "texte": "Citroën 2CV",
+     "image": "choisirait/vintage/2cv.webp"
+    },
+    {
+     "id": "300sl",
+     "texte": "Mercedes 300 SL",
+     "image": "choisirait/vintage/300sl.webp"
+    }
+   ]
+  },
+  "chien": {
+   "lui": [
+    "Which dog would he pick?",
+    "Which dog would he adopt?"
+   ],
+   "elle": [
+    "Which dog would she pick?",
+    "Which dog would she adopt?"
+   ],
+   "options": [
+    {
+     "id": "golden",
+     "texte": "Golden Retriever",
+     "image": "choisirait/chien/golden.webp"
+    },
+    {
+     "id": "malinois",
+     "texte": "Belgian Malinois",
+     "image": "choisirait/chien/malinois.webp"
+    },
+    {
+     "id": "border-collie",
+     "texte": "Border Collie",
+     "image": "choisirait/chien/border-collie.webp"
+    },
+    {
+     "id": "bouledogue",
+     "texte": "French Bulldog",
+     "image": "choisirait/chien/bouledogue.webp"
+    },
+    {
+     "id": "corgi",
+     "texte": "Corgi",
+     "image": "choisirait/chien/corgi.webp"
+    },
+    {
+     "id": "husky",
+     "texte": "Husky",
+     "image": "choisirait/chien/husky.webp"
+    },
+    {
+     "id": "berger-allemand",
+     "texte": "German Shepherd",
+     "image": "choisirait/chien/berger-allemand.webp"
+    },
+    {
+     "id": "labrador",
+     "texte": "Labrador",
+     "image": "choisirait/chien/labrador.webp"
+    },
+    {
+     "id": "carlin",
+     "texte": "Pug",
+     "image": "choisirait/chien/carlin.webp"
+    },
+    {
+     "id": "teckel",
+     "texte": "Dachshund",
+     "image": "choisirait/chien/teckel.webp"
+    },
+    {
+     "id": "samoyede",
+     "texte": "Samoyed",
+     "image": "choisirait/chien/samoyede.webp"
+    },
+    {
+     "id": "shiba",
+     "texte": "Shiba Inu",
+     "image": "choisirait/chien/shiba.webp"
+    },
+    {
+     "id": "bouvier",
+     "texte": "Bernese Mountain Dog",
+     "image": "choisirait/chien/bouvier.webp"
+    },
+    {
+     "id": "dobermann",
+     "texte": "Doberman",
+     "image": "choisirait/chien/dobermann.webp"
+    },
+    {
+     "id": "cavalier",
+     "texte": "Cavalier King Charles",
+     "image": "choisirait/chien/cavalier.webp"
+    },
+    {
+     "id": "caniche",
+     "texte": "Poodle",
+     "image": "choisirait/chien/caniche.webp"
+    },
+    {
+     "id": "chihuahua",
+     "texte": "Chihuahua",
+     "image": "choisirait/chien/chihuahua.webp"
+    },
+    {
+     "id": "dogue",
+     "texte": "Great Dane",
+     "image": "choisirait/chien/dogue.webp"
+    },
+    {
+     "id": "berger-australien",
+     "texte": "Australian Shepherd",
+     "image": "choisirait/chien/berger-australien.webp"
+    },
+    {
+     "id": "beagle",
+     "texte": "Beagle",
+     "image": "choisirait/chien/beagle.webp"
+    },
+    {
+     "id": "pomeranien",
+     "texte": "Pomeranian",
+     "image": "choisirait/chien/pomeranien.webp"
+    },
+    {
+     "id": "rottweiler",
+     "texte": "Rottweiler",
+     "image": "choisirait/chien/rottweiler.webp"
+    },
+    {
+     "id": "dalmatien",
+     "texte": "Dalmatian",
+     "image": "choisirait/chien/dalmatien.webp"
+    },
+    {
+     "id": "jack-russell",
+     "texte": "Jack Russell",
+     "image": "choisirait/chien/jack-russell.webp"
+    }
+   ]
+  },
+  "chat": {
+   "lui": [
+    "Which cat would he adopt?"
+   ],
+   "elle": [
+    "Which cat would she adopt?"
+   ],
+   "options": [
+    {
+     "id": "maine-coon",
+     "texte": "Maine Coon",
+     "image": "choisirait/chat/maine-coon.webp"
+    },
+    {
+     "id": "siamois",
+     "texte": "Siamese",
+     "image": "choisirait/chat/siamois.webp"
+    },
+    {
+     "id": "sphynx",
+     "texte": "Sphynx",
+     "image": "choisirait/chat/sphynx.webp"
+    },
+    {
+     "id": "persan",
+     "texte": "Persian",
+     "image": "choisirait/chat/persan.webp"
+    },
+    {
+     "id": "british",
+     "texte": "British Shorthair",
+     "image": "choisirait/chat/british.webp"
+    },
+    {
+     "id": "bengal",
+     "texte": "Bengal",
+     "image": "choisirait/chat/bengal.webp"
+    },
+    {
+     "id": "ragdoll",
+     "texte": "Ragdoll",
+     "image": "choisirait/chat/ragdoll.webp"
+    },
+    {
+     "id": "chat-noir",
+     "texte": "Black cat",
+     "image": "choisirait/chat/chat-noir.webp"
+    },
+    {
+     "id": "chat-roux",
+     "texte": "Ginger cat",
+     "image": "choisirait/chat/chat-roux.webp"
+    },
+    {
+     "id": "scottish",
+     "texte": "Scottish Fold",
+     "image": "choisirait/chat/scottish.webp"
+    },
+    {
+     "id": "norvegien",
+     "texte": "Norwegian Forest Cat",
+     "image": "choisirait/chat/norvegien.webp"
+    }
+   ]
+  },
+  "animal": {
+   "lui": [
+    "Which pet would he want?"
+   ],
+   "elle": [
+    "Which pet would she want?"
+   ],
+   "options": [
+    {
+     "id": "lapin",
+     "texte": "Rabbit",
+     "image": "choisirait/animal/lapin.webp"
+    },
+    {
+     "id": "hamster",
+     "texte": "Hamster",
+     "image": "choisirait/animal/hamster.webp"
+    },
+    {
+     "id": "perroquet",
+     "texte": "Parrot",
+     "image": "choisirait/animal/perroquet.webp"
+    },
+    {
+     "id": "tortue",
+     "texte": "Turtle",
+     "image": "choisirait/animal/tortue.webp"
+    },
+    {
+     "id": "poisson",
+     "texte": "Goldfish",
+     "image": "choisirait/animal/poisson.webp"
+    },
+    {
+     "id": "cheval",
+     "texte": "Horse",
+     "image": "choisirait/animal/cheval.webp"
+    },
+    {
+     "id": "herisson",
+     "texte": "Hedgehog",
+     "image": "choisirait/animal/herisson.webp"
+    },
+    {
+     "id": "cochon-dinde",
+     "texte": "Guinea pig",
+     "image": "choisirait/animal/cochon-dinde.webp"
+    },
+    {
+     "id": "cameleon",
+     "texte": "Chameleon",
+     "image": "choisirait/animal/cameleon.webp"
+    },
+    {
+     "id": "furet",
+     "texte": "Ferret",
+     "image": "choisirait/animal/furet.webp"
+    },
+    {
+     "id": "axolotl",
+     "texte": "Axolotl",
+     "image": "choisirait/animal/axolotl.webp"
+    }
+   ]
+  },
+  "vacances": {
+   "lui": [
+    "Where would he go on vacation?",
+    "Where would he take you on vacation?"
+   ],
+   "elle": [
+    "Where would she go on vacation?",
+    "Where would she take you on vacation?"
+   ],
+   "options": [
+    {
+     "id": "bali",
+     "texte": "Bali",
+     "image": "choisirait/vacances/bali.webp"
+    },
+    {
+     "id": "norvege",
+     "texte": "Norway",
+     "image": "choisirait/vacances/norvege.webp"
+    },
+    {
+     "id": "usa",
+     "texte": "USA",
+     "image": "choisirait/vacances/usa.webp"
+    },
+    {
+     "id": "maldives",
+     "texte": "Maldives",
+     "image": "choisirait/vacances/maldives.webp"
+    },
+    {
+     "id": "japon",
+     "texte": "Japan",
+     "image": "choisirait/vacances/japon.webp"
+    },
+    {
+     "id": "islande",
+     "texte": "Iceland",
+     "image": "choisirait/vacances/islande.webp"
+    },
+    {
+     "id": "grece",
+     "texte": "Greece",
+     "image": "choisirait/vacances/grece.webp"
+    },
+    {
+     "id": "dubai",
+     "texte": "Dubai",
+     "image": "choisirait/vacances/dubai.webp"
+    },
+    {
+     "id": "thailande",
+     "texte": "Thailand",
+     "image": "choisirait/vacances/thailande.webp"
+    },
+    {
+     "id": "mexique",
+     "texte": "Mexico",
+     "image": "choisirait/vacances/mexique.webp"
+    },
+    {
+     "id": "italie",
+     "texte": "Italy",
+     "image": "choisirait/vacances/italie.webp"
+    },
+    {
+     "id": "hawaii",
+     "texte": "Hawaii",
+     "image": "choisirait/vacances/hawaii.webp"
+    },
+    {
+     "id": "suisse",
+     "texte": "Switzerland",
+     "image": "choisirait/vacances/suisse.webp"
+    },
+    {
+     "id": "maroc",
+     "texte": "Morocco",
+     "image": "choisirait/vacances/maroc.webp"
+    },
+    {
+     "id": "bora-bora",
+     "texte": "Bora Bora",
+     "image": "choisirait/vacances/bora-bora.webp"
+    },
+    {
+     "id": "croatie",
+     "texte": "Croatia",
+     "image": "choisirait/vacances/croatie.webp"
+    },
+    {
+     "id": "costa-rica",
+     "texte": "Costa Rica",
+     "image": "choisirait/vacances/costa-rica.webp"
+    },
+    {
+     "id": "canada",
+     "texte": "Canada",
+     "image": "choisirait/vacances/canada.webp"
+    },
+    {
+     "id": "perou",
+     "texte": "Peru",
+     "image": "choisirait/vacances/perou.webp"
+    },
+    {
+     "id": "egypte",
+     "texte": "Egypt",
+     "image": "choisirait/vacances/egypte.webp"
+    },
+    {
+     "id": "australie",
+     "texte": "Australia",
+     "image": "choisirait/vacances/australie.webp"
+    },
+    {
+     "id": "laponie",
+     "texte": "Lapland",
+     "image": "choisirait/vacances/laponie.webp"
+    }
+   ]
+  },
+  "ville": {
+   "lui": [
+    "Which city would he take you to?"
+   ],
+   "elle": [
+    "Which city would she take you to?"
+   ],
+   "options": [
+    {
+     "id": "paris",
+     "texte": "Paris",
+     "image": "choisirait/ville/paris.webp"
+    },
+    {
+     "id": "new-york",
+     "texte": "New York",
+     "image": "choisirait/ville/new-york.webp"
+    },
+    {
+     "id": "tokyo",
+     "texte": "Tokyo",
+     "image": "choisirait/ville/tokyo.webp"
+    },
+    {
+     "id": "londres",
+     "texte": "London",
+     "image": "choisirait/ville/londres.webp"
+    },
+    {
+     "id": "rome",
+     "texte": "Rome",
+     "image": "choisirait/ville/rome.webp"
+    },
+    {
+     "id": "barcelone",
+     "texte": "Barcelona",
+     "image": "choisirait/ville/barcelone.webp"
+    },
+    {
+     "id": "amsterdam",
+     "texte": "Amsterdam",
+     "image": "choisirait/ville/amsterdam.webp"
+    },
+    {
+     "id": "lisbonne",
+     "texte": "Lisbon",
+     "image": "choisirait/ville/lisbonne.webp"
+    },
+    {
+     "id": "prague",
+     "texte": "Prague",
+     "image": "choisirait/ville/prague.webp"
+    },
+    {
+     "id": "istanbul",
+     "texte": "Istanbul",
+     "image": "choisirait/ville/istanbul.webp"
+    },
+    {
+     "id": "las-vegas",
+     "texte": "Las Vegas",
+     "image": "choisirait/ville/las-vegas.webp"
+    },
+    {
+     "id": "venise",
+     "texte": "Venice",
+     "image": "choisirait/ville/venise.webp"
+    },
+    {
+     "id": "seoul",
+     "texte": "Seoul",
+     "image": "choisirait/ville/seoul.webp"
+    },
+    {
+     "id": "marrakech",
+     "texte": "Marrakech",
+     "image": "choisirait/ville/marrakech.webp"
+    },
+    {
+     "id": "rio",
+     "texte": "Rio de Janeiro",
+     "image": "choisirait/ville/rio.webp"
+    }
+   ]
+  },
+  "weekend": {
+   "lui": [
+    "Where would he book a weekend?",
+    "Where would he book a weekend for two?"
+   ],
+   "elle": [
+    "Where would she book a weekend?",
+    "Where would she book a weekend for two?"
+   ],
+   "options": [
+    {
+     "id": "bungalow-eau",
+     "texte": "Overwater villa",
+     "image": "choisirait/weekend/bungalow-eau.webp"
+    },
+    {
+     "id": "cabane-arbre",
+     "texte": "Treehouse",
+     "image": "choisirait/weekend/cabane-arbre.webp"
+    },
+    {
+     "id": "chalet-bois",
+     "texte": "Log cabin",
+     "image": "choisirait/weekend/chalet-bois.webp"
+    },
+    {
+     "id": "chateau-hotel",
+     "texte": "Castle hotel",
+     "image": "choisirait/weekend/chateau-hotel.webp"
+    },
+    {
+     "id": "bungalow-plage",
+     "texte": "Beach bungalow",
+     "image": "choisirait/weekend/bungalow-plage.webp"
+    },
+    {
+     "id": "glamping",
+     "texte": "Glamping tent",
+     "image": "choisirait/weekend/glamping.webp"
+    },
+    {
+     "id": "chalet-ski",
+     "texte": "Ski chalet",
+     "image": "choisirait/weekend/chalet-ski.webp"
+    },
+    {
+     "id": "desert",
+     "texte": "Desert camp",
+     "image": "choisirait/weekend/desert.webp"
+    },
+    {
+     "id": "peniche",
+     "texte": "Houseboat",
+     "image": "choisirait/weekend/peniche.webp"
+    }
+   ]
+  },
+  "voyage": {
+   "lui": [
+    "How would he travel with you?"
+   ],
+   "elle": [
+    "How would she travel with you?"
+   ],
+   "options": [
+    {
+     "id": "van",
+     "texte": "Camper van",
+     "image": "choisirait/voyage/van.webp"
+    },
+    {
+     "id": "cabriolet",
+     "texte": "Convertible",
+     "image": "choisirait/voyage/cabriolet.webp"
+    },
+    {
+     "id": "moto-voyage",
+     "texte": "Motorbike",
+     "image": "choisirait/moto/bmw-gs.webp"
+    },
+    {
+     "id": "voilier",
+     "texte": "Sailboat",
+     "image": "choisirait/voyage/voilier.webp"
+    },
+    {
+     "id": "croisiere",
+     "texte": "Cruise ship",
+     "image": "choisirait/voyage/croisiere.webp"
+    },
+    {
+     "id": "jet",
+     "texte": "Private jet",
+     "image": "choisirait/voyage/jet.webp"
+    },
+    {
+     "id": "montgolfiere",
+     "texte": "Hot air balloon",
+     "image": "choisirait/voyage/montgolfiere.webp"
+    }
+   ]
+  },
+  "maison": {
+   "lui": [
+    "Which house would he pick?",
+    "Which dream house would he pick?"
+   ],
+   "elle": [
+    "Which house would she pick?",
+    "Which dream house would she pick?"
+   ],
+   "options": [
+    {
+     "id": "villa-moderne",
+     "texte": "Modern villa",
+     "image": "choisirait/maison/villa-moderne.webp"
+    },
+    {
+     "id": "cabane",
+     "texte": "Cozy cabin",
+     "image": "choisirait/weekend/chalet-bois.webp"
+    },
+    {
+     "id": "maison-plage",
+     "texte": "Beach house",
+     "image": "choisirait/maison/maison-plage.webp"
+    },
+    {
+     "id": "chateau",
+     "texte": "Castle",
+     "image": "choisirait/maison/chateau.webp"
+    },
+    {
+     "id": "tiny-house",
+     "texte": "Tiny house",
+     "image": "choisirait/maison/tiny-house.webp"
+    },
+    {
+     "id": "victorienne",
+     "texte": "Victorian house",
+     "image": "choisirait/maison/victorienne.webp"
+    },
+    {
+     "id": "chalet",
+     "texte": "Mountain chalet",
+     "image": "choisirait/maison/chalet.webp"
+    },
+    {
+     "id": "maison-lac",
+     "texte": "Lake house",
+     "image": "choisirait/maison/maison-lac.webp"
+    },
+    {
+     "id": "loft",
+     "texte": "Loft apartment",
+     "image": "choisirait/maison/loft.webp"
+    }
+   ]
+  },
+  "vue": {
+   "lui": [
+    "Which view would he wake up to?"
+   ],
+   "elle": [
+    "Which view would she wake up to?"
+   ],
+   "options": [
+    {
+     "id": "ocean",
+     "texte": "Ocean",
+     "image": "choisirait/vue/ocean.webp"
+    },
+    {
+     "id": "montagnes",
+     "texte": "Mountains",
+     "image": "choisirait/vue/montagnes.webp"
+    },
+    {
+     "id": "skyline",
+     "texte": "City skyline",
+     "image": "choisirait/vue/skyline.webp"
+    },
+    {
+     "id": "foret",
+     "texte": "Forest",
+     "image": "choisirait/vue/foret.webp"
+    },
+    {
+     "id": "lac",
+     "texte": "Lake",
+     "image": "choisirait/vue/lac.webp"
+    },
+    {
+     "id": "desert-vue",
+     "texte": "Desert",
+     "image": "choisirait/vue/desert-vue.webp"
+    },
+    {
+     "id": "neige",
+     "texte": "Snowy peaks",
+     "image": "choisirait/vue/neige.webp"
+    },
+    {
+     "id": "vignes",
+     "texte": "Vineyards",
+     "image": "choisirait/vue/vignes.webp"
+    },
+    {
+     "id": "tour-eiffel",
+     "texte": "Eiffel Tower",
+     "image": "choisirait/vue/tour-eiffel.webp"
+    },
+    {
+     "id": "aurores",
+     "texte": "Northern lights",
+     "image": "choisirait/vue/aurores.webp"
+    },
+    {
+     "id": "rizieres",
+     "texte": "Rice fields",
+     "image": "choisirait/vue/rizieres.webp"
+    },
+    {
+     "id": "plage-tropicale",
+     "texte": "Tropical beach",
+     "image": "choisirait/vue/plage-tropicale.webp"
+    }
+   ]
+  },
+  "dessert": {
+   "lui": [
+    "Which dessert would he pick?",
+    "Which cake would he pick?"
+   ],
+   "elle": [
+    "Which dessert would she pick?",
+    "Which cake would she pick?"
+   ],
+   "options": [
+    {
+     "id": "gateau-anniversaire",
+     "texte": "Huge birthday cake",
+     "image": "choisirait/dessert/gateau-anniversaire.webp"
+    },
+    {
+     "id": "eclair",
+     "texte": "Vanilla éclair",
+     "image": "choisirait/dessert/eclair.webp"
+    },
+    {
+     "id": "tarte-fraises",
+     "texte": "Strawberry tart",
+     "image": "choisirait/dessert/tarte-fraises.webp"
+    },
+    {
+     "id": "fondant",
+     "texte": "Chocolate lava cake",
+     "image": "choisirait/dessert/fondant.webp"
+    },
+    {
+     "id": "cheesecake",
+     "texte": "Cheesecake",
+     "image": "choisirait/dessert/cheesecake.webp"
+    },
+    {
+     "id": "tiramisu",
+     "texte": "Tiramisu",
+     "image": "choisirait/dessert/tiramisu.webp"
+    },
+    {
+     "id": "macarons",
+     "texte": "Macarons",
+     "image": "choisirait/dessert/macarons.webp"
+    },
+    {
+     "id": "creme-brulee",
+     "texte": "Crème brûlée",
+     "image": "choisirait/dessert/creme-brulee.webp"
+    },
+    {
+     "id": "tarte-pommes",
+     "texte": "Apple pie",
+     "image": "choisirait/dessert/tarte-pommes.webp"
+    },
+    {
+     "id": "brownie",
+     "texte": "Brownie",
+     "image": "choisirait/dessert/brownie.webp"
+    },
+    {
+     "id": "red-velvet",
+     "texte": "Red velvet cake",
+     "image": "choisirait/dessert/red-velvet.webp"
+    },
+    {
+     "id": "churros",
+     "texte": "Churros",
+     "image": "choisirait/dessert/churros.webp"
+    },
+    {
+     "id": "crepes",
+     "texte": "Crêpes",
+     "image": "choisirait/dessert/crepes.webp"
+    },
+    {
+     "id": "pavlova",
+     "texte": "Pavlova",
+     "image": "choisirait/dessert/pavlova.webp"
+    },
+    {
+     "id": "mille-feuille",
+     "texte": "Mille-feuille",
+     "image": "choisirait/dessert/mille-feuille.webp"
+    }
+   ]
+  },
+  "glace": {
+   "lui": [
+    "Which ice cream would he get?"
+   ],
+   "elle": [
+    "Which ice cream would she get?"
+   ],
+   "options": [
+    {
+     "id": "cornet",
+     "texte": "Ice cream cone",
+     "image": "choisirait/glace/cornet.webp"
+    },
+    {
+     "id": "sundae",
+     "texte": "Sundae",
+     "image": "choisirait/glace/sundae.webp"
+    },
+    {
+     "id": "gelato",
+     "texte": "Gelato",
+     "image": "choisirait/glace/gelato.webp"
+    },
+    {
+     "id": "esquimau",
+     "texte": "Popsicle",
+     "image": "choisirait/glace/esquimau.webp"
+    },
+    {
+     "id": "italienne",
+     "texte": "Soft serve",
+     "image": "choisirait/glace/italienne.webp"
+    },
+    {
+     "id": "banana-split",
+     "texte": "Banana split",
+     "image": "choisirait/glace/banana-split.webp"
+    },
+    {
+     "id": "sandwich-glace",
+     "texte": "Ice cream sandwich",
+     "image": "choisirait/glace/sandwich-glace.webp"
+    },
+    {
+     "id": "affogato",
+     "texte": "Affogato",
+     "image": "choisirait/glace/affogato.webp"
+    },
+    {
+     "id": "mochi",
+     "texte": "Mochi ice cream",
+     "image": "choisirait/glace/mochi.webp"
+    }
+   ]
+  },
+  "boulangerie": {
+   "lui": [
+    "What would he grab at the bakery?"
+   ],
+   "elle": [
+    "What would she grab at the bakery?"
+   ],
+   "options": [
+    {
+     "id": "croissant",
+     "texte": "Croissant",
+     "image": "choisirait/boulangerie/croissant.webp"
+    },
+    {
+     "id": "pain-chocolat",
+     "texte": "Pain au chocolat",
+     "image": "choisirait/boulangerie/pain-chocolat.webp"
+    },
+    {
+     "id": "cinnamon-roll",
+     "texte": "Cinnamon roll",
+     "image": "choisirait/boulangerie/cinnamon-roll.webp"
+    },
+    {
+     "id": "donut",
+     "texte": "Donut",
+     "image": "choisirait/boulangerie/donut.webp"
+    },
+    {
+     "id": "bagel",
+     "texte": "Bagel",
+     "image": "choisirait/boulangerie/bagel.webp"
+    },
+    {
+     "id": "muffin",
+     "texte": "Muffin",
+     "image": "choisirait/boulangerie/muffin.webp"
+    },
+    {
+     "id": "baguette",
+     "texte": "Baguette",
+     "image": "choisirait/boulangerie/baguette.webp"
+    },
+    {
+     "id": "brioche",
+     "texte": "Brioche",
+     "image": "choisirait/boulangerie/brioche.webp"
+    }
+   ]
+  },
+  "pizza": {
+   "lui": [
+    "Which pizza would he order?"
+   ],
+   "elle": [
+    "Which pizza would she order?"
+   ],
+   "options": [
+    {
+     "id": "margherita",
+     "texte": "Margherita",
+     "image": "choisirait/pizza/margherita.webp"
+    },
+    {
+     "id": "pepperoni",
+     "texte": "Pepperoni",
+     "image": "choisirait/pizza/pepperoni.webp"
+    },
+    {
+     "id": "hawaienne",
+     "texte": "Hawaiian",
+     "image": "choisirait/pizza/hawaienne.webp"
+    },
+    {
+     "id": "quatre-fromages",
+     "texte": "Four cheese",
+     "image": "choisirait/pizza/quatre-fromages.webp"
+    },
+    {
+     "id": "calzone",
+     "texte": "Calzone",
+     "image": "choisirait/pizza/calzone.webp"
+    },
+    {
+     "id": "vegetarienne",
+     "texte": "Veggie",
+     "image": "choisirait/pizza/vegetarienne.webp"
+    },
+    {
+     "id": "deep-dish",
+     "texte": "Deep dish",
+     "image": "choisirait/pizza/deep-dish.webp"
+    }
+   ]
+  },
+  "fastfood": {
+   "lui": [
+    "What would he order at 2 a.m.?"
+   ],
+   "elle": [
+    "What would she order at 2 a.m.?"
+   ],
+   "options": [
+    {
+     "id": "burger",
+     "texte": "Burger",
+     "image": "choisirait/fastfood/burger.webp"
+    },
+    {
+     "id": "tacos",
+     "texte": "Tacos",
+     "image": "choisirait/fastfood/tacos.webp"
+    },
+    {
+     "id": "poulet-frit",
+     "texte": "Fried chicken",
+     "image": "choisirait/fastfood/poulet-frit.webp"
+    },
+    {
+     "id": "kebab",
+     "texte": "Kebab",
+     "image": "choisirait/fastfood/kebab.webp"
+    },
+    {
+     "id": "nuggets",
+     "texte": "Nuggets",
+     "image": "choisirait/fastfood/nuggets.webp"
+    },
+    {
+     "id": "burrito",
+     "texte": "Burrito",
+     "image": "choisirait/fastfood/burrito.webp"
+    },
+    {
+     "id": "nouilles",
+     "texte": "Instant noodles",
+     "image": "choisirait/fastfood/nouilles.webp"
+    },
+    {
+     "id": "croque",
+     "texte": "Grilled cheese",
+     "image": "choisirait/fastfood/croque.webp"
+    }
+   ]
+  },
+  "petitdej": {
+   "lui": [
+    "Which breakfast would he choose?",
+    "Which breakfast would he make you?"
+   ],
+   "elle": [
+    "Which breakfast would she choose?",
+    "Which breakfast would she make you?"
+   ],
+   "options": [
+    {
+     "id": "english",
+     "texte": "Full English",
+     "image": "choisirait/petitdej/english.webp"
+    },
+    {
+     "id": "pancakes",
+     "texte": "Pancakes",
+     "image": "choisirait/petitdej/pancakes.webp"
+    },
+    {
+     "id": "croissant-cafe",
+     "texte": "Croissant & coffee",
+     "image": "choisirait/petitdej/croissant-cafe.webp"
+    },
+    {
+     "id": "avocado-toast",
+     "texte": "Avocado toast",
+     "image": "choisirait/petitdej/avocado-toast.webp"
+    },
+    {
+     "id": "gaufres",
+     "texte": "Waffles",
+     "image": "choisirait/petitdej/gaufres.webp"
+    },
+    {
+     "id": "benedict",
+     "texte": "Eggs Benedict",
+     "image": "choisirait/petitdej/benedict.webp"
+    },
+    {
+     "id": "cereales",
+     "texte": "Cereal",
+     "image": "choisirait/petitdej/cereales.webp"
+    },
+    {
+     "id": "acai",
+     "texte": "Açaí bowl",
+     "image": "choisirait/petitdej/acai.webp"
+    },
+    {
+     "id": "pain-perdu",
+     "texte": "French toast",
+     "image": "choisirait/petitdej/pain-perdu.webp"
+    },
+    {
+     "id": "shakshuka",
+     "texte": "Shakshuka",
+     "image": "choisirait/petitdej/shakshuka.webp"
+    }
+   ]
+  },
+  "oeufs": {
+   "lui": [
+    "How would he have his eggs?"
+   ],
+   "elle": [
+    "How would she have her eggs?"
+   ],
+   "options": [
+    {
+     "id": "oeuf-plat",
+     "texte": "Fried",
+     "image": "choisirait/oeufs/oeuf-plat.webp"
+    },
+    {
+     "id": "brouilles",
+     "texte": "Scrambled",
+     "image": "choisirait/oeufs/brouilles.webp"
+    },
+    {
+     "id": "coque",
+     "texte": "Soft-boiled",
+     "image": "choisirait/oeufs/coque.webp"
+    },
+    {
+     "id": "poche",
+     "texte": "Poached",
+     "image": "choisirait/oeufs/poche.webp"
+    },
+    {
+     "id": "omelette",
+     "texte": "Omelette",
+     "image": "choisirait/oeufs/omelette.webp"
+    }
+   ]
+  },
+  "patate": {
+   "lui": [
+    "Which potato would he pick?"
+   ],
+   "elle": [
+    "Which potato would she pick?"
+   ],
+   "options": [
+    {
+     "id": "frites",
+     "texte": "French fries",
+     "image": "choisirait/patate/frites.webp"
+    },
+    {
+     "id": "curly",
+     "texte": "Curly fries",
+     "image": "choisirait/patate/curly.webp"
+    },
+    {
+     "id": "hash-browns",
+     "texte": "Hash browns",
+     "image": "choisirait/patate/hash-browns.webp"
+    },
+    {
+     "id": "rosti",
+     "texte": "Rösti",
+     "image": "choisirait/patate/rosti.webp"
+    },
+    {
+     "id": "gratin",
+     "texte": "Potato gratin",
+     "image": "choisirait/patate/gratin.webp"
+    }
+   ]
+  },
+  "pates": {
+   "lui": [
+    "Which pasta would he pick?"
+   ],
+   "elle": [
+    "Which pasta would she pick?"
+   ],
+   "options": [
+    {
+     "id": "carbonara",
+     "texte": "Carbonara",
+     "image": "choisirait/pates/carbonara.webp"
+    },
+    {
+     "id": "bolognaise",
+     "texte": "Bolognese",
+     "image": "choisirait/pates/bolognaise.webp"
+    },
+    {
+     "id": "lasagnes",
+     "texte": "Lasagna",
+     "image": "choisirait/pates/lasagnes.webp"
+    },
+    {
+     "id": "pesto",
+     "texte": "Pesto",
+     "image": "choisirait/pates/pesto.webp"
+    },
+    {
+     "id": "mac-cheese",
+     "texte": "Mac and cheese",
+     "image": "choisirait/pates/mac-cheese.webp"
+    },
+    {
+     "id": "raviolis",
+     "texte": "Ravioli",
+     "image": "choisirait/pates/raviolis.webp"
+    },
+    {
+     "id": "gnocchi",
+     "texte": "Gnocchi",
+     "image": "choisirait/pates/gnocchi.webp"
+    },
+    {
+     "id": "fruits-mer",
+     "texte": "Seafood pasta",
+     "image": "choisirait/pates/fruits-mer.webp"
+    }
+   ]
+  },
+  "diner": {
+   "lui": [
+    "Which dinner would he pick?",
+    "What would he cook for date night?"
+   ],
+   "elle": [
+    "Which dinner would she pick?",
+    "What would she cook for date night?"
+   ],
+   "options": [
+    {
+     "id": "sushi",
+     "texte": "Sushi",
+     "image": "choisirait/diner/sushi.webp"
+    },
+    {
+     "id": "steak-frites",
+     "texte": "Steak and fries",
+     "image": "choisirait/diner/steak-frites.webp"
+    },
+    {
+     "id": "ramen",
+     "texte": "Ramen",
+     "image": "choisirait/diner/ramen.webp"
+    },
+    {
+     "id": "curry",
+     "texte": "Indian curry",
+     "image": "choisirait/diner/curry.webp"
+    },
+    {
+     "id": "paella",
+     "texte": "Paella",
+     "image": "choisirait/diner/paella.webp"
+    },
+    {
+     "id": "pad-thai",
+     "texte": "Pad thai",
+     "image": "choisirait/diner/pad-thai.webp"
+    },
+    {
+     "id": "fondue",
+     "texte": "Cheese fondue",
+     "image": "choisirait/diner/fondue.webp"
+    },
+    {
+     "id": "raclette",
+     "texte": "Raclette",
+     "image": "choisirait/diner/raclette.webp"
+    },
+    {
+     "id": "risotto",
+     "texte": "Risotto",
+     "image": "choisirait/diner/risotto.webp"
+    },
+    {
+     "id": "homard",
+     "texte": "Lobster",
+     "image": "choisirait/diner/homard.webp"
+    },
+    {
+     "id": "fish-chips",
+     "texte": "Fish and chips",
+     "image": "choisirait/diner/fish-chips.webp"
+    },
+    {
+     "id": "bbq-coreen",
+     "texte": "Korean BBQ",
+     "image": "choisirait/diner/bbq-coreen.webp"
+    }
+   ]
+  },
+  "snack": {
+   "lui": [
+    "Which movie snack would he pick?"
+   ],
+   "elle": [
+    "Which movie snack would she pick?"
+   ],
+   "options": [
+    {
+     "id": "popcorn",
+     "texte": "Popcorn",
+     "image": "choisirait/snack/popcorn.webp"
+    },
+    {
+     "id": "nachos",
+     "texte": "Nachos",
+     "image": "choisirait/snack/nachos.webp"
+    },
+    {
+     "id": "oursons",
+     "texte": "Gummy bears",
+     "image": "choisirait/snack/oursons.webp"
+    },
+    {
+     "id": "tablette",
+     "texte": "Chocolate bar",
+     "image": "choisirait/snack/tablette.webp"
+    },
+    {
+     "id": "pot-glace",
+     "texte": "Ice cream tub",
+     "image": "choisirait/snack/pot-glace.webp"
+    },
+    {
+     "id": "reglisse",
+     "texte": "Licorice",
+     "image": "choisirait/snack/reglisse.webp"
+    }
+   ]
+  },
+  "cafe": {
+   "lui": [
+    "Which coffee would he order?"
+   ],
+   "elle": [
+    "Which coffee would she order?"
+   ],
+   "options": [
+    {
+     "id": "espresso",
+     "texte": "Espresso",
+     "image": "choisirait/cafe/espresso.webp"
+    },
+    {
+     "id": "cappuccino",
+     "texte": "Cappuccino",
+     "image": "choisirait/cafe/cappuccino.webp"
+    },
+    {
+     "id": "iced-latte",
+     "texte": "Iced latte",
+     "image": "choisirait/cafe/iced-latte.webp"
+    },
+    {
+     "id": "matcha",
+     "texte": "Matcha latte",
+     "image": "choisirait/cafe/matcha.webp"
+    },
+    {
+     "id": "americano",
+     "texte": "Americano",
+     "image": "choisirait/cafe/americano.webp"
+    }
+   ]
+  },
+  "bar": {
+   "lui": [
+    "What would he order at the bar?"
+   ],
+   "elle": [
+    "What would she order at the bar?"
+   ],
+   "options": [
+    {
+     "id": "biere",
+     "texte": "Beer",
+     "image": "choisirait/bar/biere.webp"
+    },
+    {
+     "id": "vin-rouge",
+     "texte": "Red wine",
+     "image": "choisirait/bar/vin-rouge.webp"
+    },
+    {
+     "id": "mojito",
+     "texte": "Mojito",
+     "image": "choisirait/bar/mojito.webp"
+    },
+    {
+     "id": "margarita",
+     "texte": "Margarita",
+     "image": "choisirait/bar/margarita.webp"
+    },
+    {
+     "id": "whisky",
+     "texte": "Whiskey",
+     "image": "choisirait/bar/whisky.webp"
+    },
+    {
+     "id": "spritz",
+     "texte": "Aperol Spritz",
+     "image": "choisirait/bar/spritz.webp"
+    },
+    {
+     "id": "pina-colada",
+     "texte": "Piña colada",
+     "image": "choisirait/bar/pina-colada.webp"
+    },
+    {
+     "id": "gin-tonic",
+     "texte": "Gin and tonic",
+     "image": "choisirait/bar/gin-tonic.webp"
+    },
+    {
+     "id": "espresso-martini",
+     "texte": "Espresso martini",
+     "image": "choisirait/bar/espresso-martini.webp"
+    }
+   ]
+  },
+  "boisson": {
+   "lui": [
+    "Which drink would he get?"
+   ],
+   "elle": [
+    "Which drink would she get?"
+   ],
+   "options": [
+    {
+     "id": "bubble-tea",
+     "texte": "Bubble tea",
+     "image": "choisirait/boisson/bubble-tea.webp"
+    },
+    {
+     "id": "smoothie",
+     "texte": "Smoothie",
+     "image": "choisirait/boisson/smoothie.webp"
+    },
+    {
+     "id": "limonade",
+     "texte": "Lemonade",
+     "image": "choisirait/boisson/limonade.webp"
+    },
+    {
+     "id": "the-glace",
+     "texte": "Iced tea",
+     "image": "choisirait/boisson/the-glace.webp"
+    }
+   ]
+  },
+  "date": {
+   "lui": [
+    "Which date would he plan?",
+    "Which date would he take you on?"
+   ],
+   "elle": [
+    "Which date would she plan?",
+    "Which date would she take you on?"
+   ],
+   "options": [
+    {
+     "id": "pique-nique",
+     "texte": "Picnic",
+     "image": "choisirait/date/pique-nique.webp"
+    },
+    {
+     "id": "cinema",
+     "texte": "Cinema night",
+     "image": "choisirait/date/cinema.webp"
+    },
+    {
+     "id": "restaurant",
+     "texte": "Fancy dinner",
+     "image": "choisirait/demande/demande-resto.webp"
+    },
+    {
+     "id": "patinoire",
+     "texte": "Ice skating",
+     "image": "choisirait/date/patinoire.webp"
+    },
+    {
+     "id": "parc",
+     "texte": "Theme park",
+     "image": "choisirait/date/parc.webp"
+    },
+    {
+     "id": "musee",
+     "texte": "Museum",
+     "image": "choisirait/date/musee.webp"
+    },
+    {
+     "id": "coucher-soleil",
+     "texte": "Beach sunset",
+     "image": "choisirait/date/coucher-soleil.webp"
+    },
+    {
+     "id": "camping",
+     "texte": "Camping",
+     "image": "choisirait/date/camping.webp"
+    },
+    {
+     "id": "arcade",
+     "texte": "Arcade",
+     "image": "choisirait/date/arcade.webp"
+    },
+    {
+     "id": "montgolfiere-date",
+     "texte": "Hot air balloon",
+     "image": "choisirait/date/montgolfiere-date.webp"
+    },
+    {
+     "id": "etoiles",
+     "texte": "Stargazing",
+     "image": "choisirait/date/etoiles.webp"
+    },
+    {
+     "id": "degustation",
+     "texte": "Wine tasting",
+     "image": "choisirait/date/degustation.webp"
+    },
+    {
+     "id": "mini-golf",
+     "texte": "Mini golf",
+     "image": "choisirait/date/mini-golf.webp"
+    }
+   ]
+  },
+  "fleurs": {
+   "lui": [
+    "Which flowers would he get you?"
+   ],
+   "elle": [
+    "Which flowers would she want?"
+   ],
+   "options": [
+    {
+     "id": "roses",
+     "texte": "Red roses",
+     "image": "choisirait/fleurs/roses.webp"
+    },
+    {
+     "id": "tournesols",
+     "texte": "Sunflowers",
+     "image": "choisirait/fleurs/tournesols.webp"
+    },
+    {
+     "id": "tulipes",
+     "texte": "Tulips",
+     "image": "choisirait/fleurs/tulipes.webp"
+    },
+    {
+     "id": "pivoines",
+     "texte": "Peonies",
+     "image": "choisirait/fleurs/pivoines.webp"
+    },
+    {
+     "id": "lys",
+     "texte": "Lilies",
+     "image": "choisirait/fleurs/lys.webp"
+    },
+    {
+     "id": "marguerites",
+     "texte": "Daisies",
+     "image": "choisirait/fleurs/marguerites.webp"
+    },
+    {
+     "id": "orchidee",
+     "texte": "Orchid",
+     "image": "choisirait/fleurs/orchidee.webp"
+    },
+    {
+     "id": "lavande",
+     "texte": "Lavender",
+     "image": "choisirait/fleurs/lavande.webp"
+    },
+    {
+     "id": "hortensias",
+     "texte": "Hydrangeas",
+     "image": "choisirait/fleurs/hortensias.webp"
+    },
+    {
+     "id": "fleurs-sauvages",
+     "texte": "Wildflowers",
+     "image": "choisirait/fleurs/fleurs-sauvages.webp"
+    }
+   ]
+  },
+  "cadeau": {
+   "lui": [
+    "Which gift would he want?",
+    "Which gift would make him happy?"
+   ],
+   "elle": [
+    "Which gift would she want?",
+    "Which gift would make her happy?"
+   ],
+   "options": [
+    {
+     "id": "montre-cadeau",
+     "texte": "Watch",
+     "image": "choisirait/cadeau/montre-cadeau.webp"
+    },
+    {
+     "id": "console-cadeau",
+     "texte": "Game console",
+     "image": "choisirait/cadeau/console-cadeau.webp"
+    },
+    {
+     "id": "parfum",
+     "texte": "Perfume",
+     "image": "choisirait/cadeau/parfum.webp"
+    },
+    {
+     "id": "baskets-cadeau",
+     "texte": "Sneakers",
+     "image": "choisirait/cadeau/baskets-cadeau.webp"
+    },
+    {
+     "id": "casque",
+     "texte": "Headphones",
+     "image": "choisirait/cadeau/casque.webp"
+    },
+    {
+     "id": "appareil-photo",
+     "texte": "Camera",
+     "image": "choisirait/cadeau/appareil-photo.webp"
+    },
+    {
+     "id": "livre",
+     "texte": "Book",
+     "image": "choisirait/cadeau/livre.webp"
+    },
+    {
+     "id": "guitare",
+     "texte": "Guitar",
+     "image": "choisirait/instrument/guitare-acoustique.webp"
+    },
+    {
+     "id": "drone",
+     "texte": "Drone",
+     "image": "choisirait/cadeau/drone.webp"
+    },
+    {
+     "id": "vinyles",
+     "texte": "Vinyl records",
+     "image": "choisirait/cadeau/vinyles.webp"
+    },
+    {
+     "id": "lego",
+     "texte": "Lego set",
+     "image": "choisirait/cadeau/lego.webp"
+    }
+   ]
+  },
+  "bague": {
+   "lui": [
+    "Which ring would he pick for you?"
+   ],
+   "elle": [
+    "Which ring would she want?"
+   ],
+   "options": [
+    {
+     "id": "solitaire",
+     "texte": "Solitaire diamond",
+     "image": "choisirait/bague/solitaire.webp"
+    },
+    {
+     "id": "halo",
+     "texte": "Halo ring",
+     "image": "choisirait/bague/halo.webp"
+    },
+    {
+     "id": "vintage-bague",
+     "texte": "Vintage ring",
+     "image": "choisirait/bague/vintage-bague.webp"
+    },
+    {
+     "id": "alliance-or",
+     "texte": "Gold band",
+     "image": "choisirait/bague/alliance-or.webp"
+    },
+    {
+     "id": "emeraude",
+     "texte": "Emerald ring",
+     "image": "choisirait/bague/emeraude.webp"
+    },
+    {
+     "id": "or-rose",
+     "texte": "Rose gold ring",
+     "image": "choisirait/bague/or-rose.webp"
+    }
+   ]
+  },
+  "mariage": {
+   "lui": [
+    "Where would he want to get married?"
+   ],
+   "elle": [
+    "Where would she want to get married?"
+   ],
+   "options": [
+    {
+     "id": "mariage-plage",
+     "texte": "Beach",
+     "image": "choisirait/vue/plage-tropicale.webp"
+    },
+    {
+     "id": "mariage-chateau",
+     "texte": "Castle",
+     "image": "choisirait/mariage/mariage-chateau.webp"
+    },
+    {
+     "id": "mariage-jardin",
+     "texte": "Garden",
+     "image": "choisirait/mariage/mariage-jardin.webp"
+    },
+    {
+     "id": "vegas",
+     "texte": "Vegas chapel",
+     "image": "choisirait/mariage/vegas.webp"
+    },
+    {
+     "id": "mairie",
+     "texte": "City hall",
+     "image": "choisirait/mariage/mairie.webp"
+    },
+    {
+     "id": "vignoble",
+     "texte": "Vineyard",
+     "image": "choisirait/vue/vignes.webp"
+    },
+    {
+     "id": "mariage-foret",
+     "texte": "Forest",
+     "image": "choisirait/vue/foret.webp"
+    },
+    {
+     "id": "sommet",
+     "texte": "Mountaintop",
+     "image": "choisirait/mariage/sommet.webp"
+    },
+    {
+     "id": "bord-lac",
+     "texte": "Lakeside",
+     "image": "choisirait/vue/lac.webp"
+    }
+   ]
+  },
+  "demande": {
+   "lui": [
+    "Where would he propose?"
+   ],
+   "elle": [
+    "Where would she want you to propose?"
+   ],
+   "options": [
+    {
+     "id": "demande-eiffel",
+     "texte": "Eiffel Tower",
+     "image": "choisirait/demande/demande-eiffel.webp"
+    },
+    {
+     "id": "demande-plage",
+     "texte": "Beach at sunset",
+     "image": "choisirait/demande/demande-plage.webp"
+    },
+    {
+     "id": "demande-montagne",
+     "texte": "Mountaintop",
+     "image": "choisirait/demande/demande-montagne.webp"
+    },
+    {
+     "id": "demande-resto",
+     "texte": "Restaurant",
+     "image": "choisirait/demande/demande-resto.webp"
+    },
+    {
+     "id": "demande-montgolfiere",
+     "texte": "Hot air balloon",
+     "image": "choisirait/demande/demande-montgolfiere.webp"
+    },
+    {
+     "id": "demande-aurores",
+     "texte": "Northern lights",
+     "image": "choisirait/demande/demande-aurores.webp"
+    },
+    {
+     "id": "demande-rooftop",
+     "texte": "Rooftop",
+     "image": "choisirait/demande/demande-rooftop.webp"
+    },
+    {
+     "id": "demande-chateau",
+     "texte": "Disney castle",
+     "image": "choisirait/demande/demande-chateau.webp"
+    }
+   ]
+  },
+  "sport": {
+   "lui": [
+    "Which sport would he watch?"
+   ],
+   "elle": [
+    "Which sport would she watch?"
+   ],
+   "options": [
+    {
+     "id": "foot",
+     "texte": "Football",
+     "image": "choisirait/sport/foot.webp"
+    },
+    {
+     "id": "basket",
+     "texte": "Basketball",
+     "image": "choisirait/sport/basket.webp"
+    },
+    {
+     "id": "tennis",
+     "texte": "Tennis",
+     "image": "choisirait/sport/tennis.webp"
+    },
+    {
+     "id": "f1",
+     "texte": "Formula 1",
+     "image": "choisirait/sport/f1.webp"
+    },
+    {
+     "id": "boxe",
+     "texte": "Boxing",
+     "image": "choisirait/sport/boxe.webp"
+    },
+    {
+     "id": "golf",
+     "texte": "Golf",
+     "image": "choisirait/sport/golf.webp"
+    },
+    {
+     "id": "foot-us",
+     "texte": "American football",
+     "image": "choisirait/sport/foot-us.webp"
+    },
+    {
+     "id": "hockey",
+     "texte": "Ice hockey",
+     "image": "choisirait/sport/hockey.webp"
+    },
+    {
+     "id": "rugby",
+     "texte": "Rugby",
+     "image": "choisirait/sport/rugby.webp"
+    },
+    {
+     "id": "baseball",
+     "texte": "Baseball",
+     "image": "choisirait/sport/baseball.webp"
+    }
+   ]
+  },
+  "aventure": {
+   "lui": [
+    "Which adventure would he try?"
+   ],
+   "elle": [
+    "Which adventure would she try?"
+   ],
+   "options": [
+    {
+     "id": "surf",
+     "texte": "Surfing",
+     "image": "choisirait/aventure/surf.webp"
+    },
+    {
+     "id": "ski",
+     "texte": "Skiing",
+     "image": "choisirait/aventure/ski.webp"
+    },
+    {
+     "id": "escalade",
+     "texte": "Rock climbing",
+     "image": "choisirait/aventure/escalade.webp"
+    },
+    {
+     "id": "parachute",
+     "texte": "Skydiving",
+     "image": "choisirait/aventure/parachute.webp"
+    },
+    {
+     "id": "plongee",
+     "texte": "Scuba diving",
+     "image": "choisirait/aventure/plongee.webp"
+    },
+    {
+     "id": "snowboard",
+     "texte": "Snowboarding",
+     "image": "choisirait/aventure/snowboard.webp"
+    },
+    {
+     "id": "kayak",
+     "texte": "Kayaking",
+     "image": "choisirait/aventure/kayak.webp"
+    },
+    {
+     "id": "saut-elastique",
+     "texte": "Bungee jumping",
+     "image": "choisirait/aventure/saut-elastique.webp"
+    },
+    {
+     "id": "parapente",
+     "texte": "Paragliding",
+     "image": "choisirait/aventure/parapente.webp"
+    },
+    {
+     "id": "equitation",
+     "texte": "Horse riding",
+     "image": "choisirait/aventure/equitation.webp"
+    }
+   ]
+  },
+  "console": {
+   "lui": [
+    "Which console would he pick?"
+   ],
+   "elle": [
+    "Which console would she pick?"
+   ],
+   "options": [
+    {
+     "id": "ps5",
+     "texte": "PlayStation 5",
+     "image": "choisirait/console/ps5.webp"
+    },
+    {
+     "id": "xbox",
+     "texte": "Xbox",
+     "image": "choisirait/console/xbox.webp"
+    },
+    {
+     "id": "switch",
+     "texte": "Nintendo Switch",
+     "image": "choisirait/console/switch.webp"
+    },
+    {
+     "id": "gameboy",
+     "texte": "Game Boy",
+     "image": "choisirait/console/gameboy.webp"
+    },
+    {
+     "id": "pc-gamer",
+     "texte": "Gaming PC",
+     "image": "choisirait/console/pc-gamer.webp"
+    },
+    {
+     "id": "ps2",
+     "texte": "PlayStation 2",
+     "image": "choisirait/console/ps2.webp"
+    }
+   ]
+  },
+  "instrument": {
+   "lui": [
+    "Which instrument would he play?"
+   ],
+   "elle": [
+    "Which instrument would she play?"
+   ],
+   "options": [
+    {
+     "id": "guitare-electrique",
+     "texte": "Electric guitar",
+     "image": "choisirait/instrument/guitare-electrique.webp"
+    },
+    {
+     "id": "piano",
+     "texte": "Piano",
+     "image": "choisirait/instrument/piano.webp"
+    },
+    {
+     "id": "batterie",
+     "texte": "Drums",
+     "image": "choisirait/instrument/batterie.webp"
+    },
+    {
+     "id": "violon",
+     "texte": "Violin",
+     "image": "choisirait/instrument/violon.webp"
+    },
+    {
+     "id": "saxophone",
+     "texte": "Saxophone",
+     "image": "choisirait/instrument/saxophone.webp"
+    },
+    {
+     "id": "platines",
+     "texte": "DJ decks",
+     "image": "choisirait/instrument/platines.webp"
+    },
+    {
+     "id": "guitare-acoustique",
+     "texte": "Acoustic guitar",
+     "image": "choisirait/instrument/guitare-acoustique.webp"
+    },
+    {
+     "id": "trompette",
+     "texte": "Trumpet",
+     "image": "choisirait/instrument/trompette.webp"
+    }
+   ]
+  },
+  "loisir": {
+   "lui": [
+    "Which hobby would he pick up?"
+   ],
+   "elle": [
+    "Which hobby would she pick up?"
+   ],
+   "options": [
+    {
+     "id": "photo",
+     "texte": "Photography",
+     "image": "choisirait/loisir/photo.webp"
+    },
+    {
+     "id": "jardinage",
+     "texte": "Gardening",
+     "image": "choisirait/loisir/jardinage.webp"
+    },
+    {
+     "id": "peche",
+     "texte": "Fishing",
+     "image": "choisirait/loisir/peche.webp"
+    },
+    {
+     "id": "poterie",
+     "texte": "Pottery",
+     "image": "choisirait/loisir/poterie.webp"
+    },
+    {
+     "id": "echecs",
+     "texte": "Chess",
+     "image": "choisirait/loisir/echecs.webp"
+    },
+    {
+     "id": "menuiserie",
+     "texte": "Woodworking",
+     "image": "choisirait/loisir/menuiserie.webp"
+    },
+    {
+     "id": "tricot",
+     "texte": "Knitting",
+     "image": "choisirait/loisir/tricot.webp"
+    }
+   ]
+  },
+  "jeu": {
+   "lui": [
+    "Which game night would he pick?"
+   ],
+   "elle": [
+    "Which game night would she pick?"
+   ],
+   "options": [
+    {
+     "id": "echecs-soir",
+     "texte": "Chess",
+     "image": "choisirait/jeu/echecs-soir.webp"
+    },
+    {
+     "id": "poker",
+     "texte": "Poker",
+     "image": "choisirait/jeu/poker.webp"
+    },
+    {
+     "id": "jeux-video",
+     "texte": "Video games",
+     "image": "choisirait/jeu/jeux-video.webp"
+    },
+    {
+     "id": "billard",
+     "texte": "Pool",
+     "image": "choisirait/jeu/billard.webp"
+    },
+    {
+     "id": "ping-pong",
+     "texte": "Ping pong",
+     "image": "choisirait/jeu/ping-pong.webp"
+    },
+    {
+     "id": "baby-foot",
+     "texte": "Foosball",
+     "image": "choisirait/jeu/baby-foot.webp"
+    },
+    {
+     "id": "jeux-societe",
+     "texte": "Board games",
+     "image": "choisirait/jeu/jeux-societe.webp"
+    }
+   ]
+  },
+  "salle": {
+   "lui": [
+    "Which workout would he pick?"
+   ],
+   "elle": [
+    "Which workout would she pick?"
+   ],
+   "options": [
+    {
+     "id": "muscu",
+     "texte": "Weightlifting",
+     "image": "choisirait/salle/muscu.webp"
+    },
+    {
+     "id": "course",
+     "texte": "Running",
+     "image": "choisirait/salle/course.webp"
+    },
+    {
+     "id": "yoga",
+     "texte": "Yoga",
+     "image": "choisirait/salle/yoga.webp"
+    },
+    {
+     "id": "boxe-salle",
+     "texte": "Boxing",
+     "image": "choisirait/salle/boxe-salle.webp"
+    },
+    {
+     "id": "natation",
+     "texte": "Swimming",
+     "image": "choisirait/salle/natation.webp"
+    },
+    {
+     "id": "velo",
+     "texte": "Cycling",
+     "image": "choisirait/salle/velo.webp"
+    },
+    {
+     "id": "crossfit",
+     "texte": "CrossFit",
+     "image": "choisirait/salle/crossfit.webp"
+    }
+   ]
+  },
+  "montre": {
+   "lui": [
+    "Which watch would he wear?"
+   ],
+   "elle": [
+    "Which watch would she wear?"
+   ],
+   "options": [
+    {
+     "id": "rolex",
+     "texte": "Rolex Submariner",
+     "image": "choisirait/montre/rolex.webp"
+    },
+    {
+     "id": "g-shock",
+     "texte": "Casio G-Shock",
+     "image": "choisirait/montre/g-shock.webp"
+    },
+    {
+     "id": "speedmaster",
+     "texte": "Omega Speedmaster",
+     "image": "choisirait/montre/speedmaster.webp"
+    },
+    {
+     "id": "casio",
+     "texte": "Casio digital",
+     "image": "choisirait/montre/casio.webp"
+    },
+    {
+     "id": "cartier",
+     "texte": "Cartier Tank",
+     "image": "choisirait/montre/cartier.webp"
+    },
+    {
+     "id": "gousset",
+     "texte": "Pocket watch",
+     "image": "choisirait/montre/gousset.webp"
+    },
+    {
+     "id": "seiko",
+     "texte": "Seiko diver",
+     "image": "choisirait/montre/seiko.webp"
+    }
+   ]
+  },
+  "baskets": {
+   "lui": [
+    "Which sneakers would he pick?"
+   ],
+   "elle": [
+    "Which sneakers would she pick?"
+   ],
+   "options": [
+    {
+     "id": "air-force",
+     "texte": "Air Force 1",
+     "image": "choisirait/baskets/air-force.webp"
+    },
+    {
+     "id": "jordan",
+     "texte": "Air Jordan",
+     "image": "choisirait/baskets/jordan.webp"
+    },
+    {
+     "id": "samba",
+     "texte": "Adidas Samba",
+     "image": "choisirait/baskets/samba.webp"
+    },
+    {
+     "id": "new-balance",
+     "texte": "New Balance",
+     "image": "choisirait/baskets/new-balance.webp"
+    },
+    {
+     "id": "vans",
+     "texte": "Vans Old Skool",
+     "image": "choisirait/baskets/vans.webp"
+    },
+    {
+     "id": "air-max",
+     "texte": "Nike Air Max",
+     "image": "choisirait/baskets/air-max.webp"
+    },
+    {
+     "id": "stan-smith",
+     "texte": "Stan Smith",
+     "image": "choisirait/baskets/stan-smith.webp"
+    },
+    {
+     "id": "crocs",
+     "texte": "Crocs",
+     "image": "choisirait/baskets/crocs.webp"
+    },
+    {
+     "id": "birkenstock",
+     "texte": "Birkenstock",
+     "image": "choisirait/baskets/birkenstock.webp"
+    }
+   ]
+  },
+  "chaussures": {
+   "lui": [],
+   "elle": [
+    "Which shoes would she pick?"
+   ],
+   "options": [
+    {
+     "id": "talons",
+     "texte": "High heels",
+     "image": "choisirait/chaussures/talons.webp"
+    },
+    {
+     "id": "ballerines",
+     "texte": "Ballet flats",
+     "image": "choisirait/chaussures/ballerines.webp"
+    },
+    {
+     "id": "cuissardes",
+     "texte": "Knee-high boots",
+     "image": "choisirait/chaussures/cuissardes.webp"
+    },
+    {
+     "id": "ugg",
+     "texte": "UGG boots",
+     "image": "choisirait/chaussures/ugg.webp"
+    }
+   ]
+  },
+  "telephone": {
+   "lui": [
+    "Which phone would he pick?"
+   ],
+   "elle": [
+    "Which phone would she pick?"
+   ],
+   "options": [
+    {
+     "id": "iphone",
+     "texte": "iPhone",
+     "image": "choisirait/telephone/iphone.webp"
+    },
+    {
+     "id": "galaxy",
+     "texte": "Samsung Galaxy",
+     "image": "choisirait/telephone/galaxy.webp"
+    },
+    {
+     "id": "pixel",
+     "texte": "Google Pixel",
+     "image": "choisirait/telephone/pixel.webp"
+    },
+    {
+     "id": "nokia",
+     "texte": "Nokia 3310",
+     "image": "choisirait/telephone/nokia.webp"
+    },
+    {
+     "id": "clapet",
+     "texte": "Flip phone",
+     "image": "choisirait/telephone/clapet.webp"
+    },
+    {
+     "id": "blackberry",
+     "texte": "BlackBerry",
+     "image": "choisirait/telephone/blackberry.webp"
+    }
+   ]
+  },
+  "saison": {
+   "lui": [
+    "Which season would he pick?"
+   ],
+   "elle": [
+    "Which season would she pick?"
+   ],
+   "options": [
+    {
+     "id": "ete",
+     "texte": "Summer",
+     "image": "choisirait/saison/ete.webp"
+    },
+    {
+     "id": "automne",
+     "texte": "Autumn",
+     "image": "choisirait/saison/automne.webp"
+    },
+    {
+     "id": "hiver-saison",
+     "texte": "Winter",
+     "image": "choisirait/saison/hiver-saison.webp"
+    },
+    {
+     "id": "printemps",
+     "texte": "Spring",
+     "image": "choisirait/saison/printemps.webp"
+    }
+   ]
+  },
+  "noel-gourmandise": {
+   "lui": [
+    "Which Christmas treat would he pick?"
+   ],
+   "elle": [
+    "Which Christmas treat would she pick?"
+   ],
+   "options": [
+    {
+     "id": "pain-epices",
+     "texte": "Gingerbread cookies",
+     "image": "choisirait/noel-gourmandise/pain-epices.webp"
+    },
+    {
+     "id": "sucres-orge",
+     "texte": "Candy canes",
+     "image": "choisirait/noel-gourmandise/sucres-orge.webp"
+    },
+    {
+     "id": "buche",
+     "texte": "Yule log",
+     "image": "choisirait/noel-gourmandise/buche.webp"
+    },
+    {
+     "id": "pudding",
+     "texte": "Christmas pudding",
+     "image": "choisirait/noel-gourmandise/pudding.webp"
+    },
+    {
+     "id": "panettone",
+     "texte": "Panettone",
+     "image": "choisirait/noel-gourmandise/panettone.webp"
+    },
+    {
+     "id": "mince-pies",
+     "texte": "Mince pies",
+     "image": "choisirait/noel-gourmandise/mince-pies.webp"
+    },
+    {
+     "id": "stollen",
+     "texte": "Stollen",
+     "image": "choisirait/noel-gourmandise/stollen.webp"
+    },
+    {
+     "id": "maison-pain-epices",
+     "texte": "Gingerbread house",
+     "image": "choisirait/noel-gourmandise/maison-pain-epices.webp"
+    },
+    {
+     "id": "chocolat-noel",
+     "texte": "Hot chocolate",
+     "image": "choisirait/noel-gourmandise/chocolat-noel.webp"
+    }
+   ]
+  },
+  "noel-sortie": {
+   "lui": [
+    "Which Christmas date would he plan?"
+   ],
+   "elle": [
+    "Which Christmas date would she plan?"
+   ],
+   "options": [
+    {
+     "id": "marche-noel",
+     "texte": "Christmas market",
+     "image": "choisirait/noel-sortie/marche-noel.webp"
+    },
+    {
+     "id": "patinoire-noel",
+     "texte": "Ice skating",
+     "image": "choisirait/noel-sortie/patinoire-noel.webp"
+    },
+    {
+     "id": "illuminations",
+     "texte": "Christmas lights",
+     "image": "choisirait/noel-sortie/illuminations.webp"
+    },
+    {
+     "id": "film-sapin",
+     "texte": "Movie by the tree",
+     "image": "choisirait/noel-sortie/film-sapin.webp"
+    },
+    {
+     "id": "chalet-noel",
+     "texte": "Snowy chalet",
+     "image": "choisirait/noel-sortie/chalet-noel.webp"
+    }
+   ]
+  },
+  "nouvel-an": {
+   "lui": [
+    "Where would he spend New Year's Eve?"
+   ],
+   "elle": [
+    "Where would she spend New Year's Eve?"
+   ],
+   "options": [
+    {
+     "id": "feux-artifice",
+     "texte": "City fireworks",
+     "image": "choisirait/nouvel-an/feux-artifice.webp"
+    },
+    {
+     "id": "soiree-maison",
+     "texte": "Cozy night in",
+     "image": "choisirait/nouvel-an/soiree-maison.webp"
+    },
+    {
+     "id": "soiree-chalet",
+     "texte": "Mountain chalet",
+     "image": "choisirait/nouvel-an/soiree-chalet.webp"
+    },
+    {
+     "id": "plage-nouvel-an",
+     "texte": "Tropical beach",
+     "image": "choisirait/nouvel-an/plage-nouvel-an.webp"
+    },
+    {
+     "id": "times-square",
+     "texte": "Times Square",
+     "image": "choisirait/nouvel-an/times-square.webp"
+    },
+    {
+     "id": "rooftop-nouvel-an",
+     "texte": "Rooftop party",
+     "image": "choisirait/nouvel-an/rooftop-nouvel-an.webp"
+    }
+   ]
+  },
+  "valentin": {
+   "lui": [
+    "What would he get you for Valentine's?"
+   ],
+   "elle": [
+    "What would she want for Valentine's?"
+   ],
+   "options": [
+    {
+     "id": "valentin-roses",
+     "texte": "Red roses",
+     "image": "choisirait/valentin/valentin-roses.webp"
+    },
+    {
+     "id": "boite-chocolats",
+     "texte": "Box of chocolates",
+     "image": "choisirait/valentin/boite-chocolats.webp"
+    },
+    {
+     "id": "bijou",
+     "texte": "Jewelry",
+     "image": "choisirait/valentin/bijou.webp"
+    },
+    {
+     "id": "lettre",
+     "texte": "Love letter",
+     "image": "choisirait/valentin/lettre.webp"
+    },
+    {
+     "id": "parfum-valentin",
+     "texte": "Perfume",
+     "image": "choisirait/valentin/parfum-valentin.webp"
+    },
+    {
+     "id": "ballons-coeur",
+     "texte": "Heart balloons",
+     "image": "choisirait/valentin/ballons-coeur.webp"
+    },
+    {
+     "id": "petit-dej-lit",
+     "texte": "Breakfast in bed",
+     "image": "choisirait/valentin/petit-dej-lit.webp"
+    }
+   ]
+  },
+  "hiver": {
+   "lui": [
+    "Which winter date would he pick?"
+   ],
+   "elle": [
+    "Which winter date would she pick?"
+   ],
+   "options": [
+    {
+     "id": "hiver-ski",
+     "texte": "Skiing",
+     "image": "choisirait/hiver/hiver-ski.webp"
+    },
+    {
+     "id": "hiver-patin",
+     "texte": "Ice skating",
+     "image": "choisirait/hiver/hiver-patin.webp"
+    },
+    {
+     "id": "luge",
+     "texte": "Sledding",
+     "image": "choisirait/hiver/luge.webp"
+    },
+    {
+     "id": "bonhomme",
+     "texte": "Building a snowman",
+     "image": "choisirait/hiver/bonhomme.webp"
+    },
+    {
+     "id": "jacuzzi",
+     "texte": "Hot tub in the snow",
+     "image": "choisirait/hiver/jacuzzi.webp"
+    },
+    {
+     "id": "feu-cheminee",
+     "texte": "Cabin by the fire",
+     "image": "choisirait/hiver/feu-cheminee.webp"
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,92 @@
+{
+  "jour": "2027-03-18",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-213",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "elle",
+        "etiquette": "Dream home edition",
+        "accroche": "What would she choose?",
+        "consigne": "Guess her 3 picks, then send it to her!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "Which cat would she adopt?",
+            "options": [
+              {
+                "texte": "Black cat",
+                "image": "choisirait/chat/chat-noir.webp"
+              },
+              {
+                "texte": "British Shorthair",
+                "image": "choisirait/chat/british.webp"
+              },
+              {
+                "texte": "Maine Coon",
+                "image": "choisirait/chat/maine-coon.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which dog would she pick?",
+            "options": [
+              {
+                "texte": "Dachshund",
+                "image": "choisirait/chien/teckel.webp"
+              },
+              {
+                "texte": "French Bulldog",
+                "image": "choisirait/chien/bouledogue.webp"
+              },
+              {
+                "texte": "Dalmatian",
+                "image": "choisirait/chien/dalmatien.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which view would she wake up to?",
+            "options": [
+              {
+                "texte": "Lake",
+                "image": "choisirait/vue/lac.webp"
+              },
+              {
+                "texte": "Rice fields",
+                "image": "choisirait/vue/rizieres.webp"
+              },
+              {
+                "texte": "Eiffel Tower",
+                "image": "choisirait/vue/tour-eiffel.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Got her 3 picks? Send it and see!",
+          "bouton": "Send this to her",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Dream home edition. Guess first, send it after. Then compare.\n\nSend this to her",
+      "hashtags": [
+        "#couplequiz",
+        "#girlfriendquiz",
+        "#thisorthat",
+        "#dreamhome",
+        "#quizcouple"
+      ]
+    }
+  }
+}

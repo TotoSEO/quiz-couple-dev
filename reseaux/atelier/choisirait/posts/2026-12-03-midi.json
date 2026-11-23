@@ -1,0 +1,92 @@
+{
+  "jour": "2026-12-03",
+  "creneau": "midi",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-019",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "lui",
+        "etiquette": "Dream home edition",
+        "accroche": "What would he choose?",
+        "consigne": "3 questions, 4 seconds each. Pick for him!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "Which cat would he adopt?",
+            "options": [
+              {
+                "texte": "Norwegian Forest Cat",
+                "image": "choisirait/chat/norvegien.webp"
+              },
+              {
+                "texte": "Ginger cat",
+                "image": "choisirait/chat/chat-roux.webp"
+              },
+              {
+                "texte": "Sphynx",
+                "image": "choisirait/chat/sphynx.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which view would he wake up to?",
+            "options": [
+              {
+                "texte": "Ocean",
+                "image": "choisirait/vue/ocean.webp"
+              },
+              {
+                "texte": "Tropical beach",
+                "image": "choisirait/vue/plage-tropicale.webp"
+              },
+              {
+                "texte": "Northern lights",
+                "image": "choisirait/vue/aurores.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which dog would he adopt?",
+            "options": [
+              {
+                "texte": "Husky",
+                "image": "choisirait/chien/husky.webp"
+              },
+              {
+                "texte": "Beagle",
+                "image": "choisirait/chien/beagle.webp"
+              },
+              {
+                "texte": "Bernese Mountain Dog",
+                "image": "choisirait/chien/bouvier.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Now send it to him. Did you guess right?",
+          "bouton": "Send this to him",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Dream home edition. One letter per question, then send it to him.\n\nSend this to him",
+      "hashtags": [
+        "#couplequiz",
+        "#boyfriendquiz",
+        "#thisorthat",
+        "#dreamhome",
+        "#quizcouple"
+      ]
+    }
+  }
+}

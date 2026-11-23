@@ -1,0 +1,92 @@
+{
+  "jour": "2027-03-23",
+  "creneau": "midi",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-223",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "lui",
+        "etiquette": "Dream home edition",
+        "accroche": "What would he choose?",
+        "consigne": "3 questions, 4 seconds each. Pick for him!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "Which cat would he adopt?",
+            "options": [
+              {
+                "texte": "Siamese",
+                "image": "choisirait/chat/siamois.webp"
+              },
+              {
+                "texte": "Black cat",
+                "image": "choisirait/chat/chat-noir.webp"
+              },
+              {
+                "texte": "Bengal",
+                "image": "choisirait/chat/bengal.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which dog would he pick?",
+            "options": [
+              {
+                "texte": "Cavalier King Charles",
+                "image": "choisirait/chien/cavalier.webp"
+              },
+              {
+                "texte": "Doberman",
+                "image": "choisirait/chien/dobermann.webp"
+              },
+              {
+                "texte": "Bernese Mountain Dog",
+                "image": "choisirait/chien/bouvier.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which dream house would he pick?",
+            "options": [
+              {
+                "texte": "Beach house",
+                "image": "choisirait/maison/maison-plage.webp"
+              },
+              {
+                "texte": "Tiny house",
+                "image": "choisirait/maison/tiny-house.webp"
+              },
+              {
+                "texte": "Loft apartment",
+                "image": "choisirait/maison/loft.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Now send it to him. Did you guess right?",
+          "bouton": "Send this to him",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Dream home edition. Guess first, send it after. Then compare.\n\nSend this to him",
+      "hashtags": [
+        "#couplequiz",
+        "#boyfriendquiz",
+        "#thisorthat",
+        "#dreamhome",
+        "#quizcouple"
+      ]
+    }
+  }
+}

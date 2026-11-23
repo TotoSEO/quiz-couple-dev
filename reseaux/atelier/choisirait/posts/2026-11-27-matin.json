@@ -1,0 +1,92 @@
+{
+  "jour": "2026-11-27",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-007",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "lui",
+        "etiquette": "Wedding edition",
+        "accroche": "What would he choose?",
+        "consigne": "3 questions, 4 seconds each. Pick for him!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "Where would he want to get married?",
+            "options": [
+              {
+                "texte": "Vegas chapel",
+                "image": "choisirait/mariage/vegas.webp"
+              },
+              {
+                "texte": "Forest",
+                "image": "choisirait/vue/foret.webp"
+              },
+              {
+                "texte": "City hall",
+                "image": "choisirait/mariage/mairie.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which ring would he pick for you?",
+            "options": [
+              {
+                "texte": "Halo ring",
+                "image": "choisirait/bague/halo.webp"
+              },
+              {
+                "texte": "Solitaire diamond",
+                "image": "choisirait/bague/solitaire.webp"
+              },
+              {
+                "texte": "Vintage ring",
+                "image": "choisirait/bague/vintage-bague.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which flowers would he get you?",
+            "options": [
+              {
+                "texte": "Lilies",
+                "image": "choisirait/fleurs/lys.webp"
+              },
+              {
+                "texte": "Lavender",
+                "image": "choisirait/fleurs/lavande.webp"
+              },
+              {
+                "texte": "Red roses",
+                "image": "choisirait/fleurs/roses.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Now send it to him. Did you guess right?",
+          "bouton": "Send this to him",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Wedding edition. He will swear you got at least one wrong.\n\nSend this to him",
+      "hashtags": [
+        "#couplequiz",
+        "#boyfriendquiz",
+        "#thisorthat",
+        "#engaged",
+        "#quizcouple"
+      ]
+    }
+  }
+}

@@ -58,7 +58,34 @@ dans le lit. Une image qui ne bouge pas est un reel qu'on fait défiler.
 
 ## La semaine type (heure de Paris)
 
-Huit reels par semaine depuis le 26 octobre 2026, et rien d'autre. Thomas,
+**Vingt et un reels par semaine depuis le 24 novembre 2026** : les huit du
+soir (et du samedi midi) ne bougent pas, et les matins comme les midis, sauf
+le samedi midi, passent au nouveau jeu « What would he/she choose? »
+(catégorie `choisirait`, voir plus bas), treize reels de plus par semaine.
+Thomas, le 23 novembre 2026 : « faire un max de réels en plus de ceux
+programmés [...] on spam ça ». Ces treize-là sont écrits d'avance jusqu'au
+31 mars 2027 par une fabrique, sans Claude (`choisirait/fabrique.mjs`), et
+vivent sur `main` dans `reseaux/atelier/choisirait/posts/`, que la synchro
+lit à côté de la branche de l'atelier.
+
+| | Matin | Midi | Après-midi (16 h-18 h) |
+|---|---|---|---|
+| Lundi | Choisirait | Choisirait | Tu préfères |
+| Mardi | Choisirait | Choisirait | Connais-tu |
+| Mercredi | Choisirait | Choisirait | Tu préfères |
+| Jeudi | Choisirait | Choisirait | Tu préfères |
+| Vendredi | Choisirait | Choisirait | Connais-tu |
+| Samedi | Choisirait | Tu préfères | Bonhomme bâton |
+| Dimanche | Choisirait | Choisirait | Tu préfères |
+
+La story du jour reprend désormais le reel du matin, un « choisirait » :
+c'est le format fait pour être envoyé. La migration
+`20261123090000_choisirait_matins_midis.sql` porte cette grille dans le
+réglage `melange` (la même que `MELANGE_DEFAUT`).
+
+### La grille du 26 octobre au 23 novembre 2026
+
+Huit reels par semaine, et rien d'autre. Thomas,
 ce jour-là : il ne reprend sans doute pas l'abonnement Claude, « il faut
 préparer une grande quantité de posts [...] publier un peu moins pour
 préparer une mise en ligne automatisée sans plus aucune intervention de
@@ -244,6 +271,68 @@ suite sur les dilemmes. Renvoi vers le site possible, comme les jeux.
 108 éditions dans la banque (`tu-preferes`), dont celles de Noël et du
 Nouvel An, réservées à leur date.
 
+### `choisirait` : What would he/she choose? (gabarit `choisirait`)
+
+Le jeu du 23 novembre 2026, l'idée de Thomas : « Une personne en couple tombe
+sur le réel, et le réel montre [...] "qu'est-ce qu'il choisirait" parmi 3
+propositions à chaque fois [...] le but c'est que la fille réponde à la place
+du garçon, puis qu'il lui partage sur insta en mode : pour moi tu prends
+AAC ». Tous les matins et tous les midis sauf le samedi.
+
+Le reel : l'édition en étiquette (« Dream life edition », « Food edition »...),
+l'accroche « What would he choose? » (ou « she »), une consigne (« Guess his 3
+picks, then send it to him! »), puis **trois questions de trois photos**
+(« Which car would he pick? » : Porsche 911, Lamborghini Huracán,
+Mercedes-AMG C63 S), chaque photo marquée A, B ou C avec son nom, quatre
+secondes de chrono par question, la mascotte qui réfléchit à côté (le violet
+quand on devine pour lui, la rose pour elle), puis la fin : « Now send it to
+him. Did you guess right? » et « Send this to him ». Le reel dure
+24 secondes. Deux reels sur trois sont pour lui (c'est elle qui
+devine), un sur trois pour elle.
+
+**Les photos** : 446 options en 49 familles (voitures, motos, chiens, chats,
+vacances, villes, desserts, pizzas, petits-déjeuners, bars, montres,
+baskets, bagues, demandes en mariage, sports, consoles, Noël, Nouvel An,
+Saint-Valentin, hiver...), des photos réelles tirées de Wikimedia Commons et
+d'Openverse, recadrées en 1000 x 354 en WebP dans
+`reseaux/studio/public/choisirait/<famille>/<id>.webp` ; la source, la
+licence et l'auteur de chacune sont dans `choisirait/sources.json`. Les
+familles, leurs questions (à lui, à elle) et leurs options sont dans
+`choisirait/banque.json`. Les chaussures ne se posent que pour elle.
+
+**Les éditions** (dans `choisirait/fabrique.mjs`) : Dream life, Food, Sweet
+tooth, Date night (poids double), Travel, Pet lovers, Car lovers, Morning
+(le matin seulement), Weekend, Game night, Style, Wedding, Adventure,
+Hobbies, Luxury, Drinks, Cozy night in, Dream home, et celles de saison :
+Winter (20 novembre au 28 février), Christmas (1er au 25 décembre), New
+Year's (26 décembre au 1er janvier), Valentine's (1er au 14 février) et
+Spring (mars). Jamais la même édition dans quatre reels de suite, les
+familles et les photos les moins vues d'abord, jamais deux fois le même trio.
+
+**La légende** : l'édition, une phrase qui dit de deviner d'abord (dix
+phrases qui tournent), puis « Send this to him » ; hashtags #couplequiz,
+#boyfriendquiz ou #girlfriendquiz, #thisorthat, celui de l'édition,
+#quizcouple. Les deux premiers reels reprennent mot pour mot les exemples de
+Thomas (la voiture, le chien, les vacances ; puis le gâteau).
+
+**La fabrique** écrit un post par créneau, avec une graine fixe :
+
+```bash
+node reseaux/atelier/choisirait/fabrique.mjs --du 2026-11-24 --au 2027-03-31           # le bilan, sans rien écrire
+node reseaux/atelier/choisirait/fabrique.mjs --du 2026-11-24 --au 2027-03-31 --ecrire  # les posts et la banque de sujets
+node reseaux/automates/controler.mjs reseaux/atelier/choisirait/posts/*.json
+```
+
+Pour aller au-delà du 31 mars 2027 : relancer avec `--du 2027-04-01 --au
+<date>` (un `--du` différent change le tirage, les fichiers déjà écrits pour
+les jours d'avant ne bougent pas). Pour ajouter une photo : son WebP en
+1000 x 354 sous `studio/public/choisirait/<famille>/`, son option dans
+`banque.json`, puis la fabrique pour les jours qui restent. Le contrôle
+d'une recette est `automates/lib/choisirait.mjs` (trois questions de 42
+signes au plus qui finissent par « ? » et parlent de lui ou d'elle, trois
+photos par question, des libellés de 22 signes au plus, chaque photo
+présente dans le studio et jamais deux fois dans le même reel).
+
 ### `phrase` : phrase tendre (gabarit `citation`)
 
 **Retirée de la grille le 26 octobre 2026** (192 vues à sept jours : un format image n'est pas distribué). Gardée pour les posts déjà publiés.
@@ -372,8 +461,9 @@ tant que Thomas ne l'y a pas mis.
 
 ## La story du matin
 
-Chaque jour, le reel du matin repart **en story** juste après sa
-publication : même vidéo, 24 heures, sans légende ni son ajouté. C'est une
+Chaque jour, le premier reel que la grille ouvre (le « choisirait » du matin
+depuis le 24 novembre 2026, le reel du soir du 27 octobre au 23 novembre)
+repart **en story** juste après sa publication : même vidéo, 24 heures, sans légende ni son ajouté. C'est une
 deuxième surface pour le même travail, et c'est l'automate qui s'en occupe
 (`publierStories` dans `publication.mjs`) : la routine n'a rien à écrire.
 Un reel de plus de 60 secondes ne peut pas devenir une story ; le matin

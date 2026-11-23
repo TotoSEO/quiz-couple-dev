@@ -1,0 +1,92 @@
+{
+  "jour": "2027-02-08",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-142",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "lui",
+        "etiquette": "Hobbies edition",
+        "accroche": "What would he choose?",
+        "consigne": "Answer for him, then let him check!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "Which instrument would he play?",
+            "options": [
+              {
+                "texte": "Violin",
+                "image": "choisirait/instrument/violon.webp"
+              },
+              {
+                "texte": "Drums",
+                "image": "choisirait/instrument/batterie.webp"
+              },
+              {
+                "texte": "Saxophone",
+                "image": "choisirait/instrument/saxophone.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which workout would he pick?",
+            "options": [
+              {
+                "texte": "CrossFit",
+                "image": "choisirait/salle/crossfit.webp"
+              },
+              {
+                "texte": "Cycling",
+                "image": "choisirait/salle/velo.webp"
+              },
+              {
+                "texte": "Running",
+                "image": "choisirait/salle/course.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which hobby would he pick up?",
+            "options": [
+              {
+                "texte": "Pottery",
+                "image": "choisirait/loisir/poterie.webp"
+              },
+              {
+                "texte": "Chess",
+                "image": "choisirait/loisir/echecs.webp"
+              },
+              {
+                "texte": "Woodworking",
+                "image": "choisirait/loisir/menuiserie.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Now send it to him. Did you guess right?",
+          "bouton": "Send this to him",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Hobbies edition. Write down his three letters before you send it.\n\nSend this to him",
+      "hashtags": [
+        "#couplequiz",
+        "#boyfriendquiz",
+        "#thisorthat",
+        "#hobbies",
+        "#quizcouple"
+      ]
+    }
+  }
+}

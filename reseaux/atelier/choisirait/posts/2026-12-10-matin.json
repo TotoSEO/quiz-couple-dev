@@ -1,0 +1,92 @@
+{
+  "jour": "2026-12-10",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-031",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "lui",
+        "etiquette": "Winter edition",
+        "accroche": "What would he choose?",
+        "consigne": "3 questions, 4 seconds each. Pick for him!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "Which winter date would he pick?",
+            "options": [
+              {
+                "texte": "Cabin by the fire",
+                "image": "choisirait/hiver/feu-cheminee.webp"
+              },
+              {
+                "texte": "Building a snowman",
+                "image": "choisirait/hiver/bonhomme.webp"
+              },
+              {
+                "texte": "Hot tub in the snow",
+                "image": "choisirait/hiver/jacuzzi.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which coffee would he order?",
+            "options": [
+              {
+                "texte": "Cappuccino",
+                "image": "choisirait/cafe/cappuccino.webp"
+              },
+              {
+                "texte": "Espresso",
+                "image": "choisirait/cafe/espresso.webp"
+              },
+              {
+                "texte": "Americano",
+                "image": "choisirait/cafe/americano.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which dinner would he pick?",
+            "options": [
+              {
+                "texte": "Ramen",
+                "image": "choisirait/diner/ramen.webp"
+              },
+              {
+                "texte": "Indian curry",
+                "image": "choisirait/diner/curry.webp"
+              },
+              {
+                "texte": "Raclette",
+                "image": "choisirait/diner/raclette.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Now send it to him. Did you guess right?",
+          "bouton": "Send this to him",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Winter edition. Answer for him first, no peeking.\n\nSend this to him",
+      "hashtags": [
+        "#couplequiz",
+        "#boyfriendquiz",
+        "#thisorthat",
+        "#winter",
+        "#quizcouple"
+      ]
+    }
+  }
+}

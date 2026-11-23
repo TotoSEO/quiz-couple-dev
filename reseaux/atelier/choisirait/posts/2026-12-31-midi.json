@@ -1,0 +1,92 @@
+{
+  "jour": "2026-12-31",
+  "creneau": "midi",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-071",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "lui",
+        "etiquette": "Cozy night in edition",
+        "accroche": "What would he choose?",
+        "consigne": "3 questions, 4 seconds each. Pick for him!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "Which game night would he pick?",
+            "options": [
+              {
+                "texte": "Chess",
+                "image": "choisirait/jeu/echecs-soir.webp"
+              },
+              {
+                "texte": "Board games",
+                "image": "choisirait/jeu/jeux-societe.webp"
+              },
+              {
+                "texte": "Video games",
+                "image": "choisirait/jeu/jeux-video.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which console would he pick?",
+            "options": [
+              {
+                "texte": "Gaming PC",
+                "image": "choisirait/console/pc-gamer.webp"
+              },
+              {
+                "texte": "PlayStation 2",
+                "image": "choisirait/console/ps2.webp"
+              },
+              {
+                "texte": "Nintendo Switch",
+                "image": "choisirait/console/switch.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which movie snack would he pick?",
+            "options": [
+              {
+                "texte": "Gummy bears",
+                "image": "choisirait/snack/oursons.webp"
+              },
+              {
+                "texte": "Chocolate bar",
+                "image": "choisirait/snack/tablette.webp"
+              },
+              {
+                "texte": "Licorice",
+                "image": "choisirait/snack/reglisse.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Send it to him: how many did you get?",
+          "bouton": "Send this to him",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Cozy night in edition. Answer for him first, no peeking.\n\nSend this to him",
+      "hashtags": [
+        "#couplequiz",
+        "#boyfriendquiz",
+        "#thisorthat",
+        "#cozynight",
+        "#quizcouple"
+      ]
+    }
+  }
+}

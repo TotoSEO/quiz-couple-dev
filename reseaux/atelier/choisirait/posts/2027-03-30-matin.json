@@ -1,0 +1,92 @@
+{
+  "jour": "2027-03-30",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-235",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "lui",
+        "etiquette": "Dream home edition",
+        "accroche": "What would he choose?",
+        "consigne": "3 questions, 4 seconds each. Pick for him!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "Which cat would he adopt?",
+            "options": [
+              {
+                "texte": "Scottish Fold",
+                "image": "choisirait/chat/scottish.webp"
+              },
+              {
+                "texte": "Black cat",
+                "image": "choisirait/chat/chat-noir.webp"
+              },
+              {
+                "texte": "Siamese",
+                "image": "choisirait/chat/siamois.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which dream house would he pick?",
+            "options": [
+              {
+                "texte": "Lake house",
+                "image": "choisirait/maison/maison-lac.webp"
+              },
+              {
+                "texte": "Victorian house",
+                "image": "choisirait/maison/victorienne.webp"
+              },
+              {
+                "texte": "Tiny house",
+                "image": "choisirait/maison/tiny-house.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which dog would he pick?",
+            "options": [
+              {
+                "texte": "Chihuahua",
+                "image": "choisirait/chien/chihuahua.webp"
+              },
+              {
+                "texte": "Samoyed",
+                "image": "choisirait/chien/samoyede.webp"
+              },
+              {
+                "texte": "Australian Shepherd",
+                "image": "choisirait/chien/berger-australien.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Now send it to him. Did you guess right?",
+          "bouton": "Send this to him",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Dream home edition. No cheating: decide before the timer runs out.\n\nSend this to him",
+      "hashtags": [
+        "#couplequiz",
+        "#boyfriendquiz",
+        "#thisorthat",
+        "#dreamhome",
+        "#quizcouple"
+      ]
+    }
+  }
+}

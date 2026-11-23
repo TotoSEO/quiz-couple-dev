@@ -1,0 +1,92 @@
+{
+  "jour": "2027-02-09",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-144",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "elle",
+        "etiquette": "Dream life edition",
+        "accroche": "What would she choose?",
+        "consigne": "Pick what she would pick. Then send it to her!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "Where would she go on vacation?",
+            "options": [
+              {
+                "texte": "Peru",
+                "image": "choisirait/vacances/perou.webp"
+              },
+              {
+                "texte": "Bora Bora",
+                "image": "choisirait/vacances/bora-bora.webp"
+              },
+              {
+                "texte": "Australia",
+                "image": "choisirait/vacances/australie.webp"
+              }
+            ]
+          },
+          {
+            "question": "How would she travel with you?",
+            "options": [
+              {
+                "texte": "Hot air balloon",
+                "image": "choisirait/voyage/montgolfiere.webp"
+              },
+              {
+                "texte": "Camper van",
+                "image": "choisirait/voyage/van.webp"
+              },
+              {
+                "texte": "Sailboat",
+                "image": "choisirait/voyage/voilier.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which view would she wake up to?",
+            "options": [
+              {
+                "texte": "City skyline",
+                "image": "choisirait/vue/skyline.webp"
+              },
+              {
+                "texte": "Snowy peaks",
+                "image": "choisirait/vue/neige.webp"
+              },
+              {
+                "texte": "Northern lights",
+                "image": "choisirait/vue/aurores.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Got her 3 picks? Send it and see!",
+          "bouton": "Send this to her",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Dream life edition. If you get all three, you know her by heart.\n\nSend this to her",
+      "hashtags": [
+        "#couplequiz",
+        "#girlfriendquiz",
+        "#thisorthat",
+        "#dreamlife",
+        "#quizcouple"
+      ]
+    }
+  }
+}

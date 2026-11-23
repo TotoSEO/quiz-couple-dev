@@ -1,0 +1,92 @@
+{
+  "jour": "2027-01-24",
+  "creneau": "midi",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-115",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "lui",
+        "etiquette": "Luxury edition",
+        "accroche": "What would he choose?",
+        "consigne": "3 questions, 4 seconds each. Pick for him!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "How would he travel with you?",
+            "options": [
+              {
+                "texte": "Convertible",
+                "image": "choisirait/voyage/cabriolet.webp"
+              },
+              {
+                "texte": "Cruise ship",
+                "image": "choisirait/voyage/croisiere.webp"
+              },
+              {
+                "texte": "Camper van",
+                "image": "choisirait/voyage/van.webp"
+              }
+            ]
+          },
+          {
+            "question": "Where would he book a weekend?",
+            "options": [
+              {
+                "texte": "Glamping tent",
+                "image": "choisirait/weekend/glamping.webp"
+              },
+              {
+                "texte": "Overwater villa",
+                "image": "choisirait/weekend/bungalow-eau.webp"
+              },
+              {
+                "texte": "Treehouse",
+                "image": "choisirait/weekend/cabane-arbre.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which watch would he wear?",
+            "options": [
+              {
+                "texte": "Cartier Tank",
+                "image": "choisirait/montre/cartier.webp"
+              },
+              {
+                "texte": "Omega Speedmaster",
+                "image": "choisirait/montre/speedmaster.webp"
+              },
+              {
+                "texte": "Pocket watch",
+                "image": "choisirait/montre/gousset.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Now send it to him. Did you guess right?",
+          "bouton": "Send this to him",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Luxury edition. No cheating: decide before the timer runs out.\n\nSend this to him",
+      "hashtags": [
+        "#couplequiz",
+        "#boyfriendquiz",
+        "#thisorthat",
+        "#luxurylife",
+        "#quizcouple"
+      ]
+    }
+  }
+}

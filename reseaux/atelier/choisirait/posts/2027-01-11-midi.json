@@ -1,0 +1,92 @@
+{
+  "jour": "2027-01-11",
+  "creneau": "midi",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-091",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "lui",
+        "etiquette": "Travel edition",
+        "accroche": "What would he choose?",
+        "consigne": "3 questions, 4 seconds each. Pick for him!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "Which city would he take you to?",
+            "options": [
+              {
+                "texte": "Prague",
+                "image": "choisirait/ville/prague.webp"
+              },
+              {
+                "texte": "Rome",
+                "image": "choisirait/ville/rome.webp"
+              },
+              {
+                "texte": "Barcelona",
+                "image": "choisirait/ville/barcelone.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which view would he wake up to?",
+            "options": [
+              {
+                "texte": "Ocean",
+                "image": "choisirait/vue/ocean.webp"
+              },
+              {
+                "texte": "Desert",
+                "image": "choisirait/vue/desert-vue.webp"
+              },
+              {
+                "texte": "Vineyards",
+                "image": "choisirait/vue/vignes.webp"
+              }
+            ]
+          },
+          {
+            "question": "Where would he take you on vacation?",
+            "options": [
+              {
+                "texte": "Thailand",
+                "image": "choisirait/vacances/thailande.webp"
+              },
+              {
+                "texte": "Japan",
+                "image": "choisirait/vacances/japon.webp"
+              },
+              {
+                "texte": "Canada",
+                "image": "choisirait/vacances/canada.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Now send it to him. Did you guess right?",
+          "bouton": "Send this to him",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Travel edition. Answer for him first, no peeking.\n\nSend this to him",
+      "hashtags": [
+        "#couplequiz",
+        "#boyfriendquiz",
+        "#thisorthat",
+        "#travelcouple",
+        "#quizcouple"
+      ]
+    }
+  }
+}

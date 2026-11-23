@@ -1,0 +1,92 @@
+{
+  "jour": "2026-12-30",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-068",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "lui",
+        "etiquette": "Food edition",
+        "accroche": "What would he choose?",
+        "consigne": "Pick what he would pick. Then send it to him!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "Which potato would he pick?",
+            "options": [
+              {
+                "texte": "Hash browns",
+                "image": "choisirait/patate/hash-browns.webp"
+              },
+              {
+                "texte": "Potato gratin",
+                "image": "choisirait/patate/gratin.webp"
+              },
+              {
+                "texte": "Rösti",
+                "image": "choisirait/patate/rosti.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which pasta would he pick?",
+            "options": [
+              {
+                "texte": "Ravioli",
+                "image": "choisirait/pates/raviolis.webp"
+              },
+              {
+                "texte": "Pesto",
+                "image": "choisirait/pates/pesto.webp"
+              },
+              {
+                "texte": "Mac and cheese",
+                "image": "choisirait/pates/mac-cheese.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which pizza would he order?",
+            "options": [
+              {
+                "texte": "Four cheese",
+                "image": "choisirait/pizza/quatre-fromages.webp"
+              },
+              {
+                "texte": "Deep dish",
+                "image": "choisirait/pizza/deep-dish.webp"
+              },
+              {
+                "texte": "Calzone",
+                "image": "choisirait/pizza/calzone.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Send it to him: how many did you get?",
+          "bouton": "Send this to him",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Food edition. Your answers first, then his reaction.\n\nSend this to him",
+      "hashtags": [
+        "#couplequiz",
+        "#boyfriendquiz",
+        "#thisorthat",
+        "#foodie",
+        "#quizcouple"
+      ]
+    }
+  }
+}

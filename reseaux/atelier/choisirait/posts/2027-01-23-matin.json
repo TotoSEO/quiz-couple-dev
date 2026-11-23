@@ -1,0 +1,92 @@
+{
+  "jour": "2027-01-23",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-113",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "lui",
+        "etiquette": "Morning edition",
+        "accroche": "What would he choose?",
+        "consigne": "Guess his 3 picks, then send it to him!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "How would he have his eggs?",
+            "options": [
+              {
+                "texte": "Poached",
+                "image": "choisirait/oeufs/poche.webp"
+              },
+              {
+                "texte": "Omelette",
+                "image": "choisirait/oeufs/omelette.webp"
+              },
+              {
+                "texte": "Soft-boiled",
+                "image": "choisirait/oeufs/coque.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which breakfast would he choose?",
+            "options": [
+              {
+                "texte": "Cereal",
+                "image": "choisirait/petitdej/cereales.webp"
+              },
+              {
+                "texte": "Avocado toast",
+                "image": "choisirait/petitdej/avocado-toast.webp"
+              },
+              {
+                "texte": "Croissant & coffee",
+                "image": "choisirait/petitdej/croissant-cafe.webp"
+              }
+            ]
+          },
+          {
+            "question": "What would he grab at the bakery?",
+            "options": [
+              {
+                "texte": "Croissant",
+                "image": "choisirait/boulangerie/croissant.webp"
+              },
+              {
+                "texte": "Baguette",
+                "image": "choisirait/boulangerie/baguette.webp"
+              },
+              {
+                "texte": "Cinnamon roll",
+                "image": "choisirait/boulangerie/cinnamon-roll.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Send it to him: how many did you get?",
+          "bouton": "Send this to him",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Morning edition. Guess first, send it after. Then compare.\n\nSend this to him",
+      "hashtags": [
+        "#couplequiz",
+        "#boyfriendquiz",
+        "#thisorthat",
+        "#breakfast",
+        "#quizcouple"
+      ]
+    }
+  }
+}

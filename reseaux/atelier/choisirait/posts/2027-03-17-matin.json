@@ -1,0 +1,92 @@
+{
+  "jour": "2027-03-17",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-211",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "lui",
+        "etiquette": "Luxury edition",
+        "accroche": "What would he choose?",
+        "consigne": "3 questions, 4 seconds each. Pick for him!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "Which dream house would he pick?",
+            "options": [
+              {
+                "texte": "Cozy cabin",
+                "image": "choisirait/weekend/chalet-bois.webp"
+              },
+              {
+                "texte": "Mountain chalet",
+                "image": "choisirait/maison/chalet.webp"
+              },
+              {
+                "texte": "Modern villa",
+                "image": "choisirait/maison/villa-moderne.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which watch would he wear?",
+            "options": [
+              {
+                "texte": "Seiko diver",
+                "image": "choisirait/montre/seiko.webp"
+              },
+              {
+                "texte": "Pocket watch",
+                "image": "choisirait/montre/gousset.webp"
+              },
+              {
+                "texte": "Omega Speedmaster",
+                "image": "choisirait/montre/speedmaster.webp"
+              }
+            ]
+          },
+          {
+            "question": "Where would he book a weekend?",
+            "options": [
+              {
+                "texte": "Beach bungalow",
+                "image": "choisirait/weekend/bungalow-plage.webp"
+              },
+              {
+                "texte": "Glamping tent",
+                "image": "choisirait/weekend/glamping.webp"
+              },
+              {
+                "texte": "Desert camp",
+                "image": "choisirait/weekend/desert.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Now send it to him. Did you guess right?",
+          "bouton": "Send this to him",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Luxury edition. Answer for him first, no peeking.\n\nSend this to him",
+      "hashtags": [
+        "#couplequiz",
+        "#boyfriendquiz",
+        "#thisorthat",
+        "#luxurylife",
+        "#quizcouple"
+      ]
+    }
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "jour": "2027-03-29",
+  "creneau": "midi",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-234",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "elle",
+        "etiquette": "Food edition",
+        "accroche": "What would she choose?",
+        "consigne": "Answer for her, then let her check!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "Which pasta would she pick?",
+            "options": [
+              {
+                "texte": "Carbonara",
+                "image": "choisirait/pates/carbonara.webp"
+              },
+              {
+                "texte": "Ravioli",
+                "image": "choisirait/pates/raviolis.webp"
+              },
+              {
+                "texte": "Bolognese",
+                "image": "choisirait/pates/bolognaise.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which potato would she pick?",
+            "options": [
+              {
+                "texte": "Curly fries",
+                "image": "choisirait/patate/curly.webp"
+              },
+              {
+                "texte": "Potato gratin",
+                "image": "choisirait/patate/gratin.webp"
+              },
+              {
+                "texte": "Rösti",
+                "image": "choisirait/patate/rosti.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which pizza would she order?",
+            "options": [
+              {
+                "texte": "Hawaiian",
+                "image": "choisirait/pizza/hawaienne.webp"
+              },
+              {
+                "texte": "Four cheese",
+                "image": "choisirait/pizza/quatre-fromages.webp"
+              },
+              {
+                "texte": "Calzone",
+                "image": "choisirait/pizza/calzone.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Got her 3 picks? Send it and see!",
+          "bouton": "Send this to her",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Food edition. If you get all three, you know her by heart.\n\nSend this to her",
+      "hashtags": [
+        "#couplequiz",
+        "#girlfriendquiz",
+        "#thisorthat",
+        "#foodie",
+        "#quizcouple"
+      ]
+    }
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "jour": "2027-02-10",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-146",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "lui",
+        "etiquette": "Luxury edition",
+        "accroche": "What would he choose?",
+        "consigne": "Answer for him, then let him check!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "Which watch would he wear?",
+            "options": [
+              {
+                "texte": "Omega Speedmaster",
+                "image": "choisirait/montre/speedmaster.webp"
+              },
+              {
+                "texte": "Casio G-Shock",
+                "image": "choisirait/montre/g-shock.webp"
+              },
+              {
+                "texte": "Casio digital",
+                "image": "choisirait/montre/casio.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which house would he pick?",
+            "options": [
+              {
+                "texte": "Loft apartment",
+                "image": "choisirait/maison/loft.webp"
+              },
+              {
+                "texte": "Mountain chalet",
+                "image": "choisirait/maison/chalet.webp"
+              },
+              {
+                "texte": "Tiny house",
+                "image": "choisirait/maison/tiny-house.webp"
+              }
+            ]
+          },
+          {
+            "question": "Where would he book a weekend for two?",
+            "options": [
+              {
+                "texte": "Log cabin",
+                "image": "choisirait/weekend/chalet-bois.webp"
+              },
+              {
+                "texte": "Castle hotel",
+                "image": "choisirait/weekend/chateau-hotel.webp"
+              },
+              {
+                "texte": "Glamping tent",
+                "image": "choisirait/weekend/glamping.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Send it to him: how many did you get?",
+          "bouton": "Send this to him",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Luxury edition. Pick for him, then let him prove you wrong.\n\nSend this to him",
+      "hashtags": [
+        "#couplequiz",
+        "#boyfriendquiz",
+        "#thisorthat",
+        "#luxurylife",
+        "#quizcouple"
+      ]
+    }
+  }
+}

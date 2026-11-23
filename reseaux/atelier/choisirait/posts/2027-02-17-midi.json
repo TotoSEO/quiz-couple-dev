@@ -1,0 +1,92 @@
+{
+  "jour": "2027-02-17",
+  "creneau": "midi",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-160",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "lui",
+        "etiquette": "Travel edition",
+        "accroche": "What would he choose?",
+        "consigne": "Pick what he would pick. Then send it to him!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "Which city would he take you to?",
+            "options": [
+              {
+                "texte": "New York",
+                "image": "choisirait/ville/new-york.webp"
+              },
+              {
+                "texte": "Prague",
+                "image": "choisirait/ville/prague.webp"
+              },
+              {
+                "texte": "Venice",
+                "image": "choisirait/ville/venise.webp"
+              }
+            ]
+          },
+          {
+            "question": "Where would he book a weekend for two?",
+            "options": [
+              {
+                "texte": "Log cabin",
+                "image": "choisirait/weekend/chalet-bois.webp"
+              },
+              {
+                "texte": "Ski chalet",
+                "image": "choisirait/weekend/chalet-ski.webp"
+              },
+              {
+                "texte": "Desert camp",
+                "image": "choisirait/weekend/desert.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which view would he wake up to?",
+            "options": [
+              {
+                "texte": "Forest",
+                "image": "choisirait/vue/foret.webp"
+              },
+              {
+                "texte": "Tropical beach",
+                "image": "choisirait/vue/plage-tropicale.webp"
+              },
+              {
+                "texte": "Lake",
+                "image": "choisirait/vue/lac.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Now send it to him. Did you guess right?",
+          "bouton": "Send this to him",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Travel edition. Easy for you? Then the next one is for him.\n\nSend this to him",
+      "hashtags": [
+        "#couplequiz",
+        "#boyfriendquiz",
+        "#thisorthat",
+        "#travelcouple",
+        "#quizcouple"
+      ]
+    }
+  }
+}

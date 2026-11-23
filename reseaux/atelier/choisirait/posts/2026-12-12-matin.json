@@ -1,0 +1,92 @@
+{
+  "jour": "2026-12-12",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-035",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "lui",
+        "etiquette": "Weekend edition",
+        "accroche": "What would he choose?",
+        "consigne": "3 questions, 4 seconds each. Pick for him!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "Which date would he plan?",
+            "options": [
+              {
+                "texte": "Museum",
+                "image": "choisirait/date/musee.webp"
+              },
+              {
+                "texte": "Beach sunset",
+                "image": "choisirait/date/coucher-soleil.webp"
+              },
+              {
+                "texte": "Wine tasting",
+                "image": "choisirait/date/degustation.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which hobby would he pick up?",
+            "options": [
+              {
+                "texte": "Knitting",
+                "image": "choisirait/loisir/tricot.webp"
+              },
+              {
+                "texte": "Woodworking",
+                "image": "choisirait/loisir/menuiserie.webp"
+              },
+              {
+                "texte": "Gardening",
+                "image": "choisirait/loisir/jardinage.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which adventure would he try?",
+            "options": [
+              {
+                "texte": "Kayaking",
+                "image": "choisirait/aventure/kayak.webp"
+              },
+              {
+                "texte": "Rock climbing",
+                "image": "choisirait/aventure/escalade.webp"
+              },
+              {
+                "texte": "Scuba diving",
+                "image": "choisirait/aventure/plongee.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Send it to him: how many did you get?",
+          "bouton": "Send this to him",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Weekend edition. No cheating: decide before the timer runs out.\n\nSend this to him",
+      "hashtags": [
+        "#couplequiz",
+        "#boyfriendquiz",
+        "#thisorthat",
+        "#weekendvibes",
+        "#quizcouple"
+      ]
+    }
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "jour": "2027-02-21",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-166",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "lui",
+        "etiquette": "Adventure edition",
+        "accroche": "What would he choose?",
+        "consigne": "Answer for him, then let him check!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "Which sport would he watch?",
+            "options": [
+              {
+                "texte": "Basketball",
+                "image": "choisirait/sport/basket.webp"
+              },
+              {
+                "texte": "Ice hockey",
+                "image": "choisirait/sport/hockey.webp"
+              },
+              {
+                "texte": "Formula 1",
+                "image": "choisirait/sport/f1.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which adventure would he try?",
+            "options": [
+              {
+                "texte": "Skydiving",
+                "image": "choisirait/aventure/parachute.webp"
+              },
+              {
+                "texte": "Scuba diving",
+                "image": "choisirait/aventure/plongee.webp"
+              },
+              {
+                "texte": "Surfing",
+                "image": "choisirait/aventure/surf.webp"
+              }
+            ]
+          },
+          {
+            "question": "Where would he book a weekend?",
+            "options": [
+              {
+                "texte": "Castle hotel",
+                "image": "choisirait/weekend/chateau-hotel.webp"
+              },
+              {
+                "texte": "Overwater villa",
+                "image": "choisirait/weekend/bungalow-eau.webp"
+              },
+              {
+                "texte": "Treehouse",
+                "image": "choisirait/weekend/cabane-arbre.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Now send it to him. Did you guess right?",
+          "bouton": "Send this to him",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Adventure edition. Pick for him, then let him prove you wrong.\n\nSend this to him",
+      "hashtags": [
+        "#couplequiz",
+        "#boyfriendquiz",
+        "#thisorthat",
+        "#adventurecouple",
+        "#quizcouple"
+      ]
+    }
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "jour": "2027-02-06",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-139",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "lui",
+        "etiquette": "Valentine's edition",
+        "accroche": "What would he choose?",
+        "consigne": "3 questions, 4 seconds each. Pick for him!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "What would he get you for Valentine's?",
+            "options": [
+              {
+                "texte": "Breakfast in bed",
+                "image": "choisirait/valentin/petit-dej-lit.webp"
+              },
+              {
+                "texte": "Heart balloons",
+                "image": "choisirait/valentin/ballons-coeur.webp"
+              },
+              {
+                "texte": "Jewelry",
+                "image": "choisirait/valentin/bijou.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which ring would he pick for you?",
+            "options": [
+              {
+                "texte": "Rose gold ring",
+                "image": "choisirait/bague/or-rose.webp"
+              },
+              {
+                "texte": "Halo ring",
+                "image": "choisirait/bague/halo.webp"
+              },
+              {
+                "texte": "Emerald ring",
+                "image": "choisirait/bague/emeraude.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which flowers would he get you?",
+            "options": [
+              {
+                "texte": "Orchid",
+                "image": "choisirait/fleurs/orchidee.webp"
+              },
+              {
+                "texte": "Tulips",
+                "image": "choisirait/fleurs/tulipes.webp"
+              },
+              {
+                "texte": "Red roses",
+                "image": "choisirait/fleurs/roses.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Now send it to him. Did you guess right?",
+          "bouton": "Send this to him",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Valentine's edition. One letter per question, then send it to him.\n\nSend this to him",
+      "hashtags": [
+        "#couplequiz",
+        "#boyfriendquiz",
+        "#thisorthat",
+        "#valentinesday",
+        "#quizcouple"
+      ]
+    }
+  }
+}

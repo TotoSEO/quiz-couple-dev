@@ -1,0 +1,92 @@
+{
+  "jour": "2027-03-26",
+  "creneau": "midi",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-229",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "lui",
+        "etiquette": "Dream life edition",
+        "accroche": "What would he choose?",
+        "consigne": "Guess his 3 picks, then send it to him!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "Which dog would he adopt?",
+            "options": [
+              {
+                "texte": "Border Collie",
+                "image": "choisirait/chien/border-collie.webp"
+              },
+              {
+                "texte": "Labrador",
+                "image": "choisirait/chien/labrador.webp"
+              },
+              {
+                "texte": "Shiba Inu",
+                "image": "choisirait/chien/shiba.webp"
+              }
+            ]
+          },
+          {
+            "question": "Where would he take you on vacation?",
+            "options": [
+              {
+                "texte": "Dubai",
+                "image": "choisirait/vacances/dubai.webp"
+              },
+              {
+                "texte": "Bali",
+                "image": "choisirait/vacances/bali.webp"
+              },
+              {
+                "texte": "Lapland",
+                "image": "choisirait/vacances/laponie.webp"
+              }
+            ]
+          },
+          {
+            "question": "How would he travel with you?",
+            "options": [
+              {
+                "texte": "Cruise ship",
+                "image": "choisirait/voyage/croisiere.webp"
+              },
+              {
+                "texte": "Sailboat",
+                "image": "choisirait/voyage/voilier.webp"
+              },
+              {
+                "texte": "Hot air balloon",
+                "image": "choisirait/voyage/montgolfiere.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Now send it to him. Did you guess right?",
+          "bouton": "Send this to him",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Dream life edition. One letter per question, then send it to him.\n\nSend this to him",
+      "hashtags": [
+        "#couplequiz",
+        "#boyfriendquiz",
+        "#thisorthat",
+        "#dreamlife",
+        "#quizcouple"
+      ]
+    }
+  }
+}

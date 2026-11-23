@@ -1,0 +1,92 @@
+{
+  "jour": "2027-03-07",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-192",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "elle",
+        "etiquette": "Travel edition",
+        "accroche": "What would she choose?",
+        "consigne": "Pick what she would pick. Then send it to her!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "Which city would she take you to?",
+            "options": [
+              {
+                "texte": "Istanbul",
+                "image": "choisirait/ville/istanbul.webp"
+              },
+              {
+                "texte": "Rio de Janeiro",
+                "image": "choisirait/ville/rio.webp"
+              },
+              {
+                "texte": "Seoul",
+                "image": "choisirait/ville/seoul.webp"
+              }
+            ]
+          },
+          {
+            "question": "Where would she go on vacation?",
+            "options": [
+              {
+                "texte": "Mexico",
+                "image": "choisirait/vacances/mexique.webp"
+              },
+              {
+                "texte": "Morocco",
+                "image": "choisirait/vacances/maroc.webp"
+              },
+              {
+                "texte": "Egypt",
+                "image": "choisirait/vacances/egypte.webp"
+              }
+            ]
+          },
+          {
+            "question": "How would she travel with you?",
+            "options": [
+              {
+                "texte": "Sailboat",
+                "image": "choisirait/voyage/voilier.webp"
+              },
+              {
+                "texte": "Private jet",
+                "image": "choisirait/voyage/jet.webp"
+              },
+              {
+                "texte": "Hot air balloon",
+                "image": "choisirait/voyage/montgolfiere.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Got her 3 picks? Send it and see!",
+          "bouton": "Send this to her",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Travel edition. Write down her three letters before you send it.\n\nSend this to her",
+      "hashtags": [
+        "#couplequiz",
+        "#girlfriendquiz",
+        "#thisorthat",
+        "#travelcouple",
+        "#quizcouple"
+      ]
+    }
+  }
+}

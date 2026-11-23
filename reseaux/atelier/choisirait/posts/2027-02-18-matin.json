@@ -1,0 +1,92 @@
+{
+  "jour": "2027-02-18",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-161",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "lui",
+        "etiquette": "Date night edition",
+        "accroche": "What would he choose?",
+        "consigne": "Guess his 3 picks, then send it to him!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "Which flowers would he get you?",
+            "options": [
+              {
+                "texte": "Wildflowers",
+                "image": "choisirait/fleurs/fleurs-sauvages.webp"
+              },
+              {
+                "texte": "Peonies",
+                "image": "choisirait/fleurs/pivoines.webp"
+              },
+              {
+                "texte": "Lavender",
+                "image": "choisirait/fleurs/lavande.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which date would he take you on?",
+            "options": [
+              {
+                "texte": "Arcade",
+                "image": "choisirait/date/arcade.webp"
+              },
+              {
+                "texte": "Ice skating",
+                "image": "choisirait/date/patinoire.webp"
+              },
+              {
+                "texte": "Museum",
+                "image": "choisirait/date/musee.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which cake would he pick?",
+            "options": [
+              {
+                "texte": "Pavlova",
+                "image": "choisirait/dessert/pavlova.webp"
+              },
+              {
+                "texte": "Apple pie",
+                "image": "choisirait/dessert/tarte-pommes.webp"
+              },
+              {
+                "texte": "Strawberry tart",
+                "image": "choisirait/dessert/tarte-fraises.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Send it to him: how many did you get?",
+          "bouton": "Send this to him",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Date night edition. Answer for him first, no peeking.\n\nSend this to him",
+      "hashtags": [
+        "#couplequiz",
+        "#boyfriendquiz",
+        "#thisorthat",
+        "#datenight",
+        "#quizcouple"
+      ]
+    }
+  }
+}

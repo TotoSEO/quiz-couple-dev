@@ -1,0 +1,92 @@
+{
+  "jour": "2027-02-18",
+  "creneau": "midi",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-162",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "elle",
+        "etiquette": "Food edition",
+        "accroche": "What would she choose?",
+        "consigne": "Answer for her, then let her check!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "Which pasta would she pick?",
+            "options": [
+              {
+                "texte": "Pesto",
+                "image": "choisirait/pates/pesto.webp"
+              },
+              {
+                "texte": "Lasagna",
+                "image": "choisirait/pates/lasagnes.webp"
+              },
+              {
+                "texte": "Gnocchi",
+                "image": "choisirait/pates/gnocchi.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which pizza would she order?",
+            "options": [
+              {
+                "texte": "Deep dish",
+                "image": "choisirait/pizza/deep-dish.webp"
+              },
+              {
+                "texte": "Margherita",
+                "image": "choisirait/pizza/margherita.webp"
+              },
+              {
+                "texte": "Calzone",
+                "image": "choisirait/pizza/calzone.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which potato would she pick?",
+            "options": [
+              {
+                "texte": "Rösti",
+                "image": "choisirait/patate/rosti.webp"
+              },
+              {
+                "texte": "Curly fries",
+                "image": "choisirait/patate/curly.webp"
+              },
+              {
+                "texte": "French fries",
+                "image": "choisirait/patate/frites.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Got her 3 picks? Send it and see!",
+          "bouton": "Send this to her",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Food edition. Write down her three letters before you send it.\n\nSend this to her",
+      "hashtags": [
+        "#couplequiz",
+        "#girlfriendquiz",
+        "#thisorthat",
+        "#foodie",
+        "#quizcouple"
+      ]
+    }
+  }
+}

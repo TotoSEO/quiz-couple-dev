@@ -41,7 +41,7 @@ export const typographier = <T,>(valeur: T, langue: Langue): T => {
   if (typeof valeur === 'string') return typographie(valeur, langue) as T;
   if (Array.isArray(valeur)) return valeur.map((v) => typographier(v, langue)) as T;
   if (valeur && typeof valeur === 'object') {
-    return Object.fromEntries(Object.entries(valeur).map(([k, v]) => [k, k === 'langue' || k === 'gabarit' || k === 'theme' || k === 'type' || k === 'fleurs' || k === 'style' ? v : typographier(v, langue)])) as T;
+    return Object.fromEntries(Object.entries(valeur).map(([k, v]) => [k, k === 'langue' || k === 'gabarit' || k === 'theme' || k === 'type' || k === 'fleurs' || k === 'style' || k === 'image' || k === 'cadrage' || k === 'pour' ? v : typographier(v, langue)])) as T;
   }
   return valeur;
 };

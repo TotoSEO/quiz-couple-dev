@@ -1,0 +1,92 @@
+{
+  "jour": "2027-03-29",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-233",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "lui",
+        "etiquette": "Game night edition",
+        "accroche": "What would he choose?",
+        "consigne": "Guess his 3 picks, then send it to him!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "What would he order at 2 a.m.?",
+            "options": [
+              {
+                "texte": "Kebab",
+                "image": "choisirait/fastfood/kebab.webp"
+              },
+              {
+                "texte": "Grilled cheese",
+                "image": "choisirait/fastfood/croque.webp"
+              },
+              {
+                "texte": "Instant noodles",
+                "image": "choisirait/fastfood/nouilles.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which console would he pick?",
+            "options": [
+              {
+                "texte": "Gaming PC",
+                "image": "choisirait/console/pc-gamer.webp"
+              },
+              {
+                "texte": "Game Boy",
+                "image": "choisirait/console/gameboy.webp"
+              },
+              {
+                "texte": "PlayStation 5",
+                "image": "choisirait/console/ps5.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which game night would he pick?",
+            "options": [
+              {
+                "texte": "Poker",
+                "image": "choisirait/jeu/poker.webp"
+              },
+              {
+                "texte": "Video games",
+                "image": "choisirait/jeu/jeux-video.webp"
+              },
+              {
+                "texte": "Foosball",
+                "image": "choisirait/jeu/baby-foot.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Send it to him: how many did you get?",
+          "bouton": "Send this to him",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Game night edition. Guess first, send it after. Then compare.\n\nSend this to him",
+      "hashtags": [
+        "#couplequiz",
+        "#boyfriendquiz",
+        "#thisorthat",
+        "#gamenight",
+        "#quizcouple"
+      ]
+    }
+  }
+}

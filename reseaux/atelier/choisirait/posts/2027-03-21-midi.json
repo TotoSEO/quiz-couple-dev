@@ -1,0 +1,92 @@
+{
+  "jour": "2027-03-21",
+  "creneau": "midi",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-219",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "elle",
+        "etiquette": "Hobbies edition",
+        "accroche": "What would she choose?",
+        "consigne": "3 questions, 4 seconds each. Pick for her!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "Which instrument would she play?",
+            "options": [
+              {
+                "texte": "Acoustic guitar",
+                "image": "choisirait/instrument/guitare-acoustique.webp"
+              },
+              {
+                "texte": "Electric guitar",
+                "image": "choisirait/instrument/guitare-electrique.webp"
+              },
+              {
+                "texte": "DJ decks",
+                "image": "choisirait/instrument/platines.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which game night would she pick?",
+            "options": [
+              {
+                "texte": "Board games",
+                "image": "choisirait/jeu/jeux-societe.webp"
+              },
+              {
+                "texte": "Chess",
+                "image": "choisirait/jeu/echecs-soir.webp"
+              },
+              {
+                "texte": "Foosball",
+                "image": "choisirait/jeu/baby-foot.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which workout would she pick?",
+            "options": [
+              {
+                "texte": "Swimming",
+                "image": "choisirait/salle/natation.webp"
+              },
+              {
+                "texte": "CrossFit",
+                "image": "choisirait/salle/crossfit.webp"
+              },
+              {
+                "texte": "Cycling",
+                "image": "choisirait/salle/velo.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Got her 3 picks? Send it and see!",
+          "bouton": "Send this to her",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Hobbies edition. One letter per question, then send it to her.\n\nSend this to her",
+      "hashtags": [
+        "#couplequiz",
+        "#girlfriendquiz",
+        "#thisorthat",
+        "#hobbies",
+        "#quizcouple"
+      ]
+    }
+  }
+}

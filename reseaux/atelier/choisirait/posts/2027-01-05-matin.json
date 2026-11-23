@@ -1,0 +1,92 @@
+{
+  "jour": "2027-01-05",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-079",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "lui",
+        "etiquette": "Food edition",
+        "accroche": "What would he choose?",
+        "consigne": "3 questions, 4 seconds each. Pick for him!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "Which pasta would he pick?",
+            "options": [
+              {
+                "texte": "Bolognese",
+                "image": "choisirait/pates/bolognaise.webp"
+              },
+              {
+                "texte": "Gnocchi",
+                "image": "choisirait/pates/gnocchi.webp"
+              },
+              {
+                "texte": "Carbonara",
+                "image": "choisirait/pates/carbonara.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which potato would he pick?",
+            "options": [
+              {
+                "texte": "Potato gratin",
+                "image": "choisirait/patate/gratin.webp"
+              },
+              {
+                "texte": "Curly fries",
+                "image": "choisirait/patate/curly.webp"
+              },
+              {
+                "texte": "French fries",
+                "image": "choisirait/patate/frites.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which pizza would he order?",
+            "options": [
+              {
+                "texte": "Hawaiian",
+                "image": "choisirait/pizza/hawaienne.webp"
+              },
+              {
+                "texte": "Veggie",
+                "image": "choisirait/pizza/vegetarienne.webp"
+              },
+              {
+                "texte": "Pepperoni",
+                "image": "choisirait/pizza/pepperoni.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Now send it to him. Did you guess right?",
+          "bouton": "Send this to him",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Food edition. One letter per question, then send it to him.\n\nSend this to him",
+      "hashtags": [
+        "#couplequiz",
+        "#boyfriendquiz",
+        "#thisorthat",
+        "#foodie",
+        "#quizcouple"
+      ]
+    }
+  }
+}

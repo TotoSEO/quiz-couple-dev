@@ -1,0 +1,92 @@
+{
+  "jour": "2027-03-22",
+  "creneau": "midi",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-221",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "lui",
+        "etiquette": "Travel edition",
+        "accroche": "What would he choose?",
+        "consigne": "Guess his 3 picks, then send it to him!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "Which city would he take you to?",
+            "options": [
+              {
+                "texte": "Lisbon",
+                "image": "choisirait/ville/lisbonne.webp"
+              },
+              {
+                "texte": "Prague",
+                "image": "choisirait/ville/prague.webp"
+              },
+              {
+                "texte": "Tokyo",
+                "image": "choisirait/ville/tokyo.webp"
+              }
+            ]
+          },
+          {
+            "question": "Where would he book a weekend for two?",
+            "options": [
+              {
+                "texte": "Overwater villa",
+                "image": "choisirait/weekend/bungalow-eau.webp"
+              },
+              {
+                "texte": "Castle hotel",
+                "image": "choisirait/weekend/chateau-hotel.webp"
+              },
+              {
+                "texte": "Ski chalet",
+                "image": "choisirait/weekend/chalet-ski.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which view would he wake up to?",
+            "options": [
+              {
+                "texte": "Desert",
+                "image": "choisirait/vue/desert-vue.webp"
+              },
+              {
+                "texte": "Vineyards",
+                "image": "choisirait/vue/vignes.webp"
+              },
+              {
+                "texte": "Northern lights",
+                "image": "choisirait/vue/aurores.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Send it to him: how many did you get?",
+          "bouton": "Send this to him",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Travel edition. Answer for him first, no peeking.\n\nSend this to him",
+      "hashtags": [
+        "#couplequiz",
+        "#boyfriendquiz",
+        "#thisorthat",
+        "#travelcouple",
+        "#quizcouple"
+      ]
+    }
+  }
+}

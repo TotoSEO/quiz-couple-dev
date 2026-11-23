@@ -1,0 +1,92 @@
+{
+  "jour": "2027-01-28",
+  "creneau": "midi",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-123",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "elle",
+        "etiquette": "Food edition",
+        "accroche": "What would she choose?",
+        "consigne": "3 questions, 4 seconds each. Pick for her!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "Which potato would she pick?",
+            "options": [
+              {
+                "texte": "Hash browns",
+                "image": "choisirait/patate/hash-browns.webp"
+              },
+              {
+                "texte": "Rösti",
+                "image": "choisirait/patate/rosti.webp"
+              },
+              {
+                "texte": "Curly fries",
+                "image": "choisirait/patate/curly.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which pasta would she pick?",
+            "options": [
+              {
+                "texte": "Bolognese",
+                "image": "choisirait/pates/bolognaise.webp"
+              },
+              {
+                "texte": "Lasagna",
+                "image": "choisirait/pates/lasagnes.webp"
+              },
+              {
+                "texte": "Seafood pasta",
+                "image": "choisirait/pates/fruits-mer.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which ice cream would she get?",
+            "options": [
+              {
+                "texte": "Affogato",
+                "image": "choisirait/glace/affogato.webp"
+              },
+              {
+                "texte": "Popsicle",
+                "image": "choisirait/glace/esquimau.webp"
+              },
+              {
+                "texte": "Banana split",
+                "image": "choisirait/glace/banana-split.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Got her 3 picks? Send it and see!",
+          "bouton": "Send this to her",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Food edition. Guess first, send it after. Then compare.\n\nSend this to her",
+      "hashtags": [
+        "#couplequiz",
+        "#girlfriendquiz",
+        "#thisorthat",
+        "#foodie",
+        "#quizcouple"
+      ]
+    }
+  }
+}

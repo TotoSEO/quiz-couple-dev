@@ -1,0 +1,92 @@
+{
+  "jour": "2027-03-02",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-183",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "elle",
+        "etiquette": "Date night edition",
+        "accroche": "What would she choose?",
+        "consigne": "3 questions, 4 seconds each. Pick for her!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "Which flowers would she want?",
+            "options": [
+              {
+                "texte": "Tulips",
+                "image": "choisirait/fleurs/tulipes.webp"
+              },
+              {
+                "texte": "Lilies",
+                "image": "choisirait/fleurs/lys.webp"
+              },
+              {
+                "texte": "Daisies",
+                "image": "choisirait/fleurs/marguerites.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which date would she plan?",
+            "options": [
+              {
+                "texte": "Hot air balloon",
+                "image": "choisirait/date/montgolfiere-date.webp"
+              },
+              {
+                "texte": "Wine tasting",
+                "image": "choisirait/date/degustation.webp"
+              },
+              {
+                "texte": "Camping",
+                "image": "choisirait/date/camping.webp"
+              }
+            ]
+          },
+          {
+            "question": "What would she order at the bar?",
+            "options": [
+              {
+                "texte": "Margarita",
+                "image": "choisirait/bar/margarita.webp"
+              },
+              {
+                "texte": "Beer",
+                "image": "choisirait/bar/biere.webp"
+              },
+              {
+                "texte": "Aperol Spritz",
+                "image": "choisirait/bar/spritz.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Got her 3 picks? Send it and see!",
+          "bouton": "Send this to her",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Date night edition. Guess first, send it after. Then compare.\n\nSend this to her",
+      "hashtags": [
+        "#couplequiz",
+        "#girlfriendquiz",
+        "#thisorthat",
+        "#datenight",
+        "#quizcouple"
+      ]
+    }
+  }
+}

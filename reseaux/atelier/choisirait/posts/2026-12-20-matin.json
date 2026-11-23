@@ -1,0 +1,92 @@
+{
+  "jour": "2026-12-20",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-049",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "lui",
+        "etiquette": "Hobbies edition",
+        "accroche": "What would he choose?",
+        "consigne": "Guess his 3 picks, then send it to him!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "Which instrument would he play?",
+            "options": [
+              {
+                "texte": "Electric guitar",
+                "image": "choisirait/instrument/guitare-electrique.webp"
+              },
+              {
+                "texte": "Trumpet",
+                "image": "choisirait/instrument/trompette.webp"
+              },
+              {
+                "texte": "Violin",
+                "image": "choisirait/instrument/violon.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which workout would he pick?",
+            "options": [
+              {
+                "texte": "Yoga",
+                "image": "choisirait/salle/yoga.webp"
+              },
+              {
+                "texte": "CrossFit",
+                "image": "choisirait/salle/crossfit.webp"
+              },
+              {
+                "texte": "Running",
+                "image": "choisirait/salle/course.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which hobby would he pick up?",
+            "options": [
+              {
+                "texte": "Photography",
+                "image": "choisirait/loisir/photo.webp"
+              },
+              {
+                "texte": "Woodworking",
+                "image": "choisirait/loisir/menuiserie.webp"
+              },
+              {
+                "texte": "Fishing",
+                "image": "choisirait/loisir/peche.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Now send it to him. Did you guess right?",
+          "bouton": "Send this to him",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Hobbies edition. One letter per question, then send it to him.\n\nSend this to him",
+      "hashtags": [
+        "#couplequiz",
+        "#boyfriendquiz",
+        "#thisorthat",
+        "#hobbies",
+        "#quizcouple"
+      ]
+    }
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "jour": "2026-11-30",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-012",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "elle",
+        "etiquette": "Dream home edition",
+        "accroche": "What would she choose?",
+        "consigne": "Pick what she would pick. Then send it to her!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "Which cat would she adopt?",
+            "options": [
+              {
+                "texte": "Ragdoll",
+                "image": "choisirait/chat/ragdoll.webp"
+              },
+              {
+                "texte": "Persian",
+                "image": "choisirait/chat/persan.webp"
+              },
+              {
+                "texte": "Siamese",
+                "image": "choisirait/chat/siamois.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which dog would she pick?",
+            "options": [
+              {
+                "texte": "Labrador",
+                "image": "choisirait/chien/labrador.webp"
+              },
+              {
+                "texte": "Shiba Inu",
+                "image": "choisirait/chien/shiba.webp"
+              },
+              {
+                "texte": "German Shepherd",
+                "image": "choisirait/chien/berger-allemand.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which view would she wake up to?",
+            "options": [
+              {
+                "texte": "Lake",
+                "image": "choisirait/vue/lac.webp"
+              },
+              {
+                "texte": "Vineyards",
+                "image": "choisirait/vue/vignes.webp"
+              },
+              {
+                "texte": "Forest",
+                "image": "choisirait/vue/foret.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Got her 3 picks? Send it and see!",
+          "bouton": "Send this to her",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Dream home edition. Write down her three letters before you send it.\n\nSend this to her",
+      "hashtags": [
+        "#couplequiz",
+        "#girlfriendquiz",
+        "#thisorthat",
+        "#dreamhome",
+        "#quizcouple"
+      ]
+    }
+  }
+}

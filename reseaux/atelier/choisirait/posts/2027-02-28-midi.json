@@ -1,0 +1,92 @@
+{
+  "jour": "2027-02-28",
+  "creneau": "midi",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-180",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "elle",
+        "etiquette": "Winter edition",
+        "accroche": "What would she choose?",
+        "consigne": "Pick what she would pick. Then send it to her!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "Which winter date would she pick?",
+            "options": [
+              {
+                "texte": "Cabin by the fire",
+                "image": "choisirait/hiver/feu-cheminee.webp"
+              },
+              {
+                "texte": "Building a snowman",
+                "image": "choisirait/hiver/bonhomme.webp"
+              },
+              {
+                "texte": "Sledding",
+                "image": "choisirait/hiver/luge.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which dinner would she pick?",
+            "options": [
+              {
+                "texte": "Steak and fries",
+                "image": "choisirait/diner/steak-frites.webp"
+              },
+              {
+                "texte": "Fish and chips",
+                "image": "choisirait/diner/fish-chips.webp"
+              },
+              {
+                "texte": "Cheese fondue",
+                "image": "choisirait/diner/fondue.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which coffee would she order?",
+            "options": [
+              {
+                "texte": "Cappuccino",
+                "image": "choisirait/cafe/cappuccino.webp"
+              },
+              {
+                "texte": "Iced latte",
+                "image": "choisirait/cafe/iced-latte.webp"
+              },
+              {
+                "texte": "Americano",
+                "image": "choisirait/cafe/americano.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Got her 3 picks? Send it and see!",
+          "bouton": "Send this to her",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Winter edition. Easy for you? Then the next one is for her.\n\nSend this to her",
+      "hashtags": [
+        "#couplequiz",
+        "#girlfriendquiz",
+        "#thisorthat",
+        "#winter",
+        "#quizcouple"
+      ]
+    }
+  }
+}

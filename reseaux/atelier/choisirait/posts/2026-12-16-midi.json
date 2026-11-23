@@ -1,0 +1,92 @@
+{
+  "jour": "2026-12-16",
+  "creneau": "midi",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-043",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "lui",
+        "etiquette": "Christmas edition",
+        "accroche": "What would he choose?",
+        "consigne": "3 questions, 4 seconds each. Pick for him!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "Which gift would he want?",
+            "options": [
+              {
+                "texte": "Guitar",
+                "image": "choisirait/instrument/guitare-acoustique.webp"
+              },
+              {
+                "texte": "Watch",
+                "image": "choisirait/cadeau/montre-cadeau.webp"
+              },
+              {
+                "texte": "Perfume",
+                "image": "choisirait/cadeau/parfum.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which Christmas treat would he pick?",
+            "options": [
+              {
+                "texte": "Mince pies",
+                "image": "choisirait/noel-gourmandise/mince-pies.webp"
+              },
+              {
+                "texte": "Gingerbread cookies",
+                "image": "choisirait/noel-gourmandise/pain-epices.webp"
+              },
+              {
+                "texte": "Yule log",
+                "image": "choisirait/noel-gourmandise/buche.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which Christmas date would he plan?",
+            "options": [
+              {
+                "texte": "Ice skating",
+                "image": "choisirait/noel-sortie/patinoire-noel.webp"
+              },
+              {
+                "texte": "Snowy chalet",
+                "image": "choisirait/noel-sortie/chalet-noel.webp"
+              },
+              {
+                "texte": "Christmas market",
+                "image": "choisirait/noel-sortie/marche-noel.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Now send it to him. Did you guess right?",
+          "bouton": "Send this to him",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Christmas edition. Guess first, send it after. Then compare.\n\nSend this to him",
+      "hashtags": [
+        "#couplequiz",
+        "#boyfriendquiz",
+        "#thisorthat",
+        "#christmas",
+        "#quizcouple"
+      ]
+    }
+  }
+}

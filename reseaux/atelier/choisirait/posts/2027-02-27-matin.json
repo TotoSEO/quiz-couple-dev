@@ -1,0 +1,92 @@
+{
+  "jour": "2027-02-27",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-178",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "lui",
+        "etiquette": "Weekend edition",
+        "accroche": "What would he choose?",
+        "consigne": "Answer for him, then let him check!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "Which sport would he watch?",
+            "options": [
+              {
+                "texte": "Football",
+                "image": "choisirait/sport/foot.webp"
+              },
+              {
+                "texte": "Tennis",
+                "image": "choisirait/sport/tennis.webp"
+              },
+              {
+                "texte": "Formula 1",
+                "image": "choisirait/sport/f1.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which hobby would he pick up?",
+            "options": [
+              {
+                "texte": "Pottery",
+                "image": "choisirait/loisir/poterie.webp"
+              },
+              {
+                "texte": "Fishing",
+                "image": "choisirait/loisir/peche.webp"
+              },
+              {
+                "texte": "Knitting",
+                "image": "choisirait/loisir/tricot.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which workout would he pick?",
+            "options": [
+              {
+                "texte": "Swimming",
+                "image": "choisirait/salle/natation.webp"
+              },
+              {
+                "texte": "Yoga",
+                "image": "choisirait/salle/yoga.webp"
+              },
+              {
+                "texte": "Weightlifting",
+                "image": "choisirait/salle/muscu.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Now send it to him. Did you guess right?",
+          "bouton": "Send this to him",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Weekend edition. Your answers first, then his reaction.\n\nSend this to him",
+      "hashtags": [
+        "#couplequiz",
+        "#boyfriendquiz",
+        "#thisorthat",
+        "#weekendvibes",
+        "#quizcouple"
+      ]
+    }
+  }
+}

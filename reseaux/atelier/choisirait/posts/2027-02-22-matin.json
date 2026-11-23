@@ -1,0 +1,92 @@
+{
+  "jour": "2027-02-22",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-168",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "elle",
+        "etiquette": "Dream life edition",
+        "accroche": "What would she choose?",
+        "consigne": "Pick what she would pick. Then send it to her!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "Which watch would she wear?",
+            "options": [
+              {
+                "texte": "Cartier Tank",
+                "image": "choisirait/montre/cartier.webp"
+              },
+              {
+                "texte": "Casio G-Shock",
+                "image": "choisirait/montre/g-shock.webp"
+              },
+              {
+                "texte": "Pocket watch",
+                "image": "choisirait/montre/gousset.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which dream house would she pick?",
+            "options": [
+              {
+                "texte": "Modern villa",
+                "image": "choisirait/maison/villa-moderne.webp"
+              },
+              {
+                "texte": "Victorian house",
+                "image": "choisirait/maison/victorienne.webp"
+              },
+              {
+                "texte": "Castle",
+                "image": "choisirait/maison/chateau.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which dog would she adopt?",
+            "options": [
+              {
+                "texte": "Pomeranian",
+                "image": "choisirait/chien/pomeranien.webp"
+              },
+              {
+                "texte": "Belgian Malinois",
+                "image": "choisirait/chien/malinois.webp"
+              },
+              {
+                "texte": "Cavalier King Charles",
+                "image": "choisirait/chien/cavalier.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Got her 3 picks? Send it and see!",
+          "bouton": "Send this to her",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Dream life edition. Your answers first, then her reaction.\n\nSend this to her",
+      "hashtags": [
+        "#couplequiz",
+        "#girlfriendquiz",
+        "#thisorthat",
+        "#dreamlife",
+        "#quizcouple"
+      ]
+    }
+  }
+}

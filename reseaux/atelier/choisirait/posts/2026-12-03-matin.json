@@ -1,0 +1,92 @@
+{
+  "jour": "2026-12-03",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-018",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "elle",
+        "etiquette": "Christmas edition",
+        "accroche": "What would she choose?",
+        "consigne": "Answer for her, then let her check!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "Which gift would she want?",
+            "options": [
+              {
+                "texte": "Game console",
+                "image": "choisirait/cadeau/console-cadeau.webp"
+              },
+              {
+                "texte": "Headphones",
+                "image": "choisirait/cadeau/casque.webp"
+              },
+              {
+                "texte": "Sneakers",
+                "image": "choisirait/cadeau/baskets-cadeau.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which Christmas treat would she pick?",
+            "options": [
+              {
+                "texte": "Stollen",
+                "image": "choisirait/noel-gourmandise/stollen.webp"
+              },
+              {
+                "texte": "Yule log",
+                "image": "choisirait/noel-gourmandise/buche.webp"
+              },
+              {
+                "texte": "Gingerbread house",
+                "image": "choisirait/noel-gourmandise/maison-pain-epices.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which Christmas date would she plan?",
+            "options": [
+              {
+                "texte": "Christmas market",
+                "image": "choisirait/noel-sortie/marche-noel.webp"
+              },
+              {
+                "texte": "Ice skating",
+                "image": "choisirait/noel-sortie/patinoire-noel.webp"
+              },
+              {
+                "texte": "Movie by the tree",
+                "image": "choisirait/noel-sortie/film-sapin.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Got her 3 picks? Send it and see!",
+          "bouton": "Send this to her",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Christmas edition. Your answers first, then her reaction.\n\nSend this to her",
+      "hashtags": [
+        "#couplequiz",
+        "#girlfriendquiz",
+        "#thisorthat",
+        "#christmas",
+        "#quizcouple"
+      ]
+    }
+  }
+}

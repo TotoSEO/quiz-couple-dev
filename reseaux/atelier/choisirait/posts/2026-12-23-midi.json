@@ -1,0 +1,92 @@
+{
+  "jour": "2026-12-23",
+  "creneau": "midi",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-056",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "lui",
+        "etiquette": "Winter edition",
+        "accroche": "What would he choose?",
+        "consigne": "Pick what he would pick. Then send it to him!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "Which winter date would he pick?",
+            "options": [
+              {
+                "texte": "Hot tub in the snow",
+                "image": "choisirait/hiver/jacuzzi.webp"
+              },
+              {
+                "texte": "Building a snowman",
+                "image": "choisirait/hiver/bonhomme.webp"
+              },
+              {
+                "texte": "Ice skating",
+                "image": "choisirait/hiver/hiver-patin.webp"
+              }
+            ]
+          },
+          {
+            "question": "What would he cook for date night?",
+            "options": [
+              {
+                "texte": "Raclette",
+                "image": "choisirait/diner/raclette.webp"
+              },
+              {
+                "texte": "Ramen",
+                "image": "choisirait/diner/ramen.webp"
+              },
+              {
+                "texte": "Risotto",
+                "image": "choisirait/diner/risotto.webp"
+              }
+            ]
+          },
+          {
+            "question": "Where would he book a weekend?",
+            "options": [
+              {
+                "texte": "Overwater villa",
+                "image": "choisirait/weekend/bungalow-eau.webp"
+              },
+              {
+                "texte": "Log cabin",
+                "image": "choisirait/weekend/chalet-bois.webp"
+              },
+              {
+                "texte": "Beach bungalow",
+                "image": "choisirait/weekend/bungalow-plage.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Send it to him: how many did you get?",
+          "bouton": "Send this to him",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Winter edition. Pick for him, then let him prove you wrong.\n\nSend this to him",
+      "hashtags": [
+        "#couplequiz",
+        "#boyfriendquiz",
+        "#thisorthat",
+        "#winter",
+        "#quizcouple"
+      ]
+    }
+  }
+}

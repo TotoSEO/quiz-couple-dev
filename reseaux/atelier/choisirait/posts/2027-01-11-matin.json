@@ -1,0 +1,92 @@
+{
+  "jour": "2027-01-11",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-090",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "elle",
+        "etiquette": "Date night edition",
+        "accroche": "What would she choose?",
+        "consigne": "Answer for her, then let her check!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "Which flowers would she want?",
+            "options": [
+              {
+                "texte": "Peonies",
+                "image": "choisirait/fleurs/pivoines.webp"
+              },
+              {
+                "texte": "Wildflowers",
+                "image": "choisirait/fleurs/fleurs-sauvages.webp"
+              },
+              {
+                "texte": "Daisies",
+                "image": "choisirait/fleurs/marguerites.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which date would she plan?",
+            "options": [
+              {
+                "texte": "Ice skating",
+                "image": "choisirait/date/patinoire.webp"
+              },
+              {
+                "texte": "Arcade",
+                "image": "choisirait/date/arcade.webp"
+              },
+              {
+                "texte": "Beach sunset",
+                "image": "choisirait/date/coucher-soleil.webp"
+              }
+            ]
+          },
+          {
+            "question": "What would she order at the bar?",
+            "options": [
+              {
+                "texte": "Gin and tonic",
+                "image": "choisirait/bar/gin-tonic.webp"
+              },
+              {
+                "texte": "Margarita",
+                "image": "choisirait/bar/margarita.webp"
+              },
+              {
+                "texte": "Mojito",
+                "image": "choisirait/bar/mojito.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Got her 3 picks? Send it and see!",
+          "bouton": "Send this to her",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Date night edition. Easy for you? Then the next one is for her.\n\nSend this to her",
+      "hashtags": [
+        "#couplequiz",
+        "#girlfriendquiz",
+        "#thisorthat",
+        "#datenight",
+        "#quizcouple"
+      ]
+    }
+  }
+}

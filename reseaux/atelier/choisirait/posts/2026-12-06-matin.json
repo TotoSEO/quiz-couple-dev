@@ -1,0 +1,92 @@
+{
+  "jour": "2026-12-06",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-023",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "lui",
+        "etiquette": "Winter edition",
+        "accroche": "What would he choose?",
+        "consigne": "3 questions, 4 seconds each. Pick for him!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "Which winter date would he pick?",
+            "options": [
+              {
+                "texte": "Building a snowman",
+                "image": "choisirait/hiver/bonhomme.webp"
+              },
+              {
+                "texte": "Ice skating",
+                "image": "choisirait/hiver/hiver-patin.webp"
+              },
+              {
+                "texte": "Cabin by the fire",
+                "image": "choisirait/hiver/feu-cheminee.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which coffee would he order?",
+            "options": [
+              {
+                "texte": "Iced latte",
+                "image": "choisirait/cafe/iced-latte.webp"
+              },
+              {
+                "texte": "Cappuccino",
+                "image": "choisirait/cafe/cappuccino.webp"
+              },
+              {
+                "texte": "Matcha latte",
+                "image": "choisirait/cafe/matcha.webp"
+              }
+            ]
+          },
+          {
+            "question": "What would he cook for date night?",
+            "options": [
+              {
+                "texte": "Cheese fondue",
+                "image": "choisirait/diner/fondue.webp"
+              },
+              {
+                "texte": "Korean BBQ",
+                "image": "choisirait/diner/bbq-coreen.webp"
+              },
+              {
+                "texte": "Fish and chips",
+                "image": "choisirait/diner/fish-chips.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Send it to him: how many did you get?",
+          "bouton": "Send this to him",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Winter edition. Guess first, send it after. Then compare.\n\nSend this to him",
+      "hashtags": [
+        "#couplequiz",
+        "#boyfriendquiz",
+        "#thisorthat",
+        "#winter",
+        "#quizcouple"
+      ]
+    }
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "jour": "2027-03-18",
+  "creneau": "midi",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-214",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "lui",
+        "etiquette": "Date night edition",
+        "accroche": "What would he choose?",
+        "consigne": "Answer for him, then let him check!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "What would he order at the bar?",
+            "options": [
+              {
+                "texte": "Beer",
+                "image": "choisirait/bar/biere.webp"
+              },
+              {
+                "texte": "Margarita",
+                "image": "choisirait/bar/margarita.webp"
+              },
+              {
+                "texte": "Mojito",
+                "image": "choisirait/bar/mojito.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which flowers would he get you?",
+            "options": [
+              {
+                "texte": "Peonies",
+                "image": "choisirait/fleurs/pivoines.webp"
+              },
+              {
+                "texte": "Red roses",
+                "image": "choisirait/fleurs/roses.webp"
+              },
+              {
+                "texte": "Lilies",
+                "image": "choisirait/fleurs/lys.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which date would he take you on?",
+            "options": [
+              {
+                "texte": "Cinema night",
+                "image": "choisirait/date/cinema.webp"
+              },
+              {
+                "texte": "Camping",
+                "image": "choisirait/date/camping.webp"
+              },
+              {
+                "texte": "Museum",
+                "image": "choisirait/date/musee.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Now send it to him. Did you guess right?",
+          "bouton": "Send this to him",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Date night edition. If you get all three, you know him by heart.\n\nSend this to him",
+      "hashtags": [
+        "#couplequiz",
+        "#boyfriendquiz",
+        "#thisorthat",
+        "#datenight",
+        "#quizcouple"
+      ]
+    }
+  }
+}

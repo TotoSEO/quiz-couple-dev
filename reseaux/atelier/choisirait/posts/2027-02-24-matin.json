@@ -1,0 +1,92 @@
+{
+  "jour": "2027-02-24",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-172",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "lui",
+        "etiquette": "Luxury edition",
+        "accroche": "What would he choose?",
+        "consigne": "Pick what he would pick. Then send it to him!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "Which car would he pick?",
+            "options": [
+              {
+                "texte": "McLaren 720S",
+                "image": "choisirait/voiture/mclaren.webp"
+              },
+              {
+                "texte": "Range Rover",
+                "image": "choisirait/voiture/range-rover.webp"
+              },
+              {
+                "texte": "Corvette",
+                "image": "choisirait/voiture/corvette.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which dream house would he pick?",
+            "options": [
+              {
+                "texte": "Mountain chalet",
+                "image": "choisirait/maison/chalet.webp"
+              },
+              {
+                "texte": "Tiny house",
+                "image": "choisirait/maison/tiny-house.webp"
+              },
+              {
+                "texte": "Modern villa",
+                "image": "choisirait/maison/villa-moderne.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which watch would he wear?",
+            "options": [
+              {
+                "texte": "Rolex Submariner",
+                "image": "choisirait/montre/rolex.webp"
+              },
+              {
+                "texte": "Casio digital",
+                "image": "choisirait/montre/casio.webp"
+              },
+              {
+                "texte": "Omega Speedmaster",
+                "image": "choisirait/montre/speedmaster.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Now send it to him. Did you guess right?",
+          "bouton": "Send this to him",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Luxury edition. Write down his three letters before you send it.\n\nSend this to him",
+      "hashtags": [
+        "#couplequiz",
+        "#boyfriendquiz",
+        "#thisorthat",
+        "#luxurylife",
+        "#quizcouple"
+      ]
+    }
+  }
+}

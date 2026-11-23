@@ -1,0 +1,92 @@
+{
+  "jour": "2026-12-30",
+  "creneau": "midi",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-069",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "elle",
+        "etiquette": "Date night edition",
+        "accroche": "What would she choose?",
+        "consigne": "Guess her 3 picks, then send it to her!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "Which flowers would she want?",
+            "options": [
+              {
+                "texte": "Red roses",
+                "image": "choisirait/fleurs/roses.webp"
+              },
+              {
+                "texte": "Daisies",
+                "image": "choisirait/fleurs/marguerites.webp"
+              },
+              {
+                "texte": "Lilies",
+                "image": "choisirait/fleurs/lys.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which dessert would she pick?",
+            "options": [
+              {
+                "texte": "Macarons",
+                "image": "choisirait/dessert/macarons.webp"
+              },
+              {
+                "texte": "Cheesecake",
+                "image": "choisirait/dessert/cheesecake.webp"
+              },
+              {
+                "texte": "Red velvet cake",
+                "image": "choisirait/dessert/red-velvet.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which date would she take you on?",
+            "options": [
+              {
+                "texte": "Fancy dinner",
+                "image": "choisirait/demande/demande-resto.webp"
+              },
+              {
+                "texte": "Cinema night",
+                "image": "choisirait/date/cinema.webp"
+              },
+              {
+                "texte": "Wine tasting",
+                "image": "choisirait/date/degustation.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Got her 3 picks? Send it and see!",
+          "bouton": "Send this to her",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Date night edition. One letter per question, then send it to her.\n\nSend this to her",
+      "hashtags": [
+        "#couplequiz",
+        "#girlfriendquiz",
+        "#thisorthat",
+        "#datenight",
+        "#quizcouple"
+      ]
+    }
+  }
+}

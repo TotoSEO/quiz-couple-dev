@@ -1,0 +1,92 @@
+{
+  "jour": "2027-01-08",
+  "creneau": "midi",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-086",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "lui",
+        "etiquette": "Game night edition",
+        "accroche": "What would he choose?",
+        "consigne": "Answer for him, then let him check!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "What would he order at 2 a.m.?",
+            "options": [
+              {
+                "texte": "Tacos",
+                "image": "choisirait/fastfood/tacos.webp"
+              },
+              {
+                "texte": "Instant noodles",
+                "image": "choisirait/fastfood/nouilles.webp"
+              },
+              {
+                "texte": "Fried chicken",
+                "image": "choisirait/fastfood/poulet-frit.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which console would he pick?",
+            "options": [
+              {
+                "texte": "Nintendo Switch",
+                "image": "choisirait/console/switch.webp"
+              },
+              {
+                "texte": "PlayStation 2",
+                "image": "choisirait/console/ps2.webp"
+              },
+              {
+                "texte": "Game Boy",
+                "image": "choisirait/console/gameboy.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which game night would he pick?",
+            "options": [
+              {
+                "texte": "Board games",
+                "image": "choisirait/jeu/jeux-societe.webp"
+              },
+              {
+                "texte": "Poker",
+                "image": "choisirait/jeu/poker.webp"
+              },
+              {
+                "texte": "Ping pong",
+                "image": "choisirait/jeu/ping-pong.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Send it to him: how many did you get?",
+          "bouton": "Send this to him",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Game night edition. Pick for him, then let him prove you wrong.\n\nSend this to him",
+      "hashtags": [
+        "#couplequiz",
+        "#boyfriendquiz",
+        "#thisorthat",
+        "#gamenight",
+        "#quizcouple"
+      ]
+    }
+  }
+}

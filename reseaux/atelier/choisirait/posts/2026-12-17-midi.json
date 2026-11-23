@@ -1,0 +1,92 @@
+{
+  "jour": "2026-12-17",
+  "creneau": "midi",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-045",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "elle",
+        "etiquette": "Adventure edition",
+        "accroche": "What would she choose?",
+        "consigne": "Guess her 3 picks, then send it to her!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "Which adventure would she try?",
+            "options": [
+              {
+                "texte": "Paragliding",
+                "image": "choisirait/aventure/parapente.webp"
+              },
+              {
+                "texte": "Kayaking",
+                "image": "choisirait/aventure/kayak.webp"
+              },
+              {
+                "texte": "Surfing",
+                "image": "choisirait/aventure/surf.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which sport would she watch?",
+            "options": [
+              {
+                "texte": "Basketball",
+                "image": "choisirait/sport/basket.webp"
+              },
+              {
+                "texte": "Boxing",
+                "image": "choisirait/sport/boxe.webp"
+              },
+              {
+                "texte": "Formula 1",
+                "image": "choisirait/sport/f1.webp"
+              }
+            ]
+          },
+          {
+            "question": "How would she travel with you?",
+            "options": [
+              {
+                "texte": "Camper van",
+                "image": "choisirait/voyage/van.webp"
+              },
+              {
+                "texte": "Sailboat",
+                "image": "choisirait/voyage/voilier.webp"
+              },
+              {
+                "texte": "Private jet",
+                "image": "choisirait/voyage/jet.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Got her 3 picks? Send it and see!",
+          "bouton": "Send this to her",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Adventure edition. No cheating: decide before the timer runs out.\n\nSend this to her",
+      "hashtags": [
+        "#couplequiz",
+        "#girlfriendquiz",
+        "#thisorthat",
+        "#adventurecouple",
+        "#quizcouple"
+      ]
+    }
+  }
+}

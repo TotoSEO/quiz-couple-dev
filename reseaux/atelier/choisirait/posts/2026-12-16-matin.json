@@ -1,0 +1,92 @@
+{
+  "jour": "2026-12-16",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-042",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "elle",
+        "etiquette": "Wedding edition",
+        "accroche": "What would she choose?",
+        "consigne": "Answer for her, then let her check!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "Where would she want you to propose?",
+            "options": [
+              {
+                "texte": "Hot air balloon",
+                "image": "choisirait/demande/demande-montgolfiere.webp"
+              },
+              {
+                "texte": "Rooftop",
+                "image": "choisirait/demande/demande-rooftop.webp"
+              },
+              {
+                "texte": "Beach at sunset",
+                "image": "choisirait/demande/demande-plage.webp"
+              }
+            ]
+          },
+          {
+            "question": "Where would she want to get married?",
+            "options": [
+              {
+                "texte": "Garden",
+                "image": "choisirait/mariage/mariage-jardin.webp"
+              },
+              {
+                "texte": "Castle",
+                "image": "choisirait/mariage/mariage-chateau.webp"
+              },
+              {
+                "texte": "Beach",
+                "image": "choisirait/vue/plage-tropicale.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which ring would she want?",
+            "options": [
+              {
+                "texte": "Emerald ring",
+                "image": "choisirait/bague/emeraude.webp"
+              },
+              {
+                "texte": "Rose gold ring",
+                "image": "choisirait/bague/or-rose.webp"
+              },
+              {
+                "texte": "Gold band",
+                "image": "choisirait/bague/alliance-or.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Got her 3 picks? Send it and see!",
+          "bouton": "Send this to her",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Wedding edition. Write down her three letters before you send it.\n\nSend this to her",
+      "hashtags": [
+        "#couplequiz",
+        "#girlfriendquiz",
+        "#thisorthat",
+        "#engaged",
+        "#quizcouple"
+      ]
+    }
+  }
+}

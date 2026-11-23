@@ -56,6 +56,8 @@ export const AMBIANCE_PAR_CATEGORIE = {
   coquin: 'coquin',
   'connais-tu': 'jeu',
   'tu-preferes': 'jeu',
+  // « What would he/she choose? » (23 novembre 2026), un jeu comme les dilemmes
+  choisirait: 'jeu',
   // le bonhomme bâton : de l'action et de l'aventure, sauf mention contraire
   baton: 'epique',
   // Les mipaps : les animations font rire, les dessins qui respirent attendrissent

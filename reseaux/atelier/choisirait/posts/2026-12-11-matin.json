@@ -1,0 +1,92 @@
+{
+  "jour": "2026-12-11",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-033",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "elle",
+        "etiquette": "Cozy night in edition",
+        "accroche": "What would she choose?",
+        "consigne": "Guess her 3 picks, then send it to her!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "Which game night would she pick?",
+            "options": [
+              {
+                "texte": "Video games",
+                "image": "choisirait/jeu/jeux-video.webp"
+              },
+              {
+                "texte": "Board games",
+                "image": "choisirait/jeu/jeux-societe.webp"
+              },
+              {
+                "texte": "Ping pong",
+                "image": "choisirait/jeu/ping-pong.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which dessert would she pick?",
+            "options": [
+              {
+                "texte": "Brownie",
+                "image": "choisirait/dessert/brownie.webp"
+              },
+              {
+                "texte": "Pavlova",
+                "image": "choisirait/dessert/pavlova.webp"
+              },
+              {
+                "texte": "Crème brûlée",
+                "image": "choisirait/dessert/creme-brulee.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which movie snack would she pick?",
+            "options": [
+              {
+                "texte": "Gummy bears",
+                "image": "choisirait/snack/oursons.webp"
+              },
+              {
+                "texte": "Chocolate bar",
+                "image": "choisirait/snack/tablette.webp"
+              },
+              {
+                "texte": "Nachos",
+                "image": "choisirait/snack/nachos.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Got her 3 picks? Send it and see!",
+          "bouton": "Send this to her",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Cozy night in edition. Guess first, send it after. Then compare.\n\nSend this to her",
+      "hashtags": [
+        "#couplequiz",
+        "#girlfriendquiz",
+        "#thisorthat",
+        "#cozynight",
+        "#quizcouple"
+      ]
+    }
+  }
+}

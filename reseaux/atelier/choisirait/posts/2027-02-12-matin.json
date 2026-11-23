@@ -1,0 +1,92 @@
+{
+  "jour": "2027-02-12",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-150",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "elle",
+        "etiquette": "Valentine's edition",
+        "accroche": "What would she choose?",
+        "consigne": "Answer for her, then let her check!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "What would she want for Valentine's?",
+            "options": [
+              {
+                "texte": "Perfume",
+                "image": "choisirait/valentin/parfum-valentin.webp"
+              },
+              {
+                "texte": "Box of chocolates",
+                "image": "choisirait/valentin/boite-chocolats.webp"
+              },
+              {
+                "texte": "Love letter",
+                "image": "choisirait/valentin/lettre.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which ring would she want?",
+            "options": [
+              {
+                "texte": "Emerald ring",
+                "image": "choisirait/bague/emeraude.webp"
+              },
+              {
+                "texte": "Vintage ring",
+                "image": "choisirait/bague/vintage-bague.webp"
+              },
+              {
+                "texte": "Solitaire diamond",
+                "image": "choisirait/bague/solitaire.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which flowers would she want?",
+            "options": [
+              {
+                "texte": "Hydrangeas",
+                "image": "choisirait/fleurs/hortensias.webp"
+              },
+              {
+                "texte": "Wildflowers",
+                "image": "choisirait/fleurs/fleurs-sauvages.webp"
+              },
+              {
+                "texte": "Peonies",
+                "image": "choisirait/fleurs/pivoines.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Got her 3 picks? Send it and see!",
+          "bouton": "Send this to her",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Valentine's edition. Easy for you? Then the next one is for her.\n\nSend this to her",
+      "hashtags": [
+        "#couplequiz",
+        "#girlfriendquiz",
+        "#thisorthat",
+        "#valentinesday",
+        "#quizcouple"
+      ]
+    }
+  }
+}

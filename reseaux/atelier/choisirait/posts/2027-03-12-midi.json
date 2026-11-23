@@ -1,0 +1,92 @@
+{
+  "jour": "2027-03-12",
+  "creneau": "midi",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-203",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "lui",
+        "etiquette": "Car lovers edition",
+        "accroche": "What would he choose?",
+        "consigne": "3 questions, 4 seconds each. Pick for him!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "Which motorbike would he ride?",
+            "options": [
+              {
+                "texte": "Indian Scout",
+                "image": "choisirait/moto/indian.webp"
+              },
+              {
+                "texte": "Yamaha MT-07",
+                "image": "choisirait/moto/mt07.webp"
+              },
+              {
+                "texte": "Vespa",
+                "image": "choisirait/moto/vespa.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which classic car would he drive?",
+            "options": [
+              {
+                "texte": "Jaguar E-Type",
+                "image": "choisirait/vintage/e-type.webp"
+              },
+              {
+                "texte": "Porsche 356",
+                "image": "choisirait/vintage/porsche-356.webp"
+              },
+              {
+                "texte": "Classic Mini",
+                "image": "choisirait/vintage/mini-classique.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which car would he drive?",
+            "options": [
+              {
+                "texte": "Ford Mustang",
+                "image": "choisirait/voiture/mustang.webp"
+              },
+              {
+                "texte": "Land Rover Defender",
+                "image": "choisirait/voiture/defender.webp"
+              },
+              {
+                "texte": "Mercedes-AMG C63 S",
+                "image": "choisirait/voiture/amg-c63.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Send it to him: how many did you get?",
+          "bouton": "Send this to him",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Car lovers edition. Guess first, send it after. Then compare.\n\nSend this to him",
+      "hashtags": [
+        "#couplequiz",
+        "#boyfriendquiz",
+        "#thisorthat",
+        "#carlovers",
+        "#quizcouple"
+      ]
+    }
+  }
+}

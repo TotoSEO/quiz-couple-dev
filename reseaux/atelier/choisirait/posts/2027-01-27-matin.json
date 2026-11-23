@@ -1,0 +1,92 @@
+{
+  "jour": "2027-01-27",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-120",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "elle",
+        "etiquette": "Morning edition",
+        "accroche": "What would she choose?",
+        "consigne": "Pick what she would pick. Then send it to her!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "How would she have her eggs?",
+            "options": [
+              {
+                "texte": "Soft-boiled",
+                "image": "choisirait/oeufs/coque.webp"
+              },
+              {
+                "texte": "Omelette",
+                "image": "choisirait/oeufs/omelette.webp"
+              },
+              {
+                "texte": "Scrambled",
+                "image": "choisirait/oeufs/brouilles.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which breakfast would she choose?",
+            "options": [
+              {
+                "texte": "Full English",
+                "image": "choisirait/petitdej/english.webp"
+              },
+              {
+                "texte": "Waffles",
+                "image": "choisirait/petitdej/gaufres.webp"
+              },
+              {
+                "texte": "Pancakes",
+                "image": "choisirait/petitdej/pancakes.webp"
+              }
+            ]
+          },
+          {
+            "question": "What would she grab at the bakery?",
+            "options": [
+              {
+                "texte": "Cinnamon roll",
+                "image": "choisirait/boulangerie/cinnamon-roll.webp"
+              },
+              {
+                "texte": "Pain au chocolat",
+                "image": "choisirait/boulangerie/pain-chocolat.webp"
+              },
+              {
+                "texte": "Bagel",
+                "image": "choisirait/boulangerie/bagel.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Got her 3 picks? Send it and see!",
+          "bouton": "Send this to her",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Morning edition. Easy for you? Then the next one is for her.\n\nSend this to her",
+      "hashtags": [
+        "#couplequiz",
+        "#girlfriendquiz",
+        "#thisorthat",
+        "#breakfast",
+        "#quizcouple"
+      ]
+    }
+  }
+}

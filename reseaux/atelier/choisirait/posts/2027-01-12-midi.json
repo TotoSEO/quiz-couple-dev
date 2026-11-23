@@ -1,0 +1,92 @@
+{
+  "jour": "2027-01-12",
+  "creneau": "midi",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-093",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "elle",
+        "etiquette": "Game night edition",
+        "accroche": "What would she choose?",
+        "consigne": "Guess her 3 picks, then send it to her!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "What would she order at 2 a.m.?",
+            "options": [
+              {
+                "texte": "Burger",
+                "image": "choisirait/fastfood/burger.webp"
+              },
+              {
+                "texte": "Grilled cheese",
+                "image": "choisirait/fastfood/croque.webp"
+              },
+              {
+                "texte": "Burrito",
+                "image": "choisirait/fastfood/burrito.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which console would she pick?",
+            "options": [
+              {
+                "texte": "Xbox",
+                "image": "choisirait/console/xbox.webp"
+              },
+              {
+                "texte": "Nintendo Switch",
+                "image": "choisirait/console/switch.webp"
+              },
+              {
+                "texte": "Game Boy",
+                "image": "choisirait/console/gameboy.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which movie snack would she pick?",
+            "options": [
+              {
+                "texte": "Ice cream tub",
+                "image": "choisirait/snack/pot-glace.webp"
+              },
+              {
+                "texte": "Popcorn",
+                "image": "choisirait/snack/popcorn.webp"
+              },
+              {
+                "texte": "Chocolate bar",
+                "image": "choisirait/snack/tablette.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Got her 3 picks? Send it and see!",
+          "bouton": "Send this to her",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Game night edition. Guess first, send it after. Then compare.\n\nSend this to her",
+      "hashtags": [
+        "#couplequiz",
+        "#girlfriendquiz",
+        "#thisorthat",
+        "#gamenight",
+        "#quizcouple"
+      ]
+    }
+  }
+}

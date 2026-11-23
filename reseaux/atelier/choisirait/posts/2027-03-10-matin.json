@@ -1,0 +1,92 @@
+{
+  "jour": "2027-03-10",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-198",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "elle",
+        "etiquette": "Weekend edition",
+        "accroche": "What would she choose?",
+        "consigne": "Answer for her, then let her check!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "Which workout would she pick?",
+            "options": [
+              {
+                "texte": "Boxing",
+                "image": "choisirait/salle/boxe-salle.webp"
+              },
+              {
+                "texte": "Running",
+                "image": "choisirait/salle/course.webp"
+              },
+              {
+                "texte": "Swimming",
+                "image": "choisirait/salle/natation.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which hobby would she pick up?",
+            "options": [
+              {
+                "texte": "Gardening",
+                "image": "choisirait/loisir/jardinage.webp"
+              },
+              {
+                "texte": "Photography",
+                "image": "choisirait/loisir/photo.webp"
+              },
+              {
+                "texte": "Pottery",
+                "image": "choisirait/loisir/poterie.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which game night would she pick?",
+            "options": [
+              {
+                "texte": "Foosball",
+                "image": "choisirait/jeu/baby-foot.webp"
+              },
+              {
+                "texte": "Chess",
+                "image": "choisirait/jeu/echecs-soir.webp"
+              },
+              {
+                "texte": "Pool",
+                "image": "choisirait/jeu/billard.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Got her 3 picks? Send it and see!",
+          "bouton": "Send this to her",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Weekend edition. Your answers first, then her reaction.\n\nSend this to her",
+      "hashtags": [
+        "#couplequiz",
+        "#girlfriendquiz",
+        "#thisorthat",
+        "#weekendvibes",
+        "#quizcouple"
+      ]
+    }
+  }
+}

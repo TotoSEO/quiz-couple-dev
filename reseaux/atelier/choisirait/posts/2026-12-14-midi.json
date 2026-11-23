@@ -1,0 +1,92 @@
+{
+  "jour": "2026-12-14",
+  "creneau": "midi",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-039",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "elle",
+        "etiquette": "Cozy night in edition",
+        "accroche": "What would she choose?",
+        "consigne": "3 questions, 4 seconds each. Pick for her!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "Which console would she pick?",
+            "options": [
+              {
+                "texte": "Game Boy",
+                "image": "choisirait/console/gameboy.webp"
+              },
+              {
+                "texte": "PlayStation 2",
+                "image": "choisirait/console/ps2.webp"
+              },
+              {
+                "texte": "Xbox",
+                "image": "choisirait/console/xbox.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which game night would she pick?",
+            "options": [
+              {
+                "texte": "Ping pong",
+                "image": "choisirait/jeu/ping-pong.webp"
+              },
+              {
+                "texte": "Foosball",
+                "image": "choisirait/jeu/baby-foot.webp"
+              },
+              {
+                "texte": "Chess",
+                "image": "choisirait/jeu/echecs-soir.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which drink would she get?",
+            "options": [
+              {
+                "texte": "Smoothie",
+                "image": "choisirait/boisson/smoothie.webp"
+              },
+              {
+                "texte": "Iced tea",
+                "image": "choisirait/boisson/the-glace.webp"
+              },
+              {
+                "texte": "Bubble tea",
+                "image": "choisirait/boisson/bubble-tea.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Got her 3 picks? Send it and see!",
+          "bouton": "Send this to her",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Cozy night in edition. One letter per question, then send it to her.\n\nSend this to her",
+      "hashtags": [
+        "#couplequiz",
+        "#girlfriendquiz",
+        "#thisorthat",
+        "#cozynight",
+        "#quizcouple"
+      ]
+    }
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "jour": "2027-01-10",
+  "creneau": "midi",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-089",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "lui",
+        "etiquette": "Winter edition",
+        "accroche": "What would he choose?",
+        "consigne": "Guess his 3 picks, then send it to him!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "Which winter date would he pick?",
+            "options": [
+              {
+                "texte": "Skiing",
+                "image": "choisirait/hiver/hiver-ski.webp"
+              },
+              {
+                "texte": "Cabin by the fire",
+                "image": "choisirait/hiver/feu-cheminee.webp"
+              },
+              {
+                "texte": "Ice skating",
+                "image": "choisirait/hiver/hiver-patin.webp"
+              }
+            ]
+          },
+          {
+            "question": "What would he cook for date night?",
+            "options": [
+              {
+                "texte": "Raclette",
+                "image": "choisirait/diner/raclette.webp"
+              },
+              {
+                "texte": "Cheese fondue",
+                "image": "choisirait/diner/fondue.webp"
+              },
+              {
+                "texte": "Steak and fries",
+                "image": "choisirait/diner/steak-frites.webp"
+              }
+            ]
+          },
+          {
+            "question": "Where would he book a weekend?",
+            "options": [
+              {
+                "texte": "Houseboat",
+                "image": "choisirait/weekend/peniche.webp"
+              },
+              {
+                "texte": "Ski chalet",
+                "image": "choisirait/weekend/chalet-ski.webp"
+              },
+              {
+                "texte": "Treehouse",
+                "image": "choisirait/weekend/cabane-arbre.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Send it to him: how many did you get?",
+          "bouton": "Send this to him",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Winter edition. One letter per question, then send it to him.\n\nSend this to him",
+      "hashtags": [
+        "#couplequiz",
+        "#boyfriendquiz",
+        "#thisorthat",
+        "#winter",
+        "#quizcouple"
+      ]
+    }
+  }
+}

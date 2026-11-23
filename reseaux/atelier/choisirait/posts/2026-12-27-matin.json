@@ -1,0 +1,92 @@
+{
+  "jour": "2026-12-27",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-062",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "lui",
+        "etiquette": "Drinks edition",
+        "accroche": "What would he choose?",
+        "consigne": "Answer for him, then let him check!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "Which coffee would he order?",
+            "options": [
+              {
+                "texte": "Espresso",
+                "image": "choisirait/cafe/espresso.webp"
+              },
+              {
+                "texte": "Cappuccino",
+                "image": "choisirait/cafe/cappuccino.webp"
+              },
+              {
+                "texte": "Iced latte",
+                "image": "choisirait/cafe/iced-latte.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which drink would he get?",
+            "options": [
+              {
+                "texte": "Smoothie",
+                "image": "choisirait/boisson/smoothie.webp"
+              },
+              {
+                "texte": "Iced tea",
+                "image": "choisirait/boisson/the-glace.webp"
+              },
+              {
+                "texte": "Lemonade",
+                "image": "choisirait/boisson/limonade.webp"
+              }
+            ]
+          },
+          {
+            "question": "What would he order at the bar?",
+            "options": [
+              {
+                "texte": "Mojito",
+                "image": "choisirait/bar/mojito.webp"
+              },
+              {
+                "texte": "Aperol Spritz",
+                "image": "choisirait/bar/spritz.webp"
+              },
+              {
+                "texte": "Beer",
+                "image": "choisirait/bar/biere.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Send it to him: how many did you get?",
+          "bouton": "Send this to him",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Drinks edition. Write down his three letters before you send it.\n\nSend this to him",
+      "hashtags": [
+        "#couplequiz",
+        "#boyfriendquiz",
+        "#thisorthat",
+        "#cocktails",
+        "#quizcouple"
+      ]
+    }
+  }
+}

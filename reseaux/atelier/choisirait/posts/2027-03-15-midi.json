@@ -1,0 +1,92 @@
+{
+  "jour": "2027-03-15",
+  "creneau": "midi",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-208",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "lui",
+        "etiquette": "Spring edition",
+        "accroche": "What would he choose?",
+        "consigne": "Pick what he would pick. Then send it to him!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "Which season would he pick?",
+            "options": [
+              {
+                "texte": "Summer",
+                "image": "choisirait/saison/ete.webp"
+              },
+              {
+                "texte": "Winter",
+                "image": "choisirait/saison/hiver-saison.webp"
+              },
+              {
+                "texte": "Autumn",
+                "image": "choisirait/saison/automne.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which adventure would he try?",
+            "options": [
+              {
+                "texte": "Bungee jumping",
+                "image": "choisirait/aventure/saut-elastique.webp"
+              },
+              {
+                "texte": "Snowboarding",
+                "image": "choisirait/aventure/snowboard.webp"
+              },
+              {
+                "texte": "Rock climbing",
+                "image": "choisirait/aventure/escalade.webp"
+              }
+            ]
+          },
+          {
+            "question": "Where would he take you on vacation?",
+            "options": [
+              {
+                "texte": "Australia",
+                "image": "choisirait/vacances/australie.webp"
+              },
+              {
+                "texte": "Costa Rica",
+                "image": "choisirait/vacances/costa-rica.webp"
+              },
+              {
+                "texte": "Bora Bora",
+                "image": "choisirait/vacances/bora-bora.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Now send it to him. Did you guess right?",
+          "bouton": "Send this to him",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Spring edition. Your answers first, then his reaction.\n\nSend this to him",
+      "hashtags": [
+        "#couplequiz",
+        "#boyfriendquiz",
+        "#thisorthat",
+        "#spring",
+        "#quizcouple"
+      ]
+    }
+  }
+}

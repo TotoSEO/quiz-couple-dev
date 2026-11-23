@@ -1,0 +1,92 @@
+{
+  "jour": "2027-02-16",
+  "creneau": "midi",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-158",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "lui",
+        "etiquette": "Adventure edition",
+        "accroche": "What would he choose?",
+        "consigne": "Answer for him, then let him check!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "Which sport would he watch?",
+            "options": [
+              {
+                "texte": "Rugby",
+                "image": "choisirait/sport/rugby.webp"
+              },
+              {
+                "texte": "American football",
+                "image": "choisirait/sport/foot-us.webp"
+              },
+              {
+                "texte": "Tennis",
+                "image": "choisirait/sport/tennis.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which adventure would he try?",
+            "options": [
+              {
+                "texte": "Horse riding",
+                "image": "choisirait/aventure/equitation.webp"
+              },
+              {
+                "texte": "Kayaking",
+                "image": "choisirait/aventure/kayak.webp"
+              },
+              {
+                "texte": "Skydiving",
+                "image": "choisirait/aventure/parachute.webp"
+              }
+            ]
+          },
+          {
+            "question": "Where would he go on vacation?",
+            "options": [
+              {
+                "texte": "Bali",
+                "image": "choisirait/vacances/bali.webp"
+              },
+              {
+                "texte": "Hawaii",
+                "image": "choisirait/vacances/hawaii.webp"
+              },
+              {
+                "texte": "USA",
+                "image": "choisirait/vacances/usa.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Send it to him: how many did you get?",
+          "bouton": "Send this to him",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Adventure edition. Your answers first, then his reaction.\n\nSend this to him",
+      "hashtags": [
+        "#couplequiz",
+        "#boyfriendquiz",
+        "#thisorthat",
+        "#adventurecouple",
+        "#quizcouple"
+      ]
+    }
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "jour": "2027-02-20",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-165",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "elle",
+        "etiquette": "Travel edition",
+        "accroche": "What would she choose?",
+        "consigne": "Guess her 3 picks, then send it to her!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "Which city would she take you to?",
+            "options": [
+              {
+                "texte": "Tokyo",
+                "image": "choisirait/ville/tokyo.webp"
+              },
+              {
+                "texte": "Lisbon",
+                "image": "choisirait/ville/lisbonne.webp"
+              },
+              {
+                "texte": "Paris",
+                "image": "choisirait/ville/paris.webp"
+              }
+            ]
+          },
+          {
+            "question": "Where would she take you on vacation?",
+            "options": [
+              {
+                "texte": "Canada",
+                "image": "choisirait/vacances/canada.webp"
+              },
+              {
+                "texte": "Greece",
+                "image": "choisirait/vacances/grece.webp"
+              },
+              {
+                "texte": "Costa Rica",
+                "image": "choisirait/vacances/costa-rica.webp"
+              }
+            ]
+          },
+          {
+            "question": "How would she travel with you?",
+            "options": [
+              {
+                "texte": "Motorbike",
+                "image": "choisirait/moto/bmw-gs.webp"
+              },
+              {
+                "texte": "Camper van",
+                "image": "choisirait/voyage/van.webp"
+              },
+              {
+                "texte": "Cruise ship",
+                "image": "choisirait/voyage/croisiere.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Got her 3 picks? Send it and see!",
+          "bouton": "Send this to her",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Travel edition. No cheating: decide before the timer runs out.\n\nSend this to her",
+      "hashtags": [
+        "#couplequiz",
+        "#girlfriendquiz",
+        "#thisorthat",
+        "#travelcouple",
+        "#quizcouple"
+      ]
+    }
+  }
+}

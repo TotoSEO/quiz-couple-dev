@@ -1,0 +1,92 @@
+{
+  "jour": "2026-12-29",
+  "creneau": "midi",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-067",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "lui",
+        "etiquette": "New Year's edition",
+        "accroche": "What would he choose?",
+        "consigne": "3 questions, 4 seconds each. Pick for him!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "Where would he spend New Year's Eve?",
+            "options": [
+              {
+                "texte": "City fireworks",
+                "image": "choisirait/nouvel-an/feux-artifice.webp"
+              },
+              {
+                "texte": "Tropical beach",
+                "image": "choisirait/nouvel-an/plage-nouvel-an.webp"
+              },
+              {
+                "texte": "Mountain chalet",
+                "image": "choisirait/nouvel-an/soiree-chalet.webp"
+              }
+            ]
+          },
+          {
+            "question": "What would he order at the bar?",
+            "options": [
+              {
+                "texte": "Espresso martini",
+                "image": "choisirait/bar/espresso-martini.webp"
+              },
+              {
+                "texte": "Piña colada",
+                "image": "choisirait/bar/pina-colada.webp"
+              },
+              {
+                "texte": "Margarita",
+                "image": "choisirait/bar/margarita.webp"
+              }
+            ]
+          },
+          {
+            "question": "Where would he go on vacation?",
+            "options": [
+              {
+                "texte": "Japan",
+                "image": "choisirait/vacances/japon.webp"
+              },
+              {
+                "texte": "Egypt",
+                "image": "choisirait/vacances/egypte.webp"
+              },
+              {
+                "texte": "Thailand",
+                "image": "choisirait/vacances/thailande.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Now send it to him. Did you guess right?",
+          "bouton": "Send this to him",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "New Year's edition. He will swear you got at least one wrong.\n\nSend this to him",
+      "hashtags": [
+        "#couplequiz",
+        "#boyfriendquiz",
+        "#thisorthat",
+        "#newyearseve",
+        "#quizcouple"
+      ]
+    }
+  }
+}

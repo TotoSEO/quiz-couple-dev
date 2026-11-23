@@ -1,0 +1,92 @@
+{
+  "jour": "2027-01-20",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-107",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "lui",
+        "etiquette": "Car lovers edition",
+        "accroche": "What would he choose?",
+        "consigne": "3 questions, 4 seconds each. Pick for him!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "Which classic car would he drive?",
+            "options": [
+              {
+                "texte": "Citroën 2CV",
+                "image": "choisirait/vintage/2cv.webp"
+              },
+              {
+                "texte": "Mercedes 300 SL",
+                "image": "choisirait/vintage/300sl.webp"
+              },
+              {
+                "texte": "VW Beetle",
+                "image": "choisirait/vintage/coccinelle.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which motorbike would he ride?",
+            "options": [
+              {
+                "texte": "Triumph Bonneville",
+                "image": "choisirait/moto/bonneville.webp"
+              },
+              {
+                "texte": "Vespa",
+                "image": "choisirait/moto/vespa.webp"
+              },
+              {
+                "texte": "Yamaha MT-07",
+                "image": "choisirait/moto/mt07.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which car would he pick?",
+            "options": [
+              {
+                "texte": "Jeep Wrangler",
+                "image": "choisirait/voiture/jeep-wrangler.webp"
+              },
+              {
+                "texte": "Bugatti Chiron",
+                "image": "choisirait/voiture/bugatti.webp"
+              },
+              {
+                "texte": "Porsche 911",
+                "image": "choisirait/voiture/porsche-911.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Send it to him: how many did you get?",
+          "bouton": "Send this to him",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Car lovers edition. He will swear you got at least one wrong.\n\nSend this to him",
+      "hashtags": [
+        "#couplequiz",
+        "#boyfriendquiz",
+        "#thisorthat",
+        "#carlovers",
+        "#quizcouple"
+      ]
+    }
+  }
+}

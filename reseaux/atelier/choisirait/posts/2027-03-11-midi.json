@@ -1,0 +1,92 @@
+{
+  "jour": "2027-03-11",
+  "creneau": "midi",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-201",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "elle",
+        "etiquette": "Date night edition",
+        "accroche": "What would she choose?",
+        "consigne": "Guess her 3 picks, then send it to her!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "Which date would she plan?",
+            "options": [
+              {
+                "texte": "Beach sunset",
+                "image": "choisirait/date/coucher-soleil.webp"
+              },
+              {
+                "texte": "Fancy dinner",
+                "image": "choisirait/demande/demande-resto.webp"
+              },
+              {
+                "texte": "Picnic",
+                "image": "choisirait/date/pique-nique.webp"
+              }
+            ]
+          },
+          {
+            "question": "What would she cook for date night?",
+            "options": [
+              {
+                "texte": "Indian curry",
+                "image": "choisirait/diner/curry.webp"
+              },
+              {
+                "texte": "Ramen",
+                "image": "choisirait/diner/ramen.webp"
+              },
+              {
+                "texte": "Sushi",
+                "image": "choisirait/diner/sushi.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which cake would she pick?",
+            "options": [
+              {
+                "texte": "Tiramisu",
+                "image": "choisirait/dessert/tiramisu.webp"
+              },
+              {
+                "texte": "Cheesecake",
+                "image": "choisirait/dessert/cheesecake.webp"
+              },
+              {
+                "texte": "Macarons",
+                "image": "choisirait/dessert/macarons.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Got her 3 picks? Send it and see!",
+          "bouton": "Send this to her",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Date night edition. Answer for her first, no peeking.\n\nSend this to her",
+      "hashtags": [
+        "#couplequiz",
+        "#girlfriendquiz",
+        "#thisorthat",
+        "#datenight",
+        "#quizcouple"
+      ]
+    }
+  }
+}

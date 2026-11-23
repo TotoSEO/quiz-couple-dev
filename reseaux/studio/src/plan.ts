@@ -3,7 +3,7 @@
 // vérifier et laquelle sert de couverture.
 import { enImages, FPS, TEMPO } from './charte/charte';
 import type { EvenementAmbiance, EvenementSonore } from './charte/Son';
-import type { RecetteCitation, RecetteConnaisTu, RecetteJeu, RecetteQuizChrono, RecetteReel, RecetteTuPreferes } from './recette';
+import type { RecetteChoisirait, RecetteCitation, RecetteConnaisTu, RecetteJeu, RecetteQuizChrono, RecetteReel, RecetteTuPreferes } from './recette';
 import { planPov } from './pov/plan';
 import { planMipapsReel, planMipapsStatique } from './mipaps/plan';
 import { planBaton } from './baton/plan';
@@ -65,8 +65,51 @@ export const planCitation = (r: RecetteCitation): Plan => {
   };
 };
 
+// What would he choose? : une intro, trois questions à trois photos, une fin.
+// Les photos entrent l'une après l'autre (une tous les deux PAS), le chrono
+// part dès qu'elles sont toutes là et que la question a eu le temps d'être
+// lue (1,2 s), puis une demi-seconde pour fixer son choix avant la suivante.
+// Une photo se regarde plus vite qu'une phrase ne se lit : pas de temps de
+// lecture par mot ici, sinon chaque question durerait près de huit secondes.
+export const ENTREE_PHOTO = 2 * PAS;
+// l'image où la photo k (0, 1, 2) commence à entrer, depuis le début de la question
+export const debutPhoto = (k: number) => PAS + (k + 1) * ENTREE_PHOTO;
+export const planChoisirait = (r: RecetteChoisirait): Plan => {
+  const s = r.secondes ?? 4;
+  const intro = 3 * FPS;
+  const apres = Math.round(0.5 * FPS);
+  const fin = Math.round(3.5 * FPS);
+  const entre = 2 * TEMPO.moyen;
+  const scenes: Scene[] = [{ type: 'intro', debut: 0, duree: intro }];
+  const sons: EvenementSonore[] = [{ nom: 'pop', a: 0 }, { nom: 'intro', a: 4 }, { nom: 'saut', a: 15 }, { nom: 'saut', a: 31 }, { nom: 'coeur', a: 18 }];
+  const verifs = [entre];
+  let t = intro;
+  r.questions.forEach((q, i) => {
+    const derniere = debutPhoto(q.options.length - 1);
+    const lire = Math.max(Math.round(1.2 * FPS), derniere + TEMPO.moyen);
+    const chrono = lire;
+    const finChrono = chrono + s * FPS;
+    const duree = finChrono + apres;
+    scenes.push({ type: 'question', debut: t, duree, index: i, lecture: lire, chrono, finChrono });
+    sons.push({ nom: 'apparition', a: t });
+    q.options.forEach((_, k) => sons.push({ nom: 'pop', a: t + debutPhoto(k) }));
+    for (let k = s - 1; k >= 1; k--) {
+      const volume = k > (s * 2) / 3 ? 0.22 : k > s / 3 ? 0.32 : 0.45;
+      sons.push({ nom: 'tic', a: t + chrono + (s - k) * FPS, volume });
+    }
+    sons.push({ nom: 'bulle', a: t + finChrono });
+    // une image quand tout est entré, une avec le chrono lancé, une à la fin
+    verifs.push(t + derniere + TEMPO.moyen, t + chrono + entre, t + finChrono + Math.min(entre, apres - 1));
+    t += duree;
+  });
+  scenes.push({ type: 'fin', debut: t, duree: fin });
+  sons.push({ nom: 'fin', a: t + 2 }, { nom: 'joie', a: t + 8 });
+  verifs.push(t + entre);
+  return { duree: t + fin, couverture: entre, verifs, scenes, sons, musique: r.musique, detail: { s, apres } };
+};
+
 // Ce qu'une question donne à lire, et combien de réponses entrent après.
-const contenu = (r: RecetteJeu, i: number): { texte: string; reponses: number } => {
+const contenu = (r: Exclude<RecetteJeu, RecetteChoisirait>, i: number): { texte: string; reponses: number } => {
   if (r.gabarit === 'quiz-chrono') return { texte: r.questions[i].question, reponses: r.questions[i].reponses.length };
   if (r.gabarit === 'connais-tu') return { texte: r.questions[i], reponses: 0 };
   // un dilemme se lit en entier avant le chrono : les deux choix sont là dès le début
@@ -75,7 +118,7 @@ const contenu = (r: RecetteJeu, i: number): { texte: string; reponses: number } 
 
 // Quiz chrono, Connais-tu ton partenaire ? et Tu préfères : une intro,
 // une scène par question (lecture, chrono, puis réponse ou joie), une fin.
-export const planJeu = (r: RecetteJeu): Plan => {
+export const planJeu = (r: Exclude<RecetteJeu, RecetteChoisirait>): Plan => {
   const s = r.secondes ?? 5;
   const n = r.gabarit === 'tu-preferes' ? r.dilemmes.length : r.questions.length;
   const intro = 3 * FPS;
@@ -129,6 +172,7 @@ export const planifier = (r: RecetteReel): Plan => {
   if (r.gabarit === 'baton') return planBaton(r);
   if (r.gabarit === 'mipaps-reel') return planMipapsReel(r);
   if (r.gabarit === 'mipaps-statique') return planMipapsStatique(r);
+  if (r.gabarit === 'choisirait') return planChoisirait(r);
   return planJeu(r);
 };
 

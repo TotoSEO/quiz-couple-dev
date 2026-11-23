@@ -1,0 +1,92 @@
+{
+  "jour": "2026-12-23",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-055",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "lui",
+        "etiquette": "Christmas edition",
+        "accroche": "What would he choose?",
+        "consigne": "3 questions, 4 seconds each. Pick for him!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "Which Christmas date would he plan?",
+            "options": [
+              {
+                "texte": "Christmas market",
+                "image": "choisirait/noel-sortie/marche-noel.webp"
+              },
+              {
+                "texte": "Christmas lights",
+                "image": "choisirait/noel-sortie/illuminations.webp"
+              },
+              {
+                "texte": "Movie by the tree",
+                "image": "choisirait/noel-sortie/film-sapin.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which gift would make him happy?",
+            "options": [
+              {
+                "texte": "Headphones",
+                "image": "choisirait/cadeau/casque.webp"
+              },
+              {
+                "texte": "Lego set",
+                "image": "choisirait/cadeau/lego.webp"
+              },
+              {
+                "texte": "Watch",
+                "image": "choisirait/cadeau/montre-cadeau.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which Christmas treat would he pick?",
+            "options": [
+              {
+                "texte": "Hot chocolate",
+                "image": "choisirait/noel-gourmandise/chocolat-noel.webp"
+              },
+              {
+                "texte": "Gingerbread house",
+                "image": "choisirait/noel-gourmandise/maison-pain-epices.webp"
+              },
+              {
+                "texte": "Stollen",
+                "image": "choisirait/noel-gourmandise/stollen.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Now send it to him. Did you guess right?",
+          "bouton": "Send this to him",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Christmas edition. No cheating: decide before the timer runs out.\n\nSend this to him",
+      "hashtags": [
+        "#couplequiz",
+        "#boyfriendquiz",
+        "#thisorthat",
+        "#christmas",
+        "#quizcouple"
+      ]
+    }
+  }
+}

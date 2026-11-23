@@ -1,0 +1,92 @@
+{
+  "jour": "2026-11-25",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-003",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "elle",
+        "etiquette": "Morning edition",
+        "accroche": "What would she choose?",
+        "consigne": "3 questions, 4 seconds each. Pick for her!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "How would she have her eggs?",
+            "options": [
+              {
+                "texte": "Poached",
+                "image": "choisirait/oeufs/poche.webp"
+              },
+              {
+                "texte": "Scrambled",
+                "image": "choisirait/oeufs/brouilles.webp"
+              },
+              {
+                "texte": "Soft-boiled",
+                "image": "choisirait/oeufs/coque.webp"
+              }
+            ]
+          },
+          {
+            "question": "What would she grab at the bakery?",
+            "options": [
+              {
+                "texte": "Bagel",
+                "image": "choisirait/boulangerie/bagel.webp"
+              },
+              {
+                "texte": "Baguette",
+                "image": "choisirait/boulangerie/baguette.webp"
+              },
+              {
+                "texte": "Croissant",
+                "image": "choisirait/boulangerie/croissant.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which drink would she get?",
+            "options": [
+              {
+                "texte": "Bubble tea",
+                "image": "choisirait/boisson/bubble-tea.webp"
+              },
+              {
+                "texte": "Iced tea",
+                "image": "choisirait/boisson/the-glace.webp"
+              },
+              {
+                "texte": "Lemonade",
+                "image": "choisirait/boisson/limonade.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Got her 3 picks? Send it and see!",
+          "bouton": "Send this to her",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Morning edition. Guess first, send it after. Then compare.\n\nSend this to her",
+      "hashtags": [
+        "#couplequiz",
+        "#girlfriendquiz",
+        "#thisorthat",
+        "#breakfast",
+        "#quizcouple"
+      ]
+    }
+  }
+}

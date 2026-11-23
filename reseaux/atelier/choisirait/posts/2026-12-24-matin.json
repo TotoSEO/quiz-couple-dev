@@ -1,0 +1,92 @@
+{
+  "jour": "2026-12-24",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-057",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "elle",
+        "etiquette": "Wedding edition",
+        "accroche": "What would she choose?",
+        "consigne": "Guess her 3 picks, then send it to her!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "Where would she want you to propose?",
+            "options": [
+              {
+                "texte": "Mountaintop",
+                "image": "choisirait/demande/demande-montagne.webp"
+              },
+              {
+                "texte": "Disney castle",
+                "image": "choisirait/demande/demande-chateau.webp"
+              },
+              {
+                "texte": "Restaurant",
+                "image": "choisirait/demande/demande-resto.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which ring would she want?",
+            "options": [
+              {
+                "texte": "Rose gold ring",
+                "image": "choisirait/bague/or-rose.webp"
+              },
+              {
+                "texte": "Solitaire diamond",
+                "image": "choisirait/bague/solitaire.webp"
+              },
+              {
+                "texte": "Vintage ring",
+                "image": "choisirait/bague/vintage-bague.webp"
+              }
+            ]
+          },
+          {
+            "question": "Where would she want to get married?",
+            "options": [
+              {
+                "texte": "Lakeside",
+                "image": "choisirait/vue/lac.webp"
+              },
+              {
+                "texte": "Mountaintop",
+                "image": "choisirait/mariage/sommet.webp"
+              },
+              {
+                "texte": "Vineyard",
+                "image": "choisirait/vue/vignes.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Got her 3 picks? Send it and see!",
+          "bouton": "Send this to her",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Wedding edition. She will swear you got at least one wrong.\n\nSend this to her",
+      "hashtags": [
+        "#couplequiz",
+        "#girlfriendquiz",
+        "#thisorthat",
+        "#engaged",
+        "#quizcouple"
+      ]
+    }
+  }
+}

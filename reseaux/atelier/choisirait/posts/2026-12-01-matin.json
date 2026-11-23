@@ -1,0 +1,92 @@
+{
+  "jour": "2026-12-01",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-014",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "lui",
+        "etiquette": "Winter edition",
+        "accroche": "What would he choose?",
+        "consigne": "Answer for him, then let him check!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "Which winter date would he pick?",
+            "options": [
+              {
+                "texte": "Hot tub in the snow",
+                "image": "choisirait/hiver/jacuzzi.webp"
+              },
+              {
+                "texte": "Sledding",
+                "image": "choisirait/hiver/luge.webp"
+              },
+              {
+                "texte": "Skiing",
+                "image": "choisirait/hiver/hiver-ski.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which coffee would he order?",
+            "options": [
+              {
+                "texte": "Espresso",
+                "image": "choisirait/cafe/espresso.webp"
+              },
+              {
+                "texte": "Iced latte",
+                "image": "choisirait/cafe/iced-latte.webp"
+              },
+              {
+                "texte": "Americano",
+                "image": "choisirait/cafe/americano.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which dinner would he pick?",
+            "options": [
+              {
+                "texte": "Pad thai",
+                "image": "choisirait/diner/pad-thai.webp"
+              },
+              {
+                "texte": "Sushi",
+                "image": "choisirait/diner/sushi.webp"
+              },
+              {
+                "texte": "Steak and fries",
+                "image": "choisirait/diner/steak-frites.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Send it to him: how many did you get?",
+          "bouton": "Send this to him",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Winter edition. If you get all three, you know him by heart.\n\nSend this to him",
+      "hashtags": [
+        "#couplequiz",
+        "#boyfriendquiz",
+        "#thisorthat",
+        "#winter",
+        "#quizcouple"
+      ]
+    }
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "jour": "2027-03-26",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-228",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "elle",
+        "etiquette": "Hobbies edition",
+        "accroche": "What would she choose?",
+        "consigne": "Pick what she would pick. Then send it to her!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "Which instrument would she play?",
+            "options": [
+              {
+                "texte": "Drums",
+                "image": "choisirait/instrument/batterie.webp"
+              },
+              {
+                "texte": "Trumpet",
+                "image": "choisirait/instrument/trompette.webp"
+              },
+              {
+                "texte": "Saxophone",
+                "image": "choisirait/instrument/saxophone.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which hobby would she pick up?",
+            "options": [
+              {
+                "texte": "Chess",
+                "image": "choisirait/loisir/echecs.webp"
+              },
+              {
+                "texte": "Fishing",
+                "image": "choisirait/loisir/peche.webp"
+              },
+              {
+                "texte": "Woodworking",
+                "image": "choisirait/loisir/menuiserie.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which workout would she pick?",
+            "options": [
+              {
+                "texte": "Weightlifting",
+                "image": "choisirait/salle/muscu.webp"
+              },
+              {
+                "texte": "Boxing",
+                "image": "choisirait/salle/boxe-salle.webp"
+              },
+              {
+                "texte": "Running",
+                "image": "choisirait/salle/course.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Got her 3 picks? Send it and see!",
+          "bouton": "Send this to her",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Hobbies edition. Your answers first, then her reaction.\n\nSend this to her",
+      "hashtags": [
+        "#couplequiz",
+        "#girlfriendquiz",
+        "#thisorthat",
+        "#hobbies",
+        "#quizcouple"
+      ]
+    }
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "jour": "2026-12-06",
+  "creneau": "midi",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-024",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "elle",
+        "etiquette": "Sweet tooth edition",
+        "accroche": "What would she choose?",
+        "consigne": "Pick what she would pick. Then send it to her!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "Which ice cream would she get?",
+            "options": [
+              {
+                "texte": "Popsicle",
+                "image": "choisirait/glace/esquimau.webp"
+              },
+              {
+                "texte": "Gelato",
+                "image": "choisirait/glace/gelato.webp"
+              },
+              {
+                "texte": "Ice cream cone",
+                "image": "choisirait/glace/cornet.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which movie snack would she pick?",
+            "options": [
+              {
+                "texte": "Chocolate bar",
+                "image": "choisirait/snack/tablette.webp"
+              },
+              {
+                "texte": "Licorice",
+                "image": "choisirait/snack/reglisse.webp"
+              },
+              {
+                "texte": "Ice cream tub",
+                "image": "choisirait/snack/pot-glace.webp"
+              }
+            ]
+          },
+          {
+            "question": "What would she grab at the bakery?",
+            "options": [
+              {
+                "texte": "Muffin",
+                "image": "choisirait/boulangerie/muffin.webp"
+              },
+              {
+                "texte": "Donut",
+                "image": "choisirait/boulangerie/donut.webp"
+              },
+              {
+                "texte": "Brioche",
+                "image": "choisirait/boulangerie/brioche.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Got her 3 picks? Send it and see!",
+          "bouton": "Send this to her",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Sweet tooth edition. If you get all three, you know her by heart.\n\nSend this to her",
+      "hashtags": [
+        "#couplequiz",
+        "#girlfriendquiz",
+        "#thisorthat",
+        "#dessert",
+        "#quizcouple"
+      ]
+    }
+  }
+}

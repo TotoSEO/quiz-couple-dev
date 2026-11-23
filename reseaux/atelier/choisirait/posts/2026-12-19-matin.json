@@ -1,0 +1,92 @@
+{
+  "jour": "2026-12-19",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-048",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "elle",
+        "etiquette": "Travel edition",
+        "accroche": "What would she choose?",
+        "consigne": "Pick what she would pick. Then send it to her!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "Which city would she take you to?",
+            "options": [
+              {
+                "texte": "Lisbon",
+                "image": "choisirait/ville/lisbonne.webp"
+              },
+              {
+                "texte": "Paris",
+                "image": "choisirait/ville/paris.webp"
+              },
+              {
+                "texte": "London",
+                "image": "choisirait/ville/londres.webp"
+              }
+            ]
+          },
+          {
+            "question": "Where would she take you on vacation?",
+            "options": [
+              {
+                "texte": "Switzerland",
+                "image": "choisirait/vacances/suisse.webp"
+              },
+              {
+                "texte": "Hawaii",
+                "image": "choisirait/vacances/hawaii.webp"
+              },
+              {
+                "texte": "Iceland",
+                "image": "choisirait/vacances/islande.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which view would she wake up to?",
+            "options": [
+              {
+                "texte": "Tropical beach",
+                "image": "choisirait/vue/plage-tropicale.webp"
+              },
+              {
+                "texte": "Forest",
+                "image": "choisirait/vue/foret.webp"
+              },
+              {
+                "texte": "Eiffel Tower",
+                "image": "choisirait/vue/tour-eiffel.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Got her 3 picks? Send it and see!",
+          "bouton": "Send this to her",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Travel edition. Your answers first, then her reaction.\n\nSend this to her",
+      "hashtags": [
+        "#couplequiz",
+        "#girlfriendquiz",
+        "#thisorthat",
+        "#travelcouple",
+        "#quizcouple"
+      ]
+    }
+  }
+}

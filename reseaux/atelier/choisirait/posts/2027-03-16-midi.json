@@ -1,0 +1,92 @@
+{
+  "jour": "2027-03-16",
+  "creneau": "midi",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-210",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "elle",
+        "etiquette": "Weekend edition",
+        "accroche": "What would she choose?",
+        "consigne": "Answer for her, then let her check!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "Which sport would she watch?",
+            "options": [
+              {
+                "texte": "Tennis",
+                "image": "choisirait/sport/tennis.webp"
+              },
+              {
+                "texte": "Boxing",
+                "image": "choisirait/sport/boxe.webp"
+              },
+              {
+                "texte": "Baseball",
+                "image": "choisirait/sport/baseball.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which workout would she pick?",
+            "options": [
+              {
+                "texte": "Running",
+                "image": "choisirait/salle/course.webp"
+              },
+              {
+                "texte": "Swimming",
+                "image": "choisirait/salle/natation.webp"
+              },
+              {
+                "texte": "Yoga",
+                "image": "choisirait/salle/yoga.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which hobby would she pick up?",
+            "options": [
+              {
+                "texte": "Woodworking",
+                "image": "choisirait/loisir/menuiserie.webp"
+              },
+              {
+                "texte": "Photography",
+                "image": "choisirait/loisir/photo.webp"
+              },
+              {
+                "texte": "Chess",
+                "image": "choisirait/loisir/echecs.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Got her 3 picks? Send it and see!",
+          "bouton": "Send this to her",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Weekend edition. Easy for you? Then the next one is for her.\n\nSend this to her",
+      "hashtags": [
+        "#couplequiz",
+        "#girlfriendquiz",
+        "#thisorthat",
+        "#weekendvibes",
+        "#quizcouple"
+      ]
+    }
+  }
+}

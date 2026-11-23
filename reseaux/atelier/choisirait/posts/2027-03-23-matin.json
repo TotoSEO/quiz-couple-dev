@@ -1,0 +1,92 @@
+{
+  "jour": "2027-03-23",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-222",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "elle",
+        "etiquette": "Date night edition",
+        "accroche": "What would she choose?",
+        "consigne": "Answer for her, then let her check!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "Which movie snack would she pick?",
+            "options": [
+              {
+                "texte": "Gummy bears",
+                "image": "choisirait/snack/oursons.webp"
+              },
+              {
+                "texte": "Popcorn",
+                "image": "choisirait/snack/popcorn.webp"
+              },
+              {
+                "texte": "Chocolate bar",
+                "image": "choisirait/snack/tablette.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which flowers would she want?",
+            "options": [
+              {
+                "texte": "Tulips",
+                "image": "choisirait/fleurs/tulipes.webp"
+              },
+              {
+                "texte": "Daisies",
+                "image": "choisirait/fleurs/marguerites.webp"
+              },
+              {
+                "texte": "Hydrangeas",
+                "image": "choisirait/fleurs/hortensias.webp"
+              }
+            ]
+          },
+          {
+            "question": "What would she cook for date night?",
+            "options": [
+              {
+                "texte": "Risotto",
+                "image": "choisirait/diner/risotto.webp"
+              },
+              {
+                "texte": "Lobster",
+                "image": "choisirait/diner/homard.webp"
+              },
+              {
+                "texte": "Raclette",
+                "image": "choisirait/diner/raclette.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Got her 3 picks? Send it and see!",
+          "bouton": "Send this to her",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Date night edition. Write down her three letters before you send it.\n\nSend this to her",
+      "hashtags": [
+        "#couplequiz",
+        "#girlfriendquiz",
+        "#thisorthat",
+        "#datenight",
+        "#quizcouple"
+      ]
+    }
+  }
+}

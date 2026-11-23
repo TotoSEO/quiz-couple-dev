@@ -1,0 +1,92 @@
+{
+  "jour": "2026-12-27",
+  "creneau": "midi",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-063",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "elle",
+        "etiquette": "Date night edition",
+        "accroche": "What would she choose?",
+        "consigne": "3 questions, 4 seconds each. Pick for her!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "Which flowers would she want?",
+            "options": [
+              {
+                "texte": "Tulips",
+                "image": "choisirait/fleurs/tulipes.webp"
+              },
+              {
+                "texte": "Lavender",
+                "image": "choisirait/fleurs/lavande.webp"
+              },
+              {
+                "texte": "Sunflowers",
+                "image": "choisirait/fleurs/tournesols.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which movie snack would she pick?",
+            "options": [
+              {
+                "texte": "Chocolate bar",
+                "image": "choisirait/snack/tablette.webp"
+              },
+              {
+                "texte": "Licorice",
+                "image": "choisirait/snack/reglisse.webp"
+              },
+              {
+                "texte": "Popcorn",
+                "image": "choisirait/snack/popcorn.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which cake would she pick?",
+            "options": [
+              {
+                "texte": "Crêpes",
+                "image": "choisirait/dessert/crepes.webp"
+              },
+              {
+                "texte": "Cheesecake",
+                "image": "choisirait/dessert/cheesecake.webp"
+              },
+              {
+                "texte": "Chocolate lava cake",
+                "image": "choisirait/dessert/fondant.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Got her 3 picks? Send it and see!",
+          "bouton": "Send this to her",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Date night edition. Guess first, send it after. Then compare.\n\nSend this to her",
+      "hashtags": [
+        "#couplequiz",
+        "#girlfriendquiz",
+        "#thisorthat",
+        "#datenight",
+        "#quizcouple"
+      ]
+    }
+  }
+}

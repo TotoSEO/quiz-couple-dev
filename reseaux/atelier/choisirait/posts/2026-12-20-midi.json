@@ -1,0 +1,92 @@
+{
+  "jour": "2026-12-20",
+  "creneau": "midi",
+  "format": "reel",
+  "gabarit": "choisirait",
+  "categorie": "choisirait",
+  "sujet": "ch-050",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "choisirait",
+        "langue": "en",
+        "theme": "light",
+        "pour": "lui",
+        "etiquette": "Date night edition",
+        "accroche": "What would he choose?",
+        "consigne": "Answer for him, then let him check!",
+        "secondes": 4,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          {
+            "question": "What would he order at the bar?",
+            "options": [
+              {
+                "texte": "Beer",
+                "image": "choisirait/bar/biere.webp"
+              },
+              {
+                "texte": "Gin and tonic",
+                "image": "choisirait/bar/gin-tonic.webp"
+              },
+              {
+                "texte": "Piña colada",
+                "image": "choisirait/bar/pina-colada.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which flowers would he get you?",
+            "options": [
+              {
+                "texte": "Hydrangeas",
+                "image": "choisirait/fleurs/hortensias.webp"
+              },
+              {
+                "texte": "Wildflowers",
+                "image": "choisirait/fleurs/fleurs-sauvages.webp"
+              },
+              {
+                "texte": "Orchid",
+                "image": "choisirait/fleurs/orchidee.webp"
+              }
+            ]
+          },
+          {
+            "question": "Which date would he take you on?",
+            "options": [
+              {
+                "texte": "Cinema night",
+                "image": "choisirait/date/cinema.webp"
+              },
+              {
+                "texte": "Picnic",
+                "image": "choisirait/date/pique-nique.webp"
+              },
+              {
+                "texte": "Theme park",
+                "image": "choisirait/date/parc.webp"
+              }
+            ]
+          }
+        ],
+        "fin": {
+          "question": "Send it to him: how many did you get?",
+          "bouton": "Send this to him",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Date night edition. Easy for you? Then the next one is for him.\n\nSend this to him",
+      "hashtags": [
+        "#couplequiz",
+        "#boyfriendquiz",
+        "#thisorthat",
+        "#datenight",
+        "#quizcouple"
+      ]
+    }
+  }
+}

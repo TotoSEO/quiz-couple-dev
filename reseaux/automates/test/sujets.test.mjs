@@ -36,18 +36,20 @@ test('chaque sujet daté encore en vigueur tombe sur un créneau ouvert, de sa c
   }
 });
 
-test('la grille du 26 octobre 2026 : huit reels par semaine (cinq « Tu préfères », deux « Connais-tu », un bâton), tous les autres créneaux fermés, plus aucun format image', () => {
-  // la semaine du lundi 2 novembre 2026
-  const semaine = ['2026-11-02', '2026-11-03', '2026-11-04', '2026-11-05', '2026-11-06', '2026-11-07', '2026-11-08'];
-  for (const jour of semaine) assert.equal(categorieAttendue(MELANGE_DEFAUT, jour, 'matin'), null, jour);
-  assert.deepEqual(semaine.map((j) => categorieAttendue(MELANGE_DEFAUT, j, 'midi')), [null, null, null, null, null, 'tu-preferes', null]);
+test('la grille du 23 novembre 2026 : « What would he/she choose? » les matins et les midis (sauf le samedi), les huit reels du 26 octobre 2026 le soir et le samedi midi, plus aucun format image', () => {
+  // la semaine du lundi 30 novembre 2026
+  const semaine = ['2026-11-30', '2026-12-01', '2026-12-02', '2026-12-03', '2026-12-04', '2026-12-05', '2026-12-06'];
+  for (const jour of semaine) assert.equal(categorieAttendue(MELANGE_DEFAUT, jour, 'matin'), 'choisirait', jour);
+  assert.deepEqual(semaine.map((j) => categorieAttendue(MELANGE_DEFAUT, j, 'midi')), ['choisirait', 'choisirait', 'choisirait', 'choisirait', 'choisirait', 'tu-preferes', 'choisirait']);
   assert.deepEqual(semaine.map((j) => categorieAttendue(MELANGE_DEFAUT, j, 'soir')), ['tu-preferes', 'connais-tu', 'tu-preferes', 'tu-preferes', 'connais-tu', 'baton', 'tu-preferes']);
   const ouverts = semaine.flatMap((j) => creneauxOuverts(MELANGE_DEFAUT, j).map((c) => categorieAttendue(MELANGE_DEFAUT, j, c)));
-  assert.equal(ouverts.length, 8);
-  assert.deepEqual([...ouverts].sort(), ['baton', 'connais-tu', 'connais-tu', 'tu-preferes', 'tu-preferes', 'tu-preferes', 'tu-preferes', 'tu-preferes']);
+  assert.equal(ouverts.length, 21);
+  assert.equal(ouverts.filter((c) => c === 'choisirait').length, 13);
+  assert.deepEqual(ouverts.filter((c) => c !== 'choisirait').sort(), ['baton', 'connais-tu', 'connais-tu', 'tu-preferes', 'tu-preferes', 'tu-preferes', 'tu-preferes', 'tu-preferes']);
   // les animations des mascottes (16 octobre 2026) et les formats image (26 octobre 2026) ne partent plus
   assert.deepEqual(CATEGORIES_RETIREES, ['pov', 'coquin', 'statique', 'bd', 'carrousel', 'dix-mais', 'phrase']);
   for (const c of ouverts) assert.ok(!estRetiree(c), c);
+  assert.equal(CATEGORIES.choisirait, 'choisirait');
   // une grille absente ne ferme rien
   assert.equal(categorieAttendue(null, '2026-11-02', 'matin'), undefined);
   assert.deepEqual(creneauxOuverts(null, '2026-11-02'), ['matin', 'midi', 'soir']);
