@@ -3,6 +3,37 @@
     "title": "Thème astral de couple : ce que disent vos deux ciels",
     "description": "Votre thème astral de couple, calculé avec vos deux dates de naissance : vos Lunes, Vénus et Mars, les liens entre vos thèmes, vos signes chinois et vos 12 prochains mois."
   },
+  "carte": {
+    "kicker": "Nouveau · Thème astral",
+    "puces": [
+      "Votre ciel à deux, animé",
+      "Vos Lunes, Vénus et Mars",
+      "Vos 12 prochains mois"
+    ],
+    "bouton": "Voir notre thème astral",
+    "vous": "Vous",
+    "moitie": "Votre moitié",
+    "test": {
+      "titre": "Ce score ne regarde que vos signes",
+      "texte": "Votre signe, c'est seulement la place du Soleil. Le jour de vos naissances, la Lune, Vénus et Mars étaient aussi dans le ciel. C'est là que l'astrologie lit l'amour, le désir et les disputes.",
+      "note": "Aperçu gratuit avec vos dates de naissance"
+    },
+    "date": {
+      "titre": "Vos dates de naissance en disent plus",
+      "texte": "Ce test regarde votre signe, votre chemin de vie et votre signe chinois. Le jour de vos naissances, la Lune, Vénus et Mars étaient aussi dans le ciel. C'est là que l'astrologie lit l'amour, le désir et les disputes.",
+      "note": "Vos deux dates sont déjà remplies. L'aperçu est gratuit."
+    },
+    "chinois": {
+      "titre": "Et le ciel du jour de vos naissances ?",
+      "texte": "Vos dates donnent aussi vos signes du zodiaque. Le jour de vos naissances, la Lune, Vénus et Mars avaient chacun leur place dans le ciel. Le thème astral de couple les lit un par un, avec un chapitre sur vos signes chinois.",
+      "note": "Vos deux dates sont déjà remplies. L'aperçu est gratuit."
+    },
+    "article": {
+      "titre": "Votre signe ne dit pas tout",
+      "texte": "Votre signe, c'est la place du Soleil le jour de votre naissance. Ce jour-là, la Lune, Vénus et Mars étaient aussi dans le ciel. Avec vos deux dates de naissance, le thème astral de couple les place et vous dit ce qu'ils racontent de votre couple.",
+      "note": "Aperçu gratuit avec vos dates de naissance"
+    }
+  },
   "signes": {
     "belier": {
       "nom": "Bélier",

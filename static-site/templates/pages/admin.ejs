@@ -671,25 +671,23 @@
             <canvas id="admin-astro-chart" class="stats-canvas adm-canvas--hero"></canvas>
           </div>
 
-          <div class="adm-duo">
-            <div class="stats-panel">
-              <div class="stats-panel-head">
-                <div class="stats-panel-titre">
-                  <h2 class="stats-panel-title">Le parcours</h2>
-                  <%- aide(`De la page ouverte à la vente, sur la période. Le pourcentage de chaque ligne se lit sur la ligne du dessus. « Commandes créées » : les appuis sur « Payer » qui ont ouvert une commande (prénoms et dates enregistrés, puis la page de paiement de Stripe). « Rapports ouverts » : le rapport affiché sur la page après le paiement, ou depuis le lien de l'e-mail.`) %>
-                </div>
+          <div class="stats-panel">
+            <div class="stats-panel-head">
+              <div class="stats-panel-titre">
+                <h2 class="stats-panel-title">Le parcours</h2>
+                <%- aide(`De la page ouverte à la vente, sur la période. Le pourcentage de chaque ligne se lit sur la ligne du dessus. « Commandes créées » : les appuis sur « Payer » qui ont ouvert une commande (prénoms et dates enregistrés, puis la page de paiement de Stripe). « Rapports ouverts » : le rapport affiché sur la page après le paiement, ou depuis le lien de l'e-mail.`) %>
               </div>
-              <div id="admin-astro-entonnoir" class="stats-list"><p class="text-center text-muted-foreground py-6">Chargement...</p></div>
             </div>
-            <div class="stats-panel">
-              <div class="stats-panel-head">
-                <div class="stats-panel-titre">
-                  <h2 class="stats-panel-title">Sous le test des signes</h2>
-                  <%- aide(`La carte « Voir notre ciel à deux » sous le résultat du test des prénoms et des signes (en français) : vue quand elle arrive à l'écran, touchée, puis les visites de la page qui arrivent avec les deux prénoms du test, et les ventes de ces commandes. Le prix de l'Amérique latine (1,99 €) se lit sous les ventes.`) %>
-                </div>
+            <div id="admin-astro-entonnoir" class="stats-list"><p class="text-center text-muted-foreground py-6">Chargement...</p></div>
+          </div>
+          <div class="stats-panel">
+            <div class="stats-panel-head">
+              <div class="stats-panel-titre">
+                <h2 class="stats-panel-title">Les entrées</h2>
+                <%- aide(`La carte « Voir notre thème astral », en français : sous le score du test des prénoms et des signes, sous le résultat de la compatibilité par date de naissance et de celle des signes chinois (seulement quand les deux personnes ont 18 ans ou plus), et en bas des articles d'astrologie (depuis le 24 novembre 2026 au soir). Carte vue quand elle arrive à l'écran, touchée, puis les visites de la page qui arrivent par elle dans la demi-heure, les commandes et les ventes de chaque entrée. « Sans carte » : les visites venues d'ailleurs. Avant le 24 novembre au soir, les visites du test des signes étaient celles qui arrivaient avec ses deux prénoms. Le prix de l'Amérique latine (1,99 €) se lit sous les ventes.`) %>
               </div>
-              <div id="admin-astro-carte" class="stats-list"><p class="text-center text-muted-foreground py-6">Chargement...</p></div>
             </div>
+            <div id="admin-astro-carte" class="stats-list"><p class="text-center text-muted-foreground py-6">Chargement...</p></div>
           </div>
           <p class="adm-note" id="admin-astro-note"></p>
         </div>

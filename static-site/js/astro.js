@@ -1,10 +1,15 @@
 /* Le thème astral de couple : la page de vente, l'aperçu du ciel, le
  * paiement et l'arrivée du rapport.
  *
- * - Les prénoms et les signes viennent du test des signes astrologiques
- *   (qc-astro-couple, posé par la carte sous son résultat, 24 heures), les
- *   genres des prénoms gardés du site (qc-joueurs). Sans eux, la page parle
- *   à « Vous » et « Votre moitié ».
+ * - Ce que la carte d'une entrée a laissé au clic (js/astro-carte.js,
+ *   qc-astro-couple, 24 heures) : les prénoms et les signes du test des
+ *   signes, les dates et les signes de la date de naissance et des signes
+ *   chinois. Les prénoms qui manquent et les genres viennent des prénoms
+ *   gardés du site (qc-joueurs). Sans rien, la page parle à « Vous » et
+ *   « Votre moitié ».
+ * - D'où vient la visite : la carte touchée (qc-astro-clic, 30 minutes, lu
+ *   une fois puis gardé pour l'onglet), qui donne page_vue_<source> et la
+ *   source de la commande.
  * - La scène (js/astro-scene.js) avance avec le défilement ; ce fichier fait
  *   apparaître ses légendes au bon moment.
  * - Les dates de naissance donnent tout de suite le ciel du couple
@@ -57,24 +62,40 @@
 
   // ── Qui sont les deux personnes ─────────────────────────────
   function prenomPropre(p) { return String(p || '').replace(/\s+/g, ' ').trim().slice(0, 30); }
+  function dateIso(d) { return typeof d === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(d) && !isNaN(Date.parse(d + 'T00:00:00Z')) ? d : ''; }
   var couple = (function () {
     var c = lireJSON(CLE_COUPLE);
-    var frais = c && c.t && Date.now() - c.t < 7 * 86400000;
+    var frais = c && c.t && Date.now() - c.t < 86400000;
+    // Les prénoms gardés du site : le rang 0 tient le téléphone (« Vous »),
+    // le rang 1 est son ou sa partenaire.
     var j = lireJSON('qc-joueurs');
     var joueurs = j && j.t && Date.now() - j.t < 86400000 && Array.isArray(j.j) ? j.j : [];
     function personne(i, qui) {
       var src = frais && c[qui] ? c[qui] : {};
       var g = joueurs[i] && joueurs[i].g;
       var nomJ = joueurs[i] && prenomPropre(joueurs[i].n);
-      var prenom = prenomPropre(src.prenom) || '';
+      var prenom = prenomPropre(src.prenom) || nomJ || '';
       return {
         prenom: prenom,
+        date: dateIso(src.date),
         signe: SIGNES.indexOf(src.signe) >= 0 ? src.signe : (qui === 'a' ? 'poissons' : 'lion'),
-        connu: !!(prenom && SIGNES.indexOf(src.signe) >= 0),
         genre: nomJ && prenom && nomJ.toLowerCase() === prenom.toLowerCase() && (g === 'femme' || g === 'homme') ? (g === 'femme' ? 'f' : 'm') : null
       };
     }
     return { a: personne(0, 'a'), b: personne(1, 'b') };
+  })();
+  // D'où vient la visite : la carte touchée sur un test, un outil ou un
+  // article (js/astro-carte.js), lue une fois puis gardée pour l'onglet.
+  var SOURCES = ['test', 'date', 'chinois', 'article'];
+  var source = (function () {
+    var s = '', m = lireJSON('qc-astro-clic');
+    if (m && m.t && Date.now() - m.t < 30 * 60000 && SOURCES.indexOf(m.src) >= 0) s = m.src;
+    try { localStorage.removeItem('qc-astro-clic'); } catch (e) { /* rien */ }
+    try {
+      if (s) sessionStorage.setItem('qc-astro-src', s);
+      else if (SOURCES.indexOf(sessionStorage.getItem('qc-astro-src')) >= 0) s = sessionStorage.getItem('qc-astro-src');
+    } catch (e) { /* navigation privée */ }
+    return s;
   })();
   var inconnuA = lireT('scene.inconnu.a', ''), inconnuB = lireT('scene.inconnu.b', '');
   function nomDe(qui) { return couple[qui].prenom || (qui === 'a' ? inconnuA : inconnuB); }
@@ -238,8 +259,11 @@
         b.closest('.as-genre').classList.remove('as-manque');
       });
     });
-    if (s.date) {
-      var d = s.date.split('-');
+    // Les dates laissées par un outil passent devant celles d'une visite
+    // d'avant.
+    var dateConnue = couple[qui].date || dateIso(s.date);
+    if (dateConnue) {
+      var d = dateConnue.split('-');
       champ('annee-' + qui).value = String(Number(d[0]));
       champ('mois-' + qui).value = String(Number(d[1]));
       champ('jour-' + qui).value = String(Number(d[2]));
@@ -464,7 +488,7 @@
     } catch (e) { /* rien */ }
     appel('vue', { etape: etape }).catch(function () { /* la mesure ne bloque rien */ });
   }
-  if (!modeRapport) compter(couple.a.connu ? 'page_vue_test' : 'page_vue');
+  if (!modeRapport) compter(source ? 'page_vue_' + source : 'page_vue');
 
   // ── Le paiement ─────────────────────────────────────────────
   var bouton = document.getElementById('as-payer');
@@ -479,7 +503,7 @@
     compter('paiement_clic');
     appel('creer', {
       personnes: personnes.map(function (p) { return { prenom: p.prenom, genre: p.genre, date: p.date, heure: p.heure, fuseau: FUSEAU }; }),
-      source: couple.a.connu ? 'test' : 'direct'
+      source: source || 'direct'
     }).then(function (r) {
       if (!r.id || !r.jeton) throw new Error('creer');
       var commandes = lireJSON(CLE_COMMANDES) || {};

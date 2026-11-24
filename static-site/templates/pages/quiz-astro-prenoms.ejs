@@ -69,20 +69,7 @@
           numeroLabel: t(ns + ':results.numeroLabel', ''),
           numeroScore: t(ns + ':results.numeroScore', ''),
           detailTitle: t(ns + ':results.detailTitle', ''),
-          numeroTitle: t(ns + ':results.numeroTitle', ''),
-          // La carte du thème astral de couple sous le résultat, en français
-          // seulement (la page payante n'existe qu'en français).
-          theme: lang === 'fr' ? {
-            url: getLocalizedPath('themeAstral', lang),
-            fonction: supabaseUrl + '/functions/v1/astro',
-            cle: supabaseKey,
-            kicker: t(ns + ':theme.kicker', ''),
-            titre: t(ns + ':theme.titre', ''),
-            texte: t(ns + ':theme.texte', ''),
-            puces: t(ns + ':theme.puces', []),
-            bouton: t(ns + ':theme.bouton', ''),
-            note: t(ns + ':theme.note', '')
-          } : null
+          numeroTitle: t(ns + ':results.numeroTitle', '')
         };
       %>
       <h1 class="outil-h1 font-bold tracking-tight text-foreground">
@@ -160,57 +147,9 @@
     </div>
   </div>
   <script>window.__QC_AP = <%- JSON.stringify(apI18n).replace(/</g, '\\u003c') %>;</script>
-  <% if (lang === 'fr') { %>
-  <style>
-    /* La carte du thème astral de couple, juste sous le score : le moment où
-       l'on se demande ce que veut dire ce chiffre. Toute la carte mène à la
-       page (le lien du bouton la recouvre). Mouvements en transform et
-       opacity seulement, coupés par prefers-reduced-motion. */
-    .at-carte { position: relative; overflow: hidden; margin: 22px auto; max-width: 46rem; border-radius: 24px; padding: 26px 20px 22px; text-align: center; color: #eef0ff; cursor: pointer;
-      background: radial-gradient(420px 220px at 18% 18%, rgba(255,156,198,0.2), transparent 70%), radial-gradient(460px 260px at 85% 78%, rgba(185,164,255,0.24), transparent 70%), linear-gradient(180deg, #111a48, #070b22);
-      border: 1px solid rgba(240,207,134,0.42); box-shadow: 0 24px 60px -28px rgba(6,10,29,0.8);
-      transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease; }
-    .at-carte:hover { transform: translateY(-2px); border-color: rgba(240,207,134,0.7); box-shadow: 0 30px 70px -28px rgba(6,10,29,0.9), 0 0 44px -18px rgba(240,207,134,0.55); }
-    .at-carte > * { position: relative; }
-    .at-ciel { position: absolute !important; inset: 0; pointer-events: none; }
-    .at-ciel i { position: absolute; width: 2px; height: 2px; border-radius: 50%; background: #fff; opacity: 0.35; animation: at-scintille 3.4s ease-in-out infinite; }
-    @keyframes at-scintille { 0%, 100% { opacity: 0.2; transform: scale(0.8); } 50% { opacity: 0.95; transform: scale(1.3); } }
-    .at-duo { display: flex; align-items: flex-start; justify-content: center; margin: 0 auto 16px; max-width: 330px; }
-    .at-astre { display: grid; justify-items: center; gap: 5px; width: 104px; flex: none; }
-    .at-signe { width: 64px; height: 64px; border-radius: 50%; display: grid; place-items: center; font-size: 29px; line-height: 1; background: rgba(6,10,29,0.72);
-      font-family: 'Segoe UI Symbol', 'Apple Symbols', 'Noto Sans Symbols', 'Noto Sans Symbols 2', sans-serif; animation: at-flotte 5s ease-in-out infinite; }
-    .at-astre--b .at-signe { animation-delay: -2.5s; }
-    @keyframes at-flotte { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-4px); } }
-    .at-signe--a { color: #ff9cc6; border: 1.5px solid rgba(255,156,198,0.75); box-shadow: 0 0 24px -4px rgba(255,156,198,0.65); }
-    .at-signe--b { color: #b9a4ff; border: 1.5px solid rgba(185,164,255,0.75); box-shadow: 0 0 24px -4px rgba(185,164,255,0.65); }
-    .at-nom { max-width: 104px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-weight: 700; font-size: 0.98rem; line-height: 1.15; }
-    .at-astre--a .at-nom { color: #ff9cc6; }
-    .at-astre--b .at-nom { color: #b9a4ff; }
-    .at-signe-nom { font-size: 0.68rem; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: #a9afd9; }
-    .at-fil { flex: 1; min-width: 40px; height: 40px; margin-top: 12px; overflow: visible; }
-    .at-fil-trace { stroke-dasharray: 100; stroke-dashoffset: 100; transition: stroke-dashoffset 1.3s cubic-bezier(0.22, 1, 0.36, 1) 0.15s; }
-    .at-carte.est-vue .at-fil-trace { stroke-dashoffset: 0; }
-    .at-kicker { margin: 0 0 8px; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: #f0cf86; }
-    .at-titre { margin: 0 auto 10px; max-width: 30rem; font-size: clamp(1.4rem, 5vw, 1.85rem); line-height: 1.18; font-weight: 700; color: #fff; text-wrap: balance; }
-    .at-texte { margin: 0 auto 16px; max-width: 34rem; font-size: 0.98rem; line-height: 1.6; color: #c9cdee; }
-    .at-puces { list-style: none; margin: 0 0 20px; padding: 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; }
-    .at-puces li { font-size: 0.82rem; font-weight: 600; color: #eef0ff; border: 1px solid rgba(185,164,255,0.35); background: rgba(6,10,29,0.5); border-radius: 999px; padding: 5px 12px; }
-    .at-puces li::before { content: '✦ '; color: #f0cf86; }
-    .at-carte > .at-bouton { position: static; }
-    .at-bouton { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 54px; width: min(100%, 23rem); padding: 14px 24px; border-radius: 999px; font-weight: 700; font-size: 1.04rem; text-decoration: none; color: #1b1630;
-      background: linear-gradient(180deg, #f8e0a8, #e9bf6c); box-shadow: 0 14px 34px -12px rgba(240,207,134,0.85), 0 0 0 1px rgba(255,236,190,0.6) inset; overflow: hidden; }
-    .at-bouton::after { content: ''; position: absolute; inset: 0; border-radius: 24px; }
-    .at-bouton span[aria-hidden] { display: inline-block; transition: transform 0.18s ease; }
-    .at-carte:hover .at-bouton span[aria-hidden] { transform: translateX(3px); }
-    .at-bouton:focus-visible { outline: 2px solid #f0cf86; outline-offset: 3px; }
-    .at-note { margin: 12px 0 0; font-size: 0.82rem; color: #a9afd9; }
-    @media (prefers-reduced-motion: reduce) {
-      .at-carte, .at-bouton span[aria-hidden], .at-fil-trace { transition: none; }
-      .at-ciel i, .at-signe { animation: none; }
-      .at-fil-trace { stroke-dashoffset: 0; }
-    }
-  </style>
-  <% } %>
+  <%# La carte du thème astral de couple sous le score (en français seulement) :
+      styles, textes et js/astro-carte.js. %>
+  <%- include('../partials/astro-carte', { astroSource: 'test' }) %>
   <%# Les deux personnages qui fêtent le résultat, copiés par js/outils.js. %>
   <template id="outil-fete"><%- mascotteSvg('rose', 'joie', {}, 'outil-fete-perso outil-fete-perso--a') %><%- mascotteSvg('violet', 'joie', {}, 'outil-fete-perso outil-fete-perso--b') %></template>
   <%# L'image de tete vient en dernier dans le code, comme sur les autres pages de test : sous le texte sur telephone, en absolu a droite sur grand ecran, ou le texte passe a gauche. %>
@@ -584,75 +523,6 @@
     window.scrollTo({ top: haut, behavior: 'smooth' });
   }
 
-  // La carte du thème astral de couple (en français seulement) : les deux
-  // signes, ce que le rapport ajoute, et le lien vers la page, où l'aperçu
-  // est gratuit. Vue et clic comptés par la fonction astro, jamais pour le
-  // propriétaire ni un navigateur piloté.
-  var GLYPHES = { belier: '♈', taureau: '♉', gemeaux: '♊', cancer: '♋', lion: '♌', vierge: '♍', balance: '♎', scorpion: '♏', sagittaire: '♐', capricorne: '♑', verseau: '♒', poissons: '♓' };
-  function carteTheme(a, b, sa, sb, na, nb) {
-    var C = T.theme;
-    if (!C || !C.url) return '';
-    // Dix étoiles placées une fois pour toutes, qui scintillent à tour de rôle.
-    var ETOILES = [[8, 18], [22, 72], [36, 12], [51, 86], [63, 30], [77, 9], [88, 58], [94, 24], [15, 44], [70, 78]];
-    var ciel = '<div class="at-ciel" aria-hidden="true">' + ETOILES.map(function (e, i) {
-      return '<i style="left:' + e[0] + '%;top:' + e[1] + '%;animation-delay:' + (-i * 0.37).toFixed(2) + 's"></i>';
-    }).join('') + '</div>';
-    var astre = function (qui, nom, signe, nomSigne) {
-      return '<div class="at-astre at-astre--' + qui + '"><span class="at-signe at-signe--' + qui + '">' + (GLYPHES[signe] || '') + '︎</span>' +
-        '<span class="at-nom">' + esc(nom) + '</span><span class="at-signe-nom">' + esc(nomSigne) + '</span></div>';
-    };
-    return '<aside class="at-carte" id="at-carte">' + ciel +
-      '<div class="at-duo" aria-hidden="true">' + astre('a', a, sa, na) +
-      '<svg class="at-fil" viewBox="0 0 100 40" preserveAspectRatio="none">' +
-      '<path d="M2 24 C 30 -2, 70 -2, 98 24" fill="none" stroke="rgba(240,207,134,0.25)" stroke-width="1.2" stroke-dasharray="2 4" stroke-linecap="round" vector-effect="non-scaling-stroke"/>' +
-      '<path class="at-fil-trace" pathLength="100" d="M2 24 C 30 -2, 70 -2, 98 24" fill="none" stroke="#f0cf86" stroke-width="1.6" stroke-linecap="round" vector-effect="non-scaling-stroke"/></svg>' +
-      astre('b', b, sb, nb) + '</div>' +
-      '<p class="at-kicker">' + esc(C.kicker) + '</p>' +
-      '<h2 class="at-titre">' + esc(C.titre) + '</h2>' +
-      '<p class="at-texte">' + esc(C.texte) + '</p>' +
-      '<ul class="at-puces">' + (C.puces || []).map(function (p) { return '<li>' + esc(p) + '</li>'; }).join('') + '</ul>' +
-      '<a class="at-bouton" href="' + esc(C.url) + '" data-at-lien>' + esc(C.bouton) + ' <span aria-hidden="true">→</span></a>' +
-      '<p class="at-note">' + esc(C.note) + '</p></aside>';
-  }
-  // Le nom du signe tel que la liste l'écrit, sans son glyphe.
-  function nomDuSigne(id) {
-    var o = champ(id).selectedOptions && champ(id).selectedOptions[0];
-    return o ? o.textContent.replace(/[♈-♓︎️]/g, '').trim() : '';
-  }
-  function compterTheme(etape) {
-    var C = T.theme;
-    try { if (navigator.webdriver || localStorage.getItem('qc-no-track')) return; } catch (e) { /* rien */ }
-    try {
-      fetch(C.fonction + '?apikey=' + encodeURIComponent(C.cle || ''), {
-        method: 'POST', keepalive: true, headers: { 'Content-Type': 'text/plain' },
-        body: JSON.stringify({ action: 'vue', etape: etape, lang: LANG })
-      }).catch(function () {});
-    } catch (e) { /* la mesure ne bloque rien */ }
-  }
-  function surveillerCarte(a, b, sa, sb) {
-    var carte = document.getElementById('at-carte');
-    if (!carte) return;
-    var garder = function () {
-      try {
-        localStorage.setItem('qc-astro-couple', JSON.stringify({ t: Date.now(), a: { prenom: a.slice(0, 30), signe: sa }, b: { prenom: b.slice(0, 30), signe: sb } }));
-      } catch (e) { /* navigation privée */ }
-    };
-    garder();
-    carte.querySelector('[data-at-lien]').addEventListener('click', function () { garder(); compterTheme('carte_clic'); });
-    if ('IntersectionObserver' in window) {
-      var vu = false;
-      var io = new IntersectionObserver(function (e) {
-        if (!vu && e[0].isIntersecting) { vu = true; io.disconnect(); compterTheme('carte_vue'); }
-      }, { threshold: 0.4 });
-      io.observe(carte);
-      // Le fil d'or se trace quand la carte arrive à l'écran.
-      var io2 = new IntersectionObserver(function (e) {
-        if (e[0].isIntersecting) { carte.classList.add('est-vue'); io2.disconnect(); }
-      }, { threshold: 0.25 });
-      io2.observe(carte);
-    }
-  }
-
   function calculer() {
     var name1 = champ('name1').value.trim();
     var name2 = champ('name2').value.trim();
@@ -694,13 +564,14 @@
       barre(astroScore, T.astroLabel || '', T.astroScore || '') +
       barre(numeroScore, T.numeroLabel || '', T.numeroScore || '') +
       '</div>' +
-      // La carte du thème astral, juste sous les deux notes (français seulement).
-      carteTheme(name1, name2, sign1, sign2, nomDuSigne('sign1'), nomDuSigne('sign2')) +
+      // La carte du thème astral, juste sous les deux notes (français
+      // seulement, js/astro-carte.js).
+      (window.QCAstroCarte ? window.QCAstroCarte.html({ source: 'test', a: { nom: name1, signe: sign1 }, b: { nom: name2, signe: sign2 } }) : '') +
       '<section class="dn-bloc"><h3 class="dn-bloc-titre">⭐ ' + esc(T.detailTitle || '') + '</h3><p>' + esc(astroData.text) + '</p></section>' +
       '<section class="dn-bloc"><h3 class="dn-bloc-titre">🔢 ' + esc(T.numeroTitle || '') + '</h3><p>' + esc(getNumeroExplanation(name1, name2, n1, n2, numeroScore)) + '</p></section>';
 
     results.innerHTML = '<div class="outil-resultat">' + html + '</div>';
-    surveillerCarte(name1, name2, sign1, sign2);
+    if (window.QCAstroCarte) window.QCAstroCarte.suivi();
     form.classList.add('hidden');
     results.classList.remove('hidden');
     suite.classList.remove('hidden');

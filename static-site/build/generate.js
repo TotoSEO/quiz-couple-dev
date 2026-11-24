@@ -238,6 +238,18 @@ function entreeArticle(articleMeta, lang) {
     ? { groupe: 'article', id: 'article', formule: 'point' }
     : { groupe: 'article', id: 'article', ...(sansLivre ? { sansLivre: true } : {}) };
 }
+// Les articles d'astrologie (catégorie astrologie, en français : la page du
+// thème astral n'existe qu'en français) : en bas, la carte du thème astral de
+// couple (partials/astro-carte.ejs) à la place de la bannière de l'évaluation
+// et du livre (24 novembre 2026, Thomas : « Okk c bien ! Parfait »), le signe
+// d'un article « compatibilité amoureuse » allumé dans la ronde des douze.
+const SIGNES_ASTRO = ['belier', 'taureau', 'gemeaux', 'cancer', 'lion', 'vierge', 'balance', 'scorpion', 'sagittaire', 'capricorne', 'verseau', 'poissons'];
+function astroArticlePour(articleMeta, lang) {
+  if (lang !== 'fr' || !articleMeta || articleMeta.category !== 'astrologie') return null;
+  if (!ROUTE_SLUGS.themeAstral || !ROUTE_SLUGS.themeAstral.fr) return null;
+  const m = /^compatibilite-amoureuse-([a-z]+)$/.exec(articleMeta.internalSlug || '');
+  return { signe: m && SIGNES_ASTRO.includes(m[1]) ? m[1] : '' };
+}
 function formatPrix(centimes, lang) {
   try {
     const bcp = { fr: 'fr-FR', en: 'en-GB', es: 'es-ES', de: 'de-DE', it: 'it-IT', nl: 'nl-NL' }[lang] || 'fr-FR';
@@ -3146,7 +3158,10 @@ async function generateBlogArticle(articleMeta, lang) {
     // sa garantie, et les mentions du vendeur (mentions légales, CGV).
     bilanOuvert: bilanOuvertPour(lang),
     bilanChemin: bilanOuvertPour(lang) ? getLocalizedPath('bilanCouple', lang) : null,
-    bilanEntree: entreeArticle(articleMeta, lang),
+    // Un article d'astrologie montre la carte du thème astral à la place de
+    // la bannière de l'évaluation (astroArticlePour).
+    astroArticle: astroArticlePour(articleMeta, lang),
+    bilanEntree: astroArticlePour(articleMeta, lang) ? null : entreeArticle(articleMeta, lang),
     bilanPrix: prixBilan(lang),
     bilanPrixBase: prixBilanBase(lang),
     bilanPromo: promoBilanPour(lang),

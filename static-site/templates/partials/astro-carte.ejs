@@ -1,0 +1,109 @@
+<%
+  // La carte du thème astral de couple (page /theme-astral-couple/, en
+  // français seulement), écrite une fois pour toutes ses entrées : ses
+  // styles, ses textes (`carte` de fr/theme-astral.json) et js/astro-carte.js.
+  //  - test : sous le score du test des prénoms et des signes ;
+  //  - date : sous le résultat de la compatibilité par date de naissance ;
+  //  - chinois : sous le résultat de la compatibilité des signes chinois ;
+  //  - article : en bas des articles d'astrologie, à la place de la bannière
+  //    de l'évaluation et du livre (24 novembre 2026, Thomas : « Okk c bien !
+  //    Parfait »).
+  // Sur un outil, le script dessine la carte avec le résultat (et seulement
+  // si les deux personnes ont 18 ans ou plus, pour les deux outils à dates) ;
+  // sur un article, elle est écrite ici, avec le signe de l'article allumé
+  // dans la ronde des douze (`astroSigne`, facultatif).
+  const _src = typeof astroSource !== 'undefined' && astroSource ? astroSource : 'test';
+  const _signe = typeof astroSigne !== 'undefined' && astroSigne ? astroSigne : '';
+  const _SIGNES = ['belier', 'taureau', 'gemeaux', 'cancer', 'lion', 'vierge', 'balance', 'scorpion', 'sagittaire', 'capricorne', 'verseau', 'poissons'];
+  const _GLYPHES = ['♈', '♉', '♊', '♋', '♌', '♍', '♎', '♏', '♐', '♑', '♒', '♓'];
+  const _tc = (k, d) => t('theme-astral:carte.' + k, d);
+  const _cfg = {
+    url: getLocalizedPath('themeAstral', 'fr'),
+    fonction: supabaseUrl + '/functions/v1/astro',
+    cle: supabaseKey,
+    textes: {
+      kicker: _tc('kicker', ''), puces: _tc('puces', []), bouton: _tc('bouton', ''),
+      vous: _tc('vous', ''), moitie: _tc('moitie', ''),
+      [_src]: { titre: _tc(_src + '.titre', ''), texte: _tc(_src + '.texte', ''), note: _tc(_src + '.note', '') }
+    },
+    signes: Object.fromEntries(_SIGNES.map((s) => [s, t('theme-astral:signes.' + s + '.nom', s)]))
+  };
+  // Dix étoiles placées une fois pour toutes, qui scintillent à tour de rôle
+  // (les mêmes que dans js/astro-carte.js).
+  const _ETOILES = [[8, 18], [22, 72], [36, 12], [51, 86], [63, 30], [77, 9], [88, 58], [94, 24], [15, 44], [70, 78]];
+%>
+<% if (lang === 'fr' && _cfg.url) { %>
+<style>
+  /* Toute la carte mène à la page (le lien du bouton la recouvre).
+     Mouvements en transform et opacity seulement, coupés par
+     prefers-reduced-motion. Les règles passent par .at-carte : dans un
+     article, .blog-article p, li, h3 et article a imposent sinon leur encre
+     et leur soulignement. */
+  .at-carte { position: relative; overflow: hidden; margin: 22px auto; max-width: 46rem; border-radius: 24px; padding: 26px 20px 22px; text-align: center; color: #eef0ff; cursor: pointer;
+    background: radial-gradient(420px 220px at 18% 18%, rgba(255,156,198,0.2), transparent 70%), radial-gradient(460px 260px at 85% 78%, rgba(185,164,255,0.24), transparent 70%), linear-gradient(180deg, #111a48, #070b22);
+    border: 1px solid rgba(240,207,134,0.42); box-shadow: 0 24px 60px -28px rgba(6,10,29,0.8);
+    transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease; }
+  .at-carte:hover { transform: translateY(-2px); border-color: rgba(240,207,134,0.7); box-shadow: 0 30px 70px -28px rgba(6,10,29,0.9), 0 0 44px -18px rgba(240,207,134,0.55); }
+  .at-carte > * { position: relative; }
+  .at-carte .at-ciel { position: absolute; inset: 0; pointer-events: none; }
+  .at-carte .at-ciel i { position: absolute; width: 2px; height: 2px; border-radius: 50%; background: #fff; opacity: 0.35; animation: at-scintille 3.4s ease-in-out infinite; }
+  @keyframes at-scintille { 0%, 100% { opacity: 0.2; transform: scale(0.8); } 50% { opacity: 0.95; transform: scale(1.3); } }
+  .at-carte .at-duo { display: flex; align-items: flex-start; justify-content: center; margin: 0 auto 16px; max-width: 340px; }
+  .at-carte .at-astre { display: grid; justify-items: center; gap: 5px; width: 112px; flex: none; }
+  .at-carte .at-signe { width: 64px; height: 64px; border-radius: 50%; display: grid; place-items: center; font-size: 29px; line-height: 1; background: rgba(6,10,29,0.72);
+    font-family: 'Segoe UI Symbol', 'Apple Symbols', 'Noto Sans Symbols', 'Noto Sans Symbols 2', sans-serif; animation: at-flotte 5s ease-in-out infinite; }
+  .at-carte .at-astre--b .at-signe { animation-delay: -2.5s; }
+  @keyframes at-flotte { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-4px); } }
+  .at-carte .at-signe--a { color: #ff9cc6; border: 1.5px solid rgba(255,156,198,0.75); box-shadow: 0 0 24px -4px rgba(255,156,198,0.65); }
+  .at-carte .at-signe--b { color: #b9a4ff; border: 1.5px solid rgba(185,164,255,0.75); box-shadow: 0 0 24px -4px rgba(185,164,255,0.65); }
+  .at-carte .at-nom { max-width: 112px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-weight: 700; font-size: 0.98rem; line-height: 1.15; }
+  .at-carte .at-astre--a .at-nom { color: #ff9cc6; }
+  .at-carte .at-astre--b .at-nom { color: #b9a4ff; }
+  .at-carte .at-signe-nom { font-size: 0.68rem; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: #a9afd9; }
+  .at-carte .at-fil { flex: 1; min-width: 40px; height: 40px; margin-top: 12px; overflow: visible; }
+  .at-carte .at-fil-trace { stroke-dasharray: 100; stroke-dashoffset: 100; transition: stroke-dashoffset 1.3s cubic-bezier(0.22, 1, 0.36, 1) 0.15s; }
+  .at-carte.est-vue .at-fil-trace { stroke-dashoffset: 0; }
+  /* Dans un article : la ronde des douze signes, celui de l'article allumé. */
+  .at-carte .at-zodiaque { list-style: none; display: flex; flex-wrap: wrap; justify-content: center; gap: 6px; margin: 0 auto 16px; padding: 0; max-width: 13.5rem; }
+  @media (min-width: 640px) { .at-carte .at-zodiaque { max-width: 28rem; } }
+  .at-carte .at-zodiaque li { width: 30px; height: 30px; margin: 0; padding: 0; border-radius: 50%; display: grid; place-items: center; font-size: 15px; line-height: 1; color: #f0cf86; background: rgba(6,10,29,0.55); border: 1px solid rgba(240,207,134,0.28);
+    font-family: 'Segoe UI Symbol', 'Apple Symbols', 'Noto Sans Symbols', 'Noto Sans Symbols 2', sans-serif; }
+  .at-carte .at-zodiaque li::before { content: none; }
+  .at-carte .at-zodiaque li.est-le-sien { color: #ff9cc6; border-color: rgba(255,156,198,0.85); box-shadow: 0 0 18px -3px rgba(255,156,198,0.7); transform: scale(1.18); }
+  .at-carte .at-kicker { margin: 0 0 8px; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: #f0cf86; }
+  .at-carte .at-titre { margin: 0 auto 10px; padding: 0; border: 0; max-width: 30rem; font-size: clamp(1.4rem, 5vw, 1.85rem); line-height: 1.18; font-weight: 700; color: #fff; text-wrap: balance; }
+  .at-carte .at-titre::before, .at-carte .at-titre::after { content: none; }
+  .at-carte .at-texte { margin: 0 auto 16px; max-width: 34rem; font-size: 0.98rem; line-height: 1.6; color: #c9cdee; }
+  .at-carte .at-puces { list-style: none; margin: 0 0 20px; padding: 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; }
+  .at-carte .at-puces li { margin: 0; font-size: 0.82rem; line-height: 1.4; font-weight: 600; color: #eef0ff; border: 1px solid rgba(185,164,255,0.35); background: rgba(6,10,29,0.5); border-radius: 999px; padding: 5px 12px; }
+  .at-carte .at-puces li::before { content: '✦ '; position: static; color: #f0cf86; background: none; width: auto; height: auto; }
+  .at-carte > .at-bouton { position: static; }
+  .at-carte .at-bouton { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 54px; width: min(100%, 23rem); padding: 14px 24px; border-radius: 999px; font-weight: 700; font-size: 1.04rem; text-decoration: none; color: #1b1630;
+    background: linear-gradient(180deg, #f8e0a8, #e9bf6c); box-shadow: 0 14px 34px -12px rgba(240,207,134,0.85), 0 0 0 1px rgba(255,236,190,0.6) inset; overflow: hidden; }
+  .at-carte .at-bouton:hover, .at-carte .at-bouton:visited { color: #1b1630; text-decoration: none; }
+  .at-carte .at-bouton::after { content: ''; position: absolute; inset: 0; border-radius: 24px; }
+  .at-carte .at-bouton span[aria-hidden] { display: inline-block; transition: transform 0.18s ease; }
+  .at-carte:hover .at-bouton span[aria-hidden] { transform: translateX(3px); }
+  .at-carte .at-bouton:focus-visible { outline: 2px solid #f0cf86; outline-offset: 3px; }
+  .at-carte .at-note { margin: 12px 0 0; font-size: 0.82rem; line-height: 1.5; color: #a9afd9; }
+  @media (prefers-reduced-motion: reduce) {
+    .at-carte, .at-carte .at-bouton span[aria-hidden], .at-carte .at-fil-trace { transition: none; }
+    .at-carte .at-ciel i, .at-carte .at-signe { animation: none; }
+    .at-carte .at-fil-trace { stroke-dashoffset: 0; }
+  }
+</style>
+<script>window.QC_ASTRO_CARTE = <%- JSON.stringify(_cfg).replace(/</g, '\\u003c') %>;</script>
+<% if (_src === 'article') { const _T = _cfg.textes, _A = _T.article; %>
+<aside class="at-carte at-carte--article" id="at-carte" data-at-source="article">
+  <div class="at-ciel" aria-hidden="true"><% _ETOILES.forEach(function (e, i) { %><i style="left:<%= e[0] %>%;top:<%= e[1] %>%;animation-delay:<%= (-i * 0.37).toFixed(2) %>s"></i><% }) %></div>
+  <ul class="at-zodiaque" aria-hidden="true"><% _SIGNES.forEach(function (s, i) { %><li<%- s === _signe ? ' class="est-le-sien"' : '' %>><%= _GLYPHES[i] %>&#xFE0E;</li><% }) %></ul>
+  <p class="at-kicker"><%= _T.kicker %></p>
+  <h3 class="at-titre"><%= _A.titre %></h3>
+  <p class="at-texte"><%= _A.texte %></p>
+  <ul class="at-puces"><% (_T.puces || []).forEach(function (p) { %><li><%= p %></li><% }) %></ul>
+  <a class="at-bouton no-underline" href="<%= _cfg.url %>" data-at-lien><%= _T.bouton %> <span aria-hidden="true">→</span></a>
+  <p class="at-note"><%= _A.note %></p>
+</aside>
+<% } %>
+<script src="/js/astro-carte.js" defer></script>
+<% } %>

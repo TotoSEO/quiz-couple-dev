@@ -299,5 +299,8 @@
 <%- include('../partials/related-tests', { routeKey, lang, t, getLocalizedUrl }) %>
 
 <script>window.DN_I18N = <%- JSON.stringify(dnI18n) %>;</script>
+<%# La carte du thème astral de couple sous le résultat (en français
+    seulement, réservée aux majeurs) : styles, textes et js/astro-carte.js. %>
+<%- include('../partials/astro-carte', { astroSource: 'date' }) %>
 <script src="/js/outils.js" defer></script>
 <script src="/js/date-naissance.js" defer></script>

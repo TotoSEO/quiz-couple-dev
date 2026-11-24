@@ -51,7 +51,7 @@ alter table public.astro_rapports add constraint astro_rapports_bornes check (
   and (a_heure is null or a_heure ~ '^([01][0-9]|2[0-3]):[0-5][0-9]$')
   and (b_heure is null or b_heure ~ '^([01][0-9]|2[0-3]):[0-5][0-9]$')
   and char_length(a_fuseau) <= 64 and char_length(b_fuseau) <= 64
-  and source in ('test', 'direct')
+  and source in ('test', 'date', 'chinois', 'article', 'direct')
   and (zone is null or zone in ('latam'))
   and (paiement_session is null or char_length(paiement_session) <= 255)
   and (paiement_intent is null or char_length(paiement_intent) <= 255)
@@ -116,7 +116,8 @@ end $$;
 
 -- La lecture de l'admin (onglet Thème astral, par admin-stats et la clé de
 -- service) : les compteurs jour par jour, et les ventes, sans prénom ni
--- adresse.
+-- adresse. Les commandes et les ventes par entrée (source : test, date,
+-- chinois, article ou direct, depuis le 24 novembre 2026) : par_source.
 create or replace function public.get_astro_tableau(p_jours integer default 30)
 returns jsonb
 language sql
@@ -143,6 +144,14 @@ as $$
     from public.astro_rapports, bornes b
     where paye_le is not null and (paye_le at time zone 'Europe/Paris')::date > b.aujourdhui - b.nb
     group by 1
+  ),
+  par_source as (
+    select r.source,
+           count(*) filter (where (r.cree_le at time zone 'Europe/Paris')::date > b.aujourdhui - b.nb) as commandes,
+           count(*) filter (where r.paye_le is not null and (r.paye_le at time zone 'Europe/Paris')::date > b.aujourdhui - b.nb) as ventes,
+           coalesce(sum(r.paiement_montant) filter (where r.paye_le is not null and (r.paye_le at time zone 'Europe/Paris')::date > b.aujourdhui - b.nb), 0) as montant
+    from public.astro_rapports r, bornes b
+    group by r.source
   )
   select jsonb_build_object(
     'jours', (select nb from bornes),
@@ -156,10 +165,12 @@ as $$
       'latam', coalesce((select sum(latam) from ventes), 0)
     ),
     'commandes', (select count(*) from public.astro_rapports r, bornes b where (r.cree_le at time zone 'Europe/Paris')::date > b.aujourdhui - b.nb),
+    'par_source', coalesce((select jsonb_object_agg(source, jsonb_build_object('commandes', commandes, 'ventes', ventes, 'montant', montant))
+                            from par_source where commandes > 0 or ventes > 0), '{}'::jsonb),
     'serie', coalesce((
       select jsonb_agg(jsonb_build_object(
         'jour', j.jour,
-        'vues', coalesce((select sum(n) from c where c.jour = j.jour and c.etape in ('page_vue', 'page_vue_test')), 0),
+        'vues', coalesce((select sum(n) from c where c.jour = j.jour and left(c.etape, 8) = 'page_vue'), 0),
         'ciel', coalesce((select n from c where c.jour = j.jour and c.etape = 'ciel_vu'), 0),
         'clics', coalesce((select n from c where c.jour = j.jour and c.etape = 'paiement_clic'), 0),
         'ventes', coalesce((select n from ventes v where v.jour = j.jour), 0),

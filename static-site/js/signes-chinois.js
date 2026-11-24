@@ -214,6 +214,13 @@
     });
     html += '</div>';
 
+    // La carte du thème astral de couple (en français seulement,
+    // js/astro-carte.js), juste sous les deux fiches : seulement si les deux
+    // personnes ont 18 ans ou plus. Elle montre les signes du zodiaque que
+    // donnent les deux dates, qui passent toutes remplies à la page du thème
+    // astral.
+    if (window.QCAstroCarte) html += window.QCAstroCarte.html({ source: 'chinois', a: { d: x.d1 }, b: { d: x.d2 } });
+
     // Ce que dit la roue : la relation traditionnelle, puis la paire elle-même.
     html += '<section class="dn-bloc">' +
       '<h3 class="dn-bloc-titre">' + echapper(remplir(tr('resultat.titreRoue', ''), vars)) + '</h3>' +
@@ -247,6 +254,7 @@
     // arrivent l'une après l'autre, l'avis et les cartes « À faire ensuite »
     // se posent après lui (.outil-fin de #sc-suite).
     sortie.innerHTML = '<div class="outil-resultat">' + html + '</div>';
+    if (window.QCAstroCarte) window.QCAstroCarte.suivi();
     sortie.classList.remove('hidden');
     el('sc-formulaire').classList.add('hidden');
     el('sc-suite').classList.remove('hidden');

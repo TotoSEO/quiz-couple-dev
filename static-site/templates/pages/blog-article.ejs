@@ -252,8 +252,14 @@
         </div>
 
         <%# L'évaluation de couple (partials/bilan-banniere.ejs), sur les
-            articles qui y renvoient (bilanEntree, posé par generate.js). %>
+            articles qui y renvoient (bilanEntree, posé par generate.js) ; sur
+            un article d'astrologie, la carte du thème astral de couple à sa
+            place (astroArticle, partials/astro-carte.ejs). %>
+        <% if (typeof astroArticle !== 'undefined' && astroArticle) { %>
+        <%- include('../partials/astro-carte', { astroSource: 'article', astroSigne: astroArticle.signe }) %>
+        <% } else { %>
         <%- include('../partials/bilan-banniere') %>
+        <% } %>
 
         <!-- Back to blog link -->
         <div class="mt-8 mb-10">
