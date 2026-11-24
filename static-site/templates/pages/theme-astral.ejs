@@ -15,9 +15,10 @@
   const P = (chemin, defaut) => chemin.split('.').reduce((o, k) => (o && o[k] !== undefined ? o[k] : undefined), T) ?? defaut;
   const esc = (s) => String(s == null ? '' : s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
   const PRIX = 490;
-  // « €4.90 » en anglais, « 4,90 € » ailleurs (le même découpage que
-  // prixTexte de js/astro.js).
-  const prixTexte = (c) => { const n = (c / 100).toFixed(2); return lang === 'en' ? '€' + n : n.replace('.', ',') + '\u00a0€'; };
+  // « €4.90 » en anglais, « € 4,90 » en néerlandais (formatPrix de
+  // generate.js), « 4,90 € » ailleurs (le même découpage que prixTexte de
+  // js/astro.js).
+  const prixTexte = (c) => { const n = (c / 100).toFixed(2); return lang === 'en' ? '€' + n : lang === 'nl' ? '€\u00a0' + n.replace('.', ',') : n.replace('.', ',') + '\u00a0€'; };
   // Le nombre de parties du rapport (son sommaire, js/astro-rapport.js : la
   // carte, le profil, les domaines, les atouts, les éléments, cinq astres et
   // leurs liens, les signes chinois, les chemins de vie, l'année, les questions).

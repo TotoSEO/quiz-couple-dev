@@ -116,7 +116,16 @@
     "s5Item7Label": "Recht om uw toestemming in te trekken:",
     "s5Item7Text": "Op elk moment, voor de verwerkingen die erop gebaseerd zijn (e-mails, relatiecheck), zonder dat wat daarvoor is gebeurd wordt aangetast",
     "s5Item8Label": "Recht om een klacht in te dienen:",
-    "s5Item8Text": "Bij de CNIL (cnil.fr), de Franse toezichthouder, of bij de toezichthouder van uw land (de Autoriteit Persoonsgegevens in Nederland, de Gegevensbeschermingsautoriteit in België) als u vindt dat uw rechten niet worden gerespecteerd"
+    "s5Item8Text": "Bij de CNIL (cnil.fr), de Franse toezichthouder, of bij de toezichthouder van uw land (de Autoriteit Persoonsgegevens in Nederland, de Gegevensbeschermingsautoriteit in België) als u vindt dat uw rechten niet worden gerespecteerd",
+    "themeTitle": "De relatiehoroscoop",
+    "themeIntro": "De relatiehoroscoop berekent een astrologisch rapport op basis van uw twee geboortedata. Hier staat wat er wordt bewaard, en hoe lang.",
+    "themeItems": [
+      "<strong>Wat wordt opgeslagen:</strong> de twee voornamen, het geslacht van ieder (om de teksten in de juiste vorm te schrijven), de twee geboortedata, de tijden als u die opgeeft, en de tijdzone van uw browser. Als u betaalt, wat Stripe ons over de betaling teruggeeft: de datum, het bedrag en het e-mailadres dat op die pagina is opgegeven. Geen account.",
+      "<strong>Waarvoor:</strong> uw rapport berekenen en tonen, en u één keer de link per e-mail sturen. Verder niets: het adres komt in geen enkele verzendlijst. De rechtsgrond is de uitvoering van de overeenkomst die u sluit door het rapport te kopen.",
+      "<strong>Wie ze ziet:</strong> de mensen die de link van het rapport hebben, en verder niemand. De sleutel van de link wordt alleen als vingerafdruk bewaard, die niet terug te rekenen is. Vóór de betaling wordt het gratis voorproefje in uw browser berekend, zonder iets te versturen.",
+      "<strong>Hoe lang:</strong> zes maanden na de betaling, daarna wordt alles automatisch verwijderd. Een onbetaalde bestelling wordt na dertig dagen verwijderd. U kunt het rapport en uw gegevens ook op elk moment verwijderen, met de link ‘Dit rapport verwijderen’ aan het einde van het rapport.",
+      "<strong>De dienstverleners:</strong> Supabase host de gegevens, Stripe verwerkt de betaling en Resend verstuurt de e-mail met de link."
+    ]
   },
   "mentions": {
     "seoTitle": "Juridische informatie | Quiz Couple",

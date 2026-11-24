@@ -1,0 +1,96 @@
+// De verbindingen tussen jullie twee horoscopen. Een tekst voor twee spreekt
+// het stel aan (‘jullie’). In een gekruist paar is {{x}} de persoon van de
+// eerste planeet (de Zon van x en de Maan van y), {x:hij|zij} en {y:hij|zij}
+// zijn of haar voornaamwoorden. De eerste zin van elke tekst dient ook als
+// samenvatting (sterke punten en uitdagingen): hij moet op zichzelf
+// begrijpelijk zijn.
+export default {
+  'soleil-soleil': {
+    conjonction: "Jullie twee Zonnen staan vlak bij elkaar: jullie hebben hetzelfde sterrenbeeld, of bijna. Jullie begrijpen elkaar zonder alles te hoeven uitleggen, omdat jullie dezelfde reflexen en dezelfde wensen hebben. Het risico is dat jullie zo op elkaar lijken dat jullie fouten zich optellen in plaats van elkaar in evenwicht te houden. Twee stijfkoppen blijven ook samen stijfkoppen! Laat elkaar een beetje eigen ruimte, zodat jullie niet op elkaars tenen gaan staan.",
+    sextile: "Jullie twee Zonnen gaan goed samen. Jullie hebben verschillende karakters, maar die vullen elkaar makkelijk aan: als de een iets voorstelt, heeft de ander zin om mee te doen. Jullie laten elkaar groeien zonder te forceren, en jullie vrienden vinden jullie vaak heel goed op elkaar ingespeeld. Het is een makkelijke basis, die je met gezamenlijke plannen onderhoudt.",
+    carre: "Jullie twee Zonnen botsen. Jullie hebben heel verschillende manieren van leven en van beslissen, en ieder houdt vast aan de eigen manier. Dat geeft discussies, vooral over belangrijke beslissingen, maar ook een relatie die nooit indut. Veel sterke stellen hebben dit vierkant: het vraagt van ieder wat moeite. Het nuttigste is accepteren dat ieder een eigen manier van doen heeft, en dat de ander die niet helemaal zal veranderen.",
+    trigone: "Jullie twee Zonnen staan in harmonie. Jullie kijken op dezelfde manier naar het leven, en dat maakt het dagelijks leven makkelijk en fijn. Vanaf het begin voelde het goed tussen jullie, alsof jullie elkaar al jaren kenden. De enige valkuil is het gemak: een relatie waarin alles goed gaat, kan vergeten elkaar te verrassen.",
+    opposition: "Jullie twee Zonnen staan tegenover elkaar, aan de twee uiteinden van de dierenriem. Jullie zijn tegenpolen, en vaak is dat precies wat jullie in het begin aantrok: jullie vinden in elkaar wat je zelf mist. In het dagelijks leven trekken die verschillen soms ieder een andere kant op, en moeten jullie leren onderhandelen. Als het werkt, vormen jullie een heel compleet team, waarin de een aanvult wat de ander mist.",
+    meme: "Jullie twee Zonnen vormen geen precies aspect, maar staan in hetzelfde element. Jullie hebben dezelfde basisenergie en begrijpen elkaar moeiteloos over de belangrijkste dingen. Jullie verschillen zitten in de manier van doen, bijna nooit in de kern.",
+    allie: "Jullie twee Zonnen staan in elementen die goed samengaan, zoals vuur en lucht, of aarde en water. Het ene voedt het andere: jullie karakters verschillen, maar ze stimuleren elkaar in plaats van elkaar af te remmen. Het is een vrij makkelijke basis.",
+    contraste: "Jullie twee Zonnen staan in tegengestelde elementen, zoals vuur en water, of lucht en aarde. Jullie hebben niet hetzelfde ritme of dezelfde prioriteiten, en soms moet je vertalen wat de ander bedoelt. Het vraagt moeite, maar jullie leren er ook veel door over elkaar.",
+  },
+  'lune-lune': {
+    conjonction: "Jullie twee Manen staan samen: jullie voelen de dingen op dezelfde manier. Jullie hebben dezelfde dingen nodig om je goed te voelen, en jullie weten instinctief hoe je de ander troost. In de astrologie is het een van de zachtste verbindingen die er zijn. Let alleen op de dagen dat het met jullie tegelijk slecht gaat, want dan is er niemand om de ander gerust te stellen.",
+    sextile: "Jullie twee Manen gaan goed samen. Jullie emoties werken niet op dezelfde manier, maar ze reageren op elkaar: als de een troost nodig heeft, vindt de ander vrij makkelijk de juiste gebaren. Jullie voelen je samen goed thuis, in de kleine momenten van elke dag.",
+    carre: "Jullie twee Manen botsen. Jullie hebben niet dezelfde dingen nodig om je goed te voelen, en wat de een geruststelt, kan de ander irriteren. Bijvoorbeeld: de een wil meteen praten, terwijl de ander rust nodig heeft. Misverstanden komen vaak daarvandaan, niet uit een gebrek aan liefde. Het nuttigste is elkaar duidelijk te zeggen wat je goeddoet, in plaats van te wachten tot de ander het raadt.",
+    trigone: "Jullie twee Manen staan in harmonie. Jullie voelen je moeiteloos goed samen, en thuis is de sfeer vaak zacht en vanzelfsprekend. Jullie zien met één blik hoe de ander zich voelt. In de astrologie is het een van de beste tekenen voor een leven samen dat lang duurt.",
+    opposition: "Jullie twee Manen staan tegenover elkaar. Jullie emotionele behoeften zijn tegengesteld: misschien heeft de een behoefte aan nabijheid als de ander lucht nodig heeft. Jullie kunnen elkaar veel geven, omdat de een heeft wat de ander mist, zolang jullie dat accepteren in plaats van het elkaar te verwijten. Met een beetje geduld wordt dit tegenover elkaar staan een evenwicht.",
+    meme: "Jullie twee Manen staan in hetzelfde element, zonder precies aspect. Jullie emoties spreken dezelfde taal: vaak reageren jullie op dezelfde manier op goed en op slecht nieuws.",
+    allie: "Jullie twee Manen staan in elementen die goed samengaan. Jullie behoeften verschillen, maar ze passen goed bij elkaar, en jullie stellen elkaar vrij makkelijk gerust.",
+    contraste: "Jullie twee Manen staan in tegengestelde elementen. Wat de een geruststelt, stelt de ander niet per se gerust, en jullie moeten elkaars behoeften leren kennen. Niets onmogelijks, maar je moet erover praten.",
+  },
+  'venus-venus': {
+    conjonction: "Jullie Venusstanden vallen samen: jullie hebben op dezelfde manier lief. Jullie hebben dezelfde smaak en hetzelfde idee van een mooie avond met z'n tweeën. Jullie doen elkaar een plezier zonder erbij na te denken, omdat wat de een leuk vindt, de ander ook leuk vindt. Het is een heel tedere verbinding, die het leven samen fijn maakt.",
+    sextile: "Jullie Venusstanden gaan goed samen. Jullie manieren van liefhebben verschillen, maar ze vullen elkaar aan, en jullie laten elkaar nieuwe dingen ontdekken. Jullie vinden makkelijk uitjes en momenten waar jullie samen van genieten.",
+    carre: "Jullie Venusstanden botsen: jullie hebben niet op dezelfde manier lief. Je kunt het gevoel hebben dat je niet geliefd wordt zoals je zou willen, ook al is de liefde er wel. Bijvoorbeeld: de een toont liefde met cadeaus, terwijl de ander vooral tijd samen verwacht. Het simpelste is elkaar te vertellen wat je raakt, zodat jullie elkaar niet langer verkeerd begrijpen.",
+    trigone: "Jullie Venusstanden staan in harmonie. Jullie hebben een vergelijkbare smaak en dezelfde manier om liefde te tonen, en dat voorkomt veel misverstanden. Bij het kiezen van een cadeau, een uitje of een reis zijn jullie het vaak eens. Het is een verbinding die liefde eenvoudig en zacht maakt.",
+    opposition: "Jullie Venusstanden staan tegenover elkaar. Jullie hebben een tegengestelde smaak, en vaak is dat precies wat jullie aantrok. In het dagelijks leven moet je onderhandelen: de een gaat graag uit als de ander liever thuisblijft, bijvoorbeeld. Als jullie er goed mee omgaan, laat dit verschil jullie dingen ontdekken die je anders nooit had geprobeerd.",
+    meme: "Jullie Venusstanden staan in hetzelfde element. Ook zonder precies aspect lijkt jullie smaak genoeg op elkaar om vaak zin te hebben in dezelfde dingen.",
+    allie: "Jullie Venusstanden staan in elementen die goed samengaan. Jullie hebben niet precies op dezelfde manier lief, maar jullie manieren van liefhebben begrijpen elkaar goed.",
+    contraste: "Jullie Venusstanden staan in tegengestelde elementen. Jullie manieren van liefhebben verschillen sterk, en je kunt elkaar beter vertellen wat je fijn vindt dan het te raden.",
+  },
+  'mars-mars': {
+    conjonction: "Jullie Marsstanden vallen samen: jullie hebben dezelfde energie en hetzelfde ritme. Dat geeft een sterke aantrekking en zin om heel veel samen te doen. De keerzijde is dat jullie ook tegelijk boos worden, en jullie ruzies kunnen snel oplopen. Samen sporten of een gezamenlijk project is een goede uitlaatklep voor al die energie.",
+    sextile: "Jullie Marsstanden gaan goed samen. Jullie hebben verschillende ritmes die goed bij elkaar passen, en jullie kunnen samen vooruit zonder op elkaars tenen te staan. Ruzies zijn zeldzaam en vrij snel bijgelegd.",
+    carre: "Jullie Marsstanden botsen. Jullie handelen niet op dezelfde manier en worden niet op dezelfde manier boos, en de kleine wrijvingen van elke dag kunnen snel oplopen. Tegelijk geeft dit vierkant veel vonken aan het verlangen, en jullie verzoeningen zijn vaak intens. Leer een pauze te nemen als de gemoederen verhit raken, voordat je dingen zegt waar je spijt van krijgt.",
+    trigone: "Jullie Marsstanden staan in harmonie. Jullie hebben dezelfde energie en kunnen samen vooruit, of het nu om een verhuizing gaat of om een spontane avond. Het verlangen stroomt, zonder ingewikkeldheden. Ruzies zijn zeldzaam en kort.",
+    opposition: "Jullie Marsstanden staan tegenover elkaar. De aantrekking is sterk, maar jullie energie botst: als de een naar links wil, wil de ander naar rechts. Dit tegenover elkaar staan houdt het verlangen levend, zolang jullie niet van elke onenigheid een krachtmeting maken.",
+    meme: "Jullie Marsstanden staan in hetzelfde element. Jullie hebben een vergelijkbare energie, en jullie begrijpen elkaar vrij goed over het tempo van jullie leven.",
+    allie: "Jullie Marsstanden staan in elementen die goed samengaan. Jullie energie verschilt, maar de een stimuleert de ander, en jullie kunnen samen in actie komen.",
+    contraste: "Jullie Marsstanden staan in tegengestelde elementen. Jullie hebben niet hetzelfde ritme, en wat de een motiveert, kan de ander afremmen. Jullie moeten een gezamenlijk tempo vinden, zonder dat een van jullie het tempo alleen bepaalt.",
+  },
+  'mercure-mercure': {
+    conjonction: "Jullie Mercuriusstanden vallen samen: jullie denken op dezelfde manier. Jullie begrijpen elkaar meteen, maken soms elkaars zinnen af en kunnen uren praten. Het is een van de beste tekenen voor een goede communicatie. Let alleen op dat jullie niet steeds rond dezelfde ideeën blijven draaien.",
+    sextile: "Jullie Mercuriusstanden gaan goed samen. Jullie denken niet op dezelfde manier, maar jullie praten graag en leren van elkaar. Gesprekken gaan makkelijk, en zijn vaak grappig.",
+    carre: "Jullie Mercuriusstanden botsen. Jullie redeneren niet op dezelfde manier, en een woord van de een kan door de ander verkeerd begrepen worden. Jullie ruzies komen vaak voort uit een zin die verkeerd begrepen is, meer dan uit een echte onenigheid. Maak er een gewoonte van om te herhalen wat je hoort: “Als ik het goed begrijp, bedoel je dat…”",
+    trigone: "Jullie Mercuriusstanden staan in harmonie. Jullie spreken dezelfde taal, letterlijk en figuurlijk: ideeën gaan makkelijk heen en weer, en jullie kunnen een probleem oplossen door erover te praten. Lange gesprekken zijn een van de grote genoegens van jullie relatie.",
+    opposition: "Jullie Mercuriusstanden staan tegenover elkaar. Jullie bekijken de dingen vaak vanuit twee tegengestelde standpunten, en dat geeft levendige discussies. Het is verrijkend als je naar elkaar luistert, en vermoeiend als ieder gelijk wil krijgen. Zeg af en toe “daar heb je een punt”: dat verandert alles.",
+    meme: "Jullie Mercuriusstanden staan in hetzelfde element. Jullie hebben een vergelijkbare manier van denken, en jullie begrijpen elkaar snel.",
+    allie: "Jullie Mercuriusstanden staan in elementen die goed samengaan. Jullie denken niet op dezelfde manier, maar jullie ideeën vullen elkaar goed aan.",
+    contraste: "Jullie Mercuriusstanden staan in tegengestelde elementen. Jullie redeneren niet op dezelfde manier, en soms moet je de tijd nemen om het goed uit te leggen.",
+  },
+  'soleil-lune': {
+    conjonction: "De Zon van {{x}} staat op de Maan van {{y}}: in de astrologie is dat de verbinding van stellen die lang samenblijven. {{y}} voelt zich begrepen en gerustgesteld door wie {{x}} diep vanbinnen is, en {{x}} voelt zich geaccepteerd zoals {x:hij|zij} is. Jullie voelen je bij elkaar thuis, en dat is zeldzaam.",
+    sextile: "De Zon van {{x}} en de Maan van {{y}} gaan goed samen. Wie {{x}} diep vanbinnen is, doet {{y}} goed, en {{y}} voelt zich op {y:zijn|haar} gemak bij {x:hem|haar}. Het is een zachte verbinding, die de relatie helpt om lang te duren.",
+    carre: "De Zon van {{x}} en de Maan van {{y}} botsen. Wat {{x}} vanzelf doet, kan {{y}} kwetsen zonder dat {{x}} het merkt, en {{y}} kan het gevoel hebben niet begrepen te worden. Het is geen gebrek aan liefde, maar een verschil in ritme. Neem de tijd om elkaar uit te leggen wat je raakt.",
+    trigone: "De Zon van {{x}} en de Maan van {{y}} staan in harmonie: dat is een heel goed teken voor het leven samen. {{y}} voelt zich vanzelf goed bij {{x}}, en {{x}} vindt bij {{y}} steun zonder dat er iets tegenover hoeft te staan. Jullie vormen een team waarin ieder een eigen plek heeft.",
+    opposition: "De Zon van {{x}} en de Maan van {{y}} staan tegenover elkaar. In de astrologie is dat een heel sterke aantrekking, die van twee helften die elkaar aanvullen. Het vraagt om evenwicht: {{x}} moet letten op de gevoelens van {{y}}, en {{y}} moet {{x}} zichzelf laten zijn.",
+  },
+  'venus-mars': {
+    conjonction: "De Venus van {{x}} en de Mars van {{y}} staan vlak bij elkaar: dat is hét aspect van lichamelijke aantrekking. {{y}} voelt zich aangetrokken tot wat {{x}} uitstraalt, en {{x}} vindt het heerlijk hoe {{y}} {x:hem|haar} begeert. Tussen jullie dooft de verleiding niet snel.",
+    sextile: "De Venus van {{x}} en de Mars van {{y}} gaan goed samen. De aantrekking is er, zacht en makkelijk, en jullie kunnen elkaar verleiden zonder te forceren. Het is een verbinding die de lichamelijke klik ook na jaren levend houdt.",
+    carre: "De Venus van {{x}} en de Mars van {{y}} botsen, en dat geeft vonken. De aantrekking is sterk, een beetje elektrisch, met ruzies die vaak eindigen in een verzoening. {{x}} kan {{y}} te ongeduldig vinden, en {{y}} kan {{x}} te ingewikkeld vinden. Praat zonder taboes over waar je zin in hebt.",
+    trigone: "De Venus van {{x}} en de Mars van {{y}} staan in harmonie. Jullie trekken elkaar vanzelf aan, en jullie verlangens komen makkelijk samen. Het verlangen is eenvoudig en teder, en het blijft.",
+    opposition: "De Venus van {{x}} en de Mars van {{y}} staan tegenover elkaar: het is een sterke aantrekking, vol contrasten. {{y}} wil {{x}} verleiden, en {{x}} wordt graag verleid: dat spel kan lang duren. Let er alleen op dat het geen machtsstrijd wordt.",
+    meme: "De Venus van {{x}} en de Mars van {{y}} vormen geen precies aspect, maar staan in hetzelfde element. Jullie verlangens begrijpen elkaar: wat {{x}} fijn vindt, is vaak precies wat {{y}} wil geven.",
+    allie: "De Venus van {{x}} en de Mars van {{y}} staan in elementen die goed samengaan. De aantrekking is echt zonder explosief te zijn, en ze groeit met het vertrouwen.",
+    contraste: "De Venus van {{x}} en de Mars van {{y}} staan in tegengestelde elementen. Jullie manieren van verlangen lijken niet op elkaar, en je moet leren wat de ander fijn vindt. Door erover te praten vindt het verlangen zijn weg.",
+  },
+  'lune-venus': {
+    conjonction: "De Maan van {{x}} en de Venus van {{y}} staan samen: het is een van de tederste verbindingen. De manier waarop {{y}} liefheeft, is precies wat {{x}} nodig heeft om zich geliefd te voelen. De knuffels en kleine attenties van {{y}} raken altijd de juiste snaar.",
+    sextile: "De Maan van {{x}} en de Venus van {{y}} gaan goed samen. {{y}} weet hoe {y:hij|zij} {{x}} een goed gevoel geeft, met eenvoudige gebaren en een natuurlijke tederheid.",
+    carre: "De Maan van {{x}} en de Venus van {{y}} botsen. {{y}} toont {y:zijn|haar} liefde op een manier die {{x}} niet altijd geruststelt, en {{x}} kan zich onbegrepen voelen zonder te weten waarom. Het simpelste is dat {{x}} duidelijk zegt waardoor {x:hij|zij} zich veilig voelt.",
+    trigone: "De Maan van {{x}} en de Venus van {{y}} staan in harmonie. {{x}} voelt zich geliefd zoals {x:hij|zij} dat nodig heeft, en {{y}} zorgt graag voor {{x}}. Het is een makkelijke tederheid, die in het dagelijks leven goeddoet.",
+    opposition: "De Maan van {{x}} en de Venus van {{y}} staan tegenover elkaar. Jullie trekken elkaar aan, maar jullie behoefte aan tederheid is niet dezelfde: {{x}} verwacht een vorm van liefde waar {{y}} niet altijd aan denkt. Als jullie het tegen elkaar zeggen, vinden jullie makkelijk een middenweg.",
+  },
+  'soleil-venus': {
+    conjonction: "De Zon van {{x}} en de Venus van {{y}} staan samen: {{y}} houdt van {{x}} om wie {x:hij|zij} diep vanbinnen is. Het is de verbinding van bewondering en liefde op het eerste gezicht. {{x}} voelt zich gewaardeerd, en {{y}} vindt in {{x}} precies dat waardoor {y:hij|zij} {y:zijn|haar} hoofd verliest.",
+    sextile: "De Zon van {{x}} en de Venus van {{y}} gaan goed samen. {{y}} houdt van de persoonlijkheid van {{x}}, en jullie brengen graag tijd samen door. Het is een verbinding van eenvoudige, fijne verstandhouding.",
+    carre: "De Zon van {{x}} en de Venus van {{y}} botsen. {{y}} voelt zich aangetrokken tot {{x}}, maar sommige kanten van het karakter van {{x}} irriteren {y:hem|haar}. Je moet accepteren dat de ander niet in alles zal veranderen, en het elkaar eerder met humor zeggen dan met verwijten.",
+    trigone: "De Zon van {{x}} en de Venus van {{y}} staan in harmonie. {{y}} bewondert {{x}} zonder moeite, en {{x}} voelt zich geliefd om wie {x:hij|zij} is. Jullie verstandhouding is vanzelfsprekend, en vaak houden jullie van dezelfde dingen.",
+    opposition: "De Zon van {{x}} en de Venus van {{y}} staan tegenover elkaar. De aantrekking is sterk en bestaat uit verschillen: {{y}} valt voor wat {{x}} anders maakt. In het dagelijks leven moet je die verschillen accepteren zonder te proberen ze uit te wissen.",
+  },
+  'mercure-lune': {
+    conjonction: "De Mercurius van {{x}} en de Maan van {{y}} staan samen: de woorden van {{x}} gaan recht naar het hart van {{y}}. {{y}} voelt zich gehoord en begrepen, en jullie kunnen over alles praten, ook over wat pijn doet.",
+    sextile: "De Mercurius van {{x}} en de Maan van {{y}} gaan goed samen. {{x}} weet de woorden te vinden die {{y}} geruststellen, en de gesprekken van elke dag gaan makkelijk.",
+    carre: "De Mercurius van {{x}} en de Maan van {{y}} botsen. {{x}} kan dingen zeggen op een manier die {{y}} onbedoeld kwetst, en {{y}} kan met gevoel reageren waar {{x}} logica verwachtte. Kies voor een belangrijk gesprek het moment en de toon goed.",
+    trigone: "De Mercurius van {{x}} en de Maan van {{y}} staan in harmonie. {{x}} begrijpt wat {{y}} voelt en kan er zacht over praten. De kleine praatjes van 's avonds doen jullie relatie veel goed.",
+    opposition: "De Mercurius van {{x}} en de Maan van {{y}} staan tegenover elkaar. {{x}} redeneert waar {{y}} voelt, en jullie gesprekken kunnen een dovemansgesprek worden. Luister eerst naar wat de ander voelt, en zoek pas daarna naar oplossingen.",
+  },
+};

@@ -23,7 +23,7 @@
     // Le thème astral de couple (24 novembre 2026), dans les langues où sa
     // page existe (section 11 de {lang}/cgv.json).
     theme: getLocalizedPath('themeAstral', lang) ? lien('themeAstral', t('cgv:liens.theme', 'thème astral de couple')) : '',
-    prixTheme: lang === 'en' ? '€4.90' : '4,90\u00a0€',
+    prixTheme: lang === 'en' ? '€4.90' : lang === 'nl' ? '€\u00a04,90' : '4,90\u00a0€',
     mediateur: med.nom ? escapeHtml(med.nom) + (med.site ? ' (<a class="text-primary hover:underline" href="' + med.site + '" rel="noopener">' + escapeHtml(med.site.replace(/^https?:\/\//, '')) + '</a>)' : '') : '',
   };
   const rp = (s) => String(s || '').replace(/\{\{(\w+)\}\}/g, (m, k) => vars[k] !== undefined ? vars[k] : m);

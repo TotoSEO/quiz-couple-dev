@@ -114,7 +114,7 @@ const TEXTES = {
     titre: 'Jullie relatiehoroscoop is klaar',
     phrase: 'Hier is de link naar jullie rapport. Bewaar deze e-mail: de link werkt zes maanden, op elk apparaat.',
     puces: [
-      '**Jullie gedeelde sterrenkaart**, en jullie koppelprofiel',
+      '**Jullie gedeelde hemelkaart**, en jullie profiel als stel',
       '**De Zon, de Maan, Mercurius, Venus en Mars** van ieder van jullie, en wat jullie verbindt',
       '**Jullie komende 12 maanden**, maand voor maand',
     ],

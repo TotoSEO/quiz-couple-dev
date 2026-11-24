@@ -1,11 +1,12 @@
 {
   "title": "Algemene voorwaarden",
-  "majLe": "Laatst bijgewerkt: 4 november 2026",
-  "intro": "Deze voorwaarden gelden voor de aankoop van het volledige rapport van de {{bilan}} op quiz-couple.com. Al het andere op de site is gratis; daar wordt niets verkocht.",
+  "majLe": "Laatst bijgewerkt: 24 november 2026",
+  "intro": "Deze voorwaarden gelden voor de aankoop van het volledige rapport van de {{bilan}} en van de {{theme}} op quiz-couple.com. De artikelen 1 tot en met 10 gaan over de relatiecheck, artikel 11 over de relatiehoroscoop. Al het andere op de site is gratis; daar wordt niets verkocht.",
   "liens": {
     "contact": "contactpagina",
     "confidentialite": "privacybeleid",
-    "bilan": "relatiecheck"
+    "bilan": "relatiecheck",
+    "theme": "relatiehoroscoop"
   },
   "vendeur": {
     "titre": "De verkoper",
@@ -95,6 +96,17 @@
       "titre": "10. Toepasselijk recht",
       "p": [
         "Op deze voorwaarden is het Franse recht van toepassing. Bij een geschil, en als er geen minnelijke regeling komt, zijn de rechtbanken bevoegd die de wet aanwijst; een consument kan zich ook wenden tot de rechter van de plaats waar hij woonde op het moment van de betaling. Als u in een ander land van de Europese Unie woont, behoudt u de bescherming van de dwingende regels van uw woonland."
+      ]
+    },
+    {
+      "titre": "11. De relatiehoroscoop",
+      "p": [
+        "Wat er wordt verkocht: een astrologisch rapport dat wordt opgesteld op basis van twee voornamen en twee geboortedata (de tijd is optioneel). Het geeft de hemel van de twee personen samengebracht op één wiel, het profiel van het stel, de domeinen, de vijf planeten van ieder een voor een gelezen, de verbindingen tussen de twee horoscopen, de Chinese tekens, de levenspaden en de twaalf maanden na de aankoop. Het wiel, de planeten van ieder en het profiel worden vóór de aankoop gratis getoond; de rest alleen daarna. Het rapport is digitale inhoud: het wordt getoond op de pagina van de relatiehoroscoop en kan opnieuw worden gelezen via de persoonlijke link die per e-mail wordt verstuurd. Het is voorbehouden aan meerderjarigen.",
+        "De prijs is {{prixTheme}} voor het rapport van het stel, in één betaling, zonder abonnement; er wordt geen btw gerekend. Voor Latijns-Amerika kan een lagere prijs gelden: die staat op de pagina vóór elke betaling, en het bedrag van de betaalpagina geldt. U betaalt met een bankkaart, of met een andere betaalmethode die wordt aangeboden, op de betaalpagina van Stripe; wij zien nooit de kaartnummers.",
+        "Vóór de betaling vinkt de koper een vakje aan waarmee hij vraagt om het rapport meteen te krijgen, zonder het einde van de herroepingstermijn van veertien dagen af te wachten, en erkent hij dat zijn herroepingsrecht vervalt zodra het rapport geleverd is (artikel L221-28 13° van de Franse Code de la consommation). Het rapport is geleverd zodra het na de betaling op de pagina verschijnt, of zodra de e-mail met de link vertrekt, als dat eerder is. Vanaf dat moment is de aankoop definitief: er is geen terugbetaling verschuldigd voor een uitkomst die tegenvalt of niet past bij het beeld dat u van uw relatie had.",
+        "Het rapport valt onder de wettelijke conformiteitsgarantie voor digitale inhoud (artikelen L224-25-12 en volgende van de Franse Code de la consommation). Als het niet verschijnt, onvolledig is of niet overeenkomt met wat dit artikel beschrijft, schrijf ons dan via de {{contact}}: we verbeteren het kosteloos, en als dat niet lukt, betalen we u terug.",
+        "Astrologie is geen wetenschap, en het rapport is bedoeld als een spel voor twee: het voorspelt niets en zegt niets zekers over uw relatie of over de toekomst ervan. De posities van de planeten worden nauwkeurig berekend, maar wat erin wordt gelezen, komt uit de astrologische traditie. De beslissingen die u in uw leven op basis van het rapport neemt, zijn alleen de uwe en vallen onder uw eigen verantwoordelijkheid.",
+        "De voornamen, de geslachten en de geboortedata en -tijden dienen alleen om het rapport te berekenen; het e-mailadres dat bij Stripe wordt opgegeven, dient alleen om de link te versturen. Alles wordt zes maanden na de betaling verwijderd, of dertig dagen na een onbetaalde bestelling, en het rapport kan op elk moment via de eigen pagina worden verwijderd. De details staan in ons {{confidentialite}}. De artikelen over klachten en bemiddeling en over het toepasselijk recht (artikelen 9 en 10), en de gegevens van de verkoper, gelden ook voor de relatiehoroscoop."
       ]
     }
   ]
