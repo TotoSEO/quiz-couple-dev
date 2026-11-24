@@ -193,6 +193,11 @@ body.page-astro .est-collee .entete-logo-mini { width: 0; margin-right: 0; opaci
 .as-section { position: relative; max-width: 70rem; margin: 0 auto; padding: 5rem 1.25rem; }
 .as-section + .as-section { border-top: 1px solid rgba(185, 164, 255, 0.1); }
 .as-h2 { margin-top: 0.6rem; font-family: var(--as-titre); font-weight: 600; font-size: clamp(2.2rem, 7vw, 3.4rem); line-height: 1.04; color: var(--as-encre); text-wrap: balance; }
+/* Le site coupe les titres allemands à la syllabe (styles.css, pour les
+   composés plus larges que la ligne). Ici, aucun mot d'un titre n'est plus
+   large que sa ligne, même à 320 px : un mot passe entier à la ligne
+   (« Euer gemein- / samer Himmel » sinon). */
+html:is(:lang(de), :lang(nl)) :is(h1, h2, h3, h4) { -webkit-hyphens: manual; hyphens: manual; }
 .as-intro { margin-top: 0.9rem; max-width: 40rem; font-size: 1.05rem; line-height: 1.6; color: var(--as-gris); }
 
 .as-chapitres { list-style: none; margin-top: 1rem; display: grid; gap: 0; }

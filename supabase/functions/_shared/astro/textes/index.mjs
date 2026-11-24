@@ -5,5 +5,6 @@
 import fr from './fr/index.mjs';
 import en from './en/index.mjs';
 import es from './es/index.mjs';
+import de from './de/index.mjs';
 
-export default { fr, en, es };
+export default { fr, en, es, de };

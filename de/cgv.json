@@ -1,11 +1,12 @@
 {
   "title": "Allgemeine Geschäftsbedingungen",
-  "majLe": "Zuletzt aktualisiert: 4. November 2026",
-  "intro": "Diese Bedingungen gelten für den Kauf des vollständigen Berichts zur {{bilan}} auf quiz-couple.com. Alles andere auf der Website ist kostenlos und von keinem Verkauf betroffen.",
+  "majLe": "Zuletzt aktualisiert: 24. November 2026",
+  "intro": "Diese Bedingungen gelten für den Kauf des vollständigen Berichts zur {{bilan}} und für das {{theme}} auf quiz-couple.com. Die Artikel 1 bis 10 beschreiben die Beziehungsanalyse, Artikel 11 das Partnerhoroskop. Alles andere auf der Website ist kostenlos und von keinem Verkauf betroffen.",
   "liens": {
     "contact": "Kontaktseite",
     "confidentialite": "Datenschutzerklärung",
-    "bilan": "Beziehungsanalyse"
+    "bilan": "Beziehungsanalyse",
+    "theme": "Partnerhoroskop"
   },
   "vendeur": {
     "titre": "Der Verkäufer",
@@ -95,6 +96,17 @@
       "titre": "10. Anwendbares Recht",
       "p": [
         "Diese Bedingungen unterliegen französischem Recht. Im Streitfall und wenn keine gütliche Einigung gelingt, sind die gesetzlich bestimmten Gerichte zuständig; ein Verbraucher kann sich auch an das Gericht des Ortes wenden, an dem er zum Zeitpunkt der Zahlung wohnte. Wenn du in einem anderen Land der Europäischen Union wohnst, behältst du den Schutz der zwingenden Vorschriften deines Wohnsitzlandes."
+      ]
+    },
+    {
+      "titre": "11. Das Partnerhoroskop",
+      "p": [
+        "Was verkauft wird: ein Astrologie-Bericht, der aus zwei Vornamen und zwei Geburtsdaten erstellt wird (die Uhrzeit ist freiwillig). Er zeigt den Himmel der beiden Personen in einem einzigen Rad, das Profil des Paares, seine Bereiche, die fünf Planeten jeder Person einzeln gelesen, die Verbindungen zwischen den beiden Horoskopen, die chinesischen Tierzeichen, die Lebenszahlen und die zwölf Monate nach dem Kauf. Das Rad, die Planeten jeder Person und das Profil werden vor dem Kauf kostenlos angezeigt, der Rest erst danach. Der Bericht ist ein digitaler Inhalt: Er wird auf der Seite des Partnerhoroskops angezeigt und kann über den persönlichen Link, der per E-Mail verschickt wird, erneut gelesen werden. Er ist volljährigen Personen vorbehalten.",
+        "Der Preis beträgt {{prixTheme}} für den Bericht des Paares, in einer einzigen Zahlung, ohne Abonnement. Für Lateinamerika kann ein niedrigerer Preis angeboten werden: Er wird vor jeder Zahlung auf der Seite angezeigt, und es gilt der Preis der Zahlungsseite. Keine Umsatzsteuer, gemäß Artikel 293 B des französischen Steuergesetzbuchs (Kleinunternehmerregelung). Die Zahlung erfolgt per Karte oder mit einem anderen angebotenen Zahlungsmittel auf der Zahlungsseite von Stripe; wir sehen die Kartennummern nie.",
+        "Vor der Zahlung setzt der Käufer ein Häkchen, mit dem er verlangt, dass ihm der Bericht sofort geliefert wird, ohne das Ende der vierzehntägigen Widerrufsfrist abzuwarten, und bestätigt, dass sein Widerrufsrecht mit der Lieferung des Berichts erlischt (Artikel L221-28 13° des französischen Verbrauchergesetzbuchs). Der Bericht gilt als geliefert, sobald er nach der Zahlung auf der Seite erscheint oder sobald die E-Mail mit seinem Link verschickt wird, je nachdem, was zuerst eintritt. Ab diesem Moment ist der Kauf endgültig: Für ein Ergebnis, das nicht gefällt oder nicht dem Bild entspricht, das man von seiner Beziehung hatte, wird keine Erstattung geschuldet.",
+        "Für den Bericht gilt die gesetzliche Gewährleistung für digitale Inhalte (Artikel L224-25-12 ff. des französischen Verbrauchergesetzbuchs). Erscheint er nicht, ist er unvollständig oder entspricht er nicht dem, was dieser Artikel beschreibt, schreib uns über die {{contact}}: Wir beheben das kostenlos, und wenn das nicht möglich ist, erstatten wir den Preis.",
+        "Die Astrologie ist keine Wissenschaft, und der Bericht ist als Spiel zu zweit zu lesen: Er sagt nichts voraus und sagt nichts Sicheres über eure Beziehung oder ihre Zukunft. Die Stellungen der Planeten werden genau berechnet, aber was man aus ihnen liest, stammt aus der astrologischen Tradition. Die Entscheidungen, die ihr in eurem Leben aufgrund des Berichts trefft, liegen allein in eurer Verantwortung.",
+        "Die Vornamen, die Geschlechter sowie die Geburtsdaten und Geburtszeiten dienen nur dazu, den Bericht zu berechnen; die bei Stripe angegebene E-Mail-Adresse dient nur dazu, seinen Link zu verschicken. Alles wird sechs Monate nach der Zahlung gelöscht, oder dreißig Tage nach einer Bestellung, die nicht bezahlt wurde, und der Bericht kann jederzeit auf seiner Seite gelöscht werden. Die Einzelheiten stehen in unserer {{confidentialite}}. Die Abschnitte über Beschwerden und Schlichtung und über das anwendbare Recht (Artikel 9 und 10) sowie die Angaben zum Verkäufer gelten auch für das Partnerhoroskop."
       ]
     }
   ]

@@ -116,7 +116,16 @@
     "s5Item7Label": "Recht auf Widerruf der Einwilligung:",
     "s5Item7Text": "Jederzeit, für die darauf gestützten Verarbeitungen (E-Mails, Beziehungsanalyse), ohne dass das bisher Geschehene berührt wird",
     "s5Item8Label": "Beschwerderecht:",
-    "s5Item8Text": "Bei der CNIL (cnil.fr), der französischen Datenschutzbehörde, oder bei der Behörde deines Landes, wenn du meinst, dass deine Rechte nicht gewahrt werden"
+    "s5Item8Text": "Bei der CNIL (cnil.fr), der französischen Datenschutzbehörde, oder bei der Behörde deines Landes, wenn du meinst, dass deine Rechte nicht gewahrt werden",
+    "themeTitle": "Das Partnerhoroskop",
+    "themeIntro": "Das Partnerhoroskop berechnet aus euren beiden Geburtsdaten einen Astrologie-Bericht. Hier steht, was gespeichert wird und wie lange.",
+    "themeItems": [
+      "<strong>Was gespeichert wird:</strong> die beiden Vornamen, das Geschlecht jeder Person (damit die Texte stimmen), die beiden Geburtsdaten, die Geburtszeiten, falls ihr sie angebt, und die Zeitzone eures Browsers. Wenn ihr bezahlt, das, was uns Stripe von der Zahlung zurückgibt: das Datum, den Betrag und die auf der Stripe-Seite angegebene E-Mail-Adresse. Kein Konto.",
+      "<strong>Wozu:</strong> um euren Bericht zu berechnen und anzuzeigen und euch seinen Link ein einziges Mal per E-Mail zu schicken. Mehr nicht: Die Adresse kommt in keine Versandliste. Die Rechtsgrundlage ist die Erfüllung des Vertrags, den ihr mit dem Kauf des Berichts abschließt.",
+      "<strong>Wer sie sieht:</strong> die Personen, die den Link zum Bericht haben, und sonst niemand. Der Schlüssel des Links wird nur als Prüfsumme gespeichert, die sich nicht zurückrechnen lässt. Vor der Zahlung wird die kostenlose Vorschau in eurem Browser berechnet, ohne dass etwas verschickt wird.",
+      "<strong>Wie lange:</strong> sechs Monate nach der Zahlung, danach wird alles automatisch gelöscht. Eine Bestellung, die nicht bezahlt wurde, wird nach dreißig Tagen gelöscht. Ihr könnt den Bericht und eure Daten auch jederzeit löschen, mit dem Link „Diesen Bericht löschen“ am Ende des Berichts.",
+      "<strong>Die Dienstleister:</strong> Supabase hostet die Daten, Stripe wickelt die Zahlung ab, und Resend verschickt die E-Mail mit dem Link."
+    ]
   },
   "mentions": {
     "seoTitle": "Impressum | Quiz Couple",

@@ -224,9 +224,9 @@ export const ROUTE_SLUGS = {
   // astral tu l'as fais que en français ? »), chacune le jour où sa page, son
   // rapport, son e-mail et ses CGV sont écrits : une adresse posée ici
   // construit la page, et un texte absent y viendrait du français. Les
-  // adresses à venir : de partnerhoroskop, it tema-natale-di-coppia,
-  // nl relatiehoroscoop (et lien.mjs de la fonction astro, qui les répète).
-  themeAstral: { fr: 'theme-astral-couple', en: 'couples-birth-chart', es: 'carta-astral-de-pareja' },
+  // adresses à venir : it tema-natale-di-coppia, nl relatiehoroscoop (et
+  // lien.mjs de la fonction astro, qui les répète).
+  themeAstral: { fr: 'theme-astral-couple', en: 'couples-birth-chart', es: 'carta-astral-de-pareja', de: 'partnerhoroskop' },
 };
 
 // L'image de partage du site (27 octobre 2026) : og:image de l'accueil et de
