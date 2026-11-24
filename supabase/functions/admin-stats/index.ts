@@ -36,6 +36,7 @@ const FONCTIONS = new Set([
   'get_bilan_point',
   'get_instagram_clics',
   'get_livre_stats',
+  'get_astro_tableau',
   'get_quiz_counts',
   'get_quiz_daily',
   'get_quiz_daily_par_quiz',

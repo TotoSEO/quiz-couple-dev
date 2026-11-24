@@ -1,0 +1,96 @@
+// Les liens entre vos deux thèmes. Un texte à deux s'adresse au couple
+// (« vous ») : {v:masc|fém} accorde ce « vous », au féminin si ce sont deux
+// femmes. Dans une paire croisée, {{x}} est la personne de la première
+// planète (le Soleil de x et la Lune de y), {x:masc|fém} et {y:masc|fém}
+// leurs accords. La première phrase de chaque texte sert aussi de résumé
+// (atouts et défis) : elle doit se lire seule.
+export default {
+  'soleil-soleil': {
+    conjonction: "Vos deux Soleils sont collés l'un à l'autre : vous êtes du même signe, ou presque. Vous vous comprenez sans avoir besoin de tout expliquer, parce que vous avez les mêmes réflexes et les mêmes envies. Le risque, c'est de vous ressembler au point d'additionner vos défauts au lieu de les équilibrer. Deux têtus restent têtus ensemble ! Gardez chacun un peu d'espace à vous, pour ne pas vous marcher dessus.",
+    sextile: "Vos deux Soleils s'entendent bien. Vos caractères sont différents, mais ils se complètent facilement : quand l'un propose quelque chose, l'autre a envie de suivre. Vous vous faites grandir sans vous forcer, et vos amis vous trouvent souvent bien {v:assortis|assorties}. C'est une base facile, qu'il suffit d'entretenir avec des projets communs.",
+    carre: "Vos deux Soleils se frottent. Vous avez des façons de vivre et de décider très différentes, et vous y tenez l'un comme l'autre. Ça donne des disputes, surtout sur les choix importants, mais aussi un couple qui ne s'endort jamais. Beaucoup de couples solides ont ce carré : il oblige chacun à faire des efforts. Le plus utile, c'est d'accepter que l'autre ne fera jamais les choses exactement comme vous.",
+    trigone: "Vos deux Soleils sont en harmonie. Vous partagez la même façon de voir la vie, ce qui rend le quotidien facile et agréable. On se sent bien avec l'autre dès le début, comme si on se connaissait depuis longtemps. Le seul piège, c'est la facilité : un couple où tout va bien peut oublier de se surprendre.",
+    opposition: "Vos deux Soleils se font face, d'un bout à l'autre du zodiaque. Vous êtes des contraires, et c'est souvent ce qui vous a {v:attirés|attirées} au départ : l'autre a ce que vous n'avez pas. Au quotidien, ces différences tirent parfois chacun de son côté, et il faut apprendre à négocier. Quand ça marche, vous formez une équipe très complète, où chacun compense ce qui manque à l'autre.",
+    meme: "Vos deux Soleils ne forment pas d'aspect précis, mais ils sont dans le même élément. Vous avez la même énergie de base, et vous vous comprenez sans effort sur l'essentiel. Vos différences sont dans la manière de faire, rarement dans le fond.",
+    allie: "Vos deux Soleils sont dans des éléments qui s'entendent bien, comme le feu et l'air, ou la terre et l'eau. L'un nourrit l'autre : vos caractères sont différents, mais ils se stimulent au lieu de se gêner. C'est une base plutôt facile.",
+    contraste: "Vos deux Soleils sont dans des éléments qui se contrarient, comme le feu et l'eau, ou l'air et la terre. Vous n'avez pas le même rythme ni les mêmes priorités, et il faut parfois traduire ce que l'autre veut dire. Ça demande des efforts, mais ça vous apprend aussi beaucoup l'un sur l'autre.",
+  },
+  'lune-lune': {
+    conjonction: "Vos deux Lunes sont ensemble : vous ressentez les choses de la même façon. Vous avez les mêmes besoins pour vous sentir bien, et vous savez d'instinct comment consoler l'autre. En astrologie, c'est un des liens les plus doux qui soient. Attention seulement aux jours où vous allez mal en même temps, parce que personne n'est là pour rassurer l'autre.",
+    sextile: "Vos deux Lunes s'entendent bien. Vos émotions ne fonctionnent pas pareil, mais elles se répondent : quand l'un a besoin de réconfort, l'autre trouve assez facilement les bons gestes. Vous vous sentez bien ensemble à la maison, dans les petits moments de tous les jours.",
+    carre: "Vos deux Lunes se frottent. Vous n'avez pas les mêmes besoins pour vous sentir bien, et ce qui rassure l'un peut agacer l'autre. Par exemple, l'un veut parler tout de suite quand l'autre a besoin d'être tranquille. Les malentendus viennent souvent de là, pas d'un manque d'amour. Le plus utile est de vous dire clairement ce qui vous fait du bien, au lieu d'attendre que l'autre devine.",
+    trigone: "Vos deux Lunes sont en harmonie. Vous vous sentez bien ensemble sans effort, et l'ambiance à la maison est souvent douce et naturelle. Vous comprenez l'humeur de l'autre au premier regard. En astrologie, c'est un des meilleurs signes pour une vie à deux qui dure.",
+    opposition: "Vos deux Lunes se font face. Vos besoins émotionnels sont opposés : l'un a peut-être besoin de présence quand l'autre a besoin d'air. Vous pouvez beaucoup vous apporter, parce que chacun a ce qui manque à l'autre, à condition de l'accepter au lieu de le reprocher. Avec un peu de patience, ce face-à-face devient un équilibre.",
+    meme: "Vos deux Lunes sont dans le même élément, sans aspect précis. Vos émotions parlent la même langue : vous réagissez souvent de la même façon aux bonnes comme aux mauvaises nouvelles.",
+    allie: "Vos deux Lunes sont dans des éléments alliés. Vos besoins sont différents mais ils vont bien ensemble, et vous vous rassurez plutôt facilement l'un l'autre.",
+    contraste: "Vos deux Lunes sont dans des éléments qui se contrarient. Ce qui rassure l'un ne rassure pas forcément l'autre, et il faut apprendre les besoins de chacun. Rien d'impossible, mais ça demande de se parler.",
+  },
+  'venus-venus': {
+    conjonction: "Vos deux Vénus sont ensemble : vous aimez de la même façon. Vous avez les mêmes goûts et la même idée d'une belle soirée à deux. Vous vous faites plaisir sans réfléchir, parce que ce qui vous plaît plaît aussi à l'autre. C'est un lien très tendre, qui rend la vie de couple agréable.",
+    sextile: "Vos deux Vénus s'entendent bien. Vos façons d'aimer sont différentes, mais elles se complètent, et vous vous faites découvrir des choses nouvelles. Vous trouvez facilement des sorties et des moments qui plaisent à l'un comme à l'autre.",
+    carre: "Vos deux Vénus se frottent : vous n'aimez pas de la même façon. Chacun peut avoir l'impression de ne pas être aimé comme il le voudrait, alors que l'amour est bien là. Par exemple, l'un montre son amour par des cadeaux quand l'autre attend surtout du temps passé ensemble. Le plus simple est de vous dire ce qui vous touche, pour arrêter de vous rater.",
+    trigone: "Vos deux Vénus sont en harmonie. Vous avez des goûts proches et la même façon de montrer votre amour, ce qui évite beaucoup de malentendus. Pour choisir un cadeau, une soirée ou un voyage, vous tombez souvent d'accord. C'est un lien qui rend l'amour simple et doux.",
+    opposition: "Vos deux Vénus se font face. Vous avez des goûts opposés, et c'est souvent ce qui vous a {v:attirés|attirées} l'un vers l'autre. Au quotidien, il faut négocier : l'un aime sortir quand l'autre préfère rester à la maison, par exemple. Bien vécue, cette différence vous ouvre à des choses que vous n'auriez jamais essayées.",
+    meme: "Vos deux Vénus sont dans le même élément. Sans aspect précis entre elles, vos goûts se ressemblent assez pour que vous ayez souvent envie des mêmes choses.",
+    allie: "Vos deux Vénus sont dans des éléments alliés. Vous n'aimez pas exactement de la même façon, mais vos façons d'aimer se comprennent bien.",
+    contraste: "Vos deux Vénus sont dans des éléments qui se contrarient. Vos façons d'aimer sont très différentes, et il vaut mieux vous dire ce qui vous fait plaisir plutôt que de le deviner.",
+  },
+  'mars-mars': {
+    conjonction: "Vos deux Mars sont ensemble : vous avez la même énergie et le même rythme. Ça donne une forte attirance et l'envie de faire plein de choses ensemble. Le revers, c'est que vous vous énervez aussi en même temps, et vos disputes peuvent monter vite. Un sport ou un projet commun est une bonne façon de dépenser toute cette énergie.",
+    sextile: "Vos deux Mars s'entendent bien. Vous avez des rythmes différents mais compatibles, et vous savez avancer ensemble sans vous marcher sur les pieds. Vos disputes restent rares et se règlent assez vite.",
+    carre: "Vos deux Mars se frottent. Vous n'avez pas la même façon d'agir ni de vous mettre en colère, et les petites frictions du quotidien peuvent vite monter. En même temps, ce carré donne beaucoup de piquant au désir, et vos réconciliations sont souvent intenses. Apprenez à faire une pause quand ça chauffe, avant de dire des choses que vous regretteriez.",
+    trigone: "Vos deux Mars sont en harmonie. Vous avez la même énergie et vous savez avancer ensemble, que ce soit pour un déménagement ou une soirée improvisée. Le désir est fluide, sans prise de tête. Vos disputes sont rares et courtes.",
+    opposition: "Vos deux Mars se font face. L'attirance est forte, mais vos énergies se confrontent : quand l'un veut aller à gauche, l'autre veut aller à droite. Ce face-à-face entretient le désir, à condition de ne pas transformer chaque désaccord en bras de fer.",
+    meme: "Vos deux Mars sont dans le même élément. Vous avez une énergie qui se ressemble, et vous vous entendez plutôt bien sur le rythme à donner à votre vie.",
+    allie: "Vos deux Mars sont dans des éléments alliés. Vos énergies sont différentes mais elles se stimulent, et vous savez agir ensemble.",
+    contraste: "Vos deux Mars sont dans des éléments qui se contrarient. Vous n'avez pas le même rythme, et ce qui motive l'un peut freiner l'autre. Il faut trouver un tempo commun, sans forcer l'autre à suivre le sien.",
+  },
+  'mercure-mercure': {
+    conjonction: "Vos deux Mercure sont ensemble : vous pensez de la même façon. Vous vous comprenez à demi-mot, vous finissez parfois les phrases de l'autre et vous pouvez parler pendant des heures. C'est un des meilleurs signes pour bien communiquer. Attention juste à ne pas tourner en rond dans les mêmes idées.",
+    sextile: "Vos deux Mercure s'entendent bien. Vous n'avez pas la même façon de penser, mais vous aimez discuter et vous apprenez l'un de l'autre. Les conversations sont faciles, et souvent drôles.",
+    carre: "Vos deux Mercure se frottent. Vous ne raisonnez pas de la même façon, et un mot de l'un peut être mal compris par l'autre. Vos disputes viennent souvent d'une phrase prise de travers plus que d'un vrai désaccord. Prenez l'habitude de reformuler : « Si je comprends bien, tu veux dire que… ».",
+    trigone: "Vos deux Mercure sont en harmonie. Vous parlez la même langue, au sens propre comme au figuré : les idées circulent facilement entre vous, et vous savez régler un problème en discutant. Les longues conversations sont un des grands plaisirs de votre couple.",
+    opposition: "Vos deux Mercure se font face. Vous voyez souvent les choses de deux points de vue opposés, ce qui donne des débats animés. C'est enrichissant quand chacun écoute l'autre, et fatigant quand chacun veut avoir raison. Dites-vous « tu n'as pas tort » de temps en temps, ça change tout.",
+    meme: "Vos deux Mercure sont dans le même élément. Vous avez une façon de penser qui se ressemble, et vous vous comprenez vite.",
+    allie: "Vos deux Mercure sont dans des éléments alliés. Vous ne pensez pas pareil, mais vos idées se complètent bien.",
+    contraste: "Vos deux Mercure sont dans des éléments qui se contrarient. Vous ne raisonnez pas de la même façon, et il faut parfois prendre le temps de bien vous expliquer.",
+  },
+  'soleil-lune': {
+    conjonction: "Le Soleil de {{x}} est posé sur la Lune de {{y}} : en astrologie, c'est le lien des couples qui durent. {{y}} se sent {y:compris|comprise} et {y:rassuré|rassurée} par ce que {{x}} est au fond, et {{x}} se sent {x:accepté|acceptée} {x:tel|telle} qu'{x:il|elle} est. Vous vous sentez chez vous l'un avec l'autre, et c'est rare.",
+    sextile: "Le Soleil de {{x}} et la Lune de {{y}} s'entendent bien. Ce que {{x}} est au fond fait du bien à {{y}}, qui se sent bien à ses côtés. C'est un lien doux, qui aide le couple à durer.",
+    carre: "Le Soleil de {{x}} et la Lune de {{y}} se frottent. Ce que {{x}} fait naturellement peut blesser {{y}} sans que {{x}} s'en rende compte, et {{y}} peut avoir l'impression de ne pas être {y:compris|comprise}. Ce n'est pas un manque d'amour, plutôt deux rythmes différents. Prenez le temps de vous expliquer ce qui vous touche.",
+    trigone: "Le Soleil de {{x}} et la Lune de {{y}} sont en harmonie : c'est un très bon signe pour la vie à deux. {{y}} se sent naturellement bien avec {{x}}, et {{x}} trouve chez {{y}} un soutien qui ne demande rien en échange. Vous formez une équipe où chacun trouve sa place.",
+    opposition: "Le Soleil de {{x}} et la Lune de {{y}} se font face. En astrologie, c'est une attirance très forte, celle de deux moitiés qui se complètent. Elle demande de l'équilibre : {{x}} doit faire attention aux émotions de {{y}}, et {{y}} doit laisser {{x}} être {x:lui|elle}-même.",
+  },
+  'venus-mars': {
+    conjonction: "La Vénus de {{x}} et le Mars de {{y}} sont collés : c'est l'aspect de l'attirance physique par excellence. {{y}} est {y:attiré|attirée} par ce que {{x}} dégage, et {{x}} aime la façon dont {{y}} {x:le|la} désire. Entre vous, la séduction ne s'éteint pas facilement.",
+    sextile: "La Vénus de {{x}} et le Mars de {{y}} s'entendent bien. L'attirance est là, douce et facile, et vous savez vous séduire sans forcer. C'est un lien qui garde la complicité physique vivante avec le temps.",
+    carre: "La Vénus de {{x}} et le Mars de {{y}} se frottent, et ça fait des étincelles. L'attirance est forte, un peu électrique, avec des disputes qui finissent souvent en réconciliation. {{x}} peut trouver {{y}} trop {y:pressé|pressée}, et {{y}} trouver {{x}} trop {x:compliqué|compliquée}. Parlez de vos envies, sans tabou.",
+    trigone: "La Vénus de {{x}} et le Mars de {{y}} sont en harmonie. Vous êtes {v:attirés|attirées} l'un par l'autre de façon naturelle, et vos envies se rejoignent facilement. Le désir est simple et tendre, et il dure.",
+    opposition: "La Vénus de {{x}} et le Mars de {{y}} se font face : une attirance forte, faite de contrastes. {{y}} a envie de séduire {{x}}, qui aime être {x:séduit|séduite}, et ce jeu peut durer longtemps. Attention seulement à ne pas en faire un rapport de force.",
+    meme: "La Vénus de {{x}} et le Mars de {{y}} ne forment pas d'aspect précis, mais ils sont dans le même élément. Vos envies se comprennent : ce qui plaît à {{x}} est souvent ce que {{y}} a envie de donner.",
+    allie: "La Vénus de {{x}} et le Mars de {{y}} sont dans des éléments alliés. L'attirance est réelle sans être explosive, et elle grandit avec la confiance.",
+    contraste: "La Vénus de {{x}} et le Mars de {{y}} sont dans des éléments qui se contrarient. Vos façons de désirer ne se ressemblent pas, et il faut apprendre ce qui plaît à l'autre. C'est en en parlant que le désir trouve son chemin.",
+  },
+  'lune-venus': {
+    conjonction: "La Lune de {{x}} et la Vénus de {{y}} sont ensemble : c'est un des liens les plus tendres. La façon d'aimer de {{y}} est exactement ce dont {{x}} a besoin pour se sentir {x:aimé|aimée}. Ses câlins et ses petites attentions tombent toujours juste.",
+    sextile: "La Lune de {{x}} et la Vénus de {{y}} s'entendent bien. {{y}} sait faire du bien à {{x}}, avec des gestes simples et une tendresse naturelle.",
+    carre: "La Lune de {{x}} et la Vénus de {{y}} se frottent. {{y}} montre son amour d'une façon qui ne rassure pas toujours {{x}}, et {{x}} peut se sentir {x:incompris|incomprise} sans savoir pourquoi. Le plus simple est que {{x}} dise à {{y}} ce qui {x:le|la} rassure.",
+    trigone: "La Lune de {{x}} et la Vénus de {{y}} sont en harmonie. {{x}} se sent {x:aimé|aimée} comme {x:il|elle} en a besoin, et {{y}} aime prendre soin de {{x}}. C'est une tendresse facile, qui fait du bien au quotidien.",
+    opposition: "La Lune de {{x}} et la Vénus de {{y}} se font face. Vous vous attirez, mais vos besoins de tendresse ne sont pas les mêmes : {{x}} attend une forme d'amour que {{y}} ne pense pas toujours à donner. En vous le disant, vous trouverez facilement le juste milieu.",
+  },
+  'soleil-venus': {
+    conjonction: "Le Soleil de {{x}} et la Vénus de {{y}} sont ensemble : {{y}} aime {{x}} pour ce qu'{x:il|elle} est au fond. C'est le lien de l'admiration et du coup de cœur. {{x}} se sent {x:valorisé|valorisée}, et {{y}} trouve chez {{x}} ce qui {y:le|la} fait craquer.",
+    sextile: "Le Soleil de {{x}} et la Vénus de {{y}} s'entendent bien. {{y}} apprécie la personnalité de {{x}}, et vous prenez du plaisir à passer du temps ensemble. C'est un lien de complicité simple et agréable.",
+    carre: "Le Soleil de {{x}} et la Vénus de {{y}} se frottent. {{y}} est {y:attiré|attirée} par {{x}}, mais certains traits de caractère de {{x}} {y:le|la} dérangent. Il faut accepter que l'autre ne change pas sur tout, et le lui dire avec humour plutôt qu'avec des reproches.",
+    trigone: "Le Soleil de {{x}} et la Vénus de {{y}} sont en harmonie. {{y}} admire {{x}} sans effort, et {{x}} se sent {x:aimé|aimée} pour ce qu'{x:il|elle} est. Votre complicité est naturelle, et vous aimez souvent les mêmes choses.",
+    opposition: "Le Soleil de {{x}} et la Vénus de {{y}} se font face. L'attirance est forte, faite de différences : {{y}} est {y:séduit|séduite} par ce que {{x}} a de différent. Au quotidien, il faut accepter ces différences sans chercher à les gommer.",
+  },
+  'mercure-lune': {
+    conjonction: "Le Mercure de {{x}} et la Lune de {{y}} sont ensemble : les mots de {{x}} touchent directement les émotions de {{y}}. {{y}} se sent {y:écouté|écoutée} et {y:compris|comprise}, et vous pouvez parler de tout, même de ce qui fait mal.",
+    sextile: "Le Mercure de {{x}} et la Lune de {{y}} s'entendent bien. {{x}} sait trouver les mots qui rassurent {{y}}, et les conversations du quotidien sont faciles.",
+    carre: "Le Mercure de {{x}} et la Lune de {{y}} se frottent. {{x}} peut dire les choses d'une façon qui blesse {{y}} sans le vouloir, et {{y}} peut réagir avec ses émotions là où {{x}} attendait de la logique. Avant une discussion importante, choisissez bien le moment et le ton.",
+    trigone: "Le Mercure de {{x}} et la Lune de {{y}} sont en harmonie. {{x}} comprend ce que ressent {{y}} et sait en parler avec douceur. Les petites discussions du soir font beaucoup de bien à votre couple.",
+    opposition: "Le Mercure de {{x}} et la Lune de {{y}} se font face. {{x}} raisonne quand {{y}} ressent, et vos conversations peuvent tourner au dialogue de sourds. Écoutez d'abord ce que l'autre ressent, et cherchez des solutions seulement après.",
+  },
+};

@@ -188,6 +188,24 @@ célibataire ne crée pas d'évaluation : il répond à une petite enquête.
 - **Qui la voit** : l'onglet Évaluation de l'admin montre les comptes et les idées, jamais une adresse (`get_bilan_celib`).
 - **La carte des tests célibataires** (4 novembre 2026, `js/celib-bientot.js`) : la même enquête, à l'écran de résultat des seize tests célibataires. La réponse garde en plus la page du test (`source`) et la situation choisie (`situation` : jamais en couple, rupture de moins d'un an, histoires qui se répètent, autre). Les vues et les clics de la carte ne sont que des compteurs par page et par jour (`celib_carte_vue`, `celib_carte_clic`) ; l'appareil garde trente jours la date de sa réponse (`qc-celib-repondu`, localStorage) pour ne plus montrer la carte, et une marque par page dans sessionStorage pour ne compter qu'une vue et un clic. Mêmes durées, même case pour l'adresse (16 ans en néerlandais, 15 ailleurs).
 
+### Le thème astral de couple (24 novembre 2026)
+
+- **Finalité** : calculer et afficher le rapport d'astrologie d'un couple, et envoyer une fois son lien par e-mail.
+- **Personnes** : les deux personnes du couple.
+- **Données** (`astro_rapports`) :
+  - les deux prénoms et le genre de chacun ;
+  - les deux dates de naissance, les heures si elles sont données, le fuseau du navigateur ;
+  - ce que Stripe renvoie du paiement : session, paiement, montant, adresse e-mail ;
+  - l'empreinte du lien personnel du rapport.
+- **Base légale** : l'exécution du contrat (l'achat du rapport). L'âge de 18 ans est exigé.
+- **Destinataires** : les personnes qui ont le lien du rapport. Aucun autre.
+- **Durée** :
+  - trente jours pour une commande pas payée ;
+  - six mois après le paiement (`astro_menage`, pg_cron `astro-menage` chaque nuit) ;
+  - suppression immédiate possible depuis le rapport.
+  - Seuls des compteurs anonymes restent (`astro_compteurs`, 400 jours).
+- **Sécurité** : table fermée à la clé publique, écrite par la fonction `astro` avec la clé de service ; lien tiré au hasard, gardé en empreinte ; l'aperçu gratuit se calcule dans le navigateur, sans rien envoyer.
+
 ## Ce qui reste à faire
 
 - **L'analyse d'impact de l'évaluation de couple** est dans `docs/rgpd/AIPD-evaluation.md`, avec son plan d'action. Thomas la valide en la signant.

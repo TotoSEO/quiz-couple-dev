@@ -100,6 +100,15 @@
       "<strong>Les e-mails sur l'évaluation :</strong> quand le second a fini ses réponses, le premier reçoit un e-mail qui dit que le rapport est prêt. En dehors du lien du rapport et des liens que vous demandez, c'est le seul e-mail que nous envoyons sur l'évaluation. Il a un lien pour ne plus en recevoir. Il ne part pas si le rapport est déjà payé, et il ne contient rien de vos réponses.",
       "<strong>Une empreinte de l'adresse IP :</strong> salée et impossible à retourner, gardée avec l'évaluation pour limiter le nombre d'évaluations créées par heure depuis une même connexion."
     ],
+    "themeTitle": "Le thème astral de couple",
+    "themeIntro": "Le thème astral de couple calcule un rapport d'astrologie à partir de vos deux dates de naissance. Voici ce qui est gardé, et pour combien de temps.",
+    "themeItems": [
+      "<strong>Ce qui est enregistré :</strong> les deux prénoms, le genre de chacun (pour accorder les textes), les deux dates de naissance, les heures si vous les donnez, et le fuseau horaire de votre navigateur. Quand vous payez, ce que Stripe nous renvoie du paiement : la date, le montant et l'adresse e-mail donnée sur sa page. Aucun compte.",
+      "<strong>Pourquoi :</strong> calculer et afficher votre rapport, et vous envoyer une seule fois son lien par e-mail. Rien d'autre : l'adresse n'entre dans aucune liste d'envoi. La base légale est l'exécution du contrat que vous passez en achetant le rapport.",
+      "<strong>Qui les voit :</strong> les personnes qui ont le lien du rapport, et personne d'autre. La clé du lien n'est gardée que sous forme d'empreinte, impossible à retourner. Avant le paiement, l'aperçu gratuit se calcule dans votre navigateur, sans rien envoyer.",
+      "<strong>Combien de temps :</strong> six mois après le paiement, puis tout est effacé automatiquement. Une commande qui n'a pas été payée est effacée au bout de trente jours. Vous pouvez aussi supprimer le rapport et vos données à tout moment, avec le lien « Supprimer ce rapport » en bas du rapport.",
+      "<strong>Les prestataires :</strong> Supabase héberge les données, Stripe traite le paiement et Resend envoie l'e-mail du lien."
+    ],
     "emailsTitle": "Les e-mails de Quiz Couple",
     "emailsIntro": "À la fin de certains tests, nous vous proposons de laisser votre adresse e-mail pour voir la suite de vos résultats. C'est aussi ce que fait le formulaire de l'e-book. Voici ce qui en est fait.",
     "emailsItems": [

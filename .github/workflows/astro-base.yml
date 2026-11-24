@@ -1,0 +1,79 @@
+name: Thème astral · base
+
+# Applique 20261124120000_astro_rapports.sql par l'API de gestion de
+# Supabase, comme livre-base.yml, avec les secrets déjà là
+# (SUPABASE_ACCESS_TOKEN et SUPABASE_PROJECT_REF) : la table astro_rapports
+# (les commandes, écrites par la fonction astro avec la clé de service), ses
+# compteurs (astro_compte), le ménage de chaque nuit (pg_cron astro-menage)
+# et get_astro_tableau, que l'onglet Thème astral de l'admin lit par
+# admin-stats. Idempotente : la relancer (« Run workflow ») est sans risque.
+# Le journal est public : il ne dit que si la table et les droits sont en
+# place, jamais un compte.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'supabase/migrations/20261124120000_astro_rapports.sql'
+      - 'supabase/functions/astro/**'
+      - 'supabase/functions/_shared/astro/**'
+      - '.github/workflows/astro-base.yml'
+  workflow_dispatch:
+
+concurrency:
+  group: astro-base
+  cancel-in-progress: false
+
+jobs:
+  migration:
+    name: Table, compteurs et ménage du thème astral
+    runs-on: ubuntu-latest
+    env:
+      SUPABASE_ACCESS_TOKEN: ${{ secrets.SUPABASE_ACCESS_TOKEN }}
+      SUPABASE_PROJECT_REF: ${{ secrets.SUPABASE_PROJECT_REF }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Appliquer la migration
+        run: |
+          f=supabase/migrations/20261124120000_astro_rapports.sql
+          jq -Rs '{query: .}' "$f" > requete.json
+          code=$(curl -sS -o reponse.json -w '%{http_code}' -X POST \
+            "https://api.supabase.com/v1/projects/$SUPABASE_PROJECT_REF/database/query" \
+            -H "Authorization: Bearer $SUPABASE_ACCESS_TOKEN" -H 'Content-Type: application/json' \
+            --data @requete.json)
+          echo "$f : réponse $code"
+          head -c 800 reponse.json; echo
+          if [ "$code" -ge 300 ]; then exit 1; fi
+      - name: Vérifier les tables, les droits et le ménage
+        run: |
+          q="select to_regclass('public.astro_rapports') is not null as table_ok,
+                    to_regclass('public.astro_compteurs') is not null as compteurs_ok,
+                    has_table_privilege('anon', 'public.astro_rapports', 'select') as anon_lit,
+                    has_table_privilege('anon', 'public.astro_rapports', 'insert') as anon_ecrit,
+                    has_table_privilege('service_role', 'public.astro_rapports', 'insert') as service_ecrit,
+                    has_function_privilege('anon', 'public.astro_compte(text)', 'execute') as anon_compte,
+                    has_function_privilege('anon', 'public.get_astro_tableau(integer)', 'execute') as anon_tableau,
+                    (select count(*) from cron.job where jobname = 'astro-menage') as menage"
+          jq -n --arg q "$q" '{query: $q}' > requete.json
+          curl -sS -X POST "https://api.supabase.com/v1/projects/$SUPABASE_PROJECT_REF/database/query" \
+            -H "Authorization: Bearer $SUPABASE_ACCESS_TOKEN" -H 'Content-Type: application/json' \
+            --data @requete.json | tee reponse.json; echo
+          jq -e '.[0].table_ok == true and .[0].compteurs_ok == true and .[0].anon_lit == false and .[0].anon_ecrit == false
+                 and .[0].service_ecrit == true and .[0].anon_compte == false and .[0].anon_tableau == false and .[0].menage == 1' reponse.json > /dev/null
+
+  # La fonction astro arrive par deploy-functions.yml, lancé par le même push :
+  # la sonde attend qu'elle réponde, puis ouvre une page de paiement sans
+  # payer (commande « Sonde » supprimée ensuite).
+  sonde:
+    name: La fonction répond et la page de paiement s'ouvre
+    needs: migration
+    runs-on: ubuntu-latest
+    env:
+      SUPABASE_PROJECT_REF: ${{ secrets.SUPABASE_PROJECT_REF }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Sonde du thème astral
+        run: node supabase/functions/_shared/astro/sonde.mjs "https://$SUPABASE_PROJECT_REF.supabase.co/functions/v1/astro"
