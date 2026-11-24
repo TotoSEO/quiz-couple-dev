@@ -116,7 +116,16 @@
     "s5Item7Label": "Derecho a retirar tu consentimiento:",
     "s5Item7Text": "En cualquier momento, para los tratamientos basados en él (e-mails, evaluación de pareja), sin afectar a lo hecho antes",
     "s5Item8Label": "Derecho a reclamar:",
-    "s5Item8Text": "Ante la CNIL (cnil.fr), la autoridad francesa de protección de datos, o ante la autoridad de tu país, si consideras que no se respetan tus derechos"
+    "s5Item8Text": "Ante la CNIL (cnil.fr), la autoridad francesa de protección de datos, o ante la autoridad de tu país, si consideras que no se respetan tus derechos",
+    "themeTitle": "La carta astral de pareja",
+    "themeIntro": "La carta astral de pareja calcula un informe de astrología a partir de vuestras dos fechas de nacimiento. Esto es lo que se guarda, y durante cuánto tiempo.",
+    "themeItems": [
+      "<strong>Lo que se registra:</strong> los dos nombres, el género de cada uno (para concordar los textos), las dos fechas de nacimiento, las horas si las dais y la zona horaria de vuestro navegador. Cuando pagáis, lo que Stripe nos devuelve del pago: la fecha, el importe y la dirección de correo dada en su página. Ninguna cuenta.",
+      "<strong>Para qué:</strong> calcular y mostrar vuestro informe, y enviaros una sola vez su enlace por correo. Nada más: la dirección no entra en ninguna lista de envíos. La base legal es la ejecución del contrato que celebráis al comprar el informe.",
+      "<strong>Quién los ve:</strong> las personas que tienen el enlace del informe, y nadie más. La clave del enlace solo se guarda en forma de huella, imposible de revertir. Antes del pago, la vista previa gratis se calcula en vuestro navegador, sin enviar nada.",
+      "<strong>Durante cuánto tiempo:</strong> seis meses después del pago, y después se borra todo automáticamente. Un pedido que no se ha pagado se borra a los treinta días. También podéis borrar el informe y vuestros datos en cualquier momento, con el enlace «Borrar este informe» al final del informe.",
+      "<strong>Los proveedores:</strong> Supabase aloja los datos, Stripe gestiona el pago y Resend envía el correo con el enlace."
+    ]
   },
   "mentions": {
     "seoTitle": "Aviso Legal | Quiz Couple",

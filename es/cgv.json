@@ -1,11 +1,12 @@
 {
   "title": "Condiciones generales de venta",
-  "majLe": "Última actualización: 4 de noviembre de 2026",
-  "intro": "Estas condiciones se aplican a la compra del informe completo del {{bilan}} en quiz-couple.com. Todo lo demás en el sitio es gratis y no está sujeto a ninguna venta.",
+  "majLe": "Última actualización: 24 de noviembre de 2026",
+  "intro": "Estas condiciones se aplican a la compra del informe completo de la {{bilan}} y de la {{theme}} en quiz-couple.com. Los artículos 1 a 10 describen la evaluación de pareja, el artículo 11 la carta astral de pareja. Todo lo demás en el sitio es gratis y no está sujeto a ninguna venta.",
   "liens": {
     "contact": "página de contacto",
     "confidentialite": "política de privacidad",
-    "bilan": "evaluación de pareja"
+    "bilan": "evaluación de pareja",
+    "theme": "carta astral de pareja"
   },
   "vendeur": {
     "titre": "El vendedor",
@@ -95,6 +96,17 @@
       "titre": "10. La ley aplicable",
       "p": [
         "Estas condiciones se rigen por el derecho francés. En caso de litigio, y a falta de acuerdo amistoso, los tribunales competentes son los que designa la ley; un consumidor también puede acudir al tribunal del lugar donde residía en el momento del pago. Si resides en otro país de la Unión Europea, conservas la protección de las normas imperativas de tu país de residencia."
+      ]
+    },
+    {
+      "titre": "11. La carta astral de pareja",
+      "p": [
+        "Lo que se vende: un informe de astrología elaborado a partir de dos nombres y dos fechas de nacimiento (la hora es opcional). Da el cielo de las dos personas reunido en una sola rueda, el perfil de la pareja, sus ámbitos, los cinco planetas de cada uno leídos uno por uno, los lazos entre las dos cartas, los signos chinos, los caminos de vida y los doce meses que siguen a la compra. La rueda, los planetas de cada uno y el perfil se muestran gratis antes de la compra; el resto, solo después. El informe es un contenido digital: se muestra en la página de la carta astral y se puede volver a leer desde el enlace personal enviado por correo electrónico. Está reservado a personas mayores de edad.",
+        "El precio es de {{prixTheme}} IVA incluido por el informe de la pareja, en un solo pago, sin suscripción. Se puede ofrecer un precio más bajo para América Latina: se muestra en la página antes de cualquier pago, y el que vale es el de la página de pago. El IVA no es aplicable (artículo 293 B del Código general de impuestos francés). El pago se hace con tarjeta, o con otro medio propuesto, en la página de pago de Stripe; nunca vemos los números de tarjeta.",
+        "Antes de pagar, el comprador marca una casilla con la que pide que el informe se le entregue enseguida, sin esperar al final del plazo de desistimiento de catorce días, y reconoce que su derecho de desistimiento termina cuando se entrega el informe (artículo L221-28 13° del Código de consumo francés). El informe se entrega en cuanto aparece en la página después del pago, o en cuanto sale el correo que da su enlace, lo que ocurra primero. A partir de ese momento, la compra es definitiva: no se debe ningún reembolso por un resultado que no gusta o que no se parece a la idea que uno tenía de su pareja.",
+        "El informe está cubierto por la garantía legal de conformidad de los contenidos digitales (artículos L224-25-12 y siguientes del Código de consumo francés). Si no aparece, si está incompleto o si no corresponde a lo que describe este artículo, escríbenos desde la {{contact}}: lo corregimos sin coste y, si no es posible, te devolvemos el dinero.",
+        "La astrología no es una ciencia, y el informe se lee como un juego a dos: no predice nada y no dice nada cierto sobre vuestra pareja ni sobre su futuro. Las posiciones de los planetas se calculan con precisión, pero lo que se lee en ellas viene de la tradición astrológica. Las decisiones que toméis en vuestra vida a partir del informe son vuestras y solo vuestra responsabilidad.",
+        "Los nombres, los géneros y las fechas y horas de nacimiento solo sirven para calcular el informe; la dirección de correo dada a Stripe solo sirve para enviar su enlace. Todo se borra seis meses después del pago, o treinta días después de un pedido que no se ha pagado, y el informe puede borrarse en cualquier momento desde su página. El detalle está en nuestra {{confidentialite}}. Las secciones sobre las reclamaciones y la mediación y sobre la ley aplicable (artículos 9 y 10), así como los datos del vendedor, se aplican también a la carta astral de pareja."
       ]
     }
   ]

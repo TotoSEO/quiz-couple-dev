@@ -1,0 +1,622 @@
+{
+  "meta": {
+    "title": "Carta astral de pareja: lo que dicen vuestros dos cielos",
+    "description": "Vuestra carta astral de pareja, calculada con vuestras dos fechas de nacimiento: vuestras Lunas, Venus y Marte, los lazos entre vuestras cartas, vuestros signos chinos y vuestros próximos 12 meses."
+  },
+  "fil": "Carta astral de pareja",
+  "carte": {
+    "kicker": "Nuevo · Carta astral",
+    "puces": [
+      "Vuestro cielo a dos, animado",
+      "Vuestras Lunas, Venus y Marte",
+      "Vuestros próximos 12 meses"
+    ],
+    "bouton": "Ver nuestra carta astral",
+    "vous": "Tú",
+    "moitie": "Tu pareja",
+    "test": {
+      "titre": "Esta puntuación solo mira vuestros signos",
+      "texte": "Vuestro signo es solo la posición del Sol. El día en que nacisteis, la Luna, Venus y Marte también estaban en el cielo. Ahí es donde la astrología lee el amor, el deseo y las discusiones.",
+      "note": "Vista previa gratis con vuestras fechas de nacimiento"
+    },
+    "date": {
+      "titre": "Vuestras fechas de nacimiento dicen más",
+      "texte": "Este test mira vuestro signo, vuestro camino de vida y vuestro signo chino. El día en que nacisteis, la Luna, Venus y Marte también estaban en el cielo. Ahí es donde la astrología lee el amor, el deseo y las discusiones.",
+      "note": "Vuestras dos fechas ya están puestas. La vista previa es gratis."
+    },
+    "chinois": {
+      "titre": "¿Y el cielo del día en que nacisteis?",
+      "texte": "Vuestras fechas también dan vuestros signos del zodiaco. El día en que nacisteis, la Luna, Venus y Marte tenían cada uno su sitio en el cielo. La carta astral de pareja los lee uno por uno, con un capítulo sobre vuestros signos chinos.",
+      "note": "Vuestras dos fechas ya están puestas. La vista previa es gratis."
+    },
+    "article": {
+      "titre": "Tu signo no lo dice todo",
+      "texte": "Tu signo es la posición del Sol el día en que naciste. Ese día, la Luna, Venus y Marte también estaban en el cielo. Con vuestras dos fechas de nacimiento, la carta astral de pareja los sitúa y os dice lo que cuentan de vuestra pareja.",
+      "note": "Vista previa gratis con vuestras fechas de nacimiento"
+    }
+  },
+  "signes": {
+    "belier": {
+      "nom": "Aries",
+      "du": "Aries",
+      "en": "en Aries",
+      "ligne": "Un corazón que va de frente y no hace nada a medias."
+    },
+    "taureau": {
+      "nom": "Tauro",
+      "du": "Tauro",
+      "en": "en Tauro",
+      "ligne": "Fidelidad, ternura y una debilidad por las buenas cenas."
+    },
+    "gemeaux": {
+      "nom": "Géminis",
+      "du": "Géminis",
+      "en": "en Géminis",
+      "ligne": "Mil conversaciones, y las ganas de que ninguna se acabe."
+    },
+    "cancer": {
+      "nom": "Cáncer",
+      "du": "Cáncer",
+      "en": "en Cáncer",
+      "ligne": "Un corazón tierno que convierte al otro en su hogar."
+    },
+    "lion": {
+      "nom": "Leo",
+      "du": "Leo",
+      "en": "en Leo",
+      "ligne": "Quiere a lo grande, y le encanta que le quieran igual."
+    },
+    "vierge": {
+      "nom": "Virgo",
+      "du": "Virgo",
+      "en": "en Virgo",
+      "ligne": "Fijarse en los pequeños detalles es su forma de decir te quiero."
+    },
+    "balance": {
+      "nom": "Libra",
+      "du": "Libra",
+      "en": "en Libra",
+      "ligne": "La armonía ante todo, y un talento real para hacer las paces."
+    },
+    "scorpion": {
+      "nom": "Escorpio",
+      "du": "Escorpio",
+      "en": "en Escorpio",
+      "ligne": "Todo o nada: una pasión que va hasta el fondo."
+    },
+    "sagittaire": {
+      "nom": "Sagitario",
+      "du": "Sagitario",
+      "en": "en Sagitario",
+      "ligne": "Un corazón libre que quiere vivir la aventura a dos."
+    },
+    "capricorne": {
+      "nom": "Capricornio",
+      "du": "Capricornio",
+      "en": "en Capricornio",
+      "ligne": "Se toma su tiempo, y luego construye para durar."
+    },
+    "verseau": {
+      "nom": "Acuario",
+      "du": "Acuario",
+      "en": "en Acuario",
+      "ligne": "Un amor libre y original, que no se parece a ningún otro."
+    },
+    "poissons": {
+      "nom": "Piscis",
+      "du": "Piscis",
+      "en": "en Piscis",
+      "ligne": "Un corazón enorme, y sueños para dos."
+    }
+  },
+  "elements": {
+    "feu": {
+      "nom": "Fuego",
+      "le": "el Fuego",
+      "de": "de Fuego"
+    },
+    "terre": {
+      "nom": "Tierra",
+      "le": "la Tierra",
+      "de": "de Tierra"
+    },
+    "air": {
+      "nom": "Aire",
+      "le": "el Aire",
+      "de": "de Aire"
+    },
+    "eau": {
+      "nom": "Agua",
+      "le": "el Agua",
+      "de": "de Agua"
+    }
+  },
+  "scene": {
+    "aria": "Animación: vuestras dos constelaciones",
+    "passer": "Saltar la animación",
+    "intro": {
+      "kicker": "Vuestra carta astral de pareja",
+      "titre": "{{a}} & {{b}}",
+      "texte": "Lo que dicen las estrellas de vuestra pareja.",
+      "indice": "Desliza hacia abajo"
+    },
+    "personne": {
+      "kicker": "Bajo el signo de {{du}}",
+      "element": "Signo {{de}}"
+    },
+    "elements": {
+      "titreMeme": "Dos signos {{de}}",
+      "titre": "{{leA}} y {{leB}}",
+      "meme": "El mismo elemento: muchas veces os entendéis sin necesidad de decíroslo todo.",
+      "allie_feu_air": "Dos elementos que se alían: el aire aviva el fuego, y el fuego calienta el aire.",
+      "allie_terre_eau": "Dos elementos que se alían: el agua hace crecer lo que la tierra sostiene.",
+      "contraste": "Dos elementos que se empujan: muchas veces es ahí donde nacen las chispas."
+    },
+    "planetes": {
+      "titre": "Vuestros signos son solo el principio",
+      "texte": "El día en que nacisteis, la Luna, Venus y Marte también estaban en algún lugar del cielo. Ahí es donde se lee cómo queréis, qué os atrae y cómo discutís."
+    },
+    "final": {
+      "kicker": "Vuestro informe de pareja",
+      "titre": "Desbloquead vuestra carta astral de pareja",
+      "texte": "Nuestro informe calcula la posición exacta de cinco astros el día en que nacisteis. No es un horóscopo de signo: {{chapitres}} capítulos sobre vuestra pareja.",
+      "bouton": "Calcular nuestra carta astral",
+      "sous": "Vista previa gratis · informe completo {{prix}}",
+      "lien": "Lo que contiene el informe"
+    },
+    "inconnu": {
+      "a": "Tú",
+      "b": "Tu pareja"
+    }
+  },
+  "contenu": {
+    "kicker": "El informe",
+    "titre": "Lo que contiene el informe que podéis conseguir",
+    "intro": [
+      "Vuestro signo es solo la posición del Sol el día en que nacisteis. Ese día, la Luna, Mercurio, Venus y Marte también estaban en algún lugar del cielo. En astrología, cada uno de ellos habla de una parte de vosotros.",
+      "El informe sitúa estos cinco astros para cada uno. Después compara vuestros dos cielos y os dice lo que eso significa para vuestra pareja."
+    ],
+    "astresTitre": "Lo que dice cada astro",
+    "astres": [
+      {
+        "g": "☉",
+        "n": "El Sol",
+        "d": "Vuestro carácter, lo que os mueve."
+      },
+      {
+        "g": "☽",
+        "n": "La Luna",
+        "d": "Vuestras emociones, y lo que os tranquiliza."
+      },
+      {
+        "g": "☿",
+        "n": "Mercurio",
+        "d": "Vuestra forma de hablar y de discutir."
+      },
+      {
+        "g": "♀",
+        "n": "Venus",
+        "d": "Vuestra forma de querer, y lo que os gusta."
+      },
+      {
+        "g": "♂",
+        "n": "Marte",
+        "d": "Vuestro deseo, vuestra energía y vuestros enfados."
+      }
+    ],
+    "apercuTitre": "Así es el informe",
+    "apercuLegende": "El informe de Lucía y Pablo, una pareja de ejemplo. El vuestro se calcula con vuestras fechas.",
+    "apercus": [
+      {
+        "id": "couverture",
+        "alt": "La portada del informe: el cielo de Lucía y Pablo, sus dos constelaciones unidas por un hilo dorado."
+      },
+      {
+        "id": "carte",
+        "alt": "El mapa del cielo a dos: una rueda de los doce signos con los astros de Lucía en rosa y los de Pablo en violeta."
+      },
+      {
+        "id": "mois",
+        "alt": "Los doce próximos meses de la pareja, mes a mes, con el mejor mes destacado."
+      }
+    ],
+    "chapitresTitre": "Índice",
+    "chapitres": [
+      {
+        "t": "Vuestro mapa del cielo a dos",
+        "d": "Vuestros dos cielos en una sola rueda. Unas líneas unen los astros que se entienden, y los que se rozan."
+      },
+      {
+        "t": "Vuestro perfil de pareja",
+        "d": "Todos esos lazos resumidos en dos notas sobre 100: la dulzura y la chispa. Según las dos, vuestra pareja es la Llama, el Refugio, los Imanes o los Exploradores."
+      },
+      {
+        "t": "Vuestros seis ámbitos",
+        "d": "La ternura, el deseo, el diálogo, la complicidad, el día a día y la duración, cada uno con nota sobre 100."
+      },
+      {
+        "t": "Vuestros diez astros, uno por uno",
+        "d": "El Sol, la Luna, Venus, Marte y Mercurio de cada uno. Lo que dicen de vosotros, y luego lo que da su encuentro."
+      },
+      {
+        "t": "Lo que os impulsa, y lo que se atasca",
+        "d": "Vuestros lazos más bonitos, y los que piden un poco de atención."
+      },
+      {
+        "t": "Vuestros signos chinos y vuestros caminos de vida",
+        "d": "El animal de vuestro año de nacimiento, y el número que da vuestra fecha en numerología."
+      },
+      {
+        "t": "Vuestros próximos 12 meses",
+        "d": "Vuestros meses más tiernos, vuestros meses de fuego, y aquellos en los que más vale hablarse con suavidad."
+      },
+      {
+        "t": "Las preguntas que haceros",
+        "d": "Elegidas allí donde vuestros cielos se entienden menos, para hablarlo esta noche."
+      }
+    ],
+    "bouton": "Calcular nuestro cielo gratis",
+    "sous": "Vista previa gratis · informe completo {{prix}}"
+  },
+  "dates": {
+    "kicker": "Paso 1 de 2 · gratis",
+    "titre": "Nos faltan vuestras fechas de nacimiento",
+    "texte": "Con el día exacto, situamos vuestros diez astros. La hora, si la sabéis, hace la Luna más precisa.",
+    "prenom": "Nombre",
+    "prenomA": "Tu nombre",
+    "prenomB": "Su nombre",
+    "elle": "Una mujer",
+    "il": "Un hombre",
+    "jour": "Día",
+    "mois": "Mes",
+    "annee": "Año",
+    "moisNoms": [
+      "enero",
+      "febrero",
+      "marzo",
+      "abril",
+      "mayo",
+      "junio",
+      "julio",
+      "agosto",
+      "septiembre",
+      "octubre",
+      "noviembre",
+      "diciembre"
+    ],
+    "heure": "Hora de nacimiento",
+    "heureAide": "opcional",
+    "bouton": "Calcular nuestro cielo",
+    "erreurs": {
+      "prenom": "Falta un nombre.",
+      "genre": "Elige una mujer o un hombre.",
+      "date": "Esta fecha no existe.",
+      "futur": "Esta fecha todavía no ha llegado."
+    },
+    "exempleA": "Ej.: Lucía",
+    "exempleB": "Ej.: Pablo",
+    "genreA": "Eres",
+    "genreB": "Tu pareja es",
+    "jourVide": "DD",
+    "anneeVide": "AAAA"
+  },
+  "ciel": {
+    "kicker": "Paso 2 de 2 · vuestra vista previa gratis",
+    "titre": "Vuestro cielo a dos",
+    "texte": "Aquí está el cielo del día en que nacisteis, reunido en una sola rueda. Los astros de {{a}} están en rosa, los de {{b}} en violeta. En el centro, una línea une dos astros que se hablan: dorada cuando se entienden, coral cuando se rozan.",
+    "profilKicker": "Vuestro perfil",
+    "archetypes": {
+      "flamme": {
+        "nom": "La Llama",
+        "ligne": "Mucha dulzura y muchas chispas: una pareja que se entiende, y que todavía se sorprende."
+      },
+      "havre": {
+        "nom": "El Refugio",
+        "ligne": "Una pareja en la que se está a gusto y todo fluye: vuestra fuerza es la paz que os dais."
+      },
+      "aimants": {
+        "nom": "Los Imanes",
+        "ligne": "Os atraéis tanto como os sacudís: entre vosotros nada es tibio."
+      },
+      "explorateurs": {
+        "nom": "Los Exploradores",
+        "ligne": "Vuestro cielo no os da el trabajo hecho: vuestra pareja la inventáis vosotros."
+      }
+    },
+    "douceur": "Dulzura",
+    "etincelle": "Chispa",
+    "planetes": {
+      "soleil": "Sol",
+      "lune": "Luna",
+      "mercure": "Mercurio",
+      "venus": "Venus",
+      "mars": "Marte"
+    },
+    "doute": "{{x}} o {{y}}, según la hora",
+    "modifier": "Cambiar las fechas",
+    "placementsTitre": "Dónde estaban vuestros astros",
+    "profilTitre": "Vuestro perfil de pareja",
+    "profilTexte": "El informe resume todos los lazos entre vuestros dos cielos en dos notas sobre 100. La dulzura es lo que encaja solo entre vosotros. La chispa es lo que os atrae y os mueve. Las dos juntas dan uno de estos cuatro perfiles:",
+    "suiteKicker": "En vuestro informe",
+    "suiteTitre": "Lo que os explica vuestro informe",
+    "suiteTexte": "Todo lo que sigue ya está calculado con vuestras dos fechas. La vista previa os enseña los resultados; el informe os dice lo que significan.",
+    "dansLeRapport": "Explicado en el informe",
+    "domaines": {
+      "tendresse": "la ternura",
+      "desir": "el deseo",
+      "dialogue": "el diálogo",
+      "complicite": "la complicidad",
+      "quotidien": "el día a día",
+      "duree": "la duración"
+    },
+    "domainesNoms": {
+      "tendresse": "Ternura",
+      "desir": "Deseo",
+      "dialogue": "Diálogo",
+      "complicite": "Complicidad",
+      "quotidien": "Día a día",
+      "duree": "Duración"
+    },
+    "astresDe": {
+      "soleil": "el Sol",
+      "lune": "la Luna",
+      "mercure": "el Mercurio",
+      "venus": "la Venus",
+      "mars": "el Marte"
+    },
+    "astresMeme": {
+      "soleil": "vuestros dos Soles",
+      "lune": "vuestras dos Lunas",
+      "mercure": "vuestros dos Mercurio",
+      "venus": "vuestras dos Venus",
+      "mars": "vuestros dos Marte"
+    },
+    "teasers": {
+      "domaines": {
+        "titre": "Vuestros seis ámbitos",
+        "fait": "Vuestro punto fuerte: {{d}}, {{n}} sobre 100.",
+        "suite": "Las otras cinco notas, y lo que significan para vosotros."
+      },
+      "lunes": {
+        "titre": "Vuestras Lunas",
+        "fait": "La Luna de {{a}} está {{sa}}, la de {{b}} {{sb}}.",
+        "suite": "Lo que necesita cada uno para sentirse querido."
+      },
+      "venusMars": {
+        "titre": "Venus y Marte",
+        "fait": "La Venus de {{a}} está {{va}}, el Marte de {{b}} {{mb}}.",
+        "suite": "Lo que os atrae del otro, y cómo discutís."
+      },
+      "liens": {
+        "titre": "Vuestro lazo más bonito",
+        "fait": "{{lien}}.",
+        "faitSans": "Vuestro entendimiento se construye día a día, más que caer del cielo.",
+        "suite": "Lo que os impulsa, lo que se atasca, y qué hacer con ello."
+      },
+      "chinois": {
+        "titre": "Vuestros signos chinos",
+        "fait": "{{a}}: {{ca}}. {{b}}: {{cb}}.",
+        "suite": "Lo que dice la astrología china de vuestra pareja."
+      },
+      "annee": {
+        "titre": "Vuestros próximos 12 meses",
+        "fait": "Vuestro mejor mes: {{m1}}. El mes en el que tocará hablar: {{m2}}.",
+        "suite": "Por qué esos meses, y lo que os reservan los demás."
+      }
+    },
+    "lienDe": "{{x}} de {{p}}",
+    "lienEt": "{{x}} y {{y}}",
+    "en": "en {{s}}",
+    "enOu": "{{s1}} o {{s2}}",
+    "animalDe": "{{animal}} de {{element}}",
+    "moisNoms": [
+      "enero",
+      "febrero",
+      "marzo",
+      "abril",
+      "mayo",
+      "junio",
+      "julio",
+      "agosto",
+      "septiembre",
+      "octubre",
+      "noviembre",
+      "diciembre"
+    ]
+  },
+  "prix": {
+    "titre": "Vuestro informe completo",
+    "pourDeux": "un solo pago, para vuestra pareja",
+    "liste": [
+      "{{chapitres}} capítulos sobre vuestra pareja",
+      "Vuestros diez astros leídos uno por uno",
+      "Vuestros seis ámbitos con nota sobre 100",
+      "Vuestros próximos 12 meses, mes a mes",
+      "Vuestros signos chinos y vuestros caminos de vida",
+      "El informe en línea, y su enlace por correo"
+    ],
+    "majeur": "Tengo 18 años o más.",
+    "renonciation": "Quiero recibir mi informe ya, y renuncio a mi derecho de desistimiento de 14 días, que termina cuando el informe aparece.",
+    "bouton": "Desbloquear nuestro informe",
+    "securise": "Pago seguro con Stripe",
+    "note": "Un informe de astrología, para leer como un juego a dos: no predice nada.",
+    "erreurCases": "Marca las dos casillas para continuar.",
+    "erreurServeur": "El pago no se abre por ahora. Vuelve a intentarlo dentro de un momento.",
+    "region": "Precio para América Latina",
+    "cgv": "Condiciones generales de venta",
+    "grand": "Desbloquead vuestra carta astral de pareja",
+    "chacun": "o sea, {{moitie}} cada uno"
+  },
+  "faq": {
+    "titre": "Preguntas frecuentes",
+    "items": [
+      {
+        "q": "¿Qué es una carta astral de pareja?",
+        "r": "Una carta astral es el mapa del cielo en el momento de un nacimiento: dónde estaban el Sol, la Luna y los planetas, vistos desde la Tierra. Una carta astral de pareja compara dos de estos mapas. En astrología, esto se llama sinastría."
+      },
+      {
+        "q": "¿Hace falta saber la hora de nacimiento?",
+        "r": "No. Sin la hora, lo calculamos todo a mediodía. Eso no cambia nada para el Sol, Mercurio, Venus y Marte, salvo los raros días en que uno de ellos cambia de signo. La Luna, en cambio, cambia de signo cada dos días y medio: si cambió el día en que nacisteis, el informe os da las dos posibilidades."
+      },
+      {
+        "q": "¿Cómo recibo el informe?",
+        "r": "Aparece justo después del pago, en esta página. También te enviamos su enlace por correo, para encontrarlo cuando quieras."
+      },
+      {
+        "q": "¿Se puede regalar?",
+        "r": "¡Sí! Basta con conocer vuestras dos fechas de nacimiento. El enlace del informe se puede compartir, y se abre en cualquier móvil."
+      },
+      {
+        "q": "¿La astrología es científica?",
+        "r": "No. Ningún estudio ha demostrado que los astros decidan si una pareja funciona. El informe se lee como un juego a dos: os da de qué hablar sobre vosotros, vuestras ganas y vuestras diferencias."
+      },
+      {
+        "q": "¿Qué pasa con nuestros datos?",
+        "r": "Vuestros nombres y vuestras fechas de nacimiento solo sirven para calcular vuestro informe. Los guardamos seis meses después del pago, y después se borra todo."
+      }
+    ]
+  },
+  "credits": "Estrellas: catálogos Yale Bright Star e Hipparcos, a través de d3-celestial (Olaf Frohn). Posiciones de los planetas: Astronomy Engine (Don Cross).",
+  "rapport": {
+    "chargement": "Vuestro cielo se está preparando…",
+    "attente": "¡Pago confirmado! Vuestro informe está llegando…",
+    "erreur": "Este informe no se abre. Revisa el enlace de tu correo, o escríbenos desde la página de contacto.",
+    "kicker": "Carta astral de pareja",
+    "titre": "{{a}} & {{b}}",
+    "nee": "{{p}}, {nacido|nacida} el {{date}}",
+    "neeHeure": "{{p}}, {nacido|nacida} el {{date}} a las {{heure}}",
+    "etabli": "Elaborado el {{date}}",
+    "defiler": "Vuestro cielo empieza aquí",
+    "sommaire": "Índice",
+    "partie": "Parte {{n}}",
+    "chapitre": "Capítulo {{n}}",
+    "sections": {
+      "carte": "Vuestro mapa del cielo",
+      "profil": "Vuestro perfil de pareja",
+      "domaines": "Vuestros seis ámbitos",
+      "atouts": "Vuestros puntos fuertes y vuestros retos",
+      "elements": "Vuestros elementos",
+      "chinois": "Vuestros signos chinos",
+      "vie": "Vuestros caminos de vida",
+      "annee": "Vuestros próximos 12 meses",
+      "questions": "Las preguntas que haceros",
+      "fin": "Para terminar"
+    },
+    "intros": {
+      "carte": "Aquí está el cielo en el momento en que nacisteis, reunido en una sola rueda. Los planetas de {{a}} están en rosa en el anillo exterior, los de {{b}} en violeta en el interior. En el centro, unas líneas unen los planetas que se hablan: doradas cuando se entienden, de puntos cuando se rozan.",
+      "profil": "En astrología, en una pareja cuentan dos cosas: la dulzura, todo lo que encaja con facilidad entre vuestras cartas, y la chispa, todo lo que atrae y mueve. Vuestra pareja está en algún punto entre las dos.",
+      "domaines": "Seis grandes ámbitos de la vida en pareja, con nota sobre 100 según los lazos entre vuestros planetas. Una nota baja no quiere decir que vaya mal: solo es donde vuestras cartas se entienden menos por sí solas.",
+      "atouts": "Los lazos más marcados entre vuestras dos cartas: los que os impulsan, y los que piden un poco de atención.",
+      "elements": "Cada signo pertenece a un elemento: el fuego, la tierra, el aire o el agua. Aquí veis dónde caen vuestros diez planetas, cinco cada uno.",
+      "chinois": "La astrología china no mira los planetas, mira el año de nacimiento: un animal y un elemento, que vuelven cada sesenta años.",
+      "vie": "En numerología, el camino de vida es la suma de las cifras de la fecha de nacimiento, reducida a una sola cifra. El 11, el 22 y el 33 se quedan enteros.",
+      "annee": "Los doce meses que vienen, según el paso de Venus, Marte y Júpiter, y los periodos en que Mercurio, Venus y Marte retroceden en el cielo.",
+      "questions": "Elegid una esta noche, y hacédsela al otro. Las mejores conversaciones muchas veces empiezan así."
+    },
+    "planetes": {
+      "soleil": "Sol",
+      "lune": "Luna",
+      "mercure": "Mercurio",
+      "venus": "Venus",
+      "mars": "Marte",
+      "jupiter": "Júpiter"
+    },
+    "aspects": {
+      "conjonction": "Conjunción",
+      "sextile": "Sextil",
+      "carre": "Cuadratura",
+      "trigone": "Trígono",
+      "opposition": "Oposición"
+    },
+    "relations": {
+      "meme": "Mismo elemento",
+      "allie": "Elementos aliados",
+      "contraste": "Elementos opuestos"
+    },
+    "angle": "{{n}}° de diferencia",
+    "placements": {
+      "titre": "Vuestros planetas",
+      "planete": "Planeta",
+      "degre": "{{d}}° {{signe}}",
+      "ou": "o {{signe}}",
+      "doute": "Sin la hora de nacimiento, un planeta que cambia de signo ese día puede estar en uno o en otro. El informe os da los dos."
+    },
+    "legende": {
+      "doux": "Los planetas se entienden",
+      "tendu": "Los planetas se rozan"
+    },
+    "axes": {
+      "douceur": "Dulzura",
+      "etincelle": "Chispa"
+    },
+    "niveaux": {
+      "haut": "Punto fuerte",
+      "moyen": "A cuidar",
+      "bas": "A trabajar"
+    },
+    "atoutsTitre": "Lo que os impulsa",
+    "defisTitre": "Lo que pide atención",
+    "aucunAtout": "No hay ningún lazo muy dulce entre vuestras cartas: vuestro entendimiento se construye día a día, más que caer del cielo.",
+    "aucunDefi": "Ningún lazo de verdad tenso entre vuestras cartas. ¡Vuestros retos serán los de todas las parejas!",
+    "dominant": "Dominante",
+    "absent": "Ausente",
+    "planetesDe": "Los planetas de {{p}}",
+    "chinois": {
+      "annee": "{{animal}} de {{element}}, {{an}}",
+      "animaux": {
+        "rat": "Rata",
+        "buffle": "Buey",
+        "tigre": "Tigre",
+        "lapin": "Conejo",
+        "dragon": "Dragón",
+        "serpent": "Serpiente",
+        "cheval": "Caballo",
+        "chevre": "Cabra",
+        "singe": "Mono",
+        "coq": "Gallo",
+        "chien": "Perro",
+        "cochon": "Cerdo"
+      },
+      "elements": {
+        "bois": "Madera",
+        "feu": "Fuego",
+        "terre": "Tierra",
+        "metal": "Metal",
+        "eau": "Agua"
+      },
+      "portrait": "{{p}} · {{animal}} de {{element}}"
+    },
+    "vie": {
+      "chemin": "Camino de vida",
+      "accord": "Afinidad de vuestros caminos: {{n}} sobre 10"
+    },
+    "annee": {
+      "meilleur": "Vuestro mejor mes",
+      "prudence": "El mes que vigilar",
+      "venus": "Venus {{en}}",
+      "mars": "Marte {{en}}",
+      "jupiter": "Júpiter {{en}}",
+      "frise": "Vuestro año de un vistazo",
+      "tons": {
+        "tendre": "Tierno",
+        "passion": "Fuego",
+        "elan": "Buen viento",
+        "malentendus": "Malentendidos",
+        "turbulences": "Movido",
+        "calme": "Tranquilo"
+      }
+    },
+    "fin": {
+      "imprimer": "Imprimir o guardar en PDF",
+      "copier": "Copiar el enlace del informe",
+      "copie": "¡Enlace copiado!",
+      "supprimer": "Borrar este informe",
+      "confirmer": "Pulsa otra vez para borrar",
+      "supprime": "Vuestro informe y vuestros datos se han borrado.",
+      "garde": "Este informe sigue en línea durante seis meses. Su enlace está en el correo que recibisteis después del pago."
+    },
+    "rappel": "Según la astrología, para leer como un juego: este informe no predice nada.",
+    "credits": "Posiciones de los planetas calculadas con astronomy-engine (Don Cross, licencia MIT). Constelaciones dibujadas a partir de d3-celestial (Olaf Frohn, licencia BSD).",
+    "haut": "Volver arriba"
+  }
+}

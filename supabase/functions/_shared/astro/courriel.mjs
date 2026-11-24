@@ -4,6 +4,7 @@
 // support durable, de la demande d'exécution immédiate et de la fin du droit
 // de rétractation (L221-13 du Code de la consommation).
 import { carte, texteCarte, insec, remplir, SITE } from '../emails/carte.mjs';
+import { conjonction } from './conjonction.mjs';
 
 const CGV = {
   fr: '/conditions-generales-de-vente/',
@@ -128,7 +129,11 @@ const TEXTES = {
 // { sujet, html, texte } : `a` et `b` les deux prénoms, `url` le lien du
 // rapport avec son jeton.
 export function messageAstro({ lang, a, b, url }) {
-  const t = TEXTES[lang] || TEXTES.fr;
+  const t0 = TEXTES[lang] || TEXTES.fr;
+  // « Lucía e Inés », « Luca ed Elena » : la conjonction devant le second
+  // prénom (rapport.mjs).
+  const t = { ...t0 };
+  for (const k of ['sujet', 'bonjour']) t[k] = String(t0[k]).replace(/ (y|e) \{b\}/, (m, mot) => ' ' + conjonction(lang, mot, b) + ' {b}');
   const cgv = SITE + (CGV[lang] || CGV.fr);
   const v = { a, b };
   const m = {

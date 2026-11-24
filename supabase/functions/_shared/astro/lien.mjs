@@ -18,11 +18,11 @@ import { messageAstro } from './courriel.mjs';
 // que ROUTE_SLUGS.themeAstral de static-site/build/config.js. Une langue
 // n'entre ici qu'avec sa page, ses textes du rapport (textes/<langue>/) et
 // son e-mail (courriel.mjs) ; une commande dans une autre langue passe en
-// français. À venir : es /es/carta-astral-de-pareja/, de /de/partnerhoroskop/,
-// it /it/tema-natale-di-coppia/, nl /nl/relatiehoroscoop/.
-export const LANGUES = ['fr', 'en'];
+// français. À venir : de /de/partnerhoroskop/, it /it/tema-natale-di-coppia/,
+// nl /nl/relatiehoroscoop/.
+export const LANGUES = ['fr', 'en', 'es'];
 export const SITE = 'https://quiz-couple.com';
-export const CHEMINS = { fr: '/theme-astral-couple/', en: '/en/couples-birth-chart/' };
+export const CHEMINS = { fr: '/theme-astral-couple/', en: '/en/couples-birth-chart/', es: '/es/carta-astral-de-pareja/' };
 
 export async function empreinte(texte) {
   const h = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(String(texte)));

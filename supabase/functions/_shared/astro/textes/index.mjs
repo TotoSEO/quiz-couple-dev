@@ -4,5 +4,6 @@
 // lien.mjs le jour où sa page existe.
 import fr from './fr/index.mjs';
 import en from './en/index.mjs';
+import es from './es/index.mjs';
 
-export default { fr, en };
+export default { fr, en, es };
