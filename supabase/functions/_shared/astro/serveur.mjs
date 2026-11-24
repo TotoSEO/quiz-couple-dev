@@ -16,7 +16,15 @@ import { LANGUES, SITE, CHEMINS, empreinte, nouveauJeton, creerEnvoiLien } from 
 
 export const PRIX_CENTIMES = 490;
 export const PRIX_REGIONS = { latam: 199 };
-export const ETAPES = ['page_vue', 'page_vue_test', 'ciel_vu', 'paiement_clic', 'rapport_vu', 'carte_vue', 'carte_clic'];
+// Les entrées de la page (js/astro-carte.js) : la carte sous le test des
+// signes (test), sous la date de naissance (date) et les signes chinois
+// (chinois), en bas des articles d'astrologie (article). La carte du test se
+// compte carte_vue et carte_clic, les autres carte_vue_<source> et
+// carte_clic_<source> ; l'arrivée sur la page, page_vue_<source>.
+export const SOURCES = ['test', 'date', 'chinois', 'article'];
+export const ETAPES = ['page_vue', 'ciel_vu', 'paiement_clic', 'rapport_vu', 'carte_vue', 'carte_clic',
+  ...SOURCES.map((s) => 'page_vue_' + s),
+  ...SOURCES.filter((s) => s !== 'test').flatMap((s) => ['carte_vue_' + s, 'carte_clic_' + s])];
 const SESSION = /^cs_(test|live)_[A-Za-z0-9]{10,200}$/;
 const JETON = /^[A-Za-z0-9_-]{20,64}$/;
 
@@ -87,14 +95,24 @@ export function creerServeur({ stockage, stripe = null, courriel = null, textes,
     const ps = Array.isArray(corps.personnes) ? corps.personnes.slice(0, 2).map((p) => personnePropre(p, m)) : [];
     if (ps.length !== 2 || ps.some((p) => !p)) return non(400, 'personnes');
     const jeton = nouveauJeton();
-    const ligne = await stockage.inserer({
+    const nouvelle = {
       lang,
       jeton_hash: await empreinte(jeton),
       a_prenom: ps[0].prenom, a_genre: ps[0].genre, a_date: ps[0].date, a_heure: ps[0].heure, a_fuseau: ps[0].fuseau,
       b_prenom: ps[1].prenom, b_genre: ps[1].genre, b_date: ps[1].date, b_heure: ps[1].heure, b_fuseau: ps[1].fuseau,
-      source: corps.source === 'test' ? 'test' : 'direct',
+      source: SOURCES.includes(corps.source) ? corps.source : 'direct',
       zone: zoneValide(corps.zone) || null,
-    });
+    };
+    let ligne;
+    try {
+      ligne = await stockage.inserer(nouvelle);
+    } catch (e) {
+      // Une source que la base ne connaît pas encore (la fonction déployée
+      // avant la migration qui l'ajoute) : la commande part en « direct »
+      // plutôt que pas du tout.
+      if (nouvelle.source === 'direct' || !/astro_rapports_bornes|23514/.test(String((e && e.message) || e))) throw e;
+      ligne = await stockage.inserer({ ...nouvelle, source: 'direct' });
+    }
     return ok({ id: ligne.id, jeton });
   }
 

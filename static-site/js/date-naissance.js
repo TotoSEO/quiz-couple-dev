@@ -328,6 +328,12 @@
     html += barre(r.chinois.note, tr('resultat.axeChinois', ''), remplir(tr('resultat.axeChinoisValeur', ''), vars));
     html += '</div>';
 
+    // La carte du thème astral de couple (en français seulement,
+    // js/astro-carte.js), juste sous les trois notes : seulement si les deux
+    // personnes ont 18 ans ou plus. Ses deux dates passent toutes remplies à
+    // la page du thème astral.
+    if (window.QCAstroCarte) html += window.QCAstroCarte.html({ source: 'date', a: { signe: r.s1, d: r.d1 }, b: { signe: r.s2, d: r.d2 } });
+
     // Chemin de vie
     html += '<section class="dn-bloc">' +
       '<h3 class="dn-bloc-titre">' + echapper(tr('resultat.titreVie', '')) + '</h3>' +
@@ -361,6 +367,7 @@
     // arrivent l'une après l'autre, l'avis et les cartes « À faire ensuite »
     // se posent après lui (.outil-fin de #dn-suite).
     sortie.innerHTML = '<div class="outil-resultat">' + html + '</div>';
+    if (window.QCAstroCarte) window.QCAstroCarte.suivi();
     sortie.classList.remove('hidden');
     el('dn-formulaire').classList.add('hidden');
     el('dn-suite').classList.remove('hidden');

@@ -284,5 +284,8 @@
 <%- include('../partials/related-tests', { routeKey, lang, t, getLocalizedUrl }) %>
 
 <script>window.SC_I18N = <%- JSON.stringify(scI18n) %>;</script>
+<%# La carte du thème astral de couple sous le résultat (en français
+    seulement, réservée aux majeurs) : styles, textes et js/astro-carte.js. %>
+<%- include('../partials/astro-carte', { astroSource: 'chinois' }) %>
 <script src="/js/outils.js" defer></script>
 <script src="/js/signes-chinois.js" defer></script>

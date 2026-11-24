@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { creerServeur, PRIX_CENTIMES } from '../serveur.mjs';
+import { creerServeur, PRIX_CENTIMES, ETAPES, SOURCES } from '../serveur.mjs';
 import { creerStockageMemoire } from '../stockage-rest.mjs';
 import { creerPaiement } from '../paiement.mjs';
 import { creerEnvoiLien } from '../lien.mjs';
@@ -173,4 +173,34 @@ test("la base ne répond pas pendant la réservation : la page dit payé, sans e
   assert.equal(r.json.paye, true);
   assert.equal(m.emails.length, 0);
   assert.equal((await m.serveur.traiter({ action: 'rapport', id, jeton })).statut, 200);
+});
+
+test('les entrées de la page : étapes comptées et source de la commande', async () => {
+  const { serveur, stockage } = monter();
+  for (const e of ['page_vue', 'page_vue_test', 'page_vue_date', 'page_vue_chinois', 'page_vue_article',
+    'carte_vue', 'carte_clic', 'carte_vue_date', 'carte_clic_date', 'carte_vue_chinois', 'carte_clic_chinois', 'carte_vue_article', 'carte_clic_article']) {
+    assert.ok(ETAPES.includes(e), e);
+    assert.equal((await serveur.traiter({ action: 'vue', etape: e })).statut, 200, e);
+  }
+  assert.equal((await serveur.traiter({ action: 'vue', etape: 'carte_vue_test' })).statut, 400);
+  assert.equal((await serveur.traiter({ action: 'vue', etape: 'page_vue_ailleurs' })).statut, 400);
+  for (const src of SOURCES) {
+    const { id } = (await serveur.traiter({ action: 'creer', personnes, source: src })).json;
+    assert.equal(stockage.lignes.get(id).source, src);
+  }
+  const { id } = (await serveur.traiter({ action: 'creer', personnes, source: 'pirate' })).json;
+  assert.equal(stockage.lignes.get(id).source, 'direct');
+});
+
+test("une source que la base refuse encore : la commande part en « direct »", async () => {
+  const stockage = creerStockageMemoire();
+  const inserer = stockage.inserer.bind(stockage);
+  stockage.inserer = async (l) => {
+    if (!['test', 'direct'].includes(l.source)) throw new Error('base 400 {"code":"23514","message":"new row for relation \\"astro_rapports\\" violates check constraint \\"astro_rapports_bornes\\""}');
+    return inserer(l);
+  };
+  const serveur = creerServeur({ stockage, textes: { fr: T } });
+  const c = await serveur.traiter({ action: 'creer', personnes, source: 'date' });
+  assert.equal(c.statut, 200);
+  assert.equal(stockage.lignes.get(c.json.id).source, 'direct');
 });

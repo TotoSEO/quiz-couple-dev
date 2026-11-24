@@ -88,17 +88,5 @@
     "a2": "Les deux marchent, mais ils ne donnent pas forcément le même score, puisque chaque lettre compte. En numérologie, on part en général du prénom de l'état civil. Si tout le monde vous appelle « Alex » et pas « Alexandre », essayez aussi avec « Alex » : le nombre passe de 3 à 6.",
     "q3": "Mon signe est « incompatible » avec celui de mon partenaire, on est foutus ?",
     "a3": "Non ! Le test ne dit jamais que deux signes sont incompatibles, il donne un score plus ou moins haut. Et des couples qui durent, il y en a avec toutes les combinaisons de signes. Lisez plutôt le texte du résultat : il dit où vous êtes différents, et c'est souvent le point de départ d'une bonne discussion."
-  },
-  "theme": {
-    "kicker": "Nouveau · Thème astral",
-    "titre": "Ce score ne regarde que vos signes",
-    "texte": "Votre signe, c'est seulement la place du Soleil. Le jour de vos naissances, la Lune, Vénus et Mars étaient aussi dans le ciel. C'est là que l'astrologie lit l'amour, le désir et les disputes.",
-    "puces": [
-      "Votre ciel à deux, animé",
-      "Vos Lunes, Vénus et Mars",
-      "Vos 12 prochains mois"
-    ],
-    "bouton": "Voir notre thème astral",
-    "note": "Aperçu gratuit avec vos dates de naissance"
   }
 }

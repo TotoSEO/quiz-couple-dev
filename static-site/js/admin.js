@@ -766,7 +766,7 @@
         exporte_le: new Date().toISOString(),
         periode_jours: n,
         fuseau: tz,
-        lecture: 'Export de l\'admin de quiz-couple.com. parties_* : parties terminées (depuis toujours par test, par jour sur la période) ; lancements_* : parties commencées, depuis le 21 août 2026 ; le taux de finition d\'un test = finies / lancées. trafic_* : visites et pages vues par jour, sources des visites, sur la période. distance_par_test : parties à distance arrivées au résultat, par test, depuis le 7 septembre 2026 (fins = téléphones arrivés au résultat, deux par partie ; departs n\'est plus alimenté depuis le 20 octobre 2026). instagram_clics : clics vers Instagram depuis le site. bilan : l\'évaluation de couple payante (visites de sa page, entonnoir, ventes en centimes, sources, domaines). bilan_celibataires : au départ seul(e), les réponses à « Où en êtes-vous ? » (statuts, comptées une fois par visite) et ce que les célibataires voudraient dans une évaluation pour eux (interets, autres, et depuis le 4 novembre 2026 sources et situations : d\'où vient la réponse, l\'évaluation ou la carte d\'un test célibataire), depuis le 25 octobre 2026, sans aucune adresse. bilan_point : « Le point sur ma relation », le seul(e) depuis le 4 novembre 2026 (serie : formulaires ouverts, créés, commencés, écrans de l\'adresse, finis, écrans « prêt », clics sans la case, pages Stripe ouvertes, payés, revenu en centimes ; cles : les réponses du départ (point_motif, point_priorite, point_duree), ce que dit le rapport (point_etat, point_attachement, point_engagement, point_securite), les parties entrées et finies, les erreurs du départ, et les vues et clics de la carte des tests célibataires ; carte_celib : la carte page par page, avec les réponses et les adresses venues d\'elle). livre : la page du livre « 100 aventures à deux », depuis le 14 novembre 2026 (totaux : visites, pages vues, clics vers Amazon et visites qui ont cliqué ; serie : par jour ; emplacements : les clics par bouton, hero, cadeau, fin, barre ; sources : d\'où arrive chaque visite, menu, menu-mobile, pied, bandeau (la barre collée sous le menu du téléphone, depuis le 15 novembre 2026), encart-* (les encarts de l\'évaluation), suite-* (la carte du livre dans « Et maintenant ? » à l\'écran de résultat, depuis le 19 novembre 2026 : suite-score après un bon score, suite-jeu après un jeu ou un quiz à deux, suite-compteur, suite-noces, suite-pause sur la pause des jeux sans fin), email-e1 (le PS du premier e-mail du parcours, depuis le 22 novembre 2026), page:<chemin> pour une autre page du site, un moteur, un réseau ou direct ; gestes : les parties de la page vues (section), les pages du livre ouvertes en grand (page), les questions ouvertes (faq), la page avant/après glissée (avap), le livre qui se tourne (carrousel : sans détail, feuilleté à la main ; fin, jusqu\'au dos à la main ; auto, la lecture automatique allée jusqu\'au bout ; avant le 14 novembre 2026 au soir, l\'ancien carrousel d\'images), la liste des 100 aventures, le lien « Feuilleter » et la barre collée apparue, avec fois et visites). theme_astral : le thème astral de couple, depuis le 24 novembre 2026 (totaux : les étapes comptées une fois par page chargée, page_vue et page_vue_test (arrivée avec les prénoms du test des signes), ciel_vu, paiement_clic, rapport_vu, carte_vue et carte_clic (la carte sous le test des signes), paye et rembourse ; ventes : n, montant et montant_rembourse en centimes, rembourses, depuis_test, latam ; commandes : commandes créées ; serie : par jour). Une entrée { erreur } ou { code, message } = fonction absente ou refusée.',
+        lecture: 'Export de l\'admin de quiz-couple.com. parties_* : parties terminées (depuis toujours par test, par jour sur la période) ; lancements_* : parties commencées, depuis le 21 août 2026 ; le taux de finition d\'un test = finies / lancées. trafic_* : visites et pages vues par jour, sources des visites, sur la période. distance_par_test : parties à distance arrivées au résultat, par test, depuis le 7 septembre 2026 (fins = téléphones arrivés au résultat, deux par partie ; departs n\'est plus alimenté depuis le 20 octobre 2026). instagram_clics : clics vers Instagram depuis le site. bilan : l\'évaluation de couple payante (visites de sa page, entonnoir, ventes en centimes, sources, domaines). bilan_celibataires : au départ seul(e), les réponses à « Où en êtes-vous ? » (statuts, comptées une fois par visite) et ce que les célibataires voudraient dans une évaluation pour eux (interets, autres, et depuis le 4 novembre 2026 sources et situations : d\'où vient la réponse, l\'évaluation ou la carte d\'un test célibataire), depuis le 25 octobre 2026, sans aucune adresse. bilan_point : « Le point sur ma relation », le seul(e) depuis le 4 novembre 2026 (serie : formulaires ouverts, créés, commencés, écrans de l\'adresse, finis, écrans « prêt », clics sans la case, pages Stripe ouvertes, payés, revenu en centimes ; cles : les réponses du départ (point_motif, point_priorite, point_duree), ce que dit le rapport (point_etat, point_attachement, point_engagement, point_securite), les parties entrées et finies, les erreurs du départ, et les vues et clics de la carte des tests célibataires ; carte_celib : la carte page par page, avec les réponses et les adresses venues d\'elle). livre : la page du livre « 100 aventures à deux », depuis le 14 novembre 2026 (totaux : visites, pages vues, clics vers Amazon et visites qui ont cliqué ; serie : par jour ; emplacements : les clics par bouton, hero, cadeau, fin, barre ; sources : d\'où arrive chaque visite, menu, menu-mobile, pied, bandeau (la barre collée sous le menu du téléphone, depuis le 15 novembre 2026), encart-* (les encarts de l\'évaluation), suite-* (la carte du livre dans « Et maintenant ? » à l\'écran de résultat, depuis le 19 novembre 2026 : suite-score après un bon score, suite-jeu après un jeu ou un quiz à deux, suite-compteur, suite-noces, suite-pause sur la pause des jeux sans fin), email-e1 (le PS du premier e-mail du parcours, depuis le 22 novembre 2026), page:<chemin> pour une autre page du site, un moteur, un réseau ou direct ; gestes : les parties de la page vues (section), les pages du livre ouvertes en grand (page), les questions ouvertes (faq), la page avant/après glissée (avap), le livre qui se tourne (carrousel : sans détail, feuilleté à la main ; fin, jusqu\'au dos à la main ; auto, la lecture automatique allée jusqu\'au bout ; avant le 14 novembre 2026 au soir, l\'ancien carrousel d\'images), la liste des 100 aventures, le lien « Feuilleter » et la barre collée apparue, avec fois et visites). theme_astral : le thème astral de couple, depuis le 24 novembre 2026 (totaux : les étapes comptées une fois par page chargée, page_vue et page_vue_test (arrivée avec les prénoms du test des signes), ciel_vu, paiement_clic, rapport_vu, carte_vue et carte_clic (la carte sous le test des signes), et depuis le 24 novembre 2026 au soir page_vue_<entrée>, carte_vue_<entrée> et carte_clic_<entrée> pour la date de naissance (date), les signes chinois (chinois) et les articles d\'astrologie (article), page_vue_test comptant alors les arrivées par la carte du test, paye et rembourse ; ventes : n, montant et montant_rembourse en centimes, rembourses, depuis_test, latam ; commandes : commandes créées ; par_source : commandes, ventes et montant en centimes par entrée (test, date, chinois, article, direct) ; serie : par jour). Une entrée { erreur } ou { code, message } = fonction absente ou refusée.',
         donnees: donnees
       };
       var blob = new Blob([JSON.stringify(fichier, null, 2)], { type: 'application/json' });
@@ -1779,7 +1779,9 @@
       var v = d.ventes || {};
       var n = function (k) { return Number(t[k]) || 0; };
       var pluriel = function (x, un, plusieurs) { return nombreBilan(x) + ' ' + (x > 1 ? plusieurs : un); };
-      var visites = n('page_vue') + n('page_vue_test');
+      // Les visites de la page : page_vue (venues d'ailleurs) et
+      // page_vue_<entrée> (par la carte d'un test, d'un outil ou d'un article).
+      var visites = Object.keys(t).reduce(function (s, k) { return k === 'page_vue' || k.indexOf('page_vue_') === 0 ? s + n(k) : s; }, 0);
       var ciel = n('ciel_vu');
       var clics = n('paiement_clic');
       var commandes = Number(d.commandes) || 0;
@@ -1792,7 +1794,7 @@
 
       // Les cinq tuiles.
       ecrit('admin-astro-visites', nombreBilan(visites));
-      ecrit('admin-astro-visites-sub', periode + ' · ' + nombreBilan(n('page_vue_test')) + ' depuis le test des signes');
+      ecrit('admin-astro-visites-sub', periode + ' · ' + nombreBilan(visites - n('page_vue')) + ' par les cartes');
       ecrit('admin-astro-ciel', nombreBilan(ciel));
       ecrit('admin-astro-ciel-sub', visites ? partBilan(ciel, visites) + ' des visites' : 'les deux dates données');
       ecrit('admin-astro-clics', nombreBilan(clics));
@@ -1843,21 +1845,37 @@
           }).join('') + '</div>'
         : '<p class="bil-vide">Aucune visite sur la période.</p>');
 
-      // La carte sous le test des signes, et ce qu'elle amène.
-      var carte = [
-        ['Carte vue', 'arrivée à l\'écran sous le résultat', n('carte_vue')],
-        ['Carte touchée', '« Voir notre ciel à deux »', n('carte_clic')],
-        ['Arrivées avec les prénoms', 'la page ouverte avec le couple du test', n('page_vue_test')],
-        ['Ventes', 'commandes venues du test', Number(v.depuis_test) || 0]
+      // Les entrées : la carte du test des signes, de la date de naissance,
+      // des signes chinois et des articles d'astrologie (js/astro-carte.js),
+      // les visites qu'elle amène, puis les commandes et les ventes de chaque
+      // source (par_source). « Sans carte » : les visites venues d'ailleurs.
+      var ps = d.par_source || {};
+      var ENTREES = [
+        ['test', 'Test des signes', 'carte_vue', 'carte_clic'],
+        ['date', 'Date de naissance', 'carte_vue_date', 'carte_clic_date'],
+        ['chinois', 'Signes chinois', 'carte_vue_chinois', 'carte_clic_chinois'],
+        ['article', 'Articles d\'astrologie', 'carte_vue_article', 'carte_clic_article'],
+        ['direct', 'Sans carte', null, null]
       ];
-      var baseCarte = Math.max(1, carte[0][2]);
-      place('admin-astro-carte', carte[0][2] || carte[2][2]
-        ? '<div class="bil-colonne">' + carte.map(function (e, i) {
-            return ligneEtapeBilan(e[0], e[1], e[2], baseCarte, i ? carte[i - 1][2] : null, 'var(--adm-s-lances)');
-          }).join('') + '</div>'
-        : '<p class="bil-vide">La carte n\'a pas encore été vue sur la période.</p>');
+      var lignesEntrees = ENTREES.map(function (e) {
+        var x = ps[e[0]] || {};
+        return {
+          nom: e[1], vues: e[2] ? n(e[2]) : null, clics: e[3] ? n(e[3]) : null,
+          arrivees: e[0] === 'direct' ? n('page_vue') : n('page_vue_' + e[0]),
+          commandes: Number(x.commandes) || 0, ventes: Number(x.ventes) || 0, montant: Number(x.montant) || 0
+        };
+      });
+      var entreesVides = lignesEntrees.every(function (l) { return !((l.vues || 0) + (l.clics || 0) + l.arrivees + l.commandes + l.ventes); });
+      place('admin-astro-carte', entreesVides
+        ? '<p class="bil-vide">Aucune carte vue ni visite sur la période.</p>'
+        : '<div class="adm-table-defile"><table class="adm-table"><thead><tr><th class="bil-gauche">Entrée</th><th>Carte vue</th><th>Touchée</th><th>Taux</th><th>Visites</th><th>Commandes</th><th>Ventes</th><th>Encaissé</th></tr></thead><tbody>' +
+          lignesEntrees.map(function (l) {
+            return '<tr><td class="bil-gauche">' + esc(l.nom) + '</td><td>' + (l.vues == null ? '' : nombreBilan(l.vues)) + '</td><td>' + (l.clics == null ? '' : nombreBilan(l.clics)) + '</td><td>' +
+              (l.vues ? partBilan(l.clics, l.vues) : '') + '</td><td>' + nombreBilan(l.arrivees) + '</td><td>' + nombreBilan(l.commandes) + '</td><td>' + nombreBilan(l.ventes) + '</td><td>' +
+              (l.montant ? eurosBilan(l.montant) : '') + '</td></tr>';
+          }).join('') + '</tbody></table></div>');
 
-      if (!visites && !ventes && !n('carte_vue')) {
+      if (!visites && !ventes && entreesVides) {
         ecrit('admin-astro-note', 'Rien d\'enregistré pour l\'instant : la mesure compte depuis la mise en ligne de la page, le 24 novembre 2026.');
       }
     }).catch(function (e) {
