@@ -2795,6 +2795,53 @@ rythme habituel. Si une telle nuit revient, lire tout de suite
 `supabase-inventaire.yml` (la fonction `bilan` heure par heure et par code,
 en tête des journaux) avant que les journaux s'effacent.
 
+## 24 novembre 2026 : cinq jours après le même téléphone
+
+Lu par `bilan-chiffres.yml` (7 jours) le 24 novembre à 9 h, heure de Paris.
+
+### Un seul téléphone
+
+- Du 20 au 23 novembre, « ensemble sur ce téléphone » est choisi 34 à 48
+  fois par jour, « la même question chacun son tour » quatre fois sur cinq
+  (135 fois, contre 33 pour « chacun ses 100 questions »). 27 à 39
+  partenaires acceptent sur place chaque jour (2 à 11 avant le 19).
+- Évaluations à deux créées du 17 au 24 novembre : 587. Un partenaire est
+  arrivé dans 306 d'entre elles (52 %, 30 % au relevé du 17), et 89 couples
+  sont allés au bout (15 %, 13 % au relevé du 17). Il y a donc beaucoup plus
+  de partenaires, mais à peine plus de couples au bout : 29 % des partenaires
+  arrivés finissent, contre 43 % avant.
+- Par jour de création, du 20 au 23 : 97, 87, 93 et 101 évaluations à deux,
+  et 10, 15, 13 et 15 couples au bout (environ 70 et 10 par jour du 11 au
+  18).
+- Le choix oublié au départ (`tel`) : 29 erreurs en sept jours, contre 199
+  pour la case et 81 pour les prénoms.
+
+### Les fins, heure par heure
+
+Aucune nuit comme celle du 19. Depuis, les plus longs trous sans aucune fin
+font 7 heures et tombent dans les heures creuses (le 21 de 7 h à 14 h, le 22
+de 5 h à 12 h 40). Dans les dernières vingt-quatre heures, aucun ne dépasse
+4 heures : le relevé de la fonction par `supabase-inventaire.yml` n'était pas
+nécessaire.
+
+### Le paiement
+
+- Couples créés depuis le 17 et allés au bout : 89. 11 ont ouvert la page
+  de paiement (12 %) et 5 ont payé (6 %). Par langue : espagnol 40 couples,
+  5 pages, 2 ventes ; français 22, 3 et 2 ; anglais 17, 1 et 1 ; italien 7,
+  aucune page ; allemand 3, 2 pages, aucune vente. Au relevé du 20 : 92
+  couples, 11 % et 7 %.
+- Le point : 57 au bout, 3 pages de paiement, 3 ventes.
+- L'offre à deux du 20 au 23 : 110 offres vues, le bouton à l'écran 99 fois,
+  la case cochée 13 fois, 9 pages de paiement ouvertes. Ce sont les mêmes
+  proportions qu'au relevé du 17 (92 boutons vus et 12 cases cochées pour
+  100 offres).
+- Sept ventes payées du 18 au 23 novembre, pour 45,38 €, dont 2 points.
+
+Rien n'a été changé. Répondre sur un seul téléphone amène plus de
+partenaires, pas encore plus de couples au bout, et c'est toujours devant
+l'offre qu'on s'arrête.
+
 ## 22 novembre 2026 : le rappel du lendemain et la reprise arrêtés
 
 Thomas : « Est ce que nos mails fonctionnent ? Ça ramène des gens et du
