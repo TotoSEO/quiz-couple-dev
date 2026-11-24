@@ -6,12 +6,21 @@
     <atom:link href="https://quiz-couple.com/es/blog/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Los artículos de Quiz Couple sobre la vida en pareja, la psicología y las historias de amor.</description>
     <language>es</language>
-    <lastBuildDate>Sat, 21 Nov 2026 11:28:00 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 24 Nov 2026 09:38:00 GMT</lastBuildDate>
     <image>
       <url>https://quiz-couple.com/apple-touch-icon.png</url>
       <title>Quiz Couple · Blog</title>
       <link>https://quiz-couple.com/es/blog/</link>
     </image>
+    <item>
+      <title>60 preguntas de pareja para hacerse por teléfono o por mensaje</title>
+      <link>https://quiz-couple.com/es/blog/preguntas-de-pareja-por-mensaje/</link>
+      <guid isPermaLink="true">https://quiz-couple.com/es/blog/preguntas-de-pareja-por-mensaje/</guid>
+      <pubDate>Tue, 24 Nov 2026 09:38:00 GMT</pubDate>
+      <category>Vida en pareja</category>
+      <description>¿Los «¿qué haces?» dan vueltas sin llegar a nada? 60 preguntas de pareja pensadas para el teléfono y los mensajes: noches a distancia, mensajes del día, llamadas largas.</description>
+      <media:content url="https://quiz-couple.com/blog/questions-couple-telephone-message.webp" medium="image" type="image/webp" width="1536" height="1024"/>
+    </item>
     <item>
       <title>Gaslighting: cuando te hacen dudar de tu propia realidad</title>
       <link>https://quiz-couple.com/es/blog/gaslighting-senales/</link>
@@ -272,15 +281,6 @@
       <category>Vida en pareja</category>
       <description>¿Harto del «hola, ¿qué tal?» que no lleva a ninguna parte? 90 preguntas para hacerle a una chica, del primer mensaje al cara a cara, sin interrogatorios.</description>
       <media:content url="https://quiz-couple.com/blog/questions-a-poser-a-une-fille.webp" medium="image" type="image/webp" width="1536" height="1024"/>
-    </item>
-    <item>
-      <title>Las 35 frases preferidas de los manipuladores</title>
-      <link>https://quiz-couple.com/es/blog/frases-de-manipuladores/</link>
-      <guid isPermaLink="true">https://quiz-couple.com/es/blog/frases-de-manipuladores/</guid>
-      <pubDate>Sat, 05 Sep 2026 07:15:00 GMT</pubDate>
-      <category>Psicología</category>
-      <description>«Eres demasiado sensible», «es culpa tuya», «te lo digo por tu bien»... 35 frases de manipulador descifradas, con su traducción real y cómo replicar.</description>
-      <media:content url="https://quiz-couple.com/blog/phrases-preferees-des-manipulateurs.webp" medium="image" type="image/webp" width="1536" height="1024"/>
     </item>
   </channel>
 </rss>

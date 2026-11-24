@@ -6,12 +6,21 @@
     <atom:link href="https://quiz-couple.com/it/blog/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Gli articoli di Quiz Couple sulla vita di coppia, la psicologia e le storie d&#39;amore.</description>
     <language>it</language>
-    <lastBuildDate>Sat, 21 Nov 2026 11:28:00 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 24 Nov 2026 09:38:00 GMT</lastBuildDate>
     <image>
       <url>https://quiz-couple.com/apple-touch-icon.png</url>
       <title>Quiz Couple · Blog</title>
       <link>https://quiz-couple.com/it/blog/</link>
     </image>
+    <item>
+      <title>60 domande di coppia da fare al telefono o per messaggio</title>
+      <link>https://quiz-couple.com/it/blog/domande-di-coppia-per-messaggio/</link>
+      <guid isPermaLink="true">https://quiz-couple.com/it/blog/domande-di-coppia-per-messaggio/</guid>
+      <pubDate>Tue, 24 Nov 2026 09:38:00 GMT</pubDate>
+      <category>Vita di coppia</category>
+      <description>I «che fai?» girano a vuoto? 60 domande di coppia pensate per il telefono e i messaggi: serate a distanza, messaggi della giornata, telefonate lunghe.</description>
+      <media:content url="https://quiz-couple.com/blog/questions-couple-telephone-message.webp" medium="image" type="image/webp" width="1536" height="1024"/>
+    </item>
     <item>
       <title>Gaslighting: quando ti fanno dubitare della tua stessa realtà</title>
       <link>https://quiz-couple.com/it/blog/gaslighting-segnali/</link>
@@ -272,15 +281,6 @@
       <category>Vita di coppia</category>
       <description>Stanco del «ciao, come va?» che non porta da nessuna parte? 90 domande da fare a una ragazza, dal primo messaggio all&#39;incontro, senza interrogatori.</description>
       <media:content url="https://quiz-couple.com/blog/questions-a-poser-a-une-fille.webp" medium="image" type="image/webp" width="1536" height="1024"/>
-    </item>
-    <item>
-      <title>Le 35 frasi preferite dei manipolatori</title>
-      <link>https://quiz-couple.com/it/blog/frasi-dei-manipolatori/</link>
-      <guid isPermaLink="true">https://quiz-couple.com/it/blog/frasi-dei-manipolatori/</guid>
-      <pubDate>Sat, 05 Sep 2026 07:15:00 GMT</pubDate>
-      <category>Psicologia</category>
-      <description>«Sei troppo sensibile», «è colpa tua», «te lo dico per il tuo bene»... 35 frasi da manipolatore decifrate, con la traduzione reale e come replicare.</description>
-      <media:content url="https://quiz-couple.com/blog/phrases-preferees-des-manipulateurs.webp" medium="image" type="image/webp" width="1536" height="1024"/>
     </item>
   </channel>
 </rss>

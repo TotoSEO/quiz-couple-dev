@@ -6,12 +6,21 @@
     <atom:link href="https://quiz-couple.com/nl/blog/feed.xml" rel="self" type="application/rss+xml"/>
     <description>De artikelen van Quiz Couple over relaties, psychologie en liefdesverhalen.</description>
     <language>nl</language>
-    <lastBuildDate>Sat, 21 Nov 2026 11:28:00 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 24 Nov 2026 09:38:00 GMT</lastBuildDate>
     <image>
       <url>https://quiz-couple.com/apple-touch-icon.png</url>
       <title>Quiz Couple · Blog</title>
       <link>https://quiz-couple.com/nl/blog/</link>
     </image>
+    <item>
+      <title>60 vragen voor koppels om te stellen aan de telefoon of via berichtjes</title>
+      <link>https://quiz-couple.com/nl/blog/vragen-voor-koppels-via-berichtjes/</link>
+      <guid isPermaLink="true">https://quiz-couple.com/nl/blog/vragen-voor-koppels-via-berichtjes/</guid>
+      <pubDate>Tue, 24 Nov 2026 09:38:00 GMT</pubDate>
+      <category>Relatie</category>
+      <description>Draaien jullie ‘wat doe je?’-appjes in rondjes? 60 vragen voor koppels via berichtjes en telefoon: avonden op afstand, appjes overdag, lange gesprekken.</description>
+      <media:content url="https://quiz-couple.com/blog/questions-couple-telephone-message.webp" medium="image" type="image/webp" width="1536" height="1024"/>
+    </item>
     <item>
       <title>Gaslighting in een relatie: als je gaat twijfelen aan je eigen werkelijkheid</title>
       <link>https://quiz-couple.com/nl/blog/gaslighting-signalen/</link>
@@ -272,15 +281,6 @@
       <category>Relatie</category>
       <description>Klaar met het “hoi, hoe gaat het?” dat nergens heen gaat? 90 vragen om aan een meisje te stellen, van het eerste bericht tot de date, zonder verhoor.</description>
       <media:content url="https://quiz-couple.com/blog/questions-a-poser-a-une-fille.webp" medium="image" type="image/webp" width="1536" height="1024"/>
-    </item>
-    <item>
-      <title>De 35 favoriete zinnen van een manipulator</title>
-      <link>https://quiz-couple.com/nl/blog/zinnen-van-een-manipulator/</link>
-      <guid isPermaLink="true">https://quiz-couple.com/nl/blog/zinnen-van-een-manipulator/</guid>
-      <pubDate>Sat, 05 Sep 2026 07:15:00 GMT</pubDate>
-      <category>Psychologie</category>
-      <description>“Je bent te gevoelig”, “het is jouw schuld”, “ik zeg het voor je eigen bestwil”... 35 zinnen van een manipulator, wat ze betekenen en wat je terugzegt.</description>
-      <media:content url="https://quiz-couple.com/blog/phrases-preferees-des-manipulateurs.webp" medium="image" type="image/webp" width="1536" height="1024"/>
     </item>
   </channel>
 </rss>
