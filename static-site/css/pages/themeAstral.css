@@ -36,7 +36,19 @@ body.page-astro {
   background-color: #060a1d;
   color: #eef0ff;
 }
-body.page-astro #site-header { position: relative; }
+/* L'en-tête se pose sur le haut de la scène et part avec le premier
+   défilement : la scène est collée dès le premier pixel, au lieu de monter
+   de la hauteur de l'en-tête puis de s'arrêter net (un à-coup à l'entrée).
+   Il n'est jamais collé ici, et son état « collé » (glissement d'un niveau
+   sur ordinateur) n'a pas lieu d'être : il faisait redescendre l'en-tête en
+   remontant en haut de la page. Avec la version fixe (mouvement réduit, sans
+   WebGL) et dans le rapport, il reprend sa place dans la page. */
+body.page-astro #site-header { position: absolute; top: 0; left: 0; right: 0; }
+body.page-astro.as-en-flux #site-header { position: relative; }
+@media (prefers-reduced-motion: reduce) { body.page-astro #site-header { position: relative; } }
+body.page-astro #site-header.est-collee { transform: none; }
+body.page-astro .est-collee .entete-n1 { opacity: 1; pointer-events: auto; }
+body.page-astro .est-collee .entete-logo-mini { width: 0; margin-right: 0; opacity: 0; }
 
 .as-page {
   --as-nuit: #060a1d;
@@ -61,7 +73,7 @@ body.page-astro #site-header { position: relative; }
 .as-lecteur { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 
 /* ── La scène ─────────────────────────────────────────────── */
-.as-scene { position: relative; height: 680svh; }
+.as-scene { position: relative; height: 680svh; overflow-anchor: none; }
 .as-stage {
   position: sticky; top: 0; height: 100svh; overflow: hidden;
   background:
@@ -131,13 +143,28 @@ body.page-astro #site-header { position: relative; }
 .as-bouton svg { width: 1.15rem; height: 1.15rem; }
 .as-bouton--final { margin-top: 1.4rem; font-size: 1.06rem; }
 .as-sous { margin-top: 0.8rem; font-size: 0.85rem; color: var(--as-gris); }
+.as-etape--final .as-kicker { margin-bottom: 0.55rem; }
+/* Un voile sombre derrière le bloc de fin, qui apparaît avec lui : le texte
+   ne se mêle pas à la roue du zodiaque. */
+.as-etape--final::before { content: ''; position: absolute; inset: -14% -10% -10%; z-index: -1; pointer-events: none;
+  background: radial-gradient(closest-side, rgba(6, 10, 29, 0.82), rgba(6, 10, 29, 0.55) 60%, rgba(6, 10, 29, 0)); }
+.as-lien-scene { display: inline-flex; align-items: center; gap: 0.35rem; margin-top: 0.75rem; font: 500 0.85rem/1.2 'Inter', sans-serif; color: var(--as-gris);
+  text-decoration: underline; text-underline-offset: 3px; text-decoration-color: rgba(180, 186, 224, 0.4); }
+.as-lien-scene:hover { color: var(--as-encre); }
+@media (max-height: 700px) and (max-width: 899.98px) {
+  /* Petits téléphones : le bloc de fin tient sous les constellations. */
+  .as-etape--final .as-kicker, .as-lien-scene { display: none; }
+  .as-etape--final .as-texte { font-size: 0.95rem; margin-top: 0.6rem; }
+  .as-bouton--final { margin-top: 1rem; }
+}
 
-.as-passer { position: absolute; right: 1rem; top: 1rem; z-index: 2; padding: 0.45rem 0.8rem; border-radius: 999px;
+.as-passer { position: absolute; right: 1rem; top: calc(3.75rem + 0.75rem); z-index: 2; padding: 0.45rem 0.8rem; border-radius: 999px;
   font: 600 0.75rem/1 'Inter', sans-serif; color: var(--as-gris); background: rgba(11, 18, 51, 0.6); border: 1px solid var(--as-bord);
   text-decoration: none; backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); }
 .as-passer:hover { color: var(--as-encre); }
 .as-progression { position: absolute; right: 0.7rem; top: 22%; bottom: 22%; width: 2px; border-radius: 2px; background: rgba(255, 255, 255, 0.08); }
-.as-progression span { position: absolute; left: 0; right: 0; top: 0; height: calc(var(--p, 0) * 100%); border-radius: 2px; background: var(--as-or); box-shadow: 0 0 10px rgba(240, 207, 134, 0.7); }
+.as-progression span { position: absolute; left: 0; right: 0; top: 0; height: 100%; border-radius: 2px; background: var(--as-or); box-shadow: 0 0 10px rgba(240, 207, 134, 0.7);
+  transform: scaleY(0); transform-origin: 50% 0; will-change: transform; }
 
 @media (min-width: 900px) {
   .as-etape { left: 7vw; right: auto; bottom: auto; top: 50%; max-width: 30rem; text-align: left; transform: translate3d(0, calc(-50% + 18px), 0); }
@@ -155,9 +182,10 @@ body.page-astro #site-header { position: relative; }
    textes à la suite. */
 .as-statique .as-scene, .as-sans-gl .as-scene { height: auto; }
 .as-statique .as-stage, .as-sans-gl .as-stage { position: relative; height: auto; min-height: 100svh; padding: 4rem 1.25rem 3rem; }
-.as-statique .as-canvas { position: absolute; }
+.as-statique .as-canvas { position: absolute; opacity: 0.4; }
+.as-statique .as-etiquettes { display: none; }
 .as-statique .as-etapes, .as-sans-gl .as-etapes { position: relative; display: grid; gap: 2.4rem; }
-.as-statique .as-etape, .as-sans-gl .as-etape { position: relative; inset: auto; opacity: 1; transform: none; pointer-events: auto; max-width: 40rem; margin: 0 auto; width: auto; left: auto; top: auto; bottom: auto; text-align: center; }
+.as-statique .as-etape, .as-sans-gl .as-etape { position: relative; inset: auto; opacity: 1 !important; transform: none !important; pointer-events: auto; max-width: 40rem; margin: 0 auto; width: auto; left: auto; top: auto; bottom: auto; text-align: center; }
 .as-statique .as-indice, .as-sans-gl .as-indice, .as-statique .as-passer, .as-sans-gl .as-passer, .as-statique .as-progression, .as-sans-gl .as-progression { display: none; }
 .as-sans-gl .as-canvas, .as-sans-gl .as-etiquettes { display: none; }
 
@@ -167,7 +195,7 @@ body.page-astro #site-header { position: relative; }
 .as-h2 { margin-top: 0.6rem; font-family: var(--as-titre); font-weight: 600; font-size: clamp(2.2rem, 7vw, 3.4rem); line-height: 1.04; color: var(--as-encre); text-wrap: balance; }
 .as-intro { margin-top: 0.9rem; max-width: 40rem; font-size: 1.05rem; line-height: 1.6; color: var(--as-gris); }
 
-.as-chapitres { list-style: none; margin-top: 2.4rem; display: grid; gap: 0; }
+.as-chapitres { list-style: none; margin-top: 1rem; display: grid; gap: 0; }
 .as-chapitre { display: grid; grid-template-columns: 3.3rem 1fr; gap: 0.9rem; padding: 1.35rem 0; border-top: 1px solid var(--as-bord-or); }
 .as-chapitre-num { font-family: var(--as-titre); font-size: 2rem; line-height: 1; color: var(--as-or); }
 .as-chapitre-titre { font-family: var(--as-titre); font-weight: 600; font-size: 1.55rem; line-height: 1.1; color: var(--as-encre); }
@@ -175,6 +203,41 @@ body.page-astro #site-header { position: relative; }
 @media (min-width: 760px) {
   .as-chapitres { grid-template-columns: 1fr 1fr; column-gap: 3rem; }
 }
+
+.as-h3 { margin-top: 2.8rem; font-family: var(--as-titre); font-weight: 600; font-size: clamp(1.6rem, 5vw, 2.05rem); line-height: 1.1; color: var(--as-encre); }
+.as-h2--petit { font-size: clamp(1.9rem, 6vw, 2.7rem); }
+.as-intro + .as-intro { margin-top: 0.8rem; }
+
+/* Ce que dit chaque astre : la clé pour qui n'a jamais lu un thème. */
+.as-astres { list-style: none; margin-top: 1.2rem; display: grid; gap: 0.7rem; }
+@media (min-width: 640px) { .as-astres { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 1000px) {
+  .as-astres { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+  .as-astre { flex-direction: column; align-items: flex-start; gap: 0.7rem; padding: 1.1rem 1rem 1.2rem; }
+  .as-astre b { display: block; margin-bottom: 0.2rem; font-size: 1.02rem; }
+}
+.as-astre { display: flex; gap: 0.85rem; align-items: center; padding: 0.85rem 1rem; border-radius: 1rem; background: var(--as-carte); border: 1px solid var(--as-bord); line-height: 1.45; color: var(--as-gris); }
+.as-astre b { color: var(--as-encre); font-weight: 600; }
+.as-astre-glyphe { flex-shrink: 0; display: grid; place-items: center; width: 2.4rem; height: 2.4rem; border-radius: 50%;
+  font: 600 1.25rem/1 var(--as-titre); color: var(--as-or); background: rgba(240, 207, 134, 0.1); border: 1px solid var(--as-bord-or); }
+
+/* À quoi ressemble le rapport : trois pages d'un rapport d'exemple. Sur
+   téléphone, elles défilent de côté ; au-delà, côte à côte. */
+.as-apercus { margin: 1.2rem -1.25rem 0; padding: 0.4rem 1.25rem 1rem; display: grid; grid-auto-flow: column; grid-auto-columns: 72%; gap: 0.9rem;
+  overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; overscroll-behavior-x: contain; }
+.as-apercus::-webkit-scrollbar { display: none; }
+.as-apercu { scroll-snap-align: center; margin: 0; border-radius: 1rem; overflow: hidden; border: 1px solid var(--as-bord-or);
+  box-shadow: 0 24px 50px -30px rgba(0, 0, 0, 0.9), 0 0 0 1px rgba(255, 255, 255, 0.03) inset; background: #0b1233; }
+.as-apercu img { display: block; width: 100%; height: auto; pointer-events: none; user-select: none; }
+@media (min-width: 900px) {
+  .as-apercus { margin: 1.4rem 0 0; padding: 0; grid-auto-flow: row; grid-template-columns: repeat(3, 1fr); grid-auto-columns: auto; overflow: visible; }
+  .as-apercu--carte { transform: translateY(1.6rem); }
+}
+.as-apercu-legende { margin-top: 0.4rem; font-size: 0.85rem; color: var(--as-gris-2); text-align: center; }
+@media (min-width: 900px) { .as-apercu-legende { margin-top: 2.6rem; } }
+
+.as-appel { margin-top: 2.6rem; text-align: center; }
+.as-appel .as-bouton { width: min(100%, 24rem); }
 
 /* Le formulaire des dates */
 .as-formulaire { margin-top: 2.2rem; display: grid; gap: 1.6rem; justify-items: center; }
@@ -184,27 +247,49 @@ body.page-astro #site-header { position: relative; }
   box-shadow: 0 30px 60px -40px rgba(0, 0, 0, 0.8); position: relative; }
 .as-personne::before { content: ''; position: absolute; left: 1.15rem; right: 1.15rem; top: -1px; height: 2px; border-radius: 2px; background: var(--as-rose); opacity: 0.9; }
 .as-personne.est-b::before { background: var(--as-lavande); }
-.as-ligne { display: flex; gap: 0.75rem; align-items: flex-end; }
 .as-champ { display: grid; gap: 0.35rem; min-width: 0; }
-.as-champ--prenom { flex: 1; }
 .as-etiquette-champ { font: 600 0.72rem/1.2 'Inter', sans-serif; letter-spacing: 0.08em; text-transform: uppercase; color: var(--as-gris); }
 .as-etiquette-champ em { font-style: normal; text-transform: none; letter-spacing: 0; color: var(--as-gris-2); font-weight: 500; }
-.as-page input[type="text"], .as-page input[type="time"], .as-page select {
+/* Les champs se visent par leur classe : la minification retire
+   type="text" (valeur par défaut), et une règle [type="text"] laissait les
+   prénoms sur le fond blanc du navigateur, en texte clair, illisibles. */
+.as-page .as-saisie, .as-page select {
   width: 100%; min-width: 0; height: 3rem; padding: 0 0.8rem; border-radius: 0.8rem; font: 500 16px/1 'Inter', sans-serif;
-  color: var(--as-encre); background: rgba(6, 10, 29, 0.72); border: 1px solid rgba(185, 164, 255, 0.28); color-scheme: dark;
+  color: var(--as-encre); background-color: rgba(6, 10, 29, 0.72); border: 1px solid rgba(185, 164, 255, 0.28); color-scheme: dark;
+  -webkit-text-fill-color: var(--as-encre);
 }
-.as-page select { padding-right: 1.9rem; appearance: none; -webkit-appearance: none;
+.as-page .as-saisie::placeholder { color: var(--as-gris-2); -webkit-text-fill-color: var(--as-gris-2); opacity: 1; }
+.as-page .as-saisie:-webkit-autofill { -webkit-box-shadow: 0 0 0 40px #0b1233 inset; -webkit-text-fill-color: var(--as-encre); caret-color: var(--as-encre); }
+.as-page select { padding-left: 0.7rem; padding-right: 1.7rem; appearance: none; -webkit-appearance: none;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23b4bae0' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
   background-repeat: no-repeat; background-position: right 0.55rem center; background-size: 1rem; }
 .as-page input:focus-visible, .as-page select:focus-visible { outline: 2px solid var(--as-or); outline-offset: 1px; border-color: transparent; }
-.as-genre { display: inline-flex; padding: 0.22rem; border-radius: 999px; background: rgba(6, 10, 29, 0.72); border: 1px solid rgba(185, 164, 255, 0.28); flex-shrink: 0; height: 3rem; align-items: center; }
-.as-genre-btn { height: 2.45rem; padding: 0 0.9rem; border-radius: 999px; border: 0; background: transparent; color: var(--as-gris); font: 600 0.9rem/1 'Inter', sans-serif; cursor: pointer; }
-.as-genre-btn[aria-pressed="true"] { background: var(--as-rose); color: #2a1020; }
-.est-b .as-genre-btn[aria-pressed="true"] { background: var(--as-lavande); color: #1d1238; }
-.as-date { margin-top: 0.9rem; display: grid; grid-template-columns: minmax(4.2rem, 0.8fr) minmax(0, 1.6fr) minmax(5.2rem, 1fr); gap: 0.55rem; }
+/* « Vous êtes » : deux vrais boutons côte à côte, chacun avec son bord,
+   séparés par un espace (ils se confondaient dans une seule pastille). */
+.as-genre-bloc { margin-top: 0.9rem; display: grid; gap: 0.35rem; }
+.as-genre { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; }
+.as-genre-btn { height: 3rem; padding: 0 0.8rem; border-radius: 0.8rem; border: 1px solid rgba(185, 164, 255, 0.28); background: rgba(6, 10, 29, 0.72);
+  color: var(--as-encre); font: 600 0.95rem/1 'Inter', sans-serif; cursor: pointer; display: inline-flex; align-items: center; justify-content: center; gap: 0.45rem;
+  transition: background-color 160ms ease, border-color 160ms ease, color 160ms ease; }
+.as-genre-btn::before { content: ''; width: 0.95rem; height: 0.95rem; border-radius: 50%; border: 1.5px solid rgba(185, 164, 255, 0.55); flex-shrink: 0; box-sizing: border-box; }
+.as-genre-btn:hover { border-color: rgba(240, 207, 134, 0.55); }
+.as-genre-btn:focus-visible { outline: 2px solid var(--as-or); outline-offset: 1px; }
+.as-genre-btn[aria-pressed="true"] { background: var(--as-rose); border-color: var(--as-rose); color: #2a1020; }
+.as-genre-btn[aria-pressed="true"]::before { border: 0.28rem solid #2a1020; background: var(--as-rose); }
+.est-b .as-genre-btn[aria-pressed="true"] { background: var(--as-lavande); border-color: var(--as-lavande); color: #1d1238; }
+.est-b .as-genre-btn[aria-pressed="true"]::before { border-color: #1d1238; background: var(--as-lavande); }
+.as-date { margin-top: 0.9rem; display: grid; grid-template-columns: minmax(4.4rem, 0.8fr) minmax(0, 1.6fr) minmax(5.6rem, 1fr); gap: 0.55rem; }
+/* Petits téléphones : le mois garde sa place (« septembre » tient), l'année
+   passe dessous. */
+@media (max-width: 379.98px) {
+  .as-date { grid-template-columns: 4.6rem minmax(0, 1fr); }
+  .as-champ--annee { grid-column: 1 / -1; }
+}
 .as-champ--heure { margin-top: 0.9rem; }
 .as-erreur { margin-top: 0.8rem; color: #ffb3b3; font-size: 0.9rem; font-weight: 500; }
 .as-manque { border-color: #ff8a8a !important; box-shadow: 0 0 0 2px rgba(255, 138, 138, 0.25); }
+.as-genre.as-manque, .as-date.as-manque { box-shadow: none; }
+.as-genre.as-manque .as-genre-btn, .as-date.as-manque select { border-color: #ff8a8a; box-shadow: 0 0 0 2px rgba(255, 138, 138, 0.25); }
 
 /* L'aperçu : la roue, les planètes, le profil */
 .as-roue { margin: 2.2rem auto 0; width: min(100%, 30rem); aspect-ratio: 1; }
@@ -212,12 +297,12 @@ body.page-astro #site-header { position: relative; }
 .as-roue-signe { font-family: var(--as-titre); font-size: 17px; fill: #f0cf86; }
 .as-roue-planete text { font-family: var(--as-titre); font-size: 13.5px; font-weight: 600; }
 .as-roue-centre { font-size: 14px; fill: #f0cf86; }
-.as-placements { margin-top: 1.8rem; display: grid; gap: 1rem; }
+.as-placements { margin-top: 1rem; display: grid; gap: 1rem; }
 @media (min-width: 820px) { .as-placements { grid-template-columns: 1fr 1fr; } }
 .as-placement { border: 1px solid var(--as-bord); border-radius: 1.1rem; padding: 1rem 1.1rem; background: var(--as-carte); }
-.as-placement h3 { font-family: var(--as-titre); font-size: 1.6rem; font-weight: 600; line-height: 1; }
-.as-placement.est-a h3 { color: var(--as-rose); }
-.as-placement.est-b h3 { color: var(--as-lavande); }
+.as-placement h4 { font-family: var(--as-titre); font-size: 1.6rem; font-weight: 600; line-height: 1; }
+.as-placement.est-a h4 { color: var(--as-rose); }
+.as-placement.est-b h4 { color: var(--as-lavande); }
 .as-placement ul { list-style: none; margin-top: 0.75rem; display: flex; flex-wrap: wrap; gap: 0.45rem; }
 .as-placement li { display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.4rem 0.7rem; border-radius: 999px; font-size: 0.86rem; color: var(--as-encre);
   background: rgba(6, 10, 29, 0.6); border: 1px solid rgba(240, 207, 134, 0.22); }
@@ -225,8 +310,11 @@ body.page-astro #site-header { position: relative; }
 .as-placement li span { color: var(--as-gris); }
 .as-placement li.est-doute { border-style: dashed; }
 
-.as-profil { margin-top: 2rem; text-align: center; border: 1px solid var(--as-bord-or); border-radius: 1.5rem; padding: 2rem 1.25rem;
+.as-profil { margin-top: 1.2rem; text-align: center; border: 1px solid var(--as-bord-or); border-radius: 1.5rem; padding: 2rem 1.25rem;
   background: radial-gradient(90% 70% at 50% 0%, rgba(240, 207, 134, 0.12), transparent 70%), var(--as-carte); }
+.as-profils { list-style: none; display: flex; flex-wrap: wrap; justify-content: center; gap: 0.4rem; margin-bottom: 1.4rem; }
+.as-profils li { padding: 0.4rem 0.75rem; border-radius: 999px; font: 600 0.8rem/1 'Inter', sans-serif; color: var(--as-gris-2); border: 1px dashed rgba(185, 164, 255, 0.3); }
+.as-profils li.est-le-votre { color: #1a1430; background: var(--as-or); border: 1px solid var(--as-or); }
 .as-profil-nom { margin-top: 0.4rem; font-family: var(--as-titre); font-weight: 600; font-size: clamp(2.6rem, 10vw, 3.8rem); line-height: 1; color: var(--as-or); }
 .as-profil-ligne { margin: 0.8rem auto 0; max-width: 32rem; color: var(--as-encre); font-size: 1.06rem; line-height: 1.55; }
 .as-jauges { margin: 1.4rem auto 0; max-width: 26rem; display: grid; gap: 0.8rem; text-align: left; }
@@ -236,14 +324,29 @@ body.page-astro #site-header { position: relative; }
 .as-jauge span { display: block; height: 100%; border-radius: 999px; background: var(--as-rose); }
 .as-jauge--etincelle span { background: var(--as-or); }
 
-.as-verrou { margin-top: 1.6rem; display: grid; gap: 0.8rem; }
-.as-verrou-carte { position: relative; border: 1px solid var(--as-bord); border-radius: 1.1rem; padding: 1.1rem 1.1rem 1.2rem; background: var(--as-carte); overflow: hidden; }
-.as-verrou-carte h3 { font-family: var(--as-titre); font-size: 1.35rem; font-weight: 600; color: var(--as-encre); }
-.as-verrou-lignes { margin-top: 0.7rem; display: grid; gap: 0.5rem; filter: blur(5px); opacity: 0.8; user-select: none; }
-.as-verrou-lignes p { color: var(--as-gris); line-height: 1.5; font-size: 0.95rem; }
-.as-verrou-badge { position: absolute; right: 0.9rem; top: 0.9rem; display: inline-flex; align-items: center; gap: 0.35rem; padding: 0.35rem 0.6rem; border-radius: 999px;
-  background: rgba(240, 207, 134, 0.14); color: var(--as-or); font: 600 0.72rem/1 'Inter', sans-serif; }
-.as-verrou-badge svg { width: 0.9rem; height: 0.9rem; }
+/* Ce que le rapport explique : un résultat déjà calculé par partie (un signe,
+   une note, un mois), et sous lui ce que le rapport en dit, avec un cadenas.
+   Rien de flou : on voit ce qu'on achète. */
+.as-suite { margin-top: 3.2rem; padding-top: 2.4rem; border-top: 1px solid var(--as-bord-or); }
+.as-teasers { list-style: none; margin-top: 1.4rem; display: grid; gap: 0.8rem; }
+@media (min-width: 820px) { .as-teasers { grid-template-columns: 1fr 1fr; } }
+.as-teaser { display: flex; gap: 0.9rem; align-items: flex-start; padding: 1.05rem 1.1rem; border-radius: 1.1rem; background: var(--as-carte); border: 1px solid var(--as-bord); }
+.as-teaser-icone { flex-shrink: 0; display: grid; place-items: center; width: 2.4rem; height: 2.4rem; border-radius: 50%;
+  font: 600 1.2rem/1 var(--as-titre); color: var(--as-or); background: rgba(240, 207, 134, 0.1); border: 1px solid var(--as-bord-or); }
+.as-teaser-corps { min-width: 0; flex: 1; }
+.as-teaser h4 { font-family: var(--as-titre); font-size: 1.4rem; font-weight: 600; line-height: 1.1; color: var(--as-encre); }
+.as-teaser-fait { margin-top: 0.45rem; color: var(--as-encre); line-height: 1.5; }
+.as-teaser-fait b { color: var(--as-or); font-weight: 600; }
+.as-teaser-suite { margin-top: 0.6rem; display: flex; gap: 0.45rem; align-items: flex-start; font-size: 0.88rem; line-height: 1.45; color: var(--as-gris); }
+.as-teaser-suite svg { flex-shrink: 0; width: 0.95rem; height: 0.95rem; margin-top: 0.12rem; color: var(--as-or); }
+.as-domaines { list-style: none; margin-top: 0.7rem; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.35rem; }
+@media (min-width: 560px) and (max-width: 819.98px), (min-width: 1100px) { .as-domaines { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+.as-domaines li { display: flex; justify-content: space-between; align-items: center; gap: 0.3rem; padding: 0.4rem 0.55rem; border-radius: 0.6rem;
+  background: rgba(6, 10, 29, 0.6); border: 1px solid rgba(185, 164, 255, 0.16); font-size: 0.76rem; color: var(--as-gris); min-width: 0; }
+.as-domaines li span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.as-domaines li b { color: var(--as-gris-2); font-weight: 700; }
+.as-domaines li.est-revele { border-color: var(--as-bord-or); color: var(--as-encre); }
+.as-domaines li.est-revele b { color: var(--as-or); }
 .as-lien { margin-top: 1.4rem; background: none; border: 0; color: var(--as-gris); text-decoration: underline; text-underline-offset: 3px; cursor: pointer; font: 500 0.95rem 'Inter', sans-serif; }
 .as-lien:hover { color: var(--as-encre); }
 
@@ -252,6 +355,7 @@ body.page-astro #site-header { position: relative; }
 .as-prix-carte { max-width: 34rem; margin: 0 auto; text-align: center; border: 1px solid var(--as-bord-or); border-radius: 1.6rem; padding: 2.2rem 1.35rem 1.8rem;
   background: radial-gradient(80% 60% at 50% 0%, rgba(240, 207, 134, 0.14), transparent 70%), var(--as-carte);
   box-shadow: 0 40px 80px -50px rgba(240, 207, 134, 0.35); }
+.as-prix-grand { margin: 0.6rem auto 0; max-width: 22rem; font-family: var(--as-titre); font-weight: 600; font-size: clamp(1.9rem, 6vw, 2.4rem); line-height: 1.05; color: var(--as-encre); text-wrap: balance; }
 .as-prix-montant { margin-top: 0.6rem; font-family: var(--as-titre); font-weight: 600; font-size: 4.2rem; line-height: 1; color: var(--as-encre); }
 .as-prix-pour { margin-top: 0.4rem; color: var(--as-gris); }
 .as-prix-region { margin-top: 0.4rem; color: var(--as-or); font-size: 0.85rem; }

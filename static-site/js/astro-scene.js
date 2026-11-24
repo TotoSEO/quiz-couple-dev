@@ -122,6 +122,11 @@
     };
   }
 
+  // Les attributs du contexte : astro.js demande le même contexte dès le
+  // chargement (même toile, mêmes attributs, donc le même objet) pour savoir
+  // tout de suite s'il faut la version fixe, avant que la personne défile.
+  var ATTRIBUTS_GL = { antialias: false, alpha: true, premultipliedAlpha: true, powerPreference: 'high-performance' };
+
   function monter(section, options) {
     var stage = section.querySelector('.as-stage');
     var canvas = section.querySelector('.as-canvas');
@@ -129,38 +134,47 @@
     var reduit = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     var gl = null;
     try {
-      gl = canvas.getContext('webgl', { antialias: false, alpha: true, premultipliedAlpha: true, powerPreference: 'high-performance' });
+      gl = canvas.getContext('webgl', ATTRIBUTS_GL);
     } catch (e) { gl = null; }
     if (!gl) { section.classList.add('as-sans-gl'); return null; }
 
-    var progP, progT;
-    try {
+    // Programmes, emplacements et tampons : créés ici, et recréés si le
+    // téléphone retire le contexte WebGL à la page (appli mise en arrière-plan,
+    // mémoire) puis le lui rend. Sans ça, le ciel restait noir au retour.
+    var progP, progT, locP, locT, bufFond, bufPoints, bufTraits;
+    var tailleMax = 96;
+    var NEB = 10;
+    var capaPoints = 0, capaTraits = 0;
+    function initialiserGL() {
       progP = programme(gl, VS_POINTS, FS_POINTS);
       progT = programme(gl, VS_TRAITS, FS_TRAITS);
-    } catch (e) {
+      locP = {
+        pos: gl.getAttribLocation(progP, 'a_pos'), taille: gl.getAttribLocation(progP, 'a_taille'),
+        coul: gl.getAttribLocation(progP, 'a_coul'), alpha: gl.getAttribLocation(progP, 'a_alpha'),
+        phase: gl.getAttribLocation(progP, 'a_phase'), type: gl.getAttribLocation(progP, 'a_type'),
+        pv: gl.getUniformLocation(progP, 'u_pv'), temps: gl.getUniformLocation(progP, 'u_temps'), px: gl.getUniformLocation(progP, 'u_px'),
+        max: gl.getUniformLocation(progP, 'u_max')
+      };
+      locT = {
+        xy: gl.getAttribLocation(progT, 'a_xy'), v: gl.getAttribLocation(progT, 'a_v'), coul: gl.getAttribLocation(progT, 'a_coul')
+      };
+      bufFond = gl.createBuffer(); bufPoints = gl.createBuffer(); bufTraits = gl.createBuffer();
+      capaPoints = 0; capaTraits = 0;
+      try { tailleMax = Math.min(1024, gl.getParameter(gl.ALIASED_POINT_SIZE_RANGE)[1] || 96); } catch (e) { tailleMax = 96; }
+    }
+    try { initialiserGL(); } catch (e) {
       section.classList.add('as-sans-gl');
       return null;
     }
-    var locP = {
-      pos: gl.getAttribLocation(progP, 'a_pos'), taille: gl.getAttribLocation(progP, 'a_taille'),
-      coul: gl.getAttribLocation(progP, 'a_coul'), alpha: gl.getAttribLocation(progP, 'a_alpha'),
-      phase: gl.getAttribLocation(progP, 'a_phase'), type: gl.getAttribLocation(progP, 'a_type'),
-      pv: gl.getUniformLocation(progP, 'u_pv'), temps: gl.getUniformLocation(progP, 'u_temps'), px: gl.getUniformLocation(progP, 'u_px'),
-      max: gl.getUniformLocation(progP, 'u_max')
-    };
-    var locT = {
-      xy: gl.getAttribLocation(progT, 'a_xy'), v: gl.getAttribLocation(progT, 'a_v'), coul: gl.getAttribLocation(progT, 'a_coul')
-    };
-    var bufFond = gl.createBuffer(), bufPoints = gl.createBuffer(), bufTraits = gl.createBuffer();
-    var tailleMax = 96;
-    try { tailleMax = Math.min(1024, gl.getParameter(gl.ALIASED_POINT_SIZE_RANGE)[1] || 96); } catch (e) { tailleMax = 96; }
-    var NEB = 10;
 
     // ── Le fond : des étoiles réparties en profondeur ────────────
     var rnd = graine(20261123);
     var portrait = false, W = 1, H = 1, dpr = 1;
     var nFond = 0;
     function construireFond() {
+      // Toujours le même tirage : le ciel ne change pas quand on tourne le
+      // téléphone ou quand le contexte WebGL revient.
+      rnd = graine(20261123);
       var grand = W * H / (dpr * dpr) >= 500000;
       var n = grand ? 4200 : 2800;
       var neb = tailleMax >= 256 ? 26 : 0;
@@ -301,7 +315,7 @@
         { p: 0.52, c: bc, cadre: MP.cadreA * 0.97, d: [-0.6, 0.3], ecran: E, haut: Hh },
         { p: 0.66, c: an, cadre: MP.cadreFin * 1.06, d: [0, -1.4], ecran: E, haut: Hh },
         { p: 0.82, c: an, cadre: MP.cadreFin, d: [0.2, -2.1], ecran: E, haut: Hh },
-        { p: 1, c: an, cadre: MP.cadreFin * 0.98, d: [0, -1.6], ecran: 0, haut: portrait ? 0.16 : 0.1 }
+        { p: 1, c: an, cadre: MP.cadreFin * 0.98, d: [0, -1.6], ecran: 0, haut: portrait ? 0.19 : 0.2 }
       ];
       var k = cles(p, K);
       var c = mix3(k.a.c, k.b.c, k.t);
@@ -333,12 +347,27 @@
     function angleSigne(i, tour) { return -Math.PI / 2 + (i * 30 + 15) * Math.PI / 180 + tour; }
 
     // ── Les tampons de chaque image ─────────────────────────────
-    var points = [], traits = [];
+    // Deux tableaux de flottants gardés d'une image à l'autre et agrandis au
+    // besoin : en créer de nouveaux à chaque image (une centaine de kilo-octets)
+    // faisait travailler le ramasse-miettes, d'où des à-coups de temps en temps.
+    var tabPts = new Float32Array(NEB * 1024), nPts = 0;
+    var tabTr = new Float32Array(42 * 1024), nTr = 0;
+    function agrandir(t, besoin) {
+      var n = t.length;
+      while (n < besoin) n *= 2;
+      var g = new Float32Array(n);
+      g.set(t);
+      return g;
+    }
     function point(pos, taille, coul, alpha, phase) {
       if (alpha <= 0.002) return;
-      points.push(pos[0], pos[1], pos[2], taille, coul[0], coul[1], coul[2], alpha, phase || 0, 0);
+      if (nPts + NEB > tabPts.length) tabPts = agrandir(tabPts, nPts + NEB);
+      tabPts[nPts] = pos[0]; tabPts[nPts + 1] = pos[1]; tabPts[nPts + 2] = pos[2]; tabPts[nPts + 3] = taille;
+      tabPts[nPts + 4] = coul[0]; tabPts[nPts + 5] = coul[1]; tabPts[nPts + 6] = coul[2];
+      tabPts[nPts + 7] = alpha; tabPts[nPts + 8] = phase || 0; tabPts[nPts + 9] = 0;
+      nPts += NEB;
     }
-    var PV = null;
+    var PV = null, pvTab = new Float32Array(16);
     function proj(pos) {
       var m = PV, x = pos[0], y = pos[1], z = pos[2];
       var cx = m[0] * x + m[4] * y + m[8] * z + m[12];
@@ -357,20 +386,29 @@
       if (l < 0.5) return;
       var hw = largeurPx * dpr * 2.2;
       var nx = -dy / l * hw, ny = dx / l * hw;
-      var X = function (px) { return px / W * 2 - 1; }, Y = function (py) { return 1 - py / H * 2; };
-      var c0x = X(ax + nx), c0y = Y(ay + ny), c1x = X(ax - nx), c1y = Y(ay - ny);
-      var c2x = X(bx + nx), c2y = Y(by + ny), c3x = X(bx - nx), c3y = Y(by - ny);
-      var r = coul[0], g = coul[1], bl = coul[2];
-      traits.push(c0x, c0y, 1, r, g, bl, alpha, c1x, c1y, -1, r, g, bl, alpha, c2x, c2y, 1, r, g, bl, alpha,
-        c2x, c2y, 1, r, g, bl, alpha, c1x, c1y, -1, r, g, bl, alpha, c3x, c3y, -1, r, g, bl, alpha);
+      var iW = 2 / W, iH = 2 / H;
+      var c0x = (ax + nx) * iW - 1, c0y = 1 - (ay + ny) * iH, c1x = (ax - nx) * iW - 1, c1y = 1 - (ay - ny) * iH;
+      var c2x = (bx + nx) * iW - 1, c2y = 1 - (by + ny) * iH, c3x = (bx - nx) * iW - 1, c3y = 1 - (by - ny) * iH;
+      if (nTr + 42 > tabTr.length) tabTr = agrandir(tabTr, nTr + 42);
+      sommet(c0x, c0y, 1, coul, alpha); sommet(c1x, c1y, -1, coul, alpha); sommet(c2x, c2y, 1, coul, alpha);
+      sommet(c2x, c2y, 1, coul, alpha); sommet(c1x, c1y, -1, coul, alpha); sommet(c3x, c3y, -1, coul, alpha);
+    }
+    function sommet(x, y, v, coul, alpha) {
+      tabTr[nTr] = x; tabTr[nTr + 1] = y; tabTr[nTr + 2] = v; tabTr[nTr + 3] = coul[0]; tabTr[nTr + 4] = coul[1]; tabTr[nTr + 5] = coul[2]; tabTr[nTr + 6] = alpha;
+      nTr += 7;
     }
 
+    // Les styles ne sont écrits que s'ils changent : une étiquette cachée ne
+    // coûte rien d'une image à l'autre.
+    function ecrire(el, o, t) {
+      if (el._o !== o) { el._o = o; el.style.opacity = o; }
+      if (t && el._t !== t) { el._t = t; el.style.transform = t; }
+    }
     function placerEtiquette(el, pos, alpha, decalPx) {
       var q = alpha > 0.01 ? proj(pos) : null;
-      if (!q) { el.style.opacity = '0'; return; }
+      if (!q) { ecrire(el, '0'); return; }
       var x = (q[0] + 1) * W / 2 / dpr, y = (1 - q[1]) * H / 2 / dpr + (decalPx || 0);
-      el.style.opacity = alpha.toFixed(3);
-      el.style.transform = 'translate3d(' + x.toFixed(1) + 'px,' + y.toFixed(1) + 'px,0) translate(-50%,-50%)';
+      ecrire(el, alpha.toFixed(3), 'translate3d(' + x.toFixed(1) + 'px,' + y.toFixed(1) + 'px,0) translate(-50%,-50%)');
     }
 
     function dessinerConstellation(C, qui, p, temps, deb, fin, attenue) {
@@ -409,7 +447,7 @@
       gl.clear(gl.COLOR_BUFFER_BIT);
       var cam = camera(p);
       PV = mul(perspective(FOV, W / H, 0.1, 200), regard(cam.oeil, cam.cible, [0, 1, 0]));
-      points.length = 0; traits.length = 0;
+      nPts = 0; nTr = 0;
 
       // La première constellation reste là, plus discrète, pendant qu'on
       // regarde la seconde ; les deux reviennent en pleine lumière à la fin.
@@ -451,7 +489,7 @@
           }
         }
       } else {
-        etSignes.forEach(function (e) { e.style.opacity = '0'; });
+        etSignes.forEach(function (e) { ecrire(e, '0'); });
       }
 
       // Les planètes, sur une orbite intérieure, avec un point
@@ -513,27 +551,30 @@
 
       // Le fond, plus discret quand on regarde une constellation de près.
       gl.useProgram(progP);
-      gl.uniformMatrix4fv(locP.pv, false, new Float32Array(PV));
+      pvTab.set(PV);
+      gl.uniformMatrix4fv(locP.pv, false, pvTab);
       gl.uniform1f(locP.temps, temps);
       gl.uniform1f(locP.px, H / (2 * Math.tan(FOV / 2)));
       gl.uniform1f(locP.max, tailleMax);
       gl.enable(gl.BLEND);
       gl.blendFunc(gl.ONE, gl.ONE);
       dessinerPoints(bufFond, nFond, false);
-      if (points.length) {
+      if (nPts) {
         gl.bindBuffer(gl.ARRAY_BUFFER, bufPoints);
-        gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(points), gl.DYNAMIC_DRAW);
-        dessinerPoints(bufPoints, points.length / NEB, true);
+        if (capaPoints < tabPts.length) { gl.bufferData(gl.ARRAY_BUFFER, tabPts.byteLength, gl.DYNAMIC_DRAW); capaPoints = tabPts.length; }
+        gl.bufferSubData(gl.ARRAY_BUFFER, 0, tabPts.subarray(0, nPts));
+        dessinerPoints(bufPoints, nPts / NEB, true);
       }
-      if (traits.length) {
+      if (nTr) {
         gl.useProgram(progT);
         gl.bindBuffer(gl.ARRAY_BUFFER, bufTraits);
-        gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(traits), gl.DYNAMIC_DRAW);
+        if (capaTraits < tabTr.length) { gl.bufferData(gl.ARRAY_BUFFER, tabTr.byteLength, gl.DYNAMIC_DRAW); capaTraits = tabTr.length; }
+        gl.bufferSubData(gl.ARRAY_BUFFER, 0, tabTr.subarray(0, nTr));
         var o = 7 * 4;
         gl.enableVertexAttribArray(locT.xy); gl.vertexAttribPointer(locT.xy, 2, gl.FLOAT, false, o, 0);
         gl.enableVertexAttribArray(locT.v); gl.vertexAttribPointer(locT.v, 1, gl.FLOAT, false, o, 8);
         gl.enableVertexAttribArray(locT.coul); gl.vertexAttribPointer(locT.coul, 4, gl.FLOAT, false, o, 12);
-        gl.drawArrays(gl.TRIANGLES, 0, traits.length / 7);
+        gl.drawArrays(gl.TRIANGLES, 0, nTr / 7);
         gl.disableVertexAttribArray(locT.xy); gl.disableVertexAttribArray(locT.v); gl.disableVertexAttribArray(locT.coul);
       }
     }
@@ -553,21 +594,33 @@
     }
 
     // ── Taille, défilement, boucle ──────────────────────────────
+    var hScene = 0;
     function redimensionner() {
       dpr = Math.min(window.devicePixelRatio || 1, 2);
       var w = stage.clientWidth, h = stage.clientHeight;
+      hScene = h;
       W = Math.max(1, Math.round(w * dpr)); H = Math.max(1, Math.round(h * dpr));
       canvas.width = W; canvas.height = H;
       var nouveau = w / h < 0.85;
       if (nouveau !== portrait || !nFond) { portrait = nouveau; MP = miseEnPage(portrait); construireFond(); }
     }
+    // La course de la scène collée est la hauteur de la section moins celle de
+    // la scène, pas celle de la fenêtre : sur téléphone, la barre d'adresse qui
+    // se replie ou revient change window.innerHeight, et la progression
+    // sautait alors d'un coup (au début, quand la barre se replie, et quand on
+    // remonte, quand elle revient).
     function lireProgression() {
       if (reduit) return 1;
-      var r = section.getBoundingClientRect();
-      var course = r.height - window.innerHeight;
-      return course > 0 ? clamp(-r.top / course, 0, 1) : 1;
+      return progressionDe(section, hScene);
     }
 
+    // L'amorti : court au doigt, où le défilement du téléphone est déjà
+    // fluide (un amorti long faisait continuer l'image après qu'on a levé le
+    // doigt) ; un peu plus long à la souris, pour lisser les crans de la
+    // molette. Aux deux bouts, il se referme vite.
+    var doigt = window.matchMedia && window.matchMedia('(pointer: coarse)').matches;
+    var K = doigt ? 16 : 9;
+    var perdu = false;
     var pAffiche = lireProgression(), visible = true, enCours = false, dernier = 0, t0 = performance.now();
     function image(maintenant) {
       enCours = false;
@@ -575,14 +628,20 @@
       var dt = Math.min(0.1, (maintenant - (dernier || maintenant)) / 1000);
       dernier = maintenant;
       var cible = lireProgression();
-      pAffiche += (cible - pAffiche) * (1 - Math.exp(-dt * 7.5));
+      var k = cible <= 0 || cible >= 1 ? 24 : K;
+      pAffiche += (cible - pAffiche) * (1 - Math.exp(-dt * k));
       if (Math.abs(cible - pAffiche) < 0.0004) pAffiche = cible;
       var temps = reduit ? 0 : (maintenant - t0) / 1000;
-      dessiner(pAffiche, temps);
+      if (!perdu) dessiner(pAffiche, temps);
       if (options.surProgression) options.surProgression(pAffiche);
       if (!reduit) demander();
     }
     function demander() { if (!enCours) { enCours = true; requestAnimationFrame(image); } }
+
+    canvas.addEventListener('webglcontextlost', function (e) { e.preventDefault(); perdu = true; }, false);
+    canvas.addEventListener('webglcontextrestored', function () {
+      try { initialiserGL(); nFond = 0; construireFond(); perdu = false; demander(); } catch (e) { /* le ciel reste vide, les textes suivent */ }
+    }, false);
 
     redimensionner();
     if ('ResizeObserver' in window) new ResizeObserver(function () { redimensionner(); demander(); }).observe(stage);
@@ -599,5 +658,14 @@
     return { progression: function () { return pAffiche; } };
   }
 
-  window.QCAstroScene = { monter: monter };
+  // La progression d'une scène collée : 0 quand la section touche le haut de
+  // l'écran, 1 quand la scène va se décoller, quelle que soit la hauteur de la
+  // fenêtre.
+  function progressionDe(section, hScene) {
+    var r = section.getBoundingClientRect();
+    var course = r.height - (hScene || window.innerHeight);
+    return course > 0 ? clamp(-r.top / course, 0, 1) : 1;
+  }
+
+  window.QCAstroScene = { monter: monter, progressionDe: progressionDe, attributs: ATTRIBUTS_GL };
 })();
