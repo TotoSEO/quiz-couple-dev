@@ -1,11 +1,12 @@
 {
   "title": "Conditions générales de vente",
-  "majLe": "Dernière mise à jour : 4 novembre 2026",
-  "intro": "Ces conditions s'appliquent à l'achat du rapport complet du {{bilan}} sur quiz-couple.com. Tout le reste du site est gratuit et n'est concerné par aucune vente.",
+  "majLe": "Dernière mise à jour : 24 novembre 2026",
+  "intro": "Ces conditions s'appliquent à l'achat du rapport complet du {{bilan}} et du {{theme}} sur quiz-couple.com. Les articles 1 à 10 décrivent l'évaluation de couple, l'article 11 le thème astral de couple. Tout le reste du site est gratuit et n'est concerné par aucune vente.",
   "liens": {
     "contact": "page contact",
     "confidentialite": "politique de confidentialité",
-    "bilan": "évaluation de couple"
+    "bilan": "évaluation de couple",
+    "theme": "thème astral de couple"
   },
   "vendeur": {
     "titre": "Le vendeur",
@@ -95,6 +96,17 @@
       "titre": "10. Le droit applicable",
       "p": [
         "Ces conditions sont soumises au droit français. En cas de litige, et à défaut d'accord amiable, les tribunaux compétents sont ceux désignés par la loi ; un consommateur peut aussi saisir la juridiction du lieu où il résidait au moment du paiement. Si vous résidez dans un autre pays de l'Union européenne, vous gardez la protection des règles impératives de votre pays de résidence."
+      ]
+    },
+    {
+      "titre": "11. Le thème astral de couple",
+      "p": [
+        "Ce qui est vendu : un rapport d'astrologie établi à partir des deux prénoms et des deux dates de naissance (l'heure est facultative). Il donne la carte du ciel des deux personnes réunie sur une seule roue, le profil du couple, ses domaines, les cinq planètes de chacun lues une par une, les liens entre les deux thèmes, les signes chinois, les chemins de vie et les douze mois qui suivent l'achat. La roue, les planètes de chacun et le profil sont montrés gratuitement avant l'achat ; le reste ne l'est qu'après. Le rapport est un contenu numérique : il s'affiche sur la page du thème astral et se relit depuis le lien personnel envoyé par e-mail. Il est réservé aux personnes majeures.",
+        "Le prix est de {{prixTheme}} TTC pour le rapport du couple, en une seule fois, sans abonnement. Un prix plus bas peut être proposé pour l'Amérique latine : il est affiché sur la page avant tout paiement, et c'est celui de la page de paiement qui fait foi. La TVA n'est pas applicable (article 293 B du Code général des impôts). Le paiement se fait par carte bancaire, ou par un autre moyen proposé, sur la page de paiement de Stripe ; nous ne voyons jamais les numéros de carte.",
+        "Avant de payer, l'acheteur coche une case par laquelle il demande que le rapport lui soit fourni tout de suite, sans attendre la fin du délai de rétractation de quatorze jours, et reconnaît que son droit de rétractation prend fin quand le rapport est fourni (article L221-28 13° du Code de la consommation). Le rapport est fourni dès qu'il s'affiche sur la page après le paiement, ou dès que part l'e-mail qui donne son lien, le premier des deux. À partir de cet instant, l'achat est définitif : aucun remboursement n'est dû pour un résultat qui déplaît ou qui ne ressemble pas à l'idée qu'on se faisait de son couple.",
+        "Le rapport bénéficie de la garantie légale de conformité des contenus numériques (articles L224-25-12 et suivants du Code de la consommation). S'il ne s'affiche pas, s'il est incomplet ou s'il ne correspond pas à ce que décrit cet article, écrivez-nous depuis la {{contact}} : nous le corrigeons sans frais et, si ce n'est pas possible, nous vous remboursons.",
+        "L'astrologie n'est pas une science, et le rapport se lit comme un jeu à deux : il ne prédit rien et ne dit rien de vrai sur votre couple ni sur son avenir. Les positions des planètes sont calculées avec précision, mais ce qu'on en lit vient de la tradition astrologique. Les décisions que vous prenez dans votre vie à partir du rapport sont les vôtres et relèvent de votre seule responsabilité.",
+        "Les prénoms, les genres, les dates et heures de naissance ne servent qu'à calculer le rapport ; l'adresse e-mail donnée à Stripe ne sert qu'à envoyer son lien. Tout est effacé six mois après le paiement, ou trente jours après une commande qui n'a pas été payée, et le rapport peut être supprimé à tout moment depuis sa page. Le détail est dans notre {{confidentialite}}. Les sections sur le vendeur, les réclamations et la médiation, et le droit applicable (articles 9 et 10) s'appliquent aussi au thème astral de couple."
       ]
     }
   ]

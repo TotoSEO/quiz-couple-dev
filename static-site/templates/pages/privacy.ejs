@@ -120,6 +120,18 @@
     </section>
     <% } %>
 
+    <%# Le thème astral de couple (24 novembre 2026, en français seulement). %>
+    <% const _themePoints = lang === 'fr' ? t('legal:privacy.themeItems', []) : []; %>
+    <% if (Array.isArray(_themePoints) && _themePoints.length) { %>
+    <section class="mb-10">
+      <h2 class="text-2xl font-semibold text-foreground mb-4"><%= t('legal:privacy.themeTitle', '') %></h2>
+      <p class="text-foreground mb-4"><%= t('legal:privacy.themeIntro', '') %></p>
+      <ul class="list-disc pl-6 space-y-2 text-foreground">
+        <% for (const _pt of _themePoints) { %><li><%- _pt %></li><% } %>
+      </ul>
+    </section>
+    <% } %>
+
     <%# Les e-mails (porte des résultats et e-book) : ce qui est gardé, pourquoi,
         la base légale, la durée, le prestataire. Toujours affichée. %>
     <% const _emailsPoints = t('legal:privacy.emailsItems', []); %>

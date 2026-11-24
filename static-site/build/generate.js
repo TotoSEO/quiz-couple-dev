@@ -299,7 +299,7 @@ function promoBilanPour(lang) {
 // (l'évaluation est réservée aux majeurs) et les pages où l'on ne vend pas
 // l'évaluation : emprise, manipulation, infidélité, et pour les articles la
 // même règle que la bannière du bas (entreeArticle).
-const PAGES_SANS_BANDEAU = new Set(['bilanCouple', 'admin', 'quizAdo', 'testEmprise', 'testPervers', 'testInfidelite', 'testLoveBombing', 'livreQuizCouple']);
+const PAGES_SANS_BANDEAU = new Set(['bilanCouple', 'admin', 'quizAdo', 'testEmprise', 'testPervers', 'testInfidelite', 'testLoveBombing', 'livreQuizCouple', 'themeAstral']);
 function bandeauPromoPour(routeKey, articleMeta, lang) {
   if (!bilanOuvertPour(lang) || !BILAN_PROMO) return false;
   if (articleMeta) return !!entreeArticle(articleMeta, lang);
@@ -1498,7 +1498,7 @@ async function generatePage(routeKey, lang) {
   // était en noindex partout. Fermée, elle repasse en noindex, hors des
   // sitemaps (generateSitemaps), et les liens vers elle restent suivis
   // (« noindex, follow »).
-  const noindexRoutes = ['legalMentions', 'privacy', 'admin', 'ebookConfirm', 'cgv'];
+  const noindexRoutes = ['legalMentions', 'privacy', 'admin', 'ebookConfirm', 'cgv', 'themeAstral'];
   const isNoindex = noindexRoutes.includes(routeKey) || (routeKey === 'bilanCouple' && !bilanOuvertPour(lang)) || langueCachee(lang);
   const alternates = isNoindex ? [] : getRouteAlternates(routeKey).filter(alt => alt.href);
   const canonical = getLocalizedUrl(routeKey, lang);
@@ -2135,7 +2135,7 @@ function generateSitemaps() {
   // Static routes
   for (const [key, slugs] of Object.entries(ROUTE_SLUGS)) {
     // Skip noindex pages, admin, and frOnly routes without proper multilang support
-    if (['admin', 'legalMentions', 'privacy', 'sitemap', 'ebookConfirm', 'cgv'].includes(key)) continue;
+    if (['admin', 'legalMentions', 'privacy', 'sitemap', 'ebookConfirm', 'cgv', 'themeAstral'].includes(key)) continue;
     // L'évaluation : seulement ouverte (voir noindexRoutes).
     if (key === 'bilanCouple' && !BILAN_OUVERT) continue;
 
@@ -2368,7 +2368,7 @@ function copyStaticAssets() {
   // e-mails, après la fonction lead-capture (14 novembre 2026) : une page
   // seule, sans menu, en noindex, qui lit la langue et le résultat dans le
   // fragment de l'adresse.
-  for (const dir of ['blog', 'authors', 'quiz', 'fonts', 'bilan', 'email', 'og', 'livre', 'desinscription']) {
+  for (const dir of ['blog', 'authors', 'quiz', 'fonts', 'bilan', 'email', 'og', 'livre', 'desinscription', 'astro']) {
     const srcDir = path.join(publicDir, dir);
     const destDir = path.join(DIST_DIR, dir);
     if (fs.existsSync(srcDir)) {
@@ -2693,6 +2693,24 @@ async function copyJs() {
     fs.writeFileSync(path.join(destDir, 'bilan-rapport-point.js'),
       `(function () {\n'use strict';\n${corps}\nwindow.QCBilanRapportPoint = { ${noms.join(', ')} };\n})();\n`, 'utf-8');
     console.log(`[js] bilan-rapport-point.js construit (${noms.length} noms exportés)`);
+  }
+
+  // Le ciel du thème astral de couple (supabase/functions/_shared/astro/
+  // ciel.mjs), écrit une seule fois pour la fonction serveur et servi ici en
+  // script classique comme le calcul du bilan : l'import d'astronomy-engine
+  // remplacé par window.Astronomy (js/vendor/astronomy.js, chargé avant lui),
+  // le tout rangé sous window.QCAstroCiel.
+  const astroCielSrc = path.resolve(REPO_ROOT, 'supabase/functions/_shared/astro/ciel.mjs');
+  if (fs.existsSync(astroCielSrc)) {
+    const src = fs.readFileSync(astroCielSrc, 'utf-8');
+    const noms = [...src.matchAll(/^export (?:const|function) ([A-Za-z_]\w*)/gm)].map(m => m[1]);
+    const corps = src
+      .replace(/^import \* as A from '\.\/astronomy\.mjs';$/m, 'var A = window.Astronomy;')
+      .replace(/^export (const|function) /gm, '$1 ');
+    if (/^\s*(import|export)\b/m.test(corps)) throw new Error('[astro] ciel.mjs : import ou export inattendu');
+    fs.writeFileSync(path.join(destDir, 'astro-ciel.js'),
+      `(function () {\n'use strict';\n${corps}\nwindow.QCAstroCiel = { ${noms.join(', ')} };\n})();\n`, 'utf-8');
+    console.log(`[js] astro-ciel.js construit (${noms.length} noms exportés)`);
   }
 
   // Inject the Supabase URL + anon key (resolved from config.js, itself driven by the

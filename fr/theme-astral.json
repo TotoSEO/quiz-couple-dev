@@ -1,0 +1,421 @@
+{
+  "meta": {
+    "title": "Thème astral de couple : ce que les étoiles disent de vous deux",
+    "description": "Votre thème astral de couple, calculé avec vos deux dates de naissance : vos Lunes, Vénus et Mars, les liens entre vos thèmes, vos signes chinois et vos 12 prochains mois."
+  },
+  "signes": {
+    "belier": {
+      "nom": "Bélier",
+      "du": "du Bélier",
+      "ligne": "Un cœur qui fonce et qui ne fait rien à moitié."
+    },
+    "taureau": {
+      "nom": "Taureau",
+      "du": "du Taureau",
+      "ligne": "La fidélité, la tendresse, et un vrai faible pour les bons dîners."
+    },
+    "gemeaux": {
+      "nom": "Gémeaux",
+      "du": "des Gémeaux",
+      "ligne": "Mille conversations, et l'envie qu'aucune ne s'arrête."
+    },
+    "cancer": {
+      "nom": "Cancer",
+      "du": "du Cancer",
+      "ligne": "Un cœur tendre qui fait de l'autre sa maison."
+    },
+    "lion": {
+      "nom": "Lion",
+      "du": "du Lion",
+      "ligne": "Aime en grand, et adore qu'on le lui rende."
+    },
+    "vierge": {
+      "nom": "Vierge",
+      "du": "de la Vierge",
+      "ligne": "L'attention aux petits détails, c'est sa façon de dire je t'aime."
+    },
+    "balance": {
+      "nom": "Balance",
+      "du": "de la Balance",
+      "ligne": "L'harmonie avant tout, et un vrai talent pour faire la paix."
+    },
+    "scorpion": {
+      "nom": "Scorpion",
+      "du": "du Scorpion",
+      "ligne": "Tout ou rien : une passion qui va au fond des choses."
+    },
+    "sagittaire": {
+      "nom": "Sagittaire",
+      "du": "du Sagittaire",
+      "ligne": "Un cœur libre qui veut vivre l'aventure à deux."
+    },
+    "capricorne": {
+      "nom": "Capricorne",
+      "du": "du Capricorne",
+      "ligne": "Prend son temps, puis construit pour durer."
+    },
+    "verseau": {
+      "nom": "Verseau",
+      "du": "du Verseau",
+      "ligne": "Un amour libre, original, qui ne ressemble à aucun autre."
+    },
+    "poissons": {
+      "nom": "Poissons",
+      "du": "des Poissons",
+      "ligne": "Le cœur sur la main, et des rêves pour deux."
+    }
+  },
+  "elements": {
+    "feu": {
+      "nom": "Feu",
+      "le": "le Feu",
+      "de": "de Feu"
+    },
+    "terre": {
+      "nom": "Terre",
+      "le": "la Terre",
+      "de": "de Terre"
+    },
+    "air": {
+      "nom": "Air",
+      "le": "l'Air",
+      "de": "d'Air"
+    },
+    "eau": {
+      "nom": "Eau",
+      "le": "l'Eau",
+      "de": "d'Eau"
+    }
+  },
+  "scene": {
+    "aria": "Animation : vos deux constellations",
+    "passer": "Passer l'animation",
+    "intro": {
+      "kicker": "Votre thème astral de couple",
+      "titre": "{{a}} & {{b}}",
+      "texte": "Ce que les étoiles disent de vous deux.",
+      "indice": "Faites défiler"
+    },
+    "personne": {
+      "kicker": "Sous le signe {{du}}",
+      "element": "Signe {{de}}"
+    },
+    "elements": {
+      "titreMeme": "Deux signes {{de}}",
+      "titre": "{{leA}} et {{leB}}",
+      "meme": "Le même élément : vous vous comprenez souvent sans avoir besoin de tout vous dire.",
+      "allie_feu_air": "Deux éléments qui s'allient : l'air attise le feu, et le feu réchauffe l'air.",
+      "allie_terre_eau": "Deux éléments qui s'allient : l'eau fait pousser ce que la terre porte.",
+      "contraste": "Deux éléments qui se bousculent : c'est souvent là que naissent les étincelles."
+    },
+    "planetes": {
+      "titre": "Vos signes ne sont qu'un début",
+      "texte": "Le jour de votre naissance, la Lune, Vénus et Mars étaient quelque part dans le ciel. C'est là qu'on lit comment vous aimez, ce qui vous attire et comment vous vous disputez."
+    },
+    "final": {
+      "titre": "Votre constellation à deux",
+      "texte": "Tout se calcule avec vos deux dates de naissance.",
+      "bouton": "Découvrir notre thème astral",
+      "sous": "{{prix}} pour vous deux · résultat immédiat"
+    },
+    "inconnu": {
+      "a": "Vous",
+      "b": "Votre moitié"
+    }
+  },
+  "contenu": {
+    "kicker": "Votre rapport",
+    "titre": "Ce que vous allez découvrir",
+    "chapitres": [
+      {
+        "t": "Votre carte du ciel à deux",
+        "d": "Vos deux thèmes sur la même roue, et les liens entre vos planètes."
+      },
+      {
+        "t": "Votre profil de couple",
+        "d": "La Flamme, le Havre, les Aimants ou les Explorateurs : ce que dit l'équilibre de vos deux thèmes."
+      },
+      {
+        "t": "Vos Lunes",
+        "d": "Ce dont chacun a besoin pour se sentir aimé."
+      },
+      {
+        "t": "Vénus et Mars",
+        "d": "Comment vous aimez, ce qui vous attire, et comment vous vous disputez."
+      },
+      {
+        "t": "Mercure",
+        "d": "Votre façon de vous parler, et de vous comprendre (ou pas)."
+      },
+      {
+        "t": "Vos signes chinois et vos chemins de vie",
+        "d": "L'astrologie chinoise et la numérologie de vos dates de naissance."
+      },
+      {
+        "t": "Vos 12 prochains mois",
+        "d": "Les mois tendres, les mois de feu, et ceux où il vaut mieux tourner sept fois sa langue dans sa bouche."
+      }
+    ]
+  },
+  "dates": {
+    "kicker": "Étape 1 sur 2",
+    "titre": "Il nous manque vos dates de naissance",
+    "texte": "Pour placer la Lune, Vénus et Mars, il faut le jour exact. L'heure, si vous la connaissez, rend la Lune plus précise.",
+    "prenom": "Prénom",
+    "prenomA": "Votre prénom",
+    "prenomB": "Son prénom",
+    "elle": "Elle",
+    "il": "Il",
+    "jour": "Jour",
+    "mois": "Mois",
+    "annee": "Année",
+    "moisNoms": [
+      "janvier",
+      "février",
+      "mars",
+      "avril",
+      "mai",
+      "juin",
+      "juillet",
+      "août",
+      "septembre",
+      "octobre",
+      "novembre",
+      "décembre"
+    ],
+    "heure": "Heure de naissance",
+    "heureAide": "facultatif",
+    "bouton": "Voir notre ciel",
+    "erreurs": {
+      "prenom": "Il manque un prénom.",
+      "genre": "Choisissez Elle ou Il.",
+      "date": "Cette date n'existe pas.",
+      "futur": "Cette date n'est pas encore arrivée."
+    }
+  },
+  "ciel": {
+    "kicker": "Étape 2 sur 2",
+    "titre": "Votre ciel à deux",
+    "texte": "Voici où étaient vos planètes le jour de vos naissances.",
+    "profilKicker": "Votre profil de couple",
+    "archetypes": {
+      "flamme": {
+        "nom": "La Flamme",
+        "ligne": "Beaucoup de douceur et beaucoup d'étincelles : un couple qui se comprend, et qui se surprend encore."
+      },
+      "havre": {
+        "nom": "Le Havre",
+        "ligne": "Un couple où l'on se sent bien et où les choses coulent : votre force, c'est la paix que vous vous donnez."
+      },
+      "aimants": {
+        "nom": "Les Aimants",
+        "ligne": "Vous vous attirez autant que vous vous bousculez : rien n'est tiède entre vous."
+      },
+      "explorateurs": {
+        "nom": "Les Explorateurs",
+        "ligne": "Votre ciel ne vous mâche pas le travail : votre couple, c'est vous qui l'inventez."
+      }
+    },
+    "douceur": "Douceur",
+    "etincelle": "Étincelle",
+    "verrou": "La suite est dans votre rapport",
+    "planetes": {
+      "soleil": "Soleil",
+      "lune": "Lune",
+      "mercure": "Mercure",
+      "venus": "Vénus",
+      "mars": "Mars"
+    },
+    "doute": "{{x}} ou {{y}}, selon l'heure",
+    "modifier": "Changer les dates"
+  },
+  "prix": {
+    "titre": "Votre thème astral de couple",
+    "pourDeux": "pour vous deux, une seule fois",
+    "liste": [
+      "Votre carte du ciel à deux",
+      "Vos dix planètes lues une par une",
+      "Les liens entre vos deux thèmes",
+      "Vos signes chinois et vos chemins de vie",
+      "Vos 12 prochains mois, mois par mois",
+      "Le rapport en ligne, et son lien par e-mail"
+    ],
+    "majeur": "J'ai 18 ans ou plus.",
+    "renonciation": "Je veux recevoir mon rapport tout de suite, et je renonce à mon droit de rétractation de 14 jours, qui prend fin quand le rapport s'affiche.",
+    "bouton": "Débloquer notre thème astral",
+    "securise": "Paiement sécurisé par Stripe",
+    "note": "Un rapport d'astrologie, à lire comme un jeu à deux : il ne prédit rien.",
+    "erreurCases": "Cochez les deux cases pour continuer.",
+    "erreurServeur": "Le paiement ne s'ouvre pas pour l'instant. Réessayez dans un moment.",
+    "region": "Prix pour l'Amérique latine",
+    "cgv": "Conditions générales de vente"
+  },
+  "faq": {
+    "titre": "Questions fréquentes",
+    "items": [
+      {
+        "q": "Faut-il connaître son heure de naissance ?",
+        "r": "Non. Sans l'heure, on calcule tout à midi. Ça ne change rien pour le Soleil, Mercure, Vénus et Mars, sauf les rares jours où l'un d'eux change de signe. La Lune, elle, change de signe tous les deux jours et demi : si elle a changé le jour de votre naissance, le rapport vous donne les deux possibilités."
+      },
+      {
+        "q": "Comment je reçois le rapport ?",
+        "r": "Il s'affiche tout de suite après le paiement, sur cette page. On vous envoie aussi son lien par e-mail, pour le retrouver quand vous voulez."
+      },
+      {
+        "q": "Est-ce qu'on peut l'offrir ?",
+        "r": "Oui ! Il suffit de connaître vos deux dates de naissance. Le lien du rapport se partage, et il s'ouvre sur n'importe quel téléphone."
+      },
+      {
+        "q": "L'astrologie, c'est scientifique ?",
+        "r": "Non. Aucune étude n'a montré que les astres décident de la réussite d'un couple. Le rapport se lit comme un jeu à deux : il vous donne de quoi parler de vous, de vos envies et de vos différences."
+      },
+      {
+        "q": "Que deviennent nos données ?",
+        "r": "Vos prénoms et vos dates de naissance servent seulement à calculer votre rapport. On les garde six mois après le paiement, puis tout est effacé."
+      }
+    ]
+  },
+  "credits": "Étoiles : catalogue Yale Bright Star et Hipparcos, via d3-celestial (Olaf Frohn). Positions des planètes : Astronomy Engine (Don Cross).",
+  "rapport": {
+    "chargement": "Votre ciel se prépare…",
+    "attente": "Paiement confirmé ! Votre rapport arrive…",
+    "erreur": "Ce rapport ne s'ouvre pas. Vérifiez le lien de votre e-mail, ou écrivez-nous depuis la page contact.",
+    "kicker": "Thème astral de couple",
+    "titre": "{{a}} & {{b}}",
+    "nee": "{{p}}, {né|née} le {{date}}",
+    "neeHeure": "{{p}}, {né|née} le {{date}} à {{heure}}",
+    "etabli": "Établi le {{date}}",
+    "defiler": "Votre ciel commence ici",
+    "sommaire": "Au sommaire",
+    "partie": "Partie {{n}}",
+    "chapitre": "Chapitre {{n}}",
+    "sections": {
+      "carte": "Votre carte du ciel",
+      "profil": "Votre profil de couple",
+      "domaines": "Vos six domaines",
+      "atouts": "Vos atouts et vos défis",
+      "elements": "Vos éléments",
+      "chinois": "Vos signes chinois",
+      "vie": "Vos chemins de vie",
+      "annee": "Vos 12 prochains mois",
+      "questions": "Les questions à vous poser",
+      "fin": "Pour finir"
+    },
+    "intros": {
+      "carte": "Voici le ciel au moment de vos naissances, réuni sur une seule roue. Les planètes de {{a}} sont en rose sur l'anneau extérieur, celles de {{b}} en violet à l'intérieur. Au centre, des traits relient les planètes qui se parlent : en or quand elles s'accordent, en pointillés quand elles se frottent.",
+      "profil": "En astrologie, deux choses comptent dans un couple : la douceur, tout ce qui s'accorde facilement entre vos thèmes, et l'étincelle, tout ce qui attire et fait bouger. Votre couple se place quelque part entre les deux.",
+      "domaines": "Six grands domaines de la vie à deux, notés sur 100 d'après les liens entre vos planètes. Une note basse ne veut pas dire que ça va mal : c'est seulement là que vos thèmes se comprennent le moins tout seuls.",
+      "atouts": "Les liens les plus marquants entre vos deux thèmes : ceux qui vous portent, et ceux qui demandent un peu d'attention.",
+      "elements": "Chaque signe appartient à un élément : le feu, la terre, l'air ou l'eau. Voici où tombent vos dix planètes, cinq chacun.",
+      "chinois": "L'astrologie chinoise ne regarde pas les planètes, elle regarde l'année de naissance : un animal et un élément, qui reviennent tous les soixante ans.",
+      "vie": "En numérologie, le chemin de vie est la somme des chiffres de la date de naissance, réduite à un seul chiffre. Le 11, le 22 et le 33 restent entiers.",
+      "annee": "Les douze mois qui viennent, d'après le passage de Vénus, de Mars et de Jupiter, et les périodes où Mercure, Vénus et Mars reculent dans le ciel.",
+      "questions": "Choisissez-en une ce soir, et posez-la à l'autre. Les meilleures conversations commencent souvent comme ça."
+    },
+    "planetes": {
+      "soleil": "Soleil",
+      "lune": "Lune",
+      "mercure": "Mercure",
+      "venus": "Vénus",
+      "mars": "Mars",
+      "jupiter": "Jupiter"
+    },
+    "aspects": {
+      "conjonction": "Conjonction",
+      "sextile": "Sextile",
+      "carre": "Carré",
+      "trigone": "Trigone",
+      "opposition": "Opposition"
+    },
+    "relations": {
+      "meme": "Même élément",
+      "allie": "Éléments alliés",
+      "contraste": "Éléments contraires"
+    },
+    "angle": "{{n}}° d'écart",
+    "placements": {
+      "titre": "Vos planètes",
+      "planete": "Planète",
+      "degre": "{{d}}° {{signe}}",
+      "ou": "ou {{signe}}",
+      "doute": "Sans l'heure de naissance, une planète qui change de signe ce jour-là peut être dans l'un ou l'autre. Le rapport vous donne les deux."
+    },
+    "legende": {
+      "doux": "Les planètes s'accordent",
+      "tendu": "Les planètes se frottent"
+    },
+    "axes": {
+      "douceur": "Douceur",
+      "etincelle": "Étincelle"
+    },
+    "niveaux": {
+      "haut": "Point fort",
+      "moyen": "À entretenir",
+      "bas": "À travailler"
+    },
+    "atoutsTitre": "Ce qui vous porte",
+    "defisTitre": "Ce qui demande de l'attention",
+    "aucunAtout": "Pas de lien très doux entre vos thèmes : votre entente se construit au quotidien, plus qu'elle ne tombe du ciel.",
+    "aucunDefi": "Aucun lien vraiment tendu entre vos thèmes. Vos défis seront ceux de tous les couples !",
+    "dominant": "Dominant",
+    "absent": "Absent",
+    "planetesDe": "Les planètes de {{p}}",
+    "chinois": {
+      "annee": "{{animal}} de {{element}}, {{an}}",
+      "animaux": {
+        "rat": "Rat",
+        "buffle": "Buffle",
+        "tigre": "Tigre",
+        "lapin": "Lapin",
+        "dragon": "Dragon",
+        "serpent": "Serpent",
+        "cheval": "Cheval",
+        "chevre": "Chèvre",
+        "singe": "Singe",
+        "coq": "Coq",
+        "chien": "Chien",
+        "cochon": "Cochon"
+      },
+      "elements": {
+        "bois": "Bois",
+        "feu": "Feu",
+        "terre": "Terre",
+        "metal": "Métal",
+        "eau": "Eau"
+      },
+      "portrait": "{{p}} · {{animal}} de {{element}}"
+    },
+    "vie": {
+      "chemin": "Chemin de vie",
+      "accord": "Accord de vos chemins : {{n}} sur 10"
+    },
+    "annee": {
+      "meilleur": "Votre plus beau mois",
+      "prudence": "Le mois à surveiller",
+      "venus": "Vénus {{en}}",
+      "mars": "Mars {{en}}",
+      "jupiter": "Jupiter {{en}}",
+      "frise": "Votre année en un coup d'œil",
+      "tons": {
+        "tendre": "Tendre",
+        "passion": "Feu",
+        "elan": "Porteur",
+        "malentendus": "Malentendus",
+        "turbulences": "Agité",
+        "calme": "Tranquille"
+      }
+    },
+    "fin": {
+      "imprimer": "Imprimer ou enregistrer en PDF",
+      "copier": "Copier le lien du rapport",
+      "copie": "Lien copié !",
+      "supprimer": "Supprimer ce rapport",
+      "confirmer": "Cliquez encore pour supprimer",
+      "supprime": "Votre rapport et vos données sont supprimés.",
+      "garde": "Ce rapport reste en ligne pendant six mois. Son lien est dans l'e-mail que vous avez reçu après le paiement."
+    },
+    "rappel": "D'après l'astrologie, à lire comme un jeu : ce rapport ne prédit rien.",
+    "credits": "Positions des planètes calculées avec astronomy-engine (Don Cross, licence MIT). Constellations dessinées d'après d3-celestial (Olaf Frohn, licence BSD).",
+    "haut": "Haut du rapport"
+  }
+}

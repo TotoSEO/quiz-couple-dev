@@ -1,0 +1,32 @@
+name: Thème astral · contrôle
+
+# À chaque changement du calcul, des textes, du serveur ou de l'e-mail du
+# thème astral de couple : les tests Node (positions des planètes et dates
+# des rétrogradations face aux éphémérides, accords des textes sur cinq cents
+# couples, commande, paiement, lien envoyé une seule fois, rapport fermé
+# avant le paiement, remboursement, e-mail).
+
+on:
+  pull_request:
+    paths:
+      - 'supabase/functions/_shared/astro/**'
+      - 'supabase/functions/astro/**'
+      - '.github/workflows/astro-controle.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'supabase/functions/_shared/astro/**'
+      - 'supabase/functions/astro/**'
+  workflow_dispatch:
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Tests du thème astral
+        run: node --test supabase/functions/_shared/astro/test/*.test.mjs

@@ -6,6 +6,10 @@
 // Stripe (charge.refunded) est noté pour l'admin. La signature est vérifiée
 // avec STRIPE_WEBHOOK_SECRET (Stripe > Développeurs > Webhooks).
 // Mode d'emploi : docs/bilan/STRIPE.md.
+//
+// Le même webhook sert le thème astral de couple (fonction astro) : une
+// session qui porte la métadonnée `astro` débloque sa commande dans
+// astro_rapports, et un remboursement est cherché dans les deux tables.
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
 // @ts-ignore module JavaScript partagé avec les tests Node
 import { creerServeur, traiterWebhook } from "../_shared/bilan/serveur.mjs";
@@ -13,14 +17,25 @@ import { creerServeur, traiterWebhook } from "../_shared/bilan/serveur.mjs";
 import { creerStockageRest } from "../_shared/bilan/stockage-rest.mjs";
 // @ts-ignore
 import { verifierSignature } from "../_shared/bilan/stripe.mjs";
+// @ts-ignore
+import { creerPaiement as creerPaiementAstro } from "../_shared/astro/paiement.mjs";
+// @ts-ignore
+import { creerStockageRest as creerStockageAstro } from "../_shared/astro/stockage-rest.mjs";
 
 const SUPABASE_URL = Deno.env.get('SUPABASE_URL')!;
 const SERVICE_KEY = Deno.env.get('SUPABASE_SERVICE_ROLE_KEY')!;
 const SECRET = Deno.env.get('STRIPE_WEBHOOK_SECRET') || '';
 
-const { marquerPaye, marquerRembourse } = creerServeur({
+const bilan = creerServeur({
   stockage: creerStockageRest({ url: SUPABASE_URL, cle: SERVICE_KEY, fetch }),
 });
+const astro = creerPaiementAstro({
+  stockage: creerStockageAstro({ url: SUPABASE_URL, cle: SERVICE_KEY, fetch }),
+});
+// deno-lint-ignore no-explicit-any
+const marquerPaye = (session: any) => (session?.metadata?.astro ? astro.marquerPaye(session) : bilan.marquerPaye(session));
+// deno-lint-ignore no-explicit-any
+const marquerRembourse = async (charge: any) => (await bilan.marquerRembourse(charge)) || astro.marquerRembourse(charge);
 
 serve(async (req: Request) => {
   if (req.method !== 'POST') return new Response('methode', { status: 405 });

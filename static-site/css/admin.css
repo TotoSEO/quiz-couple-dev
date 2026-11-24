@@ -368,7 +368,7 @@ button.adm-retour-site:disabled{opacity:.6;cursor:progress;}
    sur tablette, pour qu'aucune tuile ne reste seule sur sa rangée. */
 @media (min-width:1025px){
   .adm .stats-tetes:has(> :nth-child(4)),.adm .trafic-kpis{grid-template-columns:repeat(4,minmax(0,1fr));}
-  .adm .stats-tetes--cinq{grid-template-columns:repeat(5,minmax(0,1fr));}
+  .adm .stats-tetes.stats-tetes--cinq{grid-template-columns:repeat(5,minmax(0,1fr));}
 }
 @media (max-width:1024px){
   .adm .stats-tetes:has(> :nth-child(4)),.adm .trafic-kpis{grid-template-columns:repeat(2,minmax(0,1fr));}
@@ -584,6 +584,14 @@ button.adm-retour-site:disabled{opacity:.6;cursor:progress;}
 .bil-colonne--suite{margin-top:1.25rem;}
 .bil-colonne .bil-etape{grid-template-columns:minmax(8rem,13rem) minmax(0,1fr) 3.6rem 3.4rem;}
 @media (max-width:640px){.bil-colonne .bil-etape{grid-template-columns:minmax(0,1fr) 3.6rem 3.4rem;}}
+/* Une colonne étroite (deux panneaux côte à côte sur un écran moyen) : la
+   barre passe sous le libellé, sinon elle se réduit à un point (24 novembre
+   2026, onglets Livre et Thème astral à 1 100 px). */
+.bil-colonne{container-type:inline-size;}
+@container (max-width:28rem){
+  .bil-colonne .bil-etape{grid-template-columns:minmax(0,1fr) 3.6rem 3.4rem;row-gap:.35rem;}
+  .bil-colonne .bil-etape .bil-barre{grid-column:1/-1;grid-row:2;}
+}
 .bil-note-etapes{font-size:.78rem;color:var(--adm-ink-3);margin-bottom:.75rem;line-height:1.5;}
 .bil-faits-etapes{margin-top:1rem;padding-left:1.1rem;font-size:.8125rem;color:var(--adm-ink-2);display:grid;gap:.3rem;}
 .bil-faits{display:grid;grid-template-columns:repeat(auto-fit,minmax(10.5rem,1fr));gap:.6rem;margin-bottom:1rem;}

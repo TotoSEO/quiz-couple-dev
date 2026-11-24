@@ -216,6 +216,10 @@ export const ROUTE_SLUGS = {
   // sur les mots que l'édition anglaise vise chez Amazon (« couples bucket
   // list book »).
   livreQuizCouple: { fr: 'livre-quiz-couple', en: 'couples-bucket-list-book' },
+  // Le thème astral de couple (23 novembre 2026) : la page de vente et le
+  // rapport payant, en noindex et hors du plan du site. On y arrive par la
+  // carte sous le résultat du test des signes astrologiques.
+  themeAstral: { fr: 'theme-astral-couple' },
 };
 
 // L'image de partage du site (27 octobre 2026) : og:image de l'accueil et de
@@ -486,6 +490,7 @@ export const ROUTE_CONFIG = {
   sitemap: { template: 'sitemap', namespaces: ['common'] },
   ebookConfirm: { template: 'ebook-confirm', namespaces: ['common'], frOnly: true },
   livreQuizCouple: { template: 'livre-quiz-couple', namespaces: ['livre', 'common'], frOnly: true },
+  themeAstral: { template: 'theme-astral', namespaces: ['theme-astral', 'common'], frOnly: true },
 };
 
 // Supabase config — piloté par les secrets GitHub (SUPABASE_URL / SUPABASE_ANON_KEY)
@@ -964,6 +969,8 @@ const ROUTES_SANS_PUB = [
   // La page du livre vend notre propre livre : une publicité d'un autre
   // annonceur à côté de son bouton d'achat ferait fuir l'acheteur.
   'livreQuizCouple',
+  // Le thème astral de couple, produit payant, même raison.
+  'themeAstral',
 ];
 
 export function pagePublicitaire(routeKey) {
