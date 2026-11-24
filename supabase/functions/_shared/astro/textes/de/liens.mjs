@@ -1,0 +1,96 @@
+// Die Verbindungen zwischen euren beiden Horoskopen. Ein Text zu zweit
+// spricht das Paar an („ihr“). In einem gekreuzten Paar ist {{x}} die Person
+// des ersten Planeten (die Sonne von x und der Mond von y), {x:er|sie} und
+// {y:er|sie} ihre Pronomen. Der erste Satz jedes Textes dient auch als
+// Zusammenfassung (Stärken und Herausforderungen): Er muss allein
+// verständlich sein.
+export default {
+  'soleil-soleil': {
+    conjonction: 'Eure beiden Sonnen stehen direkt beieinander: Ihr habt dasselbe Sternzeichen, oder fast. Ihr versteht euch, ohne alles erklären zu müssen, weil ihr dieselben Reflexe und dieselben Wünsche habt. Die Gefahr ist, dass ihr euch so ähnlich seid, dass sich eure Schwächen addieren, statt sich auszugleichen. Zwei Dickköpfe bleiben auch zusammen Dickköpfe! Lasst jedem ein bisschen eigenen Raum, damit ihr euch nicht auf die Füße tretet.',
+    sextile: 'Eure beiden Sonnen verstehen sich gut. Ihr habt verschiedene Charaktere, aber sie ergänzen sich leicht: Wenn einer etwas vorschlägt, hat der andere Lust mitzumachen. Ihr lasst euch gegenseitig wachsen, ohne euch zu zwingen, und eure Freunde finden oft, dass ihr ein eingespieltes Team seid. Diese leichte Grundlage müsst ihr nur mit gemeinsamen Plänen pflegen.',
+    carre: 'Eure beiden Sonnen reiben sich. Ihr lebt und entscheidet ganz unterschiedlich, und jeder hält an seiner Art fest. Das führt zu Diskussionen, vor allem bei großen Entscheidungen, aber auch zu einer Beziehung, die nie einschläft. Viele stabile Paare haben dieses Quadrat: Es verlangt von jedem, sich Mühe zu geben. Am meisten hilft es, zu akzeptieren, dass der andere die Dinge nie genau so machen wird wie man selbst.',
+    trigone: 'Eure beiden Sonnen harmonieren. Ihr seht das Leben auf dieselbe Art, und das macht den Alltag leicht und angenehm. Ihr habt euch von Anfang an wohl miteinander gefühlt, als würdet ihr euch schon ewig kennen. Die einzige Falle ist die Leichtigkeit: Ein Paar, bei dem alles gut läuft, kann vergessen, sich zu überraschen.',
+    opposition: 'Eure beiden Sonnen stehen sich gegenüber, an den beiden Enden des Tierkreises. Ihr seid Gegensätze, und oft hat euch genau das am Anfang angezogen: Der andere hat, was einem selbst fehlt. Im Alltag ziehen diese Unterschiede manchmal jeden in seine Richtung, und ihr müsst lernen zu verhandeln. Wenn es klappt, seid ihr ein sehr vollständiges Team, in dem jeder ausgleicht, was dem anderen fehlt.',
+    meme: 'Eure beiden Sonnen bilden keinen genauen Aspekt, stehen aber im selben Element. Ihr habt dieselbe Grundenergie und versteht euch im Wesentlichen mühelos. Eure Unterschiede liegen in der Art, Dinge zu tun, fast nie im Kern.',
+    allie: 'Eure beiden Sonnen stehen in Elementen, die sich gut verstehen, wie Feuer und Luft oder Erde und Wasser. Einer nährt den anderen: Eure Charaktere sind verschieden, aber sie spornen sich an, statt sich zu stören. Das ist eine ziemlich leichte Grundlage.',
+    contraste: 'Eure beiden Sonnen stehen in Elementen, die sich widersprechen, wie Feuer und Wasser oder Luft und Erde. Ihr habt nicht denselben Rhythmus und nicht dieselben Prioritäten, und manchmal müsst ihr übersetzen, was der andere meint. Das verlangt Mühe, aber ihr lernt dabei auch viel voneinander.',
+  },
+  'lune-lune': {
+    conjonction: 'Eure beiden Monde stehen zusammen: Ihr fühlt die Dinge auf dieselbe Weise. Ihr braucht dasselbe, um euch wohlzufühlen, und wisst instinktiv, wie man den anderen tröstet. In der Astrologie ist das eine der zärtlichsten Verbindungen überhaupt. Vorsicht nur an Tagen, an denen es euch gleichzeitig schlecht geht, denn dann ist keiner da, der den anderen beruhigt.',
+    sextile: 'Eure beiden Monde verstehen sich gut. Eure Gefühle funktionieren nicht gleich, aber sie antworten aufeinander: Wenn einer Trost braucht, findet der andere ziemlich leicht die richtigen Gesten. Ihr fühlt euch zusammen zu Hause wohl, in den kleinen Momenten des Alltags.',
+    carre: 'Eure beiden Monde reiben sich. Ihr braucht nicht dasselbe, um euch wohlzufühlen, und was den einen beruhigt, kann den anderen stören. Zum Beispiel will einer sofort reden, wenn der andere Ruhe braucht. Daher kommen oft die Missverständnisse, nicht von fehlender Liebe. Am meisten hilft es, klar zu sagen, was euch guttut, statt darauf zu warten, dass der andere es errät.',
+    trigone: 'Eure beiden Monde harmonieren. Ihr fühlt euch mühelos wohl miteinander, und zu Hause ist die Stimmung meist sanft und entspannt. Ihr versteht die Laune des anderen mit einem Blick. In der Astrologie ist das eines der besten Zeichen für ein Zusammenleben, das hält.',
+    opposition: 'Eure beiden Monde stehen sich gegenüber. Eure emotionalen Bedürfnisse sind gegensätzlich: Vielleicht braucht einer Nähe, wenn der andere Luft braucht. Ihr könnt euch viel geben, weil jeder das hat, was dem anderen fehlt, solange ihr das annehmt, statt es euch vorzuwerfen. Mit ein bisschen Geduld wird aus diesem Gegenüber ein Gleichgewicht.',
+    meme: 'Eure beiden Monde stehen im selben Element, ohne genauen Aspekt. Eure Gefühle sprechen dieselbe Sprache: Oft reagiert ihr gleich auf gute und auf schlechte Nachrichten.',
+    allie: 'Eure beiden Monde stehen in verbündeten Elementen. Eure Bedürfnisse sind verschieden, aber sie passen gut zusammen, und ihr beruhigt euch ziemlich leicht gegenseitig.',
+    contraste: 'Eure beiden Monde stehen in Elementen, die sich widersprechen. Was den einen beruhigt, beruhigt nicht unbedingt den anderen, und ihr müsst die Bedürfnisse des anderen erst kennenlernen. Nichts Unmögliches, aber es braucht Gespräche.',
+  },
+  'venus-venus': {
+    conjonction: 'Eure beiden Venus stehen zusammen: Ihr liebt auf dieselbe Weise. Ihr habt denselben Geschmack und dieselbe Vorstellung von einem schönen Abend zu zweit. Ihr macht euch eine Freude, ohne nachzudenken, weil das, was dem einen gefällt, auch dem anderen gefällt. Diese sehr zärtliche Verbindung macht das Leben zu zweit angenehm.',
+    sextile: 'Eure beiden Venus verstehen sich gut. Ihr liebt auf verschiedene Arten, aber sie ergänzen sich, und ihr zeigt euch gegenseitig neue Dinge. Ihr findet leicht Pläne und Momente, die euch gefallen.',
+    carre: 'Eure beiden Venus reiben sich: Ihr liebt nicht auf dieselbe Weise. Jeder kann das Gefühl haben, nicht so geliebt zu werden, wie er es sich wünscht, auch wenn die Liebe da ist. Zum Beispiel zeigt einer seine Liebe mit Geschenken, während der andere vor allem Zeit zu zweit erwartet. Am einfachsten ist es, euch zu sagen, was euch berührt, damit ihr nicht länger aneinander vorbeiliebt.',
+    trigone: 'Eure beiden Venus harmonieren. Ihr habt einen ähnlichen Geschmack und zeigt eure Liebe auf dieselbe Art, und das erspart euch viele Missverständnisse. Bei der Wahl eines Geschenks, eines Ausflugs oder einer Reise seid ihr euch meistens einig. Diese Verbindung macht die Liebe einfach und sanft.',
+    opposition: 'Eure beiden Venus stehen sich gegenüber. Ihr habt einen gegensätzlichen Geschmack, und oft hat euch genau das angezogen. Im Alltag müsst ihr verhandeln: Einer geht zum Beispiel gern aus, wenn der andere lieber zu Hause bleibt. Gut gelebt, öffnet euch dieser Unterschied für Dinge, die ihr sonst nie ausprobiert hättet.',
+    meme: 'Eure beiden Venus stehen im selben Element. Auch ohne genauen Aspekt zwischen ihnen ist euer Geschmack so ähnlich, dass ihr oft Lust auf dieselben Dinge habt.',
+    allie: 'Eure beiden Venus stehen in verbündeten Elementen. Ihr liebt nicht genau auf dieselbe Weise, aber eure Arten zu lieben verstehen sich gut.',
+    contraste: 'Eure beiden Venus stehen in Elementen, die sich widersprechen. Ihr liebt auf sehr verschiedene Arten, und es ist besser, euch zu sagen, was euch gefällt, als es zu erraten.',
+  },
+  'mars-mars': {
+    conjonction: 'Eure beiden Mars stehen zusammen: Ihr habt dieselbe Energie und denselben Rhythmus. Das sorgt für eine starke Anziehung und für Lust, jede Menge zusammen zu unternehmen. Die Kehrseite: Ihr werdet auch gleichzeitig wütend, und eure Streits können schnell hochkochen. Ein gemeinsamer Sport oder ein gemeinsames Projekt ist ein guter Weg, all diese Energie loszuwerden.',
+    sextile: 'Eure beiden Mars verstehen sich gut. Ihr habt verschiedene, aber passende Rhythmen und kommt zusammen voran, ohne euch auf die Füße zu treten. Ihr streitet selten, und wenn doch, legt sich der Streit ziemlich schnell.',
+    carre: 'Eure beiden Mars reiben sich. Ihr handelt und streitet auf verschiedene Weise, und die kleinen Reibereien des Alltags können schnell hochkochen. Gleichzeitig bringt dieses Quadrat viel Feuer ins Verlangen, und eure Versöhnungen sind oft intensiv. Lernt, eine Pause zu machen, wenn es hitzig wird, bevor ihr Dinge sagt, die ihr bereuen würdet.',
+    trigone: 'Eure beiden Mars harmonieren. Ihr habt dieselbe Energie und kommt zusammen voran, ob bei einem Umzug oder an einem spontanen Abend. Das Verlangen fließt, ohne Komplikationen. Ihr streitet selten und kurz.',
+    opposition: 'Eure beiden Mars stehen sich gegenüber. Die Anziehung ist stark, aber eure Energien prallen aufeinander: Wenn einer nach links will, will der andere nach rechts. Dieses Gegenüber hält das Verlangen lebendig, solange ihr nicht aus jeder Meinungsverschiedenheit ein Kräftemessen macht.',
+    meme: 'Eure beiden Mars stehen im selben Element. Ihr habt eine ähnliche Energie und seid euch ziemlich einig, in welchem Tempo ihr leben wollt.',
+    allie: 'Eure beiden Mars stehen in verbündeten Elementen. Eure Energien sind verschieden, aber sie spornen sich an, und ihr könnt gut zusammen handeln.',
+    contraste: 'Eure beiden Mars stehen in Elementen, die sich widersprechen. Ihr habt nicht denselben Rhythmus, und was den einen antreibt, kann den anderen bremsen. Ihr müsst ein gemeinsames Tempo finden, ohne dass einer dem anderen seinen Rhythmus aufzwingt.',
+  },
+  'mercure-mercure': {
+    conjonction: 'Eure beiden Merkur stehen zusammen: Ihr denkt auf dieselbe Weise. Ihr versteht euch ohne viele Worte, beendet manchmal die Sätze des anderen und könnt stundenlang reden. Das ist eines der besten Zeichen für eine gute Kommunikation. Passt nur auf, dass ihr euch nicht immer um dieselben Gedanken dreht.',
+    sextile: 'Eure beiden Merkur verstehen sich gut. Ihr denkt nicht auf dieselbe Weise, aber ihr redet gern miteinander und lernt voneinander. Die Gespräche sind leicht und oft lustig.',
+    carre: 'Eure beiden Merkur reiben sich. Ihr denkt nicht gleich, und ein Wort des einen kann beim anderen falsch ankommen. Eure Streits kommen oft eher von einem missverstandenen Satz als von einer echten Meinungsverschiedenheit. Gewöhnt euch an, nachzufragen: „Wenn ich dich richtig verstehe, meinst du, dass …“',
+    trigone: 'Eure beiden Merkur harmonieren. Ihr sprecht dieselbe Sprache, im wörtlichen wie im übertragenen Sinn: Ideen fließen leicht zwischen euch, und ihr könnt ein Problem lösen, indem ihr darüber redet. Lange Gespräche gehören zu den großen Freuden eurer Beziehung.',
+    opposition: 'Eure beiden Merkur stehen sich gegenüber. Oft seht ihr die Dinge von zwei entgegengesetzten Standpunkten aus, und das gibt lebhafte Diskussionen. Das ist bereichernd, wenn jeder dem anderen zuhört, und anstrengend, wenn jeder recht haben will. Sagt ab und zu „Da hast du nicht unrecht“: Das ändert alles.',
+    meme: 'Eure beiden Merkur stehen im selben Element. Ihr denkt ähnlich und versteht euch schnell.',
+    allie: 'Eure beiden Merkur stehen in verbündeten Elementen. Ihr denkt nicht gleich, aber eure Ideen ergänzen sich gut.',
+    contraste: 'Eure beiden Merkur stehen in Elementen, die sich widersprechen. Ihr denkt nicht auf dieselbe Weise, und manchmal müsst ihr euch die Zeit nehmen, euch gut zu erklären.',
+  },
+  'soleil-lune': {
+    conjonction: 'Die Sonne von {{x}} steht auf dem Mond von {{y}}: In der Astrologie ist das die Verbindung der Paare, die halten. {{y}} fühlt sich verstanden und sicher mit dem, was {{x}} im Grunde ist, und {{x}} fühlt sich so angenommen, wie {x:er|sie} ist. Ihr fühlt euch beieinander zu Hause, und das ist selten.',
+    sextile: 'Die Sonne von {{x}} und der Mond von {{y}} verstehen sich gut. Was {{x}} im Grunde ist, tut {{y}} gut, und {{y}} fühlt sich an {x:seiner|ihrer} Seite wohl. Diese sanfte Verbindung hilft der Beziehung, zu halten.',
+    carre: 'Die Sonne von {{x}} und der Mond von {{y}} reiben sich. Was {{x}} ganz natürlich tut, kann {{y}} verletzen, ohne dass {{x}} es merkt, und {{y}} kann das Gefühl haben, nicht verstanden zu werden. Das ist kein Mangel an Liebe, sondern zwei verschiedene Rhythmen. Nehmt euch die Zeit, euch zu erklären, was euch berührt.',
+    trigone: 'Die Sonne von {{x}} und der Mond von {{y}} harmonieren: Das ist ein sehr gutes Zeichen für das Zusammenleben. {{y}} fühlt sich bei {{x}} ganz natürlich wohl, und {{x}} findet in {{y}} eine Stütze, die nichts dafür verlangt. Ihr seid ein Team, in dem jeder seinen Platz hat.',
+    opposition: 'Die Sonne von {{x}} und der Mond von {{y}} stehen sich gegenüber. In der Astrologie ist das eine sehr starke Anziehung, die von zwei Hälften, die sich ergänzen. Sie verlangt Gleichgewicht: {{x}} muss auf die Gefühle von {{y}} achten, und {{y}} muss {{x}} {x:er|sie} selbst sein lassen.',
+  },
+  'venus-mars': {
+    conjonction: 'Die Venus von {{x}} und der Mars von {{y}} stehen direkt beieinander: Das ist der Aspekt der körperlichen Anziehung schlechthin. {{y}} fühlt sich von der Ausstrahlung von {{x}} angezogen, und {{x}} liebt die Art, wie {{y}} {x:ihn|sie} begehrt. Zwischen euch erlischt die Verführung nicht so leicht.',
+    sextile: 'Die Venus von {{x}} und der Mars von {{y}} verstehen sich gut. Die Anziehung ist da, sanft und leicht, und ihr wisst, wie ihr euch verführt, ohne es zu erzwingen. Diese Verbindung hält die körperliche Nähe mit der Zeit lebendig.',
+    carre: 'Die Venus von {{x}} und der Mars von {{y}} reiben sich, und es sprühen Funken. Die Anziehung ist stark, ein bisschen elektrisch, mit Streits, die oft in einer Versöhnung enden. {{x}} kann {{y}} zu ungeduldig finden, und {{y}} kann {{x}} zu kompliziert finden. Redet ohne Tabus darüber, worauf ihr Lust habt.',
+    trigone: 'Die Venus von {{x}} und der Mars von {{y}} harmonieren. Ihr zieht euch ganz natürlich an, und eure Wünsche finden leicht zueinander. Das Verlangen ist einfach und zärtlich, und es hält.',
+    opposition: 'Die Venus von {{x}} und der Mars von {{y}} stehen sich gegenüber: Das ist eine starke Anziehung aus Gegensätzen. {{y}} will {{x}} verführen, und {{x}} liebt es, verführt zu werden, und dieses Spiel kann lange dauern. Passt nur auf, dass daraus kein Machtkampf wird.',
+    meme: 'Die Venus von {{x}} und der Mars von {{y}} bilden keinen genauen Aspekt, stehen aber im selben Element. Eure Wünsche verstehen sich: Was {{x}} gefällt, ist oft genau das, was {{y}} geben möchte.',
+    allie: 'Die Venus von {{x}} und der Mars von {{y}} stehen in verbündeten Elementen. Die Anziehung ist echt, ohne explosiv zu sein, und sie wächst mit dem Vertrauen.',
+    contraste: 'Die Venus von {{x}} und der Mars von {{y}} stehen in Elementen, die sich widersprechen. Ihr begehrt auf verschiedene Weise, und ihr müsst lernen, was dem anderen gefällt. Wenn ihr darüber redet, findet das Verlangen seinen Weg.',
+  },
+  'lune-venus': {
+    conjonction: 'Der Mond von {{x}} und die Venus von {{y}} stehen zusammen: Das ist eine der zärtlichsten Verbindungen. Die Art, wie {{y}} liebt, ist genau das, was {{x}} braucht, um sich geliebt zu fühlen. Die Umarmungen und kleinen Aufmerksamkeiten von {{y}} treffen immer ins Schwarze.',
+    sextile: 'Der Mond von {{x}} und die Venus von {{y}} verstehen sich gut. {{y}} weiß, was {{x}} guttut: einfache Gesten und eine ganz natürliche Zärtlichkeit.',
+    carre: 'Der Mond von {{x}} und die Venus von {{y}} reiben sich. {{y}} zeigt {y:seine|ihre} Liebe auf eine Art, die {{x}} nicht immer beruhigt, und {{x}} kann sich unverstanden fühlen, ohne zu wissen, warum. Am einfachsten ist es, wenn {{x}} offen sagt, was {x:ihm|ihr} Sicherheit gibt.',
+    trigone: 'Der Mond von {{x}} und die Venus von {{y}} harmonieren. {{x}} fühlt sich so geliebt, wie {x:er|sie} es braucht, und {{y}} kümmert sich gern um {{x}}. Diese leichte Zärtlichkeit tut im Alltag gut.',
+    opposition: 'Der Mond von {{x}} und die Venus von {{y}} stehen sich gegenüber. Ihr zieht euch an, aber ihr braucht nicht dieselbe Zärtlichkeit: {{x}} erwartet eine Form von Liebe, an die {{y}} nicht immer denkt. Wenn ihr es euch sagt, findet ihr leicht den Mittelweg.',
+  },
+  'soleil-venus': {
+    conjonction: 'Die Sonne von {{x}} und die Venus von {{y}} stehen zusammen: {{y}} liebt {{x}} für das, was {x:er|sie} im Grunde ist. Das ist die Verbindung der Bewunderung und der Liebe auf den ersten Blick. {{x}} fühlt sich geschätzt, und {{y}} findet in {{x}} genau das, was {y:ihm|ihr} den Kopf verdreht.',
+    sextile: 'Die Sonne von {{x}} und die Venus von {{y}} verstehen sich gut. {{y}} mag die Persönlichkeit von {{x}}, und ihr verbringt gern Zeit miteinander. Das ist eine einfache, angenehme Verbindung voller Vertrautheit.',
+    carre: 'Die Sonne von {{x}} und die Venus von {{y}} reiben sich. {{y}} fühlt sich von {{x}} angezogen, aber manche Charakterzüge von {{x}} stören {y:ihn|sie}. Ihr müsst akzeptieren, dass sich der andere nicht in allem ändern wird, und es lieber mit Humor sagen als mit Vorwürfen.',
+    trigone: 'Die Sonne von {{x}} und die Venus von {{y}} harmonieren. {{y}} bewundert {{x}} ganz mühelos, und {{x}} fühlt sich für das geliebt, was {x:er|sie} ist. Eure Vertrautheit ist natürlich, und oft mögt ihr dieselben Dinge.',
+    opposition: 'Die Sonne von {{x}} und die Venus von {{y}} stehen sich gegenüber. Die Anziehung ist stark und lebt von Unterschieden: {{y}} fühlt sich von dem angezogen, was an {{x}} anders ist. Im Alltag müsst ihr diese Unterschiede annehmen, ohne zu versuchen, sie auszulöschen.',
+  },
+  'mercure-lune': {
+    conjonction: 'Der Merkur von {{x}} und der Mond von {{y}} stehen zusammen: Die Worte von {{x}} gehen {{y}} direkt zu Herzen. {{y}} fühlt sich gehört und verstanden, und ihr könnt über alles reden, auch über das, was wehtut.',
+    sextile: 'Der Merkur von {{x}} und der Mond von {{y}} verstehen sich gut. {{x}} findet die Worte, die {{y}} beruhigen, und die Gespräche im Alltag sind leicht.',
+    carre: 'Der Merkur von {{x}} und der Mond von {{y}} reiben sich. {{x}} kann Dinge auf eine Art sagen, die {{y}} ungewollt verletzt, und {{y}} kann mit Gefühlen reagieren, wo {{x}} Logik erwartet hat. Wählt vor einem wichtigen Gespräch den Moment und den Ton gut aus.',
+    trigone: 'Der Merkur von {{x}} und der Mond von {{y}} harmonieren. {{x}} versteht, was {{y}} fühlt, und kann sanft darüber reden. Die kleinen Gespräche am Abend tun eurer Beziehung sehr gut.',
+    opposition: 'Der Merkur von {{x}} und der Mond von {{y}} stehen sich gegenüber. {{x}} denkt nach, wo {{y}} fühlt, und ihr könnt leicht aneinander vorbeireden. Hört euch zuerst an, was der andere fühlt, und sucht erst danach nach Lösungen.',
+  },
+};

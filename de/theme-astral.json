@@ -1,0 +1,622 @@
+{
+  "meta": {
+    "title": "Partnerhoroskop: was eure beiden Himmel über euch sagen",
+    "description": "Euer Partnerhoroskop, berechnet aus euren beiden Geburtsdaten: eure Monde, Venus und Mars, die Verbindungen zwischen euren Horoskopen, eure chinesischen Tierzeichen und eure nächsten 12 Monate."
+  },
+  "fil": "Partnerhoroskop",
+  "carte": {
+    "kicker": "Neu · Partnerhoroskop",
+    "puces": [
+      "Euer gemeinsamer Himmel, animiert",
+      "Eure Monde, Venus und Mars",
+      "Eure nächsten 12 Monate"
+    ],
+    "bouton": "Unser Partnerhoroskop ansehen",
+    "vous": "Du",
+    "moitie": "Dein Partner",
+    "test": {
+      "titre": "Dieses Ergebnis schaut nur auf eure Sternzeichen",
+      "texte": "Euer Sternzeichen ist nur der Stand der Sonne. Am Tag eurer Geburt standen auch der Mond, Venus und Mars am Himmel. Aus ihnen liest die Astrologie Liebe, Verlangen und Streit.",
+      "note": "Kostenlose Vorschau mit euren Geburtsdaten"
+    },
+    "date": {
+      "titre": "Eure Geburtsdaten verraten noch mehr",
+      "texte": "Dieser Test schaut auf euer Sternzeichen, eure Lebenszahl und euer chinesisches Tierzeichen. Am Tag eurer Geburt standen auch der Mond, Venus und Mars am Himmel. Aus ihnen liest die Astrologie Liebe, Verlangen und Streit.",
+      "note": "Eure beiden Daten sind schon eingetragen. Die Vorschau ist kostenlos."
+    },
+    "chinois": {
+      "titre": "Und der Himmel am Tag eurer Geburt?",
+      "texte": "Eure Daten verraten auch eure Sternzeichen. Am Tag eurer Geburt hatten der Mond, Venus und Mars jeweils ihren Platz am Himmel. Das Partnerhoroskop liest sie einzeln, mit einem Kapitel über eure chinesischen Tierzeichen.",
+      "note": "Eure beiden Daten sind schon eingetragen. Die Vorschau ist kostenlos."
+    },
+    "article": {
+      "titre": "Dein Sternzeichen sagt nicht alles",
+      "texte": "Dein Sternzeichen ist der Stand der Sonne am Tag deiner Geburt. An diesem Tag standen auch der Mond, Venus und Mars am Himmel. Mit euren beiden Geburtsdaten bestimmt das Partnerhoroskop ihren Platz und sagt euch, was sie über eure Beziehung erzählen.",
+      "note": "Kostenlose Vorschau mit euren Geburtsdaten"
+    }
+  },
+  "signes": {
+    "belier": {
+      "nom": "Widder",
+      "du": "des Widders",
+      "en": "im Widder",
+      "ligne": "Ein Herz, das geradeaus geht und nichts halb macht."
+    },
+    "taureau": {
+      "nom": "Stier",
+      "du": "des Stiers",
+      "en": "im Stier",
+      "ligne": "Treue, Zärtlichkeit und eine Schwäche für gutes Essen."
+    },
+    "gemeaux": {
+      "nom": "Zwillinge",
+      "du": "der Zwillinge",
+      "en": "in den Zwillingen",
+      "ligne": "Tausend Gespräche, und die Lust, dass keines je aufhört."
+    },
+    "cancer": {
+      "nom": "Krebs",
+      "du": "des Krebses",
+      "en": "im Krebs",
+      "ligne": "Ein zärtliches Herz, das aus dem anderen sein Zuhause macht."
+    },
+    "lion": {
+      "nom": "Löwe",
+      "du": "des Löwen",
+      "en": "im Löwen",
+      "ligne": "Liebt groß und mag es, genauso geliebt zu werden."
+    },
+    "vierge": {
+      "nom": "Jungfrau",
+      "du": "der Jungfrau",
+      "en": "in der Jungfrau",
+      "ligne": "Sagt „Ich liebe dich“ mit tausend kleinen Aufmerksamkeiten."
+    },
+    "balance": {
+      "nom": "Waage",
+      "du": "der Waage",
+      "en": "in der Waage",
+      "ligne": "Harmonie vor allem, und ein echtes Talent, Frieden zu schließen."
+    },
+    "scorpion": {
+      "nom": "Skorpion",
+      "du": "des Skorpions",
+      "en": "im Skorpion",
+      "ligne": "Alles oder nichts: eine Leidenschaft, die bis auf den Grund geht."
+    },
+    "sagittaire": {
+      "nom": "Schütze",
+      "du": "des Schützen",
+      "en": "im Schützen",
+      "ligne": "Ein freies Herz, das das Abenteuer zu zweit erleben will."
+    },
+    "capricorne": {
+      "nom": "Steinbock",
+      "du": "des Steinbocks",
+      "en": "im Steinbock",
+      "ligne": "Lässt sich Zeit und baut dann für lange."
+    },
+    "verseau": {
+      "nom": "Wassermann",
+      "du": "des Wassermanns",
+      "en": "im Wassermann",
+      "ligne": "Eine freie, originelle Liebe, die keiner anderen gleicht."
+    },
+    "poissons": {
+      "nom": "Fische",
+      "du": "der Fische",
+      "en": "in den Fischen",
+      "ligne": "Ein riesiges Herz, und Träume für zwei."
+    }
+  },
+  "elements": {
+    "feu": {
+      "nom": "Feuer",
+      "le": "Feuer",
+      "de": "Feuerzeichen"
+    },
+    "terre": {
+      "nom": "Erde",
+      "le": "Erde",
+      "de": "Erdzeichen"
+    },
+    "air": {
+      "nom": "Luft",
+      "le": "Luft",
+      "de": "Luftzeichen"
+    },
+    "eau": {
+      "nom": "Wasser",
+      "le": "Wasser",
+      "de": "Wasserzeichen"
+    }
+  },
+  "scene": {
+    "aria": "Animation: eure beiden Sternbilder",
+    "passer": "Animation überspringen",
+    "intro": {
+      "kicker": "Euer Partnerhoroskop",
+      "titre": "{{a}} & {{b}}",
+      "texte": "Was die Sterne über eure Beziehung sagen.",
+      "indice": "Nach unten scrollen"
+    },
+    "personne": {
+      "kicker": "Im Zeichen {{du}}",
+      "element": "{{de}}"
+    },
+    "elements": {
+      "titreMeme": "Zwei {{de}}",
+      "titre": "{{leA}} und {{leB}}",
+      "meme": "Dasselbe Element: Oft versteht ihr euch, ohne alles sagen zu müssen.",
+      "allie_feu_air": "Zwei Elemente, die sich verbünden: Die Luft facht das Feuer an, und das Feuer wärmt die Luft.",
+      "allie_terre_eau": "Zwei Elemente, die sich verbünden: Das Wasser lässt wachsen, was die Erde trägt.",
+      "contraste": "Zwei Elemente, die sich reiben: Oft entstehen genau dort die Funken."
+    },
+    "planetes": {
+      "titre": "Eure Sternzeichen sind erst der Anfang",
+      "texte": "Am Tag eurer Geburt standen auch der Mond, Venus und Mars irgendwo am Himmel. Dort liest man, wie ihr liebt, was euch anzieht und wie ihr streitet."
+    },
+    "final": {
+      "kicker": "Euer Bericht als Paar",
+      "titre": "Schaltet euer Partnerhoroskop frei",
+      "texte": "Unser Bericht berechnet den genauen Stand von fünf Himmelskörpern am Tag eurer Geburt. Kein Sternzeichen-Horoskop: {{chapitres}} Kapitel über eure Beziehung.",
+      "bouton": "Unser Partnerhoroskop berechnen",
+      "sous": "Kostenlose Vorschau · ganzer Bericht {{prix}}",
+      "lien": "Was im Bericht steht"
+    },
+    "inconnu": {
+      "a": "Du",
+      "b": "Dein Partner"
+    }
+  },
+  "contenu": {
+    "kicker": "Der Bericht",
+    "titre": "Was in dem Bericht steht, den ihr bekommen könnt",
+    "intro": [
+      "Euer Sternzeichen ist nur der Stand der Sonne am Tag eurer Geburt. An diesem Tag standen auch der Mond, Merkur, Venus und Mars irgendwo am Himmel. In der Astrologie erzählt jeder von ihnen etwas über einen Teil von euch.",
+      "Der Bericht bestimmt den Stand dieser fünf Himmelskörper für jeden von euch. Dann vergleicht er eure beiden Himmel und sagt euch, was das für eure Beziehung bedeutet."
+    ],
+    "astresTitre": "Was jeder Himmelskörper sagt",
+    "astres": [
+      {
+        "g": "☉",
+        "n": "Die Sonne",
+        "d": "Euer Charakter, das, was euch antreibt."
+      },
+      {
+        "g": "☽",
+        "n": "Der Mond",
+        "d": "Eure Gefühle, und das, was euch beruhigt."
+      },
+      {
+        "g": "☿",
+        "n": "Merkur",
+        "d": "Eure Art zu reden und zu streiten."
+      },
+      {
+        "g": "♀",
+        "n": "Venus",
+        "d": "Eure Art zu lieben, und das, was euch gefällt."
+      },
+      {
+        "g": "♂",
+        "n": "Mars",
+        "d": "Euer Verlangen, eure Energie und eure Wut."
+      }
+    ],
+    "apercuTitre": "So sieht der Bericht aus",
+    "apercuLegende": "Der Bericht von Lena und Jonas, einem Beispielpaar. Eurer wird mit euren Daten berechnet.",
+    "apercus": [
+      {
+        "id": "couverture",
+        "alt": "Das Deckblatt des Berichts: der Himmel von Lena und Jonas, ihre beiden Sternbilder durch einen goldenen Faden verbunden."
+      },
+      {
+        "id": "carte",
+        "alt": "Die gemeinsame Himmelskarte: ein Rad der zwölf Zeichen mit den Himmelskörpern von Lena in Rosa und denen von Jonas in Violett."
+      },
+      {
+        "id": "mois",
+        "alt": "Die zwölf kommenden Monate des Paares, Monat für Monat, mit dem besten Monat hervorgehoben."
+      }
+    ],
+    "chapitresTitre": "Inhalt",
+    "chapitres": [
+      {
+        "t": "Eure gemeinsame Himmelskarte",
+        "d": "Eure beiden Himmel in einem einzigen Rad. Linien verbinden die Himmelskörper, die sich verstehen, und die, die sich reiben."
+      },
+      {
+        "t": "Euer Paarprofil",
+        "d": "All diese Verbindungen in zwei Werten von 0 bis 100 zusammengefasst: die Sanftheit und der Funke. Je nach beiden ist eure Beziehung die Flamme, der sichere Hafen, die Magnete oder die Entdecker."
+      },
+      {
+        "t": "Eure sechs Bereiche",
+        "d": "Zärtlichkeit, Verlangen, Gespräche, Vertrautheit, Alltag und Beständigkeit, jeder Bereich mit einem Wert von 0 bis 100."
+      },
+      {
+        "t": "Eure zehn Himmelskörper, einer nach dem anderen",
+        "d": "Sonne, Mond, Venus, Mars und Merkur von jedem von euch. Was sie über euch sagen, und dann, was ihr Zusammentreffen ergibt."
+      },
+      {
+        "t": "Was euch beflügelt, und was hakt",
+        "d": "Eure schönsten Verbindungen, und die, die ein bisschen Aufmerksamkeit brauchen."
+      },
+      {
+        "t": "Eure chinesischen Tierzeichen und eure Lebenszahlen",
+        "d": "Das Tier eures Geburtsjahres, und die Zahl, die euer Datum in der Numerologie ergibt."
+      },
+      {
+        "t": "Eure nächsten 12 Monate",
+        "d": "Eure zärtlichsten Monate, eure feurigen Monate und die, in denen ihr besser sanft miteinander redet."
+      },
+      {
+        "t": "Die Fragen, die ihr euch stellen könnt",
+        "d": "Ausgewählt dort, wo sich eure Himmel am wenigsten verstehen, um heute Abend darüber zu reden."
+      }
+    ],
+    "bouton": "Unseren Himmel kostenlos berechnen",
+    "sous": "Kostenlose Vorschau · ganzer Bericht {{prix}}"
+  },
+  "dates": {
+    "kicker": "Schritt 1 von 2 · kostenlos",
+    "titre": "Uns fehlen eure Geburtsdaten",
+    "texte": "Mit dem genauen Tag bestimmen wir den Stand eurer zehn Himmelskörper. Die Uhrzeit, falls ihr sie kennt, macht den Mond genauer.",
+    "prenom": "Vorname",
+    "prenomA": "Dein Vorname",
+    "prenomB": "Vorname deines Partners",
+    "elle": "Eine Frau",
+    "il": "Ein Mann",
+    "jour": "Tag",
+    "mois": "Monat",
+    "annee": "Jahr",
+    "moisNoms": [
+      "Januar",
+      "Februar",
+      "März",
+      "April",
+      "Mai",
+      "Juni",
+      "Juli",
+      "August",
+      "September",
+      "Oktober",
+      "November",
+      "Dezember"
+    ],
+    "heure": "Geburtszeit",
+    "heureAide": "optional",
+    "bouton": "Unseren Himmel berechnen",
+    "erreurs": {
+      "prenom": "Ein Vorname fehlt.",
+      "genre": "Wähle eine Frau oder einen Mann.",
+      "date": "Dieses Datum gibt es nicht.",
+      "futur": "Dieses Datum liegt in der Zukunft."
+    },
+    "exempleA": "z. B. Lena",
+    "exempleB": "z. B. Jonas",
+    "genreA": "Du bist",
+    "genreB": "Dein Partner ist",
+    "jourVide": "TT",
+    "anneeVide": "JJJJ"
+  },
+  "ciel": {
+    "kicker": "Schritt 2 von 2 · eure kostenlose Vorschau",
+    "titre": "Euer gemeinsamer Himmel",
+    "texte": "Hier ist der Himmel am Tag eurer Geburt, in einem einzigen Rad vereint. Die Himmelskörper von {{a}} sind rosa, die von {{b}} violett. In der Mitte verbindet eine Linie zwei Himmelskörper, die miteinander sprechen: golden, wenn sie sich verstehen, korallenrot, wenn sie sich reiben.",
+    "profilKicker": "Euer Profil",
+    "archetypes": {
+      "flamme": {
+        "nom": "Die Flamme",
+        "ligne": "Viel Sanftheit und viele Funken: ein Paar, das sich versteht und sich trotzdem noch überrascht."
+      },
+      "havre": {
+        "nom": "Der sichere Hafen",
+        "ligne": "Ein Paar, bei dem man sich wohlfühlt und alles fließt: Eure Stärke ist der Frieden, den ihr euch gebt."
+      },
+      "aimants": {
+        "nom": "Die Magnete",
+        "ligne": "Ihr zieht euch genauso an, wie ihr euch durchrüttelt: Zwischen euch ist nichts lauwarm."
+      },
+      "explorateurs": {
+        "nom": "Die Entdecker",
+        "ligne": "Euer Himmel nimmt euch die Arbeit nicht ab: Eure Beziehung erfindet ihr selbst."
+      }
+    },
+    "douceur": "Sanftheit",
+    "etincelle": "Funke",
+    "planetes": {
+      "soleil": "Sonne",
+      "lune": "Mond",
+      "mercure": "Merkur",
+      "venus": "Venus",
+      "mars": "Mars"
+    },
+    "doute": "{{x}} oder {{y}}, je nach Uhrzeit",
+    "modifier": "Daten ändern",
+    "placementsTitre": "Wo eure Himmelskörper standen",
+    "profilTitre": "Euer Paarprofil",
+    "profilTexte": "Der Bericht fasst alle Verbindungen zwischen euren beiden Himmeln in zwei Werten von 0 bis 100 zusammen. Die Sanftheit ist das, was zwischen euch ganz von allein passt. Der Funke ist das, was euch anzieht und bewegt. Beide zusammen ergeben eines dieser vier Profile:",
+    "suiteKicker": "In eurem Bericht",
+    "suiteTitre": "Was euch euer Bericht erklärt",
+    "suiteTexte": "Alles, was folgt, ist schon mit euren beiden Daten berechnet. Die Vorschau zeigt euch die Ergebnisse, der Bericht sagt euch, was sie bedeuten.",
+    "dansLeRapport": "Im Bericht erklärt",
+    "domaines": {
+      "tendresse": "Zärtlichkeit",
+      "desir": "Verlangen",
+      "dialogue": "Gespräche",
+      "complicite": "Vertrautheit",
+      "quotidien": "Alltag",
+      "duree": "Beständigkeit"
+    },
+    "domainesNoms": {
+      "tendresse": "Zärtlichkeit",
+      "desir": "Verlangen",
+      "dialogue": "Gespräche",
+      "complicite": "Vertrautheit",
+      "quotidien": "Alltag",
+      "duree": "Beständigkeit"
+    },
+    "astresDe": {
+      "soleil": "die Sonne",
+      "lune": "der Mond",
+      "mercure": "der Merkur",
+      "venus": "die Venus",
+      "mars": "der Mars"
+    },
+    "astresMeme": {
+      "soleil": "eure beiden Sonnen",
+      "lune": "eure beiden Monde",
+      "mercure": "eure beiden Merkur",
+      "venus": "eure beiden Venus",
+      "mars": "eure beiden Mars"
+    },
+    "teasers": {
+      "domaines": {
+        "titre": "Eure sechs Bereiche",
+        "fait": "Eure Stärke: {{d}}, {{n}} von 100.",
+        "suite": "Die fünf anderen Werte, und was sie für euch bedeuten."
+      },
+      "lunes": {
+        "titre": "Eure Monde",
+        "fait": "Der Mond von {{a}} steht {{sa}}, der von {{b}} {{sb}}.",
+        "suite": "Was jeder von euch braucht, um sich geliebt zu fühlen."
+      },
+      "venusMars": {
+        "titre": "Venus und Mars",
+        "fait": "Die Venus von {{a}} steht {{va}}, der Mars von {{b}} {{mb}}.",
+        "suite": "Was euch am anderen anzieht, und wie ihr streitet."
+      },
+      "liens": {
+        "titre": "Eure schönste Verbindung",
+        "fait": "{{lien}}.",
+        "faitSans": "Euer Verständnis entsteht eher Tag für Tag, als dass es vom Himmel fällt.",
+        "suite": "Was euch beflügelt, was hakt, und was ihr damit macht."
+      },
+      "chinois": {
+        "titre": "Eure chinesischen Tierzeichen",
+        "fait": "{{a}}: {{ca}}. {{b}}: {{cb}}.",
+        "suite": "Was die chinesische Astrologie über eure Beziehung sagt."
+      },
+      "annee": {
+        "titre": "Eure nächsten 12 Monate",
+        "fait": "Euer bester Monat: {{m1}}. Der Monat, in dem ihr reden solltet: {{m2}}.",
+        "suite": "Warum genau diese Monate, und was die anderen für euch bereithalten."
+      }
+    },
+    "lienDe": "{{x}} von {{p}}",
+    "lienEt": "{{x}} und {{y}}",
+    "en": "in {{s}}",
+    "enOu": "{{s1}} oder {{s2}}",
+    "animalDe": "{{element}}-{{animal}}",
+    "moisNoms": [
+      "Januar",
+      "Februar",
+      "März",
+      "April",
+      "Mai",
+      "Juni",
+      "Juli",
+      "August",
+      "September",
+      "Oktober",
+      "November",
+      "Dezember"
+    ]
+  },
+  "prix": {
+    "titre": "Euer vollständiger Bericht",
+    "pourDeux": "eine einzige Zahlung, für euch als Paar",
+    "liste": [
+      "{{chapitres}} Kapitel über eure Beziehung",
+      "Eure zehn Himmelskörper, einer nach dem anderen gelesen",
+      "Eure sechs Bereiche mit Werten von 0 bis 100",
+      "Eure nächsten 12 Monate, Monat für Monat",
+      "Eure chinesischen Tierzeichen und eure Lebenszahlen",
+      "Der Bericht online, und sein Link per E-Mail"
+    ],
+    "majeur": "Ich bin 18 Jahre oder älter.",
+    "renonciation": "Ich möchte meinen Bericht sofort erhalten und verzichte auf mein 14-tägiges Widerrufsrecht, das endet, sobald der Bericht erscheint.",
+    "bouton": "Unseren Bericht freischalten",
+    "securise": "Sichere Zahlung über Stripe",
+    "note": "Ein Astrologie-Bericht, als Spiel zu zweit zu lesen: Er sagt nichts voraus.",
+    "erreurCases": "Kreuze beide Kästchen an, um fortzufahren.",
+    "erreurServeur": "Die Zahlung lässt sich gerade nicht öffnen. Versuch es in einem Moment noch einmal.",
+    "region": "Preis für Lateinamerika",
+    "cgv": "Allgemeine Geschäftsbedingungen",
+    "grand": "Schaltet euer Partnerhoroskop frei",
+    "chacun": "also {{moitie}} pro Person"
+  },
+  "faq": {
+    "titre": "Häufige Fragen",
+    "items": [
+      {
+        "q": "Was ist ein Partnerhoroskop?",
+        "r": "Ein Geburtshoroskop ist die Karte des Himmels im Moment einer Geburt: wo die Sonne, der Mond und die Planeten standen, von der Erde aus gesehen. Ein Partnerhoroskop vergleicht zwei dieser Karten. In der Astrologie nennt man das Synastrie."
+      },
+      {
+        "q": "Muss man die Geburtszeit kennen?",
+        "r": "Nein. Ohne Uhrzeit berechnen wir alles für 12 Uhr mittags. Für Sonne, Merkur, Venus und Mars ändert das nichts, außer an den seltenen Tagen, an denen einer von ihnen das Zeichen wechselt. Der Mond dagegen wechselt alle zweieinhalb Tage das Zeichen: Wenn er es am Tag eurer Geburt gewechselt hat, gibt euch der Bericht beide Möglichkeiten."
+      },
+      {
+        "q": "Wie bekomme ich den Bericht?",
+        "r": "Er erscheint direkt nach der Zahlung auf dieser Seite. Wir schicken dir seinen Link auch per E-Mail, damit du ihn jederzeit wiederfindest."
+      },
+      {
+        "q": "Kann man ihn verschenken?",
+        "r": "Ja! Es reicht, eure beiden Geburtsdaten zu kennen. Der Link zum Bericht lässt sich teilen und öffnet sich auf jedem Handy."
+      },
+      {
+        "q": "Ist Astrologie wissenschaftlich?",
+        "r": "Nein. Keine Studie hat gezeigt, dass die Sterne entscheiden, ob eine Beziehung funktioniert. Der Bericht ist als Spiel zu zweit gedacht: Er gibt euch Gesprächsstoff über euch, eure Wünsche und eure Unterschiede."
+      },
+      {
+        "q": "Was passiert mit unseren Daten?",
+        "r": "Eure Vornamen und eure Geburtsdaten dienen nur dazu, euren Bericht zu berechnen. Wir bewahren sie sechs Monate nach der Zahlung auf, danach wird alles gelöscht."
+      }
+    ]
+  },
+  "credits": "Sterne: Kataloge Yale Bright Star und Hipparcos, über d3-celestial (Olaf Frohn). Planetenpositionen: Astronomy Engine (Don Cross).",
+  "rapport": {
+    "chargement": "Euer Himmel wird vorbereitet …",
+    "attente": "Zahlung bestätigt! Euer Bericht ist gleich da …",
+    "erreur": "Dieser Bericht lässt sich nicht öffnen. Prüf den Link in deiner E-Mail oder schreib uns über die Kontaktseite.",
+    "kicker": "Partnerhoroskop",
+    "titre": "{{a}} & {{b}}",
+    "nee": "{{p}}, geboren am {{date}}",
+    "neeHeure": "{{p}}, geboren am {{date}} um {{heure}} Uhr",
+    "etabli": "Erstellt am {{date}}",
+    "defiler": "Euer Himmel beginnt hier",
+    "sommaire": "Inhalt",
+    "partie": "Teil {{n}}",
+    "chapitre": "Kapitel {{n}}",
+    "sections": {
+      "carte": "Eure Himmelskarte",
+      "profil": "Euer Paarprofil",
+      "domaines": "Eure sechs Bereiche",
+      "atouts": "Eure Stärken und eure Herausforderungen",
+      "elements": "Eure Elemente",
+      "chinois": "Eure chinesischen Tierzeichen",
+      "vie": "Eure Lebenszahlen",
+      "annee": "Eure nächsten 12 Monate",
+      "questions": "Die Fragen, die ihr euch stellen könnt",
+      "fin": "Zum Schluss"
+    },
+    "intros": {
+      "carte": "Hier ist der Himmel im Moment eurer Geburt, in einem einzigen Rad vereint. Die Planeten von {{a}} sind rosa auf dem äußeren Ring, die von {{b}} violett im Inneren. In der Mitte verbinden Linien die Planeten, die miteinander sprechen: golden, wenn sie sich verstehen, gepunktet, wenn sie sich reiben.",
+      "profil": "In der Astrologie zählen in einer Beziehung zwei Dinge: die Sanftheit, alles, was zwischen euren Horoskopen leicht zusammenpasst, und der Funke, alles, was anzieht und bewegt. Eure Beziehung liegt irgendwo dazwischen.",
+      "domaines": "Sechs große Bereiche des Lebens zu zweit, bewertet von 0 bis 100 nach den Verbindungen zwischen euren Planeten. Ein niedriger Wert heißt nicht, dass es schlecht läuft: Dort verstehen sich eure Horoskope nur von allein am wenigsten.",
+      "atouts": "Die auffälligsten Verbindungen zwischen euren beiden Horoskopen: die, die euch tragen, und die, die ein bisschen Aufmerksamkeit brauchen.",
+      "elements": "Jedes Zeichen gehört zu einem Element: Feuer, Erde, Luft oder Wasser. Hier seht ihr, wo eure zehn Planeten liegen, fünf pro Person.",
+      "chinois": "Die chinesische Astrologie schaut nicht auf die Planeten, sondern auf das Geburtsjahr: ein Tier und ein Element, die alle sechzig Jahre wiederkehren.",
+      "vie": "In der Numerologie ist die Lebenszahl die Quersumme des Geburtsdatums, reduziert auf eine einzige Ziffer. Die 11, die 22 und die 33 bleiben, wie sie sind.",
+      "annee": "Die zwölf kommenden Monate, nach dem Lauf von Venus, Mars und Jupiter, und die Zeiten, in denen Merkur, Venus und Mars am Himmel rückläufig sind.",
+      "questions": "Sucht euch heute Abend eine aus und stellt sie dem anderen. Die besten Gespräche fangen oft so an."
+    },
+    "planetes": {
+      "soleil": "Sonne",
+      "lune": "Mond",
+      "mercure": "Merkur",
+      "venus": "Venus",
+      "mars": "Mars",
+      "jupiter": "Jupiter"
+    },
+    "aspects": {
+      "conjonction": "Konjunktion",
+      "sextile": "Sextil",
+      "carre": "Quadrat",
+      "trigone": "Trigon",
+      "opposition": "Opposition"
+    },
+    "relations": {
+      "meme": "Gleiches Element",
+      "allie": "Verbündete Elemente",
+      "contraste": "Gegensätzliche Elemente"
+    },
+    "angle": "{{n}}° Abstand",
+    "placements": {
+      "titre": "Eure Planeten",
+      "planete": "Planet",
+      "degre": "{{d}}° {{signe}}",
+      "ou": "oder {{signe}}",
+      "doute": "Ohne Geburtszeit kann ein Planet, der an diesem Tag das Zeichen wechselt, im einen oder im anderen stehen. Der Bericht gibt euch beide."
+    },
+    "legende": {
+      "doux": "Die Planeten verstehen sich",
+      "tendu": "Die Planeten reiben sich"
+    },
+    "axes": {
+      "douceur": "Sanftheit",
+      "etincelle": "Funke"
+    },
+    "niveaux": {
+      "haut": "Stärke",
+      "moyen": "Pflegen",
+      "bas": "Daran arbeiten"
+    },
+    "atoutsTitre": "Was euch beflügelt",
+    "defisTitre": "Was Aufmerksamkeit braucht",
+    "aucunAtout": "Zwischen euren Horoskopen gibt es keine sehr sanfte Verbindung: Euer Verständnis entsteht eher Tag für Tag, als dass es vom Himmel fällt.",
+    "aucunDefi": "Keine wirklich gespannte Verbindung zwischen euren Horoskopen. Eure Herausforderungen werden die aller Paare sein!",
+    "dominant": "Dominant",
+    "absent": "Fehlt",
+    "planetesDe": "Die Planeten von {{p}}",
+    "chinois": {
+      "annee": "{{element}}-{{animal}}, {{an}}",
+      "animaux": {
+        "rat": "Ratte",
+        "buffle": "Büffel",
+        "tigre": "Tiger",
+        "lapin": "Hase",
+        "dragon": "Drache",
+        "serpent": "Schlange",
+        "cheval": "Pferd",
+        "chevre": "Ziege",
+        "singe": "Affe",
+        "coq": "Hahn",
+        "chien": "Hund",
+        "cochon": "Schwein"
+      },
+      "elements": {
+        "bois": "Holz",
+        "feu": "Feuer",
+        "terre": "Erde",
+        "metal": "Metall",
+        "eau": "Wasser"
+      },
+      "portrait": "{{p}} · {{element}}-{{animal}}"
+    },
+    "vie": {
+      "chemin": "Lebenszahl",
+      "accord": "Übereinstimmung eurer Lebenszahlen: {{n}} von 10"
+    },
+    "annee": {
+      "meilleur": "Euer bester Monat",
+      "prudence": "Der Monat zum Aufpassen",
+      "venus": "Venus {{en}}",
+      "mars": "Mars {{en}}",
+      "jupiter": "Jupiter {{en}}",
+      "frise": "Euer Jahr auf einen Blick",
+      "tons": {
+        "tendre": "Zärtlich",
+        "passion": "Feurig",
+        "elan": "Rückenwind",
+        "malentendus": "Missverständnisse",
+        "turbulences": "Bewegt",
+        "calme": "Ruhig"
+      }
+    },
+    "fin": {
+      "imprimer": "Drucken oder als PDF speichern",
+      "copier": "Link zum Bericht kopieren",
+      "copie": "Link kopiert!",
+      "supprimer": "Diesen Bericht löschen",
+      "confirmer": "Zum Löschen noch einmal tippen",
+      "supprime": "Euer Bericht und eure Daten wurden gelöscht.",
+      "garde": "Dieser Bericht bleibt sechs Monate online. Sein Link steht in der E-Mail, die ihr nach der Zahlung bekommen habt."
+    },
+    "rappel": "Laut Astrologie und als Spiel gedacht: Dieser Bericht sagt nichts voraus.",
+    "credits": "Planetenpositionen berechnet mit astronomy-engine (Don Cross, MIT-Lizenz). Sternbilder gezeichnet nach d3-celestial (Olaf Frohn, BSD-Lizenz).",
+    "haut": "Nach oben"
+  }
+}
