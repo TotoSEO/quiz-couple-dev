@@ -91,14 +91,14 @@
   },
   "theme": {
     "kicker": "Nouveau · Thème astral",
-    "titre": "{{a}} et {{b}}, il n'y a pas que vos signes",
-    "texte": "Le jour de vos naissances, la Lune, Vénus, Mars et Mercure étaient aussi quelque part dans le ciel. En astrologie, c'est là qu'on lit comment chacun aime, ce qui vous attire et comment vous vous disputez.",
+    "titre": "Ce score ne regarde que vos signes",
+    "texte": "Votre signe, c'est seulement la place du Soleil. Le jour de vos naissances, la Lune, Vénus et Mars étaient aussi dans le ciel. C'est là que l'astrologie lit l'amour, le désir et les disputes.",
     "puces": [
-      "Votre carte du ciel à deux",
-      "Vos dix planètes, une par une",
+      "Votre ciel à deux, animé",
+      "Vos Lunes, Vénus et Mars",
       "Vos 12 prochains mois"
     ],
-    "bouton": "Voir notre ciel à deux",
-    "note": "Aperçu gratuit avec vos deux dates de naissance"
+    "bouton": "Voir notre thème astral",
+    "note": "Aperçu gratuit avec vos dates de naissance"
   }
 }

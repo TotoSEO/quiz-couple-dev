@@ -16,6 +16,12 @@
   const esc = (s) => String(s == null ? '' : s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
   const PRIX = 490;
   const prixTexte = (c) => (c / 100).toFixed(2).replace('.', lang === 'en' ? '.' : ',') + (lang === 'en' ? '' : ' ') + '€';
+  // Le nombre de parties du rapport (son sommaire, js/astro-rapport.js : la
+  // carte, le profil, les domaines, les atouts, les éléments, cinq astres et
+  // leurs liens, les signes chinois, les chemins de vie, l'année, les questions).
+  const CHAPITRES = 15;
+  const remplir = (s, v) => String(s || '').replace(/\{\{(\w+)\}\}/g, (m, k) => (v[k] !== undefined ? v[k] : m));
+  const VALEURS = { prix: prixTexte(PRIX), chapitres: CHAPITRES, moitie: prixTexte(PRIX / 2) };
   const astroConfig = {
     lang,
     fonction: supabaseUrl + '/functions/v1/astro',
@@ -24,6 +30,7 @@
     prixRegions: { latam: 199 },
     v: 'EMPREINTE_RESSOURCES',
     textes: T,
+    chapitres: CHAPITRES,
     chemins: {
       cgv: getLocalizedPath('cgv', lang),
       test: getLocalizedPath('testAstroPrenoms', lang),
@@ -66,12 +73,14 @@
           <p class="as-grand"><%= P('scene.planetes.titre', '') %></p>
           <p class="as-texte"><%= P('scene.planetes.texte', '') %></p>
         </div>
-        <div class="as-etape as-etape--final" data-de="0.885" data-a="1.2">
+        <div class="as-etape as-etape--final" data-de="0.875" data-a="1.2">
+          <p class="as-kicker"><%= P('scene.final.kicker', '') %></p>
           <p class="as-grand"><%= P('scene.final.titre', '') %></p>
-          <p class="as-texte"><%= P('scene.final.texte', '') %></p>
+          <p class="as-texte"><%= remplir(P('scene.final.texte', ''), VALEURS) %></p>
           <a class="as-bouton as-bouton--final" href="#as-dates" data-vers="as-dates"><%= P('scene.final.bouton', '') %>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-          <p class="as-sous" data-texte="final-sous"><%= P('scene.final.sous', '').replace('{{prix}}', prixTexte(PRIX)) %></p>
+          <p class="as-sous" data-texte="final-sous"><%= remplir(P('scene.final.sous', ''), VALEURS) %></p>
+          <a class="as-lien-scene" href="#as-contenu" data-vers="as-contenu"><%= P('scene.final.lien', '') %> <span aria-hidden="true">↓</span></a>
         </div>
       </div>
       <a class="as-passer" href="#as-contenu" data-vers="as-contenu"><%= P('scene.passer', '') %></a>
@@ -82,17 +91,39 @@
   <section class="as-section as-contenu" id="as-contenu">
     <p class="as-kicker"><%= P('contenu.kicker', '') %></p>
     <h2 class="as-h2"><%= P('contenu.titre', '') %></h2>
+    <% P('contenu.intro', []).forEach(function (t) { %><p class="as-intro"><%= t %></p><% }) %>
+    <h3 class="as-h3"><%= P('contenu.astresTitre', '') %></h3>
+    <ul class="as-astres">
+      <% P('contenu.astres', []).forEach(function (x) { %>
+      <li class="as-astre"><span class="as-astre-glyphe" aria-hidden="true"><%= x.g %>&#xFE0E;</span><span><b><%= x.n %></b> <%= x.d %></span></li>
+      <% }) %>
+    </ul>
+    <h3 class="as-h3"><%= P('contenu.apercuTitre', '') %></h3>
+    <div class="as-apercus">
+      <% P('contenu.apercus', []).forEach(function (x) { %>
+      <figure class="as-apercu as-apercu--<%= x.id %>">
+        <img src="/astro/apercu-<%= x.id %>-<%= lang %>.webp" srcset="/astro/apercu-<%= x.id %>-<%= lang %>-360.webp 360w, /astro/apercu-<%= x.id %>-<%= lang %>.webp 720w" sizes="(min-width: 900px) 18rem, 72vw" width="720" height="1170" alt="<%= x.alt %>" loading="lazy" decoding="async" draggable="false">
+      </figure>
+      <% }) %>
+    </div>
+    <p class="as-apercu-legende"><%= P('contenu.apercuLegende', '') %></p>
+    <h3 class="as-h3"><%= P('contenu.chapitresTitre', '') %></h3>
     <ol class="as-chapitres">
       <% chapitres.forEach(function (c, i) { %>
       <li class="as-chapitre">
         <span class="as-chapitre-num"><%= String(i + 1).padStart(2, '0') %></span>
         <div>
-          <h3 class="as-chapitre-titre"><%= c.t %></h3>
+          <h4 class="as-chapitre-titre"><%= c.t %></h4>
           <p class="as-chapitre-texte"><%= c.d %></p>
         </div>
       </li>
       <% }) %>
     </ol>
+    <div class="as-appel">
+      <a class="as-bouton" href="#as-dates" data-vers="as-dates"><%= P('contenu.bouton', '') %>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <p class="as-sous"><%= remplir(P('contenu.sous', ''), VALEURS) %></p>
+    </div>
   </section>
 
   <section class="as-section as-dates" id="as-dates">
@@ -104,27 +135,29 @@
         <% ['a', 'b'].forEach(function (qui) { %>
         <fieldset class="as-personne est-<%= qui %>">
           <legend class="as-lecteur"><%= qui === 'a' ? P('dates.prenomA', '') : P('dates.prenomB', '') %></legend>
-          <div class="as-ligne">
-            <label class="as-champ as-champ--prenom">
-              <span class="as-etiquette-champ"><%= qui === 'a' ? P('dates.prenomA', '') : P('dates.prenomB', '') %></span>
-              <input type="text" name="prenom-<%= qui %>" maxlength="30" autocomplete="<%= qui === 'a' ? 'given-name' : 'off' %>" required>
-            </label>
-            <div class="as-genre" role="radiogroup" aria-label="<%= P('dates.erreurs.genre', '') %>">
+          <label class="as-champ as-champ--prenom">
+            <span class="as-etiquette-champ"><%= qui === 'a' ? P('dates.prenomA', '') : P('dates.prenomB', '') %></span>
+            <%# Pas de type="text" : la minification le retire (valeur par défaut), le style passe par .as-champ input. %>
+            <input class="as-saisie" name="prenom-<%= qui %>" maxlength="30" autocomplete="<%= qui === 'a' ? 'given-name' : 'off' %>" placeholder="<%= qui === 'a' ? P('dates.exempleA', '') : P('dates.exempleB', '') %>" required>
+          </label>
+          <div class="as-genre-bloc">
+            <span class="as-etiquette-champ" id="as-genre-<%= qui %>"><%= qui === 'a' ? P('dates.genreA', '') : P('dates.genreB', '') %></span>
+            <div class="as-genre" role="group" aria-labelledby="as-genre-<%= qui %>">
               <button type="button" class="as-genre-btn" data-genre="f" aria-pressed="false"><%= P('dates.elle', '') %></button>
               <button type="button" class="as-genre-btn" data-genre="m" aria-pressed="false"><%= P('dates.il', '') %></button>
             </div>
           </div>
           <div class="as-date">
-            <label class="as-champ"><span class="as-etiquette-champ"><%= P('dates.jour', '') %></span>
-              <select name="jour-<%= qui %>" required><option value=""><%= P('dates.jour', '') %></option><% for (let j = 1; j <= 31; j++) { %><option value="<%= j %>"><%= j %></option><% } %></select></label>
+            <label class="as-champ as-champ--jour"><span class="as-etiquette-champ"><%= P('dates.jour', '') %></span>
+              <select name="jour-<%= qui %>" required><option value=""><%= P('dates.jourVide', '') %></option><% for (let j = 1; j <= 31; j++) { %><option value="<%= j %>"><%= j %></option><% } %></select></label>
             <label class="as-champ as-champ--mois"><span class="as-etiquette-champ"><%= P('dates.mois', '') %></span>
               <select name="mois-<%= qui %>" required><option value=""><%= P('dates.mois', '') %></option><% P('dates.moisNoms', []).forEach(function (m, i) { %><option value="<%= i + 1 %>"><%= m %></option><% }) %></select></label>
-            <label class="as-champ"><span class="as-etiquette-champ"><%= P('dates.annee', '') %></span>
-              <select name="annee-<%= qui %>" required><option value=""><%= P('dates.annee', '') %></option><% for (let a = 2012; a >= 1930; a--) { %><option value="<%= a %>"><%= a %></option><% } %></select></label>
+            <label class="as-champ as-champ--annee"><span class="as-etiquette-champ"><%= P('dates.annee', '') %></span>
+              <select name="annee-<%= qui %>" required><option value=""><%= P('dates.anneeVide', '') %></option><% for (let a = 2012; a >= 1930; a--) { %><option value="<%= a %>"><%= a %></option><% } %></select></label>
           </div>
           <label class="as-champ as-champ--heure">
             <span class="as-etiquette-champ"><%= P('dates.heure', '') %> <em><%= P('dates.heureAide', '') %></em></span>
-            <input type="time" name="heure-<%= qui %>" step="60">
+            <input class="as-saisie" type="time" name="heure-<%= qui %>" step="60">
           </label>
           <p class="as-erreur" data-erreur="<%= qui %>" hidden></p>
         </fieldset>
@@ -137,22 +170,31 @@
   <section class="as-section as-ciel" id="as-ciel" hidden>
     <p class="as-kicker"><%= P('ciel.kicker', '') %></p>
     <h2 class="as-h2"><%= P('ciel.titre', '') %></h2>
-    <p class="as-intro"><%= P('ciel.texte', '') %></p>
+    <p class="as-intro" id="as-ciel-texte"></p>
     <div class="as-roue" id="as-roue"></div>
+    <h3 class="as-h3"><%= P('ciel.placementsTitre', '') %></h3>
     <div class="as-placements" id="as-placements"></div>
+    <h3 class="as-h3"><%= P('ciel.profilTitre', '') %></h3>
+    <p class="as-intro"><%= P('ciel.profilTexte', '') %></p>
     <div class="as-profil" id="as-profil"></div>
-    <div class="as-verrou" id="as-verrou"></div>
+    <div class="as-suite">
+      <p class="as-kicker"><%= P('ciel.suiteKicker', '') %></p>
+      <h3 class="as-h2 as-h2--petit"><%= P('ciel.suiteTitre', '') %></h3>
+      <p class="as-intro"><%= P('ciel.suiteTexte', '') %></p>
+      <ul class="as-teasers" id="as-teasers"></ul>
+    </div>
     <button type="button" class="as-lien" id="as-modifier"><%= P('ciel.modifier', '') %></button>
   </section>
 
   <section class="as-section as-prix" id="as-prix" hidden>
     <div class="as-prix-carte">
       <p class="as-kicker"><%= P('prix.titre', '') %></p>
+      <h2 class="as-prix-grand"><%= P('prix.grand', '') %></h2>
       <p class="as-prix-montant" id="as-prix-montant"><%= prixTexte(PRIX) %></p>
-      <p class="as-prix-pour"><%= P('prix.pourDeux', '') %></p>
+      <p class="as-prix-pour"><%= P('prix.pourDeux', '') %><br><span id="as-prix-chacun"><%= remplir(P('prix.chacun', ''), VALEURS) %></span></p>
       <p class="as-prix-region" id="as-prix-region" hidden><%= P('prix.region', '') %></p>
       <ul class="as-prix-liste">
-        <% P('prix.liste', []).forEach(function (l) { %><li><%= l %></li><% }) %>
+        <% P('prix.liste', []).forEach(function (l) { %><li><%= remplir(l, VALEURS) %></li><% }) %>
       </ul>
       <label class="as-case"><input type="checkbox" id="as-majeur"><span><%= P('prix.majeur', '') %></span></label>
       <label class="as-case"><input type="checkbox" id="as-renonciation"><span><%= P('prix.renonciation', '') %></span></label>
@@ -174,8 +216,10 @@
   <div class="as-rapport" id="as-rapport" hidden></div>
 </div>
 <script>window.QC_ASTRO = <%- JSON.stringify(astroConfig).replace(/</g, '\\u003c') %>;</script>
-<script src="/js/vendor/astronomy.js" defer></script>
-<script src="/js/astro-ciel.js" defer></script>
+<%# La scène d'abord : astro.js n'attend pas astronomy.js (47 Ko compressés),
+    qui ne sert qu'au calcul du ciel, une fois les dates données. %>
 <script src="/js/astro-scene.js" defer></script>
 <script src="/js/astro-roue.js" defer></script>
 <script src="/js/astro.js" defer></script>
+<script src="/js/vendor/astronomy.js" defer></script>
+<script src="/js/astro-ciel.js" defer></script>

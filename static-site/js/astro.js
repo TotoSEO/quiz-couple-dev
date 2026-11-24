@@ -29,7 +29,10 @@
     return { id: h.get('r') || q.get('r'), jeton: h.get('t'), paiement: q.get('paiement'), annule: q.get('annule') };
   })();
   var modeRapport = !!(arrivee.id && (arrivee.jeton || arrivee.paiement));
-  if (modeRapport) page.classList.add('as-mode-rapport');
+  // L'en-tête est posé sur le haut de la scène (themeAstral.css) ; sans scène
+  // (rapport, version fixe), il reprend sa place dans la page.
+  function enFlux() { document.body.classList.add('as-en-flux'); }
+  if (modeRapport) { page.classList.add('as-mode-rapport'); enFlux(); }
 
   var SIGNES = ['belier', 'taureau', 'gemeaux', 'cancer', 'lion', 'vierge', 'balance', 'scorpion', 'sagittaire', 'capricorne', 'verseau', 'poissons'];
   var GLYPHES = ['♈', '♉', '♊', '♋', '♌', '♍', '♎', '♏', '♐', '♑', '♒', '♓'];
@@ -112,27 +115,47 @@
   var barre = page.querySelector('.as-progression span');
   var reduit = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var largeur = function () { return window.innerWidth >= 900; };
+  // Chaque étape apparaît puis s'efface selon p. Les styles ne sont écrits
+  // que s'ils changent : la plupart des étapes restent cachées d'une image à
+  // l'autre, et rien ne bouge quand on ne défile pas.
+  var mesures = etapes.map(function (el) {
+    return {
+      el: el, de: parseFloat(el.getAttribute('data-de')), a: parseFloat(el.getAttribute('data-a')),
+      intro: el.classList.contains('as-etape--intro'), fin: el.classList.contains('as-etape--final'), o: '', t: '', v: null
+    };
+  });
+  var dernierP = '';
+  // Version fixe (sans WebGL, mouvement réduit) : toutes les étapes à la
+  // suite, sans style posé par le défilement.
+  function fixe() { return page.classList.contains('as-statique') || page.classList.contains('as-sans-gl'); }
+  function libererEtapes() {
+    mesures.forEach(function (m) { m.el.style.opacity = ''; m.el.style.transform = ''; m.o = ''; m.t = ''; m.el.classList.add('est-visible'); m.v = true; });
+  }
   function legendes(p) {
+    if (fixe()) return;
     var grand = largeur();
-    etapes.forEach(function (el) {
-      var de = parseFloat(el.getAttribute('data-de')), a = parseFloat(el.getAttribute('data-a'));
-      var entree = Math.min(1, Math.max(0, (p - de) / 0.035));
-      var sortie = Math.min(1, Math.max(0, (a - p) / 0.035));
-      if (de <= 0) entree = 1;
+    mesures.forEach(function (m) {
+      var entree = Math.min(1, Math.max(0, (p - m.de) / 0.035));
+      var sortie = Math.min(1, Math.max(0, (m.a - p) / 0.035));
+      if (m.de <= 0) entree = 1;
       var o = Math.min(entree, sortie);
       var dy = (1 - entree) * 18 - (1 - sortie) * 14;
-      el.style.opacity = o.toFixed(3);
-      var centre = el.classList.contains('as-etape--intro') || el.classList.contains('as-etape--final');
-      var base = grand ? (centre ? (el.classList.contains('as-etape--final') ? 'translate3d(-50%,0,0)' : 'translate3d(-50%,-50%,0)') : 'translate3d(0,-50%,0)')
-        : (el.classList.contains('as-etape--intro') ? 'translate3d(0,-50%,0)' : '');
-      el.style.transform = base + ' translate3d(0,' + dy.toFixed(1) + 'px,0)';
-      el.classList.toggle('est-visible', o > 0.5);
+      var base = grand ? (m.intro ? 'translate3d(-50%,-50%,0)' : m.fin ? 'translate3d(-50%,0,0)' : 'translate3d(0,-50%,0)')
+        : (m.intro ? 'translate3d(0,-50%,0)' : '');
+      var os = o.toFixed(3), ts = base + ' translate3d(0,' + dy.toFixed(1) + 'px,0)', v = o > 0.5;
+      if (os !== m.o) { m.o = os; m.el.style.opacity = os; }
+      if (o > 0 && ts !== m.t) { m.t = ts; m.el.style.transform = ts; }
+      if (v !== m.v) { m.v = v; m.el.classList.toggle('est-visible', v); }
     });
-    if (barre) barre.parentNode.style.setProperty('--p', p.toFixed(4));
+    // La barre de progression grandit par transform (scaleY) : une hauteur
+    // changée à chaque image refaisait la mise en page de la page entière.
+    var ps = p.toFixed(3);
+    if (barre && ps !== dernierP) { dernierP = ps; barre.style.transform = 'scaleY(' + ps + ')'; }
   }
 
   function monterScene(donnees) {
-    if (!window.QCAstroScene || !section) return;
+    if (!window.QCAstroScene || !section || page.classList.contains('as-sans-gl')) return;
+    window.removeEventListener('scroll', avantLaScene);
     var html = function (qui) {
       var i = SIGNES.indexOf(couple[qui].signe);
       return esc(nomDe(qui)) + ' <small>' + GLYPHES[i] + '︎ ' + esc(lireT('signes.' + couple[qui].signe + '.nom', '')) + '</small>';
@@ -143,11 +166,50 @@
       b: { signe: couple.b.signe, signeIndex: SIGNES.indexOf(couple.b.signe), html: html('b') },
       surProgression: legendes
     });
-    if (!scene) page.classList.add('as-sans-gl');
+    if (!scene) { page.classList.remove('as-sans-gl'); section.classList.remove('as-sans-gl'); replier(); }
   }
-  if (reduit) page.classList.add('as-statique');
+  if (reduit) { page.classList.add('as-statique'); enFlux(); libererEtapes(); }
+
+  // WebGL est-il là ? On demande le contexte tout de suite, sur la toile de
+  // la scène et avec les attributs qu'elle utilisera (on obtient donc le même
+  // objet) : sans lui, la version fixe se pose avant qu'on défile, au lieu de
+  // replier la section sous les yeux une fois les constellations arrivées.
+  var stage = section && section.querySelector('.as-stage');
+  var toile = section && section.querySelector('.as-canvas');
+  if (!modeRapport && !reduit && toile) {
+    var gl0 = null;
+    try { gl0 = toile.getContext('webgl', (window.QCAstroScene && window.QCAstroScene.attributs) || undefined); } catch (x) { gl0 = null; }
+    if (!gl0) { page.classList.add('as-sans-gl'); enFlux(); libererEtapes(); }
+  }
+
+  // Avant que la scène soit montée (le temps de recevoir les constellations),
+  // les textes suivent déjà le défilement : on ne voit pas tout sauter d'un
+  // coup quand le ciel arrive.
+  function avantLaScene() {
+    if (!section || !stage || reduit || page.classList.contains('as-sans-gl')) return;
+    legendes(window.QCAstroScene ? window.QCAstroScene.progressionDe(section, stage.clientHeight) : 0);
+  }
   legendes(0);
-  if (!modeRapport) fetch('/astro/constellations.json').then(function (r) { return r.json(); }).then(monterScene).catch(function () { page.classList.add('as-sans-gl'); });
+  function demarrerScene() {
+    window.addEventListener('scroll', avantLaScene, { passive: true });
+    avantLaScene();
+    fetch('/astro/constellations.json').then(function (r) { return r.json(); }).then(monterScene).catch(function () {
+      // Sans les constellations, la version fixe ; posée tout de suite si
+      // l'on n'a pas encore défilé, sinon en gardant à l'écran ce qu'on lisait.
+      window.removeEventListener('scroll', avantLaScene);
+      replier();
+    });
+  }
+  if (!modeRapport) demarrerScene();
+  function replier() {
+    if (page.classList.contains('as-sans-gl')) return;
+    var suite = document.getElementById('as-contenu');
+    var avant = suite ? suite.getBoundingClientRect().top : 0;
+    page.classList.add('as-sans-gl');
+    enFlux();
+    libererEtapes();
+    if (suite && window.scrollY > 0) window.scrollBy(0, suite.getBoundingClientRect().top - avant);
+  }
 
   // Les liens internes de la page glissent jusqu'à leur section.
   page.addEventListener('click', function (e) {
@@ -246,40 +308,135 @@
 
   function afficherCiel() {
     var sCiel = document.getElementById('as-ciel'), sPrix = document.getElementById('as-prix');
+    var noms = { a: personnes[0].prenom, b: personnes[1].prenom };
+    document.getElementById('as-ciel-texte').textContent = tpl(lireT('ciel.texte', ''), noms);
     var roue = document.getElementById('as-roue');
     roue.innerHTML = window.QCAstroRoue ? window.QCAstroRoue.svg(ciel, { lecteur: lireT('ciel.titre', '') }) : '';
     var pl = document.getElementById('as-placements');
     pl.innerHTML = ['a', 'b'].map(function (qui, k) {
       var th = ciel.themes[k], p = personnes[k];
-      return '<div class="as-placement est-' + qui + '"><h3>' + esc(p.prenom) + '</h3><ul>' + PLANETES.map(function (n) {
+      return '<div class="as-placement est-' + qui + '"><h4>' + esc(p.prenom) + '</h4><ul>' + PLANETES.map(function (n) {
         var x = th.planetes[n];
         var doute = x.doute && x.doute.length > 1;
         var signe = doute ? tpl(lireT('ciel.doute', ''), { x: nomSigne(x.doute[0]), y: nomSigne(x.doute[1]) }) : nomSigne(x.signe);
         return '<li' + (doute ? ' class="est-doute"' : '') + '><b>' + GLYPHES_P[n] + '︎</b>' + esc(lireT('ciel.planetes.' + n, n)) + ' <span>' + esc(signe) + '</span></li>';
       }).join('') + '</ul></div>';
     }).join('');
-    var A = lireT('ciel.archetypes.' + ciel.profil.archetype, {});
+
+    // Le profil : le sien en grand, et les quatre possibles, le sien allumé.
+    var arch = ciel.profil.archetype;
+    var A = lireT('ciel.archetypes.' + arch, {});
+    var quatre = ['flamme', 'havre', 'aimants', 'explorateurs'].map(function (k) {
+      return '<li' + (k === arch ? ' class="est-le-votre" aria-current="true"' : '') + '>' + esc(lireT('ciel.archetypes.' + k + '.nom', k)) + '</li>';
+    }).join('');
     document.getElementById('as-profil').innerHTML =
+      '<ul class="as-profils">' + quatre + '</ul>' +
       '<p class="as-kicker">' + esc(lireT('ciel.profilKicker', '')) + '</p>' +
       '<p class="as-profil-nom">' + esc(A.nom || '') + '</p>' +
       '<p class="as-profil-ligne">' + esc(A.ligne || '') + '</p>' +
       '<div class="as-jauges">' +
       jauge(lireT('ciel.douceur', ''), ciel.profil.douceur, '') +
       jauge(lireT('ciel.etincelle', ''), ciel.profil.etincelle, ' as-jauge--etincelle') + '</div>';
-    var verrou = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>';
-    var chap = lireT('contenu.chapitres', []);
-    document.getElementById('as-verrou').innerHTML = [2, 3, 6].map(function (i) {
-      var c = chap[i] || {};
-      return '<div class="as-verrou-carte"><span class="as-verrou-badge">' + verrou + esc(lireT('ciel.verrou', '')) + '</span><h3>' + esc(c.t || '') + '</h3>' +
-        '<div class="as-verrou-lignes" aria-hidden="true"><p>' + esc(c.d || '') + ' ' + esc(c.d || '') + '</p><p>' + esc(c.d || '') + '</p></div></div>';
+
+    // Ce que le rapport explique : pour chaque partie, un résultat déjà
+    // calculé avec leurs dates (pas de texte flou), et ce que le rapport en dit.
+    document.getElementById('as-teasers').innerHTML = teasers(noms).map(function (t) {
+      return '<li class="as-teaser as-teaser--' + t.cle + '">' +
+        '<span class="as-teaser-icone" aria-hidden="true">' + t.icone + '</span>' +
+        '<div class="as-teaser-corps"><h4>' + esc(t.titre) + '</h4>' +
+        '<p class="as-teaser-fait">' + t.fait + '</p>' +
+        (t.extra || '') +
+        '<p class="as-teaser-suite"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>' +
+        '<span>' + esc(t.suite) + '</span></p></div></li>';
     }).join('');
+
     sCiel.hidden = false; sPrix.hidden = false;
     var montant = prixTexte(PRIX);
     document.getElementById('as-prix-montant').textContent = montant;
     document.getElementById('as-payer-prix').textContent = montant;
+    document.getElementById('as-prix-chacun').textContent = tpl(lireT('prix.chacun', ''), { moitie: prixTexte(Math.round(PRIX / 2)) });
     document.getElementById('as-prix-region').hidden = !(ZONE && PRIX !== CFG.prix);
     sCiel.scrollIntoView({ behavior: reduit ? 'auto' : 'smooth', block: 'start' });
     compter('ciel_vu');
+  }
+
+  // Les six résultats montrés avant de payer : des faits (un signe, une note,
+  // un mois), jamais l'explication, qui reste dans le rapport.
+  // Dans l'ordre de ciel.mjs (ANIMAUX, ELEMENTS_CHINOIS).
+  var ANIMAUX = ['rat', 'buffle', 'tigre', 'lapin', 'dragon', 'serpent', 'cheval', 'chevre', 'singe', 'coq', 'chien', 'cochon'];
+  var ELEMENTS_CH = ['bois', 'feu', 'terre', 'metal', 'eau'];
+  var ICONES = { domaines: '◔', lunes: '☽︎', venusMars: '♀︎', liens: '✦', chinois: '☯︎', annee: '☉︎' };
+  function enSigne(x) {
+    if (x.doute && x.doute.length > 1) return tpl(lireT('ciel.enOu', ''), { s1: nomSigne(x.doute[0]), s2: nomSigne(x.doute[1]) });
+    return tpl(lireT('ciel.en', ''), { s: nomSigne(x.signe) });
+  }
+  function nomMois(iso) {
+    var p = String(iso || '').split('-');
+    var noms = lireT('ciel.moisNoms', []);
+    return (noms[Number(p[1]) - 1] || '') + ' ' + p[0];
+  }
+  function teasers(noms) {
+    var TA = ciel.themes[0].planetes, TB = ciel.themes[1].planetes;
+    var b = function (s) { return '<b>' + esc(s) + '</b>'; };
+    var out = [];
+    // Les six domaines : le plus fort, avec sa note ; les cinq autres cachés.
+    var doms = Object.keys(ciel.domaines).map(function (k) { return { k: k, n: ciel.domaines[k] }; })
+      .sort(function (x, y) { return y.n - x.n; });
+    var fort = doms[0];
+    out.push({
+      cle: 'domaines', titre: lireT('ciel.teasers.domaines.titre', ''),
+      fait: tplHtml(lireT('ciel.teasers.domaines.fait', ''), { d: b(lireT('ciel.domaines.' + fort.k, fort.k)), n: b(String(fort.n)) }),
+      extra: '<ul class="as-domaines">' + doms.map(function (d, i) {
+        return '<li' + (i === 0 ? ' class="est-revele"' : '') + '><span>' + esc(lireT('ciel.domainesNoms.' + d.k, d.k)) + '</span><b>' + (i === 0 ? d.n : '?') + '</b></li>';
+      }).join('') + '</ul>',
+      suite: lireT('ciel.teasers.domaines.suite', '')
+    });
+    out.push({
+      cle: 'lunes', titre: lireT('ciel.teasers.lunes.titre', ''),
+      fait: tplHtml(lireT('ciel.teasers.lunes.fait', ''), { a: b(noms.a), b: b(noms.b), sa: esc(enSigne(TA.lune)), sb: esc(enSigne(TB.lune)) }),
+      suite: lireT('ciel.teasers.lunes.suite', '')
+    });
+    out.push({
+      cle: 'venusMars', titre: lireT('ciel.teasers.venusMars.titre', ''),
+      fait: tplHtml(lireT('ciel.teasers.venusMars.fait', ''), { a: b(noms.a), b: b(noms.b), va: esc(enSigne(TA.venus)), mb: esc(enSigne(TB.mars)) }),
+      suite: lireT('ciel.teasers.venusMars.suite', '')
+    });
+    var atout = ciel.atouts && ciel.atouts[0];
+    var lien = '';
+    if (atout) {
+      var pA = atout.sens === 'ba' ? noms.b : noms.a, pB = atout.sens === 'ba' ? noms.a : noms.b;
+      lien = atout.a === atout.b ? esc(majuscule(lireT('ciel.astresMeme.' + atout.a, atout.a)))
+        : tplHtml(lireT('ciel.lienEt', ''), {
+          x: tplHtml(lireT('ciel.lienDe', ''), { x: esc(majuscule(lireT('ciel.astresDe.' + atout.a, atout.a))), p: b(pA) }),
+          y: tplHtml(lireT('ciel.lienDe', ''), { x: esc(lireT('ciel.astresDe.' + atout.b, atout.b)), p: b(pB) })
+        });
+    }
+    out.push({
+      cle: 'liens', titre: lireT('ciel.teasers.liens.titre', ''),
+      fait: lien ? tplHtml(lireT('ciel.teasers.liens.fait', ''), { lien: lien }) : esc(lireT('ciel.teasers.liens.faitSans', '')),
+      suite: lireT('ciel.teasers.liens.suite', '')
+    });
+    var ch = ciel.chinois;
+    var animalDe = function (c) {
+      var el = lireT('rapport.chinois.elements.' + ELEMENTS_CH[c.element], '');
+      return lireT('rapport.chinois.animaux.' + ANIMAUX[c.animal], '') + (/^[aeiouyéèêàâîôûh]/i.test(el) ? " d'" : ' de ') + el;
+    };
+    out.push({
+      cle: 'chinois', titre: lireT('ciel.teasers.chinois.titre', ''),
+      fait: tplHtml(lireT('ciel.teasers.chinois.fait', ''), { a: b(noms.a), b: b(noms.b), ca: esc(animalDe(ch.a)), cb: esc(animalDe(ch.b)) }),
+      suite: lireT('ciel.teasers.chinois.suite', '')
+    });
+    out.push({
+      cle: 'annee', titre: lireT('ciel.teasers.annee.titre', ''),
+      fait: tplHtml(lireT('ciel.teasers.annee.fait', ''), { m1: b(nomMois(ciel.annee.meilleur)), m2: b(nomMois(ciel.annee.prudence)) }),
+      suite: lireT('ciel.teasers.annee.suite', '')
+    });
+    out.forEach(function (t) { t.icone = ICONES[t.cle] || '✦'; });
+    return out;
+  }
+  // Un modèle dont les valeurs sont déjà du HTML échappé.
+  function tplHtml(s, v) {
+    return esc(s).replace(/\{\{(\w+)\}\}/g, function (m, k) { return v[k] !== undefined ? v[k] : m; });
   }
   function jauge(nom, v, cl) {
     return '<div><div class="as-jauge-tete"><span>' + esc(nom) + '</span><b>' + v + '</b></div><div class="as-jauge' + cl + '"><span style="width:' + v + '%"></span></div></div>';
@@ -360,6 +517,7 @@
   }
   function ouvrirRapport(id, jeton, apresPaiement) {
     page.classList.add('as-mode-rapport');
+    enFlux();
     var zone = document.getElementById('as-rapport');
     zone.hidden = false;
     zone.innerHTML = '<div class="as-attente" role="status"><span class="as-attente-astre" aria-hidden="true"></span><p>' +
@@ -399,7 +557,13 @@
       var commandes = lireJSON(CLE_COMMANDES) || {};
       jeton = jeton || commandes[id];
       history.replaceState(null, '', location.pathname + (jeton ? '#r=' + id + '&t=' + jeton : ''));
-      if (!jeton) { page.classList.remove('as-mode-rapport'); return; }
+      if (!jeton) {
+        // Payé sur un autre appareil : le lien arrive par e-mail ; ici, la page.
+        page.classList.remove('as-mode-rapport');
+        if (!page.classList.contains('as-statique') && !page.classList.contains('as-sans-gl')) document.body.classList.remove('as-en-flux');
+        demarrerScene();
+        return;
+      }
       appel('verifier', { id: id, jeton: jeton, session: arrivee.paiement }).then(function () { ouvrirRapport(id, jeton, true); }, function () { ouvrirRapport(id, jeton, true); });
       return;
     }

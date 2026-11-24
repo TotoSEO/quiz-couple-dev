@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Thème astral de couple : ce que les étoiles disent de vous deux",
+    "title": "Thème astral de couple : ce que disent vos deux ciels",
     "description": "Votre thème astral de couple, calculé avec vos deux dates de naissance : vos Lunes, Vénus et Mars, les liens entre vos thèmes, vos signes chinois et vos 12 prochains mois."
   },
   "signes": {
@@ -93,7 +93,7 @@
     "intro": {
       "kicker": "Votre thème astral de couple",
       "titre": "{{a}} & {{b}}",
-      "texte": "Ce que les étoiles disent de vous deux.",
+      "texte": "Ce que les étoiles disent de votre couple.",
       "indice": "Faites défiler"
     },
     "personne": {
@@ -110,13 +110,15 @@
     },
     "planetes": {
       "titre": "Vos signes ne sont qu'un début",
-      "texte": "Le jour de votre naissance, la Lune, Vénus et Mars étaient quelque part dans le ciel. C'est là qu'on lit comment vous aimez, ce qui vous attire et comment vous vous disputez."
+      "texte": "Le jour de votre naissance, la Lune, Vénus et Mars étaient aussi quelque part dans le ciel. C'est là qu'on lit comment vous aimez, ce qui vous attire et comment vous vous disputez."
     },
     "final": {
-      "titre": "Votre constellation à deux",
-      "texte": "Tout se calcule avec vos deux dates de naissance.",
-      "bouton": "Découvrir notre thème astral",
-      "sous": "{{prix}} pour vous deux · résultat immédiat"
+      "kicker": "Votre rapport de couple",
+      "titre": "Débloquez votre thème astral de couple",
+      "texte": "Notre rapport calcule la place exacte de cinq astres le jour de vos naissances. Pas un horoscope de signe : {{chapitres}} chapitres sur votre couple.",
+      "bouton": "Calculer notre thème astral",
+      "sous": "Aperçu gratuit · rapport complet {{prix}}",
+      "lien": "Ce que contient le rapport"
     },
     "inconnu": {
       "a": "Vous",
@@ -124,48 +126,103 @@
     }
   },
   "contenu": {
-    "kicker": "Votre rapport",
-    "titre": "Ce que vous allez découvrir",
+    "kicker": "Le rapport",
+    "titre": "Ce que contient le rapport que vous pouvez obtenir",
+    "intro": [
+      "Votre signe, c'est seulement la place du Soleil le jour de votre naissance. Ce jour-là, la Lune, Mercure, Vénus et Mars étaient aussi quelque part dans le ciel. En astrologie, chacun d'eux parle d'une partie de vous.",
+      "Le rapport place ces cinq astres pour chacun de vous. Il compare ensuite vos deux ciels et vous dit ce que ça donne pour votre couple."
+    ],
+    "astresTitre": "Ce que dit chaque astre",
+    "astres": [
+      {
+        "g": "☉",
+        "n": "Le Soleil",
+        "d": "Votre caractère, ce qui vous fait avancer."
+      },
+      {
+        "g": "☽",
+        "n": "La Lune",
+        "d": "Vos émotions, et ce qui vous rassure."
+      },
+      {
+        "g": "☿",
+        "n": "Mercure",
+        "d": "Votre façon de parler et de vous disputer."
+      },
+      {
+        "g": "♀",
+        "n": "Vénus",
+        "d": "Votre façon d'aimer, et ce qui vous plaît."
+      },
+      {
+        "g": "♂",
+        "n": "Mars",
+        "d": "Votre désir, votre énergie et vos colères."
+      }
+    ],
+    "apercuTitre": "À quoi ressemble le rapport",
+    "apercuLegende": "Le rapport de Léa et Tom, un couple d'exemple. Le vôtre est calculé avec vos dates.",
+    "apercus": [
+      {
+        "id": "couverture",
+        "alt": "La couverture du rapport : le ciel de Léa et Tom, leurs deux constellations reliées par un fil d'or."
+      },
+      {
+        "id": "carte",
+        "alt": "La carte du ciel à deux : une roue des douze signes avec les astres de Léa en rose et ceux de Tom en violet."
+      },
+      {
+        "id": "mois",
+        "alt": "Les douze prochains mois du couple, mois par mois, avec le plus beau mois mis en avant."
+      }
+    ],
+    "chapitresTitre": "Au sommaire",
     "chapitres": [
       {
         "t": "Votre carte du ciel à deux",
-        "d": "Vos deux thèmes sur la même roue, et les liens entre vos planètes."
+        "d": "Vos deux ciels sur une seule roue. Des traits relient les astres qui s'entendent, et ceux qui se frottent."
       },
       {
         "t": "Votre profil de couple",
-        "d": "La Flamme, le Havre, les Aimants ou les Explorateurs : ce que dit l'équilibre de vos deux thèmes."
+        "d": "Tous ces liens résumés en deux notes sur 100 : la douceur et l'étincelle. Selon les deux, votre couple est la Flamme, le Havre, les Aimants ou les Explorateurs."
       },
       {
-        "t": "Vos Lunes",
-        "d": "Ce dont chacun a besoin pour se sentir aimé."
+        "t": "Vos six domaines",
+        "d": "La tendresse, le désir, le dialogue, la complicité, le quotidien et la durée, chacun noté sur 100."
       },
       {
-        "t": "Vénus et Mars",
-        "d": "Comment vous aimez, ce qui vous attire, et comment vous vous disputez."
+        "t": "Vos dix astres, un par un",
+        "d": "Le Soleil, la Lune, Vénus, Mars et Mercure de chacun. Ce qu'ils disent de vous, puis ce que donne leur rencontre."
       },
       {
-        "t": "Mercure",
-        "d": "Votre façon de vous parler, et de vous comprendre (ou pas)."
+        "t": "Ce qui vous porte, et ce qui coince",
+        "d": "Vos plus beaux liens, et ceux qui demandent un peu d'attention."
       },
       {
         "t": "Vos signes chinois et vos chemins de vie",
-        "d": "L'astrologie chinoise et la numérologie de vos dates de naissance."
+        "d": "L'animal de votre année de naissance, et le chiffre que donne votre date en numérologie."
       },
       {
         "t": "Vos 12 prochains mois",
-        "d": "Les mois tendres, les mois de feu, et ceux où il vaut mieux tourner sept fois sa langue dans sa bouche."
+        "d": "Vos mois les plus tendres, vos mois de feu, et ceux où il vaudra mieux se parler doucement."
+      },
+      {
+        "t": "Les questions à vous poser",
+        "d": "Choisies là où vos ciels s'entendent le moins, pour en parler ce soir."
       }
-    ]
+    ],
+    "bouton": "Calculer notre ciel gratuitement",
+    "sous": "Aperçu gratuit · rapport complet {{prix}}"
   },
   "dates": {
-    "kicker": "Étape 1 sur 2",
+    "kicker": "Étape 1 sur 2 · gratuit",
     "titre": "Il nous manque vos dates de naissance",
-    "texte": "Pour placer la Lune, Vénus et Mars, il faut le jour exact. L'heure, si vous la connaissez, rend la Lune plus précise.",
+    "texte": "Avec le jour exact, on place vos dix astres. L'heure, si vous la connaissez, rend la Lune plus précise.",
     "prenom": "Prénom",
     "prenomA": "Votre prénom",
     "prenomB": "Son prénom",
-    "elle": "Elle",
-    "il": "Il",
+    "elle": "Une femme",
+    "il": "Un homme",
     "jour": "Jour",
     "mois": "Mois",
     "annee": "Année",
@@ -185,19 +242,25 @@
     ],
     "heure": "Heure de naissance",
     "heureAide": "facultatif",
-    "bouton": "Voir notre ciel",
+    "bouton": "Calculer notre ciel",
     "erreurs": {
       "prenom": "Il manque un prénom.",
-      "genre": "Choisissez Elle ou Il.",
+      "genre": "Choisissez une femme ou un homme.",
       "date": "Cette date n'existe pas.",
       "futur": "Cette date n'est pas encore arrivée."
-    }
+    },
+    "exempleA": "Ex : Léa",
+    "exempleB": "Ex : Tom",
+    "genreA": "Vous êtes",
+    "genreB": "Votre partenaire est",
+    "jourVide": "JJ",
+    "anneeVide": "AAAA"
   },
   "ciel": {
-    "kicker": "Étape 2 sur 2",
+    "kicker": "Étape 2 sur 2 · votre aperçu gratuit",
     "titre": "Votre ciel à deux",
-    "texte": "Voici où étaient vos planètes le jour de vos naissances.",
-    "profilKicker": "Votre profil de couple",
+    "texte": "Voici le ciel le jour de vos naissances, réuni sur une seule roue. Les astres de {{a}} sont en rose, ceux de {{b}} en violet. Au centre, un trait relie deux astres qui se parlent : en or quand ils s'accordent, en corail quand ils se frottent.",
+    "profilKicker": "Votre profil",
     "archetypes": {
       "flamme": {
         "nom": "La Flamme",
@@ -218,7 +281,6 @@
     },
     "douceur": "Douceur",
     "etincelle": "Étincelle",
-    "verrou": "La suite est dans votre rapport",
     "planetes": {
       "soleil": "Soleil",
       "lune": "Lune",
@@ -227,32 +289,126 @@
       "mars": "Mars"
     },
     "doute": "{{x}} ou {{y}}, selon l'heure",
-    "modifier": "Changer les dates"
+    "modifier": "Changer les dates",
+    "placementsTitre": "Où étaient vos astres",
+    "profilTitre": "Votre profil de couple",
+    "profilTexte": "Le rapport résume tous les liens entre vos deux ciels en deux notes sur 100. La douceur, c'est ce qui s'accorde tout seul entre vous. L'étincelle, c'est ce qui vous attire et vous fait bouger. Les deux ensemble donnent l'un de ces quatre profils :",
+    "suiteKicker": "Dans votre rapport",
+    "suiteTitre": "Ce que votre rapport vous explique",
+    "suiteTexte": "Tout ce qui suit est déjà calculé avec vos deux dates. L'aperçu vous montre les résultats, le rapport vous dit ce qu'ils veulent dire.",
+    "dansLeRapport": "Expliqué dans le rapport",
+    "domaines": {
+      "tendresse": "la tendresse",
+      "desir": "le désir",
+      "dialogue": "le dialogue",
+      "complicite": "la complicité",
+      "quotidien": "le quotidien",
+      "duree": "la durée"
+    },
+    "domainesNoms": {
+      "tendresse": "Tendresse",
+      "desir": "Désir",
+      "dialogue": "Dialogue",
+      "complicite": "Complicité",
+      "quotidien": "Quotidien",
+      "duree": "Durée"
+    },
+    "astresDe": {
+      "soleil": "le Soleil",
+      "lune": "la Lune",
+      "mercure": "Mercure",
+      "venus": "Vénus",
+      "mars": "Mars"
+    },
+    "astresMeme": {
+      "soleil": "vos deux Soleils",
+      "lune": "vos deux Lunes",
+      "mercure": "vos deux Mercure",
+      "venus": "vos deux Vénus",
+      "mars": "vos deux Mars"
+    },
+    "teasers": {
+      "domaines": {
+        "titre": "Vos six domaines",
+        "fait": "Votre point fort : {{d}}, {{n}} sur 100.",
+        "suite": "Les cinq autres notes, et ce qu'elles veulent dire pour vous."
+      },
+      "lunes": {
+        "titre": "Vos Lunes",
+        "fait": "La Lune de {{a}} est {{sa}}, celle de {{b}} {{sb}}.",
+        "suite": "Ce dont chacun a besoin pour se sentir aimé."
+      },
+      "venusMars": {
+        "titre": "Vénus et Mars",
+        "fait": "La Vénus de {{a}} est {{va}}, le Mars de {{b}} {{mb}}.",
+        "suite": "Ce qui vous attire l'un chez l'autre, et comment vous vous disputez."
+      },
+      "liens": {
+        "titre": "Votre plus beau lien",
+        "fait": "{{lien}}.",
+        "faitSans": "Votre entente se construit au quotidien, plus qu'elle ne tombe du ciel.",
+        "suite": "Ce qui vous porte, ce qui coince, et quoi en faire."
+      },
+      "chinois": {
+        "titre": "Vos signes chinois",
+        "fait": "{{a}} : {{ca}}. {{b}} : {{cb}}.",
+        "suite": "Ce que l'astrologie chinoise dit de votre duo."
+      },
+      "annee": {
+        "titre": "Vos 12 prochains mois",
+        "fait": "Votre plus beau mois : {{m1}}. Le mois où il faudra se parler : {{m2}}.",
+        "suite": "Pourquoi ces mois-là, et ce que vous réservent les autres."
+      }
+    },
+    "lienDe": "{{x}} de {{p}}",
+    "lienEt": "{{x}} et {{y}}",
+    "en": "en {{s}}",
+    "enOu": "en {{s1}} ou en {{s2}}",
+    "moisNoms": [
+      "janvier",
+      "février",
+      "mars",
+      "avril",
+      "mai",
+      "juin",
+      "juillet",
+      "août",
+      "septembre",
+      "octobre",
+      "novembre",
+      "décembre"
+    ]
   },
   "prix": {
-    "titre": "Votre thème astral de couple",
-    "pourDeux": "pour vous deux, une seule fois",
+    "titre": "Votre rapport complet",
+    "pourDeux": "une seule fois, pour votre couple",
     "liste": [
-      "Votre carte du ciel à deux",
-      "Vos dix planètes lues une par une",
-      "Les liens entre vos deux thèmes",
-      "Vos signes chinois et vos chemins de vie",
+      "{{chapitres}} chapitres sur votre couple",
+      "Vos dix astres lus un par un",
+      "Vos six domaines notés sur 100",
       "Vos 12 prochains mois, mois par mois",
+      "Vos signes chinois et vos chemins de vie",
       "Le rapport en ligne, et son lien par e-mail"
     ],
     "majeur": "J'ai 18 ans ou plus.",
     "renonciation": "Je veux recevoir mon rapport tout de suite, et je renonce à mon droit de rétractation de 14 jours, qui prend fin quand le rapport s'affiche.",
-    "bouton": "Débloquer notre thème astral",
+    "bouton": "Débloquer notre rapport",
     "securise": "Paiement sécurisé par Stripe",
     "note": "Un rapport d'astrologie, à lire comme un jeu à deux : il ne prédit rien.",
     "erreurCases": "Cochez les deux cases pour continuer.",
     "erreurServeur": "Le paiement ne s'ouvre pas pour l'instant. Réessayez dans un moment.",
     "region": "Prix pour l'Amérique latine",
-    "cgv": "Conditions générales de vente"
+    "cgv": "Conditions générales de vente",
+    "grand": "Débloquez votre thème astral de couple",
+    "chacun": "soit {{moitie}} chacun"
   },
   "faq": {
     "titre": "Questions fréquentes",
     "items": [
+      {
+        "q": "C'est quoi, un thème astral de couple ?",
+        "r": "Un thème astral, c'est la carte du ciel au moment d'une naissance : où étaient le Soleil, la Lune et les planètes, vus depuis la Terre. Un thème astral de couple compare deux de ces cartes. En astrologie, on appelle ça une synastrie."
+      },
       {
         "q": "Faut-il connaître son heure de naissance ?",
         "r": "Non. Sans l'heure, on calcule tout à midi. Ça ne change rien pour le Soleil, Mercure, Vénus et Mars, sauf les rares jours où l'un d'eux change de signe. La Lune, elle, change de signe tous les deux jours et demi : si elle a changé le jour de votre naissance, le rapport vous donne les deux possibilités."
