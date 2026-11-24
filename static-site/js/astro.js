@@ -50,7 +50,19 @@
     for (var i = 0; i < k.length; i++) { if (o == null) return defaut; o = o[k[i]]; }
     return o == null ? defaut : o;
   }
-  function tpl(s, v) { return String(s || '').replace(/\{\{(\w+)\}\}/g, function (_, k) { return v[k] != null ? v[k] : ''; }); }
+  // {{k}} remplacé par v[k] ; en français, « de » et « que » devant une
+  // valeur qui commence par une voyelle s'élident (« la Lune d'Inès »), même
+  // quand la valeur est en gras (<b>Inès</b>).
+  var VOYELLE = /^(?:<[^>]+>)*[aeiouyàâäéèêëîïôöùûüÿœæ]/i;
+  function remplace(s, v, vide) {
+    return String(s || '').replace(/(^|[^A-Za-zÀ-ÖØ-öø-ÿ])(de|De|que|Que) \{\{(\w+)\}\}|\{\{(\w+)\}\}/g, function (t, avant, mot, k1, k2) {
+      if (k2) return v[k2] != null ? v[k2] : (vide ? '' : t);
+      var x = v[k1];
+      if (x == null) return vide ? avant + mot + ' ' : t;
+      return avant + (CFG.lang === 'fr' && VOYELLE.test(String(x)) ? mot.slice(0, -1) + "'" + x : mot + ' ' + x);
+    });
+  }
+  function tpl(s, v) { return remplace(s, v, true); }
   function esc(s) { return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); }
   function majuscule(s) { s = String(s || ''); return s.charAt(0).toUpperCase() + s.slice(1); }
   function lireJSON(cle) { try { return JSON.parse(localStorage.getItem(cle) || 'null'); } catch (e) { return null; } }
@@ -390,9 +402,15 @@
   var ANIMAUX = ['rat', 'buffle', 'tigre', 'lapin', 'dragon', 'serpent', 'cheval', 'chevre', 'singe', 'coq', 'chien', 'cochon'];
   var ELEMENTS_CH = ['bois', 'feu', 'terre', 'metal', 'eau'];
   var ICONES = { domaines: '◔', lunes: '☽︎', venusMars: '♀︎', liens: '✦', chinois: '☯︎', annee: '☉︎' };
+  // « en Bélier », « in Aries », « im Widder », « in den Zwillingen » : la
+  // forme de chaque signe dans la langue (signes.<s>.en).
+  function dansSigne(i) {
+    var s = SIGNES[i];
+    return lireT('signes.' + s + '.en', '') || tpl(lireT('ciel.en', ''), { s: nomSigne(i) });
+  }
   function enSigne(x) {
-    if (x.doute && x.doute.length > 1) return tpl(lireT('ciel.enOu', ''), { s1: nomSigne(x.doute[0]), s2: nomSigne(x.doute[1]) });
-    return tpl(lireT('ciel.en', ''), { s: nomSigne(x.signe) });
+    if (x.doute && x.doute.length > 1) return tpl(lireT('ciel.enOu', ''), { s1: dansSigne(x.doute[0]), s2: dansSigne(x.doute[1]) });
+    return dansSigne(x.signe);
   }
   function nomMois(iso) {
     var p = String(iso || '').split('-');
@@ -441,9 +459,12 @@
       suite: lireT('ciel.teasers.liens.suite', '')
     });
     var ch = ciel.chinois;
+    // « Rat de Bois », « Cochon d'Eau » (tpl élide en français), « Wood
+    // Rat » : la forme de ciel.animalDe dans chaque langue.
     var animalDe = function (c) {
       var el = lireT('rapport.chinois.elements.' + ELEMENTS_CH[c.element], '');
-      return lireT('rapport.chinois.animaux.' + ANIMAUX[c.animal], '') + (/^[aeiouyéèêàâîôûh]/i.test(el) ? " d'" : ' de ') + el;
+      var an = lireT('rapport.chinois.animaux.' + ANIMAUX[c.animal], '');
+      return tpl(lireT('ciel.animalDe', '{{animal}} ({{element}})'), { animal: an, element: el });
     };
     out.push({
       cle: 'chinois', titre: lireT('ciel.teasers.chinois.titre', ''),
@@ -459,9 +480,7 @@
     return out;
   }
   // Un modèle dont les valeurs sont déjà du HTML échappé.
-  function tplHtml(s, v) {
-    return esc(s).replace(/\{\{(\w+)\}\}/g, function (m, k) { return v[k] !== undefined ? v[k] : m; });
-  }
+  function tplHtml(s, v) { return remplace(esc(s), v, false); }
   function jauge(nom, v, cl) {
     return '<div><div class="as-jauge-tete"><span>' + esc(nom) + '</span><b>' + v + '</b></div><div class="as-jauge' + cl + '"><span style="width:' + v + '%"></span></div></div>';
   }

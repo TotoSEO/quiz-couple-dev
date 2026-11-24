@@ -116,7 +116,16 @@
     "s5Item7Label": "Right to withdraw consent:",
     "s5Item7Text": "At any time, for processing based on it (emails, relationship assessment), without affecting what was done before",
     "s5Item8Label": "Right to lodge a complaint:",
-    "s5Item8Text": "With the CNIL (cnil.fr), the French data protection authority, or the authority of your country, if you believe your rights are not respected"
+    "s5Item8Text": "With the CNIL (cnil.fr), the French data protection authority, or the authority of your country, if you believe your rights are not respected",
+    "themeTitle": "The couple's birth chart",
+    "themeIntro": "The couple's birth chart calculates an astrology report from your two birth dates. Here is what is kept, and for how long.",
+    "themeItems": [
+      "<strong>What is stored:</strong> the two first names, each person's gender (to write the texts correctly), the two birth dates, the times if you give them, and your browser's time zone. When you pay, what Stripe sends back to us about the payment: the date, the amount and the email address given on its page. No account.",
+      "<strong>Why:</strong> to calculate and show your report, and to send you its link by email, once. Nothing else: the address goes into no mailing list. The legal basis is the performance of the contract you enter into by buying the report.",
+      "<strong>Who sees them:</strong> the people who have the report link, and no one else. The key in the link is only kept as a fingerprint that can't be reversed. Before payment, the free preview is calculated in your browser, without sending anything.",
+      "<strong>How long:</strong> six months after payment, then everything is deleted automatically. An order that wasn't paid is deleted after thirty days. You can also delete the report and your data at any time, with the \"Delete this report\" link at the bottom of the report.",
+      "<strong>Service providers:</strong> Supabase hosts the data, Stripe handles the payment and Resend sends the email with the link."
+    ]
   },
   "mentions": {
     "seoTitle": "Legal Notice | Quiz Couple",

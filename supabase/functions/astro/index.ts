@@ -17,8 +17,8 @@ import { creerStockageRest } from "../_shared/astro/stockage-rest.mjs";
 import { creerStripe } from "../_shared/bilan/stripe.mjs";
 // @ts-ignore
 import { creerCourriel } from "../_shared/bilan/courriel.mjs";
-// @ts-ignore
-import textesFr from "../_shared/astro/textes/fr/index.mjs";
+// @ts-ignore les textes du rapport, langue par langue
+import textes from "../_shared/astro/textes/index.mjs";
 
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*',
@@ -35,7 +35,7 @@ const serveur = creerServeur({
   stockage: creerStockageRest({ url: SUPABASE_URL, cle: SERVICE_KEY, fetch }),
   stripe: STRIPE_KEY ? creerStripe({ cle: STRIPE_KEY, fetch }) : null,
   courriel: RESEND_KEY ? creerCourriel({ cle: RESEND_KEY, fetch }) : null,
-  textes: { fr: textesFr },
+  textes,
 });
 
 // Soixante appels par minute et par adresse IP laissent toute la marge à une

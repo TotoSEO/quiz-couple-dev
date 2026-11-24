@@ -33,21 +33,45 @@
   var NB = ' ';
 
   function esc(s) { return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); }
-  function tpl(s, v) { return String(s || '').replace(/\{\{(\w+)\}\}/g, function (t, k) { return v[k] != null ? v[k] : t; }); }
+  // {{k}} remplacé par v[k] ; en français, « de » et « que » devant une
+  // valeur qui commence par une voyelle s'élident (« les planètes d'Inès »,
+  // « Cochon d'Eau »).
+  var VOYELLE = /^[aeiouyàâäéèêëîïôöùûüÿœæ]/i;
+  function tpl(s, v) {
+    return String(s || '').replace(/(^|[^A-Za-zÀ-ÖØ-öø-ÿ])(de|De|que|Que) \{\{(\w+)\}\}|\{\{(\w+)\}\}/g, function (t, avant, mot, k1, k2) {
+      if (k2) return v[k2] != null ? v[k2] : t;
+      var x = v[k1];
+      if (x == null) return t;
+      return avant + (LANG === 'fr' && VOYELLE.test(String(x)) ? mot.slice(0, -1) + "'" + x : mot + ' ' + x);
+    });
+  }
   // {masc|fém} au genre d'une personne.
   function accord(s, genre) { return String(s || '').replace(/\{([^{}|:]*)\|([^{}]*)\}/g, function (_, m, f) { return genre === 'm' ? m : f; }); }
   function f1(n) { return Math.round(n * 10) / 10; }
   function g(glyphe) { return glyphe + VS; }
 
-  // Les dates, à la française.
+  // Les dates et les heures : à la française (« 1er mars 1995 », « 14 h 30 »),
+  // sinon dans la forme de la langue de la page (« March 1, 1995 »,
+  // « 1. März 1995 », « 2:30 PM »).
+  var LANG = String(document.documentElement.getAttribute('lang') || 'fr').slice(0, 2);
+  var LOCALE = { en: 'en-US', es: 'es-ES', de: 'de-DE', it: 'it-IT', nl: 'nl-NL' }[LANG] || '';
+  function formatIntl(o, t) {
+    try { return new Intl.DateTimeFormat(LOCALE, Object.assign({ timeZone: 'UTC' }, o)).format(t); } catch (e) { return ''; }
+  }
   function dateLongue(iso) {
     var p = String(iso || '').slice(0, 10).split('-').map(Number);
     if (!p[0]) return '';
+    if (LOCALE) return formatIntl({ day: 'numeric', month: 'long', year: 'numeric' }, Date.UTC(p[0], p[1] - 1, p[2])) || String(iso).slice(0, 10);
     return (p[2] === 1 ? '1er' : p[2]) + ' ' + MOIS[p[1] - 1] + ' ' + p[0];
   }
   function heureLongue(h) {
     var p = String(h || '').split(':');
-    return p.length === 2 ? Number(p[0]) + NB + 'h' + NB + p[1] : '';
+    if (p.length !== 2) return '';
+    if (LOCALE) return formatIntl({ hour: 'numeric', minute: '2-digit' }, Date.UTC(2000, 0, 1, Number(p[0]), Number(p[1]))) || h;
+    return Number(p[0]) + NB + 'h' + NB + p[1];
+  }
+  function moisCourt(m) {
+    return LOCALE ? formatIntl({ month: 'short' }, Date.UTC(2000, m - 1, 15)) : MOIS_COURT[m - 1];
   }
 
   // Un tirage reproductible, pour que le ciel de la couverture soit toujours
@@ -76,7 +100,12 @@
     var A = R.personnes[0], B = R.personnes[1];
     var qui = function (k) { return k === 'a' ? A : B; };
     var nomSigne = function (s) { return (T.signes && T.signes[s] && T.signes[s].nom) || s; };
-    var enSigne = function (s) { return 'en' + NB + nomSigne(s); };
+    // « en Bélier » (insécable en français), « in Aries », « im Widder » :
+    // signes.<s>.en de la langue.
+    var enSigne = function (s) {
+      var f = (T.signes && T.signes[s] && T.signes[s].en) || ('en ' + nomSigne(s));
+      return LANG === 'fr' ? f.replace(/^en /, 'en' + NB) : f;
+    };
     var nomPlanete = function (n) { return lire('planetes.' + n, n); };
     var lonDe = function (k, n) { return R.themes[k === 'a' ? 0 : 1].planetes[n].lon; };
     var html = [];
@@ -416,7 +445,7 @@
         var mm = Number(m.mois.slice(5, 7));
         return '<li class="ar-frise-mois ar-ton--' + m.ton + (m.meilleur ? ' est-meilleur' : '') + (m.prudence ? ' est-prudence' : '') + '">' +
           '<a href="#ar-mois-' + m.mois + '"><span class="ar-frise-gl" aria-hidden="true">' + g(GLYPHE_TON[m.ton]) + '</span>' +
-          '<span class="ar-frise-nom">' + esc(MOIS_COURT[mm - 1]) + '</span><span class="ar-frise-ton">' + esc(lire('annee.tons.' + m.ton, '')) + '</span></a></li>';
+          '<span class="ar-frise-nom">' + esc(moisCourt(mm)) + '</span><span class="ar-frise-ton">' + esc(lire('annee.tons.' + m.ton, '')) + '</span></a></li>';
       }).join('') + '</ol>';
       var cartes = M.map(function (m) {
         var badges = '';

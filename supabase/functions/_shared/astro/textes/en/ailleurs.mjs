@@ -1,0 +1,62 @@
+// Chinese signs and life paths. The portraits talk about one person ({{p}},
+// {he|she}), the relationships speak to the couple.
+export default {
+  chinois: {
+    titres: {
+      trine: 'The same triangle',
+      harmonie: 'Secret friends',
+      meme: 'The same animal',
+      neutre: 'Neither allies nor rivals',
+      nuisance: 'A pair that wears thin',
+      opposition: 'Face to face',
+    },
+    relations: {
+      trine: "In Chinese astrology, your two animals belong to the same triangle of affinity, the most sought-after link for a couple. You move at the same pace and want roughly the same things from life. Big decisions get made without a tug of war, and you feel you're on the same side.",
+      harmonie: "Your two animals form one of the six pairs of \"secret friends\" in Chinese astrology. You're very different, but each of you brings the other what they lack, and it happens almost without thinking. It's a discreet, solid link.",
+      meme: "You were both born under the same Chinese animal. You understand each other quickly, because you have the same temperament, with the same qualities and the same flaws. Be careful not to mirror back to each other what you don't like in yourselves.",
+      neutre: "Your two animals have no special affinity and no marked tension in the Chinese tradition. Nothing pushes you toward each other, and nothing keeps you apart either: how well you get along depends on you, far more than on your signs.",
+      nuisance: "Your two animals form one of the six pairs the Chinese tradition calls \"harmful\". It's not an incompatibility, more a set of small irritations that keep coming back. The remedy is simple: tell each other early what bugs you, before it piles up.",
+      opposition: "Your two animals face each other on the Chinese wheel, six signs apart. It's the most tense axis in Chinese astrology, and often the most attractive at first. Your differences charm you and tire you at the same time, and each of you has to accept that the other doesn't work like you.",
+    },
+    elements: {
+      meme: "You also share the same Chinese element: you move through life in the same way.",
+      nourrit: "Your Chinese elements feed each other, the way wood feeds fire. One of you gives the other momentum, and you're stronger together.",
+      controle: "Your Chinese elements keep each other in check, the way water puts out fire. One of you tends to hold the other back, sometimes for their own good, sometimes too much. Leave each of you room to move at your own pace.",
+    },
+    animaux: {
+      rat: "{{p}} is a Rat. In love, {he|she} is quick and clever, and always has an idea for a night out. {He|She} cares enormously about {his|her} family and the people {he|she} loves, even if it means worrying a bit too much about money or the future.",
+      buffle: "{{p}} is an Ox. In love, {he|she} builds slowly but surely, and you can count on {him|her} completely. {He|She} isn't a big fan of surprises. {His|Her} tenderness is quiet: it shows in what {he|she} does for the other, rarely in big words.",
+      tigre: "{{p}} is a Tiger. In love, {he|she} likes intense stories and has the courage of {his|her} feelings. {He|She} can't stand being given orders, and {he|she} needs freedom to stay happy. With {him|her}, life is rarely boring.",
+      lapin: "{{p}} is a Rabbit, also called the Cat. In love, {he|she} is gentle and thoughtful, and conflict wears {him|her} out fast. {He|She} needs a peaceful home to blossom, and knows better than anyone how to make a home feel nice.",
+      dragon: "{{p}} is a Dragon. {He|She} has charisma and ambition, and in love {he|she} likes to impress. {He|She} gives a lot, but also expects a lot, and nothing bores {him|her} more than an ordinary relationship.",
+      serpent: "{{p}} is a Snake. In love, {he|she} is mysterious and thinks things over for a long time before committing. {His|Her} intuition is rarely wrong. {He|She} can get jealous when {he|she} feels threatened, but {he|she} is deeply faithful.",
+      cheval: "{{p}} is a Horse. {He|She} falls in love fast and with enthusiasm. {He|She} needs movement and space, and a relationship that's too smothering makes {him|her} run. With {him|her}, you need plans and fresh air.",
+      chevre: "{{p}} is a Goat. In love, {he|she} is tender and needs to feel protected. {He|She} loves pretty things, music and cozy evenings at home, and often has a real artistic side.",
+      singe: "{{p}} is a Monkey. In love, {he|she} is funny and full of imagination. {He|She} loves surprising the other, and gets bored fast if the relationship isn't playful. {His|Her} jokes are often {his|her} way of saying {he|she} cares.",
+      coq: "{{p}} is a Rooster. In love, {he|she} is straightforward and likes things to be clear. {He|She} takes care of the details, from {his|her} outfit to important dates, and shows love by being reliable. {He|She} has {his|her} pride, and criticism hurts {him|her} more than {he|she} lets on.",
+      chien: "{{p}} is a Dog. In love, trust comes first. {He|She} is loyal and protective, and stands by {his|her} relationship come what may. Once {he|she}'s given {his|her} heart, {he|she} doesn't take it back easily.",
+      cochon: "{{p}} is a Pig. In love, {he|she} is generous and sincere, and loves simple pleasures shared together, a good meal or a lazy morning in bed. {He|She} forgives easily, sometimes too easily.",
+    },
+  },
+  vie: {
+    nombres: {
+      1: "{{p}}'s life path is 1, the number of pioneers. In love, {he|she} likes taking the initiative and moving forward. {He|She} needs a relationship that respects {his|her} independence.",
+      2: "{{p}}'s life path is 2, the number of connection. {He|She} is made for life as a couple: {he|she} listens, supports and smooths things over. {He|She} needs to feel loved and useful to blossom.",
+      3: "{{p}}'s life path is 3, the number of joy and words. In love, {he|she} brings lightness, humor and ideas. {He|She} needs a relationship where people laugh and talk to each other.",
+      4: "{{p}}'s life path is 4, the number of builders. In love, {he|she} is reliable and hardworking, and builds for the long term. {He|She} needs stability and concrete plans.",
+      5: "{{p}}'s life path is 5, the number of freedom. In love, {he|she} needs change, travel and new things. A relationship stuck in routine bores {him|her} fast.",
+      6: "{{p}}'s life path is 6, the number of love and family. {He|She} takes care of others, brings harmony everywhere and has a strong sense of responsibility. The relationship and the home mean a lot to {him|her}.",
+      7: "{{p}}'s life path is 7, the number of reflection. In love, {he|she} needs depth, conversations that mean something and time alone to recharge.",
+      8: "{{p}}'s life path is 8, the number of ambition. In love, {he|she} is strong and protective, and likes building a comfortable life. {He|She} has to make sure to keep time for the relationship.",
+      9: "{{p}}'s life path is 9, the number of generosity. In love, {he|she} gives a lot, thinks of others and dreams of an ideal. {He|She} needs a relationship that shares {his|her} values.",
+      11: "{{p}}'s life path is 11, a master number, the number of intuition. In love, {he|she} is very sensitive and inspired, and senses things before they're said.",
+      22: "{{p}}'s life path is 22, a master number, the number of big plans. In love, {he|she} thinks far ahead and wants to build something solid that lasts.",
+      33: "{{p}}'s life path is 33, a very rare master number, the number of devotion. In love, {he|she} gives enormously, sometimes to the point of forgetting {himself|herself}.",
+    },
+    accord: {
+      haut: "Your life paths match very well: in numerology, your two numbers point the same way and support each other.",
+      moyen: "Your life paths get along well, with differences that enrich you.",
+      bas: "Your life paths are quite different: you don't move at the same pace, and you have to respect each other's.",
+    },
+  },
+};

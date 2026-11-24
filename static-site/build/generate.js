@@ -238,15 +238,15 @@ function entreeArticle(articleMeta, lang) {
     ? { groupe: 'article', id: 'article', formule: 'point' }
     : { groupe: 'article', id: 'article', ...(sansLivre ? { sansLivre: true } : {}) };
 }
-// Les articles d'astrologie (catégorie astrologie, en français : la page du
-// thème astral n'existe qu'en français) : en bas, la carte du thème astral de
-// couple (partials/astro-carte.ejs) à la place de la bannière de l'évaluation
-// et du livre (24 novembre 2026, Thomas : « Okk c bien ! Parfait »), le signe
-// d'un article « compatibilité amoureuse » allumé dans la ronde des douze.
+// Les articles d'astrologie (catégorie astrologie, dans toute langue où la
+// page du thème astral existe) : en bas, la carte du thème astral de couple
+// (partials/astro-carte.ejs) à la place de la bannière de l'évaluation et du
+// livre (24 novembre 2026, Thomas : « Okk c bien ! Parfait »), le signe d'un
+// article « compatibilité amoureuse » allumé dans la ronde des douze.
 const SIGNES_ASTRO = ['belier', 'taureau', 'gemeaux', 'cancer', 'lion', 'vierge', 'balance', 'scorpion', 'sagittaire', 'capricorne', 'verseau', 'poissons'];
 function astroArticlePour(articleMeta, lang) {
-  if (lang !== 'fr' || !articleMeta || articleMeta.category !== 'astrologie') return null;
-  if (!ROUTE_SLUGS.themeAstral || !ROUTE_SLUGS.themeAstral.fr) return null;
+  if (!articleMeta || articleMeta.category !== 'astrologie') return null;
+  if (!ROUTE_SLUGS.themeAstral || !ROUTE_SLUGS.themeAstral[lang]) return null;
   const m = /^compatibilite-amoureuse-([a-z]+)$/.exec(articleMeta.internalSlug || '');
   return { signe: m && SIGNES_ASTRO.includes(m[1]) ? m[1] : '' };
 }
@@ -1665,7 +1665,7 @@ async function generatePage(routeKey, lang) {
       breadcrumbList.itemListElement.push({ '@type': 'ListItem', position: 3, name: title, item: canonical });
     } else {
       const nomFil = routeKey === 'livreQuizCouple' ? t('livre:fil', title)
-        : routeKey === 'themeAstral' ? 'Thème astral de couple' : title;
+        : routeKey === 'themeAstral' ? t('theme-astral:fil', 'Thème astral de couple') : title;
       breadcrumbList.itemListElement.push({ '@type': 'ListItem', position: 2, name: nomFil, item: canonical });
     }
     jsonLdItems.push(breadcrumbList);

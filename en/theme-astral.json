@@ -1,0 +1,622 @@
+{
+  "meta": {
+    "title": "Couple's Birth Chart: What Your Two Skies Say",
+    "description": "Your couple's birth chart, calculated from your two birth dates: your Moons, Venuses and Mars, the links between your charts, your Chinese signs and your next 12 months."
+  },
+  "fil": "Couple's birth chart",
+  "carte": {
+    "kicker": "New · Birth chart",
+    "puces": [
+      "Your shared sky, animated",
+      "Your Moons, Venuses and Mars",
+      "Your next 12 months"
+    ],
+    "bouton": "See our birth chart",
+    "vous": "You",
+    "moitie": "Your partner",
+    "test": {
+      "titre": "This score only looks at your signs",
+      "texte": "Your sign is only where the Sun was. On the days you were born, the Moon, Venus and Mars were in the sky too. That's where astrology reads love, desire and arguments.",
+      "note": "Free preview with your birth dates"
+    },
+    "date": {
+      "titre": "Your birth dates say more",
+      "texte": "This test looks at your sign, your life path and your Chinese sign. On the days you were born, the Moon, Venus and Mars were in the sky too. That's where astrology reads love, desire and arguments.",
+      "note": "Both your dates are already filled in. The preview is free."
+    },
+    "chinois": {
+      "titre": "What about the sky on the days you were born?",
+      "texte": "Your dates also give your zodiac signs. On the days you were born, the Moon, Venus and Mars each had their place in the sky. The couple's birth chart reads them one by one, with a chapter on your Chinese signs.",
+      "note": "Both your dates are already filled in. The preview is free."
+    },
+    "article": {
+      "titre": "Your sign doesn't tell the whole story",
+      "texte": "Your sign is where the Sun was on the day you were born. That day, the Moon, Venus and Mars were in the sky too. With your two birth dates, the couple's birth chart places them and tells you what they say about your relationship.",
+      "note": "Free preview with your birth dates"
+    }
+  },
+  "signes": {
+    "belier": {
+      "nom": "Aries",
+      "du": "Aries",
+      "en": "in Aries",
+      "ligne": "A heart that charges ahead and never does anything halfway."
+    },
+    "taureau": {
+      "nom": "Taurus",
+      "du": "Taurus",
+      "en": "in Taurus",
+      "ligne": "Loyalty, tenderness, and a real soft spot for good dinners."
+    },
+    "gemeaux": {
+      "nom": "Gemini",
+      "du": "Gemini",
+      "en": "in Gemini",
+      "ligne": "A thousand conversations, and the wish that none of them would end."
+    },
+    "cancer": {
+      "nom": "Cancer",
+      "du": "Cancer",
+      "en": "in Cancer",
+      "ligne": "A tender heart that makes the other their home."
+    },
+    "lion": {
+      "nom": "Leo",
+      "du": "Leo",
+      "en": "in Leo",
+      "ligne": "Loves big, and loves being loved back the same way."
+    },
+    "vierge": {
+      "nom": "Virgo",
+      "du": "Virgo",
+      "en": "in Virgo",
+      "ligne": "Caring about the little details is their way of saying I love you."
+    },
+    "balance": {
+      "nom": "Libra",
+      "du": "Libra",
+      "en": "in Libra",
+      "ligne": "Harmony above all, and a real talent for making peace."
+    },
+    "scorpion": {
+      "nom": "Scorpio",
+      "du": "Scorpio",
+      "en": "in Scorpio",
+      "ligne": "All or nothing: a passion that goes deep."
+    },
+    "sagittaire": {
+      "nom": "Sagittarius",
+      "du": "Sagittarius",
+      "en": "in Sagittarius",
+      "ligne": "A free heart that wants to share the adventure."
+    },
+    "capricorne": {
+      "nom": "Capricorn",
+      "du": "Capricorn",
+      "en": "in Capricorn",
+      "ligne": "Takes their time, then builds to last."
+    },
+    "verseau": {
+      "nom": "Aquarius",
+      "du": "Aquarius",
+      "en": "in Aquarius",
+      "ligne": "A free, original love, like no other."
+    },
+    "poissons": {
+      "nom": "Pisces",
+      "du": "Pisces",
+      "en": "in Pisces",
+      "ligne": "A big heart, and dreams for two."
+    }
+  },
+  "elements": {
+    "feu": {
+      "nom": "Fire",
+      "le": "Fire",
+      "de": "Fire"
+    },
+    "terre": {
+      "nom": "Earth",
+      "le": "Earth",
+      "de": "Earth"
+    },
+    "air": {
+      "nom": "Air",
+      "le": "Air",
+      "de": "Air"
+    },
+    "eau": {
+      "nom": "Water",
+      "le": "Water",
+      "de": "Water"
+    }
+  },
+  "scene": {
+    "aria": "Animation: your two constellations",
+    "passer": "Skip the animation",
+    "intro": {
+      "kicker": "Your couple's birth chart",
+      "titre": "{{a}} & {{b}}",
+      "texte": "What the stars say about your relationship.",
+      "indice": "Scroll down"
+    },
+    "personne": {
+      "kicker": "Under the sign of {{du}}",
+      "element": "A {{de}} sign"
+    },
+    "elements": {
+      "titreMeme": "Two {{de}} signs",
+      "titre": "{{leA}} and {{leB}}",
+      "meme": "The same element: you often understand each other without having to say everything.",
+      "allie_feu_air": "Two elements that team up: air fans the fire, and fire warms the air.",
+      "allie_terre_eau": "Two elements that team up: water helps grow what the earth holds.",
+      "contraste": "Two elements that shake each other up: that's often where the sparks come from."
+    },
+    "planetes": {
+      "titre": "Your signs are only the beginning",
+      "texte": "On the day you were born, the Moon, Venus and Mars were somewhere in the sky too. That's where we read how you love, what attracts you and how you argue."
+    },
+    "final": {
+      "kicker": "Your couple report",
+      "titre": "Unlock your couple's birth chart",
+      "texte": "Our report calculates the exact position of five celestial bodies on the days you were born. Not a sun-sign horoscope: {{chapitres}} chapters about your relationship.",
+      "bouton": "Calculate our birth chart",
+      "sous": "Free preview · full report {{prix}}",
+      "lien": "What's in the report"
+    },
+    "inconnu": {
+      "a": "You",
+      "b": "Your partner"
+    }
+  },
+  "contenu": {
+    "kicker": "The report",
+    "titre": "What's in the report you can get",
+    "intro": [
+      "Your sign is only where the Sun was on the day you were born. That day, the Moon, Mercury, Venus and Mars were somewhere in the sky too. In astrology, each of them speaks about a part of you.",
+      "The report places these five for each of you. Then it compares your two skies and tells you what that means for your relationship."
+    ],
+    "astresTitre": "What each one says",
+    "astres": [
+      {
+        "g": "☉",
+        "n": "The Sun",
+        "d": "Your character, what drives you."
+      },
+      {
+        "g": "☽",
+        "n": "The Moon",
+        "d": "Your emotions, and what reassures you."
+      },
+      {
+        "g": "☿",
+        "n": "Mercury",
+        "d": "How you talk, and how you argue."
+      },
+      {
+        "g": "♀",
+        "n": "Venus",
+        "d": "How you love, and what you like."
+      },
+      {
+        "g": "♂",
+        "n": "Mars",
+        "d": "Your desire, your energy and your anger."
+      }
+    ],
+    "apercuTitre": "What the report looks like",
+    "apercuLegende": "The report of Emma and Jake, an example couple. Yours is calculated from your dates.",
+    "apercus": [
+      {
+        "id": "couverture",
+        "alt": "The report cover: Emma and Jake's sky, their two constellations joined by a golden thread."
+      },
+      {
+        "id": "carte",
+        "alt": "The shared sky map: a wheel of the twelve signs with Emma's planets in pink and Jake's in purple."
+      },
+      {
+        "id": "mois",
+        "alt": "The couple's next twelve months, month by month, with the best month highlighted."
+      }
+    ],
+    "chapitresTitre": "Inside",
+    "chapitres": [
+      {
+        "t": "Your shared sky map",
+        "d": "Your two skies on a single wheel. Lines connect the planets that get along, and the ones that rub."
+      },
+      {
+        "t": "Your couple profile",
+        "d": "All those links summed up in two scores out of 100: harmony and spark. Depending on both, your couple is the Flame, the Haven, the Magnets or the Explorers."
+      },
+      {
+        "t": "Your six areas",
+        "d": "Tenderness, desire, communication, closeness, everyday life and staying power, each scored out of 100."
+      },
+      {
+        "t": "Your ten placements, one by one",
+        "d": "Each of your Sun, Moon, Venus, Mars and Mercury. What they say about you, then what happens when they meet."
+      },
+      {
+        "t": "What carries you, and what gets stuck",
+        "d": "Your best links, and the ones that need a little attention."
+      },
+      {
+        "t": "Your Chinese signs and your life paths",
+        "d": "The animal of your birth year, and the number your birth date gives in numerology."
+      },
+      {
+        "t": "Your next 12 months",
+        "d": "Your most tender months, your fiery months, and the ones when you'd better talk gently."
+      },
+      {
+        "t": "Questions to ask each other",
+        "d": "Picked where your skies get along the least, to talk about tonight."
+      }
+    ],
+    "bouton": "Calculate our sky for free",
+    "sous": "Free preview · full report {{prix}}"
+  },
+  "dates": {
+    "kicker": "Step 1 of 2 · free",
+    "titre": "We just need your birth dates",
+    "texte": "With the exact day, we place your ten planets. The time, if you know it, makes the Moon more precise.",
+    "prenom": "First name",
+    "prenomA": "Your first name",
+    "prenomB": "Their first name",
+    "elle": "A woman",
+    "il": "A man",
+    "jour": "Day",
+    "mois": "Month",
+    "annee": "Year",
+    "moisNoms": [
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "July",
+      "August",
+      "September",
+      "October",
+      "November",
+      "December"
+    ],
+    "heure": "Time of birth",
+    "heureAide": "optional",
+    "bouton": "Calculate our sky",
+    "erreurs": {
+      "prenom": "A first name is missing.",
+      "genre": "Choose a woman or a man.",
+      "date": "This date doesn't exist.",
+      "futur": "This date hasn't happened yet."
+    },
+    "exempleA": "e.g. Emma",
+    "exempleB": "e.g. Jake",
+    "genreA": "You are",
+    "genreB": "Your partner is",
+    "jourVide": "DD",
+    "anneeVide": "YYYY"
+  },
+  "ciel": {
+    "kicker": "Step 2 of 2 · your free preview",
+    "titre": "Your shared sky",
+    "texte": "Here is the sky on the days you were born, brought together on a single wheel. {{a}}'s planets are in pink, {{b}}'s in purple. In the middle, a line connects two planets that talk to each other: gold when they get along, coral when they rub.",
+    "profilKicker": "Your profile",
+    "archetypes": {
+      "flamme": {
+        "nom": "The Flame",
+        "ligne": "Lots of tenderness and lots of sparks: a couple who understands each other, and still surprises each other."
+      },
+      "havre": {
+        "nom": "The Haven",
+        "ligne": "A couple where you feel good and things flow: your strength is the peace you give each other."
+      },
+      "aimants": {
+        "nom": "The Magnets",
+        "ligne": "You attract each other as much as you shake each other up: nothing is lukewarm between you."
+      },
+      "explorateurs": {
+        "nom": "The Explorers",
+        "ligne": "Your sky doesn't do the work for you: your relationship is yours to invent."
+      }
+    },
+    "douceur": "Harmony",
+    "etincelle": "Spark",
+    "planetes": {
+      "soleil": "Sun",
+      "lune": "Moon",
+      "mercure": "Mercury",
+      "venus": "Venus",
+      "mars": "Mars"
+    },
+    "doute": "{{x}} or {{y}}, depending on the time",
+    "modifier": "Change the dates",
+    "placementsTitre": "Where your planets were",
+    "profilTitre": "Your couple profile",
+    "profilTexte": "The report sums up all the links between your two skies in two scores out of 100. Harmony is what fits naturally between you. Spark is what attracts you and gets you moving. Together, they give one of these four profiles:",
+    "suiteKicker": "In your report",
+    "suiteTitre": "What your report explains",
+    "suiteTexte": "Everything below is already calculated from your two dates. The preview shows you the results, the report tells you what they mean.",
+    "dansLeRapport": "Explained in the report",
+    "domaines": {
+      "tendresse": "tenderness",
+      "desir": "desire",
+      "dialogue": "communication",
+      "complicite": "closeness",
+      "quotidien": "everyday life",
+      "duree": "staying power"
+    },
+    "domainesNoms": {
+      "tendresse": "Tenderness",
+      "desir": "Desire",
+      "dialogue": "Communication",
+      "complicite": "Closeness",
+      "quotidien": "Everyday life",
+      "duree": "Staying power"
+    },
+    "astresDe": {
+      "soleil": "Sun",
+      "lune": "Moon",
+      "mercure": "Mercury",
+      "venus": "Venus",
+      "mars": "Mars"
+    },
+    "astresMeme": {
+      "soleil": "your two Suns",
+      "lune": "your two Moons",
+      "mercure": "your two Mercurys",
+      "venus": "your two Venuses",
+      "mars": "your two Mars"
+    },
+    "teasers": {
+      "domaines": {
+        "titre": "Your six areas",
+        "fait": "Your strong point: {{d}}, {{n}} out of 100.",
+        "suite": "The other five scores, and what they mean for you."
+      },
+      "lunes": {
+        "titre": "Your Moons",
+        "fait": "{{a}}'s Moon is {{sa}}, {{b}}'s {{sb}}.",
+        "suite": "What each of you needs to feel loved."
+      },
+      "venusMars": {
+        "titre": "Venus and Mars",
+        "fait": "{{a}}'s Venus is {{va}}, {{b}}'s Mars {{mb}}.",
+        "suite": "What attracts you to each other, and how you argue."
+      },
+      "liens": {
+        "titre": "Your best link",
+        "fait": "{{lien}}.",
+        "faitSans": "Your bond is built day by day, more than it falls from the sky.",
+        "suite": "What carries you, what gets stuck, and what to do about it."
+      },
+      "chinois": {
+        "titre": "Your Chinese signs",
+        "fait": "{{a}}: {{ca}}. {{b}}: {{cb}}.",
+        "suite": "What Chinese astrology says about your pair."
+      },
+      "annee": {
+        "titre": "Your next 12 months",
+        "fait": "Your best month: {{m1}}. The month when you'll need to talk: {{m2}}.",
+        "suite": "Why those months, and what the others have in store."
+      }
+    },
+    "lienDe": "{{p}}'s {{x}}",
+    "lienEt": "{{x}} and {{y}}",
+    "en": "in {{s}}",
+    "enOu": "{{s1}} or {{s2}}",
+    "animalDe": "{{element}} {{animal}}",
+    "moisNoms": [
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "July",
+      "August",
+      "September",
+      "October",
+      "November",
+      "December"
+    ]
+  },
+  "prix": {
+    "titre": "Your full report",
+    "pourDeux": "one payment, for your couple",
+    "liste": [
+      "{{chapitres}} chapters about your relationship",
+      "Your ten placements read one by one",
+      "Your six areas scored out of 100",
+      "Your next 12 months, month by month",
+      "Your Chinese signs and your life paths",
+      "The report online, and its link by email"
+    ],
+    "majeur": "I am 18 or older.",
+    "renonciation": "I want my report right away, and I waive my 14-day right of withdrawal, which ends when the report appears.",
+    "bouton": "Unlock our report",
+    "securise": "Secure payment by Stripe",
+    "note": "An astrology report, to read as a game for two: it doesn't predict anything.",
+    "erreurCases": "Check both boxes to continue.",
+    "erreurServeur": "Payment isn't opening right now. Try again in a moment.",
+    "region": "Price for Latin America",
+    "cgv": "Terms of sale",
+    "grand": "Unlock your couple's birth chart",
+    "chacun": "that's {{moitie}} each"
+  },
+  "faq": {
+    "titre": "Frequently asked questions",
+    "items": [
+      {
+        "q": "What is a couple's birth chart?",
+        "r": "A birth chart is a map of the sky at the moment someone was born: where the Sun, the Moon and the planets were, seen from Earth. A couple's birth chart compares two of these maps. In astrology, this is called synastry."
+      },
+      {
+        "q": "Do we need to know our time of birth?",
+        "r": "No. Without the time, we calculate everything at noon. That changes nothing for the Sun, Mercury, Venus and Mars, except on the rare days when one of them changes sign. The Moon, though, changes sign every two and a half days: if it changed sign on the day you were born, the report gives you both options."
+      },
+      {
+        "q": "How do I get the report?",
+        "r": "It appears right after payment, on this page. We also send you its link by email, so you can find it again whenever you want."
+      },
+      {
+        "q": "Can I give it as a gift?",
+        "r": "Yes! You just need both birth dates. The report link can be shared, and it opens on any phone."
+      },
+      {
+        "q": "Is astrology scientific?",
+        "r": "No. No study has shown that the stars decide whether a relationship works. Read the report as a game for two: it gives you something to talk about, yourselves, what you want and how you differ."
+      },
+      {
+        "q": "What happens to our data?",
+        "r": "Your first names and birth dates are only used to calculate your report. We keep them for six months after payment, then everything is deleted."
+      }
+    ]
+  },
+  "credits": "Stars: Yale Bright Star and Hipparcos catalogs, via d3-celestial (Olaf Frohn). Planet positions: Astronomy Engine (Don Cross).",
+  "rapport": {
+    "chargement": "Your sky is getting ready…",
+    "attente": "Payment confirmed! Your report is on its way…",
+    "erreur": "This report won't open. Check the link in your email, or write to us from the contact page.",
+    "kicker": "Couple's birth chart",
+    "titre": "{{a}} & {{b}}",
+    "nee": "{{p}}, born {{date}}",
+    "neeHeure": "{{p}}, born {{date}} at {{heure}}",
+    "etabli": "Prepared on {{date}}",
+    "defiler": "Your sky starts here",
+    "sommaire": "Inside",
+    "partie": "Part {{n}}",
+    "chapitre": "Chapter {{n}}",
+    "sections": {
+      "carte": "Your sky map",
+      "profil": "Your couple profile",
+      "domaines": "Your six areas",
+      "atouts": "Your strengths and challenges",
+      "elements": "Your elements",
+      "chinois": "Your Chinese signs",
+      "vie": "Your life paths",
+      "annee": "Your next 12 months",
+      "questions": "Questions to ask each other",
+      "fin": "To wrap up"
+    },
+    "intros": {
+      "carte": "Here is the sky at the moment you were born, brought together on a single wheel. {{a}}'s planets are in pink on the outer ring, {{b}}'s in purple on the inside. In the middle, lines connect the planets that talk to each other: gold when they get along, dotted when they rub.",
+      "profil": "In astrology, two things count in a couple: harmony, everything that fits easily between your charts, and spark, everything that attracts and stirs. Your relationship sits somewhere between the two.",
+      "domaines": "Six big areas of life together, scored out of 100 from the links between your planets. A low score doesn't mean things are going badly: it's just where your charts understand each other least on their own.",
+      "atouts": "The most striking links between your two charts: the ones that carry you, and the ones that need a little attention.",
+      "elements": "Each sign belongs to an element: fire, earth, air or water. Here is where your ten planets fall, five each.",
+      "chinois": "Chinese astrology doesn't look at the planets, it looks at the year of birth: an animal and an element, which come back every sixty years.",
+      "vie": "In numerology, the life path is the sum of the digits of the birth date, reduced to a single digit. 11, 22 and 33 stay whole.",
+      "annee": "The twelve months ahead, based on where Venus, Mars and Jupiter move, and the periods when Mercury, Venus and Mars go backward in the sky.",
+      "questions": "Pick one tonight, and ask the other. The best conversations often start like that."
+    },
+    "planetes": {
+      "soleil": "Sun",
+      "lune": "Moon",
+      "mercure": "Mercury",
+      "venus": "Venus",
+      "mars": "Mars",
+      "jupiter": "Jupiter"
+    },
+    "aspects": {
+      "conjonction": "Conjunction",
+      "sextile": "Sextile",
+      "carre": "Square",
+      "trigone": "Trine",
+      "opposition": "Opposition"
+    },
+    "relations": {
+      "meme": "Same element",
+      "allie": "Friendly elements",
+      "contraste": "Clashing elements"
+    },
+    "angle": "{{n}}° apart",
+    "placements": {
+      "titre": "Your planets",
+      "planete": "Planet",
+      "degre": "{{d}}° {{signe}}",
+      "ou": "or {{signe}}",
+      "doute": "Without the time of birth, a planet that changes sign that day may be in one or the other. The report gives you both."
+    },
+    "legende": {
+      "doux": "The planets get along",
+      "tendu": "The planets rub"
+    },
+    "axes": {
+      "douceur": "Harmony",
+      "etincelle": "Spark"
+    },
+    "niveaux": {
+      "haut": "Strong point",
+      "moyen": "Keep it up",
+      "bas": "Work on it"
+    },
+    "atoutsTitre": "What carries you",
+    "defisTitre": "What needs attention",
+    "aucunAtout": "No very gentle link between your charts: your bond is built day by day, more than it falls from the sky.",
+    "aucunDefi": "No really tense link between your charts. Your challenges will be those of every couple!",
+    "dominant": "Dominant",
+    "absent": "Missing",
+    "planetesDe": "{{p}}'s planets",
+    "chinois": {
+      "annee": "{{element}} {{animal}}, {{an}}",
+      "animaux": {
+        "rat": "Rat",
+        "buffle": "Ox",
+        "tigre": "Tiger",
+        "lapin": "Rabbit",
+        "dragon": "Dragon",
+        "serpent": "Snake",
+        "cheval": "Horse",
+        "chevre": "Goat",
+        "singe": "Monkey",
+        "coq": "Rooster",
+        "chien": "Dog",
+        "cochon": "Pig"
+      },
+      "elements": {
+        "bois": "Wood",
+        "feu": "Fire",
+        "terre": "Earth",
+        "metal": "Metal",
+        "eau": "Water"
+      },
+      "portrait": "{{p}} · {{element}} {{animal}}"
+    },
+    "vie": {
+      "chemin": "Life path",
+      "accord": "How well your paths match: {{n}} out of 10"
+    },
+    "annee": {
+      "meilleur": "Your best month",
+      "prudence": "The month to watch",
+      "venus": "Venus {{en}}",
+      "mars": "Mars {{en}}",
+      "jupiter": "Jupiter {{en}}",
+      "frise": "Your year at a glance",
+      "tons": {
+        "tendre": "Tender",
+        "passion": "Fiery",
+        "elan": "Lucky",
+        "malentendus": "Misunderstandings",
+        "turbulences": "Bumpy",
+        "calme": "Quiet"
+      }
+    },
+    "fin": {
+      "imprimer": "Print or save as PDF",
+      "copier": "Copy the report link",
+      "copie": "Link copied!",
+      "supprimer": "Delete this report",
+      "confirmer": "Click again to delete",
+      "supprime": "Your report and your data have been deleted.",
+      "garde": "This report stays online for six months. Its link is in the email you got after payment."
+    },
+    "rappel": "Based on astrology, to read as a game: this report doesn't predict anything.",
+    "credits": "Planet positions calculated with astronomy-engine (Don Cross, MIT license). Constellations drawn from d3-celestial (Olaf Frohn, BSD license).",
+    "haut": "Back to top"
+  }
+}

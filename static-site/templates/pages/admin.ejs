@@ -684,10 +684,19 @@
             <div class="stats-panel-head">
               <div class="stats-panel-titre">
                 <h2 class="stats-panel-title">Les entrées</h2>
-                <%- aide(`La carte « Voir notre thème astral », en français : sous le score du test des prénoms et des signes, sous le résultat de la compatibilité par date de naissance et de celle des signes chinois (seulement quand les deux personnes ont 18 ans ou plus), et en bas des articles d'astrologie (depuis le 24 novembre 2026 au soir). Carte vue quand elle arrive à l'écran, touchée, puis les visites de la page qui arrivent par elle dans la demi-heure, les commandes et les ventes de chaque entrée. « Sans carte » : les visites venues d'ailleurs. Avant le 24 novembre au soir, les visites du test des signes étaient celles qui arrivaient avec ses deux prénoms. Le prix de l'Amérique latine (1,99 €) se lit sous les ventes.`) %>
+                <%- aide(`La carte « Voir notre thème astral », dans chaque langue où la page existe : sous le score du test des prénoms et des signes, sous le résultat de la compatibilité par date de naissance et de celle des signes chinois (seulement quand les deux personnes ont 18 ans ou plus), et en bas des articles d'astrologie (depuis le 24 novembre 2026 au soir). Carte vue quand elle arrive à l'écran, touchée, puis les visites de la page qui arrivent par elle dans la demi-heure, les commandes et les ventes de chaque entrée. « Sans carte » : les visites venues d'ailleurs. Avant le 24 novembre au soir, les visites du test des signes étaient celles qui arrivaient avec ses deux prénoms. Le prix de l'Amérique latine (1,99 €) se lit sous les ventes.`) %>
               </div>
             </div>
             <div id="admin-astro-carte" class="stats-list"><p class="text-center text-muted-foreground py-6">Chargement...</p></div>
+          </div>
+          <div class="stats-panel">
+            <div class="stats-panel-head">
+              <div class="stats-panel-titre">
+                <h2 class="stats-panel-title">Par langue</h2>
+                <%- aide(`Les commandes et les ventes de la période, selon la langue de la page où elles ont été passées : la page existe en français depuis le 24 novembre 2026, puis dans les autres langues à partir du 24 novembre au soir. La langue fixe aussi celle du rapport et de l'e-mail du lien.`) %>
+              </div>
+            </div>
+            <div id="admin-astro-langues" class="stats-list"><p class="text-center text-muted-foreground py-6">Chargement...</p></div>
           </div>
           <p class="adm-note" id="admin-astro-note"></p>
         </div>

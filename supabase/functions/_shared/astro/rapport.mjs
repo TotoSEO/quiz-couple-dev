@@ -14,27 +14,34 @@
 // Les textes à deux s'adressent au couple (« vous ») autant que possible.
 import { SIGNES, ELEMENTS, PLANETES, ANIMAUX, ELEMENTS_CHINOIS, elementDuSigne } from './ciel.mjs';
 
-const pronoms = (g) => (g === 'm' ? { il: 'il', Il: 'Il', lui: 'lui' } : { il: 'elle', Il: 'Elle', lui: 'elle' });
+// Les pronoms {{il}}, {{Il}}, {{lui}} n'existent qu'en français : les textes
+// des autres langues écrivent leurs pronoms en accord ({he|she}, {er|sie}).
+const PRONOMS = {
+  fr: (g) => (g === 'm' ? { il: 'il', Il: 'Il', lui: 'lui' } : { il: 'elle', Il: 'Elle', lui: 'elle' }),
+};
 
-// « de » et « que » devant un prénom ou un pronom qui commence par une
-// voyelle : « la Vénus d'Inès », « autour d'elle », « qu'Inès ».
+// En français, « de » et « que » devant un prénom ou un pronom qui commence
+// par une voyelle : « la Vénus d'Inès », « autour d'elle », « qu'Inès ».
+// Aucune autre langue n'élide (« la Venus de Ana », « di Anna »).
 const VOYELLE = /^[aeiouyàâäéèêëîïôöùûüÿœæ]/i;
-function remplacer(texte, valeur) {
-  return String(texte || '')
-    .replace(/(^|[^\p{L}])(de|De|que|Que) \{\{(\w+)\}\}/gu, (tout, avant, mot, k) => {
+function remplacer(texte, valeur, lang = 'fr') {
+  let s = String(texte || '');
+  if (lang === 'fr') {
+    s = s.replace(/(^|[^\p{L}])(de|De|que|Que) \{\{(\w+)\}\}/gu, (tout, avant, mot, k) => {
       const v = valeur(k);
       if (v === undefined || v === null) return tout;
       return avant + (VOYELLE.test(v) ? mot.slice(0, -1) + "'" + v : mot + ' ' + v);
-    })
-    .replace(/\{\{(\w+)\}\}/g, (tout, k) => {
-      const v = valeur(k);
-      return v === undefined || v === null ? tout : v;
     });
+  }
+  return s.replace(/\{\{(\w+)\}\}/g, (tout, k) => {
+    const v = valeur(k);
+    return v === undefined || v === null ? tout : v;
+  });
 }
 
-export function accorder(texte, sujet, x, y) {
+export function accorder(texte, sujet, x, y, lang = 'fr') {
   let s = String(texte || '');
-  const P = sujet ? pronoms(sujet.genre) : null;
+  const P = sujet && PRONOMS[lang] ? PRONOMS[lang](sujet.genre) : null;
   if (x) s = s.replace(/\{x:([^{}|]*)\|([^{}]*)\}/g, (_, m, f) => (x.genre === 'm' ? m : f));
   if (y) s = s.replace(/\{y:([^{}|]*)\|([^{}]*)\}/g, (_, m, f) => (y.genre === 'm' ? m : f));
   if (x && y) s = s.replace(/\{v:([^{}|]*)\|([^{}]*)\}/g, (_, m, f) => (x.genre === 'f' && y.genre === 'f' ? f : m));
@@ -45,11 +52,11 @@ export function accorder(texte, sujet, x, y) {
     if (k === 'y' && y) return y.prenom;
     if (P && P[k] !== undefined) return P[k];
     return undefined;
-  });
+  }, lang);
 }
 
-function remplir(texte, valeurs) {
-  return remplacer(texte, (k) => valeurs[k]);
+function remplir(texte, valeurs, lang = 'fr') {
+  return remplacer(texte, (k) => valeurs[k], lang);
 }
 
 // Le texte d'une lecture à deux : son aspect, sinon la relation de ses
@@ -63,18 +70,35 @@ function texteLien(T, l, avecRelation) {
 
 const MOIS = {
   fr: ['janvier', 'février', 'mars', 'avril', 'mai', 'juin', 'juillet', 'août', 'septembre', 'octobre', 'novembre', 'décembre'],
+  en: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+  es: ['enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre'],
+  de: ['Januar', 'Februar', 'März', 'April', 'Mai', 'Juni', 'Juli', 'August', 'September', 'Oktober', 'November', 'Dezember'],
+  it: ['gennaio', 'febbraio', 'marzo', 'aprile', 'maggio', 'giugno', 'luglio', 'agosto', 'settembre', 'ottobre', 'novembre', 'dicembre'],
+  nl: ['januari', 'februari', 'maart', 'april', 'mei', 'juni', 'juli', 'augustus', 'september', 'oktober', 'november', 'december'],
 };
+// « mars 2027 », « March 2027 », « marzo de 2027 ».
 function nomMois(lang, iso) {
   const [a, m] = iso.split('-').map(Number);
-  return (MOIS[lang] || MOIS.fr)[m - 1] + ' ' + a;
+  const nom = (MOIS[lang] || MOIS.fr)[m - 1];
+  return lang === 'es' ? nom + ' de ' + a : nom + ' ' + a;
 }
+// « 1er mars », « March 1 », « 1 de marzo », « 1. März », « 1° marzo »,
+// « 1 maart ».
 function dateCourte(lang, iso) {
   const [, m, j] = iso.split('-').map(Number);
-  return (j === 1 ? '1er' : String(j)) + ' ' + (MOIS[lang] || MOIS.fr)[m - 1];
+  const nom = (MOIS[lang] || MOIS.fr)[m - 1];
+  if (lang === 'en') return nom + ' ' + j;
+  if (lang === 'es') return j + ' de ' + nom;
+  if (lang === 'de') return j + '. ' + nom;
+  if (lang === 'it') return (j === 1 ? '1°' : String(j)) + ' ' + nom;
+  if (lang === 'nl') return j + ' ' + nom;
+  return (j === 1 ? '1er' : String(j)) + ' ' + nom;
 }
 
 export function assembler({ ciel, personnes, lang = 'fr', textes: T, date }) {
   const U = T.ui;
+  const acc = (t, sujet, x, y) => accorder(t, sujet, x, y, lang);
+  const rem = (t, v) => remplir(t, v, lang);
   const [pa, pb] = personnes;
   const th = ciel.themes;
   const nomSigne = (i) => T.signes[SIGNES[i]].nom;
@@ -98,29 +122,29 @@ export function assembler({ ciel, personnes, lang = 'fr', textes: T, date }) {
     ['a', 'b'].forEach((k, i) => {
       const P = th[i].planetes[n];
       const p = qui(k);
-      const titre = remplir(U.titrePersonne, { p: p.prenom, planete: T.planetes[n].nom, en: enSigne(P.signe) });
+      const titre = rem(U.titrePersonne, { p: p.prenom, planete: T.planetes[n].nom, en: enSigne(P.signe) });
       let note = null, alternative = null;
       if (P.doute && P.doute.length > 1) {
         const autreSigne = P.doute.find((s) => s !== P.signe);
         const pl = T.planetes[n];
-        note = accorder(remplir(U.doute, { Planete: pl.Le, planete: pl.le, pil: pl.il, ici: enSigne(P.signe), en: enSigne(autreSigne) }), p);
+        note = acc(rem(U.doute, { Planete: pl.Le, planete: pl.le, pil: pl.il, ici: enSigne(P.signe), en: enSigne(autreSigne) }), p);
         alternative = {
           signe: SIGNES[autreSigne],
-          titre: remplir(U.doutePlus, { planete: pl.le, en: enSigne(autreSigne) }),
-          texte: accorder(T[n][SIGNES[autreSigne]], p),
+          titre: rem(U.doutePlus, { planete: pl.le, en: enSigne(autreSigne) }),
+          texte: acc(T[n][SIGNES[autreSigne]], p),
         };
       }
-      blocs.push({ type: 'personne', qui: k, planete: n, signe: SIGNES[P.signe], degre: P.degre, titre, texte: accorder(T[n][SIGNES[P.signe]], p), note, alternative });
+      blocs.push({ type: 'personne', qui: k, planete: n, signe: SIGNES[P.signe], degre: P.degre, titre, texte: acc(T[n][SIGNES[P.signe]], p), note, alternative });
     });
     const lecture = ciel.lectures.find((l) => l.cle === n + '-' + n);
     const lien = lecture ? texteLien(T, lecture, true) : null;
     if (lien) {
       blocs.push({
         type: 'lien', aspect: lecture.aspect, relation: lecture.relation,
-        titre: remplir(lecture.aspect ? U.lienAspect : U.lienRelation, {
+        titre: rem(lecture.aspect ? U.lienAspect : U.lienRelation, {
           planetes: C.vos, aspect: T.aspects[lecture.aspect]?.nom || '', relation: T.relations[lecture.relation],
         }),
-        texte: accorder(lien, null, pa, pb),
+        texte: acc(lien, null, pa, pb),
       });
     }
     return { cle: n, titre: C.titre, intro: C.intro, blocs };
@@ -141,11 +165,11 @@ export function assembler({ ciel, personnes, lang = 'fr', textes: T, date }) {
       const [p1, p2] = l.cle.split('-');
       return {
         type: 'lien', aspect: l.aspect, relation: l.relation, cle: l.cle, sens: l.sens,
-        titre: remplir(l.aspect ? U.croiseAspect : U.croiseRelation, {
+        titre: rem(l.aspect ? U.croiseAspect : U.croiseRelation, {
           x: x.prenom, y: y.prenom, P1: T.planetes[p1].Le, p2: T.planetes[p2].le,
           aspect: T.aspects[l.aspect]?.nom || '', relation: T.relations[l.relation],
         }),
-        texte: accorder(texte, null, x, y),
+        texte: acc(texte, null, x, y),
       };
     }).filter(Boolean);
     return { cle: 'liens', titre: C.titre, intro: C.intro, blocs };
@@ -163,9 +187,9 @@ export function assembler({ ciel, personnes, lang = 'fr', textes: T, date }) {
     const [p1, p2] = l.cle.split('-');
     return {
       cle: l.cle, aspect: l.aspect, relation: l.relation, sens: l.sens,
-      titre: p1 === p2 ? remplir(U.atoutMeme, { planetes: U.chapitres[p1].vos })
-        : remplir(U.atoutCroise, { x: x.prenom, y: y.prenom, P1: T.planetes[p1].Le, p2: T.planetes[p2].le }),
-      texte: accorder(premiere(texteLien(T, l, !l.aspect)), null, x, y),
+      titre: p1 === p2 ? rem(U.atoutMeme, { planetes: U.chapitres[p1].vos })
+        : rem(U.atoutCroise, { x: x.prenom, y: y.prenom, P1: T.planetes[p1].Le, p2: T.planetes[p2].le }),
+      texte: acc(premiere(texteLien(T, l, !l.aspect)), null, x, y),
     };
   };
 
@@ -173,12 +197,12 @@ export function assembler({ ciel, personnes, lang = 'fr', textes: T, date }) {
   const profil = {
     archetype: P.archetype, douceur: P.douceur, etincelle: P.etincelle,
     nom: T.profil[P.archetype].nom, accroche: T.profil[P.archetype].accroche,
-    texte: T.profil[P.archetype].texte.map((t) => accorder(t, null, pa, pb)),
+    texte: T.profil[P.archetype].texte.map((t) => acc(t, null, pa, pb)),
   };
   const domaines = Object.entries(ciel.domaines).map(([cle, note]) => {
     const D = T.domaines[cle];
     const niveau = note >= 75 ? 'haut' : note >= 58 ? 'moyen' : 'bas';
-    return { cle, nom: D.nom, note, niveau, texte: accorder(D[niveau], null, pa, pb) };
+    return { cle, nom: D.nom, note, niveau, texte: acc(D[niveau], null, pa, pb) };
   });
   const E = ciel.elements;
   const cleEgalite = E.egalite.length === 2 ? E.egalite.slice().sort().join('_') : null;
@@ -186,8 +210,8 @@ export function assembler({ ciel, personnes, lang = 'fr', textes: T, date }) {
     : cleEgalite ? T.elementsCouple.duo[cleEgalite] : T.elementsCouple.dominant[E.dominant];
   const elements = {
     compte: E.compte, dominant: E.dominant, egalite: E.egalite, manquant: E.manquant,
-    texte: [accorder(tete, null, pa, pb)]
-      .concat(E.manquant.map((m) => accorder(T.elementsCouple.manque[m], null, pa, pb))),
+    texte: [acc(tete, null, pa, pb)]
+      .concat(E.manquant.map((m) => acc(T.elementsCouple.manque[m], null, pa, pb))),
   };
 
   const ch = ciel.chinois;
@@ -196,18 +220,18 @@ export function assembler({ ciel, personnes, lang = 'fr', textes: T, date }) {
     b: { animal: ANIMAUX[ch.b.animal], element: ELEMENTS_CHINOIS[ch.b.element], an: ch.b.an },
     relation: ch.relation,
     titre: T.chinois.titres[ch.relation],
-    texte: [accorder(T.chinois.relations[ch.relation], null, pa, pb), accorder(T.chinois.elements[ch.element], null, pa, pb)],
+    texte: [acc(T.chinois.relations[ch.relation], null, pa, pb), acc(T.chinois.elements[ch.element], null, pa, pb)],
     portraits: [
-      { qui: 'a', texte: accorder(T.chinois.animaux[ANIMAUX[ch.a.animal]], pa) },
-      { qui: 'b', texte: accorder(T.chinois.animaux[ANIMAUX[ch.b.animal]], pb) },
+      { qui: 'a', texte: acc(T.chinois.animaux[ANIMAUX[ch.a.animal]], pa) },
+      { qui: 'b', texte: acc(T.chinois.animaux[ANIMAUX[ch.b.animal]], pb) },
     ],
   };
   const V = ciel.vie;
   const vie = {
     a: V.a, b: V.b, note: V.note,
-    texteA: accorder(T.vie.nombres[String(V.a)], pa),
-    texteB: accorder(T.vie.nombres[String(V.b)], pb),
-    accord: accorder(T.vie.accord[V.note >= 8 ? 'haut' : V.note >= 6 ? 'moyen' : 'bas'], null, pa, pb),
+    texteA: acc(T.vie.nombres[String(V.a)], pa),
+    texteB: acc(T.vie.nombres[String(V.b)], pb),
+    accord: acc(T.vie.accord[V.note >= 8 ? 'haut' : V.note >= 6 ? 'moyen' : 'bas'], null, pa, pb),
   };
 
   // Les douze mois : le ton du mois, ses dates de Mercure qui recule et les
@@ -218,13 +242,13 @@ export function assembler({ ciel, personnes, lang = 'fr', textes: T, date }) {
     const k = vus[m.ton] = (vus[m.ton] || 0) + 1;
     const v = { venus: enSigne(m.venus), mars: enSigne(m.mars), jupiter: enSigne(m.jupiter) };
     const notes = [];
-    const periode = (cle, r) => notes.push({ type: 'retro', planete: cle, texte: remplir(T.mois.notes[cle], { du: dateCourte(lang, r.du), au: dateCourte(lang, r.au) }) });
+    const periode = (cle, r) => notes.push({ type: 'retro', planete: cle, texte: rem(T.mois.notes[cle], { du: dateCourte(lang, r.du), au: dateCourte(lang, r.au) }) });
     if (m.mercureRetro) periode('mercure', m.mercureRetro);
     if (m.venusRetro) periode('venus', m.venusRetro);
     if (m.marsRetro) periode('mars', m.marsRetro);
-    m.anniversaires.forEach((q) => notes.push({ type: 'anniv', qui: q, texte: accorder(T.mois.notes.anniversaire, qui(q)) }));
-    let texte = accorder(remplir(liste[(k - 1) % liste.length], v), null, pa, pb);
-    if (m.vedette && T.mois.vedette[m.ton]) texte += ' ' + accorder(T.mois.vedette[m.ton], qui(m.vedette));
+    m.anniversaires.forEach((q) => notes.push({ type: 'anniv', qui: q, texte: acc(T.mois.notes.anniversaire, qui(q)) }));
+    let texte = acc(rem(liste[(k - 1) % liste.length], v), null, pa, pb);
+    if (m.vedette && T.mois.vedette[m.ton]) texte += ' ' + acc(T.mois.vedette[m.ton], qui(m.vedette));
     return {
       mois: m.mois, libelle: nomMois(lang, m.mois), ton: m.ton, titre: T.mois.titres[m.ton],
       texte, notes, vedette: m.vedette,
@@ -238,7 +262,7 @@ export function assembler({ ciel, personnes, lang = 'fr', textes: T, date }) {
   const tri = domaines.slice().sort((x, y) => x.note - y.note);
   const questions = [tri[0], tri[1]].flatMap((d) => (T.questions[d.cle] || []).slice(0, 2))
     .concat((T.questions[tri[tri.length - 1].cle] || []).slice(2, 3))
-    .map((q) => accorder(q, null, pa, pb));
+    .map((q) => acc(q, null, pa, pb));
 
   const rapport = {
     lang, date: date || null, version: 1,
@@ -252,7 +276,7 @@ export function assembler({ ciel, personnes, lang = 'fr', textes: T, date }) {
     chinois, vie,
     annee: { mois, meilleur: ciel.annee.meilleur, prudence: ciel.annee.prudence },
     questions,
-    fin: T.ui.fin.map((t) => accorder(t, null, pa, pb)),
+    fin: T.ui.fin.map((t) => acc(t, null, pa, pb)),
   };
   return lang === 'fr' ? partout(rapport, insecables) : rapport;
 }

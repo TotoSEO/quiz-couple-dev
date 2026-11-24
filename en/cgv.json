@@ -1,11 +1,12 @@
 {
   "title": "Terms of sale",
-  "majLe": "Last updated: 4 November 2026",
-  "intro": "These terms apply to the purchase of the full report of the {{bilan}} on quiz-couple.com. Everything else on the site is free and isn't covered by any sale.",
+  "majLe": "Last updated: 24 November 2026",
+  "intro": "These terms apply to the purchase of the full report of the {{bilan}} and of the {{theme}} on quiz-couple.com. Sections 1 to 10 describe the relationship assessment, section 11 the couple's birth chart. Everything else on the site is free and isn't covered by any sale.",
   "liens": {
     "contact": "contact page",
     "confidentialite": "privacy policy",
-    "bilan": "relationship assessment"
+    "bilan": "relationship assessment",
+    "theme": "couple's birth chart"
   },
   "vendeur": {
     "titre": "The seller",
@@ -95,6 +96,17 @@
       "titre": "10. Applicable law",
       "p": [
         "These terms are governed by French law. In the event of a dispute, and failing an amicable solution, the competent courts are those designated by law; a consumer may also bring the matter before the court of the place where they lived at the time of payment. If you live in another country of the European Union, you keep the protection of the mandatory rules of your country of residence."
+      ]
+    },
+    {
+      "titre": "11. The couple's birth chart",
+      "p": [
+        "What is sold: an astrology report drawn up from two first names and two birth dates (the time is optional). It gives both people's skies brought together on a single wheel, the couple's profile, its areas, each person's five planets read one by one, the links between the two charts, the Chinese signs, the life paths and the twelve months following the purchase. The wheel, each person's planets and the profile are shown for free before purchase; the rest only after. The report is digital content: it is shown on the birth chart page and can be read again from the personal link sent by email. It is reserved for adults.",
+        "The price is {{prixTheme}} including all taxes for the couple's report, paid once, with no subscription. A lower price may be offered for Latin America: it is shown on the page before any payment, and the price on the payment page is the one that applies. VAT is not applicable (Article 293 B of the French General Tax Code). Payment is made by card, or by another method offered, on Stripe's payment page; we never see card numbers.",
+        "Before paying, the buyer ticks a box asking for the report to be provided right away, without waiting for the end of the fourteen-day withdrawal period, and acknowledges that their right of withdrawal ends when the report is provided (Article L221-28 13° of the French Consumer Code). The report is provided as soon as it is shown on the page after payment, or as soon as the email giving its link is sent, whichever comes first. From that moment the purchase is final: no refund is due for a result you dislike or that doesn't match the idea you had of your relationship.",
+        "The report is covered by the legal guarantee of conformity for digital content (Articles L224-25-12 and following of the French Consumer Code). If it won't show, if it is incomplete or if it doesn't match what this section describes, write to us from the {{contact}}: we fix it at no cost and, if that isn't possible, we refund you.",
+        "Astrology is not a science, and the report is to be read as a game for two: it predicts nothing and says nothing true about your relationship or its future. The positions of the planets are calculated precisely, but what is read in them comes from astrological tradition. The decisions you make in your life based on the report are yours and your sole responsibility.",
+        "The first names, genders, birth dates and times are only used to calculate the report; the email address given to Stripe is only used to send its link. Everything is deleted six months after payment, or thirty days after an order that wasn't paid, and the report can be deleted at any time from its page. The details are in our {{confidentialite}}. The sections on complaints and mediation and on applicable law (sections 9 and 10), and the seller's details above, also apply to the couple's birth chart."
       ]
     }
   ]

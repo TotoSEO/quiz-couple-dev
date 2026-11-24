@@ -1,5 +1,5 @@
-/* La carte du thème astral de couple (page /theme-astral-couple/, en
- * français seulement), écrite une fois pour toutes ses entrées :
+/* La carte du thème astral de couple (page /theme-astral-couple/ et ses
+ * versions dans les autres langues), écrite une fois pour toutes ses entrées :
  * templates/partials/astro-carte.ejs pose ses styles, ses textes
  * (window.QC_ASTRO_CARTE) et ce fichier.
  *
@@ -113,7 +113,7 @@
       // préchargement avant le compte.
       fetch(C.fonction + '?apikey=' + encodeURIComponent(C.cle || ''), {
         method: 'POST', keepalive: true, headers: { 'Content-Type': 'text/plain' },
-        body: JSON.stringify({ action: 'vue', etape: etape, lang: 'fr' })
+        body: JSON.stringify({ action: 'vue', etape: etape, lang: C.lang || 'fr' })
       }).catch(function () {});
     } catch (e) { /* la mesure ne bloque rien */ }
   }

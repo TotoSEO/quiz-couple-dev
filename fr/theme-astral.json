@@ -3,6 +3,7 @@
     "title": "Thème astral de couple : ce que disent vos deux ciels",
     "description": "Votre thème astral de couple, calculé avec vos deux dates de naissance : vos Lunes, Vénus et Mars, les liens entre vos thèmes, vos signes chinois et vos 12 prochains mois."
   },
+  "fil": "Thème astral de couple",
   "carte": {
     "kicker": "Nouveau · Thème astral",
     "puces": [
@@ -38,61 +39,73 @@
     "belier": {
       "nom": "Bélier",
       "du": "du Bélier",
+      "en": "en Bélier",
       "ligne": "Un cœur qui fonce et qui ne fait rien à moitié."
     },
     "taureau": {
       "nom": "Taureau",
       "du": "du Taureau",
+      "en": "en Taureau",
       "ligne": "La fidélité, la tendresse, et un vrai faible pour les bons dîners."
     },
     "gemeaux": {
       "nom": "Gémeaux",
       "du": "des Gémeaux",
+      "en": "en Gémeaux",
       "ligne": "Mille conversations, et l'envie qu'aucune ne s'arrête."
     },
     "cancer": {
       "nom": "Cancer",
       "du": "du Cancer",
+      "en": "en Cancer",
       "ligne": "Un cœur tendre qui fait de l'autre sa maison."
     },
     "lion": {
       "nom": "Lion",
       "du": "du Lion",
+      "en": "en Lion",
       "ligne": "Aime en grand, et adore qu'on le lui rende."
     },
     "vierge": {
       "nom": "Vierge",
       "du": "de la Vierge",
+      "en": "en Vierge",
       "ligne": "L'attention aux petits détails, c'est sa façon de dire je t'aime."
     },
     "balance": {
       "nom": "Balance",
       "du": "de la Balance",
+      "en": "en Balance",
       "ligne": "L'harmonie avant tout, et un vrai talent pour faire la paix."
     },
     "scorpion": {
       "nom": "Scorpion",
       "du": "du Scorpion",
+      "en": "en Scorpion",
       "ligne": "Tout ou rien : une passion qui va au fond des choses."
     },
     "sagittaire": {
       "nom": "Sagittaire",
       "du": "du Sagittaire",
+      "en": "en Sagittaire",
       "ligne": "Un cœur libre qui veut vivre l'aventure à deux."
     },
     "capricorne": {
       "nom": "Capricorne",
       "du": "du Capricorne",
+      "en": "en Capricorne",
       "ligne": "Prend son temps, puis construit pour durer."
     },
     "verseau": {
       "nom": "Verseau",
       "du": "du Verseau",
+      "en": "en Verseau",
       "ligne": "Un amour libre, original, qui ne ressemble à aucun autre."
     },
     "poissons": {
       "nom": "Poissons",
       "du": "des Poissons",
+      "en": "en Poissons",
       "ligne": "Le cœur sur la main, et des rêves pour deux."
     }
   },
@@ -146,7 +159,7 @@
     "final": {
       "kicker": "Votre rapport de couple",
       "titre": "Débloquez votre thème astral de couple",
-      "texte": "Notre rapport calcule la place exacte de cinq astres le jour de vos naissances. Pas un horoscope de signe : {{chapitres}} chapitres sur votre couple.",
+      "texte": "Notre rapport calcule la place exacte de cinq astres le jour de vos naissances. Pas un horoscope de signe : {{chapitres}} chapitres sur votre couple.",
       "bouton": "Calculer notre thème astral",
       "sous": "Aperçu gratuit · rapport complet {{prix}}",
       "lien": "Ce que contient le rapport"
@@ -394,7 +407,8 @@
     "lienDe": "{{x}} de {{p}}",
     "lienEt": "{{x}} et {{y}}",
     "en": "en {{s}}",
-    "enOu": "en {{s1}} ou en {{s2}}",
+    "enOu": "{{s1}} ou {{s2}}",
+    "animalDe": "{{animal}} de {{element}}",
     "moisNoms": [
       "janvier",
       "février",
@@ -414,7 +428,7 @@
     "titre": "Votre rapport complet",
     "pourDeux": "une seule fois, pour votre couple",
     "liste": [
-      "{{chapitres}} chapitres sur votre couple",
+      "{{chapitres}} chapitres sur votre couple",
       "Vos dix astres lus un par un",
       "Vos six domaines notés sur 100",
       "Vos 12 prochains mois, mois par mois",

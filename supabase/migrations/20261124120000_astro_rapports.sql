@@ -117,7 +117,8 @@ end $$;
 -- La lecture de l'admin (onglet Thème astral, par admin-stats et la clé de
 -- service) : les compteurs jour par jour, et les ventes, sans prénom ni
 -- adresse. Les commandes et les ventes par entrée (source : test, date,
--- chinois, article ou direct, depuis le 24 novembre 2026) : par_source.
+-- chinois, article ou direct, depuis le 24 novembre 2026) : par_source ; par
+-- langue de la page (depuis le 24 novembre 2026 au soir) : par_langue.
 create or replace function public.get_astro_tableau(p_jours integer default 30)
 returns jsonb
 language sql
@@ -152,6 +153,14 @@ as $$
            coalesce(sum(r.paiement_montant) filter (where r.paye_le is not null and (r.paye_le at time zone 'Europe/Paris')::date > b.aujourdhui - b.nb), 0) as montant
     from public.astro_rapports r, bornes b
     group by r.source
+  ),
+  par_langue as (
+    select r.lang,
+           count(*) filter (where (r.cree_le at time zone 'Europe/Paris')::date > b.aujourdhui - b.nb) as commandes,
+           count(*) filter (where r.paye_le is not null and (r.paye_le at time zone 'Europe/Paris')::date > b.aujourdhui - b.nb) as ventes,
+           coalesce(sum(r.paiement_montant) filter (where r.paye_le is not null and (r.paye_le at time zone 'Europe/Paris')::date > b.aujourdhui - b.nb), 0) as montant
+    from public.astro_rapports r, bornes b
+    group by r.lang
   )
   select jsonb_build_object(
     'jours', (select nb from bornes),
@@ -167,6 +176,8 @@ as $$
     'commandes', (select count(*) from public.astro_rapports r, bornes b where (r.cree_le at time zone 'Europe/Paris')::date > b.aujourdhui - b.nb),
     'par_source', coalesce((select jsonb_object_agg(source, jsonb_build_object('commandes', commandes, 'ventes', ventes, 'montant', montant))
                             from par_source where commandes > 0 or ventes > 0), '{}'::jsonb),
+    'par_langue', coalesce((select jsonb_object_agg(lang, jsonb_build_object('commandes', commandes, 'ventes', ventes, 'montant', montant))
+                            from par_langue where commandes > 0 or ventes > 0), '{}'::jsonb),
     'serie', coalesce((
       select jsonb_agg(jsonb_build_object(
         'jour', j.jour,
