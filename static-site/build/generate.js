@@ -1604,6 +1604,11 @@ async function generatePage(routeKey, lang) {
     // description parle de Noël pendant les fêtes (livreNoelActif).
     title = t('livre:seo.title', '100 aventures à deux');
     description = livreNoelActif() ? t('livre:seo.descriptionNoel', '') : t('livre:seo.description', '');
+  } else if (routeKey === 'themeAstral') {
+    // La page de vente du thème astral : ses textes sont dans
+    // {lang}/theme-astral.json, que quizzes.json ne connaît pas.
+    title = t('theme-astral:meta.title', 'Thème astral de couple');
+    description = t('theme-astral:meta.description', '');
   } else {
     // Quiz/test pages - get from quizzes.json
     title = t(`quizzes:${routeKey}.title`, 'Quiz Couple');
@@ -1647,7 +1652,8 @@ async function generatePage(routeKey, lang) {
       });
       breadcrumbList.itemListElement.push({ '@type': 'ListItem', position: 3, name: title, item: canonical });
     } else {
-      const nomFil = routeKey === 'livreQuizCouple' ? t('livre:fil', title) : title;
+      const nomFil = routeKey === 'livreQuizCouple' ? t('livre:fil', title)
+        : routeKey === 'themeAstral' ? 'Thème astral de couple' : title;
       breadcrumbList.itemListElement.push({ '@type': 'ListItem', position: 2, name: nomFil, item: canonical });
     }
     jsonLdItems.push(breadcrumbList);
