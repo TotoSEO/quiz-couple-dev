@@ -1,0 +1,622 @@
+{
+  "meta": {
+    "title": "Relatiehoroscoop: wat jullie twee hemels zeggen",
+    "description": "Jullie relatiehoroscoop, berekend op basis van jullie twee geboortedata: jullie Manen, Venus- en Marsstanden, de verbindingen tussen jullie horoscopen, jullie Chinese tekens en jullie komende 12 maanden."
+  },
+  "fil": "Relatiehoroscoop",
+  "carte": {
+    "kicker": "Nieuw · Relatiehoroscoop",
+    "puces": [
+      "Jullie gedeelde hemel, geanimeerd",
+      "Jullie Manen, Venus- en Marsstanden",
+      "Jullie komende 12 maanden"
+    ],
+    "bouton": "Bekijk onze relatiehoroscoop",
+    "vous": "Jij",
+    "moitie": "Je partner",
+    "test": {
+      "titre": "Deze score kijkt alleen naar jullie sterrenbeelden",
+      "texte": "Je sterrenbeeld is alleen waar de Zon stond. Op de dagen dat jullie geboren zijn, stonden de Maan, Venus en Mars ook aan de hemel. Daar leest de astrologie liefde, verlangen en ruzies in.",
+      "note": "Gratis voorproefje met jullie geboortedata"
+    },
+    "date": {
+      "titre": "Jullie geboortedata zeggen meer",
+      "texte": "Deze test kijkt naar jullie sterrenbeeld, jullie levenspad en jullie Chinese teken. Op de dagen dat jullie geboren zijn, stonden de Maan, Venus en Mars ook aan de hemel. Daar leest de astrologie liefde, verlangen en ruzies in.",
+      "note": "Jullie twee data zijn al ingevuld. Het voorproefje is gratis."
+    },
+    "chinois": {
+      "titre": "En de hemel op de dagen dat jullie geboren zijn?",
+      "texte": "Jullie data geven ook jullie sterrenbeelden. Op de dagen dat jullie geboren zijn, hadden de Maan, Venus en Mars elk hun plek aan de hemel. De relatiehoroscoop leest ze een voor een, met een hoofdstuk over jullie Chinese tekens.",
+      "note": "Jullie twee data zijn al ingevuld. Het voorproefje is gratis."
+    },
+    "article": {
+      "titre": "Je sterrenbeeld vertelt niet alles",
+      "texte": "Je sterrenbeeld is waar de Zon stond op de dag dat je geboren bent. Die dag stonden de Maan, Venus en Mars ook aan de hemel. Met jullie twee geboortedata plaatst de relatiehoroscoop ze en vertelt hij wat ze over jullie relatie zeggen.",
+      "note": "Gratis voorproefje met jullie geboortedata"
+    }
+  },
+  "signes": {
+    "belier": {
+      "nom": "Ram",
+      "du": "de Ram",
+      "en": "in Ram",
+      "ligne": "Een hart dat recht op zijn doel afgaat en niets half doet."
+    },
+    "taureau": {
+      "nom": "Stier",
+      "du": "de Stier",
+      "en": "in Stier",
+      "ligne": "Trouw, tederheid, en een zwak voor lekkere etentjes."
+    },
+    "gemeaux": {
+      "nom": "Tweelingen",
+      "du": "de Tweelingen",
+      "en": "in Tweelingen",
+      "ligne": "Duizend gesprekken, en de wens dat er nooit een eindigt."
+    },
+    "cancer": {
+      "nom": "Kreeft",
+      "du": "de Kreeft",
+      "en": "in Kreeft",
+      "ligne": "Een teder hart dat van de ander een thuis maakt."
+    },
+    "lion": {
+      "nom": "Leeuw",
+      "du": "de Leeuw",
+      "en": "in Leeuw",
+      "ligne": "Heeft groots lief, en wil net zo groots geliefd worden."
+    },
+    "vierge": {
+      "nom": "Maagd",
+      "du": "de Maagd",
+      "en": "in Maagd",
+      "ligne": "Op de kleine dingen letten is een manier om ‘ik hou van je’ te zeggen."
+    },
+    "balance": {
+      "nom": "Weegschaal",
+      "du": "de Weegschaal",
+      "en": "in Weegschaal",
+      "ligne": "Harmonie boven alles, en een echt talent om vrede te sluiten."
+    },
+    "scorpion": {
+      "nom": "Schorpioen",
+      "du": "de Schorpioen",
+      "en": "in Schorpioen",
+      "ligne": "Alles of niets: een passie die diep gaat."
+    },
+    "sagittaire": {
+      "nom": "Boogschutter",
+      "du": "de Boogschutter",
+      "en": "in Boogschutter",
+      "ligne": "Een vrij hart dat het avontuur wil delen."
+    },
+    "capricorne": {
+      "nom": "Steenbok",
+      "du": "de Steenbok",
+      "en": "in Steenbok",
+      "ligne": "Neemt de tijd, en bouwt dan voor lang."
+    },
+    "verseau": {
+      "nom": "Waterman",
+      "du": "de Waterman",
+      "en": "in Waterman",
+      "ligne": "Een vrije, originele liefde, als geen ander."
+    },
+    "poissons": {
+      "nom": "Vissen",
+      "du": "de Vissen",
+      "en": "in Vissen",
+      "ligne": "Een groot hart, en dromen voor twee."
+    }
+  },
+  "elements": {
+    "feu": {
+      "nom": "Vuur",
+      "le": "vuur",
+      "de": "vuurteken"
+    },
+    "terre": {
+      "nom": "Aarde",
+      "le": "aarde",
+      "de": "aardeteken"
+    },
+    "air": {
+      "nom": "Lucht",
+      "le": "lucht",
+      "de": "luchtteken"
+    },
+    "eau": {
+      "nom": "Water",
+      "le": "water",
+      "de": "waterteken"
+    }
+  },
+  "scene": {
+    "aria": "Animatie: jullie twee sterrenbeelden",
+    "passer": "Animatie overslaan",
+    "intro": {
+      "kicker": "Jullie relatiehoroscoop",
+      "titre": "{{a}} & {{b}}",
+      "texte": "Wat de sterren over jullie relatie zeggen.",
+      "indice": "Scroll naar beneden"
+    },
+    "personne": {
+      "kicker": "Onder het teken van {{du}}",
+      "element": "Een {{de}}"
+    },
+    "elements": {
+      "titreMeme": "Twee {{de}}s",
+      "titre": "{{leA}} en {{leB}}",
+      "meme": "Hetzelfde element: vaak begrijpen jullie elkaar zonder alles te hoeven zeggen.",
+      "allie_feu_air": "Twee elementen die samenwerken: lucht wakkert het vuur aan, en vuur verwarmt de lucht.",
+      "allie_terre_eau": "Twee elementen die samenwerken: water laat groeien wat de aarde draagt.",
+      "contraste": "Twee elementen die elkaar wakker schudden: daar komen vaak de vonken vandaan."
+    },
+    "planetes": {
+      "titre": "Jullie sterrenbeelden zijn pas het begin",
+      "texte": "Op de dag dat jullie geboren zijn, stonden de Maan, Venus en Mars ook ergens aan de hemel. Daar lezen we hoe jullie liefhebben, wat jullie aantrekt en hoe jullie ruziemaken."
+    },
+    "final": {
+      "kicker": "Jullie rapport",
+      "titre": "Ontgrendel jullie relatiehoroscoop",
+      "texte": "Ons rapport berekent de exacte positie van vijf hemellichamen op de dagen dat jullie geboren zijn. Geen horoscoop van alleen je sterrenbeeld: {{chapitres}} hoofdstukken over jullie relatie.",
+      "bouton": "Bereken onze relatiehoroscoop",
+      "sous": "Gratis voorproefje · volledig rapport {{prix}}",
+      "lien": "Wat er in het rapport staat"
+    },
+    "inconnu": {
+      "a": "Jij",
+      "b": "Je partner"
+    }
+  },
+  "contenu": {
+    "kicker": "Het rapport",
+    "titre": "Wat er in het rapport staat dat jullie kunnen krijgen",
+    "intro": [
+      "Je sterrenbeeld is alleen waar de Zon stond op de dag dat je geboren bent. Die dag stonden de Maan, Mercurius, Venus en Mars ook ergens aan de hemel. In de astrologie zegt elk van hen iets over een deel van jou.",
+      "Het rapport plaatst die vijf voor ieder van jullie. Daarna vergelijkt het jullie twee hemels en vertelt het wat dat betekent voor jullie relatie."
+    ],
+    "astresTitre": "Wat elk hemellichaam zegt",
+    "astres": [
+      {
+        "g": "☉",
+        "n": "De Zon",
+        "d": "Je karakter, wat je drijft."
+      },
+      {
+        "g": "☽",
+        "n": "De Maan",
+        "d": "Je gevoelens, en wat je geruststelt."
+      },
+      {
+        "g": "☿",
+        "n": "Mercurius",
+        "d": "Hoe je praat, en hoe je ruziemaakt."
+      },
+      {
+        "g": "♀",
+        "n": "Venus",
+        "d": "Hoe je liefhebt, en wat je mooi vindt."
+      },
+      {
+        "g": "♂",
+        "n": "Mars",
+        "d": "Je verlangen, je energie en je boosheid."
+      }
+    ],
+    "apercuTitre": "Zo ziet het rapport eruit",
+    "apercuLegende": "Het rapport van Sanne en Daan, een voorbeeldstel. Dat van jullie wordt berekend op basis van jullie data.",
+    "apercus": [
+      {
+        "id": "couverture",
+        "alt": "De voorkant van het rapport: de hemel van Sanne en Daan, hun twee sterrenbeelden verbonden door een gouden draad."
+      },
+      {
+        "id": "carte",
+        "alt": "De gedeelde hemelkaart: een wiel met de twaalf tekens, met de planeten van Sanne in roze en die van Daan in paars."
+      },
+      {
+        "id": "mois",
+        "alt": "De komende twaalf maanden van het stel, maand voor maand, met de beste maand uitgelicht."
+      }
+    ],
+    "chapitresTitre": "Wat erin staat",
+    "chapitres": [
+      {
+        "t": "Jullie gedeelde hemelkaart",
+        "d": "Jullie twee hemels op één wiel. Lijnen verbinden de planeten die goed samengaan, en die die schuren."
+      },
+      {
+        "t": "Jullie profiel als stel",
+        "d": "Al die verbindingen samengevat in twee scores op 100: harmonie en vonk. Afhankelijk van die twee is jullie relatie De Vlam, De Veilige Haven, De Magneten of De Ontdekkers."
+      },
+      {
+        "t": "Jullie zes domeinen",
+        "d": "Tederheid, verlangen, gesprekken, verbondenheid, dagelijks leven en lange termijn, elk met een score op 100."
+      },
+      {
+        "t": "Jullie tien standen, een voor een",
+        "d": "De Zon, Maan, Venus, Mars en Mercurius van ieder van jullie. Wat ze over jou zeggen, en wat er gebeurt als ze elkaar ontmoeten."
+      },
+      {
+        "t": "Wat jullie draagt, en wat schuurt",
+        "d": "Jullie mooiste verbindingen, en die die wat aandacht nodig hebben."
+      },
+      {
+        "t": "Jullie Chinese tekens en jullie levenspaden",
+        "d": "Het dier van jullie geboortejaar, en het getal dat jullie geboortedatum in de numerologie geeft."
+      },
+      {
+        "t": "Jullie komende 12 maanden",
+        "d": "Jullie tederste maanden, jullie vurige maanden, en die waarin je beter zacht met elkaar kunt praten."
+      },
+      {
+        "t": "Vragen om elkaar te stellen",
+        "d": "Gekozen waar jullie hemels het minst met elkaar overweg kunnen, om er vanavond over te praten."
+      }
+    ],
+    "bouton": "Bereken gratis onze hemel",
+    "sous": "Gratis voorproefje · volledig rapport {{prix}}"
+  },
+  "dates": {
+    "kicker": "Stap 1 van 2 · gratis",
+    "titre": "We hebben alleen jullie geboortedata nodig",
+    "texte": "Met de exacte dag plaatsen we jullie tien planeten. De tijd, als je die weet, maakt de Maan nauwkeuriger.",
+    "prenom": "Voornaam",
+    "prenomA": "Je voornaam",
+    "prenomB": "Voornaam van je partner",
+    "elle": "Een vrouw",
+    "il": "Een man",
+    "jour": "Dag",
+    "mois": "Maand",
+    "annee": "Jaar",
+    "moisNoms": [
+      "januari",
+      "februari",
+      "maart",
+      "april",
+      "mei",
+      "juni",
+      "juli",
+      "augustus",
+      "september",
+      "oktober",
+      "november",
+      "december"
+    ],
+    "heure": "Geboortetijd",
+    "heureAide": "optioneel",
+    "bouton": "Bereken onze hemel",
+    "erreurs": {
+      "prenom": "Er ontbreekt een voornaam.",
+      "genre": "Kies een vrouw of een man.",
+      "date": "Deze datum bestaat niet.",
+      "futur": "Deze datum moet nog komen."
+    },
+    "exempleA": "Bijv. Sanne",
+    "exempleB": "Bijv. Daan",
+    "genreA": "Jij bent",
+    "genreB": "Je partner is",
+    "jourVide": "DD",
+    "anneeVide": "JJJJ"
+  },
+  "ciel": {
+    "kicker": "Stap 2 van 2 · jullie gratis voorproefje",
+    "titre": "Jullie gedeelde hemel",
+    "texte": "Dit is de hemel op de dagen dat jullie geboren zijn, samengebracht op één wiel. De planeten van {{a}} staan in roze, die van {{b}} in paars. In het midden verbindt een lijn twee planeten die met elkaar praten: goud als ze goed samengaan, koraal als ze schuren.",
+    "profilKicker": "Jullie profiel",
+    "archetypes": {
+      "flamme": {
+        "nom": "De Vlam",
+        "ligne": "Veel tederheid en veel vonken: een stel dat elkaar begrijpt en elkaar toch blijft verrassen."
+      },
+      "havre": {
+        "nom": "De Veilige Haven",
+        "ligne": "Een stel waarin je je goed voelt en alles soepel gaat: jullie kracht is de rust die jullie elkaar geven."
+      },
+      "aimants": {
+        "nom": "De Magneten",
+        "ligne": "Jullie trekken elkaar net zo sterk aan als jullie elkaar wakker schudden: tussen jullie is niets lauw."
+      },
+      "explorateurs": {
+        "nom": "De Ontdekkers",
+        "ligne": "Jullie hemel doet het werk niet voor jullie: jullie relatie verzinnen jullie zelf."
+      }
+    },
+    "douceur": "Harmonie",
+    "etincelle": "Vonk",
+    "planetes": {
+      "soleil": "Zon",
+      "lune": "Maan",
+      "mercure": "Mercurius",
+      "venus": "Venus",
+      "mars": "Mars"
+    },
+    "doute": "{{x}} of {{y}}, afhankelijk van de tijd",
+    "modifier": "Data wijzigen",
+    "placementsTitre": "Waar jullie planeten stonden",
+    "profilTitre": "Jullie profiel als stel",
+    "profilTexte": "Het rapport vat alle verbindingen tussen jullie twee hemels samen in twee scores op 100. Harmonie is wat vanzelf goed past tussen jullie. Vonk is wat jullie aantrekt en in beweging zet. Samen geven ze een van deze vier profielen:",
+    "suiteKicker": "In jullie rapport",
+    "suiteTitre": "Wat jullie rapport uitlegt",
+    "suiteTexte": "Alles hieronder is al berekend op basis van jullie twee data. Het voorproefje laat de uitkomsten zien, het rapport vertelt wat ze betekenen.",
+    "dansLeRapport": "Uitgelegd in het rapport",
+    "domaines": {
+      "tendresse": "tederheid",
+      "desir": "verlangen",
+      "dialogue": "gesprekken",
+      "complicite": "verbondenheid",
+      "quotidien": "dagelijks leven",
+      "duree": "lange termijn"
+    },
+    "domainesNoms": {
+      "tendresse": "Tederheid",
+      "desir": "Verlangen",
+      "dialogue": "Gesprekken",
+      "complicite": "Verbondenheid",
+      "quotidien": "Dagelijks leven",
+      "duree": "Lange termijn"
+    },
+    "astresDe": {
+      "soleil": "de Zon",
+      "lune": "de Maan",
+      "mercure": "de Mercurius",
+      "venus": "de Venus",
+      "mars": "de Mars"
+    },
+    "astresMeme": {
+      "soleil": "jullie twee Zonnen",
+      "lune": "jullie twee Manen",
+      "mercure": "jullie Mercuriusstanden",
+      "venus": "jullie Venusstanden",
+      "mars": "jullie Marsstanden"
+    },
+    "teasers": {
+      "domaines": {
+        "titre": "Jullie zes domeinen",
+        "fait": "Jullie sterke punt: {{d}}, {{n}} op 100.",
+        "suite": "De vijf andere scores, en wat ze voor jullie betekenen."
+      },
+      "lunes": {
+        "titre": "Jullie Manen",
+        "fait": "De Maan van {{a}} staat {{sa}}, die van {{b}} {{sb}}.",
+        "suite": "Wat ieder van jullie nodig heeft om zich geliefd te voelen."
+      },
+      "venusMars": {
+        "titre": "Venus en Mars",
+        "fait": "De Venus van {{a}} staat {{va}}, de Mars van {{b}} {{mb}}.",
+        "suite": "Wat jullie in elkaar aantrekt, en hoe jullie ruziemaken."
+      },
+      "liens": {
+        "titre": "Jullie mooiste verbinding",
+        "fait": "{{lien}}.",
+        "faitSans": "Jullie band bouwen jullie dag na dag op, meer dan dat hij uit de hemel valt.",
+        "suite": "Wat jullie draagt, wat schuurt, en wat je eraan kunt doen."
+      },
+      "chinois": {
+        "titre": "Jullie Chinese tekens",
+        "fait": "{{a}}: {{ca}}. {{b}}: {{cb}}.",
+        "suite": "Wat de Chinese astrologie over jullie paar zegt."
+      },
+      "annee": {
+        "titre": "Jullie komende 12 maanden",
+        "fait": "Jullie beste maand: {{m1}}. De maand waarin jullie moeten praten: {{m2}}.",
+        "suite": "Waarom die maanden, en wat de andere voor jullie in petto hebben."
+      }
+    },
+    "lienDe": "{{x}} van {{p}}",
+    "lienEt": "{{x}} en {{y}}",
+    "en": "in {{s}}",
+    "enOu": "{{s1}} of {{s2}}",
+    "animalDe": "{{animal}} met {{element}}",
+    "moisNoms": [
+      "januari",
+      "februari",
+      "maart",
+      "april",
+      "mei",
+      "juni",
+      "juli",
+      "augustus",
+      "september",
+      "oktober",
+      "november",
+      "december"
+    ]
+  },
+  "prix": {
+    "titre": "Jullie volledige rapport",
+    "pourDeux": "één betaling, voor jullie samen",
+    "liste": [
+      "{{chapitres}} hoofdstukken over jullie relatie",
+      "Jullie tien standen een voor een gelezen",
+      "Jullie zes domeinen met een score op 100",
+      "Jullie komende 12 maanden, maand voor maand",
+      "Jullie Chinese tekens en jullie levenspaden",
+      "Het rapport online, en de link per e-mail"
+    ],
+    "majeur": "Ik ben 18 jaar of ouder.",
+    "renonciation": "Ik wil mijn rapport meteen, zonder het einde van de herroepingstermijn van 14 dagen af te wachten, en ik erken dat ik mijn herroepingsrecht verlies zodra het rapport verschijnt.",
+    "bouton": "Ontgrendel ons rapport",
+    "securise": "Veilig betalen via Stripe",
+    "note": "Een astrologisch rapport, om te lezen als een spel voor twee: het voorspelt niets.",
+    "erreurCases": "Vink beide vakjes aan om verder te gaan.",
+    "erreurServeur": "De betaling gaat nu niet open. Probeer het zo meteen opnieuw.",
+    "region": "Prijs voor Latijns-Amerika",
+    "cgv": "Algemene voorwaarden",
+    "grand": "Ontgrendel jullie relatiehoroscoop",
+    "chacun": "dat is {{moitie}} per persoon"
+  },
+  "faq": {
+    "titre": "Veelgestelde vragen",
+    "items": [
+      {
+        "q": "Wat is een relatiehoroscoop?",
+        "r": "Een geboortehoroscoop is een kaart van de hemel op het moment dat iemand geboren werd: waar de Zon, de Maan en de planeten stonden, gezien vanaf de aarde. Een relatiehoroscoop vergelijkt twee van die kaarten. In de astrologie heet dat synastrie."
+      },
+      {
+        "q": "Moeten we onze geboortetijd weten?",
+        "r": "Nee. Zonder tijd rekenen we alles uit om 12.00 uur 's middags. Dat verandert niets aan de Zon, Mercurius, Venus en Mars, behalve op de zeldzame dagen dat een van hen van teken verandert. De Maan verandert wel om de tweeënhalve dag van teken: als dat gebeurde op de dag dat je geboren bent, geeft het rapport je beide mogelijkheden."
+      },
+      {
+        "q": "Hoe krijg ik het rapport?",
+        "r": "Het verschijnt direct na de betaling, op deze pagina. We sturen je ook de link per e-mail, zodat je het terugvindt wanneer je maar wilt."
+      },
+      {
+        "q": "Kan ik het cadeau geven?",
+        "r": "Ja! Je hebt alleen de twee geboortedata nodig. De link van het rapport kun je delen, en hij opent op elke telefoon."
+      },
+      {
+        "q": "Is astrologie wetenschappelijk?",
+        "r": "Nee. Geen enkel onderzoek heeft aangetoond dat de sterren bepalen of een relatie werkt. Lees het rapport als een spel voor twee: het geeft jullie iets om over te praten, over jullie zelf, wat jullie willen en hoe jullie verschillen."
+      },
+      {
+        "q": "Wat gebeurt er met onze gegevens?",
+        "r": "Jullie voornamen en geboortedata dienen alleen om jullie rapport te berekenen. We bewaren ze zes maanden na de betaling, daarna wordt alles verwijderd."
+      }
+    ]
+  },
+  "credits": "Sterren: Yale Bright Star- en Hipparcos-catalogus, via d3-celestial (Olaf Frohn). Posities van de planeten: Astronomy Engine (Don Cross).",
+  "rapport": {
+    "chargement": "Jullie hemel wordt klaargezet…",
+    "attente": "Betaling bevestigd! Jullie rapport komt eraan…",
+    "erreur": "Dit rapport gaat niet open. Controleer de link in je e-mail, of schrijf ons via de contactpagina.",
+    "kicker": "Relatiehoroscoop",
+    "titre": "{{a}} & {{b}}",
+    "nee": "{{p}}, geboren op {{date}}",
+    "neeHeure": "{{p}}, geboren op {{date}} om {{heure}}",
+    "etabli": "Opgesteld op {{date}}",
+    "defiler": "Jullie hemel begint hier",
+    "sommaire": "Wat erin staat",
+    "partie": "Deel {{n}}",
+    "chapitre": "Hoofdstuk {{n}}",
+    "sections": {
+      "carte": "Jullie hemelkaart",
+      "profil": "Jullie profiel als stel",
+      "domaines": "Jullie zes domeinen",
+      "atouts": "Jullie sterke punten en uitdagingen",
+      "elements": "Jullie elementen",
+      "chinois": "Jullie Chinese tekens",
+      "vie": "Jullie levenspaden",
+      "annee": "Jullie komende 12 maanden",
+      "questions": "Vragen om elkaar te stellen",
+      "fin": "Tot slot"
+    },
+    "intros": {
+      "carte": "Dit is de hemel op het moment dat jullie geboren zijn, samengebracht op één wiel. De planeten van {{a}} staan in roze op de buitenste ring, die van {{b}} in paars aan de binnenkant. In het midden verbinden lijnen de planeten die met elkaar praten: goud als ze goed samengaan, gestippeld als ze schuren.",
+      "profil": "In de astrologie tellen twee dingen in een relatie: harmonie, alles wat vanzelf past tussen jullie horoscopen, en vonk, alles wat aantrekt en in beweging zet. Jullie relatie zit ergens tussen die twee.",
+      "domaines": "Zes grote domeinen van het leven samen, met een score op 100 op basis van de verbindingen tussen jullie planeten. Een lage score betekent niet dat het slecht gaat: het is gewoon waar jullie horoscopen elkaar vanzelf het minst begrijpen.",
+      "atouts": "De opvallendste verbindingen tussen jullie twee horoscopen: die die jullie dragen, en die die wat aandacht nodig hebben.",
+      "elements": "Elk teken hoort bij een element: vuur, aarde, lucht of water. Zo zijn jullie tien planeten verdeeld, vijf per persoon.",
+      "chinois": "De Chinese astrologie kijkt niet naar de planeten, maar naar het geboortejaar: een dier en een element, die om de zestig jaar terugkomen.",
+      "vie": "In de numerologie is het levenspad de som van de cijfers van de geboortedatum, teruggebracht tot één cijfer. 11, 22 en 33 blijven heel.",
+      "annee": "De komende twaalf maanden, op basis van waar Venus, Mars en Jupiter naartoe gaan, en de periodes waarin Mercurius, Venus en Mars aan de hemel achteruitgaan.",
+      "questions": "Kies er vanavond een, en stel hem aan de ander. De beste gesprekken beginnen vaak zo."
+    },
+    "planetes": {
+      "soleil": "Zon",
+      "lune": "Maan",
+      "mercure": "Mercurius",
+      "venus": "Venus",
+      "mars": "Mars",
+      "jupiter": "Jupiter"
+    },
+    "aspects": {
+      "conjonction": "Conjunctie",
+      "sextile": "Sextiel",
+      "carre": "Vierkant",
+      "trigone": "Driehoek",
+      "opposition": "Oppositie"
+    },
+    "relations": {
+      "meme": "Hetzelfde element",
+      "allie": "Bevriende elementen",
+      "contraste": "Tegengestelde elementen"
+    },
+    "angle": "{{n}}° uit elkaar",
+    "placements": {
+      "titre": "Jullie planeten",
+      "planete": "Planeet",
+      "degre": "{{d}}° {{signe}}",
+      "ou": "of {{signe}}",
+      "doute": "Zonder geboortetijd kan een planeet die die dag van teken verandert in het ene of in het andere teken staan. Het rapport geeft je beide."
+    },
+    "legende": {
+      "doux": "De planeten gaan goed samen",
+      "tendu": "De planeten schuren"
+    },
+    "axes": {
+      "douceur": "Harmonie",
+      "etincelle": "Vonk"
+    },
+    "niveaux": {
+      "haut": "Sterk punt",
+      "moyen": "Om te onderhouden",
+      "bas": "Om aan te werken"
+    },
+    "atoutsTitre": "Wat jullie draagt",
+    "defisTitre": "Wat aandacht vraagt",
+    "aucunAtout": "Geen heel zachte verbinding tussen jullie horoscopen: jullie band bouwen jullie dag na dag op, meer dan dat hij uit de hemel valt.",
+    "aucunDefi": "Geen echt gespannen verbinding tussen jullie horoscopen. Jullie uitdagingen zullen die van elk stel zijn!",
+    "dominant": "Overheersend",
+    "absent": "Ontbreekt",
+    "planetesDe": "De planeten van {{p}}",
+    "chinois": {
+      "annee": "{{animal}} met {{element}}, {{an}}",
+      "animaux": {
+        "rat": "Rat",
+        "buffle": "Os",
+        "tigre": "Tijger",
+        "lapin": "Konijn",
+        "dragon": "Draak",
+        "serpent": "Slang",
+        "cheval": "Paard",
+        "chevre": "Geit",
+        "singe": "Aap",
+        "coq": "Haan",
+        "chien": "Hond",
+        "cochon": "Varken"
+      },
+      "elements": {
+        "bois": "Hout",
+        "feu": "Vuur",
+        "terre": "Aarde",
+        "metal": "Metaal",
+        "eau": "Water"
+      },
+      "portrait": "{{p}} · {{animal}} met {{element}}"
+    },
+    "vie": {
+      "chemin": "Levenspad",
+      "accord": "Hoe goed jullie paden samengaan: {{n}} op 10"
+    },
+    "annee": {
+      "meilleur": "Jullie beste maand",
+      "prudence": "De maand om op te letten",
+      "venus": "Venus {{en}}",
+      "mars": "Mars {{en}}",
+      "jupiter": "Jupiter {{en}}",
+      "frise": "Jullie jaar in één oogopslag",
+      "tons": {
+        "tendre": "Teder",
+        "passion": "Vurig",
+        "elan": "Wind mee",
+        "malentendus": "Misverstanden",
+        "turbulences": "Woelig",
+        "calme": "Rustig"
+      }
+    },
+    "fin": {
+      "imprimer": "Afdrukken of opslaan als pdf",
+      "copier": "De link van het rapport kopiëren",
+      "copie": "Link gekopieerd!",
+      "supprimer": "Dit rapport verwijderen",
+      "confirmer": "Klik nog eens om te verwijderen",
+      "supprime": "Jullie rapport en jullie gegevens zijn verwijderd.",
+      "garde": "Dit rapport blijft zes maanden online. De link staat in de e-mail die je na de betaling kreeg."
+    },
+    "rappel": "Op basis van de astrologie, om te lezen als een spel: dit rapport voorspelt niets.",
+    "credits": "Posities van de planeten berekend met astronomy-engine (Don Cross, MIT-licentie). Sterrenbeelden getekend op basis van d3-celestial (Olaf Frohn, BSD-licentie).",
+    "haut": "Terug naar boven"
+  }
+}

@@ -42,6 +42,7 @@
   function conjonction(mot, x) {
     var nu = String(x).normalize('NFD').replace(/[\u0300-\u036f]/g, '');
     if (LANG === 'es' && (mot === 'y' || mot === 'Y')) return /^h?i(?!e)/i.test(nu) ? (mot === 'Y' ? 'E' : 'e') : mot;
+    // langues: sans-nl (« ed » devant un « e » n'existe qu'en italien)
     if (LANG === 'it' && (mot === 'e' || mot === 'E')) return /^e/i.test(nu) ? mot + 'd' : mot;
     return mot;
   }
@@ -49,6 +50,7 @@
   // (« l'8 marzo », « dall'11 aprile » : eliderDates de conjonction.mjs).
   var ELISIONS_IT = { il: "l'", Il: "L'", dal: "dall'", Dal: "Dall'", al: "all'", Al: "All'", del: "dell'", Del: "Dell'", nel: "nell'", Nel: "Nell'" };
   function eliderDates(s) {
+    // langues: sans-nl (l'élision devant 8 et 11 n'existe qu'en italien)
     if (LANG !== 'it') return s;
     return String(s).replace(/(^|[^A-Za-zÀ-ÖØ-öø-ÿ])(il|Il|dal|Dal|al|Al|del|Del|nel|Nel) (8|11)(?!\d)/g, function (t, avant, mot, n) { return avant + ELISIONS_IT[mot] + n; })
       // « all'1:15 » (all'una), mais « alle 11:15 ».
@@ -82,6 +84,7 @@
     if (LOCALE) {
       var d = formatIntl({ day: 'numeric', month: 'long', year: 'numeric' }, Date.UTC(p[0], p[1] - 1, p[2])) || String(iso).slice(0, 10);
       // « 1° marzo 1995 », comme dateCourte de rapport.mjs.
+      // langues: sans-nl (« 1° marzo » n'existe qu'en italien)
       return LANG === 'it' && p[2] === 1 ? d.replace(/^1 /, '1° ') : d;
     }
     return (p[2] === 1 ? '1er' : p[2]) + ' ' + MOIS[p[1] - 1] + ' ' + p[0];
@@ -89,6 +92,8 @@
   function heureLongue(h) {
     var p = String(h || '').split(':');
     if (p.length !== 2) return '';
+    // « 7.10 uur », comme le reste des pages néerlandaises.
+    if (LANG === 'nl') return Number(p[0]) + '.' + p[1] + '\u00a0uur';
     if (LOCALE) return formatIntl({ hour: 'numeric', minute: '2-digit' }, Date.UTC(2000, 0, 1, Number(p[0]), Number(p[1]))) || h;
     return Number(p[0]) + NB + 'h' + NB + p[1];
   }

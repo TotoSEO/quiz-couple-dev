@@ -7,5 +7,6 @@ import en from './en/index.mjs';
 import es from './es/index.mjs';
 import de from './de/index.mjs';
 import it from './it/index.mjs';
+import nl from './nl/index.mjs';
 
-export default { fr, en, es, de, it };
+export default { fr, en, es, de, it, nl };

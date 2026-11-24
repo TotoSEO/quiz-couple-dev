@@ -58,7 +58,7 @@ const PRODUIT = {
   },
   nl: {
     nom: 'Relatiehoroscoop',
-    description: 'Jullie relatiehoroscoop, online: jullie gedeelde sterrenkaart, de Zon, de Maan, Mercurius, Venus en Mars van ieder van jullie een voor een gelezen, de verbanden tussen jullie horoscopen, jullie Chinese tekens, jullie levenspaden en jullie komende 12 maanden.',
+    description: 'Jullie relatiehoroscoop, online: jullie gedeelde hemelkaart, de Zon, de Maan, Mercurius, Venus en Mars van ieder van jullie een voor een gelezen, de verbindingen tussen jullie horoscopen, jullie Chinese tekens, jullie levenspaden en jullie komende 12 maanden.',
     mention: 'Geen btw van toepassing, art. 293 B van de Franse Code général des impôts. Het rapport verschijnt zodra de betaling bevestigd is: je hebt om directe levering gevraagd en afgezien van het herroepingsrecht.',
   },
 };

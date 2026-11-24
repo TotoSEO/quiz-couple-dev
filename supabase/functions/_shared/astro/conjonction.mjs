@@ -6,6 +6,7 @@
 export function conjonction(lang, mot, suivant) {
   const nu = String(suivant || '').normalize('NFD').replace(/\p{M}/gu, '');
   if (lang === 'es' && (mot === 'y' || mot === 'Y')) return /^h?i(?!e)/i.test(nu) ? (mot === 'Y' ? 'E' : 'e') : mot;
+  // langues: sans-nl (« ed » devant un « e » n'existe qu'en italien)
   if (lang === 'it' && (mot === 'e' || mot === 'E')) return /^e/i.test(nu) ? mot + 'd' : mot;
   return mot;
 }
@@ -16,6 +17,7 @@ export function conjonction(lang, mot, suivant) {
 // après le remplacement. Recopiée dans js/astro-rapport.js.
 const ELISIONS_IT = { il: "l'", Il: "L'", dal: "dall'", Dal: "Dall'", al: "all'", Al: "All'", del: "dell'", Del: "Dell'", nel: "nell'", Nel: "Nell'" };
 export function eliderDates(lang, texte) {
+  // langues: sans-nl (l'élision devant 8 et 11 n'existe qu'en italien)
   if (lang !== 'it') return texte;
   return String(texte).replace(/(^|[^\p{L}])(il|Il|dal|Dal|al|Al|del|Del|nel|Nel) (8|11)(?!\d)/gu, (t, avant, mot, n) => avant + ELISIONS_IT[mot] + n);
 }

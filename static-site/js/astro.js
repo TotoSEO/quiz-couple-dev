@@ -79,7 +79,10 @@
   function ecrireJSON(cle, v) { try { localStorage.setItem(cle, JSON.stringify(v)); } catch (e) { /* navigation privée */ } }
   function prixTexte(c) {
     var n = (c / 100).toFixed(2);
-    return CFG.lang === 'en' ? '€' + n : n.replace('.', ',') + ' €';
+    // « €4.90 », « € 4,90 » en néerlandais, « 4,90 € » ailleurs, comme le
+    // gabarit.
+    if (CFG.lang === 'en') return '€' + n;
+    return CFG.lang === 'nl' ? '€ ' + n.replace('.', ',') : n.replace('.', ',') + ' €';
   }
 
   // ── Qui sont les deux personnes ─────────────────────────────

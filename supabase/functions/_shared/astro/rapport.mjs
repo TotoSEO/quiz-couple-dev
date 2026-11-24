@@ -36,6 +36,7 @@ function remplacer(texte, valeur, lang = 'fr') {
   }
   // En espagnol, « y » devient « e » devant un son « i » (« Lucía e Inés ») ;
   // en italien, « e » devient « ed » devant un « e » (« Luca ed Elena »).
+  // langues: sans-nl (la conjonction ne change pas en néerlandais)
   if (lang === 'es' || lang === 'it') {
     s = s.replace(/(^|[^\p{L}])(y|Y|e|E) \{\{(\w+)\}\}/gu, (tout, avant, mot, k) => {
       const v = valeur(k);
@@ -101,6 +102,7 @@ function dateCourte(lang, iso) {
   if (lang === 'en') return nom + ' ' + j;
   if (lang === 'es') return j + ' de ' + nom;
   if (lang === 'de') return j + '. ' + nom;
+  // langues: sans-nl (« 1° marzo » n'existe qu'en italien)
   if (lang === 'it') return (j === 1 ? '1°' : String(j)) + ' ' + nom;
   if (lang === 'nl') return j + ' ' + nom;
   return (j === 1 ? '1er' : String(j)) + ' ' + nom;
