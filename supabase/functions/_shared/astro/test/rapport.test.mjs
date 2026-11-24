@@ -58,8 +58,11 @@ function cles(o, prefixe = '') {
   return [];
 }
 
-// Des mots qui trahissent un texte resté en français.
-const FRANCAIS = /\b(vous|avec|est|les|des|une|dans|pour|votre|vos)\b/;
+// Des mots qui trahissent un texte resté en français, sans ceux qui existent
+// aussi dans la langue vérifiée (« os une », « les », « des »).
+const MOTS_FR = ['vous', 'avec', 'est', 'les', 'des', 'une', 'dans', 'pour', 'votre', 'vos'];
+const AUSSI_DANS = { es: ['les', 'des', 'une', 'vos'], de: ['des'], nl: ['les', 'des'], it: ['est'] };
+const francais = (lang) => new RegExp('(?<!\\p{L})(' + MOTS_FR.filter((m) => !(AUSSI_DANS[lang] || []).includes(m)).join('|') + ')(?!\\p{L})', 'u');
 
 test('chaque langue a toutes les clés du français, et seulement elles', () => {
   const ref = cles(TOUS.fr);
@@ -75,7 +78,7 @@ test('chaque langue ouverte a ses textes, son adresse et son e-mail', () => {
     assert.ok(CHEMINS[lang], 'adresse ' + lang);
     const m = messageAstro({ lang, a: 'Ana', b: 'Tom', url: 'https://quiz-couple.com' + CHEMINS[lang] + '#r=1&t=2' });
     assert.match(m.sujet, /Ana/);
-    if (lang !== 'fr') assert.doesNotMatch(m.texte, FRANCAIS, 'e-mail ' + lang);
+    if (lang !== 'fr') assert.doesNotMatch(m.texte, francais(lang), 'e-mail ' + lang);
   }
 });
 
@@ -98,7 +101,7 @@ test('deux cents couples par langue : aucun texte manquant, aucune accolade, auc
         assert.doesNotMatch(t, /[{}|]/, lang + ' accolade restée : ' + t);
         assert.doesNotMatch(t, /undefined|NaN/, lang + ' : ' + t);
         assert.doesNotMatch(t, / /, lang + ' espace insécable : ' + t);
-        assert.doesNotMatch(t, FRANCAIS, lang + ' mot français : ' + t);
+        assert.doesNotMatch(t, francais(lang), lang + ' mot français : ' + t);
       }
       assert.equal(rap.annee.mois.length, 12);
     }

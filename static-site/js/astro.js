@@ -54,12 +54,22 @@
   // valeur qui commence par une voyelle s'élident (« la Lune d'Inès »), même
   // quand la valeur est en gras (<b>Inès</b>).
   var VOYELLE = /^(?:<[^>]+>)*[aeiouyàâäéèêëîïôöùûüÿœæ]/i;
+  // En espagnol, « y » devient « e » devant un son « i » (« Lucía e Inés ») ;
+  // en italien, « e » devient « ed » devant un « e » (le même choix que
+  // conjonction.mjs de la fonction astro).
+  function conjonction(mot, x) {
+    var nu = String(x).replace(/<[^>]+>/g, '').normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+    if (CFG.lang === 'es' && (mot === 'y' || mot === 'Y')) return /^h?i(?!e)/i.test(nu) ? (mot === 'Y' ? 'E' : 'e') : mot;
+    if (CFG.lang === 'it' && (mot === 'e' || mot === 'E')) return /^e/i.test(nu) ? mot + 'd' : mot;
+    return mot;
+  }
   function remplace(s, v, vide) {
-    return String(s || '').replace(/(^|[^A-Za-zÀ-ÖØ-öø-ÿ])(de|De|que|Que) \{\{(\w+)\}\}|\{\{(\w+)\}\}/g, function (t, avant, mot, k1, k2) {
+    return String(s || '').replace(/(^|[^A-Za-zÀ-ÖØ-öø-ÿ])(de|De|que|Que|y|Y|e|E) \{\{(\w+)\}\}|\{\{(\w+)\}\}/g, function (t, avant, mot, k1, k2) {
       if (k2) return v[k2] != null ? v[k2] : (vide ? '' : t);
       var x = v[k1];
       if (x == null) return vide ? avant + mot + ' ' : t;
-      return avant + (CFG.lang === 'fr' && VOYELLE.test(String(x)) ? mot.slice(0, -1) + "'" + x : mot + ' ' + x);
+      if (/^(de|De|que|Que)$/.test(mot)) return avant + (CFG.lang === 'fr' && VOYELLE.test(String(x)) ? mot.slice(0, -1) + "'" + x : mot + ' ' + x);
+      return avant + conjonction(mot, x) + ' ' + x;
     });
   }
   function tpl(s, v) { return remplace(s, v, true); }

@@ -1,0 +1,96 @@
+// Los lazos entre vuestras dos cartas. Un texto a dos habla a la pareja
+// («vosotros»): {v:masc|fem} concuerda ese «vosotros», en femenino si son
+// dos mujeres. En una pareja cruzada, {{x}} es la persona del primer
+// planeta (el Sol de x y la Luna de y), {x:masc|fem} y {y:masc|fem} sus
+// concordancias. La primera frase de cada texto sirve también de resumen
+// (puntos fuertes y retos): tiene que entenderse sola.
+export default {
+  'soleil-soleil': {
+    conjonction: 'Vuestros dos Soles están pegados: sois del mismo signo, o casi. Os entendéis sin necesidad de explicarlo todo, porque tenéis los mismos reflejos y las mismas ganas. El riesgo es pareceros tanto que sumáis vuestros defectos en vez de equilibrarlos. ¡Dos cabezotas siguen siendo cabezotas {v:juntos|juntas}! Guardad cada uno un poco de espacio propio, para no pisaros.',
+    sextile: 'Vuestros dos Soles se llevan bien. Vuestros caracteres son distintos, pero se complementan con facilidad: cuando uno propone algo, al otro le apetece seguirle. Os hacéis crecer sin forzaros, y vuestros amigos suelen veros muy {v:compenetrados|compenetradas}. Es una base fácil, que basta con cuidar con proyectos en común.',
+    carre: 'Vuestros dos Soles se rozan. Tenéis formas de vivir y de decidir muy distintas, y los dos os aferráis a la vuestra. Eso trae discusiones, sobre todo en las decisiones importantes, pero también una pareja que nunca se duerme. Muchas parejas sólidas tienen esta cuadratura: obliga a cada uno a hacer esfuerzos. Lo más útil es aceptar que el otro nunca hará las cosas exactamente como {v:vosotros|vosotras}.',
+    trigone: 'Vuestros dos Soles están en armonía. Compartís la misma forma de ver la vida, lo que hace el día a día fácil y agradable. Os sentisteis bien {v:juntos|juntas} desde el principio, como si os conocierais de siempre. La única trampa es la facilidad: una pareja en la que todo va bien puede olvidarse de sorprenderse.',
+    opposition: 'Vuestros dos Soles se miran de frente, de un extremo al otro del zodiaco. Sois {v:opuestos|opuestas}, y muchas veces eso fue lo que os atrajo al principio: el otro tiene lo que a {v:vosotros|vosotras} os falta. En el día a día, esas diferencias a veces tiran de cada uno hacia su lado, y hay que aprender a negociar. Cuando funciona, formáis un equipo muy completo, en el que cada uno compensa lo que le falta al otro.',
+    meme: 'Vuestros dos Soles no forman un aspecto preciso, pero están en el mismo elemento. Tenéis la misma energía de base y os entendéis sin esfuerzo en lo esencial. Vuestras diferencias están en la forma de hacer, casi nunca en el fondo.',
+    allie: 'Vuestros dos Soles están en elementos que se llevan bien, como el fuego y el aire, o la tierra y el agua. Uno alimenta al otro: vuestros caracteres son distintos, pero se estimulan en vez de estorbarse. Es una base bastante fácil.',
+    contraste: 'Vuestros dos Soles están en elementos que se contrarían, como el fuego y el agua, o el aire y la tierra. No tenéis el mismo ritmo ni las mismas prioridades, y a veces hay que traducir lo que quiere decir el otro. Pide esfuerzos, pero también os enseña mucho el uno del otro.',
+  },
+  'lune-lune': {
+    conjonction: 'Vuestras dos Lunas están juntas: sentís las cosas de la misma manera. Necesitáis lo mismo para estar bien, y sabéis por instinto cómo consolar al otro. En astrología, es uno de los lazos más dulces que hay. Solo cuidado con los días en que estáis mal a la vez, porque entonces no hay nadie para tranquilizar al otro.',
+    sextile: 'Vuestras dos Lunas se llevan bien. Vuestras emociones no funcionan igual, pero se responden: cuando uno necesita consuelo, el otro encuentra con bastante facilidad los gestos adecuados. Estáis a gusto {v:juntos|juntas} en casa, en los pequeños momentos de cada día.',
+    carre: 'Vuestras dos Lunas se rozan. No necesitáis lo mismo para estar bien, y lo que tranquiliza a uno puede molestar al otro. Por ejemplo, uno quiere hablar enseguida cuando el otro necesita estar tranquilo. Los malentendidos suelen venir de ahí, no de una falta de amor. Lo más útil es deciros claramente lo que os sienta bien, en vez de esperar a que el otro lo adivine.',
+    trigone: 'Vuestras dos Lunas están en armonía. Estáis bien {v:juntos|juntas} sin esfuerzo, y el ambiente en casa suele ser dulce y natural. Entendéis el humor del otro con una mirada. En astrología, es una de las mejores señales para una vida en común que dure.',
+    opposition: 'Vuestras dos Lunas se miran de frente. Vuestras necesidades emocionales son opuestas: quizá uno necesite cercanía cuando el otro necesita aire. Podéis aportaros mucho, porque cada uno tiene lo que le falta al otro, siempre que lo aceptéis en vez de reprochároslo. Con un poco de paciencia, este cara a cara se convierte en un equilibrio.',
+    meme: 'Vuestras dos Lunas están en el mismo elemento, sin aspecto preciso. Vuestras emociones hablan el mismo idioma: muchas veces reaccionáis igual ante las buenas y las malas noticias.',
+    allie: 'Vuestras dos Lunas están en elementos aliados. Vuestras necesidades son distintas, pero combinan bien, y os tranquilizáis el uno al otro con bastante facilidad.',
+    contraste: 'Vuestras dos Lunas están en elementos que se contrarían. Lo que tranquiliza a uno no tranquiliza necesariamente al otro, y hay que aprender las necesidades de cada uno. Nada imposible, pero pide hablarlo.',
+  },
+  'venus-venus': {
+    conjonction: 'Vuestras dos Venus están juntas: queréis de la misma manera. Tenéis los mismos gustos y la misma idea de una noche bonita a dos. Os dais gusto sin pensarlo, porque lo que os gusta también le gusta al otro. Es un lazo muy tierno, que hace agradable la vida en pareja.',
+    sextile: 'Vuestras dos Venus se llevan bien. Vuestras formas de querer son distintas, pero se complementan, y os descubrís cosas nuevas. Encontráis con facilidad planes y momentos que os gustan a los dos.',
+    carre: 'Vuestras dos Venus se rozan: no queréis de la misma manera. Cada uno puede sentir que no le quieren como le gustaría, aunque el amor esté ahí. Por ejemplo, uno demuestra su amor con regalos cuando el otro espera sobre todo tiempo en pareja. Lo más sencillo es deciros lo que os llega, para dejar de desencontraros.',
+    trigone: 'Vuestras dos Venus están en armonía. Tenéis gustos parecidos y la misma forma de demostrar vuestro amor, lo que evita muchos malentendidos. Para elegir un regalo, una salida o un viaje, soléis estar de acuerdo. Es un lazo que hace el amor sencillo y dulce.',
+    opposition: 'Vuestras dos Venus se miran de frente. Tenéis gustos opuestos, y muchas veces eso fue lo que os atrajo. En el día a día, hay que negociar: a uno le gusta salir cuando el otro prefiere quedarse en casa, por ejemplo. Bien llevada, esta diferencia os abre a cosas que nunca habríais probado.',
+    meme: 'Vuestras dos Venus están en el mismo elemento. Sin un aspecto preciso entre ellas, vuestros gustos se parecen lo bastante como para que muchas veces os apetezcan las mismas cosas.',
+    allie: 'Vuestras dos Venus están en elementos aliados. No queréis exactamente de la misma manera, pero vuestras formas de querer se entienden bien.',
+    contraste: 'Vuestras dos Venus están en elementos que se contrarían. Vuestras formas de querer son muy distintas, y mejor deciros lo que os gusta que adivinarlo.',
+  },
+  'mars-mars': {
+    conjonction: 'Vuestros dos Marte están juntos: tenéis la misma energía y el mismo ritmo. Eso da una atracción fuerte y ganas de hacer un montón de cosas {v:juntos|juntas}. La otra cara es que también os enfadáis a la vez, y vuestras discusiones pueden subir rápido. Un deporte o un proyecto en común es una buena forma de gastar toda esa energía.',
+    sextile: 'Vuestros dos Marte se llevan bien. Tenéis ritmos distintos pero compatibles, y sabéis avanzar {v:juntos|juntas} sin pisaros. Vuestras discusiones son raras y se arreglan bastante rápido.',
+    carre: 'Vuestros dos Marte se rozan. No tenéis la misma forma de actuar ni de enfadaros, y los pequeños roces del día a día pueden subir rápido. Al mismo tiempo, esta cuadratura le da mucha chispa al deseo, y vuestras reconciliaciones suelen ser intensas. Aprended a hacer una pausa cuando la cosa se calienta, antes de decir cosas de las que os arrepentiríais.',
+    trigone: 'Vuestros dos Marte están en armonía. Tenéis la misma energía y sabéis avanzar {v:juntos|juntas}, ya sea para una mudanza o para una noche improvisada. El deseo fluye, sin complicaciones. Vuestras discusiones son raras y cortas.',
+    opposition: 'Vuestros dos Marte se miran de frente. La atracción es fuerte, pero vuestras energías chocan: cuando uno quiere ir a la izquierda, el otro quiere ir a la derecha. Este cara a cara mantiene vivo el deseo, siempre que no convirtáis cada desacuerdo en un pulso.',
+    meme: 'Vuestros dos Marte están en el mismo elemento. Tenéis una energía parecida, y os entendéis bastante bien sobre el ritmo que dar a vuestra vida.',
+    allie: 'Vuestros dos Marte están en elementos aliados. Vuestras energías son distintas, pero se estimulan, y sabéis actuar {v:juntos|juntas}.',
+    contraste: 'Vuestros dos Marte están en elementos que se contrarían. No tenéis el mismo ritmo, y lo que motiva a uno puede frenar al otro. Hay que encontrar un compás común, sin obligar al otro a seguir el suyo.',
+  },
+  'mercure-mercure': {
+    conjonction: 'Vuestros dos Mercurio están juntos: pensáis de la misma manera. Os entendéis con medias palabras, a veces acabáis las frases del otro y podéis hablar durante horas. Es una de las mejores señales para comunicarse bien. Solo cuidado con no dar vueltas siempre a las mismas ideas.',
+    sextile: 'Vuestros dos Mercurio se llevan bien. No pensáis de la misma manera, pero os encanta hablar y aprendéis el uno del otro. Las conversaciones son fáciles, y muchas veces divertidas.',
+    carre: 'Vuestros dos Mercurio se rozan. No razonáis igual, y una palabra de uno puede entenderse mal por el otro. Vuestras discusiones vienen a menudo de una frase mal interpretada más que de un desacuerdo real. Acostumbraos a reformular: «Si lo entiendo bien, quieres decir que…».',
+    trigone: 'Vuestros dos Mercurio están en armonía. Habláis el mismo idioma, en sentido literal y figurado: las ideas circulan con facilidad entre {v:vosotros|vosotras}, y sabéis resolver un problema hablando. Las conversaciones largas son uno de los grandes placeres de vuestra pareja.',
+    opposition: 'Vuestros dos Mercurio se miran de frente. A menudo veis las cosas desde dos puntos de vista opuestos, lo que da debates animados. Es enriquecedor cuando cada uno escucha al otro, y agotador cuando cada uno quiere tener razón. Decid «no te falta razón» de vez en cuando: lo cambia todo.',
+    meme: 'Vuestros dos Mercurio están en el mismo elemento. Tenéis una forma de pensar parecida, y os entendéis rápido.',
+    allie: 'Vuestros dos Mercurio están en elementos aliados. No pensáis igual, pero vuestras ideas se complementan bien.',
+    contraste: 'Vuestros dos Mercurio están en elementos que se contrarían. No razonáis de la misma manera, y a veces hay que tomarse el tiempo de explicarse bien.',
+  },
+  'soleil-lune': {
+    conjonction: 'El Sol de {{x}} está sobre la Luna de {{y}}: en astrología, es el lazo de las parejas que duran. {{y}} se siente {y:comprendido|comprendida} y {y:tranquilo|tranquila} con lo que {{x}} es en el fondo, y {{x}} se siente {x:aceptado|aceptada} tal como es. Os sentís en casa el uno con el otro, y eso es poco común.',
+    sextile: 'El Sol de {{x}} y la Luna de {{y}} se llevan bien. Lo que {{x}} es en el fondo le sienta bien a {{y}}, que se siente a gusto a su lado. Es un lazo dulce, que ayuda a que la pareja dure.',
+    carre: 'El Sol de {{x}} y la Luna de {{y}} se rozan. Lo que {{x}} hace con naturalidad puede herir a {{y}} sin que {{x}} se dé cuenta, y {{y}} puede sentir que no {y:lo|la} entienden. No es falta de amor, sino dos ritmos distintos. Tomaos el tiempo de explicaros lo que os llega.',
+    trigone: 'El Sol de {{x}} y la Luna de {{y}} están en armonía: es muy buena señal para la vida en común. {{y}} se siente bien con {{x}} de forma natural, y {{x}} encuentra en {{y}} un apoyo que no pide nada a cambio. Formáis un equipo en el que cada uno tiene su sitio.',
+    opposition: 'El Sol de {{x}} y la Luna de {{y}} se miran de frente. En astrología, es una atracción muy fuerte, la de dos mitades que se complementan. Pide equilibrio: {{x}} tiene que estar {x:atento|atenta} a las emociones de {{y}}, y {{y}} tiene que dejar que {{x}} sea {x:él mismo|ella misma}.',
+  },
+  'venus-mars': {
+    conjonction: 'La Venus de {{x}} y el Marte de {{y}} están pegados: es el aspecto de la atracción física por excelencia. A {{y}} le atrae lo que transmite {{x}}, y a {{x}} le encanta la forma en que {{y}} {x:lo|la} desea. Entre {v:vosotros|vosotras}, la seducción no se apaga fácilmente.',
+    sextile: 'La Venus de {{x}} y el Marte de {{y}} se llevan bien. La atracción está ahí, dulce y fácil, y sabéis seduciros sin forzar. Es un lazo que mantiene viva la complicidad física con el tiempo.',
+    carre: 'La Venus de {{x}} y el Marte de {{y}} se rozan, y saltan chispas. La atracción es fuerte, un poco eléctrica, con discusiones que muchas veces acaban en reconciliación. {{x}} puede encontrar a {{y}} demasiado {y:impaciente|impaciente}, y {{y}} encontrar a {{x}} demasiado {x:complicado|complicada}. Hablad de lo que os apetece, sin tabúes.',
+    trigone: 'La Venus de {{x}} y el Marte de {{y}} están en armonía. Os atraéis de forma natural, y vuestros deseos se encuentran con facilidad. El deseo es sencillo y tierno, y dura.',
+    opposition: 'La Venus de {{x}} y el Marte de {{y}} se miran de frente: una atracción fuerte, hecha de contrastes. {{y}} tiene ganas de seducir a {{x}}, a quien le encanta que {x:lo|la} seduzcan, y ese juego puede durar mucho tiempo. Solo cuidado con no convertirlo en una lucha de poder.',
+    meme: 'La Venus de {{x}} y el Marte de {{y}} no forman un aspecto preciso, pero están en el mismo elemento. Vuestros deseos se entienden: lo que le gusta a {{x}} suele ser lo que {{y}} tiene ganas de dar.',
+    allie: 'La Venus de {{x}} y el Marte de {{y}} están en elementos aliados. La atracción es real sin ser explosiva, y crece con la confianza.',
+    contraste: 'La Venus de {{x}} y el Marte de {{y}} están en elementos que se contrarían. Vuestras formas de desear no se parecen, y hay que aprender lo que le gusta al otro. Es hablándolo como el deseo encuentra su camino.',
+  },
+  'lune-venus': {
+    conjonction: 'La Luna de {{x}} y la Venus de {{y}} están juntas: es uno de los lazos más tiernos. La forma de querer de {{y}} es justo lo que {{x}} necesita para sentirse {x:querido|querida}. Sus abrazos y sus pequeños detalles siempre aciertan.',
+    sextile: 'La Luna de {{x}} y la Venus de {{y}} se llevan bien. {{y}} sabe hacer sentir bien a {{x}}, con gestos sencillos y una ternura natural.',
+    carre: 'La Luna de {{x}} y la Venus de {{y}} se rozan. {{y}} demuestra su amor de una forma que no siempre tranquiliza a {{x}}, y {{x}} puede sentirse {x:incomprendido|incomprendida} sin saber por qué. Lo más sencillo es que {{x}} le diga a {{y}} lo que le da seguridad.',
+    trigone: 'La Luna de {{x}} y la Venus de {{y}} están en armonía. {{x}} se siente {x:querido|querida} como necesita, y a {{y}} le encanta cuidar de {{x}}. Es una ternura fácil, que sienta bien en el día a día.',
+    opposition: 'La Luna de {{x}} y la Venus de {{y}} se miran de frente. Os atraéis, pero vuestras necesidades de ternura no son las mismas: {{x}} espera una forma de amor que a {{y}} no siempre se le ocurre dar. Diciéndooslo, encontraréis fácilmente el término medio.',
+  },
+  'soleil-venus': {
+    conjonction: 'El Sol de {{x}} y la Venus de {{y}} están juntos: {{y}} quiere a {{x}} por lo que es en el fondo. Es el lazo de la admiración y del flechazo. {{x}} se siente {x:valorado|valorada}, y {{y}} encuentra en {{x}} justo lo que le hace perder la cabeza.',
+    sextile: 'El Sol de {{x}} y la Venus de {{y}} se llevan bien. A {{y}} le gusta la personalidad de {{x}}, y disfrutáis pasando tiempo {v:juntos|juntas}. Es un lazo de complicidad sencillo y agradable.',
+    carre: 'El Sol de {{x}} y la Venus de {{y}} se rozan. A {{y}} le atrae {{x}}, pero algunos rasgos del carácter de {{x}} le molestan. Hay que aceptar que el otro no va a cambiar en todo, y decírselo con humor más que con reproches.',
+    trigone: 'El Sol de {{x}} y la Venus de {{y}} están en armonía. {{y}} admira a {{x}} sin esfuerzo, y {{x}} se siente {x:querido|querida} por lo que es. Vuestra complicidad es natural, y muchas veces os gustan las mismas cosas.',
+    opposition: 'El Sol de {{x}} y la Venus de {{y}} se miran de frente. La atracción es fuerte, hecha de diferencias: a {{y}} le seduce lo que {{x}} tiene de distinto. En el día a día, hay que aceptar esas diferencias sin intentar borrarlas.',
+  },
+  'mercure-lune': {
+    conjonction: 'El Mercurio de {{x}} y la Luna de {{y}} están juntos: las palabras de {{x}} llegan directamente a las emociones de {{y}}. {{y}} se siente {y:escuchado|escuchada} y {y:comprendido|comprendida}, y podéis hablar de todo, incluso de lo que duele.',
+    sextile: 'El Mercurio de {{x}} y la Luna de {{y}} se llevan bien. {{x}} sabe encontrar las palabras que tranquilizan a {{y}}, y las conversaciones del día a día son fáciles.',
+    carre: 'El Mercurio de {{x}} y la Luna de {{y}} se rozan. {{x}} puede decir las cosas de una forma que hiere a {{y}} sin querer, y {{y}} puede reaccionar con sus emociones donde {{x}} esperaba lógica. Antes de una conversación importante, elegid bien el momento y el tono.',
+    trigone: 'El Mercurio de {{x}} y la Luna de {{y}} están en armonía. {{x}} entiende lo que siente {{y}} y sabe hablar de ello con dulzura. Las pequeñas charlas de la noche le hacen mucho bien a vuestra pareja.',
+    opposition: 'El Mercurio de {{x}} y la Luna de {{y}} se miran de frente. {{x}} razona cuando {{y}} siente, y vuestras conversaciones pueden convertirse en un diálogo de sordos. Escuchad primero lo que siente el otro, y buscad soluciones solo después.',
+  },
+};

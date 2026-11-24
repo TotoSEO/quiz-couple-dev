@@ -37,12 +37,21 @@
   // valeur qui commence par une voyelle s'élident (« les planètes d'Inès »,
   // « Cochon d'Eau »).
   var VOYELLE = /^[aeiouyàâäéèêëîïôöùûüÿœæ]/i;
+  // En espagnol, « y » devient « e » devant un son « i » ; en italien, « e »
+  // devient « ed » devant un « e » (conjonction.mjs de la fonction astro).
+  function conjonction(mot, x) {
+    var nu = String(x).normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+    if (LANG === 'es' && (mot === 'y' || mot === 'Y')) return /^h?i(?!e)/i.test(nu) ? (mot === 'Y' ? 'E' : 'e') : mot;
+    if (LANG === 'it' && (mot === 'e' || mot === 'E')) return /^e/i.test(nu) ? mot + 'd' : mot;
+    return mot;
+  }
   function tpl(s, v) {
-    return String(s || '').replace(/(^|[^A-Za-zÀ-ÖØ-öø-ÿ])(de|De|que|Que) \{\{(\w+)\}\}|\{\{(\w+)\}\}/g, function (t, avant, mot, k1, k2) {
+    return String(s || '').replace(/(^|[^A-Za-zÀ-ÖØ-öø-ÿ])(de|De|que|Que|y|Y|e|E) \{\{(\w+)\}\}|\{\{(\w+)\}\}/g, function (t, avant, mot, k1, k2) {
       if (k2) return v[k2] != null ? v[k2] : t;
       var x = v[k1];
       if (x == null) return t;
-      return avant + (LANG === 'fr' && VOYELLE.test(String(x)) ? mot.slice(0, -1) + "'" + x : mot + ' ' + x);
+      if (/^(de|De|que|Que)$/.test(mot)) return avant + (LANG === 'fr' && VOYELLE.test(String(x)) ? mot.slice(0, -1) + "'" + x : mot + ' ' + x);
+      return avant + conjonction(mot, x) + ' ' + x;
     });
   }
   // {masc|fém} au genre d'une personne.
@@ -161,7 +170,9 @@
       }
       var ia = SIGNES.indexOf(A.signe), ib = SIGNES.indexOf(B.signe);
       var nee = function (p) {
-        return accord(tpl(lire(p.heure ? 'neeHeure' : 'nee', ''), { p: esc(p.prenom), date: dateLongue(p.date), heure: heureLongue(p.heure) }), p.genre);
+        var nee = accord(tpl(lire(p.heure ? 'neeHeure' : 'nee', ''), { p: esc(p.prenom), date: dateLongue(p.date), heure: heureLongue(p.heure) }), p.genre);
+        // « a las 14:30 », mais « a la 1:15 ».
+        return LANG === 'es' ? nee.replace(/\ba las 1:/, 'a la 1:') : nee;
       };
       // Le dessin : le cercle du zodiaque, vos deux signes allumés, et vos deux
       // constellations dedans, côte à côte sur un grand écran, l'une au-dessus

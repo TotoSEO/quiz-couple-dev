@@ -13,6 +13,7 @@
 //                    sont des femmes
 // Les textes à deux s'adressent au couple (« vous ») autant que possible.
 import { SIGNES, ELEMENTS, PLANETES, ANIMAUX, ELEMENTS_CHINOIS, elementDuSigne } from './ciel.mjs';
+import { conjonction } from './conjonction.mjs';
 
 // Les pronoms {{il}}, {{Il}}, {{lui}} n'existent qu'en français : les textes
 // des autres langues écrivent leurs pronoms en accord ({he|she}, {er|sie}).
@@ -33,11 +34,21 @@ function remplacer(texte, valeur, lang = 'fr') {
       return avant + (VOYELLE.test(v) ? mot.slice(0, -1) + "'" + v : mot + ' ' + v);
     });
   }
+  // En espagnol, « y » devient « e » devant un son « i » (« Lucía e Inés ») ;
+  // en italien, « e » devient « ed » devant un « e » (« Luca ed Elena »).
+  if (lang === 'es' || lang === 'it') {
+    s = s.replace(/(^|[^\p{L}])(y|Y|e|E) \{\{(\w+)\}\}/gu, (tout, avant, mot, k) => {
+      const v = valeur(k);
+      if (v === undefined || v === null) return tout;
+      return avant + conjonction(lang, mot, v) + ' ' + v;
+    });
+  }
   return s.replace(/\{\{(\w+)\}\}/g, (tout, k) => {
     const v = valeur(k);
     return v === undefined || v === null ? tout : v;
   });
 }
+
 
 export function accorder(texte, sujet, x, y, lang = 'fr') {
   let s = String(texte || '');
@@ -196,7 +207,7 @@ export function assembler({ ciel, personnes, lang = 'fr', textes: T, date }) {
   const P = ciel.profil;
   const profil = {
     archetype: P.archetype, douceur: P.douceur, etincelle: P.etincelle,
-    nom: T.profil[P.archetype].nom, accroche: T.profil[P.archetype].accroche,
+    nom: T.profil[P.archetype].nom, accroche: acc(T.profil[P.archetype].accroche, null, pa, pb),
     texte: T.profil[P.archetype].texte.map((t) => acc(t, null, pa, pb)),
   };
   const domaines = Object.entries(ciel.domaines).map(([cle, note]) => {
@@ -293,4 +304,4 @@ function partout(o, f) {
   return o;
 }
 
-export { ELEMENTS };
+export { ELEMENTS, conjonction };
