@@ -116,7 +116,16 @@
     "s5Item7Label": "Diritto di revocare il consenso:",
     "s5Item7Text": "In qualsiasi momento, per i trattamenti che si basano su di esso (e-mail, valutazione di coppia), senza rimettere in discussione quanto fatto prima",
     "s5Item8Label": "Diritto di reclamo:",
-    "s5Item8Text": "Alla CNIL (cnil.fr), l'autorità francese per la protezione dei dati, o all'autorità del tuo paese, se ritieni che i tuoi diritti non siano rispettati"
+    "s5Item8Text": "Alla CNIL (cnil.fr), l'autorità francese per la protezione dei dati, o all'autorità del tuo paese, se ritieni che i tuoi diritti non siano rispettati",
+    "themeTitle": "Il tema natale di coppia",
+    "themeIntro": "Il tema natale di coppia calcola un report di astrologia a partire dalle vostre due date di nascita. Ecco cosa viene conservato, e per quanto tempo.",
+    "themeItems": [
+      "<strong>Cosa viene registrato:</strong> i due nomi, il genere di ognuno (per accordare i testi), le due date di nascita, le ore se le date e il fuso orario del vostro browser. Quando pagate, quello che Stripe ci restituisce del pagamento: la data, l'importo e l'indirizzo email dato sulla sua pagina. Nessun account.",
+      "<strong>Per cosa:</strong> calcolare e mostrare il vostro report, e inviarvi una sola volta il suo link per email. Nient'altro: l'indirizzo non entra in nessuna lista di invio. La base giuridica è l'esecuzione del contratto che concludete acquistando il report.",
+      "<strong>Chi li vede:</strong> le persone che hanno il link del report, e nessun altro. La chiave del link è conservata solo sotto forma di impronta, impossibile da invertire. Prima del pagamento, l'anteprima gratuita è calcolata nel vostro browser, senza inviare niente.",
+      "<strong>Per quanto tempo:</strong> sei mesi dopo il pagamento, poi tutto viene cancellato automaticamente. Un ordine non pagato viene cancellato dopo trenta giorni. Potete anche cancellare il report e i vostri dati in qualsiasi momento, con il link «Cancella questo report» alla fine del report.",
+      "<strong>I fornitori:</strong> Supabase ospita i dati, Stripe gestisce il pagamento e Resend invia l'email con il link."
+    ]
   },
   "mentions": {
     "seoTitle": "Note Legali | Quiz Couple",

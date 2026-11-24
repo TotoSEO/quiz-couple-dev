@@ -13,7 +13,7 @@
 //                    sont des femmes
 // Les textes à deux s'adressent au couple (« vous ») autant que possible.
 import { SIGNES, ELEMENTS, PLANETES, ANIMAUX, ELEMENTS_CHINOIS, elementDuSigne } from './ciel.mjs';
-import { conjonction } from './conjonction.mjs';
+import { conjonction, eliderDates } from './conjonction.mjs';
 
 // Les pronoms {{il}}, {{Il}}, {{lui}} n'existent qu'en français : les textes
 // des autres langues écrivent leurs pronoms en accord ({he|she}, {er|sie}).
@@ -43,10 +43,10 @@ function remplacer(texte, valeur, lang = 'fr') {
       return avant + conjonction(lang, mot, v) + ' ' + v;
     });
   }
-  return s.replace(/\{\{(\w+)\}\}/g, (tout, k) => {
+  return eliderDates(lang, s.replace(/\{\{(\w+)\}\}/g, (tout, k) => {
     const v = valeur(k);
     return v === undefined || v === null ? tout : v;
-  });
+  }));
 }
 
 
