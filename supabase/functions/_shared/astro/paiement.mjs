@@ -2,6 +2,8 @@
 // serveur pour que le webhook de Stripe (bilan-stripe) le charge sans les
 // éphémérides ni les textes : une session payée débloque la commande qu'elle
 // porte en métadonnée (`astro`), un remboursement est noté sur la commande.
+// Le webhook passe aussi `envoyerLien` (lien.mjs) : le lien du rapport part
+// alors par e-mail même si l'acheteur ne revient pas sur la page.
 export const UUID = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/;
 
 export function emailPropre(e) {
@@ -9,7 +11,7 @@ export function emailPropre(e) {
   return s.length <= 254 && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(s) ? s : null;
 }
 
-export function creerPaiement({ stockage, maintenant = () => new Date() }) {
+export function creerPaiement({ stockage, maintenant = () => new Date(), envoyerLien = null }) {
   async function compter(etape) {
     try { await stockage.compter(etape); } catch (e) { console.warn('[astro] compteur', String(e.message || e).slice(0, 120)); }
   }
@@ -20,20 +22,27 @@ export function creerPaiement({ stockage, maintenant = () => new Date() }) {
     const id = session?.metadata?.astro;
     if (typeof id !== 'string' || !UUID.test(id)) return false;
     if (session.payment_status !== 'paid') return false;
-    const ligne = await stockage.lire(id);
+    let ligne = await stockage.lire(id);
     if (!ligne) return false;
-    if (ligne.paye_le) return true;
-    const intent = typeof session.payment_intent === 'string' ? session.payment_intent
-      : (session.payment_intent && typeof session.payment_intent.id === 'string' ? session.payment_intent.id : null);
-    const email = emailPropre(session.customer_details?.email) || emailPropre(session.customer_email);
-    await stockage.maj(id, {
-      paye_le: maintenant().toISOString(),
-      paiement_session: typeof session.id === 'string' ? session.id.slice(0, 255) : null,
-      paiement_intent: intent ? intent.slice(0, 255) : null,
-      paiement_montant: Number.isInteger(session.amount_total) ? session.amount_total : null,
-      paiement_email: email,
-    });
-    await compter('paye');
+    if (!ligne.paye_le) {
+      const intent = typeof session.payment_intent === 'string' ? session.payment_intent
+        : (session.payment_intent && typeof session.payment_intent.id === 'string' ? session.payment_intent.id : null);
+      const email = emailPropre(session.customer_details?.email) || emailPropre(session.customer_email);
+      const champs = {
+        paye_le: maintenant().toISOString(),
+        paiement_session: typeof session.id === 'string' ? session.id.slice(0, 255) : null,
+        paiement_intent: intent ? intent.slice(0, 255) : null,
+        paiement_montant: Number.isInteger(session.amount_total) ? session.amount_total : null,
+        paiement_email: email,
+      };
+      ligne = (await stockage.maj(id, champs)) || { ...ligne, ...champs };
+      await compter('paye');
+    }
+    // Le lien par e-mail, s'il n'est pas déjà parti (un webhook rejoué le
+    // rattrape aussi) ; une panne d'envoi ne fait pas échouer le paiement.
+    if (envoyerLien) {
+      try { await envoyerLien(ligne, null); } catch (e) { console.warn('[astro] lien', String((e && e.message) || e).slice(0, 160)); }
+    }
     return true;
   }
 

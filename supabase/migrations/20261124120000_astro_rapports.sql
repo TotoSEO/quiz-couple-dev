@@ -5,14 +5,18 @@
 --
 -- Ce qu'une commande garde : deux prénoms, deux genres, deux dates et heures
 -- de naissance, le fuseau du navigateur, et ce que Stripe renvoie du
--- paiement (l'adresse e-mail sert au seul envoi du lien du rapport). Le jeton
--- qui ouvre le rapport n'est gardé qu'en empreinte (SHA-256). Fermée à la clé
--- publique : seule la fonction astro l'écrit, avec la clé de service.
+-- paiement (l'adresse e-mail sert au seul envoi du lien du rapport). Les
+-- jetons qui ouvrent le rapport ne sont gardés qu'en empreinte (SHA-256) :
+-- celui de la page (jeton_hash) et celui que le webhook de Stripe tire pour
+-- l'e-mail du lien quand l'acheteur ne revient pas sur la page
+-- (jeton_mail_hash). Fermée à la clé publique : seules les fonctions astro et
+-- bilan-stripe l'écrivent, avec la clé de service.
 create table if not exists public.astro_rapports (
   id uuid primary key default gen_random_uuid(),
   cree_le timestamptz not null default now(),
   lang text not null default 'fr',
   jeton_hash text not null,
+  jeton_mail_hash text,
   a_prenom text not null,
   a_genre text not null,
   a_date date not null,
@@ -35,10 +39,13 @@ create table if not exists public.astro_rapports (
   rembourse_le timestamptz
 );
 
+alter table public.astro_rapports add column if not exists jeton_mail_hash text;
+
 alter table public.astro_rapports drop constraint if exists astro_rapports_bornes;
 alter table public.astro_rapports add constraint astro_rapports_bornes check (
   lang in ('fr', 'en', 'es', 'de', 'it', 'nl')
   and char_length(jeton_hash) = 64
+  and (jeton_mail_hash is null or char_length(jeton_mail_hash) = 64)
   and char_length(a_prenom) between 1 and 30 and char_length(b_prenom) between 1 and 30
   and a_genre in ('f', 'm') and b_genre in ('f', 'm')
   and (a_heure is null or a_heure ~ '^([01][0-9]|2[0-3]):[0-5][0-9]$')

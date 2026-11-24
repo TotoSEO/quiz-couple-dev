@@ -35,6 +35,14 @@ export function creerStockageRest({ url, cle, fetch: f = fetch }) {
     async supprimer(id) {
       await appel(base + '?id=eq.' + encodeURIComponent(id), { method: 'DELETE', headers: entetes() });
     },
+    // Pose lien_envoye_le seulement s'il est vide, en une requête : rend vrai
+    // à un seul des appels qui se croisent (la page et le webhook, lien.mjs).
+    async reserverEnvoi(id, quand) {
+      const r = await appel(base + '?id=eq.' + encodeURIComponent(id) + '&lien_envoye_le=is.null', {
+        method: 'PATCH', headers: entetes({ Prefer: 'return=representation' }), body: JSON.stringify({ lien_envoye_le: quand }),
+      });
+      return ((await r.json()) || []).length > 0;
+    },
     async trouverParIntent(intent) {
       const r = await appel(base + '?paiement_intent=eq.' + encodeURIComponent(intent) + '&select=*&limit=1', { headers: entetes() });
       return (await r.json())[0] || null;
@@ -55,6 +63,7 @@ export function creerStockageMemoire() {
     async lire(id) { const l = lignes.get(id); return l ? { ...l } : null; },
     async maj(id, champs) { const l = lignes.get(id); if (!l) return null; Object.assign(l, champs); return { ...l }; },
     async supprimer(id) { lignes.delete(id); },
+    async reserverEnvoi(id, quand) { const l = lignes.get(id); if (!l || l.lien_envoye_le) return false; l.lien_envoye_le = quand; return true; },
     async trouverParIntent(intent) { for (const l of lignes.values()) if (l.paiement_intent === intent) return { ...l }; return null; },
     async compter(etape) { compteurs[etape] = (compteurs[etape] || 0) + 1; },
   };

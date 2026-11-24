@@ -21,6 +21,10 @@ import { verifierSignature } from "../_shared/bilan/stripe.mjs";
 import { creerPaiement as creerPaiementAstro } from "../_shared/astro/paiement.mjs";
 // @ts-ignore
 import { creerStockageRest as creerStockageAstro } from "../_shared/astro/stockage-rest.mjs";
+// @ts-ignore module JS sans types
+import { creerEnvoiLien } from "../_shared/astro/lien.mjs";
+// @ts-ignore module JS sans types
+import { creerCourriel } from "../_shared/bilan/courriel.mjs";
 
 const SUPABASE_URL = Deno.env.get('SUPABASE_URL')!;
 const SERVICE_KEY = Deno.env.get('SUPABASE_SERVICE_ROLE_KEY')!;
@@ -29,8 +33,14 @@ const SECRET = Deno.env.get('STRIPE_WEBHOOK_SECRET') || '';
 const bilan = creerServeur({
   stockage: creerStockageRest({ url: SUPABASE_URL, cle: SERVICE_KEY, fetch }),
 });
+// Le thème astral : le webhook envoie aussi le lien du rapport par e-mail
+// (une seule fois, lien.mjs), pour l'acheteur qui ne revient pas sur la page
+// après Stripe.
+const stockageAstro = creerStockageAstro({ url: SUPABASE_URL, cle: SERVICE_KEY, fetch });
+const RESEND = Deno.env.get('RESEND_API_KEY') || '';
 const astro = creerPaiementAstro({
-  stockage: creerStockageAstro({ url: SUPABASE_URL, cle: SERVICE_KEY, fetch }),
+  stockage: stockageAstro,
+  envoyerLien: RESEND ? creerEnvoiLien({ stockage: stockageAstro, courriel: creerCourriel({ cle: RESEND, fetch }) }) : null,
 });
 // deno-lint-ignore no-explicit-any
 const marquerPaye = (session: any) => (session?.metadata?.astro ? astro.marquerPaye(session) : bilan.marquerPaye(session));

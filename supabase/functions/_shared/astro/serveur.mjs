@@ -11,14 +11,11 @@
 // (PRIX_REGIONS, l'Amérique latine comme le point sur ma relation).
 import { cielDuCouple, dateValide, heureValide, fuseauValide } from './ciel.mjs';
 import { assembler } from './rapport.mjs';
-import { messageAstro } from './courriel.mjs';
 import { creerPaiement, emailPropre, UUID } from './paiement.mjs';
+import { LANGUES, SITE, CHEMINS, empreinte, nouveauJeton, creerEnvoiLien } from './lien.mjs';
 
 export const PRIX_CENTIMES = 490;
 export const PRIX_REGIONS = { latam: 199 };
-export const LANGUES = ['fr'];
-export const SITE = 'https://quiz-couple.com';
-export const CHEMINS = { fr: '/theme-astral-couple/' };
 export const ETAPES = ['page_vue', 'page_vue_test', 'ciel_vu', 'paiement_clic', 'rapport_vu', 'carte_vue', 'carte_clic'];
 const SESSION = /^cs_(test|live)_[A-Za-z0-9]{10,200}$/;
 const JETON = /^[A-Za-z0-9_-]{20,64}$/;
@@ -36,22 +33,11 @@ export function zoneValide(zone) {
 }
 export function prixPour(zone) { return zoneValide(zone) ? PRIX_REGIONS[zone] : PRIX_CENTIMES; }
 
-export async function empreinte(texte) {
-  const h = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(String(texte)));
-  return [...new Uint8Array(h)].map((b) => b.toString(16).padStart(2, '0')).join('');
-}
-export function nouveauJeton() {
-  const o = new Uint8Array(24);
-  crypto.getRandomValues(o);
-  let s = '';
-  for (const b of o) s += String.fromCharCode(b);
-  return btoa(s).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
-}
 export function prenomPropre(p) {
   const s = String(p || '').normalize('NFC').replace(/[\u0000-\u001f<>]/g, '').replace(/\s+/g, ' ').trim();
   return s.slice(0, 30);
 }
-export { emailPropre };
+export { emailPropre, LANGUES, SITE, CHEMINS, empreinte, nouveauJeton };
 
 // Une personne envoyée par la page : prénom, genre (f ou m), date, heure
 // facultative, fuseau. null si quelque chose ne va pas.
@@ -82,7 +68,10 @@ export function creerServeur({ stockage, stripe = null, courriel = null, textes,
     const jeton = typeof corps.jeton === 'string' && JETON.test(corps.jeton) ? corps.jeton : '';
     if (!id || !jeton) return { erreur: non(400, 'lien') };
     const ligne = await stockage.lire(id);
-    if (!ligne || ligne.jeton_hash !== await empreinte(jeton)) return { erreur: non(404, 'introuvable') };
+    // Le jeton de la page, ou celui de l'e-mail que le webhook a envoyé
+    // (lien.mjs).
+    const h = await empreinte(jeton);
+    if (!ligne || (ligne.jeton_hash !== h && ligne.jeton_mail_hash !== h)) return { erreur: non(404, 'introuvable') };
     return { ligne };
   }
 
@@ -153,23 +142,10 @@ export function creerServeur({ stockage, stripe = null, courriel = null, textes,
 
   const { marquerPaye, marquerRembourse } = creerPaiement({ stockage, maintenant });
 
-  // Le lien du rapport, envoyé une seule fois, au premier passage qui
-  // connaît le jeton (la page, au retour de Stripe) : le webhook, lui, ne
-  // connaît pas le jeton, que la base ne garde pas.
-  async function envoyerLien(ligne, jeton) {
-    if (!courriel || !ligne.paiement_email || ligne.lien_envoye_le) return false;
-    const lang = LANGUES.includes(ligne.lang) ? ligne.lang : 'fr';
-    const url = SITE + (CHEMINS[lang] || CHEMINS.fr) + '#r=' + ligne.id + '&t=' + jeton;
-    const m = messageAstro({ lang, a: ligne.a_prenom, b: ligne.b_prenom, url });
-    try {
-      await courriel.envoyer({ a: ligne.paiement_email, sujet: m.sujet, html: m.html, texte: m.texte, lang });
-      await stockage.maj(ligne.id, { lien_envoye_le: maintenant().toISOString() });
-      return true;
-    } catch (e) {
-      console.warn('[astro] e-mail', String(e.message || e).slice(0, 160));
-      return false;
-    }
-  }
+  // Le lien du rapport, envoyé une seule fois (lien.mjs) : ici, au retour de
+  // Stripe, avec le jeton de la page ; le webhook l'envoie aussi, avec un
+  // jeton à lui, quand l'acheteur ne revient pas sur la page.
+  const envoyerLien = creerEnvoiLien({ stockage, courriel, maintenant });
 
   async function verifier(corps) {
     const c = await charger(corps);
