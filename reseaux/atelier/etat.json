@@ -1,5 +1,5 @@
 {
-  "genere_le": "2026-11-24T03:16:40.794Z",
+  "genere_le": "2026-11-24T13:42:29.943Z",
   "langue": "en",
   "compte": {
     "nom": "quiz_couple_official",
@@ -849,7 +849,7 @@
       "creneau": "matin",
       "gabarit": "choisirait",
       "categorie": "choisirait",
-      "statut": "rendu",
+      "statut": "publie",
       "texte": "What would she choose?",
       "erreur": null
     },
@@ -858,7 +858,7 @@
       "creneau": "midi",
       "gabarit": "choisirait",
       "categorie": "choisirait",
-      "statut": "rendu",
+      "statut": "publie",
       "texte": "What would he choose?",
       "erreur": null
     },
@@ -903,7 +903,7 @@
       "creneau": "matin",
       "gabarit": "choisirait",
       "categorie": "choisirait",
-      "statut": "a_rendre",
+      "statut": "rendu",
       "texte": "What would she choose?",
       "erreur": null
     },
@@ -912,7 +912,7 @@
       "creneau": "midi",
       "gabarit": "choisirait",
       "categorie": "choisirait",
-      "statut": "a_rendre",
+      "statut": "rendu",
       "texte": "What would he choose?",
       "erreur": null
     },
@@ -4601,7 +4601,7 @@
   "idees": [],
   "prochain_creneau": {
     "connais-tu": {
-      "jour": "2026-11-24",
+      "jour": "2026-11-27",
       "creneau": "soir"
     },
     "tu-preferes": {
