@@ -1,11 +1,12 @@
 {
   "title": "Condizioni generali di vendita",
-  "majLe": "Ultimo aggiornamento: 4 novembre 2026",
-  "intro": "Queste condizioni si applicano all'acquisto del report completo del {{bilan}} su quiz-couple.com. Tutto il resto del sito è gratuito e non è interessato da nessuna vendita.",
+  "majLe": "Ultimo aggiornamento: 24 novembre 2026",
+  "intro": "Queste condizioni si applicano all'acquisto del report completo della {{bilan}} e del {{theme}} su quiz-couple.com. Gli articoli da 1 a 10 descrivono la valutazione di coppia, l'articolo 11 il tema natale di coppia. Tutto il resto del sito è gratuito e non è interessato da nessuna vendita.",
   "liens": {
     "contact": "pagina dei contatti",
     "confidentialite": "informativa sulla privacy",
-    "bilan": "valutazione di coppia"
+    "bilan": "valutazione di coppia",
+    "theme": "tema natale di coppia"
   },
   "vendeur": {
     "titre": "Il venditore",
@@ -95,6 +96,17 @@
       "titre": "10. La legge applicabile",
       "p": [
         "Queste condizioni sono soggette al diritto francese. In caso di controversia, e in mancanza di un accordo amichevole, i tribunali competenti sono quelli designati dalla legge; un consumatore può anche rivolgersi al tribunale del luogo in cui risiedeva al momento del pagamento. Se risiedi in un altro paese dell'Unione europea, conservi la protezione delle norme imperative del tuo paese di residenza."
+      ]
+    },
+    {
+      "titre": "11. Il tema natale di coppia",
+      "p": [
+        "Cosa si vende: un report di astrologia elaborato a partire da due nomi e due date di nascita (l'ora è facoltativa). Dà il cielo delle due persone riunito su una sola ruota, il profilo della coppia, i suoi ambiti, i cinque pianeti di ognuno letti uno per uno, i legami tra i due temi, i segni cinesi, i cammini di vita e i dodici mesi che seguono l'acquisto. La ruota, i pianeti di ognuno e il profilo sono mostrati gratis prima dell'acquisto; il resto, solo dopo. Il report è un contenuto digitale: viene mostrato sulla pagina del tema natale e si può rileggere dal link personale inviato per email. È riservato alle persone maggiorenni.",
+        "Il prezzo è di {{prixTheme}} per il report della coppia, in un solo pagamento, senza abbonamento. Per l'America Latina può essere proposto un prezzo più basso: è mostrato sulla pagina prima di qualsiasi pagamento, e vale quello della pagina di pagamento. IVA non applicabile, articolo 293 B del Codice generale delle imposte francese. Il pagamento avviene con carta, o con un altro mezzo proposto, sulla pagina di pagamento di Stripe; non vediamo mai i numeri delle carte.",
+        "Prima di pagare, l'acquirente spunta una casella con cui chiede che il report gli sia fornito subito, senza aspettare la fine del termine di recesso di quattordici giorni, e riconosce che il suo diritto di recesso termina quando il report viene fornito (articolo L221-28 13° del Codice del consumo francese). Il report è fornito non appena appare sulla pagina dopo il pagamento, o non appena parte l'email che dà il suo link, se prima. Da quel momento l'acquisto è definitivo: nessun rimborso è dovuto per un risultato che non piace o che non somiglia all'idea che ci si era fatti della propria coppia.",
+        "Il report è coperto dalla garanzia legale di conformità dei contenuti digitali (articoli L224-25-12 e seguenti del Codice del consumo francese). Se non appare, se è incompleto o se non corrisponde a quanto descritto in questo articolo, scrivici dalla {{contact}}: lo correggiamo senza costi e, se non è possibile, ti rimborsiamo.",
+        "L'astrologia non è una scienza, e il report si legge come un gioco a due: non predice niente e non dice niente di certo sulla vostra coppia né sul suo futuro. Le posizioni dei pianeti sono calcolate con precisione, ma quello che ci si legge viene dalla tradizione astrologica. Le decisioni che prendete nella vostra vita a partire dal report sono solo vostre e sotto la vostra sola responsabilità.",
+        "I nomi, i generi e le date e ore di nascita servono solo a calcolare il report; l'indirizzo email dato a Stripe serve solo a inviare il suo link. Tutto viene cancellato sei mesi dopo il pagamento, o trenta giorni dopo un ordine non pagato, e il report si può cancellare in qualsiasi momento dalla sua pagina. I dettagli sono nella nostra {{confidentialite}}. Gli articoli sui reclami e sulla mediazione e sulla legge applicabile (articoli 9 e 10), così come i dati del venditore, valgono anche per il tema natale di coppia."
       ]
     }
   ]

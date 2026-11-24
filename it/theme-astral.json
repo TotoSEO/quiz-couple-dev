@@ -1,0 +1,622 @@
+{
+  "meta": {
+    "title": "Tema natale di coppia: cosa dicono i vostri due cieli",
+    "description": "Il vostro tema natale di coppia, calcolato con le vostre due date di nascita: le vostre Lune, Venere e Marte, i legami tra i vostri temi, i vostri segni cinesi e i vostri prossimi 12 mesi."
+  },
+  "fil": "Tema natale di coppia",
+  "carte": {
+    "kicker": "Novità · Tema natale",
+    "puces": [
+      "Il vostro cielo a due, animato",
+      "Le vostre Lune, Venere e Marte",
+      "I vostri prossimi 12 mesi"
+    ],
+    "bouton": "Vedi il nostro tema natale",
+    "vous": "Tu",
+    "moitie": "Il tuo partner",
+    "test": {
+      "titre": "Questo punteggio guarda solo i vostri segni",
+      "texte": "Il vostro segno è solo la posizione del Sole. Il giorno della vostra nascita, anche la Luna, Venere e Marte erano nel cielo. È lì che l'astrologia legge l'amore, il desiderio e i litigi.",
+      "note": "Anteprima gratis con le vostre date di nascita"
+    },
+    "date": {
+      "titre": "Le vostre date di nascita dicono di più",
+      "texte": "Questo test guarda il vostro segno, il vostro cammino di vita e il vostro segno cinese. Il giorno della vostra nascita, anche la Luna, Venere e Marte erano nel cielo. È lì che l'astrologia legge l'amore, il desiderio e i litigi.",
+      "note": "Le vostre due date sono già inserite. L'anteprima è gratis."
+    },
+    "chinois": {
+      "titre": "E il cielo del giorno della vostra nascita?",
+      "texte": "Le vostre date danno anche i vostri segni zodiacali. Il giorno della vostra nascita, la Luna, Venere e Marte avevano ognuno il suo posto nel cielo. Il tema natale di coppia li legge uno per uno, con un capitolo sui vostri segni cinesi.",
+      "note": "Le vostre due date sono già inserite. L'anteprima è gratis."
+    },
+    "article": {
+      "titre": "Il tuo segno non dice tutto",
+      "texte": "Il tuo segno è la posizione del Sole il giorno della tua nascita. Quel giorno, anche la Luna, Venere e Marte erano nel cielo. Con le vostre due date di nascita, il tema natale di coppia li colloca e vi dice cosa raccontano della vostra coppia.",
+      "note": "Anteprima gratis con le vostre date di nascita"
+    }
+  },
+  "signes": {
+    "belier": {
+      "nom": "Ariete",
+      "du": "dell'Ariete",
+      "en": "in Ariete",
+      "ligne": "Un cuore che va dritto e non fa niente a metà."
+    },
+    "taureau": {
+      "nom": "Toro",
+      "du": "del Toro",
+      "en": "in Toro",
+      "ligne": "Fedeltà, tenerezza e un debole per le buone cene."
+    },
+    "gemeaux": {
+      "nom": "Gemelli",
+      "du": "dei Gemelli",
+      "en": "in Gemelli",
+      "ligne": "Mille conversazioni, e la voglia che nessuna finisca."
+    },
+    "cancer": {
+      "nom": "Cancro",
+      "du": "del Cancro",
+      "en": "in Cancro",
+      "ligne": "Un cuore tenero che fa dell'altro la sua casa."
+    },
+    "lion": {
+      "nom": "Leone",
+      "du": "del Leone",
+      "en": "in Leone",
+      "ligne": "Ama in grande, e adora essere amato allo stesso modo."
+    },
+    "vierge": {
+      "nom": "Vergine",
+      "du": "della Vergine",
+      "en": "in Vergine",
+      "ligne": "Dice «ti amo» con mille piccole attenzioni."
+    },
+    "balance": {
+      "nom": "Bilancia",
+      "du": "della Bilancia",
+      "en": "in Bilancia",
+      "ligne": "L'armonia prima di tutto, e un vero talento per fare pace."
+    },
+    "scorpion": {
+      "nom": "Scorpione",
+      "du": "dello Scorpione",
+      "en": "in Scorpione",
+      "ligne": "Tutto o niente: una passione che va fino in fondo."
+    },
+    "sagittaire": {
+      "nom": "Sagittario",
+      "du": "del Sagittario",
+      "en": "in Sagittario",
+      "ligne": "Un cuore libero che vuole vivere l'avventura a due."
+    },
+    "capricorne": {
+      "nom": "Capricorno",
+      "du": "del Capricorno",
+      "en": "in Capricorno",
+      "ligne": "Si prende il suo tempo, poi costruisce per durare."
+    },
+    "verseau": {
+      "nom": "Acquario",
+      "du": "dell'Acquario",
+      "en": "in Acquario",
+      "ligne": "Un amore libero e originale, che non somiglia a nessun altro."
+    },
+    "poissons": {
+      "nom": "Pesci",
+      "du": "dei Pesci",
+      "en": "in Pesci",
+      "ligne": "Un cuore immenso, e sogni per due."
+    }
+  },
+  "elements": {
+    "feu": {
+      "nom": "Fuoco",
+      "le": "il Fuoco",
+      "de": "di Fuoco"
+    },
+    "terre": {
+      "nom": "Terra",
+      "le": "la Terra",
+      "de": "di Terra"
+    },
+    "air": {
+      "nom": "Aria",
+      "le": "l'Aria",
+      "de": "d'Aria"
+    },
+    "eau": {
+      "nom": "Acqua",
+      "le": "l'Acqua",
+      "de": "d'Acqua"
+    }
+  },
+  "scene": {
+    "aria": "Animazione: le vostre due costellazioni",
+    "passer": "Salta l'animazione",
+    "intro": {
+      "kicker": "Il vostro tema natale di coppia",
+      "titre": "{{a}} & {{b}}",
+      "texte": "Cosa dicono le stelle della vostra coppia.",
+      "indice": "Scorri verso il basso"
+    },
+    "personne": {
+      "kicker": "Sotto il segno {{du}}",
+      "element": "Segno {{de}}"
+    },
+    "elements": {
+      "titreMeme": "Due segni {{de}}",
+      "titre": "{{leA}} e {{leB}}",
+      "meme": "Lo stesso elemento: spesso vi capite senza bisogno di dirvi tutto.",
+      "allie_feu_air": "Due elementi che si alleano: l'aria ravviva il fuoco, e il fuoco scalda l'aria.",
+      "allie_terre_eau": "Due elementi che si alleano: l'acqua fa crescere quello che la terra sostiene.",
+      "contraste": "Due elementi che si scontrano: spesso è proprio lì che nascono le scintille."
+    },
+    "planetes": {
+      "titre": "I vostri segni sono solo l'inizio",
+      "texte": "Il giorno della vostra nascita, anche la Luna, Venere e Marte erano da qualche parte nel cielo. È lì che si legge come amate, cosa vi attrae e come litigate."
+    },
+    "final": {
+      "kicker": "Il vostro report di coppia",
+      "titre": "Sbloccate il vostro tema natale di coppia",
+      "texte": "Il nostro report calcola la posizione esatta di cinque astri il giorno della vostra nascita. Non è un oroscopo del segno: {{chapitres}} capitoli sulla vostra coppia.",
+      "bouton": "Calcola il nostro tema natale",
+      "sous": "Anteprima gratis · report completo {{prix}}",
+      "lien": "Cosa contiene il report"
+    },
+    "inconnu": {
+      "a": "Tu",
+      "b": "Il tuo partner"
+    }
+  },
+  "contenu": {
+    "kicker": "Il report",
+    "titre": "Cosa contiene il report che potete ottenere",
+    "intro": [
+      "Il vostro segno è solo la posizione del Sole il giorno della vostra nascita. Quel giorno, anche la Luna, Mercurio, Venere e Marte erano da qualche parte nel cielo. In astrologia, ognuno di loro parla di una parte di voi.",
+      "Il report colloca questi cinque astri per ognuno di voi. Poi confronta i vostri due cieli e vi dice cosa significa per la vostra coppia."
+    ],
+    "astresTitre": "Cosa dice ogni astro",
+    "astres": [
+      {
+        "g": "☉",
+        "n": "Il Sole",
+        "d": "Il vostro carattere, quello che vi muove."
+      },
+      {
+        "g": "☽",
+        "n": "La Luna",
+        "d": "Le vostre emozioni, e quello che vi rassicura."
+      },
+      {
+        "g": "☿",
+        "n": "Mercurio",
+        "d": "Il vostro modo di parlare e di discutere."
+      },
+      {
+        "g": "♀",
+        "n": "Venere",
+        "d": "Il vostro modo di amare, e quello che vi piace."
+      },
+      {
+        "g": "♂",
+        "n": "Marte",
+        "d": "Il vostro desiderio, la vostra energia e la vostra rabbia."
+      }
+    ],
+    "apercuTitre": "Ecco com'è il report",
+    "apercuLegende": "Il report di Giulia e Luca, una coppia di esempio. Il vostro si calcola con le vostre date.",
+    "apercus": [
+      {
+        "id": "couverture",
+        "alt": "La copertina del report: il cielo di Giulia e Luca, le loro due costellazioni unite da un filo d'oro."
+      },
+      {
+        "id": "carte",
+        "alt": "La mappa del cielo a due: una ruota dei dodici segni con gli astri di Giulia in rosa e quelli di Luca in viola."
+      },
+      {
+        "id": "mois",
+        "alt": "I prossimi dodici mesi della coppia, mese per mese, con il mese migliore in evidenza."
+      }
+    ],
+    "chapitresTitre": "Indice",
+    "chapitres": [
+      {
+        "t": "La vostra mappa del cielo a due",
+        "d": "I vostri due cieli su una sola ruota. Delle linee uniscono gli astri che si intendono, e quelli che si scontrano."
+      },
+      {
+        "t": "Il vostro profilo di coppia",
+        "d": "Tutti questi legami riassunti in due punteggi su 100: la dolcezza e la scintilla. In base ai due, la vostra coppia è la Fiamma, il Rifugio, le Calamite o gli Esploratori."
+      },
+      {
+        "t": "I vostri sei ambiti",
+        "d": "La tenerezza, il desiderio, il dialogo, la complicità, la quotidianità e la durata, ognuno con un punteggio su 100."
+      },
+      {
+        "t": "I vostri dieci astri, uno per uno",
+        "d": "Il Sole, la Luna, Venere, Marte e Mercurio di ognuno. Cosa dicono di voi, e poi cosa nasce dal loro incontro."
+      },
+      {
+        "t": "Quello che vi spinge, e quello che si inceppa",
+        "d": "I vostri legami più belli, e quelli che chiedono un po' di attenzione."
+      },
+      {
+        "t": "I vostri segni cinesi e i vostri cammini di vita",
+        "d": "L'animale del vostro anno di nascita, e il numero che dà la vostra data in numerologia."
+      },
+      {
+        "t": "I vostri prossimi 12 mesi",
+        "d": "I vostri mesi più teneri, i vostri mesi di fuoco, e quelli in cui è meglio parlarsi con dolcezza."
+      },
+      {
+        "t": "Le domande da farvi",
+        "d": "Scelte dove i vostri cieli si capiscono meno, per parlarne stasera."
+      }
+    ],
+    "bouton": "Calcola gratis il nostro cielo",
+    "sous": "Anteprima gratis · report completo {{prix}}"
+  },
+  "dates": {
+    "kicker": "Passo 1 di 2 · gratis",
+    "titre": "Ci mancano le vostre date di nascita",
+    "texte": "Con il giorno esatto collochiamo i vostri dieci astri. L'ora, se la sapete, rende la Luna più precisa.",
+    "prenom": "Nome",
+    "prenomA": "Il tuo nome",
+    "prenomB": "Il nome del tuo partner",
+    "elle": "Una donna",
+    "il": "Un uomo",
+    "jour": "Giorno",
+    "mois": "Mese",
+    "annee": "Anno",
+    "moisNoms": [
+      "Gennaio",
+      "Febbraio",
+      "Marzo",
+      "Aprile",
+      "Maggio",
+      "Giugno",
+      "Luglio",
+      "Agosto",
+      "Settembre",
+      "Ottobre",
+      "Novembre",
+      "Dicembre"
+    ],
+    "heure": "Ora di nascita",
+    "heureAide": "facoltativa",
+    "bouton": "Calcola il nostro cielo",
+    "erreurs": {
+      "prenom": "Manca un nome.",
+      "genre": "Scegli una donna o un uomo.",
+      "date": "Questa data non esiste.",
+      "futur": "Questa data non è ancora arrivata."
+    },
+    "exempleA": "Es.: Giulia",
+    "exempleB": "Es.: Luca",
+    "genreA": "Sei",
+    "genreB": "Il tuo partner è",
+    "jourVide": "GG",
+    "anneeVide": "AAAA"
+  },
+  "ciel": {
+    "kicker": "Passo 2 di 2 · la vostra anteprima gratis",
+    "titre": "Il vostro cielo a due",
+    "texte": "Ecco il cielo del giorno della vostra nascita, riunito su una sola ruota. Gli astri di {{a}} sono in rosa, quelli di {{b}} in viola. Al centro, una linea unisce due astri che si parlano: dorata quando si intendono, corallo quando si scontrano.",
+    "profilKicker": "Il vostro profilo",
+    "archetypes": {
+      "flamme": {
+        "nom": "La Fiamma",
+        "ligne": "Tanta dolcezza e tante scintille: una coppia che si capisce, e che si sorprende ancora."
+      },
+      "havre": {
+        "nom": "Il Rifugio",
+        "ligne": "Una coppia in cui si sta bene e tutto scorre: la vostra forza è la pace che vi date."
+      },
+      "aimants": {
+        "nom": "Le Calamite",
+        "ligne": "Vi attraete tanto quanto vi scuotete: tra voi niente è tiepido."
+      },
+      "explorateurs": {
+        "nom": "Gli Esploratori",
+        "ligne": "Il vostro cielo non vi dà il lavoro già fatto: la vostra coppia la inventate voi."
+      }
+    },
+    "douceur": "Dolcezza",
+    "etincelle": "Scintilla",
+    "planetes": {
+      "soleil": "Sole",
+      "lune": "Luna",
+      "mercure": "Mercurio",
+      "venus": "Venere",
+      "mars": "Marte"
+    },
+    "doute": "{{x}} o {{y}}, a seconda dell'ora",
+    "modifier": "Cambia le date",
+    "placementsTitre": "Dov'erano i vostri astri",
+    "profilTitre": "Il vostro profilo di coppia",
+    "profilTexte": "Il report riassume tutti i legami tra i vostri due cieli in due punteggi su 100. La dolcezza è quello che si intende da solo tra voi. La scintilla è quello che vi attrae e vi smuove. Insieme danno uno di questi quattro profili:",
+    "suiteKicker": "Nel vostro report",
+    "suiteTitre": "Cosa vi spiega il vostro report",
+    "suiteTexte": "Tutto quello che segue è già calcolato con le vostre due date. L'anteprima vi mostra i risultati, il report vi dice cosa significano.",
+    "dansLeRapport": "Spiegato nel report",
+    "domaines": {
+      "tendresse": "la tenerezza",
+      "desir": "il desiderio",
+      "dialogue": "il dialogo",
+      "complicite": "la complicità",
+      "quotidien": "la quotidianità",
+      "duree": "la durata"
+    },
+    "domainesNoms": {
+      "tendresse": "Tenerezza",
+      "desir": "Desiderio",
+      "dialogue": "Dialogo",
+      "complicite": "Complicità",
+      "quotidien": "Quotidianità",
+      "duree": "Durata"
+    },
+    "astresDe": {
+      "soleil": "il Sole",
+      "lune": "la Luna",
+      "mercure": "il Mercurio",
+      "venus": "la Venere",
+      "mars": "il Marte"
+    },
+    "astresMeme": {
+      "soleil": "i vostri due Soli",
+      "lune": "le vostre due Lune",
+      "mercure": "i vostri due Mercurio",
+      "venus": "le vostre due Venere",
+      "mars": "i vostri due Marte"
+    },
+    "teasers": {
+      "domaines": {
+        "titre": "I vostri sei ambiti",
+        "fait": "Il vostro punto forte: {{d}}, {{n}} su 100.",
+        "suite": "Gli altri cinque punteggi, e cosa significano per voi."
+      },
+      "lunes": {
+        "titre": "Le vostre Lune",
+        "fait": "La Luna di {{a}} è {{sa}}, quella di {{b}} {{sb}}.",
+        "suite": "Di cosa ha bisogno ognuno per sentirsi amato."
+      },
+      "venusMars": {
+        "titre": "Venere e Marte",
+        "fait": "La Venere di {{a}} è {{va}}, il Marte di {{b}} {{mb}}.",
+        "suite": "Cosa vi attrae dell'altro, e come litigate."
+      },
+      "liens": {
+        "titre": "Il vostro legame più bello",
+        "fait": "{{lien}}.",
+        "faitSans": "La vostra intesa si costruisce giorno dopo giorno, più che cadere dal cielo.",
+        "suite": "Quello che vi spinge, quello che si inceppa, e cosa farne."
+      },
+      "chinois": {
+        "titre": "I vostri segni cinesi",
+        "fait": "{{a}}: {{ca}}. {{b}}: {{cb}}.",
+        "suite": "Cosa dice l'astrologia cinese della vostra coppia."
+      },
+      "annee": {
+        "titre": "I vostri prossimi 12 mesi",
+        "fait": "Il vostro mese migliore: {{m1}}. Il mese in cui bisognerà parlarsi: {{m2}}.",
+        "suite": "Perché proprio quei mesi, e cosa vi riservano gli altri."
+      }
+    },
+    "lienDe": "{{x}} di {{p}}",
+    "lienEt": "{{x}} e {{y}}",
+    "en": "in {{s}}",
+    "enOu": "{{s1}} o {{s2}}",
+    "animalDe": "{{animal}} di {{element}}",
+    "moisNoms": [
+      "gennaio",
+      "febbraio",
+      "marzo",
+      "aprile",
+      "maggio",
+      "giugno",
+      "luglio",
+      "agosto",
+      "settembre",
+      "ottobre",
+      "novembre",
+      "dicembre"
+    ]
+  },
+  "prix": {
+    "titre": "Il vostro report completo",
+    "pourDeux": "un solo pagamento, per la vostra coppia",
+    "liste": [
+      "{{chapitres}} capitoli sulla vostra coppia",
+      "I vostri dieci astri letti uno per uno",
+      "I vostri sei ambiti con un punteggio su 100",
+      "I vostri prossimi 12 mesi, mese per mese",
+      "I vostri segni cinesi e i vostri cammini di vita",
+      "Il report online, e il suo link per email"
+    ],
+    "majeur": "Ho 18 anni o più.",
+    "renonciation": "Voglio ricevere subito il mio report e rinuncio al mio diritto di recesso di 14 giorni, che termina quando il report appare.",
+    "bouton": "Sblocca il nostro report",
+    "securise": "Pagamento sicuro con Stripe",
+    "note": "Un report di astrologia, da leggere come un gioco a due: non predice niente.",
+    "erreurCases": "Spunta le due caselle per continuare.",
+    "erreurServeur": "Il pagamento non si apre per ora. Riprova tra un momento.",
+    "region": "Prezzo per l'America Latina",
+    "cgv": "Condizioni generali di vendita",
+    "grand": "Sbloccate il vostro tema natale di coppia",
+    "chacun": "cioè {{moitie}} a testa"
+  },
+  "faq": {
+    "titre": "Domande frequenti",
+    "items": [
+      {
+        "q": "Cos'è un tema natale di coppia?",
+        "r": "Un tema natale è la mappa del cielo al momento di una nascita: dov'erano il Sole, la Luna e i pianeti, visti dalla Terra. Un tema natale di coppia confronta due di queste mappe. In astrologia si chiama sinastria."
+      },
+      {
+        "q": "Bisogna sapere l'ora di nascita?",
+        "r": "No. Senza l'ora, calcoliamo tutto a mezzogiorno. Per il Sole, Mercurio, Venere e Marte non cambia niente, tranne nei rari giorni in cui uno di loro cambia segno. La Luna invece cambia segno ogni due giorni e mezzo: se l'ha cambiato il giorno della vostra nascita, il report vi dà le due possibilità."
+      },
+      {
+        "q": "Come ricevo il report?",
+        "r": "Appare subito dopo il pagamento, su questa pagina. Ti mandiamo anche il suo link per email, per ritrovarlo quando vuoi."
+      },
+      {
+        "q": "Si può regalare?",
+        "r": "Sì! Basta conoscere le vostre due date di nascita. Il link del report si può condividere, e si apre su qualsiasi telefono."
+      },
+      {
+        "q": "L'astrologia è scientifica?",
+        "r": "No. Nessuno studio ha dimostrato che gli astri decidano se una coppia funziona. Il report si legge come un gioco a due: vi dà di che parlare di voi, dei vostri desideri e delle vostre differenze."
+      },
+      {
+        "q": "Cosa succede ai nostri dati?",
+        "r": "I vostri nomi e le vostre date di nascita servono solo a calcolare il vostro report. Li conserviamo sei mesi dopo il pagamento, poi viene cancellato tutto."
+      }
+    ]
+  },
+  "credits": "Stelle: cataloghi Yale Bright Star e Hipparcos, tramite d3-celestial (Olaf Frohn). Posizioni dei pianeti: Astronomy Engine (Don Cross).",
+  "rapport": {
+    "chargement": "Il vostro cielo si sta preparando…",
+    "attente": "Pagamento confermato! Il vostro report sta arrivando…",
+    "erreur": "Questo report non si apre. Controlla il link nella tua email, o scrivici dalla pagina dei contatti.",
+    "kicker": "Tema natale di coppia",
+    "titre": "{{a}} & {{b}}",
+    "nee": "{{p}}, {nato|nata} il {{date}}",
+    "neeHeure": "{{p}}, {nato|nata} il {{date}} alle {{heure}}",
+    "etabli": "Elaborato il {{date}}",
+    "defiler": "Il vostro cielo comincia qui",
+    "sommaire": "Indice",
+    "partie": "Parte {{n}}",
+    "chapitre": "Capitolo {{n}}",
+    "sections": {
+      "carte": "La vostra mappa del cielo",
+      "profil": "Il vostro profilo di coppia",
+      "domaines": "I vostri sei ambiti",
+      "atouts": "I vostri punti di forza e le vostre sfide",
+      "elements": "I vostri elementi",
+      "chinois": "I vostri segni cinesi",
+      "vie": "I vostri cammini di vita",
+      "annee": "I vostri prossimi 12 mesi",
+      "questions": "Le domande da farvi",
+      "fin": "Per finire"
+    },
+    "intros": {
+      "carte": "Ecco il cielo al momento delle vostre nascite, riunito su una sola ruota. I pianeti di {{a}} sono in rosa sull'anello esterno, quelli di {{b}} in viola all'interno. Al centro, delle linee uniscono i pianeti che si parlano: dorate quando si intendono, tratteggiate quando si scontrano.",
+      "profil": "In astrologia, in una coppia contano due cose: la dolcezza, tutto quello che si intende facilmente tra i vostri temi, e la scintilla, tutto quello che attrae e smuove. La vostra coppia si colloca da qualche parte tra le due.",
+      "domaines": "Sei grandi ambiti della vita a due, con un punteggio su 100 in base ai legami tra i vostri pianeti. Un punteggio basso non vuol dire che vada male: è solo lì che i vostri temi si capiscono meno da soli.",
+      "atouts": "I legami più marcati tra i vostri due temi: quelli che vi sostengono, e quelli che chiedono un po' di attenzione.",
+      "elements": "Ogni segno appartiene a un elemento: il fuoco, la terra, l'aria o l'acqua. Ecco dove cadono i vostri dieci pianeti, cinque a testa.",
+      "chinois": "L'astrologia cinese non guarda i pianeti, guarda l'anno di nascita: un animale e un elemento, che tornano ogni sessant'anni.",
+      "vie": "In numerologia, il cammino di vita è la somma delle cifre della data di nascita, ridotta a una sola cifra. L'11, il 22 e il 33 restano interi.",
+      "annee": "I dodici mesi che vengono, in base al passaggio di Venere, Marte e Giove, e i periodi in cui Mercurio, Venere e Marte tornano indietro nel cielo.",
+      "questions": "Sceglietene una stasera, e fatela all'altro. Le conversazioni migliori spesso cominciano così."
+    },
+    "planetes": {
+      "soleil": "Sole",
+      "lune": "Luna",
+      "mercure": "Mercurio",
+      "venus": "Venere",
+      "mars": "Marte",
+      "jupiter": "Giove"
+    },
+    "aspects": {
+      "conjonction": "Congiunzione",
+      "sextile": "Sestile",
+      "carre": "Quadratura",
+      "trigone": "Trigono",
+      "opposition": "Opposizione"
+    },
+    "relations": {
+      "meme": "Stesso elemento",
+      "allie": "Elementi alleati",
+      "contraste": "Elementi opposti"
+    },
+    "angle": "{{n}}° di distanza",
+    "placements": {
+      "titre": "I vostri pianeti",
+      "planete": "Pianeta",
+      "degre": "{{d}}° {{signe}}",
+      "ou": "o {{signe}}",
+      "doute": "Senza l'ora di nascita, un pianeta che cambia segno quel giorno può essere nell'uno o nell'altro. Il report vi dà entrambi."
+    },
+    "legende": {
+      "doux": "I pianeti si intendono",
+      "tendu": "I pianeti si scontrano"
+    },
+    "axes": {
+      "douceur": "Dolcezza",
+      "etincelle": "Scintilla"
+    },
+    "niveaux": {
+      "haut": "Punto forte",
+      "moyen": "Da curare",
+      "bas": "Da lavorare"
+    },
+    "atoutsTitre": "Quello che vi spinge",
+    "defisTitre": "Quello che chiede attenzione",
+    "aucunAtout": "Nessun legame molto dolce tra i vostri temi: la vostra intesa si costruisce giorno dopo giorno, più che cadere dal cielo.",
+    "aucunDefi": "Nessun legame davvero teso tra i vostri temi. Le vostre sfide saranno quelle di tutte le coppie!",
+    "dominant": "Dominante",
+    "absent": "Assente",
+    "planetesDe": "I pianeti di {{p}}",
+    "chinois": {
+      "annee": "{{animal}} di {{element}}, {{an}}",
+      "animaux": {
+        "rat": "Topo",
+        "buffle": "Bufalo",
+        "tigre": "Tigre",
+        "lapin": "Coniglio",
+        "dragon": "Drago",
+        "serpent": "Serpente",
+        "cheval": "Cavallo",
+        "chevre": "Capra",
+        "singe": "Scimmia",
+        "coq": "Gallo",
+        "chien": "Cane",
+        "cochon": "Maiale"
+      },
+      "elements": {
+        "bois": "Legno",
+        "feu": "Fuoco",
+        "terre": "Terra",
+        "metal": "Metallo",
+        "eau": "Acqua"
+      },
+      "portrait": "{{p}} · {{animal}} di {{element}}"
+    },
+    "vie": {
+      "chemin": "Cammino di vita",
+      "accord": "Affinità dei vostri cammini: {{n}} su 10"
+    },
+    "annee": {
+      "meilleur": "Il vostro mese migliore",
+      "prudence": "Il mese da tenere d'occhio",
+      "venus": "Venere {{en}}",
+      "mars": "Marte {{en}}",
+      "jupiter": "Giove {{en}}",
+      "frise": "Il vostro anno a colpo d'occhio",
+      "tons": {
+        "tendre": "Tenero",
+        "passion": "Fuoco",
+        "elan": "Vento in poppa",
+        "malentendus": "Malintesi",
+        "turbulences": "Movimentato",
+        "calme": "Tranquillo"
+      }
+    },
+    "fin": {
+      "imprimer": "Stampa o salva in PDF",
+      "copier": "Copia il link del report",
+      "copie": "Link copiato!",
+      "supprimer": "Cancella questo report",
+      "confirmer": "Tocca di nuovo per cancellare",
+      "supprime": "Il vostro report e i vostri dati sono stati cancellati.",
+      "garde": "Questo report resta online per sei mesi. Il suo link è nell'email che avete ricevuto dopo il pagamento."
+    },
+    "rappel": "Secondo l'astrologia, da leggere come un gioco: questo report non predice niente.",
+    "credits": "Posizioni dei pianeti calcolate con astronomy-engine (Don Cross, licenza MIT). Costellazioni disegnate a partire da d3-celestial (Olaf Frohn, licenza BSD).",
+    "haut": "Torna su"
+  }
+}

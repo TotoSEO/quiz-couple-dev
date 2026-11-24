@@ -45,14 +45,23 @@
     if (LANG === 'it' && (mot === 'e' || mot === 'E')) return /^e/i.test(nu) ? mot + 'd' : mot;
     return mot;
   }
+  // En italien, « il », « dal », « al »... s'élident devant le 8 et le 11
+  // (« l'8 marzo », « dall'11 aprile » : eliderDates de conjonction.mjs).
+  var ELISIONS_IT = { il: "l'", Il: "L'", dal: "dall'", Dal: "Dall'", al: "all'", Al: "All'", del: "dell'", Del: "Dell'", nel: "nell'", Nel: "Nell'" };
+  function eliderDates(s) {
+    if (LANG !== 'it') return s;
+    return String(s).replace(/(^|[^A-Za-zÀ-ÖØ-öø-ÿ])(il|Il|dal|Dal|al|Al|del|Del|nel|Nel) (8|11)(?!\d)/g, function (t, avant, mot, n) { return avant + ELISIONS_IT[mot] + n; })
+      // « all'1:15 » (all'una), mais « alle 11:15 ».
+      .replace(/(^|[^A-Za-zÀ-ÖØ-öø-ÿ])(alle|Alle) 1:/g, function (t, avant, mot) { return avant + mot.slice(0, 3) + "'1:"; });
+  }
   function tpl(s, v) {
-    return String(s || '').replace(/(^|[^A-Za-zÀ-ÖØ-öø-ÿ])(de|De|que|Que|y|Y|e|E) \{\{(\w+)\}\}|\{\{(\w+)\}\}/g, function (t, avant, mot, k1, k2) {
+    return eliderDates(String(s || '').replace(/(^|[^A-Za-zÀ-ÖØ-öø-ÿ])(de|De|que|Que|y|Y|e|E) \{\{(\w+)\}\}|\{\{(\w+)\}\}/g, function (t, avant, mot, k1, k2) {
       if (k2) return v[k2] != null ? v[k2] : t;
       var x = v[k1];
       if (x == null) return t;
       if (/^(de|De|que|Que)$/.test(mot)) return avant + (LANG === 'fr' && VOYELLE.test(String(x)) ? mot.slice(0, -1) + "'" + x : mot + ' ' + x);
       return avant + conjonction(mot, x) + ' ' + x;
-    });
+    }));
   }
   // {masc|fém} au genre d'une personne.
   function accord(s, genre) { return String(s || '').replace(/\{([^{}|:]*)\|([^{}]*)\}/g, function (_, m, f) { return genre === 'm' ? m : f; }); }
@@ -70,7 +79,11 @@
   function dateLongue(iso) {
     var p = String(iso || '').slice(0, 10).split('-').map(Number);
     if (!p[0]) return '';
-    if (LOCALE) return formatIntl({ day: 'numeric', month: 'long', year: 'numeric' }, Date.UTC(p[0], p[1] - 1, p[2])) || String(iso).slice(0, 10);
+    if (LOCALE) {
+      var d = formatIntl({ day: 'numeric', month: 'long', year: 'numeric' }, Date.UTC(p[0], p[1] - 1, p[2])) || String(iso).slice(0, 10);
+      // « 1° marzo 1995 », comme dateCourte de rapport.mjs.
+      return LANG === 'it' && p[2] === 1 ? d.replace(/^1 /, '1° ') : d;
+    }
     return (p[2] === 1 ? '1er' : p[2]) + ' ' + MOIS[p[1] - 1] + ' ' + p[0];
   }
   function heureLongue(h) {
