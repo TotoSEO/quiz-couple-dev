@@ -1,7 +1,8 @@
 <%
-  // La carte du thème astral de couple (page /theme-astral-couple/, en
-  // français seulement), écrite une fois pour toutes ses entrées : ses
-  // styles, ses textes (`carte` de fr/theme-astral.json) et js/astro-carte.js.
+  // La carte du thème astral de couple (page /theme-astral-couple/ et ses
+  // versions dans les autres langues), écrite une fois pour toutes ses
+  // entrées : ses styles, ses textes (`carte` de {lang}/theme-astral.json) et
+  // js/astro-carte.js.
   //  - test : sous le score du test des prénoms et des signes ;
   //  - date : sous le résultat de la compatibilité par date de naissance ;
   //  - chinois : sous le résultat de la compatibilité des signes chinois ;
@@ -18,7 +19,8 @@
   const _GLYPHES = ['♈', '♉', '♊', '♋', '♌', '♍', '♎', '♏', '♐', '♑', '♒', '♓'];
   const _tc = (k, d) => t('theme-astral:carte.' + k, d);
   const _cfg = {
-    url: getLocalizedPath('themeAstral', 'fr'),
+    url: getLocalizedPath('themeAstral', lang),
+    lang,
     fonction: supabaseUrl + '/functions/v1/astro',
     cle: supabaseKey,
     textes: {
@@ -32,7 +34,7 @@
   // (les mêmes que dans js/astro-carte.js).
   const _ETOILES = [[8, 18], [22, 72], [36, 12], [51, 86], [63, 30], [77, 9], [88, 58], [94, 24], [15, 44], [70, 78]];
 %>
-<% if (lang === 'fr' && _cfg.url) { %>
+<% if (_cfg.url && _cfg.textes.bouton) { %>
 <style>
   /* Toute la carte mène à la page (le lien du bouton la recouvre).
      Mouvements en transform et opacity seulement, coupés par

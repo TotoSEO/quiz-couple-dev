@@ -28,11 +28,38 @@ export const ETAPES = ['page_vue', 'ciel_vu', 'paiement_clic', 'rapport_vu', 'ca
 const SESSION = /^cs_(test|live)_[A-Za-z0-9]{10,200}$/;
 const JETON = /^[A-Za-z0-9_-]{20,64}$/;
 
+// Le nom, la description et la mention de la page de paiement de Stripe,
+// dans la langue de la commande.
 const PRODUIT = {
   fr: {
     nom: 'Thème astral de couple',
-    description: 'Votre thème astral de couple, en ligne : votre carte du ciel à deux, vos dix planètes lues une par une, les liens entre vos thèmes, vos signes chinois, vos chemins de vie et vos 12 prochains mois.',
+    description: 'Votre thème astral de couple, en ligne : votre carte du ciel à deux, le Soleil, la Lune, Mercure, Vénus et Mars de chacun lus un par un, les liens entre vos thèmes, vos signes chinois, vos chemins de vie et vos 12 prochains mois.',
     mention: "TVA non applicable, art. 293 B du CGI. Le rapport s'affiche dès le paiement confirmé : vous avez demandé l'exécution immédiate et renoncé au droit de rétractation.",
+  },
+  en: {
+    nom: "Couple's birth chart",
+    description: "Your couple's birth chart, online: your shared sky map, each of your Sun, Moon, Mercury, Venus and Mars read one by one, the links between your charts, your Chinese signs, your life paths and your next 12 months.",
+    mention: 'VAT not applicable, art. 293 B of the French tax code. The report appears as soon as payment is confirmed: you asked for immediate performance and waived your right of withdrawal.',
+  },
+  es: {
+    nom: 'Carta astral de pareja',
+    description: 'Vuestra carta astral de pareja, en línea: vuestro mapa del cielo a dos, el Sol, la Luna, Mercurio, Venus y Marte de cada uno leídos uno a uno, los lazos entre vuestras cartas, vuestros signos chinos, vuestros caminos de vida y vuestros próximos 12 meses.',
+    mention: 'IVA no aplicable, art. 293 B del CGI francés. El informe se muestra en cuanto se confirma el pago: has pedido la ejecución inmediata y renunciado al derecho de desistimiento.',
+  },
+  de: {
+    nom: 'Partnerhoroskop',
+    description: 'Euer Partnerhoroskop online: eure gemeinsame Himmelskarte, Sonne, Mond, Merkur, Venus und Mars von jedem einzeln gedeutet, die Verbindungen zwischen euren Horoskopen, eure chinesischen Tierzeichen, eure Lebenszahlen und eure nächsten 12 Monate.',
+    mention: 'Keine Umsatzsteuer gemäß Art. 293 B des französischen Steuergesetzbuchs. Der Bericht erscheint, sobald die Zahlung bestätigt ist: Du hast die sofortige Ausführung verlangt und auf das Widerrufsrecht verzichtet.',
+  },
+  it: {
+    nom: 'Tema natale di coppia',
+    description: 'Il vostro tema natale di coppia, online: la vostra mappa del cielo a due, il Sole, la Luna, Mercurio, Venere e Marte di ciascuno letti uno per uno, i legami tra i vostri temi, i vostri segni cinesi, i vostri cammini di vita e i vostri prossimi 12 mesi.',
+    mention: "IVA non applicabile, art. 293 B del CGI francese. Il report compare appena il pagamento è confermato: hai chiesto l'esecuzione immediata e rinunciato al diritto di recesso.",
+  },
+  nl: {
+    nom: 'Relatiehoroscoop',
+    description: 'Jullie relatiehoroscoop, online: jullie gedeelde sterrenkaart, de Zon, de Maan, Mercurius, Venus en Mars van ieder van jullie een voor een gelezen, de verbanden tussen jullie horoscopen, jullie Chinese tekens, jullie levenspaden en jullie komende 12 maanden.',
+    mention: 'Geen btw van toepassing, art. 293 B van de Franse Code général des impôts. Het rapport verschijnt zodra de betaling bevestigd is: je hebt om directe levering gevraagd en afgezien van het herroepingsrecht.',
   },
 };
 
