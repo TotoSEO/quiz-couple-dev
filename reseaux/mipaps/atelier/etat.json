@@ -1,12 +1,12 @@
 {
-  "genere_le": "2026-11-24T13:42:38.622Z",
+  "genere_le": "2026-11-25T03:16:57.570Z",
   "langue": "fr",
   "compte": {
     "nom": "mipaps_stories",
     "actif": true
   },
   "fuseau": "Europe/Paris",
-  "aujourdhui": "2026-11-24",
+  "aujourdhui": "2026-11-25",
   "melange": {
     "midi": {
       "1": null,
@@ -28,39 +28,12 @@
     },
     "matin": "mipaps-anime"
   },
-  "reserve_jours": 128,
+  "reserve_jours": 127,
   "a_remplir": [],
   "a_corriger": [],
   "hors_grille": [],
   "refuses": [],
   "recents_et_prevus": [
-    {
-      "jour": "2026-10-25",
-      "creneau": "matin",
-      "gabarit": "mipaps-reel",
-      "categorie": "mipaps-anime",
-      "statut": "publie",
-      "texte": null,
-      "erreur": null
-    },
-    {
-      "jour": "2026-10-25",
-      "creneau": "midi",
-      "gabarit": "mipaps-post",
-      "categorie": "mipaps-post",
-      "statut": "echec",
-      "texte": "t'es la première personne que j'ai envie d'appeler quand il se passe un truc.",
-      "erreur": "Instagram /17841424283703541/media_publish : Application request limit reached"
-    },
-    {
-      "jour": "2026-10-25",
-      "creneau": "soir",
-      "gabarit": "mipaps-carrousel",
-      "categorie": "mipaps-histoire",
-      "statut": "echec",
-      "texte": null,
-      "erreur": "Instagram /17841424283703541/media_publish : Application request limit reached"
-    },
     {
       "jour": "2026-10-26",
       "creneau": "matin",
@@ -2459,7 +2432,7 @@
   "idees": [],
   "prochain_creneau": {
     "mipaps-anime": {
-      "jour": "2026-11-25",
+      "jour": "2026-11-26",
       "creneau": "matin"
     },
     "mipaps-statique": null,
