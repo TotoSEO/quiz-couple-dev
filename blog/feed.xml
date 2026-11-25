@@ -6,12 +6,21 @@
     <atom:link href="https://quiz-couple.com/blog/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Les articles de Quiz Couple sur la vie de couple, la psychologie et les histoires d&#39;amour.</description>
     <language>fr</language>
-    <lastBuildDate>Tue, 24 Nov 2026 09:38:00 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 25 Nov 2026 07:30:00 GMT</lastBuildDate>
     <image>
       <url>https://quiz-couple.com/apple-touch-icon.png</url>
       <title>Quiz Couple · Le blog</title>
       <link>https://quiz-couple.com/blog/</link>
     </image>
+    <item>
+      <title>Compte commun : 73 % votent pour, mais 87 % gardent un compte perso</title>
+      <link>https://quiz-couple.com/blog/compte-commun-couple-votes/</link>
+      <guid isPermaLink="true">https://quiz-couple.com/blog/compte-commun-couple-votes/</guid>
+      <pubDate>Wed, 25 Nov 2026 07:30:00 GMT</pubDate>
+      <category>En chiffres</category>
+      <description>Sur Quiz Couple, 773 votes : 73 % sont pour le compte commun. Mais 87 % veulent garder un compte perso, et 86 % refusent de se faire rembourser un café.</description>
+      <media:content url="https://quiz-couple.com/blog/compte-commun-couple-votes.webp" medium="image" type="image/webp" width="1536" height="864"/>
+    </item>
     <item>
       <title>60 questions de couple à poser au téléphone ou par message</title>
       <link>https://quiz-couple.com/blog/questions-couple-telephone-message/</link>
@@ -272,15 +281,6 @@
       <category>Psychologie</category>
       <description>Adorable en public, démolisseuse en privé. Les 10 signes de la femme perverse narcissique, ses masques, et pourquoi les hommes qui la subissent n&#39;en parlent jamais.</description>
       <media:content url="https://quiz-couple.com/blog/femme-perverse-narcissique-signes.webp" medium="image" type="image/webp" width="1536" height="1024"/>
-    </item>
-    <item>
-      <title>Comment sortir de la dépendance affective : 12 exercices concrets</title>
-      <link>https://quiz-couple.com/blog/sortir-de-la-dependance-affective/</link>
-      <guid isPermaLink="true">https://quiz-couple.com/blog/sortir-de-la-dependance-affective/</guid>
-      <pubDate>Tue, 22 Sep 2026 09:32:00 GMT</pubDate>
-      <category>Psychologie</category>
-      <description>Un plan en 3 phases et 12 exercices concrets pour sortir de la dépendance affective, semaine après semaine, avec les pièges à connaître en route.</description>
-      <media:content url="https://quiz-couple.com/blog/sortir-de-la-dependance-affective.webp" medium="image" type="image/webp" width="1536" height="1024"/>
     </item>
   </channel>
 </rss>
