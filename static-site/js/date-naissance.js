@@ -24,6 +24,11 @@
   var T = window.DN_I18N || {};
   var LANG = racine.getAttribute('data-lang') || 'fr';
 
+  // La place de l'avis et des cartes « À faire ensuite » (.outil-fin). On
+  // garde l'élément lui-même : chaque résultat remplace le contenu de
+  // #dn-resultat, et il doit survivre au suivant avec ce qu'il contient.
+  var finDuResultat = racine.querySelector('.outil-fin');
+
   // ── Petites aides ─────────────────────────────────────────
   function mod(n, m) { return ((n % m) + m) % m; }
   function el(id) { return document.getElementById(id); }
@@ -364,9 +369,17 @@
 
     var sortie = el('dn-resultat');
     // Tout le résultat dans un seul bloc (18 novembre 2026) : ses parties y
-    // arrivent l'une après l'autre, l'avis et les cartes « À faire ensuite »
-    // se posent après lui (.outil-fin de #dn-suite).
+    // arrivent l'une après l'autre.
     sortie.innerHTML = '<div class="outil-resultat">' + html + '</div>';
+    // L'avis et les cartes « À faire ensuite » juste sous les trois notes, et
+    // sous la carte du thème astral quand elle s'affiche (26 novembre 2026).
+    // Posés après tout le résultat le 18 novembre, ils tombaient trois écrans
+    // plus bas sur un téléphone, et la part des résultats suivis d'un autre
+    // test était passée de 32 % à 19 % en français, de 28 % à 6 % en
+    // allemand (relevé « Trafic · pages par visite »). Avant le 18 novembre,
+    // ils venaient tout de suite sous le verdict.
+    var premierBloc = sortie.querySelector('.dn-bloc');
+    if (finDuResultat && premierBloc) premierBloc.parentNode.insertBefore(finDuResultat, premierBloc);
     if (window.QCAstroCarte) window.QCAstroCarte.suivi();
     sortie.classList.remove('hidden');
     el('dn-formulaire').classList.add('hidden');
