@@ -1,12 +1,12 @@
 {
-  "genere_le": "2026-11-25T12:51:19.093Z",
+  "genere_le": "2026-11-26T03:15:54.584Z",
   "langue": "fr",
   "compte": {
     "nom": "mipaps_stories",
     "actif": true
   },
   "fuseau": "Europe/Paris",
-  "aujourdhui": "2026-11-25",
+  "aujourdhui": "2026-11-26",
   "melange": {
     "midi": {
       "1": null,
@@ -28,39 +28,12 @@
     },
     "matin": "mipaps-anime"
   },
-  "reserve_jours": 127,
+  "reserve_jours": 126,
   "a_remplir": [],
   "a_corriger": [],
   "hors_grille": [],
   "refuses": [],
   "recents_et_prevus": [
-    {
-      "jour": "2026-10-26",
-      "creneau": "matin",
-      "gabarit": "mipaps-reel",
-      "categorie": "mipaps-anime",
-      "statut": "publie",
-      "texte": null,
-      "erreur": null
-    },
-    {
-      "jour": "2026-10-26",
-      "creneau": "midi",
-      "gabarit": "mipaps-post",
-      "categorie": "mipaps-post",
-      "statut": "echec",
-      "texte": "ton pull est mieux sur moi",
-      "erreur": "créneau fermé par la grille (huit reels par semaine depuis le 26 octobre 2026) : rien n'y part"
-    },
-    {
-      "jour": "2026-10-26",
-      "creneau": "soir",
-      "gabarit": "mipaps-carrousel",
-      "categorie": "mipaps-histoire",
-      "statut": "echec",
-      "texte": null,
-      "erreur": "créneau fermé par la grille (huit reels par semaine depuis le 26 octobre 2026) : rien n'y part"
-    },
     {
       "jour": "2026-10-27",
       "creneau": "matin",
@@ -2432,7 +2405,7 @@
   "idees": [],
   "prochain_creneau": {
     "mipaps-anime": {
-      "jour": "2026-11-26",
+      "jour": "2026-11-27",
       "creneau": "matin"
     },
     "mipaps-statique": null,
