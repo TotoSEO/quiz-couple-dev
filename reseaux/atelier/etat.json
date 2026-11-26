@@ -1,5 +1,5 @@
 {
-  "genere_le": "2026-11-26T03:15:50.155Z",
+  "genere_le": "2026-11-26T12:24:37.618Z",
   "langue": "en",
   "compte": {
     "nom": "quiz_couple_official",
@@ -849,7 +849,7 @@
       "creneau": "matin",
       "gabarit": "choisirait",
       "categorie": "choisirait",
-      "statut": "rendu",
+      "statut": "publie",
       "texte": "What would she choose?",
       "erreur": null
     },
@@ -858,7 +858,7 @@
       "creneau": "midi",
       "gabarit": "choisirait",
       "categorie": "choisirait",
-      "statut": "rendu",
+      "statut": "publie",
       "texte": "What would he choose?",
       "erreur": null
     },
@@ -903,7 +903,7 @@
       "creneau": "matin",
       "gabarit": "choisirait",
       "categorie": "choisirait",
-      "statut": "a_rendre",
+      "statut": "rendu",
       "texte": "What would she choose?",
       "erreur": null
     },
@@ -912,7 +912,7 @@
       "creneau": "midi",
       "gabarit": "tu-preferes",
       "categorie": "tu-preferes",
-      "statut": "a_rendre",
+      "statut": "rendu",
       "texte": "Would you rather: couple edition",
       "erreur": null
     },
@@ -4551,8 +4551,8 @@
       "creneau": "soir"
     },
     "tu-preferes": {
-      "jour": "2026-11-26",
-      "creneau": "soir"
+      "jour": "2026-11-28",
+      "creneau": "midi"
     },
     "phrase": null,
     "carrousel": null,
