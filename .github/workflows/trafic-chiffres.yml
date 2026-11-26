@@ -24,6 +24,11 @@ name: Trafic · pages par visite
 # « coupure » (une date AAAA-MM-JJ) compare l'avant et l'après de ce
 # jour-là, jour exclu : par type d'entrée, page d'entrée par page d'entrée
 # (les 40 premières), et ce qui suit un écran de résultat selon la porte.
+# 26 novembre 2026 : avec une coupure, ce qui suit l'écran de résultat de
+# chaque test, avant et après (les 45 plus vus) : la sortie, un autre test
+# (le retour sur la page du test et la revanche n'en sont pas) et la page du
+# livre, pour lire l'effet de ce qui est proposé sous un résultat (la carte
+# du livre dans « Et maintenant ? », en ligne le 19 novembre).
 
 on:
   workflow_dispatch:
@@ -233,6 +238,28 @@ jobs:
                 round(100.0 * avg((pages <= 1)::int) filter (where j.t0 >= c.d1), 1) as une_page_apres
               from v join j using (visite_id), c
               group by entree order by count(*) desc limit 40"
+
+            sql "Après un écran de résultat, test par test, avant et après le $COUPURE (les 45 plus vus ; autre test : ni le retour sur sa page ni la revanche)" "$SUITE, $C, t as (
+                select regexp_replace(path, 'resultat/\$', '') as test,
+                  case when created_at < c.d0 then 'avant' when created_at >= c.d1 then 'apres' end as periode,
+                  case
+                    when p2 is null then 'sortie'
+                    when p2 = path then 'revanche'
+                    when p2 = regexp_replace(path, 'resultat/\$', '') then 'retour'
+                    when p2 ~ '/(livre-quiz-couple|couples-bucket-list-book)/\$' then 'livre'
+                    when p2 ~ '/resultat/\$' then 'autre'
+                    else $(type_de p2 k2) end as suite
+                from s, c where res)
+              select test,
+                count(*) filter (where periode = 'avant') as res_avant,
+                round(100.0 * avg((suite = 'sortie')::int) filter (where periode = 'avant'), 1) as sortie_avant,
+                round(100.0 * avg((suite = 'jouable')::int) filter (where periode = 'avant'), 1) as autre_test_avant,
+                round(100.0 * avg((suite = 'livre')::int) filter (where periode = 'avant'), 1) as livre_avant,
+                count(*) filter (where periode = 'apres') as res_apres,
+                round(100.0 * avg((suite = 'sortie')::int) filter (where periode = 'apres'), 1) as sortie_apres,
+                round(100.0 * avg((suite = 'jouable')::int) filter (where periode = 'apres'), 1) as autre_test_apres,
+                round(100.0 * avg((suite = 'livre')::int) filter (where periode = 'apres'), 1) as livre_apres
+              from t where periode is not null group by 1 order by count(*) desc limit 45"
 
             sql "Après un écran de résultat, avant et après le $COUPURE : tests à porte et autres" "$SUITE, $C, t as (
                 select case when s.created_at < c.d0 then '1 avant' when s.created_at >= c.d1 then '2 après' end as periode,
