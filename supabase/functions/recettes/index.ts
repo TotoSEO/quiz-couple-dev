@@ -8,7 +8,8 @@
 // que lire chez Stripe, depuis une date : les sessions de paiement
 // terminées (avec les métadonnées que posent nos pages de paiement, qui
 // disent ce qui a été vendu, et la remise d'un code de promotion), les
-// paiements (le moyen de paiement, les frais) et les remboursements. Rien
+// paiements (le moyen de paiement, les frais), les remboursements et les
+// litiges (un paiement contesté par la banque du client). Rien
 // n'est écrit, ni chez Stripe ni dans la base. Aucune adresse e-mail ne
 // sort : seulement une empreinte, pour reconnaître les achats faits par
 // Thomas pour essayer.
@@ -113,10 +114,11 @@ serve(async (req: Request) => {
   // plus tôt, le script range ensuite chaque paiement à son jour de Paris.
   const gte = String(Math.floor(Date.parse(depuis + 'T00:00:00Z') / 1000) - 7200);
   try {
-    const [sessions, charges, remboursements] = await Promise.all([
+    const [sessions, charges, remboursements, litiges] = await Promise.all([
       liste('checkout/sessions', { 'created[gte]': gte, status: 'complete' }),
       liste('charges', { 'created[gte]': gte, 'expand[]': 'data.balance_transaction' }),
       liste('refunds', { 'created[gte]': gte }),
+      liste('disputes', { 'created[gte]': gte }),
     ]);
     return reponse(200, {
       compte: STRIPE_KEY.startsWith('sk_live_') ? 'live' : 'test',
@@ -144,6 +146,7 @@ serve(async (req: Request) => {
         montant: c.amount,
         capture: c.amount_captured,
         rembourse: c.amount_refunded,
+        conteste: c.disputed === true,
         devise: c.currency,
         intent: idDe(c.payment_intent),
         type: c.payment_method_details?.type ?? null,
@@ -164,6 +167,16 @@ serve(async (req: Request) => {
         intent: idDe(r.payment_intent),
         charge: idDe(r.charge),
         raison: r.reason ?? null,
+      })),
+      litiges: litiges.map((d) => ({
+        id: d.id,
+        cree: d.created,
+        statut: d.status,
+        montant: d.amount,
+        devise: d.currency,
+        intent: idDe(d.payment_intent),
+        charge: idDe(d.charge),
+        raison: d.reason ?? null,
       })),
     });
   } catch (e) {
