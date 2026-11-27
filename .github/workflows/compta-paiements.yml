@@ -1,0 +1,88 @@
+name: Comptabilité · paiements Stripe
+
+# Les paiements reçus chez Stripe, pour le livre des recettes
+# (compta/paiements.mjs, qui appelle la fonction interne `recettes` ; la clé
+# Stripe ne vit que dans les fonctions de Supabase). La fonction ne fait que
+# lire : sessions de paiement terminées, paiements, remboursements.
+#
+# À lancer à la main (« Run workflow »), jamais programmé. Le journal est
+# public, comme le dépôt : la réponse n'y est écrite que chiffrée avec la clé
+# publique donnée en entrée (une clé RSA, PEM encodé en base64 sur une ligne),
+# dont seule la personne qui a lancé le workflow a la clé privée. Le fichier
+# est compressé, chiffré en AES-256-CBC avec une clé tirée au hasard, et cette
+# clé (32 octets, puis les 16 du vecteur d'initialisation) est chiffrée en
+# RSA-OAEP (SHA-256). Pour lire :
+#   1. copier les deux blocs du journal dans cle.b64 et donnees.b64 ;
+#   2. base64 -d cle.b64 | openssl pkeyutl -decrypt -inkey prive.pem \
+#        -pkeyopt rsa_padding_mode:oaep -pkeyopt rsa_oaep_md:sha256 \
+#        -pkeyopt rsa_mgf1_md:sha256 > cle.bin
+#   3. K=$(head -c 32 cle.bin | od -An -tx1 | tr -d ' \n')
+#      IV=$(tail -c 16 cle.bin | od -An -tx1 | tr -d ' \n')
+#      base64 -d donnees.b64 | openssl enc -d -aes-256-cbc -K "$K" -iv "$IV" \
+#        | gunzip > paiements.json
+
+on:
+  workflow_dispatch:
+    inputs:
+      depuis:
+        description: 'Premier jour lu (AAAA-MM-JJ, heure de Paris)'
+        required: false
+        default: '2026-10-01'
+        type: string
+      cle_publique:
+        description: 'Clé publique RSA (PEM encodé en base64 sur une ligne) qui chiffre la réponse'
+        required: true
+        type: string
+
+concurrency:
+  group: compta-paiements
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  paiements:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      SUPABASE_ACCESS_TOKEN: ${{ secrets.SUPABASE_ACCESS_TOKEN }}
+      SUPABASE_PROJECT_REF: ${{ secrets.SUPABASE_PROJECT_REF }}
+      # Les saisies passent par l'environnement, jamais dans la ligne de
+      # commande : le script contrôle la date, openssl la clé.
+      DEPUIS: ${{ inputs.depuis }}
+      CLE_PUBLIQUE: ${{ inputs.cle_publique }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            compta/paiements.mjs
+          sparse-checkout-cone-mode: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Paiements, chiffrés
+        run: |
+          set -euo pipefail
+          umask 077
+          d=$(mktemp -d)
+          trap 'rm -rf "$d"' EXIT
+          printf '%s' "$CLE_PUBLIQUE" | tr -d ' \n\r' | base64 -d > "$d/publique.pem"
+          # Une clé publique RSA de 2048 bits au moins, sinon rien n'est lu.
+          bits=$(openssl pkey -pubin -in "$d/publique.pem" -noout -text | sed -nE 's/.*Public-Key: \(([0-9]+) bit\).*/\1/p')
+          if [ -z "$bits" ] || [ "$bits" -lt 2048 ]; then echo "clé publique RSA de 2048 bits au moins attendue"; exit 1; fi
+          node compta/paiements.mjs "$DEPUIS" "$d/paiements.json"
+          gzip -9 -c "$d/paiements.json" > "$d/paiements.gz"
+          openssl rand 32 > "$d/cle"
+          openssl rand 16 > "$d/iv"
+          K=$(od -An -tx1 "$d/cle" | tr -d ' \n')
+          IV=$(od -An -tx1 "$d/iv" | tr -d ' \n')
+          openssl enc -aes-256-cbc -K "$K" -iv "$IV" -in "$d/paiements.gz" -out "$d/donnees"
+          cat "$d/cle" "$d/iv" | openssl pkeyutl -encrypt -pubin -inkey "$d/publique.pem" \
+            -pkeyopt rsa_padding_mode:oaep -pkeyopt rsa_oaep_md:sha256 -pkeyopt rsa_mgf1_md:sha256 > "$d/cle.enc"
+          unset K IV
+          echo '----- CLE -----'
+          base64 -w 76 "$d/cle.enc"
+          echo '----- DONNEES -----'
+          base64 -w 76 "$d/donnees"
+          echo '----- FIN -----'

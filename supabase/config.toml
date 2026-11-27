@@ -44,3 +44,6 @@ verify_jwt = false
 
 [functions.brevo-webhook]
 verify_jwt = false
+
+[functions.recettes]
+verify_jwt = false
