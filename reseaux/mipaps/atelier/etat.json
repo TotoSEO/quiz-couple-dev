@@ -1,12 +1,12 @@
 {
-  "genere_le": "2026-11-26T12:24:43.256Z",
+  "genere_le": "2026-11-27T03:17:13.261Z",
   "langue": "fr",
   "compte": {
     "nom": "mipaps_stories",
     "actif": true
   },
   "fuseau": "Europe/Paris",
-  "aujourdhui": "2026-11-26",
+  "aujourdhui": "2026-11-27",
   "melange": {
     "midi": {
       "1": null,
@@ -28,39 +28,12 @@
     },
     "matin": "mipaps-anime"
   },
-  "reserve_jours": 126,
+  "reserve_jours": 125,
   "a_remplir": [],
   "a_corriger": [],
   "hors_grille": [],
   "refuses": [],
   "recents_et_prevus": [
-    {
-      "jour": "2026-10-27",
-      "creneau": "matin",
-      "gabarit": "mipaps-reel",
-      "categorie": "mipaps-anime",
-      "statut": "publie",
-      "texte": null,
-      "erreur": null
-    },
-    {
-      "jour": "2026-10-27",
-      "creneau": "midi",
-      "gabarit": "mipaps-post",
-      "categorie": "mipaps-post",
-      "statut": "echec",
-      "texte": "j'ai faim mais je veux pas choisir",
-      "erreur": "créneau fermé par la grille (huit reels par semaine depuis le 26 octobre 2026) : rien n'y part"
-    },
-    {
-      "jour": "2026-10-27",
-      "creneau": "soir",
-      "gabarit": "mipaps-statique",
-      "categorie": "mipaps-statique",
-      "statut": "echec",
-      "texte": "j'adore quand tu t'endors au milieu d'une phrase",
-      "erreur": "créneau fermé par la grille (huit reels par semaine depuis le 26 octobre 2026) : rien n'y part"
-    },
     {
       "jour": "2026-10-28",
       "creneau": "matin",
@@ -921,7 +894,7 @@
       "creneau": "soir",
       "gabarit": "mipaps-reel",
       "categorie": "mipaps-anime",
-      "statut": "a_rendre",
+      "statut": "rendu",
       "texte": null,
       "erreur": null
     },
@@ -2405,7 +2378,7 @@
   "idees": [],
   "prochain_creneau": {
     "mipaps-anime": {
-      "jour": "2026-11-27",
+      "jour": "2026-11-28",
       "creneau": "matin"
     },
     "mipaps-statique": null,
