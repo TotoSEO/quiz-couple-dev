@@ -29,6 +29,12 @@ name: Trafic · pages par visite
 # (le retour sur la page du test et la revanche n'en sont pas) et la page du
 # livre, pour lire l'effet de ce qui est proposé sous un résultat (la carte
 # du livre dans « Et maintenant ? », en ligne le 19 novembre).
+# 27 novembre 2026 : l'entrée « pages » (des bouts de chemin séparés par |)
+# donne, pour les pages d'entrée qui les contiennent, les visites arrivées
+# de Google jour par jour, et avec une coupure leur moyenne par jour avant
+# et après, à côté du site entier et de chaque langue pour témoins. C'est
+# le relevé des clics quand la Search Console n'est pas lisible (Windsor
+# avait suspendu les lectures ce jour-là) ; il ne dit rien des positions.
 
 on:
   workflow_dispatch:
@@ -39,6 +45,10 @@ on:
         default: '14'
       coupure:
         description: 'Facultatif : une date AAAA-MM-JJ, pour comparer avant et après ce jour-là (jour exclu)'
+        required: false
+        default: ''
+      pages:
+        description: 'Facultatif : des bouts de chemin séparés par | (ex. /de/liebesrechner/|who-is-most-likely), pour lire les visites venues de Google sur ces pages d entrée'
         required: false
         default: ''
 
@@ -55,6 +65,7 @@ jobs:
       SUPABASE_PROJECT_REF: ${{ secrets.SUPABASE_PROJECT_REF }}
       JOURS: ${{ inputs.jours }}
       COUPURE: ${{ inputs.coupure }}
+      PAGES: ${{ inputs.pages }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -70,6 +81,11 @@ jobs:
           if [ -z "$PORTE" ]; then PORTE="''"; fi
           echo "Pages à porte e-mail : $(printf '%s' "$PORTE" | tr ',' '\n' | grep -c .)"
           COUPURE=$(printf '%s' "${COUPURE:-}" | grep -E '^[0-9]{4}-[0-9]{2}-[0-9]{2}$' || true)
+          # Les pages suivies, écrites telles quelles dans une expression
+          # régulière du SQL : des lettres, des chiffres, / _ - et le | qui
+          # sépare deux pages, sans | vide (il prendrait toutes les pages).
+          MOTIF=$(printf '%s' "${PAGES:-}" | tr -cd 'A-Za-z0-9/|_-' | sed -E 's/\|+/|/g; s/^\|//; s/\|$//')
+          if [ -n "$MOTIF" ]; then echo "Pages suivies : $MOTIF"; fi
           if [ "$N" -lt 1 ]; then N=1; fi
           if [ "$N" -gt 34 ]; then N=34; fi
           echo "Fenêtre : les $N derniers jours complets, heure de Paris."
@@ -214,6 +230,36 @@ jobs:
               $MESURES
             from v join j using (visite_id) group by 1, 2 order by 1, 2"
 
+          # Les visites arrivées de Google (le référent de la première page
+          # vue), sur les pages suivies, puis par langue et sur tout le site
+          # pour témoins : un recul sur tout le site n'est pas celui d'une page.
+          GOOGLE="$BASE, j as (
+              select visite_id, min(created_at) as t0 from pv group by visite_id
+            ), g as (
+              select v.entree, coalesce(v.entree_lang, '?') as lang, j.t0
+              from v join j using (visite_id)
+              where v.entree_source ~ 'google'
+            ), lignes as (
+              select '(tout le site)' as groupe, t0 from g
+              union all select '(langue ' || lang || ')', t0 from g
+              union all select entree, t0 from g where entree ~ '($MOTIF)' and entree !~ '/resultat/\$'
+            )"
+          if [ -n "$MOTIF" ]; then
+            JOUR_COUPE="null::date"
+            if [ -n "$COUPURE" ]; then JOUR_COUPE="'$COUPURE'::date"; fi
+            sql "Visites venues de Google, jour par jour, du plus ancien au plus récent (entre crochets : le jour de la coupure)" "$GOOGLE, jours as (
+                select d::date as jour from borne, generate_series((borne.b at time zone 'Europe/Paris')::date, (borne.e at time zone 'Europe/Paris')::date - 1, interval '1 day') d
+              ), parjour as (
+                select groupe, (t0 at time zone 'Europe/Paris')::date as jour, count(*) as n from lignes group by 1, 2
+              ), groupes as (
+                select groupe, count(*) as total from lignes group by 1
+              )
+              select gr.groupe, gr.total as google,
+                string_agg(case when jj.jour = $JOUR_COUPE then '[' || coalesce(p.n, 0) || ']' else coalesce(p.n, 0)::text end, ' ' order by jj.jour) as jour_par_jour
+              from groupes gr cross join jours jj left join parjour p on p.groupe = gr.groupe and p.jour = jj.jour
+              group by gr.groupe, gr.total order by gr.total desc limit 60"
+          fi
+
           if [ -n "$COUPURE" ]; then
             C="c as (select ('$COUPURE'::date)::timestamp at time zone 'Europe/Paris' as d0,
                             (('$COUPURE'::date) + 1)::timestamp at time zone 'Europe/Paris' as d1)"
@@ -271,4 +317,19 @@ jobs:
                 round(100.0 * avg(sortie::int), 1) as pct_sortie,
                 round(100.0 * avg(autre_page::int), 1) as pct_autre_page
               from t where periode is not null group by 1, 2 order by 1, 2"
+
+            if [ -n "$MOTIF" ]; then
+              sql "Visites venues de Google par jour, avant et après le $COUPURE (ce jour exclu)" "$GOOGLE, $C, n as (
+                  select '$COUPURE'::date - (borne.b at time zone 'Europe/Paris')::date as ja,
+                         (borne.e at time zone 'Europe/Paris')::date - ('$COUPURE'::date + 1) as jp
+                  from borne)
+                select groupe,
+                  count(*) filter (where t0 < c.d0) as google_avant,
+                  round(count(*) filter (where t0 < c.d0)::numeric / nullif(n.ja, 0), 1) as par_jour_avant,
+                  count(*) filter (where t0 >= c.d1) as google_apres,
+                  round(count(*) filter (where t0 >= c.d1)::numeric / nullif(n.jp, 0), 1) as par_jour_apres,
+                  round(100.0 * count(*) filter (where t0 >= c.d1) * n.ja / nullif(count(*) filter (where t0 < c.d0) * n.jp, 0) - 100, 0) as evolution_pct,
+                  n.ja as jours_avant, n.jp as jours_apres
+                from lignes, c, n group by groupe, n.ja, n.jp order by count(*) desc limit 60"
+            fi
           fi
