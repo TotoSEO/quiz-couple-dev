@@ -1,12 +1,12 @@
 {
-  "genere_le": "2026-11-27T12:12:48.693Z",
+  "genere_le": "2026-11-28T03:18:56.768Z",
   "langue": "en",
   "compte": {
     "nom": "quiz_couple_official",
     "actif": true
   },
   "fuseau": "Europe/Paris",
-  "aujourdhui": "2026-11-27",
+  "aujourdhui": "2026-11-28",
   "melange": {
     "midi": {
       "1": "choisirait",
@@ -28,39 +28,12 @@
     },
     "matin": "choisirait"
   },
-  "reserve_jours": 125,
+  "reserve_jours": 124,
   "a_remplir": [],
   "a_corriger": [],
   "hors_grille": [],
   "refuses": [],
   "recents_et_prevus": [
-    {
-      "jour": "2026-10-28",
-      "creneau": "matin",
-      "gabarit": "baton",
-      "categorie": "baton",
-      "statut": "echec",
-      "texte": null,
-      "erreur": "créneau passé sans publication"
-    },
-    {
-      "jour": "2026-10-28",
-      "creneau": "midi",
-      "gabarit": "connais-tu",
-      "categorie": "connais-tu",
-      "statut": "echec",
-      "texte": "How well do you know your partner?",
-      "erreur": "créneau passé sans publication"
-    },
-    {
-      "jour": "2026-10-28",
-      "creneau": "soir",
-      "gabarit": "tu-preferes",
-      "categorie": "tu-preferes",
-      "statut": "publie",
-      "texte": "Would you rather: powers?",
-      "erreur": null
-    },
     {
       "jour": "2026-10-29",
       "creneau": "matin",
@@ -867,7 +840,7 @@
       "creneau": "soir",
       "gabarit": "connais-tu",
       "categorie": "connais-tu",
-      "statut": "rendu",
+      "statut": "publie",
       "texte": "How well do you know your partner?",
       "erreur": null
     },
@@ -921,7 +894,7 @@
       "creneau": "soir",
       "gabarit": "tu-preferes",
       "categorie": "tu-preferes",
-      "statut": "a_rendre",
+      "statut": "rendu",
       "texte": "Would you rather: couple edition",
       "erreur": null
     },
@@ -6066,6 +6039,24 @@
       "jour": "2026-11-19",
       "creneau": "soir",
       "theme": null
+    },
+    {
+      "variante_id": "d1ddec08-30d7-496f-b557-60e1dc05f95a",
+      "releve": "j7",
+      "vues": 392,
+      "portee": 296,
+      "likes": 6,
+      "commentaires": 0,
+      "partages": 6,
+      "enregistrements": 2,
+      "releve_le": "2026-11-28T03:18:53.517154+00:00",
+      "publie_le": "2026-11-20T16:10:09.96+00:00",
+      "categorie": "connais-tu",
+      "format": "reel",
+      "gabarit": "connais-tu",
+      "jour": "2026-11-20",
+      "creneau": "soir",
+      "theme": null
     }
   ],
   "statistiques_par_categorie": [
@@ -6081,17 +6072,6 @@
       "commentaires": 8
     },
     {
-      "categorie": "connais-tu",
-      "posts": 15,
-      "vues_mediane": 1659,
-      "vues_moyenne": 1504,
-      "vues_max": 3589,
-      "partages": 467,
-      "enregistrements": 220,
-      "likes": 299,
-      "commentaires": 0
-    },
-    {
       "categorie": "baton",
       "posts": 12,
       "vues_mediane": 1385,
@@ -6100,6 +6080,17 @@
       "partages": 40,
       "enregistrements": 21,
       "likes": 217,
+      "commentaires": 0
+    },
+    {
+      "categorie": "connais-tu",
+      "posts": 16,
+      "vues_mediane": 1246,
+      "vues_moyenne": 1434,
+      "vues_max": 3589,
+      "partages": 473,
+      "enregistrements": 222,
+      "likes": 305,
       "commentaires": 0
     },
     {
