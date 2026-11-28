@@ -6,12 +6,21 @@
     <atom:link href="https://quiz-couple.com/nl/blog/feed.xml" rel="self" type="application/rss+xml"/>
     <description>De artikelen van Quiz Couple over relaties, psychologie en liefdesverhalen.</description>
     <language>nl</language>
-    <lastBuildDate>Tue, 24 Nov 2026 09:38:00 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 28 Nov 2026 07:25:00 GMT</lastBuildDate>
     <image>
       <url>https://quiz-couple.com/apple-touch-icon.png</url>
       <title>Quiz Couple · Blog</title>
       <link>https://quiz-couple.com/nl/blog/</link>
     </image>
+    <item>
+      <title>De 4 hechtingsstijlen in de liefde: welke bepaalt hoe jij liefhebt?</title>
+      <link>https://quiz-couple.com/nl/blog/hechtingsstijlen-in-een-relatie/</link>
+      <guid isPermaLink="true">https://quiz-couple.com/nl/blog/hechtingsstijlen-in-een-relatie/</guid>
+      <pubDate>Sat, 28 Nov 2026 07:25:00 GMT</pubDate>
+      <category>Psychologie</category>
+      <description>Veilig, angstig, vermijdend, gedesorganiseerd: je hechtingsstijl bepaalt hoe je liefhebt, lang voor jij dat doet. De 4 profielen en hoe je de jouwe vindt.</description>
+      <media:content url="https://quiz-couple.com/blog/styles-attachement-couple.webp" medium="image" type="image/webp" width="1536" height="1024"/>
+    </item>
     <item>
       <title>60 vragen voor koppels om te stellen aan de telefoon of via berichtjes</title>
       <link>https://quiz-couple.com/nl/blog/vragen-voor-koppels-via-berichtjes/</link>
@@ -272,15 +281,6 @@
       <category>Psychologie</category>
       <description>Je telefoon 40 keer checken, bang voor stilte, een relatie die alle ruimte inneemt... De 16 symptomen van emotionele afhankelijkheid, per levensgebied.</description>
       <media:content url="https://quiz-couple.com/blog/dependance-affective-symptomes.webp" medium="image" type="image/webp" width="1536" height="1024"/>
-    </item>
-    <item>
-      <title>De 90 beste vragen om aan een meisje te stellen om haar te leren kennen</title>
-      <link>https://quiz-couple.com/nl/blog/vragen-om-aan-een-meisje-te-stellen/</link>
-      <guid isPermaLink="true">https://quiz-couple.com/nl/blog/vragen-om-aan-een-meisje-te-stellen/</guid>
-      <pubDate>Tue, 08 Sep 2026 11:26:00 GMT</pubDate>
-      <category>Relatie</category>
-      <description>Klaar met het “hoi, hoe gaat het?” dat nergens heen gaat? 90 vragen om aan een meisje te stellen, van het eerste bericht tot de date, zonder verhoor.</description>
-      <media:content url="https://quiz-couple.com/blog/questions-a-poser-a-une-fille.webp" medium="image" type="image/webp" width="1536" height="1024"/>
     </item>
   </channel>
 </rss>

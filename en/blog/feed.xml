@@ -6,12 +6,21 @@
     <atom:link href="https://quiz-couple.com/en/blog/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Quiz Couple articles on relationships, psychology and love stories.</description>
     <language>en</language>
-    <lastBuildDate>Tue, 24 Nov 2026 09:38:00 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 28 Nov 2026 07:25:00 GMT</lastBuildDate>
     <image>
       <url>https://quiz-couple.com/apple-touch-icon.png</url>
       <title>Quiz Couple · Blog</title>
       <link>https://quiz-couple.com/en/blog/</link>
     </image>
+    <item>
+      <title>The 4 attachment styles in love: which one steers your way of loving?</title>
+      <link>https://quiz-couple.com/en/blog/attachment-styles-in-love/</link>
+      <guid isPermaLink="true">https://quiz-couple.com/en/blog/attachment-styles-in-love/</guid>
+      <pubDate>Sat, 28 Nov 2026 07:25:00 GMT</pubDate>
+      <category>Psychology</category>
+      <description>Secure, anxious, avoidant, disorganised: your attachment style decides how you love long before you do. The 4 profiles explained, and how to identify yours.</description>
+      <media:content url="https://quiz-couple.com/blog/styles-attachement-couple.webp" medium="image" type="image/webp" width="1536" height="1024"/>
+    </item>
     <item>
       <title>60 couple questions to ask over the phone or by message</title>
       <link>https://quiz-couple.com/en/blog/questions-for-couples-over-text/</link>
@@ -272,15 +281,6 @@
       <category>Psychology</category>
       <description>The phone checked 40 times, the fear of silence, the relationship taking up all the space... The 16 symptoms of emotional dependency, area by area.</description>
       <media:content url="https://quiz-couple.com/blog/dependance-affective-symptomes.webp" medium="image" type="image/webp" width="1536" height="1024"/>
-    </item>
-    <item>
-      <title>The 90 best questions to ask a girl to get to know her</title>
-      <link>https://quiz-couple.com/en/blog/questions-to-ask-a-girl/</link>
-      <guid isPermaLink="true">https://quiz-couple.com/en/blog/questions-to-ask-a-girl/</guid>
-      <pubDate>Tue, 08 Sep 2026 11:26:00 GMT</pubDate>
-      <category>Relationship</category>
-      <description>Tired of «hey, how are you?» going nowhere? 90 questions to ask a girl, from the first message to a real one to one, never an interrogation.</description>
-      <media:content url="https://quiz-couple.com/blog/questions-a-poser-a-une-fille.webp" medium="image" type="image/webp" width="1536" height="1024"/>
     </item>
   </channel>
 </rss>

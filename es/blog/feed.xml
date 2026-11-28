@@ -6,12 +6,21 @@
     <atom:link href="https://quiz-couple.com/es/blog/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Los artículos de Quiz Couple sobre la vida en pareja, la psicología y las historias de amor.</description>
     <language>es</language>
-    <lastBuildDate>Tue, 24 Nov 2026 09:38:00 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 28 Nov 2026 07:25:00 GMT</lastBuildDate>
     <image>
       <url>https://quiz-couple.com/apple-touch-icon.png</url>
       <title>Quiz Couple · Blog</title>
       <link>https://quiz-couple.com/es/blog/</link>
     </image>
+    <item>
+      <title>Los 4 estilos de apego en el amor: ¿cuál pilota tu forma de querer?</title>
+      <link>https://quiz-couple.com/es/blog/estilos-de-apego-en-la-pareja/</link>
+      <guid isPermaLink="true">https://quiz-couple.com/es/blog/estilos-de-apego-en-la-pareja/</guid>
+      <pubDate>Sat, 28 Nov 2026 07:25:00 GMT</pubDate>
+      <category>Psicología</category>
+      <description>Seguro, ansioso, evitativo, desorganizado: tu estilo de apego decide tu forma de querer mucho antes que tú. Los 4 perfiles explicados y cómo identificar el tuyo.</description>
+      <media:content url="https://quiz-couple.com/blog/styles-attachement-couple.webp" medium="image" type="image/webp" width="1536" height="1024"/>
+    </item>
     <item>
       <title>60 preguntas de pareja para hacerse por teléfono o por mensaje</title>
       <link>https://quiz-couple.com/es/blog/preguntas-de-pareja-por-mensaje/</link>
@@ -272,15 +281,6 @@
       <category>Psicología</category>
       <description>El móvil mirado 40 veces, el miedo al silencio, la pareja que lo ocupa todo... Los 16 síntomas de la dependencia emocional, esfera por esfera.</description>
       <media:content url="https://quiz-couple.com/blog/dependance-affective-symptomes.webp" medium="image" type="image/webp" width="1536" height="1024"/>
-    </item>
-    <item>
-      <title>Las 90 mejores preguntas para hacerle a una chica para conocerla</title>
-      <link>https://quiz-couple.com/es/blog/preguntas-para-una-chica/</link>
-      <guid isPermaLink="true">https://quiz-couple.com/es/blog/preguntas-para-una-chica/</guid>
-      <pubDate>Tue, 08 Sep 2026 11:26:00 GMT</pubDate>
-      <category>Vida en pareja</category>
-      <description>¿Harto del «hola, ¿qué tal?» que no lleva a ninguna parte? 90 preguntas para hacerle a una chica, del primer mensaje al cara a cara, sin interrogatorios.</description>
-      <media:content url="https://quiz-couple.com/blog/questions-a-poser-a-une-fille.webp" medium="image" type="image/webp" width="1536" height="1024"/>
     </item>
   </channel>
 </rss>

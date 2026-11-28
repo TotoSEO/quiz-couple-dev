@@ -6,12 +6,21 @@
     <atom:link href="https://quiz-couple.com/it/blog/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Gli articoli di Quiz Couple sulla vita di coppia, la psicologia e le storie d&#39;amore.</description>
     <language>it</language>
-    <lastBuildDate>Tue, 24 Nov 2026 09:38:00 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 28 Nov 2026 07:25:00 GMT</lastBuildDate>
     <image>
       <url>https://quiz-couple.com/apple-touch-icon.png</url>
       <title>Quiz Couple · Blog</title>
       <link>https://quiz-couple.com/it/blog/</link>
     </image>
+    <item>
+      <title>I 4 stili di attaccamento in amore: quale pilota il tuo modo di amare?</title>
+      <link>https://quiz-couple.com/it/blog/stili-di-attaccamento-in-amore/</link>
+      <guid isPermaLink="true">https://quiz-couple.com/it/blog/stili-di-attaccamento-in-amore/</guid>
+      <pubDate>Sat, 28 Nov 2026 07:25:00 GMT</pubDate>
+      <category>Psicologia</category>
+      <description>Sicuro, ansioso, evitante, disorganizzato: il tuo stile di attaccamento decide il tuo modo di amare molto prima di te. I 4 profili spiegati e come identificare il tuo.</description>
+      <media:content url="https://quiz-couple.com/blog/styles-attachement-couple.webp" medium="image" type="image/webp" width="1536" height="1024"/>
+    </item>
     <item>
       <title>60 domande di coppia da fare al telefono o per messaggio</title>
       <link>https://quiz-couple.com/it/blog/domande-di-coppia-per-messaggio/</link>
@@ -272,15 +281,6 @@
       <category>Psicologia</category>
       <description>Il telefono controllato 40 volte, la paura del silenzio, la coppia che occupa tutto lo spazio... I 16 sintomi della dipendenza affettiva, sfera per sfera.</description>
       <media:content url="https://quiz-couple.com/blog/dependance-affective-symptomes.webp" medium="image" type="image/webp" width="1536" height="1024"/>
-    </item>
-    <item>
-      <title>Le 90 migliori domande da fare a una ragazza per conoscerla</title>
-      <link>https://quiz-couple.com/it/blog/domande-da-fare-a-una-ragazza/</link>
-      <guid isPermaLink="true">https://quiz-couple.com/it/blog/domande-da-fare-a-una-ragazza/</guid>
-      <pubDate>Tue, 08 Sep 2026 11:26:00 GMT</pubDate>
-      <category>Vita di coppia</category>
-      <description>Stanco del «ciao, come va?» che non porta da nessuna parte? 90 domande da fare a una ragazza, dal primo messaggio all&#39;incontro, senza interrogatori.</description>
-      <media:content url="https://quiz-couple.com/blog/questions-a-poser-a-une-fille.webp" medium="image" type="image/webp" width="1536" height="1024"/>
     </item>
   </channel>
 </rss>

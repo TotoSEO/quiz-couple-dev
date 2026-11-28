@@ -6,12 +6,30 @@
     <atom:link href="https://quiz-couple.com/blog/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Les articles de Quiz Couple sur la vie de couple, la psychologie et les histoires d&#39;amour.</description>
     <language>fr</language>
-    <lastBuildDate>Wed, 25 Nov 2026 07:30:00 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 28 Nov 2026 07:30:00 GMT</lastBuildDate>
     <image>
       <url>https://quiz-couple.com/apple-touch-icon.png</url>
       <title>Quiz Couple · Le blog</title>
       <link>https://quiz-couple.com/blog/</link>
     </image>
+    <item>
+      <title>Le chien dans le lit : 69 % de non en français, 60 % de oui en espagnol</title>
+      <link>https://quiz-couple.com/blog/chien-dans-le-lit-couple/</link>
+      <guid isPermaLink="true">https://quiz-couple.com/blog/chien-dans-le-lit-couple/</guid>
+      <pubDate>Sat, 28 Nov 2026 07:30:00 GMT</pubDate>
+      <category>En chiffres</category>
+      <description>Laisser le chien dormir dans le lit ? Sur Quiz Couple, 559 votes : 69 % de non sur les pages en français, mais 60 % de oui en espagnol et 59 % en italien.</description>
+      <media:content url="https://quiz-couple.com/blog/chien-dans-le-lit-couple.webp" medium="image" type="image/webp" width="1536" height="864"/>
+    </item>
+    <item>
+      <title>Les 4 styles d&#39;attachement en amour : lequel pilote ta façon d&#39;aimer ?</title>
+      <link>https://quiz-couple.com/blog/styles-attachement-couple/</link>
+      <guid isPermaLink="true">https://quiz-couple.com/blog/styles-attachement-couple/</guid>
+      <pubDate>Sat, 28 Nov 2026 07:25:00 GMT</pubDate>
+      <category>Psychologie</category>
+      <description>Sécure, anxieux, évitant, désorganisé : ton style d&#39;attachement décide de ta façon d&#39;aimer bien avant toi. Les 4 profils expliqués, et comment identifier le tien.</description>
+      <media:content url="https://quiz-couple.com/blog/styles-attachement-couple.webp" medium="image" type="image/webp" width="1536" height="1024"/>
+    </item>
     <item>
       <title>Compte commun : 73 % votent pour, mais 87 % gardent un compte perso</title>
       <link>https://quiz-couple.com/blog/compte-commun-couple-votes/</link>
@@ -263,24 +281,6 @@
       <category>Psychologie</category>
       <description>Une relation n&#39;est pas toxique par ses disputes, mais par ce qu&#39;elle te fait devenir. Les 7 signes fiables, la différence avec une passe difficile, et ce qui se répare.</description>
       <media:content url="https://quiz-couple.com/blog/relation-toxique-signes.webp" medium="image" type="image/webp" width="1536" height="1024"/>
-    </item>
-    <item>
-      <title>75 questions à poser à sa copine, pour la (re)découvrir</title>
-      <link>https://quiz-couple.com/blog/questions-a-poser-a-sa-copine/</link>
-      <guid isPermaLink="true">https://quiz-couple.com/blog/questions-a-poser-a-sa-copine/</guid>
-      <pubDate>Tue, 29 Sep 2026 15:24:00 GMT</pubDate>
-      <category>Vie de couple</category>
-      <description>Tu crois la connaître par cœur ? Pari : sur ces 75 questions à poser à ta copine, il y en a au moins dix dont tu ne connais pas la réponse.</description>
-      <media:content url="https://quiz-couple.com/blog/questions-a-poser-a-sa-copine.webp" medium="image" type="image/webp" width="1536" height="1024"/>
-    </item>
-    <item>
-      <title>La femme perverse narcissique : 10 signes que les hommes n&#39;osent pas nommer</title>
-      <link>https://quiz-couple.com/blog/femme-perverse-narcissique-signes/</link>
-      <guid isPermaLink="true">https://quiz-couple.com/blog/femme-perverse-narcissique-signes/</guid>
-      <pubDate>Sat, 26 Sep 2026 07:25:00 GMT</pubDate>
-      <category>Psychologie</category>
-      <description>Adorable en public, démolisseuse en privé. Les 10 signes de la femme perverse narcissique, ses masques, et pourquoi les hommes qui la subissent n&#39;en parlent jamais.</description>
-      <media:content url="https://quiz-couple.com/blog/femme-perverse-narcissique-signes.webp" medium="image" type="image/webp" width="1536" height="1024"/>
     </item>
   </channel>
 </rss>
