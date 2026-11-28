@@ -1,5 +1,5 @@
 {
-  "genere_le": "2026-11-28T03:18:56.768Z",
+  "genere_le": "2026-11-28T11:45:40.866Z",
   "langue": "en",
   "compte": {
     "nom": "quiz_couple_official",
@@ -849,7 +849,7 @@
       "creneau": "matin",
       "gabarit": "choisirait",
       "categorie": "choisirait",
-      "statut": "rendu",
+      "statut": "publie",
       "texte": "What would she choose?",
       "erreur": null
     },
@@ -858,7 +858,7 @@
       "creneau": "midi",
       "gabarit": "tu-preferes",
       "categorie": "tu-preferes",
-      "statut": "rendu",
+      "statut": "publie",
       "texte": "Would you rather: couple edition",
       "erreur": null
     },
@@ -903,7 +903,7 @@
       "creneau": "matin",
       "gabarit": "choisirait",
       "categorie": "choisirait",
-      "statut": "a_rendre",
+      "statut": "rendu",
       "texte": "What would he choose?",
       "erreur": null
     },
@@ -4497,8 +4497,8 @@
       "creneau": "soir"
     },
     "tu-preferes": {
-      "jour": "2026-11-28",
-      "creneau": "midi"
+      "jour": "2026-11-29",
+      "creneau": "soir"
     },
     "phrase": null,
     "carrousel": null,
@@ -6057,18 +6057,36 @@
       "jour": "2026-11-20",
       "creneau": "soir",
       "theme": null
+    },
+    {
+      "variante_id": "ce4a3a11-f912-4740-bef2-14870f25320e",
+      "releve": "j7",
+      "vues": 423,
+      "portee": 352,
+      "likes": 2,
+      "commentaires": 0,
+      "partages": 10,
+      "enregistrements": 2,
+      "releve_le": "2026-11-28T11:45:39.641517+00:00",
+      "publie_le": "2026-11-21T11:30:11.708+00:00",
+      "categorie": "tu-preferes",
+      "format": "reel",
+      "gabarit": "tu-preferes",
+      "jour": "2026-11-21",
+      "creneau": "midi",
+      "theme": null
     }
   ],
   "statistiques_par_categorie": [
     {
       "categorie": "tu-preferes",
-      "posts": 29,
-      "vues_mediane": 2075,
-      "vues_moyenne": 10270,
+      "posts": 30,
+      "vues_mediane": 2033,
+      "vues_moyenne": 9942,
       "vues_max": 107713,
-      "partages": 10314,
-      "enregistrements": 3880,
-      "likes": 3942,
+      "partages": 10324,
+      "enregistrements": 3882,
+      "likes": 3944,
       "commentaires": 8
     },
     {
