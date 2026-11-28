@@ -1,12 +1,12 @@
 {
-  "genere_le": "2026-11-27T12:12:56.007Z",
+  "genere_le": "2026-11-28T03:19:02.038Z",
   "langue": "fr",
   "compte": {
     "nom": "mipaps_stories",
     "actif": true
   },
   "fuseau": "Europe/Paris",
-  "aujourdhui": "2026-11-27",
+  "aujourdhui": "2026-11-28",
   "melange": {
     "midi": {
       "1": null,
@@ -28,39 +28,12 @@
     },
     "matin": "mipaps-anime"
   },
-  "reserve_jours": 125,
+  "reserve_jours": 124,
   "a_remplir": [],
   "a_corriger": [],
   "hors_grille": [],
   "refuses": [],
   "recents_et_prevus": [
-    {
-      "jour": "2026-10-28",
-      "creneau": "matin",
-      "gabarit": "mipaps-reel",
-      "categorie": "mipaps-anime",
-      "statut": "publie",
-      "texte": null,
-      "erreur": null
-    },
-    {
-      "jour": "2026-10-28",
-      "creneau": "midi",
-      "gabarit": "mipaps-post",
-      "categorie": "mipaps-post",
-      "statut": "echec",
-      "texte": "ok j'avoue c'est moi qui ai mangé la dernière part",
-      "erreur": "créneau fermé par la grille (huit reels par semaine depuis le 26 octobre 2026) : rien n'y part"
-    },
-    {
-      "jour": "2026-10-28",
-      "creneau": "soir",
-      "gabarit": "mipaps-carrousel",
-      "categorie": "mipaps-histoire",
-      "statut": "echec",
-      "texte": null,
-      "erreur": "créneau fermé par la grille (huit reels par semaine depuis le 26 octobre 2026) : rien n'y part"
-    },
     {
       "jour": "2026-10-29",
       "creneau": "matin",
@@ -2379,7 +2352,7 @@
   "prochain_creneau": {
     "mipaps-anime": {
       "jour": "2026-11-28",
-      "creneau": "matin"
+      "creneau": "soir"
     },
     "mipaps-statique": null,
     "mipaps-histoire": null,
